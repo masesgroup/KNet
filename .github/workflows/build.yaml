@@ -1,0 +1,90 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI_BUILD
+
+# Controls when the action will run. Triggers the workflow on push
+# events but only for the master branch
+on:
+  push:
+
+# This workflow contains two jobs called "check_changes", "build_windows"
+jobs:
+  # Verify if a build is needed
+  check_changes:
+    name: Check changed files
+    outputs:
+      run_build_windows: ${{ steps.check_files.outputs.run_build_windows }}
+    runs-on: ubuntu-latest
+    steps:
+      - id: get_changed_files
+        uses: jitterbit/get-changed-files@v1
+        with:
+          format: 'csv'
+      - id: check_files
+        run: |
+          mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.get_changed_files.outputs.added_modified }}')
+          for added_modified_file in "${added_modified_files[@]}"; do
+              if [[ $added_modified_file == ".github/workflows/build.yaml"* ]]; then
+                echo "$added_modified_file is myself."
+                echo "::set-output name=run_build_windows::true"
+                break
+              fi
+              if [[ $added_modified_file == "src/"* ]]; then
+                echo "$added_modified_file file is under the directory 'src/'."
+                echo "::set-output name=run_build_windows::true"
+                break
+              fi
+          done
+      - name: Get run_build_windows
+        run: echo "The selected run_build_windows is ${{ steps.check_files.outputs.run_build_windows }}"
+
+  # Now run "build_windows"
+  build_windows:
+    needs: check_changes
+    if: "always() && needs.check_changes.outputs.run_build_windows == 'true'"
+    # The type of runner that the job will run on
+    runs-on: windows-2019
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:   
+      # Runs a set of commands using the runners shell
+      # Support longpaths
+      - name: Support long paths
+        run: git config --system core.longpaths true
+      
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+        with:
+          submodules: 'true'
+
+      - name: Compile 
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\KafkaBridge.sln
+
+      - name: Clear documentation folder 
+        run: Remove-Item .\docs\* -Recurse -Force -Exclude _config.yml
+
+      - name: Build documentation
+        run: |
+          choco install docfx
+          cd src\Documentation
+          docfx
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: NuReflector
+          path: .\bin\*nupkg
+
+      - name: Extract commit SHA
+        run: |
+          echo "GITHUB_COMMIT_MESSAGE=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV
+        shell: bash
+
+      - name: Commit changes
+        if: ${{ github.repository_owner == 'masesgroup'}} #do not push any changes outside main repo
+        uses: EndBug/add-and-commit@v5
+        with:
+          author_name: github-actions
+          author_email: 41898282+github-actions[bot]@users.noreply.github.com
+          add: '.\docs\*.*'
+          message: Update documentation after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
+ 

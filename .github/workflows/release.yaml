@@ -1,0 +1,41 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI_RELEASE
+
+# Controls when the action will run. Triggers the workflow on release published or release edited request
+# events but only for the master branch
+on:
+  release:
+    types: 
+      - published
+      - edited
+
+jobs:
+  # This workflow contains a single job called "build_release"
+  build_release:
+    # The type of runner that the job will run on
+    runs-on: windows-2019
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Runs a set of commands using the runners shell
+      # Support longpaths
+      - name: Support long paths
+        run: git config --system core.longpaths true
+      
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it                                                                                  
+      - uses: actions/checkout@v2
+        with:
+          submodules: 'true'
+
+      - name: Build NuGet Packages
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\KafkaBridge.sln
+
+      - uses: nuget/setup-nuget@v1
+        with:
+          nuget-version: '5.x'
+
+      - name: Publish to NuGet
+        run: |
+          nuget push .\bin\*.nupkg -ApiKey ${{ secrets.MASES_NUGET_API_KEY }} -Source https://api.nuget.org/v3/index.json -SkipDuplicate
+          nuget push .\bin\*.snupkg -ApiKey ${{ secrets.MASES_NUGET_API_KEY }} -Source https://api.nuget.org/v3/index.json -SkipDuplicate
+          
