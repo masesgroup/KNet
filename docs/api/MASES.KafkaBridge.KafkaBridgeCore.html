@@ -1,0 +1,1727 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class KafkaBridgeCore
+   | CLI Parser website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class KafkaBridgeCore
+   | CLI Parser website ">
+    <meta name="generator" content="docfx 2.58.5.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MASES.KafkaBridge.KafkaBridgeCore">
+  
+  
+  <h1 id="MASES_KafkaBridge_KafkaBridgeCore" data-uid="MASES.KafkaBridge.KafkaBridgeCore" class="text-break">Class KafkaBridgeCore
+  </h1>
+  <div class="markdown level0 summary"><p>Public entry point of <a class="xref" href="MASES.KafkaBridge.KafkaBridgeCore.html">KafkaBridgeCore</a></p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper</span></div>
+    <div class="level2"><span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper</span>&lt;<a class="xref" href="MASES.KafkaBridge.KafkaBridgeCore.html">KafkaBridgeCore</a>&gt;</div>
+    <div class="level3"><span class="xref">KafkaBridgeCore</span></div>
+      <div class="level4"><a class="xref" href="MASES.KafkaBridge.Admin.BrokerApiVersionsCommand.html">BrokerApiVersionsCommand</a></div>
+      <div class="level4"><a class="xref" href="MASES.KafkaBridge.Admin.ConfigCommand.html">ConfigCommand</a></div>
+      <div class="level4"><a class="xref" href="MASES.KafkaBridge.Admin.ConsumerGroupCommand.html">ConsumerGroupCommand</a></div>
+      <div class="level4"><a class="xref" href="MASES.KafkaBridge.Admin.DelegationTokenCommand.html">DelegationTokenCommand</a></div>
+      <div class="level4"><a class="xref" href="MASES.KafkaBridge.Admin.DeleteRecordsCommand.html">DeleteRecordsCommand</a></div>
+      <div class="level4"><a class="xref" href="MASES.KafkaBridge.Admin.LeaderElectionCommand.html">LeaderElectionCommand</a></div>
+      <div class="level4"><a class="xref" href="MASES.KafkaBridge.Admin.LogDirsCommand.html">LogDirsCommand</a></div>
+      <div class="level4"><a class="xref" href="MASES.KafkaBridge.Admin.ReassignPartitionsCommand.html">ReassignPartitionsCommand</a></div>
+      <div class="level4"><a class="xref" href="MASES.KafkaBridge.Admin.TopicCommand.html">TopicCommand</a></div>
+      <div class="level4"><a class="xref" href="MASES.KafkaBridge.Tools.ConsoleConsumer.html">ConsoleConsumer</a></div>
+      <div class="level4"><a class="xref" href="MASES.KafkaBridge.Tools.ConsoleProducer.html">ConsoleProducer</a></div>
+      <div class="level4"><a class="xref" href="MASES.KafkaBridge.Tools.ConsumerPerformance.html">ConsumerPerformance</a></div>
+      <div class="level4"><a class="xref" href="MASES.KafkaBridge.Tools.DumpLogSegments.html">DumpLogSegments</a></div>
+      <div class="level4"><a class="xref" href="MASES.KafkaBridge.Tools.GetOffsetShell.html">GetOffsetShell</a></div>
+      <div class="level4"><a class="xref" href="MASES.KafkaBridge.Tools.MirrorMaker.html">MirrorMaker</a></div>
+      <div class="level4"><a class="xref" href="MASES.KafkaBridge.Tools.ProducerPerformance.html">ProducerPerformance</a></div>
+      <div class="level4"><a class="xref" href="MASES.KafkaBridge.Tools.ReplicaVerificationTool.html">ReplicaVerificationTool</a></div>
+      <div class="level4"><a class="xref" href="MASES.KafkaBridge.Tools.StreamsResetter.html">StreamsResetter</a></div>
+      <div class="level4"><a class="xref" href="MASES.KafkaBridge.Tools.TransactionsCommand.html">TransactionsCommand</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper&lt;MASES.KafkaBridge.KafkaBridgeCore&gt;.UnwrapOn(System.Threading.ParameterizedThreadStart, System.Object, System.Threading.ApartmentState)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper&lt;MASES.KafkaBridge.KafkaBridgeCore&gt;.UnwrapAndDemonizeOn(System.Threading.ParameterizedThreadStart, System.Object, System.Threading.ApartmentState)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.Initialize()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.ImportPackage(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.RegisterCLRGlobal(System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.UnregisterCLRGlobal(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.GetJVMGlobal(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.GetCLRGlobal(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.InitializeListener(MASES.JCOBridge.C2JBridge.ICLRListener)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.GetListener(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.ReleaseListener(MASES.JCOBridge.C2JBridge.ICLRListener)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.GetJCGraphicContainer(System.String, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.GetJCGraphicContainer(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.ReleaseJCGraphicContainer(MASES.JCOBridge.C2JBridge.IJCGraphicContainer)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.InitializeRemote()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.UnwrapOn&lt;T&gt;(System.Threading.ParameterizedThreadStart, System.Object, System.Threading.ApartmentState)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.UnwrapAndDemonizeOn&lt;T&gt;(System.Threading.ParameterizedThreadStart, System.Object, System.Threading.ApartmentState)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.JVM</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.JVMStats</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.DynJVM</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.RemoteJCOBridge</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.LicensePath</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.JDKHome</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.JVMPath</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.JVMPackages</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.JNIVerbosity</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.JNIOutputFile</span>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MASES.KafkaBridge.html">MASES.KafkaBridge</a></h6>
+  <h6><strong>Assembly</strong>: MASES.KafkaBridge.dll</h6>
+  <h5 id="MASES_KafkaBridge_KafkaBridgeCore_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class KafkaBridgeCore : SetupJVMWrapper&lt;KafkaBridgeCore&gt;, ISetupJVMWrapper</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore__ctor.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L277">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore__ctor_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.#ctor*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore__ctor" data-uid="MASES.KafkaBridge.KafkaBridgeCore.#ctor">KafkaBridgeCore()</h4>
+  <div class="markdown level1 summary"><p>Initialize a new <a class="xref" href="MASES.KafkaBridge.KafkaBridgeCore.html">KafkaBridgeCore</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KafkaBridgeCore()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore__ctor_System_String_System_Boolean_System_Object___.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.%23ctor(System.String%2CSystem.Boolean%2CSystem.Object%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L288">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore__ctor_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.#ctor*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore__ctor_System_String_System_Boolean_System_Object___" data-uid="MASES.KafkaBridge.KafkaBridgeCore.#ctor(System.String,System.Boolean,System.Object[])">KafkaBridgeCore(String, Boolean, Object[])</h4>
+  <div class="markdown level1 summary"><p>Initialize a new <a class="xref" href="MASES.KafkaBridge.KafkaBridgeCore.html">KafkaBridgeCore</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KafkaBridgeCore(string mainClass, bool staticClass = false, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">mainClass</span></td>
+        <td><p>The main class to be managed</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">staticClass</span></td>
+        <td><p>Set to true to avoid to create an instance of <code data-dev-comment-type="paramref" class="paramref">mainClass</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td><p>Argument class</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_ClassPath.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.ClassPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L254">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_ClassPath_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ClassPath*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_ClassPath" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ClassPath">ClassPath</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed override string ClassPath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.ClassPath</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_ClientsPath.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.ClientsPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L130">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_ClientsPath_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ClientsPath*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_ClientsPath" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ClientsPath">ClientsPath</h4>
+  <div class="markdown level1 summary"><p>The path where Apache Kafka clients Jars are installed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string ClientsPath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_ConnectApiDependenciesPath.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.ConnectApiDependenciesPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L164">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_ConnectApiDependenciesPath_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ConnectApiDependenciesPath*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_ConnectApiDependenciesPath" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ConnectApiDependenciesPath">ConnectApiDependenciesPath</h4>
+  <div class="markdown level1 summary"><p>The path where Apache Kafka Connect API dependencies Jars are installed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string ConnectApiDependenciesPath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_ConnectApiPath.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.ConnectApiPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L159">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_ConnectApiPath_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ConnectApiPath*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_ConnectApiPath" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ConnectApiPath">ConnectApiPath</h4>
+  <div class="markdown level1 summary"><p>The path where Apache Kafka Connect API Jars are installed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string ConnectApiPath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_ConnectFileDependenciesPath.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.ConnectFileDependenciesPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L184">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_ConnectFileDependenciesPath_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ConnectFileDependenciesPath*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_ConnectFileDependenciesPath" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ConnectFileDependenciesPath">ConnectFileDependenciesPath</h4>
+  <div class="markdown level1 summary"><p>The path where Apache Kafka Connect file dependencies Jars are installed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string ConnectFileDependenciesPath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_ConnectFilePath.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.ConnectFilePath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L179">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_ConnectFilePath_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ConnectFilePath*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_ConnectFilePath" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ConnectFilePath">ConnectFilePath</h4>
+  <div class="markdown level1 summary"><p>The path where Apache Kafka Connect file Jars are installed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string ConnectFilePath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_ConnectJsonDependenciesPath.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.ConnectJsonDependenciesPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L194">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_ConnectJsonDependenciesPath_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ConnectJsonDependenciesPath*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_ConnectJsonDependenciesPath" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ConnectJsonDependenciesPath">ConnectJsonDependenciesPath</h4>
+  <div class="markdown level1 summary"><p>The path where Apache Kafka Connect json dependencies Jars are installed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string ConnectJsonDependenciesPath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_ConnectJsonPath.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.ConnectJsonPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L189">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_ConnectJsonPath_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ConnectJsonPath*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_ConnectJsonPath" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ConnectJsonPath">ConnectJsonPath</h4>
+  <div class="markdown level1 summary"><p>The path where Apache Kafka Connect json Jars are installed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string ConnectJsonPath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_ConnectRuntimeDependenciesPath.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.ConnectRuntimeDependenciesPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L174">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_ConnectRuntimeDependenciesPath_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ConnectRuntimeDependenciesPath*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_ConnectRuntimeDependenciesPath" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ConnectRuntimeDependenciesPath">ConnectRuntimeDependenciesPath</h4>
+  <div class="markdown level1 summary"><p>The path where Apache Kafka Connect runtime dependencies Jars are installed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string ConnectRuntimeDependenciesPath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_ConnectRuntimePath.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.ConnectRuntimePath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L169">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_ConnectRuntimePath_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ConnectRuntimePath*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_ConnectRuntimePath" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ConnectRuntimePath">ConnectRuntimePath</h4>
+  <div class="markdown level1 summary"><p>The path where Apache Kafka Connect runtime Jars are installed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string ConnectRuntimePath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_ConnectToolsDependenciesPath.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.ConnectToolsDependenciesPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L204">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_ConnectToolsDependenciesPath_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ConnectToolsDependenciesPath*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_ConnectToolsDependenciesPath" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ConnectToolsDependenciesPath">ConnectToolsDependenciesPath</h4>
+  <div class="markdown level1 summary"><p>The path where Apache Kafka Connect tools dependencies Jars are installed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string ConnectToolsDependenciesPath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_ConnectToolsPath.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.ConnectToolsPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L199">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_ConnectToolsPath_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ConnectToolsPath*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_ConnectToolsPath" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ConnectToolsPath">ConnectToolsPath</h4>
+  <div class="markdown level1 summary"><p>The path where Apache Kafka Connect tools Jars are installed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string ConnectToolsPath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_CoreDependenciesPath.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.CoreDependenciesPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L120">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_CoreDependenciesPath_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.CoreDependenciesPath*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_CoreDependenciesPath" data-uid="MASES.KafkaBridge.KafkaBridgeCore.CoreDependenciesPath">CoreDependenciesPath</h4>
+  <div class="markdown level1 summary"><p>The path where Apache Kafka core dependencies Jars are installed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string CoreDependenciesPath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_DebugSuspendFlag.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.DebugSuspendFlag%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L85">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_DebugSuspendFlag_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.DebugSuspendFlag*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_DebugSuspendFlag" data-uid="MASES.KafkaBridge.KafkaBridgeCore.DebugSuspendFlag">DebugSuspendFlag</h4>
+  <div class="markdown level1 summary"><p>Enables Debug</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string DebugSuspendFlag { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_DynClassLoaded.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.DynClassLoaded%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L258">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_DynClassLoaded_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.DynClassLoaded*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_DynClassLoaded" data-uid="MASES.KafkaBridge.KafkaBridgeCore.DynClassLoaded">DynClassLoaded</h4>
+  <div class="markdown level1 summary"><p>Dynamic accessor to the <see cref="!:ClassToLoad"></see> instance</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public dynamic DynClassLoaded { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_EnableDebug.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.EnableDebug%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L75">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_EnableDebug_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.EnableDebug*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_EnableDebug" data-uid="MASES.KafkaBridge.KafkaBridgeCore.EnableDebug">EnableDebug</h4>
+  <div class="markdown level1 summary"><p>Enables Debug</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool EnableDebug { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_ExamplesPath.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.ExamplesPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L125">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_ExamplesPath_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ExamplesPath*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_ExamplesPath" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ExamplesPath">ExamplesPath</h4>
+  <div class="markdown level1 summary"><p>The path where Apache Kafka examples Jars are installed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string ExamplesPath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_ExtraClassPath.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.ExtraClassPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L209">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_ExtraClassPath_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ExtraClassPath*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_ExtraClassPath" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ExtraClassPath">ExtraClassPath</h4>
+  <div class="markdown level1 summary"><p>The path where Apache Kafka tools Jars are installed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string ExtraClassPath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_GlobalRootPath.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.GlobalRootPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L35">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_GlobalRootPath_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.GlobalRootPath*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_GlobalRootPath" data-uid="MASES.KafkaBridge.KafkaBridgeCore.GlobalRootPath">GlobalRootPath</h4>
+  <div class="markdown level1 summary"><p>Sets the global value of root path</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GlobalRootPath { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_GlobalScalaVersion.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.GlobalScalaVersion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L40">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_GlobalScalaVersion_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.GlobalScalaVersion*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_GlobalScalaVersion" data-uid="MASES.KafkaBridge.KafkaBridgeCore.GlobalScalaVersion">GlobalScalaVersion</h4>
+  <div class="markdown level1 summary"><p>Sets the global value of root path</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GlobalScalaVersion { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_HeapSize.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.HeapSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L94">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_HeapSize_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.HeapSize*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_HeapSize" data-uid="MASES.KafkaBridge.KafkaBridgeCore.HeapSize">HeapSize</h4>
+  <div class="markdown level1 summary"><p>The Heap size to be used</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string HeapSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_JavaDebugOpts.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.JavaDebugOpts%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L90">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_JavaDebugOpts_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.JavaDebugOpts*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_JavaDebugOpts" data-uid="MASES.KafkaBridge.KafkaBridgeCore.JavaDebugOpts">JavaDebugOpts</h4>
+  <div class="markdown level1 summary"><p>Java Debug options used if <a class="xref" href="MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore_EnableDebug">EnableDebug</a> is true</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string JavaDebugOpts { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_JavaDebugPort.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.JavaDebugPort%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L80">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_JavaDebugPort_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.JavaDebugPort*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_JavaDebugPort" data-uid="MASES.KafkaBridge.KafkaBridgeCore.JavaDebugPort">JavaDebugPort</h4>
+  <div class="markdown level1 summary"><p>Java Debug Port</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual short JavaDebugPort { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int16">Int16</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_JmxPort.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.JmxPort%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L70">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_JmxPort_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.JmxPort*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_JmxPort" data-uid="MASES.KafkaBridge.KafkaBridgeCore.JmxPort">JmxPort</h4>
+  <div class="markdown level1 summary"><p>The JMX Port to use</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual short? JmxPort { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int16">Int16</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_JVMOptions.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.JVMOptions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L221">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_JVMOptions_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.JVMOptions*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_JVMOptions" data-uid="MASES.KafkaBridge.KafkaBridgeCore.JVMOptions">JVMOptions</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed override IEnumerable&lt;KeyValuePair&lt;string, string&gt;&gt; JVMOptions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper.JVMOptions</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_Log4JOpts.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.Log4JOpts%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L65">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_Log4JOpts_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.Log4JOpts*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_Log4JOpts" data-uid="MASES.KafkaBridge.KafkaBridgeCore.Log4JOpts">Log4JOpts</h4>
+  <div class="markdown level1 summary"><p>The log4j configuration</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string Log4JOpts { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_LogDir.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.LogDir%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L60">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_LogDir_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.LogDir*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_LogDir" data-uid="MASES.KafkaBridge.KafkaBridgeCore.LogDir">LogDir</h4>
+  <div class="markdown level1 summary"><p>The log folder</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string LogDir { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_MainClass.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.MainClass%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L266">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_MainClass_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.MainClass*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_MainClass" data-uid="MASES.KafkaBridge.KafkaBridgeCore.MainClass">MainClass</h4>
+  <div class="markdown level1 summary"><p>Accessor to static methods of the class requested</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IJavaType MainClass { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_MainInstanceClass.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.MainInstanceClass%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L262">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_MainInstanceClass_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.MainInstanceClass*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_MainInstanceClass" data-uid="MASES.KafkaBridge.KafkaBridgeCore.MainInstanceClass">MainInstanceClass</h4>
+  <div class="markdown level1 summary"><p>Accessor to the instance methods of the class requested</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IJavaObject MainInstanceClass { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_Options.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.Options%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L223">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_Options_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.Options*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_Options" data-uid="MASES.KafkaBridge.KafkaBridgeCore.Options">Options</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IDictionary&lt;string, string&gt; Options { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_PerformanceOptions.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.PerformanceOptions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L99">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_PerformanceOptions_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.PerformanceOptions*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_PerformanceOptions" data-uid="MASES.KafkaBridge.KafkaBridgeCore.PerformanceOptions">PerformanceOptions</h4>
+  <div class="markdown level1 summary"><p>Default performance options used in initialization</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IDictionary&lt;string, string&gt; PerformanceOptions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_ReleaseAdditionalPath.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.ReleaseAdditionalPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L219">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_ReleaseAdditionalPath_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ReleaseAdditionalPath*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_ReleaseAdditionalPath" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ReleaseAdditionalPath">ReleaseAdditionalPath</h4>
+  <div class="markdown level1 summary"><p>The path where Apache Kafka additional Jars are installed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string ReleaseAdditionalPath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_ReleasePath.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.ReleasePath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L214">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_ReleasePath_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ReleasePath*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_ReleasePath" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ReleasePath">ReleasePath</h4>
+  <div class="markdown level1 summary"><p>The path where Apache Kafka libs Jars are installed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string ReleasePath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_RootPath.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.RootPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L55">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_RootPath_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.RootPath*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_RootPath" data-uid="MASES.KafkaBridge.KafkaBridgeCore.RootPath">RootPath</h4>
+  <div class="markdown level1 summary"><p>The root path where Apache Kafka is installed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string RootPath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_ScalaBinaryVersion.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.ScalaBinaryVersion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L50">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_ScalaBinaryVersion_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ScalaBinaryVersion*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_ScalaBinaryVersion" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ScalaBinaryVersion">ScalaBinaryVersion</h4>
+  <div class="markdown level1 summary"><p>The Scala binary version to be used</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string ScalaBinaryVersion { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_ScalaVersion.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.ScalaVersion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L45">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_ScalaVersion_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ScalaVersion*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_ScalaVersion" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ScalaVersion">ScalaVersion</h4>
+  <div class="markdown level1 summary"><p>The Scala version to be used</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string ScalaVersion { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_StreamsDependenciesPath.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.StreamsDependenciesPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L144">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_StreamsDependenciesPath_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.StreamsDependenciesPath*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_StreamsDependenciesPath" data-uid="MASES.KafkaBridge.KafkaBridgeCore.StreamsDependenciesPath">StreamsDependenciesPath</h4>
+  <div class="markdown level1 summary"><p>The path where Apache Kafka Streams dependencies Jars are installed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string StreamsDependenciesPath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_StreamsExamplePath.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.StreamsExamplePath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L139">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_StreamsExamplePath_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.StreamsExamplePath*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_StreamsExamplePath" data-uid="MASES.KafkaBridge.KafkaBridgeCore.StreamsExamplePath">StreamsExamplePath</h4>
+  <div class="markdown level1 summary"><p>The path where Apache Kafka Streams examples Jars are installed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string StreamsExamplePath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_StreamsPath.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.StreamsPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L134">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_StreamsPath_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.StreamsPath*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_StreamsPath" data-uid="MASES.KafkaBridge.KafkaBridgeCore.StreamsPath">StreamsPath</h4>
+  <div class="markdown level1 summary"><p>The path where Apache Kafka Streams Jars are installed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string StreamsPath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_ToolsDependenciesPath.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.ToolsDependenciesPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L154">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_ToolsDependenciesPath_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ToolsDependenciesPath*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_ToolsDependenciesPath" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ToolsDependenciesPath">ToolsDependenciesPath</h4>
+  <div class="markdown level1 summary"><p>The path where Apache Kafka tools Jars are installed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string ToolsDependenciesPath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_ToolsPath.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.ToolsPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L149">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_ToolsPath_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ToolsPath*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_ToolsPath" data-uid="MASES.KafkaBridge.KafkaBridgeCore.ToolsPath">ToolsPath</h4>
+  <div class="markdown level1 summary"><p>The path where Apache Kafka tools Jars are installed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string ToolsPath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_Execute__1___0___.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.Execute%60%601(%60%600%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L367">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_Execute_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.Execute*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_Execute__1___0___" data-uid="MASES.KafkaBridge.KafkaBridgeCore.Execute``1(``0[])">Execute&lt;T&gt;(T[])</h4>
+  <div class="markdown level1 summary"><p>Executes the code</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void Execute&lt;T&gt;(params T[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>T[]</td>
+        <td><span class="parametername">args</span></td>
+        <td><p>Possible arguments</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_Initialize_System_String_System_Boolean_System_Object___.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.Initialize(System.String%2CSystem.Boolean%2CSystem.Object%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L308">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_Initialize_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.Initialize*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_Initialize_System_String_System_Boolean_System_Object___" data-uid="MASES.KafkaBridge.KafkaBridgeCore.Initialize(System.String,System.Boolean,System.Object[])">Initialize(String, Boolean, Object[])</h4>
+  <div class="markdown level1 summary"><p>Initialize a class within <a class="xref" href="MASES.KafkaBridge.KafkaBridgeCore.html">KafkaBridgeCore</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Initialize(string mainClass, bool staticClass = false, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">mainClass</span></td>
+        <td><p>The main class to be managed</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">staticClass</span></td>
+        <td><p>Set to true to avoid to create an instance of <code data-dev-comment-type="paramref" class="paramref">mainClass</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td><p>Argument class</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore_Parse_System_String___.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore.Parse(System.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L297">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_KafkaBridgeCore_Parse_" data-uid="MASES.KafkaBridge.KafkaBridgeCore.Parse*"></a>
+  <h4 id="MASES_KafkaBridge_KafkaBridgeCore_Parse_System_String___" data-uid="MASES.KafkaBridge.KafkaBridgeCore.Parse(System.String[])">Parse(String[])</h4>
+  <div class="markdown level1 summary"><p>Parse the command-line for initialization</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Parse(params string[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td><p>Command line arguments</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_KafkaBridgeCore.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.KafkaBridgeCore%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/KafkaBridgeCore.cs/#L30" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2021 MASES s.r.l..<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
