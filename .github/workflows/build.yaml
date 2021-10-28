@@ -71,7 +71,7 @@ jobs:
 
       - uses: actions/upload-artifact@v2
         with:
-          name: NuReflector
+          name: KafkaBridge
           path: .\bin\*nupkg
 
       - name: Extract commit SHA
