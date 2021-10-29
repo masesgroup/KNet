@@ -10,6 +10,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KafkaBridgeCLI", "KafkaBrid
 		{9C1888CC-3151-48AC-AC90-BCC03DC35EB5} = {9C1888CC-3151-48AC-AC90-BCC03DC35EB5}
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "templatepack", "templates\templatepack.csproj", "{8778C196-4145-4140-8E91-9C2475DEB121}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,10 @@ Global
 		{9F3FBD10-BD37-48B3-8209-84528A2E1FDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F3FBD10-BD37-48B3-8209-84528A2E1FDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F3FBD10-BD37-48B3-8209-84528A2E1FDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8778C196-4145-4140-8E91-9C2475DEB121}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8778C196-4145-4140-8E91-9C2475DEB121}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8778C196-4145-4140-8E91-9C2475DEB121}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8778C196-4145-4140-8E91-9C2475DEB121}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

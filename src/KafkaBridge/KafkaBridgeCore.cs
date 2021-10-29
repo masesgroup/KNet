@@ -363,6 +363,7 @@ namespace MASES.KafkaBridge
         /// <summary>
         /// Executes the code
         /// </summary>
+        /// <typeparam name="T">The argument type to be used</typeparam>
         /// <param name="args">Possible arguments</param>
         public abstract void Execute<T>(params T[] args);
     }
@@ -370,7 +371,6 @@ namespace MASES.KafkaBridge
     /// <summary>
     /// Execute directly the class implementing the Java "main" method
     /// </summary>
-    /// <typeparam name="Class">The class which implements a "main" method</typeparam>
     public class KafkaBridgeMain : KafkaBridgeCore
     {
         /// <summary>
@@ -383,6 +383,37 @@ namespace MASES.KafkaBridge
         public sealed override void Execute<T>(params T[] args)
         {
             MainClass.Invoke("main", args.FilterJCOBridgeArguments());
+        }
+    }
+
+    /// <summary>
+    /// Runs directly the class implementing the Java "main" method
+    /// </summary>
+    /// <typeparam name="Class">The class which implements the <see cref="KafkaBridgeCore.Execute{T}(T[])"/> method</typeparam>
+    public class KafkaBridgeRunner<Class>
+        where Class : KafkaBridgeCore
+    {
+        /// <summary>
+        /// Executes <see cref="KafkaBridgeCore.Execute{T}(T[])"/>
+        /// </summary>
+        /// <typeparam name="T">The arguments type</typeparam>
+        /// <param name="args">The arguments</param>
+        public static void Run<T>(params T[] args)
+        {
+            KafkaBridgeCore core = Activator.CreateInstance(typeof(Class)) as KafkaBridgeCore;
+            core.Execute<T>(args);
+        }
+        /// <summary>
+        /// Executes <see cref="KafkaBridgeCore.Execute{T}(T[])"/>
+        /// </summary>
+        /// <typeparam name="T">The arguments type</typeparam>
+        /// <param name="className">The Java class to be instantiated</param>
+        /// <param name="staticClass">true if the class does not contains any default constructor, i.e. it is an executable class</param>
+        /// <param name="args">The arguments</param>
+        public static void Run<T>(string className, bool staticClass = false, params T[] args)
+        {
+            KafkaBridgeCore core = Activator.CreateInstance(typeof(Class), className, staticClass) as KafkaBridgeCore;
+            core.Execute<T>(args);
         }
     }
 }

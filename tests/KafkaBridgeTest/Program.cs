@@ -22,7 +22,8 @@
  *  SOFTWARE.
  */
 
-using MASES.KafkaBridge.Tools;
+using MASES.KafkaBridge;
+using System;
 
 namespace MASES.KafkaBridgeTest
 {
@@ -30,10 +31,28 @@ namespace MASES.KafkaBridgeTest
     {
         static void Main(string[] args)
         {
-            //KafkaBridge.KafkaBridgeCore.GlobalRootPath = @"D:\MARIO\MASES\Tools\kafka_2.13-3.0.0";
-            //KafkaBridge.KafkaBridgeCore.GlobalJVMPath = @"C:\Users\mmastrodicasa\AppData\Local\Programs\AdoptOpenJDK\jdk-11.0.9.11-hotspot\bin\server\jvm.dll";
+            try
+            {
+                KafkaBridgeRunner<KafkaBridgeApp>.Run("kafka.tools.ConsoleConsumer", true, args);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
 
-            new ConsoleConsumer().Execute(args);
+        class KafkaBridgeApp : KafkaBridgeCore
+        {
+            public KafkaBridgeApp(string mainClass, bool staticClass)
+                : base(mainClass, staticClass)
+            {
+
+            }
+
+            public override void Execute<T>(params T[] args)
+            {
+                // adds execution here
+            }
         }
     }
 }
