@@ -850,6 +850,42 @@ references:
   fullName.vb: MASES.KafkaBridge.KafkaBridgeMain.Execute(Of T)(T())
   nameWithType: KafkaBridgeMain.Execute<T>(T[])
   nameWithType.vb: KafkaBridgeMain.Execute(Of T)(T())
+- uid: MASES.KafkaBridge.KafkaBridgeRunner`1
+  name: KafkaBridgeRunner<Class>
+  href: api/MASES.KafkaBridge.KafkaBridgeRunner-1.html
+  commentId: T:MASES.KafkaBridge.KafkaBridgeRunner`1
+  name.vb: KafkaBridgeRunner(Of Class)
+  fullName: MASES.KafkaBridge.KafkaBridgeRunner<Class>
+  fullName.vb: MASES.KafkaBridge.KafkaBridgeRunner(Of Class)
+  nameWithType: KafkaBridgeRunner<Class>
+  nameWithType.vb: KafkaBridgeRunner(Of Class)
+- uid: MASES.KafkaBridge.KafkaBridgeRunner`1.Run*
+  name: Run
+  href: api/MASES.KafkaBridge.KafkaBridgeRunner-1.html#MASES_KafkaBridge_KafkaBridgeRunner_1_Run_
+  commentId: Overload:MASES.KafkaBridge.KafkaBridgeRunner`1.Run
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.KafkaBridgeRunner<Class>.Run
+  fullName.vb: MASES.KafkaBridge.KafkaBridgeRunner(Of Class).Run
+  nameWithType: KafkaBridgeRunner<Class>.Run
+  nameWithType.vb: KafkaBridgeRunner(Of Class).Run
+- uid: MASES.KafkaBridge.KafkaBridgeRunner`1.Run``1(``0[])
+  name: Run<T>(T[])
+  href: api/MASES.KafkaBridge.KafkaBridgeRunner-1.html#MASES_KafkaBridge_KafkaBridgeRunner_1_Run__1___0___
+  commentId: M:MASES.KafkaBridge.KafkaBridgeRunner`1.Run``1(``0[])
+  name.vb: Run(Of T)(T())
+  fullName: MASES.KafkaBridge.KafkaBridgeRunner<Class>.Run<T>(T[])
+  fullName.vb: MASES.KafkaBridge.KafkaBridgeRunner(Of Class).Run(Of T)(T())
+  nameWithType: KafkaBridgeRunner<Class>.Run<T>(T[])
+  nameWithType.vb: KafkaBridgeRunner(Of Class).Run(Of T)(T())
+- uid: MASES.KafkaBridge.KafkaBridgeRunner`1.Run``1(System.String,System.Boolean,``0[])
+  name: Run<T>(String, Boolean, T[])
+  href: api/MASES.KafkaBridge.KafkaBridgeRunner-1.html#MASES_KafkaBridge_KafkaBridgeRunner_1_Run__1_System_String_System_Boolean___0___
+  commentId: M:MASES.KafkaBridge.KafkaBridgeRunner`1.Run``1(System.String,System.Boolean,``0[])
+  name.vb: Run(Of T)(String, Boolean, T())
+  fullName: MASES.KafkaBridge.KafkaBridgeRunner<Class>.Run<T>(System.String, System.Boolean, T[])
+  fullName.vb: MASES.KafkaBridge.KafkaBridgeRunner(Of Class).Run(Of T)(System.String, System.Boolean, T())
+  nameWithType: KafkaBridgeRunner<Class>.Run<T>(String, Boolean, T[])
+  nameWithType.vb: KafkaBridgeRunner(Of Class).Run(Of T)(String, Boolean, T())
 - uid: MASES.KafkaBridge.Tools
   name: MASES.KafkaBridge.Tools
   href: api/MASES.KafkaBridge.Tools.html
