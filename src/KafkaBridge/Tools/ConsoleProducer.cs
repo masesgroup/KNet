@@ -18,16 +18,17 @@
 
 namespace MASES.KafkaBridge.Tools
 {
-    public class ConsoleProducer : KafkaBridgeCore
+    /// <summary>
+    /// Class managing ConsoleProducer
+    /// </summary>
+    public class ConsoleProducer : KafkaBridgeMain
     {
+        /// <summary>
+        /// Initialize a new <see cref="ConsoleProducer"/>
+        /// </summary>
         public ConsoleProducer()
-            : base("kafka.tools.ConsoleProducer", true)
+            : base("kafka.tools.ConsoleProducer")
         {
-        }
-
-        public override void Execute<T>(params T[] args)
-        {
-            MainClass.Invoke("main", args.FilterJCOBridgeArguments());
         }
     }
 }

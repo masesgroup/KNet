@@ -18,16 +18,17 @@
 
 namespace MASES.KafkaBridge.Admin
 {
-    public class LogDirsCommand : KafkaBridgeCore
+    /// <summary>
+    /// Class managing LogDirsCommand
+    /// </summary>
+    public class LogDirsCommand : KafkaBridgeMain
     {
+        /// <summary>
+        /// Initialize a new <see cref="LogDirsCommand"/>
+        /// </summary>
         public LogDirsCommand()
-            : base("kafka.admin.LogDirsCommand", true)
+            : base("kafka.admin.LogDirsCommand")
         {
-        }
-
-        public override void Execute<T>(params T[] args)
-        {
-            MainClass.Invoke("main", args.FilterJCOBridgeArguments());
         }
     }
 }

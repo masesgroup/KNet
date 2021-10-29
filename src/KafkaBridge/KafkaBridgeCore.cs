@@ -366,4 +366,23 @@ namespace MASES.KafkaBridge
         /// <param name="args">Possible arguments</param>
         public abstract void Execute<T>(params T[] args);
     }
+
+    /// <summary>
+    /// Execute directly the class implementing the Java "main" method
+    /// </summary>
+    /// <typeparam name="Class">The class which implements a "main" method</typeparam>
+    public class KafkaBridgeMain : KafkaBridgeCore
+    {
+        /// <summary>
+        /// Initialize a new <see cref="KafkaBridgeCore"/>
+        /// </summary>
+        /// <param name="mainClass">The main class to be managed</param>
+        public KafkaBridgeMain(string mainClass) : base(mainClass, true) { }
+
+        /// <inheritdoc cref="KafkaBridgeCore.Execute{T}(T[])"/>
+        public sealed override void Execute<T>(params T[] args)
+        {
+            MainClass.Invoke("main", args.FilterJCOBridgeArguments());
+        }
+    }
 }

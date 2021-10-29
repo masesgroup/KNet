@@ -18,16 +18,17 @@
 
 namespace MASES.KafkaBridge.Tools
 {
-    public class DumpLogSegments : KafkaBridgeCore
+    /// <summary>
+    /// Class managing DumpLogSegments
+    /// </summary>
+    public class DumpLogSegments : KafkaBridgeMain
     {
+        /// <summary>
+        /// Initialize a new <see cref="DumpLogSegments"/>
+        /// </summary>
         public DumpLogSegments()
-            : base("kafka.tools.DumpLogSegments", true)
+            : base("kafka.tools.DumpLogSegments")
         {
-        }
-
-        public override void Execute<T>(params T[] args)
-        {
-            MainClass.Invoke("main", args.FilterJCOBridgeArguments());
         }
     }
 }

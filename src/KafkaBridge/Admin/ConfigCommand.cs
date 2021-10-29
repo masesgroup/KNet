@@ -18,16 +18,17 @@
 
 namespace MASES.KafkaBridge.Admin
 {
-    public class ConfigCommand : KafkaBridgeCore
+    /// <summary>
+    /// Class managing ConfigCommand
+    /// </summary>
+    public class ConfigCommand : KafkaBridgeMain
     {
+        /// <summary>
+        /// Initialize a new <see cref="ConfigCommand"/>
+        /// </summary>
         public ConfigCommand()
-            : base("kafka.admin.ConfigCommand", true)
+            : base("kafka.admin.ConfigCommand")
         {
-        }
-
-        public override void Execute<T>(params T[] args)
-        {
-            MainClass.Invoke("main", args.FilterJCOBridgeArguments());
         }
     }
 }

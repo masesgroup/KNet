@@ -18,16 +18,17 @@
 
 namespace MASES.KafkaBridge.Admin
 {
-    public class DelegationTokenCommand : KafkaBridgeCore
+    /// <summary>
+    /// Class managing DelegationTokenCommand
+    /// </summary>
+    public class DelegationTokenCommand : KafkaBridgeMain
     {
+        /// <summary>
+        /// Initialize a new <see cref="DelegationTokenCommand"/>
+        /// </summary>
         public DelegationTokenCommand()
-            : base("kafka.admin.DelegationTokenCommand", true)
+            : base("kafka.admin.DelegationTokenCommand")
         {
-        }
-
-        public override void Execute<T>(params T[] args)
-        {
-            MainClass.Invoke("main", args.FilterJCOBridgeArguments());
         }
     }
 }

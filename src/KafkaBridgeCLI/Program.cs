@@ -81,10 +81,11 @@ namespace MASES.KafkaBridgeCLI
                 }
 
                 if (type == null) throw new ArgumentException($"Requested class {className} is not a valid class name.");
+
                 try
                 {
-                    var core = Activator.CreateInstance(type) as KafkaBridgeCore;
-                    if (core == null) throw new ArgumentException("Requested class is not a child of KafkaBridgeCore.");
+                    var core = Activator.CreateInstance(type) as KafkaBridgeMain;
+                    if (core == null) throw new ArgumentException("Requested class is not a child of KafkaBridgeMain.");
 
                     core.Execute(parser.UnparsedArgs);
                 }

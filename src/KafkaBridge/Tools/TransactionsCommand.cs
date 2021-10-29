@@ -18,16 +18,17 @@
 
 namespace MASES.KafkaBridge.Tools
 {
-    public class TransactionsCommand : KafkaBridgeCore
+    /// <summary>
+    /// Class managing TransactionsCommand
+    /// </summary>
+    public class TransactionsCommand : KafkaBridgeMain
     {
+        /// <summary>
+        /// Initialize a new <see cref="TransactionsCommand"/>
+        /// </summary>
         public TransactionsCommand()
-            : base("org.apache.kafka.tools.TransactionsCommand", true)
+            : base("org.apache.kafka.tools.TransactionsCommand")
         {
-        }
-
-        public override void Execute<T>(params T[] args)
-        {
-            MainClass.Invoke("main", args.FilterJCOBridgeArguments());
         }
     }
 }

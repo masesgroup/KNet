@@ -18,16 +18,17 @@
 
 namespace MASES.KafkaBridge.Tools
 {
-    public class ConsoleConsumer : KafkaBridgeCore
+    /// <summary>
+    /// Class managing ConsoleConsumer
+    /// </summary>
+    public class ConsoleConsumer : KafkaBridgeMain
     {
+        /// <summary>
+        /// Initialize a new <see cref="ConsoleConsumer"/>
+        /// </summary>
         public ConsoleConsumer()
-            : base("kafka.tools.ConsoleConsumer", true)
+            : base("kafka.tools.ConsoleConsumer")
         {
-        }
-
-        public override void Execute<T>(params T[] args)
-        {
-            MainClass.Invoke("main", args.FilterJCOBridgeArguments());
         }
     }
 }

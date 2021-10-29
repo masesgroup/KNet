@@ -18,16 +18,17 @@
 
 namespace MASES.KafkaBridge.Tools
 {
-    public class ProducerPerformance : KafkaBridgeCore
+    /// <summary>
+    /// Class managing ProducerPerformance
+    /// </summary>
+    public class ProducerPerformance : KafkaBridgeMain
     {
+        /// <summary>
+        /// Initialize a new <see cref="ProducerPerformance"/>
+        /// </summary>
         public ProducerPerformance()
-            : base("org.apache.kafka.tools.ProducerPerformance", true)
+            : base("org.apache.kafka.tools.ProducerPerformance")
         {
-        }
-
-        public override void Execute<T>(params T[] args)
-        {
-            MainClass.Invoke("main", args.FilterJCOBridgeArguments());
         }
     }
 }

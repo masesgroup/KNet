@@ -18,16 +18,17 @@
 
 namespace MASES.KafkaBridge.Admin
 {
-    public class TopicCommand : KafkaBridgeCore
+    /// <summary>
+    /// Class managing TopicCommand
+    /// </summary>
+    public class TopicCommand : KafkaBridgeMain
     {
+        /// <summary>
+        /// Initialize a new <see cref="TopicCommand"/>
+        /// </summary>
         public TopicCommand()
-            : base("kafka.admin.TopicCommand", true)
+            : base("kafka.admin.TopicCommand")
         {
-        }
-
-        public override void Execute<T>(params T[] args)
-        {
-            MainClass.Invoke("main", args.FilterJCOBridgeArguments());
         }
     }
 }

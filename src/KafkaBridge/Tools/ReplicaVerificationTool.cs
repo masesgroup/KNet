@@ -18,16 +18,17 @@
 
 namespace MASES.KafkaBridge.Tools
 {
-    public class ReplicaVerificationTool : KafkaBridgeCore
+    /// <summary>
+    /// Class managing ReplicaVerificationTool
+    /// </summary>
+    public class ReplicaVerificationTool : KafkaBridgeMain
     {
+        /// <summary>
+        /// Initialize a new <see cref="ReplicaVerificationTool"/>
+        /// </summary>
         public ReplicaVerificationTool()
-            : base("kafka.tools.ReplicaVerificationTool", true)
+            : base("kafka.tools.ReplicaVerificationTool")
         {
-        }
-
-        public override void Execute<T>(params T[] args)
-        {
-            MainClass.Invoke("main", args.FilterJCOBridgeArguments());
         }
     }
 }

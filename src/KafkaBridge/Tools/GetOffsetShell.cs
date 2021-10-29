@@ -18,16 +18,17 @@
 
 namespace MASES.KafkaBridge.Tools
 {
-    public class GetOffsetShell : KafkaBridgeCore
+    /// <summary>
+    /// Class managing GetOffsetShell
+    /// </summary>
+    public class GetOffsetShell : KafkaBridgeMain
     {
+        /// <summary>
+        /// Initialize a new <see cref="GetOffsetShell"/>
+        /// </summary>
         public GetOffsetShell()
-            : base("kafka.tools.GetOffsetShell", true)
+            : base("kafka.tools.GetOffsetShell")
         {
-        }
-
-        public override void Execute<T>(params T[] args)
-        {
-            MainClass.Invoke("main", args.FilterJCOBridgeArguments());
         }
     }
 }

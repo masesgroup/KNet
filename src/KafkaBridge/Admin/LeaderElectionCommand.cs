@@ -18,16 +18,17 @@
 
 namespace MASES.KafkaBridge.Admin
 {
-    public class LeaderElectionCommand : KafkaBridgeCore
+    /// <summary>
+    /// Class managing LeaderElectionCommand
+    /// </summary>
+    public class LeaderElectionCommand : KafkaBridgeMain
     {
+        /// <summary>
+        /// Initialize a new <see cref="LeaderElectionCommand"/>
+        /// </summary>
         public LeaderElectionCommand()
-            : base("kafka.admin.LeaderElectionCommand", true)
+            : base("kafka.admin.LeaderElectionCommand")
         {
-        }
-
-        public override void Execute<T>(params T[] args)
-        {
-            MainClass.Invoke("main", args.FilterJCOBridgeArguments());
         }
     }
 }

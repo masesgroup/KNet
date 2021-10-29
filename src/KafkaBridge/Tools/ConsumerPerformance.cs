@@ -18,16 +18,17 @@
 
 namespace MASES.KafkaBridge.Tools
 {
-    public class ConsumerPerformance : KafkaBridgeCore
+    /// <summary>
+    /// Class managing ConsumerPerformance
+    /// </summary>
+    public class ConsumerPerformance : KafkaBridgeMain
     {
+        /// <summary>
+        /// Initialize a new <see cref="ConsumerPerformance"/>
+        /// </summary>
         public ConsumerPerformance()
-            : base("kafka.tools.ConsumerPerformance", true)
+            : base("kafka.tools.ConsumerPerformance")
         {
-        }
-
-        public override void Execute<T>(params T[] args)
-        {
-            MainClass.Invoke("main", args.FilterJCOBridgeArguments());
         }
     }
 }

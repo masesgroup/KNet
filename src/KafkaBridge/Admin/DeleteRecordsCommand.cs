@@ -18,16 +18,17 @@
 
 namespace MASES.KafkaBridge.Admin
 {
-    public class DeleteRecordsCommand : KafkaBridgeCore
+    /// <summary>
+    /// Class managing DeleteRecordsCommand
+    /// </summary>
+    public class DeleteRecordsCommand : KafkaBridgeMain
     {
+        /// <summary>
+        /// Initialize a new <see cref="DeleteRecordsCommand"/>
+        /// </summary>
         public DeleteRecordsCommand()
-            : base("kafka.admin.DeleteRecordsCommand", true)
+            : base("kafka.admin.DeleteRecordsCommand")
         {
-        }
-
-        public override void Execute<T>(params T[] args)
-        {
-            MainClass.Invoke("main", args.FilterJCOBridgeArguments());
         }
     }
 }

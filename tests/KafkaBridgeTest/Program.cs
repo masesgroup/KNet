@@ -22,7 +22,7 @@
  *  SOFTWARE.
  */
 
-using MASES.KafkaBridge;
+using MASES.KafkaBridge.Tools;
 
 namespace MASES.KafkaBridgeTest
 {
@@ -33,7 +33,7 @@ namespace MASES.KafkaBridgeTest
             //KafkaBridge.KafkaBridgeCore.GlobalRootPath = @"D:\MARIO\MASES\Tools\kafka_2.13-3.0.0";
             //KafkaBridge.KafkaBridgeCore.GlobalJVMPath = @"C:\Users\mmastrodicasa\AppData\Local\Programs\AdoptOpenJDK\jdk-11.0.9.11-hotspot\bin\server\jvm.dll";
 
-            KafkaBridgeCore.Execute(args);
+            new ConsoleConsumer().Execute(args);
         }
     }
 }

@@ -18,16 +18,17 @@
 
 namespace MASES.KafkaBridge.Admin
 {
-    public class ReassignPartitionsCommand : KafkaBridgeCore
+    /// <summary>
+    /// Class managing ReassignPartitionsCommand
+    /// </summary>
+    public class ReassignPartitionsCommand : KafkaBridgeMain
     {
+        /// <summary>
+        /// Initialize a new <see cref="ReassignPartitionsCommand"/>
+        /// </summary>
         public ReassignPartitionsCommand()
-            : base("kafka.admin.ReassignPartitionsCommand", true)
+            : base("kafka.admin.ReassignPartitionsCommand")
         {
-        }
-
-        public override void Execute<T>(params T[] args)
-        {
-            MainClass.Invoke("main", args.FilterJCOBridgeArguments());
         }
     }
 }

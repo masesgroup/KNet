@@ -18,16 +18,17 @@
 
 namespace MASES.KafkaBridge.Admin
 {
-    public class BrokerApiVersionsCommand : KafkaBridgeCore
+    /// <summary>
+    /// Class managing BrokerApiVersionsCommand
+    /// </summary>
+    public class BrokerApiVersionsCommand : KafkaBridgeMain
     {
+        /// <summary>
+        /// Initialize a new <see cref="BrokerApiVersionsCommand"/>
+        /// </summary>
         public BrokerApiVersionsCommand()
-            : base("kafka.admin.BrokerApiVersionsCommand", true)
+            : base("kafka.admin.BrokerApiVersionsCommand")
         {
-        }
-
-        public override void Execute<T>(params T[] args)
-        {
-            MainClass.Invoke("main", args.FilterJCOBridgeArguments());
         }
     }
 }

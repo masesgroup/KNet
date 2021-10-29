@@ -18,16 +18,17 @@
 
 namespace MASES.KafkaBridge.Tools
 {
-    public class MirrorMaker : KafkaBridgeCore
+    /// <summary>
+    /// Class managing MirrorMaker
+    /// </summary>
+    public class MirrorMaker : KafkaBridgeMain
     {
+        /// <summary>
+        /// Initialize a new <see cref="MirrorMaker"/>
+        /// </summary>
         public MirrorMaker()
-            : base("kafka.tools.MirrorMaker", true)
+            : base("kafka.tools.MirrorMaker")
         {
-        }
-
-        public override void Execute<T>(params T[] args)
-        {
-            MainClass.Invoke("main", args.FilterJCOBridgeArguments());
         }
     }
 }

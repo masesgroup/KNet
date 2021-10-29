@@ -18,16 +18,17 @@
 
 namespace MASES.KafkaBridge.Admin
 {
-    public class ConsumerGroupCommand : KafkaBridgeCore
+    /// <summary>
+    /// Class managing ConsumerGroupCommand
+    /// </summary>
+    public class ConsumerGroupCommand : KafkaBridgeMain
     {
+        /// <summary>
+        /// Initialize a new <see cref="ConsumerGroupCommand"/>
+        /// </summary>
         public ConsumerGroupCommand()
-            : base("kafka.admin.ConsumerGroupCommand", true)
+            : base("kafka.admin.ConsumerGroupCommand")
         {
-        }
-
-        public override void Execute<T>(params T[] args)
-        {
-            MainClass.Invoke("main", args.FilterJCOBridgeArguments());
         }
     }
 }

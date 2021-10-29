@@ -18,18 +18,21 @@
 
 namespace MASES.KafkaBridge.Tools
 {
-    public class StreamsResetter : KafkaBridgeCore
+    /// <summary>
+    /// Class managing StreamsResetter
+    /// </summary>
+    public class StreamsResetter : KafkaBridgeMain
     {
+        /// <summary>
+        /// Sets HeapSize to 512MB
+        /// </summary>
         public override string HeapSize => "512M";
-
+        /// <summary>
+        /// Initialize a new <see cref="StreamsResetter"/>
+        /// </summary>
         public StreamsResetter()
-            : base("kafka.tools.StreamsResetter", true)
+            : base("kafka.tools.StreamsResetter")
         {
-        }
-
-        public override void Execute<T>(params T[] args)
-        {
-            MainClass.Invoke("main", args.FilterJCOBridgeArguments());
         }
     }
 }
