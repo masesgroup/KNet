@@ -73,7 +73,8 @@
   
   <h1 id="MASES_KafkaBridge_Tools_TransactionsCommand" data-uid="MASES.KafkaBridge.Tools.TransactionsCommand" class="text-break">Class TransactionsCommand
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Class managing TransactionsCommand</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -81,10 +82,14 @@
     <div class="level1"><span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper</span></div>
     <div class="level2"><span class="xref">MASES.JCOBridge.C2JBridge.SetupJVMWrapper</span>&lt;<a class="xref" href="MASES.KafkaBridge.KafkaBridgeCore.html">KafkaBridgeCore</a>&gt;</div>
     <div class="level3"><a class="xref" href="MASES.KafkaBridge.KafkaBridgeCore.html">KafkaBridgeCore</a></div>
-    <div class="level4"><span class="xref">TransactionsCommand</span></div>
+    <div class="level4"><a class="xref" href="MASES.KafkaBridge.KafkaBridgeMain.html">KafkaBridgeMain</a></div>
+    <div class="level5"><span class="xref">TransactionsCommand</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="MASES.KafkaBridge.KafkaBridgeMain.html#MASES_KafkaBridge_KafkaBridgeMain_Execute__1___0___">KafkaBridgeMain.Execute&lt;T&gt;(T[])</a>
+    </div>
     <div>
       <a class="xref" href="MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore_GlobalRootPath">KafkaBridgeCore.GlobalRootPath</a>
     </div>
@@ -321,7 +326,7 @@
   <h6><strong>Assembly</strong>: MASES.KafkaBridge.dll</h6>
   <h5 id="MASES_KafkaBridge_Tools_TransactionsCommand_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TransactionsCommand : KafkaBridgeCore, ISetupJVMWrapper</code></pre>
+    <pre><code class="lang-csharp hljs">public class TransactionsCommand : KafkaBridgeMain, ISetupJVMWrapper</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -330,67 +335,17 @@
     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Tools_TransactionsCommand__ctor.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Tools.TransactionsCommand.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/Tools/TransactionsCommand.cs/#L23">View Source</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/Tools/TransactionsCommand.cs/#L29">View Source</a>
   </span>
   <a id="MASES_KafkaBridge_Tools_TransactionsCommand__ctor_" data-uid="MASES.KafkaBridge.Tools.TransactionsCommand.#ctor*"></a>
   <h4 id="MASES_KafkaBridge_Tools_TransactionsCommand__ctor" data-uid="MASES.KafkaBridge.Tools.TransactionsCommand.#ctor">TransactionsCommand()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initialize a new <a class="xref" href="MASES.KafkaBridge.Tools.TransactionsCommand.html">TransactionsCommand</a></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public TransactionsCommand()</code></pre>
   </div>
-  <h3 id="methods">Methods
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Tools_TransactionsCommand_Execute__1___0___.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Tools.TransactionsCommand.Execute%60%601(%60%600%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/Tools/TransactionsCommand.cs/#L28">View Source</a>
-  </span>
-  <a id="MASES_KafkaBridge_Tools_TransactionsCommand_Execute_" data-uid="MASES.KafkaBridge.Tools.TransactionsCommand.Execute*"></a>
-  <h4 id="MASES_KafkaBridge_Tools_TransactionsCommand_Execute__1___0___" data-uid="MASES.KafkaBridge.Tools.TransactionsCommand.Execute``1(``0[])">Execute&lt;T&gt;(T[])</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void Execute&lt;T&gt;(params T[] args)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>T[]</td>
-        <td><span class="parametername">args</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">MASES.KafkaBridge.KafkaBridgeCore.Execute&lt;T&gt;(T[])</span></div>
 </article>
           </div>
           
@@ -402,7 +357,7 @@
                     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Tools_TransactionsCommand.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Tools.TransactionsCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/Tools/TransactionsCommand.cs/#L21" class="contribution-link">View Source</a>
+                    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/Tools/TransactionsCommand.cs/#L24" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
