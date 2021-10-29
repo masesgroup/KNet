@@ -32,22 +32,6 @@ references:
   isSpec: "True"
   fullName: MASES.KafkaBridge.Admin.BrokerApiVersionsCommand.BrokerApiVersionsCommand
   nameWithType: BrokerApiVersionsCommand.BrokerApiVersionsCommand
-- uid: MASES.KafkaBridge.Admin.BrokerApiVersionsCommand.Execute*
-  name: Execute
-  href: api/MASES.KafkaBridge.Admin.BrokerApiVersionsCommand.html#MASES_KafkaBridge_Admin_BrokerApiVersionsCommand_Execute_
-  commentId: Overload:MASES.KafkaBridge.Admin.BrokerApiVersionsCommand.Execute
-  isSpec: "True"
-  fullName: MASES.KafkaBridge.Admin.BrokerApiVersionsCommand.Execute
-  nameWithType: BrokerApiVersionsCommand.Execute
-- uid: MASES.KafkaBridge.Admin.BrokerApiVersionsCommand.Execute``1(``0[])
-  name: Execute<T>(T[])
-  href: api/MASES.KafkaBridge.Admin.BrokerApiVersionsCommand.html#MASES_KafkaBridge_Admin_BrokerApiVersionsCommand_Execute__1___0___
-  commentId: M:MASES.KafkaBridge.Admin.BrokerApiVersionsCommand.Execute``1(``0[])
-  name.vb: Execute(Of T)(T())
-  fullName: MASES.KafkaBridge.Admin.BrokerApiVersionsCommand.Execute<T>(T[])
-  fullName.vb: MASES.KafkaBridge.Admin.BrokerApiVersionsCommand.Execute(Of T)(T())
-  nameWithType: BrokerApiVersionsCommand.Execute<T>(T[])
-  nameWithType.vb: BrokerApiVersionsCommand.Execute(Of T)(T())
 - uid: MASES.KafkaBridge.Admin.ConfigCommand
   name: ConfigCommand
   href: api/MASES.KafkaBridge.Admin.ConfigCommand.html
@@ -67,22 +51,6 @@ references:
   isSpec: "True"
   fullName: MASES.KafkaBridge.Admin.ConfigCommand.ConfigCommand
   nameWithType: ConfigCommand.ConfigCommand
-- uid: MASES.KafkaBridge.Admin.ConfigCommand.Execute*
-  name: Execute
-  href: api/MASES.KafkaBridge.Admin.ConfigCommand.html#MASES_KafkaBridge_Admin_ConfigCommand_Execute_
-  commentId: Overload:MASES.KafkaBridge.Admin.ConfigCommand.Execute
-  isSpec: "True"
-  fullName: MASES.KafkaBridge.Admin.ConfigCommand.Execute
-  nameWithType: ConfigCommand.Execute
-- uid: MASES.KafkaBridge.Admin.ConfigCommand.Execute``1(``0[])
-  name: Execute<T>(T[])
-  href: api/MASES.KafkaBridge.Admin.ConfigCommand.html#MASES_KafkaBridge_Admin_ConfigCommand_Execute__1___0___
-  commentId: M:MASES.KafkaBridge.Admin.ConfigCommand.Execute``1(``0[])
-  name.vb: Execute(Of T)(T())
-  fullName: MASES.KafkaBridge.Admin.ConfigCommand.Execute<T>(T[])
-  fullName.vb: MASES.KafkaBridge.Admin.ConfigCommand.Execute(Of T)(T())
-  nameWithType: ConfigCommand.Execute<T>(T[])
-  nameWithType.vb: ConfigCommand.Execute(Of T)(T())
 - uid: MASES.KafkaBridge.Admin.ConsumerGroupCommand
   name: ConsumerGroupCommand
   href: api/MASES.KafkaBridge.Admin.ConsumerGroupCommand.html
@@ -102,22 +70,6 @@ references:
   isSpec: "True"
   fullName: MASES.KafkaBridge.Admin.ConsumerGroupCommand.ConsumerGroupCommand
   nameWithType: ConsumerGroupCommand.ConsumerGroupCommand
-- uid: MASES.KafkaBridge.Admin.ConsumerGroupCommand.Execute*
-  name: Execute
-  href: api/MASES.KafkaBridge.Admin.ConsumerGroupCommand.html#MASES_KafkaBridge_Admin_ConsumerGroupCommand_Execute_
-  commentId: Overload:MASES.KafkaBridge.Admin.ConsumerGroupCommand.Execute
-  isSpec: "True"
-  fullName: MASES.KafkaBridge.Admin.ConsumerGroupCommand.Execute
-  nameWithType: ConsumerGroupCommand.Execute
-- uid: MASES.KafkaBridge.Admin.ConsumerGroupCommand.Execute``1(``0[])
-  name: Execute<T>(T[])
-  href: api/MASES.KafkaBridge.Admin.ConsumerGroupCommand.html#MASES_KafkaBridge_Admin_ConsumerGroupCommand_Execute__1___0___
-  commentId: M:MASES.KafkaBridge.Admin.ConsumerGroupCommand.Execute``1(``0[])
-  name.vb: Execute(Of T)(T())
-  fullName: MASES.KafkaBridge.Admin.ConsumerGroupCommand.Execute<T>(T[])
-  fullName.vb: MASES.KafkaBridge.Admin.ConsumerGroupCommand.Execute(Of T)(T())
-  nameWithType: ConsumerGroupCommand.Execute<T>(T[])
-  nameWithType.vb: ConsumerGroupCommand.Execute(Of T)(T())
 - uid: MASES.KafkaBridge.Admin.DelegationTokenCommand
   name: DelegationTokenCommand
   href: api/MASES.KafkaBridge.Admin.DelegationTokenCommand.html
@@ -137,22 +89,6 @@ references:
   isSpec: "True"
   fullName: MASES.KafkaBridge.Admin.DelegationTokenCommand.DelegationTokenCommand
   nameWithType: DelegationTokenCommand.DelegationTokenCommand
-- uid: MASES.KafkaBridge.Admin.DelegationTokenCommand.Execute*
-  name: Execute
-  href: api/MASES.KafkaBridge.Admin.DelegationTokenCommand.html#MASES_KafkaBridge_Admin_DelegationTokenCommand_Execute_
-  commentId: Overload:MASES.KafkaBridge.Admin.DelegationTokenCommand.Execute
-  isSpec: "True"
-  fullName: MASES.KafkaBridge.Admin.DelegationTokenCommand.Execute
-  nameWithType: DelegationTokenCommand.Execute
-- uid: MASES.KafkaBridge.Admin.DelegationTokenCommand.Execute``1(``0[])
-  name: Execute<T>(T[])
-  href: api/MASES.KafkaBridge.Admin.DelegationTokenCommand.html#MASES_KafkaBridge_Admin_DelegationTokenCommand_Execute__1___0___
-  commentId: M:MASES.KafkaBridge.Admin.DelegationTokenCommand.Execute``1(``0[])
-  name.vb: Execute(Of T)(T())
-  fullName: MASES.KafkaBridge.Admin.DelegationTokenCommand.Execute<T>(T[])
-  fullName.vb: MASES.KafkaBridge.Admin.DelegationTokenCommand.Execute(Of T)(T())
-  nameWithType: DelegationTokenCommand.Execute<T>(T[])
-  nameWithType.vb: DelegationTokenCommand.Execute(Of T)(T())
 - uid: MASES.KafkaBridge.Admin.DeleteRecordsCommand
   name: DeleteRecordsCommand
   href: api/MASES.KafkaBridge.Admin.DeleteRecordsCommand.html
@@ -172,22 +108,6 @@ references:
   isSpec: "True"
   fullName: MASES.KafkaBridge.Admin.DeleteRecordsCommand.DeleteRecordsCommand
   nameWithType: DeleteRecordsCommand.DeleteRecordsCommand
-- uid: MASES.KafkaBridge.Admin.DeleteRecordsCommand.Execute*
-  name: Execute
-  href: api/MASES.KafkaBridge.Admin.DeleteRecordsCommand.html#MASES_KafkaBridge_Admin_DeleteRecordsCommand_Execute_
-  commentId: Overload:MASES.KafkaBridge.Admin.DeleteRecordsCommand.Execute
-  isSpec: "True"
-  fullName: MASES.KafkaBridge.Admin.DeleteRecordsCommand.Execute
-  nameWithType: DeleteRecordsCommand.Execute
-- uid: MASES.KafkaBridge.Admin.DeleteRecordsCommand.Execute``1(``0[])
-  name: Execute<T>(T[])
-  href: api/MASES.KafkaBridge.Admin.DeleteRecordsCommand.html#MASES_KafkaBridge_Admin_DeleteRecordsCommand_Execute__1___0___
-  commentId: M:MASES.KafkaBridge.Admin.DeleteRecordsCommand.Execute``1(``0[])
-  name.vb: Execute(Of T)(T())
-  fullName: MASES.KafkaBridge.Admin.DeleteRecordsCommand.Execute<T>(T[])
-  fullName.vb: MASES.KafkaBridge.Admin.DeleteRecordsCommand.Execute(Of T)(T())
-  nameWithType: DeleteRecordsCommand.Execute<T>(T[])
-  nameWithType.vb: DeleteRecordsCommand.Execute(Of T)(T())
 - uid: MASES.KafkaBridge.Admin.LeaderElectionCommand
   name: LeaderElectionCommand
   href: api/MASES.KafkaBridge.Admin.LeaderElectionCommand.html
@@ -207,22 +127,6 @@ references:
   isSpec: "True"
   fullName: MASES.KafkaBridge.Admin.LeaderElectionCommand.LeaderElectionCommand
   nameWithType: LeaderElectionCommand.LeaderElectionCommand
-- uid: MASES.KafkaBridge.Admin.LeaderElectionCommand.Execute*
-  name: Execute
-  href: api/MASES.KafkaBridge.Admin.LeaderElectionCommand.html#MASES_KafkaBridge_Admin_LeaderElectionCommand_Execute_
-  commentId: Overload:MASES.KafkaBridge.Admin.LeaderElectionCommand.Execute
-  isSpec: "True"
-  fullName: MASES.KafkaBridge.Admin.LeaderElectionCommand.Execute
-  nameWithType: LeaderElectionCommand.Execute
-- uid: MASES.KafkaBridge.Admin.LeaderElectionCommand.Execute``1(``0[])
-  name: Execute<T>(T[])
-  href: api/MASES.KafkaBridge.Admin.LeaderElectionCommand.html#MASES_KafkaBridge_Admin_LeaderElectionCommand_Execute__1___0___
-  commentId: M:MASES.KafkaBridge.Admin.LeaderElectionCommand.Execute``1(``0[])
-  name.vb: Execute(Of T)(T())
-  fullName: MASES.KafkaBridge.Admin.LeaderElectionCommand.Execute<T>(T[])
-  fullName.vb: MASES.KafkaBridge.Admin.LeaderElectionCommand.Execute(Of T)(T())
-  nameWithType: LeaderElectionCommand.Execute<T>(T[])
-  nameWithType.vb: LeaderElectionCommand.Execute(Of T)(T())
 - uid: MASES.KafkaBridge.Admin.LogDirsCommand
   name: LogDirsCommand
   href: api/MASES.KafkaBridge.Admin.LogDirsCommand.html
@@ -242,22 +146,6 @@ references:
   isSpec: "True"
   fullName: MASES.KafkaBridge.Admin.LogDirsCommand.LogDirsCommand
   nameWithType: LogDirsCommand.LogDirsCommand
-- uid: MASES.KafkaBridge.Admin.LogDirsCommand.Execute*
-  name: Execute
-  href: api/MASES.KafkaBridge.Admin.LogDirsCommand.html#MASES_KafkaBridge_Admin_LogDirsCommand_Execute_
-  commentId: Overload:MASES.KafkaBridge.Admin.LogDirsCommand.Execute
-  isSpec: "True"
-  fullName: MASES.KafkaBridge.Admin.LogDirsCommand.Execute
-  nameWithType: LogDirsCommand.Execute
-- uid: MASES.KafkaBridge.Admin.LogDirsCommand.Execute``1(``0[])
-  name: Execute<T>(T[])
-  href: api/MASES.KafkaBridge.Admin.LogDirsCommand.html#MASES_KafkaBridge_Admin_LogDirsCommand_Execute__1___0___
-  commentId: M:MASES.KafkaBridge.Admin.LogDirsCommand.Execute``1(``0[])
-  name.vb: Execute(Of T)(T())
-  fullName: MASES.KafkaBridge.Admin.LogDirsCommand.Execute<T>(T[])
-  fullName.vb: MASES.KafkaBridge.Admin.LogDirsCommand.Execute(Of T)(T())
-  nameWithType: LogDirsCommand.Execute<T>(T[])
-  nameWithType.vb: LogDirsCommand.Execute(Of T)(T())
 - uid: MASES.KafkaBridge.Admin.ReassignPartitionsCommand
   name: ReassignPartitionsCommand
   href: api/MASES.KafkaBridge.Admin.ReassignPartitionsCommand.html
@@ -277,22 +165,6 @@ references:
   isSpec: "True"
   fullName: MASES.KafkaBridge.Admin.ReassignPartitionsCommand.ReassignPartitionsCommand
   nameWithType: ReassignPartitionsCommand.ReassignPartitionsCommand
-- uid: MASES.KafkaBridge.Admin.ReassignPartitionsCommand.Execute*
-  name: Execute
-  href: api/MASES.KafkaBridge.Admin.ReassignPartitionsCommand.html#MASES_KafkaBridge_Admin_ReassignPartitionsCommand_Execute_
-  commentId: Overload:MASES.KafkaBridge.Admin.ReassignPartitionsCommand.Execute
-  isSpec: "True"
-  fullName: MASES.KafkaBridge.Admin.ReassignPartitionsCommand.Execute
-  nameWithType: ReassignPartitionsCommand.Execute
-- uid: MASES.KafkaBridge.Admin.ReassignPartitionsCommand.Execute``1(``0[])
-  name: Execute<T>(T[])
-  href: api/MASES.KafkaBridge.Admin.ReassignPartitionsCommand.html#MASES_KafkaBridge_Admin_ReassignPartitionsCommand_Execute__1___0___
-  commentId: M:MASES.KafkaBridge.Admin.ReassignPartitionsCommand.Execute``1(``0[])
-  name.vb: Execute(Of T)(T())
-  fullName: MASES.KafkaBridge.Admin.ReassignPartitionsCommand.Execute<T>(T[])
-  fullName.vb: MASES.KafkaBridge.Admin.ReassignPartitionsCommand.Execute(Of T)(T())
-  nameWithType: ReassignPartitionsCommand.Execute<T>(T[])
-  nameWithType.vb: ReassignPartitionsCommand.Execute(Of T)(T())
 - uid: MASES.KafkaBridge.Admin.TopicCommand
   name: TopicCommand
   href: api/MASES.KafkaBridge.Admin.TopicCommand.html
@@ -312,22 +184,6 @@ references:
   isSpec: "True"
   fullName: MASES.KafkaBridge.Admin.TopicCommand.TopicCommand
   nameWithType: TopicCommand.TopicCommand
-- uid: MASES.KafkaBridge.Admin.TopicCommand.Execute*
-  name: Execute
-  href: api/MASES.KafkaBridge.Admin.TopicCommand.html#MASES_KafkaBridge_Admin_TopicCommand_Execute_
-  commentId: Overload:MASES.KafkaBridge.Admin.TopicCommand.Execute
-  isSpec: "True"
-  fullName: MASES.KafkaBridge.Admin.TopicCommand.Execute
-  nameWithType: TopicCommand.Execute
-- uid: MASES.KafkaBridge.Admin.TopicCommand.Execute``1(``0[])
-  name: Execute<T>(T[])
-  href: api/MASES.KafkaBridge.Admin.TopicCommand.html#MASES_KafkaBridge_Admin_TopicCommand_Execute__1___0___
-  commentId: M:MASES.KafkaBridge.Admin.TopicCommand.Execute``1(``0[])
-  name.vb: Execute(Of T)(T())
-  fullName: MASES.KafkaBridge.Admin.TopicCommand.Execute<T>(T[])
-  fullName.vb: MASES.KafkaBridge.Admin.TopicCommand.Execute(Of T)(T())
-  nameWithType: TopicCommand.Execute<T>(T[])
-  nameWithType.vb: TopicCommand.Execute(Of T)(T())
 - uid: MASES.KafkaBridge.KafkaBridgeCore
   name: KafkaBridgeCore
   href: api/MASES.KafkaBridge.KafkaBridgeCore.html
@@ -959,6 +815,41 @@ references:
   fullName.vb: MASES.KafkaBridge.KafkaBridgeCoreExtensions.FilterJCOBridgeArguments(Of T)(T())
   nameWithType: KafkaBridgeCoreExtensions.FilterJCOBridgeArguments<T>(T[])
   nameWithType.vb: KafkaBridgeCoreExtensions.FilterJCOBridgeArguments(Of T)(T())
+- uid: MASES.KafkaBridge.KafkaBridgeMain
+  name: KafkaBridgeMain
+  href: api/MASES.KafkaBridge.KafkaBridgeMain.html
+  commentId: T:MASES.KafkaBridge.KafkaBridgeMain
+  fullName: MASES.KafkaBridge.KafkaBridgeMain
+  nameWithType: KafkaBridgeMain
+- uid: MASES.KafkaBridge.KafkaBridgeMain.#ctor(System.String)
+  name: KafkaBridgeMain(String)
+  href: api/MASES.KafkaBridge.KafkaBridgeMain.html#MASES_KafkaBridge_KafkaBridgeMain__ctor_System_String_
+  commentId: M:MASES.KafkaBridge.KafkaBridgeMain.#ctor(System.String)
+  fullName: MASES.KafkaBridge.KafkaBridgeMain.KafkaBridgeMain(System.String)
+  nameWithType: KafkaBridgeMain.KafkaBridgeMain(String)
+- uid: MASES.KafkaBridge.KafkaBridgeMain.#ctor*
+  name: KafkaBridgeMain
+  href: api/MASES.KafkaBridge.KafkaBridgeMain.html#MASES_KafkaBridge_KafkaBridgeMain__ctor_
+  commentId: Overload:MASES.KafkaBridge.KafkaBridgeMain.#ctor
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.KafkaBridgeMain.KafkaBridgeMain
+  nameWithType: KafkaBridgeMain.KafkaBridgeMain
+- uid: MASES.KafkaBridge.KafkaBridgeMain.Execute*
+  name: Execute
+  href: api/MASES.KafkaBridge.KafkaBridgeMain.html#MASES_KafkaBridge_KafkaBridgeMain_Execute_
+  commentId: Overload:MASES.KafkaBridge.KafkaBridgeMain.Execute
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.KafkaBridgeMain.Execute
+  nameWithType: KafkaBridgeMain.Execute
+- uid: MASES.KafkaBridge.KafkaBridgeMain.Execute``1(``0[])
+  name: Execute<T>(T[])
+  href: api/MASES.KafkaBridge.KafkaBridgeMain.html#MASES_KafkaBridge_KafkaBridgeMain_Execute__1___0___
+  commentId: M:MASES.KafkaBridge.KafkaBridgeMain.Execute``1(``0[])
+  name.vb: Execute(Of T)(T())
+  fullName: MASES.KafkaBridge.KafkaBridgeMain.Execute<T>(T[])
+  fullName.vb: MASES.KafkaBridge.KafkaBridgeMain.Execute(Of T)(T())
+  nameWithType: KafkaBridgeMain.Execute<T>(T[])
+  nameWithType.vb: KafkaBridgeMain.Execute(Of T)(T())
 - uid: MASES.KafkaBridge.Tools
   name: MASES.KafkaBridge.Tools
   href: api/MASES.KafkaBridge.Tools.html
@@ -984,22 +875,6 @@ references:
   isSpec: "True"
   fullName: MASES.KafkaBridge.Tools.ConsoleConsumer.ConsoleConsumer
   nameWithType: ConsoleConsumer.ConsoleConsumer
-- uid: MASES.KafkaBridge.Tools.ConsoleConsumer.Execute*
-  name: Execute
-  href: api/MASES.KafkaBridge.Tools.ConsoleConsumer.html#MASES_KafkaBridge_Tools_ConsoleConsumer_Execute_
-  commentId: Overload:MASES.KafkaBridge.Tools.ConsoleConsumer.Execute
-  isSpec: "True"
-  fullName: MASES.KafkaBridge.Tools.ConsoleConsumer.Execute
-  nameWithType: ConsoleConsumer.Execute
-- uid: MASES.KafkaBridge.Tools.ConsoleConsumer.Execute``1(``0[])
-  name: Execute<T>(T[])
-  href: api/MASES.KafkaBridge.Tools.ConsoleConsumer.html#MASES_KafkaBridge_Tools_ConsoleConsumer_Execute__1___0___
-  commentId: M:MASES.KafkaBridge.Tools.ConsoleConsumer.Execute``1(``0[])
-  name.vb: Execute(Of T)(T())
-  fullName: MASES.KafkaBridge.Tools.ConsoleConsumer.Execute<T>(T[])
-  fullName.vb: MASES.KafkaBridge.Tools.ConsoleConsumer.Execute(Of T)(T())
-  nameWithType: ConsoleConsumer.Execute<T>(T[])
-  nameWithType.vb: ConsoleConsumer.Execute(Of T)(T())
 - uid: MASES.KafkaBridge.Tools.ConsoleProducer
   name: ConsoleProducer
   href: api/MASES.KafkaBridge.Tools.ConsoleProducer.html
@@ -1019,22 +894,6 @@ references:
   isSpec: "True"
   fullName: MASES.KafkaBridge.Tools.ConsoleProducer.ConsoleProducer
   nameWithType: ConsoleProducer.ConsoleProducer
-- uid: MASES.KafkaBridge.Tools.ConsoleProducer.Execute*
-  name: Execute
-  href: api/MASES.KafkaBridge.Tools.ConsoleProducer.html#MASES_KafkaBridge_Tools_ConsoleProducer_Execute_
-  commentId: Overload:MASES.KafkaBridge.Tools.ConsoleProducer.Execute
-  isSpec: "True"
-  fullName: MASES.KafkaBridge.Tools.ConsoleProducer.Execute
-  nameWithType: ConsoleProducer.Execute
-- uid: MASES.KafkaBridge.Tools.ConsoleProducer.Execute``1(``0[])
-  name: Execute<T>(T[])
-  href: api/MASES.KafkaBridge.Tools.ConsoleProducer.html#MASES_KafkaBridge_Tools_ConsoleProducer_Execute__1___0___
-  commentId: M:MASES.KafkaBridge.Tools.ConsoleProducer.Execute``1(``0[])
-  name.vb: Execute(Of T)(T())
-  fullName: MASES.KafkaBridge.Tools.ConsoleProducer.Execute<T>(T[])
-  fullName.vb: MASES.KafkaBridge.Tools.ConsoleProducer.Execute(Of T)(T())
-  nameWithType: ConsoleProducer.Execute<T>(T[])
-  nameWithType.vb: ConsoleProducer.Execute(Of T)(T())
 - uid: MASES.KafkaBridge.Tools.ConsumerPerformance
   name: ConsumerPerformance
   href: api/MASES.KafkaBridge.Tools.ConsumerPerformance.html
@@ -1054,22 +913,6 @@ references:
   isSpec: "True"
   fullName: MASES.KafkaBridge.Tools.ConsumerPerformance.ConsumerPerformance
   nameWithType: ConsumerPerformance.ConsumerPerformance
-- uid: MASES.KafkaBridge.Tools.ConsumerPerformance.Execute*
-  name: Execute
-  href: api/MASES.KafkaBridge.Tools.ConsumerPerformance.html#MASES_KafkaBridge_Tools_ConsumerPerformance_Execute_
-  commentId: Overload:MASES.KafkaBridge.Tools.ConsumerPerformance.Execute
-  isSpec: "True"
-  fullName: MASES.KafkaBridge.Tools.ConsumerPerformance.Execute
-  nameWithType: ConsumerPerformance.Execute
-- uid: MASES.KafkaBridge.Tools.ConsumerPerformance.Execute``1(``0[])
-  name: Execute<T>(T[])
-  href: api/MASES.KafkaBridge.Tools.ConsumerPerformance.html#MASES_KafkaBridge_Tools_ConsumerPerformance_Execute__1___0___
-  commentId: M:MASES.KafkaBridge.Tools.ConsumerPerformance.Execute``1(``0[])
-  name.vb: Execute(Of T)(T())
-  fullName: MASES.KafkaBridge.Tools.ConsumerPerformance.Execute<T>(T[])
-  fullName.vb: MASES.KafkaBridge.Tools.ConsumerPerformance.Execute(Of T)(T())
-  nameWithType: ConsumerPerformance.Execute<T>(T[])
-  nameWithType.vb: ConsumerPerformance.Execute(Of T)(T())
 - uid: MASES.KafkaBridge.Tools.DumpLogSegments
   name: DumpLogSegments
   href: api/MASES.KafkaBridge.Tools.DumpLogSegments.html
@@ -1089,22 +932,6 @@ references:
   isSpec: "True"
   fullName: MASES.KafkaBridge.Tools.DumpLogSegments.DumpLogSegments
   nameWithType: DumpLogSegments.DumpLogSegments
-- uid: MASES.KafkaBridge.Tools.DumpLogSegments.Execute*
-  name: Execute
-  href: api/MASES.KafkaBridge.Tools.DumpLogSegments.html#MASES_KafkaBridge_Tools_DumpLogSegments_Execute_
-  commentId: Overload:MASES.KafkaBridge.Tools.DumpLogSegments.Execute
-  isSpec: "True"
-  fullName: MASES.KafkaBridge.Tools.DumpLogSegments.Execute
-  nameWithType: DumpLogSegments.Execute
-- uid: MASES.KafkaBridge.Tools.DumpLogSegments.Execute``1(``0[])
-  name: Execute<T>(T[])
-  href: api/MASES.KafkaBridge.Tools.DumpLogSegments.html#MASES_KafkaBridge_Tools_DumpLogSegments_Execute__1___0___
-  commentId: M:MASES.KafkaBridge.Tools.DumpLogSegments.Execute``1(``0[])
-  name.vb: Execute(Of T)(T())
-  fullName: MASES.KafkaBridge.Tools.DumpLogSegments.Execute<T>(T[])
-  fullName.vb: MASES.KafkaBridge.Tools.DumpLogSegments.Execute(Of T)(T())
-  nameWithType: DumpLogSegments.Execute<T>(T[])
-  nameWithType.vb: DumpLogSegments.Execute(Of T)(T())
 - uid: MASES.KafkaBridge.Tools.GetOffsetShell
   name: GetOffsetShell
   href: api/MASES.KafkaBridge.Tools.GetOffsetShell.html
@@ -1124,22 +951,6 @@ references:
   isSpec: "True"
   fullName: MASES.KafkaBridge.Tools.GetOffsetShell.GetOffsetShell
   nameWithType: GetOffsetShell.GetOffsetShell
-- uid: MASES.KafkaBridge.Tools.GetOffsetShell.Execute*
-  name: Execute
-  href: api/MASES.KafkaBridge.Tools.GetOffsetShell.html#MASES_KafkaBridge_Tools_GetOffsetShell_Execute_
-  commentId: Overload:MASES.KafkaBridge.Tools.GetOffsetShell.Execute
-  isSpec: "True"
-  fullName: MASES.KafkaBridge.Tools.GetOffsetShell.Execute
-  nameWithType: GetOffsetShell.Execute
-- uid: MASES.KafkaBridge.Tools.GetOffsetShell.Execute``1(``0[])
-  name: Execute<T>(T[])
-  href: api/MASES.KafkaBridge.Tools.GetOffsetShell.html#MASES_KafkaBridge_Tools_GetOffsetShell_Execute__1___0___
-  commentId: M:MASES.KafkaBridge.Tools.GetOffsetShell.Execute``1(``0[])
-  name.vb: Execute(Of T)(T())
-  fullName: MASES.KafkaBridge.Tools.GetOffsetShell.Execute<T>(T[])
-  fullName.vb: MASES.KafkaBridge.Tools.GetOffsetShell.Execute(Of T)(T())
-  nameWithType: GetOffsetShell.Execute<T>(T[])
-  nameWithType.vb: GetOffsetShell.Execute(Of T)(T())
 - uid: MASES.KafkaBridge.Tools.MirrorMaker
   name: MirrorMaker
   href: api/MASES.KafkaBridge.Tools.MirrorMaker.html
@@ -1159,22 +970,6 @@ references:
   isSpec: "True"
   fullName: MASES.KafkaBridge.Tools.MirrorMaker.MirrorMaker
   nameWithType: MirrorMaker.MirrorMaker
-- uid: MASES.KafkaBridge.Tools.MirrorMaker.Execute*
-  name: Execute
-  href: api/MASES.KafkaBridge.Tools.MirrorMaker.html#MASES_KafkaBridge_Tools_MirrorMaker_Execute_
-  commentId: Overload:MASES.KafkaBridge.Tools.MirrorMaker.Execute
-  isSpec: "True"
-  fullName: MASES.KafkaBridge.Tools.MirrorMaker.Execute
-  nameWithType: MirrorMaker.Execute
-- uid: MASES.KafkaBridge.Tools.MirrorMaker.Execute``1(``0[])
-  name: Execute<T>(T[])
-  href: api/MASES.KafkaBridge.Tools.MirrorMaker.html#MASES_KafkaBridge_Tools_MirrorMaker_Execute__1___0___
-  commentId: M:MASES.KafkaBridge.Tools.MirrorMaker.Execute``1(``0[])
-  name.vb: Execute(Of T)(T())
-  fullName: MASES.KafkaBridge.Tools.MirrorMaker.Execute<T>(T[])
-  fullName.vb: MASES.KafkaBridge.Tools.MirrorMaker.Execute(Of T)(T())
-  nameWithType: MirrorMaker.Execute<T>(T[])
-  nameWithType.vb: MirrorMaker.Execute(Of T)(T())
 - uid: MASES.KafkaBridge.Tools.ProducerPerformance
   name: ProducerPerformance
   href: api/MASES.KafkaBridge.Tools.ProducerPerformance.html
@@ -1194,22 +989,6 @@ references:
   isSpec: "True"
   fullName: MASES.KafkaBridge.Tools.ProducerPerformance.ProducerPerformance
   nameWithType: ProducerPerformance.ProducerPerformance
-- uid: MASES.KafkaBridge.Tools.ProducerPerformance.Execute*
-  name: Execute
-  href: api/MASES.KafkaBridge.Tools.ProducerPerformance.html#MASES_KafkaBridge_Tools_ProducerPerformance_Execute_
-  commentId: Overload:MASES.KafkaBridge.Tools.ProducerPerformance.Execute
-  isSpec: "True"
-  fullName: MASES.KafkaBridge.Tools.ProducerPerformance.Execute
-  nameWithType: ProducerPerformance.Execute
-- uid: MASES.KafkaBridge.Tools.ProducerPerformance.Execute``1(``0[])
-  name: Execute<T>(T[])
-  href: api/MASES.KafkaBridge.Tools.ProducerPerformance.html#MASES_KafkaBridge_Tools_ProducerPerformance_Execute__1___0___
-  commentId: M:MASES.KafkaBridge.Tools.ProducerPerformance.Execute``1(``0[])
-  name.vb: Execute(Of T)(T())
-  fullName: MASES.KafkaBridge.Tools.ProducerPerformance.Execute<T>(T[])
-  fullName.vb: MASES.KafkaBridge.Tools.ProducerPerformance.Execute(Of T)(T())
-  nameWithType: ProducerPerformance.Execute<T>(T[])
-  nameWithType.vb: ProducerPerformance.Execute(Of T)(T())
 - uid: MASES.KafkaBridge.Tools.ReplicaVerificationTool
   name: ReplicaVerificationTool
   href: api/MASES.KafkaBridge.Tools.ReplicaVerificationTool.html
@@ -1229,22 +1008,6 @@ references:
   isSpec: "True"
   fullName: MASES.KafkaBridge.Tools.ReplicaVerificationTool.ReplicaVerificationTool
   nameWithType: ReplicaVerificationTool.ReplicaVerificationTool
-- uid: MASES.KafkaBridge.Tools.ReplicaVerificationTool.Execute*
-  name: Execute
-  href: api/MASES.KafkaBridge.Tools.ReplicaVerificationTool.html#MASES_KafkaBridge_Tools_ReplicaVerificationTool_Execute_
-  commentId: Overload:MASES.KafkaBridge.Tools.ReplicaVerificationTool.Execute
-  isSpec: "True"
-  fullName: MASES.KafkaBridge.Tools.ReplicaVerificationTool.Execute
-  nameWithType: ReplicaVerificationTool.Execute
-- uid: MASES.KafkaBridge.Tools.ReplicaVerificationTool.Execute``1(``0[])
-  name: Execute<T>(T[])
-  href: api/MASES.KafkaBridge.Tools.ReplicaVerificationTool.html#MASES_KafkaBridge_Tools_ReplicaVerificationTool_Execute__1___0___
-  commentId: M:MASES.KafkaBridge.Tools.ReplicaVerificationTool.Execute``1(``0[])
-  name.vb: Execute(Of T)(T())
-  fullName: MASES.KafkaBridge.Tools.ReplicaVerificationTool.Execute<T>(T[])
-  fullName.vb: MASES.KafkaBridge.Tools.ReplicaVerificationTool.Execute(Of T)(T())
-  nameWithType: ReplicaVerificationTool.Execute<T>(T[])
-  nameWithType.vb: ReplicaVerificationTool.Execute(Of T)(T())
 - uid: MASES.KafkaBridge.Tools.StreamsResetter
   name: StreamsResetter
   href: api/MASES.KafkaBridge.Tools.StreamsResetter.html
@@ -1264,22 +1027,6 @@ references:
   isSpec: "True"
   fullName: MASES.KafkaBridge.Tools.StreamsResetter.StreamsResetter
   nameWithType: StreamsResetter.StreamsResetter
-- uid: MASES.KafkaBridge.Tools.StreamsResetter.Execute*
-  name: Execute
-  href: api/MASES.KafkaBridge.Tools.StreamsResetter.html#MASES_KafkaBridge_Tools_StreamsResetter_Execute_
-  commentId: Overload:MASES.KafkaBridge.Tools.StreamsResetter.Execute
-  isSpec: "True"
-  fullName: MASES.KafkaBridge.Tools.StreamsResetter.Execute
-  nameWithType: StreamsResetter.Execute
-- uid: MASES.KafkaBridge.Tools.StreamsResetter.Execute``1(``0[])
-  name: Execute<T>(T[])
-  href: api/MASES.KafkaBridge.Tools.StreamsResetter.html#MASES_KafkaBridge_Tools_StreamsResetter_Execute__1___0___
-  commentId: M:MASES.KafkaBridge.Tools.StreamsResetter.Execute``1(``0[])
-  name.vb: Execute(Of T)(T())
-  fullName: MASES.KafkaBridge.Tools.StreamsResetter.Execute<T>(T[])
-  fullName.vb: MASES.KafkaBridge.Tools.StreamsResetter.Execute(Of T)(T())
-  nameWithType: StreamsResetter.Execute<T>(T[])
-  nameWithType.vb: StreamsResetter.Execute(Of T)(T())
 - uid: MASES.KafkaBridge.Tools.StreamsResetter.HeapSize
   name: HeapSize
   href: api/MASES.KafkaBridge.Tools.StreamsResetter.html#MASES_KafkaBridge_Tools_StreamsResetter_HeapSize
@@ -1312,19 +1059,3 @@ references:
   isSpec: "True"
   fullName: MASES.KafkaBridge.Tools.TransactionsCommand.TransactionsCommand
   nameWithType: TransactionsCommand.TransactionsCommand
-- uid: MASES.KafkaBridge.Tools.TransactionsCommand.Execute*
-  name: Execute
-  href: api/MASES.KafkaBridge.Tools.TransactionsCommand.html#MASES_KafkaBridge_Tools_TransactionsCommand_Execute_
-  commentId: Overload:MASES.KafkaBridge.Tools.TransactionsCommand.Execute
-  isSpec: "True"
-  fullName: MASES.KafkaBridge.Tools.TransactionsCommand.Execute
-  nameWithType: TransactionsCommand.Execute
-- uid: MASES.KafkaBridge.Tools.TransactionsCommand.Execute``1(``0[])
-  name: Execute<T>(T[])
-  href: api/MASES.KafkaBridge.Tools.TransactionsCommand.html#MASES_KafkaBridge_Tools_TransactionsCommand_Execute__1___0___
-  commentId: M:MASES.KafkaBridge.Tools.TransactionsCommand.Execute``1(``0[])
-  name.vb: Execute(Of T)(T())
-  fullName: MASES.KafkaBridge.Tools.TransactionsCommand.Execute<T>(T[])
-  fullName.vb: MASES.KafkaBridge.Tools.TransactionsCommand.Execute(Of T)(T())
-  nameWithType: TransactionsCommand.Execute<T>(T[])
-  nameWithType.vb: TransactionsCommand.Execute(Of T)(T())
