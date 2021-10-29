@@ -9,7 +9,7 @@
     <Company>MASES s.r.l.</Company>
     <Copyright>Copyright ©  MASES s.r.l. 2021</Copyright>
     <Summary>Ready made templates to create applications based on KafkaBridge</Summary>
-    <Description>Ready made templates to create applications based for KafkaBridge. The templates are ready made starting points, all information and APIs are available in the official website https://www.jcobridge.com</Description>
+    <Description>Ready made templates to create applications based on KafkaBridge. The templates are ready made starting points, all information and APIs are available in the official website https://masesgroup.github.io/KafkaBridge</Description>
     <TargetFrameworks>net5.0;netcoreapp3.1;net461</TargetFrameworks>
     <OutputPath>..\..\bin\</OutputPath>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -19,9 +19,9 @@
     <RepositoryUrl>https://github.com/masesgroup/KafkaBridge</RepositoryUrl>
     <PackageReleaseNotes>https://github.com/masesgroup/KafkaBridge/releases</PackageReleaseNotes>
     <PackageIcon>JCOB128x128.png</PackageIcon>
-    <PackageTags>kafka apache-kafka dotnet clr netcore net5</PackageTags>
+    <PackageTags>kafka apache-kafka dotnet clr netcore net5 template</PackageTags>
     <LangVersion>8.0</LangVersion>
-    <Product>Bridge library between .NET CLR (Core/Framework) and JVM (Java)</Product>
+    <Product>KafkaBridge Templates</Product>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\Common\KafkaBridge.snk</AssemblyOriginatorKeyFile>
