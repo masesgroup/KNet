@@ -38,6 +38,11 @@ namespace MASES.KafkaBridge.Clients.Admin
         {
             return IExecute<CreateTopicsResult>("createTopics", newTopics.Instance, options.Instance);
         }
+
+        public CreateTopicsResult DeleteTopics(Collection<NewTopic> newTopics)
+        {
+            return IExecute<CreateTopicsResult>("deleteTopics", newTopics.Instance);
+        }
     }
 }
 
