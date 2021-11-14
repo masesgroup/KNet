@@ -1,4 +1,4 @@
-﻿using MASES.KafkaBridge;
+﻿using MASES.JCOBridge.C2JBridge;
 using System;
 
 namespace MASES.KafkaBridgeTest
@@ -9,7 +9,7 @@ namespace MASES.KafkaBridgeTest
         {
             try
             {
-                KafkaBridgeRunner<KafkaBridgeApp>.Run(args);
+                JVMBridgeRunner<KafkaBridgeApp>.Run(args);
             }
             catch (Exception e)
             {
@@ -17,8 +17,10 @@ namespace MASES.KafkaBridgeTest
             }
         }
 
-        class KafkaBridgeApp : KafkaBridgeCore
+        class KafkaBridgeApp : JVMBridgeBase<KafkaBridgeApp>
         {
+            public override string ClassName => throw new NotImplementedException();
+
             public override void Execute<T>(params T[] args)
             {
                 // adds execution here
