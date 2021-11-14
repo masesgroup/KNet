@@ -118,7 +118,7 @@ namespace MASES.KafkaBridgeTest
 
         static void produceSomething()
         {
-            Properties props = Properties.New();
+            Properties props = new Properties();
             props.Put("bootstrap.servers", serverToUse);
             props.Put("acks", "all");
             props.Put("retries", 0);
@@ -142,7 +142,7 @@ namespace MASES.KafkaBridgeTest
 
         static void consumeSomething()
         {
-            Properties props = Properties.New();
+            Properties props = new Properties();
             props.Put("bootstrap.servers", serverToUse);
             props.Put("group.id", "test");
             props.Put("enable.auto.commit", "true");
