@@ -21,7 +21,7 @@ namespace MASES.KafkaBridge.Admin
     /// <summary>
     /// Class managing TopicCommand
     /// </summary>
-    public class TopicCommand : KafkaBridgeMain
+    public class TopicCommand : JCOBridge.C2JBridge.JVMBridgeMain<TopicCommand>
     {
         /// <summary>
         /// Initialize a new <see cref="TopicCommand"/>

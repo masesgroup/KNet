@@ -21,7 +21,7 @@ namespace MASES.KafkaBridge.Tools
     /// <summary>
     /// Class managing ReplicaVerificationTool
     /// </summary>
-    public class ReplicaVerificationTool : KafkaBridgeMain
+    public class ReplicaVerificationTool : JCOBridge.C2JBridge.JVMBridgeMain<ReplicaVerificationTool>
     {
         /// <summary>
         /// Initialize a new <see cref="ReplicaVerificationTool"/>

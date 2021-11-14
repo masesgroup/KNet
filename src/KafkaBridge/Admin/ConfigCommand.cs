@@ -21,7 +21,7 @@ namespace MASES.KafkaBridge.Admin
     /// <summary>
     /// Class managing ConfigCommand
     /// </summary>
-    public class ConfigCommand : KafkaBridgeMain
+    public class ConfigCommand : JCOBridge.C2JBridge.JVMBridgeMain<ConfigCommand>
     {
         /// <summary>
         /// Initialize a new <see cref="ConfigCommand"/>

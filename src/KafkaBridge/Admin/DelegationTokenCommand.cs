@@ -21,7 +21,7 @@ namespace MASES.KafkaBridge.Admin
     /// <summary>
     /// Class managing DelegationTokenCommand
     /// </summary>
-    public class DelegationTokenCommand : KafkaBridgeMain
+    public class DelegationTokenCommand : JCOBridge.C2JBridge.JVMBridgeMain<DelegationTokenCommand>
     {
         /// <summary>
         /// Initialize a new <see cref="DelegationTokenCommand"/>
