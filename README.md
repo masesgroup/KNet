@@ -17,6 +17,20 @@ The benefits comes from tow main points related to JCOBridge:
 * its ablitity to manage a direct access to the JVM from any .NET application: any Java / Scala class behind Apache Kafka can be directly managed;
 * using the dynamic code feature of JCOBridge it is possible to write a Java/Scala/Kotlin/etc seamless language directly inside a standard .NET application written in C#/VB.NET
 
+Summary:
+
+* [Roadmap](src/Documentation/articles/roadmap.md)
+* [Actual state](src/Documentation/articles/actualstate.md)
+* [KafkaBridge usage](src/Documentation/articles/usage.md)
+* [KafkaBridgeCLI usage](src/Documentation/articles/usageCLI.md)
+
+---
+title: Actual state
+output:
+  bookdown::html_document2: default
+  bookdown::pdf_document2: default
+---
+
 ## Actual state
 
 The first public version comes with few ready made classes:
