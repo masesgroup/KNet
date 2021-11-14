@@ -28,7 +28,9 @@ using MASES.KafkaBridge.Clients.Admin;
 using MASES.KafkaBridge.Clients.Consumer;
 using MASES.KafkaBridge.Clients.Producer;
 using MASES.KafkaBridge.Common.Config;
+using MASES.KafkaBridge.Common.Serialization;
 using MASES.KafkaBridge.Java.Util;
+using MASES.KafkaBridge.Streams;
 using System;
 using System.Threading;
 
@@ -65,6 +67,12 @@ namespace MASES.KafkaBridgeTest
                 Name = "consume"
             };
             threadConsume.Start();
+
+            Thread threadStream = new Thread(streamSomething)
+            {
+                Name = "stream"
+            };
+            threadStream.Start();
 
             Thread.Sleep(20000);
             resetEvent.Set();
@@ -125,7 +133,7 @@ namespace MASES.KafkaBridgeTest
                 {
                     var record = new ProducerRecord<string, string>(topicToUse, i.ToString(), i.ToString());
                     var result = producer.Send(record);
-                    Console.WriteLine($"Producing: {record}");
+                    Console.WriteLine($"Producing: {record} with result: {result}");
                     producer.Flush();
                     i++;
                 }
@@ -149,6 +157,38 @@ namespace MASES.KafkaBridgeTest
                 foreach (var item in records)
                 {
                     Console.WriteLine($"Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}");
+                }
+            }
+        }
+
+        static void streamSomething()
+        {
+            var streamConfig = StreamsConfig.DynClazz;
+            var serdes = Serdes.DynClazz;
+
+            var propObj = Properties.New();
+
+            var props = propObj.Dyn();
+            propObj.Put(streamConfig.APPLICATION_ID_CONFIG, "streams-pipe");
+            propObj.Put(streamConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
+            propObj.Put(streamConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, serdes.String().getClass());
+            propObj.Put(streamConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, serdes.String().getClass());
+
+            // setting offset reset to earliest so that we can re-run the demo code with the same pre-loaded data
+            props.put(ConsumerConfig.DynClazz.AUTO_OFFSET_RESET_CONFIG, "earliest");
+
+            var builder = StreamsBuilder.New();
+            var dynBuilder = builder.Dyn();
+
+            dynBuilder.stream(topicToUse).to("streams-pipe-output");
+
+            using (var streams = KafkaStreams.New(dynBuilder.build(), props))
+            {
+                streams.start();
+                while (!resetEvent.WaitOne(1000))
+                {
+                    var state = streams.state();
+                    Console.WriteLine($"KafkaStreams state: {state}");
                 }
             }
         }
