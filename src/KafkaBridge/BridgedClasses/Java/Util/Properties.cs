@@ -16,24 +16,15 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KafkaBridge.Tools
+namespace MASES.KafkaBridge.Java.Util
 {
-    /// <summary>
-    /// Class managing StreamsResetter
-    /// </summary>
-    public class StreamsResetter : JCOBridge.C2JBridge.JVMBridgeMain<ReplicaVerificationTool>
+    public class Properties : JCOBridge.C2JBridge.JVMBridgeBase<Properties>
     {
-        static StreamsResetter()
-        {
-            KafkaBridgeCore.GlobalHeapSize = "512M";
-        }
+        public override string ClassName => "java.util.Properties";
 
-        /// <summary>
-        /// Initialize a new <see cref="StreamsResetter"/>
-        /// </summary>
-        public StreamsResetter()
-            : base("kafka.tools.StreamsResetter")
+        public void Put(object key, object value)
         {
+            IExecute("put", key, value);
         }
     }
 }

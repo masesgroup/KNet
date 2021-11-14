@@ -16,12 +16,14 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
+
 namespace MASES.KafkaBridge.Admin
 {
     /// <summary>
     /// Class managing BrokerApiVersionsCommand
     /// </summary>
-    public class BrokerApiVersionsCommand : KafkaBridgeMain
+    public class BrokerApiVersionsCommand : JCOBridge.C2JBridge.JVMBridgeMain<BrokerApiVersionsCommand>
     {
         /// <summary>
         /// Initialize a new <see cref="BrokerApiVersionsCommand"/>

@@ -16,78 +16,40 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.CLIParser;
+using MASES.JCOBridge.C2JBridge;
 using MASES.KafkaBridge;
 using System;
-using System.Collections.Generic;
 using System.Reflection;
 
 namespace MASES.KafkaBridgeCLI
 {
     class Program
     {
-        class CLIParam
-        {
-            // CommonArgs
-            public const string ClassToRun = "ClassToRun";
-            public const string KafkaLocation = "KafkaLocation";
-        }
-
-        static readonly Parser parser = Parser.CreateInstance(new Settings()
-        {
-            DefaultType = ArgumentType.Double
-        });
-
-        static IArgumentMetadata[] prepareArguments()
-        {
-            return new IArgumentMetadata[]
-            {
-                new ArgumentMetadata<string>()
-                {
-                    Name = CLIParam.ClassToRun,
-                    IsMandatory = true,
-                    Help = "The class to be instantiated.",
-                },
-                new ArgumentMetadata<string>()
-                {
-                    Name = CLIParam.KafkaLocation,
-                    Default = "..",
-                    Help = "The folder where Kafka package is available. Default consider this application running in bin folder.",
-                },
-            };
-        }
-
         static void Main(string[] args)
         {
             try
             {
                 if (args.Length == 0) { showHelp(); return; }
 
-                parser.Add(prepareArguments());
-
-                var arguments = parser.Parse(args);
-
-                var className = arguments.Get<string>(CLIParam.ClassToRun);
-
                 Type type = null;
 
                 foreach (var item in typeof(KafkaBridgeCore).Assembly.ExportedTypes)
                 {
-                    if (item.Name == className || item.FullName == className)
+                    if (item.Name == KafkaBridgeCore.MainClassToRun || item.FullName == KafkaBridgeCore.MainClassToRun)
                     {
                         type = item;
                         break;
                     }
                 }
 
-                if (type == null) throw new ArgumentException($"Requested class {className} is not a valid class name.");
+                if (type == null) throw new ArgumentException($"Requested class {KafkaBridgeCore.MainClassToRun} is not a valid class name.");
 
                 try
                 {
-                    var core = Activator.CreateInstance(type) as KafkaBridgeMain;
-                    if (core == null) throw new ArgumentException("Requested class is not a child of KafkaBridgeMain.");
+                    var core = Activator.CreateInstance(type) as JVMBridgeBase;
+                    if (core == null) throw new ArgumentException("Requested class is not a child of JVMBridgeBase.");
 
-                    core.Execute(parser.UnparsedArgs);
+                    core.Execute(KafkaBridgeCore.ApplicationArgs);
                 }
                 catch (TargetInvocationException tie)
                 {

@@ -21,7 +21,7 @@ namespace MASES.KafkaBridge.Tools
     /// <summary>
     /// Class managing ConsumerPerformance
     /// </summary>
-    public class ConsumerPerformance : KafkaBridgeMain
+    public class ConsumerPerformance : JCOBridge.C2JBridge.JVMBridgeMain<ConsumerPerformance>
     {
         /// <summary>
         /// Initialize a new <see cref="ConsumerPerformance"/>

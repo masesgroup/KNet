@@ -16,24 +16,11 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KafkaBridge.Tools
+namespace MASES.KafkaBridge.Clients.Consumer
 {
-    /// <summary>
-    /// Class managing StreamsResetter
-    /// </summary>
-    public class StreamsResetter : JCOBridge.C2JBridge.JVMBridgeMain<ReplicaVerificationTool>
+    public class ConsumerConfig : JCOBridge.C2JBridge.JVMBridgeBase<ConsumerConfig>
     {
-        static StreamsResetter()
-        {
-            KafkaBridgeCore.GlobalHeapSize = "512M";
-        }
-
-        /// <summary>
-        /// Initialize a new <see cref="StreamsResetter"/>
-        /// </summary>
-        public StreamsResetter()
-            : base("kafka.tools.StreamsResetter")
-        {
-        }
+        public override bool IsStatic => true;
+        public override string ClassName => "org.apache.kafka.clients.consumer.ConsumerConfig";
     }
 }

@@ -20,19 +20,31 @@ using System;
 
 namespace MASES.KafkaBridge
 {
+    class CLIParam
+    {
+        // CommonArgs
+        public const string ClassToRun = "ClassToRun";
+        public const string ScalaVersion = "ScalaVersion";
+        public const string KafkaLocation = "KafkaLocation";
+    }
+
+    /// <summary>
+    /// Default constants
+    /// </summary>
+    public class Const
+    {
+        /// <summary>
+        /// Default Scala version
+        /// </summary>
+        public const string DefaultScalaVersion = "2.13.6";
+        /// <summary>
+        /// Default root path, i.e. consider installation within bin folder
+        /// </summary>
+        public const string DefaultRootPath = "..";
+    }
+
     class InternalConst
     {
-        public const string JCOBridgeLicensePathString = "--LicensePath";
-        public const string JCOBridgeHelpString = "--JCOBridgeHelp";
-        public const string JDKHomeString = "--JDKHome:";
-        public const string JVMPathString = "--JVMPath:";
-        public const string ClassPathString = "--JVMClassPath:";
-        public const string JNIVerbosityString = "--JNIVerbosity:";
-        public const string JNIOutputFileString = "--JNIOutputFile:";
-        public const string JVMPackagesString = "--JVMPackages:";
-        public const string JVMOptionString = "--JVMOption:";
-        public const string JVMKVOptionString = "--JVMKVOption:";
-
         public static readonly char PathSeparator = (Environment.OSVersion.Platform == PlatformID.Unix || Environment.OSVersion.Platform == PlatformID.MacOSX) ? ':' : ';';
     }
 }

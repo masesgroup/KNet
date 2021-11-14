@@ -21,7 +21,7 @@ namespace MASES.KafkaBridge.Tools
     /// <summary>
     /// Class managing ConsoleProducer
     /// </summary>
-    public class ConsoleProducer : KafkaBridgeMain
+    public class ConsoleProducer : JCOBridge.C2JBridge.JVMBridgeMain<ConsoleProducer>
     {
         /// <summary>
         /// Initialize a new <see cref="ConsoleProducer"/>

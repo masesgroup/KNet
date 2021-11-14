@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <PackageType>Template</PackageType>
-    <PackageVersion>1.0.1.0</PackageVersion>
+    <PackageVersion>1.1.0.0</PackageVersion>
     <PackageId>MASES.KafkaBridge.Templates</PackageId>
     <Title>KafkaBridge Templates - Templates to use the KafkaBridge</Title>
     <Authors>MASES s.r.l.</Authors>
@@ -10,14 +10,14 @@
     <Copyright>Copyright ©  MASES s.r.l. 2021</Copyright>
     <Summary>Ready made templates to create applications based on KafkaBridge</Summary>
     <Description>Ready made templates to create applications based on KafkaBridge. The templates are ready made starting points, all information and APIs are available in the official website https://masesgroup.github.io/KafkaBridge</Description>
-    <TargetFrameworks>net5.0;netcoreapp3.1;net461</TargetFrameworks>
+    <TargetFrameworks>net6.0;net5.0;netcoreapp3.1;net461</TargetFrameworks>
     <OutputPath>..\..\bin\</OutputPath>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageLicenseUrl>https://github.com/masesgroup/KafkaBridge/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/masesgroup/KafkaBridge/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/masesgroup/KafkaBridge</RepositoryUrl>
     <PackageReleaseNotes>https://github.com/masesgroup/KafkaBridge/releases</PackageReleaseNotes>
+    <PackageLicense>LICENSE</PackageLicense>
     <PackageIcon>JCOB128x128.png</PackageIcon>
     <PackageTags>kafka apache-kafka dotnet clr netcore net5 template</PackageTags>
     <LangVersion>8.0</LangVersion>
@@ -41,6 +41,7 @@
     <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="..\..\LICENSE" Pack="true" PackagePath="" />
     <None Include="..\Common\JCOB128x128.png" Pack="true" PackagePath=""/>
     <None Include="..\Common\KafkaBridge.snk" Link="KafkaBridge.snk" />
     <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**;templates\**\.vscode\**" />

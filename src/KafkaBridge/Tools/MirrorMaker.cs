@@ -21,7 +21,7 @@ namespace MASES.KafkaBridge.Tools
     /// <summary>
     /// Class managing MirrorMaker
     /// </summary>
-    public class MirrorMaker : KafkaBridgeMain
+    public class MirrorMaker : JCOBridge.C2JBridge.JVMBridgeMain<MirrorMaker>
     {
         /// <summary>
         /// Initialize a new <see cref="MirrorMaker"/>

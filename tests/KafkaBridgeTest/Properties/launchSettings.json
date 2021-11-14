@@ -1,9 +1,0 @@
-{
-  "profiles": {
-    "KafkaBridgeTest": {
-      "commandName": "Project",
-      "commandLineArgs": "ConsoleConsumer --JVMPath:C:\\Users\\mmastrodicasa\\AppData\\Local\\Programs\\AdoptOpenJDK\\jdk-11.0.9.11-hotspot\\bin\\server\\jvm.dll --bootstrap-server 206.189.214.143:9093 --topic messages --from-beginning",
-      "workingDirectory": "D:\\MARIO\\MASES\\Tools\\kafka_2.13-3.0.0"
-    }
-  }
-}

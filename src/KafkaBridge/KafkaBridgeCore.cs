@@ -16,6 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.CLIParser;
 using MASES.JCOBridge.C2JBridge;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
 using System;
@@ -27,8 +28,71 @@ namespace MASES.KafkaBridge
     /// <summary>
     /// Public entry point of <see cref="KafkaBridgeCore"/>
     /// </summary>
-    public abstract class KafkaBridgeCore : SetupJVMWrapper<KafkaBridgeCore>
+    public class KafkaBridgeCore : SetupJVMWrapper<KafkaBridgeCore>
     {
+        static readonly Parser parser = Parser.CreateInstance(new Settings()
+        {
+            DefaultType = ArgumentType.Double
+        });
+
+        static IArgumentMetadata[] prepareArguments()
+        {
+            return new IArgumentMetadata[]
+            {
+                new ArgumentMetadata<string>()
+                {
+                    Name = CLIParam.ClassToRun,
+                    Help = "The class to be instantiated.",
+                },
+                new ArgumentMetadata<string>()
+                {
+                    Name = CLIParam.ScalaVersion,
+                    Default = Const.DefaultScalaVersion,
+                    Help = "The version of scala to be used.",
+                },
+                new ArgumentMetadata<string>()
+                {
+                    Name = CLIParam.KafkaLocation,
+                    Default = Const.DefaultRootPath,
+                    Help = "The folder where Kafka package is available. Default consider this application running in bin folder.",
+                },
+            };
+        }
+
+        static IEnumerable<IArgumentMetadataParsed> _parsedArgs = null;
+
+        static KafkaBridgeCore()
+        {
+            GlobalScalaVersion = Const.DefaultScalaVersion;
+            GlobalRootPath = Const.DefaultRootPath;
+            GlobalHeapSize = "256M";
+
+            parser.Add(prepareArguments());
+
+            _parsedArgs = parser.Parse(Environment.GetCommandLineArgs());
+            MainClassToRun = _parsedArgs.Get<string>(CLIParam.ClassToRun);
+            ApplicationArgs = parser.UnparsedArgs.FilterJCOBridgeArguments();
+
+            GlobalRootPath = _parsedArgs.Get<string>(CLIParam.KafkaLocation);
+            GlobalScalaVersion = _parsedArgs.Get<string>(CLIParam.ScalaVersion);
+
+            new KafkaBridgeCore().Globalize();
+        }
+
+        KafkaBridgeCore()
+        {
+        }
+
+        /// <summary>
+        /// Sets the global value of root path
+        /// </summary>
+        public static string MainClassToRun { get; set; }
+
+        /// <summary>
+        /// The filtered application arguments 
+        /// </summary>
+        public static string[] ApplicationArgs { get; private set; }
+
         /// <summary>
         /// Sets the global value of root path
         /// </summary>
@@ -38,6 +102,11 @@ namespace MASES.KafkaBridge
         /// Sets the global value of root path
         /// </summary>
         public static string GlobalScalaVersion { get; set; }
+
+        /// <summary>
+        /// Sets the global heap size
+        /// </summary>
+        public static string GlobalHeapSize { get; set; }
 
         /// <summary>
         /// The Scala version to be used
@@ -88,10 +157,6 @@ namespace MASES.KafkaBridge
         /// Java Debug options used if <see cref="EnableDebug"/> is true
         /// </summary>
         public virtual string JavaDebugOpts { get { return $"-agentlib:jdwp=transport=dt_socket,server=y,suspend={DebugSuspendFlag},address={JavaDebugPort}"; } }
-        /// <summary>
-        /// The Heap size to be used
-        /// </summary>
-        public virtual string HeapSize { get { return "256M"; } }
 
         /// <summary>
         /// Default performance options used in initialization
@@ -233,7 +298,7 @@ namespace MASES.KafkaBridge
                     { "com.sun.management.jmxremote.ssl", "false" },
                     { "log4j.configuration", Log4JOpts},
                     { "kafka.logs.dir", LogDir},
-                    { "-Xmx" + HeapSize, null}
+                    { "-Xmx" + GlobalHeapSize, null}
                 };
 
                 if (JmxPort.HasValue)
@@ -252,65 +317,10 @@ namespace MASES.KafkaBridge
 
         string classPath = string.Empty;
         public sealed override string ClassPath => buildClassPath();
-        /// <summary>
-        /// Dynamic accessor to the <see cref="ClassToLoad"/> instance
-        /// </summary>
-        public dynamic DynClassLoaded { get { dynamic clazz = MainInstanceClass; return clazz; } }
-        /// <summary>
-        /// Accessor to the instance methods of the class requested
-        /// </summary>
-        public IJavaObject MainInstanceClass { get; private set; }
-        /// <summary>
-        /// Accessor to static methods of the class requested
-        /// </summary>
-        public IJavaType MainClass { get; private set; }
-
-        static KafkaBridgeCore()
-        {
-            GlobalScalaVersion = "2.13.6";
-            GlobalRootPath = ".";
-        }
-
-        /// <summary>
-        /// Initialize a new <see cref="KafkaBridgeCore"/>
-        /// </summary>
-        public KafkaBridgeCore()
-        {
-            Initialize();
-        }
-
-        /// <summary>
-        /// Initialize a new <see cref="KafkaBridgeCore"/>
-        /// </summary>
-        /// <param name="mainClass">The main class to be managed</param>
-        /// <param name="staticClass">Set to true to avoid to create an instance of <paramref name="mainClass"/></param>
-        /// <param name="args">Argument class</param>
-        public KafkaBridgeCore(string mainClass, bool staticClass = false, params object[] args)
-            : this()
-        {
-            Initialize(mainClass, staticClass, args);
-        }
-        /// <summary>
-        /// Parse the command-line for initialization
-        /// </summary>
-        /// <param name="args">Command line arguments</param>
-        public void Parse(params string[] args)
-        {
-
-        }
-
-        /// <summary>
-        /// Initialize a class within <see cref="KafkaBridgeCore"/>
-        /// </summary>
-        /// <param name="mainClass">The main class to be managed</param>
-        /// <param name="staticClass">Set to true to avoid to create an instance of <paramref name="mainClass"/></param>
-        /// <param name="args">Argument class</param>
-        public void Initialize(string mainClass, bool staticClass = false, params object[] args)
-        {
-            MainClass = JVM.GetClass(mainClass);
-            if (MainClass == null) throw new InvalidOperationException($"Unable to find {mainClass}");
-            if (!staticClass) MainInstanceClass = JVM.New(mainClass, args) as IJavaObject;
-        }
+        /// <inheritdoc cref="IKafkaBridgeCore.DynJVM"/>
+        public new dynamic DynJVM { get { return base.DynJVM; } }
+        /// <inheritdoc cref="IKafkaBridgeCore.JVM"/>
+        public new IJVMWrapperDirect JVM { get { return base.JVM; } }
 
         string buildClassPath()
         {
@@ -358,62 +368,6 @@ namespace MASES.KafkaBridge
             }
 
             return classPath;
-        }
-
-        /// <summary>
-        /// Executes the code
-        /// </summary>
-        /// <typeparam name="T">The argument type to be used</typeparam>
-        /// <param name="args">Possible arguments</param>
-        public abstract void Execute<T>(params T[] args);
-    }
-
-    /// <summary>
-    /// Execute directly the class implementing the Java "main" method
-    /// </summary>
-    public class KafkaBridgeMain : KafkaBridgeCore
-    {
-        /// <summary>
-        /// Initialize a new <see cref="KafkaBridgeCore"/>
-        /// </summary>
-        /// <param name="mainClass">The main class to be managed</param>
-        public KafkaBridgeMain(string mainClass) : base(mainClass, true) { }
-
-        /// <inheritdoc cref="KafkaBridgeCore.Execute{T}(T[])"/>
-        public sealed override void Execute<T>(params T[] args)
-        {
-            MainClass.Invoke("main", args.FilterJCOBridgeArguments());
-        }
-    }
-
-    /// <summary>
-    /// Runs directly the class implementing the Java "main" method
-    /// </summary>
-    /// <typeparam name="Class">The class which implements the <see cref="KafkaBridgeCore.Execute{T}(T[])"/> method</typeparam>
-    public class KafkaBridgeRunner<Class>
-        where Class : KafkaBridgeCore
-    {
-        /// <summary>
-        /// Executes <see cref="KafkaBridgeCore.Execute{T}(T[])"/>
-        /// </summary>
-        /// <typeparam name="T">The arguments type</typeparam>
-        /// <param name="args">The arguments</param>
-        public static void Run<T>(params T[] args)
-        {
-            KafkaBridgeCore core = Activator.CreateInstance(typeof(Class)) as KafkaBridgeCore;
-            core.Execute<T>(args);
-        }
-        /// <summary>
-        /// Executes <see cref="KafkaBridgeCore.Execute{T}(T[])"/>
-        /// </summary>
-        /// <typeparam name="T">The arguments type</typeparam>
-        /// <param name="className">The Java class to be instantiated</param>
-        /// <param name="staticClass">true if the class does not contains any default constructor, i.e. it is an executable class</param>
-        /// <param name="args">The arguments</param>
-        public static void Run<T>(string className, bool staticClass = false, params T[] args)
-        {
-            KafkaBridgeCore core = Activator.CreateInstance(typeof(Class), className, staticClass) as KafkaBridgeCore;
-            core.Execute<T>(args);
         }
     }
 }

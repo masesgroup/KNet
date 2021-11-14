@@ -21,7 +21,7 @@ namespace MASES.KafkaBridge.Admin
     /// <summary>
     /// Class managing LogDirsCommand
     /// </summary>
-    public class LogDirsCommand : KafkaBridgeMain
+    public class LogDirsCommand : JCOBridge.C2JBridge.JVMBridgeMain<LogDirsCommand>
     {
         /// <summary>
         /// Initialize a new <see cref="LogDirsCommand"/>

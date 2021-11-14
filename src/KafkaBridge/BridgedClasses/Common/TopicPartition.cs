@@ -16,24 +16,23 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KafkaBridge.Tools
+namespace MASES.KafkaBridge.Common
 {
-    /// <summary>
-    /// Class managing StreamsResetter
-    /// </summary>
-    public class StreamsResetter : JCOBridge.C2JBridge.JVMBridgeMain<ReplicaVerificationTool>
+    public class TopicPartition : JCOBridge.C2JBridge.JVMBridgeBase<TopicPartition>
     {
-        static StreamsResetter()
+        public override string ClassName => "org.apache.kafka.common.TopicPartition";
+
+        public TopicPartition()
         {
-            KafkaBridgeCore.GlobalHeapSize = "512M";
         }
 
-        /// <summary>
-        /// Initialize a new <see cref="StreamsResetter"/>
-        /// </summary>
-        public StreamsResetter()
-            : base("kafka.tools.StreamsResetter")
+        public TopicPartition(string topic, int partition)
+            : base(topic, partition)
         {
         }
+
+        public int Partition => (int)IExecute("partition");
+
+        public string Topic => (string)IExecute("topic");
     }
 }

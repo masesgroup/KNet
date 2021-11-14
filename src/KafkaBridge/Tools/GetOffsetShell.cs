@@ -21,7 +21,7 @@ namespace MASES.KafkaBridge.Tools
     /// <summary>
     /// Class managing GetOffsetShell
     /// </summary>
-    public class GetOffsetShell : KafkaBridgeMain
+    public class GetOffsetShell : JCOBridge.C2JBridge.JVMBridgeMain<GetOffsetShell>
     {
         /// <summary>
         /// Initialize a new <see cref="GetOffsetShell"/>

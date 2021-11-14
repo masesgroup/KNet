@@ -21,7 +21,7 @@ namespace MASES.KafkaBridge.Tools
     /// <summary>
     /// Class managing DumpLogSegments
     /// </summary>
-    public class DumpLogSegments : KafkaBridgeMain
+    public class DumpLogSegments : JCOBridge.C2JBridge.JVMBridgeMain<DumpLogSegments>
     {
         /// <summary>
         /// Initialize a new <see cref="DumpLogSegments"/>

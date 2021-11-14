@@ -21,7 +21,7 @@ namespace MASES.KafkaBridge.Tools
     /// <summary>
     /// Class managing ProducerPerformance
     /// </summary>
-    public class ProducerPerformance : KafkaBridgeMain
+    public class ProducerPerformance : JCOBridge.C2JBridge.JVMBridgeMain<ProducerPerformance>
     {
         /// <summary>
         /// Initialize a new <see cref="ProducerPerformance"/>
