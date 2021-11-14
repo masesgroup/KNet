@@ -17,7 +17,8 @@ The benefits comes from tow main points related to JCOBridge:
 * its ablitity to manage a direct access to the JVM from any .NET application: any Java / Scala class behind Apache Kafka can be directly managed;
 * using the dynamic code feature of JCOBridge it is possible to write a Java/Scala/Kotlin/etc seamless language directly inside a standard .NET application written in C#/VB.NET
 
-Summary:
+---
+## Summary
 
 * [Roadmap](src/Documentation/articles/roadmap.md)
 * [Actual state](src/Documentation/articles/actualstate.md)
@@ -25,33 +26,3 @@ Summary:
 * [KafkaBridgeCLI usage](src/Documentation/articles/usageCLI.md)
 
 ---
-title: Actual state
-output:
-  bookdown::html_document2: default
-  bookdown::pdf_document2: default
----
-
-## Actual state
-
-The first public version comes with few ready made classes:
-
-* The command line interface classes (i.e. the executables Apache Kafka classes), the ones available under the _bin_ folder of any Apache Kafka binary distribution, can be managed using the KafkaBridgeCLI, e.g. ConsoleConsumer, ConsoleProducer and so on.
-
-## Roadmap
-
-The roadmap can be synthetized in the following points:
-
-* Add more classes to simplify management from .NET;
-* Create Kafka Connect and Kafka Streams bridging classes for .NET to mix both any JVM language (Scala, Java) and .NET languages;
-* Add features to extend ability to use .NET packages (e.g. EntityFramework) with Kafka Streams.
-
-## KafkaBridgeCLI usage
-
-To use the CLI interface (KafkaBridgeCLI) runs a command like the following:
-
-> KafkaBridgeCLI -ClassToRun ConsoleConsumer --bootstrap-server SERVER-ADDRESS:9093 --topic topic_name --from-beginning
-
-KafkaBridgeCLI accepts the following command-line switch:
-
-* **ClassToRun**: represents the class to be launched
-* **KafkaLocation**: represents the path to the root folder of Apache Kafka binary distribution; default value consider that KafkaBridgeCLI is installed within the bin folder of Apache Kafka binary distribution;
