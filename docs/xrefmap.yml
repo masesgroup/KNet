@@ -184,34 +184,1602 @@ references:
   isSpec: "True"
   fullName: MASES.KafkaBridge.Admin.TopicCommand.TopicCommand
   nameWithType: TopicCommand.TopicCommand
+- uid: MASES.KafkaBridge.Clients.Admin
+  name: MASES.KafkaBridge.Clients.Admin
+  href: api/MASES.KafkaBridge.Clients.Admin.html
+  commentId: N:MASES.KafkaBridge.Clients.Admin
+  fullName: MASES.KafkaBridge.Clients.Admin
+  nameWithType: MASES.KafkaBridge.Clients.Admin
+- uid: MASES.KafkaBridge.Clients.Admin.AdminClientConfig
+  name: AdminClientConfig
+  href: api/MASES.KafkaBridge.Clients.Admin.AdminClientConfig.html
+  commentId: T:MASES.KafkaBridge.Clients.Admin.AdminClientConfig
+  fullName: MASES.KafkaBridge.Clients.Admin.AdminClientConfig
+  nameWithType: AdminClientConfig
+- uid: MASES.KafkaBridge.Clients.Admin.AdminClientConfig.ClassName
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Admin.AdminClientConfig.html#MASES_KafkaBridge_Clients_Admin_AdminClientConfig_ClassName
+  commentId: P:MASES.KafkaBridge.Clients.Admin.AdminClientConfig.ClassName
+  fullName: MASES.KafkaBridge.Clients.Admin.AdminClientConfig.ClassName
+  nameWithType: AdminClientConfig.ClassName
+- uid: MASES.KafkaBridge.Clients.Admin.AdminClientConfig.ClassName*
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Admin.AdminClientConfig.html#MASES_KafkaBridge_Clients_Admin_AdminClientConfig_ClassName_
+  commentId: Overload:MASES.KafkaBridge.Clients.Admin.AdminClientConfig.ClassName
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Admin.AdminClientConfig.ClassName
+  nameWithType: AdminClientConfig.ClassName
+- uid: MASES.KafkaBridge.Clients.Admin.AdminClientConfig.IsStatic
+  name: IsStatic
+  href: api/MASES.KafkaBridge.Clients.Admin.AdminClientConfig.html#MASES_KafkaBridge_Clients_Admin_AdminClientConfig_IsStatic
+  commentId: P:MASES.KafkaBridge.Clients.Admin.AdminClientConfig.IsStatic
+  fullName: MASES.KafkaBridge.Clients.Admin.AdminClientConfig.IsStatic
+  nameWithType: AdminClientConfig.IsStatic
+- uid: MASES.KafkaBridge.Clients.Admin.AdminClientConfig.IsStatic*
+  name: IsStatic
+  href: api/MASES.KafkaBridge.Clients.Admin.AdminClientConfig.html#MASES_KafkaBridge_Clients_Admin_AdminClientConfig_IsStatic_
+  commentId: Overload:MASES.KafkaBridge.Clients.Admin.AdminClientConfig.IsStatic
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Admin.AdminClientConfig.IsStatic
+  nameWithType: AdminClientConfig.IsStatic
+- uid: MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions
+  name: CreateTopicsOptions
+  href: api/MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.html
+  commentId: T:MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions
+  fullName: MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions
+  nameWithType: CreateTopicsOptions
+- uid: MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.ClassName
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.html#MASES_KafkaBridge_Clients_Admin_CreateTopicsOptions_ClassName
+  commentId: P:MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.ClassName
+  fullName: MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.ClassName
+  nameWithType: CreateTopicsOptions.ClassName
+- uid: MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.ClassName*
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.html#MASES_KafkaBridge_Clients_Admin_CreateTopicsOptions_ClassName_
+  commentId: Overload:MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.ClassName
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.ClassName
+  nameWithType: CreateTopicsOptions.ClassName
+- uid: MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.retryOnQuotaViolation(System.Boolean)
+  name: retryOnQuotaViolation(Boolean)
+  href: api/MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.html#MASES_KafkaBridge_Clients_Admin_CreateTopicsOptions_retryOnQuotaViolation_System_Boolean_
+  commentId: M:MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.retryOnQuotaViolation(System.Boolean)
+  fullName: MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.retryOnQuotaViolation(System.Boolean)
+  nameWithType: CreateTopicsOptions.retryOnQuotaViolation(Boolean)
+- uid: MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.retryOnQuotaViolation*
+  name: retryOnQuotaViolation
+  href: api/MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.html#MASES_KafkaBridge_Clients_Admin_CreateTopicsOptions_retryOnQuotaViolation_
+  commentId: Overload:MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.retryOnQuotaViolation
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.retryOnQuotaViolation
+  nameWithType: CreateTopicsOptions.retryOnQuotaViolation
+- uid: MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.shouldRetryOnQuotaViolation
+  name: shouldRetryOnQuotaViolation()
+  href: api/MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.html#MASES_KafkaBridge_Clients_Admin_CreateTopicsOptions_shouldRetryOnQuotaViolation
+  commentId: M:MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.shouldRetryOnQuotaViolation
+  fullName: MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.shouldRetryOnQuotaViolation()
+  nameWithType: CreateTopicsOptions.shouldRetryOnQuotaViolation()
+- uid: MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.shouldRetryOnQuotaViolation*
+  name: shouldRetryOnQuotaViolation
+  href: api/MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.html#MASES_KafkaBridge_Clients_Admin_CreateTopicsOptions_shouldRetryOnQuotaViolation_
+  commentId: Overload:MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.shouldRetryOnQuotaViolation
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.shouldRetryOnQuotaViolation
+  nameWithType: CreateTopicsOptions.shouldRetryOnQuotaViolation
+- uid: MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.shouldValidateOnly
+  name: shouldValidateOnly()
+  href: api/MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.html#MASES_KafkaBridge_Clients_Admin_CreateTopicsOptions_shouldValidateOnly
+  commentId: M:MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.shouldValidateOnly
+  fullName: MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.shouldValidateOnly()
+  nameWithType: CreateTopicsOptions.shouldValidateOnly()
+- uid: MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.shouldValidateOnly*
+  name: shouldValidateOnly
+  href: api/MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.html#MASES_KafkaBridge_Clients_Admin_CreateTopicsOptions_shouldValidateOnly_
+  commentId: Overload:MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.shouldValidateOnly
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.shouldValidateOnly
+  nameWithType: CreateTopicsOptions.shouldValidateOnly
+- uid: MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.validateOnly(System.Boolean)
+  name: validateOnly(Boolean)
+  href: api/MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.html#MASES_KafkaBridge_Clients_Admin_CreateTopicsOptions_validateOnly_System_Boolean_
+  commentId: M:MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.validateOnly(System.Boolean)
+  fullName: MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.validateOnly(System.Boolean)
+  nameWithType: CreateTopicsOptions.validateOnly(Boolean)
+- uid: MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.validateOnly*
+  name: validateOnly
+  href: api/MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.html#MASES_KafkaBridge_Clients_Admin_CreateTopicsOptions_validateOnly_
+  commentId: Overload:MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.validateOnly
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions.validateOnly
+  nameWithType: CreateTopicsOptions.validateOnly
+- uid: MASES.KafkaBridge.Clients.Admin.CreateTopicsResult
+  name: CreateTopicsResult
+  href: api/MASES.KafkaBridge.Clients.Admin.CreateTopicsResult.html
+  commentId: T:MASES.KafkaBridge.Clients.Admin.CreateTopicsResult
+  fullName: MASES.KafkaBridge.Clients.Admin.CreateTopicsResult
+  nameWithType: CreateTopicsResult
+- uid: MASES.KafkaBridge.Clients.Admin.CreateTopicsResult.ClassName
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Admin.CreateTopicsResult.html#MASES_KafkaBridge_Clients_Admin_CreateTopicsResult_ClassName
+  commentId: P:MASES.KafkaBridge.Clients.Admin.CreateTopicsResult.ClassName
+  fullName: MASES.KafkaBridge.Clients.Admin.CreateTopicsResult.ClassName
+  nameWithType: CreateTopicsResult.ClassName
+- uid: MASES.KafkaBridge.Clients.Admin.CreateTopicsResult.ClassName*
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Admin.CreateTopicsResult.html#MASES_KafkaBridge_Clients_Admin_CreateTopicsResult_ClassName_
+  commentId: Overload:MASES.KafkaBridge.Clients.Admin.CreateTopicsResult.ClassName
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Admin.CreateTopicsResult.ClassName
+  nameWithType: CreateTopicsResult.ClassName
+- uid: MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions
+  name: DeleteTopicsOptions
+  href: api/MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions.html
+  commentId: T:MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions
+  fullName: MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions
+  nameWithType: DeleteTopicsOptions
+- uid: MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions.ClassName
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions.html#MASES_KafkaBridge_Clients_Admin_DeleteTopicsOptions_ClassName
+  commentId: P:MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions.ClassName
+  fullName: MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions.ClassName
+  nameWithType: DeleteTopicsOptions.ClassName
+- uid: MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions.ClassName*
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions.html#MASES_KafkaBridge_Clients_Admin_DeleteTopicsOptions_ClassName_
+  commentId: Overload:MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions.ClassName
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions.ClassName
+  nameWithType: DeleteTopicsOptions.ClassName
+- uid: MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions.retryOnQuotaViolation(System.Boolean)
+  name: retryOnQuotaViolation(Boolean)
+  href: api/MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions.html#MASES_KafkaBridge_Clients_Admin_DeleteTopicsOptions_retryOnQuotaViolation_System_Boolean_
+  commentId: M:MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions.retryOnQuotaViolation(System.Boolean)
+  fullName: MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions.retryOnQuotaViolation(System.Boolean)
+  nameWithType: DeleteTopicsOptions.retryOnQuotaViolation(Boolean)
+- uid: MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions.retryOnQuotaViolation*
+  name: retryOnQuotaViolation
+  href: api/MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions.html#MASES_KafkaBridge_Clients_Admin_DeleteTopicsOptions_retryOnQuotaViolation_
+  commentId: Overload:MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions.retryOnQuotaViolation
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions.retryOnQuotaViolation
+  nameWithType: DeleteTopicsOptions.retryOnQuotaViolation
+- uid: MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions.shouldRetryOnQuotaViolation
+  name: shouldRetryOnQuotaViolation()
+  href: api/MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions.html#MASES_KafkaBridge_Clients_Admin_DeleteTopicsOptions_shouldRetryOnQuotaViolation
+  commentId: M:MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions.shouldRetryOnQuotaViolation
+  fullName: MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions.shouldRetryOnQuotaViolation()
+  nameWithType: DeleteTopicsOptions.shouldRetryOnQuotaViolation()
+- uid: MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions.shouldRetryOnQuotaViolation*
+  name: shouldRetryOnQuotaViolation
+  href: api/MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions.html#MASES_KafkaBridge_Clients_Admin_DeleteTopicsOptions_shouldRetryOnQuotaViolation_
+  commentId: Overload:MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions.shouldRetryOnQuotaViolation
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions.shouldRetryOnQuotaViolation
+  nameWithType: DeleteTopicsOptions.shouldRetryOnQuotaViolation
+- uid: MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions.timeoutMs(System.Int32)
+  name: timeoutMs(Int32)
+  href: api/MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions.html#MASES_KafkaBridge_Clients_Admin_DeleteTopicsOptions_timeoutMs_System_Int32_
+  commentId: M:MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions.timeoutMs(System.Int32)
+  fullName: MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions.timeoutMs(System.Int32)
+  nameWithType: DeleteTopicsOptions.timeoutMs(Int32)
+- uid: MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions.timeoutMs*
+  name: timeoutMs
+  href: api/MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions.html#MASES_KafkaBridge_Clients_Admin_DeleteTopicsOptions_timeoutMs_
+  commentId: Overload:MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions.timeoutMs
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Admin.DeleteTopicsOptions.timeoutMs
+  nameWithType: DeleteTopicsOptions.timeoutMs
+- uid: MASES.KafkaBridge.Clients.Admin.DeleteTopicsResult
+  name: DeleteTopicsResult
+  href: api/MASES.KafkaBridge.Clients.Admin.DeleteTopicsResult.html
+  commentId: T:MASES.KafkaBridge.Clients.Admin.DeleteTopicsResult
+  fullName: MASES.KafkaBridge.Clients.Admin.DeleteTopicsResult
+  nameWithType: DeleteTopicsResult
+- uid: MASES.KafkaBridge.Clients.Admin.DeleteTopicsResult.ClassName
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Admin.DeleteTopicsResult.html#MASES_KafkaBridge_Clients_Admin_DeleteTopicsResult_ClassName
+  commentId: P:MASES.KafkaBridge.Clients.Admin.DeleteTopicsResult.ClassName
+  fullName: MASES.KafkaBridge.Clients.Admin.DeleteTopicsResult.ClassName
+  nameWithType: DeleteTopicsResult.ClassName
+- uid: MASES.KafkaBridge.Clients.Admin.DeleteTopicsResult.ClassName*
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Admin.DeleteTopicsResult.html#MASES_KafkaBridge_Clients_Admin_DeleteTopicsResult_ClassName_
+  commentId: Overload:MASES.KafkaBridge.Clients.Admin.DeleteTopicsResult.ClassName
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Admin.DeleteTopicsResult.ClassName
+  nameWithType: DeleteTopicsResult.ClassName
+- uid: MASES.KafkaBridge.Clients.Admin.KafkaAdminClient
+  name: KafkaAdminClient
+  href: api/MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.html
+  commentId: T:MASES.KafkaBridge.Clients.Admin.KafkaAdminClient
+  fullName: MASES.KafkaBridge.Clients.Admin.KafkaAdminClient
+  nameWithType: KafkaAdminClient
+- uid: MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.ClassName
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.html#MASES_KafkaBridge_Clients_Admin_KafkaAdminClient_ClassName
+  commentId: P:MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.ClassName
+  fullName: MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.ClassName
+  nameWithType: KafkaAdminClient.ClassName
+- uid: MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.ClassName*
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.html#MASES_KafkaBridge_Clients_Admin_KafkaAdminClient_ClassName_
+  commentId: Overload:MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.ClassName
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.ClassName
+  nameWithType: KafkaAdminClient.ClassName
+- uid: MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.Create(MASES.KafkaBridge.Java.Util.Properties)
+  name: Create(Properties)
+  href: api/MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.html#MASES_KafkaBridge_Clients_Admin_KafkaAdminClient_Create_MASES_KafkaBridge_Java_Util_Properties_
+  commentId: M:MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.Create(MASES.KafkaBridge.Java.Util.Properties)
+  fullName: MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.Create(MASES.KafkaBridge.Java.Util.Properties)
+  nameWithType: KafkaAdminClient.Create(Properties)
+- uid: MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.Create*
+  name: Create
+  href: api/MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.html#MASES_KafkaBridge_Clients_Admin_KafkaAdminClient_Create_
+  commentId: Overload:MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.Create
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.Create
+  nameWithType: KafkaAdminClient.Create
+- uid: MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.CreateTopics(MASES.KafkaBridge.Java.Util.Collection{MASES.KafkaBridge.Clients.Admin.NewTopic})
+  name: CreateTopics(Collection<NewTopic>)
+  href: api/MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.html#MASES_KafkaBridge_Clients_Admin_KafkaAdminClient_CreateTopics_MASES_KafkaBridge_Java_Util_Collection_MASES_KafkaBridge_Clients_Admin_NewTopic__
+  commentId: M:MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.CreateTopics(MASES.KafkaBridge.Java.Util.Collection{MASES.KafkaBridge.Clients.Admin.NewTopic})
+  name.vb: CreateTopics(Collection(Of NewTopic))
+  fullName: MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.CreateTopics(MASES.KafkaBridge.Java.Util.Collection<MASES.KafkaBridge.Clients.Admin.NewTopic>)
+  fullName.vb: MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.CreateTopics(MASES.KafkaBridge.Java.Util.Collection(Of MASES.KafkaBridge.Clients.Admin.NewTopic))
+  nameWithType: KafkaAdminClient.CreateTopics(Collection<NewTopic>)
+  nameWithType.vb: KafkaAdminClient.CreateTopics(Collection(Of NewTopic))
+- uid: MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.CreateTopics(MASES.KafkaBridge.Java.Util.Collection{MASES.KafkaBridge.Clients.Admin.NewTopic},MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions)
+  name: CreateTopics(Collection<NewTopic>, CreateTopicsOptions)
+  href: api/MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.html#MASES_KafkaBridge_Clients_Admin_KafkaAdminClient_CreateTopics_MASES_KafkaBridge_Java_Util_Collection_MASES_KafkaBridge_Clients_Admin_NewTopic__MASES_KafkaBridge_Clients_Admin_CreateTopicsOptions_
+  commentId: M:MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.CreateTopics(MASES.KafkaBridge.Java.Util.Collection{MASES.KafkaBridge.Clients.Admin.NewTopic},MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions)
+  name.vb: CreateTopics(Collection(Of NewTopic), CreateTopicsOptions)
+  fullName: MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.CreateTopics(MASES.KafkaBridge.Java.Util.Collection<MASES.KafkaBridge.Clients.Admin.NewTopic>, MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions)
+  fullName.vb: MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.CreateTopics(MASES.KafkaBridge.Java.Util.Collection(Of MASES.KafkaBridge.Clients.Admin.NewTopic), MASES.KafkaBridge.Clients.Admin.CreateTopicsOptions)
+  nameWithType: KafkaAdminClient.CreateTopics(Collection<NewTopic>, CreateTopicsOptions)
+  nameWithType.vb: KafkaAdminClient.CreateTopics(Collection(Of NewTopic), CreateTopicsOptions)
+- uid: MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.CreateTopics*
+  name: CreateTopics
+  href: api/MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.html#MASES_KafkaBridge_Clients_Admin_KafkaAdminClient_CreateTopics_
+  commentId: Overload:MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.CreateTopics
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.CreateTopics
+  nameWithType: KafkaAdminClient.CreateTopics
+- uid: MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.DeleteTopics(MASES.KafkaBridge.Java.Util.Collection{MASES.KafkaBridge.Clients.Admin.NewTopic})
+  name: DeleteTopics(Collection<NewTopic>)
+  href: api/MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.html#MASES_KafkaBridge_Clients_Admin_KafkaAdminClient_DeleteTopics_MASES_KafkaBridge_Java_Util_Collection_MASES_KafkaBridge_Clients_Admin_NewTopic__
+  commentId: M:MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.DeleteTopics(MASES.KafkaBridge.Java.Util.Collection{MASES.KafkaBridge.Clients.Admin.NewTopic})
+  name.vb: DeleteTopics(Collection(Of NewTopic))
+  fullName: MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.DeleteTopics(MASES.KafkaBridge.Java.Util.Collection<MASES.KafkaBridge.Clients.Admin.NewTopic>)
+  fullName.vb: MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.DeleteTopics(MASES.KafkaBridge.Java.Util.Collection(Of MASES.KafkaBridge.Clients.Admin.NewTopic))
+  nameWithType: KafkaAdminClient.DeleteTopics(Collection<NewTopic>)
+  nameWithType.vb: KafkaAdminClient.DeleteTopics(Collection(Of NewTopic))
+- uid: MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.DeleteTopics*
+  name: DeleteTopics
+  href: api/MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.html#MASES_KafkaBridge_Clients_Admin_KafkaAdminClient_DeleteTopics_
+  commentId: Overload:MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.DeleteTopics
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Admin.KafkaAdminClient.DeleteTopics
+  nameWithType: KafkaAdminClient.DeleteTopics
+- uid: MASES.KafkaBridge.Clients.Admin.NewTopic
+  name: NewTopic
+  href: api/MASES.KafkaBridge.Clients.Admin.NewTopic.html
+  commentId: T:MASES.KafkaBridge.Clients.Admin.NewTopic
+  fullName: MASES.KafkaBridge.Clients.Admin.NewTopic
+  nameWithType: NewTopic
+- uid: MASES.KafkaBridge.Clients.Admin.NewTopic.#ctor
+  name: NewTopic()
+  href: api/MASES.KafkaBridge.Clients.Admin.NewTopic.html#MASES_KafkaBridge_Clients_Admin_NewTopic__ctor
+  commentId: M:MASES.KafkaBridge.Clients.Admin.NewTopic.#ctor
+  fullName: MASES.KafkaBridge.Clients.Admin.NewTopic.NewTopic()
+  nameWithType: NewTopic.NewTopic()
+- uid: MASES.KafkaBridge.Clients.Admin.NewTopic.#ctor(System.String,System.Int32,System.Int16)
+  name: NewTopic(String, Int32, Int16)
+  href: api/MASES.KafkaBridge.Clients.Admin.NewTopic.html#MASES_KafkaBridge_Clients_Admin_NewTopic__ctor_System_String_System_Int32_System_Int16_
+  commentId: M:MASES.KafkaBridge.Clients.Admin.NewTopic.#ctor(System.String,System.Int32,System.Int16)
+  fullName: MASES.KafkaBridge.Clients.Admin.NewTopic.NewTopic(System.String, System.Int32, System.Int16)
+  nameWithType: NewTopic.NewTopic(String, Int32, Int16)
+- uid: MASES.KafkaBridge.Clients.Admin.NewTopic.#ctor*
+  name: NewTopic
+  href: api/MASES.KafkaBridge.Clients.Admin.NewTopic.html#MASES_KafkaBridge_Clients_Admin_NewTopic__ctor_
+  commentId: Overload:MASES.KafkaBridge.Clients.Admin.NewTopic.#ctor
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Admin.NewTopic.NewTopic
+  nameWithType: NewTopic.NewTopic
+- uid: MASES.KafkaBridge.Clients.Admin.NewTopic.ClassName
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Admin.NewTopic.html#MASES_KafkaBridge_Clients_Admin_NewTopic_ClassName
+  commentId: P:MASES.KafkaBridge.Clients.Admin.NewTopic.ClassName
+  fullName: MASES.KafkaBridge.Clients.Admin.NewTopic.ClassName
+  nameWithType: NewTopic.ClassName
+- uid: MASES.KafkaBridge.Clients.Admin.NewTopic.ClassName*
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Admin.NewTopic.html#MASES_KafkaBridge_Clients_Admin_NewTopic_ClassName_
+  commentId: Overload:MASES.KafkaBridge.Clients.Admin.NewTopic.ClassName
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Admin.NewTopic.ClassName
+  nameWithType: NewTopic.ClassName
+- uid: MASES.KafkaBridge.Clients.Admin.NewTopic.Configs(MASES.KafkaBridge.Java.Util.Map{System.String,System.String})
+  name: Configs(Map<String, String>)
+  href: api/MASES.KafkaBridge.Clients.Admin.NewTopic.html#MASES_KafkaBridge_Clients_Admin_NewTopic_Configs_MASES_KafkaBridge_Java_Util_Map_System_String_System_String__
+  commentId: M:MASES.KafkaBridge.Clients.Admin.NewTopic.Configs(MASES.KafkaBridge.Java.Util.Map{System.String,System.String})
+  name.vb: Configs(Map(Of String, String))
+  fullName: MASES.KafkaBridge.Clients.Admin.NewTopic.Configs(MASES.KafkaBridge.Java.Util.Map<System.String, System.String>)
+  fullName.vb: MASES.KafkaBridge.Clients.Admin.NewTopic.Configs(MASES.KafkaBridge.Java.Util.Map(Of System.String, System.String))
+  nameWithType: NewTopic.Configs(Map<String, String>)
+  nameWithType.vb: NewTopic.Configs(Map(Of String, String))
+- uid: MASES.KafkaBridge.Clients.Admin.NewTopic.Configs*
+  name: Configs
+  href: api/MASES.KafkaBridge.Clients.Admin.NewTopic.html#MASES_KafkaBridge_Clients_Admin_NewTopic_Configs_
+  commentId: Overload:MASES.KafkaBridge.Clients.Admin.NewTopic.Configs
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Admin.NewTopic.Configs
+  nameWithType: NewTopic.Configs
+- uid: MASES.KafkaBridge.Clients.Consumer
+  name: MASES.KafkaBridge.Clients.Consumer
+  href: api/MASES.KafkaBridge.Clients.Consumer.html
+  commentId: N:MASES.KafkaBridge.Clients.Consumer
+  fullName: MASES.KafkaBridge.Clients.Consumer
+  nameWithType: MASES.KafkaBridge.Clients.Consumer
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerConfig
+  name: ConsumerConfig
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerConfig.html
+  commentId: T:MASES.KafkaBridge.Clients.Consumer.ConsumerConfig
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerConfig
+  nameWithType: ConsumerConfig
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerConfig.ClassName
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerConfig.html#MASES_KafkaBridge_Clients_Consumer_ConsumerConfig_ClassName
+  commentId: P:MASES.KafkaBridge.Clients.Consumer.ConsumerConfig.ClassName
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerConfig.ClassName
+  nameWithType: ConsumerConfig.ClassName
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerConfig.ClassName*
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerConfig.html#MASES_KafkaBridge_Clients_Consumer_ConsumerConfig_ClassName_
+  commentId: Overload:MASES.KafkaBridge.Clients.Consumer.ConsumerConfig.ClassName
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerConfig.ClassName
+  nameWithType: ConsumerConfig.ClassName
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerConfig.IsStatic
+  name: IsStatic
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerConfig.html#MASES_KafkaBridge_Clients_Consumer_ConsumerConfig_IsStatic
+  commentId: P:MASES.KafkaBridge.Clients.Consumer.ConsumerConfig.IsStatic
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerConfig.IsStatic
+  nameWithType: ConsumerConfig.IsStatic
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerConfig.IsStatic*
+  name: IsStatic
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerConfig.html#MASES_KafkaBridge_Clients_Consumer_ConsumerConfig_IsStatic_
+  commentId: Overload:MASES.KafkaBridge.Clients.Consumer.ConsumerConfig.IsStatic
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerConfig.IsStatic
+  nameWithType: ConsumerConfig.IsStatic
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord
+  name: ConsumerRecord
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.html
+  commentId: T:MASES.KafkaBridge.Clients.Consumer.ConsumerRecord
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord
+  nameWithType: ConsumerRecord
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.ClassName
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.html#MASES_KafkaBridge_Clients_Consumer_ConsumerRecord_ClassName
+  commentId: P:MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.ClassName
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.ClassName
+  nameWithType: ConsumerRecord.ClassName
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.ClassName*
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.html#MASES_KafkaBridge_Clients_Consumer_ConsumerRecord_ClassName_
+  commentId: Overload:MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.ClassName
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.ClassName
+  nameWithType: ConsumerRecord.ClassName
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Headers
+  name: Headers
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.html#MASES_KafkaBridge_Clients_Consumer_ConsumerRecord_Headers
+  commentId: P:MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Headers
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Headers
+  nameWithType: ConsumerRecord.Headers
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Headers*
+  name: Headers
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.html#MASES_KafkaBridge_Clients_Consumer_ConsumerRecord_Headers_
+  commentId: Overload:MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Headers
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Headers
+  nameWithType: ConsumerRecord.Headers
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Key
+  name: Key
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.html#MASES_KafkaBridge_Clients_Consumer_ConsumerRecord_Key
+  commentId: P:MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Key
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Key
+  nameWithType: ConsumerRecord.Key
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Key*
+  name: Key
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.html#MASES_KafkaBridge_Clients_Consumer_ConsumerRecord_Key_
+  commentId: Overload:MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Key
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Key
+  nameWithType: ConsumerRecord.Key
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Offset
+  name: Offset
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.html#MASES_KafkaBridge_Clients_Consumer_ConsumerRecord_Offset
+  commentId: P:MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Offset
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Offset
+  nameWithType: ConsumerRecord.Offset
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Offset*
+  name: Offset
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.html#MASES_KafkaBridge_Clients_Consumer_ConsumerRecord_Offset_
+  commentId: Overload:MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Offset
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Offset
+  nameWithType: ConsumerRecord.Offset
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Partition
+  name: Partition
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.html#MASES_KafkaBridge_Clients_Consumer_ConsumerRecord_Partition
+  commentId: P:MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Partition
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Partition
+  nameWithType: ConsumerRecord.Partition
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Partition*
+  name: Partition
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.html#MASES_KafkaBridge_Clients_Consumer_ConsumerRecord_Partition_
+  commentId: Overload:MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Partition
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Partition
+  nameWithType: ConsumerRecord.Partition
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.SerializedKeySize
+  name: SerializedKeySize
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.html#MASES_KafkaBridge_Clients_Consumer_ConsumerRecord_SerializedKeySize
+  commentId: P:MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.SerializedKeySize
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.SerializedKeySize
+  nameWithType: ConsumerRecord.SerializedKeySize
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.SerializedKeySize*
+  name: SerializedKeySize
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.html#MASES_KafkaBridge_Clients_Consumer_ConsumerRecord_SerializedKeySize_
+  commentId: Overload:MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.SerializedKeySize
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.SerializedKeySize
+  nameWithType: ConsumerRecord.SerializedKeySize
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.SerializedValueSize
+  name: SerializedValueSize
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.html#MASES_KafkaBridge_Clients_Consumer_ConsumerRecord_SerializedValueSize
+  commentId: P:MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.SerializedValueSize
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.SerializedValueSize
+  nameWithType: ConsumerRecord.SerializedValueSize
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.SerializedValueSize*
+  name: SerializedValueSize
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.html#MASES_KafkaBridge_Clients_Consumer_ConsumerRecord_SerializedValueSize_
+  commentId: Overload:MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.SerializedValueSize
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.SerializedValueSize
+  nameWithType: ConsumerRecord.SerializedValueSize
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Timestamp
+  name: Timestamp
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.html#MASES_KafkaBridge_Clients_Consumer_ConsumerRecord_Timestamp
+  commentId: P:MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Timestamp
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Timestamp
+  nameWithType: ConsumerRecord.Timestamp
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Timestamp*
+  name: Timestamp
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.html#MASES_KafkaBridge_Clients_Consumer_ConsumerRecord_Timestamp_
+  commentId: Overload:MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Timestamp
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Timestamp
+  nameWithType: ConsumerRecord.Timestamp
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.TimestampType
+  name: TimestampType
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.html#MASES_KafkaBridge_Clients_Consumer_ConsumerRecord_TimestampType
+  commentId: P:MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.TimestampType
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.TimestampType
+  nameWithType: ConsumerRecord.TimestampType
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.TimestampType*
+  name: TimestampType
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.html#MASES_KafkaBridge_Clients_Consumer_ConsumerRecord_TimestampType_
+  commentId: Overload:MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.TimestampType
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.TimestampType
+  nameWithType: ConsumerRecord.TimestampType
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Topic
+  name: Topic
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.html#MASES_KafkaBridge_Clients_Consumer_ConsumerRecord_Topic
+  commentId: P:MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Topic
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Topic
+  nameWithType: ConsumerRecord.Topic
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Topic*
+  name: Topic
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.html#MASES_KafkaBridge_Clients_Consumer_ConsumerRecord_Topic_
+  commentId: Overload:MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Topic
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Topic
+  nameWithType: ConsumerRecord.Topic
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Value
+  name: Value
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.html#MASES_KafkaBridge_Clients_Consumer_ConsumerRecord_Value
+  commentId: P:MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Value
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Value
+  nameWithType: ConsumerRecord.Value
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Value*
+  name: Value
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.html#MASES_KafkaBridge_Clients_Consumer_ConsumerRecord_Value_
+  commentId: Overload:MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Value
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord.Value
+  nameWithType: ConsumerRecord.Value
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord`2
+  name: ConsumerRecord<K, V>
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerRecord-2.html
+  commentId: T:MASES.KafkaBridge.Clients.Consumer.ConsumerRecord`2
+  name.vb: ConsumerRecord(Of K, V)
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord<K, V>
+  fullName.vb: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord(Of K, V)
+  nameWithType: ConsumerRecord<K, V>
+  nameWithType.vb: ConsumerRecord(Of K, V)
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord`2.ClassName
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerRecord-2.html#MASES_KafkaBridge_Clients_Consumer_ConsumerRecord_2_ClassName
+  commentId: P:MASES.KafkaBridge.Clients.Consumer.ConsumerRecord`2.ClassName
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord<K, V>.ClassName
+  fullName.vb: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord(Of K, V).ClassName
+  nameWithType: ConsumerRecord<K, V>.ClassName
+  nameWithType.vb: ConsumerRecord(Of K, V).ClassName
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord`2.ClassName*
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerRecord-2.html#MASES_KafkaBridge_Clients_Consumer_ConsumerRecord_2_ClassName_
+  commentId: Overload:MASES.KafkaBridge.Clients.Consumer.ConsumerRecord`2.ClassName
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord<K, V>.ClassName
+  fullName.vb: MASES.KafkaBridge.Clients.Consumer.ConsumerRecord(Of K, V).ClassName
+  nameWithType: ConsumerRecord<K, V>.ClassName
+  nameWithType.vb: ConsumerRecord(Of K, V).ClassName
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerRecords
+  name: ConsumerRecords
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerRecords.html
+  commentId: T:MASES.KafkaBridge.Clients.Consumer.ConsumerRecords
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerRecords
+  nameWithType: ConsumerRecords
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerRecords.ClassName
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerRecords.html#MASES_KafkaBridge_Clients_Consumer_ConsumerRecords_ClassName
+  commentId: P:MASES.KafkaBridge.Clients.Consumer.ConsumerRecords.ClassName
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerRecords.ClassName
+  nameWithType: ConsumerRecords.ClassName
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerRecords.ClassName*
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerRecords.html#MASES_KafkaBridge_Clients_Consumer_ConsumerRecords_ClassName_
+  commentId: Overload:MASES.KafkaBridge.Clients.Consumer.ConsumerRecords.ClassName
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerRecords.ClassName
+  nameWithType: ConsumerRecords.ClassName
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerRecords`2
+  name: ConsumerRecords<K, V>
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerRecords-2.html
+  commentId: T:MASES.KafkaBridge.Clients.Consumer.ConsumerRecords`2
+  name.vb: ConsumerRecords(Of K, V)
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerRecords<K, V>
+  fullName.vb: MASES.KafkaBridge.Clients.Consumer.ConsumerRecords(Of K, V)
+  nameWithType: ConsumerRecords<K, V>
+  nameWithType.vb: ConsumerRecords(Of K, V)
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerRecords`2.ClassName
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerRecords-2.html#MASES_KafkaBridge_Clients_Consumer_ConsumerRecords_2_ClassName
+  commentId: P:MASES.KafkaBridge.Clients.Consumer.ConsumerRecords`2.ClassName
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerRecords<K, V>.ClassName
+  fullName.vb: MASES.KafkaBridge.Clients.Consumer.ConsumerRecords(Of K, V).ClassName
+  nameWithType: ConsumerRecords<K, V>.ClassName
+  nameWithType.vb: ConsumerRecords(Of K, V).ClassName
+- uid: MASES.KafkaBridge.Clients.Consumer.ConsumerRecords`2.ClassName*
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Consumer.ConsumerRecords-2.html#MASES_KafkaBridge_Clients_Consumer_ConsumerRecords_2_ClassName_
+  commentId: Overload:MASES.KafkaBridge.Clients.Consumer.ConsumerRecords`2.ClassName
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Consumer.ConsumerRecords<K, V>.ClassName
+  fullName.vb: MASES.KafkaBridge.Clients.Consumer.ConsumerRecords(Of K, V).ClassName
+  nameWithType: ConsumerRecords<K, V>.ClassName
+  nameWithType.vb: ConsumerRecords(Of K, V).ClassName
+- uid: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer
+  name: KafkaConsumer
+  href: api/MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.html
+  commentId: T:MASES.KafkaBridge.Clients.Consumer.KafkaConsumer
+  fullName: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer
+  nameWithType: KafkaConsumer
+- uid: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.#ctor
+  name: KafkaConsumer()
+  href: api/MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.html#MASES_KafkaBridge_Clients_Consumer_KafkaConsumer__ctor
+  commentId: M:MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.#ctor
+  fullName: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.KafkaConsumer()
+  nameWithType: KafkaConsumer.KafkaConsumer()
+- uid: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.#ctor(MASES.KafkaBridge.Java.Util.Properties)
+  name: KafkaConsumer(Properties)
+  href: api/MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.html#MASES_KafkaBridge_Clients_Consumer_KafkaConsumer__ctor_MASES_KafkaBridge_Java_Util_Properties_
+  commentId: M:MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.#ctor(MASES.KafkaBridge.Java.Util.Properties)
+  fullName: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.KafkaConsumer(MASES.KafkaBridge.Java.Util.Properties)
+  nameWithType: KafkaConsumer.KafkaConsumer(Properties)
+- uid: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.#ctor*
+  name: KafkaConsumer
+  href: api/MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.html#MASES_KafkaBridge_Clients_Consumer_KafkaConsumer__ctor_
+  commentId: Overload:MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.#ctor
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.KafkaConsumer
+  nameWithType: KafkaConsumer.KafkaConsumer
+- uid: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.Assign(MASES.KafkaBridge.Java.Util.Collection{MASES.KafkaBridge.Common.TopicPartition})
+  name: Assign(Collection<TopicPartition>)
+  href: api/MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.html#MASES_KafkaBridge_Clients_Consumer_KafkaConsumer_Assign_MASES_KafkaBridge_Java_Util_Collection_MASES_KafkaBridge_Common_TopicPartition__
+  commentId: M:MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.Assign(MASES.KafkaBridge.Java.Util.Collection{MASES.KafkaBridge.Common.TopicPartition})
+  name.vb: Assign(Collection(Of TopicPartition))
+  fullName: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.Assign(MASES.KafkaBridge.Java.Util.Collection<MASES.KafkaBridge.Common.TopicPartition>)
+  fullName.vb: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.Assign(MASES.KafkaBridge.Java.Util.Collection(Of MASES.KafkaBridge.Common.TopicPartition))
+  nameWithType: KafkaConsumer.Assign(Collection<TopicPartition>)
+  nameWithType.vb: KafkaConsumer.Assign(Collection(Of TopicPartition))
+- uid: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.Assign*
+  name: Assign
+  href: api/MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.html#MASES_KafkaBridge_Clients_Consumer_KafkaConsumer_Assign_
+  commentId: Overload:MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.Assign
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.Assign
+  nameWithType: KafkaConsumer.Assign
+- uid: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.ClassName
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.html#MASES_KafkaBridge_Clients_Consumer_KafkaConsumer_ClassName
+  commentId: P:MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.ClassName
+  fullName: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.ClassName
+  nameWithType: KafkaConsumer.ClassName
+- uid: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.ClassName*
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.html#MASES_KafkaBridge_Clients_Consumer_KafkaConsumer_ClassName_
+  commentId: Overload:MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.ClassName
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.ClassName
+  nameWithType: KafkaConsumer.ClassName
+- uid: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.Poll(System.Int64)
+  name: Poll(Int64)
+  href: api/MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.html#MASES_KafkaBridge_Clients_Consumer_KafkaConsumer_Poll_System_Int64_
+  commentId: M:MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.Poll(System.Int64)
+  fullName: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.Poll(System.Int64)
+  nameWithType: KafkaConsumer.Poll(Int64)
+- uid: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.Poll*
+  name: Poll
+  href: api/MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.html#MASES_KafkaBridge_Clients_Consumer_KafkaConsumer_Poll_
+  commentId: Overload:MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.Poll
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.Poll
+  nameWithType: KafkaConsumer.Poll
+- uid: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.Subscribe(MASES.KafkaBridge.Java.Util.Collection{System.String})
+  name: Subscribe(Collection<String>)
+  href: api/MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.html#MASES_KafkaBridge_Clients_Consumer_KafkaConsumer_Subscribe_MASES_KafkaBridge_Java_Util_Collection_System_String__
+  commentId: M:MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.Subscribe(MASES.KafkaBridge.Java.Util.Collection{System.String})
+  name.vb: Subscribe(Collection(Of String))
+  fullName: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.Subscribe(MASES.KafkaBridge.Java.Util.Collection<System.String>)
+  fullName.vb: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.Subscribe(MASES.KafkaBridge.Java.Util.Collection(Of System.String))
+  nameWithType: KafkaConsumer.Subscribe(Collection<String>)
+  nameWithType.vb: KafkaConsumer.Subscribe(Collection(Of String))
+- uid: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.Subscribe*
+  name: Subscribe
+  href: api/MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.html#MASES_KafkaBridge_Clients_Consumer_KafkaConsumer_Subscribe_
+  commentId: Overload:MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.Subscribe
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.Subscribe
+  nameWithType: KafkaConsumer.Subscribe
+- uid: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.Unsubscribe
+  name: Unsubscribe()
+  href: api/MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.html#MASES_KafkaBridge_Clients_Consumer_KafkaConsumer_Unsubscribe
+  commentId: M:MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.Unsubscribe
+  fullName: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.Unsubscribe()
+  nameWithType: KafkaConsumer.Unsubscribe()
+- uid: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.Unsubscribe*
+  name: Unsubscribe
+  href: api/MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.html#MASES_KafkaBridge_Clients_Consumer_KafkaConsumer_Unsubscribe_
+  commentId: Overload:MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.Unsubscribe
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.Unsubscribe
+  nameWithType: KafkaConsumer.Unsubscribe
+- uid: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer`2
+  name: KafkaConsumer<K, V>
+  href: api/MASES.KafkaBridge.Clients.Consumer.KafkaConsumer-2.html
+  commentId: T:MASES.KafkaBridge.Clients.Consumer.KafkaConsumer`2
+  name.vb: KafkaConsumer(Of K, V)
+  fullName: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer<K, V>
+  fullName.vb: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer(Of K, V)
+  nameWithType: KafkaConsumer<K, V>
+  nameWithType.vb: KafkaConsumer(Of K, V)
+- uid: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer`2.ClassName
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Consumer.KafkaConsumer-2.html#MASES_KafkaBridge_Clients_Consumer_KafkaConsumer_2_ClassName
+  commentId: P:MASES.KafkaBridge.Clients.Consumer.KafkaConsumer`2.ClassName
+  fullName: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer<K, V>.ClassName
+  fullName.vb: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer(Of K, V).ClassName
+  nameWithType: KafkaConsumer<K, V>.ClassName
+  nameWithType.vb: KafkaConsumer(Of K, V).ClassName
+- uid: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer`2.ClassName*
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Consumer.KafkaConsumer-2.html#MASES_KafkaBridge_Clients_Consumer_KafkaConsumer_2_ClassName_
+  commentId: Overload:MASES.KafkaBridge.Clients.Consumer.KafkaConsumer`2.ClassName
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer<K, V>.ClassName
+  fullName.vb: MASES.KafkaBridge.Clients.Consumer.KafkaConsumer(Of K, V).ClassName
+  nameWithType: KafkaConsumer<K, V>.ClassName
+  nameWithType.vb: KafkaConsumer(Of K, V).ClassName
+- uid: MASES.KafkaBridge.Clients.Producer
+  name: MASES.KafkaBridge.Clients.Producer
+  href: api/MASES.KafkaBridge.Clients.Producer.html
+  commentId: N:MASES.KafkaBridge.Clients.Producer
+  fullName: MASES.KafkaBridge.Clients.Producer
+  nameWithType: MASES.KafkaBridge.Clients.Producer
+- uid: MASES.KafkaBridge.Clients.Producer.KafkaProducer
+  name: KafkaProducer
+  href: api/MASES.KafkaBridge.Clients.Producer.KafkaProducer.html
+  commentId: T:MASES.KafkaBridge.Clients.Producer.KafkaProducer
+  fullName: MASES.KafkaBridge.Clients.Producer.KafkaProducer
+  nameWithType: KafkaProducer
+- uid: MASES.KafkaBridge.Clients.Producer.KafkaProducer.#ctor
+  name: KafkaProducer()
+  href: api/MASES.KafkaBridge.Clients.Producer.KafkaProducer.html#MASES_KafkaBridge_Clients_Producer_KafkaProducer__ctor
+  commentId: M:MASES.KafkaBridge.Clients.Producer.KafkaProducer.#ctor
+  fullName: MASES.KafkaBridge.Clients.Producer.KafkaProducer.KafkaProducer()
+  nameWithType: KafkaProducer.KafkaProducer()
+- uid: MASES.KafkaBridge.Clients.Producer.KafkaProducer.#ctor(MASES.KafkaBridge.Java.Util.Properties)
+  name: KafkaProducer(Properties)
+  href: api/MASES.KafkaBridge.Clients.Producer.KafkaProducer.html#MASES_KafkaBridge_Clients_Producer_KafkaProducer__ctor_MASES_KafkaBridge_Java_Util_Properties_
+  commentId: M:MASES.KafkaBridge.Clients.Producer.KafkaProducer.#ctor(MASES.KafkaBridge.Java.Util.Properties)
+  fullName: MASES.KafkaBridge.Clients.Producer.KafkaProducer.KafkaProducer(MASES.KafkaBridge.Java.Util.Properties)
+  nameWithType: KafkaProducer.KafkaProducer(Properties)
+- uid: MASES.KafkaBridge.Clients.Producer.KafkaProducer.#ctor*
+  name: KafkaProducer
+  href: api/MASES.KafkaBridge.Clients.Producer.KafkaProducer.html#MASES_KafkaBridge_Clients_Producer_KafkaProducer__ctor_
+  commentId: Overload:MASES.KafkaBridge.Clients.Producer.KafkaProducer.#ctor
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Producer.KafkaProducer.KafkaProducer
+  nameWithType: KafkaProducer.KafkaProducer
+- uid: MASES.KafkaBridge.Clients.Producer.KafkaProducer.AbortTransaction
+  name: AbortTransaction()
+  href: api/MASES.KafkaBridge.Clients.Producer.KafkaProducer.html#MASES_KafkaBridge_Clients_Producer_KafkaProducer_AbortTransaction
+  commentId: M:MASES.KafkaBridge.Clients.Producer.KafkaProducer.AbortTransaction
+  fullName: MASES.KafkaBridge.Clients.Producer.KafkaProducer.AbortTransaction()
+  nameWithType: KafkaProducer.AbortTransaction()
+- uid: MASES.KafkaBridge.Clients.Producer.KafkaProducer.AbortTransaction*
+  name: AbortTransaction
+  href: api/MASES.KafkaBridge.Clients.Producer.KafkaProducer.html#MASES_KafkaBridge_Clients_Producer_KafkaProducer_AbortTransaction_
+  commentId: Overload:MASES.KafkaBridge.Clients.Producer.KafkaProducer.AbortTransaction
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Producer.KafkaProducer.AbortTransaction
+  nameWithType: KafkaProducer.AbortTransaction
+- uid: MASES.KafkaBridge.Clients.Producer.KafkaProducer.BeginTransaction
+  name: BeginTransaction()
+  href: api/MASES.KafkaBridge.Clients.Producer.KafkaProducer.html#MASES_KafkaBridge_Clients_Producer_KafkaProducer_BeginTransaction
+  commentId: M:MASES.KafkaBridge.Clients.Producer.KafkaProducer.BeginTransaction
+  fullName: MASES.KafkaBridge.Clients.Producer.KafkaProducer.BeginTransaction()
+  nameWithType: KafkaProducer.BeginTransaction()
+- uid: MASES.KafkaBridge.Clients.Producer.KafkaProducer.BeginTransaction*
+  name: BeginTransaction
+  href: api/MASES.KafkaBridge.Clients.Producer.KafkaProducer.html#MASES_KafkaBridge_Clients_Producer_KafkaProducer_BeginTransaction_
+  commentId: Overload:MASES.KafkaBridge.Clients.Producer.KafkaProducer.BeginTransaction
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Producer.KafkaProducer.BeginTransaction
+  nameWithType: KafkaProducer.BeginTransaction
+- uid: MASES.KafkaBridge.Clients.Producer.KafkaProducer.ClassName
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Producer.KafkaProducer.html#MASES_KafkaBridge_Clients_Producer_KafkaProducer_ClassName
+  commentId: P:MASES.KafkaBridge.Clients.Producer.KafkaProducer.ClassName
+  fullName: MASES.KafkaBridge.Clients.Producer.KafkaProducer.ClassName
+  nameWithType: KafkaProducer.ClassName
+- uid: MASES.KafkaBridge.Clients.Producer.KafkaProducer.ClassName*
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Producer.KafkaProducer.html#MASES_KafkaBridge_Clients_Producer_KafkaProducer_ClassName_
+  commentId: Overload:MASES.KafkaBridge.Clients.Producer.KafkaProducer.ClassName
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Producer.KafkaProducer.ClassName
+  nameWithType: KafkaProducer.ClassName
+- uid: MASES.KafkaBridge.Clients.Producer.KafkaProducer.CommitTransaction
+  name: CommitTransaction()
+  href: api/MASES.KafkaBridge.Clients.Producer.KafkaProducer.html#MASES_KafkaBridge_Clients_Producer_KafkaProducer_CommitTransaction
+  commentId: M:MASES.KafkaBridge.Clients.Producer.KafkaProducer.CommitTransaction
+  fullName: MASES.KafkaBridge.Clients.Producer.KafkaProducer.CommitTransaction()
+  nameWithType: KafkaProducer.CommitTransaction()
+- uid: MASES.KafkaBridge.Clients.Producer.KafkaProducer.CommitTransaction*
+  name: CommitTransaction
+  href: api/MASES.KafkaBridge.Clients.Producer.KafkaProducer.html#MASES_KafkaBridge_Clients_Producer_KafkaProducer_CommitTransaction_
+  commentId: Overload:MASES.KafkaBridge.Clients.Producer.KafkaProducer.CommitTransaction
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Producer.KafkaProducer.CommitTransaction
+  nameWithType: KafkaProducer.CommitTransaction
+- uid: MASES.KafkaBridge.Clients.Producer.KafkaProducer.Flush
+  name: Flush()
+  href: api/MASES.KafkaBridge.Clients.Producer.KafkaProducer.html#MASES_KafkaBridge_Clients_Producer_KafkaProducer_Flush
+  commentId: M:MASES.KafkaBridge.Clients.Producer.KafkaProducer.Flush
+  fullName: MASES.KafkaBridge.Clients.Producer.KafkaProducer.Flush()
+  nameWithType: KafkaProducer.Flush()
+- uid: MASES.KafkaBridge.Clients.Producer.KafkaProducer.Flush*
+  name: Flush
+  href: api/MASES.KafkaBridge.Clients.Producer.KafkaProducer.html#MASES_KafkaBridge_Clients_Producer_KafkaProducer_Flush_
+  commentId: Overload:MASES.KafkaBridge.Clients.Producer.KafkaProducer.Flush
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Producer.KafkaProducer.Flush
+  nameWithType: KafkaProducer.Flush
+- uid: MASES.KafkaBridge.Clients.Producer.KafkaProducer.InitTransactions
+  name: InitTransactions()
+  href: api/MASES.KafkaBridge.Clients.Producer.KafkaProducer.html#MASES_KafkaBridge_Clients_Producer_KafkaProducer_InitTransactions
+  commentId: M:MASES.KafkaBridge.Clients.Producer.KafkaProducer.InitTransactions
+  fullName: MASES.KafkaBridge.Clients.Producer.KafkaProducer.InitTransactions()
+  nameWithType: KafkaProducer.InitTransactions()
+- uid: MASES.KafkaBridge.Clients.Producer.KafkaProducer.InitTransactions*
+  name: InitTransactions
+  href: api/MASES.KafkaBridge.Clients.Producer.KafkaProducer.html#MASES_KafkaBridge_Clients_Producer_KafkaProducer_InitTransactions_
+  commentId: Overload:MASES.KafkaBridge.Clients.Producer.KafkaProducer.InitTransactions
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Producer.KafkaProducer.InitTransactions
+  nameWithType: KafkaProducer.InitTransactions
+- uid: MASES.KafkaBridge.Clients.Producer.KafkaProducer.IsCloseable
+  name: IsCloseable
+  href: api/MASES.KafkaBridge.Clients.Producer.KafkaProducer.html#MASES_KafkaBridge_Clients_Producer_KafkaProducer_IsCloseable
+  commentId: P:MASES.KafkaBridge.Clients.Producer.KafkaProducer.IsCloseable
+  fullName: MASES.KafkaBridge.Clients.Producer.KafkaProducer.IsCloseable
+  nameWithType: KafkaProducer.IsCloseable
+- uid: MASES.KafkaBridge.Clients.Producer.KafkaProducer.IsCloseable*
+  name: IsCloseable
+  href: api/MASES.KafkaBridge.Clients.Producer.KafkaProducer.html#MASES_KafkaBridge_Clients_Producer_KafkaProducer_IsCloseable_
+  commentId: Overload:MASES.KafkaBridge.Clients.Producer.KafkaProducer.IsCloseable
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Producer.KafkaProducer.IsCloseable
+  nameWithType: KafkaProducer.IsCloseable
+- uid: MASES.KafkaBridge.Clients.Producer.KafkaProducer.Send(MASES.KafkaBridge.Clients.Producer.ProducerRecord)
+  name: Send(ProducerRecord)
+  href: api/MASES.KafkaBridge.Clients.Producer.KafkaProducer.html#MASES_KafkaBridge_Clients_Producer_KafkaProducer_Send_MASES_KafkaBridge_Clients_Producer_ProducerRecord_
+  commentId: M:MASES.KafkaBridge.Clients.Producer.KafkaProducer.Send(MASES.KafkaBridge.Clients.Producer.ProducerRecord)
+  fullName: MASES.KafkaBridge.Clients.Producer.KafkaProducer.Send(MASES.KafkaBridge.Clients.Producer.ProducerRecord)
+  nameWithType: KafkaProducer.Send(ProducerRecord)
+- uid: MASES.KafkaBridge.Clients.Producer.KafkaProducer.Send*
+  name: Send
+  href: api/MASES.KafkaBridge.Clients.Producer.KafkaProducer.html#MASES_KafkaBridge_Clients_Producer_KafkaProducer_Send_
+  commentId: Overload:MASES.KafkaBridge.Clients.Producer.KafkaProducer.Send
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Producer.KafkaProducer.Send
+  nameWithType: KafkaProducer.Send
+- uid: MASES.KafkaBridge.Clients.Producer.KafkaProducer.Send``2(MASES.KafkaBridge.Clients.Producer.ProducerRecord{``0,``1})
+  name: Send<K, V>(ProducerRecord<K, V>)
+  href: api/MASES.KafkaBridge.Clients.Producer.KafkaProducer.html#MASES_KafkaBridge_Clients_Producer_KafkaProducer_Send__2_MASES_KafkaBridge_Clients_Producer_ProducerRecord___0___1__
+  commentId: M:MASES.KafkaBridge.Clients.Producer.KafkaProducer.Send``2(MASES.KafkaBridge.Clients.Producer.ProducerRecord{``0,``1})
+  name.vb: Send(Of K, V)(ProducerRecord(Of K, V))
+  fullName: MASES.KafkaBridge.Clients.Producer.KafkaProducer.Send<K, V>(MASES.KafkaBridge.Clients.Producer.ProducerRecord<K, V>)
+  fullName.vb: MASES.KafkaBridge.Clients.Producer.KafkaProducer.Send(Of K, V)(MASES.KafkaBridge.Clients.Producer.ProducerRecord(Of K, V))
+  nameWithType: KafkaProducer.Send<K, V>(ProducerRecord<K, V>)
+  nameWithType.vb: KafkaProducer.Send(Of K, V)(ProducerRecord(Of K, V))
+- uid: MASES.KafkaBridge.Clients.Producer.ProducerConfig
+  name: ProducerConfig
+  href: api/MASES.KafkaBridge.Clients.Producer.ProducerConfig.html
+  commentId: T:MASES.KafkaBridge.Clients.Producer.ProducerConfig
+  fullName: MASES.KafkaBridge.Clients.Producer.ProducerConfig
+  nameWithType: ProducerConfig
+- uid: MASES.KafkaBridge.Clients.Producer.ProducerConfig.ClassName
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Producer.ProducerConfig.html#MASES_KafkaBridge_Clients_Producer_ProducerConfig_ClassName
+  commentId: P:MASES.KafkaBridge.Clients.Producer.ProducerConfig.ClassName
+  fullName: MASES.KafkaBridge.Clients.Producer.ProducerConfig.ClassName
+  nameWithType: ProducerConfig.ClassName
+- uid: MASES.KafkaBridge.Clients.Producer.ProducerConfig.ClassName*
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Producer.ProducerConfig.html#MASES_KafkaBridge_Clients_Producer_ProducerConfig_ClassName_
+  commentId: Overload:MASES.KafkaBridge.Clients.Producer.ProducerConfig.ClassName
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Producer.ProducerConfig.ClassName
+  nameWithType: ProducerConfig.ClassName
+- uid: MASES.KafkaBridge.Clients.Producer.ProducerConfig.IsStatic
+  name: IsStatic
+  href: api/MASES.KafkaBridge.Clients.Producer.ProducerConfig.html#MASES_KafkaBridge_Clients_Producer_ProducerConfig_IsStatic
+  commentId: P:MASES.KafkaBridge.Clients.Producer.ProducerConfig.IsStatic
+  fullName: MASES.KafkaBridge.Clients.Producer.ProducerConfig.IsStatic
+  nameWithType: ProducerConfig.IsStatic
+- uid: MASES.KafkaBridge.Clients.Producer.ProducerConfig.IsStatic*
+  name: IsStatic
+  href: api/MASES.KafkaBridge.Clients.Producer.ProducerConfig.html#MASES_KafkaBridge_Clients_Producer_ProducerConfig_IsStatic_
+  commentId: Overload:MASES.KafkaBridge.Clients.Producer.ProducerConfig.IsStatic
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Producer.ProducerConfig.IsStatic
+  nameWithType: ProducerConfig.IsStatic
+- uid: MASES.KafkaBridge.Clients.Producer.ProducerRecord
+  name: ProducerRecord
+  href: api/MASES.KafkaBridge.Clients.Producer.ProducerRecord.html
+  commentId: T:MASES.KafkaBridge.Clients.Producer.ProducerRecord
+  fullName: MASES.KafkaBridge.Clients.Producer.ProducerRecord
+  nameWithType: ProducerRecord
+- uid: MASES.KafkaBridge.Clients.Producer.ProducerRecord.#ctor
+  name: ProducerRecord()
+  href: api/MASES.KafkaBridge.Clients.Producer.ProducerRecord.html#MASES_KafkaBridge_Clients_Producer_ProducerRecord__ctor
+  commentId: M:MASES.KafkaBridge.Clients.Producer.ProducerRecord.#ctor
+  fullName: MASES.KafkaBridge.Clients.Producer.ProducerRecord.ProducerRecord()
+  nameWithType: ProducerRecord.ProducerRecord()
+- uid: MASES.KafkaBridge.Clients.Producer.ProducerRecord.#ctor(System.String,System.Int32,System.Int64,System.Object,System.Object)
+  name: ProducerRecord(String, Int32, Int64, Object, Object)
+  href: api/MASES.KafkaBridge.Clients.Producer.ProducerRecord.html#MASES_KafkaBridge_Clients_Producer_ProducerRecord__ctor_System_String_System_Int32_System_Int64_System_Object_System_Object_
+  commentId: M:MASES.KafkaBridge.Clients.Producer.ProducerRecord.#ctor(System.String,System.Int32,System.Int64,System.Object,System.Object)
+  fullName: MASES.KafkaBridge.Clients.Producer.ProducerRecord.ProducerRecord(System.String, System.Int32, System.Int64, System.Object, System.Object)
+  nameWithType: ProducerRecord.ProducerRecord(String, Int32, Int64, Object, Object)
+- uid: MASES.KafkaBridge.Clients.Producer.ProducerRecord.#ctor(System.String,System.Int32,System.Object,System.Object)
+  name: ProducerRecord(String, Int32, Object, Object)
+  href: api/MASES.KafkaBridge.Clients.Producer.ProducerRecord.html#MASES_KafkaBridge_Clients_Producer_ProducerRecord__ctor_System_String_System_Int32_System_Object_System_Object_
+  commentId: M:MASES.KafkaBridge.Clients.Producer.ProducerRecord.#ctor(System.String,System.Int32,System.Object,System.Object)
+  fullName: MASES.KafkaBridge.Clients.Producer.ProducerRecord.ProducerRecord(System.String, System.Int32, System.Object, System.Object)
+  nameWithType: ProducerRecord.ProducerRecord(String, Int32, Object, Object)
+- uid: MASES.KafkaBridge.Clients.Producer.ProducerRecord.#ctor(System.String,System.Object)
+  name: ProducerRecord(String, Object)
+  href: api/MASES.KafkaBridge.Clients.Producer.ProducerRecord.html#MASES_KafkaBridge_Clients_Producer_ProducerRecord__ctor_System_String_System_Object_
+  commentId: M:MASES.KafkaBridge.Clients.Producer.ProducerRecord.#ctor(System.String,System.Object)
+  fullName: MASES.KafkaBridge.Clients.Producer.ProducerRecord.ProducerRecord(System.String, System.Object)
+  nameWithType: ProducerRecord.ProducerRecord(String, Object)
+- uid: MASES.KafkaBridge.Clients.Producer.ProducerRecord.#ctor(System.String,System.Object,System.Object)
+  name: ProducerRecord(String, Object, Object)
+  href: api/MASES.KafkaBridge.Clients.Producer.ProducerRecord.html#MASES_KafkaBridge_Clients_Producer_ProducerRecord__ctor_System_String_System_Object_System_Object_
+  commentId: M:MASES.KafkaBridge.Clients.Producer.ProducerRecord.#ctor(System.String,System.Object,System.Object)
+  fullName: MASES.KafkaBridge.Clients.Producer.ProducerRecord.ProducerRecord(System.String, System.Object, System.Object)
+  nameWithType: ProducerRecord.ProducerRecord(String, Object, Object)
+- uid: MASES.KafkaBridge.Clients.Producer.ProducerRecord.#ctor*
+  name: ProducerRecord
+  href: api/MASES.KafkaBridge.Clients.Producer.ProducerRecord.html#MASES_KafkaBridge_Clients_Producer_ProducerRecord__ctor_
+  commentId: Overload:MASES.KafkaBridge.Clients.Producer.ProducerRecord.#ctor
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Producer.ProducerRecord.ProducerRecord
+  nameWithType: ProducerRecord.ProducerRecord
+- uid: MASES.KafkaBridge.Clients.Producer.ProducerRecord`2
+  name: ProducerRecord<K, V>
+  href: api/MASES.KafkaBridge.Clients.Producer.ProducerRecord-2.html
+  commentId: T:MASES.KafkaBridge.Clients.Producer.ProducerRecord`2
+  name.vb: ProducerRecord(Of K, V)
+  fullName: MASES.KafkaBridge.Clients.Producer.ProducerRecord<K, V>
+  fullName.vb: MASES.KafkaBridge.Clients.Producer.ProducerRecord(Of K, V)
+  nameWithType: ProducerRecord<K, V>
+  nameWithType.vb: ProducerRecord(Of K, V)
+- uid: MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.#ctor
+  name: ProducerRecord()
+  href: api/MASES.KafkaBridge.Clients.Producer.ProducerRecord-2.html#MASES_KafkaBridge_Clients_Producer_ProducerRecord_2__ctor
+  commentId: M:MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.#ctor
+  fullName: MASES.KafkaBridge.Clients.Producer.ProducerRecord<K, V>.ProducerRecord()
+  fullName.vb: MASES.KafkaBridge.Clients.Producer.ProducerRecord(Of K, V).ProducerRecord()
+  nameWithType: ProducerRecord<K, V>.ProducerRecord()
+  nameWithType.vb: ProducerRecord(Of K, V).ProducerRecord()
+- uid: MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.#ctor(System.String,`0,`1)
+  name: ProducerRecord(String, K, V)
+  href: api/MASES.KafkaBridge.Clients.Producer.ProducerRecord-2.html#MASES_KafkaBridge_Clients_Producer_ProducerRecord_2__ctor_System_String__0__1_
+  commentId: M:MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.#ctor(System.String,`0,`1)
+  fullName: MASES.KafkaBridge.Clients.Producer.ProducerRecord<K, V>.ProducerRecord(System.String, K, V)
+  fullName.vb: MASES.KafkaBridge.Clients.Producer.ProducerRecord(Of K, V).ProducerRecord(System.String, K, V)
+  nameWithType: ProducerRecord<K, V>.ProducerRecord(String, K, V)
+  nameWithType.vb: ProducerRecord(Of K, V).ProducerRecord(String, K, V)
+- uid: MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.#ctor(System.String,`1)
+  name: ProducerRecord(String, V)
+  href: api/MASES.KafkaBridge.Clients.Producer.ProducerRecord-2.html#MASES_KafkaBridge_Clients_Producer_ProducerRecord_2__ctor_System_String__1_
+  commentId: M:MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.#ctor(System.String,`1)
+  fullName: MASES.KafkaBridge.Clients.Producer.ProducerRecord<K, V>.ProducerRecord(System.String, V)
+  fullName.vb: MASES.KafkaBridge.Clients.Producer.ProducerRecord(Of K, V).ProducerRecord(System.String, V)
+  nameWithType: ProducerRecord<K, V>.ProducerRecord(String, V)
+  nameWithType.vb: ProducerRecord(Of K, V).ProducerRecord(String, V)
+- uid: MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.#ctor(System.String,System.Int32,`0,`1)
+  name: ProducerRecord(String, Int32, K, V)
+  href: api/MASES.KafkaBridge.Clients.Producer.ProducerRecord-2.html#MASES_KafkaBridge_Clients_Producer_ProducerRecord_2__ctor_System_String_System_Int32__0__1_
+  commentId: M:MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.#ctor(System.String,System.Int32,`0,`1)
+  fullName: MASES.KafkaBridge.Clients.Producer.ProducerRecord<K, V>.ProducerRecord(System.String, System.Int32, K, V)
+  fullName.vb: MASES.KafkaBridge.Clients.Producer.ProducerRecord(Of K, V).ProducerRecord(System.String, System.Int32, K, V)
+  nameWithType: ProducerRecord<K, V>.ProducerRecord(String, Int32, K, V)
+  nameWithType.vb: ProducerRecord(Of K, V).ProducerRecord(String, Int32, K, V)
+- uid: MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.#ctor(System.String,System.Int32,System.Int64,`0,`1)
+  name: ProducerRecord(String, Int32, Int64, K, V)
+  href: api/MASES.KafkaBridge.Clients.Producer.ProducerRecord-2.html#MASES_KafkaBridge_Clients_Producer_ProducerRecord_2__ctor_System_String_System_Int32_System_Int64__0__1_
+  commentId: M:MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.#ctor(System.String,System.Int32,System.Int64,`0,`1)
+  fullName: MASES.KafkaBridge.Clients.Producer.ProducerRecord<K, V>.ProducerRecord(System.String, System.Int32, System.Int64, K, V)
+  fullName.vb: MASES.KafkaBridge.Clients.Producer.ProducerRecord(Of K, V).ProducerRecord(System.String, System.Int32, System.Int64, K, V)
+  nameWithType: ProducerRecord<K, V>.ProducerRecord(String, Int32, Int64, K, V)
+  nameWithType.vb: ProducerRecord(Of K, V).ProducerRecord(String, Int32, Int64, K, V)
+- uid: MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.#ctor*
+  name: ProducerRecord
+  href: api/MASES.KafkaBridge.Clients.Producer.ProducerRecord-2.html#MASES_KafkaBridge_Clients_Producer_ProducerRecord_2__ctor_
+  commentId: Overload:MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.#ctor
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Producer.ProducerRecord<K, V>.ProducerRecord
+  fullName.vb: MASES.KafkaBridge.Clients.Producer.ProducerRecord(Of K, V).ProducerRecord
+  nameWithType: ProducerRecord<K, V>.ProducerRecord
+  nameWithType.vb: ProducerRecord(Of K, V).ProducerRecord
+- uid: MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.ClassName
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Producer.ProducerRecord-2.html#MASES_KafkaBridge_Clients_Producer_ProducerRecord_2_ClassName
+  commentId: P:MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.ClassName
+  fullName: MASES.KafkaBridge.Clients.Producer.ProducerRecord<K, V>.ClassName
+  fullName.vb: MASES.KafkaBridge.Clients.Producer.ProducerRecord(Of K, V).ClassName
+  nameWithType: ProducerRecord<K, V>.ClassName
+  nameWithType.vb: ProducerRecord(Of K, V).ClassName
+- uid: MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.ClassName*
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Producer.ProducerRecord-2.html#MASES_KafkaBridge_Clients_Producer_ProducerRecord_2_ClassName_
+  commentId: Overload:MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.ClassName
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Producer.ProducerRecord<K, V>.ClassName
+  fullName.vb: MASES.KafkaBridge.Clients.Producer.ProducerRecord(Of K, V).ClassName
+  nameWithType: ProducerRecord<K, V>.ClassName
+  nameWithType.vb: ProducerRecord(Of K, V).ClassName
+- uid: MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.Key
+  name: Key
+  href: api/MASES.KafkaBridge.Clients.Producer.ProducerRecord-2.html#MASES_KafkaBridge_Clients_Producer_ProducerRecord_2_Key
+  commentId: P:MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.Key
+  fullName: MASES.KafkaBridge.Clients.Producer.ProducerRecord<K, V>.Key
+  fullName.vb: MASES.KafkaBridge.Clients.Producer.ProducerRecord(Of K, V).Key
+  nameWithType: ProducerRecord<K, V>.Key
+  nameWithType.vb: ProducerRecord(Of K, V).Key
+- uid: MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.Key*
+  name: Key
+  href: api/MASES.KafkaBridge.Clients.Producer.ProducerRecord-2.html#MASES_KafkaBridge_Clients_Producer_ProducerRecord_2_Key_
+  commentId: Overload:MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.Key
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Producer.ProducerRecord<K, V>.Key
+  fullName.vb: MASES.KafkaBridge.Clients.Producer.ProducerRecord(Of K, V).Key
+  nameWithType: ProducerRecord<K, V>.Key
+  nameWithType.vb: ProducerRecord(Of K, V).Key
+- uid: MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.Timestamp
+  name: Timestamp
+  href: api/MASES.KafkaBridge.Clients.Producer.ProducerRecord-2.html#MASES_KafkaBridge_Clients_Producer_ProducerRecord_2_Timestamp
+  commentId: P:MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.Timestamp
+  fullName: MASES.KafkaBridge.Clients.Producer.ProducerRecord<K, V>.Timestamp
+  fullName.vb: MASES.KafkaBridge.Clients.Producer.ProducerRecord(Of K, V).Timestamp
+  nameWithType: ProducerRecord<K, V>.Timestamp
+  nameWithType.vb: ProducerRecord(Of K, V).Timestamp
+- uid: MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.Timestamp*
+  name: Timestamp
+  href: api/MASES.KafkaBridge.Clients.Producer.ProducerRecord-2.html#MASES_KafkaBridge_Clients_Producer_ProducerRecord_2_Timestamp_
+  commentId: Overload:MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.Timestamp
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Producer.ProducerRecord<K, V>.Timestamp
+  fullName.vb: MASES.KafkaBridge.Clients.Producer.ProducerRecord(Of K, V).Timestamp
+  nameWithType: ProducerRecord<K, V>.Timestamp
+  nameWithType.vb: ProducerRecord(Of K, V).Timestamp
+- uid: MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.Topic
+  name: Topic
+  href: api/MASES.KafkaBridge.Clients.Producer.ProducerRecord-2.html#MASES_KafkaBridge_Clients_Producer_ProducerRecord_2_Topic
+  commentId: P:MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.Topic
+  fullName: MASES.KafkaBridge.Clients.Producer.ProducerRecord<K, V>.Topic
+  fullName.vb: MASES.KafkaBridge.Clients.Producer.ProducerRecord(Of K, V).Topic
+  nameWithType: ProducerRecord<K, V>.Topic
+  nameWithType.vb: ProducerRecord(Of K, V).Topic
+- uid: MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.Topic*
+  name: Topic
+  href: api/MASES.KafkaBridge.Clients.Producer.ProducerRecord-2.html#MASES_KafkaBridge_Clients_Producer_ProducerRecord_2_Topic_
+  commentId: Overload:MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.Topic
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Producer.ProducerRecord<K, V>.Topic
+  fullName.vb: MASES.KafkaBridge.Clients.Producer.ProducerRecord(Of K, V).Topic
+  nameWithType: ProducerRecord<K, V>.Topic
+  nameWithType.vb: ProducerRecord(Of K, V).Topic
+- uid: MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.ToString
+  name: ToString()
+  href: api/MASES.KafkaBridge.Clients.Producer.ProducerRecord-2.html#MASES_KafkaBridge_Clients_Producer_ProducerRecord_2_ToString
+  commentId: M:MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.ToString
+  fullName: MASES.KafkaBridge.Clients.Producer.ProducerRecord<K, V>.ToString()
+  fullName.vb: MASES.KafkaBridge.Clients.Producer.ProducerRecord(Of K, V).ToString()
+  nameWithType: ProducerRecord<K, V>.ToString()
+  nameWithType.vb: ProducerRecord(Of K, V).ToString()
+- uid: MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.ToString*
+  name: ToString
+  href: api/MASES.KafkaBridge.Clients.Producer.ProducerRecord-2.html#MASES_KafkaBridge_Clients_Producer_ProducerRecord_2_ToString_
+  commentId: Overload:MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.ToString
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Producer.ProducerRecord<K, V>.ToString
+  fullName.vb: MASES.KafkaBridge.Clients.Producer.ProducerRecord(Of K, V).ToString
+  nameWithType: ProducerRecord<K, V>.ToString
+  nameWithType.vb: ProducerRecord(Of K, V).ToString
+- uid: MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.Value
+  name: Value
+  href: api/MASES.KafkaBridge.Clients.Producer.ProducerRecord-2.html#MASES_KafkaBridge_Clients_Producer_ProducerRecord_2_Value
+  commentId: P:MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.Value
+  fullName: MASES.KafkaBridge.Clients.Producer.ProducerRecord<K, V>.Value
+  fullName.vb: MASES.KafkaBridge.Clients.Producer.ProducerRecord(Of K, V).Value
+  nameWithType: ProducerRecord<K, V>.Value
+  nameWithType.vb: ProducerRecord(Of K, V).Value
+- uid: MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.Value*
+  name: Value
+  href: api/MASES.KafkaBridge.Clients.Producer.ProducerRecord-2.html#MASES_KafkaBridge_Clients_Producer_ProducerRecord_2_Value_
+  commentId: Overload:MASES.KafkaBridge.Clients.Producer.ProducerRecord`2.Value
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Producer.ProducerRecord<K, V>.Value
+  fullName.vb: MASES.KafkaBridge.Clients.Producer.ProducerRecord(Of K, V).Value
+  nameWithType: ProducerRecord<K, V>.Value
+  nameWithType.vb: ProducerRecord(Of K, V).Value
+- uid: MASES.KafkaBridge.Clients.Producer.RecordMetadata
+  name: RecordMetadata
+  href: api/MASES.KafkaBridge.Clients.Producer.RecordMetadata.html
+  commentId: T:MASES.KafkaBridge.Clients.Producer.RecordMetadata
+  fullName: MASES.KafkaBridge.Clients.Producer.RecordMetadata
+  nameWithType: RecordMetadata
+- uid: MASES.KafkaBridge.Clients.Producer.RecordMetadata.ClassName
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Producer.RecordMetadata.html#MASES_KafkaBridge_Clients_Producer_RecordMetadata_ClassName
+  commentId: P:MASES.KafkaBridge.Clients.Producer.RecordMetadata.ClassName
+  fullName: MASES.KafkaBridge.Clients.Producer.RecordMetadata.ClassName
+  nameWithType: RecordMetadata.ClassName
+- uid: MASES.KafkaBridge.Clients.Producer.RecordMetadata.ClassName*
+  name: ClassName
+  href: api/MASES.KafkaBridge.Clients.Producer.RecordMetadata.html#MASES_KafkaBridge_Clients_Producer_RecordMetadata_ClassName_
+  commentId: Overload:MASES.KafkaBridge.Clients.Producer.RecordMetadata.ClassName
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Producer.RecordMetadata.ClassName
+  nameWithType: RecordMetadata.ClassName
+- uid: MASES.KafkaBridge.Clients.Producer.RecordMetadata.HasOffset
+  name: HasOffset
+  href: api/MASES.KafkaBridge.Clients.Producer.RecordMetadata.html#MASES_KafkaBridge_Clients_Producer_RecordMetadata_HasOffset
+  commentId: P:MASES.KafkaBridge.Clients.Producer.RecordMetadata.HasOffset
+  fullName: MASES.KafkaBridge.Clients.Producer.RecordMetadata.HasOffset
+  nameWithType: RecordMetadata.HasOffset
+- uid: MASES.KafkaBridge.Clients.Producer.RecordMetadata.HasOffset*
+  name: HasOffset
+  href: api/MASES.KafkaBridge.Clients.Producer.RecordMetadata.html#MASES_KafkaBridge_Clients_Producer_RecordMetadata_HasOffset_
+  commentId: Overload:MASES.KafkaBridge.Clients.Producer.RecordMetadata.HasOffset
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Producer.RecordMetadata.HasOffset
+  nameWithType: RecordMetadata.HasOffset
+- uid: MASES.KafkaBridge.Clients.Producer.RecordMetadata.HasTimestamp
+  name: HasTimestamp
+  href: api/MASES.KafkaBridge.Clients.Producer.RecordMetadata.html#MASES_KafkaBridge_Clients_Producer_RecordMetadata_HasTimestamp
+  commentId: P:MASES.KafkaBridge.Clients.Producer.RecordMetadata.HasTimestamp
+  fullName: MASES.KafkaBridge.Clients.Producer.RecordMetadata.HasTimestamp
+  nameWithType: RecordMetadata.HasTimestamp
+- uid: MASES.KafkaBridge.Clients.Producer.RecordMetadata.HasTimestamp*
+  name: HasTimestamp
+  href: api/MASES.KafkaBridge.Clients.Producer.RecordMetadata.html#MASES_KafkaBridge_Clients_Producer_RecordMetadata_HasTimestamp_
+  commentId: Overload:MASES.KafkaBridge.Clients.Producer.RecordMetadata.HasTimestamp
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Producer.RecordMetadata.HasTimestamp
+  nameWithType: RecordMetadata.HasTimestamp
+- uid: MASES.KafkaBridge.Clients.Producer.RecordMetadata.Offset
+  name: Offset
+  href: api/MASES.KafkaBridge.Clients.Producer.RecordMetadata.html#MASES_KafkaBridge_Clients_Producer_RecordMetadata_Offset
+  commentId: P:MASES.KafkaBridge.Clients.Producer.RecordMetadata.Offset
+  fullName: MASES.KafkaBridge.Clients.Producer.RecordMetadata.Offset
+  nameWithType: RecordMetadata.Offset
+- uid: MASES.KafkaBridge.Clients.Producer.RecordMetadata.Offset*
+  name: Offset
+  href: api/MASES.KafkaBridge.Clients.Producer.RecordMetadata.html#MASES_KafkaBridge_Clients_Producer_RecordMetadata_Offset_
+  commentId: Overload:MASES.KafkaBridge.Clients.Producer.RecordMetadata.Offset
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Producer.RecordMetadata.Offset
+  nameWithType: RecordMetadata.Offset
+- uid: MASES.KafkaBridge.Clients.Producer.RecordMetadata.Partition
+  name: Partition
+  href: api/MASES.KafkaBridge.Clients.Producer.RecordMetadata.html#MASES_KafkaBridge_Clients_Producer_RecordMetadata_Partition
+  commentId: P:MASES.KafkaBridge.Clients.Producer.RecordMetadata.Partition
+  fullName: MASES.KafkaBridge.Clients.Producer.RecordMetadata.Partition
+  nameWithType: RecordMetadata.Partition
+- uid: MASES.KafkaBridge.Clients.Producer.RecordMetadata.Partition*
+  name: Partition
+  href: api/MASES.KafkaBridge.Clients.Producer.RecordMetadata.html#MASES_KafkaBridge_Clients_Producer_RecordMetadata_Partition_
+  commentId: Overload:MASES.KafkaBridge.Clients.Producer.RecordMetadata.Partition
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Producer.RecordMetadata.Partition
+  nameWithType: RecordMetadata.Partition
+- uid: MASES.KafkaBridge.Clients.Producer.RecordMetadata.SerializedKeySize
+  name: SerializedKeySize
+  href: api/MASES.KafkaBridge.Clients.Producer.RecordMetadata.html#MASES_KafkaBridge_Clients_Producer_RecordMetadata_SerializedKeySize
+  commentId: P:MASES.KafkaBridge.Clients.Producer.RecordMetadata.SerializedKeySize
+  fullName: MASES.KafkaBridge.Clients.Producer.RecordMetadata.SerializedKeySize
+  nameWithType: RecordMetadata.SerializedKeySize
+- uid: MASES.KafkaBridge.Clients.Producer.RecordMetadata.SerializedKeySize*
+  name: SerializedKeySize
+  href: api/MASES.KafkaBridge.Clients.Producer.RecordMetadata.html#MASES_KafkaBridge_Clients_Producer_RecordMetadata_SerializedKeySize_
+  commentId: Overload:MASES.KafkaBridge.Clients.Producer.RecordMetadata.SerializedKeySize
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Producer.RecordMetadata.SerializedKeySize
+  nameWithType: RecordMetadata.SerializedKeySize
+- uid: MASES.KafkaBridge.Clients.Producer.RecordMetadata.SerializedValueSize
+  name: SerializedValueSize
+  href: api/MASES.KafkaBridge.Clients.Producer.RecordMetadata.html#MASES_KafkaBridge_Clients_Producer_RecordMetadata_SerializedValueSize
+  commentId: P:MASES.KafkaBridge.Clients.Producer.RecordMetadata.SerializedValueSize
+  fullName: MASES.KafkaBridge.Clients.Producer.RecordMetadata.SerializedValueSize
+  nameWithType: RecordMetadata.SerializedValueSize
+- uid: MASES.KafkaBridge.Clients.Producer.RecordMetadata.SerializedValueSize*
+  name: SerializedValueSize
+  href: api/MASES.KafkaBridge.Clients.Producer.RecordMetadata.html#MASES_KafkaBridge_Clients_Producer_RecordMetadata_SerializedValueSize_
+  commentId: Overload:MASES.KafkaBridge.Clients.Producer.RecordMetadata.SerializedValueSize
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Producer.RecordMetadata.SerializedValueSize
+  nameWithType: RecordMetadata.SerializedValueSize
+- uid: MASES.KafkaBridge.Clients.Producer.RecordMetadata.Timestamp
+  name: Timestamp
+  href: api/MASES.KafkaBridge.Clients.Producer.RecordMetadata.html#MASES_KafkaBridge_Clients_Producer_RecordMetadata_Timestamp
+  commentId: P:MASES.KafkaBridge.Clients.Producer.RecordMetadata.Timestamp
+  fullName: MASES.KafkaBridge.Clients.Producer.RecordMetadata.Timestamp
+  nameWithType: RecordMetadata.Timestamp
+- uid: MASES.KafkaBridge.Clients.Producer.RecordMetadata.Timestamp*
+  name: Timestamp
+  href: api/MASES.KafkaBridge.Clients.Producer.RecordMetadata.html#MASES_KafkaBridge_Clients_Producer_RecordMetadata_Timestamp_
+  commentId: Overload:MASES.KafkaBridge.Clients.Producer.RecordMetadata.Timestamp
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Producer.RecordMetadata.Timestamp
+  nameWithType: RecordMetadata.Timestamp
+- uid: MASES.KafkaBridge.Clients.Producer.RecordMetadata.Topic
+  name: Topic
+  href: api/MASES.KafkaBridge.Clients.Producer.RecordMetadata.html#MASES_KafkaBridge_Clients_Producer_RecordMetadata_Topic
+  commentId: P:MASES.KafkaBridge.Clients.Producer.RecordMetadata.Topic
+  fullName: MASES.KafkaBridge.Clients.Producer.RecordMetadata.Topic
+  nameWithType: RecordMetadata.Topic
+- uid: MASES.KafkaBridge.Clients.Producer.RecordMetadata.Topic*
+  name: Topic
+  href: api/MASES.KafkaBridge.Clients.Producer.RecordMetadata.html#MASES_KafkaBridge_Clients_Producer_RecordMetadata_Topic_
+  commentId: Overload:MASES.KafkaBridge.Clients.Producer.RecordMetadata.Topic
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Clients.Producer.RecordMetadata.Topic
+  nameWithType: RecordMetadata.Topic
+- uid: MASES.KafkaBridge.Common
+  name: MASES.KafkaBridge.Common
+  href: api/MASES.KafkaBridge.Common.html
+  commentId: N:MASES.KafkaBridge.Common
+  fullName: MASES.KafkaBridge.Common
+  nameWithType: MASES.KafkaBridge.Common
+- uid: MASES.KafkaBridge.Common.Config
+  name: MASES.KafkaBridge.Common.Config
+  href: api/MASES.KafkaBridge.Common.Config.html
+  commentId: N:MASES.KafkaBridge.Common.Config
+  fullName: MASES.KafkaBridge.Common.Config
+  nameWithType: MASES.KafkaBridge.Common.Config
+- uid: MASES.KafkaBridge.Common.Config.TopicConfig
+  name: TopicConfig
+  href: api/MASES.KafkaBridge.Common.Config.TopicConfig.html
+  commentId: T:MASES.KafkaBridge.Common.Config.TopicConfig
+  fullName: MASES.KafkaBridge.Common.Config.TopicConfig
+  nameWithType: TopicConfig
+- uid: MASES.KafkaBridge.Common.Config.TopicConfig.ClassName
+  name: ClassName
+  href: api/MASES.KafkaBridge.Common.Config.TopicConfig.html#MASES_KafkaBridge_Common_Config_TopicConfig_ClassName
+  commentId: P:MASES.KafkaBridge.Common.Config.TopicConfig.ClassName
+  fullName: MASES.KafkaBridge.Common.Config.TopicConfig.ClassName
+  nameWithType: TopicConfig.ClassName
+- uid: MASES.KafkaBridge.Common.Config.TopicConfig.ClassName*
+  name: ClassName
+  href: api/MASES.KafkaBridge.Common.Config.TopicConfig.html#MASES_KafkaBridge_Common_Config_TopicConfig_ClassName_
+  commentId: Overload:MASES.KafkaBridge.Common.Config.TopicConfig.ClassName
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Common.Config.TopicConfig.ClassName
+  nameWithType: TopicConfig.ClassName
+- uid: MASES.KafkaBridge.Common.Config.TopicConfig.IsStatic
+  name: IsStatic
+  href: api/MASES.KafkaBridge.Common.Config.TopicConfig.html#MASES_KafkaBridge_Common_Config_TopicConfig_IsStatic
+  commentId: P:MASES.KafkaBridge.Common.Config.TopicConfig.IsStatic
+  fullName: MASES.KafkaBridge.Common.Config.TopicConfig.IsStatic
+  nameWithType: TopicConfig.IsStatic
+- uid: MASES.KafkaBridge.Common.Config.TopicConfig.IsStatic*
+  name: IsStatic
+  href: api/MASES.KafkaBridge.Common.Config.TopicConfig.html#MASES_KafkaBridge_Common_Config_TopicConfig_IsStatic_
+  commentId: Overload:MASES.KafkaBridge.Common.Config.TopicConfig.IsStatic
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Common.Config.TopicConfig.IsStatic
+  nameWithType: TopicConfig.IsStatic
+- uid: MASES.KafkaBridge.Common.Serialization
+  name: MASES.KafkaBridge.Common.Serialization
+  href: api/MASES.KafkaBridge.Common.Serialization.html
+  commentId: N:MASES.KafkaBridge.Common.Serialization
+  fullName: MASES.KafkaBridge.Common.Serialization
+  nameWithType: MASES.KafkaBridge.Common.Serialization
+- uid: MASES.KafkaBridge.Common.Serialization.Serdes
+  name: Serdes
+  href: api/MASES.KafkaBridge.Common.Serialization.Serdes.html
+  commentId: T:MASES.KafkaBridge.Common.Serialization.Serdes
+  fullName: MASES.KafkaBridge.Common.Serialization.Serdes
+  nameWithType: Serdes
+- uid: MASES.KafkaBridge.Common.Serialization.Serdes.ClassName
+  name: ClassName
+  href: api/MASES.KafkaBridge.Common.Serialization.Serdes.html#MASES_KafkaBridge_Common_Serialization_Serdes_ClassName
+  commentId: P:MASES.KafkaBridge.Common.Serialization.Serdes.ClassName
+  fullName: MASES.KafkaBridge.Common.Serialization.Serdes.ClassName
+  nameWithType: Serdes.ClassName
+- uid: MASES.KafkaBridge.Common.Serialization.Serdes.ClassName*
+  name: ClassName
+  href: api/MASES.KafkaBridge.Common.Serialization.Serdes.html#MASES_KafkaBridge_Common_Serialization_Serdes_ClassName_
+  commentId: Overload:MASES.KafkaBridge.Common.Serialization.Serdes.ClassName
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Common.Serialization.Serdes.ClassName
+  nameWithType: Serdes.ClassName
+- uid: MASES.KafkaBridge.Common.TopicPartition
+  name: TopicPartition
+  href: api/MASES.KafkaBridge.Common.TopicPartition.html
+  commentId: T:MASES.KafkaBridge.Common.TopicPartition
+  fullName: MASES.KafkaBridge.Common.TopicPartition
+  nameWithType: TopicPartition
+- uid: MASES.KafkaBridge.Common.TopicPartition.#ctor
+  name: TopicPartition()
+  href: api/MASES.KafkaBridge.Common.TopicPartition.html#MASES_KafkaBridge_Common_TopicPartition__ctor
+  commentId: M:MASES.KafkaBridge.Common.TopicPartition.#ctor
+  fullName: MASES.KafkaBridge.Common.TopicPartition.TopicPartition()
+  nameWithType: TopicPartition.TopicPartition()
+- uid: MASES.KafkaBridge.Common.TopicPartition.#ctor(System.String,System.Int32)
+  name: TopicPartition(String, Int32)
+  href: api/MASES.KafkaBridge.Common.TopicPartition.html#MASES_KafkaBridge_Common_TopicPartition__ctor_System_String_System_Int32_
+  commentId: M:MASES.KafkaBridge.Common.TopicPartition.#ctor(System.String,System.Int32)
+  fullName: MASES.KafkaBridge.Common.TopicPartition.TopicPartition(System.String, System.Int32)
+  nameWithType: TopicPartition.TopicPartition(String, Int32)
+- uid: MASES.KafkaBridge.Common.TopicPartition.#ctor*
+  name: TopicPartition
+  href: api/MASES.KafkaBridge.Common.TopicPartition.html#MASES_KafkaBridge_Common_TopicPartition__ctor_
+  commentId: Overload:MASES.KafkaBridge.Common.TopicPartition.#ctor
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Common.TopicPartition.TopicPartition
+  nameWithType: TopicPartition.TopicPartition
+- uid: MASES.KafkaBridge.Common.TopicPartition.ClassName
+  name: ClassName
+  href: api/MASES.KafkaBridge.Common.TopicPartition.html#MASES_KafkaBridge_Common_TopicPartition_ClassName
+  commentId: P:MASES.KafkaBridge.Common.TopicPartition.ClassName
+  fullName: MASES.KafkaBridge.Common.TopicPartition.ClassName
+  nameWithType: TopicPartition.ClassName
+- uid: MASES.KafkaBridge.Common.TopicPartition.ClassName*
+  name: ClassName
+  href: api/MASES.KafkaBridge.Common.TopicPartition.html#MASES_KafkaBridge_Common_TopicPartition_ClassName_
+  commentId: Overload:MASES.KafkaBridge.Common.TopicPartition.ClassName
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Common.TopicPartition.ClassName
+  nameWithType: TopicPartition.ClassName
+- uid: MASES.KafkaBridge.Common.TopicPartition.Partition
+  name: Partition
+  href: api/MASES.KafkaBridge.Common.TopicPartition.html#MASES_KafkaBridge_Common_TopicPartition_Partition
+  commentId: P:MASES.KafkaBridge.Common.TopicPartition.Partition
+  fullName: MASES.KafkaBridge.Common.TopicPartition.Partition
+  nameWithType: TopicPartition.Partition
+- uid: MASES.KafkaBridge.Common.TopicPartition.Partition*
+  name: Partition
+  href: api/MASES.KafkaBridge.Common.TopicPartition.html#MASES_KafkaBridge_Common_TopicPartition_Partition_
+  commentId: Overload:MASES.KafkaBridge.Common.TopicPartition.Partition
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Common.TopicPartition.Partition
+  nameWithType: TopicPartition.Partition
+- uid: MASES.KafkaBridge.Common.TopicPartition.Topic
+  name: Topic
+  href: api/MASES.KafkaBridge.Common.TopicPartition.html#MASES_KafkaBridge_Common_TopicPartition_Topic
+  commentId: P:MASES.KafkaBridge.Common.TopicPartition.Topic
+  fullName: MASES.KafkaBridge.Common.TopicPartition.Topic
+  nameWithType: TopicPartition.Topic
+- uid: MASES.KafkaBridge.Common.TopicPartition.Topic*
+  name: Topic
+  href: api/MASES.KafkaBridge.Common.TopicPartition.html#MASES_KafkaBridge_Common_TopicPartition_Topic_
+  commentId: Overload:MASES.KafkaBridge.Common.TopicPartition.Topic
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Common.TopicPartition.Topic
+  nameWithType: TopicPartition.Topic
+- uid: MASES.KafkaBridge.Const
+  name: Const
+  href: api/MASES.KafkaBridge.Const.html
+  commentId: T:MASES.KafkaBridge.Const
+  fullName: MASES.KafkaBridge.Const
+  nameWithType: Const
+- uid: MASES.KafkaBridge.Const.DefaultRootPath
+  name: DefaultRootPath
+  href: api/MASES.KafkaBridge.Const.html#MASES_KafkaBridge_Const_DefaultRootPath
+  commentId: F:MASES.KafkaBridge.Const.DefaultRootPath
+  fullName: MASES.KafkaBridge.Const.DefaultRootPath
+  nameWithType: Const.DefaultRootPath
+- uid: MASES.KafkaBridge.Const.DefaultScalaVersion
+  name: DefaultScalaVersion
+  href: api/MASES.KafkaBridge.Const.html#MASES_KafkaBridge_Const_DefaultScalaVersion
+  commentId: F:MASES.KafkaBridge.Const.DefaultScalaVersion
+  fullName: MASES.KafkaBridge.Const.DefaultScalaVersion
+  nameWithType: Const.DefaultScalaVersion
+- uid: MASES.KafkaBridge.Java.Util
+  name: MASES.KafkaBridge.Java.Util
+  href: api/MASES.KafkaBridge.Java.Util.html
+  commentId: N:MASES.KafkaBridge.Java.Util
+  fullName: MASES.KafkaBridge.Java.Util
+  nameWithType: MASES.KafkaBridge.Java.Util
+- uid: MASES.KafkaBridge.Java.Util.Collection`1
+  name: Collection<E>
+  href: api/MASES.KafkaBridge.Java.Util.Collection-1.html
+  commentId: T:MASES.KafkaBridge.Java.Util.Collection`1
+  name.vb: Collection(Of E)
+  fullName: MASES.KafkaBridge.Java.Util.Collection<E>
+  fullName.vb: MASES.KafkaBridge.Java.Util.Collection(Of E)
+  nameWithType: Collection<E>
+  nameWithType.vb: Collection(Of E)
+- uid: MASES.KafkaBridge.Java.Util.Collection`1.ClassName
+  name: ClassName
+  href: api/MASES.KafkaBridge.Java.Util.Collection-1.html#MASES_KafkaBridge_Java_Util_Collection_1_ClassName
+  commentId: P:MASES.KafkaBridge.Java.Util.Collection`1.ClassName
+  fullName: MASES.KafkaBridge.Java.Util.Collection<E>.ClassName
+  fullName.vb: MASES.KafkaBridge.Java.Util.Collection(Of E).ClassName
+  nameWithType: Collection<E>.ClassName
+  nameWithType.vb: Collection(Of E).ClassName
+- uid: MASES.KafkaBridge.Java.Util.Collection`1.ClassName*
+  name: ClassName
+  href: api/MASES.KafkaBridge.Java.Util.Collection-1.html#MASES_KafkaBridge_Java_Util_Collection_1_ClassName_
+  commentId: Overload:MASES.KafkaBridge.Java.Util.Collection`1.ClassName
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Java.Util.Collection<E>.ClassName
+  fullName.vb: MASES.KafkaBridge.Java.Util.Collection(Of E).ClassName
+  nameWithType: Collection<E>.ClassName
+  nameWithType.vb: Collection(Of E).ClassName
+- uid: MASES.KafkaBridge.Java.Util.Collections
+  name: Collections
+  href: api/MASES.KafkaBridge.Java.Util.Collections.html
+  commentId: T:MASES.KafkaBridge.Java.Util.Collections
+  fullName: MASES.KafkaBridge.Java.Util.Collections
+  nameWithType: Collections
+- uid: MASES.KafkaBridge.Java.Util.Collections.ClassName
+  name: ClassName
+  href: api/MASES.KafkaBridge.Java.Util.Collections.html#MASES_KafkaBridge_Java_Util_Collections_ClassName
+  commentId: P:MASES.KafkaBridge.Java.Util.Collections.ClassName
+  fullName: MASES.KafkaBridge.Java.Util.Collections.ClassName
+  nameWithType: Collections.ClassName
+- uid: MASES.KafkaBridge.Java.Util.Collections.ClassName*
+  name: ClassName
+  href: api/MASES.KafkaBridge.Java.Util.Collections.html#MASES_KafkaBridge_Java_Util_Collections_ClassName_
+  commentId: Overload:MASES.KafkaBridge.Java.Util.Collections.ClassName
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Java.Util.Collections.ClassName
+  nameWithType: Collections.ClassName
+- uid: MASES.KafkaBridge.Java.Util.Collections.IsStatic
+  name: IsStatic
+  href: api/MASES.KafkaBridge.Java.Util.Collections.html#MASES_KafkaBridge_Java_Util_Collections_IsStatic
+  commentId: P:MASES.KafkaBridge.Java.Util.Collections.IsStatic
+  fullName: MASES.KafkaBridge.Java.Util.Collections.IsStatic
+  nameWithType: Collections.IsStatic
+- uid: MASES.KafkaBridge.Java.Util.Collections.IsStatic*
+  name: IsStatic
+  href: api/MASES.KafkaBridge.Java.Util.Collections.html#MASES_KafkaBridge_Java_Util_Collections_IsStatic_
+  commentId: Overload:MASES.KafkaBridge.Java.Util.Collections.IsStatic
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Java.Util.Collections.IsStatic
+  nameWithType: Collections.IsStatic
+- uid: MASES.KafkaBridge.Java.Util.Collections.singleton*
+  name: singleton
+  href: api/MASES.KafkaBridge.Java.Util.Collections.html#MASES_KafkaBridge_Java_Util_Collections_singleton_
+  commentId: Overload:MASES.KafkaBridge.Java.Util.Collections.singleton
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Java.Util.Collections.singleton
+  nameWithType: Collections.singleton
+- uid: MASES.KafkaBridge.Java.Util.Collections.singleton``1(``0)
+  name: singleton<E>(E)
+  href: api/MASES.KafkaBridge.Java.Util.Collections.html#MASES_KafkaBridge_Java_Util_Collections_singleton__1___0_
+  commentId: M:MASES.KafkaBridge.Java.Util.Collections.singleton``1(``0)
+  name.vb: singleton(Of E)(E)
+  fullName: MASES.KafkaBridge.Java.Util.Collections.singleton<E>(E)
+  fullName.vb: MASES.KafkaBridge.Java.Util.Collections.singleton(Of E)(E)
+  nameWithType: Collections.singleton<E>(E)
+  nameWithType.vb: Collections.singleton(Of E)(E)
+- uid: MASES.KafkaBridge.Java.Util.Collections.singletonMap*
+  name: singletonMap
+  href: api/MASES.KafkaBridge.Java.Util.Collections.html#MASES_KafkaBridge_Java_Util_Collections_singletonMap_
+  commentId: Overload:MASES.KafkaBridge.Java.Util.Collections.singletonMap
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Java.Util.Collections.singletonMap
+  nameWithType: Collections.singletonMap
+- uid: MASES.KafkaBridge.Java.Util.Collections.singletonMap``2(``0,``1)
+  name: singletonMap<K, V>(K, V)
+  href: api/MASES.KafkaBridge.Java.Util.Collections.html#MASES_KafkaBridge_Java_Util_Collections_singletonMap__2___0___1_
+  commentId: M:MASES.KafkaBridge.Java.Util.Collections.singletonMap``2(``0,``1)
+  name.vb: singletonMap(Of K, V)(K, V)
+  fullName: MASES.KafkaBridge.Java.Util.Collections.singletonMap<K, V>(K, V)
+  fullName.vb: MASES.KafkaBridge.Java.Util.Collections.singletonMap(Of K, V)(K, V)
+  nameWithType: Collections.singletonMap<K, V>(K, V)
+  nameWithType.vb: Collections.singletonMap(Of K, V)(K, V)
+- uid: MASES.KafkaBridge.Java.Util.Concurrent
+  name: MASES.KafkaBridge.Java.Util.Concurrent
+  href: api/MASES.KafkaBridge.Java.Util.Concurrent.html
+  commentId: N:MASES.KafkaBridge.Java.Util.Concurrent
+  fullName: MASES.KafkaBridge.Java.Util.Concurrent
+  nameWithType: MASES.KafkaBridge.Java.Util.Concurrent
+- uid: MASES.KafkaBridge.Java.Util.Concurrent.Future`1
+  name: Future<E>
+  href: api/MASES.KafkaBridge.Java.Util.Concurrent.Future-1.html
+  commentId: T:MASES.KafkaBridge.Java.Util.Concurrent.Future`1
+  name.vb: Future(Of E)
+  fullName: MASES.KafkaBridge.Java.Util.Concurrent.Future<E>
+  fullName.vb: MASES.KafkaBridge.Java.Util.Concurrent.Future(Of E)
+  nameWithType: Future<E>
+  nameWithType.vb: Future(Of E)
+- uid: MASES.KafkaBridge.Java.Util.Concurrent.Future`1.ClassName
+  name: ClassName
+  href: api/MASES.KafkaBridge.Java.Util.Concurrent.Future-1.html#MASES_KafkaBridge_Java_Util_Concurrent_Future_1_ClassName
+  commentId: P:MASES.KafkaBridge.Java.Util.Concurrent.Future`1.ClassName
+  fullName: MASES.KafkaBridge.Java.Util.Concurrent.Future<E>.ClassName
+  fullName.vb: MASES.KafkaBridge.Java.Util.Concurrent.Future(Of E).ClassName
+  nameWithType: Future<E>.ClassName
+  nameWithType.vb: Future(Of E).ClassName
+- uid: MASES.KafkaBridge.Java.Util.Concurrent.Future`1.ClassName*
+  name: ClassName
+  href: api/MASES.KafkaBridge.Java.Util.Concurrent.Future-1.html#MASES_KafkaBridge_Java_Util_Concurrent_Future_1_ClassName_
+  commentId: Overload:MASES.KafkaBridge.Java.Util.Concurrent.Future`1.ClassName
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Java.Util.Concurrent.Future<E>.ClassName
+  fullName.vb: MASES.KafkaBridge.Java.Util.Concurrent.Future(Of E).ClassName
+  nameWithType: Future<E>.ClassName
+  nameWithType.vb: Future(Of E).ClassName
+- uid: MASES.KafkaBridge.Java.Util.Map`2
+  name: Map<K, V>
+  href: api/MASES.KafkaBridge.Java.Util.Map-2.html
+  commentId: T:MASES.KafkaBridge.Java.Util.Map`2
+  name.vb: Map(Of K, V)
+  fullName: MASES.KafkaBridge.Java.Util.Map<K, V>
+  fullName.vb: MASES.KafkaBridge.Java.Util.Map(Of K, V)
+  nameWithType: Map<K, V>
+  nameWithType.vb: Map(Of K, V)
+- uid: MASES.KafkaBridge.Java.Util.Map`2.ClassName
+  name: ClassName
+  href: api/MASES.KafkaBridge.Java.Util.Map-2.html#MASES_KafkaBridge_Java_Util_Map_2_ClassName
+  commentId: P:MASES.KafkaBridge.Java.Util.Map`2.ClassName
+  fullName: MASES.KafkaBridge.Java.Util.Map<K, V>.ClassName
+  fullName.vb: MASES.KafkaBridge.Java.Util.Map(Of K, V).ClassName
+  nameWithType: Map<K, V>.ClassName
+  nameWithType.vb: Map(Of K, V).ClassName
+- uid: MASES.KafkaBridge.Java.Util.Map`2.ClassName*
+  name: ClassName
+  href: api/MASES.KafkaBridge.Java.Util.Map-2.html#MASES_KafkaBridge_Java_Util_Map_2_ClassName_
+  commentId: Overload:MASES.KafkaBridge.Java.Util.Map`2.ClassName
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Java.Util.Map<K, V>.ClassName
+  fullName.vb: MASES.KafkaBridge.Java.Util.Map(Of K, V).ClassName
+  nameWithType: Map<K, V>.ClassName
+  nameWithType.vb: Map(Of K, V).ClassName
+- uid: MASES.KafkaBridge.Java.Util.Properties
+  name: Properties
+  href: api/MASES.KafkaBridge.Java.Util.Properties.html
+  commentId: T:MASES.KafkaBridge.Java.Util.Properties
+  fullName: MASES.KafkaBridge.Java.Util.Properties
+  nameWithType: Properties
+- uid: MASES.KafkaBridge.Java.Util.Properties.ClassName
+  name: ClassName
+  href: api/MASES.KafkaBridge.Java.Util.Properties.html#MASES_KafkaBridge_Java_Util_Properties_ClassName
+  commentId: P:MASES.KafkaBridge.Java.Util.Properties.ClassName
+  fullName: MASES.KafkaBridge.Java.Util.Properties.ClassName
+  nameWithType: Properties.ClassName
+- uid: MASES.KafkaBridge.Java.Util.Properties.ClassName*
+  name: ClassName
+  href: api/MASES.KafkaBridge.Java.Util.Properties.html#MASES_KafkaBridge_Java_Util_Properties_ClassName_
+  commentId: Overload:MASES.KafkaBridge.Java.Util.Properties.ClassName
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Java.Util.Properties.ClassName
+  nameWithType: Properties.ClassName
+- uid: MASES.KafkaBridge.Java.Util.Properties.Put(System.Object,System.Object)
+  name: Put(Object, Object)
+  href: api/MASES.KafkaBridge.Java.Util.Properties.html#MASES_KafkaBridge_Java_Util_Properties_Put_System_Object_System_Object_
+  commentId: M:MASES.KafkaBridge.Java.Util.Properties.Put(System.Object,System.Object)
+  fullName: MASES.KafkaBridge.Java.Util.Properties.Put(System.Object, System.Object)
+  nameWithType: Properties.Put(Object, Object)
+- uid: MASES.KafkaBridge.Java.Util.Properties.Put*
+  name: Put
+  href: api/MASES.KafkaBridge.Java.Util.Properties.html#MASES_KafkaBridge_Java_Util_Properties_Put_
+  commentId: Overload:MASES.KafkaBridge.Java.Util.Properties.Put
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Java.Util.Properties.Put
+  nameWithType: Properties.Put
+- uid: MASES.KafkaBridge.Java.Util.Set`1
+  name: Set<E>
+  href: api/MASES.KafkaBridge.Java.Util.Set-1.html
+  commentId: T:MASES.KafkaBridge.Java.Util.Set`1
+  name.vb: Set(Of E)
+  fullName: MASES.KafkaBridge.Java.Util.Set<E>
+  fullName.vb: MASES.KafkaBridge.Java.Util.Set(Of E)
+  nameWithType: Set<E>
+  nameWithType.vb: Set(Of E)
+- uid: MASES.KafkaBridge.Java.Util.Set`1.ClassName
+  name: ClassName
+  href: api/MASES.KafkaBridge.Java.Util.Set-1.html#MASES_KafkaBridge_Java_Util_Set_1_ClassName
+  commentId: P:MASES.KafkaBridge.Java.Util.Set`1.ClassName
+  fullName: MASES.KafkaBridge.Java.Util.Set<E>.ClassName
+  fullName.vb: MASES.KafkaBridge.Java.Util.Set(Of E).ClassName
+  nameWithType: Set<E>.ClassName
+  nameWithType.vb: Set(Of E).ClassName
+- uid: MASES.KafkaBridge.Java.Util.Set`1.ClassName*
+  name: ClassName
+  href: api/MASES.KafkaBridge.Java.Util.Set-1.html#MASES_KafkaBridge_Java_Util_Set_1_ClassName_
+  commentId: Overload:MASES.KafkaBridge.Java.Util.Set`1.ClassName
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.Java.Util.Set<E>.ClassName
+  fullName.vb: MASES.KafkaBridge.Java.Util.Set(Of E).ClassName
+  nameWithType: Set<E>.ClassName
+  nameWithType.vb: Set(Of E).ClassName
 - uid: MASES.KafkaBridge.KafkaBridgeCore
   name: KafkaBridgeCore
   href: api/MASES.KafkaBridge.KafkaBridgeCore.html
   commentId: T:MASES.KafkaBridge.KafkaBridgeCore
   fullName: MASES.KafkaBridge.KafkaBridgeCore
   nameWithType: KafkaBridgeCore
-- uid: MASES.KafkaBridge.KafkaBridgeCore.#ctor
-  name: KafkaBridgeCore()
-  href: api/MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore__ctor
-  commentId: M:MASES.KafkaBridge.KafkaBridgeCore.#ctor
-  fullName: MASES.KafkaBridge.KafkaBridgeCore.KafkaBridgeCore()
-  nameWithType: KafkaBridgeCore.KafkaBridgeCore()
-- uid: MASES.KafkaBridge.KafkaBridgeCore.#ctor(System.String,System.Boolean,System.Object[])
-  name: KafkaBridgeCore(String, Boolean, Object[])
-  href: api/MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore__ctor_System_String_System_Boolean_System_Object___
-  commentId: M:MASES.KafkaBridge.KafkaBridgeCore.#ctor(System.String,System.Boolean,System.Object[])
-  name.vb: KafkaBridgeCore(String, Boolean, Object())
-  fullName: MASES.KafkaBridge.KafkaBridgeCore.KafkaBridgeCore(System.String, System.Boolean, System.Object[])
-  fullName.vb: MASES.KafkaBridge.KafkaBridgeCore.KafkaBridgeCore(System.String, System.Boolean, System.Object())
-  nameWithType: KafkaBridgeCore.KafkaBridgeCore(String, Boolean, Object[])
-  nameWithType.vb: KafkaBridgeCore.KafkaBridgeCore(String, Boolean, Object())
-- uid: MASES.KafkaBridge.KafkaBridgeCore.#ctor*
-  name: KafkaBridgeCore
-  href: api/MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore__ctor_
-  commentId: Overload:MASES.KafkaBridge.KafkaBridgeCore.#ctor
+- uid: MASES.KafkaBridge.KafkaBridgeCore.ApplicationArgs
+  name: ApplicationArgs
+  href: api/MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore_ApplicationArgs
+  commentId: P:MASES.KafkaBridge.KafkaBridgeCore.ApplicationArgs
+  fullName: MASES.KafkaBridge.KafkaBridgeCore.ApplicationArgs
+  nameWithType: KafkaBridgeCore.ApplicationArgs
+- uid: MASES.KafkaBridge.KafkaBridgeCore.ApplicationArgs*
+  name: ApplicationArgs
+  href: api/MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore_ApplicationArgs_
+  commentId: Overload:MASES.KafkaBridge.KafkaBridgeCore.ApplicationArgs
   isSpec: "True"
-  fullName: MASES.KafkaBridge.KafkaBridgeCore.KafkaBridgeCore
-  nameWithType: KafkaBridgeCore.KafkaBridgeCore
+  fullName: MASES.KafkaBridge.KafkaBridgeCore.ApplicationArgs
+  nameWithType: KafkaBridgeCore.ApplicationArgs
 - uid: MASES.KafkaBridge.KafkaBridgeCore.ClassPath
   name: ClassPath
   href: api/MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore_ClassPath
@@ -394,19 +1962,19 @@ references:
   isSpec: "True"
   fullName: MASES.KafkaBridge.KafkaBridgeCore.DebugSuspendFlag
   nameWithType: KafkaBridgeCore.DebugSuspendFlag
-- uid: MASES.KafkaBridge.KafkaBridgeCore.DynClassLoaded
-  name: DynClassLoaded
-  href: api/MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore_DynClassLoaded
-  commentId: P:MASES.KafkaBridge.KafkaBridgeCore.DynClassLoaded
-  fullName: MASES.KafkaBridge.KafkaBridgeCore.DynClassLoaded
-  nameWithType: KafkaBridgeCore.DynClassLoaded
-- uid: MASES.KafkaBridge.KafkaBridgeCore.DynClassLoaded*
-  name: DynClassLoaded
-  href: api/MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore_DynClassLoaded_
-  commentId: Overload:MASES.KafkaBridge.KafkaBridgeCore.DynClassLoaded
+- uid: MASES.KafkaBridge.KafkaBridgeCore.DynJVM
+  name: DynJVM
+  href: api/MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore_DynJVM
+  commentId: P:MASES.KafkaBridge.KafkaBridgeCore.DynJVM
+  fullName: MASES.KafkaBridge.KafkaBridgeCore.DynJVM
+  nameWithType: KafkaBridgeCore.DynJVM
+- uid: MASES.KafkaBridge.KafkaBridgeCore.DynJVM*
+  name: DynJVM
+  href: api/MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore_DynJVM_
+  commentId: Overload:MASES.KafkaBridge.KafkaBridgeCore.DynJVM
   isSpec: "True"
-  fullName: MASES.KafkaBridge.KafkaBridgeCore.DynClassLoaded
-  nameWithType: KafkaBridgeCore.DynClassLoaded
+  fullName: MASES.KafkaBridge.KafkaBridgeCore.DynJVM
+  nameWithType: KafkaBridgeCore.DynJVM
 - uid: MASES.KafkaBridge.KafkaBridgeCore.EnableDebug
   name: EnableDebug
   href: api/MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore_EnableDebug
@@ -433,22 +2001,6 @@ references:
   isSpec: "True"
   fullName: MASES.KafkaBridge.KafkaBridgeCore.ExamplesPath
   nameWithType: KafkaBridgeCore.ExamplesPath
-- uid: MASES.KafkaBridge.KafkaBridgeCore.Execute*
-  name: Execute
-  href: api/MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore_Execute_
-  commentId: Overload:MASES.KafkaBridge.KafkaBridgeCore.Execute
-  isSpec: "True"
-  fullName: MASES.KafkaBridge.KafkaBridgeCore.Execute
-  nameWithType: KafkaBridgeCore.Execute
-- uid: MASES.KafkaBridge.KafkaBridgeCore.Execute``1(``0[])
-  name: Execute<T>(T[])
-  href: api/MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore_Execute__1___0___
-  commentId: M:MASES.KafkaBridge.KafkaBridgeCore.Execute``1(``0[])
-  name.vb: Execute(Of T)(T())
-  fullName: MASES.KafkaBridge.KafkaBridgeCore.Execute<T>(T[])
-  fullName.vb: MASES.KafkaBridge.KafkaBridgeCore.Execute(Of T)(T())
-  nameWithType: KafkaBridgeCore.Execute<T>(T[])
-  nameWithType.vb: KafkaBridgeCore.Execute(Of T)(T())
 - uid: MASES.KafkaBridge.KafkaBridgeCore.ExtraClassPath
   name: ExtraClassPath
   href: api/MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore_ExtraClassPath
@@ -462,6 +2014,19 @@ references:
   isSpec: "True"
   fullName: MASES.KafkaBridge.KafkaBridgeCore.ExtraClassPath
   nameWithType: KafkaBridgeCore.ExtraClassPath
+- uid: MASES.KafkaBridge.KafkaBridgeCore.GlobalHeapSize
+  name: GlobalHeapSize
+  href: api/MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore_GlobalHeapSize
+  commentId: P:MASES.KafkaBridge.KafkaBridgeCore.GlobalHeapSize
+  fullName: MASES.KafkaBridge.KafkaBridgeCore.GlobalHeapSize
+  nameWithType: KafkaBridgeCore.GlobalHeapSize
+- uid: MASES.KafkaBridge.KafkaBridgeCore.GlobalHeapSize*
+  name: GlobalHeapSize
+  href: api/MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore_GlobalHeapSize_
+  commentId: Overload:MASES.KafkaBridge.KafkaBridgeCore.GlobalHeapSize
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.KafkaBridgeCore.GlobalHeapSize
+  nameWithType: KafkaBridgeCore.GlobalHeapSize
 - uid: MASES.KafkaBridge.KafkaBridgeCore.GlobalRootPath
   name: GlobalRootPath
   href: api/MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore_GlobalRootPath
@@ -488,35 +2053,6 @@ references:
   isSpec: "True"
   fullName: MASES.KafkaBridge.KafkaBridgeCore.GlobalScalaVersion
   nameWithType: KafkaBridgeCore.GlobalScalaVersion
-- uid: MASES.KafkaBridge.KafkaBridgeCore.HeapSize
-  name: HeapSize
-  href: api/MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore_HeapSize
-  commentId: P:MASES.KafkaBridge.KafkaBridgeCore.HeapSize
-  fullName: MASES.KafkaBridge.KafkaBridgeCore.HeapSize
-  nameWithType: KafkaBridgeCore.HeapSize
-- uid: MASES.KafkaBridge.KafkaBridgeCore.HeapSize*
-  name: HeapSize
-  href: api/MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore_HeapSize_
-  commentId: Overload:MASES.KafkaBridge.KafkaBridgeCore.HeapSize
-  isSpec: "True"
-  fullName: MASES.KafkaBridge.KafkaBridgeCore.HeapSize
-  nameWithType: KafkaBridgeCore.HeapSize
-- uid: MASES.KafkaBridge.KafkaBridgeCore.Initialize(System.String,System.Boolean,System.Object[])
-  name: Initialize(String, Boolean, Object[])
-  href: api/MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore_Initialize_System_String_System_Boolean_System_Object___
-  commentId: M:MASES.KafkaBridge.KafkaBridgeCore.Initialize(System.String,System.Boolean,System.Object[])
-  name.vb: Initialize(String, Boolean, Object())
-  fullName: MASES.KafkaBridge.KafkaBridgeCore.Initialize(System.String, System.Boolean, System.Object[])
-  fullName.vb: MASES.KafkaBridge.KafkaBridgeCore.Initialize(System.String, System.Boolean, System.Object())
-  nameWithType: KafkaBridgeCore.Initialize(String, Boolean, Object[])
-  nameWithType.vb: KafkaBridgeCore.Initialize(String, Boolean, Object())
-- uid: MASES.KafkaBridge.KafkaBridgeCore.Initialize*
-  name: Initialize
-  href: api/MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore_Initialize_
-  commentId: Overload:MASES.KafkaBridge.KafkaBridgeCore.Initialize
-  isSpec: "True"
-  fullName: MASES.KafkaBridge.KafkaBridgeCore.Initialize
-  nameWithType: KafkaBridgeCore.Initialize
 - uid: MASES.KafkaBridge.KafkaBridgeCore.JavaDebugOpts
   name: JavaDebugOpts
   href: api/MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore_JavaDebugOpts
@@ -556,6 +2092,19 @@ references:
   isSpec: "True"
   fullName: MASES.KafkaBridge.KafkaBridgeCore.JmxPort
   nameWithType: KafkaBridgeCore.JmxPort
+- uid: MASES.KafkaBridge.KafkaBridgeCore.JVM
+  name: JVM
+  href: api/MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore_JVM
+  commentId: P:MASES.KafkaBridge.KafkaBridgeCore.JVM
+  fullName: MASES.KafkaBridge.KafkaBridgeCore.JVM
+  nameWithType: KafkaBridgeCore.JVM
+- uid: MASES.KafkaBridge.KafkaBridgeCore.JVM*
+  name: JVM
+  href: api/MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore_JVM_
+  commentId: Overload:MASES.KafkaBridge.KafkaBridgeCore.JVM
+  isSpec: "True"
+  fullName: MASES.KafkaBridge.KafkaBridgeCore.JVM
+  nameWithType: KafkaBridgeCore.JVM
 - uid: MASES.KafkaBridge.KafkaBridgeCore.JVMOptions
   name: JVMOptions
   href: api/MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore_JVMOptions
@@ -595,32 +2144,19 @@ references:
   isSpec: "True"
   fullName: MASES.KafkaBridge.KafkaBridgeCore.LogDir
   nameWithType: KafkaBridgeCore.LogDir
-- uid: MASES.KafkaBridge.KafkaBridgeCore.MainClass
-  name: MainClass
-  href: api/MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore_MainClass
-  commentId: P:MASES.KafkaBridge.KafkaBridgeCore.MainClass
-  fullName: MASES.KafkaBridge.KafkaBridgeCore.MainClass
-  nameWithType: KafkaBridgeCore.MainClass
-- uid: MASES.KafkaBridge.KafkaBridgeCore.MainClass*
-  name: MainClass
-  href: api/MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore_MainClass_
-  commentId: Overload:MASES.KafkaBridge.KafkaBridgeCore.MainClass
+- uid: MASES.KafkaBridge.KafkaBridgeCore.MainClassToRun
+  name: MainClassToRun
+  href: api/MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore_MainClassToRun
+  commentId: P:MASES.KafkaBridge.KafkaBridgeCore.MainClassToRun
+  fullName: MASES.KafkaBridge.KafkaBridgeCore.MainClassToRun
+  nameWithType: KafkaBridgeCore.MainClassToRun
+- uid: MASES.KafkaBridge.KafkaBridgeCore.MainClassToRun*
+  name: MainClassToRun
+  href: api/MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore_MainClassToRun_
+  commentId: Overload:MASES.KafkaBridge.KafkaBridgeCore.MainClassToRun
   isSpec: "True"
-  fullName: MASES.KafkaBridge.KafkaBridgeCore.MainClass
-  nameWithType: KafkaBridgeCore.MainClass
-- uid: MASES.KafkaBridge.KafkaBridgeCore.MainInstanceClass
-  name: MainInstanceClass
-  href: api/MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore_MainInstanceClass
-  commentId: P:MASES.KafkaBridge.KafkaBridgeCore.MainInstanceClass
-  fullName: MASES.KafkaBridge.KafkaBridgeCore.MainInstanceClass
-  nameWithType: KafkaBridgeCore.MainInstanceClass
-- uid: MASES.KafkaBridge.KafkaBridgeCore.MainInstanceClass*
-  name: MainInstanceClass
-  href: api/MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore_MainInstanceClass_
-  commentId: Overload:MASES.KafkaBridge.KafkaBridgeCore.MainInstanceClass
-  isSpec: "True"
-  fullName: MASES.KafkaBridge.KafkaBridgeCore.MainInstanceClass
-  nameWithType: KafkaBridgeCore.MainInstanceClass
+  fullName: MASES.KafkaBridge.KafkaBridgeCore.MainClassToRun
+  nameWithType: KafkaBridgeCore.MainClassToRun
 - uid: MASES.KafkaBridge.KafkaBridgeCore.Options
   name: Options
   href: api/MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore_Options
@@ -634,22 +2170,6 @@ references:
   isSpec: "True"
   fullName: MASES.KafkaBridge.KafkaBridgeCore.Options
   nameWithType: KafkaBridgeCore.Options
-- uid: MASES.KafkaBridge.KafkaBridgeCore.Parse(System.String[])
-  name: Parse(String[])
-  href: api/MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore_Parse_System_String___
-  commentId: M:MASES.KafkaBridge.KafkaBridgeCore.Parse(System.String[])
-  name.vb: Parse(String())
-  fullName: MASES.KafkaBridge.KafkaBridgeCore.Parse(System.String[])
-  fullName.vb: MASES.KafkaBridge.KafkaBridgeCore.Parse(System.String())
-  nameWithType: KafkaBridgeCore.Parse(String[])
-  nameWithType.vb: KafkaBridgeCore.Parse(String())
-- uid: MASES.KafkaBridge.KafkaBridgeCore.Parse*
-  name: Parse
-  href: api/MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore_Parse_
-  commentId: Overload:MASES.KafkaBridge.KafkaBridgeCore.Parse
-  isSpec: "True"
-  fullName: MASES.KafkaBridge.KafkaBridgeCore.Parse
-  nameWithType: KafkaBridgeCore.Parse
 - uid: MASES.KafkaBridge.KafkaBridgeCore.PerformanceOptions
   name: PerformanceOptions
   href: api/MASES.KafkaBridge.KafkaBridgeCore.html#MASES_KafkaBridge_KafkaBridgeCore_PerformanceOptions
@@ -793,99 +2313,82 @@ references:
   isSpec: "True"
   fullName: MASES.KafkaBridge.KafkaBridgeCore.ToolsPath
   nameWithType: KafkaBridgeCore.ToolsPath
-- uid: MASES.KafkaBridge.KafkaBridgeCoreExtensions
-  name: KafkaBridgeCoreExtensions
-  href: api/MASES.KafkaBridge.KafkaBridgeCoreExtensions.html
-  commentId: T:MASES.KafkaBridge.KafkaBridgeCoreExtensions
-  fullName: MASES.KafkaBridge.KafkaBridgeCoreExtensions
-  nameWithType: KafkaBridgeCoreExtensions
-- uid: MASES.KafkaBridge.KafkaBridgeCoreExtensions.FilterJCOBridgeArguments*
-  name: FilterJCOBridgeArguments
-  href: api/MASES.KafkaBridge.KafkaBridgeCoreExtensions.html#MASES_KafkaBridge_KafkaBridgeCoreExtensions_FilterJCOBridgeArguments_
-  commentId: Overload:MASES.KafkaBridge.KafkaBridgeCoreExtensions.FilterJCOBridgeArguments
+- uid: MASES.KafkaBridge.Streams
+  name: MASES.KafkaBridge.Streams
+  href: api/MASES.KafkaBridge.Streams.html
+  commentId: N:MASES.KafkaBridge.Streams
+  fullName: MASES.KafkaBridge.Streams
+  nameWithType: MASES.KafkaBridge.Streams
+- uid: MASES.KafkaBridge.Streams.KafkaStreams
+  name: KafkaStreams
+  href: api/MASES.KafkaBridge.Streams.KafkaStreams.html
+  commentId: T:MASES.KafkaBridge.Streams.KafkaStreams
+  fullName: MASES.KafkaBridge.Streams.KafkaStreams
+  nameWithType: KafkaStreams
+- uid: MASES.KafkaBridge.Streams.KafkaStreams.ClassName
+  name: ClassName
+  href: api/MASES.KafkaBridge.Streams.KafkaStreams.html#MASES_KafkaBridge_Streams_KafkaStreams_ClassName
+  commentId: P:MASES.KafkaBridge.Streams.KafkaStreams.ClassName
+  fullName: MASES.KafkaBridge.Streams.KafkaStreams.ClassName
+  nameWithType: KafkaStreams.ClassName
+- uid: MASES.KafkaBridge.Streams.KafkaStreams.ClassName*
+  name: ClassName
+  href: api/MASES.KafkaBridge.Streams.KafkaStreams.html#MASES_KafkaBridge_Streams_KafkaStreams_ClassName_
+  commentId: Overload:MASES.KafkaBridge.Streams.KafkaStreams.ClassName
   isSpec: "True"
-  fullName: MASES.KafkaBridge.KafkaBridgeCoreExtensions.FilterJCOBridgeArguments
-  nameWithType: KafkaBridgeCoreExtensions.FilterJCOBridgeArguments
-- uid: MASES.KafkaBridge.KafkaBridgeCoreExtensions.FilterJCOBridgeArguments``1(``0[])
-  name: FilterJCOBridgeArguments<T>(T[])
-  href: api/MASES.KafkaBridge.KafkaBridgeCoreExtensions.html#MASES_KafkaBridge_KafkaBridgeCoreExtensions_FilterJCOBridgeArguments__1___0___
-  commentId: M:MASES.KafkaBridge.KafkaBridgeCoreExtensions.FilterJCOBridgeArguments``1(``0[])
-  name.vb: FilterJCOBridgeArguments(Of T)(T())
-  fullName: MASES.KafkaBridge.KafkaBridgeCoreExtensions.FilterJCOBridgeArguments<T>(T[])
-  fullName.vb: MASES.KafkaBridge.KafkaBridgeCoreExtensions.FilterJCOBridgeArguments(Of T)(T())
-  nameWithType: KafkaBridgeCoreExtensions.FilterJCOBridgeArguments<T>(T[])
-  nameWithType.vb: KafkaBridgeCoreExtensions.FilterJCOBridgeArguments(Of T)(T())
-- uid: MASES.KafkaBridge.KafkaBridgeMain
-  name: KafkaBridgeMain
-  href: api/MASES.KafkaBridge.KafkaBridgeMain.html
-  commentId: T:MASES.KafkaBridge.KafkaBridgeMain
-  fullName: MASES.KafkaBridge.KafkaBridgeMain
-  nameWithType: KafkaBridgeMain
-- uid: MASES.KafkaBridge.KafkaBridgeMain.#ctor(System.String)
-  name: KafkaBridgeMain(String)
-  href: api/MASES.KafkaBridge.KafkaBridgeMain.html#MASES_KafkaBridge_KafkaBridgeMain__ctor_System_String_
-  commentId: M:MASES.KafkaBridge.KafkaBridgeMain.#ctor(System.String)
-  fullName: MASES.KafkaBridge.KafkaBridgeMain.KafkaBridgeMain(System.String)
-  nameWithType: KafkaBridgeMain.KafkaBridgeMain(String)
-- uid: MASES.KafkaBridge.KafkaBridgeMain.#ctor*
-  name: KafkaBridgeMain
-  href: api/MASES.KafkaBridge.KafkaBridgeMain.html#MASES_KafkaBridge_KafkaBridgeMain__ctor_
-  commentId: Overload:MASES.KafkaBridge.KafkaBridgeMain.#ctor
+  fullName: MASES.KafkaBridge.Streams.KafkaStreams.ClassName
+  nameWithType: KafkaStreams.ClassName
+- uid: MASES.KafkaBridge.Streams.StreamsBuilder
+  name: StreamsBuilder
+  href: api/MASES.KafkaBridge.Streams.StreamsBuilder.html
+  commentId: T:MASES.KafkaBridge.Streams.StreamsBuilder
+  fullName: MASES.KafkaBridge.Streams.StreamsBuilder
+  nameWithType: StreamsBuilder
+- uid: MASES.KafkaBridge.Streams.StreamsBuilder.ClassName
+  name: ClassName
+  href: api/MASES.KafkaBridge.Streams.StreamsBuilder.html#MASES_KafkaBridge_Streams_StreamsBuilder_ClassName
+  commentId: P:MASES.KafkaBridge.Streams.StreamsBuilder.ClassName
+  fullName: MASES.KafkaBridge.Streams.StreamsBuilder.ClassName
+  nameWithType: StreamsBuilder.ClassName
+- uid: MASES.KafkaBridge.Streams.StreamsBuilder.ClassName*
+  name: ClassName
+  href: api/MASES.KafkaBridge.Streams.StreamsBuilder.html#MASES_KafkaBridge_Streams_StreamsBuilder_ClassName_
+  commentId: Overload:MASES.KafkaBridge.Streams.StreamsBuilder.ClassName
   isSpec: "True"
-  fullName: MASES.KafkaBridge.KafkaBridgeMain.KafkaBridgeMain
-  nameWithType: KafkaBridgeMain.KafkaBridgeMain
-- uid: MASES.KafkaBridge.KafkaBridgeMain.Execute*
-  name: Execute
-  href: api/MASES.KafkaBridge.KafkaBridgeMain.html#MASES_KafkaBridge_KafkaBridgeMain_Execute_
-  commentId: Overload:MASES.KafkaBridge.KafkaBridgeMain.Execute
+  fullName: MASES.KafkaBridge.Streams.StreamsBuilder.ClassName
+  nameWithType: StreamsBuilder.ClassName
+- uid: MASES.KafkaBridge.Streams.StreamsConfig
+  name: StreamsConfig
+  href: api/MASES.KafkaBridge.Streams.StreamsConfig.html
+  commentId: T:MASES.KafkaBridge.Streams.StreamsConfig
+  fullName: MASES.KafkaBridge.Streams.StreamsConfig
+  nameWithType: StreamsConfig
+- uid: MASES.KafkaBridge.Streams.StreamsConfig.ClassName
+  name: ClassName
+  href: api/MASES.KafkaBridge.Streams.StreamsConfig.html#MASES_KafkaBridge_Streams_StreamsConfig_ClassName
+  commentId: P:MASES.KafkaBridge.Streams.StreamsConfig.ClassName
+  fullName: MASES.KafkaBridge.Streams.StreamsConfig.ClassName
+  nameWithType: StreamsConfig.ClassName
+- uid: MASES.KafkaBridge.Streams.StreamsConfig.ClassName*
+  name: ClassName
+  href: api/MASES.KafkaBridge.Streams.StreamsConfig.html#MASES_KafkaBridge_Streams_StreamsConfig_ClassName_
+  commentId: Overload:MASES.KafkaBridge.Streams.StreamsConfig.ClassName
   isSpec: "True"
-  fullName: MASES.KafkaBridge.KafkaBridgeMain.Execute
-  nameWithType: KafkaBridgeMain.Execute
-- uid: MASES.KafkaBridge.KafkaBridgeMain.Execute``1(``0[])
-  name: Execute<T>(T[])
-  href: api/MASES.KafkaBridge.KafkaBridgeMain.html#MASES_KafkaBridge_KafkaBridgeMain_Execute__1___0___
-  commentId: M:MASES.KafkaBridge.KafkaBridgeMain.Execute``1(``0[])
-  name.vb: Execute(Of T)(T())
-  fullName: MASES.KafkaBridge.KafkaBridgeMain.Execute<T>(T[])
-  fullName.vb: MASES.KafkaBridge.KafkaBridgeMain.Execute(Of T)(T())
-  nameWithType: KafkaBridgeMain.Execute<T>(T[])
-  nameWithType.vb: KafkaBridgeMain.Execute(Of T)(T())
-- uid: MASES.KafkaBridge.KafkaBridgeRunner`1
-  name: KafkaBridgeRunner<Class>
-  href: api/MASES.KafkaBridge.KafkaBridgeRunner-1.html
-  commentId: T:MASES.KafkaBridge.KafkaBridgeRunner`1
-  name.vb: KafkaBridgeRunner(Of Class)
-  fullName: MASES.KafkaBridge.KafkaBridgeRunner<Class>
-  fullName.vb: MASES.KafkaBridge.KafkaBridgeRunner(Of Class)
-  nameWithType: KafkaBridgeRunner<Class>
-  nameWithType.vb: KafkaBridgeRunner(Of Class)
-- uid: MASES.KafkaBridge.KafkaBridgeRunner`1.Run*
-  name: Run
-  href: api/MASES.KafkaBridge.KafkaBridgeRunner-1.html#MASES_KafkaBridge_KafkaBridgeRunner_1_Run_
-  commentId: Overload:MASES.KafkaBridge.KafkaBridgeRunner`1.Run
+  fullName: MASES.KafkaBridge.Streams.StreamsConfig.ClassName
+  nameWithType: StreamsConfig.ClassName
+- uid: MASES.KafkaBridge.Streams.StreamsConfig.IsStatic
+  name: IsStatic
+  href: api/MASES.KafkaBridge.Streams.StreamsConfig.html#MASES_KafkaBridge_Streams_StreamsConfig_IsStatic
+  commentId: P:MASES.KafkaBridge.Streams.StreamsConfig.IsStatic
+  fullName: MASES.KafkaBridge.Streams.StreamsConfig.IsStatic
+  nameWithType: StreamsConfig.IsStatic
+- uid: MASES.KafkaBridge.Streams.StreamsConfig.IsStatic*
+  name: IsStatic
+  href: api/MASES.KafkaBridge.Streams.StreamsConfig.html#MASES_KafkaBridge_Streams_StreamsConfig_IsStatic_
+  commentId: Overload:MASES.KafkaBridge.Streams.StreamsConfig.IsStatic
   isSpec: "True"
-  fullName: MASES.KafkaBridge.KafkaBridgeRunner<Class>.Run
-  fullName.vb: MASES.KafkaBridge.KafkaBridgeRunner(Of Class).Run
-  nameWithType: KafkaBridgeRunner<Class>.Run
-  nameWithType.vb: KafkaBridgeRunner(Of Class).Run
-- uid: MASES.KafkaBridge.KafkaBridgeRunner`1.Run``1(``0[])
-  name: Run<T>(T[])
-  href: api/MASES.KafkaBridge.KafkaBridgeRunner-1.html#MASES_KafkaBridge_KafkaBridgeRunner_1_Run__1___0___
-  commentId: M:MASES.KafkaBridge.KafkaBridgeRunner`1.Run``1(``0[])
-  name.vb: Run(Of T)(T())
-  fullName: MASES.KafkaBridge.KafkaBridgeRunner<Class>.Run<T>(T[])
-  fullName.vb: MASES.KafkaBridge.KafkaBridgeRunner(Of Class).Run(Of T)(T())
-  nameWithType: KafkaBridgeRunner<Class>.Run<T>(T[])
-  nameWithType.vb: KafkaBridgeRunner(Of Class).Run(Of T)(T())
-- uid: MASES.KafkaBridge.KafkaBridgeRunner`1.Run``1(System.String,System.Boolean,``0[])
-  name: Run<T>(String, Boolean, T[])
-  href: api/MASES.KafkaBridge.KafkaBridgeRunner-1.html#MASES_KafkaBridge_KafkaBridgeRunner_1_Run__1_System_String_System_Boolean___0___
-  commentId: M:MASES.KafkaBridge.KafkaBridgeRunner`1.Run``1(System.String,System.Boolean,``0[])
-  name.vb: Run(Of T)(String, Boolean, T())
-  fullName: MASES.KafkaBridge.KafkaBridgeRunner<Class>.Run<T>(System.String, System.Boolean, T[])
-  fullName.vb: MASES.KafkaBridge.KafkaBridgeRunner(Of Class).Run(Of T)(System.String, System.Boolean, T())
-  nameWithType: KafkaBridgeRunner<Class>.Run<T>(String, Boolean, T[])
-  nameWithType.vb: KafkaBridgeRunner(Of Class).Run(Of T)(String, Boolean, T())
+  fullName: MASES.KafkaBridge.Streams.StreamsConfig.IsStatic
+  nameWithType: StreamsConfig.IsStatic
 - uid: MASES.KafkaBridge.Tools
   name: MASES.KafkaBridge.Tools
   href: api/MASES.KafkaBridge.Tools.html
@@ -1063,19 +2566,6 @@ references:
   isSpec: "True"
   fullName: MASES.KafkaBridge.Tools.StreamsResetter.StreamsResetter
   nameWithType: StreamsResetter.StreamsResetter
-- uid: MASES.KafkaBridge.Tools.StreamsResetter.HeapSize
-  name: HeapSize
-  href: api/MASES.KafkaBridge.Tools.StreamsResetter.html#MASES_KafkaBridge_Tools_StreamsResetter_HeapSize
-  commentId: P:MASES.KafkaBridge.Tools.StreamsResetter.HeapSize
-  fullName: MASES.KafkaBridge.Tools.StreamsResetter.HeapSize
-  nameWithType: StreamsResetter.HeapSize
-- uid: MASES.KafkaBridge.Tools.StreamsResetter.HeapSize*
-  name: HeapSize
-  href: api/MASES.KafkaBridge.Tools.StreamsResetter.html#MASES_KafkaBridge_Tools_StreamsResetter_HeapSize_
-  commentId: Overload:MASES.KafkaBridge.Tools.StreamsResetter.HeapSize
-  isSpec: "True"
-  fullName: MASES.KafkaBridge.Tools.StreamsResetter.HeapSize
-  nameWithType: StreamsResetter.HeapSize
 - uid: MASES.KafkaBridge.Tools.TransactionsCommand
   name: TransactionsCommand
   href: api/MASES.KafkaBridge.Tools.TransactionsCommand.html
