@@ -5,13 +5,14 @@
   </PropertyGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'net461'">
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Windows.Forms" />
   </ItemGroup>
-  <ItemGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
+  <ItemGroup Condition="Exists('..\..\..\KafkaBridge\KafkaBridge.csproj')">
+    <!--Within GitHub repo: used for test purpose-->
+    <PackageReference Include="MASES.JCOBridge" Version="2.4.0" />
+    <ProjectReference Include="..\..\..\KafkaBridge\KafkaBridge.csproj" />
+  </ItemGroup>
+  <ItemGroup Condition="!Exists('..\..\..\KafkaBridge\KafkaBridge.csproj')">
+    <!--Outside GitHub repo-->
     <PackageReference Include="MASES.KafkaBridge" Version="1.1.0" />
-  </ItemGroup>
-  <ItemGroup Condition="'$(GITHUB_ACTIONS)' != 'true'">
-    <PackageReference Include="MASES.JCOBridge" Version="2.4.0"/>
-    <ProjectReference Include="$(SolutionDir)\KafkaBridge\KafkaBridge.csproj"/>
   </ItemGroup>
 </Project>
