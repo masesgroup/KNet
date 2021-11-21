@@ -29,11 +29,11 @@ namespace MASES.KafkaBridgeTemplate.KafkaBridgeConsumer
             props.Put("auto.commit.interval.ms", "1000");
             props.Put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
             props.Put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
-            KafkaConsumer consumer = new KafkaConsumer(props);
+            var consumer = new KafkaConsumer<string, string>(props);
             consumer.Subscribe(Collections.singleton(topicToUse));
             while (true)
             {
-                ConsumerRecords records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);
+                var records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);
                 foreach (var item in records)
                 {
                     Console.WriteLine($"Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}");
