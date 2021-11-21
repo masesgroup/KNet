@@ -81,16 +81,27 @@
     <div class="level1"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
     <div class="level2"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span></div>
     <div class="level3"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span>&lt;<a class="xref" href="MASES.KafkaBridge.Clients.Consumer.ConsumerRecords-2.html">ConsumerRecords</a>&lt;K, V&gt;&gt;</div>
-    <div class="level4"><span class="xref">ConsumerRecords&lt;K, V&gt;</span></div>
+    <div class="level4"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBaseEnumerable</span>&lt;<a class="xref" href="MASES.KafkaBridge.Clients.Consumer.ConsumerRecords-2.html">ConsumerRecords</a>&lt;K, V&gt;&gt;</div>
+    <div class="level5"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBaseEnumerable</span>&lt;<a class="xref" href="MASES.KafkaBridge.Clients.Consumer.ConsumerRecords-2.html">ConsumerRecords</a>&lt;K, V&gt;, <a class="xref" href="MASES.KafkaBridge.Clients.Consumer.ConsumerRecord-2.html">ConsumerRecord</a>&lt;K, V&gt;&gt;</div>
+    <div class="level6"><span class="xref">ConsumerRecords&lt;K, V&gt;</span></div>
+      <div class="level7"><a class="xref" href="MASES.KafkaBridge.Clients.Consumer.ConsumerRecords.html">ConsumerRecords</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
     <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span></div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MASES.KafkaBridge.Clients.Consumer.ConsumerRecord-2.html">ConsumerRecord</a>&lt;K, V&gt;&gt;</div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBaseEnumerable&lt;MASES.KafkaBridge.Clients.Consumer.ConsumerRecords&lt;K, V&gt;, MASES.KafkaBridge.Clients.Consumer.ConsumerRecord&lt;K, V&gt;&gt;.GetEnumerator()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBaseEnumerable&lt;MASES.KafkaBridge.Clients.Consumer.ConsumerRecords&lt;K, V&gt;&gt;.System.Collections.IEnumerable.GetEnumerator()</span>
+    </div>
     <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Clients.Consumer.ConsumerRecords&lt;K, V&gt;&gt;.SExecute(System.String, System.Object[])</span>
     </div>
@@ -210,7 +221,7 @@
   <h6><strong>Assembly</strong>: MASES.KafkaBridge.dll</h6>
   <h5 id="MASES_KafkaBridge_Clients_Consumer_ConsumerRecords_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ConsumerRecords&lt;K, V&gt; : JVMBridgeBase&lt;ConsumerRecords&lt;K, V&gt;&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, ISetupJVMBridgeCore, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public class ConsumerRecords&lt;K, V&gt; : JVMBridgeBaseEnumerable&lt;ConsumerRecords&lt;K, V&gt;, ConsumerRecord&lt;K, V&gt;&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, ISetupJVMBridgeCore, IDisposable, IEnumerable&lt;ConsumerRecord&lt;K, V&gt;&gt;, IEnumerable</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -238,7 +249,7 @@
     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Clients_Consumer_ConsumerRecords_2_ClassName.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Clients.Consumer.ConsumerRecords%602.ClassName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/BridgedClasses/Clients/Consumer/ConsumerRecords.cs/#L28">View Source</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/BridgedClasses/Clients/Consumer/ConsumerRecords.cs/#L23">View Source</a>
   </span>
   <a id="MASES_KafkaBridge_Clients_Consumer_ConsumerRecords_2_ClassName_" data-uid="MASES.KafkaBridge.Clients.Consumer.ConsumerRecords`2.ClassName*"></a>
   <h4 id="MASES_KafkaBridge_Clients_Consumer_ConsumerRecords_2_ClassName" data-uid="MASES.KafkaBridge.Clients.Consumer.ConsumerRecords`2.ClassName">ClassName</h4>
@@ -275,6 +286,12 @@
   <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
   </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">System.Collections.Generic.IEnumerable&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable">System.Collections.IEnumerable</a>
+  </div>
 </article>
           </div>
           
@@ -286,7 +303,7 @@
                     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Clients_Consumer_ConsumerRecords_2.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Clients.Consumer.ConsumerRecords%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/BridgedClasses/Clients/Consumer/ConsumerRecords.cs/#L26" class="contribution-link">View Source</a>
+                    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/BridgedClasses/Clients/Consumer/ConsumerRecords.cs/#L21" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

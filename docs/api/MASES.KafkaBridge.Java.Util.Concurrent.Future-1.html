@@ -82,6 +82,7 @@
     <div class="level2"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span></div>
     <div class="level3"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span>&lt;<a class="xref" href="MASES.KafkaBridge.Java.Util.Concurrent.Future-1.html">Future</a>&lt;E&gt;&gt;</div>
     <div class="level4"><span class="xref">Future&lt;E&gt;</span></div>
+      <div class="level5"><a class="xref" href="MASES.KafkaBridge.Common.KafkaFuture-1.html">KafkaFuture&lt;E&gt;</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -210,7 +211,7 @@
   <h6><strong>Assembly</strong>: MASES.KafkaBridge.dll</h6>
   <h5 id="MASES_KafkaBridge_Java_Util_Concurrent_Future_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Future&lt;E&gt; : JVMBridgeBase&lt;Future&lt;E&gt;&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, ISetupJVMBridgeCore, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public class Future&lt;E&gt; : JVMBridgeBase&lt;Future&lt;E&gt;&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, ISetupJVMBridgeCore, IDisposable where E : JVMBridgeBase, new()</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,7 +235,7 @@
     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Java_Util_Concurrent_Future_1_ClassName.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Java.Util.Concurrent.Future%601.ClassName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/BridgedClasses/Java/Util/Concurrent/Future.cs/#L23">View Source</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/BridgedClasses/Java/Util/Concurrent/Future.cs/#L24">View Source</a>
   </span>
   <a id="MASES_KafkaBridge_Java_Util_Concurrent_Future_1_ClassName_" data-uid="MASES.KafkaBridge.Java.Util.Concurrent.Future`1.ClassName*"></a>
   <h4 id="MASES_KafkaBridge_Java_Util_Concurrent_Future_1_ClassName" data-uid="MASES.KafkaBridge.Java.Util.Concurrent.Future`1.ClassName">ClassName</h4>
@@ -261,6 +262,150 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClassName</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Java_Util_Concurrent_Future_1_IsCancelled.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Java.Util.Concurrent.Future%601.IsCancelled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/BridgedClasses/Java/Util/Concurrent/Future.cs/#L41">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Java_Util_Concurrent_Future_1_IsCancelled_" data-uid="MASES.KafkaBridge.Java.Util.Concurrent.Future`1.IsCancelled*"></a>
+  <h4 id="MASES_KafkaBridge_Java_Util_Concurrent_Future_1_IsCancelled" data-uid="MASES.KafkaBridge.Java.Util.Concurrent.Future`1.IsCancelled">IsCancelled</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsCancelled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Java_Util_Concurrent_Future_1_IsDone.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Java.Util.Concurrent.Future%601.IsDone%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/BridgedClasses/Java/Util/Concurrent/Future.cs/#L43">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Java_Util_Concurrent_Future_1_IsDone_" data-uid="MASES.KafkaBridge.Java.Util.Concurrent.Future`1.IsDone*"></a>
+  <h4 id="MASES_KafkaBridge_Java_Util_Concurrent_Future_1_IsDone" data-uid="MASES.KafkaBridge.Java.Util.Concurrent.Future`1.IsDone">IsDone</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDone { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Java_Util_Concurrent_Future_1_Get.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Java.Util.Concurrent.Future%601.Get%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/BridgedClasses/Java/Util/Concurrent/Future.cs/#L31">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Java_Util_Concurrent_Future_1_Get_" data-uid="MASES.KafkaBridge.Java.Util.Concurrent.Future`1.Get*"></a>
+  <h4 id="MASES_KafkaBridge_Java_Util_Concurrent_Future_1_Get" data-uid="MASES.KafkaBridge.Java.Util.Concurrent.Future`1.Get">Get()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public E Get()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">E</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Java_Util_Concurrent_Future_1_Get_System_Int64_MASES_KafkaBridge_Java_Util_Concurrent_TimeUnit_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Java.Util.Concurrent.Future%601.Get(System.Int64%2CMASES.KafkaBridge.Java.Util.Concurrent.TimeUnit)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/BridgedClasses/Java/Util/Concurrent/Future.cs/#L36">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Java_Util_Concurrent_Future_1_Get_" data-uid="MASES.KafkaBridge.Java.Util.Concurrent.Future`1.Get*"></a>
+  <h4 id="MASES_KafkaBridge_Java_Util_Concurrent_Future_1_Get_System_Int64_MASES_KafkaBridge_Java_Util_Concurrent_TimeUnit_" data-uid="MASES.KafkaBridge.Java.Util.Concurrent.Future`1.Get(System.Int64,MASES.KafkaBridge.Java.Util.Concurrent.TimeUnit)">Get(Int64, TimeUnit)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public E Get(long timeout, TimeUnit unit)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">timeout</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Java.Util.Concurrent.TimeUnit.html">TimeUnit</a></td>
+        <td><span class="parametername">unit</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">E</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">System.Dynamic.IDynamicMetaObjectProvider</a>
