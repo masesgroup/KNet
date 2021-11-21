@@ -16,15 +16,11 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KafkaBridge.Clients.Consumer
+namespace MASES.KafkaBridge.Common
 {
-    public class ConsumerRecords<K, V> : JCOBridge.C2JBridge.JVMBridgeBaseEnumerable<ConsumerRecords<K, V>, ConsumerRecord<K, V>>
+    public enum ElectionType : byte
     {
-        public override string ClassName => "org.apache.kafka.clients.consumer.ConsumerRecords";
-    }
-
-    public class ConsumerRecords : ConsumerRecords<object, object>
-    {
-
+        PREFERRED = 0,
+        UNCLEAN = 1,
     }
 }

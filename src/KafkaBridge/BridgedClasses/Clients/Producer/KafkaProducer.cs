@@ -59,12 +59,12 @@ namespace MASES.KafkaBridge.Clients.Producer
 
         public Future<RecordMetadata> Send(ProducerRecord record)
         {
-            return IExecute<Future<RecordMetadata>>("send", record.Instance);
+            return New<Future<RecordMetadata>>("send", record.Instance);
         }
 
         public Future<RecordMetadata> Send<K, V>(ProducerRecord<K, V> record)
         {
-            return IExecute<Future<RecordMetadata>>("send", record.Instance);
+            return New<Future<RecordMetadata>>("send", record.Instance);
         }
 
         public void Flush()

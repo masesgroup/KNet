@@ -16,15 +16,10 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KafkaBridge.Clients.Consumer
+namespace MASES.KafkaBridge.Java.Util
 {
-    public class ConsumerRecords<K, V> : JCOBridge.C2JBridge.JVMBridgeBaseEnumerable<ConsumerRecords<K, V>, ConsumerRecord<K, V>>
+    public class List<E> : JCOBridge.C2JBridge.JVMBridgeBase<List<E>>
     {
-        public override string ClassName => "org.apache.kafka.clients.consumer.ConsumerRecords";
-    }
-
-    public class ConsumerRecords : ConsumerRecords<object, object>
-    {
-
+        public override string ClassName => "java.util.List";
     }
 }

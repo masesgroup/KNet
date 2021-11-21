@@ -30,7 +30,7 @@ namespace MASES.KafkaBridge.Clients.Admin
 
         public bool shouldValidateOnly()
         {
-            return (bool)IExecute("shouldValidateOnly");
+            return IExecute<bool>("shouldValidateOnly");
         }
 
         public CreateTopicsOptions retryOnQuotaViolation(bool validateOnly)
@@ -41,7 +41,7 @@ namespace MASES.KafkaBridge.Clients.Admin
 
         public bool shouldRetryOnQuotaViolation()
         {
-            return (bool)IExecute("shouldRetryOnQuotaViolation");
+            return IExecute<bool>("shouldRetryOnQuotaViolation");
         }
     }
 }

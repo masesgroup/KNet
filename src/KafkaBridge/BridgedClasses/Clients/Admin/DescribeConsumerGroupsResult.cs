@@ -16,15 +16,10 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KafkaBridge.Clients.Consumer
+namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class ConsumerRecords<K, V> : JCOBridge.C2JBridge.JVMBridgeBaseEnumerable<ConsumerRecords<K, V>, ConsumerRecord<K, V>>
+    public class DescribeConsumerGroupsResult : JCOBridge.C2JBridge.JVMBridgeBase<DescribeConsumerGroupsResult>
     {
-        public override string ClassName => "org.apache.kafka.clients.consumer.ConsumerRecords";
-    }
-
-    public class ConsumerRecords : ConsumerRecords<object, object>
-    {
-
+        public override string ClassName => "org.apache.kafka.clients.admin.DescribeConsumerGroupsResult";
     }
 }

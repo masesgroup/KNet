@@ -16,15 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KafkaBridge.Clients.Consumer
+namespace MASES.KafkaBridge.Java.Lang
 {
-    public class ConsumerRecords<K, V> : JCOBridge.C2JBridge.JVMBridgeBaseEnumerable<ConsumerRecords<K, V>, ConsumerRecord<K, V>>
+    public sealed class Void : JCOBridge.C2JBridge.JVMBridgeBase<Void>
     {
-        public override string ClassName => "org.apache.kafka.clients.consumer.ConsumerRecords";
-    }
+        public override bool IsStatic => true;
 
-    public class ConsumerRecords : ConsumerRecords<object, object>
-    {
-
+        public override string ClassName => "java.lang.Void";
     }
 }

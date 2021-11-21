@@ -18,9 +18,8 @@
 
 namespace MASES.KafkaBridge.Java.Util
 {
-    public class Set<E> : JCOBridge.C2JBridge.JVMBridgeBase<Set<E>>
+    public class Set<E> : Collection<E>
     {
         public override string ClassName => "java.util.Set";
     }
 }
-

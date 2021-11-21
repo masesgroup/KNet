@@ -22,20 +22,20 @@ namespace MASES.KafkaBridge.Clients.Producer
     {
         public override string ClassName => "org.apache.kafka.clients.producer.RecordMetadata";
 
-        public bool HasOffset => (bool)IExecute("hasOffset");
+        public bool HasOffset => IExecute<bool>("hasOffset");
 
-        public long Offset => (long)IExecute("offset");
+        public long Offset => IExecute<long>("offset");
 
-        public bool HasTimestamp => (bool)IExecute("hasTimestamp");
+        public bool HasTimestamp => IExecute<bool>("hasTimestamp");
 
-        public long Timestamp => (long)IExecute("timestamp");
+        public long Timestamp => IExecute<long>("timestamp");
 
-        public int SerializedKeySize => (int)IExecute("serializedKeySize");
+        public int SerializedKeySize => IExecute<int>("serializedKeySize");
 
-        public int SerializedValueSize => (int)IExecute("serializedValueSize");
+        public int SerializedValueSize => IExecute<int>("serializedValueSize");
 
-        public string Topic => (string)IExecute("topic");
+        public string Topic => IExecute<string>("topic");
 
-        public int Partition => (int)IExecute("partition");
+        public int Partition => IExecute<int>("partition");
     }
 }

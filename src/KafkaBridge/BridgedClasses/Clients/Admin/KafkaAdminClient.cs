@@ -16,6 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common;
 using MASES.KafkaBridge.Java.Util;
 
 namespace MASES.KafkaBridge.Clients.Admin
@@ -31,17 +32,32 @@ namespace MASES.KafkaBridge.Clients.Admin
 
         public CreateTopicsResult CreateTopics(Collection<NewTopic> newTopics)
         {
-            return IExecute<CreateTopicsResult>("createTopics", newTopics.Instance);
+            return New<CreateTopicsResult>("createTopics", newTopics.Instance);
         }
 
         public CreateTopicsResult CreateTopics(Collection<NewTopic> newTopics, CreateTopicsOptions options)
         {
-            return IExecute<CreateTopicsResult>("createTopics", newTopics.Instance, options.Instance);
+            return New<CreateTopicsResult>("createTopics", newTopics.Instance, options.Instance);
         }
 
         public CreateTopicsResult DeleteTopics(Collection<NewTopic> newTopics)
         {
-            return IExecute<CreateTopicsResult>("deleteTopics", newTopics.Instance);
+            return New<CreateTopicsResult>("deleteTopics", newTopics.Instance);
+        }
+
+        public DescribeConsumerGroupsResult DescribeConsumerGroups(Collection<string> groupIds)
+        {
+            return New<DescribeConsumerGroupsResult>("describeConsumerGroups", groupIds.Instance);
+        }
+
+        public ListConsumerGroupsResult ListConsumerGroups()
+        {
+            return New<ListConsumerGroupsResult>("listConsumerGroups");
+        }
+
+        public ElectLeadersResult ElectLeaders(ElectionType electionType, Set<TopicPartition> partitions)
+        {
+            return New<ElectLeadersResult>("electLeaders", (byte)electionType, partitions.Instance);
         }
     }
 }

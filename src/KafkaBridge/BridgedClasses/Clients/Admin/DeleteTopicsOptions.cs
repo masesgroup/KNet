@@ -36,7 +36,7 @@ namespace MASES.KafkaBridge.Clients.Admin
 
         public bool shouldRetryOnQuotaViolation()
         {
-            return (bool)IExecute("shouldRetryOnQuotaViolation");
+            return IExecute<bool>("shouldRetryOnQuotaViolation");
         }
     }
 }

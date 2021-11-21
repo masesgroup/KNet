@@ -16,30 +16,21 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KafkaBridge.Java.Util.Concurrent
+using MASES.KafkaBridge.Java.Lang;
+using MASES.KafkaBridge.Java.Util.Concurrent;
+
+namespace MASES.KafkaBridge.Common
 {
-    public class Future<E> : JCOBridge.C2JBridge.JVMBridgeBase<Future<E>>
+    public class KafkaFuture<E> : Future<E>
         where E : JCOBridge.C2JBridge.JVMBridgeBase, new()
     {
-        public override string ClassName => "java.util.concurrent.Future";
+        public override string ClassName => "org.apache.kafka.common.KafkaFuture";
 
-        bool Cancel(bool mayInterruptIfRunning)
+        public static KafkaFuture<Void> AllOf<T>(params KafkaFuture<T>[] futures) where T : JCOBridge.C2JBridge.JVMBridgeBase, new()
         {
-            return IExecute<bool>("cancel", mayInterruptIfRunning);
+            return SExecute<KafkaFuture<Void>>("allOf", futures);
         }
 
-        public E Get()
-        {
-            return New<E>("get");
-        }
-
-        public E Get(long timeout, TimeUnit unit)
-        {
-            return New<E>("get", timeout, unit);
-        }
-
-        public bool IsCancelled => IExecute<bool>("isCancelled");
-
-        public bool IsDone => IExecute<bool>("isDone");
+        public bool IsCompletedExceptionally => IExecute<bool>("isCompletedExceptionally");
     }
 }
