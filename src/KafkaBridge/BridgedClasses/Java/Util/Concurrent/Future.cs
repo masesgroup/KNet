@@ -19,7 +19,27 @@
 namespace MASES.KafkaBridge.Java.Util.Concurrent
 {
     public class Future<E> : JCOBridge.C2JBridge.JVMBridgeBase<Future<E>>
+        where E : JCOBridge.C2JBridge.JVMBridgeBase, new()
     {
         public override string ClassName => "java.util.concurrent.Future";
+
+        bool Cancel(bool mayInterruptIfRunning)
+        {
+            return IExecute<bool>("cancel", mayInterruptIfRunning);
+        }
+
+        public E Get()
+        {
+            return New<E>("get");
+        }
+
+        public E Get(long timeout, TimeUnit unit)
+        {
+            return New<E>("get", timeout, unit);
+        }
+
+        public bool IsCancelled => IExecute<bool>("isCancelled");
+
+        public bool IsDone => IExecute<bool>("isDone");
     }
 }

@@ -18,13 +18,13 @@
 
 namespace MASES.KafkaBridge.Clients.Consumer
 {
-    public class ConsumerRecords : JCOBridge.C2JBridge.JVMBridgeBaseEnumerable<ConsumerRecords, ConsumerRecord>
+    public class ConsumerRecords<K, V> : JCOBridge.C2JBridge.JVMBridgeBaseEnumerable<ConsumerRecords<K, V>, ConsumerRecord<K, V>>
     {
         public override string ClassName => "org.apache.kafka.clients.consumer.ConsumerRecords";
     }
 
-    public class ConsumerRecords<K, V> : JCOBridge.C2JBridge.JVMBridgeBase<ConsumerRecords<K, V>>
+    public class ConsumerRecords : ConsumerRecords<object, object>
     {
-        public override string ClassName => "org.apache.kafka.clients.consumer.ConsumerRecords";
+
     }
 }

@@ -21,7 +21,7 @@ using MASES.KafkaBridge.Java.Util;
 
 namespace MASES.KafkaBridge.Clients.Consumer
 {
-    public class KafkaConsumer : JCOBridge.C2JBridge.JVMBridgeBase<KafkaConsumer>
+    public class KafkaConsumer<K, V> : JCOBridge.C2JBridge.JVMBridgeBase<KafkaConsumer<K, V>>
     {
         public override string ClassName => "org.apache.kafka.clients.consumer.KafkaConsumer";
 
@@ -49,14 +49,14 @@ namespace MASES.KafkaBridge.Clients.Consumer
             IExecute("assign", partitions.Instance);
         }
 
-        public ConsumerRecords Poll(long timeoutMs)
+        public ConsumerRecords<K, V> Poll(long timeoutMs)
         {
-            return IExecute<ConsumerRecords>("poll", timeoutMs);
+            return New<ConsumerRecords<K, V>>("poll", timeoutMs);
         }
     }
 
-    public class KafkaConsumer<K, V> : JCOBridge.C2JBridge.JVMBridgeBase<KafkaConsumer<K, V>>
+    public class KafkaConsumer : KafkaConsumer<object, object>
     {
-        public override string ClassName => "org.apache.kafka.clients.consumer.KafkaConsumer";
+
     }
 }

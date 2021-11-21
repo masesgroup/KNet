@@ -69,7 +69,9 @@ namespace MASES.KafkaBridge
 
             parser.Add(prepareArguments());
 
-            _parsedArgs = parser.Parse(Environment.GetCommandLineArgs());
+            List<string> args = new List<string>(Environment.GetCommandLineArgs());
+            args.RemoveAt(0);
+            _parsedArgs = parser.Parse(args.ToArray());
             MainClassToRun = _parsedArgs.Get<string>(CLIParam.ClassToRun);
             ApplicationArgs = parser.UnparsedArgs.FilterJCOBridgeArguments();
 

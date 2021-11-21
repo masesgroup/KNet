@@ -133,7 +133,7 @@ namespace MASES.KafkaBridgeTest
                 {
                     var record = new ProducerRecord<string, string>(topicToUse, i.ToString(), i.ToString());
                     var result = producer.Send(record);
-                    Console.WriteLine($"Producing: {record} with result: {result}");
+                    Console.WriteLine($"Producing: {record} with result: {result.Get()}");
                     producer.Flush();
                     i++;
                 }
@@ -149,11 +149,11 @@ namespace MASES.KafkaBridgeTest
             props.Put("auto.commit.interval.ms", "1000");
             props.Put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
             props.Put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
-            KafkaConsumer consumer = new KafkaConsumer(props);
+            var consumer = new KafkaConsumer<string, string>(props);
             consumer.Subscribe(Collections.singleton(topicToUse));
             while (!resetEvent.WaitOne(0))
             {
-                ConsumerRecords records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);
+                var records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);
                 foreach (var item in records)
                 {
                     Console.WriteLine($"Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}");

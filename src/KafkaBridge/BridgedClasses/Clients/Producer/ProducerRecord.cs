@@ -46,24 +46,13 @@ namespace MASES.KafkaBridge.Clients.Producer
         {
         }
 
-        public string Topic => (string)IExecute("topic");
+        public string Topic => IExecute<string>("topic");
 
-        public K Key => (K)IExecute("key");
+        public K Key => IExecute<K>("key");
 
-        public V Value => (V)IExecute("value");
+        public V Value => IExecute<V>("value");
 
-        public long Timestamp => (long)IExecute("timestamp");
-
-        /// <inheritdoc cref="object.ToString"/>
-        public override string ToString()
-        {
-            if (Instance != null)
-            {
-                return (string) (IExecute("toString") as MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject).ToPrimitive();
-            }
-
-            return base.ToString();
-        }
+        public long Timestamp => IExecute<long>("timestamp");
     }
 
     public class ProducerRecord : ProducerRecord<object, object>

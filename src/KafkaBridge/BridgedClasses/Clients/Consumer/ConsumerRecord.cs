@@ -16,35 +16,40 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common.Header;
+using System;
+
 namespace MASES.KafkaBridge.Clients.Consumer
 {
-    public class ConsumerRecord : JCOBridge.C2JBridge.JVMBridgeBase<ConsumerRecord>
-    {
-        public override string ClassName => "org.apache.kafka.clients.consumer.ConsumerRecord";
-
-        public string Topic => (string)IExecute("topic");
-
-        public int Partition => (int)IExecute("partition");
-
-        public object Headers => IExecute("headers");
-
-        public object Key => IExecute("key");
-
-        public object Value => IExecute("value");
-
-        public long Offset => (long)IExecute("offset");
-
-        public long Timestamp => (long)IExecute("timestamp");
-
-        public object TimestampType => IExecute("timestampType");
-
-        public int SerializedKeySize => (int)IExecute("serializedKeySize");
-
-        public int SerializedValueSize => (int)IExecute("serializedValueSize");
-    }
-
     public class ConsumerRecord<K, V> : JCOBridge.C2JBridge.JVMBridgeBase<ConsumerRecord<K, V>>
     {
         public override string ClassName => "org.apache.kafka.clients.consumer.ConsumerRecord";
+
+        public string Topic => IExecute<string>("topic");
+
+        public int Partition => IExecute<int>("partition");
+
+        public Headers Headers => New<Headers>("headers");
+
+        public K Key => IExecute<K>("key");
+
+        public V Value => IExecute<V>("value");
+
+        public long Offset => IExecute<long>("offset");
+
+        public DateTime DateTime => DateTimeOffset.FromUnixTimeMilliseconds(Timestamp).DateTime;
+
+        public long Timestamp => IExecute<long>("timestamp");
+
+        public object TimestampType => IExecute("timestampType");
+
+        public int SerializedKeySize => IExecute<int>("serializedKeySize");
+
+        public int SerializedValueSize => IExecute<int>("serializedValueSize");
+    }
+
+    public class ConsumerRecord : ConsumerRecord<object, object>
+    {
+
     }
 }

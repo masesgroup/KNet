@@ -16,6 +16,8 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge.JVMInterop;
+
 namespace MASES.KafkaBridge.Common
 {
     public class TopicPartition : JCOBridge.C2JBridge.JVMBridgeBase<TopicPartition>
@@ -31,8 +33,8 @@ namespace MASES.KafkaBridge.Common
         {
         }
 
-        public int Partition => (int)IExecute("partition");
+        public int Partition => IExecute<int>("partition");
 
-        public string Topic => (string)IExecute("topic");
+        public string Topic => IExecute<string>("topic");
     }
 }

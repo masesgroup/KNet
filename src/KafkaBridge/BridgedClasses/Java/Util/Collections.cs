@@ -25,10 +25,16 @@ namespace MASES.KafkaBridge.Java.Util
         public override bool IsStatic => true;
         public override string ClassName => "java.util.Collections";
 
-        public static Collection<E> singleton<E>(E element)
+        public static Set<E> singleton<E>(E element)
         {
-            return SExecute<Collection<E>>("singleton", 
-                                           (typeof(JVMBridgeBase).IsAssignableFrom(typeof(E))) ? (object)(element as JVMBridgeBase).Instance : (object)element);
+            return SExecute<Set<E>>("singleton", 
+                                    (typeof(JVMBridgeBase).IsAssignableFrom(typeof(E))) ? (object)(element as JVMBridgeBase).Instance : (object)element);
+        }
+
+        public static List<E> singletonList<E>(E element)
+        {
+            return SExecute<List<E>>("singleton", 
+                                     (typeof(JVMBridgeBase).IsAssignableFrom(typeof(E))) ? (object)(element as JVMBridgeBase).Instance : (object)element);
         }
 
         public static Map<K, V> singletonMap<K, V>(K key, V value)
