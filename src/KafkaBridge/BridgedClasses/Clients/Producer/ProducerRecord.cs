@@ -16,6 +16,8 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common.Header;
+
 namespace MASES.KafkaBridge.Clients.Producer
 {
     public class ProducerRecord<K, V> : JCOBridge.C2JBridge.JVMBridgeBase<ProducerRecord<K, V>>
@@ -26,8 +28,18 @@ namespace MASES.KafkaBridge.Clients.Producer
         {
         }
 
+        public ProducerRecord(string topic, int partition, long timestamp, K key, V value, Headers headers)
+            : base(topic, partition, timestamp, key, value, headers.Instance)
+        {
+        }
+
         public ProducerRecord(string topic, int partition, long timestamp, K key, V value)
             : base(topic, partition, timestamp, key, value)
+        {
+        }
+
+        public ProducerRecord(string topic, int partition, K key, V value, Headers headers)
+            : base(topic, partition, key, value, headers.Instance)
         {
         }
 
@@ -48,11 +60,15 @@ namespace MASES.KafkaBridge.Clients.Producer
 
         public string Topic => IExecute<string>("topic");
 
+        public int Partition => IExecute<int>("partition");
+
         public K Key => IExecute<K>("key");
 
         public V Value => IExecute<V>("value");
 
         public long Timestamp => IExecute<long>("timestamp");
+
+        public Headers Headers => New<Headers>("headers");
     }
 
     public class ProducerRecord : ProducerRecord<object, object>
@@ -61,8 +77,18 @@ namespace MASES.KafkaBridge.Clients.Producer
         {
         }
 
-        public ProducerRecord(string topic, int partition, long timestamp, object key, object value)
+        public ProducerRecord(string topic, int partition, long timestamp, object key, object value, Headers headers)
+            : base(topic, partition, timestamp, key, value, headers)
+        {
+        }
+
+        public ProducerRecord(string topic, int partition, long timestamp, K key, V value)
             : base(topic, partition, timestamp, key, value)
+        {
+        }
+
+        public ProducerRecord(string topic, int partition, object key, object value, Headers headers)
+            : base(topic, partition, key, value, headers)
         {
         }
 
