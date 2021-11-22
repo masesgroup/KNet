@@ -21,5 +21,49 @@ namespace MASES.KafkaBridge.Common.Serialization
     public class Serdes : JCOBridge.C2JBridge.JVMBridgeBase<Serdes>
     {
         public override string ClassName => "org.apache.kafka.common.serialization.Serdes";
+
+        public static readonly dynamic VoidSerde = DynClazz.VoidSerde;
+
+        public static readonly dynamic LongSerde = DynClazz.LongSerde;
+
+        public static readonly dynamic IntegerSerde = DynClazz.IntegerSerde;
+
+        public static readonly dynamic ShortSerde = DynClazz.ShortSerde;
+
+        public static readonly dynamic FloatSerde = DynClazz.FloatSerde;
+
+        public static readonly dynamic DoubleSerde = DynClazz.DoubleSerde;
+
+        public static readonly dynamic StringSerde = DynClazz.StringSerde;
+
+        public static readonly dynamic ByteBufferSerde = DynClazz.ByteBufferSerde;
+
+        public static readonly dynamic BytesSerde = DynClazz.BytesSerde;
+
+        public static readonly dynamic ByteArraySerde = DynClazz.ByteArraySerde;
+
+        public static readonly dynamic UUIDSerde = DynClazz.UUIDSerde;
+
+        public static dynamic Long => DynClazz.Long();
+
+        public static dynamic Integer => DynClazz.Integer();
+
+        public static dynamic Short => DynClazz.Short();
+
+        public static dynamic Float => DynClazz.Float();
+
+        public static dynamic Double => DynClazz.Double();
+
+        public static dynamic String => DynClazz.String();
+
+        public static dynamic ByteBuffer => DynClazz.ByteBuffer();
+
+        public static dynamic Bytes => DynClazz.Bytes();
+
+        public static dynamic UUID => DynClazz.UUID();
+
+        public static dynamic ByteArray => DynClazz.ByteArray();
+
+        public static dynamic Void => DynClazz.Void();
     }
 }
