@@ -82,7 +82,7 @@ namespace MASES.KafkaBridge.Clients.Producer
         {
         }
 
-        public ProducerRecord(string topic, int partition, long timestamp, K key, V value)
+        public ProducerRecord(string topic, int partition, long timestamp, object key, object value)
             : base(topic, partition, timestamp, key, value)
         {
         }
