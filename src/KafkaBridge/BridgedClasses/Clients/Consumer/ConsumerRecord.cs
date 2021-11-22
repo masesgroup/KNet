@@ -16,7 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge.JVMInterop;
 using MASES.KafkaBridge.Common.Header;
+using MASES.KafkaBridge.Common.Record;
 using System;
 
 namespace MASES.KafkaBridge.Clients.Consumer
@@ -41,7 +43,7 @@ namespace MASES.KafkaBridge.Clients.Consumer
 
         public long Timestamp => IExecute<long>("timestamp");
 
-        public object TimestampType => IExecute("timestampType");
+        public TimestampType TimestampType => (TimestampType)(int)IExecute<IJavaObject>("timestampType").GetField("id");
 
         public int SerializedKeySize => IExecute<int>("serializedKeySize");
 
