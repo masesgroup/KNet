@@ -23,12 +23,12 @@ namespace MASES.KafkaBridgeTemplate.KafkaBridgeConsumer
             }
 
             Properties props = new Properties();
-            props.Put("bootstrap.servers", serverToUse);
-            props.Put("group.id", "test");
-            props.Put("enable.auto.commit", "true");
-            props.Put("auto.commit.interval.ms", "1000");
-            props.Put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
-            props.Put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
+            props.Put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
+            props.Put(ConsumerConfig.GROUP_ID_CONFIG, "test");
+            props.Put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "true");
+            props.Put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG, "1000");
+            props.Put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
+            props.Put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
             var consumer = new KafkaConsumer<string, string>(props);
             consumer.Subscribe(Collections.singleton(topicToUse));
             while (true)

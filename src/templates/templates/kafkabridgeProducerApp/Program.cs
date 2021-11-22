@@ -1,5 +1,4 @@
 ﻿using MASES.KafkaBridge;
-using MASES.KafkaBridge.Clients.Consumer;
 using MASES.KafkaBridge.Clients.Producer;
 using MASES.KafkaBridge.Java.Util;
 using System;
@@ -24,12 +23,12 @@ namespace MASES.KafkaBridgeTemplate.KafkaBridgeConsumer
             }
 
             Properties props = new Properties();
-            props.Put("bootstrap.servers", serverToUse);
-            props.Put("acks", "all");
-            props.Put("retries", 0);
-            props.Put("linger.ms", 1);
-            props.Put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
-            props.Put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
+            props.Put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
+            props.Put(ProducerConfig.ACKS_CONFIG, "all");
+            props.Put(ProducerConfig.RETRIES_CONFIG, 0);
+            props.Put(ProducerConfig.LINGER_MS_CONFIG, 1);
+            props.Put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
+            props.Put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
 
             using (KafkaProducer producer = new KafkaProducer(props))
             {
