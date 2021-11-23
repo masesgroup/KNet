@@ -176,16 +176,15 @@ namespace MASES.KafkaBridgeTest
             props.Put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
 
             var builder = new StreamsBuilder();
-            var dynBuilder = builder.Dyn();
 
-            dynBuilder.stream(topicToUse).to("streams-pipe-output");
+            builder.Stream<string, string>(topicToUse).To("streams-pipe-output");
 
-            using (var streams = KafkaStreams.New(dynBuilder.build(), props.Dyn()))
+            using (var streams = new KafkaStreams(builder.Build(), props))
             {
-                streams.start();
+                streams.Start();
                 while (!resetEvent.WaitOne(1000))
                 {
-                    var state = streams.state();
+                    var state = streams.State;
                     Console.WriteLine($"KafkaStreams state: {state}");
                 }
             }

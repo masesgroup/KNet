@@ -16,10 +16,29 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Java.Util;
+using MASES.KafkaBridge.Streams.KStream;
+
 namespace MASES.KafkaBridge.Streams
 {
     public class StreamsBuilder : JCOBridge.C2JBridge.JVMBridgeBase<StreamsBuilder>
     {
         public override string ClassName => "org.apache.kafka.streams.StreamsBuilder";
+
+        public KStream<K, V> Stream<K, V>(string topic) { return New<KStream<K, V>>("stream", topic); }
+
+        public KTable<K, V> Table<K, V>(string topic) { return New<KTable<K, V>>("table", topic); }
+
+        public GlobalKTable<K, V> GlobalTable<K, V>(string topic) { return New<GlobalKTable<K, V>>("globalTable", topic); }
+
+        public Topology Build()
+        {
+            return New<Topology>("build");
+        }
+
+        public Topology Build(Properties props)
+        {
+            return New<Topology>("build", props.Instance);
+        }
     }
 }

@@ -16,11 +16,44 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge.JVMInterop;
+using MASES.KafkaBridge.Java.Util;
+using System;
+
 namespace MASES.KafkaBridge.Streams
 {
     public class KafkaStreams : JCOBridge.C2JBridge.JVMBridgeBase<KafkaStreams>
     {
+        public override bool IsCloseable => true;
+
         public override string ClassName => "org.apache.kafka.streams.KafkaStreams";
+
+        public enum StateType
+        {
+            CREATED,          // 0
+            REBALANCING,   // 1
+            RUNNING,    // 2
+            PENDING_SHUTDOWN,    // 3
+            NOT_RUNNING,            // 4
+            PENDING_ERROR,       // 5
+            ERROR,                 // 6
+        }
+        [Obsolete("This is not public in Apache Kafka API")]
+        public KafkaStreams() { }
+
+        public KafkaStreams(Topology topology, Properties props)
+            : base(topology.Instance, props.Instance)
+        {
+
+        }
+
+        public StateType State => (StateType)IExecute<IJavaObject>("state").Invoke<int>("ordinal");
+
+        public Optional<string> AddStreamThread() { return New<Optional<string>>("addStreamThread"); }
+
+        public Optional<string> RemoveStreamThread() { return New<Optional<string>>("removeStreamThread"); }
+
+        public void Start() { IExecute("start"); }
     }
 }
 
