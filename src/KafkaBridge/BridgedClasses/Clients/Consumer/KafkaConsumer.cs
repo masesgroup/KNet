@@ -23,6 +23,8 @@ namespace MASES.KafkaBridge.Clients.Consumer
 {
     public class KafkaConsumer<K, V> : JCOBridge.C2JBridge.JVMBridgeBase<KafkaConsumer<K, V>>
     {
+        public override bool IsCloseable => true;
+
         public override string ClassName => "org.apache.kafka.clients.consumer.KafkaConsumer";
 
         public KafkaConsumer()

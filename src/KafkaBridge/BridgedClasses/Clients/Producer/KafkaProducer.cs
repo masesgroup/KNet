@@ -18,11 +18,10 @@
 
 using MASES.KafkaBridge.Java.Util;
 using MASES.KafkaBridge.Java.Util.Concurrent;
-using System;
 
 namespace MASES.KafkaBridge.Clients.Producer
 {
-    public class KafkaProducer : JCOBridge.C2JBridge.JVMBridgeBase<KafkaProducer>, IDisposable
+    public class KafkaProducer : JCOBridge.C2JBridge.JVMBridgeBase<KafkaProducer>
     {
         public override bool IsCloseable => true;
 

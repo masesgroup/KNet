@@ -148,14 +148,17 @@ namespace MASES.KafkaBridgeTest
             props.Put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG, "1000");
             props.Put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
             props.Put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
-            var consumer = new KafkaConsumer<string, string>(props);
-            consumer.Subscribe(Collections.singleton(topicToUse));
-            while (!resetEvent.WaitOne(0))
+
+            using (var consumer = new KafkaConsumer<string, string>(props))
             {
-                var records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);
-                foreach (var item in records)
+                consumer.Subscribe(Collections.singleton(topicToUse));
+                while (!resetEvent.WaitOne(0))
                 {
-                    Console.WriteLine($"Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}");
+                    var records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);
+                    foreach (var item in records)
+                    {
+                        Console.WriteLine($"Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}");
+                    }
                 }
             }
         }
