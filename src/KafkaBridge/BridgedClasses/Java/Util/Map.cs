@@ -21,5 +21,23 @@ namespace MASES.KafkaBridge.Java.Util
     public class Map<K, V> : JCOBridge.C2JBridge.JVMBridgeBase<Map<K, V>>
     {
         public override string ClassName => "java.util.Map";
+
+        public virtual V Get​(K key) { return IExecute<V>("get", key); }
+
+        public virtual V Put​(K key, V value) 
+        {
+            object val = value;
+            if (typeof(JCOBridge.C2JBridge.JVMBridgeBase).IsAssignableFrom(typeof(V)))
+            {
+                val = (value as JCOBridge.C2JBridge.JVMBridgeBase).Instance;
+            }
+
+            return IExecute<V>("put", key, val); 
+        }
+    }
+
+    public class Map2<K, V> : Map<K, V> where V : JCOBridge.C2JBridge.JVMBridgeBase, new()
+    {
+        public override V Get​(K key) { return New<V>("get", key); }
     }
 }

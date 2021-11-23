@@ -16,24 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KafkaBridge.Common;
-using MASES.KafkaBridge.Java.Lang;
-using MASES.KafkaBridge.Java.Util;
-
-namespace MASES.KafkaBridge.Clients.Admin
+namespace MASES.KafkaBridge.Java.Lang
 {
-    public class CreateTopicsResult : JCOBridge.C2JBridge.JVMBridgeBase<CreateTopicsResult>
+    public sealed class UUID : JCOBridge.C2JBridge.JVMBridgeBase<UUID>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.CreateTopicsResult";
+        public override bool IsStatic => true;
 
-        public Map<string, KafkaFuture<Void>> Values => New<Map2<string, KafkaFuture<Void>>>("values");
-
-        public KafkaFuture<Void> All => New<KafkaFuture<Void>>("all");
-
-        public KafkaFuture<Uuid> TopicId(string topic)
-        {
-            return New<KafkaFuture<Uuid>>(topic);
-        }
+        public override string ClassName => "java.lang.UUID";
     }
 }
-

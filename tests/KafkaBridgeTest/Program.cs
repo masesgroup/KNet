@@ -102,11 +102,11 @@ namespace MASES.KafkaBridgeTest
                     CreateTopicsResult result = admin.CreateTopics(coll);
 
                     // Call values() to get the result for a specific topic
-                    var future = result.Dyn().values().get(topicName);
+                    var future = result.Values.Get(topicName);
 
                     // Call get() to block until the topic creation is complete or has failed
                     // if creation failed the ExecutionException wraps the underlying cause.
-                    future.get();
+                    future.Get();
                 }
             }
             catch (Exception e)
