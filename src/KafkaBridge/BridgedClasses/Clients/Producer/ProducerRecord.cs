@@ -17,6 +17,7 @@
 */
 
 using MASES.KafkaBridge.Common.Header;
+using System;
 
 namespace MASES.KafkaBridge.Clients.Producer
 {
@@ -33,8 +34,18 @@ namespace MASES.KafkaBridge.Clients.Producer
         {
         }
 
+        public ProducerRecord(string topic, int partition, DateTime timestamp, K key, V value, Headers headers)
+            : base(topic, partition, new DateTimeOffset(timestamp).ToUnixTimeMilliseconds(), timestamp, key, value, headers.Instance)
+        {
+        }
+
         public ProducerRecord(string topic, int partition, long timestamp, K key, V value)
             : base(topic, partition, timestamp, key, value)
+        {
+        }
+
+        public ProducerRecord(string topic, int partition, DateTime timestamp, K key, V value)
+            : base(topic, partition, new DateTimeOffset(timestamp).ToUnixTimeMilliseconds(), key, value)
         {
         }
 
@@ -68,6 +79,8 @@ namespace MASES.KafkaBridge.Clients.Producer
 
         public long Timestamp => IExecute<long>("timestamp");
 
+        public DateTime DateTime => DateTimeOffset.FromUnixTimeMilliseconds(Timestamp).DateTime;
+
         public Headers Headers => New<Headers>("headers");
     }
 
@@ -82,7 +95,17 @@ namespace MASES.KafkaBridge.Clients.Producer
         {
         }
 
+        public ProducerRecord(string topic, int partition, DateTime timestamp, object key, object value, Headers headers)
+            : base(topic, partition, timestamp, key, value, headers)
+        {
+        }
+
         public ProducerRecord(string topic, int partition, long timestamp, object key, object value)
+            : base(topic, partition, timestamp, key, value)
+        {
+        }
+
+        public ProducerRecord(string topic, int partition, DateTime timestamp, object key, object value)
             : base(topic, partition, timestamp, key, value)
         {
         }
