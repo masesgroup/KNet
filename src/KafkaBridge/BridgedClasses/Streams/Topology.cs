@@ -20,6 +20,29 @@ namespace MASES.KafkaBridge.Streams
 {
     public class Topology : JCOBridge.C2JBridge.JVMBridgeBase<Topology>
     {
+        public enum AutoOffsetReset
+        {
+            EARLIEST, LATEST
+        }
+
         public override string ClassName => "org.apache.kafka.streams.Topology";
+
+        public Topology AddSource(string name, params string[] topics)
+        {
+            IExecute("addSource", name, topics);
+            return this;
+        }
+
+        public Topology AddSource(AutoOffsetReset offsetReset, string name, params string[] topics)
+        {
+            IExecute("addSource", offsetReset, name, topics);
+            return this;
+        }
+
+        public Topology AddSink(string name, string topic, params string[] parentNames)
+        {
+            IExecute("addSink", name, topic, parentNames);
+            return this;
+        }
     }
 }
