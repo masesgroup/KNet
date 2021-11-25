@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "kafkabridgeProducerApp", "t
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "kafkabridgeConsumerApp", "templates\templates\kafkabridgeConsumerApp\kafkabridgeConsumerApp.csproj", "{A1CF5D0C-C76C-4E44-A113-8F73DC7F3732}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "kafkabridgePipeStreamApp", "templates\templates\kafkabridgePipeStreamApp\kafkabridgePipeStreamApp.csproj", "{D022E0DE-0B84-4C83-9530-C3B9D797D6C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{A1CF5D0C-C76C-4E44-A113-8F73DC7F3732}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1CF5D0C-C76C-4E44-A113-8F73DC7F3732}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1CF5D0C-C76C-4E44-A113-8F73DC7F3732}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D022E0DE-0B84-4C83-9530-C3B9D797D6C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D022E0DE-0B84-4C83-9530-C3B9D797D6C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D022E0DE-0B84-4C83-9530-C3B9D797D6C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D022E0DE-0B84-4C83-9530-C3B9D797D6C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
