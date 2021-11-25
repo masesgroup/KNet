@@ -30,24 +30,20 @@ namespace MASES.KafkaBridge.Streams
 
         public enum StateType
         {
-            CREATED,          // 0
-            REBALANCING,   // 1
-            RUNNING,    // 2
-            PENDING_SHUTDOWN,    // 3
-            NOT_RUNNING,            // 4
-            PENDING_ERROR,       // 5
-            ERROR,                 // 6
+            CREATED,            // 0
+            REBALANCING,        // 1
+            RUNNING,            // 2
+            PENDING_SHUTDOWN,   // 3
+            NOT_RUNNING,        // 4
+            PENDING_ERROR,      // 5
+            ERROR,              // 6
         }
         [Obsolete("This is not public in Apache Kafka API")]
         public KafkaStreams() { }
 
-        public KafkaStreams(Topology topology, Properties props)
-            : base(topology.Instance, props.Instance)
-        {
+        public KafkaStreams(Topology topology, Properties props) : base(topology.Instance, props.Instance) { }
 
-        }
-
-        public StateType State => (StateType)IExecute<IJavaObject>("state").Invoke<int>("ordinal");
+        public StateType State => (StateType)Enum.Parse(typeof(StateType), IExecute<IJavaObject>("state").Invoke<string>("name"));
 
         public Optional<string> AddStreamThread() { return New<Optional<string>>("addStreamThread"); }
 

@@ -43,7 +43,7 @@ namespace MASES.KafkaBridge.Clients.Consumer
 
         public long Timestamp => IExecute<long>("timestamp");
 
-        public TimestampType TimestampType => (TimestampType)(int)IExecute<IJavaObject>("timestampType").GetField("id");
+        public TimestampType TimestampType => (TimestampType)Enum.Parse(typeof(TimestampType), IExecute<IJavaObject>("timestampType").Invoke<string>("name")); // (TimestampType)(int)IExecute<IJavaObject>("timestampType").GetField("id");
 
         public int SerializedKeySize => IExecute<int>("serializedKeySize");
 
