@@ -21,7 +21,7 @@
     <PackageReleaseNotes>https://github.com/masesgroup/KafkaBridge/releases</PackageReleaseNotes>
     <PackageLicense>LICENSE</PackageLicense>
     <PackageIcon>JCOB128x128.png</PackageIcon>
-    <PackageTags>kafka apache-kafka dotnet clr netcore net5</PackageTags>
+    <PackageTags>kafka apache-kafka dotnet clr netcore net5 net6</PackageTags>
     <PackageId>MASES.KafkaBridgeCLI</PackageId>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>

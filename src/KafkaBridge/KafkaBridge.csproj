@@ -20,7 +20,7 @@
     <PackageReleaseNotes>https://github.com/masesgroup/KafkaBridge/releases</PackageReleaseNotes>
     <PackageLicense>LICENSE</PackageLicense>
     <PackageIcon>JCOB128x128.png</PackageIcon>
-    <PackageTags>kafka apache-kafka dotnet clr netcore net5</PackageTags>
+    <PackageTags>kafka apache-kafka dotnet clr netcore net5 net6</PackageTags>
     <PackageId>MASES.KafkaBridge</PackageId>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
@@ -49,7 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MASES.CLIParser" Version="2.2.0" />
-    <PackageReference Include="MASES.JCOBridge" Version="2.4.1" />
+    <PackageReference Include="MASES.JCOBridge" Version="2.4.3" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
   </ItemGroup>
 </Project>

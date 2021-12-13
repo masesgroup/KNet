@@ -78,7 +78,7 @@ namespace MASES.KafkaBridge
             GlobalRootPath = _parsedArgs.Get<string>(CLIParam.KafkaLocation);
             GlobalScalaVersion = _parsedArgs.Get<string>(CLIParam.ScalaVersion);
 
-            new KafkaBridgeCore().Globalize();
+            new KafkaBridgeCore();
         }
 
         KafkaBridgeCore()

@@ -19,7 +19,7 @@
     <PackageReleaseNotes>https://github.com/masesgroup/KafkaBridge/releases</PackageReleaseNotes>
     <PackageLicense>LICENSE</PackageLicense>
     <PackageIcon>JCOB128x128.png</PackageIcon>
-    <PackageTags>kafka apache-kafka dotnet clr netcore net5 template</PackageTags>
+    <PackageTags>kafka apache-kafka dotnet clr netcore net5 net6 template</PackageTags>
     <LangVersion>8.0</LangVersion>
     <Product>KafkaBridge Templates</Product>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
