@@ -28,7 +28,7 @@ jobs:
           submodules: 'true'
 
       - name: Build NuGet Packages
-        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\KafkaBridge.sln
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KafkaBridge.sln
 
       - uses: nuget/setup-nuget@v1
         with:

@@ -1,19 +1,18 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <AssemblyName>MASES.KafkaBridgeCLI</AssemblyName>
-    <RootNamespace>MASES.KafkaBridgeCLI</RootNamespace>
-    <Title>KafkaBridgeCLI - CLI interface of KafkaBridge</Title>
-    <Description>KafkaBridgeCLI - CLI interface of KafkaBridge</Description>
+    <AssemblyName>MASES.KafkaBridge</AssemblyName>
+    <RootNamespace>MASES.KafkaBridge</RootNamespace>
+    <Title>KafkaBridge - Access natively Apache Kafka from any .NET application</Title>
+    <Description>KafkaBridge - Access natively Apache Kafka from any .NET application</Description>
     <Copyright>Copyright ©  MASES s.r.l. 2021</Copyright>
     <Owners>MASES s.r.l.</Owners>
     <Authors>MASES s.r.l.</Authors>
     <Company>MASES s.r.l.</Company>
     <Version>1.1.2.0</Version>
-    <Product>KafkaBridgeCLI</Product>
+    <Product>KafkaBridge</Product>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <TargetFrameworks>net461;netcoreapp3.1;net5.0;net5.0-windows;net6.0;net6.0-windows</TargetFrameworks>
-    <OutputPath>..\..\bin\</OutputPath>
+    <OutputPath>..\..\..\bin\</OutputPath>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageProjectUrl>https://github.com/masesgroup/KafkaBridge/</PackageProjectUrl>
@@ -22,7 +21,7 @@
     <PackageLicense>LICENSE</PackageLicense>
     <PackageIcon>JCOB128x128.png</PackageIcon>
     <PackageTags>kafka apache-kafka dotnet clr netcore net5 net6</PackageTags>
-    <PackageId>MASES.KafkaBridgeCLI</PackageId>
+    <PackageId>MASES.KafkaBridge</PackageId>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
@@ -40,15 +39,17 @@
   <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
     <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
   </PropertyGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'net461'">
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\LICENSE" Pack="true" PackagePath="" />
+    <None Include="..\..\..\LICENSE" Pack="true" PackagePath="" />
     <None Include="..\Common\JCOB128x128.png" Pack="true" PackagePath="" />
     <None Include="..\Common\KafkaBridge.snk" Link="KafkaBridge.snk" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="MASES.CLIParser" Version="2.2.0" />
+    <PackageReference Include="MASES.JCOBridge" Version="2.4.3" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\KafkaBridge\KafkaBridge.csproj" />
   </ItemGroup>
 </Project>

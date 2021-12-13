@@ -16,6 +16,6 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\KafkaBridge\KafkaBridge.csproj" />
+    <ProjectReference Include="..\..\src\net\KafkaBridge\KafkaBridge.csproj" />
   </ItemGroup>
 </Project>
