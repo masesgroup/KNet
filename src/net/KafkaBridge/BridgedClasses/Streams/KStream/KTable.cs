@@ -21,5 +21,43 @@ namespace MASES.KafkaBridge.Streams.KStream
     public class KTable<K, V> : JCOBridge.C2JBridge.JVMBridgeBase<KTable<K, V>>
     {
         public override string ClassName => "org.apache.kafka.streams.kstream.KTable";
+
+        public KTable<K, V> Filter<T, J>(Predicate<T, J> predicate)
+            where T : K
+            where J : V
+        {
+            return New<KTable<K, V>>("filter", predicate.Listener);
+        }
+
+        public KTable<K, V> Filter<T, J>(Predicate<T, J> predicate, Named named)
+            where T : K
+            where J : V
+        {
+            return New<KTable<K, V>>("filter", predicate.Listener, named.Instance);
+        }
+
+        public KTable<K, V> FilterNot<T, J>(Predicate<T, J> predicate)
+            where T : K
+            where J : V
+        {
+            return New<KTable<K, V>>("filterNot", predicate.Listener);
+        }
+
+        public KTable<K, V> FilterNot<T, J>(Predicate<T, J> predicate, Named named)
+            where T : K
+            where J : V
+        {
+            return New<KTable<K, V>>("filterNot", predicate.Listener, named.Instance);
+        }
+
+        public KStream<K, V> ToStream()
+        {
+            return New<KStream<K, V>>("toStream");
+        }
+
+        public KStream<K, V> ToStream(Named named)
+        {
+            return New<KStream<K, V>>("toStream", named.Instance);
+        }
     }
 }
