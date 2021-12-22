@@ -1,0 +1,9 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <jars Include="$(MSBuildThisFileDirectory)\native\*.*" />
+  </ItemGroup>
+
+  <Target Name="CopyFilesNative" BeforeTargets="Build">
+    <Copy SourceFiles="@(jars)" DestinationFolder="$(TargetDir)" />
+  </Target>
+</Project>
