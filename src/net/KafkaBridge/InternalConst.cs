@@ -40,7 +40,7 @@ namespace MASES.KafkaBridge
         /// <summary>
         /// Default root path, i.e. consider installation within bin folder
         /// </summary>
-        public const string DefaultRootPath = "..";
+        public const string DefaultRootPath = "./jars";
     }
 
     class InternalConst

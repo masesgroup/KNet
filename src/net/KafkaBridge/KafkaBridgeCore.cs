@@ -54,7 +54,7 @@ namespace MASES.KafkaBridge
                 {
                     Name = CLIParam.KafkaLocation,
                     Default = Const.DefaultRootPath,
-                    Help = "The folder where Kafka package is available. Default consider this application running in bin folder.",
+                    Help = "The folder where Kafka package is available. Default consider the application use the Jars in the package.",
                 },
             };
         }
@@ -88,7 +88,7 @@ namespace MASES.KafkaBridge
         /// <summary>
         /// Sets the global value of root path
         /// </summary>
-        public static string MainClassToRun { get; set; }
+        public static string MainClassToRun { get; protected set; }
 
         /// <summary>
         /// The filtered application arguments 
@@ -327,6 +327,7 @@ namespace MASES.KafkaBridge
         string buildClassPath()
         {
             classPath = string.Empty;
+            buildClassPath(GlobalRootPath);
             buildClassPath(CoreDependenciesPath);
             buildClassPath(ExamplesPath);
             buildClassPath(ClientsPath);
