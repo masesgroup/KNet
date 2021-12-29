@@ -1,9 +1,13 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <jars Include="$(MSBuildThisFileDirectory)\jars\*.*" />
+    <config Include="$(MSBuildThisFileDirectory)\config\*.*" />
+    <configKraft Include="$(MSBuildThisFileDirectory)\config\kraft\*.*" />
   </ItemGroup>
 
   <Target Name="CopyFilesNative" BeforeTargets="Build">
     <Copy SourceFiles="@(jars)" DestinationFolder="$(TargetDir)/jars" />
+    <Copy SourceFiles="@(config)" DestinationFolder="$(TargetDir)/config" />
+    <Copy SourceFiles="@(configKraft)" DestinationFolder="$(TargetDir)/config/kraft" />
   </Target>
 </Project>

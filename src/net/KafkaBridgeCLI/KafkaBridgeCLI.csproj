@@ -28,6 +28,7 @@
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\Common\KafkaBridge.snk</AssemblyOriginatorKeyFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
   <!-- Fix start https://github.com/dotnet/sourcelink/issues/572 -->
   <PropertyGroup>
@@ -44,6 +45,7 @@
     <None Include="..\..\..\LICENSE" Pack="true" PackagePath="" />
     <None Include="..\Common\JCOB128x128.png" Pack="true" PackagePath="" />
     <None Include="..\Common\KafkaBridge.snk" Link="KafkaBridge.snk" />
+    <None Include="..\..\..\README.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
