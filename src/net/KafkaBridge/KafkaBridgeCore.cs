@@ -56,6 +56,12 @@ namespace MASES.KafkaBridge
                     Default = Const.DefaultRootPath,
                     Help = "The folder where Kafka package is available. Default consider the application use the Jars in the package.",
                 },
+                new ArgumentMetadata<string>()
+                {
+                    Name = CLIParam.Log4JConfiguration,
+                    Default = Const.DefaultLog4JPath,
+                    Help = "The file containing the configuration of log4j.",
+                },
             };
         }
 
@@ -76,6 +82,7 @@ namespace MASES.KafkaBridge
             ApplicationArgs = parser.UnparsedArgs.FilterJCOBridgeArguments();
 
             GlobalRootPath = _parsedArgs.Get<string>(CLIParam.KafkaLocation);
+            GlobalLog4JPath = _parsedArgs.Get<string>(CLIParam.Log4JConfiguration);
             GlobalScalaVersion = _parsedArgs.Get<string>(CLIParam.ScalaVersion);
 
             new KafkaBridgeCore();
@@ -101,6 +108,11 @@ namespace MASES.KafkaBridge
         public static string GlobalRootPath { get; set; }
 
         /// <summary>
+        /// Sets the global value of log4j path
+        /// </summary>
+        public static string GlobalLog4JPath { get; set; }
+
+        /// <summary>
         /// Sets the global value of root path
         /// </summary>
         public static string GlobalScalaVersion { get; set; }
@@ -109,6 +121,11 @@ namespace MASES.KafkaBridge
         /// Sets the global heap size
         /// </summary>
         public static string GlobalHeapSize { get; set; }
+
+        /// <summary>
+        /// Sets the initial heap size
+        /// </summary>
+        public static string InitialHeapSize { get; set; }
 
         /// <summary>
         /// The Scala version to be used
@@ -300,8 +317,14 @@ namespace MASES.KafkaBridge
                     { "com.sun.management.jmxremote.ssl", "false" },
                     { "log4j.configuration", Log4JOpts},
                     { "kafka.logs.dir", LogDir},
-                    { "-Xmx" + GlobalHeapSize, null}
+                    { "-Xmx" + GlobalHeapSize, null},
+                    { "log4j.configuration", $"file:{GlobalLog4JPath}"},
                 };
+
+                if (!string.IsNullOrEmpty(InitialHeapSize))
+                {
+                    options.Add("-Xms" + InitialHeapSize, null);
+                }
 
                 if (JmxPort.HasValue)
                 {

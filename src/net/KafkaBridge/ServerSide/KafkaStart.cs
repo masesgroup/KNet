@@ -16,23 +16,26 @@
 *  Refer to LICENSE for more information.
 */
 
+using System;
+
 namespace MASES.KafkaBridge.Tools
 {
     /// <summary>
-    /// Class managing StreamsResetter
+    /// Class managing Kafka start
     /// </summary>
-    public class StreamsResetter : JCOBridge.C2JBridge.JVMBridgeMain<ReplicaVerificationTool>
+    public class KafkaStart : JCOBridge.C2JBridge.JVMBridgeMain<KafkaStart>
     {
-        static StreamsResetter()
+        static KafkaStart()
         {
-            KafkaBridgeCore.GlobalHeapSize = "512M";
+            KafkaBridgeCore.GlobalHeapSize = Environment.Is64BitOperatingSystem ? "1G": "512M";
+            KafkaBridgeCore.InitialHeapSize = Environment.Is64BitOperatingSystem ? "1G" : "512M";
         }
 
         /// <summary>
-        /// Initialize a new <see cref="StreamsResetter"/>
+        /// Initialize a new <see cref="KafkaStart"/>
         /// </summary>
-        public StreamsResetter()
-            : base("kafka.tools.StreamsResetter")
+        public KafkaStart()
+            : base("kafka.Kafka")
         {
         }
     }

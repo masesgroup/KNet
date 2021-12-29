@@ -26,6 +26,7 @@ namespace MASES.KafkaBridge
         public const string ClassToRun = "ClassToRun";
         public const string ScalaVersion = "ScalaVersion";
         public const string KafkaLocation = "KafkaLocation";
+        public const string Log4JConfiguration = "Log4JConfiguration";
     }
 
     /// <summary>
@@ -41,6 +42,10 @@ namespace MASES.KafkaBridge
         /// Default root path, i.e. consider installation within bin folder
         /// </summary>
         public const string DefaultRootPath = "./jars";
+        /// <summary>
+        /// Default log4j path, i.e. consider installation within bin folder
+        /// </summary>
+        public const string DefaultLog4JPath = "./config/log4j.properties";
     }
 
     class InternalConst
