@@ -5,7 +5,7 @@ using MASES.KafkaBridge.Java.Util;
 using MASES.KafkaBridge.Streams;
 using System;
 
-namespace MASES.KafkaBridgeTemplate.KafkaBridgeConsumer
+namespace MASES.KafkaBridgeTemplate.KafkaBridgeStreamPipe
 {
     class Program
     {

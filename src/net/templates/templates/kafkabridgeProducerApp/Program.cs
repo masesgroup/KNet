@@ -3,7 +3,7 @@ using MASES.KafkaBridge.Clients.Producer;
 using MASES.KafkaBridge.Java.Util;
 using System;
 
-namespace MASES.KafkaBridgeTemplate.KafkaBridgeConsumer
+namespace MASES.KafkaBridgeTemplate.KafkaBridgeProducer
 {
     class Program
     {
