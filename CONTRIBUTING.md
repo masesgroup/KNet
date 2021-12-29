@@ -14,9 +14,15 @@ The project is organized in this folder structure:
 
 * **docs** (website)
 * **sc**
-	* **KafkaBridge** (The folder containing the source and project of the reflector)
+	* **config**: contains the configuration files copied from the oficial Apache Kafka delivery
+	* **java**
+		* **kafkabridge**: contains the JVM side implementation of some classes managed from .NET side; it is structured as a complete Maven project
+	* **net**
+		* **KafkaBridge**: The folder containing the source and project of the Apache Kafka files ported on .NET
+		* **KafkaBridgeCLI**: The folder containing the source and project of the CLI for Apache Kafka
+		* **templates**: The folder containing the source and project to generate the NuGet template package
 * **tests**
-	* **KafkaBridgeTest** (The folder containing the source and project of the KafkaBridge test)
+	* **KafkaBridgeTest**: The folder containing the source and project of the KafkaBridge test
 
 # How Can I Contribute?
 
