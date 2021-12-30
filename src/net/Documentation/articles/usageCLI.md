@@ -1,0 +1,42 @@
+# KafkaBridgeCLI usage
+
+To use the CLI interface (KafkaBridgeCLI) runs a command like the following:
+
+> KafkaBridgeCLI -ClassToRun ConsoleConsumer --bootstrap-server SERVER-ADDRESS:9093 --topic topic_name --from-beginning
+
+KafkaBridgeCLI accepts the following command-line switch:
+
+* **ClassToRun**: represents the class to be launched; the list is:
+	* Administration:
+		* AclCommand
+		* BrokerApiVersionsCommand
+		* ConfigCommand
+		* ConsumerGroupCommand
+		* DelegationTokenCommand
+		* DeleteRecordsCommand
+		* FeatureCommand
+		* LeaderElectionCommand
+		* LogDirsCommand
+		* ReassignPartitionsCommand
+		* TopicCommand
+		* ZkSecurityMigrator
+	* Shell:
+		* MetadataShell
+	* Tools:
+		* ClusterTool
+		* ConsoleConsumer
+		* ConsoleProducer
+		* ConsumerPerformance
+		* DumpLogSegments
+		* GetOffsetShell
+		* MirrorMaker
+		* ProducerPerformance
+		* ReplicaVerificationTool
+		* StorageTool
+		* StreamsResetter
+		* TransactionsCommand
+		* VerifiableConsumer
+		* VerifiableProducer
+* **KafkaLocation**: represents the path to the root folder of Apache Kafka binary distribution; default value consider that KafkaBridgeCLI uses the Apache Kafka jars available under the jars folder prepared from the package;
+* **ScalaVersion**: the scala version to be used. The default version (_2.13.6_) is binded to the deafult Apache Kafka version available in the package;
+* **Log4JConfiguration**: the log4j configuration file; the default uses the file within the package.

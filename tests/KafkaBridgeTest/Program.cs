@@ -22,7 +22,6 @@
  *  SOFTWARE.
  */
 
-using MASES.JCOBridge.C2JBridge;
 using MASES.KafkaBridge;
 using MASES.KafkaBridge.Clients.Admin;
 using MASES.KafkaBridge.Clients.Consumer;
@@ -93,9 +92,8 @@ namespace MASES.KafkaBridgeTest
                 topic.Configs(map);
                 var coll = Collections.singleton(topic);
 
-                var adminClientConfig = AdminClientConfig.DynClazz;
                 Properties props = new Properties();
-                props.Put(adminClientConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
+                props.Put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
 
                 using (var admin = KafkaAdminClient.Create(props))
                 {
@@ -103,11 +101,11 @@ namespace MASES.KafkaBridgeTest
                     CreateTopicsResult result = admin.CreateTopics(coll);
 
                     // Call values() to get the result for a specific topic
-                    var future = result.Dyn().values().get(topicName);
+                    var future = result.Values.Get(topicName);
 
                     // Call get() to block until the topic creation is complete or has failed
                     // if creation failed the ExecutionException wraps the underlying cause.
-                    future.get();
+                    future.Get();
                 }
             }
             catch (Exception e)
@@ -119,12 +117,12 @@ namespace MASES.KafkaBridgeTest
         static void produceSomething()
         {
             Properties props = new Properties();
-            props.Put("bootstrap.servers", serverToUse);
-            props.Put("acks", "all");
-            props.Put("retries", 0);
-            props.Put("linger.ms", 1);
-            props.Put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
-            props.Put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
+            props.Put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
+            props.Put(ProducerConfig.ACKS_CONFIG, "all");
+            props.Put(ProducerConfig.RETRIES_CONFIG, 0);
+            props.Put(ProducerConfig.LINGER_MS_CONFIG, 1);
+            props.Put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
+            props.Put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
 
             using (KafkaProducer producer = new KafkaProducer(props))
             {
@@ -143,51 +141,49 @@ namespace MASES.KafkaBridgeTest
         static void consumeSomething()
         {
             Properties props = new Properties();
-            props.Put("bootstrap.servers", serverToUse);
-            props.Put("group.id", "test");
-            props.Put("enable.auto.commit", "true");
-            props.Put("auto.commit.interval.ms", "1000");
-            props.Put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
-            props.Put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
-            var consumer = new KafkaConsumer<string, string>(props);
-            consumer.Subscribe(Collections.singleton(topicToUse));
-            while (!resetEvent.WaitOne(0))
+            props.Put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
+            props.Put(ConsumerConfig.GROUP_ID_CONFIG, "test");
+            props.Put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "true");
+            props.Put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG, "1000");
+            props.Put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
+            props.Put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
+
+            using (var consumer = new KafkaConsumer<string, string>(props))
             {
-                var records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);
-                foreach (var item in records)
+                consumer.Subscribe(Collections.singleton(topicToUse));
+                while (!resetEvent.WaitOne(0))
                 {
-                    Console.WriteLine($"Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}");
+                    var records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);
+                    foreach (var item in records)
+                    {
+                        Console.WriteLine($"Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}");
+                    }
                 }
             }
         }
 
         static void streamSomething()
         {
-            var streamConfig = StreamsConfig.DynClazz;
-            var serdes = Serdes.DynClazz;
+            var props = new Properties();
 
-            var propObj = Properties.New();
-
-            var props = propObj.Dyn();
-            propObj.Put(streamConfig.APPLICATION_ID_CONFIG, "streams-pipe");
-            propObj.Put(streamConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
-            propObj.Put(streamConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, serdes.String().getClass());
-            propObj.Put(streamConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, serdes.String().getClass());
+            props.Put(StreamsConfig.APPLICATION_ID_CONFIG, "streams-pipe");
+            props.Put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
+            props.Put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String.getClass());
+            props.Put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String.getClass());
 
             // setting offset reset to earliest so that we can re-run the demo code with the same pre-loaded data
-            props.put(ConsumerConfig.DynClazz.AUTO_OFFSET_RESET_CONFIG, "earliest");
+            props.Put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
 
-            var builder = StreamsBuilder.New();
-            var dynBuilder = builder.Dyn();
+            var builder = new StreamsBuilder();
 
-            dynBuilder.stream(topicToUse).to("streams-pipe-output");
+            builder.Stream<string, string>(topicToUse).To("streams-pipe-output");
 
-            using (var streams = KafkaStreams.New(dynBuilder.build(), props))
+            using (var streams = new KafkaStreams(builder.Build(), props))
             {
-                streams.start();
+                streams.Start();
                 while (!resetEvent.WaitOne(1000))
                 {
-                    var state = streams.state();
+                    var state = streams.State;
                     Console.WriteLine($"KafkaStreams state: {state}");
                 }
             }

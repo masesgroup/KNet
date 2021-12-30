@@ -1,5 +1,4 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <AssemblyName>KafkaBridgeTest</AssemblyName>
     <OutputType>Exe</OutputType>
@@ -13,10 +12,10 @@
     <TargetFrameworks>net461;netcoreapp3.1;net5.0;net5.0-windows;net6.0;net6.0-windows</TargetFrameworks>
     <OutputPath>..\..\bin\</OutputPath>
   </PropertyGroup>
-  <ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'net461'">
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\KafkaBridge\KafkaBridge.csproj" />
+    <ProjectReference Include="..\..\src\net\KafkaBridge\KafkaBridge.csproj" />
   </ItemGroup>
 </Project>

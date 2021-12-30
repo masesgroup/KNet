@@ -1,0 +1,63 @@
+﻿/*
+*  Copyright 2021 MASES s.r.l.
+*
+*  Licensed under the Apache License, Version 2.0 (the "License");
+*  you may not use this file except in compliance with the License.
+*  You may obtain a copy of the License at
+*
+*  http://www.apache.org/licenses/LICENSE-2.0
+*
+*  Unless required by applicable law or agreed to in writing, software
+*  distributed under the License is distributed on an "AS IS" BASIS,
+*  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+*  See the License for the specific language governing permissions and
+*  limitations under the License.
+*
+*  Refer to LICENSE for more information.
+*/
+
+namespace MASES.KafkaBridge.Streams.KStream
+{
+    public class KTable<K, V> : JCOBridge.C2JBridge.JVMBridgeBase<KTable<K, V>>
+    {
+        public override string ClassName => "org.apache.kafka.streams.kstream.KTable";
+
+        public KTable<K, V> Filter<T, J>(Predicate<T, J> predicate)
+            where T : K
+            where J : V
+        {
+            return New<KTable<K, V>>("filter", predicate.Listener);
+        }
+
+        public KTable<K, V> Filter<T, J>(Predicate<T, J> predicate, Named named)
+            where T : K
+            where J : V
+        {
+            return New<KTable<K, V>>("filter", predicate.Listener, named.Instance);
+        }
+
+        public KTable<K, V> FilterNot<T, J>(Predicate<T, J> predicate)
+            where T : K
+            where J : V
+        {
+            return New<KTable<K, V>>("filterNot", predicate.Listener);
+        }
+
+        public KTable<K, V> FilterNot<T, J>(Predicate<T, J> predicate, Named named)
+            where T : K
+            where J : V
+        {
+            return New<KTable<K, V>>("filterNot", predicate.Listener, named.Instance);
+        }
+
+        public KStream<K, V> ToStream()
+        {
+            return New<KStream<K, V>>("toStream");
+        }
+
+        public KStream<K, V> ToStream(Named named)
+        {
+            return New<KStream<K, V>>("toStream", named.Instance);
+        }
+    }
+}

@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageType>Template</PackageType>
+    <PackageVersion>1.1.2.0</PackageVersion>
+    <PackageId>MASES.KafkaBridge.Templates</PackageId>
+    <Title>KafkaBridge Templates - Templates to use the KafkaBridge</Title>
+    <Authors>MASES s.r.l.</Authors>
+    <Owners>MASES s.r.l.</Owners>
+    <Company>MASES s.r.l.</Company>
+    <Copyright>Copyright ©  MASES s.r.l. 2021</Copyright>
+    <Summary>Ready made templates to create applications based on KafkaBridge</Summary>
+    <Description>Ready made templates to create applications based on KafkaBridge. The templates are ready made starting points, all information and APIs are available in the official website https://masesgroup.github.io/KafkaBridge</Description>
+    <TargetFrameworks>net6.0;net5.0;netcoreapp3.1;net461</TargetFrameworks>
+    <OutputPath>..\..\..\bin\</OutputPath>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageProjectUrl>https://github.com/masesgroup/KafkaBridge/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/masesgroup/KafkaBridge</RepositoryUrl>
+    <PackageReleaseNotes>https://github.com/masesgroup/KafkaBridge/releases</PackageReleaseNotes>
+    <PackageLicense>LICENSE</PackageLicense>
+    <PackageIcon>JCOB128x128.png</PackageIcon>
+    <PackageTags>kafka apache-kafka dotnet clr netcore net5 net6 template</PackageTags>
+    <LangVersion>8.0</LangVersion>
+    <Product>KafkaBridge Templates</Product>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\Common\KafkaBridge.snk</AssemblyOriginatorKeyFile>
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+  <!-- Fix start https://github.com/dotnet/sourcelink/issues/572 -->
+  <PropertyGroup>
+    <TargetFrameworkMonikerAssemblyAttributesPath>$([System.IO.Path]::Combine('$(IntermediateOutputPath)','$(TargetFrameworkMoniker).AssemblyAttributes$(DefaultLanguageSourceExtension)'))</TargetFrameworkMonikerAssemblyAttributesPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedFiles Include="$(GeneratedAssemblyInfoFile)" />
+  </ItemGroup>
+  <!-- Fix end -->
+  <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\..\..\LICENSE" Pack="true" PackagePath="" />
+    <None Include="..\Common\JCOB128x128.png" Pack="true" PackagePath="" />
+    <None Include="..\Common\KafkaBridge.snk" Link="KafkaBridge.snk" />
+    <None Include="..\..\..\README.md" Pack="true" PackagePath="\"/>
+    <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**;templates\**\.vscode\**" />
+    <Compile Remove="**\*" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+  </ItemGroup>
+</Project>

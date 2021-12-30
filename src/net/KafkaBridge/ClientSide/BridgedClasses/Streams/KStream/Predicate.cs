@@ -1,0 +1,90 @@
+﻿/*
+*  Copyright 2021 MASES s.r.l.
+*
+*  Licensed under the Apache License, Version 2.0 (the "License");
+*  you may not use this file except in compliance with the License.
+*  You may obtain a copy of the License at
+*
+*  http://www.apache.org/licenses/LICENSE-2.0
+*
+*  Unless required by applicable law or agreed to in writing, software
+*  distributed under the License is distributed on an "AS IS" BASIS,
+*  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+*  See the License for the specific language governing permissions and
+*  limitations under the License.
+*
+*  Refer to LICENSE for more information.
+*/
+
+using MASES.JCOBridge.C2JBridge;
+using System;
+
+namespace MASES.KafkaBridge.Streams.KStream
+{
+    /// <summary>
+    /// Listerner for Kafka Predicate. Extends <see cref="CLRListener"/>
+    /// </summary>
+    /// <typeparam name="T">The data associated to the event</typeparam>
+    /// <typeparam name="U">The data associated to the event</typeparam> 
+    public class Predicate<T, U> : CLRListener
+    {
+        /// <inheritdoc cref="CLRListener.JniClass"/>
+        public sealed override string JniClass => "org.mases.kafkabridge.streams.kstream.PredicateImpl";
+
+        readonly Func<T, U, bool> executionFunction = null;
+        /// <summary>
+        /// The <see cref="Func{T, U, Boolean}"/> to be executed
+        /// </summary>
+        public virtual Func<T, U, bool> Execute { get { return executionFunction; } }
+        /// <summary>
+        /// Initialize a new instance of <see cref="Predicate{T, U}"/>
+        /// </summary>
+        /// <param name="func">The <see cref="Func{T, U, Boolean}"/> to be executed</param>
+        public Predicate(Func<T, U, bool> func = null)
+        {
+            if (func != null) executionFunction = func;
+            else executionFunction = Test;
+
+            AddEventHandler("test", new EventHandler<CLRListenerEventArgs<CLREventData<T>>>(EventHandler));
+        }
+
+        void EventHandler(object sender, CLRListenerEventArgs<CLREventData<T>> data)
+        {
+            var retVal = Execute(data.EventData.TypedEventData, data.EventData.To<U>(0));
+            data.CLRReturnValue = retVal;
+        }
+        /// <summary>
+        /// Executes the Predicate action in the CLR
+        /// </summary>
+        /// <param name="o1">The Predicate object</param>
+        /// <param name="o2">The Predicate object</param>
+        /// <returns>The test evaluation</returns>
+        public virtual bool Test(T o1, U o2) { return false; }
+    }
+
+    /// <summary>
+    /// Listerner for Kafka Predicate. Extends <see cref="Predicate{T, U}"/>
+    /// </summary>
+    /// <typeparam name="T">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
+    /// <typeparam name="U">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam> 
+    public class JVMBridgePredicate<T, U> : Predicate<T, U>
+        where T : JVMBridgeBase, new()
+        where U : JVMBridgeBase, new()
+    {
+        /// <summary>
+        /// Initialize a new instance of <see cref="JVMBridgePredicate{T, U}"/>
+        /// </summary>
+        /// <param name="func">The <see cref="Func{T, U, Boolean}"/> to be executed</param>
+        public JVMBridgePredicate(Func<T, U, bool> func = null) : base(func)
+        {
+            AddEventHandler("test", new EventHandler<CLRListenerEventArgs<JVMBridgeEventData<T>>>(EventHandler));
+        }
+
+        void EventHandler(object sender, CLRListenerEventArgs<JVMBridgeEventData<T>> data)
+        {
+            var retVal = Execute(data.EventData.TypedEventData, data.EventData.To<U>(0));
+            data.CLRReturnValue = retVal;
+        }
+    }
+
+}
