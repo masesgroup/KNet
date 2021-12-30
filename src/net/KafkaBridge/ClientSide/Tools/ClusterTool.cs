@@ -16,18 +16,18 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KafkaBridge.Admin
+namespace MASES.KafkaBridge.Tools
 {
     /// <summary>
-    /// Class managing BrokerApiVersionsCommand
+    /// Class managing ClusterTool
     /// </summary>
-    public class BrokerApiVersionsCommand : JCOBridge.C2JBridge.JVMBridgeMain<BrokerApiVersionsCommand>
+    public class ClusterTool : JCOBridge.C2JBridge.JVMBridgeMain<ClusterTool>
     {
         /// <summary>
-        /// Initialize a new <see cref="BrokerApiVersionsCommand"/>
+        /// Initialize a new <see cref="ClusterTool"/>
         /// </summary>
-        public BrokerApiVersionsCommand()
-            : base("kafka.admin.BrokerApiVersionsCommand")
+        public ClusterTool()
+            : base("kafka.tools.ClusterTool")
         {
         }
     }

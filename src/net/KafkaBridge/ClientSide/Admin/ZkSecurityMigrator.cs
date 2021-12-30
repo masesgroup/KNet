@@ -19,15 +19,15 @@
 namespace MASES.KafkaBridge.Admin
 {
     /// <summary>
-    /// Class managing BrokerApiVersionsCommand
+    /// Class managing ZkSecurityMigrator
     /// </summary>
-    public class BrokerApiVersionsCommand : JCOBridge.C2JBridge.JVMBridgeMain<BrokerApiVersionsCommand>
+    public class ZkSecurityMigrator : JCOBridge.C2JBridge.JVMBridgeMain<ZkSecurityMigrator>
     {
         /// <summary>
-        /// Initialize a new <see cref="BrokerApiVersionsCommand"/>
+        /// Initialize a new <see cref="ZkSecurityMigrator"/>
         /// </summary>
-        public BrokerApiVersionsCommand()
-            : base("kafka.admin.BrokerApiVersionsCommand")
+        public ZkSecurityMigrator()
+            : base("kafka.admin.ZkSecurityMigrator")
         {
         }
     }

@@ -16,18 +16,23 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KafkaBridge.Admin
+namespace MASES.KafkaBridge.Tools
 {
     /// <summary>
-    /// Class managing BrokerApiVersionsCommand
+    /// Class managing VerifiableConsumer
     /// </summary>
-    public class BrokerApiVersionsCommand : JCOBridge.C2JBridge.JVMBridgeMain<BrokerApiVersionsCommand>
+    public class VerifiableConsumer : JCOBridge.C2JBridge.JVMBridgeMain<VerifiableConsumer>
     {
+        static VerifiableConsumer()
+        {
+            KafkaBridgeCore.GlobalHeapSize = "512M";
+        }
+
         /// <summary>
-        /// Initialize a new <see cref="BrokerApiVersionsCommand"/>
+        /// Initialize a new <see cref="VerifiableConsumer"/>
         /// </summary>
-        public BrokerApiVersionsCommand()
-            : base("kafka.admin.BrokerApiVersionsCommand")
+        public VerifiableConsumer()
+            : base("org.apache.kafka.tools.VerifiableConsumer")
         {
         }
     }

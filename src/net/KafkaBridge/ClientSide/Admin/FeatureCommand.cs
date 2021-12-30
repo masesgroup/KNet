@@ -19,15 +19,15 @@
 namespace MASES.KafkaBridge.Admin
 {
     /// <summary>
-    /// Class managing BrokerApiVersionsCommand
+    /// Class managing FeatureCommand
     /// </summary>
-    public class BrokerApiVersionsCommand : JCOBridge.C2JBridge.JVMBridgeMain<BrokerApiVersionsCommand>
+    public class FeatureCommand : JCOBridge.C2JBridge.JVMBridgeMain<FeatureCommand>
     {
         /// <summary>
-        /// Initialize a new <see cref="BrokerApiVersionsCommand"/>
+        /// Initialize a new <see cref="FeatureCommand"/>
         /// </summary>
-        public BrokerApiVersionsCommand()
-            : base("kafka.admin.BrokerApiVersionsCommand")
+        public FeatureCommand()
+            : base("kafka.admin.FeatureCommand")
         {
         }
     }

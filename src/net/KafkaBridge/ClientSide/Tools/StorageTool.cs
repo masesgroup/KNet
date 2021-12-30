@@ -16,18 +16,18 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KafkaBridge.Admin
+namespace MASES.KafkaBridge.Tools
 {
     /// <summary>
-    /// Class managing BrokerApiVersionsCommand
+    /// Class managing StorageTool
     /// </summary>
-    public class BrokerApiVersionsCommand : JCOBridge.C2JBridge.JVMBridgeMain<BrokerApiVersionsCommand>
+    public class StorageTool : JCOBridge.C2JBridge.JVMBridgeMain<StorageTool>
     {
         /// <summary>
-        /// Initialize a new <see cref="BrokerApiVersionsCommand"/>
+        /// Initialize a new <see cref="StorageTool"/>
         /// </summary>
-        public BrokerApiVersionsCommand()
-            : base("kafka.admin.BrokerApiVersionsCommand")
+        public StorageTool()
+            : base("kafka.tools.StorageTool")
         {
         }
     }

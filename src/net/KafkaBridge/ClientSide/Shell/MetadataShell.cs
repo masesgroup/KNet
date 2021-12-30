@@ -16,18 +16,18 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KafkaBridge.Admin
+namespace MASES.KafkaBridge.Shell
 {
     /// <summary>
-    /// Class managing BrokerApiVersionsCommand
+    /// Class managing MetadataShell
     /// </summary>
-    public class BrokerApiVersionsCommand : JCOBridge.C2JBridge.JVMBridgeMain<BrokerApiVersionsCommand>
+    public class MetadataShell : JCOBridge.C2JBridge.JVMBridgeMain<MetadataShell>
     {
         /// <summary>
-        /// Initialize a new <see cref="BrokerApiVersionsCommand"/>
+        /// Initialize a new <see cref="MetadataShell"/>
         /// </summary>
-        public BrokerApiVersionsCommand()
-            : base("kafka.admin.BrokerApiVersionsCommand")
+        public MetadataShell()
+            : base("org.apache.kafka.shell.MetadataShell")
         {
         }
     }

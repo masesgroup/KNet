@@ -19,15 +19,15 @@
 namespace MASES.KafkaBridge.Admin
 {
     /// <summary>
-    /// Class managing BrokerApiVersionsCommand
+    /// Class managing AclCommand
     /// </summary>
-    public class BrokerApiVersionsCommand : JCOBridge.C2JBridge.JVMBridgeMain<BrokerApiVersionsCommand>
+    public class AclCommand : JCOBridge.C2JBridge.JVMBridgeMain<AclCommand>
     {
         /// <summary>
-        /// Initialize a new <see cref="BrokerApiVersionsCommand"/>
+        /// Initialize a new <see cref="AclCommand"/>
         /// </summary>
-        public BrokerApiVersionsCommand()
-            : base("kafka.admin.BrokerApiVersionsCommand")
+        public AclCommand()
+            : base("kafka.admin.AclCommand")
         {
         }
     }
