@@ -179,9 +179,6 @@
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsStatic</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsCloseable</span>
-    </div>
-    <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.DynInstance</span>
     </div>
     <div>
@@ -192,6 +189,9 @@
     </div>
     <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.JVM</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Management</span>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
@@ -212,6 +212,61 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class KafkaStreams : JVMBridgeBase&lt;KafkaStreams&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, ISetupJVMBridgeCore, IDisposable</code></pre>
   </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_KafkaStreams__ctor.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.KafkaStreams.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/KafkaStreams.cs/#L41">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Streams_KafkaStreams__ctor_" data-uid="MASES.KafkaBridge.Streams.KafkaStreams.#ctor*"></a>
+  <h4 id="MASES_KafkaBridge_Streams_KafkaStreams__ctor" data-uid="MASES.KafkaBridge.Streams.KafkaStreams.#ctor">KafkaStreams()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This is not public in Apache Kafka API&quot;)]
+public KafkaStreams()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_KafkaStreams__ctor_MASES_KafkaBridge_Streams_Topology_MASES_KafkaBridge_Java_Util_Properties_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.KafkaStreams.%23ctor(MASES.KafkaBridge.Streams.Topology%2CMASES.KafkaBridge.Java.Util.Properties)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/KafkaStreams.cs/#L44">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Streams_KafkaStreams__ctor_" data-uid="MASES.KafkaBridge.Streams.KafkaStreams.#ctor*"></a>
+  <h4 id="MASES_KafkaBridge_Streams_KafkaStreams__ctor_MASES_KafkaBridge_Streams_Topology_MASES_KafkaBridge_Java_Util_Properties_" data-uid="MASES.KafkaBridge.Streams.KafkaStreams.#ctor(MASES.KafkaBridge.Streams.Topology,MASES.KafkaBridge.Java.Util.Properties)">KafkaStreams(Topology, Properties)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KafkaStreams(Topology topology, Properties props)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Streams.Topology.html">Topology</a></td>
+        <td><span class="parametername">topology</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Java.Util.Properties.html">Properties</a></td>
+        <td><span class="parametername">props</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
@@ -219,7 +274,7 @@
     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_KafkaStreams_ClassName.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.KafkaStreams.ClassName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/BridgedClasses/Streams/KafkaStreams.cs/#L23">View Source</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/KafkaStreams.cs/#L29">View Source</a>
   </span>
   <a id="MASES_KafkaBridge_Streams_KafkaStreams_ClassName_" data-uid="MASES.KafkaBridge.Streams.KafkaStreams.ClassName*"></a>
   <h4 id="MASES_KafkaBridge_Streams_KafkaStreams_ClassName" data-uid="MASES.KafkaBridge.Streams.KafkaStreams.ClassName">ClassName</h4>
@@ -246,6 +301,145 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClassName</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_KafkaStreams_IsCloseable.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.KafkaStreams.IsCloseable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/KafkaStreams.cs/#L27">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Streams_KafkaStreams_IsCloseable_" data-uid="MASES.KafkaBridge.Streams.KafkaStreams.IsCloseable*"></a>
+  <h4 id="MASES_KafkaBridge_Streams_KafkaStreams_IsCloseable" data-uid="MASES.KafkaBridge.Streams.KafkaStreams.IsCloseable">IsCloseable</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsCloseable { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsCloseable</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_KafkaStreams_State.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.KafkaStreams.State%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/KafkaStreams.cs/#L46">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Streams_KafkaStreams_State_" data-uid="MASES.KafkaBridge.Streams.KafkaStreams.State*"></a>
+  <h4 id="MASES_KafkaBridge_Streams_KafkaStreams_State" data-uid="MASES.KafkaBridge.Streams.KafkaStreams.State">State</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KafkaStreams.StateType State { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Streams.KafkaStreams.StateType.html">KafkaStreams.StateType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_KafkaStreams_AddStreamThread.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.KafkaStreams.AddStreamThread%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/KafkaStreams.cs/#L48">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Streams_KafkaStreams_AddStreamThread_" data-uid="MASES.KafkaBridge.Streams.KafkaStreams.AddStreamThread*"></a>
+  <h4 id="MASES_KafkaBridge_Streams_KafkaStreams_AddStreamThread" data-uid="MASES.KafkaBridge.Streams.KafkaStreams.AddStreamThread">AddStreamThread()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Optional&lt;string&gt; AddStreamThread()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Java.Util.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_KafkaStreams_RemoveStreamThread.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.KafkaStreams.RemoveStreamThread%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/KafkaStreams.cs/#L50">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Streams_KafkaStreams_RemoveStreamThread_" data-uid="MASES.KafkaBridge.Streams.KafkaStreams.RemoveStreamThread*"></a>
+  <h4 id="MASES_KafkaBridge_Streams_KafkaStreams_RemoveStreamThread" data-uid="MASES.KafkaBridge.Streams.KafkaStreams.RemoveStreamThread">RemoveStreamThread()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Optional&lt;string&gt; RemoveStreamThread()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Java.Util.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_KafkaStreams_Start.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.KafkaStreams.Start%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/KafkaStreams.cs/#L52">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Streams_KafkaStreams_Start_" data-uid="MASES.KafkaBridge.Streams.KafkaStreams.Start*"></a>
+  <h4 id="MASES_KafkaBridge_Streams_KafkaStreams_Start" data-uid="MASES.KafkaBridge.Streams.KafkaStreams.Start">Start()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Start()</code></pre>
+  </div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">System.Dynamic.IDynamicMetaObjectProvider</a>
@@ -267,7 +461,7 @@
                     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_KafkaStreams.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.KafkaStreams%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/KafkaBridge/BridgedClasses/Streams/KafkaStreams.cs/#L21" class="contribution-link">View Source</a>
+                    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/KafkaStreams.cs/#L25" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -75,8 +75,52 @@
 </blockquote>
 <p>KafkaBridgeCLI accepts the following command-line switch:</p>
 <ul>
-<li><strong>ClassToRun</strong>: represents the class to be launched</li>
-<li><strong>KafkaLocation</strong>: represents the path to the root folder of Apache Kafka binary distribution; default value consider that KafkaBridgeCLI is installed within the bin folder of Apache Kafka binary distribution;</li>
+<li><strong>ClassToRun</strong>: represents the class to be launched; the list is:
+<ul>
+<li>Administration:
+<ul>
+<li>AclCommand</li>
+<li>BrokerApiVersionsCommand</li>
+<li>ConfigCommand</li>
+<li>ConsumerGroupCommand</li>
+<li>DelegationTokenCommand</li>
+<li>DeleteRecordsCommand</li>
+<li>FeatureCommand</li>
+<li>LeaderElectionCommand</li>
+<li>LogDirsCommand</li>
+<li>ReassignPartitionsCommand</li>
+<li>TopicCommand</li>
+<li>ZkSecurityMigrator</li>
+</ul>
+</li>
+<li>Shell:
+<ul>
+<li>MetadataShell</li>
+</ul>
+</li>
+<li>Tools:
+<ul>
+<li>ClusterTool</li>
+<li>ConsoleConsumer</li>
+<li>ConsoleProducer</li>
+<li>ConsumerPerformance</li>
+<li>DumpLogSegments</li>
+<li>GetOffsetShell</li>
+<li>MirrorMaker</li>
+<li>ProducerPerformance</li>
+<li>ReplicaVerificationTool</li>
+<li>StorageTool</li>
+<li>StreamsResetter</li>
+<li>TransactionsCommand</li>
+<li>VerifiableConsumer</li>
+<li>VerifiableProducer</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>KafkaLocation</strong>: represents the path to the root folder of Apache Kafka binary distribution; default value consider that KafkaBridgeCLI uses the Apache Kafka jars available under the jars folder prepared from the package;</li>
+<li><strong>ScalaVersion</strong>: the scala version to be used. The default version (<em>2.13.6</em>) is binded to the deafult Apache Kafka version available in the package;</li>
+<li><strong>Log4JConfiguration</strong>: the log4j configuration file; the default uses the file within the package.</li>
 </ul>
 </article>
           </div>
@@ -86,7 +130,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/Documentation/articles/usageCLI.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/Documentation/articles/usageCLI.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
