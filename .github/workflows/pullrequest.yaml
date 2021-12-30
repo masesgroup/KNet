@@ -58,5 +58,5 @@ jobs:
       - name: Build documentation
         run: |
           choco install docfx
-          cd src\Documentation
+          cd src\net\Documentation
           docfx
