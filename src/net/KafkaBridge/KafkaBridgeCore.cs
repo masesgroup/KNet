@@ -315,10 +315,9 @@ namespace MASES.KafkaBridge
                     { "-Dcom.sun.management.jmxremote", null },
                     { "com.sun.management.jmxremote.authenticate", "false" },
                     { "com.sun.management.jmxremote.ssl", "false" },
-                    { "log4j.configuration", Log4JOpts},
+                    { "log4j.configuration", string.IsNullOrEmpty(GlobalLog4JPath) ? ((GlobalRootPath == Const.DefaultRootPath) ? Log4JOpts : null) : $"file:{GlobalLog4JPath}"},
                     { "kafka.logs.dir", LogDir},
                     { "-Xmx" + GlobalHeapSize, null},
-                    { "log4j.configuration", $"file:{GlobalLog4JPath}"},
                 };
 
                 if (!string.IsNullOrEmpty(InitialHeapSize))
