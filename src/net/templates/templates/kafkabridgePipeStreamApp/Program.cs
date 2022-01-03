@@ -24,6 +24,8 @@ namespace MASES.KafkaBridgeTemplate.KafkaBridgeStreamPipe
                 serverToUse = args[0];
             }
 
+            Console.WriteLine("Server in use {0}", serverToUse);
+
             var props = new Properties();
 
             props.Put(StreamsConfig.APPLICATION_ID_CONFIG, "streams-pipe");

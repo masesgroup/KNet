@@ -22,6 +22,8 @@ namespace MASES.KafkaBridgeTemplate.KafkaBridgeConsumer
                 serverToUse = args[0];
             }
 
+            Console.WriteLine("Server in use {0}", serverToUse);
+
             Properties props = new Properties();
             props.Put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
             props.Put(ConsumerConfig.GROUP_ID_CONFIG, "test");

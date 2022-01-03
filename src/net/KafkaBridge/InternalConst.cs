@@ -17,6 +17,7 @@
 */
 
 using System;
+using System.IO;
 
 namespace MASES.KafkaBridge
 {
@@ -35,17 +36,21 @@ namespace MASES.KafkaBridge
     public class Const
     {
         /// <summary>
+        /// The location of this assembly
+        /// </summary>
+        public static readonly string AssemblyLocation = Path.GetDirectoryName(typeof(Const).Assembly.Location);
+        /// <summary>
         /// Default Scala version
         /// </summary>
         public const string DefaultScalaVersion = "2.13.6";
         /// <summary>
         /// Default root path, i.e. consider installation within bin folder
         /// </summary>
-        public const string DefaultRootPath = "./jars";
+        public static readonly string DefaultRootPath = Path.Combine(AssemblyLocation, "jars") + Path.DirectorySeparatorChar;
         /// <summary>
         /// Default log4j path, i.e. consider installation within bin folder
         /// </summary>
-        public const string DefaultLog4JPath = "./config/log4j.properties";
+        public static readonly string DefaultLog4JPath = Path.Combine(AssemblyLocation, "config", "log4j.properties");
     }
 
     class InternalConst
