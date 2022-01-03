@@ -3221,6 +3221,12 @@ references:
   commentId: T:MASES.KafkaBridge.Const
   fullName: MASES.KafkaBridge.Const
   nameWithType: Const
+- uid: MASES.KafkaBridge.Const.AssemblyLocation
+  name: AssemblyLocation
+  href: api/MASES.KafkaBridge.Const.html#MASES_KafkaBridge_Const_AssemblyLocation
+  commentId: F:MASES.KafkaBridge.Const.AssemblyLocation
+  fullName: MASES.KafkaBridge.Const.AssemblyLocation
+  nameWithType: Const.AssemblyLocation
 - uid: MASES.KafkaBridge.Const.DefaultLog4JPath
   name: DefaultLog4JPath
   href: api/MASES.KafkaBridge.Const.html#MASES_KafkaBridge_Const_DefaultLog4JPath
