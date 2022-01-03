@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <PackageType>Template</PackageType>
-    <PackageVersion>1.1.2.0</PackageVersion>
+    <PackageVersion>1.1.3.0</PackageVersion>
     <PackageId>MASES.KafkaBridge.Templates</PackageId>
     <Title>KafkaBridge Templates - Templates to use the KafkaBridge</Title>
     <Authors>MASES s.r.l.</Authors>
@@ -19,7 +19,7 @@
     <PackageReleaseNotes>https://github.com/masesgroup/KafkaBridge/releases</PackageReleaseNotes>
     <PackageLicense>LICENSE</PackageLicense>
     <PackageIcon>JCOB128x128.png</PackageIcon>
-    <PackageTags>kafka apache-kafka dotnet clr netcore net5 net6 template</PackageTags>
+    <PackageTags>kafka apache-kafka dotnet clr netcore net5 net6 template kafka connect streams producer consumer providers streamprovider confluent</PackageTags>
     <LangVersion>8.0</LangVersion>
     <Product>KafkaBridge Templates</Product>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>

@@ -315,10 +315,9 @@ namespace MASES.KafkaBridge
                     { "-Dcom.sun.management.jmxremote", null },
                     { "com.sun.management.jmxremote.authenticate", "false" },
                     { "com.sun.management.jmxremote.ssl", "false" },
-                    { "log4j.configuration", Log4JOpts},
+                    { "log4j.configuration", string.IsNullOrEmpty(GlobalLog4JPath) ? ((GlobalRootPath == Const.DefaultRootPath) ? Log4JOpts : null) : $"file:{GlobalLog4JPath}"},
                     { "kafka.logs.dir", LogDir},
                     { "-Xmx" + GlobalHeapSize, null},
-                    { "log4j.configuration", $"file:{GlobalLog4JPath}"},
                 };
 
                 if (!string.IsNullOrEmpty(InitialHeapSize))
@@ -349,8 +348,12 @@ namespace MASES.KafkaBridge
 
         string buildClassPath()
         {
+#if DEBUG
+            Console.WriteLine("RootPath is: {0}", RootPath);
+#endif
+
             classPath = string.Empty;
-            buildClassPath(GlobalRootPath);
+            buildClassPath(RootPath, "*.jar");
             buildClassPath(CoreDependenciesPath);
             buildClassPath(ExamplesPath);
             buildClassPath(ClientsPath);
@@ -374,13 +377,19 @@ namespace MASES.KafkaBridge
 
             classPath += !string.IsNullOrEmpty(ExtraClassPath) ? InternalConst.PathSeparator + ExtraClassPath : string.Empty;
 
+#if DEBUG
+            Console.WriteLine("ClassPath is: {0}", classPath);
+#endif
             return classPath;
         }
 
-        string buildClassPath(string path)
+        string buildClassPath(string path, string pattern = null)
         {
             var folder = Path.GetDirectoryName(path);
-            var pattern = Path.GetFileName(path);
+            if (pattern == null) pattern = Path.GetFileName(path);
+#if DEBUG
+            Console.WriteLine("Search on {0} with pattern {1}", folder, pattern);
+#endif
             if (Directory.Exists(folder))
             {
                 foreach (var item in Directory.GetFiles(folder, pattern, SearchOption.TopDirectoryOnly))
