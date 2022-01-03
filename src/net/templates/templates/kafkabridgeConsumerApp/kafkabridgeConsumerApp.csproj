@@ -8,7 +8,7 @@
   </ItemGroup>
   <ItemGroup Condition="Exists('..\..\..\KafkaBridge\KafkaBridge.csproj')">
     <!--Within GitHub repo: used for test purpose-->
-    <PackageReference Include="MASES.JCOBridge" Version="2.4.3" />
+    <PackageReference Include="MASES.JCOBridge" Version="2.4.4" />
     <ProjectReference Include="..\..\..\KafkaBridge\KafkaBridge.csproj" />
   </ItemGroup>
   <ItemGroup Condition="!Exists('..\..\..\KafkaBridge\KafkaBridge.csproj')">
