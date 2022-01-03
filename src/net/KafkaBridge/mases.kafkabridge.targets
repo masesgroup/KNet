@@ -10,4 +10,10 @@
     <Copy SourceFiles="@(config)" DestinationFolder="$(TargetDir)/config" />
     <Copy SourceFiles="@(configKraft)" DestinationFolder="$(TargetDir)/config/kraft" />
   </Target>
+  
+  <Target Name="CopyFilesNativePublish" BeforeTargets="Publish">
+    <Copy SourceFiles="@(jars)" DestinationFolder="$(PublishDir)/jars" />
+    <Copy SourceFiles="@(config)" DestinationFolder="$(PublishDir)/config" />
+    <Copy SourceFiles="@(configKraft)" DestinationFolder="$(PublishDir)/config/kraft" />
+  </Target>
 </Project>
