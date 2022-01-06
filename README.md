@@ -9,11 +9,13 @@ This project adheres to the Contributor [Covenant code of conduct](CODE_OF_CONDU
 ## Scope of the project
 
 This project aims to create a library able to direct access the features available in the [Apache Kafka binary distribution](https://kafka.apache.org/downloads).
+
 There are many client libraries written to manage communication with Apache Kafka. Conversely, this poject use directly the Java packages released from Apache Foundation giving more than one benefit:
 * all implemented features are availables;
 * avoids protocol implementation from any third party;
 * can access any feature made available from Apache Kafka: one of the most important one is Kafka Stream which does not have any C# implementation.
-The benefits comes from tow main points related to JCOBridge:
+
+The benefits comes from two main points related to JCOBridge:
 * its ablitity to manage a direct access to the JVM from any .NET application: any Java / Scala class behind Apache Kafka can be directly managed;
 * using the dynamic code feature of JCOBridge it is possible to write a Java/Scala/Kotlin/etc seamless language directly inside a standard .NET application written in C#/VB.NET
 
