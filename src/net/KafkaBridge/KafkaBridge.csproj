@@ -4,11 +4,11 @@
     <RootNamespace>MASES.KafkaBridge</RootNamespace>
     <Title>KafkaBridge - Access natively Apache Kafka from any .NET application</Title>
     <Description>KafkaBridge - Access natively Apache Kafka from any .NET application</Description>
-    <Copyright>Copyright ©  MASES s.r.l. 2021</Copyright>
+    <Copyright>Copyright ©  MASES s.r.l. 2022</Copyright>
     <Owners>MASES s.r.l.</Owners>
     <Authors>MASES s.r.l.</Authors>
     <Company>MASES s.r.l.</Company>
-    <Version>1.1.3.0</Version>
+    <Version>1.1.4.0</Version>
     <Product>KafkaBridge</Product>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <TargetFrameworks>net461;netcoreapp3.1;net5.0;net5.0-windows;net6.0;net6.0-windows</TargetFrameworks>
