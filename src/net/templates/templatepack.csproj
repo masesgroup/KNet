@@ -7,7 +7,7 @@
     <Authors>MASES s.r.l.</Authors>
     <Owners>MASES s.r.l.</Owners>
     <Company>MASES s.r.l.</Company>
-    <Copyright>Copyright ©  MASES s.r.l. 2021</Copyright>
+    <Copyright>Copyright ©  MASES s.r.l. 2022</Copyright>
     <Summary>Ready made templates to create applications based on KafkaBridge</Summary>
     <Description>Ready made templates to create applications based on KafkaBridge. The templates are ready made starting points, all information and APIs are available in the official website https://masesgroup.github.io/KafkaBridge</Description>
     <TargetFrameworks>net6.0;net5.0;netcoreapp3.1;net461</TargetFrameworks>
