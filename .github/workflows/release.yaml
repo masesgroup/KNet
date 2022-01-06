@@ -45,7 +45,7 @@ jobs:
         shell: bash
 
       - name: Create Jars
-        run: mvn --file ./src/java/kafkabridge/pom.xml package
+        run: mvn --file ./src/java/kafkabridge/pom.xml --no-transfer-progress package
         env:
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
           MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}

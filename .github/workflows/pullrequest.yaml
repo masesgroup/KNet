@@ -25,6 +25,14 @@ jobs:
         with:
           submodules: 'true'
 
+      - name: Cache local Maven repository
+        uses: actions/cache@v2
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
       - name: Pre compile
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KafkaBridge.sln
 
@@ -43,7 +51,7 @@ jobs:
         shell: bash
 
       - name: Create Jars
-        run: mvn --file ./src/java/kafkabridge/pom.xml package
+        run: mvn --file ./src/java/kafkabridge/pom.xml --no-transfer-progress package
         env:
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
           MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
