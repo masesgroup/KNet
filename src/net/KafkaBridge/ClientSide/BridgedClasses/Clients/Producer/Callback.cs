@@ -25,6 +25,7 @@ namespace MASES.KafkaBridge.Clients.Producer
     /// <summary>
     /// Listerner for Kafka Callback. Extends <see cref="CLRListener"/>
     /// </summary>
+    /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
     public class Callback : CLRListener
     {
         /// <inheritdoc cref="CLRListener.JniClass"/>
@@ -38,10 +39,10 @@ namespace MASES.KafkaBridge.Clients.Producer
         /// <summary>
         /// Initialize a new instance of <see cref="Callback"/>
         /// </summary>
-        /// <param name="func">The <see cref="Action{RecordMetadata, JVMBridgeException}"/> to be executed</param>
-        public Callback(Action<RecordMetadata, JVMBridgeException> func = null)
+        /// <param name="action">The <see cref="Action{RecordMetadata, JVMBridgeException}"/> to be executed</param>
+        public Callback(Action<RecordMetadata, JVMBridgeException> action = null)
         {
-            if (func != null) executionFunction = func;
+            if (action != null) executionFunction = action;
             else executionFunction = OnCompletion;
 
             AddEventHandler("onCompletion", new EventHandler<CLRListenerEventArgs<JVMBridgeEventData<RecordMetadata>>>(EventHandler));
