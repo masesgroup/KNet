@@ -115,7 +115,7 @@ var result = producer.Send(record, new Callback((o1, o2) =>
 }));
 ```
 
-has two main drawbacks:
+there are two main drawbacks:
 * it creates a resource leak because the object cannot be programmatically disposed;
 * on each cycle, the engine shall allocate the infrastructure to handle events from the JVM.
 
