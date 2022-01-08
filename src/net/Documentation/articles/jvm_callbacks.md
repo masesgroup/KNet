@@ -26,10 +26,10 @@ public final class CallbackImpl extends JCListener implements Callback {
 ```
 
 The structure follows the guidelines of JCOBridge:
-* It **must** _extends_ the base class _JCListener_ (or _implements_ the interface _IJCListener_): this is a constraint of JCOBridge; _JCListener_ has many ready made methods; if the callback is not based on an interface the developer can _implements_ the _IJCListener_;
+* It **must** `extends` the base class `JCListener` (or `implements` the interface `IJCListener`): this is a constraint of JCOBridge; `JCListener` has many ready made methods; if the callback is not based on an interface the developer can `implements` the `IJCListener`;
 * The concrete class **must** have at least a constructor accepting a String;
-* Within the implementation of the interface method (in this case the method _onCompletion_ of the _Callback_ interface) the method _raiseEvent_ informs the CLR that a method was raised using the specific key (**onCompletion** in this case) along with all associated objects:
-  * If the interface has many methods each one must have its own _raiseEvent_ call;
+* Within the implementation of the interface method (in this case the method `onCompletion` of the `Callback` interface) the method `raiseEvent` informs the CLR that a method was raised using the specific key (**onCompletion** in this case) along with all associated objects:
+  * If the interface has many methods each one must have its own `raiseEvent` call;
   * The key used from raiseEvent is not mandatory to be equal to the name of the calling method, it is only a convention for the mapping: this will be more clear looking at the C# code.
 
 Now there is a concrete class within the JVM space. 
@@ -60,30 +60,30 @@ public class Callback : CLRListener
 ```
 
 The structure follows the guidelines of JCOBridge:
-* It **must** _extends_ the base class _CLRListener_ : this is a constraint of JCOBridge; _CLRListener_ contains all the functionality to handle events from the JVM;
-* The _JniClass_ property informs the base class about the concrete class in JVM associated to this event handler;
-* Within the constructor the method _AddEventHandler_ registers a .NET _EventHandler_ associated to the method in JVM; look at the key string: **it is the same used from the JVM**;
-  * The costructor of the code above accept in input an _Action_ which permits to write lambda expression in C#;
+* It **must** `extends` the base class `CLRListener` : this is a constraint of JCOBridge; `CLRListener` contains all the functionality to handle events from the JVM;
+* The `JniClass` property informs the base class about the concrete class in JVM associated to this event handler;
+* Within the constructor the method `AddEventHandler` registers a .NET `EventHandler` associated to the method in JVM; look at the key string: **it is the same used from the JVM**;
+  * The costructor of the code above accept in input an `Action` which permits to write lambda expression in C#;
   * The code above associate a private handler with specific data type:
-    * _CLRListenerEventArgs_ is mandatory and it is used from _CLRListener_;
-    * _JVMBridgeEventData_ informs the subsystem that the first parameter inherits from a _JVMBridgeBase_ class and must be treated accordingly;
-    * _RecordMetadata_ represents the CLR version of the corresponding _RecordMetadata_ within the JVM;
-* On callback invocation (_onCompletion_ in this case) the CLR will invoke _EventHandler_:
-  * The first parameter is directly reported using the _TypedEventData_ property;
-  * The second parameter shall be managed differently in this case because it is an _Exception_:
+    * `CLRListenerEventArgs` is mandatory and it is used from `CLRListener`;
+    * `JVMBridgeEventData` informs the subsystem that the first parameter inherits from a `JVMBridgeBase` class and must be treated accordingly;
+    * `RecordMetadata` represents the CLR version of the corresponding `RecordMetadata` within the JVM;
+* On callback invocation (`onCompletion` in this case) the CLR will invoke `EventHandler`:
+  * The first parameter is directly reported using the `TypedEventData` property;
+  * The second parameter shall be managed differently in this case because it is an `Exception`:
     * JCOBridge has its own mechanism to translate the exception from the JVM;
-	* Parameters raised from JVM, beyond the first, are available within _ExtraData_ property;
-	* The code extracts the first object (the second of the event) and converts it into a generic _IJavaObject_;
-	* Invoking _JVMBridgeException.New(exception)_ the subsystem reads the data from the real JVM exception and try to instantiate a valid exception, otherwise returns a generic _JVMBridgeException_;
-	  * _JVMBridgeException.New(exception)_ can return null if the extracted data is not an _IJavaObject_ or it is null within the JVM;
+	* Parameters raised from JVM, beyond the first, are available within `ExtraData` property;
+	* The code extracts the first object (the second of the event) and converts it into a generic `IJavaObject`;
+	* Invoking `JVMBridgeException.New(exception)` the subsystem reads the data from the real JVM exception and try to instantiate a valid exception, otherwise returns a generic `JVMBridgeException`;
+	  * `JVMBridgeException.New(exception)` can return null if the extracted data is not an `IJavaObject` or it is null within the JVM;
 * Other pieces of the class are useful in other condition:
-  * Creating a new class extending _Callback_ class, the method _OnCompletion_ can be overridden;
-  * Otherwise to the property _Execute_ can be associated to an handler;
+  * Creating a new class extending `Callback` class, the method `OnCompletion` can be overridden;
+  * Otherwise to the property `Execute` can be associated to an handler;
     	
 ## KafkaBridge Callback lifecycle
 
 The lifecycle of the callback managed from JCOBridge is slightly different from the standard one.
-A _CLRListener_ to be able to live without to be recovered from the Garbage Collector shall be registered. _CLRListener_ do this automatically within the initialization (this behavior can be avoided with the property _AutoInit_).
+A `CLRListener` to be able to live without to be recovered from the Garbage Collector shall be registered. `CLRListener` do this automatically within the initialization (this behavior can be avoided with the property `AutoInit`).
 So at the end of its use it must be disposed to avoid a resource leak. In the [Producer with Callback](usage.md) example there is a **using** clause and the class is instantiated only one time.
 A correct approach is like the following:
 
