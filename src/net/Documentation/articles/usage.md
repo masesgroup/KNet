@@ -1,6 +1,7 @@
 # KafkaBridge usage
 
 To use KafkaBridge classes the developer can write code in .NET using the same classes available in the official Apache Kafka package.
+If classes or methods are not available yet it is possible to use the approach synthetized in the chapter [What to do if an API was not yet implemented](##What-to-do-if-an-API-was-not-yet-implemented)
 
 ## Producer example
 
@@ -196,3 +197,34 @@ The example above can be found in the [templates package](https://www.nuget.org/
 * create a consumer using the properties
 * subscribe and starts consume
 * when data are received it logs to the console the information.
+
+## What to do if an API was not yet implemented
+
+With JCOBridge a developer can use some properties to manage objects in the JVM. Each class implemented in KafkaBridge contains a direct and a dynamic accessor which are able to analyze the JVM class and executes the code.
+A simple example is this following one:
+
+```C#
+
+var consumer = new KafkaConsumer<string, string>(props);
+var topPart = consumer.JVM.New("TopicPartition", "myTopic", 0);
+var result = consumer.DynInstance.committed(topPart);
+```
+
+The example above consider the class _TopicPartition_ not implemented yet. Anyway it exists in JVM.
+Each object, like _KafkaConsumer_ instance, exposes (hidded in the editor) two properties:
+* **JVM** which access the JVM using methods;
+* **DynJVM** which access the JVM using the Dynamic engine.
+
+Explaining the code:
+* The first line creates a JVM object in C# style: _KafkaConsumer_ lives in the CLR and has its countpart in the JVM.
+* The second line requests to the JVM to allocate a _TopicPartition_ object with two parameters.
+* This resulting object (_topPart_) is used in the third line as parameter of the _committed_ method invocation.
+* The _result_ is a **dynamic** object that can be used to extract data or invokes other methods.
+
+
+
+
+
+
+
+
