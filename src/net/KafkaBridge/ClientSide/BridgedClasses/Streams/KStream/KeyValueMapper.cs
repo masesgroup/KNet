@@ -25,7 +25,8 @@ namespace MASES.KafkaBridge.Streams.KStream
     /// Listerner for Kafka KeyValueMapper. Extends <see cref="CLRListener"/>
     /// </summary>
     /// <typeparam name="T">The data associated to the event</typeparam>
-    /// <typeparam name="U">The data associated to the event</typeparam> 
+    /// <typeparam name="U">The data associated to the event</typeparam>
+    /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
     public class KeyValueMapper<T, U, VR> : CLRListener
     {
         /// <inheritdoc cref="CLRListener.JniClass"/>
@@ -66,7 +67,8 @@ namespace MASES.KafkaBridge.Streams.KStream
     /// Listerner for Kafka KeyValueMapper. Extends <see cref="KeyValueMapper{T, U, VR}"/>
     /// </summary>
     /// <typeparam name="T">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
-    /// <typeparam name="U">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam> 
+    /// <typeparam name="U">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
+    /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
     public class JVMBridgeKeyValueMapper<T, U, VR> : KeyValueMapper<T, U, VR>
         where T : JVMBridgeBase, new()
         where U : JVMBridgeBase, new()

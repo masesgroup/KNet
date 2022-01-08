@@ -1,0 +1,123 @@
+# KafkaBridge: JVM callbacks
+
+One of the features of [JCOBridge](https://www.jcobridge.com/), used in KafkaBridge, is the callback management from JVM.
+Many applications use the callback mechanism to be informed about events which happens during execution.
+Apache Kakfa exposes many API which have callbacks in the parameters.
+The Java code of a callback can be written with lambda expressions, but KafkaBridge cannot, it needs an object.
+
+## KafkaBridge Callback internals
+
+KafkaBridge is based on [JCOBridge](https://www.jcobridge.com/). JCOBridge as per its name is a bridge between the CLR (CoreCLR) and the JVM.
+Events, generally are expressed as interfaces in Java, and a lambda expression is translated into an object at compile time. Otherwise the developer can implement a Java class which **implements** the interface: with JCOBridge the developer needs to follow a seamless approach.
+In KafkaBridge some callbacks are ready made. In this tutorial the **Callback** interface (org.apache.kafka.clients.producer.Callback) will be taken as an example.
+The concrete class implementing the interface is the following one:
+
+```java
+public final class CallbackImpl extends JCListener implements Callback {
+    public CallbackImpl(String key) throws JCNativeException {
+        super(key);
+    }
+
+    @Override
+    public void onCompletion(org.apache.kafka.clients.producer.RecordMetadata metadata, Exception exception) {
+        raiseEvent("onCompletion", metadata, exception);
+    }
+}
+```
+
+The structure follows the guidelines of JCOBridge:
+* It **must** _extends_ the base class _JCListener_ (or _implements_ the interface _IJCListener_): this is a constraint of JCOBridge; _JCListener_ has many ready made methods; if the callback is not based on an interface the developer can _implements_ the _IJCListener_;
+* The concrete class **must** have at least a constructor accepting a String;
+* Within the implementation of the interface method (in this case the method _onCompletion_ of the _Callback_ interface) the method _raiseEvent_ informs the CLR that a method was raised using the specific key (**onCompletion** in this case) along with all associated objects:
+  * If the interface has many methods each one must have its own _raiseEvent_ call;
+  * The key used from raiseEvent is not mandatory to be equal to the name of the calling method, it is only a convention for the mapping: this will be more clear looking at the C# code.
+
+Now there is a concrete class within the JVM space. 
+Going on to the CLR side a possible concrete class in C# is as the following one:
+
+```c#
+public class Callback : CLRListener
+{
+	public sealed override string JniClass => "org.mases.kafkabridge.clients.producer.CallbackImpl";
+
+	readonly Action<RecordMetadata, JVMBridgeException> executionFunction = null;
+	public virtual Action<RecordMetadata, JVMBridgeException> Execute { get { return executionFunction; } }
+	public Callback(Action<RecordMetadata, JVMBridgeException> func = null)
+	{
+		if (func != null) executionFunction = func;
+		else executionFunction = OnCompletion;
+
+		AddEventHandler("onCompletion", new EventHandler<CLRListenerEventArgs<JVMBridgeEventData<RecordMetadata>>>(EventHandler));
+	}
+
+	void EventHandler(object sender, CLRListenerEventArgs<JVMBridgeEventData<RecordMetadata>> data)
+	{
+		var exception = data.EventData.ExtraData.Get(0) as IJavaObject;
+		Execute(data.EventData.TypedEventData, JVMBridgeException.New(exception));
+	}
+	public virtual void OnCompletion(RecordMetadata metadata, JVMBridgeException exception) { }
+}
+```
+
+The structure follows the guidelines of JCOBridge:
+* It **must** _extends_ the base class _CLRListener_ : this is a constraint of JCOBridge; _CLRListener_ contains all the functionality to handle events from the JVM;
+* The _JniClass_ property informs the base class about the concrete class in JVM associated to this event handler;
+* Within the constructor the method _AddEventHandler_ registers a .NET _EventHandler_ associated to the method in JVM; look at the key string: **it is the same used from the JVM**;
+  * The costructor of the code above accept in input an _Action_ which permits to write lambda expression in C#;
+  * The code above associate a private handler with specific data type:
+    * _CLRListenerEventArgs_ is mandatory and it is used from _CLRListener_;
+    * _JVMBridgeEventData_ informs the subsystem that the first parameter inherits from a _JVMBridgeBase_ class and must be treated accordingly;
+    * _RecordMetadata_ represents the CLR version of the corresponding _RecordMetadata_ within the JVM;
+* On callback invocation (_onCompletion_ in this case) the CLR will invoke _EventHandler_:
+  * The first parameter is directly reported using the _TypedEventData_ property;
+  * The second parameter shall be managed differently in this case because it is an _Exception_:
+    * JCOBridge has its own mechanism to translate the exception from the JVM;
+	* Parameters raised from JVM, beyond the first, are available within _ExtraData_ property;
+	* The code extracts the first object (the second of the event) and converts it into a generic _IJavaObject_;
+	* Invoking _JVMBridgeException.New(exception)_ the subsystem reads the data from the real JVM exception and try to instantiate a valid exception, otherwise returns a generic _JVMBridgeException_;
+	  * _JVMBridgeException.New(exception)_ can return null if the extracted data is not an _IJavaObject_ or it is null within the JVM;
+* Other pieces of the class are useful in other condition:
+  * Creating a new class extending _Callback_ class, the method _OnCompletion_ can be overridden;
+  * Otherwise to the property _Execute_ can be associated to an handler;
+    	
+## KafkaBridge Callback lifecycle
+
+The lifecycle of the callback managed from JCOBridge is slightly different from the standard one.
+A _CLRListener_ to be able to live without to be recovered from the Garbage Collector shall be registered. _CLRListener_ do this automatically within the initialization (this behavior can be avoided with the property _AutoInit_).
+So at the end of its use it must be disposed to avoid a resource leak. In the [Producer with Callback](usage.md) example there is a **using** clause and the class is instantiated only one time.
+A correct approach is like the following:
+
+```c#
+using (var callback = new Callback((o1, o2) =>
+{
+	if (o2 != null) Console.WriteLine(o2.ToString());
+	else Console.WriteLine($"Produced on topic {o1.Topic} at offset {o1.Offset}");
+}))
+{
+	while (!resetEvent.WaitOne(0))
+	{
+		var record = new ProducerRecord<string, string>(topicToUse, i.ToString(), i.ToString());
+		var result = producer.Send(record, callback);
+		Console.WriteLine($"Producing: {record} with result: {result.Get()}");
+		producer.Flush();
+		i++;
+	}
+}
+```
+
+while an approach like the following one: 
+
+```c#
+var result = producer.Send(record, new Callback((o1, o2) =>
+{
+	if (o2 != null) Console.WriteLine(o2.ToString());
+	else Console.WriteLine($"Produced on topic {o1.Topic} at offset {o1.Offset}");
+}));
+```
+
+has two main drawbacks:
+* it creates a resource leak because the object cannot be programmatically disposed;
+* on each cycle, the engine shall allocate the infrastructure to handle events from the JVM.
+
+
+ 

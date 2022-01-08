@@ -25,7 +25,8 @@ namespace MASES.KafkaBridge.Streams.KStream
     /// Listerner for Kafka Predicate. Extends <see cref="CLRListener"/>
     /// </summary>
     /// <typeparam name="T">The data associated to the event</typeparam>
-    /// <typeparam name="U">The data associated to the event</typeparam> 
+    /// <typeparam name="U">The data associated to the event</typeparam>
+    /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
     public class Predicate<T, U> : CLRListener
     {
         /// <inheritdoc cref="CLRListener.JniClass"/>
@@ -66,7 +67,8 @@ namespace MASES.KafkaBridge.Streams.KStream
     /// Listerner for Kafka Predicate. Extends <see cref="Predicate{T, U}"/>
     /// </summary>
     /// <typeparam name="T">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
-    /// <typeparam name="U">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam> 
+    /// <typeparam name="U">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
+    /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
     public class JVMBridgePredicate<T, U> : Predicate<T, U>
         where T : JVMBridgeBase, new()
         where U : JVMBridgeBase, new()
@@ -86,5 +88,4 @@ namespace MASES.KafkaBridge.Streams.KStream
             data.CLRReturnValue = retVal;
         }
     }
-
 }
