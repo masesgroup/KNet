@@ -23,6 +23,7 @@ using MASES.KafkaBridge.Clients.Consumer;
 using MASES.KafkaBridge.Clients.Producer;
 using MASES.KafkaBridge.Common;
 using MASES.KafkaBridge.Common.Errors;
+using MASES.KafkaBridge.Java.Util.Concurrent;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -90,6 +91,12 @@ namespace MASES.KafkaBridge
             GlobalScalaVersion = _parsedArgs.Get<string>(CLIParam.ScalaVersion);
 
             new KafkaBridgeCore();
+
+            #region Java Exceptions
+
+            JCOBridge.C2JBridge.JCOBridge.RegisterException<ExecutionException>();
+
+            #endregion
 
             #region Base Exceptions
 
