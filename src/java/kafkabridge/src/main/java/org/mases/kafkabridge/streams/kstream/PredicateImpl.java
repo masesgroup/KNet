@@ -24,9 +24,8 @@
 
 package org.mases.kafkabridge.streams.kstream;
 
-import org.mases.jcobridge.*;
-
 import org.apache.kafka.streams.kstream.Predicate;
+import org.mases.jcobridge.*;
 
 public final class PredicateImpl extends JCListener implements Predicate {
     public PredicateImpl(String key) throws JCNativeException {

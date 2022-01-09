@@ -116,77 +116,96 @@ namespace MASES.KafkaBridgeTest
 
         static void produceSomething()
         {
-            Properties props = new Properties();
-            props.Put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
-            props.Put(ProducerConfig.ACKS_CONFIG, "all");
-            props.Put(ProducerConfig.RETRIES_CONFIG, 0);
-            props.Put(ProducerConfig.LINGER_MS_CONFIG, 1);
-            props.Put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
-            props.Put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
-
-            using (KafkaProducer producer = new KafkaProducer(props))
+            try
             {
-                int i = 0;
-                while (!resetEvent.WaitOne(0))
+                Properties props = new Properties();
+                props.Put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
+                props.Put(ProducerConfig.ACKS_CONFIG, "all");
+                props.Put(ProducerConfig.RETRIES_CONFIG, 0);
+                props.Put(ProducerConfig.LINGER_MS_CONFIG, 1);
+                props.Put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
+                props.Put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
+
+                using (KafkaProducer producer = new KafkaProducer(props))
                 {
-                    var record = new ProducerRecord<string, string>(topicToUse, i.ToString(), i.ToString());
-                    var result = producer.Send(record);
-                    Console.WriteLine($"Producing: {record} with result: {result.Get()}");
-                    producer.Flush();
-                    i++;
+                    int i = 0;
+                    using (var callback = new Callback((o1, o2) =>
+                    {
+                        if (o2 != null) Console.WriteLine(o2.ToString());
+                        else Console.WriteLine($"Produced on topic {o1.Topic} at offset {o1.Offset}");
+                    }))
+                    {
+                        while (!resetEvent.WaitOne(0))
+                        {
+                            var record = new ProducerRecord<string, string>(topicToUse, i.ToString(), i.ToString());
+                            var result = producer.Send(record, callback);
+                            Console.WriteLine($"Producing: {record} with result: {result.Get()}");
+                            producer.Flush();
+                            i++;
+                        }
+                    }
                 }
             }
+            catch (Exception ex) { Console.WriteLine("Producer ended with error: {0}", ex.Message); }
         }
 
         static void consumeSomething()
         {
-            Properties props = new Properties();
-            props.Put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
-            props.Put(ConsumerConfig.GROUP_ID_CONFIG, "test");
-            props.Put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "true");
-            props.Put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG, "1000");
-            props.Put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
-            props.Put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
-
-            using (var consumer = new KafkaConsumer<string, string>(props))
+            try
             {
-                consumer.Subscribe(Collections.singleton(topicToUse));
-                while (!resetEvent.WaitOne(0))
+                Properties props = new Properties();
+                props.Put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
+                props.Put(ConsumerConfig.GROUP_ID_CONFIG, "test");
+                props.Put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "true");
+                props.Put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG, "1000");
+                props.Put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
+                props.Put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
+
+                using (var consumer = new KafkaConsumer<string, string>(props))
                 {
-                    var records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);
-                    foreach (var item in records)
+                    consumer.Subscribe(Collections.singleton(topicToUse));
+                    while (!resetEvent.WaitOne(0))
                     {
-                        Console.WriteLine($"Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}");
+                        var records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);
+                        foreach (var item in records)
+                        {
+                            Console.WriteLine($"Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}");
+                        }
                     }
                 }
             }
+            catch (Exception ex) { Console.WriteLine("Consumer ended with error: {0}", ex.Message); }
         }
 
         static void streamSomething()
         {
-            var props = new Properties();
-
-            props.Put(StreamsConfig.APPLICATION_ID_CONFIG, "streams-pipe");
-            props.Put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
-            props.Put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String.getClass());
-            props.Put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String.getClass());
-
-            // setting offset reset to earliest so that we can re-run the demo code with the same pre-loaded data
-            props.Put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
-
-            var builder = new StreamsBuilder();
-
-            builder.Stream<string, string>(topicToUse).To("streams-pipe-output");
-
-            using (var streams = new KafkaStreams(builder.Build(), props))
+            try
             {
-                streams.Start();
-                while (!resetEvent.WaitOne(1000))
+                var props = new Properties();
+
+                props.Put(StreamsConfig.APPLICATION_ID_CONFIG, "streams-pipe");
+                props.Put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
+                props.Put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String.getClass());
+                props.Put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String.getClass());
+
+                // setting offset reset to earliest so that we can re-run the demo code with the same pre-loaded data
+                props.Put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
+
+                var builder = new StreamsBuilder();
+
+                builder.Stream<string, string>(topicToUse).To("streams-pipe-output");
+
+                using (var streams = new KafkaStreams(builder.Build(), props))
                 {
-                    var state = streams.State;
-                    Console.WriteLine($"KafkaStreams state: {state}");
+                    streams.Start();
+                    while (!resetEvent.WaitOne(1000))
+                    {
+                        var state = streams.State;
+                        Console.WriteLine($"KafkaStreams state: {state}");
+                    }
                 }
             }
+            catch (Exception ex) { Console.WriteLine("Streams ended with error: {0}", ex.Message); }
         }
     }
 }

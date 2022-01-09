@@ -19,6 +19,11 @@
 using MASES.CLIParser;
 using MASES.JCOBridge.C2JBridge;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
+using MASES.KafkaBridge.Clients.Consumer;
+using MASES.KafkaBridge.Clients.Producer;
+using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Common.Errors;
+using MASES.KafkaBridge.Java.Util.Concurrent;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -86,6 +91,159 @@ namespace MASES.KafkaBridge
             GlobalScalaVersion = _parsedArgs.Get<string>(CLIParam.ScalaVersion);
 
             new KafkaBridgeCore();
+
+            #region Java Exceptions
+
+            JCOBridge.C2JBridge.JCOBridge.RegisterException<ExecutionException>();
+
+            #endregion
+
+            #region Base Exceptions
+
+            JCOBridge.C2JBridge.JCOBridge.RegisterException<KafkaException>();
+
+            #endregion
+
+            #region Common Exceptions
+
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(ApiException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(AuthenticationException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(AuthorizationException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(BrokerIdNotRegisteredException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(BrokerNotAvailableException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(ClusterAuthorizationException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(ConcurrentTransactionsException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(ControllerMovedException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(CoordinatorLoadInProgressException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(CoordinatorNotAvailableException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(CorruptRecordException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(DelegationTokenAuthorizationException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(DelegationTokenDisabledException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(DelegationTokenExpiredException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(DelegationTokenNotFoundException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(DelegationTokenOwnerMismatchException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(DisconnectException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(DuplicateBrokerRegistrationException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(DuplicateResourceException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(DuplicateSequenceException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(ElectionNotNeededException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(EligibleLeadersNotAvailableException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(FeatureUpdateFailedException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(FencedInstanceIdException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(FencedLeaderEpochException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(FetchSessionIdNotFoundException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(GroupAuthorizationException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(GroupIdNotFoundException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(GroupMaxSizeReachedException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(GroupNotEmptyException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(GroupSubscribedToTopicException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(IllegalGenerationException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(IllegalSaslStateException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InconsistentClusterIdException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InconsistentGroupProtocolException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InconsistentTopicIdException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InconsistentVoterSetException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InterruptException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidCommitOffsetSizeException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidConfigurationException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidFetchSessionEpochException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidFetchSizeException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidGroupIdException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidMetadataException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(Clients.Consumer.InvalidOffsetException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidPartitionsException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidPidMappingException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidPrincipalTypeException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidProducerEpochException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidReplicaAssignmentException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidReplicationFactorException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidRequestException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidRequiredAcksException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidSessionTimeoutException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidTimestampException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidTopicException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidTxnStateException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidTxnTimeoutException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidUpdateVersionException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(KafkaStorageException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(LeaderNotAvailableException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(ListenerNotFoundException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(LogDirNotFoundException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(MemberIdRequiredException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(NetworkException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(NoReassignmentInProgressException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(NotControllerException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(NotCoordinatorException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(NotEnoughReplicasAfterAppendException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(NotEnoughReplicasException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(NotLeaderForPartitionException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(NotLeaderOrFollowerException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(OffsetMetadataTooLarge));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(OffsetNotAvailableException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(Common.Errors.OffsetOutOfRangeException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(OperationNotAttemptedException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(OutOfOrderSequenceException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(PolicyViolationException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(PositionOutOfRangeException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(PreferredLeaderNotAvailableException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(PrincipalDeserializationException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(ProducerFencedException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(ReassignmentInProgressException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(RebalanceInProgressException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(RecordBatchTooLargeException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(RecordDeserializationException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(RecordTooLargeException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(ReplicaNotAvailableException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(ResourceNotFoundException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(RetriableException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(SaslAuthenticationException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(SecurityDisabledException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(SerializationException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(SnapshotNotFoundException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(SslAuthenticationException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(StaleBrokerEpochException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(ThrottlingQuotaExceededException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(Common.Errors.TimeoutException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(TopicAuthorizationException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(TopicDeletionDisabledException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(TopicExistsException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(TransactionAbortedException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(TransactionalIdAuthorizationException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(TransactionalIdNotFoundException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(TransactionCoordinatorFencedException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(UnacceptableCredentialException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(UnknownLeaderEpochException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(UnknownMemberIdException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(UnknownProducerIdException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(UnknownServerException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(UnknownTopicIdException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(UnknownTopicOrPartitionException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(UnstableOffsetCommitException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(UnsupportedByAuthenticationException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(UnsupportedCompressionTypeException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(UnsupportedForMessageFormatException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(UnsupportedSaslMechanismException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(UnsupportedVersionException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(WakeupException));
+
+            #endregion
+
+            #region Consumer Exceptions
+
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(CommitFailedException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(Clients.Consumer.InvalidOffsetException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(LogTruncationException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(NoOffsetForPartitionException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(Clients.Consumer.OffsetOutOfRangeException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(RetriableCommitFailedException));
+
+            #endregion
+
+            #region Producer Exceptions
+
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(BufferExhaustedException));
+
+            #endregion
         }
 
         KafkaBridgeCore()

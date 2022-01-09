@@ -16,6 +16,8 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Clients.Consumer;
+using MASES.KafkaBridge.Common;
 using MASES.KafkaBridge.Java.Util;
 using MASES.KafkaBridge.Java.Util.Concurrent;
 
@@ -46,6 +48,16 @@ namespace MASES.KafkaBridge.Clients.Producer
             IExecute("beginTransaction");
         }
 
+        public void SendOffsetsToTransaction(Map<TopicPartition, OffsetAndMetadata> offsets, string consumerGroupId)
+        {
+            IExecute("sendOffsetsToTransaction", offsets.Instance, consumerGroupId);
+        }
+
+        public void SendOffsetsToTransaction(Map<TopicPartition, OffsetAndMetadata> offsets, ConsumerGroupMetadata groupMetadata)
+        {
+            IExecute("sendOffsetsToTransaction", offsets.Instance, groupMetadata.Instance);
+        }
+
         public void CommitTransaction()
         {
             IExecute("commitTransaction");
@@ -61,14 +73,29 @@ namespace MASES.KafkaBridge.Clients.Producer
             return New<Future<RecordMetadata>>("send", record.Instance);
         }
 
+        public Future<RecordMetadata> Send(ProducerRecord record, Callback callback)
+        {
+            return New<Future<RecordMetadata>>("send", record.Instance, callback.Listener);
+        }
+
         public Future<RecordMetadata> Send<K, V>(ProducerRecord<K, V> record)
         {
             return New<Future<RecordMetadata>>("send", record.Instance);
         }
 
+        public Future<RecordMetadata> Send<K, V>(ProducerRecord<K, V> record, Callback callback)
+        {
+            return New<Future<RecordMetadata>>("send", record.Instance, callback.Listener);
+        }
+
         public void Flush()
         {
             IExecute("flush");
+        }
+
+        public List<PartitionInfo> PartitionsFor(string topic)
+        {
+            return New<List<PartitionInfo>>("partitionsFor", topic);
         }
     }
 }
