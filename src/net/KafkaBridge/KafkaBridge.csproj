@@ -2,8 +2,8 @@
   <PropertyGroup>
     <AssemblyName>MASES.KafkaBridge</AssemblyName>
     <RootNamespace>MASES.KafkaBridge</RootNamespace>
-    <Title>KafkaBridge - Access natively Apache Kafka from any .NET application</Title>
-    <Description>KafkaBridge - Access natively Apache Kafka from any .NET application</Description>
+    <Title>KafkaBridge - the Apache Kafka .NET implementation</Title>
+    <Description>KafkaBridge - the Apache Kafka .NET implementation</Description>
     <Copyright>Copyright ©  MASES s.r.l. 2022</Copyright>
     <Owners>MASES s.r.l.</Owners>
     <Authors>MASES s.r.l.</Authors>
