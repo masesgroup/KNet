@@ -35,7 +35,7 @@ namespace MASES.KafkaBridge.Clients.Producer
         /// <summary>
         /// The <see cref="Action{RecordMetadata, JVMBridgeException}"/> to be executed
         /// </summary>
-        public virtual Action<RecordMetadata, JVMBridgeException> Completion { get { return executionFunction; } }
+        public virtual Action<RecordMetadata, JVMBridgeException> OnOnCompletion { get { return executionFunction; } }
         /// <summary>
         /// Initialize a new instance of <see cref="Callback"/>
         /// </summary>
@@ -51,7 +51,7 @@ namespace MASES.KafkaBridge.Clients.Producer
         void EventHandler(object sender, CLRListenerEventArgs<JVMBridgeEventData<RecordMetadata>> data)
         {
             var exception = data.EventData.ExtraData.Get(0) as IJavaObject;
-            Completion(data.EventData.TypedEventData, JVMBridgeException.New(exception));
+            OnOnCompletion(data.EventData.TypedEventData, JVMBridgeException.New(exception));
         }
         /// <summary>
         /// Executes the Callback action in the CLR
