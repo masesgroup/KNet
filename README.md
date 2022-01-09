@@ -11,7 +11,7 @@ This project adheres to the Contributor [Covenant code of conduct](CODE_OF_CONDU
 This project aims to create a library to direct access, from .NET, all the features available in the [Apache Kafka binary distribution](https://kafka.apache.org/downloads). 
 
 There are many client libraries written to manage communication with Apache Kafka. Conversely, this project use directly the Java packages released from The Apache Foundation giving more than one benefit:
-* all implemented features are availables at no extra implementation costs, see [KafkaBridge usage](src/Documentation/articles/usage.md);
+* all implemented features are availables at no extra implementation costs, see [KafkaBridge usage](src/net/Documentation/articles/usage.md);
 * avoids any third party communication protocol implementation;
 * access all features made available from Apache Kafka: the most important one is Kafka Streams which does not have any C# implementation.
 
@@ -26,16 +26,16 @@ Many benefits comes from the [features of JCOBridge](https://www.jcobridge.com/f
   * No need to learn new APIs: we try to expose the same APIs in C# style;
   * No extra validation cycle on protocol and functionality: bug fix, improvements, new features are immediately available;
   * Documentation is shared;
-* **Dynamic code**: it helps to write a Java/Scala/Kotlin/etc seamless language code directly inside a standard .NET application written in C#/VB.NET: look at this [simple example](https://www.jcobridge.com/net-examples/dotnet-examples/) and [KafkaBridge APIs extensibility](src/Documentation/articles/API_extensibility.md).
+* **Dynamic code**: it helps to write a Java/Scala/Kotlin/etc seamless language code directly inside a standard .NET application written in C#/VB.NET: look at this [simple example](https://www.jcobridge.com/net-examples/dotnet-examples/) and [KafkaBridge APIs extensibility](src/net/Documentation/articles/API_extensibility.md).
 
 ---
 ## Summary
 
-* [Roadmap](src/Documentation/articles/roadmap.md)
-* [Actual state](src/Documentation/articles/actualstate.md)
-* [KafkaBridge usage](src/Documentation/articles/usage.md)
-* [KafkaBridge APIs extensibility](src/Documentation/articles/API_extensibility.md)
-* [KafkaBridgeCLI usage](src/Documentation/articles/usageCLI.md)
+* [Roadmap](src/net/Documentation/articles/roadmap.md)
+* [Actual state](src/net/Documentation/articles/actualstate.md)
+* [KafkaBridge usage](src/net/Documentation/articles/usage.md)
+* [KafkaBridge APIs extensibility](src/net/Documentation/articles/API_extensibility.md)
+* [KafkaBridgeCLI usage](src/net/Documentation/articles/usageCLI.md)
 
 ---
 
