@@ -16,6 +16,8 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Clients.Consumer;
+using MASES.KafkaBridge.Common;
 using MASES.KafkaBridge.Java.Util;
 using MASES.KafkaBridge.Java.Util.Concurrent;
 
@@ -44,6 +46,16 @@ namespace MASES.KafkaBridge.Clients.Producer
         public void BeginTransaction()
         {
             IExecute("beginTransaction");
+        }
+
+        public void SendOffsetsToTransaction(Map<TopicPartition, OffsetAndMetadata> offsets, string consumerGroupId)
+        {
+            IExecute("sendOffsetsToTransaction", offsets.Instance, consumerGroupId);
+        }
+
+        public void SendOffsetsToTransaction(Map<TopicPartition, OffsetAndMetadata> offsets, ConsumerGroupMetadata groupMetadata)
+        {
+            IExecute("sendOffsetsToTransaction", offsets.Instance, groupMetadata.Instance);
         }
 
         public void CommitTransaction()
@@ -79,6 +91,11 @@ namespace MASES.KafkaBridge.Clients.Producer
         public void Flush()
         {
             IExecute("flush");
+        }
+
+        public List<PartitionInfo> PartitionsFor(string topic)
+        {
+            return New<List<PartitionInfo>>("partitionsFor", topic);
         }
     }
 }
