@@ -20,6 +20,10 @@ KafkaBridgeCLI accepts the following command-line switch:
 		* ReassignPartitionsCommand
 		* TopicCommand
 		* ZkSecurityMigrator
+	* Server:
+		* KafkaStart
+		* ZooKeeperShell
+		* ZooKeeperStart
 	* Shell:
 		* MetadataShell
 	* Tools:
