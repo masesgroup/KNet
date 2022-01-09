@@ -65,10 +65,10 @@ jobs:
 
     - if: matrix.language == 'java' 
       run: |
-       make bootstrap
-       make release
        dotnet build --no-incremental --configuration Release --framework net5.0 /p:Platform="Any CPU" src\net\KafkaBridge.sln
        mvn "install:install-file" "-DgroupId=JCOBridge" "-DartifactId=JCOBridge" "-Dversion=2.4.5" "-Dpackaging=jar" "-Dfile=./bin/net5.0/JCOBridge.jar"
+       make bootstrap
+       make release
        mvn --file ./src/java/kafkabridge/pom.xml --no-transfer-progress package
 
     - name: Perform CodeQL Analysis
