@@ -76,6 +76,10 @@ jobs:
     # ✏️ If the Autobuild fails above, remove it and uncomment the following three lines
     #    and modify them (or add more) to build your code if your project
     #    uses a compiled language
+    
+      #run: |
+      # make bootstrap
+      # make release
 
     - name: Maven preparation (step 1)
       if: matrix.language == 'java' 
@@ -86,10 +90,7 @@ jobs:
       run: mvn "install:install-file" "-DgroupId=JCOBridge" "-DartifactId=JCOBridge" "-Dversion=2.4.5" "-Dpackaging=jar" "-Dfile=./bin/net5.0/JCOBridge.jar"
 
     - if: matrix.language == 'java' 
-      run: |
-       make bootstrap
-       make release
-       mvn --file ./src/java/kafkabridge/pom.xml --no-transfer-progress package
+      run: mvn --file ./src/java/kafkabridge/pom.xml --no-transfer-progress package
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
