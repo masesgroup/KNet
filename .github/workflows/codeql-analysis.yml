@@ -79,7 +79,7 @@ jobs:
 
     - if: matrix.language == 'java' 
       run: |
-       dotnet build --no-incremental --configuration Release --framework net5.0 /p:Platform="Any CPU" src\net\KafkaBridge.sln
+       dotnet build --no-incremental --configuration Release --framework net5.0 /p:Platform="Any CPU" ./src/net/KafkaBridge.sln
        mvn "install:install-file" "-DgroupId=JCOBridge" "-DartifactId=JCOBridge" "-Dversion=2.4.5" "-Dpackaging=jar" "-Dfile=./bin/net5.0/JCOBridge.jar"
        make bootstrap
        make release
