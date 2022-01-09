@@ -50,6 +50,20 @@ jobs:
         # Prefix the list here with "+" to use these queries and those in the config file.
         # queries: ./path/to/local/query, your-org/your-repo/queries@main
 
+    # Install .NET SDKs
+    - name: Setup .NET Core 3.1
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.x
+    - name: Setup .NET 5.0
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+    - name: Setup .NET 6.0
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 6.0.x
+
     # Autobuild attempts to build any compiled languages  (C/C++, C#, or Java).
     # If this step fails, then you should remove it and run the build manually (see below)
     - name: Autobuild
@@ -62,9 +76,14 @@ jobs:
     #    and modify them (or add more) to build your code if your project
     #    uses a compiled language
 
-    #- run: |
-    #   make bootstrap
-    #   make release
+    - if: matrix.language == 'java' 
+      run: |
+       make bootstrap
+       make release
+       dotnet build --no-incremental --configuration Release --framework net5.0 /p:Platform="Any CPU" src\net\KafkaBridge.sln
+       mvn install:install-file -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.4.3 -Dpackaging=jar -Dfile=./bin/net5.0/JCOBridge.jar
+       mvn --file ./src/java/kafkabridge/pom.xml --no-transfer-progress package
+       
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
