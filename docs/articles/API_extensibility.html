@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>KafkaBridge: APIs extendibility | Kafka Bridge website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="KafkaBridge: APIs extendibility | Kafka Bridge website ">
+    <meta name="generator" content="docfx 2.58.9.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="kafkabridge-apis-extendibility">KafkaBridge: APIs extendibility</h1>
+
+<p>What to do if an API was not yet implemented? The simplest answer is: help us to make this product reacher :-)
+Anyway there is another answer which is not available with other products: Dynamic code and programmatically API access.</p>
+<p>With <strong>JCOBridge</strong> a developer can use some properties to manage objects in the JVM.
+Each KafkaBridge class implemented contains some methods and two properties: a direct and a dynamic accessor able to analyze the JVM class and executes the code.
+So it is not necessary at all to have the methods be ready to be used.</p>
+<h2 id="when-a-method-is-not-available">When a method is not available</h2>
+<p>Let's go with an example of a ready made API available in <code>KafkaProducer</code>:</p>
+<pre><code class="lang-C#">public void BeginTransaction()
+{
+	IExecute(&quot;beginTransaction&quot;);
+}
+</code></pre>
+<p>This is a void method, using <strong>IExecute</strong> the user of the library can invoke the <code>BeginTransaction</code> method on the class. Anyway the developer can invoke the internal method directly from the instance of the object:</p>
+<pre><code class="lang-C#">KafkaProducer producer = new KafkaProducer(...);
+
+producer.IExecute(&quot;beginTransaction&quot;);
+</code></pre>
+<p><code>beginTransaction</code> can be replaced with any method (with or without parameters) of the class (<code>KafkaProducer</code> was only an example).</p>
+<h2 id="when-a-class-is-not-available">When a class is not available</h2>
+<p>In a more compex scenario the method can return back objects. We start again from a ready made API:</p>
+<pre><code class="lang-C#">public Future&lt;RecordMetadata&gt; Send(ProducerRecord record)
+{
+	return New&lt;Future&lt;RecordMetadata&gt;&gt;(&quot;send&quot;, record.Instance);
+}
+</code></pre>
+<p>in this case the method accept in input a ready made class <code>ProducerRecord</code> and returns a ready made <code>Future&lt;RecordMetadata&gt;</code>. From a user point of view the C# and Java method behave the same.</p>
+<h3 id="return-class-is-not-available">Return class is not available</h3>
+<p>Now consider that the returned data type (<code>Future&lt;RecordMetadata&gt;</code>) is not yet implemented; a solution on this problem is to use directly the <code>send</code> Java method like in the following code snippet does:</p>
+<pre><code class="lang-C#">KafkaProducer producer = new KafkaProducer(...);
+ProducerRecord record = new ProducerRecord(...);
+var dynFuture = producer.IExecute(&quot;send&quot;, record.Instance); // the returned object is a dynamic object reference of the Future object in Java
+var dynRecordMetadata = dynFuture.get();  // the returned object is a dynamic object reference of the RecordMetadata object in Java
+
+// then the developer can access any method of the RecordMetadata using dynRecordMetadata
+
+bool hasOffset = dynRecordMetadata.hasOffset();
+
+</code></pre>
+<p>The example above consider the classes <code>Future</code> and <code>RecordMetadata</code> not implemented yet. Anyway them exists in JVM.</p>
+<h3 id="input-and-return-class-are-not-available">Input and Return class are not available</h3>
+<p>If even the input class is not available the solution is like the following:</p>
+<pre><code class="lang-C#">KafkaProducer producer = new KafkaProducer(...);
+var dynProducerRecord = producer.JVM.New(&quot;ProducerRecord&quot;, ....); // the returned object is a dynamic object reference of the ProducerRecord object in Java
+var dynFuture = producer.IExecute(&quot;send&quot;, dynProducerRecord); // the returned object is a dynamic object reference of the Future object in Java
+var dynRecordMetadata = dynFuture.get();  // the returned object is a dynamic object reference of the RecordMetadata object in Java
+
+// then the developer can access any method of the RecordMetadata using dynRecordMetadata
+
+bool hasOffset = dynRecordMetadata.hasOffset();
+
+</code></pre>
+<p>The example above consider that even the class <code>ProducerRecord</code> is not implemented yet. Anyway it exists in JVM.
+Each object, like <code>KafkaProducer</code> instance, exposes (hidden in the editor) two properties:</p>
+<ul>
+<li><strong>JVM</strong> which access the JVM using methods;</li>
+<li><strong>DynJVM</strong> which access the JVM using the Dynamic engine.</li>
+</ul>
+<p>Using the properties it is possible to instruct the JVM about the action to be done.</p>
+<h3 id="anything-is-not-available">Anything is not available</h3>
+<p>If no classes are available the solution comes from the global accessor available in JCOBridge and the code snippet is like the following one:</p>
+<pre><code class="lang-C#">var dynKafkaProducer = JCOBridge.Global.JVM.New(&quot;KafkaProducer&quot;, ...); // the returned object is a dynamic object reference of the KafkaProducer object in Java
+var dynProducerRecord = JCOBridge.Global.JVM.New(&quot;ProducerRecord&quot;, ....); // the returned object is a dynamic object reference of the ProducerRecord object in Java
+var dynFuture = dynKafkaProducer.send(dynProducerRecord); // the returned object is a dynamic object reference of the Future object in Java
+var dynRecordMetadata = dynFuture.get();  // the returned object is a dynamic object reference of the RecordMetadata object in Java
+
+// then the developer can access any method of the RecordMetadata using dynRecordMetadata
+
+bool hasOffset = dynRecordMetadata.hasOffset();
+
+</code></pre>
+<p>The example above consider that even the class <code>KafkaProducer</code> is not implemented yet. Anyway it exists in JVM.
+In previous chapter the tutorial reports about two hidden properties in each object; the properties on each class are just an useful reference to the real one available in <code>JCOBridge.Global</code>:</p>
+<ul>
+<li><strong>JVM</strong> which access the JVM using methods;</li>
+<li><strong>DynJVM</strong> which access the JVM using the Dynamic engine.</li>
+</ul>
+<p>Using the properties it is possible to instruct the JVM about the action to be done.</p>
+<h3 id="call-a-method-dynamically">Call a method dynamically</h3>
+<p>Look at the simple example below:</p>
+<pre><code class="lang-C#">
+var consumer = new KafkaConsumer&lt;string, string&gt;(props);
+var topPart = consumer.JVM.New(&quot;TopicPartition&quot;, &quot;myTopic&quot;, 0); // the returned object is a dynamic object reference of the TopicPartition object in Java
+var result = consumer.DynInstance.committed(topPart); // this line invokes dynamically the committed on the instance of the KafkaConsumer
+</code></pre>
+<p>The example above consider the class <code>TopicPartition</code> not implemented yet. Anyway it exists in JVM.
+As exposed before, each object, like <code>KafkaConsumer</code> instance, exposes (hidden in the editor) two properties.</p>
+<p>Explaining the code:</p>
+<ul>
+<li>The first line creates a JVM object in C# style: <code>KafkaConsumer</code> lives in the CLR and has its counterpart in the JVM.</li>
+<li>The second line requests to the JVM to allocate a <code>TopicPartition</code> object with two parameters.</li>
+<li>This resulting object (<code>topPart</code>) is used in the third line as parameter of the <code>committed</code> method invocation.</li>
+<li>The <code>result</code> is a <strong>dynamic</strong> object that can be used to extract data or invokes other methods.</li>
+</ul>
+<h2 id="api-exendibility-limitation">API exendibility limitation</h2>
+<p>Starting from the assumption that JCOBridge does not make any code injection, or compilation, within JVM side, the actual limitation is related to something missing within the JVM.
+In the <a href="jvm_callbacks.html">JVM callbacks</a> article there is an explanation of how works callbacks.
+<strong>The callback feature needs a concrete class in the JVM and if it does not exist there is no way to use it from KafkaBridge.</strong></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/Documentation/articles/API_extensibility.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2022 MASES s.r.l..<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

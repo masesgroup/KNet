@@ -70,7 +70,139 @@
 <h1 id="kafkabridge-usage">KafkaBridge usage</h1>
 
 <p>To use KafkaBridge classes the developer can write code in .NET using the same classes available in the official Apache Kafka package.
-A basic consumer can be like the following one:</p>
+If classes or methods are not available yet it is possible to use the approach synthetized in <a href="API_extensibility.html">What to do if an API was not yet implemented</a></p>
+<h2 id="producer-example">Producer example</h2>
+<p>Below the reader can found two different version of producer examples.</p>
+<h3 id="simple-producer">Simple producer</h3>
+<p>A basic producer can be like the following one:</p>
+<pre><code class="lang-C#">using MASES.KafkaBridge;
+using MASES.KafkaBridge.Clients.Producer;
+using MASES.KafkaBridge.Java.Util;
+using System;
+
+namespace MASES.KafkaBridgeTemplate.KafkaBridgeProducer
+{
+    class Program
+    {
+        const string theServer = &quot;localhost:9092&quot;;
+        const string theTopic = &quot;myTopic&quot;;
+
+        static string serverToUse = theServer;
+        static string topicToUse = theTopic;
+
+        static void Main(string[] args)
+        {
+            var appArgs = KafkaBridgeCore.ApplicationArgs;
+
+            if (appArgs.Length != 0)
+            {
+                serverToUse = args[0];
+            }
+
+			Properties props = new Properties();
+			props.Put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
+			props.Put(ProducerConfig.ACKS_CONFIG, &quot;all&quot;);
+			props.Put(ProducerConfig.RETRIES_CONFIG, 0);
+			props.Put(ProducerConfig.LINGER_MS_CONFIG, 1);
+			props.Put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, &quot;org.apache.kafka.common.serialization.StringSerializer&quot;);
+			props.Put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, &quot;org.apache.kafka.common.serialization.StringSerializer&quot;);
+
+			using (KafkaProducer producer = new KafkaProducer(props))
+			{
+				int i = 0;
+				while (!resetEvent.WaitOne(0))
+				{
+					var record = new ProducerRecord&lt;string, string&gt;(topicToUse, i.ToString(), i.ToString());
+					var result = producer.Send(record);
+					Console.WriteLine($&quot;Producing: {record} with result: {result.Get()}&quot;);
+					producer.Flush();
+					i++;
+				}
+			}
+        }
+    }
+}
+</code></pre>
+<p>The example above can be found in the <a href="https://www.nuget.org/packages/MASES.KafkaBridge.Templates/">templates package</a>. Its behavior is:</p>
+<ul>
+<li>during initialization prepares the properties,</li>
+<li>create a producer using the properties</li>
+<li>create ProducerRecord and send it</li>
+<li>print out the produced data and the resulting RecordMetadata</li>
+</ul>
+<h3 id="producer-with-callback">Producer with Callback</h3>
+<p>A producer with Callback can be like the following one. In this example the reader can highlight a slightly difference from the corresponding Java code.
+Surf <a href="">JVM callbacks</a> to go into detail in the callback management from JVM.</p>
+<pre><code class="lang-C#">using MASES.KafkaBridge;
+using MASES.KafkaBridge.Clients.Producer;
+using MASES.KafkaBridge.Java.Util;
+using System;
+
+namespace MASES.KafkaBridgeTemplate.KafkaBridgeProducer
+{
+    class Program
+    {
+        const string theServer = &quot;localhost:9092&quot;;
+        const string theTopic = &quot;myTopic&quot;;
+
+        static string serverToUse = theServer;
+        static string topicToUse = theTopic;
+
+        static void Main(string[] args)
+        {
+            var appArgs = KafkaBridgeCore.ApplicationArgs;
+
+            if (appArgs.Length != 0)
+            {
+                serverToUse = args[0];
+            }
+
+			Properties props = new Properties();
+			props.Put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
+			props.Put(ProducerConfig.ACKS_CONFIG, &quot;all&quot;);
+			props.Put(ProducerConfig.RETRIES_CONFIG, 0);
+			props.Put(ProducerConfig.LINGER_MS_CONFIG, 1);
+			props.Put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, &quot;org.apache.kafka.common.serialization.StringSerializer&quot;);
+			props.Put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, &quot;org.apache.kafka.common.serialization.StringSerializer&quot;);
+
+			using (KafkaProducer producer = new KafkaProducer(props))
+			{
+				int i = 0;
+				using (var callback = new Callback((o1, o2) =&gt;
+				{
+					if (o2 != null) Console.WriteLine(o2.ToString());
+					else Console.WriteLine($&quot;Produced on topic {o1.Topic} at offset {o1.Offset}&quot;);
+				}))
+				{
+					while (!resetEvent.WaitOne(0))
+					{
+						var record = new ProducerRecord&lt;string, string&gt;(topicToUse, i.ToString(), i.ToString());
+						var result = producer.Send(record, callback);
+						Console.WriteLine($&quot;Producing: {record} with result: {result.Get()}&quot;);
+						producer.Flush();
+						i++;
+					}
+				}
+			}
+        }
+    }
+}
+</code></pre>
+<p>The example above can be found in the <a href="https://www.nuget.org/packages/MASES.KafkaBridge.Templates/">templates package</a>. Its behavior is:</p>
+<ul>
+<li>during initialization prepares the properties</li>
+<li>create a producer using the properties</li>
+<li>create ProducerRecord and send it using the API Send with the attached Callback</li>
+<li>when the operation completed the Callback is called:
+<ul>
+<li>if an Exception was raised it will be printed out</li>
+<li>otherwise the RecordMetadata is printed out</li>
+</ul>
+</li>
+<li>print out the produced data and the resulting RecordMetadata</li>
+</ul>
+<h2 id="consumer-example">Consumer example</h2>
+<p>A basic consumer can be like the following one:</p>
 <pre><code class="lang-C#">using MASES.KafkaBridge;
 using MASES.KafkaBridge.Clients.Consumer;
 using MASES.KafkaBridge.Java.Util;

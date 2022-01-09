@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>KafkaBridge: JVM callbacks | Kafka Bridge website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="KafkaBridge: JVM callbacks | Kafka Bridge website ">
+    <meta name="generator" content="docfx 2.58.9.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="kafkabridge-jvm-callbacks">KafkaBridge: JVM callbacks</h1>
+
+<p>One of the features of <a href="https://www.jcobridge.com/">JCOBridge</a>, used in KafkaBridge, is the callback management from JVM.
+Many applications use the callback mechanism to be informed about events which happens during execution.
+Apache Kakfa exposes many API which have callbacks in the parameters.
+The Java code of a callback can be written with lambda expressions, but KafkaBridge cannot, it needs an object.</p>
+<h2 id="kafkabridge-callback-internals">KafkaBridge Callback internals</h2>
+<p>KafkaBridge is based on <a href="https://www.jcobridge.com/">JCOBridge</a>. JCOBridge as per its name is a bridge between the CLR (CoreCLR) and the JVM.
+Events, generally are expressed as interfaces in Java, and a lambda expression is translated into an object at compile time. Otherwise the developer can implement a Java class which <strong>implements</strong> the interface: with JCOBridge the developer needs to follow a seamless approach.
+In KafkaBridge some callbacks are ready made. In this tutorial the <strong>Callback</strong> interface (org.apache.kafka.clients.producer.Callback) will be taken as an example.
+The concrete class implementing the interface is the following one:</p>
+<pre><code class="lang-java">public final class CallbackImpl extends JCListener implements Callback {
+    public CallbackImpl(String key) throws JCNativeException {
+        super(key);
+    }
+
+    @Override
+    public void onCompletion(org.apache.kafka.clients.producer.RecordMetadata metadata, Exception exception) {
+        raiseEvent(&quot;onCompletion&quot;, metadata, exception);
+    }
+}
+</code></pre>
+<p>The structure follows the guidelines of JCOBridge:</p>
+<ul>
+<li>It <strong>must</strong> <code>extends</code> the base class <code>JCListener</code> (or <code>implements</code> the interface <code>IJCListener</code>): this is a constraint of JCOBridge; <code>JCListener</code> has many ready made methods; if the callback is not based on an interface the developer can <code>implements</code> the <code>IJCListener</code>;</li>
+<li>The concrete class <strong>must</strong> have at least a constructor accepting a String;</li>
+<li>Within the implementation of the interface method (in this case the method <code>onCompletion</code> of the <code>Callback</code> interface) the method <code>raiseEvent</code> informs the CLR that a method was raised using the specific key (<strong>onCompletion</strong> in this case) along with all associated objects:
+<ul>
+<li>If the interface has many methods each one must have its own <code>raiseEvent</code> call;</li>
+<li>The key used from raiseEvent is not mandatory to be equal to the name of the calling method, it is only a convention for the mapping: this will be more clear looking at the C# code.</li>
+</ul>
+</li>
+</ul>
+<p>Now there is a concrete class within the JVM space.
+Going on to the CLR side a possible concrete class in C# is as the following one:</p>
+<pre><code class="lang-c#">public class Callback : CLRListener
+{
+	public sealed override string JniClass =&gt; &quot;org.mases.kafkabridge.clients.producer.CallbackImpl&quot;;
+
+	readonly Action&lt;RecordMetadata, JVMBridgeException&gt; executionFunction = null;
+	public virtual Action&lt;RecordMetadata, JVMBridgeException&gt; Execute { get { return executionFunction; } }
+	public Callback(Action&lt;RecordMetadata, JVMBridgeException&gt; func = null)
+	{
+		if (func != null) executionFunction = func;
+		else executionFunction = OnCompletion;
+
+		AddEventHandler(&quot;onCompletion&quot;, new EventHandler&lt;CLRListenerEventArgs&lt;JVMBridgeEventData&lt;RecordMetadata&gt;&gt;&gt;(EventHandler));
+	}
+
+	void EventHandler(object sender, CLRListenerEventArgs&lt;JVMBridgeEventData&lt;RecordMetadata&gt;&gt; data)
+	{
+		var exception = data.EventData.ExtraData.Get(0) as IJavaObject;
+		Execute(data.EventData.TypedEventData, JVMBridgeException.New(exception));
+	}
+	public virtual void OnCompletion(RecordMetadata metadata, JVMBridgeException exception) { }
+}
+</code></pre>
+<p>The structure follows the guidelines of JCOBridge:</p>
+<ul>
+<li>It <strong>must</strong> <code>extends</code> the base class <code>CLRListener</code> : this is a constraint of JCOBridge; <code>CLRListener</code> contains all the functionality to handle events from the JVM;</li>
+<li>The <code>JniClass</code> property informs the base class about the concrete class in JVM associated to this event handler;</li>
+<li>Within the constructor the method <code>AddEventHandler</code> registers a .NET <code>EventHandler</code> associated to the method in JVM; look at the key string: <strong>it is the same used from the JVM</strong>;
+<ul>
+<li>The costructor of the code above accept in input an <code>Action</code> which permits to write lambda expression in C#;</li>
+<li>The code above associate a private handler with specific data type:
+<ul>
+<li><code>CLRListenerEventArgs</code> is mandatory and it is used from <code>CLRListener</code>;</li>
+<li><code>JVMBridgeEventData</code> informs the subsystem that the first parameter inherits from a <code>JVMBridgeBase</code> class and must be treated accordingly;</li>
+<li><code>RecordMetadata</code> represents the CLR version of the corresponding <code>RecordMetadata</code> within the JVM;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>On callback invocation (<code>onCompletion</code> in this case) the CLR will invoke <code>EventHandler</code>:
+<ul>
+<li>The first parameter is directly reported using the <code>TypedEventData</code> property;</li>
+<li>The second parameter shall be managed differently in this case because it is an <code>Exception</code>:
+<ul>
+<li>JCOBridge has its own mechanism to translate the exception from the JVM;</li>
+<li>Parameters raised from JVM, beyond the first, are available within <code>ExtraData</code> property;</li>
+<li>The code extracts the first object (the second of the event) and converts it into a generic <code>IJavaObject</code>;</li>
+<li>Invoking <code>JVMBridgeException.New(exception)</code> the subsystem reads the data from the real JVM exception and try to instantiate a valid exception, otherwise returns a generic <code>JVMBridgeException</code>;
+<ul>
+<li><code>JVMBridgeException.New(exception)</code> can return null if the extracted data is not an <code>IJavaObject</code> or it is null within the JVM;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Other pieces of the class are useful in other condition:
+<ul>
+<li>Creating a new class extending <code>Callback</code> class, the method <code>OnCompletion</code> can be overridden;</li>
+<li>Otherwise to the property <code>Execute</code> can be associated to an handler;</li>
+</ul>
+</li>
+</ul>
+<h2 id="kafkabridge-callback-lifecycle">KafkaBridge Callback lifecycle</h2>
+<p>The lifecycle of the callback managed from JCOBridge is slightly different from the standard one.
+A <code>CLRListener</code> to be able to live without to be recovered from the Garbage Collector shall be registered. <code>CLRListener</code> do this automatically within the initialization (this behavior can be avoided with the property <code>AutoInit</code>).
+So at the end of its use it must be disposed to avoid a resource leak. In the <a href="usage.html">Producer with Callback</a> example there is a <strong>using</strong> clause and the class is instantiated only one time.
+A correct approach is like the following:</p>
+<pre><code class="lang-c#">using (var callback = new Callback((o1, o2) =&gt;
+{
+	if (o2 != null) Console.WriteLine(o2.ToString());
+	else Console.WriteLine($&quot;Produced on topic {o1.Topic} at offset {o1.Offset}&quot;);
+}))
+{
+	while (!resetEvent.WaitOne(0))
+	{
+		var record = new ProducerRecord&lt;string, string&gt;(topicToUse, i.ToString(), i.ToString());
+		var result = producer.Send(record, callback);
+		Console.WriteLine($&quot;Producing: {record} with result: {result.Get()}&quot;);
+		producer.Flush();
+		i++;
+	}
+}
+</code></pre>
+<p>while an approach like the following one:</p>
+<pre><code class="lang-c#">var result = producer.Send(record, new Callback((o1, o2) =&gt;
+{
+	if (o2 != null) Console.WriteLine(o2.ToString());
+	else Console.WriteLine($&quot;Produced on topic {o1.Topic} at offset {o1.Offset}&quot;);
+}));
+</code></pre>
+<p>there are two main drawbacks:</p>
+<ul>
+<li>it creates a resource leak because the object cannot be programmatically disposed;</li>
+<li>on each cycle, the engine shall allocate the infrastructure to handle events from the JVM.</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/Documentation/articles/jvm_callbacks.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2022 MASES s.r.l..<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
