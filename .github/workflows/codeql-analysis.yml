@@ -68,9 +68,8 @@ jobs:
        make bootstrap
        make release
        dotnet build --no-incremental --configuration Release --framework net5.0 /p:Platform="Any CPU" src\net\KafkaBridge.sln
-       mvn install:install-file -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.4.3 -Dpackaging=jar -Dfile=./bin/net5.0/JCOBridge.jar
+       mvn "install:install-file" "-DgroupId=JCOBridge" "-DartifactId=JCOBridge" "-Dversion=2.4.5" "-Dpackaging=jar" "-Dfile=./bin/net5.0/JCOBridge.jar"
        mvn --file ./src/java/kafkabridge/pom.xml --no-transfer-progress package
-      shell: bash
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
