@@ -19,6 +19,8 @@
 using MASES.CLIParser;
 using MASES.JCOBridge.C2JBridge;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
+using MASES.KafkaBridge.Clients.Consumer;
+using MASES.KafkaBridge.Clients.Producer;
 using MASES.KafkaBridge.Common;
 using MASES.KafkaBridge.Common.Errors;
 using System;
@@ -88,7 +90,15 @@ namespace MASES.KafkaBridge
             GlobalScalaVersion = _parsedArgs.Get<string>(CLIParam.ScalaVersion);
 
             new KafkaBridgeCore();
+
+            #region Base Exceptions
+
             JCOBridge.C2JBridge.JCOBridge.RegisterException<KafkaException>();
+
+            #endregion
+
+            #region Common Exceptions
+
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(ApiException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(AuthenticationException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(AuthorizationException));
@@ -133,7 +143,7 @@ namespace MASES.KafkaBridge
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidFetchSizeException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidGroupIdException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidMetadataException));
-            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidOffsetException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(Clients.Consumer.InvalidOffsetException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidPartitionsException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidPidMappingException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidPrincipalTypeException));
@@ -163,7 +173,7 @@ namespace MASES.KafkaBridge
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(NotLeaderOrFollowerException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(OffsetMetadataTooLarge));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(OffsetNotAvailableException));
-            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(OffsetOutOfRangeException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(Common.Errors.OffsetOutOfRangeException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(OperationNotAttemptedException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(OutOfOrderSequenceException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(PolicyViolationException));
@@ -208,6 +218,25 @@ namespace MASES.KafkaBridge
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(UnsupportedSaslMechanismException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(UnsupportedVersionException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(WakeupException));
+
+            #endregion
+
+            #region Consumer Exceptions
+
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(CommitFailedException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(Clients.Consumer.InvalidOffsetException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(LogTruncationException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(NoOffsetForPartitionException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(Clients.Consumer.OffsetOutOfRangeException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(RetriableCommitFailedException));
+
+            #endregion
+
+            #region Producer Exceptions
+
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(BufferExhaustedException));
+
+            #endregion
         }
 
         KafkaBridgeCore()
