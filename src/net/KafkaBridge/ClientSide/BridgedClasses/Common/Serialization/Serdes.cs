@@ -21,7 +21,7 @@ namespace MASES.KafkaBridge.Common.Serialization
     public class Serdes : JCOBridge.C2JBridge.JVMBridgeBase<Serdes>
     {
         public override string ClassName => "org.apache.kafka.common.serialization.Serdes";
-
+        /* disabled to be checked
         public static readonly dynamic VoidSerde = DynClazz.VoidSerde;
 
         public static readonly dynamic LongSerde = DynClazz.LongSerde;
@@ -43,7 +43,7 @@ namespace MASES.KafkaBridge.Common.Serialization
         public static readonly dynamic ByteArraySerde = DynClazz.ByteArraySerde;
 
         public static readonly dynamic UUIDSerde = DynClazz.UUIDSerde;
-
+        */
         public static dynamic Long => DynClazz.Long();
 
         public static dynamic Integer => DynClazz.Integer();
