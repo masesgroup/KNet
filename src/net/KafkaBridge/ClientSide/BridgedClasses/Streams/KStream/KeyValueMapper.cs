@@ -36,7 +36,7 @@ namespace MASES.KafkaBridge.Streams.KStream
         /// <summary>
         /// The <see cref="Func{T, U, VR}"/> to be executed
         /// </summary>
-        public virtual Func<T, U, VR> Execute { get { return executionFunction; } }
+        public virtual Func<T, U, VR> OnApply { get { return executionFunction; } }
         /// <summary>
         /// Initialize a new instance of <see cref="KeyValueMapper{T, U, VR}"/>
         /// </summary>
@@ -51,7 +51,7 @@ namespace MASES.KafkaBridge.Streams.KStream
 
         void EventHandler(object sender, CLRListenerEventArgs<CLREventData<T>> data)
         {
-            var retVal = Execute(data.EventData.TypedEventData, data.EventData.To<U>(0));
+            var retVal = OnApply(data.EventData.TypedEventData, data.EventData.To<U>(0));
             data.CLRReturnValue = retVal;
         }
         /// <summary>
@@ -85,7 +85,7 @@ namespace MASES.KafkaBridge.Streams.KStream
 
         void EventHandler(object sender, CLRListenerEventArgs<JVMBridgeEventData<T>> data)
         {
-            var retVal = Execute(data.EventData.TypedEventData, data.EventData.To<U>(0));
+            var retVal = OnApply(data.EventData.TypedEventData, data.EventData.To<U>(0));
             data.CLRReturnValue = retVal;
         }
     }

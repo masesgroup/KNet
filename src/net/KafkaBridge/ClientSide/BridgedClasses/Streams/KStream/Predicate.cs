@@ -36,7 +36,7 @@ namespace MASES.KafkaBridge.Streams.KStream
         /// <summary>
         /// The <see cref="Func{T, U, Boolean}"/> to be executed
         /// </summary>
-        public virtual Func<T, U, bool> Execute { get { return executionFunction; } }
+        public virtual Func<T, U, bool> OnTest { get { return executionFunction; } }
         /// <summary>
         /// Initialize a new instance of <see cref="Predicate{T, U}"/>
         /// </summary>
@@ -51,7 +51,7 @@ namespace MASES.KafkaBridge.Streams.KStream
 
         void EventHandler(object sender, CLRListenerEventArgs<CLREventData<T>> data)
         {
-            var retVal = Execute(data.EventData.TypedEventData, data.EventData.To<U>(0));
+            var retVal = OnTest(data.EventData.TypedEventData, data.EventData.To<U>(0));
             data.CLRReturnValue = retVal;
         }
         /// <summary>
@@ -84,7 +84,7 @@ namespace MASES.KafkaBridge.Streams.KStream
 
         void EventHandler(object sender, CLRListenerEventArgs<JVMBridgeEventData<T>> data)
         {
-            var retVal = Execute(data.EventData.TypedEventData, data.EventData.To<U>(0));
+            var retVal = OnTest(data.EventData.TypedEventData, data.EventData.To<U>(0));
             data.CLRReturnValue = retVal;
         }
     }
