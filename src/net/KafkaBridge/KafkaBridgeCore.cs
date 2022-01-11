@@ -101,6 +101,7 @@ namespace MASES.KafkaBridge
             #region Base Exceptions
 
             JCOBridge.C2JBridge.JCOBridge.RegisterException<KafkaException>();
+            JCOBridge.C2JBridge.JCOBridge.RegisterException<InvalidRecordException>();
 
             #endregion
 

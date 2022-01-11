@@ -18,12 +18,13 @@
 
 using MASES.KafkaBridge.Clients.Consumer;
 using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Common.Serialization;
 using MASES.KafkaBridge.Java.Util;
 using MASES.KafkaBridge.Java.Util.Concurrent;
 
 namespace MASES.KafkaBridge.Clients.Producer
 {
-    public class KafkaProducer : JCOBridge.C2JBridge.JVMBridgeBase<KafkaProducer>
+    public class KafkaProducer<K, V> : JCOBridge.C2JBridge.JVMBridgeBase<KafkaProducer<K, V>>
     {
         public override bool IsCloseable => true;
 
@@ -35,6 +36,11 @@ namespace MASES.KafkaBridge.Clients.Producer
 
         public KafkaProducer(Properties props)
             : base(props)
+        {
+        }
+
+        public KafkaProducer(Properties props, Serializer<K> keySerializer, Serializer<V> valueSerializer)
+            : base(props, keySerializer.Listener, valueSerializer.Listener)
         {
         }
 
@@ -78,12 +84,12 @@ namespace MASES.KafkaBridge.Clients.Producer
             return New<Future<RecordMetadata>>("send", record.Instance, callback.Listener);
         }
 
-        public Future<RecordMetadata> Send<K, V>(ProducerRecord<K, V> record)
+        public Future<RecordMetadata> Send(ProducerRecord<K, V> record)
         {
             return New<Future<RecordMetadata>>("send", record.Instance);
         }
 
-        public Future<RecordMetadata> Send<K, V>(ProducerRecord<K, V> record, Callback callback)
+        public Future<RecordMetadata> Send(ProducerRecord<K, V> record, Callback callback)
         {
             return New<Future<RecordMetadata>>("send", record.Instance, callback.Listener);
         }
@@ -97,5 +103,10 @@ namespace MASES.KafkaBridge.Clients.Producer
         {
             return New<List<PartitionInfo>>("partitionsFor", topic);
         }
+    }
+
+    public class KafkaProducer : KafkaProducer<object, object>
+    {
+        public KafkaProducer(Properties props) : base(props) { }
     }
 }

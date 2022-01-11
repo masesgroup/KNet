@@ -17,6 +17,7 @@
 */
 
 using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Common.Serialization;
 using MASES.KafkaBridge.Java.Time;
 using MASES.KafkaBridge.Java.Util;
 using MASES.KafkaBridge.Java.Util.Regex;
@@ -35,6 +36,11 @@ namespace MASES.KafkaBridge.Clients.Consumer
 
         public KafkaConsumer(Properties props)
             : base(props)
+        {
+        }
+
+        public KafkaConsumer(Properties props, Deserializer<K> keyDeserializer, Deserializer<V> valueDeserializer)
+            : base(props, keyDeserializer.Listener, valueDeserializer.Listener)
         {
         }
 
@@ -239,7 +245,7 @@ namespace MASES.KafkaBridge.Clients.Consumer
             return New<Optional<long>>("currentLag", topicPartition.Instance);
         }
 
-         public ConsumerGroupMetadata GroupMetadata()
+        public ConsumerGroupMetadata GroupMetadata()
         {
             return New<ConsumerGroupMetadata>("groupMetadata");
         }
@@ -257,6 +263,6 @@ namespace MASES.KafkaBridge.Clients.Consumer
 
     public class KafkaConsumer : KafkaConsumer<object, object>
     {
-
+        public KafkaConsumer(Properties props) : base(props) { }
     }
 }
