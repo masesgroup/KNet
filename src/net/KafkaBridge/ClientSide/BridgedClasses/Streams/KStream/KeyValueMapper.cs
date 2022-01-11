@@ -41,12 +41,15 @@ namespace MASES.KafkaBridge.Streams.KStream
         /// Initialize a new instance of <see cref="KeyValueMapper{T, U, VR}"/>
         /// </summary>
         /// <param name="func">The <see cref="Func{T, U, VR}"/> to be executed</param>
-        public KeyValueMapper(Func<T, U, VR> func = null)
+        /// <param name="attachEventHandler">Set to false to disable attach of <see cref="EventHandler"/> and set an own one</param>
+        public KeyValueMapper(Func<T, U, VR> func = null, bool attachEventHandler = true)
         {
             if (func != null) executionFunction = func;
             else executionFunction = Apply;
-
-            AddEventHandler("apply", new EventHandler<CLRListenerEventArgs<CLREventData<T>>>(EventHandler));
+            if (attachEventHandler)
+            {
+                AddEventHandler("apply", new EventHandler<CLRListenerEventArgs<CLREventData<T>>>(EventHandler));
+            }
         }
 
         void EventHandler(object sender, CLRListenerEventArgs<CLREventData<T>> data)
@@ -64,7 +67,7 @@ namespace MASES.KafkaBridge.Streams.KStream
     }
 
     /// <summary>
-    /// Listerner for Kafka KeyValueMapper. Extends <see cref="KeyValueMapper{T, U, VR}"/>
+    /// Listerner for Kafka KeyValueMapper. Extends <see cref="JVMBridgeKeyValueMapper{T, U, VR}"/>
     /// </summary>
     /// <typeparam name="T">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
     /// <typeparam name="U">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
@@ -78,7 +81,7 @@ namespace MASES.KafkaBridge.Streams.KStream
         /// Initialize a new instance of <see cref="JVMBridgeKeyValueMapper{T, U, VR}"/>
         /// </summary>
         /// <param name="func">The <see cref="Func{T, U, VR}"/> to be executed</param>
-        public JVMBridgeKeyValueMapper(Func<T, U, VR> func = null) : base(func)
+        public JVMBridgeKeyValueMapper(Func<T, U, VR> func = null) : base(func, false)
         {
             AddEventHandler("apply", new EventHandler<CLRListenerEventArgs<JVMBridgeEventData<T>>>(EventHandler));
         }
@@ -86,7 +89,7 @@ namespace MASES.KafkaBridge.Streams.KStream
         void EventHandler(object sender, CLRListenerEventArgs<JVMBridgeEventData<T>> data)
         {
             var retVal = OnApply(data.EventData.TypedEventData, data.EventData.To<U>(0));
-            data.CLRReturnValue = retVal;
+            data.CLRReturnValue = retVal?.Instance;
         }
     }
 

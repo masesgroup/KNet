@@ -41,12 +41,16 @@ namespace MASES.KafkaBridge.Streams.KStream
         /// Initialize a new instance of <see cref="Predicate{T, U}"/>
         /// </summary>
         /// <param name="func">The <see cref="Func{T, U, Boolean}"/> to be executed</param>
-        public Predicate(Func<T, U, bool> func = null)
+        /// <param name="attachEventHandler">Set to false to disable attach of <see cref="EventHandler"/> and set an own one</param>
+        public Predicate(Func<T, U, bool> func = null, bool attachEventHandler = true)
         {
             if (func != null) executionFunction = func;
             else executionFunction = Test;
 
-            AddEventHandler("test", new EventHandler<CLRListenerEventArgs<CLREventData<T>>>(EventHandler));
+            if (attachEventHandler)
+            {
+                AddEventHandler("test", new EventHandler<CLRListenerEventArgs<CLREventData<T>>>(EventHandler));
+            }
         }
 
         void EventHandler(object sender, CLRListenerEventArgs<CLREventData<T>> data)
@@ -77,7 +81,7 @@ namespace MASES.KafkaBridge.Streams.KStream
         /// Initialize a new instance of <see cref="JVMBridgePredicate{T, U}"/>
         /// </summary>
         /// <param name="func">The <see cref="Func{T, U, Boolean}"/> to be executed</param>
-        public JVMBridgePredicate(Func<T, U, bool> func = null) : base(func)
+        public JVMBridgePredicate(Func<T, U, bool> func = null) : base(func, false)
         {
             AddEventHandler("test", new EventHandler<CLRListenerEventArgs<JVMBridgeEventData<T>>>(EventHandler));
         }
