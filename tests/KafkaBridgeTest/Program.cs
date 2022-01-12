@@ -141,7 +141,7 @@ namespace MASES.KafkaBridgeTest
                     keySerializer = new Serializer<string>(serializeWithHeadersFun: (topic, headers, data) =>
                     {
                         var key = Encoding.Unicode.GetBytes(data);
-                        return null;
+                        return key;
                     });
                     valueSerializer = new Serializer<string>(serializeWithHeadersFun: (topic, headers, data) =>
                     {
@@ -210,14 +210,15 @@ namespace MASES.KafkaBridgeTest
 
                 Deserializer<string> keyDeserializer = null;
                 Deserializer<string> valueDeserializer = null;
+                ConsumerRebalanceListener rebalanceListener = null;
                 if (useSerdes)
                 {
                     keyDeserializer = new Deserializer<string>(deserializeFun: (topic, data) =>
-                {
-                    var key = Encoding.Unicode.GetString(data);
-                    Console.WriteLine("Received key {0} from topic {1}", key, topic);
-                    return key;
-                });
+                    {
+                        var key = Encoding.Unicode.GetString(data);
+                        Console.WriteLine("Received key {0} from topic {1}", key, topic);
+                        return key;
+                    });
                     valueDeserializer = new Deserializer<string>(deserializeFun: (topic, data) =>
                     {
                         var value = Encoding.Unicode.GetString(data);
@@ -225,18 +226,32 @@ namespace MASES.KafkaBridgeTest
                         return value;
                     });
                 }
+                if (useCallback)
+                {
+                    rebalanceListener = new ConsumerRebalanceListener(
+                        revoked: (o) =>
+                        {
+                            Console.WriteLine("Revoked: {0}", o.ToString());
+                        },
+                        assigned: (o) =>
+                        {
+                            Console.WriteLine("Assigned: {0}", o.ToString());
+                        });
+                }
                 try
                 {
                     {
                         using (var consumer = useSerdes ? new KafkaConsumer<string, string>(props, keyDeserializer, valueDeserializer) : new KafkaConsumer<string, string>(props))
                         {
-                            consumer.Subscribe(Collections.singleton(topicToUse));
+                            if (useCallback) consumer.Subscribe(Collections.singleton(topicToUse), rebalanceListener);
+                            else consumer.Subscribe(Collections.singleton(topicToUse));
+
                             while (!resetEvent.WaitOne(0))
                             {
                                 var records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);
                                 foreach (var item in records)
                                 {
-                                    Console.WriteLine($"Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}");
+                                    Console.WriteLine($"Consuming from Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}");
                                 }
                             }
                         }

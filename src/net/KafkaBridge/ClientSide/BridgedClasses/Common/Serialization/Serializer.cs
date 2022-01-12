@@ -67,10 +67,7 @@ namespace MASES.KafkaBridge.Common.Serialization
         {
             var data = eventData.EventData.ExtraData.Get(0);
             var retVal = OnSerialize(eventData.EventData.TypedEventData, data.Convert<E>());
-            if (retVal != null)
-            {
-                eventData.CLRReturnValue = JCOBridge.C2JBridge.JCOBridge.Global.JVM.NewArray(retVal);
-            }
+            eventData.CLRReturnValue = retVal;
         }
 
         void EventHandlerWithHeaders(object sender, CLRListenerEventArgs<CLREventData<string>> eventData)
@@ -95,7 +92,7 @@ namespace MASES.KafkaBridge.Common.Serialization
         /// <param name="headers"><see cref="Headers"/> associated with the record; may be empty.</param>
         /// <param name="data"><typeparamref name="E"/> data</param>
         /// <returns>serialized bytes</returns>
-        public virtual byte[] SerializeWithHeaders(string topic, Headers headers, E data) { return Serialize(topic, data); }
+        public virtual byte[] SerializeWithHeaders(string topic, Headers headers, E data) { return OnSerialize(topic, data); }
     }
 
     /// <summary>

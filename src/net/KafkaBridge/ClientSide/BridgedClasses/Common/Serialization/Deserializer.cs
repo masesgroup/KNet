@@ -95,7 +95,7 @@ namespace MASES.KafkaBridge.Common.Serialization
         /// <param name="headers"><see cref="Headers"/> associated with the record; may be empty.</param>
         /// <param name="data">serialized bytes; may be null; implementations are recommended to handle null by returning a value or null rather than throwing an exception</param>
         /// <returns>The deserialized <typeparamref name="E"/></returns>
-        public virtual E DeserializeWithHeaders(string topic, Headers headers, byte[] data) { return Deserialize(topic, data); }
+        public virtual E DeserializeWithHeaders(string topic, Headers headers, byte[] data) { return OnDeserialize(topic, data); }
     }
 
     /// <summary>
