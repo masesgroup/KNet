@@ -16,14 +16,18 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
 using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Java.Time;
 using MASES.KafkaBridge.Java.Util;
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class KafkaAdminClient : JCOBridge.C2JBridge.JVMBridgeBase<KafkaAdminClient>
+    public class KafkaAdminClient : JVMBridgeBase<KafkaAdminClient>, IAdmin
     {
         public override string ClassName => "org.apache.kafka.clients.admin.KafkaAdminClient";
+
+        public Map<MetricName, Metric> Metrics => IExecute<Map<MetricName, Metric>>("metrics");
 
         public static KafkaAdminClient Create(Properties props)
         {
@@ -32,32 +36,67 @@ namespace MASES.KafkaBridge.Clients.Admin
 
         public CreateTopicsResult CreateTopics(Collection<NewTopic> newTopics)
         {
-            return New<CreateTopicsResult>("createTopics", newTopics.Instance);
+            return IExecute<CreateTopicsResult>("createTopics", newTopics.Instance);
         }
 
         public CreateTopicsResult CreateTopics(Collection<NewTopic> newTopics, CreateTopicsOptions options)
         {
-            return New<CreateTopicsResult>("createTopics", newTopics.Instance, options.Instance);
+            return IExecute<CreateTopicsResult>("createTopics", newTopics.Instance, options.Instance);
         }
 
         public CreateTopicsResult DeleteTopics(Collection<NewTopic> newTopics)
         {
-            return New<CreateTopicsResult>("deleteTopics", newTopics.Instance);
+            return IExecute<CreateTopicsResult>("deleteTopics", newTopics.Instance);
         }
 
         public DescribeConsumerGroupsResult DescribeConsumerGroups(Collection<string> groupIds)
         {
-            return New<DescribeConsumerGroupsResult>("describeConsumerGroups", groupIds.Instance);
+            return IExecute<DescribeConsumerGroupsResult>("describeConsumerGroups", groupIds.Instance);
         }
 
         public ListConsumerGroupsResult ListConsumerGroups()
         {
-            return New<ListConsumerGroupsResult>("listConsumerGroups");
+            return IExecute<ListConsumerGroupsResult>("listConsumerGroups");
         }
 
         public ElectLeadersResult ElectLeaders(ElectionType electionType, Set<TopicPartition> partitions)
         {
-            return New<ElectLeadersResult>("electLeaders", (byte)electionType, partitions.Instance);
+            return IExecute<ElectLeadersResult>("electLeaders", (byte)electionType, partitions.Instance);
+        }
+
+        public void Close()
+        {
+            IExecute("close");
+        }
+
+        public void Close(Duration timeout)
+        {
+            IExecute("close", timeout.Instance);
+        }
+
+        public DeleteTopicsResult DeleteTopics(Collection<string> topics)
+        {
+          return IExecute<DeleteTopicsResult>("deleteTopics", topics.Instance);
+        }
+
+        public DeleteTopicsResult DeleteTopics(Collection<string> topics, DeleteTopicsOptions options)
+        {
+            return IExecute<DeleteTopicsResult>("deleteTopics", topics.Instance, options.Instance);
+        }
+
+        public ListTopicsResult ListTopics()
+        {
+            return IExecute<ListTopicsResult>("listTopics");
+        }
+
+        public DescribeTopicsResult DescribeTopics(Collection<string> topicNames)
+        {
+            return IExecute<DescribeTopicsResult>("describeTopics", topicNames.Instance);
+        }
+
+        public DescribeClusterResult DescribeCluster()
+        {
+            return IExecute<DescribeClusterResult>("describeCluster");
         }
     }
 }
