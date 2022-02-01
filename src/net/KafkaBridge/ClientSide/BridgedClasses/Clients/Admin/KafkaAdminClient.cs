@@ -31,27 +31,27 @@ namespace MASES.KafkaBridge.Clients.Admin
 
         public static KafkaAdminClient Create(Properties props)
         {
-            return SExecute<KafkaAdminClient>("create", props.Instance);
+            return SExecute<KafkaAdminClient>("create", props);
         }
 
         public CreateTopicsResult CreateTopics(Collection<NewTopic> newTopics)
         {
-            return IExecute<CreateTopicsResult>("createTopics", newTopics.Instance);
+            return IExecute<CreateTopicsResult>("createTopics", newTopics);
         }
 
         public CreateTopicsResult CreateTopics(Collection<NewTopic> newTopics, CreateTopicsOptions options)
         {
-            return IExecute<CreateTopicsResult>("createTopics", newTopics.Instance, options.Instance);
+            return IExecute<CreateTopicsResult>("createTopics", newTopics, options);
         }
 
         public CreateTopicsResult DeleteTopics(Collection<NewTopic> newTopics)
         {
-            return IExecute<CreateTopicsResult>("deleteTopics", newTopics.Instance);
+            return IExecute<CreateTopicsResult>("deleteTopics", newTopics);
         }
 
         public DescribeConsumerGroupsResult DescribeConsumerGroups(Collection<string> groupIds)
         {
-            return IExecute<DescribeConsumerGroupsResult>("describeConsumerGroups", groupIds.Instance);
+            return IExecute<DescribeConsumerGroupsResult>("describeConsumerGroups", groupIds);
         }
 
         public ListConsumerGroupsResult ListConsumerGroups()
@@ -61,7 +61,7 @@ namespace MASES.KafkaBridge.Clients.Admin
 
         public ElectLeadersResult ElectLeaders(ElectionType electionType, Set<TopicPartition> partitions)
         {
-            return IExecute<ElectLeadersResult>("electLeaders", (byte)electionType, partitions.Instance);
+            return IExecute<ElectLeadersResult>("electLeaders", (byte)electionType, partitions);
         }
 
         public void Close()
@@ -71,17 +71,17 @@ namespace MASES.KafkaBridge.Clients.Admin
 
         public void Close(Duration timeout)
         {
-            IExecute("close", timeout.Instance);
+            IExecute("close", timeout);
         }
 
         public DeleteTopicsResult DeleteTopics(Collection<string> topics)
         {
-          return IExecute<DeleteTopicsResult>("deleteTopics", topics.Instance);
+          return IExecute<DeleteTopicsResult>("deleteTopics", topics);
         }
 
         public DeleteTopicsResult DeleteTopics(Collection<string> topics, DeleteTopicsOptions options)
         {
-            return IExecute<DeleteTopicsResult>("deleteTopics", topics.Instance, options.Instance);
+            return IExecute<DeleteTopicsResult>("deleteTopics", topics, options);
         }
 
         public ListTopicsResult ListTopics()
@@ -91,7 +91,7 @@ namespace MASES.KafkaBridge.Clients.Admin
 
         public DescribeTopicsResult DescribeTopics(Collection<string> topicNames)
         {
-            return IExecute<DescribeTopicsResult>("describeTopics", topicNames.Instance);
+            return IExecute<DescribeTopicsResult>("describeTopics", topicNames);
         }
 
         public DescribeClusterResult DescribeCluster()

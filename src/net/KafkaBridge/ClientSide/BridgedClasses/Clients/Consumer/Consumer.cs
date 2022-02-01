@@ -25,7 +25,7 @@ using System;
 
 namespace MASES.KafkaBridge.Clients.Consumer
 {
-    public interface Consumer<K, V> : IJVMBridgeBase
+    public interface IConsumer<K, V> : IJVMBridgeBase
     {
         Set<TopicPartition> Assignment { get; }
 

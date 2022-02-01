@@ -25,7 +25,7 @@ using System;
 
 namespace MASES.KafkaBridge.Clients.Producer
 {
-    public interface Producer<K, V> : IJVMBridgeBase
+    public interface IProducer<K, V> : IJVMBridgeBase
     {
         void InitTransactions();
 

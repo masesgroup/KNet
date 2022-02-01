@@ -24,7 +24,7 @@ using MASES.KafkaBridge.Java.Util.Concurrent;
 
 namespace MASES.KafkaBridge.Clients.Producer
 {
-    public class KafkaProducer<K, V> : JCOBridge.C2JBridge.JVMBridgeBase<KafkaProducer<K, V>>, Producer<K, V>
+    public class KafkaProducer<K, V> : JCOBridge.C2JBridge.JVMBridgeBase<KafkaProducer<K, V>>, IProducer<K, V>
     {
         public override bool IsCloseable => true;
 
@@ -42,7 +42,7 @@ namespace MASES.KafkaBridge.Clients.Producer
         }
 
         public KafkaProducer(Properties props, Serializer<K> keySerializer, Serializer<V> valueSerializer)
-            : base(props, keySerializer.Instance, valueSerializer.Instance)
+            : base(props, keySerializer, valueSerializer)
         {
         }
 
@@ -58,12 +58,12 @@ namespace MASES.KafkaBridge.Clients.Producer
 
         public void SendOffsetsToTransaction(Map<TopicPartition, OffsetAndMetadata> offsets, string consumerGroupId)
         {
-            IExecute("sendOffsetsToTransaction", offsets.Instance, consumerGroupId);
+            IExecute("sendOffsetsToTransaction", offsets, consumerGroupId);
         }
 
         public void SendOffsetsToTransaction(Map<TopicPartition, OffsetAndMetadata> offsets, ConsumerGroupMetadata groupMetadata)
         {
-            IExecute("sendOffsetsToTransaction", offsets.Instance, groupMetadata.Instance);
+            IExecute("sendOffsetsToTransaction", offsets, groupMetadata);
         }
 
         public void CommitTransaction()
@@ -78,22 +78,22 @@ namespace MASES.KafkaBridge.Clients.Producer
 
         public Future<RecordMetadata> Send(ProducerRecord record)
         {
-            return IExecute<Future<RecordMetadata>>("send", record.Instance);
+            return IExecute<Future<RecordMetadata>>("send", record);
         }
 
         public Future<RecordMetadata> Send(ProducerRecord record, Callback callback)
         {
-            return IExecute<Future<RecordMetadata>>("send", record.Instance, callback.Instance);
+            return IExecute<Future<RecordMetadata>>("send", record, callback);
         }
 
         public Future<RecordMetadata> Send(ProducerRecord<K, V> record)
         {
-            return IExecute<Future<RecordMetadata>>("send", record.Instance);
+            return IExecute<Future<RecordMetadata>>("send", record);
         }
 
         public Future<RecordMetadata> Send(ProducerRecord<K, V> record, Callback callback)
         {
-            return IExecute<Future<RecordMetadata>>("send", record.Instance, callback.Instance);
+            return IExecute<Future<RecordMetadata>>("send", record, callback);
         }
 
         public void Flush()

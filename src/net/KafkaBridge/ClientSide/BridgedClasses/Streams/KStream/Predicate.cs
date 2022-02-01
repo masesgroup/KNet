@@ -22,15 +22,31 @@ using System;
 namespace MASES.KafkaBridge.Streams.KStream
 {
     /// <summary>
-    /// Listerner for Kafka Predicate. Extends <see cref="CLRListener"/>
+    /// Listerner for Kafka Predicate. Extends <see cref="IJVMBridgeBase"/>
+    /// </summary>
+    /// <typeparam name="T">The data associated to the event</typeparam>
+    /// <typeparam name="U">The data associated to the event</typeparam>
+    public interface IPredicate<T, U> : IJVMBridgeBase
+    {
+        /// <summary>
+        /// Executes the Predicate action in the CLR
+        /// </summary>
+        /// <param name="o1">The Predicate object</param>
+        /// <param name="o2">The Predicate object</param>
+        /// <returns>The test evaluation</returns>
+        bool Test(T o1, U o2);
+    }
+
+    /// <summary>
+    /// Listerner for Kafka Predicate. Extends <see cref="CLRListener"/>, implements <see cref="IPredicate{T, U}"/>
     /// </summary>
     /// <typeparam name="T">The data associated to the event</typeparam>
     /// <typeparam name="U">The data associated to the event</typeparam>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
-    public class Predicate<T, U> : CLRListener
+    public class Predicate<T, U> : CLRListener, IPredicate<T, U>
     {
-        /// <inheritdoc cref="CLRListener.JniClass"/>
-        public sealed override string JniClass => "org.mases.kafkabridge.streams.kstream.PredicateImpl";
+        /// <inheritdoc cref="CLRListener.ClassName"/>
+        public sealed override string ClassName => "org.mases.kafkabridge.streams.kstream.PredicateImpl";
 
         readonly Func<T, U, bool> executionFunction = null;
         /// <summary>
@@ -56,7 +72,7 @@ namespace MASES.KafkaBridge.Streams.KStream
         void EventHandler(object sender, CLRListenerEventArgs<CLREventData<T>> data)
         {
             var retVal = OnTest(data.EventData.TypedEventData, data.EventData.To<U>(0));
-            data.CLRReturnValue = retVal;
+            data.SetReturnValue(retVal);
         }
         /// <summary>
         /// Executes the Predicate action in the CLR
@@ -66,14 +82,14 @@ namespace MASES.KafkaBridge.Streams.KStream
         /// <returns>The test evaluation</returns>
         public virtual bool Test(T o1, U o2) { return false; }
     }
-
+    /*
     /// <summary>
-    /// Listerner for Kafka Predicate. Extends <see cref="Predicate{T, U}"/>
+    /// Listerner for Kafka Predicate. Extends <see cref="PredicateImpl{T, U}"/>
     /// </summary>
     /// <typeparam name="T">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
     /// <typeparam name="U">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
-    public class JVMBridgePredicate<T, U> : Predicate<T, U>
+    public class JVMBridgePredicate<T, U> : PredicateImpl<T, U>
         where T : JVMBridgeBase, new()
         where U : JVMBridgeBase, new()
     {
@@ -92,4 +108,5 @@ namespace MASES.KafkaBridge.Streams.KStream
             data.CLRReturnValue = retVal;
         }
     }
+    */
 }

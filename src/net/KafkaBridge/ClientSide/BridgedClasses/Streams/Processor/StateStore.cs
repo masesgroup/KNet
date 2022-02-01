@@ -16,20 +16,41 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
+
 namespace MASES.KafkaBridge.Streams.Processor
 {
-    public class StateStore : JCOBridge.C2JBridge.JVMBridgeBase<StateStore>
+    public interface IStateStore : IJVMBridgeBase
+    {
+        string Name { get; }
+
+        void Flush();
+
+        void Close();
+
+        bool Persistent { get; }
+
+        bool IsOpen { get; }
+    }
+
+    public class StateStore : JVMBridgeBase<StateStore, IStateStore>, IStateStore
     {
         public override string ClassName => "org.apache.kafka.streams.processor.StateStore";
 
         public string Name => IExecute<string>("name");
 
-        public void Flush() { IExecute("flush"); }
-
-        public void Close() { IExecute("close"); }
-
         public bool Persistent => IExecute<bool>("persistent");
 
         public bool IsOpen => IExecute<bool>("isOpen");
+
+        public void Close()
+        {
+            IExecute("close");
+        }
+
+        public void Flush()
+        {
+            IExecute("flush");
+        }
     }
 }

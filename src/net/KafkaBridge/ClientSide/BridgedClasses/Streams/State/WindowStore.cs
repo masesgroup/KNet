@@ -16,20 +16,47 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Java.Time;
+using MASES.KafkaBridge.Streams.KStream;
 using MASES.KafkaBridge.Streams.Processor;
 
 namespace MASES.KafkaBridge.Streams.State
 {
-    public class WindowStore<K, V> : StateStore
+    public interface IWindowStore<K, V> : IStateStore, IReadOnlyWindowStore<K, V>
+    {
+        void Put(K key, V value, long windowStartTimestamp);
+    }
+
+    public class WindowStore<K, V> : StateStore, IWindowStore<K, V>
     {
         public override string ClassName => "org.apache.kafka.streams.state.WindowStore";
+
+        public KeyValueIterator<Windowed<K>, V> All => IExecute<KeyValueIterator<Windowed<K>, V>>("all");
+
+        public V Fetch(K key, long time)
+        {
+            return IExecute<V>("fetch", key, time);
+        }
+
+        public WindowStoreIterator<V> Fetch(K key, Instant timeFrom, Instant timeTo)
+        {
+            return IExecute<WindowStoreIterator<V>>("fetch", key, timeFrom, timeTo);
+        }
+
+        public KeyValueIterator<Windowed<K>, V> Fetch(K keyFrom, K keyTo, Instant timeFrom, Instant timeTo)
+        {
+            return IExecute<KeyValueIterator<Windowed<K>, V>>("fetch", keyFrom, timeFrom, timeTo);
+        }
+
+        public KeyValueIterator<Windowed<K>, V> FetchAll(Instant timeFrom, Instant timeTo)
+        {
+            return IExecute<KeyValueIterator<Windowed<K>, V>>("fetchAll", timeFrom, timeTo);
+        }
 
         public void Put(K key, V value, long windowStartTimestamp)
         {
             IExecute("put", key, value, windowStartTimestamp);
         }
-
-
     }
 }
 

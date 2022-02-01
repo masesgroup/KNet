@@ -28,7 +28,7 @@ namespace MASES.KafkaBridge.Common.Errors
 
         public Set<string> InvalidTopics()
         {
-            return JVMBridgeBase.New<Set<string>>(Instance.Invoke("invalidTopics") as IJavaObject);
+            return JVMBridgeBase.Wraps<Set<string>>(Instance.Invoke("invalidTopics") as IJavaObject);
         }
     }
 }

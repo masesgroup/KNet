@@ -27,7 +27,7 @@ namespace MASES.KafkaBridge.Clients.Consumer
     /// <summary>
     /// Listerner for Kafka OffsetCommitCallback. Extends <see cref="IJVMBridgeBase"/>
     /// </summary>
-    public interface OffsetCommitCallback : IJVMBridgeBase
+    public interface IOffsetCommitCallback : IJVMBridgeBase
     {
         /// <summary>
         /// Executes the Callback action in the CLR
@@ -38,10 +38,10 @@ namespace MASES.KafkaBridge.Clients.Consumer
     }
 
     /// <summary>
-    /// Listerner for Kafka OffsetCommitCallback. Extends <see cref="CLRListener"/>, implements <see cref="OffsetCommitCallback"/>
+    /// Listerner for Kafka OffsetCommitCallback. Extends <see cref="CLRListener"/>, implements <see cref="IOffsetCommitCallback"/>
     /// </summary>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
-    public class OffsetCommitCallbackImpl : CLRListener, OffsetCommitCallback
+    public class OffsetCommitCallback : CLRListener, IOffsetCommitCallback
     {
         /// <inheritdoc cref="CLRListener.ClassName"/>
         public sealed override string ClassName => "org.mases.kafkabridge.clients.consumer.OffsetCommitCallbackImpl";
@@ -52,10 +52,10 @@ namespace MASES.KafkaBridge.Clients.Consumer
         /// </summary>
         public virtual Action<Map<TopicPartition, OffsetAndMetadata>, JVMBridgeException> OnOnComplete { get { return executionFunction; } }
         /// <summary>
-        /// Initialize a new instance of <see cref="OffsetCommitCallbackImpl"/>
+        /// Initialize a new instance of <see cref="OffsetCommitCallback"/>
         /// </summary>
         /// <param name="action">The <see cref="Action{Map{TopicPartition, OffsetAndMetadata}, JVMBridgeException}"/> to be executed</param>
-        public OffsetCommitCallbackImpl(Action<Map<TopicPartition, OffsetAndMetadata>, JVMBridgeException> action = null)
+        public OffsetCommitCallback(Action<Map<TopicPartition, OffsetAndMetadata>, JVMBridgeException> action = null)
         {
             if (action != null) executionFunction = action;
             else executionFunction = OnComplete;

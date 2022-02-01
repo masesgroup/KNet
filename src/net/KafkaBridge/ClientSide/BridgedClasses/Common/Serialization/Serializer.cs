@@ -24,14 +24,44 @@ using System;
 namespace MASES.KafkaBridge.Common.Serialization
 {
     /// <summary>
-    /// Listerner for Kafka Serializer. Extends <see cref="CLRListener"/>
+    /// Listerner for Kafka Serializer. Extends <see cref="IJVMBridgeBase"/>
+    /// </summary>
+    /// <typeparam name="E">The data associated to the event</typeparam>
+    public interface ISerializer : IJVMBridgeBase
+    {
+    }
+
+    /// <summary>
+    /// Listerner for Kafka Serializer. Extends <see cref="Serializer"/>
+    /// </summary>
+    /// <typeparam name="E">The data associated to the event</typeparam>
+    public interface ISerializer<E> : ISerializer
+    {
+        /// <summary>
+        /// Executes the Serializer action in the CLR
+        /// </summary>
+        /// <param name="topic">topic associated with the data</param>
+        /// <param name="data"><typeparamref name="E"/> data</param>
+        /// <returns>serialized bytes</returns>
+        byte[] Serialize(string topic, E data);
+        /// <summary>
+        /// Executes the Serializer action in the CLR
+        /// </summary>
+        /// <param name="topic">topic associated with the data</param>
+        /// <param name="headers"><see cref="Headers"/> associated with the record; may be empty.</param>
+        /// <param name="data"><typeparamref name="E"/> data</param>
+        /// <returns>serialized bytes</returns>
+        byte[] SerializeWithHeaders(string topic, Headers headers, E data);
+    }
+    /// <summary>
+    /// Listerner for Kafka Serializer. Extends <see cref="CLRListener"/>. Implements <see cref="ISerializer{E}"/>
     /// </summary>
     /// <typeparam name="E">The data associated to the event</typeparam>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
-    public class Serializer<E> : JCOBridge.C2JBridge.CLRListener
+    public class Serializer<E> : CLRListener, ISerializer<E>
     {
-        /// <inheritdoc cref="CLRListener.JniClass"/>
-        public sealed override string JniClass => "org.mases.kafkabridge.clients.common.serialization.SerializerImpl";
+        /// <inheritdoc cref="CLRListener.ClassName"/>
+        public sealed override string ClassName => "org.mases.kafkabridge.clients.common.serialization.SerializerImpl";
 
         readonly Func<string, E, byte[]> serialize = null;
         readonly Func<string, Headers, E, byte[]> serializeWithHeaders = null;
@@ -67,15 +97,15 @@ namespace MASES.KafkaBridge.Common.Serialization
         {
             var data = eventData.EventData.ExtraData.Get(0);
             var retVal = OnSerialize(eventData.EventData.TypedEventData, data.Convert<E>());
-            eventData.CLRReturnValue = retVal;
+            eventData.SetReturnValue(retVal);
         }
 
         void EventHandlerWithHeaders(object sender, CLRListenerEventArgs<CLREventData<string>> eventData)
         {
             var headers = eventData.EventData.ExtraData.Get(0) as IJavaObject; // it is a Headers
             var data = eventData.EventData.ExtraData.Get(1);
-            var retVal = OnSerializeWithHeaders(eventData.EventData.TypedEventData, JVMBridgeBase.New<Headers>(headers), data.Convert<E>());
-            eventData.CLRReturnValue = retVal;
+            var retVal = OnSerializeWithHeaders(eventData.EventData.TypedEventData, JVMBridgeBase.Wraps<Headers>(headers), data.Convert<E>());
+            eventData.SetReturnValue(retVal);
         }
 
         /// <summary>
@@ -94,13 +124,13 @@ namespace MASES.KafkaBridge.Common.Serialization
         /// <returns>serialized bytes</returns>
         public virtual byte[] SerializeWithHeaders(string topic, Headers headers, E data) { return OnSerialize(topic, data); }
     }
-
+    /*
     /// <summary>
-    /// Listerner for Kafka Serializer. Extends <see cref="Serializer{E}"/>
+    /// Listerner for Kafka Serializer. Extends <see cref="SerializerImpl{E}"/>
     /// </summary>
     /// <typeparam name="E">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
-    public class JVMBridgeSerializer<E> : Serializer<E>
+    public class JVMBridgeSerializer<E> : SerializerImpl<E>
         where E : JVMBridgeBase, new()
     {
         /// <summary>
@@ -126,8 +156,9 @@ namespace MASES.KafkaBridge.Common.Serialization
         {
             var headers = eventData.EventData.ExtraData.Get(0) as IJavaObject; // it is a Headers
             var data = eventData.EventData.ExtraData.Get(1);
-            var retVal = OnSerializeWithHeaders(eventData.EventData.TypedEventData, JVMBridgeBase.New<Headers>(headers), data.Convert<E>());
+            var retVal = OnSerializeWithHeaders(eventData.EventData.TypedEventData, JVMBridgeBase.Wraps<Headers>(headers), data.Convert<E>());
             eventData.CLRReturnValue = retVal;
         }
     }
+    */
 }

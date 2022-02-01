@@ -35,7 +35,7 @@ namespace MASES.KafkaBridge.Clients.Admin
 
         public NewTopic Configs(Map<string, string> configs)
         {
-            IExecute("configs", configs.Instance);
+            IExecute("configs", configs);
             return this;
         }
     }

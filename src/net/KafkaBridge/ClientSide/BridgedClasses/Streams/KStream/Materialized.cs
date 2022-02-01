@@ -16,12 +16,17 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common.Serialization;
+using MASES.KafkaBridge.Common.Utils;
+using MASES.KafkaBridge.Java.Time;
+using MASES.KafkaBridge.Java.Util;
 using MASES.KafkaBridge.Streams.Processor;
+using MASES.KafkaBridge.Streams.State;
 
 namespace MASES.KafkaBridge.Streams.KStream
 {
     public class Materialized<K, V, S> : JCOBridge.C2JBridge.JVMBridgeBase<Materialized<K, V, S>>
-        where S : StateStore
+        where S : IStateStore
     {
         public override string ClassName => "org.apache.kafka.streams.kstream.Materialized";
 
@@ -30,5 +35,59 @@ namespace MASES.KafkaBridge.Streams.KStream
             return SExecute<Materialized<K, V, S>>("as", storeName);
         }
 
+        public static Materialized<K, V, WindowStore<Bytes, byte[]>> As(WindowBytesStoreSupplier supplier)
+        {
+            return SExecute<Materialized<K, V, WindowStore<Bytes, byte[]>>>("as", supplier);
+        }
+
+        public static Materialized<K, V, SessionStore<Bytes, byte[]>> As(SessionBytesStoreSupplier supplier)
+        {
+            return SExecute<Materialized<K, V, SessionStore<Bytes, byte[]>>>("as", supplier);
+        }
+
+        public static Materialized<K, V, KeyValueStore<Bytes, byte[]>> As(KeyValueBytesStoreSupplier supplier)
+        {
+            return SExecute<Materialized<K, V, KeyValueStore<Bytes, byte[]>>>("as", supplier);
+        }
+
+        public static Materialized<K, V, S> With(Serde<K> keySerde, Serde<V> valueSerde)
+        {
+            return SExecute<Materialized<K, V, S>>("with", keySerde, valueSerde);
+        }
+
+        public Materialized<K, V, S> WithValueSerde(Serde<V> valueSerde)
+        {
+            return IExecute<Materialized<K, V, S>>("withValueSerde", valueSerde);
+        }
+
+        public Materialized<K, V, S> WithKeySerde(Serde<K> keySerde)
+        {
+            return IExecute<Materialized<K, V, S>>("withKeySerde", keySerde);
+        }
+
+        public Materialized<K, V, S> WithLoggingEnabled(Map<string, string> config)
+        {
+            return IExecute<Materialized<K, V, S>>("withLoggingEnabled", config);
+        }
+
+        public Materialized<K, V, S> WithLoggingDisabled()
+        {
+            return IExecute<Materialized<K, V, S>>("withLoggingDisabled");
+        }
+
+        public Materialized<K, V, S> WithCachingEnabled()
+        {
+            return IExecute<Materialized<K, V, S>>("withCachingEnabled");
+        }
+
+        public Materialized<K, V, S> WithCachingDisabled()
+        {
+            return IExecute<Materialized<K, V, S>>("withCachingDisabled");
+        }
+
+        public Materialized<K, V, S> WithRetention(Duration retention)
+        {
+            return IExecute<Materialized<K, V, S>>("withRetention", retention);
+        }
     }
 }

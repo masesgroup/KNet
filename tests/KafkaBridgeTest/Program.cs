@@ -22,6 +22,7 @@
  *  SOFTWARE.
  */
 
+using MASES.JCOBridge.C2JBridge;
 using MASES.KafkaBridge;
 using MASES.KafkaBridge.Clients.Admin;
 using MASES.KafkaBridge.Clients.Consumer;
@@ -29,7 +30,6 @@ using MASES.KafkaBridge.Clients.Producer;
 using MASES.KafkaBridge.Common.Config;
 using MASES.KafkaBridge.Common.Serialization;
 using MASES.KafkaBridge.Java.Util;
-using MASES.KafkaBridge.Streams;
 using System;
 using System.Text;
 using System.Threading;
@@ -38,8 +38,8 @@ namespace MASES.KafkaBridgeTest
 {
     class Program
     {
-        const bool useSerdes = true;
-        const bool useCallback = true;
+        static bool useSerdes = true;
+        static bool useCallback = true;
 
         const string theServer = "localhost:9092";
         const string theTopic = "myTopic";
@@ -70,12 +70,6 @@ namespace MASES.KafkaBridgeTest
                 Name = "consume"
             };
             threadConsume.Start();
-
-            Thread threadStream = new Thread(streamSomething)
-            {
-                Name = "stream"
-            };
-            threadStream.Start();
 
             Thread.Sleep(20000);
             resetEvent.Set();
@@ -273,44 +267,6 @@ namespace MASES.KafkaBridgeTest
             catch (Exception ex)
             {
                 Console.WriteLine("Consumer ended with error: {0}", ex.Message);
-            }
-        }
-
-        static void streamSomething()
-        {
-            try
-            {
-                var props = new Properties();
-
-                props.Put(StreamsConfig.APPLICATION_ID_CONFIG, "streams-pipe");
-                props.Put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
-                props.Put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String.getClass());
-                props.Put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String.getClass());
-
-                // setting offset reset to earliest so that we can re-run the demo code with the same pre-loaded data
-                props.Put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
-
-                var builder = new StreamsBuilder();
-
-                builder.Stream<string, string>(topicToUse).To("streams-pipe-output");
-
-                using (var streams = new KafkaStreams(builder.Build(), props))
-                {
-                    streams.Start();
-                    while (!resetEvent.WaitOne(1000))
-                    {
-                        var state = streams.State;
-                        Console.WriteLine($"KafkaStreams state: {state}");
-                    }
-                }
-            }
-            catch (KafkaBridge.Java.Util.Concurrent.ExecutionException ex)
-            {
-                Console.WriteLine("Streams ended with error: {0}", ex.InnerException.Message);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Streams ended with error: {0}", ex.Message);
             }
         }
     }

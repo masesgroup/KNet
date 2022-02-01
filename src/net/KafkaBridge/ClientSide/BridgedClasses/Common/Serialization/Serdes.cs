@@ -16,6 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common.Utils;
+using MASES.KafkaBridge.Java.Lang;
+
 namespace MASES.KafkaBridge.Common.Serialization
 {
     public class Serdes : JCOBridge.C2JBridge.JVMBridgeBase<Serdes>
@@ -44,26 +47,27 @@ namespace MASES.KafkaBridge.Common.Serialization
 
         public static readonly dynamic UUIDSerde = DynClazz.UUIDSerde;
         */
-        public static dynamic Long => DynClazz.Long();
 
-        public static dynamic Integer => DynClazz.Integer();
+        public static Serde<long> Long => SExecute<Serde<long>>("Long");
 
-        public static dynamic Short => DynClazz.Short();
+        public static Serde<int> Integer => SExecute<Serde<int>>("Integer");
 
-        public static dynamic Float => DynClazz.Float();
+        public static Serde<short> Short => SExecute<Serde<short>>("Short");
 
-        public static dynamic Double => DynClazz.Double();
+        public static Serde<float> Float => SExecute<Serde<float>>("Float");
 
-        public static dynamic String => DynClazz.String();
+        public static Serde<double> Double => SExecute<Serde<double>>("Double");
+
+        public static Serde<string> String => SExecute<Serde<string>>("String");
 
         public static dynamic ByteBuffer => DynClazz.ByteBuffer();
 
-        public static dynamic Bytes => DynClazz.Bytes();
+        public static Serde<Bytes> Bytes => SExecute<Serde<Bytes>>("Bytes");
 
-        public static dynamic UUID => DynClazz.UUID();
+        public static Serde<UUID> UUID => SExecute<Serde<UUID>>("UUID");
 
-        public static dynamic ByteArray => DynClazz.ByteArray();
+        public static Serde<byte[]> ByteArray => SExecute<Serde<byte[]>>("ByteArray");
 
-        public static dynamic Void => DynClazz.Void();
+        public static Serde<Void> Void => SExecute<Serde<Void>>("Void");
     }
 }

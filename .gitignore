@@ -1,0 +1,27 @@
+# Compiled source #
+###################
+*.class
+
+# Intermediate files #
+###################
+*.classpath
+*.filelist
+*.manifest
+*.csproj.user
+
+# Support files #
+###################
+launchSettings.json
+
+###############
+#    folder   #
+###############
+/**/.vs/
+/**/.idea/
+/**/target/
+/**/DROP/
+/**/TEMP/
+/**/packages/
+/**/bin/
+/**/obj/
+_site

@@ -26,7 +26,7 @@ namespace MASES.KafkaBridge.Common.Header
 
         public Headers Add(Header header)
         {
-            IExecute("add", header.Instance);
+            IExecute("add", header);
             return this;
         }
 

@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KafkaBridgeTest", "KafkaBri
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KafkaBridge", "..\src\net\KafkaBridge\KafkaBridge.csproj", "{14871D50-7E4E-4BAE-8005-CA86E891F602}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KafkaBridgeTestStreams", "KafkaBridgeTestStreams\KafkaBridgeTestStreams.csproj", "{17E101E1-A0F8-44F0-929C-498E4A41F551}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{14871D50-7E4E-4BAE-8005-CA86E891F602}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14871D50-7E4E-4BAE-8005-CA86E891F602}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14871D50-7E4E-4BAE-8005-CA86E891F602}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17E101E1-A0F8-44F0-929C-498E4A41F551}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17E101E1-A0F8-44F0-929C-498E4A41F551}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17E101E1-A0F8-44F0-929C-498E4A41F551}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17E101E1-A0F8-44F0-929C-498E4A41F551}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
