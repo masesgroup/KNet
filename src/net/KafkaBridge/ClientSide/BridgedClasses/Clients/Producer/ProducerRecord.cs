@@ -81,7 +81,7 @@ namespace MASES.KafkaBridge.Clients.Producer
 
         public DateTime DateTime => DateTimeOffset.FromUnixTimeMilliseconds(Timestamp).DateTime;
 
-        public Headers Headers => New<Headers>("headers");
+        public Headers Headers => IExecute<Headers>("headers");
     }
 
     public class ProducerRecord : ProducerRecord<object, object>

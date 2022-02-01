@@ -28,6 +28,6 @@ namespace MASES.KafkaBridge.Clients.Consumer
 
         public string Metadata => IExecute<string>("metadata");
 
-        public Optional<int> LeaderEpoch => New<Optional<int>>("leaderEpoch");
+        public Optional<int> LeaderEpoch => IExecute<Optional<int>>("leaderEpoch");
     }
 }

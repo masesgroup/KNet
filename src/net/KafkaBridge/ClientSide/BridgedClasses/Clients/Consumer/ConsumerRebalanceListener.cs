@@ -24,13 +24,30 @@ using System;
 namespace MASES.KafkaBridge.Clients.Consumer
 {
     /// <summary>
-    /// Listerner for Kafka ConsumerRebalanceListener. Extends <see cref="CLRListener"/>
+    /// Listerner for Kafka ConsumerRebalanceListener. Extends <see cref="IJVMBridgeBase"/>
+    /// </summary>
+    public interface IConsumerRebalanceListener : IJVMBridgeBase
+    {
+        /// <summary>
+        /// Executes the Callback action in the CLR
+        /// </summary>
+        /// <param name="partitions">The <see cref="Collection{TopicPartition}"/> object</param>
+        void OnPartitionsRevoked(Collection<TopicPartition> partitions);
+        /// <summary>
+        /// Executes the Callback action in the CLR
+        /// </summary>
+        /// <param name="partitions">The <see cref="Collection{TopicPartition}"/> object</param>
+        void OnPartitionsAssigned(Collection<TopicPartition> partitions);
+    }
+
+    /// <summary>
+    /// Listerner for Kafka ConsumerRebalanceListener. Extends <see cref="CLRListener"/>, implements <see cref="IConsumerRebalanceListener"/>
     /// </summary>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
-    public class ConsumerRebalanceListener : CLRListener
+    public class ConsumerRebalanceListener : CLRListener, IConsumerRebalanceListener
     {
-        /// <inheritdoc cref="CLRListener.JniClass"/>
-        public sealed override string JniClass => "org.mases.kafkabridge.clients.consumer.ConsumerRebalanceListenerImpl";
+        /// <inheritdoc cref="CLRListener.ClassName"/>
+        public sealed override string ClassName => "org.mases.kafkabridge.clients.consumer.ConsumerRebalanceListenerImpl";
 
         readonly Action<Collection<TopicPartition>> revokedFunction = null;
         readonly Action<Collection<TopicPartition>> assignedFunction = null;
@@ -43,7 +60,7 @@ namespace MASES.KafkaBridge.Clients.Consumer
         /// </summary>
         public virtual Action<Collection<TopicPartition>> OnOnPartitionsAssigned { get { return assignedFunction; } }
         /// <summary>
-        /// Initialize a new instance of <see cref="Callback"/>
+        /// Initialize a new instance of <see cref="ConsumerRebalanceListener"/>
         /// </summary>
         /// <param name="revoked">The <see cref="Action{Collection{TopicPartition}}"/> to be executed on revoked partitions</param>
         /// <param name="assigned">The <see cref="Action{Collection{TopicPartition}}"/> to be executed on assigned partitions</param>
@@ -54,16 +71,16 @@ namespace MASES.KafkaBridge.Clients.Consumer
             if (assigned != null) assignedFunction = assigned;
             else assignedFunction = OnPartitionsAssigned;
 
-            AddEventHandler("onPartitionsRevoked", new EventHandler<CLRListenerEventArgs<JVMBridgeEventData<Collection<TopicPartition>>>>(EventHandlerRevoked));
-            AddEventHandler("onPartitionsAssigned", new EventHandler<CLRListenerEventArgs<JVMBridgeEventData<Collection<TopicPartition>>>>(EventHandlerAssigned));
+            AddEventHandler("onPartitionsRevoked", new EventHandler<CLRListenerEventArgs<CLREventData<Collection<TopicPartition>>>>(EventHandlerRevoked));
+            AddEventHandler("onPartitionsAssigned", new EventHandler<CLRListenerEventArgs<CLREventData<Collection<TopicPartition>>>>(EventHandlerAssigned));
         }
 
-        void EventHandlerRevoked(object sender, CLRListenerEventArgs<JVMBridgeEventData<Collection<TopicPartition>>> data)
+        void EventHandlerRevoked(object sender, CLRListenerEventArgs<CLREventData<Collection<TopicPartition>>> data)
         {
             OnOnPartitionsRevoked(data.EventData.TypedEventData);
         }
 
-        void EventHandlerAssigned(object sender, CLRListenerEventArgs<JVMBridgeEventData<Collection<TopicPartition>>> data)
+        void EventHandlerAssigned(object sender, CLRListenerEventArgs<CLREventData<Collection<TopicPartition>>> data)
         {
             OnOnPartitionsAssigned(data.EventData.TypedEventData);
         }

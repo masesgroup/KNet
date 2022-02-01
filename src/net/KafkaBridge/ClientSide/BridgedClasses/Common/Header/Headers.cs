@@ -44,17 +44,17 @@ namespace MASES.KafkaBridge.Common.Header
 
         public Header LastHeader(string key)
         {
-            return New<Header>("lastHeader", key);
+            return IExecute<Header>("lastHeader", key);
         }
 
         public IEnumerable<Header> headers(string key)
         {
-            return New<Headers>("headers", key);
+            return IExecute<Headers>("headers", key);
         }
 
         public Header[] ToArray()
         {
-            return New<Headers>("toArray").ToArray();
+            return IExecute<Headers>("toArray").ToArray();
         }
     }
 }

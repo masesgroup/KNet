@@ -24,11 +24,13 @@ using MASES.KafkaBridge.Java.Util.Concurrent;
 
 namespace MASES.KafkaBridge.Clients.Producer
 {
-    public class KafkaProducer<K, V> : JCOBridge.C2JBridge.JVMBridgeBase<KafkaProducer<K, V>>
+    public class KafkaProducer<K, V> : JCOBridge.C2JBridge.JVMBridgeBase<KafkaProducer<K, V>>, Producer<K, V>
     {
         public override bool IsCloseable => true;
 
         public override string ClassName => "org.apache.kafka.clients.producer.KafkaProducer";
+
+        public Map<MetricName, Metric> Metrics => IExecute<Map<MetricName, Metric>>("metrics");
 
         public KafkaProducer()
         {
@@ -40,7 +42,7 @@ namespace MASES.KafkaBridge.Clients.Producer
         }
 
         public KafkaProducer(Properties props, Serializer<K> keySerializer, Serializer<V> valueSerializer)
-            : base(props, keySerializer.Listener, valueSerializer.Listener)
+            : base(props, keySerializer.Instance, valueSerializer.Instance)
         {
         }
 
@@ -76,22 +78,22 @@ namespace MASES.KafkaBridge.Clients.Producer
 
         public Future<RecordMetadata> Send(ProducerRecord record)
         {
-            return New<Future<RecordMetadata>>("send", record.Instance);
+            return IExecute<Future<RecordMetadata>>("send", record.Instance);
         }
 
         public Future<RecordMetadata> Send(ProducerRecord record, Callback callback)
         {
-            return New<Future<RecordMetadata>>("send", record.Instance, callback.Listener);
+            return IExecute<Future<RecordMetadata>>("send", record.Instance, callback.Instance);
         }
 
         public Future<RecordMetadata> Send(ProducerRecord<K, V> record)
         {
-            return New<Future<RecordMetadata>>("send", record.Instance);
+            return IExecute<Future<RecordMetadata>>("send", record.Instance);
         }
 
         public Future<RecordMetadata> Send(ProducerRecord<K, V> record, Callback callback)
         {
-            return New<Future<RecordMetadata>>("send", record.Instance, callback.Listener);
+            return IExecute<Future<RecordMetadata>>("send", record.Instance, callback.Instance);
         }
 
         public void Flush()
@@ -101,7 +103,7 @@ namespace MASES.KafkaBridge.Clients.Producer
 
         public List<PartitionInfo> PartitionsFor(string topic)
         {
-            return New<List<PartitionInfo>>("partitionsFor", topic);
+            return IExecute<List<PartitionInfo>>("partitionsFor", topic);
         }
     }
 

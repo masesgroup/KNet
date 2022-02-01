@@ -27,6 +27,6 @@ namespace MASES.KafkaBridge.Clients.Consumer
     {
         public override string ClassName => "org.apache.kafka.clients.consumer.InvalidOffsetException";
 
-        public Set<TopicPartition> Partitions => JVMBridgeBase.New<Set<TopicPartition>>(Instance.Invoke("partitions") as IJavaObject);
+        public Set<TopicPartition> Partitions => JVMBridgeBase.Wraps<Set<TopicPartition>>(Instance.Invoke("partitions") as IJavaObject);
     }
 }

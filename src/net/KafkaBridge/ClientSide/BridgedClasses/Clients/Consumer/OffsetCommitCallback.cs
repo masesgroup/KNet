@@ -25,13 +25,26 @@ using System;
 namespace MASES.KafkaBridge.Clients.Consumer
 {
     /// <summary>
-    /// Listerner for Kafka OffsetCommitCallback. Extends <see cref="CLRListener"/>
+    /// Listerner for Kafka OffsetCommitCallback. Extends <see cref="IJVMBridgeBase"/>
+    /// </summary>
+    public interface OffsetCommitCallback : IJVMBridgeBase
+    {
+        /// <summary>
+        /// Executes the Callback action in the CLR
+        /// </summary>
+        /// <param name="offsets">The <see cref="Map{TopicPartition, OffsetAndMetadata}"/> object</param>
+        /// <param name="exception">The <see cref="JVMBridgeException"/> object</param>
+        void OnComplete(Map<TopicPartition, OffsetAndMetadata> offsets, JVMBridgeException exception);
+    }
+
+    /// <summary>
+    /// Listerner for Kafka OffsetCommitCallback. Extends <see cref="CLRListener"/>, implements <see cref="OffsetCommitCallback"/>
     /// </summary>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
-    public class OffsetCommitCallback : CLRListener
+    public class OffsetCommitCallbackImpl : CLRListener, OffsetCommitCallback
     {
-        /// <inheritdoc cref="CLRListener.JniClass"/>
-        public sealed override string JniClass => "org.mases.kafkabridge.clients.consumer.OffsetCommitCallbackImpl";
+        /// <inheritdoc cref="CLRListener.ClassName"/>
+        public sealed override string ClassName => "org.mases.kafkabridge.clients.consumer.OffsetCommitCallbackImpl";
 
         readonly Action<Map<TopicPartition, OffsetAndMetadata>, JVMBridgeException> executionFunction = null;
         /// <summary>
@@ -39,18 +52,18 @@ namespace MASES.KafkaBridge.Clients.Consumer
         /// </summary>
         public virtual Action<Map<TopicPartition, OffsetAndMetadata>, JVMBridgeException> OnOnComplete { get { return executionFunction; } }
         /// <summary>
-        /// Initialize a new instance of <see cref="Callback"/>
+        /// Initialize a new instance of <see cref="OffsetCommitCallbackImpl"/>
         /// </summary>
         /// <param name="action">The <see cref="Action{Map{TopicPartition, OffsetAndMetadata}, JVMBridgeException}"/> to be executed</param>
-        public OffsetCommitCallback(Action<Map<TopicPartition, OffsetAndMetadata>, JVMBridgeException> action = null)
+        public OffsetCommitCallbackImpl(Action<Map<TopicPartition, OffsetAndMetadata>, JVMBridgeException> action = null)
         {
             if (action != null) executionFunction = action;
             else executionFunction = OnComplete;
 
-            AddEventHandler("onComplete", new EventHandler<CLRListenerEventArgs<JVMBridgeEventData<Map<TopicPartition, OffsetAndMetadata>>>>(EventHandler));
+            AddEventHandler("onComplete", new EventHandler<CLRListenerEventArgs<CLREventData<Map<TopicPartition, OffsetAndMetadata>>>>(EventHandler));
         }
 
-        void EventHandler(object sender, CLRListenerEventArgs<JVMBridgeEventData<Map<TopicPartition, OffsetAndMetadata>>> data)
+        void EventHandler(object sender, CLRListenerEventArgs<CLREventData<Map<TopicPartition, OffsetAndMetadata>>> data)
         {
             var exception = data.EventData.ExtraData.Get(0) as IJavaObject;
             OnOnComplete(data.EventData.TypedEventData, JVMBridgeException.New(exception));
