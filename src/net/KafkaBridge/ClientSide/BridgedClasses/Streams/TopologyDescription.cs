@@ -21,121 +21,70 @@ using MASES.KafkaBridge.Java.Util;
 using MASES.KafkaBridge.Java.Util.Regex;
 using MASES.KafkaBridge.Streams.Processor;
 
-namespace MASES.KafkaBridge.ClientSide.BridgedClasses.Streams
+namespace MASES.KafkaBridge.Streams
 {
-    public interface ISubtopology
-    {
-        int Id { get; }
-
-        Set<Node> Nodes { get; }
-    }
-
-    public class Subtopology : JVMBridgeBase<Subtopology, ISubtopology>, ISubtopology
-    {
-        public override string ClassName => "org.apache.kafka.streams.TopologyDescription.Subtopology";
-
-        public int Id => IExecute<int>("id");
-
-        public Set<Node> Nodes => IExecute<Set<Node>>("nodes");
-    }
-
-    public interface IGlobalStore
-    {
-        Source Source { get; }
-
-        Processor Processor { get; }
-
-        int Id { get; }
-    }
-
-    public class GlobalStore : JVMBridgeBase<GlobalStore, IGlobalStore>, IGlobalStore
-    {
-        public override string ClassName => "org.apache.kafka.streams.TopologyDescription.GlobalStore";
-
-        public Source Source => IExecute<Source>("source");
-
-        public Processor Processor => IExecute<Processor>("processor");
-
-        public int Id => IExecute<int>("id");
-    }
-
-    public interface INode
-    {
-        string Name { get; }
-
-        Set<Node> Predecessors { get; }
-
-        Set<Node> Successors { get; }
-    }
-
-    public class Node : JVMBridgeBase<Node, INode>, INode
-    {
-        public override string ClassName => "org.apache.kafka.streams.TopologyDescription.Node";
-
-        public string Name => IExecute<string>("name");
-
-        public Set<Node> Predecessors => IExecute<Set<Node>>("predecessors");
-
-        public Set<Node> Successors => IExecute<Set<Node>>("successors");
-    }
-
-    public interface ISource : INode
-    {
-        Set<string> TopicSet { get; }
-
-        Pattern TopicPattern { get; }
-    }
-
-    public class Source : Node, ISource
-    {
-        public override string ClassName => "org.apache.kafka.streams.TopologyDescription.Source";
-
-        public Set<string> TopicSet => IExecute<Set<string>>("topicSet");
-
-        public Pattern TopicPattern => IExecute<Pattern>("topicPattern");
-    }
-
-    public interface IProcessor : INode
-    {
-        Set<string> Stores { get; }
-    }
-
-    public class Processor : Node, IProcessor
-    {
-        public override string ClassName => "org.apache.kafka.streams.TopologyDescription.Processor";
-
-        public Set<string> Stores => IExecute<Set<string>>("stores");
-    }
-
-    public interface ISink : INode
-    {
-        string Topic { get; }
-
-        ITopicNameExtractor TopicNameExtractor { get; }
-    }
-
-    public class Sink : Node, ISink
-    {
-        public override string ClassName => "org.apache.kafka.streams.TopologyDescription.Sink";
-
-        public string Topic => IExecute<string>("topic");
-
-        public ITopicNameExtractor TopicNameExtractor => IExecute<ITopicNameExtractor>("topicNameExtractor");
-    }
-
-    public interface ITopologyDescription
-    {
-        Set<Subtopology> Subtopologies { get; }
-
-        Set<GlobalStore> GlobalStores { get; }
-    }
-
-    public class TopologyDescription : JVMBridgeBase<TopologyDescription, ITopologyDescription>, ITopologyDescription
+    public class TopologyDescription : JVMBridgeBase<TopologyDescription>
     {
         public override string ClassName => "org.apache.kafka.streams.TopologyDescription";
 
         public Set<Subtopology> Subtopologies => IExecute<Set<Subtopology>>("subtopologies");
 
         public Set<GlobalStore> GlobalStores => IExecute<Set<GlobalStore>>("globalStores");
+
+        public class Subtopology : JVMBridgeBase<Subtopology>
+        {
+            public override string ClassName => "org.apache.kafka.streams.TopologyDescription.Subtopology";
+
+            public int Id => IExecute<int>("id");
+
+            public Set<Node> Nodes => IExecute<Set<Node>>("nodes");
+        }
+
+        public class GlobalStore : JVMBridgeBase<GlobalStore>
+        {
+            public override string ClassName => "org.apache.kafka.streams.TopologyDescription.GlobalStore";
+
+            public Source Source => IExecute<Source>("source");
+
+            public Processor Processor => IExecute<Processor>("processor");
+
+            public int Id => IExecute<int>("id");
+        }
+
+        public class Node : JVMBridgeBase<Node>
+        {
+            public override string ClassName => "org.apache.kafka.streams.TopologyDescription.Node";
+
+            public string Name => IExecute<string>("name");
+
+            public Set<Node> Predecessors => IExecute<Set<Node>>("predecessors");
+
+            public Set<Node> Successors => IExecute<Set<Node>>("successors");
+        }
+
+        public class Source : Node
+        {
+            public override string ClassName => "org.apache.kafka.streams.TopologyDescription.Source";
+
+            public Set<string> TopicSet => IExecute<Set<string>>("topicSet");
+
+            public Pattern TopicPattern => IExecute<Pattern>("topicPattern");
+        }
+
+        public class Sink : Node
+        {
+            public override string ClassName => "org.apache.kafka.streams.TopologyDescription.Sink";
+
+            public string Topic => IExecute<string>("topic");
+
+            public ITopicNameExtractor TopicNameExtractor => IExecute<ITopicNameExtractor>("topicNameExtractor");
+        }
+
+        public class Processor : Node
+        {
+            public override string ClassName => "org.apache.kafka.streams.TopologyDescription.Processor";
+
+            public Set<string> Stores => IExecute<Set<string>>("stores");
+        }
     }
 }

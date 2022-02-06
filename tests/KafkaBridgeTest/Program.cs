@@ -22,7 +22,6 @@
  *  SOFTWARE.
  */
 
-using MASES.JCOBridge.C2JBridge;
 using MASES.KafkaBridge;
 using MASES.KafkaBridge.Clients.Admin;
 using MASES.KafkaBridge.Clients.Consumer;

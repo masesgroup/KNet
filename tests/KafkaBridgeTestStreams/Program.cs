@@ -23,7 +23,6 @@
  */
 
 using MASES.JCOBridge.C2JBridge;
-using MASES.JCOBridge.C2JBridge.JVMInterop;
 using MASES.KafkaBridge;
 using MASES.KafkaBridge.Clients.Consumer;
 using MASES.KafkaBridge.Common.Serialization;
@@ -33,7 +32,6 @@ using MASES.KafkaBridge.Streams;
 using MASES.KafkaBridge.Streams.Errors;
 using MASES.KafkaBridge.Streams.KStream;
 using System;
-using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Threading;
 

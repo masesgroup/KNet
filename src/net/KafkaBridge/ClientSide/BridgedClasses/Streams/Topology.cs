@@ -16,7 +16,6 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KafkaBridge.ClientSide.BridgedClasses.Streams;
 using MASES.KafkaBridge.Common.Serialization;
 using MASES.KafkaBridge.Java.Lang;
 using MASES.KafkaBridge.Java.Util.Regex;
