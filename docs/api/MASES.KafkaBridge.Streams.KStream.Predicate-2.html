@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Predicate&lt;T, U&gt;
    | Kafka Bridge website ">
-    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="generator" content="docfx 2.59.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,7 +73,7 @@
   
   <h1 id="MASES_KafkaBridge_Streams_KStream_Predicate_2" data-uid="MASES.KafkaBridge.Streams.KStream.Predicate`2" class="text-break">Class Predicate&lt;T, U&gt;
   </h1>
-  <div class="markdown level0 summary"><p>Listerner for Kafka Predicate. Extends <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener</span></p>
+  <div class="markdown level0 summary"><p>Listerner for Kafka Predicate. Extends <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener</span>, implements <a class="xref" href="MASES.KafkaBridge.Streams.KStream.IPredicate-2.html">IPredicate&lt;T, U&gt;</a></p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -81,12 +81,14 @@
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">MASES.JCOBridge.C2JBridge.CLRListener</span></div>
     <div class="level2"><span class="xref">Predicate&lt;T, U&gt;</span></div>
-      <div class="level3"><a class="xref" href="MASES.KafkaBridge.Streams.KStream.JVMBridgePredicate-2.html">JVMBridgePredicate&lt;T, U&gt;</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
     <div><span class="xref">MASES.JCOBridge.C2JBridge.ICLRListener</span></div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    <div><a class="xref" href="MASES.KafkaBridge.Streams.KStream.IPredicate-2.html">IPredicate</a>&lt;T, U&gt;</div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -100,6 +102,9 @@
       <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.Dispose()</span>
     </div>
     <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.JniClass</span>
+    </div>
+    <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.AutoInit</span>
     </div>
     <div>
@@ -107,6 +112,18 @@
     </div>
     <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.DynListener</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.IsStatic</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.IsCloseable</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.Instance</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.DynInstance</span>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#system-object-tostring">Object.ToString()</a>
@@ -134,7 +151,7 @@
   <h6><strong>Assembly</strong>: MASES.KafkaBridge.dll</h6>
   <h5 id="MASES_KafkaBridge_Streams_KStream_Predicate_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Predicate&lt;T, U&gt; : CLRListener, ICLRListener, IDisposable, ICLRListenerInternal</code></pre>
+    <pre><code class="lang-csharp hljs">public class Predicate&lt;T, U&gt; : CLRListener, ICLRListener, IDisposable, IPredicate&lt;T, U&gt;, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -164,19 +181,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_KStream_Predicate_2__ctor_System_Func__0__1_System_Boolean__.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.KStream.Predicate%602.%23ctor(System.Func%7B%600%2C%601%2CSystem.Boolean%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_KStream_Predicate_2__ctor_System_Func__0__1_System_Boolean__System_Boolean_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.KStream.Predicate%602.%23ctor(System.Func%7B%600%2C%601%2CSystem.Boolean%7D%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/KStream/Predicate.cs/#L44">View Source</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/KStream/Predicate.cs/#L61">View Source</a>
   </span>
   <a id="MASES_KafkaBridge_Streams_KStream_Predicate_2__ctor_" data-uid="MASES.KafkaBridge.Streams.KStream.Predicate`2.#ctor*"></a>
-  <h4 id="MASES_KafkaBridge_Streams_KStream_Predicate_2__ctor_System_Func__0__1_System_Boolean__" data-uid="MASES.KafkaBridge.Streams.KStream.Predicate`2.#ctor(System.Func{`0,`1,System.Boolean})">Predicate(Func&lt;T, U, Boolean&gt;)</h4>
+  <h4 id="MASES_KafkaBridge_Streams_KStream_Predicate_2__ctor_System_Func__0__1_System_Boolean__System_Boolean_" data-uid="MASES.KafkaBridge.Streams.KStream.Predicate`2.#ctor(System.Func{`0,`1,System.Boolean},System.Boolean)">Predicate(Func&lt;T, U, Boolean&gt;, Boolean)</h4>
   <div class="markdown level1 summary"><p>Initialize a new instance of <a class="xref" href="MASES.KafkaBridge.Streams.KStream.Predicate-2.html">Predicate&lt;T, U&gt;</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Predicate(Func&lt;T, U, bool&gt; func = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Predicate(Func&lt;T, U, bool&gt; func = null, bool attachEventHandler = true)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -194,24 +211,30 @@
         <td><p>The <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-3">Func&lt;T1,T2,TResult&gt;</a> to be executed</p>
 </td>
       </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">attachEventHandler</span></td>
+        <td><p>Set to false to disable attach of <span class="xref">MASES.KafkaBridge.Streams.KStream.Predicate`2.EventHandler(System.Object,MASES.JCOBridge.C2JBridge.CLRListenerEventArgs{MASES.JCOBridge.C2JBridge.CLREventData{`0}})</span> and set an own one</p>
+</td>
+      </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_KStream_Predicate_2_JniClass.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.KStream.Predicate%602.JniClass%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_KStream_Predicate_2_ClassName.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.KStream.Predicate%602.ClassName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/KStream/Predicate.cs/#L33">View Source</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/KStream/Predicate.cs/#L49">View Source</a>
   </span>
-  <a id="MASES_KafkaBridge_Streams_KStream_Predicate_2_JniClass_" data-uid="MASES.KafkaBridge.Streams.KStream.Predicate`2.JniClass*"></a>
-  <h4 id="MASES_KafkaBridge_Streams_KStream_Predicate_2_JniClass" data-uid="MASES.KafkaBridge.Streams.KStream.Predicate`2.JniClass">JniClass</h4>
+  <a id="MASES_KafkaBridge_Streams_KStream_Predicate_2_ClassName_" data-uid="MASES.KafkaBridge.Streams.KStream.Predicate`2.ClassName*"></a>
+  <h4 id="MASES_KafkaBridge_Streams_KStream_Predicate_2_ClassName" data-uid="MASES.KafkaBridge.Streams.KStream.Predicate`2.ClassName">ClassName</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed override string JniClass { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed override string ClassName { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -229,13 +252,13 @@
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.JniClass</span></div>
+  <div><span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.ClassName</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_KStream_Predicate_2_OnTest.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.KStream.Predicate%602.OnTest%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/KStream/Predicate.cs/#L39">View Source</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/KStream/Predicate.cs/#L55">View Source</a>
   </span>
   <a id="MASES_KafkaBridge_Streams_KStream_Predicate_2_OnTest_" data-uid="MASES.KafkaBridge.Streams.KStream.Predicate`2.OnTest*"></a>
   <h4 id="MASES_KafkaBridge_Streams_KStream_Predicate_2_OnTest" data-uid="MASES.KafkaBridge.Streams.KStream.Predicate`2.OnTest">OnTest</h4>
@@ -268,7 +291,7 @@
     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_KStream_Predicate_2_Test__0__1_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.KStream.Predicate%602.Test(%600%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/KStream/Predicate.cs/#L63">View Source</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/KStream/Predicate.cs/#L83">View Source</a>
   </span>
   <a id="MASES_KafkaBridge_Streams_KStream_Predicate_2_Test_" data-uid="MASES.KafkaBridge.Streams.KStream.Predicate`2.Test*"></a>
   <h4 id="MASES_KafkaBridge_Streams_KStream_Predicate_2_Test__0__1_" data-uid="MASES.KafkaBridge.Streams.KStream.Predicate`2.Test(`0,`1)">Test(T, U)</h4>
@@ -326,6 +349,15 @@
   <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
   </div>
+  <div>
+      <a class="xref" href="MASES.KafkaBridge.Streams.KStream.IPredicate-2.html">IPredicate&lt;T, U&gt;</a>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span>
+  </div>
 </article>
           </div>
           
@@ -337,7 +369,7 @@
                     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_KStream_Predicate_2.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.KStream.Predicate%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/KStream/Predicate.cs/#L30" class="contribution-link">View Source</a>
+                    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/KStream/Predicate.cs/#L46" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class StateStore
    | Kafka Bridge website ">
-    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="generator" content="docfx 2.59.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -81,14 +81,21 @@
     <div class="level1"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
     <div class="level2"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span></div>
     <div class="level3"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span>&lt;<a class="xref" href="MASES.KafkaBridge.Streams.Processor.StateStore.html">StateStore</a>&gt;</div>
-    <div class="level4"><span class="xref">StateStore</span></div>
-      <div class="level5"><a class="xref" href="MASES.KafkaBridge.Streams.State.WindowStore-2.html">WindowStore&lt;K, V&gt;</a></div>
+    <div class="level4"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span>&lt;<a class="xref" href="MASES.KafkaBridge.Streams.Processor.StateStore.html">StateStore</a>, <a class="xref" href="MASES.KafkaBridge.Streams.Processor.IStateStore.html">IStateStore</a>&gt;</div>
+    <div class="level5"><span class="xref">StateStore</span></div>
+      <div class="level6"><a class="xref" href="MASES.KafkaBridge.Streams.State.KeyValueStore-2.html">KeyValueStore&lt;K, V&gt;</a></div>
+      <div class="level6"><a class="xref" href="MASES.KafkaBridge.Streams.State.SessionStore-2.html">SessionStore&lt;K, AGG&gt;</a></div>
+      <div class="level6"><a class="xref" href="MASES.KafkaBridge.Streams.State.WindowStore-2.html">WindowStore&lt;K, V&gt;</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
     <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span></div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span></div>
+    <div><a class="xref" href="MASES.KafkaBridge.Streams.Processor.IStateStore.html">IStateStore</a></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -96,10 +103,22 @@
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Streams.Processor.StateStore&gt;.SExecute(System.String, System.Object[])</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Streams.Processor.StateStore&gt;.SExecute&lt;TNewClass&gt;(System.String, System.Object[])</span>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Streams.Processor.StateStore&gt;.SExecute&lt;TReturn&gt;(System.String, System.Object[])</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Streams.Processor.StateStore&gt;.New&lt;TNewClass&gt;(System.String, System.Object[])</span>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Streams.Processor.StateStore&gt;.SExecute(System.Type, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Streams.Processor.StateStore&gt;.SExecute&lt;TNewClass, TReturn&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Streams.Processor.StateStore&gt;.SExecute&lt;TReturn&gt;(System.Type, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Streams.Processor.StateStore&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Streams.Processor.StateStore&gt;.SExecute&lt;TReturn, TConverter&gt;(System.Type, System.String, System.Object[])</span>
     </div>
     <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Streams.Processor.StateStore&gt;.New(System.Object[])</span>
@@ -114,7 +133,37 @@
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Streams.Processor.StateStore&gt;.Clazz</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.New&lt;TNewClass&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Streams.Processor.StateStore&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.DynClazz</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Streams.Processor.StateStore&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.Clazz</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TReturn&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.New&lt;TNewClass&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.New&lt;TNewClass, TReturn&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.New&lt;TNewClass, TReturn, TConverter&gt;(System.String, System.Object[])</span>
     </div>
     <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Dispose()</span>
@@ -135,10 +184,22 @@
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TReturn&gt;(System.String, System.Object[])</span>
     </div>
     <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TNewClass, TReturn&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TNewClass, TReturn, TConverter&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.DynInstance</span>
     </div>
     <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Instance</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsStatic</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsCloseable</span>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember#system-dynamic-dynamicobject-trygetmember(system-dynamic-getmemberbinder-system-object@)">DynamicObject.TryGetMember(GetMemberBinder, Object)</a>
@@ -199,7 +260,7 @@
   <h6><strong>Assembly</strong>: MASES.KafkaBridge.dll</h6>
   <h5 id="MASES_KafkaBridge_Streams_Processor_StateStore_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class StateStore : JVMBridgeBase&lt;StateStore&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, ISetupJVMBridgeCore, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public class StateStore : JVMBridgeBase&lt;StateStore, IStateStore&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IStateStore, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -208,7 +269,7 @@
     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_Processor_StateStore_ClassName.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.Processor.StateStore.ClassName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/Processor/StateStore.cs/#L23">View Source</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/Processor/StateStore.cs/#L38">View Source</a>
   </span>
   <a id="MASES_KafkaBridge_Streams_Processor_StateStore_ClassName_" data-uid="MASES.KafkaBridge.Streams.Processor.StateStore.ClassName*"></a>
   <h4 id="MASES_KafkaBridge_Streams_Processor_StateStore_ClassName" data-uid="MASES.KafkaBridge.Streams.Processor.StateStore.ClassName">ClassName</h4>
@@ -240,7 +301,7 @@
     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_Processor_StateStore_IsOpen.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.Processor.StateStore.IsOpen%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/Processor/StateStore.cs/#L33">View Source</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/Processor/StateStore.cs/#L44">View Source</a>
   </span>
   <a id="MASES_KafkaBridge_Streams_Processor_StateStore_IsOpen_" data-uid="MASES.KafkaBridge.Streams.Processor.StateStore.IsOpen*"></a>
   <h4 id="MASES_KafkaBridge_Streams_Processor_StateStore_IsOpen" data-uid="MASES.KafkaBridge.Streams.Processor.StateStore.IsOpen">IsOpen</h4>
@@ -270,7 +331,7 @@
     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_Processor_StateStore_Name.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.Processor.StateStore.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/Processor/StateStore.cs/#L25">View Source</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/Processor/StateStore.cs/#L40">View Source</a>
   </span>
   <a id="MASES_KafkaBridge_Streams_Processor_StateStore_Name_" data-uid="MASES.KafkaBridge.Streams.Processor.StateStore.Name*"></a>
   <h4 id="MASES_KafkaBridge_Streams_Processor_StateStore_Name" data-uid="MASES.KafkaBridge.Streams.Processor.StateStore.Name">Name</h4>
@@ -300,7 +361,7 @@
     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_Processor_StateStore_Persistent.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.Processor.StateStore.Persistent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/Processor/StateStore.cs/#L31">View Source</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/Processor/StateStore.cs/#L42">View Source</a>
   </span>
   <a id="MASES_KafkaBridge_Streams_Processor_StateStore_Persistent_" data-uid="MASES.KafkaBridge.Streams.Processor.StateStore.Persistent*"></a>
   <h4 id="MASES_KafkaBridge_Streams_Processor_StateStore_Persistent" data-uid="MASES.KafkaBridge.Streams.Processor.StateStore.Persistent">Persistent</h4>
@@ -332,7 +393,7 @@
     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_Processor_StateStore_Close.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.Processor.StateStore.Close%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/Processor/StateStore.cs/#L29">View Source</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/Processor/StateStore.cs/#L46">View Source</a>
   </span>
   <a id="MASES_KafkaBridge_Streams_Processor_StateStore_Close_" data-uid="MASES.KafkaBridge.Streams.Processor.StateStore.Close*"></a>
   <h4 id="MASES_KafkaBridge_Streams_Processor_StateStore_Close" data-uid="MASES.KafkaBridge.Streams.Processor.StateStore.Close">Close()</h4>
@@ -347,7 +408,7 @@
     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_Processor_StateStore_Flush.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.Processor.StateStore.Flush%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/Processor/StateStore.cs/#L27">View Source</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/Processor/StateStore.cs/#L51">View Source</a>
   </span>
   <a id="MASES_KafkaBridge_Streams_Processor_StateStore_Flush_" data-uid="MASES.KafkaBridge.Streams.Processor.StateStore.Flush*"></a>
   <h4 id="MASES_KafkaBridge_Streams_Processor_StateStore_Flush" data-uid="MASES.KafkaBridge.Streams.Processor.StateStore.Flush">Flush()</h4>
@@ -367,6 +428,18 @@
   <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
   </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KafkaBridge.Streams.Processor.IStateStore.html">IStateStore</a>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span>
+  </div>
 </article>
           </div>
           
@@ -378,7 +451,7 @@
                     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_Processor_StateStore.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.Processor.StateStore%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/Processor/StateStore.cs/#L21" class="contribution-link">View Source</a>
+                    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/Processor/StateStore.cs/#L36" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

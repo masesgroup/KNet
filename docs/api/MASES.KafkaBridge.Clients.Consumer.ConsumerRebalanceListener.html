@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ConsumerRebalanceListener
    | Kafka Bridge website ">
-    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="generator" content="docfx 2.59.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,7 +73,7 @@
   
   <h1 id="MASES_KafkaBridge_Clients_Consumer_ConsumerRebalanceListener" data-uid="MASES.KafkaBridge.Clients.Consumer.ConsumerRebalanceListener" class="text-break">Class ConsumerRebalanceListener
   </h1>
-  <div class="markdown level0 summary"><p>Listerner for Kafka ConsumerRebalanceListener. Extends <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener</span></p>
+  <div class="markdown level0 summary"><p>Listerner for Kafka ConsumerRebalanceListener. Extends <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener</span>, implements <a class="xref" href="MASES.KafkaBridge.Clients.Consumer.IConsumerRebalanceListener.html">IConsumerRebalanceListener</a></p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -86,6 +86,9 @@
     <h5>Implements</h5>
     <div><span class="xref">MASES.JCOBridge.C2JBridge.ICLRListener</span></div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    <div><a class="xref" href="MASES.KafkaBridge.Clients.Consumer.IConsumerRebalanceListener.html">IConsumerRebalanceListener</a></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -99,6 +102,9 @@
       <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.Dispose()</span>
     </div>
     <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.JniClass</span>
+    </div>
+    <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.AutoInit</span>
     </div>
     <div>
@@ -106,6 +112,18 @@
     </div>
     <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.DynListener</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.IsStatic</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.IsCloseable</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.Instance</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.DynInstance</span>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#system-object-tostring">Object.ToString()</a>
@@ -133,7 +151,7 @@
   <h6><strong>Assembly</strong>: MASES.KafkaBridge.dll</h6>
   <h5 id="MASES_KafkaBridge_Clients_Consumer_ConsumerRebalanceListener_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ConsumerRebalanceListener : CLRListener, ICLRListener, IDisposable, ICLRListenerInternal</code></pre>
+    <pre><code class="lang-csharp hljs">public class ConsumerRebalanceListener : CLRListener, ICLRListener, IDisposable, IConsumerRebalanceListener, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
   </div>
   <h5 id="MASES_KafkaBridge_Clients_Consumer_ConsumerRebalanceListener_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</p>
@@ -145,11 +163,11 @@
     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Clients_Consumer_ConsumerRebalanceListener__ctor_System_Action_MASES_KafkaBridge_Java_Util_Collection_MASES_KafkaBridge_Common_TopicPartition___System_Action_MASES_KafkaBridge_Java_Util_Collection_MASES_KafkaBridge_Common_TopicPartition___.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Clients.Consumer.ConsumerRebalanceListener.%23ctor(System.Action%7BMASES.KafkaBridge.Java.Util.Collection%7BMASES.KafkaBridge.Common.TopicPartition%7D%7D%2CSystem.Action%7BMASES.KafkaBridge.Java.Util.Collection%7BMASES.KafkaBridge.Common.TopicPartition%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Clients/Consumer/ConsumerRebalanceListener.cs/#L50">View Source</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Clients/Consumer/ConsumerRebalanceListener.cs/#L67">View Source</a>
   </span>
   <a id="MASES_KafkaBridge_Clients_Consumer_ConsumerRebalanceListener__ctor_" data-uid="MASES.KafkaBridge.Clients.Consumer.ConsumerRebalanceListener.#ctor*"></a>
   <h4 id="MASES_KafkaBridge_Clients_Consumer_ConsumerRebalanceListener__ctor_System_Action_MASES_KafkaBridge_Java_Util_Collection_MASES_KafkaBridge_Common_TopicPartition___System_Action_MASES_KafkaBridge_Java_Util_Collection_MASES_KafkaBridge_Common_TopicPartition___" data-uid="MASES.KafkaBridge.Clients.Consumer.ConsumerRebalanceListener.#ctor(System.Action{MASES.KafkaBridge.Java.Util.Collection{MASES.KafkaBridge.Common.TopicPartition}},System.Action{MASES.KafkaBridge.Java.Util.Collection{MASES.KafkaBridge.Common.TopicPartition}})">ConsumerRebalanceListener(Action&lt;Collection&lt;TopicPartition&gt;&gt;, Action&lt;Collection&lt;TopicPartition&gt;&gt;)</h4>
-  <div class="markdown level1 summary"><p>Initialize a new instance of <see cref="!:Callback"></see></p>
+  <div class="markdown level1 summary"><p>Initialize a new instance of <a class="xref" href="MASES.KafkaBridge.Clients.Consumer.ConsumerRebalanceListener.html">ConsumerRebalanceListener</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -184,18 +202,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Clients_Consumer_ConsumerRebalanceListener_JniClass.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Clients.Consumer.ConsumerRebalanceListener.JniClass%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Clients_Consumer_ConsumerRebalanceListener_ClassName.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Clients.Consumer.ConsumerRebalanceListener.ClassName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Clients/Consumer/ConsumerRebalanceListener.cs/#L33">View Source</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Clients/Consumer/ConsumerRebalanceListener.cs/#L50">View Source</a>
   </span>
-  <a id="MASES_KafkaBridge_Clients_Consumer_ConsumerRebalanceListener_JniClass_" data-uid="MASES.KafkaBridge.Clients.Consumer.ConsumerRebalanceListener.JniClass*"></a>
-  <h4 id="MASES_KafkaBridge_Clients_Consumer_ConsumerRebalanceListener_JniClass" data-uid="MASES.KafkaBridge.Clients.Consumer.ConsumerRebalanceListener.JniClass">JniClass</h4>
+  <a id="MASES_KafkaBridge_Clients_Consumer_ConsumerRebalanceListener_ClassName_" data-uid="MASES.KafkaBridge.Clients.Consumer.ConsumerRebalanceListener.ClassName*"></a>
+  <h4 id="MASES_KafkaBridge_Clients_Consumer_ConsumerRebalanceListener_ClassName" data-uid="MASES.KafkaBridge.Clients.Consumer.ConsumerRebalanceListener.ClassName">ClassName</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed override string JniClass { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed override string ClassName { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -213,13 +231,13 @@
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.JniClass</span></div>
+  <div><span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.ClassName</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Clients_Consumer_ConsumerRebalanceListener_OnOnPartitionsAssigned.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Clients.Consumer.ConsumerRebalanceListener.OnOnPartitionsAssigned%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Clients/Consumer/ConsumerRebalanceListener.cs/#L44">View Source</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Clients/Consumer/ConsumerRebalanceListener.cs/#L61">View Source</a>
   </span>
   <a id="MASES_KafkaBridge_Clients_Consumer_ConsumerRebalanceListener_OnOnPartitionsAssigned_" data-uid="MASES.KafkaBridge.Clients.Consumer.ConsumerRebalanceListener.OnOnPartitionsAssigned*"></a>
   <h4 id="MASES_KafkaBridge_Clients_Consumer_ConsumerRebalanceListener_OnOnPartitionsAssigned" data-uid="MASES.KafkaBridge.Clients.Consumer.ConsumerRebalanceListener.OnOnPartitionsAssigned">OnOnPartitionsAssigned</h4>
@@ -250,7 +268,7 @@
     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Clients_Consumer_ConsumerRebalanceListener_OnOnPartitionsRevoked.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Clients.Consumer.ConsumerRebalanceListener.OnOnPartitionsRevoked%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Clients/Consumer/ConsumerRebalanceListener.cs/#L40">View Source</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Clients/Consumer/ConsumerRebalanceListener.cs/#L57">View Source</a>
   </span>
   <a id="MASES_KafkaBridge_Clients_Consumer_ConsumerRebalanceListener_OnOnPartitionsRevoked_" data-uid="MASES.KafkaBridge.Clients.Consumer.ConsumerRebalanceListener.OnOnPartitionsRevoked*"></a>
   <h4 id="MASES_KafkaBridge_Clients_Consumer_ConsumerRebalanceListener_OnOnPartitionsRevoked" data-uid="MASES.KafkaBridge.Clients.Consumer.ConsumerRebalanceListener.OnOnPartitionsRevoked">OnOnPartitionsRevoked</h4>
@@ -283,7 +301,7 @@
     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Clients_Consumer_ConsumerRebalanceListener_OnPartitionsAssigned_MASES_KafkaBridge_Java_Util_Collection_MASES_KafkaBridge_Common_TopicPartition__.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Clients.Consumer.ConsumerRebalanceListener.OnPartitionsAssigned(MASES.KafkaBridge.Java.Util.Collection%7BMASES.KafkaBridge.Common.TopicPartition%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Clients/Consumer/ConsumerRebalanceListener.cs/#L79">View Source</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Clients/Consumer/ConsumerRebalanceListener.cs/#L96">View Source</a>
   </span>
   <a id="MASES_KafkaBridge_Clients_Consumer_ConsumerRebalanceListener_OnPartitionsAssigned_" data-uid="MASES.KafkaBridge.Clients.Consumer.ConsumerRebalanceListener.OnPartitionsAssigned*"></a>
   <h4 id="MASES_KafkaBridge_Clients_Consumer_ConsumerRebalanceListener_OnPartitionsAssigned_MASES_KafkaBridge_Java_Util_Collection_MASES_KafkaBridge_Common_TopicPartition__" data-uid="MASES.KafkaBridge.Clients.Consumer.ConsumerRebalanceListener.OnPartitionsAssigned(MASES.KafkaBridge.Java.Util.Collection{MASES.KafkaBridge.Common.TopicPartition})">OnPartitionsAssigned(Collection&lt;TopicPartition&gt;)</h4>
@@ -317,7 +335,7 @@
     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Clients_Consumer_ConsumerRebalanceListener_OnPartitionsRevoked_MASES_KafkaBridge_Java_Util_Collection_MASES_KafkaBridge_Common_TopicPartition__.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Clients.Consumer.ConsumerRebalanceListener.OnPartitionsRevoked(MASES.KafkaBridge.Java.Util.Collection%7BMASES.KafkaBridge.Common.TopicPartition%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Clients/Consumer/ConsumerRebalanceListener.cs/#L74">View Source</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Clients/Consumer/ConsumerRebalanceListener.cs/#L91">View Source</a>
   </span>
   <a id="MASES_KafkaBridge_Clients_Consumer_ConsumerRebalanceListener_OnPartitionsRevoked_" data-uid="MASES.KafkaBridge.Clients.Consumer.ConsumerRebalanceListener.OnPartitionsRevoked*"></a>
   <h4 id="MASES_KafkaBridge_Clients_Consumer_ConsumerRebalanceListener_OnPartitionsRevoked_MASES_KafkaBridge_Java_Util_Collection_MASES_KafkaBridge_Common_TopicPartition__" data-uid="MASES.KafkaBridge.Clients.Consumer.ConsumerRebalanceListener.OnPartitionsRevoked(MASES.KafkaBridge.Java.Util.Collection{MASES.KafkaBridge.Common.TopicPartition})">OnPartitionsRevoked(Collection&lt;TopicPartition&gt;)</h4>
@@ -353,6 +371,15 @@
   <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
   </div>
+  <div>
+      <a class="xref" href="MASES.KafkaBridge.Clients.Consumer.IConsumerRebalanceListener.html">IConsumerRebalanceListener</a>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span>
+  </div>
 </article>
           </div>
           
@@ -364,7 +391,7 @@
                     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Clients_Consumer_ConsumerRebalanceListener.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Clients.Consumer.ConsumerRebalanceListener%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Clients/Consumer/ConsumerRebalanceListener.cs/#L30" class="contribution-link">View Source</a>
+                    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Clients/Consumer/ConsumerRebalanceListener.cs/#L47" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

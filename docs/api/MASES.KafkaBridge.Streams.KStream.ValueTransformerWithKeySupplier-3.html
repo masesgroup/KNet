@@ -5,12 +5,12 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class JVMBridgeKeyValueMapper&lt;T, U, VR&gt;
+    <title>Class ValueTransformerWithKeySupplier&lt;K, V, VR&gt;
    | Kafka Bridge website </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class JVMBridgeKeyValueMapper&lt;T, U, VR&gt;
+    <meta name="title" content="Class ValueTransformerWithKeySupplier&lt;K, V, VR&gt;
    | Kafka Bridge website ">
-    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="generator" content="docfx 2.59.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -68,36 +68,40 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="MASES.KafkaBridge.Streams.KStream.JVMBridgeKeyValueMapper`3">
+            <article class="content wrap" id="_content" data-uid="MASES.KafkaBridge.Streams.KStream.ValueTransformerWithKeySupplier`3">
   
   
-  <h1 id="MASES_KafkaBridge_Streams_KStream_JVMBridgeKeyValueMapper_3" data-uid="MASES.KafkaBridge.Streams.KStream.JVMBridgeKeyValueMapper`3" class="text-break">Class JVMBridgeKeyValueMapper&lt;T, U, VR&gt;
+  <h1 id="MASES_KafkaBridge_Streams_KStream_ValueTransformerWithKeySupplier_3" data-uid="MASES.KafkaBridge.Streams.KStream.ValueTransformerWithKeySupplier`3" class="text-break">Class ValueTransformerWithKeySupplier&lt;K, V, VR&gt;
   </h1>
-  <div class="markdown level0 summary"><p>Listerner for Kafka KeyValueMapper. Extends <a class="xref" href="MASES.KafkaBridge.Streams.KStream.KeyValueMapper-3.html">KeyValueMapper&lt;T, U, VR&gt;</a></p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">MASES.JCOBridge.C2JBridge.CLRListener</span></div>
-    <div class="level2"><a class="xref" href="MASES.KafkaBridge.Streams.KStream.KeyValueMapper-3.html">KeyValueMapper</a>&lt;T, U, VR&gt;</div>
-    <div class="level3"><span class="xref">JVMBridgeKeyValueMapper&lt;T, U, VR&gt;</span></div>
+    <div class="level2"><span class="xref">MASES.JCOBridge.C2JBridge.Function.SupplierListener</span>&lt;<a class="xref" href="MASES.KafkaBridge.Streams.KStream.ValueTransformerWithKey-3.html">ValueTransformerWithKey</a>&lt;K, V, VR&gt;&gt;</div>
+    <div class="level3"><span class="xref">ValueTransformerWithKeySupplier&lt;K, V, VR&gt;</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
     <div><span class="xref">MASES.JCOBridge.C2JBridge.ICLRListener</span></div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    <div><a class="xref" href="MASES.KafkaBridge.Streams.KStream.IValueTransformerWithKeySupplier-3.html">IValueTransformerWithKeySupplier</a>&lt;K, V, VR&gt;</div>
+    <div><a class="xref" href="MASES.KafkaBridge.Streams.Processor.IConnectedStoreProvider.html">IConnectedStoreProvider</a></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.Function.Supplier</span>&lt;<a class="xref" href="MASES.KafkaBridge.Streams.KStream.ValueTransformerWithKey-3.html">ValueTransformerWithKey</a>&lt;K, V, VR&gt;&gt;</div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="MASES.KafkaBridge.Streams.KStream.KeyValueMapper-3.html#MASES_KafkaBridge_Streams_KStream_KeyValueMapper_3_JniClass">KeyValueMapper&lt;T, U, VR&gt;.JniClass</a>
+      <span class="xref">MASES.JCOBridge.C2JBridge.Function.SupplierListener&lt;MASES.KafkaBridge.Streams.KStream.ValueTransformerWithKey&lt;K, V, VR&gt;&gt;.Get()</span>
     </div>
     <div>
-      <a class="xref" href="MASES.KafkaBridge.Streams.KStream.KeyValueMapper-3.html#MASES_KafkaBridge_Streams_KStream_KeyValueMapper_3_OnApply">KeyValueMapper&lt;T, U, VR&gt;.OnApply</a>
+      <span class="xref">MASES.JCOBridge.C2JBridge.Function.SupplierListener&lt;MASES.KafkaBridge.Streams.KStream.ValueTransformerWithKey&lt;K, V, VR&gt;&gt;.ClassName</span>
     </div>
     <div>
-      <a class="xref" href="MASES.KafkaBridge.Streams.KStream.KeyValueMapper-3.html#MASES_KafkaBridge_Streams_KStream_KeyValueMapper_3_Apply__0__1_">KeyValueMapper&lt;T, U, VR&gt;.Apply(T, U)</a>
+      <span class="xref">MASES.JCOBridge.C2JBridge.Function.SupplierListener&lt;MASES.KafkaBridge.Streams.KStream.ValueTransformerWithKey&lt;K, V, VR&gt;&gt;.OnGet</span>
     </div>
     <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.AddEventHandler(System.String, System.EventHandler)</span>
@@ -112,6 +116,9 @@
       <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.JniClass</span>
     </div>
     <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.ClassName</span>
+    </div>
+    <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.AutoInit</span>
     </div>
     <div>
@@ -119,6 +126,18 @@
     </div>
     <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.DynListener</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.IsStatic</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.IsCloseable</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.Instance</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.DynInstance</span>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#system-object-tostring">Object.ToString()</a>
@@ -144,11 +163,9 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="MASES.KafkaBridge.Streams.KStream.html">MASES.KafkaBridge.Streams.KStream</a></h6>
   <h6><strong>Assembly</strong>: MASES.KafkaBridge.dll</h6>
-  <h5 id="MASES_KafkaBridge_Streams_KStream_JVMBridgeKeyValueMapper_3_syntax">Syntax</h5>
+  <h5 id="MASES_KafkaBridge_Streams_KStream_ValueTransformerWithKeySupplier_3_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class JVMBridgeKeyValueMapper&lt;T, U, VR&gt; : KeyValueMapper&lt;T, U, VR&gt;, ICLRListener, IDisposable, ICLRListenerInternal where T : JVMBridgeBase, new()
-    where U : JVMBridgeBase, new()
-    where VR : JVMBridgeBase, new()</code></pre>
+    <pre><code class="lang-csharp hljs">public class ValueTransformerWithKeySupplier&lt;K, V, VR&gt; : SupplierListener&lt;ValueTransformerWithKey&lt;K, V, VR&gt;&gt;, ICLRListener, IDisposable, IValueTransformerWithKeySupplier&lt;K, V, VR&gt;, IConnectedStoreProvider, Supplier&lt;ValueTransformerWithKey&lt;K, V, VR&gt;&gt;, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -160,14 +177,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">T</span></td>
-        <td><p>The data associated to the event as an <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span> object</p>
-</td>
+        <td><span class="parametername">K</span></td>
+        <td></td>
       </tr>
       <tr>
-        <td><span class="parametername">U</span></td>
-        <td><p>The data associated to the event as an <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span> object</p>
-</td>
+        <td><span class="parametername">V</span></td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="parametername">VR</span></td>
@@ -175,42 +190,35 @@
       </tr>
     </tbody>
   </table>
-  <h5 id="MASES_KafkaBridge_Streams_KStream_JVMBridgeKeyValueMapper_3_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</p>
-</div>
-  <h3 id="constructors">Constructors
+  <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_KStream_JVMBridgeKeyValueMapper_3__ctor_System_Func__0__1__2__.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.KStream.JVMBridgeKeyValueMapper%603.%23ctor(System.Func%7B%600%2C%601%2C%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_KStream_ValueTransformerWithKeySupplier_3_Stores.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.KStream.ValueTransformerWithKeySupplier%603.Stores%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/KStream/KeyValueMapper.cs/#L81">View Source</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/KStream/ValueTransformerWithKeySupplier.cs/#L32">View Source</a>
   </span>
-  <a id="MASES_KafkaBridge_Streams_KStream_JVMBridgeKeyValueMapper_3__ctor_" data-uid="MASES.KafkaBridge.Streams.KStream.JVMBridgeKeyValueMapper`3.#ctor*"></a>
-  <h4 id="MASES_KafkaBridge_Streams_KStream_JVMBridgeKeyValueMapper_3__ctor_System_Func__0__1__2__" data-uid="MASES.KafkaBridge.Streams.KStream.JVMBridgeKeyValueMapper`3.#ctor(System.Func{`0,`1,`2})">JVMBridgeKeyValueMapper(Func&lt;T, U, VR&gt;)</h4>
-  <div class="markdown level1 summary"><p>Initialize a new instance of <a class="xref" href="MASES.KafkaBridge.Streams.KStream.JVMBridgeKeyValueMapper-3.html">JVMBridgeKeyValueMapper&lt;T, U, VR&gt;</a></p>
-</div>
+  <a id="MASES_KafkaBridge_Streams_KStream_ValueTransformerWithKeySupplier_3_Stores_" data-uid="MASES.KafkaBridge.Streams.KStream.ValueTransformerWithKeySupplier`3.Stores*"></a>
+  <h4 id="MASES_KafkaBridge_Streams_KStream_ValueTransformerWithKeySupplier_3_Stores" data-uid="MASES.KafkaBridge.Streams.KStream.ValueTransformerWithKeySupplier`3.Stores">Stores</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public JVMBridgeKeyValueMapper(Func&lt;T, U, VR&gt; func = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Set&lt;StoreBuilder&gt; Stores { get; }</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;T, U, VR&gt;</td>
-        <td><span class="parametername">func</span></td>
-        <td><p>The <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-3">Func&lt;T1,T2,TResult&gt;</a> to be executed</p>
-</td>
+        <td><a class="xref" href="MASES.KafkaBridge.Java.Util.Set-1.html">Set</a>&lt;<a class="xref" href="MASES.KafkaBridge.Streams.State.StoreBuilder.html">StoreBuilder</a>&gt;</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -221,6 +229,21 @@
   <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
   </div>
+  <div>
+      <a class="xref" href="MASES.KafkaBridge.Streams.KStream.IValueTransformerWithKeySupplier-3.html">IValueTransformerWithKeySupplier&lt;K, V, VR&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KafkaBridge.Streams.Processor.IConnectedStoreProvider.html">IConnectedStoreProvider</a>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.Function.Supplier&lt;TReturn&gt;</span>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span>
+  </div>
 </article>
           </div>
           
@@ -229,10 +252,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_KStream_JVMBridgeKeyValueMapper_3.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.KStream.JVMBridgeKeyValueMapper%603%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_KStream_ValueTransformerWithKeySupplier_3.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.KStream.ValueTransformerWithKeySupplier%603%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/KStream/KeyValueMapper.cs/#L72" class="contribution-link">View Source</a>
+                    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/KStream/ValueTransformerWithKeySupplier.cs/#L30" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class WindowStore&lt;K, V&gt;
    | Kafka Bridge website ">
-    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="generator" content="docfx 2.59.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -81,25 +81,27 @@
     <div class="level1"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
     <div class="level2"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span></div>
     <div class="level3"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span>&lt;<a class="xref" href="MASES.KafkaBridge.Streams.Processor.StateStore.html">StateStore</a>&gt;</div>
-    <div class="level4"><a class="xref" href="MASES.KafkaBridge.Streams.Processor.StateStore.html">StateStore</a></div>
-    <div class="level5"><span class="xref">WindowStore&lt;K, V&gt;</span></div>
+    <div class="level4"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span>&lt;<a class="xref" href="MASES.KafkaBridge.Streams.Processor.StateStore.html">StateStore</a>, <a class="xref" href="MASES.KafkaBridge.Streams.Processor.IStateStore.html">IStateStore</a>&gt;</div>
+    <div class="level5"><a class="xref" href="MASES.KafkaBridge.Streams.Processor.StateStore.html">StateStore</a></div>
+    <div class="level6"><span class="xref">WindowStore&lt;K, V&gt;</span></div>
+      <div class="level7"><a class="xref" href="MASES.KafkaBridge.Streams.State.TimestampedWindowStore-2.html">TimestampedWindowStore&lt;K, V&gt;</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
     <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span></div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span></div>
+    <div><a class="xref" href="MASES.KafkaBridge.Streams.State.IWindowStore-2.html">IWindowStore</a>&lt;K, V&gt;</div>
+    <div><a class="xref" href="MASES.KafkaBridge.Streams.Processor.IStateStore.html">IStateStore</a></div>
+    <div><a class="xref" href="MASES.KafkaBridge.Streams.State.IReadOnlyWindowStore-2.html">IReadOnlyWindowStore</a>&lt;K, V&gt;</div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
       <a class="xref" href="MASES.KafkaBridge.Streams.Processor.StateStore.html#MASES_KafkaBridge_Streams_Processor_StateStore_Name">StateStore.Name</a>
-    </div>
-    <div>
-      <a class="xref" href="MASES.KafkaBridge.Streams.Processor.StateStore.html#MASES_KafkaBridge_Streams_Processor_StateStore_Flush">StateStore.Flush()</a>
-    </div>
-    <div>
-      <a class="xref" href="MASES.KafkaBridge.Streams.Processor.StateStore.html#MASES_KafkaBridge_Streams_Processor_StateStore_Close">StateStore.Close()</a>
     </div>
     <div>
       <a class="xref" href="MASES.KafkaBridge.Streams.Processor.StateStore.html#MASES_KafkaBridge_Streams_Processor_StateStore_Persistent">StateStore.Persistent</a>
@@ -108,13 +110,31 @@
       <a class="xref" href="MASES.KafkaBridge.Streams.Processor.StateStore.html#MASES_KafkaBridge_Streams_Processor_StateStore_IsOpen">StateStore.IsOpen</a>
     </div>
     <div>
+      <a class="xref" href="MASES.KafkaBridge.Streams.Processor.StateStore.html#MASES_KafkaBridge_Streams_Processor_StateStore_Close">StateStore.Close()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KafkaBridge.Streams.Processor.StateStore.html#MASES_KafkaBridge_Streams_Processor_StateStore_Flush">StateStore.Flush()</a>
+    </div>
+    <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Streams.Processor.StateStore&gt;.SExecute(System.String, System.Object[])</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Streams.Processor.StateStore&gt;.SExecute&lt;TNewClass&gt;(System.String, System.Object[])</span>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Streams.Processor.StateStore&gt;.SExecute&lt;TReturn&gt;(System.String, System.Object[])</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Streams.Processor.StateStore&gt;.New&lt;TNewClass&gt;(System.String, System.Object[])</span>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Streams.Processor.StateStore&gt;.SExecute(System.Type, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Streams.Processor.StateStore&gt;.SExecute&lt;TNewClass, TReturn&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Streams.Processor.StateStore&gt;.SExecute&lt;TReturn&gt;(System.Type, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Streams.Processor.StateStore&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Streams.Processor.StateStore&gt;.SExecute&lt;TReturn, TConverter&gt;(System.Type, System.String, System.Object[])</span>
     </div>
     <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Streams.Processor.StateStore&gt;.New(System.Object[])</span>
@@ -129,7 +149,37 @@
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Streams.Processor.StateStore&gt;.Clazz</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.New&lt;TNewClass&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Streams.Processor.StateStore&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.DynClazz</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Streams.Processor.StateStore&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.Clazz</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TReturn&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.New&lt;TNewClass&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.New&lt;TNewClass, TReturn&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.New&lt;TNewClass, TReturn, TConverter&gt;(System.String, System.Object[])</span>
     </div>
     <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Dispose()</span>
@@ -150,10 +200,22 @@
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TReturn&gt;(System.String, System.Object[])</span>
     </div>
     <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TNewClass, TReturn&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TNewClass, TReturn, TConverter&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.DynInstance</span>
     </div>
     <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Instance</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsStatic</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsCloseable</span>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember#system-dynamic-dynamicobject-trygetmember(system-dynamic-getmemberbinder-system-object@)">DynamicObject.TryGetMember(GetMemberBinder, Object)</a>
@@ -214,7 +276,7 @@
   <h6><strong>Assembly</strong>: MASES.KafkaBridge.dll</h6>
   <h5 id="MASES_KafkaBridge_Streams_State_WindowStore_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class WindowStore&lt;K, V&gt; : StateStore, IDynamicMetaObjectProvider, IJVMBridgeCore, ISetupJVMBridgeCore, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public class WindowStore&lt;K, V&gt; : StateStore, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IWindowStore&lt;K, V&gt;, IStateStore, IReadOnlyWindowStore&lt;K, V&gt;, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -239,10 +301,40 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_State_WindowStore_2_All.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.State.WindowStore%602.All%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/State/WindowStore.cs/#L34">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Streams_State_WindowStore_2_All_" data-uid="MASES.KafkaBridge.Streams.State.WindowStore`2.All*"></a>
+  <h4 id="MASES_KafkaBridge_Streams_State_WindowStore_2_All" data-uid="MASES.KafkaBridge.Streams.State.WindowStore`2.All">All</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyValueIterator&lt;Windowed&lt;K&gt;, V&gt; All { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Streams.State.KeyValueIterator-2.html">KeyValueIterator</a>&lt;<a class="xref" href="MASES.KafkaBridge.Streams.KStream.Windowed-1.html">Windowed</a>&lt;K&gt;, V&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_State_WindowStore_2_ClassName.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.State.WindowStore%602.ClassName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/State/WindowStore.cs/#L25">View Source</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/State/WindowStore.cs/#L32">View Source</a>
   </span>
   <a id="MASES_KafkaBridge_Streams_State_WindowStore_2_ClassName_" data-uid="MASES.KafkaBridge.Streams.State.WindowStore`2.ClassName*"></a>
   <h4 id="MASES_KafkaBridge_Streams_State_WindowStore_2_ClassName" data-uid="MASES.KafkaBridge.Streams.State.WindowStore`2.ClassName">ClassName</h4>
@@ -273,10 +365,233 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_State_WindowStore_2_Fetch__0__0_MASES_KafkaBridge_Java_Time_Instant_MASES_KafkaBridge_Java_Time_Instant_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.State.WindowStore%602.Fetch(%600%2C%600%2CMASES.KafkaBridge.Java.Time.Instant%2CMASES.KafkaBridge.Java.Time.Instant)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/State/WindowStore.cs/#L46">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Streams_State_WindowStore_2_Fetch_" data-uid="MASES.KafkaBridge.Streams.State.WindowStore`2.Fetch*"></a>
+  <h4 id="MASES_KafkaBridge_Streams_State_WindowStore_2_Fetch__0__0_MASES_KafkaBridge_Java_Time_Instant_MASES_KafkaBridge_Java_Time_Instant_" data-uid="MASES.KafkaBridge.Streams.State.WindowStore`2.Fetch(`0,`0,MASES.KafkaBridge.Java.Time.Instant,MASES.KafkaBridge.Java.Time.Instant)">Fetch(K, K, Instant, Instant)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyValueIterator&lt;Windowed&lt;K&gt;, V&gt; Fetch(K keyFrom, K keyTo, Instant timeFrom, Instant timeTo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">K</span></td>
+        <td><span class="parametername">keyFrom</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">K</span></td>
+        <td><span class="parametername">keyTo</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Java.Time.Instant.html">Instant</a></td>
+        <td><span class="parametername">timeFrom</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Java.Time.Instant.html">Instant</a></td>
+        <td><span class="parametername">timeTo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Streams.State.KeyValueIterator-2.html">KeyValueIterator</a>&lt;<a class="xref" href="MASES.KafkaBridge.Streams.KStream.Windowed-1.html">Windowed</a>&lt;K&gt;, V&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_State_WindowStore_2_Fetch__0_MASES_KafkaBridge_Java_Time_Instant_MASES_KafkaBridge_Java_Time_Instant_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.State.WindowStore%602.Fetch(%600%2CMASES.KafkaBridge.Java.Time.Instant%2CMASES.KafkaBridge.Java.Time.Instant)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/State/WindowStore.cs/#L41">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Streams_State_WindowStore_2_Fetch_" data-uid="MASES.KafkaBridge.Streams.State.WindowStore`2.Fetch*"></a>
+  <h4 id="MASES_KafkaBridge_Streams_State_WindowStore_2_Fetch__0_MASES_KafkaBridge_Java_Time_Instant_MASES_KafkaBridge_Java_Time_Instant_" data-uid="MASES.KafkaBridge.Streams.State.WindowStore`2.Fetch(`0,MASES.KafkaBridge.Java.Time.Instant,MASES.KafkaBridge.Java.Time.Instant)">Fetch(K, Instant, Instant)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WindowStoreIterator&lt;V&gt; Fetch(K key, Instant timeFrom, Instant timeTo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">K</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Java.Time.Instant.html">Instant</a></td>
+        <td><span class="parametername">timeFrom</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Java.Time.Instant.html">Instant</a></td>
+        <td><span class="parametername">timeTo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Streams.State.WindowStoreIterator-1.html">WindowStoreIterator</a>&lt;V&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_State_WindowStore_2_Fetch__0_System_Int64_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.State.WindowStore%602.Fetch(%600%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/State/WindowStore.cs/#L36">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Streams_State_WindowStore_2_Fetch_" data-uid="MASES.KafkaBridge.Streams.State.WindowStore`2.Fetch*"></a>
+  <h4 id="MASES_KafkaBridge_Streams_State_WindowStore_2_Fetch__0_System_Int64_" data-uid="MASES.KafkaBridge.Streams.State.WindowStore`2.Fetch(`0,System.Int64)">Fetch(K, Int64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public V Fetch(K key, long time)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">K</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">time</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">V</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_State_WindowStore_2_FetchAll_MASES_KafkaBridge_Java_Time_Instant_MASES_KafkaBridge_Java_Time_Instant_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.State.WindowStore%602.FetchAll(MASES.KafkaBridge.Java.Time.Instant%2CMASES.KafkaBridge.Java.Time.Instant)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/State/WindowStore.cs/#L51">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Streams_State_WindowStore_2_FetchAll_" data-uid="MASES.KafkaBridge.Streams.State.WindowStore`2.FetchAll*"></a>
+  <h4 id="MASES_KafkaBridge_Streams_State_WindowStore_2_FetchAll_MASES_KafkaBridge_Java_Time_Instant_MASES_KafkaBridge_Java_Time_Instant_" data-uid="MASES.KafkaBridge.Streams.State.WindowStore`2.FetchAll(MASES.KafkaBridge.Java.Time.Instant,MASES.KafkaBridge.Java.Time.Instant)">FetchAll(Instant, Instant)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyValueIterator&lt;Windowed&lt;K&gt;, V&gt; FetchAll(Instant timeFrom, Instant timeTo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Java.Time.Instant.html">Instant</a></td>
+        <td><span class="parametername">timeFrom</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Java.Time.Instant.html">Instant</a></td>
+        <td><span class="parametername">timeTo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Streams.State.KeyValueIterator-2.html">KeyValueIterator</a>&lt;<a class="xref" href="MASES.KafkaBridge.Streams.KStream.Windowed-1.html">Windowed</a>&lt;K&gt;, V&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_State_WindowStore_2_Put__0__1_System_Int64_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.State.WindowStore%602.Put(%600%2C%601%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/State/WindowStore.cs/#L27">View Source</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/State/WindowStore.cs/#L56">View Source</a>
   </span>
   <a id="MASES_KafkaBridge_Streams_State_WindowStore_2_Put_" data-uid="MASES.KafkaBridge.Streams.State.WindowStore`2.Put*"></a>
   <h4 id="MASES_KafkaBridge_Streams_State_WindowStore_2_Put__0__1_System_Int64_" data-uid="MASES.KafkaBridge.Streams.State.WindowStore`2.Put(`0,`1,System.Int64)">Put(K, V, Int64)</h4>
@@ -323,6 +638,24 @@
   <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
   </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KafkaBridge.Streams.State.IWindowStore-2.html">IWindowStore&lt;K, V&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KafkaBridge.Streams.Processor.IStateStore.html">IStateStore</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KafkaBridge.Streams.State.IReadOnlyWindowStore-2.html">IReadOnlyWindowStore&lt;K, V&gt;</a>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span>
+  </div>
 </article>
           </div>
           
@@ -334,7 +667,7 @@
                     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_State_WindowStore_2.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.State.WindowStore%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/State/WindowStore.cs/#L23" class="contribution-link">View Source</a>
+                    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/State/WindowStore.cs/#L30" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

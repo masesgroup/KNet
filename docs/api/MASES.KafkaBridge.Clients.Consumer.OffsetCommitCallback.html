@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class OffsetCommitCallback
    | Kafka Bridge website ">
-    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="generator" content="docfx 2.59.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,7 +73,7 @@
   
   <h1 id="MASES_KafkaBridge_Clients_Consumer_OffsetCommitCallback" data-uid="MASES.KafkaBridge.Clients.Consumer.OffsetCommitCallback" class="text-break">Class OffsetCommitCallback
   </h1>
-  <div class="markdown level0 summary"><p>Listerner for Kafka OffsetCommitCallback. Extends <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener</span></p>
+  <div class="markdown level0 summary"><p>Listerner for Kafka OffsetCommitCallback. Extends <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener</span>, implements <a class="xref" href="MASES.KafkaBridge.Clients.Consumer.IOffsetCommitCallback.html">IOffsetCommitCallback</a></p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -86,6 +86,9 @@
     <h5>Implements</h5>
     <div><span class="xref">MASES.JCOBridge.C2JBridge.ICLRListener</span></div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    <div><a class="xref" href="MASES.KafkaBridge.Clients.Consumer.IOffsetCommitCallback.html">IOffsetCommitCallback</a></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -99,6 +102,9 @@
       <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.Dispose()</span>
     </div>
     <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.JniClass</span>
+    </div>
+    <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.AutoInit</span>
     </div>
     <div>
@@ -106,6 +112,18 @@
     </div>
     <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.DynListener</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.IsStatic</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.IsCloseable</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.Instance</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.DynInstance</span>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#system-object-tostring">Object.ToString()</a>
@@ -133,7 +151,7 @@
   <h6><strong>Assembly</strong>: MASES.KafkaBridge.dll</h6>
   <h5 id="MASES_KafkaBridge_Clients_Consumer_OffsetCommitCallback_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class OffsetCommitCallback : CLRListener, ICLRListener, IDisposable, ICLRListenerInternal</code></pre>
+    <pre><code class="lang-csharp hljs">public class OffsetCommitCallback : CLRListener, ICLRListener, IDisposable, IOffsetCommitCallback, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
   </div>
   <h5 id="MASES_KafkaBridge_Clients_Consumer_OffsetCommitCallback_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</p>
@@ -145,11 +163,11 @@
     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Clients_Consumer_OffsetCommitCallback__ctor_System_Action_MASES_KafkaBridge_Java_Util_Map_MASES_KafkaBridge_Common_TopicPartition_MASES_KafkaBridge_Clients_Consumer_OffsetAndMetadata__MASES_JCOBridge_C2JBridge_JVMBridgeException__.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Clients.Consumer.OffsetCommitCallback.%23ctor(System.Action%7BMASES.KafkaBridge.Java.Util.Map%7BMASES.KafkaBridge.Common.TopicPartition%2CMASES.KafkaBridge.Clients.Consumer.OffsetAndMetadata%7D%2CMASES.JCOBridge.C2JBridge.JVMBridgeException%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Clients/Consumer/OffsetCommitCallback.cs/#L45">View Source</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Clients/Consumer/OffsetCommitCallback.cs/#L58">View Source</a>
   </span>
   <a id="MASES_KafkaBridge_Clients_Consumer_OffsetCommitCallback__ctor_" data-uid="MASES.KafkaBridge.Clients.Consumer.OffsetCommitCallback.#ctor*"></a>
   <h4 id="MASES_KafkaBridge_Clients_Consumer_OffsetCommitCallback__ctor_System_Action_MASES_KafkaBridge_Java_Util_Map_MASES_KafkaBridge_Common_TopicPartition_MASES_KafkaBridge_Clients_Consumer_OffsetAndMetadata__MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KafkaBridge.Clients.Consumer.OffsetCommitCallback.#ctor(System.Action{MASES.KafkaBridge.Java.Util.Map{MASES.KafkaBridge.Common.TopicPartition,MASES.KafkaBridge.Clients.Consumer.OffsetAndMetadata},MASES.JCOBridge.C2JBridge.JVMBridgeException})">OffsetCommitCallback(Action&lt;Map&lt;TopicPartition, OffsetAndMetadata&gt;, JVMBridgeException&gt;)</h4>
-  <div class="markdown level1 summary"><p>Initialize a new instance of <see cref="!:Callback"></see></p>
+  <div class="markdown level1 summary"><p>Initialize a new instance of <a class="xref" href="MASES.KafkaBridge.Clients.Consumer.OffsetCommitCallback.html">OffsetCommitCallback</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -178,18 +196,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Clients_Consumer_OffsetCommitCallback_JniClass.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Clients.Consumer.OffsetCommitCallback.JniClass%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Clients_Consumer_OffsetCommitCallback_ClassName.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Clients.Consumer.OffsetCommitCallback.ClassName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Clients/Consumer/OffsetCommitCallback.cs/#L34">View Source</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Clients/Consumer/OffsetCommitCallback.cs/#L47">View Source</a>
   </span>
-  <a id="MASES_KafkaBridge_Clients_Consumer_OffsetCommitCallback_JniClass_" data-uid="MASES.KafkaBridge.Clients.Consumer.OffsetCommitCallback.JniClass*"></a>
-  <h4 id="MASES_KafkaBridge_Clients_Consumer_OffsetCommitCallback_JniClass" data-uid="MASES.KafkaBridge.Clients.Consumer.OffsetCommitCallback.JniClass">JniClass</h4>
+  <a id="MASES_KafkaBridge_Clients_Consumer_OffsetCommitCallback_ClassName_" data-uid="MASES.KafkaBridge.Clients.Consumer.OffsetCommitCallback.ClassName*"></a>
+  <h4 id="MASES_KafkaBridge_Clients_Consumer_OffsetCommitCallback_ClassName" data-uid="MASES.KafkaBridge.Clients.Consumer.OffsetCommitCallback.ClassName">ClassName</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed override string JniClass { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed override string ClassName { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -207,13 +225,13 @@
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.JniClass</span></div>
+  <div><span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.ClassName</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Clients_Consumer_OffsetCommitCallback_OnOnComplete.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Clients.Consumer.OffsetCommitCallback.OnOnComplete%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Clients/Consumer/OffsetCommitCallback.cs/#L40">View Source</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Clients/Consumer/OffsetCommitCallback.cs/#L53">View Source</a>
   </span>
   <a id="MASES_KafkaBridge_Clients_Consumer_OffsetCommitCallback_OnOnComplete_" data-uid="MASES.KafkaBridge.Clients.Consumer.OffsetCommitCallback.OnOnComplete*"></a>
   <h4 id="MASES_KafkaBridge_Clients_Consumer_OffsetCommitCallback_OnOnComplete" data-uid="MASES.KafkaBridge.Clients.Consumer.OffsetCommitCallback.OnOnComplete">OnOnComplete</h4>
@@ -246,7 +264,7 @@
     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Clients_Consumer_OffsetCommitCallback_OnComplete_MASES_KafkaBridge_Java_Util_Map_MASES_KafkaBridge_Common_TopicPartition_MASES_KafkaBridge_Clients_Consumer_OffsetAndMetadata__MASES_JCOBridge_C2JBridge_JVMBridgeException_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Clients.Consumer.OffsetCommitCallback.OnComplete(MASES.KafkaBridge.Java.Util.Map%7BMASES.KafkaBridge.Common.TopicPartition%2CMASES.KafkaBridge.Clients.Consumer.OffsetAndMetadata%7D%2CMASES.JCOBridge.C2JBridge.JVMBridgeException)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Clients/Consumer/OffsetCommitCallback.cs/#L63">View Source</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Clients/Consumer/OffsetCommitCallback.cs/#L76">View Source</a>
   </span>
   <a id="MASES_KafkaBridge_Clients_Consumer_OffsetCommitCallback_OnComplete_" data-uid="MASES.KafkaBridge.Clients.Consumer.OffsetCommitCallback.OnComplete*"></a>
   <h4 id="MASES_KafkaBridge_Clients_Consumer_OffsetCommitCallback_OnComplete_MASES_KafkaBridge_Java_Util_Map_MASES_KafkaBridge_Common_TopicPartition_MASES_KafkaBridge_Clients_Consumer_OffsetAndMetadata__MASES_JCOBridge_C2JBridge_JVMBridgeException_" data-uid="MASES.KafkaBridge.Clients.Consumer.OffsetCommitCallback.OnComplete(MASES.KafkaBridge.Java.Util.Map{MASES.KafkaBridge.Common.TopicPartition,MASES.KafkaBridge.Clients.Consumer.OffsetAndMetadata},MASES.JCOBridge.C2JBridge.JVMBridgeException)">OnComplete(Map&lt;TopicPartition, OffsetAndMetadata&gt;, JVMBridgeException)</h4>
@@ -288,6 +306,15 @@
   <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
   </div>
+  <div>
+      <a class="xref" href="MASES.KafkaBridge.Clients.Consumer.IOffsetCommitCallback.html">IOffsetCommitCallback</a>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span>
+  </div>
 </article>
           </div>
           
@@ -299,7 +326,7 @@
                     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Clients_Consumer_OffsetCommitCallback.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Clients.Consumer.OffsetCommitCallback%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Clients/Consumer/OffsetCommitCallback.cs/#L31" class="contribution-link">View Source</a>
+                    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Clients/Consumer/OffsetCommitCallback.cs/#L44" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class KafkaConsumer
    | Kafka Bridge website ">
-    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="generator" content="docfx 2.59.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -89,6 +89,10 @@
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
     <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span></div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span></div>
+    <div><a class="xref" href="MASES.KafkaBridge.Clients.Consumer.IConsumer-2.html">IConsumer</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>&gt;</div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -106,6 +110,9 @@
     </div>
     <div>
       <a class="xref" href="MASES.KafkaBridge.Clients.Consumer.KafkaConsumer-2.html#MASES_KafkaBridge_Clients_Consumer_KafkaConsumer_2_Paused">KafkaConsumer&lt;Object, Object&gt;.Paused</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KafkaBridge.Clients.Consumer.KafkaConsumer-2.html#MASES_KafkaBridge_Clients_Consumer_KafkaConsumer_2_Metrics">KafkaConsumer&lt;Object, Object&gt;.Metrics</a>
     </div>
     <div>
       <a class="xref" href="MASES.KafkaBridge.Clients.Consumer.KafkaConsumer-2.html#MASES_KafkaBridge_Clients_Consumer_KafkaConsumer_2_Subscribe_MASES_KafkaBridge_Java_Util_Collection_System_String__MASES_KafkaBridge_Clients_Consumer_ConsumerRebalanceListener_">KafkaConsumer&lt;Object, Object&gt;.Subscribe(Collection&lt;String&gt;, ConsumerRebalanceListener)</a>
@@ -156,7 +163,7 @@
       <a class="xref" href="MASES.KafkaBridge.Clients.Consumer.KafkaConsumer-2.html#MASES_KafkaBridge_Clients_Consumer_KafkaConsumer_2_Seek_MASES_KafkaBridge_Common_TopicPartition_System_Int64_">KafkaConsumer&lt;Object, Object&gt;.Seek(TopicPartition, Int64)</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KafkaBridge.Clients.Consumer.KafkaConsumer-2.html#MASES_KafkaBridge_Clients_Consumer_KafkaConsumer_2_SeekToBeginning_MASES_KafkaBridge_Common_TopicPartition_MASES_KafkaBridge_Clients_Consumer_OffsetAndMetadata_">KafkaConsumer&lt;Object, Object&gt;.SeekToBeginning(TopicPartition, OffsetAndMetadata)</a>
+      <a class="xref" href="MASES.KafkaBridge.Clients.Consumer.KafkaConsumer-2.html#MASES_KafkaBridge_Clients_Consumer_KafkaConsumer_2_Seek_MASES_KafkaBridge_Common_TopicPartition_MASES_KafkaBridge_Clients_Consumer_OffsetAndMetadata_">KafkaConsumer&lt;Object, Object&gt;.Seek(TopicPartition, OffsetAndMetadata)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KafkaBridge.Clients.Consumer.KafkaConsumer-2.html#MASES_KafkaBridge_Clients_Consumer_KafkaConsumer_2_SeekToBeginning_MASES_KafkaBridge_Java_Util_Collection_MASES_KafkaBridge_Common_TopicPartition__">KafkaConsumer&lt;Object, Object&gt;.SeekToBeginning(Collection&lt;TopicPartition&gt;)</a>
@@ -234,10 +241,22 @@
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Clients.Consumer.KafkaConsumer&lt;System.Object, System.Object&gt;&gt;.SExecute(System.String, System.Object[])</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Clients.Consumer.KafkaConsumer&lt;System.Object, System.Object&gt;&gt;.SExecute&lt;TNewClass&gt;(System.String, System.Object[])</span>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Clients.Consumer.KafkaConsumer&lt;System.Object, System.Object&gt;&gt;.SExecute&lt;TReturn&gt;(System.String, System.Object[])</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Clients.Consumer.KafkaConsumer&lt;System.Object, System.Object&gt;&gt;.New&lt;TNewClass&gt;(System.String, System.Object[])</span>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Clients.Consumer.KafkaConsumer&lt;System.Object, System.Object&gt;&gt;.SExecute(System.Type, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Clients.Consumer.KafkaConsumer&lt;System.Object, System.Object&gt;&gt;.SExecute&lt;TNewClass, TReturn&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Clients.Consumer.KafkaConsumer&lt;System.Object, System.Object&gt;&gt;.SExecute&lt;TReturn&gt;(System.Type, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Clients.Consumer.KafkaConsumer&lt;System.Object, System.Object&gt;&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Clients.Consumer.KafkaConsumer&lt;System.Object, System.Object&gt;&gt;.SExecute&lt;TReturn, TConverter&gt;(System.Type, System.String, System.Object[])</span>
     </div>
     <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Clients.Consumer.KafkaConsumer&lt;System.Object, System.Object&gt;&gt;.New(System.Object[])</span>
@@ -252,7 +271,37 @@
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Clients.Consumer.KafkaConsumer&lt;System.Object, System.Object&gt;&gt;.Clazz</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.New&lt;TNewClass&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Clients.Consumer.KafkaConsumer&lt;System.Object, System.Object&gt;&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.DynClazz</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Clients.Consumer.KafkaConsumer&lt;System.Object, System.Object&gt;&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.Clazz</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TReturn&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.New&lt;TNewClass&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.New&lt;TNewClass, TReturn&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.New&lt;TNewClass, TReturn, TConverter&gt;(System.String, System.Object[])</span>
     </div>
     <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Execute&lt;T&gt;(T[])</span>
@@ -276,10 +325,25 @@
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TReturn&gt;(System.String, System.Object[])</span>
     </div>
     <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TNewClass, TReturn&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TNewClass, TReturn, TConverter&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.DynInstance</span>
     </div>
     <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Instance</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClassName</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsStatic</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsCloseable</span>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember#system-dynamic-dynamicobject-trygetmember(system-dynamic-getmemberbinder-system-object@)">DynamicObject.TryGetMember(GetMemberBinder, Object)</a>
@@ -340,8 +404,42 @@
   <h6><strong>Assembly</strong>: MASES.KafkaBridge.dll</h6>
   <h5 id="MASES_KafkaBridge_Clients_Consumer_KafkaConsumer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class KafkaConsumer : KafkaConsumer&lt;object, object&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, ISetupJVMBridgeCore, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public class KafkaConsumer : KafkaConsumer&lt;object, object&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IConsumer&lt;object, object&gt;, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
   </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Clients_Consumer_KafkaConsumer__ctor_MASES_KafkaBridge_Java_Util_Properties_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.%23ctor(MASES.KafkaBridge.Java.Util.Properties)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Clients/Consumer/KafkaConsumer.cs/#L263">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Clients_Consumer_KafkaConsumer__ctor_" data-uid="MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.#ctor*"></a>
+  <h4 id="MASES_KafkaBridge_Clients_Consumer_KafkaConsumer__ctor_MASES_KafkaBridge_Java_Util_Properties_" data-uid="MASES.KafkaBridge.Clients.Consumer.KafkaConsumer.#ctor(MASES.KafkaBridge.Java.Util.Properties)">KafkaConsumer(Properties)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KafkaConsumer(Properties props)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Java.Util.Properties.html">Properties</a></td>
+        <td><span class="parametername">props</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">System.Dynamic.IDynamicMetaObjectProvider</a>
@@ -351,6 +449,18 @@
   </div>
   <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KafkaBridge.Clients.Consumer.IConsumer-2.html">IConsumer&lt;K, V&gt;</a>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span>
   </div>
 </article>
           </div>
@@ -363,7 +473,7 @@
                     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Clients_Consumer_KafkaConsumer.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Clients.Consumer.KafkaConsumer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Clients/Consumer/KafkaConsumer.cs/#L258" class="contribution-link">View Source</a>
+                    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Clients/Consumer/KafkaConsumer.cs/#L261" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
