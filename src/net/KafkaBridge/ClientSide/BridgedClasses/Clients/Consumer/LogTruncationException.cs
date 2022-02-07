@@ -27,6 +27,6 @@ namespace MASES.KafkaBridge.Clients.Consumer
     {
         public override string ClassName => "org.apache.kafka.clients.consumer.LogTruncationException";
 
-        public Map<TopicPartition, OffsetAndMetadata> DivergentOffsets => JVMBridgeBase.New<Map<TopicPartition, OffsetAndMetadata>>(Instance.Invoke("divergentOffsets") as IJavaObject);
+        public Map<TopicPartition, OffsetAndMetadata> DivergentOffsets => JVMBridgeBase.Wraps<Map<TopicPartition, OffsetAndMetadata>>(Instance.Invoke("divergentOffsets") as IJavaObject);
     }
 }

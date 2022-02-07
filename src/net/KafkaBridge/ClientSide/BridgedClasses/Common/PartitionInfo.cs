@@ -30,7 +30,7 @@ namespace MASES.KafkaBridge.Common
 
         public int Partition => IExecute<int>("partition");
 
-        public Node Leader => New<Node>("leader");
+        public Node Leader => IExecute<Node>("leader");
 
         public Node[] Replicas
         {
@@ -40,7 +40,7 @@ namespace MASES.KafkaBridge.Common
                 List<Node> nodes = new List<Node>();
                 foreach (var item in array)
                 {
-                    nodes.Add(New<Node>(item as IJavaObject));
+                    nodes.Add(Wraps<Node>(item as IJavaObject));
                 }
                 return nodes.ToArray();
             }
@@ -54,7 +54,7 @@ namespace MASES.KafkaBridge.Common
                 List<Node> nodes = new List<Node>();
                 foreach (var item in array)
                 {
-                    nodes.Add(New<Node>(item as IJavaObject));
+                    nodes.Add(Wraps<Node>(item as IJavaObject));
                 }
                 return nodes.ToArray();
             }
@@ -68,7 +68,7 @@ namespace MASES.KafkaBridge.Common
                 List<Node> nodes = new List<Node>();
                 foreach (var item in array)
                 {
-                    nodes.Add(New<Node>(item as IJavaObject));
+                    nodes.Add(Wraps<Node>(item as IJavaObject));
                 }
                 return nodes.ToArray();
             }

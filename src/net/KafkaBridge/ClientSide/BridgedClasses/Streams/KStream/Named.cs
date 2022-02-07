@@ -29,7 +29,7 @@ namespace MASES.KafkaBridge.Streams.KStream
 
         public Named WithName(string name)
         {
-            return New<Named>("withName", name);
+            return IExecute<Named>("withName", name);
         }
     }
 }

@@ -24,6 +24,7 @@ using MASES.KafkaBridge.Clients.Producer;
 using MASES.KafkaBridge.Common;
 using MASES.KafkaBridge.Common.Errors;
 using MASES.KafkaBridge.Java.Util.Concurrent;
+using MASES.KafkaBridge.Streams.Errors;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -101,6 +102,7 @@ namespace MASES.KafkaBridge
             #region Base Exceptions
 
             JCOBridge.C2JBridge.JCOBridge.RegisterException<KafkaException>();
+            JCOBridge.C2JBridge.JCOBridge.RegisterException<InvalidRecordException>();
 
             #endregion
 
@@ -243,6 +245,26 @@ namespace MASES.KafkaBridge
 
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(BufferExhaustedException));
 
+            #endregion
+
+            #region Streams Exceptions
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(BrokerNotFoundException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidStateStoreException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidStateStorePartitionException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(LockException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(MissingSourceTopicException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(ProcessorStateException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(StateStoreMigratedException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(StateStoreNotAvailableException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(StreamsException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(StreamsNotStartedException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(StreamsRebalancingException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(TaskAssignmentException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(TaskCorruptedException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(TaskIdFormatException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(TaskMigratedException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(TopologyException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(UnknownStateStoreException));
             #endregion
         }
 
@@ -460,7 +482,21 @@ namespace MASES.KafkaBridge
         /// </summary>
         public virtual string ReleaseAdditionalPath { get { return Path.Combine(RootPath, "core", "build", "libs", "kafka_" + ScalaBinaryVersion + "*.jar"); } }
 
-        public sealed override IEnumerable<KeyValuePair<string, string>> JVMOptions => Options;
+        public sealed override IEnumerable<KeyValuePair<string, string>> JVMOptions
+        {
+            get
+            {
+                IDictionary<string, string> opt = Options;
+                if (base.JVMOptions != null)
+                {
+                    foreach (var item in base.JVMOptions)
+                    {
+                        opt.Add(item);
+                    }
+                }
+                return opt;
+            }
+        }
 
         protected virtual IDictionary<string, string> Options
         {

@@ -1,0 +1,39 @@
+﻿/*
+*  Copyright 2022 MASES s.r.l.
+*
+*  Licensed under the Apache License, Version 2.0 (the "License");
+*  you may not use this file except in compliance with the License.
+*  You may obtain a copy of the License at
+*
+*  http://www.apache.org/licenses/LICENSE-2.0
+*
+*  Unless required by applicable law or agreed to in writing, software
+*  distributed under the License is distributed on an "AS IS" BASIS,
+*  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+*  See the License for the specific language governing permissions and
+*  limitations under the License.
+*
+*  Refer to LICENSE for more information.
+*/
+
+using System;
+
+namespace MASES.KafkaBridge.Streams
+{
+    public class KeyValue<K, V> : JCOBridge.C2JBridge.JVMBridgeBase<KeyValue<K, V>>
+    {
+        public override string ClassName => "org.apache.kafka.streams.KeyValue";
+
+        public static KeyValue<K, V> Pair(K key, V value)
+        {
+            return SExecute<KeyValue<K, V>>("pair", key, value);
+        }
+
+        [Obsolete("This is not public in Apache Kafka API")]
+        public KeyValue() { }
+
+        public KeyValue(K key, V value)
+            : base(key, value)
+        { }
+    }
+}

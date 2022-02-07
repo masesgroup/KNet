@@ -16,10 +16,17 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
+
 namespace MASES.KafkaBridge.Java.Util
 {
-    public class Collection<E> : JCOBridge.C2JBridge.JVMBridgeBase<Collection<E>>
+    public class Collection<E> : JVMBridgeBaseEnumerable<Collection<E>>
     {
         public override string ClassName => "java.util.Collection";
+
+        public bool Add(E e)
+        {
+            return IExecute<bool>("add", e);
+        }
     }
 }

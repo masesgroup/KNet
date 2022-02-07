@@ -16,9 +16,16 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
+
 namespace MASES.KafkaBridge.Streams.KStream
 {
-    public class GlobalKTable<K, V> : JCOBridge.C2JBridge.JVMBridgeBase<GlobalKTable<K, V>>
+    public interface IGlobalKTable<K, V> : IJVMBridgeBase
+    {
+        string QueryableStoreName { get; }
+    }
+
+    public class GlobalKTable<K, V> : JVMBridgeBase<GlobalKTable<K, V>, IGlobalKTable<K, V>>, IGlobalKTable<K, V>
     {
         public override string ClassName => "org.apache.kafka.streams.kstream.GlobalKTable";
 

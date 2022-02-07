@@ -1,4 +1,5 @@
-﻿using MASES.KafkaBridge;
+﻿using MASES.JCOBridge.C2JBridge;
+using MASES.KafkaBridge;
 using MASES.KafkaBridge.Clients.Consumer;
 using MASES.KafkaBridge.Common.Serialization;
 using MASES.KafkaBridge.Java.Util;
@@ -30,8 +31,8 @@ namespace MASES.KafkaBridgeTemplate.KafkaBridgeStreamPipe
 
             props.Put(StreamsConfig.APPLICATION_ID_CONFIG, "streams-pipe");
             props.Put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
-            props.Put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String.getClass());
-            props.Put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String.getClass());
+            props.Put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String.Dyn().getClass());
+            props.Put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String.Dyn().getClass());
 
             // setting offset reset to earliest so that we can re-run the demo code with the same pre-loaded data
             props.Put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");

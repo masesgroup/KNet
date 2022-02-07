@@ -29,14 +29,17 @@ using MASES.KafkaBridge.Clients.Producer;
 using MASES.KafkaBridge.Common.Config;
 using MASES.KafkaBridge.Common.Serialization;
 using MASES.KafkaBridge.Java.Util;
-using MASES.KafkaBridge.Streams;
 using System;
+using System.Text;
 using System.Threading;
 
 namespace MASES.KafkaBridgeTest
 {
     class Program
     {
+        static bool useSerdes = true;
+        static bool useCallback = true;
+
         const string theServer = "localhost:9092";
         const string theTopic = "myTopic";
 
@@ -66,12 +69,6 @@ namespace MASES.KafkaBridgeTest
                 Name = "consume"
             };
             threadConsume.Start();
-
-            Thread threadStream = new Thread(streamSomething)
-            {
-                Name = "stream"
-            };
-            threadStream.Start();
 
             Thread.Sleep(20000);
             resetEvent.Set();
@@ -108,6 +105,10 @@ namespace MASES.KafkaBridgeTest
                     future.Get();
                 }
             }
+            catch (KafkaBridge.Java.Util.Concurrent.ExecutionException ex)
+            {
+                Console.WriteLine(ex.InnerException.Message);
+            }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
@@ -126,27 +127,66 @@ namespace MASES.KafkaBridgeTest
                 props.Put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
                 props.Put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
 
-                using (KafkaProducer producer = new KafkaProducer(props))
+                Serializer<string> keySerializer = null;
+                Serializer<string> valueSerializer = null;
+                if (useSerdes)
                 {
-                    int i = 0;
-                    using (var callback = new Callback((o1, o2) =>
+                    keySerializer = new Serializer<string>(serializeWithHeadersFun: (topic, headers, data) =>
                     {
-                        if (o2 != null) Console.WriteLine(o2.ToString());
-                        else Console.WriteLine($"Produced on topic {o1.Topic} at offset {o1.Offset}");
-                    }))
+                        var key = Encoding.Unicode.GetBytes(data);
+                        return key;
+                    });
+                    valueSerializer = new Serializer<string>(serializeWithHeadersFun: (topic, headers, data) =>
                     {
-                        while (!resetEvent.WaitOne(0))
+                        var value = Encoding.Unicode.GetBytes(data);
+                        return value;
+                    });
+                }
+                try
+                {
+                    using (var producer = useSerdes ? new KafkaProducer<string, string>(props, keySerializer, valueSerializer) : new KafkaProducer<string, string>(props))
+                    {
+                        int i = 0;
+                        Callback callback = null;
+                        if (useCallback)
                         {
-                            var record = new ProducerRecord<string, string>(topicToUse, i.ToString(), i.ToString());
-                            var result = producer.Send(record, callback);
-                            Console.WriteLine($"Producing: {record} with result: {result.Get()}");
-                            producer.Flush();
-                            i++;
+                            callback = new Callback((o1, o2) =>
+                            {
+                                if (o2 != null) Console.WriteLine(o2.ToString());
+                                else Console.WriteLine($"Produced on topic {o1.Topic} at offset {o1.Offset}");
+                            });
                         }
+                        try
+                        {
+                            while (!resetEvent.WaitOne(0))
+                            {
+                                var record = new ProducerRecord<string, string>(topicToUse, i.ToString(), i.ToString());
+                                var result = useCallback ? producer.Send(record, callback) : producer.Send(record);
+                                Console.WriteLine($"Producing: {record} with result: {result.Get()}");
+                                producer.Flush();
+                                i++;
+                            }
+                        }
+                        finally { if (useCallback) callback.Dispose(); }
+                    }
+                }
+                finally
+                {
+                    if (useSerdes)
+                    {
+                        keySerializer.Dispose();
+                        valueSerializer.Dispose();
                     }
                 }
             }
-            catch (Exception ex) { Console.WriteLine("Producer ended with error: {0}", ex.Message); }
+            catch (KafkaBridge.Java.Util.Concurrent.ExecutionException ex)
+            {
+                Console.WriteLine("Producer ended with error: {0}", ex.InnerException.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Producer ended with error: {0}", ex.Message);
+            }
         }
 
         static void consumeSomething()
@@ -161,51 +201,72 @@ namespace MASES.KafkaBridgeTest
                 props.Put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
                 props.Put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
 
-                using (var consumer = new KafkaConsumer<string, string>(props))
+                Deserializer<string> keyDeserializer = null;
+                Deserializer<string> valueDeserializer = null;
+                ConsumerRebalanceListener rebalanceListener = null;
+                if (useSerdes)
                 {
-                    consumer.Subscribe(Collections.singleton(topicToUse));
-                    while (!resetEvent.WaitOne(0))
+                    keyDeserializer = new Deserializer<string>(deserializeFun: (topic, data) =>
                     {
-                        var records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);
-                        foreach (var item in records)
+                        var key = Encoding.Unicode.GetString(data);
+                        Console.WriteLine("Received key {0} from topic {1}", key, topic);
+                        return key;
+                    });
+                    valueDeserializer = new Deserializer<string>(deserializeFun: (topic, data) =>
+                    {
+                        var value = Encoding.Unicode.GetString(data);
+                        Console.WriteLine("Received value {0} from topic {1}", value, topic);
+                        return value;
+                    });
+                }
+                if (useCallback)
+                {
+                    rebalanceListener = new ConsumerRebalanceListener(
+                        revoked: (o) =>
                         {
-                            Console.WriteLine($"Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}");
+                            Console.WriteLine("Revoked: {0}", o.ToString());
+                        },
+                        assigned: (o) =>
+                        {
+                            Console.WriteLine("Assigned: {0}", o.ToString());
+                        });
+                }
+                try
+                {
+                    {
+                        using (var consumer = useSerdes ? new KafkaConsumer<string, string>(props, keyDeserializer, valueDeserializer) : new KafkaConsumer<string, string>(props))
+                        {
+                            if (useCallback) consumer.Subscribe(Collections.singleton(topicToUse), rebalanceListener);
+                            else consumer.Subscribe(Collections.singleton(topicToUse));
+
+                            while (!resetEvent.WaitOne(0))
+                            {
+                                var records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);
+                                foreach (var item in records)
+                                {
+                                    Console.WriteLine($"Consuming from Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}");
+                                }
+                            }
                         }
                     }
                 }
-            }
-            catch (Exception ex) { Console.WriteLine("Consumer ended with error: {0}", ex.Message); }
-        }
-
-        static void streamSomething()
-        {
-            try
-            {
-                var props = new Properties();
-
-                props.Put(StreamsConfig.APPLICATION_ID_CONFIG, "streams-pipe");
-                props.Put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
-                props.Put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String.getClass());
-                props.Put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String.getClass());
-
-                // setting offset reset to earliest so that we can re-run the demo code with the same pre-loaded data
-                props.Put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
-
-                var builder = new StreamsBuilder();
-
-                builder.Stream<string, string>(topicToUse).To("streams-pipe-output");
-
-                using (var streams = new KafkaStreams(builder.Build(), props))
+                finally
                 {
-                    streams.Start();
-                    while (!resetEvent.WaitOne(1000))
+                    if (useSerdes)
                     {
-                        var state = streams.State;
-                        Console.WriteLine($"KafkaStreams state: {state}");
+                        keyDeserializer.Dispose();
+                        valueDeserializer.Dispose();
                     }
                 }
             }
-            catch (Exception ex) { Console.WriteLine("Streams ended with error: {0}", ex.Message); }
+            catch (KafkaBridge.Java.Util.Concurrent.ExecutionException ex)
+            {
+                Console.WriteLine("Consumer ended with error: {0}", ex.InnerException.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Consumer ended with error: {0}", ex.Message);
+            }
         }
     }
 }

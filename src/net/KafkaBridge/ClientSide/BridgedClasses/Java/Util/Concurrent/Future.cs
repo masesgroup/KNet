@@ -30,12 +30,12 @@ namespace MASES.KafkaBridge.Java.Util.Concurrent
 
         public E Get()
         {
-            return New<E>("get");
+            return IExecute<E>("get");
         }
 
         public E Get(long timeout, TimeUnit unit)
         {
-            return New<E>("get", timeout, unit);
+            return IExecute<E>("get", timeout, unit);
         }
 
         public bool IsCancelled => IExecute<bool>("isCancelled");

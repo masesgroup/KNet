@@ -17,13 +17,14 @@
 */
 
 using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Common.Serialization;
 using MASES.KafkaBridge.Java.Time;
 using MASES.KafkaBridge.Java.Util;
 using MASES.KafkaBridge.Java.Util.Regex;
 
 namespace MASES.KafkaBridge.Clients.Consumer
 {
-    public class KafkaConsumer<K, V> : JCOBridge.C2JBridge.JVMBridgeBase<KafkaConsumer<K, V>>
+    public class KafkaConsumer<K, V> : JCOBridge.C2JBridge.JVMBridgeBase<KafkaConsumer<K, V>>, IConsumer<K, V>
     {
         public override bool IsCloseable => true;
 
@@ -38,30 +39,37 @@ namespace MASES.KafkaBridge.Clients.Consumer
         {
         }
 
-        public Set<TopicPartition> Assignment => New<Set<TopicPartition>>("assignment");
+        public KafkaConsumer(Properties props, Deserializer<K> keyDeserializer, Deserializer<V> valueDeserializer)
+            : base(props, keyDeserializer, valueDeserializer)
+        {
+        }
 
-        public Set<string> Subscription => New<Set<string>>("subscription");
+        public Set<TopicPartition> Assignment => IExecute<Set<TopicPartition>>("assignment");
 
-        public Set<TopicPartition> Paused => New<Set<TopicPartition>>("paused");
+        public Set<string> Subscription => IExecute<Set<string>>("subscription");
+
+        public Set<TopicPartition> Paused => IExecute<Set<TopicPartition>>("paused");
+
+        public Map<MetricName, Metric> Metrics => IExecute<Map<MetricName, Metric>>("metrics");
 
         public void Subscribe(Collection<string> topics, ConsumerRebalanceListener listener)
         {
-            IExecute("subscribe", topics.Instance, listener.Listener);
+            IExecute("subscribe", topics, listener);
         }
 
         public void Subscribe(Collection<string> topics)
         {
-            IExecute("subscribe", topics.Instance);
+            IExecute("subscribe", topics);
         }
 
         public void Subscribe(Pattern pattern, ConsumerRebalanceListener listener)
         {
-            IExecute("subscribe", pattern.Instance, listener.Listener);
+            IExecute("subscribe", pattern, listener);
         }
 
         public void Subscribe(Pattern pattern)
         {
-            IExecute("subscribe", pattern.Instance);
+            IExecute("subscribe", pattern);
         }
 
         public void Unsubscribe()
@@ -71,17 +79,17 @@ namespace MASES.KafkaBridge.Clients.Consumer
 
         public void Assign(Collection<TopicPartition> partitions)
         {
-            IExecute("assign", partitions.Instance);
+            IExecute("assign", partitions);
         }
 
         public ConsumerRecords<K, V> Poll(long timeoutMs)
         {
-            return New<ConsumerRecords<K, V>>("poll", timeoutMs);
+            return IExecute<ConsumerRecords<K, V>>("poll", timeoutMs);
         }
 
         public ConsumerRecords<K, V> Poll(Duration timeout)
         {
-            return New<ConsumerRecords<K, V>>("poll", timeout.Instance);
+            return IExecute<ConsumerRecords<K, V>>("poll", timeout);
         }
 
         public void CommitSync()
@@ -91,17 +99,17 @@ namespace MASES.KafkaBridge.Clients.Consumer
 
         public void CommitSync(Duration timeout)
         {
-            IExecute("commitSync", timeout.Instance);
+            IExecute("commitSync", timeout);
         }
 
         public void CommitSync(Map<TopicPartition, OffsetAndMetadata> offsets)
         {
-            IExecute("commitSync", offsets.Instance);
+            IExecute("commitSync", offsets);
         }
 
         public void CommitSync(Map<TopicPartition, OffsetAndMetadata> offsets, Duration timeout)
         {
-            IExecute("commitSync", offsets.Instance, timeout.Instance);
+            IExecute("commitSync", offsets, timeout);
         }
 
         public void CommitAsync()
@@ -111,137 +119,132 @@ namespace MASES.KafkaBridge.Clients.Consumer
 
         public void CommitAsync(OffsetCommitCallback callback)
         {
-            IExecute("commitAsync", callback.Listener);
+            IExecute("commitAsync", callback);
         }
 
         public void CommitAsync(Map<TopicPartition, OffsetAndMetadata> offsets, OffsetCommitCallback callback)
         {
-            IExecute("commitAsync", offsets.Instance, callback.Listener);
+            IExecute("commitAsync", offsets, callback);
         }
 
         public void Seek(TopicPartition partition, long offset)
         {
-            IExecute("seek", partition.Instance, offset);
+            IExecute("seek", partition, offset);
         }
 
-        public void SeekToBeginning(TopicPartition partition, OffsetAndMetadata offsetAndMetadata)
+        public void Seek(TopicPartition partition, OffsetAndMetadata offsetAndMetadata)
         {
-            IExecute("seekToBeginning", partition.Instance, offsetAndMetadata.Instance);
+            IExecute("seek", partition, offsetAndMetadata);
         }
 
         public void SeekToBeginning(Collection<TopicPartition> partitions)
         {
-            IExecute("seekToBeginning", partitions.Instance);
+            IExecute("seekToBeginning", partitions);
         }
 
         public void SeekToEnd(Collection<TopicPartition> partitions)
         {
-            IExecute("seekToEnd", partitions.Instance);
+            IExecute("seekToEnd", partitions);
         }
 
         public long Position(TopicPartition partition)
         {
-            return IExecute<long>("position", partition.Instance);
+            return IExecute<long>("position", partition);
         }
 
         public long Position(TopicPartition partition, Duration timeout)
         {
-            return IExecute<long>("position", partition.Instance, timeout.Instance);
+            return IExecute<long>("position", partition, timeout);
         }
 
         public OffsetAndMetadata Committed(TopicPartition partition)
         {
-            return New<OffsetAndMetadata>("committed", partition.Instance);
+            return IExecute<OffsetAndMetadata>("committed", partition);
         }
 
         public OffsetAndMetadata Committed(TopicPartition partition, Duration timeout)
         {
-            return New<OffsetAndMetadata>("committed", partition.Instance, timeout.Instance);
+            return IExecute<OffsetAndMetadata>("committed", partition, timeout);
         }
 
         public Map<TopicPartition, OffsetAndMetadata> Committed(Set<TopicPartition> partitions)
         {
-            return New<Map<TopicPartition, OffsetAndMetadata>>("committed", partitions.Instance);
+            return IExecute<Map<TopicPartition, OffsetAndMetadata>>("committed", partitions);
         }
 
         public Map<TopicPartition, OffsetAndMetadata> Committed(Set<TopicPartition> partitions, Duration timeout)
         {
-            return New<Map<TopicPartition, OffsetAndMetadata>>("committed", partitions.Instance, timeout.Instance);
+            return IExecute<Map<TopicPartition, OffsetAndMetadata>>("committed", partitions, timeout);
         }
-
-        /** To be added
-
-    public Map<MetricName, ? extends Metric> metrics()
-        */
 
         public List<PartitionInfo> PartitionsFor(string topic)
         {
-            return New<List<PartitionInfo>>("partitionsFor", topic);
+            return IExecute<List<PartitionInfo>>("partitionsFor", topic);
         }
 
         public List<PartitionInfo> PartitionsFor(string topic, Duration timeout)
         {
-            return New<List<PartitionInfo>>("partitionsFor", topic, timeout.Instance);
+            return IExecute<List<PartitionInfo>>("partitionsFor", topic, timeout);
         }
 
         public Map<string, List<PartitionInfo>> ListTopics()
         {
-            return New<Map<string, List<PartitionInfo>>>("listTopics");
+            return IExecute<Map<string, List<PartitionInfo>>>("listTopics");
         }
 
         public Map<string, List<PartitionInfo>> ListTopics(Duration timeout)
         {
-            return New<Map<string, List<PartitionInfo>>>("listTopics", timeout.Instance);
+            return IExecute<Map<string, List<PartitionInfo>>>("listTopics", timeout);
         }
 
         public void Pause(Collection<TopicPartition> partitions)
         {
-            IExecute("pause", partitions.Instance);
+            IExecute("pause", partitions);
         }
 
         public void Resume(Collection<TopicPartition> partitions)
         {
-            IExecute("resume", partitions.Instance);
+            IExecute("resume", partitions);
         }
 
         public Map<TopicPartition, OffsetAndTimestamp> OffsetsForTimes(Map<TopicPartition, long> timestampsToSearch)
         {
-            return New<Map<TopicPartition, OffsetAndTimestamp>>("offsetsForTimes", timestampsToSearch.Instance);
+            return IExecute<Map<TopicPartition, OffsetAndTimestamp>>("offsetsForTimes", timestampsToSearch);
         }
 
         public Map<TopicPartition, OffsetAndTimestamp> OffsetsForTimes(Map<TopicPartition, long> timestampsToSearch, Duration timeout)
         {
-            return New<Map<TopicPartition, OffsetAndTimestamp>>("offsetsForTimes", timestampsToSearch.Instance, timeout.Instance);
+            return IExecute<Map<TopicPartition, OffsetAndTimestamp>>("offsetsForTimes", timestampsToSearch, timeout);
         }
 
         public Map<TopicPartition, long> BeginningOffsets(Collection<TopicPartition> partitions)
         {
-            return New<Map<TopicPartition, long>>("beginningOffsets", partitions.Instance);
+            return IExecute<Map<TopicPartition, long>>("beginningOffsets", partitions);
         }
 
         public Map<TopicPartition, long> BeginningOffsets(Collection<TopicPartition> partitions, Duration timeout)
         {
-            return New<Map<TopicPartition, long>>("beginningOffsets", partitions.Instance, timeout.Instance);
+            return IExecute<Map<TopicPartition, long>>("beginningOffsets", partitions, timeout);
         }
 
         public Map<TopicPartition, long> EndOffsets(Collection<TopicPartition> partitions)
         {
-            return New<Map<TopicPartition, long>>("endOffsets", partitions.Instance);
+            return IExecute<Map<TopicPartition, long>>("endOffsets", partitions);
         }
 
         public Map<TopicPartition, long> EndOffsets(Collection<TopicPartition> partitions, Duration timeout)
         {
-            return New<Map<TopicPartition, long>>("endOffsets", partitions.Instance, timeout.Instance);
+            return IExecute<Map<TopicPartition, long>>("endOffsets", partitions, timeout);
         }
 
         public Optional<long> CurrentLag(TopicPartition topicPartition)
         {
-            return New<Optional<long>>("currentLag", topicPartition.Instance);
+            return IExecute<Optional<long>>("currentLag", topicPartition);
         }
 
-         public ConsumerGroupMetadata GroupMetadata()
+        public ConsumerGroupMetadata GroupMetadata()
         {
-            return New<ConsumerGroupMetadata>("groupMetadata");
+            return IExecute<ConsumerGroupMetadata>("groupMetadata");
         }
 
         public void EnforceRebalance()
@@ -257,6 +260,6 @@ namespace MASES.KafkaBridge.Clients.Consumer
 
     public class KafkaConsumer : KafkaConsumer<object, object>
     {
-
+        public KafkaConsumer(Properties props) : base(props) { }
     }
 }

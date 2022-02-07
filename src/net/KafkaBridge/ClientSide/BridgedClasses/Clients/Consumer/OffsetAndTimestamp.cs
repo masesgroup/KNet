@@ -28,6 +28,6 @@ namespace MASES.KafkaBridge.Clients.Consumer
 
         public long Offset => IExecute<long>("offset");
 
-        public Optional<int> LeaderEpoch => New<Optional<int>>("leaderEpoch");
+        public Optional<int> LeaderEpoch => IExecute<Optional<int>>("leaderEpoch");
     }
 }

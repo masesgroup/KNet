@@ -16,9 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
+using MASES.JCOBridge.C2JBridge.JVMInterop;
+
 namespace MASES.KafkaBridge.Java.Util
 {
-    public class Map<K, V> : JCOBridge.C2JBridge.JVMBridgeBase<Map<K, V>>
+    public class Map<K, V> : JVMBridgeBase<Map<K, V>>
     {
         public override string ClassName => "java.util.Map";
 
@@ -26,18 +29,17 @@ namespace MASES.KafkaBridge.Java.Util
 
         public virtual V Put​(K key, V value) 
         {
-            object val = value;
-            if (typeof(JCOBridge.C2JBridge.JVMBridgeBase).IsAssignableFrom(typeof(V)))
+            var obj = IExecute<V>("put", key, value);
+            if (value is IJVMBridgeBase)
             {
-                val = (value as JCOBridge.C2JBridge.JVMBridgeBase).Instance;
+                return Wraps<V>(obj as IJavaObject);
             }
-
-            return IExecute<V>("put", key, val); 
+            else return obj;
         }
     }
 
     public class Map2<K, V> : Map<K, V> where V : JCOBridge.C2JBridge.JVMBridgeBase, new()
     {
-        public override V Get​(K key) { return New<V>("get", key); }
+        public override V Get​(K key) { return IExecute<V>("get", key); }
     }
 }

@@ -30,6 +30,6 @@ namespace MASES.KafkaBridge.Clients.Consumer
 
         public string MemberId => IExecute<string>("memberId");
 
-        public Optional<string> GroupInstanceId => New<Optional<string>>("groupInstanceId");
+        public Optional<string> GroupInstanceId => IExecute<Optional<string>>("groupInstanceId");
     }
 }

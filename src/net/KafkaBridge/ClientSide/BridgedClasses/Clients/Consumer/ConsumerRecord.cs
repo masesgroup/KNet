@@ -31,7 +31,7 @@ namespace MASES.KafkaBridge.Clients.Consumer
 
         public int Partition => IExecute<int>("partition");
 
-        public Headers Headers => New<Headers>("headers");
+        public Headers Headers => IExecute<Headers>("headers");
 
         public K Key => IExecute<K>("key");
 

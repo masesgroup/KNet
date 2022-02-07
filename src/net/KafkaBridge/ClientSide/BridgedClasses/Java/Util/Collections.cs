@@ -28,20 +28,20 @@ namespace MASES.KafkaBridge.Java.Util
         public static Set<E> singleton<E>(E element)
         {
             return SExecute<Set<E>>("singleton", 
-                                    (typeof(JVMBridgeBase).IsAssignableFrom(typeof(E))) ? (object)(element as JVMBridgeBase).Instance : (object)element);
+                                    (typeof(JVMBridgeBase).IsAssignableFrom(typeof(E))) ? (object)(element as JVMBridgeBase) : (object)element);
         }
 
         public static List<E> singletonList<E>(E element)
         {
             return SExecute<List<E>>("singleton", 
-                                     (typeof(JVMBridgeBase).IsAssignableFrom(typeof(E))) ? (object)(element as JVMBridgeBase).Instance : (object)element);
+                                     (typeof(JVMBridgeBase).IsAssignableFrom(typeof(E))) ? (object)(element as JVMBridgeBase) : (object)element);
         }
 
         public static Map<K, V> singletonMap<K, V>(K key, V value)
         {
             return SExecute<Map<K, V>>("singletonMap", 
-                                       (typeof(JVMBridgeBase).IsAssignableFrom(typeof(K))) ? (object)(key as JVMBridgeBase).Instance : (object)key,
-                                       (typeof(JVMBridgeBase).IsAssignableFrom(typeof(V))) ? (object)(value as JVMBridgeBase).Instance : (object)value);
+                                       (typeof(JVMBridgeBase).IsAssignableFrom(typeof(K))) ? (object)(key as JVMBridgeBase) : (object)key,
+                                       (typeof(JVMBridgeBase).IsAssignableFrom(typeof(V))) ? (object)(value as JVMBridgeBase) : (object)value);
         }
     }
 }

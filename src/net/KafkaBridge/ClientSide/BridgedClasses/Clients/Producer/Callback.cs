@@ -23,13 +23,26 @@ using System;
 namespace MASES.KafkaBridge.Clients.Producer
 {
     /// <summary>
-    /// Listerner for Kafka Callback. Extends <see cref="CLRListener"/>
+    /// Listerner for Kafka Callback. Extends <see cref="IJVMBridgeBase"/>
+    /// </summary>
+    public interface ICallback : IJVMBridgeBase
+    {
+        /// <summary>
+        /// Executes the Callback action in the CLR
+        /// </summary>
+        /// <param name="metadata">The <see cref="RecordMetadata"/> object</param>
+        /// <param name="exception">The <see cref="JVMBridgeException"/> object</param>
+        void OnCompletion(RecordMetadata metadata, JVMBridgeException exception);
+    }
+
+    /// <summary>
+    /// Listerner for Kafka Callback. Extends <see cref="CLRListener"/>, implements <see cref="ICallback"/>
     /// </summary>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
-    public class Callback : CLRListener
+    public class Callback : CLRListener, ICallback
     {
-        /// <inheritdoc cref="CLRListener.JniClass"/>
-        public sealed override string JniClass => "org.mases.kafkabridge.clients.producer.CallbackImpl";
+        /// <inheritdoc cref="CLRListener.ClassName"/>
+        public sealed override string ClassName => "org.mases.kafkabridge.clients.producer.CallbackImpl";
 
         readonly Action<RecordMetadata, JVMBridgeException> executionFunction = null;
         /// <summary>
@@ -45,10 +58,10 @@ namespace MASES.KafkaBridge.Clients.Producer
             if (action != null) executionFunction = action;
             else executionFunction = OnCompletion;
 
-            AddEventHandler("onCompletion", new EventHandler<CLRListenerEventArgs<JVMBridgeEventData<RecordMetadata>>>(EventHandler));
+            AddEventHandler("onCompletion", new EventHandler<CLRListenerEventArgs<CLREventData<RecordMetadata>>>(EventHandler));
         }
 
-        void EventHandler(object sender, CLRListenerEventArgs<JVMBridgeEventData<RecordMetadata>> data)
+        void EventHandler(object sender, CLRListenerEventArgs<CLREventData<RecordMetadata>> data)
         {
             var exception = data.EventData.ExtraData.Get(0) as IJavaObject;
             OnOnCompletion(data.EventData.TypedEventData, JVMBridgeException.New(exception));

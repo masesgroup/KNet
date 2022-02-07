@@ -22,15 +22,33 @@ using System;
 namespace MASES.KafkaBridge.Streams.KStream
 {
     /// <summary>
-    /// Listerner for Kafka KeyValueMapper. Extends <see cref="CLRListener"/>
+    /// Listerner for Kafka KeyValueMapper. Extends <see cref="IJVMBridgeBase"/>
     /// </summary>
     /// <typeparam name="T">The data associated to the event</typeparam>
     /// <typeparam name="U">The data associated to the event</typeparam>
-    /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
-    public class KeyValueMapper<T, U, VR> : CLRListener
+    /// <typeparam name="VR">The result value</typeparam>
+    public interface IKeyValueMapper<T, U, VR> : IJVMBridgeBase
     {
-        /// <inheritdoc cref="CLRListener.JniClass"/>
-        public sealed override string JniClass => "org.mases.kafkabridge.streams.kstream.KeyValueMapperImpl";
+        /// <summary>
+        /// Executes the KeyValueMapper action in the CLR
+        /// </summary>
+        /// <param name="o1">The KeyValueMapper object</param>
+        /// <param name="o2">The KeyValueMapper object</param>
+        /// <returns>The <typeparamref name="VR"/> apply evaluation</returns>
+        VR Apply(T o1, U o2);
+    }
+
+    /// <summary>
+    /// Listerner for Kafka KeyValueMapper. Extends <see cref="CLRListener"/>, implements <see cref="IKeyValueMapper{T, U, VR}"/>
+    /// </summary>
+    /// <typeparam name="T">The data associated to the event</typeparam>
+    /// <typeparam name="U">The data associated to the event</typeparam>
+    /// <typeparam name="VR">The result value</typeparam>
+    /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
+    public class KeyValueMapper<T, U, VR> : CLRListener, IKeyValueMapper<T, U, VR>
+    {
+        /// <inheritdoc cref="CLRListener.ClassName"/>
+        public sealed override string ClassName => "org.mases.kafkabridge.streams.kstream.KeyValueMapperImpl";
 
         readonly Func<T, U, VR> executionFunction = null;
         /// <summary>
@@ -41,18 +59,21 @@ namespace MASES.KafkaBridge.Streams.KStream
         /// Initialize a new instance of <see cref="KeyValueMapper{T, U, VR}"/>
         /// </summary>
         /// <param name="func">The <see cref="Func{T, U, VR}"/> to be executed</param>
-        public KeyValueMapper(Func<T, U, VR> func = null)
+        /// <param name="attachEventHandler">Set to false to disable attach of <see cref="EventHandler"/> and set an own one</param>
+        public KeyValueMapper(Func<T, U, VR> func = null, bool attachEventHandler = true)
         {
             if (func != null) executionFunction = func;
             else executionFunction = Apply;
-
-            AddEventHandler("apply", new EventHandler<CLRListenerEventArgs<CLREventData<T>>>(EventHandler));
+            if (attachEventHandler)
+            {
+                AddEventHandler("apply", new EventHandler<CLRListenerEventArgs<CLREventData<T>>>(EventHandler));
+            }
         }
 
         void EventHandler(object sender, CLRListenerEventArgs<CLREventData<T>> data)
         {
             var retVal = OnApply(data.EventData.TypedEventData, data.EventData.To<U>(0));
-            data.CLRReturnValue = retVal;
+            data.SetReturnValue(retVal);
         }
         /// <summary>
         /// Executes the KeyValueMapper action in the CLR
@@ -62,14 +83,15 @@ namespace MASES.KafkaBridge.Streams.KStream
         /// <returns>The <typeparamref name="VR"/> apply evaluation</returns>
         public virtual VR Apply(T o1, U o2) { return default(VR); }
     }
-
+    /*
     /// <summary>
-    /// Listerner for Kafka KeyValueMapper. Extends <see cref="KeyValueMapper{T, U, VR}"/>
+    /// Listerner for Kafka KeyValueMapper. Extends <see cref="KeyValueMapperImpl{T, U, VR}"/>
     /// </summary>
     /// <typeparam name="T">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
     /// <typeparam name="U">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
+    /// <typeparam name="VR">The result data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
-    public class JVMBridgeKeyValueMapper<T, U, VR> : KeyValueMapper<T, U, VR>
+    public class JVMBridgeKeyValueMapper<T, U, VR> : KeyValueMapperImpl<T, U, VR>
         where T : JVMBridgeBase, new()
         where U : JVMBridgeBase, new()
         where VR : JVMBridgeBase, new()
@@ -78,7 +100,7 @@ namespace MASES.KafkaBridge.Streams.KStream
         /// Initialize a new instance of <see cref="JVMBridgeKeyValueMapper{T, U, VR}"/>
         /// </summary>
         /// <param name="func">The <see cref="Func{T, U, VR}"/> to be executed</param>
-        public JVMBridgeKeyValueMapper(Func<T, U, VR> func = null) : base(func)
+        public JVMBridgeKeyValueMapper(Func<T, U, VR> func = null) : base(func, false)
         {
             AddEventHandler("apply", new EventHandler<CLRListenerEventArgs<JVMBridgeEventData<T>>>(EventHandler));
         }
@@ -86,8 +108,8 @@ namespace MASES.KafkaBridge.Streams.KStream
         void EventHandler(object sender, CLRListenerEventArgs<JVMBridgeEventData<T>> data)
         {
             var retVal = OnApply(data.EventData.TypedEventData, data.EventData.To<U>(0));
-            data.CLRReturnValue = retVal;
+            data.CLRReturnValue = retVal?;
         }
     }
-
+    */
 }

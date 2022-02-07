@@ -18,16 +18,19 @@
 
 using MASES.KafkaBridge.Clients.Consumer;
 using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Common.Serialization;
 using MASES.KafkaBridge.Java.Util;
 using MASES.KafkaBridge.Java.Util.Concurrent;
 
 namespace MASES.KafkaBridge.Clients.Producer
 {
-    public class KafkaProducer : JCOBridge.C2JBridge.JVMBridgeBase<KafkaProducer>
+    public class KafkaProducer<K, V> : JCOBridge.C2JBridge.JVMBridgeBase<KafkaProducer<K, V>>, IProducer<K, V>
     {
         public override bool IsCloseable => true;
 
         public override string ClassName => "org.apache.kafka.clients.producer.KafkaProducer";
+
+        public Map<MetricName, Metric> Metrics => IExecute<Map<MetricName, Metric>>("metrics");
 
         public KafkaProducer()
         {
@@ -35,6 +38,11 @@ namespace MASES.KafkaBridge.Clients.Producer
 
         public KafkaProducer(Properties props)
             : base(props)
+        {
+        }
+
+        public KafkaProducer(Properties props, Serializer<K> keySerializer, Serializer<V> valueSerializer)
+            : base(props, keySerializer, valueSerializer)
         {
         }
 
@@ -50,12 +58,12 @@ namespace MASES.KafkaBridge.Clients.Producer
 
         public void SendOffsetsToTransaction(Map<TopicPartition, OffsetAndMetadata> offsets, string consumerGroupId)
         {
-            IExecute("sendOffsetsToTransaction", offsets.Instance, consumerGroupId);
+            IExecute("sendOffsetsToTransaction", offsets, consumerGroupId);
         }
 
         public void SendOffsetsToTransaction(Map<TopicPartition, OffsetAndMetadata> offsets, ConsumerGroupMetadata groupMetadata)
         {
-            IExecute("sendOffsetsToTransaction", offsets.Instance, groupMetadata.Instance);
+            IExecute("sendOffsetsToTransaction", offsets, groupMetadata);
         }
 
         public void CommitTransaction()
@@ -70,22 +78,22 @@ namespace MASES.KafkaBridge.Clients.Producer
 
         public Future<RecordMetadata> Send(ProducerRecord record)
         {
-            return New<Future<RecordMetadata>>("send", record.Instance);
+            return IExecute<Future<RecordMetadata>>("send", record);
         }
 
         public Future<RecordMetadata> Send(ProducerRecord record, Callback callback)
         {
-            return New<Future<RecordMetadata>>("send", record.Instance, callback.Listener);
+            return IExecute<Future<RecordMetadata>>("send", record, callback);
         }
 
-        public Future<RecordMetadata> Send<K, V>(ProducerRecord<K, V> record)
+        public Future<RecordMetadata> Send(ProducerRecord<K, V> record)
         {
-            return New<Future<RecordMetadata>>("send", record.Instance);
+            return IExecute<Future<RecordMetadata>>("send", record);
         }
 
-        public Future<RecordMetadata> Send<K, V>(ProducerRecord<K, V> record, Callback callback)
+        public Future<RecordMetadata> Send(ProducerRecord<K, V> record, Callback callback)
         {
-            return New<Future<RecordMetadata>>("send", record.Instance, callback.Listener);
+            return IExecute<Future<RecordMetadata>>("send", record, callback);
         }
 
         public void Flush()
@@ -95,7 +103,12 @@ namespace MASES.KafkaBridge.Clients.Producer
 
         public List<PartitionInfo> PartitionsFor(string topic)
         {
-            return New<List<PartitionInfo>>("partitionsFor", topic);
+            return IExecute<List<PartitionInfo>>("partitionsFor", topic);
         }
+    }
+
+    public class KafkaProducer : KafkaProducer<object, object>
+    {
+        public KafkaProducer(Properties props) : base(props) { }
     }
 }
