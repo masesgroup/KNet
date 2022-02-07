@@ -6,3 +6,4 @@ This release comes with some ready made classes:
 * Producer/Consumer classes
 * Kafka Admin Client with basic topic creation/deletion and queries to the cluster
 * Almost completed Kafka Streams
+* Initial development of Kafka Connect (under development)
