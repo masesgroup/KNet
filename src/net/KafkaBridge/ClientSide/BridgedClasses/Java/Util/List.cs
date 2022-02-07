@@ -18,7 +18,12 @@
 
 namespace MASES.KafkaBridge.Java.Util
 {
-    public class List<E> : JCOBridge.C2JBridge.JVMBridgeBase<List<E>>
+    public class List : JCOBridge.C2JBridge.JVMBridgeBase<List>
+    {
+        public override string ClassName => "java.util.List";
+    }
+
+    public class List<E> : List
     {
         public override string ClassName => "java.util.List";
     }

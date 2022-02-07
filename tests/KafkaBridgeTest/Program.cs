@@ -85,9 +85,9 @@ namespace MASES.KafkaBridgeTest
                 var topicConfig = TopicConfig.DynClazz;
 
                 var topic = new NewTopic(topicName, partitions, replicationFactor);
-                var map = Collections.singletonMap((string)topicConfig.CLEANUP_POLICY_CONFIG, (string)topicConfig.CLEANUP_POLICY_COMPACT);
+                var map = Collections.SingletonMap((string)topicConfig.CLEANUP_POLICY_CONFIG, (string)topicConfig.CLEANUP_POLICY_COMPACT);
                 topic.Configs(map);
-                var coll = Collections.singleton(topic);
+                var coll = Collections.Singleton(topic);
 
                 Properties props = new Properties();
                 props.Put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
@@ -236,8 +236,8 @@ namespace MASES.KafkaBridgeTest
                     {
                         using (var consumer = useSerdes ? new KafkaConsumer<string, string>(props, keyDeserializer, valueDeserializer) : new KafkaConsumer<string, string>(props))
                         {
-                            if (useCallback) consumer.Subscribe(Collections.singleton(topicToUse), rebalanceListener);
-                            else consumer.Subscribe(Collections.singleton(topicToUse));
+                            if (useCallback) consumer.Subscribe(Collections.Singleton(topicToUse), rebalanceListener);
+                            else consumer.Subscribe(Collections.Singleton(topicToUse));
 
                             while (!resetEvent.WaitOne(0))
                             {

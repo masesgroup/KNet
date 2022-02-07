@@ -73,8 +73,8 @@ namespace MASES.KafkaBridgeTemplate.KafkaBridgeConsumer
 
                 using (var consumer = useSerdes ? new KafkaConsumer<string, string>(props, keyDeserializer, valueDeserializer) : new KafkaConsumer<string, string>(props))
                 {
-                    if (useCallback) consumer.Subscribe(Collections.singleton(topicToUse), rebalanceListener);
-                    else consumer.Subscribe(Collections.singleton(topicToUse));
+                    if (useCallback) consumer.Subscribe(Collections.Singleton(topicToUse), rebalanceListener);
+                    else consumer.Subscribe(Collections.Singleton(topicToUse));
 
                     while (true)
                     {

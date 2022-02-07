@@ -23,6 +23,7 @@ using MASES.KafkaBridge.Clients.Consumer;
 using MASES.KafkaBridge.Clients.Producer;
 using MASES.KafkaBridge.Common;
 using MASES.KafkaBridge.Common.Errors;
+using MASES.KafkaBridge.Connect.Errors;
 using MASES.KafkaBridge.Java.Util.Concurrent;
 using MASES.KafkaBridge.Streams.Errors;
 using System;
@@ -197,7 +198,7 @@ namespace MASES.KafkaBridge
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(RecordTooLargeException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(ReplicaNotAvailableException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(ResourceNotFoundException));
-            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(RetriableException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(Common.Errors.RetriableException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(SaslAuthenticationException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(SecurityDisabledException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(SerializationException));
@@ -265,6 +266,17 @@ namespace MASES.KafkaBridge
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(TaskMigratedException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(TopologyException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(UnknownStateStoreException));
+            #endregion
+
+            #region Connect Exceptions
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(AlreadyExistsException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(ConnectException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(DataException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(IllegalWorkerStateException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(NotFoundException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(Connect.Errors.RetriableException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(SchemaBuilderException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(SchemaProjectorException));
             #endregion
         }
 
