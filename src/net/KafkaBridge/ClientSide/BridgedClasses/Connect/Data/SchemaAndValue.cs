@@ -16,24 +16,27 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KafkaBridge.Common;
-using MASES.KafkaBridge.Java.Lang;
-using MASES.KafkaBridge.Java.Util;
+using MASES.JCOBridge.C2JBridge;
+using System;
 
-namespace MASES.KafkaBridge.Clients.Admin
+namespace MASES.KafkaBridge.Connect.Data
 {
-    public class CreateTopicsResult : JCOBridge.C2JBridge.JVMBridgeBase<CreateTopicsResult>
+    public class SchemaAndValue : JVMBridgeBase<SchemaAndValue>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.CreateTopicsResult";
+        public override string ClassName => "org.apache.kafka.connect.data.SchemaAndValue";
 
-        public Map<string, KafkaFuture<Void>> Values => IExecute<Map<string, KafkaFuture<Void>>>("values");
-
-        public KafkaFuture<Void> All => IExecute<KafkaFuture<Void>>("all");
-
-        public KafkaFuture<Uuid> TopicId(string topic)
+        [Obsolete("This is not public in Apache Kafka API")]
+        public SchemaAndValue()
         {
-            return IExecute<KafkaFuture<Uuid>>(topic);
         }
+
+        public SchemaAndValue(Schema schema, Java.Lang.Object value)
+            :base(schema, value)
+        {
+        }
+
+        public Schema Schema => IExecute<Schema>("schema");
+
+        public Java.Lang.Object Value => IExecute<Java.Lang.Object>("value");
     }
 }
-

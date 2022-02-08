@@ -21,7 +21,12 @@ using MASES.JCOBridge.C2JBridge.JVMInterop;
 
 namespace MASES.KafkaBridge.Java.Util
 {
-    public class Map<K, V> : JVMBridgeBase<Map<K, V>>
+    public class Map : JVMBridgeBase<Map>
+    {
+        public override string ClassName => "java.util.Map";
+    }
+
+    public class Map<K, V> : Map
     {
         public override string ClassName => "java.util.Map";
 
@@ -36,10 +41,5 @@ namespace MASES.KafkaBridge.Java.Util
             }
             else return obj;
         }
-    }
-
-    public class Map2<K, V> : Map<K, V> where V : JCOBridge.C2JBridge.JVMBridgeBase, new()
-    {
-        public override V Get​(K key) { return IExecute<V>("get", key); }
     }
 }

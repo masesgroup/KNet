@@ -16,24 +16,18 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KafkaBridge.Common;
-using MASES.KafkaBridge.Java.Lang;
-using MASES.KafkaBridge.Java.Util;
-
-namespace MASES.KafkaBridge.Clients.Admin
+namespace MASES.KafkaBridge.Common.Serialization
 {
-    public class CreateTopicsResult : JCOBridge.C2JBridge.JVMBridgeBase<CreateTopicsResult>
+    public class FloatDeserializer : Deserializer<float>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.CreateTopicsResult";
+        public override string ClassName => "org.apache.kafka.common.serialization.FloatDeserializer";
 
-        public Map<string, KafkaFuture<Void>> Values => IExecute<Map<string, KafkaFuture<Void>>>("values");
+        public override bool AutoInit => false;
 
-        public KafkaFuture<Void> All => IExecute<KafkaFuture<Void>>("all");
-
-        public KafkaFuture<Uuid> TopicId(string topic)
+        public FloatDeserializer()
+            : base(null, null, false)
         {
-            return IExecute<KafkaFuture<Uuid>>(topic);
+
         }
     }
 }
-

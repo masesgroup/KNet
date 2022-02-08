@@ -16,24 +16,29 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KafkaBridge.Common;
-using MASES.KafkaBridge.Java.Lang;
-using MASES.KafkaBridge.Java.Util;
+using MASES.JCOBridge.C2JBridge;
+using System;
 
-namespace MASES.KafkaBridge.Clients.Admin
+namespace MASES.KafkaBridge.Connect.Data
 {
-    public class CreateTopicsResult : JCOBridge.C2JBridge.JVMBridgeBase<CreateTopicsResult>
+    public class Field : JVMBridgeBase<Field>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.CreateTopicsResult";
+        public override string ClassName => "org.apache.kafka.connect.data.Field";
 
-        public Map<string, KafkaFuture<Void>> Values => IExecute<Map<string, KafkaFuture<Void>>>("values");
-
-        public KafkaFuture<Void> All => IExecute<KafkaFuture<Void>>("all");
-
-        public KafkaFuture<Uuid> TopicId(string topic)
+        [Obsolete("This is not public in Apache Kafka API")]
+        public Field()
         {
-            return IExecute<KafkaFuture<Uuid>>(topic);
         }
+
+        public Field(string name, int index, Schema schema)
+            : base(name, index, schema)
+        {
+        }
+
+        public string Name => IExecute<string>("name");
+
+        public int Index => IExecute<int>("index");
+
+        public Schema Schema => IExecute<Schema>("schema");
     }
 }
-

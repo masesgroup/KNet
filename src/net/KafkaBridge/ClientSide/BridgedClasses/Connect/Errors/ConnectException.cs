@@ -17,23 +17,11 @@
 */
 
 using MASES.KafkaBridge.Common;
-using MASES.KafkaBridge.Java.Lang;
-using MASES.KafkaBridge.Java.Util;
 
-namespace MASES.KafkaBridge.Clients.Admin
+namespace MASES.KafkaBridge.Connect.Errors
 {
-    public class CreateTopicsResult : JCOBridge.C2JBridge.JVMBridgeBase<CreateTopicsResult>
+    public class ConnectException : KafkaException
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.CreateTopicsResult";
-
-        public Map<string, KafkaFuture<Void>> Values => IExecute<Map<string, KafkaFuture<Void>>>("values");
-
-        public KafkaFuture<Void> All => IExecute<KafkaFuture<Void>>("all");
-
-        public KafkaFuture<Uuid> TopicId(string topic)
-        {
-            return IExecute<KafkaFuture<Uuid>>(topic);
-        }
+        public override string ClassName => "org.apache.kafka.connect.errors.ConnectException";
     }
 }
-

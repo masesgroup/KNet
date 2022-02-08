@@ -16,24 +16,18 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KafkaBridge.Common;
-using MASES.KafkaBridge.Java.Lang;
-using MASES.KafkaBridge.Java.Util;
+using MASES.JCOBridge.C2JBridge;
+using System;
 
-namespace MASES.KafkaBridge.Clients.Admin
+namespace MASES.KafkaBridge.Connect.Data
 {
-    public class CreateTopicsResult : JCOBridge.C2JBridge.JVMBridgeBase<CreateTopicsResult>
+    public class SchemaProjector : JVMBridgeBase<SchemaProjector>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.CreateTopicsResult";
+        public override string ClassName => "org.apache.kafka.connect.data.SchemaProjector";
 
-        public Map<string, KafkaFuture<Void>> Values => IExecute<Map<string, KafkaFuture<Void>>>("values");
-
-        public KafkaFuture<Void> All => IExecute<KafkaFuture<Void>>("all");
-
-        public KafkaFuture<Uuid> TopicId(string topic)
+        public static Java.Lang.Object project(Schema source, Object record, Schema target)
         {
-            return IExecute<KafkaFuture<Uuid>>(topic);
+            return SExecute<Java.Lang.Object>("project", source, record, target);
         }
     }
 }
-
