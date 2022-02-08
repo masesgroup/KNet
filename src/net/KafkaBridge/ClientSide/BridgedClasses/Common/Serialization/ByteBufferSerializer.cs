@@ -16,12 +16,20 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.JCOBridge.C2JBridge;
+using MASES.KafkaBridge.Java.Nio;
 
 namespace MASES.KafkaBridge.Common.Serialization
 {
-    public class ByteBufferSerializer : JVMBridgeBase<ByteBufferSerializer>
+    public class ByteBufferSerializer : Serializer<ByteBuffer>
     {
         public override string ClassName => "org.apache.kafka.common.serialization.ByteBufferSerializer";
+
+        public override bool AutoInit => false;
+
+        public ByteBufferSerializer()
+            : base(null, null, false)
+        {
+
+        }
     }
 }

@@ -16,12 +16,20 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.JCOBridge.C2JBridge;
+using MASES.KafkaBridge.Java.Lang;
 
 namespace MASES.KafkaBridge.Common.Serialization
 {
-    public class VoidDeserializer : JVMBridgeBase<VoidDeserializer>
+    public class VoidDeserializer : Deserializer<Void>
     {
         public override string ClassName => "org.apache.kafka.common.serialization.VoidDeserializer";
+
+        public override bool AutoInit => false;
+
+        public VoidDeserializer()
+            : base(null, null, false)
+        {
+
+        }
     }
 }

@@ -16,12 +16,18 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.JCOBridge.C2JBridge;
-
 namespace MASES.KafkaBridge.Common.Serialization
 {
-    public class FloatDeserializer : JVMBridgeBase<FloatDeserializer>
+    public class FloatDeserializer : Deserializer<float>
     {
         public override string ClassName => "org.apache.kafka.common.serialization.FloatDeserializer";
+
+        public override bool AutoInit => false;
+
+        public FloatDeserializer()
+            : base(null, null, false)
+        {
+
+        }
     }
 }

@@ -16,12 +16,18 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.JCOBridge.C2JBridge;
-
 namespace MASES.KafkaBridge.Common.Serialization
 {
-    public class LongDeserializer : JVMBridgeBase<LongDeserializer>
+    public class LongDeserializer : Deserializer<long>
     {
         public override string ClassName => "org.apache.kafka.common.serialization.LongDeserializer";
+
+        public override bool AutoInit => false;
+
+        public LongDeserializer()
+            : base(null, null, false)
+        {
+
+        }
     }
 }

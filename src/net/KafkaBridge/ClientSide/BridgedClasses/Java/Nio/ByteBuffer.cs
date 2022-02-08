@@ -16,10 +16,10 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KafkaBridge.Connect.Errors
+namespace MASES.KafkaBridge.Java.Nio
 {
-    public class SchemaProjectorException : DataException
+    public class ByteBuffer : JCOBridge.C2JBridge.JVMBridgeBase<ByteBuffer>
     {
-        public override string ClassName => "org.apache.kafka.connect.errors.SchemaProjectorException";
+        public override string ClassName => "java.nio.ByteBuffer";
     }
 }

@@ -20,6 +20,6 @@ namespace MASES.KafkaBridge.Connect.Errors
 {
     public class IllegalWorkerStateException : ConnectException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.IllegalWorkerStateException";
+        public override string ClassName => "org.apache.kafka.connect.errors.IllegalWorkerStateException";
     }
 }

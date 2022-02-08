@@ -16,12 +16,18 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.JCOBridge.C2JBridge;
-
 namespace MASES.KafkaBridge.Common.Serialization
 {
-    public class ShortDeserializer : JVMBridgeBase<ShortDeserializer>
+    public class ShortDeserializer : Deserializer<short>
     {
         public override string ClassName => "org.apache.kafka.common.serialization.ShortDeserializer";
+
+        public override bool AutoInit => false;
+
+        public ShortDeserializer()
+            : base(null, null, false)
+        {
+
+        }
     }
 }

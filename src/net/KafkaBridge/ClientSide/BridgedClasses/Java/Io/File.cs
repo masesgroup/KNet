@@ -21,6 +21,5 @@ namespace MASES.KafkaBridge.Java.Io
     public class File : JCOBridge.C2JBridge.JVMBridgeBase<File>
     {
         public override string ClassName => "java.io.File";
-
     }
 }

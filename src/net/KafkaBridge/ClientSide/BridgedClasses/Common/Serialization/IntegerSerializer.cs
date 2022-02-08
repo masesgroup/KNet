@@ -16,12 +16,18 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.JCOBridge.C2JBridge;
-
 namespace MASES.KafkaBridge.Common.Serialization
 {
-    public class IntegerSerializer : JVMBridgeBase<IntegerSerializer>
+    public class IntegerSerializer : Serializer<int>
     {
         public override string ClassName => "org.apache.kafka.common.serialization.IntegerSerializer";
+
+        public override bool AutoInit => false;
+
+        public IntegerSerializer()
+            : base(null, null, false)
+        {
+
+        }
     }
 }

@@ -20,6 +20,6 @@ namespace MASES.KafkaBridge.Connect.Errors
 {
     public class RetriableException : ConnectException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.RetriableException";
+        public override string ClassName => "org.apache.kafka.connect.errors.RetriableException";
     }
 }

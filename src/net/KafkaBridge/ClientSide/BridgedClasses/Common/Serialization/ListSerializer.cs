@@ -16,12 +16,20 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.JCOBridge.C2JBridge;
+using MASES.KafkaBridge.Java.Util;
 
 namespace MASES.KafkaBridge.Common.Serialization
 {
-    public class ListSerializer<Inner> : JVMBridgeBase<ListSerializer<Inner>>
+    public class ListSerializer<Inner> : Serializer<List<Inner>>
     {
         public override string ClassName => "org.apache.kafka.common.serialization.ListSerializer";
+
+        public override bool AutoInit => false;
+
+        public ListSerializer()
+            : base(null, null, false)
+        {
+
+        }
     }
 }

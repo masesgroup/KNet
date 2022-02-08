@@ -20,6 +20,6 @@ namespace MASES.KafkaBridge.Connect.Errors
 {
     public class AlreadyExistsException : ConnectException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.AlreadyExistsException";
+        public override string ClassName => "org.apache.kafka.connect.errors.AlreadyExistsException";
     }
 }

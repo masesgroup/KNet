@@ -16,12 +16,18 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.JCOBridge.C2JBridge;
-
 namespace MASES.KafkaBridge.Common.Serialization
 {
-    public class LongSerializer : JVMBridgeBase<LongSerializer>
+    public class LongSerializer : Serializer<long>
     {
         public override string ClassName => "org.apache.kafka.common.serialization.LongSerializer";
+
+        public override bool AutoInit => false;
+
+        public LongSerializer()
+            : base(null, null, false)
+        {
+
+        }
     }
 }

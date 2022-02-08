@@ -16,12 +16,18 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.JCOBridge.C2JBridge;
-
 namespace MASES.KafkaBridge.Common.Serialization
 {
-    public class StringSerializer : JVMBridgeBase<StringSerializer>
+    public class StringSerializer : Serializer<string>
     {
         public override string ClassName => "org.apache.kafka.common.serialization.StringSerializer";
+
+        public override bool AutoInit => false;
+
+        public StringSerializer()
+            : base(null, null, false)
+        {
+
+        }
     }
 }

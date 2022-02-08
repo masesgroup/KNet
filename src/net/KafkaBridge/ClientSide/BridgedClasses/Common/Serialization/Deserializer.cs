@@ -61,7 +61,7 @@ namespace MASES.KafkaBridge.Common.Serialization
     public class Deserializer<E> : CLRListener, IDeserializer<E>
     {
         /// <inheritdoc cref="CLRListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.kafkabridge.clients.common.serialization.DeserializerImpl";
+        public override string ClassName => "org.mases.kafkabridge.clients.common.serialization.DeserializerImpl";
 
         readonly Func<string, byte[], E> deserialize = null;
         readonly Func<string, Headers, byte[], E> deserializeWithHeaders = null;

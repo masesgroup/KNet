@@ -16,12 +16,18 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.JCOBridge.C2JBridge;
-
 namespace MASES.KafkaBridge.Common.Serialization
 {
-    public class UUIDDeserializer : JVMBridgeBase<UUIDDeserializer>
+    public class UUIDDeserializer : Deserializer<Uuid>
     {
         public override string ClassName => "org.apache.kafka.common.serialization.UUIDDeserializer";
+
+        public override bool AutoInit => false;
+
+        public UUIDDeserializer()
+            : base(null, null, false)
+        {
+
+        }
     }
 }
