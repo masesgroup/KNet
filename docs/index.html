@@ -62,41 +62,46 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="welcome-to-kafkabridge">Welcome to KafkaBridge</h1>
 
-<p>Access natively Apache Kafka Java classes from any .NET application using <a href="https://www.jcobridge.com">JCOBridge</a> engine.</p>
+<p>KafkaBridge is a .NET mirror of <a href="https://kafka.apache.org/">Apache Kafka</a> <a href="https://kafka.apache.org/documentation/#api">APIs</a> providing all features: Producer, Consumer, Admin, Streams, Connect, ZooKeeper, Kafka backend.</p>
 <p>This project adheres to the Contributor <a href="CODE_OF_CONDUCT.md">Covenant code of conduct</a>. By participating, you are expected to uphold this code. Please report unacceptable behavior to coc_reporting@masesgroup.com.</p>
 <h2 id="scope-of-the-project">Scope of the project</h2>
-<p>This project aims to create a library able to direct access the features available in the <a href="https://kafka.apache.org/downloads">Apache Kafka binary distribution</a>.
-There are many client libraries written to manage communication with Apache Kafka. Conversely, this poject use directly the Java packages released from Apache Foundation giving more than one benefit:</p>
+<p>This project aims to create a library to direct access, from .NET, all the features available in the <a href="https://kafka.apache.org/downloads">Apache Kafka binary distribution</a>.</p>
+<p>There are many client libraries written to manage communication with Apache Kafka. Conversely, this project use directly the Java packages released from The Apache Foundation giving more than one benefit:</p>
 <ul>
-<li>all implemented features are availables;</li>
-<li>avoids  protocol implementation from any third party;</li>
-<li>can access any feature made available.
-The benefits comes from tow main points related to JCOBridge:</li>
-<li>its ablitity to manage a direct access to the JVM from any .NET application: any Java / Scala class behind Apache Kafka can be directly managed;</li>
-<li>using the dynamic code feature of JCOBridge it is possible to write a Java/Scala/Kotlin/etc seamless language directly inside a standard .NET application written in C#/VB.NET</li>
+<li>all implemented features are availables at no extra implementation costs, see <a href="articles/usage.html">KafkaBridge usage</a>;</li>
+<li>avoids any third party communication protocol implementation;</li>
+<li>access all features made available from Apache Kafka: the most important one is Kafka Streams which does not have any C# implementation.</li>
 </ul>
-<h2 id="actual-state">Actual state</h2>
-<p>The first public version comes with few ready made classes:</p>
+<p>Many benefits comes from the <a href="https://www.jcobridge.com/features/">features of JCOBridge</a>:</p>
 <ul>
-<li>The command line interface classes (i.e. the executables Apache Kafka classes), the ones available under the <em>bin</em> folder of any Apache Kafka binary distribution, can be managed using the KafkaBridgeCLI, e.g. ConsoleConsumer, ConsoleProducer and so on.</li>
-</ul>
-<h2 id="roadmap">Roadmap</h2>
-<p>The roadmap can be synthetized in the following points:</p>
+<li><strong>Cyber-security</strong>:
 <ul>
-<li>Add more classes to simplify management from .NET;</li>
-<li>Create Kafka Connect and Kafka Streams bridging classes for .NET to mix both any JVM language (Scala, Java) and .NET languages;</li>
-<li>Add features to extend ability to use .NET packages (e.g. EntityFramework) with Kafka Streams.</li>
+<li><a href="https://en.wikipedia.org/wiki/Java_virtual_machine">JVM</a> and <a href="https://en.wikipedia.org/wiki/Common_Language_Runtime">CLR, or CoreCLR,</a> runs in the same process, but are insulated from each other;</li>
+<li>JCOBridge does not make any code injection into JVM;</li>
+<li>JCOBridge does not use any other communication mechanism than JNI;</li>
+<li>.NET (CLR) inherently inherits the cyber-security levels of running JVM and Apache Kafka;</li>
 </ul>
-<h2 id="kafkabridgecli-usage">KafkaBridgeCLI usage</h2>
-<p>To use the CLI interface (KafkaBridgeCLI) runs a command like the following:</p>
-<blockquote>
-<p>KafkaBridgeCLI -ClassToRun ConsoleConsumer --bootstrap-server SERVER-ADDRESS:9093 --topic topic_name --from-beginning</p>
-</blockquote>
-<p>KafkaBridgeCLI accepts the following command-line switch:</p>
+</li>
+<li><strong>Direct access the JVM from any .NET application</strong>:
 <ul>
-<li><strong>ClassToRun</strong>: represents the class to be launched</li>
-<li><strong>KafkaLocation</strong>: represents the path to the root folder of Apache Kafka binary distribution; default value consider that KafkaBridgeCLI is installed within the bin folder of Apache Kafka binary distribution;</li>
+<li>Any Java/Scala class behind Apache Kafka can be directly managed: Consumer, Producer, Administration, Streams, Server-side, and so on;</li>
+<li>No need to learn new APIs: we try to expose the same APIs in C# style;</li>
+<li>No extra validation cycle on protocol and functionality: bug fix, improvements, new features are immediately available;</li>
+<li>Documentation is shared;</li>
 </ul>
+</li>
+<li><strong>Dynamic code</strong>: it helps to write a Java/Scala/Kotlin/etc seamless language code directly inside a standard .NET application written in C#/VB.NET: look at this <a href="https://www.jcobridge.com/net-examples/dotnet-examples/">simple example</a> and <a href="articles/API_extensibility.html">KafkaBridge APIs extensibility</a>.</li>
+</ul>
+<hr>
+<h2 id="summary">Summary</h2>
+<ul>
+<li><a href="articles/roadmap.html">Roadmap</a></li>
+<li><a href="articles/actualstate.html">Actual state</a></li>
+<li><a href="articles/usage.html">KafkaBridge usage</a></li>
+<li><a href="articles/API_extensibility.html">KafkaBridge APIs extensibility</a></li>
+<li><a href="articles/usageCLI.html">KafkaBridgeCLI usage</a></li>
+</ul>
+<hr>
 </article>
           </div>
           
