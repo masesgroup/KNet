@@ -18,20 +18,12 @@
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class DeleteTopicsOptions : JCOBridge.C2JBridge.JVMBridgeBase<DeleteTopicsOptions>
+    public class SupportedVersionRange : JCOBridge.C2JBridge.JVMBridgeBase<SupportedVersionRange>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.DeleteTopicsOptions";
+        public override string ClassName => "org.apache.kafka.clients.admin.SupportedVersionRange";
 
-        public DeleteTopicsOptions TimeoutMs(int timeoutMs)
-        {
-            return IExecute<DeleteTopicsOptions>("timeoutMs", timeoutMs);
-        }
+        public short MinVersion => IExecute<short>("minVersion");
 
-        public DeleteTopicsOptions RetryOnQuotaViolation(bool validateOnly)
-        {
-            return IExecute<DeleteTopicsOptions>("retryOnQuotaViolation", validateOnly);
-        }
-
-        public bool ShouldRetryOnQuotaViolation => IExecute<bool>("shouldRetryOnQuotaViolation");
+        public short MaxVersion => IExecute<short>("maxVersion");
     }
 }
