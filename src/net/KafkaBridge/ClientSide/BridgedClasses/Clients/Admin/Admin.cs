@@ -16,11 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-#define DISABLE_FUNCTION
-
 using MASES.JCOBridge.C2JBridge;
 using MASES.KafkaBridge.Clients.Consumer;
 using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Common.Acl;
+using MASES.KafkaBridge.Common.Config;
+using MASES.KafkaBridge.Common.Quota;
 using MASES.KafkaBridge.Java.Time;
 using MASES.KafkaBridge.Java.Util;
 using System;
@@ -43,24 +44,20 @@ namespace MASES.KafkaBridge.Clients.Admin
 
         DeleteTopicsResult DeleteTopics(Collection<string> topics, DeleteTopicsOptions options);
 
-#if !DISABLE_FUNCTION
-
         DeleteTopicsResult DeleteTopics(TopicCollection topics);
 
         DeleteTopicsResult DeleteTopics(TopicCollection topics, DeleteTopicsOptions options);
-#endif
+
         ListTopicsResult ListTopics();
 
-#if !DISABLE_FUNCTION
         ListTopicsResult ListTopics(ListTopicsOptions options);
-#endif
 
         DescribeTopicsResult DescribeTopics(Collection<string> topicNames);
-#if !DISABLE_FUNCTION
+
         DescribeTopicsResult DescribeTopics(Collection<string> topicNames, DescribeTopicsOptions options);
-#endif
+
         DescribeClusterResult DescribeCluster();
-#if !DISABLE_FUNCTION
+
         DescribeClusterResult DescribeCluster(DescribeClusterOptions options);
 
         DescribeAclsResult DescribeAcls(AclBindingFilter filter);
@@ -124,9 +121,9 @@ namespace MASES.KafkaBridge.Clients.Admin
         DescribeConsumerGroupsResult DescribeConsumerGroups(Collection<string> groupIds);
 
         ListConsumerGroupsResult ListConsumerGroups(ListConsumerGroupsOptions options);
-#endif
+
         ListConsumerGroupsResult ListConsumerGroups();
-#if !DISABLE_FUNCTION
+
         ListConsumerGroupOffsetsResult ListConsumerGroupOffsets(String groupId, ListConsumerGroupOffsetsOptions options);
 
         ListConsumerGroupOffsetsResult ListConsumerGroupOffsets(string groupId);
@@ -138,9 +135,9 @@ namespace MASES.KafkaBridge.Clients.Admin
         DeleteConsumerGroupOffsetsResult DeleteConsumerGroupOffsets(string groupId, Set<TopicPartition> partitions, DeleteConsumerGroupOffsetsOptions options);
 
         DeleteConsumerGroupOffsetsResult DeleteConsumerGroupOffsets(string groupId, Set<TopicPartition> partitions);
-#endif
+
         ElectLeadersResult ElectLeaders(ElectionType electionType, Set<TopicPartition> partitions);
-#if !DISABLE_FUNCTION
+
         ElectLeadersResult ElectLeaders(ElectionType electionType, Set<TopicPartition> partitions, ElectLeadersOptions options);
 
         AlterPartitionReassignmentsResult AlterPartitionReassignments(Map<TopicPartition, Optional<NewPartitionReassignment>> reassignments);
@@ -210,7 +207,6 @@ namespace MASES.KafkaBridge.Clients.Admin
         ListTransactionsResult ListTransactions();
 
         ListTransactionsResult ListTransactions(ListTransactionsOptions options);
-#endif
     }
 }
 

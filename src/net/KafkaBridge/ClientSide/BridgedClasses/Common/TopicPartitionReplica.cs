@@ -18,21 +18,23 @@
 
 namespace MASES.KafkaBridge.Common
 {
-    public class TopicPartition : JCOBridge.C2JBridge.JVMBridgeBase<TopicPartition>
+    public class TopicPartitionReplica : JCOBridge.C2JBridge.JVMBridgeBase<TopicPartitionReplica>
     {
-        public override string ClassName => "org.apache.kafka.common.TopicPartition";
+        public override string ClassName => "org.apache.kafka.common.TopicPartitionReplica";
 
-        public TopicPartition()
+        public TopicPartitionReplica()
         {
         }
 
-        public TopicPartition(string topic, int partition)
-            : base(topic, partition)
+        public TopicPartitionReplica(string topic, int partition, int brokerId)
+            : base(topic, partition, brokerId)
         {
         }
 
         public int Partition => IExecute<int>("partition");
 
         public string Topic => IExecute<string>("topic");
+
+        public int BrokerId => IExecute<int>("brokerId");
     }
 }

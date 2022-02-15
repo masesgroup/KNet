@@ -22,21 +22,18 @@ namespace MASES.KafkaBridge.Clients.Admin
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DeleteTopicsOptions";
 
-        public DeleteTopicsOptions timeoutMs(int timeoutMs)
+        public DeleteTopicsOptions TimeoutMs(int timeoutMs)
         {
             IExecute("timeoutMs", timeoutMs);
             return this;
         }
 
-        public DeleteTopicsOptions retryOnQuotaViolation(bool validateOnly)
+        public DeleteTopicsOptions RetryOnQuotaViolation(bool validateOnly)
         {
             IExecute("retryOnQuotaViolation", validateOnly);
             return this;
         }
 
-        public bool shouldRetryOnQuotaViolation()
-        {
-            return IExecute<bool>("shouldRetryOnQuotaViolation");
-        }
+        public bool ShouldRetryOnQuotaViolation => IExecute<bool>("shouldRetryOnQuotaViolation");
     }
 }

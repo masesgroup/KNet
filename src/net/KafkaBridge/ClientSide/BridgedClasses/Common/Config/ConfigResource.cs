@@ -16,23 +16,10 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KafkaBridge.Common
+namespace MASES.KafkaBridge.Common.Config
 {
-    public class TopicPartition : JCOBridge.C2JBridge.JVMBridgeBase<TopicPartition>
+    public class ConfigResource : JCOBridge.C2JBridge.JVMBridgeBase<ConfigResource>
     {
-        public override string ClassName => "org.apache.kafka.common.TopicPartition";
-
-        public TopicPartition()
-        {
-        }
-
-        public TopicPartition(string topic, int partition)
-            : base(topic, partition)
-        {
-        }
-
-        public int Partition => IExecute<int>("partition");
-
-        public string Topic => IExecute<string>("topic");
+        public override string ClassName => "org.apache.kafka.common.config.ConfigResource";
     }
 }

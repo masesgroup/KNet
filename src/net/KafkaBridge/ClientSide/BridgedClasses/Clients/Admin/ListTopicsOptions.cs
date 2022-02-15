@@ -18,22 +18,20 @@
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class CreateTopicsOptions : JCOBridge.C2JBridge.JVMBridgeBase<CreateTopicsOptions>
+    public class ListTopicsOptions : JCOBridge.C2JBridge.JVMBridgeBase<ListTopicsOptions>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.CreateTopicsOptions";
+        public override string ClassName => "org.apache.kafka.clients.admin.ListTopicsOptions";
 
-        public CreateTopicsOptions ValidateOnly(bool validateOnly)
+        public ListTopicsOptions TimeoutMs(int timeoutMs)
         {
-            return IExecute<CreateTopicsOptions>("validateOnly", validateOnly);
+            return IExecute<ListTopicsOptions>("timeoutMs", timeoutMs);
         }
 
-        public bool ShouldValidateOnly => IExecute<bool>("shouldValidateOnly");
-
-        public CreateTopicsOptions RetryOnQuotaViolation(bool validateOnly)
+        public ListTopicsOptions ListInternal(bool listInternal)
         {
-            return IExecute<CreateTopicsOptions>("retryOnQuotaViolation", validateOnly);
+            return IExecute<ListTopicsOptions>("listInternal", listInternal);
         }
 
-        public bool ShouldRetryOnQuotaViolation => IExecute<bool>("shouldRetryOnQuotaViolation");
+        public bool ShouldListInternal => IExecute<bool>("shouldListInternal");
     }
 }

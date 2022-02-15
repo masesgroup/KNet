@@ -17,7 +17,11 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
+using MASES.KafkaBridge.Clients.Consumer;
 using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Common.Acl;
+using MASES.KafkaBridge.Common.Config;
+using MASES.KafkaBridge.Common.Quota;
 using MASES.KafkaBridge.Java.Time;
 using MASES.KafkaBridge.Java.Util;
 
@@ -76,7 +80,7 @@ namespace MASES.KafkaBridge.Clients.Admin
 
         public DeleteTopicsResult DeleteTopics(Collection<string> topics)
         {
-          return IExecute<DeleteTopicsResult>("deleteTopics", topics);
+            return IExecute<DeleteTopicsResult>("deleteTopics", topics);
         }
 
         public DeleteTopicsResult DeleteTopics(Collection<string> topics, DeleteTopicsOptions options)
@@ -97,6 +101,386 @@ namespace MASES.KafkaBridge.Clients.Admin
         public DescribeClusterResult DescribeCluster()
         {
             return IExecute<DescribeClusterResult>("describeCluster");
+        }
+
+        public DeleteTopicsResult DeleteTopics(TopicCollection topics)
+        {
+            return IExecute<DeleteTopicsResult>("deleteTopics", topics);
+        }
+
+        public DeleteTopicsResult DeleteTopics(TopicCollection topics, DeleteTopicsOptions options)
+        {
+            return IExecute<DeleteTopicsResult>("deleteTopics", topics, options);
+        }
+
+        public ListTopicsResult ListTopics(ListTopicsOptions options)
+        {
+            return IExecute<ListTopicsResult>("listTopics", options);
+        }
+
+        public DescribeTopicsResult DescribeTopics(Collection<string> topicNames, DescribeTopicsOptions options)
+        {
+            return IExecute<DescribeTopicsResult>("describeTopics", topicNames, options);
+        }
+
+        public DescribeClusterResult DescribeCluster(DescribeClusterOptions options)
+        {
+            return IExecute<DescribeClusterResult>("describeCluster", options);
+        }
+
+        public DescribeAclsResult DescribeAcls(AclBindingFilter filter)
+        {
+            return IExecute<DescribeAclsResult>("describeAcls", filter);
+        }
+
+        public DescribeAclsResult DescribeAcls(AclBindingFilter filter, DescribeAclsOptions options)
+        {
+            return IExecute<DescribeAclsResult>("describeAcls", filter, options);
+        }
+
+        public CreateAclsResult CreateAcls(Collection<AclBinding> acls)
+        {
+            return IExecute<CreateAclsResult>("createAcls", acls);
+        }
+
+        public CreateAclsResult CreateAcls(Collection<AclBinding> acls, CreateAclsOptions options)
+        {
+            return IExecute<CreateAclsResult>("createAcls", acls, options);
+        }
+
+        public DeleteAclsResult DeleteAcls(Collection<AclBindingFilter> filters)
+        {
+            return IExecute<DeleteAclsResult>("deleteAcls", filters);
+        }
+
+        public DeleteAclsResult DeleteAcls(Collection<AclBindingFilter> filters, DeleteAclsOptions options)
+        {
+            return IExecute<DeleteAclsResult>("deleteAcls", filters, options);
+        }
+
+        public DescribeConfigsResult DescribeConfigs(Collection<ConfigResource> resources)
+        {
+            return IExecute<DescribeConfigsResult>("describeConfigs", resources);
+        }
+
+        public DescribeConfigsResult DescribeConfigs(Collection<ConfigResource> resources, DescribeConfigsOptions options)
+        {
+            return IExecute<DescribeConfigsResult>("describeConfigs", resources, options);
+        }
+
+        public AlterConfigsResult IncrementalAlterConfigs(Map<ConfigResource, Collection<AlterConfigOp>> configs)
+        {
+            return IExecute<AlterConfigsResult>("incrementalAlterConfigs", configs);
+        }
+
+        public AlterConfigsResult IncrementalAlterConfigs(Map<ConfigResource, Collection<AlterConfigOp>> configs, AlterConfigsOptions options)
+        {
+            return IExecute<AlterConfigsResult>("incrementalAlterConfigs", configs, options);
+        }
+
+        public AlterReplicaLogDirsResult AlterReplicaLogDirs(Map<TopicPartitionReplica, string> replicaAssignment)
+        {
+            return IExecute<AlterReplicaLogDirsResult>("alterReplicaLogDirs", replicaAssignment);
+        }
+
+        public AlterReplicaLogDirsResult AlterReplicaLogDirs(Map<TopicPartitionReplica, string> replicaAssignment, AlterReplicaLogDirsOptions options)
+        {
+            return IExecute<AlterReplicaLogDirsResult>("alterReplicaLogDirs", replicaAssignment, options);
+        }
+
+        public DescribeLogDirsResult DescribeLogDirs(Collection<int> brokers)
+        {
+            return IExecute<DescribeLogDirsResult>("describeLogDirs", brokers);
+        }
+
+        public DescribeLogDirsResult DescribeLogDirs(Collection<int> brokers, DescribeLogDirsOptions options)
+        {
+            return IExecute<DescribeLogDirsResult>("describeLogDirs", brokers, options);
+        }
+
+        public DescribeReplicaLogDirsResult DescribeReplicaLogDirs(Collection<TopicPartitionReplica> replicas)
+        {
+            return IExecute<DescribeReplicaLogDirsResult>("describeReplicaLogDirs", replicas);
+        }
+
+        public DescribeReplicaLogDirsResult DescribeReplicaLogDirs(Collection<TopicPartitionReplica> replicas, DescribeReplicaLogDirsOptions options)
+        {
+            return IExecute<DescribeReplicaLogDirsResult>("describeReplicaLogDirs", replicas, options);
+        }
+
+        public CreatePartitionsResult CreatePartitions(Map<string, NewPartitions> newPartitions)
+        {
+            return IExecute<CreatePartitionsResult>("createPartitions", newPartitions);
+        }
+
+        public CreatePartitionsResult CreatePartitions(Map<string, NewPartitions> newPartitions, CreatePartitionsOptions options)
+        {
+            return IExecute<CreatePartitionsResult>("createPartitions", newPartitions, options);
+        }
+
+        public DeleteRecordsResult DeleteRecords(Map<TopicPartition, RecordsToDelete> recordsToDelete)
+        {
+            return IExecute<DeleteRecordsResult>("deleteRecords", recordsToDelete);
+        }
+
+        public DeleteRecordsResult DeleteRecords(Map<TopicPartition, RecordsToDelete> recordsToDelete, DeleteRecordsOptions options)
+        {
+            return IExecute<DeleteRecordsResult>("deleteRecords", recordsToDelete, options);
+        }
+
+        public CreateDelegationTokenResult CreateDelegationToken()
+        {
+            return IExecute<CreateDelegationTokenResult>("createDelegationToken");
+        }
+
+        public CreateDelegationTokenResult CreateDelegationToken(CreateDelegationTokenOptions options)
+        {
+            return IExecute<CreateDelegationTokenResult>("createDelegationToken", options);
+        }
+
+        public RenewDelegationTokenResult RenewDelegationToken(byte[] hmac)
+        {
+            return IExecute<RenewDelegationTokenResult>("renewDelegationToken", hmac);
+        }
+
+        public RenewDelegationTokenResult RenewDelegationToken(byte[] hmac, RenewDelegationTokenOptions options)
+        {
+            return IExecute<RenewDelegationTokenResult>("renewDelegationToken", hmac, options);
+        }
+
+        public ExpireDelegationTokenResult ExpireDelegationToken(byte[] hmac)
+        {
+            return IExecute<ExpireDelegationTokenResult>("expireDelegationToken", hmac);
+        }
+
+        public ExpireDelegationTokenResult ExpireDelegationToken(byte[] hmac, ExpireDelegationTokenOptions options)
+        {
+            return IExecute<ExpireDelegationTokenResult>("expireDelegationToken", hmac, options);
+        }
+
+        public DescribeDelegationTokenResult DescribeDelegationToken()
+        {
+            return IExecute<DescribeDelegationTokenResult>("describeDelegationToken");
+        }
+
+        public DescribeDelegationTokenResult DescribeDelegationToken(DescribeDelegationTokenOptions options)
+        {
+            return IExecute<DescribeDelegationTokenResult>("describeDelegationToken", options);
+        }
+
+        public DescribeConsumerGroupsResult DescribeConsumerGroups(Collection<string> groupIds, DescribeConsumerGroupsOptions options)
+        {
+            return IExecute<DescribeConsumerGroupsResult>("describeConsumerGroups", groupIds, options);
+        }
+
+        public ListConsumerGroupsResult ListConsumerGroups(ListConsumerGroupsOptions options)
+        {
+            return IExecute<ListConsumerGroupsResult>("listConsumerGroups", options);
+        }
+
+        public ListConsumerGroupOffsetsResult ListConsumerGroupOffsets(string groupId, ListConsumerGroupOffsetsOptions options)
+        {
+            return IExecute<ListConsumerGroupOffsetsResult>("listConsumerGroupOffsets", groupId, options);
+        }
+
+        public ListConsumerGroupOffsetsResult ListConsumerGroupOffsets(string groupId)
+        {
+            return IExecute<ListConsumerGroupOffsetsResult>("listConsumerGroupOffsets", groupId);
+        }
+
+        public DeleteConsumerGroupsResult DeleteConsumerGroups(Collection<string> groupIds, DeleteConsumerGroupsOptions options)
+        {
+            return IExecute<DeleteConsumerGroupsResult>("deleteConsumerGroups", groupIds, options);
+        }
+
+        public DeleteConsumerGroupsResult DeleteConsumerGroups(Collection<string> groupIds)
+        {
+            return IExecute<DeleteConsumerGroupsResult>("deleteConsumerGroups", groupIds);
+        }
+
+        public DeleteConsumerGroupOffsetsResult DeleteConsumerGroupOffsets(string groupId, Set<TopicPartition> partitions, DeleteConsumerGroupOffsetsOptions options)
+        {
+            return IExecute<DeleteConsumerGroupOffsetsResult>("deleteConsumerGroupOffsets", groupId, partitions, options);
+        }
+
+        public DeleteConsumerGroupOffsetsResult DeleteConsumerGroupOffsets(string groupId, Set<TopicPartition> partitions)
+        {
+            return IExecute<DeleteConsumerGroupOffsetsResult>("deleteConsumerGroupOffsets", groupId, partitions);
+        }
+
+        public ElectLeadersResult ElectLeaders(ElectionType electionType, Set<TopicPartition> partitions, ElectLeadersOptions options)
+        {
+            return IExecute<ElectLeadersResult>("electLeaders", electionType, partitions, options);
+        }
+
+        public AlterPartitionReassignmentsResult AlterPartitionReassignments(Map<TopicPartition, Optional<NewPartitionReassignment>> reassignments)
+        {
+            return IExecute<AlterPartitionReassignmentsResult>("alterPartitionReassignments", reassignments);
+        }
+
+        public AlterPartitionReassignmentsResult AlterPartitionReassignments(Map<TopicPartition, Optional<NewPartitionReassignment>> reassignments, AlterPartitionReassignmentsOptions options)
+        {
+            return IExecute<AlterPartitionReassignmentsResult>("alterPartitionReassignments", reassignments, options);
+        }
+
+        public ListPartitionReassignmentsResult ListPartitionReassignments()
+        {
+            return IExecute<ListPartitionReassignmentsResult>("listPartitionReassignments");
+        }
+
+        public ListPartitionReassignmentsResult ListPartitionReassignments(Set<TopicPartition> partitions)
+        {
+            return IExecute<ListPartitionReassignmentsResult>("listPartitionReassignments", partitions);
+        }
+
+        public ListPartitionReassignmentsResult ListPartitionReassignments(Set<TopicPartition> partitions, ListPartitionReassignmentsOptions options)
+        {
+            return IExecute<ListPartitionReassignmentsResult>("listPartitionReassignments", partitions, options);
+        }
+
+        public ListPartitionReassignmentsResult ListPartitionReassignments(ListPartitionReassignmentsOptions options)
+        {
+            return IExecute<ListPartitionReassignmentsResult>("listPartitionReassignments", options);
+        }
+
+        public ListPartitionReassignmentsResult ListPartitionReassignments(Optional<Set<TopicPartition>> partitions, ListPartitionReassignmentsOptions options)
+        {
+            return IExecute<ListPartitionReassignmentsResult>("listPartitionReassignments", partitions, options);
+        }
+
+        public RemoveMembersFromConsumerGroupResult RemoveMembersFromConsumerGroup(string groupId, RemoveMembersFromConsumerGroupOptions options)
+        {
+            return IExecute<RemoveMembersFromConsumerGroupResult>("removeMembersFromConsumerGroup", groupId, options);
+        }
+
+        public AlterConsumerGroupOffsetsResult AlterConsumerGroupOffsets(string groupId, Map<TopicPartition, OffsetAndMetadata> offsets)
+        {
+            return IExecute<AlterConsumerGroupOffsetsResult>("alterConsumerGroupOffsets", groupId, offsets);
+        }
+
+        public AlterConsumerGroupOffsetsResult AlterConsumerGroupOffsets(string groupId, Map<TopicPartition, OffsetAndMetadata> offsets, AlterConsumerGroupOffsetsOptions options)
+        {
+            return IExecute<AlterConsumerGroupOffsetsResult>("alterConsumerGroupOffsets", groupId, offsets, options);
+        }
+
+        public ListOffsetsResult ListOffsets(Map<TopicPartition, OffsetSpec> topicPartitionOffsets)
+        {
+            return IExecute<ListOffsetsResult>("listOffsets", topicPartitionOffsets);
+        }
+
+        public ListOffsetsResult ListOffsets(Map<TopicPartition, OffsetSpec> topicPartitionOffsets, ListOffsetsOptions options)
+        {
+            return IExecute<ListOffsetsResult>("listOffsets", topicPartitionOffsets, options);
+        }
+
+        public DescribeClientQuotasResult DescribeClientQuotas(ClientQuotaFilter filter)
+        {
+            return IExecute<DescribeClientQuotasResult>("describeClientQuotas", filter);
+        }
+
+        public DescribeClientQuotasResult DescribeClientQuotas(ClientQuotaFilter filter, DescribeClientQuotasOptions options)
+        {
+            return IExecute<DescribeClientQuotasResult>("describeClientQuotas", filter, options);
+        }
+
+        public AlterClientQuotasResult AlterClientQuotas(Collection<ClientQuotaAlteration> entries)
+        {
+            return IExecute<AlterClientQuotasResult>("alterClientQuotas", entries);
+        }
+
+        public AlterClientQuotasResult AlterClientQuotas(Collection<ClientQuotaAlteration> entries, AlterClientQuotasOptions options)
+        {
+            return IExecute<AlterClientQuotasResult>("alterClientQuotas", entries, options);
+        }
+
+        public DescribeUserScramCredentialsResult DescribeUserScramCredentials()
+        {
+            return IExecute<DescribeUserScramCredentialsResult>("describeUserScramCredentials");
+        }
+
+        public DescribeUserScramCredentialsResult DescribeUserScramCredentials(List<string> users)
+        {
+            return IExecute<DescribeUserScramCredentialsResult>("describeUserScramCredentials", users);
+        }
+
+        public DescribeUserScramCredentialsResult DescribeUserScramCredentials(List<string> users, DescribeUserScramCredentialsOptions options)
+        {
+            return IExecute<DescribeUserScramCredentialsResult>("describeUserScramCredentials", users, options);
+        }
+
+        public AlterUserScramCredentialsResult AlterUserScramCredentials(List<UserScramCredentialAlteration> alterations)
+        {
+            return IExecute<AlterUserScramCredentialsResult>("alterUserScramCredentials", alterations);
+        }
+
+        public AlterUserScramCredentialsResult AlterUserScramCredentials(List<UserScramCredentialAlteration> alterations, AlterUserScramCredentialsOptions options)
+        {
+            return IExecute<AlterUserScramCredentialsResult>("alterUserScramCredentials", alterations, options);
+        }
+
+        public DescribeFeaturesResult DescribeFeatures()
+        {
+            return IExecute<DescribeFeaturesResult>("describeFeatures");
+        }
+
+        public DescribeFeaturesResult DescribeFeatures(DescribeFeaturesOptions options)
+        {
+            return IExecute<DescribeFeaturesResult>("describeFeatures", options);
+        }
+
+        public UpdateFeaturesResult UpdateFeatures(Map<string, FeatureUpdate> featureUpdates, UpdateFeaturesOptions options)
+        {
+            return IExecute<UpdateFeaturesResult>("updateFeatures", featureUpdates, options);
+        }
+
+        public UnregisterBrokerResult UnregisterBroker(int brokerId)
+        {
+            return IExecute<UnregisterBrokerResult>("unregisterBroker", brokerId);
+        }
+
+        public UnregisterBrokerResult UnregisterBroker(int brokerId, UnregisterBrokerOptions options)
+        {
+            return IExecute<UnregisterBrokerResult>("unregisterBroker", brokerId, options);
+        }
+
+        public DescribeProducersResult DescribeProducers(Collection<TopicPartition> partitions)
+        {
+            return IExecute<DescribeProducersResult>("describeProducers", partitions);
+        }
+
+        public DescribeProducersResult DescribeProducers(Collection<TopicPartition> partitions, DescribeProducersOptions options)
+        {
+            return IExecute<DescribeProducersResult>("describeProducers", partitions, options);
+        }
+
+        public DescribeTransactionsResult DescribeTransactions(Collection<string> transactionalIds)
+        {
+            return IExecute<DescribeTransactionsResult>("describeTransactions", transactionalIds);
+        }
+
+        public DescribeTransactionsResult DescribeTransactions(Collection<string> transactionalIds, DescribeTransactionsOptions options)
+        {
+            return IExecute<DescribeTransactionsResult>("describeTransactions", transactionalIds, options);
+        }
+
+        public AbortTransactionResult AbortTransaction(AbortTransactionSpec spec)
+        {
+            return IExecute<AbortTransactionResult>("abortTransaction", spec);
+        }
+
+        public AbortTransactionResult AbortTransaction(AbortTransactionSpec spec, AbortTransactionOptions options)
+        {
+            return IExecute<AbortTransactionResult>("abortTransaction", spec, options);
+        }
+
+        public ListTransactionsResult ListTransactions()
+        {
+            return IExecute<ListTransactionsResult>("listTransactions");
+        }
+
+        public ListTransactionsResult ListTransactions(ListTransactionsOptions options)
+        {
+            return IExecute<ListTransactionsResult>("listTransactions", options);
         }
     }
 }
