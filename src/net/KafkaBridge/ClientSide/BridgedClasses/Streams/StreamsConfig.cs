@@ -16,13 +16,13 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Java.Util;
 using System;
 
 namespace MASES.KafkaBridge.Streams
 {
     public class StreamsConfig : JCOBridge.C2JBridge.JVMBridgeBase<StreamsConfig>
     {
-        public override bool IsStatic => true;
         public override string ClassName => "org.apache.kafka.streams.StreamsConfig";
 
         public static readonly string TOPIC_PREFIX = Clazz.GetField<string>("TOPIC_PREFIX");
@@ -173,5 +173,13 @@ namespace MASES.KafkaBridge.Streams
 
         [Obsolete]
         public static readonly string TOPOLOGY_OPTIMIZATION = Clazz.GetField<string>("TOPOLOGY_OPTIMIZATION");
+
+        [Obsolete("This is not public in Apache Kafka API")]
+        public StreamsConfig() { }
+
+        public StreamsConfig(Map props)
+            : base(props)
+        {
+        }
     }
 }

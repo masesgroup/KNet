@@ -16,11 +16,13 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Java.Util;
+using System;
+
 namespace MASES.KafkaBridge.Clients.Consumer
 {
     public class ConsumerConfig : JCOBridge.C2JBridge.JVMBridgeBase<ConsumerConfig>
     {
-        public override bool IsStatic => true;
         public override string ClassName => "org.apache.kafka.clients.consumer.ConsumerConfig";
 
         public static readonly string GROUP_ID_CONFIG = Clazz.GetField<string>("GROUP_ID_CONFIG");
@@ -114,5 +116,18 @@ namespace MASES.KafkaBridge.Clients.Consumer
         public static readonly bool DEFAULT_ALLOW_AUTO_CREATE_TOPICS = Clazz.GetField<bool>("DEFAULT_ALLOW_AUTO_CREATE_TOPICS");
 
         public static readonly string SECURITY_PROVIDERS_CONFIG = Clazz.GetField<string>("SECURITY_PROVIDERS_CONFIG");
+
+        [Obsolete("This is not public in Apache Kafka API")]
+        public ConsumerConfig() { }
+
+        public ConsumerConfig(Properties props)
+            : base(props)
+        {
+        }
+
+        public ConsumerConfig(Map<string, object> props)
+            : base(props)
+        {
+        }
     }
 }

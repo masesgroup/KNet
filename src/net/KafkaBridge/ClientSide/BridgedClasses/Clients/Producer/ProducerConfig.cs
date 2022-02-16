@@ -16,11 +16,13 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Java.Util;
+using System;
+
 namespace MASES.KafkaBridge.Clients.Producer
 {
     public class ProducerConfig : JCOBridge.C2JBridge.JVMBridgeBase<ProducerConfig>
     {
-        public override bool IsStatic => true;
         public override string ClassName => "org.apache.kafka.clients.producer.ProducerConfig";
 
         public static readonly string BOOTSTRAP_SERVERS_CONFIG = Clazz.GetField<string>("BOOTSTRAP_SERVERS_CONFIG");
@@ -94,5 +96,18 @@ namespace MASES.KafkaBridge.Clients.Producer
         public static readonly string TRANSACTIONAL_ID_CONFIG = Clazz.GetField<string>("TRANSACTIONAL_ID_CONFIG");
 
         public static readonly string SECURITY_PROVIDERS_CONFIG = Clazz.GetField<string>("SECURITY_PROVIDERS_CONFIG");
+
+        [Obsolete("This is not public in Apache Kafka API")]
+        public ProducerConfig() { }
+
+        public ProducerConfig(Properties props)
+            : base(props)
+        {
+        }
+
+        public ProducerConfig(Map<string, object> props)
+            : base(props)
+        {
+        }
     }
 }
