@@ -55,7 +55,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MASES.CLIParser" Version="2.2.1" />
-    <PackageReference Include="MASES.JCOBridge" Version="2.4.6" />
+	<PackageReference Include="MASES.JCOBridge" Version="2.4.6">
+		<IncludeAssets>All</IncludeAssets>
+		<PrivateAssets>None</PrivateAssets>
+	</PackageReference>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
   </ItemGroup>
 </Project>
