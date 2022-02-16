@@ -22,7 +22,7 @@ using System;
 namespace MASES.KafkaBridge.Streams.KStream
 {
     /// <summary>
-    /// Listerner for Kafka Merger. Extends <see cref="IJVMBridgeBase"/>
+    /// Listener for Kafka Merger. Extends <see cref="IJVMBridgeBase"/>
     /// </summary>
     /// <typeparam name="K">The data associated to the event</typeparam>
     /// <typeparam name="V">The data associated to the event</typeparam>
@@ -38,7 +38,7 @@ namespace MASES.KafkaBridge.Streams.KStream
         V Apply(K aggKey, V aggOne, V aggTwo);
     }
         /// <summary>
-        /// Listerner for Kafka Merger. Extends <see cref="CLRListener"/>
+        /// Listener for Kafka Merger. Extends <see cref="CLRListener"/>
         /// </summary>
         /// <typeparam name="K">The data associated to the event</typeparam>
         /// <typeparam name="V">The data associated to the event</typeparam>
@@ -84,7 +84,7 @@ namespace MASES.KafkaBridge.Streams.KStream
     }
     /*
     /// <summary>
-    /// Listerner for Kafka Merger. Extends <see cref="MergerImpl{K, V, VA}"/>
+    /// Listener for Kafka Merger. Extends <see cref="MergerImpl{K, V, VA}"/>
     /// </summary>
     /// <typeparam name="K">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
     /// <typeparam name="V">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>

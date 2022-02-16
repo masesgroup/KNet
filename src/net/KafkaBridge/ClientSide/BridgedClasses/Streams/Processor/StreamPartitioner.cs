@@ -22,7 +22,7 @@ using System;
 namespace MASES.KafkaBridge.Streams.Processor
 {
     /// <summary>
-    /// Listerner for Kafka StreamPartitioner. Extends <see cref="IJVMBridgeBase"/>
+    /// Listener for Kafka StreamPartitioner. Extends <see cref="IJVMBridgeBase"/>
     /// </summary>
     /// <typeparam name="K">The data associated to the event</typeparam>
     /// <typeparam name="V">The data associated to the event</typeparam>
@@ -40,7 +40,7 @@ namespace MASES.KafkaBridge.Streams.Processor
     }
 
     /// <summary>
-    /// Listerner for Kafka StreamPartitioner. Extends <see cref="CLRListener"/>, implements <see cref="IStreamPartitioner{K, V}"/>
+    /// Listener for Kafka StreamPartitioner. Extends <see cref="CLRListener"/>, implements <see cref="IStreamPartitioner{K, V}"/>
     /// </summary>
     /// <typeparam name="K">The data associated to the event</typeparam>
     /// <typeparam name="V">The data associated to the event</typeparam>
@@ -87,7 +87,7 @@ namespace MASES.KafkaBridge.Streams.Processor
     }
     /*
     /// <summary>
-    /// Listerner for Kafka StreamPartitioner. Extends <see cref="StreamPartitionerImpl{K, V}"/>
+    /// Listener for Kafka StreamPartitioner. Extends <see cref="StreamPartitionerImpl{K, V}"/>
     /// </summary>
     /// <typeparam name="T">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
     /// <typeparam name="U">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>

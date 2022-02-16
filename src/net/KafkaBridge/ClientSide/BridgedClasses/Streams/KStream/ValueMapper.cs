@@ -22,7 +22,7 @@ using System;
 namespace MASES.KafkaBridge.Streams.KStream
 {
     /// <summary>
-    /// Listerner for Kafka ValueMapper. Extends <see cref="IJVMBridgeBase"/>
+    /// Listener for Kafka ValueMapper. Extends <see cref="IJVMBridgeBase"/>
     /// </summary>
     /// <typeparam name="V">The data associated to the event</typeparam>
     /// <typeparam name="VR">The result data associated to the event</typeparam>
@@ -36,7 +36,7 @@ namespace MASES.KafkaBridge.Streams.KStream
         VR Apply(V o1);
     }
         /// <summary>
-        /// Listerner for Kafka ValueMapper. Extends <see cref="CLRListener"/>, implements <see cref="IValueMapper{V, VR}"/>
+        /// Listener for Kafka ValueMapper. Extends <see cref="CLRListener"/>, implements <see cref="IValueMapper{V, VR}"/>
         /// </summary>
         /// <typeparam name="V">The data associated to the event</typeparam>
         /// <typeparam name="VR">The result data associated to the event</typeparam>
@@ -81,7 +81,7 @@ namespace MASES.KafkaBridge.Streams.KStream
     }
     /*
     /// <summary>
-    /// Listerner for Kafka ValueMapper. Extends <see cref="ValueMapperImpl{V, VR}"/>
+    /// Listener for Kafka ValueMapper. Extends <see cref="ValueMapperImpl{V, VR}"/>
     /// </summary>
     /// <typeparam name="V">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
     /// <typeparam name="VR">The result data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>

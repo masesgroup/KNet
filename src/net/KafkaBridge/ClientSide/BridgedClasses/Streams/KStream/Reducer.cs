@@ -22,7 +22,7 @@ using System;
 namespace MASES.KafkaBridge.Streams.KStream
 {
     /// <summary>
-    /// Listerner for Kafka Reducer. Extends <see cref="IJVMBridgeBase"/>
+    /// Listener for Kafka Reducer. Extends <see cref="IJVMBridgeBase"/>
     /// </summary>
     /// <typeparam name="V">The data associated to the event</typeparam>
     public interface IReducer<V> : IJVMBridgeBase
@@ -37,7 +37,7 @@ namespace MASES.KafkaBridge.Streams.KStream
     }
 
     /// <summary>
-    /// Listerner for Kafka Reducer. Extends <see cref="CLRListener"/>, implements <see cref="IReducer{V}"/>
+    /// Listener for Kafka Reducer. Extends <see cref="CLRListener"/>, implements <see cref="IReducer{V}"/>
     /// </summary>
     /// <typeparam name="V">The data associated to the event</typeparam>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
@@ -81,7 +81,7 @@ namespace MASES.KafkaBridge.Streams.KStream
     }
     /*
     /// <summary>
-    /// Listerner for Kafka Reducer. Extends <see cref="ReducerImpl{V}"/>
+    /// Listener for Kafka Reducer. Extends <see cref="ReducerImpl{V}"/>
     /// </summary>
     /// <typeparam name="V">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>

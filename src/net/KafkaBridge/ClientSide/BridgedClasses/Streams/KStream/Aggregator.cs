@@ -22,7 +22,7 @@ using System;
 namespace MASES.KafkaBridge.Streams.KStream
 {
     /// <summary>
-    /// Listerner for Kafka Aggregator. Extends <see cref="IJVMBridgeBase"/>
+    /// Listener for Kafka Aggregator. Extends <see cref="IJVMBridgeBase"/>
     /// </summary>
     /// <typeparam name="K">The data associated to the event</typeparam>
     /// <typeparam name="V">The data associated to the event</typeparam>
@@ -40,7 +40,7 @@ namespace MASES.KafkaBridge.Streams.KStream
     }
 
     /// <summary>
-    /// Listerner for Kafka Aggregator. Extends <see cref="CLRListener"/>, implements <see cref="IAggregator{K, V, VA}"/>
+    /// Listener for Kafka Aggregator. Extends <see cref="CLRListener"/>, implements <see cref="IAggregator{K, V, VA}"/>
     /// </summary>
     /// <typeparam name="K">The data associated to the event</typeparam>
     /// <typeparam name="V">The data associated to the event</typeparam>
@@ -87,7 +87,7 @@ namespace MASES.KafkaBridge.Streams.KStream
     }
     /*
     /// <summary>
-    /// Listerner for Kafka Aggregator. Extends <see cref="AggregatorImpl{K, V, VA}"/>
+    /// Listener for Kafka Aggregator. Extends <see cref="AggregatorImpl{K, V, VA}"/>
     /// </summary>
     /// <typeparam name="K">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
     /// <typeparam name="V">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>

@@ -22,7 +22,7 @@ using System;
 namespace MASES.KafkaBridge.Streams.KStream
 {
     /// <summary>
-    /// Listerner for Kafka ForeachAction. Extends <see cref="IJVMBridgeBase"/>
+    /// Listener for Kafka ForeachAction. Extends <see cref="IJVMBridgeBase"/>
     /// </summary>
     /// <typeparam name="K">The data associated to the event</typeparam>
     /// <typeparam name="V">The data associated to the event</typeparam>
@@ -39,7 +39,7 @@ namespace MASES.KafkaBridge.Streams.KStream
 
 
     /// <summary>
-    /// Listerner for Kafka ForeachAction. Extends <see cref="CLRListener"/>, implements <see cref="IForeachAction{K, V}"/>
+    /// Listener for Kafka ForeachAction. Extends <see cref="CLRListener"/>, implements <see cref="IForeachAction{K, V}"/>
     /// </summary>
     /// <typeparam name="K">The data associated to the event</typeparam>
     /// <typeparam name="V">The data associated to the event</typeparam>
@@ -83,7 +83,7 @@ namespace MASES.KafkaBridge.Streams.KStream
     }
     /*
     /// <summary>
-    /// Listerner for Kafka ForeachAction. Extends <see cref="ForeachActionImpl{K, V}"/>
+    /// Listener for Kafka ForeachAction. Extends <see cref="ForeachActionImpl{K, V}"/>
     /// </summary>
     /// <typeparam name="K">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
     /// <typeparam name="V">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>

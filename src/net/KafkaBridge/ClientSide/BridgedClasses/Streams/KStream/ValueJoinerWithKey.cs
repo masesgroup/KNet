@@ -22,7 +22,7 @@ using System;
 namespace MASES.KafkaBridge.Streams.KStream
 {
     /// <summary>
-    /// Listerner for Kafka ValueJoinerWithKey. Extends <see cref="IJVMBridgeBase"/>
+    /// Listener for Kafka ValueJoinerWithKey. Extends <see cref="IJVMBridgeBase"/>
     /// </summary>
     /// <typeparam name="K1">The data associated to the event</typeparam>
     /// <typeparam name="V1">The data associated to the event</typeparam>
@@ -41,7 +41,7 @@ namespace MASES.KafkaBridge.Streams.KStream
     }
 
     /// <summary>
-    /// Listerner for Kafka ValueJoinerWithKey. Extends <see cref="CLRListener"/>, implements <see cref="IValueJoinerWithKey{K1, V1, V2, VR}"/>
+    /// Listener for Kafka ValueJoinerWithKey. Extends <see cref="CLRListener"/>, implements <see cref="IValueJoinerWithKey{K1, V1, V2, VR}"/>
     /// </summary>
     /// <typeparam name="K1">The data associated to the event</typeparam>
     /// <typeparam name="V1">The data associated to the event</typeparam>
@@ -89,7 +89,7 @@ namespace MASES.KafkaBridge.Streams.KStream
     }
     /*
     /// <summary>
-    /// Listerner for Kafka ValueJoinerWithKey. Extends <see cref="ValueJoinerWithKeyImpl{K1, V1, V2, VR}"/>
+    /// Listener for Kafka ValueJoinerWithKey. Extends <see cref="ValueJoinerWithKeyImpl{K1, V1, V2, VR}"/>
     /// </summary>
     /// <typeparam name="K1">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
     /// <typeparam name="V1">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
