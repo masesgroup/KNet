@@ -69,9 +69,16 @@ namespace MASES.KafkaBridge
                     Default = Const.DefaultLog4JPath,
                     Help = "The file containing the configuration of log4j.",
                 },
+                new ArgumentMetadata<bool>()
+                {
+                    Name = CLIParam.LogClassPath,
+                    Type = ArgumentType.Single,
+                    Help = "Add on command-line to show ClassPath resolution.",
+                },
             };
         }
 
+        static readonly bool _logClassPath = false;
         static IEnumerable<IArgumentMetadataParsed> _parsedArgs = null;
 
         static KafkaBridgeCore()
@@ -82,7 +89,7 @@ namespace MASES.KafkaBridge
 
             parser.Add(prepareArguments());
 
-            List<string> args = new List<string>(Environment.GetCommandLineArgs());
+            List<string> args = new(Environment.GetCommandLineArgs());
             args.RemoveAt(0);
             _parsedArgs = parser.Parse(args.ToArray());
             MainClassToRun = _parsedArgs.Get<string>(CLIParam.ClassToRun);
@@ -92,22 +99,28 @@ namespace MASES.KafkaBridge
             GlobalLog4JPath = _parsedArgs.Get<string>(CLIParam.Log4JConfiguration);
             GlobalScalaVersion = _parsedArgs.Get<string>(CLIParam.ScalaVersion);
 
+#if DEBUG
+            _logClassPath = true;
+#else
+            _logClassPath = _parsedArgs.Exist(CLIParam.LogClassPath);
+#endif
+
             new KafkaBridgeCore();
 
-            #region Java Exceptions
+#region Java Exceptions
 
             JCOBridge.C2JBridge.JCOBridge.RegisterException<ExecutionException>();
 
-            #endregion
+#endregion
 
-            #region Base Exceptions
+#region Base Exceptions
 
             JCOBridge.C2JBridge.JCOBridge.RegisterException<KafkaException>();
             JCOBridge.C2JBridge.JCOBridge.RegisterException<InvalidRecordException>();
 
-            #endregion
+#endregion
 
-            #region Common Exceptions
+#region Common Exceptions
 
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(ApiException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(AuthenticationException));
@@ -229,9 +242,9 @@ namespace MASES.KafkaBridge
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(UnsupportedVersionException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(WakeupException));
 
-            #endregion
+#endregion
 
-            #region Consumer Exceptions
+#region Consumer Exceptions
 
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(CommitFailedException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(Clients.Consumer.InvalidOffsetException));
@@ -240,15 +253,15 @@ namespace MASES.KafkaBridge
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(Clients.Consumer.OffsetOutOfRangeException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(RetriableCommitFailedException));
 
-            #endregion
+#endregion
 
-            #region Producer Exceptions
+#region Producer Exceptions
 
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(BufferExhaustedException));
 
-            #endregion
+#endregion
 
-            #region Streams Exceptions
+#region Streams Exceptions
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(BrokerNotFoundException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidStateStoreException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidStateStorePartitionException));
@@ -266,9 +279,9 @@ namespace MASES.KafkaBridge
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(TaskMigratedException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(TopologyException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(UnknownStateStoreException));
-            #endregion
+#endregion
 
-            #region Connect Exceptions
+#region Connect Exceptions
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(AlreadyExistsException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(ConnectException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(DataException));
@@ -277,7 +290,7 @@ namespace MASES.KafkaBridge
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(Connect.Errors.RetriableException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(SchemaBuilderException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(SchemaProjectorException));
-            #endregion
+#endregion
         }
 
         KafkaBridgeCore()
@@ -554,9 +567,10 @@ namespace MASES.KafkaBridge
 
         string buildClassPath()
         {
-#if DEBUG
-            Console.WriteLine("RootPath is: {0}", RootPath);
-#endif
+            if (_logClassPath)
+            {
+                Console.WriteLine("RootPath is: {0}", RootPath);
+            }
 
             classPath = string.Empty;
             buildClassPath(RootPath, "*.jar");
@@ -583,9 +597,10 @@ namespace MASES.KafkaBridge
 
             classPath += !string.IsNullOrEmpty(ExtraClassPath) ? InternalConst.PathSeparator + ExtraClassPath : string.Empty;
 
-#if DEBUG
-            Console.WriteLine("ClassPath is: {0}", classPath);
-#endif
+            if (_logClassPath)
+            {
+                Console.WriteLine("ClassPath is: {0}", classPath);
+            }
             return classPath;
         }
 
@@ -593,9 +608,10 @@ namespace MASES.KafkaBridge
         {
             var folder = Path.GetDirectoryName(path);
             if (pattern == null) pattern = Path.GetFileName(path);
-#if DEBUG
-            Console.WriteLine("Search on {0} with pattern {1}", folder, pattern);
-#endif
+            if (_logClassPath)
+            {
+                Console.WriteLine("Search on {0} with pattern {1}", folder, pattern);
+            }
             if (Directory.Exists(folder))
             {
                 foreach (var item in Directory.GetFiles(folder, pattern, SearchOption.TopDirectoryOnly))

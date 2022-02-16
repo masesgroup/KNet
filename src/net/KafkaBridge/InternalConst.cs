@@ -28,6 +28,7 @@ namespace MASES.KafkaBridge
         public const string ScalaVersion = "ScalaVersion";
         public const string KafkaLocation = "KafkaLocation";
         public const string Log4JConfiguration = "Log4JConfiguration";
+        public const string LogClassPath = "LogClassPath";
     }
 
     /// <summary>
