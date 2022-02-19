@@ -71,7 +71,7 @@ namespace MASES.KafkaBridge.Streams.Processor.Api
 
         void EventHandlerProcess(object sender, CLRListenerEventArgs<CLREventData<Record<KIn, VIn>>> data)
         {
-            OnProcess(data.EventData.TypedEventData, data.EventData.To<V>(0));
+            OnProcess(data.EventData.TypedEventData);
         }
 
         void EventHandlerClose(object sender, CLRListenerEventArgs<CLREventData> data)
