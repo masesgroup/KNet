@@ -45,7 +45,7 @@ namespace MASES.KafkaBridge.Streams.Processor
 
         public virtual Action OnClose { get { return executionFunctionClose; } }
 
-        public Processor(Action<ProcessorContext> init = null, Action<K, V> process = null, Action close, bool attachEventHandler = true)
+        public Processor(Action<ProcessorContext> init = null, Action<K, V> process = null, Action close = null, bool attachEventHandler = true)
         {
             if (init != null) executionFunctionInit = init;
             else executionFunctionInit = Init;
