@@ -16,10 +16,20 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Java.Lang;
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class DeleteTopicsResult : JCOBridge.C2JBridge.JVMBridgeBase<DeleteTopicsResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DeleteTopicsResult";
+
+        public Map<Uuid, KafkaFuture<Void>> TopicIdValues => IExecute<Map<Uuid, KafkaFuture<Void>>>("topicIdValues");
+
+        public Map<string, KafkaFuture<Void>> TopicNameValues => IExecute<Map<string, KafkaFuture<Void>>>("topicNameValues");
+
+        public KafkaFuture<Void> All => IExecute<KafkaFuture<Void>>("all");
     }
 }
