@@ -37,13 +37,13 @@ namespace MASES.KafkaBridge.Streams.KStream
         /// <returns>The <typeparamref name="V"/> apply evaluation</returns>
         V Apply(K aggKey, V aggOne, V aggTwo);
     }
-        /// <summary>
-        /// Listener for Kafka Merger. Extends <see cref="CLRListener"/>
-        /// </summary>
-        /// <typeparam name="K">The data associated to the event</typeparam>
-        /// <typeparam name="V">The data associated to the event</typeparam>
-        /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
-        public class Merger<K, V> : CLRListener, IMerger<K, V>
+    /// <summary>
+    /// Listener for Kafka Merger. Extends <see cref="CLRListener"/>
+    /// </summary>
+    /// <typeparam name="K">The data associated to the event</typeparam>
+    /// <typeparam name="V">The data associated to the event</typeparam>
+    /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
+    public class Merger<K, V> : CLRListener, IMerger<K, V>
     {
         /// <inheritdoc cref="CLRListener.ClassName"/>
         public sealed override string ClassName => "org.mases.kafkabridge.streams.kstream.MergerImpl";

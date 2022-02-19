@@ -17,6 +17,7 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
+using System;
 
 namespace MASES.KafkaBridge.Streams.Processor.Api
 {
@@ -29,23 +30,68 @@ namespace MASES.KafkaBridge.Streams.Processor.Api
         void Close();
     }
 
-    public class Processor<KIn, VIn, KOut, VOut> : JVMBridgeBase<Processor<KIn, VIn, KOut, VOut>, IProcessor<KIn, VIn, KOut, VOut>>, IProcessor<KIn, VIn, KOut, VOut>
+    public class Processor<KIn, VIn, KOut, VOut> : CLRListener, IProcessor<KIn, VIn, KOut, VOut>
     {
-        public override string ClassName => "org.apache.kafka.streams.processor.api.Processor";
+        /// <inheritdoc cref="CLRListener.ClassName"/>
+        public sealed override string ClassName => "org.apache.kafka.streams.processor.api.ProcessorImpl";
 
-        public void Close()
+        readonly Action<ProcessorContext<KOut, VOut>> executionFunctionInit = null;
+        readonly Action<Record<KIn, VIn>> executionFunctionProcess = null;
+        readonly Action executionFunctionClose = null;
+
+        public virtual Action<ProcessorContext<KOut, VOut>> OnInit { get { return executionFunctionInit; } }
+
+        public virtual Action<Record<KIn, VIn>> OnProcess { get { return executionFunctionProcess; } }
+
+        public virtual Action OnClose { get { return executionFunctionClose; } }
+
+        public Processor(Action<ProcessorContext<KOut, VOut>> init = null, Action<Record<KIn, VIn>> process = null, Action close, bool attachEventHandler = true)
         {
-            IExecute("close");
+            if (init != null) executionFunctionInit = init;
+            else executionFunctionInit = Init;
+
+            if (process != null) executionFunctionProcess = process;
+            else executionFunctionProcess = Process;
+
+            if (close != null) executionFunctionClose = close;
+            else executionFunctionClose = Close;
+
+            if (attachEventHandler)
+            {
+                AddEventHandler("init", new EventHandler<CLRListenerEventArgs<CLREventData<ProcessorContext<KOut, VOut>>>>(EventHandlerInit));
+                AddEventHandler("process", new EventHandler<CLRListenerEventArgs<CLREventData<Record<KIn, VIn>>>>(EventHandlerProcess));
+                AddEventHandler("close", new EventHandler<CLRListenerEventArgs<CLREventData>>(EventHandlerClose));
+            }
         }
 
-        public void Init(ProcessorContext<KOut, VOut> context)
+        void EventHandlerInit(object sender, CLRListenerEventArgs<CLREventData<ProcessorContext<KOut, VOut>>> data)
         {
-            IExecute("init", context);
+            OnInit(data.EventData.TypedEventData);
         }
 
-        public void Process(Record<KIn, VIn> record)
+        void EventHandlerProcess(object sender, CLRListenerEventArgs<CLREventData<Record<KIn, VIn>>> data)
         {
-            IExecute("process", record);
+            OnProcess(data.EventData.TypedEventData, data.EventData.To<V>(0));
+        }
+
+        void EventHandlerClose(object sender, CLRListenerEventArgs<CLREventData> data)
+        {
+            OnClose();
+        }
+
+        public virtual void Init(ProcessorContext<KOut, VOut> context)
+        {
+
+        }
+
+        public virtual void Process(Record<KIn, VIn> record)
+        {
+
+        }
+
+        public virtual void Close()
+        {
+
         }
     }
 }
