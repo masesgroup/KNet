@@ -16,9 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.JCOBridge.C2JBridge;
 using MASES.KafkaBridge.Java.Util;
-using System;
 
 namespace MASES.KafkaBridge.Connect.Data
 {
@@ -26,7 +24,8 @@ namespace MASES.KafkaBridge.Connect.Data
     {
         public override string ClassName => "org.apache.kafka.connect.data.ConnectSchema";
 
-        [Obsolete("This is not public in Apache Kafka API")]
+        [System.Obsolete("This is not public in Apache Kafka API")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public ConnectSchema()
         {
         }

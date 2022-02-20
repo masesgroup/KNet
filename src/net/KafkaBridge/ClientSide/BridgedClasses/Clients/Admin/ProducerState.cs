@@ -16,22 +16,25 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class DescribeTopicsOptions : JCOBridge.C2JBridge.JVMBridgeBase<DescribeTopicsOptions>
+    public class ProducerState : JCOBridge.C2JBridge.JVMBridgeBase<ProducerState>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.DescribeTopicsOptions";
+        public override string ClassName => "org.apache.kafka.clients.admin.ProducerState";
 
-        public DescribeTopicsOptions TimeoutMs(int timeoutMs)
-        {
-            return IExecute<DescribeTopicsOptions>("timeoutMs", timeoutMs); 
-        }
+        public long ProducerId => IExecute<long>("producerId");
 
-        public DescribeTopicsOptions IncludeAuthorizedOperations(bool includeAuthorizedOperations)
-        {
-            return IExecute<DescribeTopicsOptions>("includeAuthorizedOperations", includeAuthorizedOperations);
-        }
+        public int ProducerEpoch => IExecute<int>("producerEpoch");
 
-        public bool IncludeAuthorizedOperations() => IExecute<bool>("includeAuthorizedOperations");
+        public int LastSequence => IExecute<int>("lastSequence");
+
+        public long LastTimestamp => IExecute<long>("lastTimestamp");
+
+        public OptionalLong CurrentTransactionStartOffset => IExecute<OptionalLong>("producerId");
+
+        public OptionalInt CoordinatorEpoch => IExecute<OptionalInt>("producerId");
     }
 }
+

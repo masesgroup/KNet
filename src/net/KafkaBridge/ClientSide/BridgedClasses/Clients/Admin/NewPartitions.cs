@@ -16,11 +16,27 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class NewPartitions : JCOBridge.C2JBridge.JVMBridgeBase<NewPartitions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.NewPartitions";
+
+        public static NewPartitions IncreaseTo(int totalCount)
+        {
+            return SExecute<NewPartitions>("increaseTo", totalCount);
+        }
+
+        public static NewPartitions IncreaseTo(int totalCount, List<List<int>> newAssignments)
+        {
+            return SExecute<NewPartitions>("increaseTo", totalCount, newAssignments);
+        }
+
+        public int TotalCount => IExecute<int>("totalCount");
+
+        public List<List<int>> Assignments => IExecute<List<List<int>>>("assignments");
     }
 }
 

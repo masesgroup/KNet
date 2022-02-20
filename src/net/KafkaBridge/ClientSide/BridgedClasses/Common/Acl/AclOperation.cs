@@ -16,21 +16,22 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KafkaBridge.Java.Util
+namespace MASES.KafkaBridge.Common.Acl
 {
-    public class Optional<T> : JCOBridge.C2JBridge.JVMBridgeBase<Optional<T>>
+    public enum AclOperation
     {
-        public override string ClassName => "java.util.Optional";
-
-        public static Optional<T> Empty => SExecute<Optional<T>>("empty");
-
-        public static Optional<T> Of(T value) => SExecute<Optional<T>>("of", value);
-
-        public static Optional<T> OfNullable(T value) => SExecute<Optional<T>>("ofNullable", value);
-
-        public bool IsPresent => IExecute<bool>("isPresent");
-
-        public virtual T Get​() { return IExecute<T>("get"); }
+        UNKNOWN = 0,
+        ANY,
+        ALL,
+        READ,
+        WRITE,
+        CREATE,
+        DELETE,
+        ALTER,
+        DESCRIBE,
+        CLUSTER_ACTION,
+        DESCRIBE_CONFIGS,
+        ALTER_CONFIGS,
+        IDEMPOTENT_WRITE,
     }
 }
-

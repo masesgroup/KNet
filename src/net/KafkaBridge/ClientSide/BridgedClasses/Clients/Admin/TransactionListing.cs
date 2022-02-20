@@ -16,29 +16,28 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KafkaBridge.Java.Util;
-
-namespace MASES.KafkaBridge.Common
+namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class MetricName : JCOBridge.C2JBridge.JVMBridgeBase<MetricName>
+    public class TransactionListing : JCOBridge.C2JBridge.JVMBridgeBase<TransactionListing>
     {
-        public override string ClassName => "org.apache.kafka.common.MetricName";
+        public override string ClassName => "org.apache.kafka.clients.admin.TransactionListing";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
-        public MetricName() { }
-
-        public MetricName(string name, string group, string description, Map<string, string> tags)
-            : base(name, group, description, tags)
+        public TransactionListing()
         {
         }
 
-        public string Name => IExecute<string>("name");
+        public TransactionListing(string transactionalId, long producerId, TransactionState transactionState)
+            : base(transactionalId, producerId, transactionState)
+        {
+        }
 
-        public string Group => IExecute<string>("group");
+        public string TransactionalId => IExecute<string>("transactionalId");
 
-        public Map<string, string> Tags => IExecute<Map<string, string>>("tags");
+        public long ProducerId => IExecute<long>("producerId");
 
-        public string Description => IExecute<string>("description");
+        public TransactionState State => IExecute<TransactionState>("state");
     }
 }
+

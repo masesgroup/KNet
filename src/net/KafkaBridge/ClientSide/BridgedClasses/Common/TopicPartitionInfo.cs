@@ -16,22 +16,29 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KafkaBridge.Clients.Admin
+using MASES.KafkaBridge.Java.Util;
+
+namespace MASES.KafkaBridge.Common
 {
-    public class DescribeTopicsOptions : JCOBridge.C2JBridge.JVMBridgeBase<DescribeTopicsOptions>
+    public class TopicPartitionInfo : JCOBridge.C2JBridge.JVMBridgeBase<TopicPartitionInfo>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.DescribeTopicsOptions";
+        public override string ClassName => "org.apache.kafka.common.TopicPartitionInfo";
 
-        public DescribeTopicsOptions TimeoutMs(int timeoutMs)
+        public TopicPartitionInfo()
         {
-            return IExecute<DescribeTopicsOptions>("timeoutMs", timeoutMs); 
         }
 
-        public DescribeTopicsOptions IncludeAuthorizedOperations(bool includeAuthorizedOperations)
+        public TopicPartitionInfo(int partition, Node leader, List<Node> replicas, List<Node> isr)
+            :base(partition, leader, replicas, isr)
         {
-            return IExecute<DescribeTopicsOptions>("includeAuthorizedOperations", includeAuthorizedOperations);
         }
 
-        public bool IncludeAuthorizedOperations() => IExecute<bool>("includeAuthorizedOperations");
+        public int Partition => IExecute<int>("partition");
+
+        public Node Leader => IExecute<Node>("leader");
+
+        public List<Node> Replicas => IExecute<List<Node>>("replicas");
+
+        public List<Node> Isr => IExecute<List<Node>>("isr");
     }
 }

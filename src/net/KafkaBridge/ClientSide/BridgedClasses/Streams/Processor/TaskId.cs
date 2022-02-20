@@ -16,15 +16,14 @@
 *  Refer to LICENSE for more information.
 */
 
-using System;
-
 namespace MASES.KafkaBridge.Streams.Processor
 {
     public class TaskId : JCOBridge.C2JBridge.JVMBridgeBase<TaskId>
     {
         public override string ClassName => "org.apache.kafka.streams.processor.TaskId";
 
-        [Obsolete("This is not public in Apache Kafka API")]
+        [System.Obsolete("This is not public in Apache Kafka API")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public TaskId() { }
 
         public TaskId(int topicGroupId, int partition)

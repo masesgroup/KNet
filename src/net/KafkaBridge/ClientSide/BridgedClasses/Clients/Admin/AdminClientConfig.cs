@@ -17,7 +17,6 @@
 */
 
 using MASES.KafkaBridge.Java.Util;
-using System;
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
@@ -65,7 +64,8 @@ namespace MASES.KafkaBridge.Clients.Admin
         public static readonly string RETRIES_CONFIG = Clazz.GetField<string>("RETRIES_CONFIG");
         public static readonly string DEFAULT_API_TIMEOUT_MS_CONFIG = Clazz.GetField<string>("DEFAULT_API_TIMEOUT_MS_CONFIG");
 
-        [Obsolete("This is not public in Apache Kafka API")]
+        [System.Obsolete("This is not public in Apache Kafka API")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public AdminClientConfig() { }
 
         public AdminClientConfig(Map props)

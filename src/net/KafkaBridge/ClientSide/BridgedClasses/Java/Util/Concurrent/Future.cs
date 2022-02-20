@@ -19,7 +19,6 @@
 namespace MASES.KafkaBridge.Java.Util.Concurrent
 {
     public class Future<E> : JCOBridge.C2JBridge.JVMBridgeBase<Future<E>>
-        where E : JCOBridge.C2JBridge.JVMBridgeBase, new()
     {
         public override string ClassName => "java.util.concurrent.Future";
 

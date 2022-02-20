@@ -21,6 +21,13 @@ namespace MASES.KafkaBridge.Clients.Admin
     public class RecordsToDelete : JCOBridge.C2JBridge.JVMBridgeBase<RecordsToDelete>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.RecordsToDelete";
+
+        public static RecordsToDelete BeforeOffset(long offset)
+        {
+            return SExecute<RecordsToDelete>("beforeOffset", offset);
+        }
+
+        public long BeforeOffset() => IExecute<long>("beforeOffset");
     }
 }
 

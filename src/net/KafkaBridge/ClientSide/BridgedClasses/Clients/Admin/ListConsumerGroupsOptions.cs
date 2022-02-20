@@ -16,10 +16,20 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class ListConsumerGroupsOptions : JCOBridge.C2JBridge.JVMBridgeBase<ListConsumerGroupsOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.ListConsumerGroupsOptions";
+
+        public ListConsumerGroupsOptions InStates(Set<ConsumerGroupState> states)
+        {
+            return IExecute<ListConsumerGroupsOptions>("inStates", states);
+        }
+
+        public Set<ConsumerGroupState> States => IExecute<Set<ConsumerGroupState>>("states");
     }
 }

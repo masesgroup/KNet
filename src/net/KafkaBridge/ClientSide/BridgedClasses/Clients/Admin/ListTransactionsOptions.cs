@@ -16,10 +16,26 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class ListTransactionsOptions : JCOBridge.C2JBridge.JVMBridgeBase<ListTransactionsOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.ListTransactionsOptions";
+
+        public ListTransactionsOptions FilterStates(Collection<TransactionState> states)
+        {
+            return IExecute<ListTransactionsOptions>("filterStates", states);
+        }
+
+        public ListTransactionsOptions FilterProducerIds(Collection<long> producerIdFilters)
+        {
+            return IExecute<ListTransactionsOptions>("filterProducerIds", producerIdFilters);
+        }
+
+        public Set<TransactionState> FilteredStates => IExecute<Set<TransactionState>>("filteredStates");
+
+        public Set<long> FilteredProducerIds => IExecute<Set<long>>("filteredProducerIds");
     }
 }

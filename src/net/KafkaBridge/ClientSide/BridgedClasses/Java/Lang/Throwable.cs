@@ -16,21 +16,14 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KafkaBridge.Java.Util
+namespace MASES.KafkaBridge.Java.Lang
 {
-    public class Optional<T> : JCOBridge.C2JBridge.JVMBridgeBase<Optional<T>>
+    public sealed class Throwable : JCOBridge.C2JBridge.JVMBridgeBase<Throwable>
     {
-        public override string ClassName => "java.util.Optional";
+        public override string ClassName => "java.lang.Throwable";
 
-        public static Optional<T> Empty => SExecute<Optional<T>>("empty");
+        public string Message => IExecute<string>("getMessage");
 
-        public static Optional<T> Of(T value) => SExecute<Optional<T>>("of", value);
-
-        public static Optional<T> OfNullable(T value) => SExecute<Optional<T>>("ofNullable", value);
-
-        public bool IsPresent => IExecute<bool>("isPresent");
-
-        public virtual T Get​() { return IExecute<T>("get"); }
+        public Throwable Cause => IExecute<Throwable>("getCause");
     }
 }
-

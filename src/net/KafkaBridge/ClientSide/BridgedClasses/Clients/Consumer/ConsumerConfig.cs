@@ -17,7 +17,6 @@
 */
 
 using MASES.KafkaBridge.Java.Util;
-using System;
 
 namespace MASES.KafkaBridge.Clients.Consumer
 {
@@ -117,7 +116,8 @@ namespace MASES.KafkaBridge.Clients.Consumer
 
         public static readonly string SECURITY_PROVIDERS_CONFIG = Clazz.GetField<string>("SECURITY_PROVIDERS_CONFIG");
 
-        [Obsolete("This is not public in Apache Kafka API")]
+        [System.Obsolete("This is not public in Apache Kafka API")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public ConsumerConfig() { }
 
         public ConsumerConfig(Properties props)

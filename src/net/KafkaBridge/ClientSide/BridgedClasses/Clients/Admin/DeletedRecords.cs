@@ -16,22 +16,22 @@
 *  Refer to LICENSE for more information.
 */
 
+using System;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class DescribeTopicsOptions : JCOBridge.C2JBridge.JVMBridgeBase<DescribeTopicsOptions>
+    public class DeletedRecords : JCOBridge.C2JBridge.JVMBridgeBase<DeletedRecords>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.DescribeTopicsOptions";
+        public override string ClassName => "org.apache.kafka.clients.admin.DeletedRecords";
 
-        public DescribeTopicsOptions TimeoutMs(int timeoutMs)
+        [Obsolete("This is not public in Apache Kafka API")]
+        public DeletedRecords() { }
+
+        public DeletedRecords(long lowWatermark)
+            : base(lowWatermark)
         {
-            return IExecute<DescribeTopicsOptions>("timeoutMs", timeoutMs); 
         }
 
-        public DescribeTopicsOptions IncludeAuthorizedOperations(bool includeAuthorizedOperations)
-        {
-            return IExecute<DescribeTopicsOptions>("includeAuthorizedOperations", includeAuthorizedOperations);
-        }
-
-        public bool IncludeAuthorizedOperations() => IExecute<bool>("includeAuthorizedOperations");
+        public long LowWatermark => IExecute<long>("lowWatermark");
     }
 }

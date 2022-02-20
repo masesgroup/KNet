@@ -89,7 +89,8 @@ namespace MASES.KafkaBridge.Streams
 
         public override string ClassName => "org.apache.kafka.streams.KafkaStreams";
 
-        [Obsolete("This is not public in Apache Kafka API")]
+        [System.Obsolete("This is not public in Apache Kafka API")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public KafkaStreams() { }
 
         public KafkaStreams(Topology topology, Properties props) : base(topology, props) { }

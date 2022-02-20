@@ -16,10 +16,20 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class DescribeTransactionsResult : JCOBridge.C2JBridge.JVMBridgeBase<DescribeTransactionsResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DescribeTransactionsResult";
+
+        public KafkaFuture<TransactionDescription> Description(string transactionalId)
+        {
+            return IExecute<KafkaFuture<TransactionDescription>>("description", transactionalId); ;
+        }
+
+        public KafkaFuture<Map<string, TransactionDescription>> All => IExecute<KafkaFuture<Map<string, TransactionDescription>>>("all");
     }
 }

@@ -21,5 +21,17 @@ namespace MASES.KafkaBridge.Clients.Admin
     public class DescribeClusterOptions : JCOBridge.C2JBridge.JVMBridgeBase<DescribeClusterOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DescribeClusterOptions";
+
+        public DescribeClusterOptions TimeoutMs(int timeoutMs)
+        {
+            return IExecute<DescribeClusterOptions>("timeoutMs", timeoutMs);
+        }
+
+        public DescribeClusterOptions IncludeAuthorizedOperations(bool includeAuthorizedOperations)
+        {
+            return IExecute<DescribeClusterOptions>("includeAuthorizedOperations", includeAuthorizedOperations);
+        }
+
+        public bool IncludeAuthorizedOperations() => IExecute<bool>("includeAuthorizedOperations");
     }
 }

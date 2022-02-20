@@ -16,11 +16,19 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Java.Lang;
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class DeleteRecordsResult : JCOBridge.C2JBridge.JVMBridgeBase<DeleteRecordsResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DeleteRecordsResult";
+
+        public Map<TopicPartition, KafkaFuture<DeletedRecords>> LowWatermarks => IExecute<Map<TopicPartition, KafkaFuture<DeletedRecords>>>("lowWatermarks");
+
+        public KafkaFuture<Void> All => IExecute<KafkaFuture<Void>>("all");
     }
 }
 

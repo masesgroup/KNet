@@ -16,22 +16,25 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class DescribeTopicsOptions : JCOBridge.C2JBridge.JVMBridgeBase<DescribeTopicsOptions>
+    public class MemberAssignment : JCOBridge.C2JBridge.JVMBridgeBase<MemberAssignment>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.DescribeTopicsOptions";
+        public override string ClassName => "org.apache.kafka.clients.admin.MemberAssignment";
 
-        public DescribeTopicsOptions TimeoutMs(int timeoutMs)
+        [System.Obsolete("This is not public in Apache Kafka API")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public MemberAssignment() { }
+
+        public MemberAssignment(Set<TopicPartition> topicPartitions)
+            :base(topicPartitions)
         {
-            return IExecute<DescribeTopicsOptions>("timeoutMs", timeoutMs); 
         }
 
-        public DescribeTopicsOptions IncludeAuthorizedOperations(bool includeAuthorizedOperations)
-        {
-            return IExecute<DescribeTopicsOptions>("includeAuthorizedOperations", includeAuthorizedOperations);
-        }
-
-        public bool IncludeAuthorizedOperations() => IExecute<bool>("includeAuthorizedOperations");
+        public Set<TopicPartition> TopicPartitions => IExecute<Set<TopicPartition>>("topicPartitions");
     }
 }
+

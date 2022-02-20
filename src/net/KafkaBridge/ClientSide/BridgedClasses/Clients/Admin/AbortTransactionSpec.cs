@@ -16,10 +16,31 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class AbortTransactionSpec : JCOBridge.C2JBridge.JVMBridgeBase<AbortTransactionSpec>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.AbortTransactionSpec";
+
+        [System.Obsolete("This is not public in Apache Kafka API")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public AbortTransactionSpec()
+        {
+        }
+
+        public AbortTransactionSpec(TopicPartition topicPartition, long producerId, short producerEpoch, int coordinatorEpoch)
+            : base(topicPartition, producerId, producerEpoch, coordinatorEpoch)
+        {
+        }
+
+        public TopicPartition TopicPartition => IExecute<TopicPartition>("topicPartition");
+
+        public long ProducerId => IExecute<long>("producerId");
+
+        public short ProducerEpoch => IExecute<short>("producerEpoch");
+
+        public int CoordinatorEpoch => IExecute<int>("coordinatorEpoch");
     }
 }

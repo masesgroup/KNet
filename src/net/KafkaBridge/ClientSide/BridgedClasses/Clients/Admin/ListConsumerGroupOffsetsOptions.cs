@@ -16,10 +16,20 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class ListConsumerGroupOffsetsOptions : JCOBridge.C2JBridge.JVMBridgeBase<ListConsumerGroupOffsetsOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.ListConsumerGroupOffsetsOptions";
+
+        public ListConsumerGroupOffsetsOptions TopicPartitions(List<TopicPartition> topicPartitions)
+        {
+            return IExecute<ListConsumerGroupOffsetsOptions>("topicPartitions", topicPartitions);
+        }
+
+        public List<TopicPartition> TopicPartitions() => IExecute<List<TopicPartition>>("topicPartitions");
     }
 }

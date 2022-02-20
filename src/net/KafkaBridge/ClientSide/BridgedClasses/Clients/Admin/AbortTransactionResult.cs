@@ -16,10 +16,15 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Java.Lang;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class AbortTransactionResult : JCOBridge.C2JBridge.JVMBridgeBase<AbortTransactionResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.AbortTransactionResult";
+
+        public KafkaFuture<Void> All => IExecute<KafkaFuture<Void>>("all");
     }
 }

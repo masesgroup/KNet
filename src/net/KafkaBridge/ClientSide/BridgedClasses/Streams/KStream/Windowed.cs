@@ -16,15 +16,14 @@
 *  Refer to LICENSE for more information.
 */
 
-using System;
-
 namespace MASES.KafkaBridge.Streams.KStream
 {
     public class Windowed<K> : JCOBridge.C2JBridge.JVMBridgeBase<Windowed<K>>
     {
         public override string ClassName => "org.apache.kafka.streams.kstream.Windowed";
 
-        [Obsolete("This is not public in Apache Kafka API")]
+        [System.Obsolete("This is not public in Apache Kafka API")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public Windowed() { }
 
         public Windowed(K key, Window window)

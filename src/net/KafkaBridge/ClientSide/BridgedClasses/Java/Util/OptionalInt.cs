@@ -18,19 +18,17 @@
 
 namespace MASES.KafkaBridge.Java.Util
 {
-    public class Optional<T> : JCOBridge.C2JBridge.JVMBridgeBase<Optional<T>>
+    public class OptionalInt : JCOBridge.C2JBridge.JVMBridgeBase<OptionalInt>
     {
-        public override string ClassName => "java.util.Optional";
+        public override string ClassName => "java.util.OptionalInt";
 
-        public static Optional<T> Empty => SExecute<Optional<T>>("empty");
+        public static OptionalLong Empty => SExecute<OptionalLong>("empty");
 
-        public static Optional<T> Of(T value) => SExecute<Optional<T>>("of", value);
-
-        public static Optional<T> OfNullable(T value) => SExecute<Optional<T>>("ofNullable", value);
+        public static OptionalInt Of(int value) => SExecute<OptionalInt>("of", value);
 
         public bool IsPresent => IExecute<bool>("isPresent");
 
-        public virtual T Get​() { return IExecute<T>("get"); }
+        public virtual int GetAsInt() { return IExecute<int>("getAsInt"); }
     }
 }
 

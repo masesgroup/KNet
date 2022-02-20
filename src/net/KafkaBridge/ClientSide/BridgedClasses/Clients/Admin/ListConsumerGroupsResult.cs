@@ -16,10 +16,20 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Java.Lang;
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class ListConsumerGroupsResult : JCOBridge.C2JBridge.JVMBridgeBase<ListConsumerGroupsResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.ListConsumerGroupsResult";
+
+        public KafkaFuture<Collection<ConsumerGroupListing>> All => IExecute<KafkaFuture<Collection<ConsumerGroupListing>>>("all");
+
+        public KafkaFuture<Collection<ConsumerGroupListing>> Valid => IExecute<KafkaFuture<Collection<ConsumerGroupListing>>>("all");
+
+        public KafkaFuture<Collection<Throwable>> Errors => IExecute<KafkaFuture<Collection<Throwable>>>("errors");
     }
 }

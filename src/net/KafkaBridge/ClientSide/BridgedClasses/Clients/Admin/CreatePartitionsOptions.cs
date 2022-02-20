@@ -21,5 +21,19 @@ namespace MASES.KafkaBridge.Clients.Admin
     public class CreatePartitionsOptions : JCOBridge.C2JBridge.JVMBridgeBase<CreatePartitionsOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.CreatePartitionsOptions";
+
+        public bool ValidateOnly() => IExecute<bool>("validateOnly");
+
+        public CreatePartitionsOptions ValidateOnly(bool validateOnly)
+        {
+            return IExecute<CreatePartitionsOptions>("validateOnly", validateOnly);
+        }
+
+        public CreatePartitionsOptions RetryOnQuotaViolation(bool retryOnQuotaViolation)
+        {
+            return IExecute<CreatePartitionsOptions>("retryOnQuotaViolation", retryOnQuotaViolation);
+        }
+
+        public bool ShouldRetryOnQuotaViolation => IExecute<bool>("shouldRetryOnQuotaViolation");
     }
 }

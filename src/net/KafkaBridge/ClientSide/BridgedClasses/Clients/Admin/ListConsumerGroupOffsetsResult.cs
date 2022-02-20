@@ -16,10 +16,16 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Clients.Consumer;
+using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class ListConsumerGroupOffsetsResult : JCOBridge.C2JBridge.JVMBridgeBase<ListConsumerGroupOffsetsResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.ListConsumerGroupOffsetsResult";
+
+        public KafkaFuture<Map<TopicPartition, OffsetAndMetadata>> partitionsToOffsetAndMetadata => IExecute<KafkaFuture<Map<TopicPartition, OffsetAndMetadata>>>("partitionsToOffsetAndMetadata");
     }
 }

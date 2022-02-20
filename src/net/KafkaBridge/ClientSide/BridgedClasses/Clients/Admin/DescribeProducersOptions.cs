@@ -16,10 +16,19 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class DescribeProducersOptions : JCOBridge.C2JBridge.JVMBridgeBase<DescribeProducersOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DescribeProducersOptions";
+
+        public DescribeProducersOptions brokerId(int brokerId)
+        {
+            return IExecute<DescribeProducersOptions>("brokerId", brokerId);
+        }
+
+        public OptionalInt BrokerId => IExecute<OptionalInt>("brokerId");
     }
 }

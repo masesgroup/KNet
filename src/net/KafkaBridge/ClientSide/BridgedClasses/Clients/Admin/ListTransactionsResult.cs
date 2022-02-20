@@ -16,10 +16,19 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class ListTransactionsResult : JCOBridge.C2JBridge.JVMBridgeBase<ListTransactionsResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.ListTransactionsResult";
+
+        public KafkaFuture<Collection<TransactionListing>> All => IExecute<KafkaFuture<Collection<TransactionListing>>>("all");
+
+        public KafkaFuture<Map<int, KafkaFuture<Collection<TransactionListing>>>> ByBrokerId => IExecute<KafkaFuture<Map<int, KafkaFuture<Collection<TransactionListing>>>>>("byBrokerId");
+
+        public KafkaFuture<Map<int, Collection<TransactionListing>>> AllByBrokerId => IExecute<KafkaFuture<Map<int, Collection<TransactionListing>>>>("allByBrokerId");
     }
 }

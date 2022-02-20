@@ -16,10 +16,33 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class DescribeProducersResult : JCOBridge.C2JBridge.JVMBridgeBase<DescribeProducersResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DescribeProducersResult";
+
+        public KafkaFuture<PartitionProducerState> PartitionResult(TopicPartition partition)
+        {
+            return IExecute<KafkaFuture<PartitionProducerState>>("partitionResult");
+        }
+
+        public KafkaFuture<Map<TopicPartition, PartitionProducerState>> All => IExecute<KafkaFuture<Map<TopicPartition, PartitionProducerState>>>("all");
+
+
+        public class PartitionProducerState : JCOBridge.C2JBridge.JVMBridgeBase<DescribeProducersResult>
+        {
+            public override string ClassName => "org.apache.kafka.clients.admin.DescribeProducersResult.PartitionProducerState";
+
+            public PartitionProducerState(List<ProducerState> activeProducers)
+                :base(activeProducers)
+            {
+            }
+
+            public List<ProducerState> ActiveProducers => IExecute<List<ProducerState>>("activeProducers");
+        }
     }
 }

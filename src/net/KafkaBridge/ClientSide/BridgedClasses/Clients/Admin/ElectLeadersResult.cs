@@ -16,10 +16,18 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Java.Lang;
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class ElectLeadersResult : JCOBridge.C2JBridge.JVMBridgeBase<ElectLeadersResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.ElectLeadersResult";
+
+        public KafkaFuture<Map<TopicPartition, Optional<Throwable>>> Partitions => IExecute<KafkaFuture<Map<TopicPartition, Optional<Throwable>>>>("partitions");
+
+        public KafkaFuture<Void> All => IExecute<KafkaFuture<Void>>("all");
     }
 }

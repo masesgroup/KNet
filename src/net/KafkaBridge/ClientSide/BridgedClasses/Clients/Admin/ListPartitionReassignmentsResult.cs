@@ -16,10 +16,15 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class ListPartitionReassignmentsResult : JCOBridge.C2JBridge.JVMBridgeBase<ListPartitionReassignmentsResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.ListPartitionReassignmentsResult";
+
+        public KafkaFuture<Map<TopicPartition, PartitionReassignment>> Reassignments => IExecute<KafkaFuture<Map<TopicPartition, PartitionReassignment>>>("reassignments");
     }
 }

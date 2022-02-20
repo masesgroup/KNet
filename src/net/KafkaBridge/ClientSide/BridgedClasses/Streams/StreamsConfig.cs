@@ -174,7 +174,8 @@ namespace MASES.KafkaBridge.Streams
         [Obsolete]
         public static readonly string TOPOLOGY_OPTIMIZATION = Clazz.GetField<string>("TOPOLOGY_OPTIMIZATION");
 
-        [Obsolete("This is not public in Apache Kafka API")]
+        [System.Obsolete("This is not public in Apache Kafka API")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public StreamsConfig() { }
 
         public StreamsConfig(Map props)

@@ -16,22 +16,23 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class DescribeTopicsOptions : JCOBridge.C2JBridge.JVMBridgeBase<DescribeTopicsOptions>
+    public class MemberDescription : JCOBridge.C2JBridge.JVMBridgeBase<MemberDescription>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.DescribeTopicsOptions";
+        public override string ClassName => "org.apache.kafka.clients.admin.MemberDescription";
 
-        public DescribeTopicsOptions TimeoutMs(int timeoutMs)
-        {
-            return IExecute<DescribeTopicsOptions>("timeoutMs", timeoutMs); 
-        }
+        public string ConsumerId => IExecute<string>("consumerId");
 
-        public DescribeTopicsOptions IncludeAuthorizedOperations(bool includeAuthorizedOperations)
-        {
-            return IExecute<DescribeTopicsOptions>("includeAuthorizedOperations", includeAuthorizedOperations);
-        }
+        public Optional<string> GroupInstanceId => IExecute<Optional<string>>("groupInstanceId");
 
-        public bool IncludeAuthorizedOperations() => IExecute<bool>("includeAuthorizedOperations");
+        public string ClientId => IExecute<string>("clientId");
+
+        public string Host => IExecute<string>("host");
+
+        public MemberAssignment Assignment => IExecute<MemberAssignment>("assignment");
     }
 }
+

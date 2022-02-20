@@ -92,9 +92,9 @@ namespace MASES.KafkaBridge.Clients.Admin
 
         DescribeReplicaLogDirsResult DescribeReplicaLogDirs(Collection<TopicPartitionReplica> replicas, DescribeReplicaLogDirsOptions options);
 
-        CreatePartitionsResult CreatePartitions(Map<String, NewPartitions> newPartitions);
+        CreatePartitionsResult CreatePartitions(Map<string, NewPartitions> newPartitions);
 
-        CreatePartitionsResult CreatePartitions(Map<String, NewPartitions> newPartitions, CreatePartitionsOptions options);
+        CreatePartitionsResult CreatePartitions(Map<string, NewPartitions> newPartitions, CreatePartitionsOptions options);
 
         DeleteRecordsResult DeleteRecords(Map<TopicPartition, RecordsToDelete> recordsToDelete);
 
@@ -124,7 +124,7 @@ namespace MASES.KafkaBridge.Clients.Admin
 
         ListConsumerGroupsResult ListConsumerGroups();
 
-        ListConsumerGroupOffsetsResult ListConsumerGroupOffsets(String groupId, ListConsumerGroupOffsetsOptions options);
+        ListConsumerGroupOffsetsResult ListConsumerGroupOffsets(string groupId, ListConsumerGroupOffsetsOptions options);
 
         ListConsumerGroupOffsetsResult ListConsumerGroupOffsets(string groupId);
 

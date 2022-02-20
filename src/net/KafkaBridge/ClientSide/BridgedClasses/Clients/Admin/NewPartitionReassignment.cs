@@ -16,10 +16,23 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Java.Util;
+using System;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class NewPartitionReassignment : JCOBridge.C2JBridge.JVMBridgeBase<NewPartitionReassignment>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.NewPartitionReassignment";
+
+        [Obsolete("This is not public in Apache Kafka API")]
+        public NewPartitionReassignment() { }
+
+        public NewPartitionReassignment(List<int> targetReplicas)
+            : base(targetReplicas)
+        {
+        }
+
+        public List<int> TargetReplicas => IExecute<List<int>>("targetReplicas");
     }
 }

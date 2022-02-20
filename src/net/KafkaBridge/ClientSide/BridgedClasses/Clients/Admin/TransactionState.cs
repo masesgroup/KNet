@@ -18,20 +18,16 @@
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class DescribeTopicsOptions : JCOBridge.C2JBridge.JVMBridgeBase<DescribeTopicsOptions>
+    public enum TransactionState
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.DescribeTopicsOptions";
-
-        public DescribeTopicsOptions TimeoutMs(int timeoutMs)
-        {
-            return IExecute<DescribeTopicsOptions>("timeoutMs", timeoutMs); 
-        }
-
-        public DescribeTopicsOptions IncludeAuthorizedOperations(bool includeAuthorizedOperations)
-        {
-            return IExecute<DescribeTopicsOptions>("includeAuthorizedOperations", includeAuthorizedOperations);
-        }
-
-        public bool IncludeAuthorizedOperations() => IExecute<bool>("includeAuthorizedOperations");
+        ONGOING,
+        PREPARE_ABORT,
+        PREPARE_COMMIT,
+        COMPLETE_ABORT,
+        COMPLETE_COMMIT,
+        EMPTY,
+        PREPARE_EPOCH_FENCE,
+        UNKNOWN,
     }
 }
+
