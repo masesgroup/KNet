@@ -16,10 +16,19 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class ListOffsetsOptions : JCOBridge.C2JBridge.JVMBridgeBase<ListOffsetsOptions>
+    public class ListOffsetsOptions : AbstractOptions<ListOffsetsOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.ListOffsetsOptions";
+
+        public ListOffsetsOptions(IsolationLevel isolationLevel)
+            : base(isolationLevel)
+        {
+        }
+
+        public IsolationLevel IsolationLevel => IExecute<IsolationLevel>("isolationLevel");
     }
 }

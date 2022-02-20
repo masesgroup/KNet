@@ -18,8 +18,15 @@
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class RenewDelegationTokenOptions : JCOBridge.C2JBridge.JVMBridgeBase<RenewDelegationTokenOptions>
+    public class RenewDelegationTokenOptions : AbstractOptions<RenewDelegationTokenOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.RenewDelegationTokenOptions";
+
+        public RenewDelegationTokenOptions RenewTimePeriodMs(long renewTimePeriodMs)
+        {
+            return IExecute<RenewDelegationTokenOptions>("renewTimePeriodMs", renewTimePeriodMs);
+        }
+
+        public long RenewTimePeriodMs() => IExecute<long>("renewTimePeriodMs");
     }
 }

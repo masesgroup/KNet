@@ -18,8 +18,15 @@
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class ExpireDelegationTokenOptions : JCOBridge.C2JBridge.JVMBridgeBase<ExpireDelegationTokenOptions>
+    public class ExpireDelegationTokenOptions : AbstractOptions<ExpireDelegationTokenOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.ExpireDelegationTokenOptions";
+
+        public ExpireDelegationTokenOptions expiryTimePeriodMs(long expiryTimePeriodMs)
+        {
+            return IExecute<ExpireDelegationTokenOptions>("expiryTimePeriodMs", expiryTimePeriodMs);
+        }
+
+        public long expiryTimePeriodMs() => IExecute<long>("expiryTimePeriodMs");
     }
 }

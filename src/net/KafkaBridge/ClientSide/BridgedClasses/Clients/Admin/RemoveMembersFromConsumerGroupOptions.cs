@@ -16,10 +16,21 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class RemoveMembersFromConsumerGroupOptions : JCOBridge.C2JBridge.JVMBridgeBase<RemoveMembersFromConsumerGroupOptions>
+    public class RemoveMembersFromConsumerGroupOptions : AbstractOptions<RemoveMembersFromConsumerGroupOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.RemoveMembersFromConsumerGroupOptions";
+
+        public RemoveMembersFromConsumerGroupOptions(Collection<MemberToRemove> members)
+            : base(members)
+        {
+        }
+
+        public Set<MemberToRemove> Members => IExecute<Set<MemberToRemove>>("members");
+
+        public bool RemoveAll => IExecute<bool>("removeAll");
     }
 }

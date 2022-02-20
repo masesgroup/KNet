@@ -18,9 +18,14 @@
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class DeleteAclsOptions : JCOBridge.C2JBridge.JVMBridgeBase<DeleteAclsOptions>
+    public class DeleteAclsOptions : AbstractOptions<DeleteAclsOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DeleteAclsOptions";
+
+        public new DeleteAclsOptions TimeoutMs(int timeoutMs)
+        {
+            return IExecute<DeleteAclsOptions>("timeoutMs", timeoutMs);
+        }
     }
 }
 

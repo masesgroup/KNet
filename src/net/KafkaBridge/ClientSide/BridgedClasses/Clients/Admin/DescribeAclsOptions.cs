@@ -18,8 +18,13 @@
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class DescribeAclsOptions : JCOBridge.C2JBridge.JVMBridgeBase<DescribeAclsOptions>
+    public class DescribeAclsOptions : AbstractOptions<DescribeAclsOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DescribeAclsOptions";
+
+        public new DescribeAclsOptions TimeoutMs(int timeoutMs)
+        {
+            return IExecute<DescribeAclsOptions>("timeoutMs", timeoutMs);
+        }
     }
 }

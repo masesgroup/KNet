@@ -21,7 +21,7 @@ using MASES.KafkaBridge.Java.Util;
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class ListConsumerGroupOffsetsOptions : JCOBridge.C2JBridge.JVMBridgeBase<ListConsumerGroupOffsetsOptions>
+    public class ListConsumerGroupOffsetsOptions : AbstractOptions<ListConsumerGroupOffsetsOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.ListConsumerGroupOffsetsOptions";
 

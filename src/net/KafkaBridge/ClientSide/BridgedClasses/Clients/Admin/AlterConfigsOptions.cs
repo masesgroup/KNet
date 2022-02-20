@@ -18,9 +18,21 @@
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class AlterConfigsOptions : JCOBridge.C2JBridge.JVMBridgeBase<AlterConfigsOptions>
+    public class AlterConfigsOptions : AbstractOptions<AlterConfigsOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.AlterConfigsOptions";
+
+        public new AlterConfigsOptions TimeoutMs(int timeoutMs)
+        {
+            return IExecute<AlterConfigsOptions>("timeoutMs", timeoutMs);
+        }
+
+        public bool ShouldValidateOnly => IExecute<bool>("shouldValidateOnly");
+
+        public AlterConfigsOptions ValidateOnly(bool validateOnly)
+        {
+            return IExecute<AlterConfigsOptions>("validateOnly", validateOnly);
+        }
     }
 }
 

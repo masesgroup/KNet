@@ -20,7 +20,7 @@ using MASES.KafkaBridge.Java.Util;
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class ListTransactionsOptions : JCOBridge.C2JBridge.JVMBridgeBase<ListTransactionsOptions>
+    public class ListTransactionsOptions : AbstractOptions<ListTransactionsOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.ListTransactionsOptions";
 

@@ -16,10 +16,27 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common.Security.Auth;
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class CreateDelegationTokenOptions : JCOBridge.C2JBridge.JVMBridgeBase<CreateDelegationTokenOptions>
+    public class CreateDelegationTokenOptions : AbstractOptions<CreateDelegationTokenOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.CreateDelegationTokenOptions";
+
+        public CreateDelegationTokenOptions Renewers(List<KafkaPrincipal> renewers)
+        {
+            return IExecute<CreateDelegationTokenOptions>("renewers", renewers);
+        }
+
+        public List<KafkaPrincipal> Renewers() => IExecute<List<KafkaPrincipal>>("renewers");
+
+        public CreateDelegationTokenOptions MaxlifeTimeMs(long maxLifeTimeMs)
+        {
+            return IExecute<CreateDelegationTokenOptions>("maxlifeTimeMs", maxLifeTimeMs);
+        }
+
+        public long MaxlifeTimeMs() => IExecute<long>("maxlifeTimeMs");
     }
 }

@@ -16,10 +16,18 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Java.Lang;
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class AlterPartitionReassignmentsResult : JCOBridge.C2JBridge.JVMBridgeBase<AlterPartitionReassignmentsResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.AlterPartitionReassignmentsResult";
+
+        public Map<TopicPartition, KafkaFuture<Void>> Values => IExecute<Map<TopicPartition, KafkaFuture<Void>>>("values");
+
+        public KafkaFuture<Void> All => IExecute<KafkaFuture<Void>>("all");
     }
 }

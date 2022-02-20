@@ -18,7 +18,7 @@
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class DeleteRecordsOptions : JCOBridge.C2JBridge.JVMBridgeBase<DeleteRecordsOptions>
+    public class DeleteRecordsOptions : AbstractOptions<DeleteRecordsOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DeleteRecordsOptions";
     }

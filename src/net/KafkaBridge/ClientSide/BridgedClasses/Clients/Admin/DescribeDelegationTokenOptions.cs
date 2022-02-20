@@ -16,10 +16,20 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common.Security.Auth;
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class DescribeDelegationTokenOptions : JCOBridge.C2JBridge.JVMBridgeBase<DescribeDelegationTokenOptions>
+    public class DescribeDelegationTokenOptions : AbstractOptions<DescribeDelegationTokenOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DescribeDelegationTokenOptions";
+
+        public DescribeDelegationTokenOptions Owners(List<KafkaPrincipal> owners)
+        {
+            return IExecute<DescribeDelegationTokenOptions>("owners", owners);
+        }
+
+        public List<KafkaPrincipal> Owners() => IExecute<List<KafkaPrincipal>>("owners");
     }
 }

@@ -18,7 +18,7 @@
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class DescribeClientQuotasOptions : JCOBridge.C2JBridge.JVMBridgeBase<DescribeClientQuotasOptions>
+    public class DescribeClientQuotasOptions : AbstractOptions<DescribeClientQuotasOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DescribeClientQuotasOptions";
     }

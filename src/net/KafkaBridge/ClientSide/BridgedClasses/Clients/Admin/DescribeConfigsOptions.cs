@@ -18,8 +18,27 @@
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class DescribeConfigsOptions : JCOBridge.C2JBridge.JVMBridgeBase<DescribeConfigsOptions>
+    public class DescribeConfigsOptions : AbstractOptions<DescribeConfigsOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DescribeConfigsOptions";
+
+        public new DescribeConfigsOptions TimeoutMs(int timeoutMs)
+        {
+            return IExecute<DescribeConfigsOptions>("timeoutMs", timeoutMs);
+        }
+
+        public bool IncludeSynonyms() => IExecute<bool>("includeSynonyms");
+
+        public bool IncludeDocumentation() => IExecute<bool>("includeDocumentation");
+
+        public DescribeConfigsOptions IncludeSynonyms(bool includeSynonyms)
+        {
+            return IExecute<DescribeConfigsOptions>("includeSynonyms", includeSynonyms);
+        }
+
+        public DescribeConfigsOptions IncludeDocumentation(bool includeDocumentation)
+        {
+            return IExecute<DescribeConfigsOptions>("includeDocumentation", includeDocumentation);
+        }
     }
 }

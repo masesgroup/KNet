@@ -18,7 +18,7 @@
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class DeleteConsumerGroupOffsetsOptions : JCOBridge.C2JBridge.JVMBridgeBase<DeleteConsumerGroupOffsetsOptions>
+    public class DeleteConsumerGroupOffsetsOptions : AbstractOptions<DeleteConsumerGroupOffsetsOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DeleteConsumerGroupOffsetsOptions";
     }

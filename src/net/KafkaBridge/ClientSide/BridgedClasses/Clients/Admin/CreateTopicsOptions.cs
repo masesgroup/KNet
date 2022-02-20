@@ -18,7 +18,7 @@
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class CreateTopicsOptions : JCOBridge.C2JBridge.JVMBridgeBase<CreateTopicsOptions>
+    public class CreateTopicsOptions : AbstractOptions<CreateTopicsOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.CreateTopicsOptions";
 

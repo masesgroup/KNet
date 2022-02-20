@@ -16,11 +16,20 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Common.Config;
+using MASES.KafkaBridge.Java.Lang;
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class AlterConfigsResult : JCOBridge.C2JBridge.JVMBridgeBase<AlterConfigsResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.AlterConfigsResult";
+
+        public Map<ConfigResource, KafkaFuture<Void>> Values => IExecute<Map<ConfigResource, KafkaFuture<Void>>>("values");
+
+        public KafkaFuture<Void> All => IExecute<KafkaFuture<Void>>("all");
     }
 }
 

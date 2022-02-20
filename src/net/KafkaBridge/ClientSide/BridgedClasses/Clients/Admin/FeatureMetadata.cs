@@ -16,10 +16,18 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class AbortTransactionOptions : AbstractOptions<AbortTransactionOptions>
+    public class FeatureMetadata : JCOBridge.C2JBridge.JVMBridgeBase<FeatureMetadata>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.AbortTransactionOptions";
+        public override string ClassName => "org.apache.kafka.clients.admin.FeatureMetadata";
+
+        public Map<string, FinalizedVersionRange> FinalizedFeatures => IExecute<Map<string, FinalizedVersionRange>>("finalizedFeatures");
+
+        public Optional<long> FinalizedFeaturesEpoch => IExecute<Optional<long>>("finalizedFeaturesEpoch");
+
+        public Map<string, SupportedVersionRange> SupportedFeatures => IExecute<Map<string, SupportedVersionRange>>("supportedFeatures");
     }
 }

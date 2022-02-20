@@ -18,7 +18,7 @@
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class DescribeFeaturesOptions : JCOBridge.C2JBridge.JVMBridgeBase<DescribeFeaturesOptions>
+    public class DescribeFeaturesOptions : AbstractOptions<DescribeFeaturesOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DescribeFeaturesOptions";
     }

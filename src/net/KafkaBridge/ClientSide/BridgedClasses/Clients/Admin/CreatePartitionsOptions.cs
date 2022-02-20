@@ -18,7 +18,7 @@
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class CreatePartitionsOptions : JCOBridge.C2JBridge.JVMBridgeBase<CreatePartitionsOptions>
+    public class CreatePartitionsOptions : AbstractOptions<CreatePartitionsOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.CreatePartitionsOptions";
 

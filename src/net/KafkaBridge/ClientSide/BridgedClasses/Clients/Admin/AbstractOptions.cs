@@ -18,14 +18,24 @@
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class CreateAclsOptions : AbstractOptions<CreateAclsOptions>
+    public class AbstractOptions<T> : JCOBridge.C2JBridge.JVMBridgeBase<AbstractOptions<T>>
+        where T : AbstractOptions<T>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.CreateAclsOptions";
+        public override string ClassName => "org.apache.kafka.clients.admin.AbstractOptions";
 
-        public new CreateAclsOptions TimeoutMs(int timeoutMs)
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public AbstractOptions()
         {
-            return IExecute<CreateAclsOptions>("timeoutMs", timeoutMs);
         }
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public AbstractOptions(params object[] args) : base(args) { }
+
+        public T TimeoutMs(int timeoutMs)
+        {
+            return IExecute<T>("timeoutMs", timeoutMs);
+        }
+
+        public int TimeoutMs() => IExecute<int>("timeoutMs");
     }
 }
-

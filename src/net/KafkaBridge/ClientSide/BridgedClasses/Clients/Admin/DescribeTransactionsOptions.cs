@@ -18,7 +18,7 @@
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class DescribeTransactionsOptions : JCOBridge.C2JBridge.JVMBridgeBase<DescribeTransactionsOptions>
+    public class DescribeTransactionsOptions : AbstractOptions<DescribeTransactionsOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DescribeTransactionsOptions";
     }

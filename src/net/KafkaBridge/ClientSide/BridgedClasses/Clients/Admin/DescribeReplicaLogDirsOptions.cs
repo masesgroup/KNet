@@ -18,7 +18,7 @@
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class DescribeReplicaLogDirsOptions : JCOBridge.C2JBridge.JVMBridgeBase<DescribeReplicaLogDirsOptions>
+    public class DescribeReplicaLogDirsOptions : AbstractOptions<DescribeReplicaLogDirsOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DescribeReplicaLogDirsOptions";
     }

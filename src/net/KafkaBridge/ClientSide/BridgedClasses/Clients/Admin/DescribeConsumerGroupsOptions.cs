@@ -18,8 +18,15 @@
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class DescribeConsumerGroupsOptions : JCOBridge.C2JBridge.JVMBridgeBase<DescribeConsumerGroupsOptions>
+    public class DescribeConsumerGroupsOptions : AbstractOptions<DescribeConsumerGroupsOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DescribeConsumerGroupsOptions";
+
+        public DescribeConsumerGroupsOptions IncludeAuthorizedOperations(bool includeAuthorizedOperations)
+        {
+            return IExecute<DescribeConsumerGroupsOptions>("includeAuthorizedOperations", includeAuthorizedOperations);
+        }
+
+        public bool IncludeAuthorizedOperations() => IExecute<bool>("includeAuthorizedOperations");
     }
 }

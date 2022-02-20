@@ -16,10 +16,11 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KafkaBridge.Clients.Admin
+namespace MASES.KafkaBridge.Common
 {
-    public class AbortTransactionOptions : AbstractOptions<AbortTransactionOptions>
+    public enum IsolationLevel : byte
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.AbortTransactionOptions";
+        READ_UNCOMMITTED = 0,
+        READ_COMMITTED = 1,
     }
 }

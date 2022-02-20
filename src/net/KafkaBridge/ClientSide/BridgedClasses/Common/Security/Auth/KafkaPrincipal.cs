@@ -16,25 +16,36 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KafkaBridge.Clients.Admin
+namespace MASES.KafkaBridge.Common.Security.Auth
 {
-    public class FeatureUpdate : JCOBridge.C2JBridge.JVMBridgeBase<FeatureUpdate>
+    public class KafkaPrincipal : JCOBridge.C2JBridge.JVMBridgeBase<KafkaPrincipal>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.FeatureUpdate";
+        public override string ClassName => "org.apache.kafka.common.security.auth.KafkaPrincipal";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
-        public FeatureUpdate()
+        public KafkaPrincipal()
         {
         }
 
-        public FeatureUpdate(short maxVersionLevel, bool allowDowngrade)
-            :base(maxVersionLevel, allowDowngrade)
+        public KafkaPrincipal(string principalType, string name)
+            :base(principalType, name)
         {
         }
 
-        public short MaxVersionLevel => IExecute<short>("maxVersionLevel");
+        public KafkaPrincipal(string principalType, string name, bool tokenAuthenticated)
+           : base(principalType, name, tokenAuthenticated)
+        {
+        }
 
-        public bool AllowDowngrade => IExecute<bool>("allowDowngrade");
+        public string Name => IExecute<string>("getName");
+
+        public string PrincipalType => IExecute<string>("getPrincipalType");
+
+        public bool TokenAuthenticated
+        {
+            get { return IExecute<bool>("tokenAuthenticated"); }
+            set { IExecute("tokenAuthenticated", value); }
+        }
     }
 }

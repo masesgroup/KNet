@@ -16,10 +16,20 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Java.Lang;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class RemoveMembersFromConsumerGroupResult : JCOBridge.C2JBridge.JVMBridgeBase<RemoveMembersFromConsumerGroupResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.RemoveMembersFromConsumerGroupResult";
+
+        public KafkaFuture<Void> All => IExecute<KafkaFuture<Void>>("all");
+
+        public KafkaFuture<Void> MemberResult(MemberToRemove member)
+        {
+            return IExecute<KafkaFuture<Void>>("memberResult", member);
+        }
     }
 }

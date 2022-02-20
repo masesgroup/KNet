@@ -18,11 +18,11 @@
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class DeleteTopicsOptions : JCOBridge.C2JBridge.JVMBridgeBase<DeleteTopicsOptions>
+    public class DeleteTopicsOptions : AbstractOptions<DeleteTopicsOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DeleteTopicsOptions";
 
-        public DeleteTopicsOptions TimeoutMs(int timeoutMs)
+        public new DeleteTopicsOptions TimeoutMs(int timeoutMs)
         {
             return IExecute<DeleteTopicsOptions>("timeoutMs", timeoutMs);
         }

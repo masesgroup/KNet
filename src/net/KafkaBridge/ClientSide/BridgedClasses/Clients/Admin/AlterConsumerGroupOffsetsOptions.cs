@@ -18,7 +18,7 @@
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class AlterConsumerGroupOffsetsOptions : JCOBridge.C2JBridge.JVMBridgeBase<AlterConsumerGroupOffsetsOptions>
+    public class AlterConsumerGroupOffsetsOptions : AbstractOptions<AlterConsumerGroupOffsetsOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.AlterConsumerGroupOffsetsOptions";
     }

@@ -16,10 +16,20 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Java.Lang;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class AlterConsumerGroupOffsetsResult : JCOBridge.C2JBridge.JVMBridgeBase<AlterConsumerGroupOffsetsResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.AlterConsumerGroupOffsetsResult";
+
+        public KafkaFuture<Void> PartitionResult(TopicPartition partition)
+        {
+            return IExecute<KafkaFuture<Void>>("partitionResult", partition);
+        }
+
+        public KafkaFuture<Void> All => IExecute<KafkaFuture<Void>>("all");
     }
 }

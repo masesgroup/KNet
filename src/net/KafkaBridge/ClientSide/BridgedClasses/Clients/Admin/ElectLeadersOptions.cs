@@ -18,7 +18,7 @@
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class ElectLeadersOptions : JCOBridge.C2JBridge.JVMBridgeBase<ElectLeadersOptions>
+    public class ElectLeadersOptions : AbstractOptions<ElectLeadersOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.ElectLeadersOptions";
     }

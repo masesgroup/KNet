@@ -16,10 +16,14 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class DescribeFeaturesResult : JCOBridge.C2JBridge.JVMBridgeBase<DescribeFeaturesResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DescribeFeaturesResult";
+
+        public KafkaFuture<FeatureMetadata> FeatureMetadata => IExecute<KafkaFuture<FeatureMetadata>>("featureMetadata");
     }
 }

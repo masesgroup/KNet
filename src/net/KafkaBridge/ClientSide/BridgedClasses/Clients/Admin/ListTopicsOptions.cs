@@ -18,11 +18,11 @@
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class ListTopicsOptions : JCOBridge.C2JBridge.JVMBridgeBase<ListTopicsOptions>
+    public class ListTopicsOptions : AbstractOptions<ListTopicsOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.ListTopicsOptions";
 
-        public ListTopicsOptions TimeoutMs(int timeoutMs)
+        public new ListTopicsOptions TimeoutMs(int timeoutMs)
         {
             return IExecute<ListTopicsOptions>("timeoutMs", timeoutMs);
         }

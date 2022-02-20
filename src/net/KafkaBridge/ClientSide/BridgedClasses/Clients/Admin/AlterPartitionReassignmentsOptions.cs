@@ -18,7 +18,7 @@
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class AlterPartitionReassignmentsOptions : JCOBridge.C2JBridge.JVMBridgeBase<AlterPartitionReassignmentsOptions>
+    public class AlterPartitionReassignmentsOptions : AbstractOptions<AlterPartitionReassignmentsOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.AlterPartitionReassignmentsOptions";
     }

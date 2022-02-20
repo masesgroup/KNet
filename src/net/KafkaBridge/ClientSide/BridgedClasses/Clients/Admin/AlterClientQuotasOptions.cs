@@ -18,8 +18,15 @@
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class AlterClientQuotasOptions : JCOBridge.C2JBridge.JVMBridgeBase<AlterClientQuotasOptions>
+    public class AlterClientQuotasOptions : AbstractOptions<AlterClientQuotasOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.AlterClientQuotasOptions";
+
+        public bool ValidateOnly() => IExecute<bool>("validateOnly");
+
+        public AlterClientQuotasOptions ValidateOnly(bool validateOnly)
+        {
+            return IExecute<AlterClientQuotasOptions>("validateOnly", validateOnly);
+        }
     }
 }

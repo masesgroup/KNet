@@ -18,7 +18,7 @@
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class AlterUserScramCredentialsOptions : JCOBridge.C2JBridge.JVMBridgeBase<AlterUserScramCredentialsOptions>
+    public class AlterUserScramCredentialsOptions : AbstractOptions<AlterUserScramCredentialsOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.AlterUserScramCredentialsOptions";
     }

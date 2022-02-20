@@ -18,7 +18,7 @@
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class UnregisterBrokerOptions : JCOBridge.C2JBridge.JVMBridgeBase<UnregisterBrokerOptions>
+    public class UnregisterBrokerOptions : AbstractOptions<UnregisterBrokerOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.UnregisterBrokerOptions";
     }

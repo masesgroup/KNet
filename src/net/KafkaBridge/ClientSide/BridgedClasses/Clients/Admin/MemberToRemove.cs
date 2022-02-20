@@ -18,8 +18,22 @@
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class AbortTransactionOptions : AbstractOptions<AbortTransactionOptions>
+    public class MemberToRemove : JCOBridge.C2JBridge.JVMBridgeBase<MemberToRemove>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.AbortTransactionOptions";
+        public override string ClassName => "org.apache.kafka.clients.admin.MemberToRemove";
+
+        [System.Obsolete("This is not public in Apache Kafka API")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public MemberToRemove()
+        {
+        }
+
+        public MemberToRemove(string groupInstanceId)
+            :base(groupInstanceId)
+        {
+        }
+
+        public string GroupInstanceId => IExecute<string>("groupInstanceId");
     }
 }
+
