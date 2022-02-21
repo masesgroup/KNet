@@ -3,6 +3,8 @@
 [![CI_BUILD](https://github.com/masesgroup/KafkaBridge/actions/workflows/build.yaml/badge.svg)](https://github.com/masesgroup/KafkaBridge/actions/workflows/build.yaml) [![CI_RELEASE](https://github.com/masesgroup/KafkaBridge/actions/workflows/release.yaml/badge.svg)](https://github.com/masesgroup/KafkaBridge/actions/workflows/release.yaml) 
 
 [![latest version](https://img.shields.io/nuget/v/MASES.KafkaBridge)](https://www.nuget.org/packages/MASES.KafkaBridge) [![downloads](https://img.shields.io/nuget/dt/MASES.KafkaBridge)](https://www.nuget.org/packages/MASES.KafkaBridge)
+[![latest version](https://img.shields.io/nuget/v/MASES.KafkaBridgeCLI)](https://www.nuget.org/packages/MASES.KafkaBridgeCLI) [![downloads](https://img.shields.io/nuget/dt/MASES.KafkaBridgeCLI)](https://www.nuget.org/packages/MASES.KafkaBridgeCLI)
+[![latest version](https://img.shields.io/nuget/v/MASES.KafkaBridge.Templates)](https://www.nuget.org/packages/MASES.KafkaBridge.Templates) [![downloads](https://img.shields.io/nuget/dt/MASES.KafkaBridge.Templates)](https://www.nuget.org/packages/MASES.KafkaBridge.Templates)
 
 KafkaBridge is a .NET mirror of [Apache Kafka](https://kafka.apache.org/) [APIs](https://kafka.apache.org/documentation/#api) providing all features: Producer, Consumer, Admin, Streams, Connect, ZooKeeper, Kafka backend.
 
