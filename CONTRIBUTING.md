@@ -13,7 +13,7 @@ This project and everyone participating in it is governed by the [KafkaBridge Co
 The project is organized in this folder structure:
 
 * **docs** (website)
-* **sc**
+* **src**
 	* **config**: contains the configuration files copied from the oficial Apache Kafka delivery
 	* **java**
 		* **kafkabridge**: contains the JVM side implementation of some classes managed from .NET side; it is structured as a complete Maven project
@@ -22,7 +22,9 @@ The project is organized in this folder structure:
 		* **KafkaBridgeCLI**: The folder containing the source and project of the CLI for Apache Kafka
 		* **templates**: The folder containing the source and project to generate the NuGet template package
 * **tests**
-	* **KafkaBridgeTest**: The folder containing the source and project of the KafkaBridge test
+	* **KafkaBridgeTest**: The folder containing the source and project of the KafkaBridge test for Producer/Consumer APIs
+	* **KafkaBridgeTestAdmin**: The folder containing the source and project of the KafkaBridge test for Admin APIs
+	* **KafkaBridgeTest**: The folder containing the source and project of the KafkaBridge test for Streams APIs
 
 # How Can I Contribute?
 
