@@ -27,21 +27,16 @@ using MASES.KafkaBridge.Clients.Admin;
 using MASES.KafkaBridge.Common.Config;
 using MASES.KafkaBridge.Java.Util;
 using System;
-using System.Threading;
 
 namespace MASES.KafkaBridgeTestAdmin
 {
     class Program
     {
-        static bool useSerdes = true;
-        static bool useCallback = true;
-
         const string theServer = "localhost:9092";
         const string theTopic = "myTopic";
 
         static string serverToUse = theServer;
         static string topicToUse = theTopic;
-        static ManualResetEvent resetEvent = new ManualResetEvent(false);
 
         static void Main(string[] args)
         {
@@ -57,13 +52,12 @@ namespace MASES.KafkaBridgeTestAdmin
 
             using (var admin = KafkaAdminClient.Create(props))
             {
-                createTopic(admin);
-
-
+                CreateTopic(admin);
+                DeleteTopic(admin);
             }
         }
 
-        static void createTopic(IAdmin admin)
+        static void CreateTopic(IAdmin admin)
         {
             try
             {
@@ -84,6 +78,33 @@ namespace MASES.KafkaBridgeTestAdmin
 
                 // Call get() to block until the topic creation is complete or has failed
                 // if creation failed the ExecutionException wraps the underlying cause.
+                future.Get();
+            }
+            catch (KafkaBridge.Java.Util.Concurrent.ExecutionException ex)
+            {
+                Console.WriteLine(ex.InnerException.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+
+        static void DeleteTopic(IAdmin admin)
+        {
+            try
+            {
+                string topicName = topicToUse;
+                var coll = Collections.Singleton(topicName);
+
+                // Create a compacted topic
+                DeleteTopicsResult result = admin.DeleteTopics(coll);
+
+                // Call All to get the result
+                var future = result.All;
+
+                // Call get() to block until the topic deletion is complete or has failed
+                // if deletion failed the ExecutionException wraps the underlying cause.
                 future.Get();
             }
             catch (KafkaBridge.Java.Util.Concurrent.ExecutionException ex)
