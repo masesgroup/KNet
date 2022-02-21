@@ -16,10 +16,16 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Common.Security.Token.Delegation;
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class DescribeDelegationTokenResult : JCOBridge.C2JBridge.JVMBridgeBase<DescribeDelegationTokenResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DescribeDelegationTokenResult";
+
+        public KafkaFuture<List<DelegationToken>> DelegationTokens => IExecute<KafkaFuture<List<DelegationToken>>>("delegationTokens");
     }
 }

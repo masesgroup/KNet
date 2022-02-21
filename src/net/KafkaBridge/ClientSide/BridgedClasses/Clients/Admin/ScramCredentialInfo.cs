@@ -16,20 +16,24 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KafkaBridge.Common;
-using MASES.KafkaBridge.Java.Lang;
-
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class DeleteConsumerGroupOffsetsResult : JCOBridge.C2JBridge.JVMBridgeBase<DeleteConsumerGroupOffsetsResult>
+    public class ScramCredentialInfo : JCOBridge.C2JBridge.JVMBridgeBase<ScramCredentialInfo>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.DeleteConsumerGroupOffsetsResult";
+        public override string ClassName => "org.apache.kafka.clients.admin.ScramCredentialInfo";
 
-        public KafkaFuture<Void> PartitionResult(TopicPartition partition)
+        [System.Obsolete("This is not public in Apache Kafka API")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public ScramCredentialInfo()
         {
-            return IExecute<KafkaFuture<Void>>("partitionResult", partition); ;
+        }
+        public ScramCredentialInfo(ScramMechanism mechanism, int iterations)
+            :base(mechanism, iterations)
+        {
         }
 
-        public KafkaFuture<Void> All => IExecute<KafkaFuture<Void>>("all");
+        public ScramMechanism Mechanism => IExecute<ScramMechanism>("mechanism");
+
+        public int Iterations => IExecute<int>("iterations");
     }
 }

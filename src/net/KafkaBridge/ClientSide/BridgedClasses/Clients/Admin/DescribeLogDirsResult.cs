@@ -16,10 +16,20 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Common.Requests;
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class DescribeLogDirsResult : JCOBridge.C2JBridge.JVMBridgeBase<DescribeLogDirsResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DescribeLogDirsResult";
+
+        public Map<int, KafkaFuture<Map<string, DescribeLogDirsResponse.LogDirInfo>>> values => IExecute<Map<int, KafkaFuture<Map<string, DescribeLogDirsResponse.LogDirInfo>>>>("descriptions");
+
+        public Map<int, KafkaFuture<Map<string, LogDirDescription>>> descriptions => IExecute<Map<int, KafkaFuture<Map<string, LogDirDescription>>>>("descriptions");
+
+        public KafkaFuture<Map<int, Map<string, LogDirDescription>>> allDescriptions => IExecute<KafkaFuture<Map<int, Map<string, LogDirDescription>>>>("allDescriptions");
     }
 }

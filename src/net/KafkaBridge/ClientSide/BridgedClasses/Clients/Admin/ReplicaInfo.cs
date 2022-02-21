@@ -17,17 +17,29 @@
 */
 
 using MASES.KafkaBridge.Common;
-using MASES.KafkaBridge.Java.Lang;
 using MASES.KafkaBridge.Java.Util;
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class AlterUserScramCredentialsResult : JCOBridge.C2JBridge.JVMBridgeBase<AlterUserScramCredentialsResult>
+    public class ReplicaInfo : JCOBridge.C2JBridge.JVMBridgeBase<ReplicaInfo>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.AlterUserScramCredentialsResult";
+        public override string ClassName => "org.apache.kafka.clients.admin.ReplicaInfo";
 
-        public Map<string, KafkaFuture<Void>> values => IExecute<Map<string, KafkaFuture<Void>>>("values");
+        [System.Obsolete("This is not public in Apache Kafka API")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public ReplicaInfo()
+        {
+        }
 
-        public KafkaFuture<Void> All => IExecute<KafkaFuture<Void>>("all");
+        public ReplicaInfo(long size, long offsetLag, bool isFuture)
+            : base(size, offsetLag, isFuture)
+        {
+        }
+
+        public long Size => IExecute<long>("size");
+
+        public long OffsetLag => IExecute<long>("offsetLag");
+
+        public bool IsFuture => IExecute<bool>("isFuture");
     }
 }

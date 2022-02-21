@@ -16,11 +16,20 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Common.Acl;
+using MASES.KafkaBridge.Java.Lang;
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class CreateAclsResult : JCOBridge.C2JBridge.JVMBridgeBase<CreateAclsResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.CreateAclsResult";
+
+        public Map<AclBinding, KafkaFuture<Void>> Values => IExecute<Map<AclBinding, KafkaFuture<Void>>>("values");
+
+        public KafkaFuture<Void> All => IExecute<KafkaFuture<Void>>("all");
     }
 }
 

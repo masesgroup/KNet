@@ -16,10 +16,19 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Common.Quota;
+using MASES.KafkaBridge.Java.Lang;
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class AlterClientQuotasResult : JCOBridge.C2JBridge.JVMBridgeBase<AlterClientQuotasResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.AlterClientQuotasResult";
+
+        public Map<ClientQuotaEntity, KafkaFuture<Void>> values => IExecute<Map<ClientQuotaEntity, KafkaFuture<Void>>>("values");
+
+        public KafkaFuture<Void> All => IExecute<KafkaFuture<Void>>("all");
     }
 }

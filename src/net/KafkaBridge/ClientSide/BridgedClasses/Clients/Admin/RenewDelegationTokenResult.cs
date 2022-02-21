@@ -16,10 +16,14 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class RenewDelegationTokenResult : JCOBridge.C2JBridge.JVMBridgeBase<RenewDelegationTokenResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.RenewDelegationTokenResult";
+
+        public KafkaFuture<long> ExpiryTimestamp => IExecute<KafkaFuture<long>>("expiryTimestamp");
     }
 }

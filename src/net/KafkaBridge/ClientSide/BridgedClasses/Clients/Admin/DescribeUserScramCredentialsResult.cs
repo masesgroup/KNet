@@ -16,10 +16,22 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class DescribeUserScramCredentialsResult : JCOBridge.C2JBridge.JVMBridgeBase<DescribeUserScramCredentialsResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DescribeUserScramCredentialsResult";
+
+        public KafkaFuture<Map<string, UserScramCredentialsDescription>> All => IExecute<KafkaFuture<Map<string, UserScramCredentialsDescription>>>("all");
+
+        public KafkaFuture<List<string>> Users => IExecute<KafkaFuture<List<string>>>("users");
+
+        public KafkaFuture<UserScramCredentialsDescription> description(string userName)
+        {
+            return IExecute< KafkaFuture<UserScramCredentialsDescription>>("description");
+        }
     }
 }

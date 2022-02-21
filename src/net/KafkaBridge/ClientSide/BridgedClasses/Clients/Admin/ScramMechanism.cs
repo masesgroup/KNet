@@ -16,18 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KafkaBridge.Common;
-using MASES.KafkaBridge.Java.Lang;
-using MASES.KafkaBridge.Java.Util;
-
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class AlterUserScramCredentialsResult : JCOBridge.C2JBridge.JVMBridgeBase<AlterUserScramCredentialsResult>
+    public enum ScramMechanism : byte
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.AlterUserScramCredentialsResult";
-
-        public Map<string, KafkaFuture<Void>> values => IExecute<Map<string, KafkaFuture<Void>>>("values");
-
-        public KafkaFuture<Void> All => IExecute<KafkaFuture<Void>>("all");
+        UNKNOWN,
+        SCRAM_SHA_256,
+        SCRAM_SHA_512,
     }
 }

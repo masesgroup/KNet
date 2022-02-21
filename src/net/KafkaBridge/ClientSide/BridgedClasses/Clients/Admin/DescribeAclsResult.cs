@@ -16,10 +16,16 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Common.Acl;
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class DescribeAclsResult : JCOBridge.C2JBridge.JVMBridgeBase<DescribeAclsResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DescribeAclsResult";
+
+        public KafkaFuture<Collection<AclBinding>> Values => IExecute<KafkaFuture<Collection<AclBinding>>>("values");
     }
 }

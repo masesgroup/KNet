@@ -16,10 +16,18 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Java.Lang;
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class DeleteConsumerGroupsResult : JCOBridge.C2JBridge.JVMBridgeBase<DeleteConsumerGroupsResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DeleteConsumerGroupsResult";
+
+        public Map<string, KafkaFuture<Void>> DeletedGroups => IExecute<Map<string, KafkaFuture<Void>>>("deletedGroups");
+
+        public KafkaFuture<Void> All => IExecute<KafkaFuture<Void>>("all");
     }
 }

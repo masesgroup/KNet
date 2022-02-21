@@ -16,10 +16,15 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Java.Lang;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class UnregisterBrokerResult : JCOBridge.C2JBridge.JVMBridgeBase<UnregisterBrokerResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.UnregisterBrokerResult";
+
+        public KafkaFuture<Void> All => IExecute<KafkaFuture<Void>>("all");
     }
 }

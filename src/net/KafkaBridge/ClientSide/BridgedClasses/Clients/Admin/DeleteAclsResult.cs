@@ -16,11 +16,36 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Common.Acl;
+using MASES.KafkaBridge.Common.Errors;
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class DeleteAclsResult : JCOBridge.C2JBridge.JVMBridgeBase<DeleteAclsResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DeleteAclsResult";
+
+        public Map<AclBindingFilter, KafkaFuture<FilterResults>> Values => IExecute<Map<AclBindingFilter, KafkaFuture<FilterResults>>>("values");
+
+        public KafkaFuture<Collection<AclBinding>> All => IExecute<KafkaFuture<Collection<AclBinding>>>("all");
+
+        public class FilterResults : JCOBridge.C2JBridge.JVMBridgeBase<FilterResults>
+        {
+            public override string ClassName => "org.apache.kafka.clients.admin.DeleteAclsResult.FilterResults";
+
+            public List<FilterResult> Values => IExecute<List<FilterResult>>("values");
+        }
+
+        public class FilterResult : JCOBridge.C2JBridge.JVMBridgeBase<FilterResult>
+        {
+            public override string ClassName => "org.apache.kafka.clients.admin.DeleteAclsResult.FilterResult";
+
+            public AclBinding Binding => IExecute<AclBinding>("binding");
+
+            public ApiException Exception => IExecute<ApiException>("exception");
+        }
     }
 }
 

@@ -16,18 +16,15 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KafkaBridge.Common;
-using MASES.KafkaBridge.Java.Lang;
-using MASES.KafkaBridge.Java.Util;
-
-namespace MASES.KafkaBridge.Clients.Admin
+namespace MASES.KafkaBridge.Common.Requests
 {
-    public class AlterUserScramCredentialsResult : JCOBridge.C2JBridge.JVMBridgeBase<AlterUserScramCredentialsResult>
+    public class DescribeLogDirsResponse : JCOBridge.C2JBridge.JVMBridgeBase<DescribeLogDirsResponse>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.AlterUserScramCredentialsResult";
+        public override string ClassName => "org.apache.kafka.common.requests.DescribeLogDirsResponse";
 
-        public Map<string, KafkaFuture<Void>> values => IExecute<Map<string, KafkaFuture<Void>>>("values");
-
-        public KafkaFuture<Void> All => IExecute<KafkaFuture<Void>>("all");
+        public class LogDirInfo : JCOBridge.C2JBridge.JVMBridgeBase<LogDirInfo>
+        {
+            public override string ClassName => "org.apache.kafka.common.requests.DescribeLogDirsResponse.LogDirInfo";
+        }
     }
 }

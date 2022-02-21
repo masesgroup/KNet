@@ -16,11 +16,19 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Java.Lang;
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class AlterReplicaLogDirsResult : JCOBridge.C2JBridge.JVMBridgeBase<AlterReplicaLogDirsResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.AlterReplicaLogDirsResult";
+
+        public Map<TopicPartitionReplica, KafkaFuture<Void>> Values => IExecute<Map<TopicPartitionReplica, KafkaFuture<Void>>>("values");
+
+        public KafkaFuture<Void> All => IExecute<KafkaFuture<Void>>("all");
     }
 }
 
