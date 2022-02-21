@@ -17,7 +17,6 @@
 */
 
 using MASES.KafkaBridge.Java.Time;
-using System;
 
 namespace MASES.KafkaBridge.Streams.KStream
 {
@@ -25,7 +24,8 @@ namespace MASES.KafkaBridge.Streams.KStream
     {
         public override string ClassName => "org.apache.kafka.streams.kstream.Window";
 
-        [Obsolete("This is not public in Apache Kafka API")]
+        [System.Obsolete("This is not public in Apache Kafka API")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public Window() { }
 
         public Window(long startMs, long endMs)

@@ -25,7 +25,7 @@ using System;
 namespace MASES.KafkaBridge.Streams.Processor
 {
     /// <summary>
-    /// Listerner for Kafka KafkaClientSupplier. Extends <see cref="IJVMBridgeBase"/>
+    /// Listener for Kafka KafkaClientSupplier. Extends <see cref="IJVMBridgeBase"/>
     /// </summary>
     public interface IKafkaClientSupplier : IJVMBridgeBase
     {
@@ -41,7 +41,7 @@ namespace MASES.KafkaBridge.Streams.Processor
     }
 
     /// <summary>
-    /// Listerner for Kafka KafkaClientSupplier. Extends <see cref="CLRListener"/>, implements <see cref="IKafkaClientSupplier"/>
+    /// Listener for Kafka KafkaClientSupplier. Extends <see cref="CLRListener"/>, implements <see cref="IKafkaClientSupplier"/>
     /// </summary>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
     public class KafkaClientSupplier : CLRListener, IKafkaClientSupplier

@@ -24,7 +24,7 @@ using System;
 namespace MASES.KafkaBridge.Clients.Consumer
 {
     /// <summary>
-    /// Listerner for Kafka ConsumerRebalanceListener. Extends <see cref="IJVMBridgeBase"/>
+    /// Listener for Kafka ConsumerRebalanceListener. Extends <see cref="IJVMBridgeBase"/>
     /// </summary>
     public interface IConsumerRebalanceListener : IJVMBridgeBase
     {
@@ -41,7 +41,7 @@ namespace MASES.KafkaBridge.Clients.Consumer
     }
 
     /// <summary>
-    /// Listerner for Kafka ConsumerRebalanceListener. Extends <see cref="CLRListener"/>, implements <see cref="IConsumerRebalanceListener"/>
+    /// Listener for Kafka ConsumerRebalanceListener. Extends <see cref="CLRListener"/>, implements <see cref="IConsumerRebalanceListener"/>
     /// </summary>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
     public class ConsumerRebalanceListener : CLRListener, IConsumerRebalanceListener

@@ -22,7 +22,6 @@ using MASES.KafkaBridge.Java.Util.Concurrent;
 namespace MASES.KafkaBridge.Common
 {
     public class KafkaFuture<E> : Future<E>
-        where E : JCOBridge.C2JBridge.JVMBridgeBase, new()
     {
         public override string ClassName => "org.apache.kafka.common.KafkaFuture";
 

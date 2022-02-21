@@ -17,20 +17,19 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using MASES.KafkaBridge.Clients.Consumer;
 using System;
 
 namespace MASES.KafkaBridge.Streams.Processor
 {
     /// <summary>
-    /// Listerner for Kafka TopicNameExtractor. Extends <see cref="IJVMBridgeBase"/>
+    /// Listener for Kafka TopicNameExtractor. Extends <see cref="IJVMBridgeBase"/>
     /// </summary>
     public interface ITopicNameExtractor : IJVMBridgeBase
     {
     }
 
     /// <summary>
-    /// Listerner for Kafka TopicNameExtractor. Extends <see cref="ITopicNameExtractor"/>
+    /// Listener for Kafka TopicNameExtractor. Extends <see cref="ITopicNameExtractor"/>
     /// </summary>
     public interface ITopicNameExtractor<K, V> : ITopicNameExtractor
     {
@@ -45,7 +44,7 @@ namespace MASES.KafkaBridge.Streams.Processor
     }
 
     /// <summary>
-    /// Listerner for Kafka TopicNameExtractor. Extends <see cref="CLRListener"/>, implements <see cref="ITopicNameExtractor{K, V}"/>
+    /// Listener for Kafka TopicNameExtractor. Extends <see cref="CLRListener"/>, implements <see cref="ITopicNameExtractor{K, V}"/>
     /// </summary>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
     public class TopicNameExtractor<K, V> : CLRListener, ITopicNameExtractor<K, V>
@@ -89,7 +88,7 @@ namespace MASES.KafkaBridge.Streams.Processor
     }
     /*
     /// <summary>
-    /// Listerner for Kafka TopicNameExtractor. Extends <see cref="TopicNameExtractorImpl{K, V}"/>
+    /// Listener for Kafka TopicNameExtractor. Extends <see cref="TopicNameExtractorImpl{K, V}"/>
     /// </summary>
     /// <typeparam name="T">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
     /// <typeparam name="U">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>

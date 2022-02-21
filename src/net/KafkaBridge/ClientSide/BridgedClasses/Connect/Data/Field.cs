@@ -17,7 +17,6 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using System;
 
 namespace MASES.KafkaBridge.Connect.Data
 {
@@ -25,7 +24,8 @@ namespace MASES.KafkaBridge.Connect.Data
     {
         public override string ClassName => "org.apache.kafka.connect.data.Field";
 
-        [Obsolete("This is not public in Apache Kafka API")]
+        [System.Obsolete("This is not public in Apache Kafka API")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public Field()
         {
         }

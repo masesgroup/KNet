@@ -16,8 +16,6 @@
 *  Refer to LICENSE for more information.
 */
 
-using System;
-
 namespace MASES.KafkaBridge.Java.Util.Regex
 {
     public sealed class Pattern : JCOBridge.C2JBridge.JVMBridgeBase<Pattern>

@@ -22,7 +22,7 @@ using System;
 namespace MASES.KafkaBridge.Streams.KStream
 {
     /// <summary>
-    /// Listerner for Kafka Initializer. Extends <see cref="IJVMBridgeBase"/>
+    /// Listener for Kafka Initializer. Extends <see cref="IJVMBridgeBase"/>
     /// </summary>
     /// <typeparam name="VA">The Initialized data associated to the event</typeparam>
     public interface IInitializer<VA> : IJVMBridgeBase
@@ -35,7 +35,7 @@ namespace MASES.KafkaBridge.Streams.KStream
     }
 
     /// <summary>
-    /// Listerner for Kafka Initializer. Extends <see cref="CLRListener"/>, implements <see cref="IInitializer{VA}"/>
+    /// Listener for Kafka Initializer. Extends <see cref="CLRListener"/>, implements <see cref="IInitializer{VA}"/>
     /// </summary>
     /// <typeparam name="VA">The Initialized data associated to the event</typeparam>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
@@ -77,7 +77,7 @@ namespace MASES.KafkaBridge.Streams.KStream
     }
 /*
     /// <summary>
-    /// Listerner for Kafka Initializer. Extends <see cref="InitializerImpl{VA}"/>
+    /// Listener for Kafka Initializer. Extends <see cref="InitializerImpl{VA}"/>
     /// </summary>
     /// <typeparam name="VA">The aggregated data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>

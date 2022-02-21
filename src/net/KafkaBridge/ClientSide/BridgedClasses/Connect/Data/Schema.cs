@@ -18,7 +18,6 @@
 
 using MASES.JCOBridge.C2JBridge;
 using MASES.KafkaBridge.Java.Util;
-using System;
 
 namespace MASES.KafkaBridge.Connect.Data
 {
@@ -117,16 +116,19 @@ namespace MASES.KafkaBridge.Connect.Data
     {
         public override string ClassName => "org.apache.kafka.connect.data.Schema";
 
-        [Obsolete("This is not public in Apache Kafka API")]
+        [System.Obsolete("This is not public in Apache Kafka API")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public Schema() { }
 
-        [Obsolete("This is not public in Apache Kafka API")]
+        [System.Obsolete("This is not public in Apache Kafka API")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public Schema(Type type)
             : base(type)
         {
         }
 
-        [Obsolete("This is not public in Apache Kafka API")]
+        [System.Obsolete("This is not public in Apache Kafka API")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public Schema(Type type, bool optional, Java.Lang.Object defaultValue, string name, int version, string doc, Map<string, string> parameters, List<Field> fields, Schema keySchema, Schema valueSchema)
             : base(type, optional, defaultValue, name, version, doc, parameters, fields, keySchema, valueSchema)
         {

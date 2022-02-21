@@ -16,13 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-using System;
+using MASES.KafkaBridge.Java.Util;
 
 namespace MASES.KafkaBridge.Streams
 {
     public class StreamsConfig : JCOBridge.C2JBridge.JVMBridgeBase<StreamsConfig>
     {
-        public override bool IsStatic => true;
         public override string ClassName => "org.apache.kafka.streams.StreamsConfig";
 
         public static readonly string TOPIC_PREFIX = Clazz.GetField<string>("TOPIC_PREFIX");
@@ -65,10 +64,10 @@ namespace MASES.KafkaBridge.Streams
 
         public static readonly string AT_LEAST_ONCE = Clazz.GetField<string>("AT_LEAST_ONCE");
 
-        [Obsolete]
+        [System.Obsolete]
         public static readonly string EXACTLY_ONCE = Clazz.GetField<string>("EXACTLY_ONCE");
 
-        [Obsolete]
+        [System.Obsolete]
         public static readonly string EXACTLY_ONCE_BETA = Clazz.GetField<string>("EXACTLY_ONCE_BETA");
 
         public static readonly string EXACTLY_ONCE_V2 = Clazz.GetField<string>("EXACTLY_ONCE_V2");
@@ -99,10 +98,10 @@ namespace MASES.KafkaBridge.Streams
 
         public static readonly string DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG = Clazz.GetField<string>("DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG");
 
-        [Obsolete]
+        [System.Obsolete]
         public static readonly string DEFAULT_WINDOWED_KEY_SERDE_INNER_CLASS = Clazz.GetField<string>("DEFAULT_WINDOWED_KEY_SERDE_INNER_CLASS");
 
-        [Obsolete]
+        [System.Obsolete]
         public static readonly string DEFAULT_WINDOWED_VALUE_SERDE_INNER_CLASS = Clazz.GetField<string>("DEFAULT_WINDOWED_VALUE_SERDE_INNER_CLASS");
 
         public static readonly string WINDOWED_INNER_CLASS_SERDE = Clazz.GetField<string>("WINDOWED_INNER_CLASS_SERDE");
@@ -171,7 +170,16 @@ namespace MASES.KafkaBridge.Streams
 
         public static readonly string WINDOW_STORE_CHANGE_LOG_ADDITIONAL_RETENTION_MS_CONFIG = Clazz.GetField<string>("WINDOW_STORE_CHANGE_LOG_ADDITIONAL_RETENTION_MS_CONFIG");
 
-        [Obsolete]
+        [System.Obsolete]
         public static readonly string TOPOLOGY_OPTIMIZATION = Clazz.GetField<string>("TOPOLOGY_OPTIMIZATION");
+
+        [System.Obsolete("This is not public in Apache Kafka API")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public StreamsConfig() { }
+
+        public StreamsConfig(Map props)
+            : base(props)
+        {
+        }
     }
 }

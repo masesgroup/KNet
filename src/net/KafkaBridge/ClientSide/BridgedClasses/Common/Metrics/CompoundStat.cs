@@ -25,7 +25,8 @@ namespace MASES.KafkaBridge.Common.Metrics
     {
         public override string ClassName => "org.apache.kafka.common.metrics.CompoundStat.NamedMeasurable";
 
-        [System.Obsolete("This is not public in Apache Kafka API", true)]
+        [System.Obsolete("This is not public in Apache Kafka API")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public NamedMeasurable()
         {
         }

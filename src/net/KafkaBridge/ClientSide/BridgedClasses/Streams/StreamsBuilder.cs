@@ -57,7 +57,7 @@ namespace MASES.KafkaBridge.Streams
 
         public KStream<K, V> Stream<K, V>(Pattern topicPattern, Consumed<K, V> consumed)
         {
-            return IExecute<KStream<K, V>>("stream", topicPattern);
+            return IExecute<KStream<K, V>>("stream", topicPattern, consumed);
         }
 
         public KTable<K, V> Table<K, V>(string topic, Consumed<K, V> consumed, Materialized<K, V, KeyValueStore<Bytes, byte[]>> materialized)

@@ -16,10 +16,21 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class DescribeTopicsResult : JCOBridge.C2JBridge.JVMBridgeBase<DescribeTopicsResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DescribeTopicsResult";
+
+        public Map<Uuid, KafkaFuture<TopicDescription>> TopicIdValues => IExecute<Map<Uuid, KafkaFuture<TopicDescription>>>("topicIdValues");
+
+        public Map<string, KafkaFuture<TopicDescription>> TopicNameValues => IExecute<Map<string, KafkaFuture<TopicDescription>>>("topicNameValues");
+
+        public KafkaFuture<Map<string, TopicDescription>> AllTopicNames => IExecute<KafkaFuture<Map<string, TopicDescription>>>("allTopicNames");
+
+        public KafkaFuture<Map<Uuid, TopicDescription>> AllTopicIds => IExecute<KafkaFuture<Map<Uuid, TopicDescription>>>("allTopicIds");
     }
 }

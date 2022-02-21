@@ -16,8 +16,6 @@
 *  Refer to LICENSE for more information.
 */
 
-using System;
-
 namespace MASES.KafkaBridge.Common.Metrics
 {
     public class Quota : JCOBridge.C2JBridge.JVMBridgeBase<Quota>
@@ -34,7 +32,8 @@ namespace MASES.KafkaBridge.Common.Metrics
             return SExecute<Quota>("lowerBound", lowerBound);
         }
 
-        [Obsolete("This is not public in Apache Kafka API")]
+        [System.Obsolete("This is not public in Apache Kafka API")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public Quota() { }
 
         public Quota(double bound, bool upper)

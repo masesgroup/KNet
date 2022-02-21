@@ -16,8 +16,6 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.JCOBridge.C2JBridge.JVMInterop;
-
 namespace MASES.KafkaBridge.Common
 {
     public class TopicPartition : JCOBridge.C2JBridge.JVMBridgeBase<TopicPartition>

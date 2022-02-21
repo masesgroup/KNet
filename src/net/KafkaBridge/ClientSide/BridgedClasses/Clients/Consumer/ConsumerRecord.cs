@@ -19,7 +19,6 @@
 using MASES.JCOBridge.C2JBridge.JVMInterop;
 using MASES.KafkaBridge.Common.Header;
 using MASES.KafkaBridge.Common.Record;
-using System;
 
 namespace MASES.KafkaBridge.Clients.Consumer
 {
@@ -39,11 +38,11 @@ namespace MASES.KafkaBridge.Clients.Consumer
 
         public long Offset => IExecute<long>("offset");
 
-        public DateTime DateTime => DateTimeOffset.FromUnixTimeMilliseconds(Timestamp).DateTime;
+        public System.DateTime DateTime => System.DateTimeOffset.FromUnixTimeMilliseconds(Timestamp).DateTime;
 
         public long Timestamp => IExecute<long>("timestamp");
 
-        public TimestampType TimestampType => (TimestampType)Enum.Parse(typeof(TimestampType), IExecute<IJavaObject>("timestampType").Invoke<string>("name")); // (TimestampType)(int)IExecute<IJavaObject>("timestampType").GetField("id");
+        public TimestampType TimestampType => (TimestampType)System.Enum.Parse(typeof(TimestampType), IExecute<IJavaObject>("timestampType").Invoke<string>("name")); // (TimestampType)(int)IExecute<IJavaObject>("timestampType").GetField("id");
 
         public int SerializedKeySize => IExecute<int>("serializedKeySize");
 

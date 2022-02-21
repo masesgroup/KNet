@@ -16,8 +16,6 @@
 *  Refer to LICENSE for more information.
 */
 
-using System;
-
 namespace MASES.KafkaBridge.Clients.Producer
 {
     public class RecordMetadata : JCOBridge.C2JBridge.JVMBridgeBase<RecordMetadata>
@@ -32,7 +30,7 @@ namespace MASES.KafkaBridge.Clients.Producer
 
         public long Timestamp => IExecute<long>("timestamp");
 
-        public DateTime DateTime => DateTimeOffset.FromUnixTimeMilliseconds(Timestamp).DateTime;
+        public System.DateTime DateTime => System.DateTimeOffset.FromUnixTimeMilliseconds(Timestamp).DateTime;
 
         public int SerializedKeySize => IExecute<int>("serializedKeySize");
 

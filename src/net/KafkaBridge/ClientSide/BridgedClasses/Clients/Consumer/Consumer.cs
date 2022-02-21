@@ -21,7 +21,6 @@ using MASES.KafkaBridge.Common;
 using MASES.KafkaBridge.Java.Time;
 using MASES.KafkaBridge.Java.Util;
 using MASES.KafkaBridge.Java.Util.Regex;
-using System;
 
 namespace MASES.KafkaBridge.Clients.Consumer
 {
@@ -47,7 +46,7 @@ namespace MASES.KafkaBridge.Clients.Consumer
 
         void Unsubscribe();
 
-        [Obsolete]
+        [System.Obsolete]
         ConsumerRecords<K, V> Poll(long timeoutMs);
 
         ConsumerRecords<K, V> Poll(Duration timeout);
@@ -78,10 +77,10 @@ namespace MASES.KafkaBridge.Clients.Consumer
 
         long Position(TopicPartition partition, Duration timeout);
 
-        [Obsolete]
+        [System.Obsolete]
         OffsetAndMetadata Committed(TopicPartition partition);
 
-        [Obsolete]
+        [System.Obsolete]
         OffsetAndMetadata Committed(TopicPartition partition, Duration timeout);
 
         Map<TopicPartition, OffsetAndMetadata> Committed(Set<TopicPartition> partitions);

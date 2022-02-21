@@ -17,7 +17,6 @@
 */
 
 using MASES.KafkaBridge.Java.Util;
-using System;
 
 namespace MASES.KafkaBridge.Common
 {
@@ -25,7 +24,8 @@ namespace MASES.KafkaBridge.Common
     {
         public override string ClassName => "org.apache.kafka.common.MetricName";
 
-        [Obsolete("This is not public in Apache Kafka API")]
+        [System.Obsolete("This is not public in Apache Kafka API")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public MetricName() { }
 
         public MetricName(string name, string group, string description, Map<string, string> tags)

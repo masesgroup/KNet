@@ -117,7 +117,7 @@ namespace MASES.KafkaBridgeTest
             {
                 var props = new Properties();
 
-                props.Put(StreamsConfig.APPLICATION_ID_CONFIG, "streams-pipe");
+                props.Put(StreamsConfig.APPLICATION_ID_CONFIG, "WordCountDemo");
                 props.Put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
                 props.Put(StreamsConfig.CACHE_MAX_BYTES_BUFFERING_CONFIG, 0);
                 props.Put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String.Dyn().getClass());

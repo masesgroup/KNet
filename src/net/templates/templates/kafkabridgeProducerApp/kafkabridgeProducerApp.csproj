@@ -8,13 +8,10 @@
   </ItemGroup>
   <ItemGroup Condition="Exists('..\..\..\KafkaBridge\KafkaBridge.csproj')">
     <!--Within GitHub repo: used for test purpose-->
-    <PackageReference Include="MASES.JCOBridge" Version="2.4.6" />
     <ProjectReference Include="..\..\..\KafkaBridge\KafkaBridge.csproj" />
   </ItemGroup>
   <ItemGroup Condition="!Exists('..\..\..\KafkaBridge\KafkaBridge.csproj')">
     <!--Outside GitHub repo-->
-    <PackageReference Include="MASES.KafkaBridge" Version="1.1.5" />
-    <PackageReference Include="MASES.CLIParser" Version="2.2.1" />
-    <PackageReference Include="MASES.JCOBridge" Version="2.4.6" />
+    <PackageReference Include="MASES.KafkaBridge" Version="1.1.6" />
   </ItemGroup>
 </Project>

@@ -17,7 +17,6 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using System;
 
 namespace MASES.KafkaBridge.Connect.Data
 {

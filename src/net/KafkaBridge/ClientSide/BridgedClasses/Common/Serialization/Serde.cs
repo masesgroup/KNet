@@ -18,7 +18,6 @@
 
 using MASES.JCOBridge.C2JBridge;
 using MASES.KafkaBridge.Java.Util;
-using System;
 
 namespace MASES.KafkaBridge.Common.Serialization
 {

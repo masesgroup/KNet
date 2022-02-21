@@ -16,10 +16,22 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Common.Acl;
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class DescribeClusterResult : JCOBridge.C2JBridge.JVMBridgeBase<DescribeClusterResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DescribeClusterResult";
+
+        public KafkaFuture<Collection<Common.Node>> Nodes => IExecute<KafkaFuture<Collection<Common.Node>>>("nodes");
+
+        public KafkaFuture<Common.Node> Controller => IExecute<KafkaFuture<Common.Node>>("controller");
+
+        public KafkaFuture<string> ClusterId => IExecute<KafkaFuture<string>>("clusterId");
+
+        public KafkaFuture<Set<AclOperation>> AuthorizedOperations => IExecute<KafkaFuture<Set<AclOperation>>>("controller");
     }
 }

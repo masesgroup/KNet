@@ -16,8 +16,6 @@
 *  Refer to LICENSE for more information.
 */
 
-using System;
-
 namespace MASES.KafkaBridge.Streams
 {
     public class KeyValue<K, V> : JCOBridge.C2JBridge.JVMBridgeBase<KeyValue<K, V>>
@@ -29,7 +27,8 @@ namespace MASES.KafkaBridge.Streams
             return SExecute<KeyValue<K, V>>("pair", key, value);
         }
 
-        [Obsolete("This is not public in Apache Kafka API")]
+        [System.Obsolete("This is not public in Apache Kafka API")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public KeyValue() { }
 
         public KeyValue(K key, V value)

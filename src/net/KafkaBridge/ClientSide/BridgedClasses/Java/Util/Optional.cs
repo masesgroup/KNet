@@ -24,6 +24,10 @@ namespace MASES.KafkaBridge.Java.Util
 
         public static Optional<T> Empty => SExecute<Optional<T>>("empty");
 
+        public static Optional<T> Of(T value) => SExecute<Optional<T>>("of", value);
+
+        public static Optional<T> OfNullable(T value) => SExecute<Optional<T>>("ofNullable", value);
+
         public bool IsPresent => IExecute<bool>("isPresent");
 
         public virtual T Get​() { return IExecute<T>("get"); }

@@ -23,7 +23,7 @@ using System;
 namespace MASES.KafkaBridge.Clients.Producer
 {
     /// <summary>
-    /// Listerner for Kafka Callback. Extends <see cref="IJVMBridgeBase"/>
+    /// Listener for Kafka Callback. Extends <see cref="IJVMBridgeBase"/>
     /// </summary>
     public interface ICallback : IJVMBridgeBase
     {
@@ -36,7 +36,7 @@ namespace MASES.KafkaBridge.Clients.Producer
     }
 
     /// <summary>
-    /// Listerner for Kafka Callback. Extends <see cref="CLRListener"/>, implements <see cref="ICallback"/>
+    /// Listener for Kafka Callback. Extends <see cref="CLRListener"/>, implements <see cref="ICallback"/>
     /// </summary>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
     public class Callback : CLRListener, ICallback

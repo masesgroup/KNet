@@ -24,6 +24,10 @@ namespace MASES.KafkaBridge.Java.Util
     {
         public override string ClassName => "java.util.ArrayList";
 
+        public static implicit operator Collection<E>(ArrayList<E> array) { return Wraps<Collection<E>>(array.Instance); }
+
+        public static implicit operator List<E>(ArrayList<E> array) { return Wraps<List<E>>(array.Instance); }
+
         public bool IsEmpty => IExecute<bool>("isEmpty");
 
         public bool Add(E element)

@@ -21,7 +21,6 @@ using MASES.KafkaBridge.Common.Utils;
 using MASES.KafkaBridge.Java.Lang;
 using MASES.KafkaBridge.Streams.Processor;
 using MASES.KafkaBridge.Streams.State;
-using System.Collections.Generic;
 
 namespace MASES.KafkaBridge.Streams.KStream
 {

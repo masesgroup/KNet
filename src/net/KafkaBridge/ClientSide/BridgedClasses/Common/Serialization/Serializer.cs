@@ -24,7 +24,7 @@ using System;
 namespace MASES.KafkaBridge.Common.Serialization
 {
     /// <summary>
-    /// Listerner for Kafka Serializer. Extends <see cref="IJVMBridgeBase"/>
+    /// Listener for Kafka Serializer. Extends <see cref="IJVMBridgeBase"/>
     /// </summary>
     /// <typeparam name="E">The data associated to the event</typeparam>
     public interface ISerializer : IJVMBridgeBase
@@ -32,7 +32,7 @@ namespace MASES.KafkaBridge.Common.Serialization
     }
 
     /// <summary>
-    /// Listerner for Kafka Serializer. Extends <see cref="Serializer"/>
+    /// Listener for Kafka Serializer. Extends <see cref="Serializer"/>
     /// </summary>
     /// <typeparam name="E">The data associated to the event</typeparam>
     public interface ISerializer<E> : ISerializer
@@ -54,7 +54,7 @@ namespace MASES.KafkaBridge.Common.Serialization
         byte[] SerializeWithHeaders(string topic, Headers headers, E data);
     }
     /// <summary>
-    /// Listerner for Kafka Serializer. Extends <see cref="CLRListener"/>. Implements <see cref="ISerializer{E}"/>
+    /// Listener for Kafka Serializer. Extends <see cref="CLRListener"/>. Implements <see cref="ISerializer{E}"/>
     /// </summary>
     /// <typeparam name="E">The data associated to the event</typeparam>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
@@ -126,7 +126,7 @@ namespace MASES.KafkaBridge.Common.Serialization
     }
     /*
     /// <summary>
-    /// Listerner for Kafka Serializer. Extends <see cref="SerializerImpl{E}"/>
+    /// Listener for Kafka Serializer. Extends <see cref="SerializerImpl{E}"/>
     /// </summary>
     /// <typeparam name="E">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>

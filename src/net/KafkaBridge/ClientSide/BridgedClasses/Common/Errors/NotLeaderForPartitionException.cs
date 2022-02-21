@@ -16,11 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-using System;
-
 namespace MASES.KafkaBridge.Common.Errors
 {
-    [Obsolete]
+    [System.Obsolete]
     public class NotLeaderForPartitionException : InvalidMetadataException
     {
         public override string ClassName => "org.apache.kafka.common.errors.NotLeaderForPartitionException";

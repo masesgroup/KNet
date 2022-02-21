@@ -30,7 +30,7 @@ namespace MASES.KafkaBridge.Streams.Errors
     }
 
     /// <summary>
-    /// Listerner for Kafka StreamsUncaughtExceptionHandler. Extends <see cref="IJVMBridgeBase"/>
+    /// Listener for Kafka StreamsUncaughtExceptionHandler. Extends <see cref="IJVMBridgeBase"/>
     /// </summary>
     public interface IStreamsUncaughtExceptionHandler : IJVMBridgeBase
     {
@@ -43,7 +43,7 @@ namespace MASES.KafkaBridge.Streams.Errors
     }
 
     /// <summary>
-    /// Listerner for Kafka StreamsUncaughtExceptionHandler. Extends <see cref="CLRListener"/>, implements <see cref="IStreamsUncaughtExceptionHandler"/>
+    /// Listener for Kafka StreamsUncaughtExceptionHandler. Extends <see cref="CLRListener"/>, implements <see cref="IStreamsUncaughtExceptionHandler"/>
     /// </summary>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
     public class StreamsUncaughtExceptionHandler : CLRListener, IStreamsUncaughtExceptionHandler

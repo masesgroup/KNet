@@ -46,7 +46,7 @@ namespace MASES.KafkaBridge.Streams
     }
 
     /// <summary>
-    /// Listerner for Kafka StateListener. Extends <see cref="CLRListener"/>, implements <see cref="IStateListener"/>
+    /// Listener for Kafka StateListener. Extends <see cref="CLRListener"/>, implements <see cref="IStateListener"/>
     /// </summary>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
     public class StateListener : CLRListener, IStateListener
@@ -89,7 +89,8 @@ namespace MASES.KafkaBridge.Streams
 
         public override string ClassName => "org.apache.kafka.streams.KafkaStreams";
 
-        [Obsolete("This is not public in Apache Kafka API")]
+        [System.Obsolete("This is not public in Apache Kafka API")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public KafkaStreams() { }
 
         public KafkaStreams(Topology topology, Properties props) : base(topology, props) { }

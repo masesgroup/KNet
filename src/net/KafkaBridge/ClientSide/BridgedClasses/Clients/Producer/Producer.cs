@@ -21,7 +21,6 @@ using MASES.KafkaBridge.Clients.Consumer;
 using MASES.KafkaBridge.Common;
 using MASES.KafkaBridge.Java.Util;
 using MASES.KafkaBridge.Java.Util.Concurrent;
-using System;
 
 namespace MASES.KafkaBridge.Clients.Producer
 {
@@ -31,7 +30,7 @@ namespace MASES.KafkaBridge.Clients.Producer
 
         void BeginTransaction();
 
-        [Obsolete()]
+        [System.Obsolete()]
         void SendOffsetsToTransaction(Map<TopicPartition, OffsetAndMetadata> offsets, string consumerGroupId);
 
         void SendOffsetsToTransaction(Map<TopicPartition, OffsetAndMetadata> offsets, ConsumerGroupMetadata groupMetadata);

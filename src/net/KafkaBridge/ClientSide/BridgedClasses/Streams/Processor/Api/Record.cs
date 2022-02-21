@@ -25,6 +25,7 @@ namespace MASES.KafkaBridge.Streams.Processor.Api
         public override string ClassName => "org.apache.kafka.streams.processor.api.Record";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public Record() { }
 
         public Record(K key, V value, long timestamp, Headers headers)

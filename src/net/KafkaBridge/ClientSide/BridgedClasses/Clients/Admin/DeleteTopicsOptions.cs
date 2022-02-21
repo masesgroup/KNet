@@ -18,25 +18,20 @@
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class DeleteTopicsOptions : JCOBridge.C2JBridge.JVMBridgeBase<DeleteTopicsOptions>
+    public class DeleteTopicsOptions : AbstractOptions<DeleteTopicsOptions>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DeleteTopicsOptions";
 
-        public DeleteTopicsOptions timeoutMs(int timeoutMs)
+        public new DeleteTopicsOptions TimeoutMs(int timeoutMs)
         {
-            IExecute("timeoutMs", timeoutMs);
-            return this;
+            return IExecute<DeleteTopicsOptions>("timeoutMs", timeoutMs);
         }
 
-        public DeleteTopicsOptions retryOnQuotaViolation(bool validateOnly)
+        public DeleteTopicsOptions RetryOnQuotaViolation(bool validateOnly)
         {
-            IExecute("retryOnQuotaViolation", validateOnly);
-            return this;
+            return IExecute<DeleteTopicsOptions>("retryOnQuotaViolation", validateOnly);
         }
 
-        public bool shouldRetryOnQuotaViolation()
-        {
-            return IExecute<bool>("shouldRetryOnQuotaViolation");
-        }
+        public bool ShouldRetryOnQuotaViolation => IExecute<bool>("shouldRetryOnQuotaViolation");
     }
 }

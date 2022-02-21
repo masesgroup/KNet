@@ -18,7 +18,6 @@
 
 using MASES.JCOBridge.C2JBridge;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
-using System.Collections.Generic;
 
 namespace MASES.KafkaBridge.Common
 {
@@ -37,7 +36,7 @@ namespace MASES.KafkaBridge.Common
             get
             {
                 var array = IExecute("replicas") as IJavaArray;
-                List<Node> nodes = new List<Node>();
+                System.Collections.Generic.List<Node> nodes = new System.Collections.Generic.List<Node>();
                 foreach (var item in array)
                 {
                     nodes.Add(Wraps<Node>(item as IJavaObject));
@@ -51,7 +50,7 @@ namespace MASES.KafkaBridge.Common
             get
             {
                 var array = IExecute("inSyncReplicas") as IJavaArray;
-                List<Node> nodes = new List<Node>();
+                System.Collections.Generic.List<Node> nodes = new System.Collections.Generic.List<Node>();
                 foreach (var item in array)
                 {
                     nodes.Add(Wraps<Node>(item as IJavaObject));
@@ -65,7 +64,7 @@ namespace MASES.KafkaBridge.Common
             get
             {
                 var array = IExecute("offlineReplicas") as IJavaArray;
-                List<Node> nodes = new List<Node>();
+                System.Collections.Generic.List<Node> nodes = new System.Collections.Generic.List<Node>();
                 foreach (var item in array)
                 {
                     nodes.Add(Wraps<Node>(item as IJavaObject));

@@ -19,7 +19,6 @@
 using MASES.JCOBridge.C2JBridge;
 using MASES.KafkaBridge.Java.Math;
 using MASES.KafkaBridge.Java.Util;
-using System;
 
 namespace MASES.KafkaBridge.Connect.Data
 {
@@ -102,12 +101,12 @@ namespace MASES.KafkaBridge.Connect.Data
             return SExecute<BigDecimal>("convertToDecimal", schema, value, scale);
         }
 
-        public static Schema inferSchema(Object value)
+        public static Schema InferSchema(Java.Lang.Object value)
         {
             return SExecute<Schema>("inferSchema", value);
         }
 
-        public static SchemaAndValue parseString(string value)
+        public static SchemaAndValue ParseString(string value)
         {
             return SExecute<SchemaAndValue>("parseString", value);
         }

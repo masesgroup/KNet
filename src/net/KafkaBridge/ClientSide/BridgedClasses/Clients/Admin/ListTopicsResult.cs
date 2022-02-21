@@ -16,10 +16,19 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common;
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class ListTopicsResult : JCOBridge.C2JBridge.JVMBridgeBase<ListTopicsResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.ListTopicsResult";
+
+        public KafkaFuture<Map<string, TopicListing>> NamesToListings => IExecute<KafkaFuture<Map<string, TopicListing>>>("namesToListings");
+
+        public KafkaFuture<Collection<TopicListing>> Listings => IExecute<KafkaFuture<Collection<TopicListing>>>("listings");
+
+        public KafkaFuture<Set<string>> Names => IExecute<KafkaFuture<Set<string>>>("names");
     }
 }

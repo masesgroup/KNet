@@ -25,7 +25,7 @@ using System;
 namespace MASES.KafkaBridge.Clients.Consumer
 {
     /// <summary>
-    /// Listerner for Kafka OffsetCommitCallback. Extends <see cref="IJVMBridgeBase"/>
+    /// Listener for Kafka OffsetCommitCallback. Extends <see cref="IJVMBridgeBase"/>
     /// </summary>
     public interface IOffsetCommitCallback : IJVMBridgeBase
     {
@@ -38,7 +38,7 @@ namespace MASES.KafkaBridge.Clients.Consumer
     }
 
     /// <summary>
-    /// Listerner for Kafka OffsetCommitCallback. Extends <see cref="CLRListener"/>, implements <see cref="IOffsetCommitCallback"/>
+    /// Listener for Kafka OffsetCommitCallback. Extends <see cref="CLRListener"/>, implements <see cref="IOffsetCommitCallback"/>
     /// </summary>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
     public class OffsetCommitCallback : CLRListener, IOffsetCommitCallback
