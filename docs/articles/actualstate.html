@@ -73,10 +73,11 @@
 <ul>
 <li>The command line interface classes (i.e. the executables Apache Kafka classes), the ones available under the <em>bin</em> folder of any Apache Kafka binary distribution, can be managed using the <a href="usageCLI.html">KafkaBridgeCLI</a>, e.g. ConsoleConsumer, ConsoleProducer and so on.</li>
 <li>Producer/Consumer classes</li>
-<li>Kafka Admin Client with basic topic creation/deletion and queries to the cluster</li>
+<li>Kafka Admin Client covering all available APIs: since many classes are marked with @InterfaceStability.Evolving annotation some properties or methods can be missed; use <strong>dynamic</strong> code to interact with Admin API types.</li>
 <li>Almost completed Kafka Streams</li>
 <li>Initial development of Kafka Connect (under development)</li>
 </ul>
+<p>If something is not available use <a href="API_extensibility.html">API extensibility</a> to cover missing features.</p>
 </article>
           </div>
           
