@@ -2,6 +2,8 @@
 
 [![CI_BUILD](https://github.com/masesgroup/KafkaBridge/actions/workflows/build.yaml/badge.svg)](https://github.com/masesgroup/KafkaBridge/actions/workflows/build.yaml) [![CI_RELEASE](https://github.com/masesgroup/KafkaBridge/actions/workflows/release.yaml/badge.svg)](https://github.com/masesgroup/KafkaBridge/actions/workflows/release.yaml) 
 
+[![latest version](https://img.shields.io/nuget/v/MASES.KafkaBridge)](https://www.nuget.org/packages/MASES.KafkaBridge) [![downloads](https://img.shields.io/nuget/dt/MASES.KafkaBridge)](https://www.nuget.org/packages/MASES.KafkaBridge)
+
 KafkaBridge is a .NET mirror of [Apache Kafka](https://kafka.apache.org/) [APIs](https://kafka.apache.org/documentation/#api) providing all features: Producer, Consumer, Admin, Streams, Connect, ZooKeeper, Kafka backend.
 
 This project adheres to the Contributor [Covenant code of conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to coc_reporting@masesgroup.com.
