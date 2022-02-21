@@ -16,8 +16,6 @@
 *  Refer to LICENSE for more information.
 */
 
-using System;
-
 namespace MASES.KafkaBridge.Java.Time
 {
     public sealed class Duration : JCOBridge.C2JBridge.JVMBridgeBase<Duration>
@@ -26,7 +24,7 @@ namespace MASES.KafkaBridge.Java.Time
 
         // to be extended; add a single method related to TimeSpan of .NET: Duration and Timespan are similar
 
-        public static implicit operator Duration(TimeSpan timespan)
+        public static implicit operator Duration(System.TimeSpan timespan)
         {
             var milli = timespan.TotalMilliseconds;
             return SExecute<Duration>("ofMillis", (long)milli);

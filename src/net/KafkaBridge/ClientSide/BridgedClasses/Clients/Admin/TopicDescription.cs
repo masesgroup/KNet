@@ -19,7 +19,6 @@
 using MASES.KafkaBridge.Common;
 using MASES.KafkaBridge.Common.Acl;
 using MASES.KafkaBridge.Java.Util;
-using System;
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
@@ -27,7 +26,8 @@ namespace MASES.KafkaBridge.Clients.Admin
     {
         public override string ClassName => "org.apache.kafka.clients.admin.TopicDescription";
 
-        [Obsolete("This is not public in Apache Kafka API")]
+        [System.Obsolete("This is not public in Apache Kafka API")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public TopicDescription() { }
 
         public TopicDescription(string name, bool _internal, List<TopicPartitionInfo> partitions)

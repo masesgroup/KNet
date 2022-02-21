@@ -16,8 +16,6 @@
 *  Refer to LICENSE for more information.
 */
 
-using System;
-
 namespace MASES.KafkaBridge.Java.Time
 {
     public sealed class Instant : JCOBridge.C2JBridge.JVMBridgeBase<Instant>
@@ -26,9 +24,9 @@ namespace MASES.KafkaBridge.Java.Time
 
         // to be extended; add a single method related to DateTime of .NET: Instant and DateTime are similar
 
-        public static implicit operator Instant(DateTime dt)
+        public static implicit operator Instant(System.DateTime dt)
         {
-            var milli = new DateTimeOffset(dt).ToUnixTimeMilliseconds();
+            var milli = new System.DateTimeOffset(dt).ToUnixTimeMilliseconds();
             return SExecute<Instant>("ofEpochMilli", milli);
         }
     }

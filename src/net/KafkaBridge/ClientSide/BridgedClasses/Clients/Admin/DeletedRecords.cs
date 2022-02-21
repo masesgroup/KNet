@@ -16,15 +16,14 @@
 *  Refer to LICENSE for more information.
 */
 
-using System;
-
 namespace MASES.KafkaBridge.Clients.Admin
 {
     public class DeletedRecords : JCOBridge.C2JBridge.JVMBridgeBase<DeletedRecords>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DeletedRecords";
 
-        [Obsolete("This is not public in Apache Kafka API")]
+        [System.Obsolete("This is not public in Apache Kafka API")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public DeletedRecords() { }
 
         public DeletedRecords(long lowWatermark)

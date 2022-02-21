@@ -24,11 +24,10 @@ using MASES.KafkaBridge.Common.Config;
 using MASES.KafkaBridge.Common.Quota;
 using MASES.KafkaBridge.Java.Time;
 using MASES.KafkaBridge.Java.Util;
-using System;
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public interface IAdmin : IJVMBridgeBase, IDisposable
+    public interface IAdmin : IJVMBridgeBase, System.IDisposable
     {
         Map<MetricName, Metric> Metrics { get; }
 

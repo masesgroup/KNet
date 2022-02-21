@@ -17,7 +17,6 @@
 */
 
 using MASES.KafkaBridge.Java.Util;
-using System;
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
@@ -25,7 +24,8 @@ namespace MASES.KafkaBridge.Clients.Admin
     {
         public override string ClassName => "org.apache.kafka.clients.admin.NewPartitionReassignment";
 
-        [Obsolete("This is not public in Apache Kafka API")]
+        [System.Obsolete("This is not public in Apache Kafka API")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public NewPartitionReassignment() { }
 
         public NewPartitionReassignment(List<int> targetReplicas)

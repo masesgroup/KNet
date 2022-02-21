@@ -16,8 +16,6 @@
 *  Refer to LICENSE for more information.
 */
 
-using System;
-
 namespace MASES.KafkaBridge.Common.Config
 {
     public class TopicConfig : JCOBridge.C2JBridge.JVMBridgeBase<TopicConfig>
@@ -73,7 +71,7 @@ namespace MASES.KafkaBridge.Common.Config
 
         public static readonly string PREALLOCATE_CONFIG = Clazz.GetField<string>("PREALLOCATE_CONFIG");
 
-        [Obsolete()]
+        [System.Obsolete()]
         public static readonly string MESSAGE_FORMAT_VERSION_CONFIG = Clazz.GetField<string>("MESSAGE_FORMAT_VERSION_CONFIG");
 
         public static readonly string MESSAGE_TIMESTAMP_TYPE_CONFIG = Clazz.GetField<string>("MESSAGE_TIMESTAMP_TYPE_CONFIG");

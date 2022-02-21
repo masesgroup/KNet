@@ -18,7 +18,6 @@
 
 using MASES.JCOBridge.C2JBridge;
 using MASES.KafkaBridge.Java.Math;
-using System;
 
 namespace MASES.KafkaBridge.Connect.Data
 {

@@ -18,7 +18,6 @@
 
 using MASES.KafkaBridge.Common;
 using MASES.KafkaBridge.Java.Util;
-using System;
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
@@ -26,7 +25,8 @@ namespace MASES.KafkaBridge.Clients.Admin
     {
         public override string ClassName => "org.apache.kafka.clients.admin.ListOffsetsResult";
 
-        [Obsolete("This is not public in Apache Kafka API")]
+        [System.Obsolete("This is not public in Apache Kafka API")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public ListOffsetsResult()
         {
 
@@ -49,7 +49,8 @@ namespace MASES.KafkaBridge.Clients.Admin
         {
             public override string ClassName => "org.apache.kafka.clients.admin.ListOffsetsResult.ListOffsetsResultInfo";
 
-            [Obsolete("This is not public in Apache Kafka API")]
+            [System.Obsolete("This is not public in Apache Kafka API")]
+            [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
             public ListOffsetsResultInfo()
             {
 

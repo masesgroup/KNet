@@ -16,11 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-using System;
-
 namespace MASES.KafkaBridge.Common.Errors
 {
-    [Obsolete]
+    [System.Obsolete]
     public class NotLeaderOrFollowerException : NotLeaderForPartitionException
     {
         public override string ClassName => "org.apache.kafka.common.errors.NotLeaderOrFollowerException";

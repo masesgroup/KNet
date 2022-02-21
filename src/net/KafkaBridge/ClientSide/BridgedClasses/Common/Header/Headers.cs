@@ -16,8 +16,6 @@
 *  Refer to LICENSE for more information.
 */
 
-using System.Collections.Generic;
-
 namespace MASES.KafkaBridge.Common.Header
 {
     public class Headers : JCOBridge.C2JBridge.JVMBridgeBaseEnumerable<Headers, Header>
@@ -44,7 +42,7 @@ namespace MASES.KafkaBridge.Common.Header
             return IExecute<Header>("lastHeader", key);
         }
 
-        public IEnumerable<Header> headers(string key)
+        public System.Collections.Generic.IEnumerable<Header> headers(string key)
         {
             return IExecute<Headers>("headers", key);
         }
