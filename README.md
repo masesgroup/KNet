@@ -2,7 +2,7 @@
 
 [![CI_BUILD](https://github.com/masesgroup/KafkaBridge/actions/workflows/build.yaml/badge.svg)](https://github.com/masesgroup/KafkaBridge/actions/workflows/build.yaml) [![CI_RELEASE](https://github.com/masesgroup/KafkaBridge/actions/workflows/release.yaml/badge.svg)](https://github.com/masesgroup/KafkaBridge/actions/workflows/release.yaml) 
 
-|KafkaBridge | KafkaBridgeCLI | KafkaBridge.Templates|
+|KafkaBridge | KafkaBridgeCLI | KafkaBridge.Templates |
 |---	|---	|---	|
 |[![latest version](https://img.shields.io/nuget/v/MASES.KafkaBridge)](https://www.nuget.org/packages/MASES.KafkaBridge) [![downloads](https://img.shields.io/nuget/dt/MASES.KafkaBridge)](https://www.nuget.org/packages/MASES.KafkaBridge)|[![latest version](https://img.shields.io/nuget/v/MASES.KafkaBridgeCLI)](https://www.nuget.org/packages/MASES.KafkaBridgeCLI) [![downloads](https://img.shields.io/nuget/dt/MASES.KafkaBridgeCLI)](https://www.nuget.org/packages/MASES.KafkaBridgeCLI)|[![latest version](https://img.shields.io/nuget/v/MASES.KafkaBridge.Templates)](https://www.nuget.org/packages/MASES.KafkaBridge.Templates) [![downloads](https://img.shields.io/nuget/dt/MASES.KafkaBridge.Templates)](https://www.nuget.org/packages/MASES.KafkaBridge.Templates)|
 
@@ -23,7 +23,9 @@ There are many client libraries written to manage communication with Apache Kafk
 * avoids any third party communication protocol implementation;
 * access all features made available from Apache Kafka: the most important one is Kafka Streams which does not have any C# implementation.
 
-Many benefits comes from the [features of JCOBridge](https://www.jcobridge.com/features/):
+## Runtime engine
+
+KafkaBridge uses [JCOBridge](https://www.jcobridge.com), and its [features](https://www.jcobridge.com/features/), to obtain many benefits:
 * **Cyber-security**: 
   * [JVM](https://en.wikipedia.org/wiki/Java_virtual_machine) and [CLR, or CoreCLR,](https://en.wikipedia.org/wiki/Common_Language_Runtime) runs in the same process, but are insulated from each other;
   * JCOBridge does not make any code injection into JVM;
@@ -35,6 +37,10 @@ Many benefits comes from the [features of JCOBridge](https://www.jcobridge.com/f
   * No extra validation cycle on protocol and functionality: bug fix, improvements, new features are immediately available;
   * Documentation is shared;
 * **Dynamic code**: it helps to write a Java/Scala/Kotlin/etc seamless language code directly inside a standard .NET application written in C#/VB.NET: look at this [simple example](https://www.jcobridge.com/net-examples/dotnet-examples/) and [KafkaBridge APIs extensibility](src/net/Documentation/articles/API_extensibility.md).
+
+Have a look at [![latest version](https://img.shields.io/nuget/v/MASES.JCOBridge)](https://www.nuget.org/packages/MASES.JCOBridge); plus look at the following resources:
+- [Release notes](https://www.jcobridge.com/release-notes/)
+- [Commercial info](https://www.jcobridge.com/pricing/)
 
 ---
 ## Summary

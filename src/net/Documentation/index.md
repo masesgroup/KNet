@@ -17,7 +17,9 @@ There are many client libraries written to manage communication with Apache Kafk
 * avoids any third party communication protocol implementation;
 * access all features made available from Apache Kafka: the most important one is Kafka Streams which does not have any C# implementation.
 
-Many benefits comes from the [features of JCOBridge](https://www.jcobridge.com/features/):
+## Runtime engine
+
+KafkaBridge uses [JCOBridge](https://www.jcobridge.com), and its [features](https://www.jcobridge.com/features/), to obtain many benefits:
 * **Cyber-security**: 
   * [JVM](https://en.wikipedia.org/wiki/Java_virtual_machine) and [CLR, or CoreCLR,](https://en.wikipedia.org/wiki/Common_Language_Runtime) runs in the same process, but are insulated from each other;
   * JCOBridge does not make any code injection into JVM;
@@ -29,6 +31,10 @@ Many benefits comes from the [features of JCOBridge](https://www.jcobridge.com/f
   * No extra validation cycle on protocol and functionality: bug fix, improvements, new features are immediately available;
   * Documentation is shared;
 * **Dynamic code**: it helps to write a Java/Scala/Kotlin/etc seamless language code directly inside a standard .NET application written in C#/VB.NET: look at this [simple example](https://www.jcobridge.com/net-examples/dotnet-examples/) and [KafkaBridge APIs extensibility](articles/API_extensibility.md).
+
+Have a look at [![latest version](https://img.shields.io/nuget/v/MASES.JCOBridge)](https://www.nuget.org/packages/MASES.JCOBridge); plus look at the following resources:
+- [Release notes](https://www.jcobridge.com/release-notes/)
+- [Commercial info](https://www.jcobridge.com/pricing/)
 
 ---
 ## Summary
