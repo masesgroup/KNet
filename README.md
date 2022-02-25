@@ -4,7 +4,7 @@
 
 |KafkaBridge | KafkaBridgeCLI | KafkaBridge.Templates |
 |---	|---	|---	|
-|[![latest version](https://img.shields.io/nuget/v/MASES.KafkaBridge)](https://www.nuget.org/packages/MASES.KafkaBridge) [![downloads](https://img.shields.io/nuget/dt/MASES.KafkaBridge)](https://www.nuget.org/packages/MASES.KafkaBridge)|[![latest version](https://img.shields.io/nuget/v/MASES.KafkaBridgeCLI)](https://www.nuget.org/packages/MASES.KafkaBridgeCLI) [![downloads](https://img.shields.io/nuget/dt/MASES.KafkaBridgeCLI)](https://www.nuget.org/packages/MASES.KafkaBridgeCLI)|[![latest version](https://img.shields.io/nuget/v/MASES.KafkaBridge.Templates)](https://www.nuget.org/packages/MASES.KafkaBridge.Templates) [![downloads](https://img.shields.io/nuget/dt/MASES.KafkaBridge.Templates)](https://www.nuget.org/packages/MASES.KafkaBridge.Templates)|
+|[![KafkaBridge nuget](https://img.shields.io/nuget/v/MASES.KafkaBridge)](https://www.nuget.org/packages/MASES.KafkaBridge) [![downloads](https://img.shields.io/nuget/dt/MASES.KafkaBridge)](https://www.nuget.org/packages/MASES.KafkaBridge) | [![KafkaBridgeCLI nuget](https://img.shields.io/nuget/v/MASES.KafkaBridgeCLI)](https://www.nuget.org/packages/MASES.KafkaBridgeCLI) [![downloads](https://img.shields.io/nuget/dt/MASES.KafkaBridgeCLI)](https://www.nuget.org/packages/MASES.KafkaBridgeCLI) | [![KafkaBridge.Templates nuget](https://img.shields.io/nuget/v/MASES.KafkaBridge.Templates)](https://www.nuget.org/packages/MASES.KafkaBridge.Templates) [![downloads](https://img.shields.io/nuget/dt/MASES.KafkaBridge.Templates)](https://www.nuget.org/packages/MASES.KafkaBridge.Templates)|
 
 KafkaBridge is a .NET mirror of [Apache Kafka](https://kafka.apache.org/) [APIs](https://kafka.apache.org/documentation/#api) providing all features: Producer, Consumer, Admin, Streams, Connect, ZooKeeper, Kafka backend.
 
@@ -38,9 +38,10 @@ KafkaBridge uses [JCOBridge](https://www.jcobridge.com), and its [features](http
   * Documentation is shared;
 * **Dynamic code**: it helps to write a Java/Scala/Kotlin/etc seamless language code directly inside a standard .NET application written in C#/VB.NET: look at this [simple example](https://www.jcobridge.com/net-examples/dotnet-examples/) and [KafkaBridge APIs extensibility](src/net/Documentation/articles/API_extensibility.md).
 
-Have a look at [![latest version](https://img.shields.io/nuget/v/MASES.JCOBridge)](https://www.nuget.org/packages/MASES.JCOBridge); plus look at the following resources:
+Have a look at the following resources:
 - [Release notes](https://www.jcobridge.com/release-notes/)
 - [Commercial info](https://www.jcobridge.com/pricing/)
+- [![JCOBridge nuget](https://img.shields.io/nuget/v/MASES.JCOBridge)](https://www.nuget.org/packages/MASES.JCOBridge)
 
 ---
 ## Summary

@@ -32,9 +32,10 @@ KafkaBridge uses [JCOBridge](https://www.jcobridge.com), and its [features](http
   * Documentation is shared;
 * **Dynamic code**: it helps to write a Java/Scala/Kotlin/etc seamless language code directly inside a standard .NET application written in C#/VB.NET: look at this [simple example](https://www.jcobridge.com/net-examples/dotnet-examples/) and [KafkaBridge APIs extensibility](articles/API_extensibility.md).
 
-Have a look at [![latest version](https://img.shields.io/nuget/v/MASES.JCOBridge)](https://www.nuget.org/packages/MASES.JCOBridge); plus look at the following resources:
+Have a look at the following resources:
 - [Release notes](https://www.jcobridge.com/release-notes/)
 - [Commercial info](https://www.jcobridge.com/pricing/)
+- [![JCOBridge nuget](https://img.shields.io/nuget/v/MASES.JCOBridge)](https://www.nuget.org/packages/MASES.JCOBridge)
 
 ---
 ## Summary
