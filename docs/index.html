@@ -65,14 +65,35 @@
 <p>KafkaBridge is a .NET mirror of <a href="https://kafka.apache.org/">Apache Kafka</a> <a href="https://kafka.apache.org/documentation/#api">APIs</a> providing all features: Producer, Consumer, Admin, Streams, Connect, ZooKeeper, Kafka backend.</p>
 <p>This project adheres to the Contributor <a href="CODE_OF_CONDUCT.md">Covenant code of conduct</a>. By participating, you are expected to uphold this code. Please report unacceptable behavior to coc_reporting@masesgroup.com.</p>
 <h2 id="scope-of-the-project">Scope of the project</h2>
-<p>This project aims to create a library to direct access, from .NET, all the features available in the <a href="https://kafka.apache.org/downloads">Apache Kafka binary distribution</a>. The packages are downloaded using Maven from <a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22kafka-clients%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/kafka-clients.svg?label=kafka-clients%20Maven%20Central" alt="Maven Central"></a>, <a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22kafka-streams%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/kafka-streams.svg?label=kafka-streams%20Maven%20Central" alt="Maven Central"></a>, <a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22kafka-tools%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/kafka-tools.svg?label=kafka-tools%20Maven%20Central" alt="Maven Central"></a>, <a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22kafka_2.13%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/kafka_2.13.svg?label=kafka_2.13%20Maven%20Central" alt="Maven Central"></a>, <a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22connect-runtime%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/connect-runtime.svg?label=connect-runtime%20Maven%20Central" alt="Maven Central"></a>.</p>
+<p>This project aims to create a library to direct access, from .NET, all the features available in the <a href="https://kafka.apache.org/downloads">Apache Kafka binary distribution</a>. The packages are downloaded from:</p>
+<table>
+<thead>
+<tr>
+<th>kafka-clients</th>
+<th>kafka-streams</th>
+<th>kafka-tools</th>
+<th>kafka_2.13</th>
+<th>connect-runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22kafka-clients%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/kafka-clients.svg?label=Maven%20Central" alt="Maven Central"></a></td>
+<td><a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22kafka-streams%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/kafka-streams.svg?label=Maven%20Central" alt="Maven Central"></a></td>
+<td><a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22kafka-tools%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/kafka-tools.svg?label=Maven%20Central" alt="Maven Central"></a></td>
+<td><a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22kafka_2.13%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/kafka_2.13.svg?label=Maven%20Central" alt="Maven Central"></a></td>
+<td><a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22connect-runtime%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/connect-runtime.svg?label=Maven%20Central" alt="Maven Central"></a></td>
+</tr>
+</tbody>
+</table>
 <p>There are many client libraries written to manage communication with Apache Kafka. Conversely, this project use directly the Java packages released from The Apache Foundation giving more than one benefit:</p>
 <ul>
 <li>all implemented features are availables at no extra implementation costs, see <a href="articles/usage.html">KafkaBridge usage</a>;</li>
 <li>avoids any third party communication protocol implementation;</li>
 <li>access all features made available from Apache Kafka: the most important one is Kafka Streams which does not have any C# implementation.</li>
 </ul>
-<p>Many benefits comes from the <a href="https://www.jcobridge.com/features/">features of JCOBridge</a>:</p>
+<h2 id="runtime-engine">Runtime engine</h2>
+<p>KafkaBridge uses <a href="https://www.jcobridge.com">JCOBridge</a>, and its <a href="https://www.jcobridge.com/features/">features</a>, to obtain many benefits:</p>
 <ul>
 <li><strong>Cyber-security</strong>:
 <ul>
@@ -91,6 +112,12 @@
 </ul>
 </li>
 <li><strong>Dynamic code</strong>: it helps to write a Java/Scala/Kotlin/etc seamless language code directly inside a standard .NET application written in C#/VB.NET: look at this <a href="https://www.jcobridge.com/net-examples/dotnet-examples/">simple example</a> and <a href="articles/API_extensibility.html">KafkaBridge APIs extensibility</a>.</li>
+</ul>
+<p>Have a look at the following resources:</p>
+<ul>
+<li><a href="https://www.jcobridge.com/release-notes/">Release notes</a></li>
+<li><a href="https://www.jcobridge.com/pricing/">Commercial info</a></li>
+<li><a href="https://www.nuget.org/packages/MASES.JCOBridge"><img src="https://img.shields.io/nuget/v/MASES.JCOBridge" alt="JCOBridge nuget"></a></li>
 </ul>
 <hr>
 <h2 id="summary">Summary</h2>
