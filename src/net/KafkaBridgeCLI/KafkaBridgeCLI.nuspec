@@ -18,10 +18,12 @@
     <packageTypes>
       <packageType name="DotnetTool" />
     </packageTypes>
+	<readme>usageCLI.md</readme>
   </metadata>
 	<files>
 		<file src="..\..\..\LICENSE" target="LICENSE" />
 		<file src="..\Common\JCOB128x128.png" target="" />
+		<file src="..\Documentation\articles\usageCLI.md" target="" />
 		<file src="..\..\..\jars\" target="tools\netcoreapp3.1\any\jars\" />
 		<file src="..\..\..\jars\" target="tools\net5.0\any\jars\" />
 		<file src="..\..\..\jars\" target="tools\net6.0\any\jars\" />

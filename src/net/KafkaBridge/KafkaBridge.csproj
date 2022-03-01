@@ -28,7 +28,7 @@
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<SignAssembly>true</SignAssembly>
 		<AssemblyOriginatorKeyFile>..\Common\KafkaBridge.snk</AssemblyOriginatorKeyFile>
-		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageReadmeFile>usage.md</PackageReadmeFile>
 	</PropertyGroup>
   <!-- Fix start https://github.com/dotnet/sourcelink/issues/572 -->
   <PropertyGroup>
@@ -51,7 +51,7 @@
     <None Include="..\..\..\jars\*.jar" Pack="true" PackagePath="build\jars" />
     <None Include="..\..\config\**\*" Pack="true" PackagePath="build\config" />
     <None Include="..\Common\KafkaBridge.snk" Link="KafkaBridge.snk" />
-    <None Include="..\..\..\README.md" Pack="true" PackagePath="\" />
+	  <None Include="..\Documentation\articles\usage.md" Pack="true" PackagePath="\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MASES.CLIParser" Version="2.2.1" />
