@@ -9,10 +9,10 @@
 		<Owners>MASES s.r.l.</Owners>
 		<Authors>MASES s.r.l.</Authors>
 		<Company>MASES s.r.l.</Company>
-		<Version>1.1.6.0</Version>
+		<Version>1.1.7.0</Version>
 		<Product>KafkaBridge</Product>
 		<GenerateAssemblyInfo>true</GenerateAssemblyInfo>
-		<TargetFrameworks>net461;netcoreapp3.1;net5.0;net5.0-windows;net6.0;net6.0-windows</TargetFrameworks>
+		<TargetFrameworks>net461;netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
 		<OutputPath>..\..\..\bin\</OutputPath>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -28,7 +28,7 @@
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<SignAssembly>true</SignAssembly>
 		<AssemblyOriginatorKeyFile>..\Common\KafkaBridge.snk</AssemblyOriginatorKeyFile>
-		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageReadmeFile>usage.md</PackageReadmeFile>
 	</PropertyGroup>
   <!-- Fix start https://github.com/dotnet/sourcelink/issues/572 -->
   <PropertyGroup>
@@ -48,10 +48,10 @@
     <None Include="..\..\..\LICENSE" Pack="true" PackagePath="" />
     <None Include="..\Common\JCOB128x128.png" Pack="true" PackagePath="" />
     <None Include="mases.kafkabridge.targets" Pack="true" PackagePath="build" />
-    <None Include="..\..\..\bin\jars\*.jar" Pack="true" PackagePath="build\jars" />
+    <None Include="..\..\..\jars\*.jar" Pack="true" PackagePath="build\jars" />
     <None Include="..\..\config\**\*" Pack="true" PackagePath="build\config" />
     <None Include="..\Common\KafkaBridge.snk" Link="KafkaBridge.snk" />
-    <None Include="..\..\..\README.md" Pack="true" PackagePath="\" />
+	<None Include="..\Documentation\articles\usage.md" Pack="true" PackagePath="\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MASES.CLIParser" Version="2.2.1" />

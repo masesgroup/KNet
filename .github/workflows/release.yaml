@@ -28,7 +28,7 @@ jobs:
           submodules: 'true'
 
       - name: Pre compile
-        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KafkaBridge.sln
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KafkaBridge\KafkaBridge.csproj
 
       - name: Set up Apache Maven Central
         uses: actions/setup-java@v1
@@ -51,12 +51,17 @@ jobs:
           MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
           MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
 
-      - name: Recompile to create nuget packages
-        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KafkaBridge.sln
+      - name: Compile command line
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KafkaBridgeCLI\KafkaBridgeCLI.csproj
 
       - uses: nuget/setup-nuget@v1
         with:
           nuget-version: '5.x'
+          
+      - run: nuget pack src\net\KafkaBridgeCLI\KafkaBridgeCLI.nuspec -OutputDirectory .\bin
+
+      - name: Recompile to create nuget packages
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KafkaBridge.sln
 
       - name: Publish to NuGet
         run: |

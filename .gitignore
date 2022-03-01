@@ -24,4 +24,5 @@ launchSettings.json
 /**/packages/
 /**/bin/
 /**/obj/
+/**/jars/
 _site
