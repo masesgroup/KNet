@@ -20,6 +20,7 @@ using MASES.JCOBridge.C2JBridge;
 using MASES.KafkaBridge;
 using System;
 using System.Reflection;
+using System.Text;
 
 namespace MASES.KafkaBridgeCLI
 {
@@ -73,9 +74,19 @@ namespace MASES.KafkaBridgeCLI
             {
                 Console.WriteLine("Error: {0}", errorString);
             }
-            Console.WriteLine("ClassToRun: the class to be invoked (ConsoleConsumer, ConsoleProducer, ...). ");
-            Console.WriteLine("KafkaLocation: The folder where Kafka package is available. Default consider this application running in bin folder.");
-            Console.WriteLine("JCOBridgeArguments: the arguments of JCOBridge (see online for the possible values). ");
+            StringBuilder avTypes = new StringBuilder();
+            foreach (var item in typeof(KafkaBridgeCore).Assembly.ExportedTypes)
+            {
+                var baseType = item.GetTypeInfo().BaseType;
+                if (baseType != null && baseType.IsGenericType && baseType.GetGenericTypeDefinition() == typeof(JVMBridgeMain<>))
+                {
+                    avTypes.AppendFormat("{0}, ", item.Name);
+                }
+            }
+
+            Console.WriteLine("ClassToRun: the class to be invoked ({0}...). ", avTypes.ToString());
+            Console.WriteLine("KafkaLocation: The folder where Kafka package is available. Default consider this application uses the package jars folder.");
+            Console.WriteLine("JCOBridgeArguments: the arguments of JCOBridge (see online at https://www.jcobridge.com/net-examples/command-line-options/ for the possible values). ");
             Console.WriteLine("ClassArguments: the arguments of the class. Depends on the ClassToRun value, to obtain them runs the application or look at Apache Kafka documentation.");
             Console.WriteLine();
             Console.WriteLine("Examples:");
