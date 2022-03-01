@@ -1,4 +1,10 @@
-# KafkaBridgeCLI usage
+# KafkaBridgeCLI
+
+## Installation
+
+To install the tool follows the instructions on https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools.
+
+## Usage
 
 To use the CLI interface (KafkaBridgeCLI) runs a command like the following:
 
@@ -6,8 +12,8 @@ To use the CLI interface (KafkaBridgeCLI) runs a command like the following:
 
 KafkaBridgeCLI accepts the following command-line switch:
 
-* **ClassToRun**: represents the class to be launched; the list is:
-	* Administration:
+* **ClassToRun**: represents the class to be executed; the list is:
+	* Administration scope:
 		* AclCommand
 		* BrokerApiVersionsCommand
 		* ConfigCommand
@@ -20,13 +26,13 @@ KafkaBridgeCLI accepts the following command-line switch:
 		* ReassignPartitionsCommand
 		* TopicCommand
 		* ZkSecurityMigrator
-	* Server:
+	* Server scope:
 		* KafkaStart
 		* ZooKeeperShell
 		* ZooKeeperStart
-	* Shell:
+	* Shell scope:
 		* MetadataShell
-	* Tools:
+	* Tools scope:
 		* ClusterTool
 		* ConsoleConsumer
 		* ConsoleProducer
