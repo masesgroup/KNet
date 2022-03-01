@@ -9,7 +9,7 @@
     <name>mases.kafkabridge</name>
     <description>Apache Kafka interface bridging implementation</description>
     <url>https://github.com/masesgroup/KafkaBridge</url>
-    <version>1.1.6.0</version>
+    <version>1.1.7.0</version>
 
     <licenses>
         <license>
@@ -78,7 +78,7 @@
                             <goal>copy-dependencies</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${basedir}/../../../bin/jars/</outputDirectory>
+                            <outputDirectory>${basedir}/../../../jars/</outputDirectory>
                             <overWriteReleases>false</overWriteReleases>
                             <overWriteSnapshots>false</overWriteSnapshots>
                             <overWriteIfNewer>true</overWriteIfNewer>
@@ -99,7 +99,7 @@
                                     <type>${project.packaging}</type>
                                 </artifactItem>
                             </artifactItems>
-                            <outputDirectory>${basedir}/../../../bin/jars/</outputDirectory>
+                            <outputDirectory>${basedir}/../../../jars/</outputDirectory>
                             <overWriteIfNewer>true</overWriteIfNewer>
                         </configuration>
                     </execution>

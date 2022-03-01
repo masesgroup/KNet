@@ -22,9 +22,9 @@
 	<files>
 		<file src="..\..\..\LICENSE" target="LICENSE" />
 		<file src="..\Common\JCOB128x128.png" target="" />
-		<file src="..\..\..\bin\jars\" target="tools\netcoreapp3.1\any\jars\" />
-		<file src="..\..\..\bin\jars\" target="tools\net5.0\any\jars\" />
-		<file src="..\..\..\bin\jars\" target="tools\net6.0\any\jars\" />
+		<file src="..\..\..\jars\" target="tools\netcoreapp3.1\any\jars\" />
+		<file src="..\..\..\jars\" target="tools\net5.0\any\jars\" />
+		<file src="..\..\..\jars\" target="tools\net6.0\any\jars\" />
 		<file src="..\..\config\" target="tools\netcoreapp3.1\any\config\" />
 		<file src="..\..\config\" target="tools\net5.0\any\config\" />
 		<file src="..\..\config\" target="tools\net6.0\any\config\" />

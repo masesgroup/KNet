@@ -48,7 +48,7 @@
     <None Include="..\..\..\LICENSE" Pack="true" PackagePath="" />
     <None Include="..\Common\JCOB128x128.png" Pack="true" PackagePath="" />
     <None Include="mases.kafkabridge.targets" Pack="true" PackagePath="build" />
-    <None Include="..\..\..\bin\jars\*.jar" Pack="true" PackagePath="build\jars" />
+    <None Include="..\..\..\jars\*.jar" Pack="true" PackagePath="build\jars" />
     <None Include="..\..\config\**\*" Pack="true" PackagePath="build\config" />
     <None Include="..\Common\KafkaBridge.snk" Link="KafkaBridge.snk" />
     <None Include="..\..\..\README.md" Pack="true" PackagePath="\" />
