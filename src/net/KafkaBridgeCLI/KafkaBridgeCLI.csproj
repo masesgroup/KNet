@@ -10,7 +10,7 @@
     <Owners>MASES s.r.l.</Owners>
     <Authors>MASES s.r.l.</Authors>
     <Company>MASES s.r.l.</Company>
-    <Version>1.1.7.0</Version>
+    <Version>1.1.8.0</Version>
     <Product>KafkaBridgeCLI</Product>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <TargetFrameworks>net461;netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
