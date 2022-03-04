@@ -24,15 +24,33 @@ namespace MASES.KafkaBridge.Java.Util
     public class Map : JVMBridgeBase<Map>
     {
         public override string ClassName => "java.util.Map";
+
+        public Map()
+        {
+        }
+
+        public Map(params object[] args)
+            : base(args)
+        {
+        }
     }
 
     public class Map<K, V> : Map
     {
         public override string ClassName => "java.util.Map";
 
+        public Map()
+        {
+        }
+
+        public Map(params object[] args)
+            : base(args)
+        {
+        }
+
         public virtual V Get​(K key) { return IExecute<V>("get", key); }
 
-        public virtual V Put​(K key, V value) 
+        public virtual V Put​(K key, V value)
         {
             var obj = IExecute<V>("put", key, value);
             if (value is IJVMBridgeBase)

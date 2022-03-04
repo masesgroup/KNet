@@ -16,12 +16,30 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common.Config;
 using MASES.KafkaBridge.Java.Util;
 
 namespace MASES.KafkaBridge.Clients.Producer
 {
-    public class ProducerConfig : JCOBridge.C2JBridge.JVMBridgeBase<ProducerConfig>
+    public class ProducerConfig : AbstractConfig<ProducerConfig>
     {
+        public enum Acks
+        {
+            All,
+            MinusOne,
+            None,
+            One
+        }
+
+        public enum CompressionType
+        {
+            none,
+            gzip,
+            snappy,
+            lz4,
+            zstd
+        }
+
         public override string ClassName => "org.apache.kafka.clients.producer.ProducerConfig";
 
         public static readonly string BOOTSTRAP_SERVERS_CONFIG = Clazz.GetField<string>("BOOTSTRAP_SERVERS_CONFIG");
@@ -108,6 +126,213 @@ namespace MASES.KafkaBridge.Clients.Producer
         public ProducerConfig(Map<string, object> props)
             : base(props)
         {
+        }
+    }
+
+    public class ProducerConfigBuilder : CommonClientConfigsBuilder<ProducerConfigBuilder>
+    {
+        public long MetadataMaxIdle { get { return GetProperty<long>(ProducerConfig.METADATA_MAX_IDLE_CONFIG); } set { SetProperty(ProducerConfig.METADATA_MAX_IDLE_CONFIG, value); } }
+
+        public ProducerConfigBuilder WithMetadataMaxIdle(long metadataMaxIdle)
+        {
+            var clone = Clone();
+            clone.MetadataMaxIdle = metadataMaxIdle;
+            return clone;
+        }
+
+        public int BatchSize { get { return GetProperty<int>(ProducerConfig.BATCH_SIZE_CONFIG); } set { SetProperty(ProducerConfig.BATCH_SIZE_CONFIG, value); } }
+
+        public ProducerConfigBuilder WithBatchSize(int batchSize)
+        {
+            var clone = Clone();
+            clone.BatchSize = batchSize;
+            return clone;
+        }
+
+        // "all", "-1", "0", "1"
+        public ProducerConfig.Acks Acks
+        {
+            get
+            {
+                var strName = GetProperty<string>(ProducerConfig.ACKS_CONFIG);
+                if (strName == "all") return ProducerConfig.Acks.All;
+                else if (strName == "-1") return ProducerConfig.Acks.MinusOne;
+                else if (strName == "0") return ProducerConfig.Acks.None;
+                else if (strName == "1") return ProducerConfig.Acks.One;
+
+                return ProducerConfig.Acks.None;
+            }
+            set
+            {
+                string str = value switch
+                {
+                    ProducerConfig.Acks.All => "all",
+                    ProducerConfig.Acks.MinusOne => "-1",
+                    ProducerConfig.Acks.None => "0",
+                    ProducerConfig.Acks.One => "1",
+                    _ => "all",
+                };
+                SetProperty(ProducerConfig.ACKS_CONFIG, str);
+            }
+        }
+
+        public ProducerConfigBuilder WithAcks(ProducerConfig.Acks acks)
+        {
+            var clone = Clone();
+            clone.Acks = acks;
+            return clone;
+        }
+
+        public long LingerMs { get { return GetProperty<long>(ProducerConfig.LINGER_MS_CONFIG); } set { SetProperty(ProducerConfig.LINGER_MS_CONFIG, value); } }
+
+        public ProducerConfigBuilder WithLingerMs(long lingerMs)
+        {
+            var clone = Clone();
+            clone.LingerMs = lingerMs;
+            return clone;
+        }
+
+        public int DeliveryTimeoutMs { get { return GetProperty<int>(ProducerConfig.DELIVERY_TIMEOUT_MS_CONFIG); } set { SetProperty(ProducerConfig.DELIVERY_TIMEOUT_MS_CONFIG, value); } }
+
+        public ProducerConfigBuilder WithDeliveryTimeoutMs(int deliveryTimeoutMs)
+        {
+            var clone = Clone();
+            clone.DeliveryTimeoutMs = deliveryTimeoutMs;
+            return clone;
+        }
+
+        public int MaxRequestSize { get { return GetProperty<int>(ProducerConfig.MAX_REQUEST_SIZE_CONFIG); } set { SetProperty(ProducerConfig.MAX_REQUEST_SIZE_CONFIG, value); } }
+
+        public ProducerConfigBuilder WithMaxRequestSize(int maxRequestSize)
+        {
+            var clone = Clone();
+            clone.MaxRequestSize = maxRequestSize;
+            return clone;
+        }
+
+        public long MaxBlockMs { get { return GetProperty<long>(ProducerConfig.MAX_BLOCK_MS_CONFIG); } set { SetProperty(ProducerConfig.MAX_BLOCK_MS_CONFIG, value); } }
+
+        public ProducerConfigBuilder WithMaxBlockMs(long maxBlockMs)
+        {
+            var clone = Clone();
+            clone.MaxBlockMs = maxBlockMs;
+            return clone;
+        }
+
+        public long BufferMemory { get { return GetProperty<long>(ProducerConfig.BUFFER_MEMORY_CONFIG); } set { SetProperty(ProducerConfig.BUFFER_MEMORY_CONFIG, value); } }
+
+        public ProducerConfigBuilder WithBufferMemory(long bufferMemory)
+        {
+            var clone = Clone();
+            clone.BufferMemory = bufferMemory;
+            return clone;
+        }
+
+        public ProducerConfig.CompressionType CompressionType
+        {
+            get
+            {
+                var strName = GetProperty<string>(ProducerConfig.COMPRESSION_TYPE_CONFIG);
+                if (System.Enum.TryParse<ProducerConfig.CompressionType>(strName, out var rest))
+                {
+                    return rest;
+                }
+                return ProducerConfig.CompressionType.none;
+            }
+            set
+            {
+                SetProperty(ProducerConfig.COMPRESSION_TYPE_CONFIG, System.Enum.GetName(typeof(ProducerConfig.CompressionType), value).ToLowerInvariant());
+            }
+        }
+
+        public ProducerConfigBuilder WithCompressionType(ProducerConfig.CompressionType compressionType)
+        {
+            var clone = Clone();
+            clone.CompressionType = compressionType;
+            return clone;
+        }
+
+        public int MaxInFlightRequestPerConnection { get { return GetProperty<int>(ProducerConfig.MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION); } set { SetProperty(ProducerConfig.MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION, value); } }
+
+        public ProducerConfigBuilder WitMaxInFlightRequestPerConnection(int maxInFlightRequestPerConnection)
+        {
+            var clone = Clone();
+            clone.MaxInFlightRequestPerConnection = maxInFlightRequestPerConnection;
+            return clone;
+        }
+
+        public string KeySerializerClass { get { return GetProperty<string>(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG); } set { SetProperty(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, value); } }
+
+        public ProducerConfigBuilder WithKeySerializerClass(string keySerializerClass)
+        {
+            var clone = Clone();
+            clone.KeySerializerClass = keySerializerClass;
+            return clone;
+        }
+
+        public string ValueSerializerClass { get { return GetProperty<string>(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG); } set { SetProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, value); } }
+
+        public ProducerConfigBuilder WithValueSerializerClass(string valueSerializerClass)
+        {
+            var clone = Clone();
+            clone.ValueSerializerClass = valueSerializerClass;
+            return clone;
+        }
+
+        public dynamic PartitionerClass { get => GetProperty<dynamic>(ProducerConfig.PARTITIONER_CLASS_CONFIG); set { SetProperty(ProducerConfig.PARTITIONER_CLASS_CONFIG, value); } }
+
+        public ProducerConfigBuilder WithPartitionerClass(dynamic partitionerClass)
+        {
+            var clone = Clone();
+            clone.PartitionerClass = partitionerClass;
+            return clone;
+        }
+
+        [System.Obsolete("To be checked")]
+        public List InterceptorClasses { get { return GetProperty<List>(ProducerConfig.INTERCEPTOR_CLASSES_CONFIG); } set { SetProperty(ProducerConfig.INTERCEPTOR_CLASSES_CONFIG, value); } }
+
+        [System.Obsolete("To be checked")]
+        public ProducerConfigBuilder WithInterceptorClasses(List interceptorClasses)
+        {
+            var clone = Clone();
+            clone.InterceptorClasses = interceptorClasses;
+            return clone;
+        }
+
+        public bool EnableIdempotence { get { return GetProperty<bool>(ProducerConfig.ENABLE_IDEMPOTENCE_CONFIG); } set { SetProperty(ProducerConfig.ENABLE_IDEMPOTENCE_CONFIG, value); } }
+
+        public ProducerConfigBuilder WithEnableIdempotence(bool enableIdempotence)
+        {
+            var clone = Clone();
+            clone.EnableIdempotence = enableIdempotence;
+            return clone;
+        }
+
+        public int TransactionTimeout { get { return GetProperty<int>(ProducerConfig.TRANSACTION_TIMEOUT_CONFIG); } set { SetProperty(ProducerConfig.TRANSACTION_TIMEOUT_CONFIG, value); } }
+
+        public ProducerConfigBuilder WitTransactionTimeout(int transactionTimeout)
+        {
+            var clone = Clone();
+            clone.TransactionTimeout = transactionTimeout;
+            return clone;
+        }
+
+        public string TransactionalId { get { return GetProperty<string>(ProducerConfig.TRANSACTIONAL_ID_CONFIG); } set { SetProperty(ProducerConfig.TRANSACTIONAL_ID_CONFIG, value); } }
+
+        public ProducerConfigBuilder WitTransactionalId(string transactionalId)
+        {
+            var clone = Clone();
+            clone.TransactionalId = transactionalId;
+            return clone;
+        }
+
+        public string SecurityProviders { get { return GetProperty<string>(ProducerConfig.SECURITY_PROVIDERS_CONFIG); } set { SetProperty(ProducerConfig.SECURITY_PROVIDERS_CONFIG, value); } }
+
+        public ProducerConfigBuilder WithSecurityProviders(string securityProviders)
+        {
+            var clone = Clone();
+            clone.SecurityProviders = securityProviders;
+            return clone;
         }
     }
 }
