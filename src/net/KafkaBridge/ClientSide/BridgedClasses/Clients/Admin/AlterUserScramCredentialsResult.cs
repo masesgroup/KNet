@@ -26,7 +26,7 @@ namespace MASES.KafkaBridge.Clients.Admin
     {
         public override string ClassName => "org.apache.kafka.clients.admin.AlterUserScramCredentialsResult";
 
-        public Map<string, KafkaFuture<Void>> values => IExecute<Map<string, KafkaFuture<Void>>>("values");
+        public Map<string, KafkaFuture<Void>> Values => IExecute<Map<string, KafkaFuture<Void>>>("values");
 
         public KafkaFuture<Void> All => IExecute<KafkaFuture<Void>>("all");
     }

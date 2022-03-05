@@ -25,7 +25,7 @@ namespace MASES.KafkaBridge.Clients.Admin
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DescribeConsumerGroupsResult";
 
-        public Map<string, KafkaFuture<ConsumerGroupDescription>> describedGroups => IExecute<Map<string, KafkaFuture<ConsumerGroupDescription>>>("describedGroups");
+        public Map<string, KafkaFuture<ConsumerGroupDescription>> DescribedGroups => IExecute<Map<string, KafkaFuture<ConsumerGroupDescription>>>("describedGroups");
 
         public KafkaFuture<Map<string, ConsumerGroupDescription>> All => IExecute<KafkaFuture<Map<string, ConsumerGroupDescription>>>("all");
     }

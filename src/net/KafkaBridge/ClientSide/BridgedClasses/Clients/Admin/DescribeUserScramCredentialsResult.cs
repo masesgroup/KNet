@@ -29,9 +29,9 @@ namespace MASES.KafkaBridge.Clients.Admin
 
         public KafkaFuture<List<string>> Users => IExecute<KafkaFuture<List<string>>>("users");
 
-        public KafkaFuture<UserScramCredentialsDescription> description(string userName)
+        public KafkaFuture<UserScramCredentialsDescription> Description(string userName)
         {
-            return IExecute< KafkaFuture<UserScramCredentialsDescription>>("description");
+            return IExecute< KafkaFuture<UserScramCredentialsDescription>>("description", userName);
         }
     }
 }

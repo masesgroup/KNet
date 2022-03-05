@@ -26,6 +26,6 @@ namespace MASES.KafkaBridge.Clients.Admin
     {
         public override string ClassName => "org.apache.kafka.clients.admin.ListConsumerGroupOffsetsResult";
 
-        public KafkaFuture<Map<TopicPartition, OffsetAndMetadata>> partitionsToOffsetAndMetadata => IExecute<KafkaFuture<Map<TopicPartition, OffsetAndMetadata>>>("partitionsToOffsetAndMetadata");
+        public KafkaFuture<Map<TopicPartition, OffsetAndMetadata>> PartitionsToOffsetAndMetadata => IExecute<KafkaFuture<Map<TopicPartition, OffsetAndMetadata>>>("partitionsToOffsetAndMetadata");
     }
 }

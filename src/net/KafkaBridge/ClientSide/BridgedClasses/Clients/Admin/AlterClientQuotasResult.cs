@@ -27,7 +27,7 @@ namespace MASES.KafkaBridge.Clients.Admin
     {
         public override string ClassName => "org.apache.kafka.clients.admin.AlterClientQuotasResult";
 
-        public Map<ClientQuotaEntity, KafkaFuture<Void>> values => IExecute<Map<ClientQuotaEntity, KafkaFuture<Void>>>("values");
+        public Map<ClientQuotaEntity, KafkaFuture<Void>> Values => IExecute<Map<ClientQuotaEntity, KafkaFuture<Void>>>("values");
 
         public KafkaFuture<Void> All => IExecute<KafkaFuture<Void>>("all");
     }

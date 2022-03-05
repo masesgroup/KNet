@@ -26,10 +26,10 @@ namespace MASES.KafkaBridge.Clients.Admin
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DescribeLogDirsResult";
 
-        public Map<int, KafkaFuture<Map<string, DescribeLogDirsResponse.LogDirInfo>>> values => IExecute<Map<int, KafkaFuture<Map<string, DescribeLogDirsResponse.LogDirInfo>>>>("descriptions");
+        public Map<int, KafkaFuture<Map<string, DescribeLogDirsResponse.LogDirInfo>>> Values => IExecute<Map<int, KafkaFuture<Map<string, DescribeLogDirsResponse.LogDirInfo>>>>("descriptions");
 
-        public Map<int, KafkaFuture<Map<string, LogDirDescription>>> descriptions => IExecute<Map<int, KafkaFuture<Map<string, LogDirDescription>>>>("descriptions");
+        public Map<int, KafkaFuture<Map<string, LogDirDescription>>> Descriptions => IExecute<Map<int, KafkaFuture<Map<string, LogDirDescription>>>>("descriptions");
 
-        public KafkaFuture<Map<int, Map<string, LogDirDescription>>> allDescriptions => IExecute<KafkaFuture<Map<int, Map<string, LogDirDescription>>>>("allDescriptions");
+        public KafkaFuture<Map<int, Map<string, LogDirDescription>>> AllDescriptions => IExecute<KafkaFuture<Map<int, Map<string, LogDirDescription>>>>("allDescriptions");
     }
 }
