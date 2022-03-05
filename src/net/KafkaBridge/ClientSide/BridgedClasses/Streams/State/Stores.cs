@@ -25,24 +25,24 @@ namespace MASES.KafkaBridge.Streams.State
     {
         public override string ClassName => "org.apache.kafka.streams.state.Stores";
 
-        public static WindowBytesStoreSupplier PersistentKeyValueStore(string name)
+        public static KeyValueBytesStoreSupplier PersistentKeyValueStore(string name)
         {
-            return SExecute<WindowBytesStoreSupplier>("persistentKeyValueStore", name);
+            return SExecute<KeyValueBytesStoreSupplier>("persistentKeyValueStore", name);
         }
 
-        public static WindowBytesStoreSupplier PersistentTimestampedKeyValueStore(string name)
+        public static KeyValueBytesStoreSupplier PersistentTimestampedKeyValueStore(string name)
         {
-            return SExecute<WindowBytesStoreSupplier>("persistentTimestampedKeyValueStore", name);
+            return SExecute<KeyValueBytesStoreSupplier>("persistentTimestampedKeyValueStore", name);
         }
 
-        public static WindowBytesStoreSupplier InMemoryKeyValueStore(string name)
+        public static KeyValueBytesStoreSupplier InMemoryKeyValueStore(string name)
         {
-            return SExecute<WindowBytesStoreSupplier>("inMemoryKeyValueStore", name);
+            return SExecute<KeyValueBytesStoreSupplier>("inMemoryKeyValueStore", name);
         }
 
-        public static WindowBytesStoreSupplier LruMap(string name, int maxCacheSize)
+        public static KeyValueBytesStoreSupplier LruMap(string name, int maxCacheSize)
         {
-            return SExecute<WindowBytesStoreSupplier>("lruMap", name, maxCacheSize);
+            return SExecute<KeyValueBytesStoreSupplier>("lruMap", name, maxCacheSize);
         }
 
 

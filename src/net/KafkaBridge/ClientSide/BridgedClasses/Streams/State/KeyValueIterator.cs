@@ -21,7 +21,7 @@ using MASES.KafkaBridge.Java.Util;
 
 namespace MASES.KafkaBridge.Streams.State
 {
-    public class KeyValueIterator<K, V> : JVMBridgeBaseEnumerable<KeyValueIterator<K, V>>
+    public class KeyValueIterator<K, V> : JVMBridgeBaseEnumerable<KeyValueIterator<K, V>, KeyValue<K, V>>
     {
         public override string ClassName => "org.apache.kafka.streams.state.KeyValueIterator";
 
