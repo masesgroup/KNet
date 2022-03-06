@@ -16,34 +16,20 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KafkaBridge.Java.Time;
-
-namespace MASES.KafkaBridge.Streams.KStream
+namespace MASES.KafkaBridge.Streams.KStream.Internals
 {
-    public class Window : JCOBridge.C2JBridge.JVMBridgeBase<Window>
+    public class TimeWindow : Window    
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.Window";
+        public override string ClassName => "org.apache.kafka.streams.kstream.internals.TimeWindow";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
-        public Window() { }
+        public TimeWindow() { }
 
-        public Window(long startMs, long endMs)
+        public TimeWindow(long startMs, long endMs)
             : base(startMs, endMs)
         {
         }
 
-        public virtual long Start => IExecute<long>("start");
-
-        public virtual long End => IExecute<long>("end");
-
-        public virtual Instant StartTime => IExecute<Instant>("startTime");
-
-        public virtual Instant EndTime => IExecute<Instant>("endTime");
-
-        public bool Overlap(Window other)
-        {
-            return IExecute<bool>("overlap", other);
-        }
     }
 }

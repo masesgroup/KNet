@@ -16,34 +16,23 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KafkaBridge.Java.Time;
+using MASES.JCOBridge.C2JBridge;
 
 namespace MASES.KafkaBridge.Streams.KStream
 {
-    public class Window : JCOBridge.C2JBridge.JVMBridgeBase<Window>
+    public class ForeachProcessor<K, V> : JVMBridgeBase<ForeachProcessor<K, V>>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.Window";
+        public override string ClassName => "org.apache.kafka.streams.kstream.ForeachProcessor";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
-        public Window() { }
-
-        public Window(long startMs, long endMs)
-            : base(startMs, endMs)
+        public ForeachProcessor()
         {
         }
 
-        public virtual long Start => IExecute<long>("start");
-
-        public virtual long End => IExecute<long>("end");
-
-        public virtual Instant StartTime => IExecute<Instant>("startTime");
-
-        public virtual Instant EndTime => IExecute<Instant>("endTime");
-
-        public bool Overlap(Window other)
+        public ForeachProcessor(ForeachAction<K, V> action)
+            : base(action)
         {
-            return IExecute<bool>("overlap", other);
         }
     }
 }
