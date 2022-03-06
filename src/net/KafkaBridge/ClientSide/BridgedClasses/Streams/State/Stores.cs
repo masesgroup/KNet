@@ -82,37 +82,37 @@ namespace MASES.KafkaBridge.Streams.State
         }
 
 
-        public static StoreBuilder<KeyValueStore<K, V>> KeyValueStoreBuilder<K, V>(WindowBytesStoreSupplier supplier,
-                                                                                          Serde<K> keySerde,
-                                                                                          Serde<V> valueSerde)
+        public static StoreBuilder<KeyValueStore<K, V>> KeyValueStoreBuilder<K, V>(KeyValueBytesStoreSupplier supplier,
+                                                                                   Serde<K> keySerde,
+                                                                                   Serde<V> valueSerde)
         {
             return SExecute<StoreBuilder<KeyValueStore<K, V>>>("keyValueStoreBuilder", supplier, keySerde, valueSerde);
         }
 
-        public static StoreBuilder<TimestampedKeyValueStore<K, V>> TimestampedKeyValueStoreBuilder<K, V>(WindowBytesStoreSupplier supplier,
-                                                                                                                Serde<K> keySerde,
-                                                                                                                Serde<V> valueSerde)
+        public static StoreBuilder<TimestampedKeyValueStore<K, V>> TimestampedKeyValueStoreBuilder<K, V>(KeyValueBytesStoreSupplier supplier,
+                                                                                                         Serde<K> keySerde,
+                                                                                                         Serde<V> valueSerde)
         {
             return SExecute<StoreBuilder<TimestampedKeyValueStore<K, V>>>("timestampedKeyValueStoreBuilder", supplier, keySerde, valueSerde);
         }
 
         public static StoreBuilder<WindowStore<K, V>> WindowStoreBuilder<K, V>(WindowBytesStoreSupplier supplier,
-                                                                                      Serde<K> keySerde,
-                                                                                      Serde<V> valueSerde)
+                                                                               Serde<K> keySerde,
+                                                                               Serde<V> valueSerde)
         {
             return SExecute<StoreBuilder<WindowStore<K, V>>>("windowStoreBuilder", supplier, keySerde, valueSerde);
         }
 
         public static StoreBuilder<TimestampedWindowStore<K, V>> TimestampedWindowStoreBuilder<K, V>(WindowBytesStoreSupplier supplier,
-                                                                                                            Serde<K> keySerde,
-                                                                                                            Serde<V> valueSerde)
+                                                                                                     Serde<K> keySerde,
+                                                                                                     Serde<V> valueSerde)
         {
             return SExecute<StoreBuilder<TimestampedWindowStore<K, V>>>("timestampedWindowStoreBuilder", supplier, keySerde, valueSerde);
         }
 
         public static StoreBuilder<SessionStore<K, V>> SessionStoreBuilder<K, V>(SessionBytesStoreSupplier supplier,
-                                                                                         Serde<K> keySerde,
-                                                                                         Serde<V> valueSerde)
+                                                                                 Serde<K> keySerde,
+                                                                                 Serde<V> valueSerde)
         {
             return SExecute<StoreBuilder<SessionStore<K, V>>>("sessionStoreBuilder", supplier, keySerde, valueSerde);
         }
