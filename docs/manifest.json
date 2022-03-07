@@ -213,7 +213,19 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Clients.Admin.AdminClientConfig.html",
-          "hash": "8qmgTAmrkM5cZOqGiUUrM2UJf8SEpaN2LW5vnixmpTI="
+          "hash": "CxFPojzhdXTuDDDYPzFi+3ytLDLf3r6XvSrhaa5yY8o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Clients.Admin.AdminClientConfigBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Clients.Admin.AdminClientConfigBuilder.html",
+          "hash": "Tsjkbg2Jm+kinESUUK14r75Z/ZIRWCJaHL14F99RCWI="
         }
       },
       "is_incremental": false,
@@ -237,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Clients.Admin.AlterClientQuotasResult.html",
-          "hash": "PciZHSAFnuCXLL4Spbcvj/f4wwgB0pWT3GFFTq7kWT4="
+          "hash": "CCvTIdPgQLrTkGoP4l2IwT51wnR4p5LZNXK6V6egyl4="
         }
       },
       "is_incremental": false,
@@ -369,7 +381,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Clients.Admin.AlterUserScramCredentialsResult.html",
-          "hash": "TXMUewT2IiUcPZGyd8wYiRB71J1y+d8rB5DGLDztQ24="
+          "hash": "Kn9Pu6nXXSykpUg3K5XcugAUBz8DbchFvfkZ/3MgODI="
         }
       },
       "is_incremental": false,
@@ -825,7 +837,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Clients.Admin.DescribeConsumerGroupsResult.html",
-          "hash": "Nvt2GaKu44WytK+JY+8eg+YGFsuZbMsW7xfPvkC8QDI="
+          "hash": "cn5X99MVNtLIjCHqEbT+Q4L+5/5WIWEydv2oUi1n3hk="
         }
       },
       "is_incremental": false,
@@ -897,7 +909,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Clients.Admin.DescribeLogDirsResult.html",
-          "hash": "10oIkv+92rS49xjfNGwXJPaNp+xS03tlpot79sT0qFU="
+          "hash": "1ouaA/RRiWF0WdQphysIf3zrHr3OJBM4YqFPKHvl+QI="
         }
       },
       "is_incremental": false,
@@ -1041,7 +1053,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Clients.Admin.DescribeUserScramCredentialsResult.html",
-          "hash": "PC5qP6Ch3Iz1b6Jo2j7XgOCiuH8oYD3zApzuJ5ca7rM="
+          "hash": "M651595GhwyjlyzR2bGvESJzdXNVETn/YW9CytxLwZ4="
         }
       },
       "is_incremental": false,
@@ -1173,7 +1185,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Clients.Admin.ListConsumerGroupOffsetsResult.html",
-          "hash": "CBwvApAigBQdUj1Qzu70WEHoAuwlMqJoI5PHzadMCnc="
+          "hash": "EKepHyisKuuUJv03WjdN3r8u+TsYHhNN5mMQPTpIRpk="
         }
       },
       "is_incremental": false,
@@ -1389,7 +1401,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Clients.Admin.NewTopic.html",
-          "hash": "BmgKz3Q+FPw56QHZNOhW+PpzIFC4wwLoLyv1oSRNxOI="
+          "hash": "zYNcSWLCJMiKAfgXhhHgXaRdBTo72lW72Sjgx+LlBaY="
         }
       },
       "is_incremental": false,
@@ -1677,7 +1689,31 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Clients.Admin.html",
-          "hash": "Z2x+x3atXdxYM4AnOR3NU0JPWTTdBAIZNxunZQSXyVY="
+          "hash": "90e6jp14Vy5j/HlS0vOTzw3S9ABKXKHwaGGtB1w8lk4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Clients.CommonClientConfigs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Clients.CommonClientConfigs.html",
+          "hash": "JKmzRx8UCw/M9wK0xDiHzI/uh4YEEyLqi7Hx+rQZ1Y8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Clients.CommonClientConfigsBuilder-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Clients.CommonClientConfigsBuilder-1.html",
+          "hash": "XQ+u4mW2anCVFvzt94gf1KLhaJpZk9Hs7U1E592AcGY="
         }
       },
       "is_incremental": false,
@@ -1697,11 +1733,35 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Clients.Consumer.ConsumerConfig.AutoOffsetReset.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Clients.Consumer.ConsumerConfig.AutoOffsetReset.html",
+          "hash": "lcuCsJm+UibrDi0/tY341aC7y5QyHJY1/xNmBysnVpw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MASES.KafkaBridge.Clients.Consumer.ConsumerConfig.yml",
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Clients.Consumer.ConsumerConfig.html",
-          "hash": "/THqf1P48LXpZFgOXyjgSO2lFjyqlUwEEdVApCblISA="
+          "hash": "92ls8Nt23d7uiyVkNS69F2KDZfQm+xpt9/E8wr43Dhs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Clients.Consumer.ConsumerConfigBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Clients.Consumer.ConsumerConfigBuilder.html",
+          "hash": "7+8qSeagSTZt+/ZlE5n8o8c6Vem8eZ97a7O200K163E="
         }
       },
       "is_incremental": false,
@@ -1941,7 +2001,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Clients.Consumer.html",
-          "hash": "mYcDPnNTpdrMMWA8v5/BssSZ6f5wCc3x6AL5Tqh2Wtw="
+          "hash": "8GKN/sxQl8Ja/nP2Ek9N91u6kLUthNEAUNP6NsWeFCg="
         }
       },
       "is_incremental": false,
@@ -2021,11 +2081,47 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Clients.Producer.ProducerConfig.Acks.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Clients.Producer.ProducerConfig.Acks.html",
+          "hash": "2CKBrbwvAOPValYosztXFwE/YiTllBojVydVjTwJidk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Clients.Producer.ProducerConfig.CompressionType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Clients.Producer.ProducerConfig.CompressionType.html",
+          "hash": "BD8A0wFvHsP7NHt0jBWUXP+YU+xXiKZb2S3M9z/p5wk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MASES.KafkaBridge.Clients.Producer.ProducerConfig.yml",
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Clients.Producer.ProducerConfig.html",
-          "hash": "916y+cdDJiOQL786cXTUAbwkwdTKQUrtmwQClRnBG+U="
+          "hash": "I26seEg9MBnOMw8onNT5oS2SVYzziieMRsyZEDEQWNA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Clients.Producer.ProducerConfigBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Clients.Producer.ProducerConfigBuilder.html",
+          "hash": "JUyh7aGdu9gWx4KtdDSd9IDbpjzyDxemg12AaSG+res="
         }
       },
       "is_incremental": false,
@@ -2073,7 +2169,19 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Clients.Producer.html",
-          "hash": "EtfeBXVtN/AIG2RDHslvTmXR+ooTCiA9sv3xi17n6xg="
+          "hash": "0X3TqQ52aBm5aSFcRaDGoMiR9d/+xZyTsYDOK3+wo14="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Clients.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Clients.html",
+          "hash": "VoZplJZxMbQ7u3W908FYGEnnyBe9BeIV7/AlzdJMbNc="
         }
       },
       "is_incremental": false,
@@ -2129,6 +2237,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Common.Config.AbstractConfig-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Common.Config.AbstractConfig-1.html",
+          "hash": "Qg/5iXDrgy8lCmzifoWN+FyRfgZsZaGOe0XASOrCXTI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MASES.KafkaBridge.Common.Config.ConfigResource.yml",
       "output": {
         ".html": {
@@ -2141,11 +2261,59 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Common.Config.TopicConfig.CleanupPolicy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Common.Config.TopicConfig.CleanupPolicy.html",
+          "hash": "6nNgtW0/iYbE+yaxNANlMd14VX26N3UWH8uPMP0lu+Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Common.Config.TopicConfig.CompressionType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Common.Config.TopicConfig.CompressionType.html",
+          "hash": "HBJjoWz5B24rdu+IKzOpHX8HR2Zes8DMStBAEU9yBFU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Common.Config.TopicConfig.MessageTimestampType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Common.Config.TopicConfig.MessageTimestampType.html",
+          "hash": "LlwT/BEP8iPbFEiGQCJ5wxR062o0KY+CA9ilgkCNQKY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MASES.KafkaBridge.Common.Config.TopicConfig.yml",
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Common.Config.TopicConfig.html",
-          "hash": "17DKV1qO5f8moOsdCMKYecigYOzbitDq8UzGLGqgG8Y="
+          "hash": "fhWSB2qeJyY+/CtmSp3EOLLVnNGDQ1jVg/fpCzc6yAc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Common.Config.TopicConfigBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Common.Config.TopicConfigBuilder.html",
+          "hash": "vq80I3st29rTo0FqXRG/jwt2MOyk01yGjrkV8xyZuyw="
         }
       },
       "is_incremental": false,
@@ -2157,7 +2325,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Common.Config.html",
-          "hash": "eh56WfeVi3sT88ZSTCE9fPbF3svPwJEweHfgVnF6TcE="
+          "hash": "54uyzDdqqfk6qzakmhGQLysihkbMrlKiAw9V8w7qNEc="
         }
       },
       "is_incremental": false,
@@ -4773,7 +4941,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Connect.Data.Schema.html",
-          "hash": "NkTex7wXVlMcrIXgiQ6X+EzWsF0jM356qY5AbKE5lYI="
+          "hash": "++OUv4ppbNrKzQVuw/8WCY5lS1XjLA8A2k5LxsIlkY4="
         }
       },
       "is_incremental": false,
@@ -5009,6 +5177,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.GenericConfigBuilder-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.GenericConfigBuilder-1.html",
+          "hash": "pWa5u6UxETh6Vf7aOTiKNoEC/XwawpHa7eJ5Rn9oB78="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MASES.KafkaBridge.Java.Io.File.yml",
       "output": {
         ".html": {
@@ -5026,6 +5206,42 @@
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Java.Io.html",
           "hash": "xO6eGlZXbY8mSR4jrKTJhZnClHTaqied2s7ZL18coPk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Java.Lang.Annotation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Java.Lang.Annotation.html",
+          "hash": "zuoFBr7JW6ikfLRCmp6u9WF/0jdw09CuKxlaTxwQ62Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Java.Lang.Class-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Java.Lang.Class-1.html",
+          "hash": "sODT2V8PURx8+vvH931Jer9hIvUVRNhywpAzAEwE4us="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Java.Lang.Class.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Java.Lang.Class.html",
+          "hash": "f86tTpIIt9HzODl4HBCIumy8ZLU0p8vDZcZ9+1G9DCw="
         }
       },
       "is_incremental": false,
@@ -5073,7 +5289,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Java.Lang.UUID.html",
-          "hash": "Ik9HSydzhpJeAyDkJuilerdtU0ZHjUMcmeYoTFFsqjc="
+          "hash": "3gKQv7vcYQ0+L9+eXfYtFhtvceBek+ead/qlEMX2SWw="
         }
       },
       "is_incremental": false,
@@ -5097,7 +5313,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Java.Lang.html",
-          "hash": "bwJUmRKFI3w3Wb9HaJWIkmyeoUJAm8X2YU7fDFfO+XQ="
+          "hash": "Qoqw++HrZYU0iwfAQURX4qEGXpnhkyfSLd8TgQTXcXs="
         }
       },
       "is_incremental": false,
@@ -5182,6 +5398,18 @@
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Java.Time.html",
           "hash": "gpEmnPGTON9PmVUp8KY11aWIr2JY374PICJ01wSqokw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Java.Util.AbstractMap-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Java.Util.AbstractMap-2.html",
+          "hash": "r8PP4Oaxzb20RzAhoE87K+QOQ+TMWkVqhJrQE1N2Xes="
         }
       },
       "is_incremental": false,
@@ -5285,6 +5513,54 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Java.Util.Dictionary-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Java.Util.Dictionary-2.html",
+          "hash": "thB6bn2U1STTXhzf4+s90HwNfSU2kYFYu0lPyFrl8DI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Java.Util.HashMap-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Java.Util.HashMap-2.html",
+          "hash": "ZHyEcZ+5Yq1V7DObdlk0XnCTlltnWceNk2Bf7pAgoGo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Java.Util.Hashtable-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Java.Util.Hashtable-2.html",
+          "hash": "fAdY9uO0opQrDCXNdnNT7UBaJeIZczH0zveANWhjorI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Java.Util.Iterator-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Java.Util.Iterator-1.html",
+          "hash": "5qRy/biZ5SsHJlbfbQNMMczyK2R4FX8TY/vb0MGCXaY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MASES.KafkaBridge.Java.Util.List-1.yml",
       "output": {
         ".html": {
@@ -5313,7 +5589,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Java.Util.Map-2.html",
-          "hash": "+bn0D7lKg3BMeuPRqq/xn8cUEMMsyQtOE58tgiXzeVY="
+          "hash": "AB3JLpjGiF66dk+LZ/duYXPT+iFzj4YfU9W/Al4Z12c="
         }
       },
       "is_incremental": false,
@@ -5325,7 +5601,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Java.Util.Map.html",
-          "hash": "Sq3UqK0VOyJ/KkYESmKuS//6SsvYgYvIcDZwCBc7vec="
+          "hash": "kPV1yTnx1MykYpeLNI33Nwuj8PCWpfSHUli2maLJp9A="
         }
       },
       "is_incremental": false,
@@ -5429,11 +5705,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Java.Util.TreeMap-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Java.Util.TreeMap-2.html",
+          "hash": "Cy40NJFLR0Fk2crVsLq9CIPYhXJ95HOwEUpEIsy6MMc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MASES.KafkaBridge.Java.Util.yml",
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Java.Util.html",
-          "hash": "RY/gr43lkxhrEQablhv4L1z0Aay+WETSCGnRipWAwxY="
+          "hash": "S+r6bvn9xRu/YJlSimXHdP/nuGlQaBge6VoAm/K8alU="
         }
       },
       "is_incremental": false,
@@ -5885,6 +6173,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Streams.KStream.ForeachProcessor-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Streams.KStream.ForeachProcessor-2.html",
+          "hash": "ysCbTQFSrdNE2f0XX7R3NAfaGenkyhHrJfmqNXfbn1k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MASES.KafkaBridge.Streams.KStream.GlobalKTable-2.yml",
       "output": {
         ".html": {
@@ -6329,6 +6629,42 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Streams.KStream.Internals.TimeWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Streams.KStream.Internals.TimeWindow.html",
+          "hash": "y+i3IQQ9HUwYPBgefKBzxNptk8d91Hw+I209AsJuHNA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Streams.KStream.Internals.UnlimitedWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Streams.KStream.Internals.UnlimitedWindow.html",
+          "hash": "/Txg1ywPjSDwFHZK+QGaj7/zry2mNLMEQaNrbjUJGJ8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Streams.KStream.Internals.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Streams.KStream.Internals.html",
+          "hash": "lmEHAsIlPRy6sQufNrAKTtS16ktM83N/pvd192zEuUs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MASES.KafkaBridge.Streams.KStream.JoinWindows.yml",
       "output": {
         ".html": {
@@ -6533,11 +6869,35 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Streams.KStream.SessionWindowedDeserializer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Streams.KStream.SessionWindowedDeserializer-1.html",
+          "hash": "2PhYPaTfZOsTh9D3lsuvnExuFlsRXAC4IFqmo5JJyBk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MASES.KafkaBridge.Streams.KStream.SessionWindowedKStream-2.yml",
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Streams.KStream.SessionWindowedKStream-2.html",
           "hash": "DlCVtMpdhmUF3wFSwUN2sYWb7kBYoU9HBt3Qf6dUHII="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Streams.KStream.SessionWindowedSerializer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Streams.KStream.SessionWindowedSerializer-1.html",
+          "hash": "U5pdmNADQ3kWnxTrbmM8nPa/AOaAhsP0ZZtrgZKseAQ="
         }
       },
       "is_incremental": false,
@@ -6605,6 +6965,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Streams.KStream.TableJoined-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Streams.KStream.TableJoined-2.html",
+          "hash": "e7POhfpDUKPF4hM2cxCIEZHcjrO1TFEqhfwWttamTSQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MASES.KafkaBridge.Streams.KStream.TimeWindowedCogroupedKStream-2.yml",
       "output": {
         ".html": {
@@ -6617,11 +6989,47 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Streams.KStream.TimeWindowedDeserializer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Streams.KStream.TimeWindowedDeserializer-1.html",
+          "hash": "gX3PJpin0HExVx72ErX9fp5gFgMLTaDfE7NhpE9loGE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MASES.KafkaBridge.Streams.KStream.TimeWindowedKStream-2.yml",
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Streams.KStream.TimeWindowedKStream-2.html",
           "hash": "qbytOvvKrQ8eAgPqjXbik9akMwwXCSbp+h3JEHFo1Ds="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Streams.KStream.TimeWindowedSerializer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Streams.KStream.TimeWindowedSerializer-1.html",
+          "hash": "pXLwEH/IJDc5dAiWbFtXVpLYmYuyqaQygdEUcl+JX60="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Streams.KStream.TimeWindows.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Streams.KStream.TimeWindows.html",
+          "hash": "s+KKomVQv6Clg5onWwtPwPwGt8AWeK9MFLuhkJSw/pc="
         }
       },
       "is_incremental": false,
@@ -6646,6 +7054,18 @@
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Streams.KStream.TransformerSupplier-3.html",
           "hash": "6ZbbdRDSUWUO9RI/Zldu7gPOT2Yu2JzN5tJYoCWN9sk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Streams.KStream.UnlimitedWindows.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Streams.KStream.UnlimitedWindows.html",
+          "hash": "kpOCSXKgIkDL+m+6dKE+eDcusjXKQKJweY/ZZgOaBqk="
         }
       },
       "is_incremental": false,
@@ -6753,7 +7173,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Streams.KStream.Window.html",
-          "hash": "TYUMayqLPbvINN0XiTjY11QwddBIQds+jq/c12e6tiQ="
+          "hash": "AYgR6DgD0dO5dZOIzIu5FH9QyuosqCmv2T++dREGQGY="
         }
       },
       "is_incremental": false,
@@ -6765,7 +7185,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Streams.KStream.Windowed-1.html",
-          "hash": "DJ5k0yqBOXDmu+p5L+ecxlNBtgqVjFuQucY2Z/i8Krk="
+          "hash": "mjNtJGz/TN/wUWUSF23olUckFNuVUjtTVI1NCFlgrOU="
         }
       },
       "is_incremental": false,
@@ -6777,7 +7197,19 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Streams.KStream.Windowed.html",
-          "hash": "OLgwH8eRZkDetqz7sxAJbTuUpsNFsHP+kRlwgYdqkYM="
+          "hash": "jkpCERlwl2rf+pMhliTDc8iWio+fV+mAeslJOw2pDn0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Streams.KStream.WindowedSerdes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Streams.KStream.WindowedSerdes.html",
+          "hash": "nmiKjhrwl3Ba08GJFsg4g1c5jKkTARhzbREiiYH/+mg="
         }
       },
       "is_incremental": false,
@@ -6789,7 +7221,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Streams.KStream.Windows-1.html",
-          "hash": "P28Hq3VhqnVchDkMCoe6gwUzXyVIbfFllwD17hOEeBg="
+          "hash": "D1RWXTfp1CkLWjp0k/BiU00837ngrWICJ/H3lBzfdvc="
         }
       },
       "is_incremental": false,
@@ -6801,7 +7233,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Streams.KStream.html",
-          "hash": "Avn8p/zkPnNn7Hv0Z/VtocaxHnmEjyzGGEV6IDO0iqI="
+          "hash": "8vuaV9ii/PvJl0Vj+ZzExRL7dmfEuVJlxH+811H/+nI="
         }
       },
       "is_incremental": false,
@@ -7557,7 +7989,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Streams.State.KeyValueIterator-2.html",
-          "hash": "+rUS8QN3iTuA6FoUEMkQVul8zULEADPCNh+BZehWais="
+          "hash": "+DiWBSYIPyXQZRmAGNIVFODoonE0GW/HVWV4imrDJNw="
         }
       },
       "is_incremental": false,
@@ -7582,6 +8014,30 @@
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Streams.State.QueryableStoreType-1.html",
           "hash": "d4Jv2EFVNquk3ZaiMPHpnzXWQOgkKfY4VTn6dpCciVA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Streams.State.QueryableStoreTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Streams.State.QueryableStoreTypes.html",
+          "hash": "ZFU+lqYKCMRyGRt5uhomJgTOcMtb8B1n5RPIVJIfyVc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Streams.State.ReadOnlyKeyValueStore-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Streams.State.ReadOnlyKeyValueStore-2.html",
+          "hash": "3GWT6JyxSnVIeL36Nyug43LWRaoi6L33RoywoSfWj2U="
         }
       },
       "is_incremental": false,
@@ -7677,7 +8133,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Streams.State.Stores.html",
-          "hash": "MF6MuWzK8hssPArYUqvlnDJAdZOg8/4QXUwGmOklQDc="
+          "hash": "FUgSCBNOpmlQoVlloK2mlxX0AQXEKIk0y39jYvddXI0="
         }
       },
       "is_incremental": false,
@@ -7749,7 +8205,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Streams.State.WindowStoreIterator-1.html",
-          "hash": "feUxNdluN//tnni8OrYjlcA/TKc55mrp+21B4yBgPXQ="
+          "hash": "jkzxlE+k1HTfPM/q1fQnwy+P+jEFht5R5o3AhSrSmOg="
         }
       },
       "is_incremental": false,
@@ -7761,7 +8217,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Streams.State.html",
-          "hash": "Excwfc6aHwbX1sNrGP/QUJOmBrJJZfJlwXf+Mdhae7A="
+          "hash": "Q6GWQch85gvvaMAB/zt4H4h8uYv+jKGSkU9S3TmEKGI="
         }
       },
       "is_incremental": false,
@@ -7797,7 +8253,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Streams.StoreQueryParameters-1.html",
-          "hash": "X7dbTDnFbvrJAWiz6BM7U+bgQKkulFwbQnAB9qZGvN0="
+          "hash": "JFhTBjhyaFHICWQ2DnqWqhscIdNRwlhXuRiPjoYb+eE="
         }
       },
       "is_incremental": false,
@@ -7821,7 +8277,19 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Streams.StreamsConfig.html",
-          "hash": "3jg0MUf/X+xV+nb2hDNEHBHieP+ZoLMHmVrgCdkFh9U="
+          "hash": "M3darIwcFRqQF4sTc9KsyGl6UOX/zL+kE1IKPtLVvDM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KafkaBridge.Streams.StreamsConfigBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KafkaBridge.Streams.StreamsConfigBuilder.html",
+          "hash": "xxASjtaI7No1sR25JFBN7tkany6m09BWO0+G7LhfgbY="
         }
       },
       "is_incremental": false,
@@ -7989,7 +8457,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.Streams.html",
-          "hash": "ixVeA7zphcqZwR/tpR/lvjjeUjTMpT7f+ONPGLUWRkg="
+          "hash": "qRsWzJwTH7BZ6eraFIn0Sa5571CSsamIFJU3ZjhyTG4="
         }
       },
       "is_incremental": false,
@@ -8217,7 +8685,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KafkaBridge.html",
-          "hash": "ZKnTXogE3z9r5RgPA3KiumTPmSIGtdZCLSCbyqTG43g="
+          "hash": "RZ46pObuekKqo+UzuKHNi3xwGDiXYO112PU8ynlupFE="
         }
       },
       "is_incremental": false,
@@ -8241,7 +8709,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "wP0PJ0P0R80yYWvQ26p6lhcN6CcKEpnc004oYHydfSk="
+          "hash": "7YNcZ57p3m/D0gVIlWg12Apq/AOekkkDG2H0ZT6JqEk="
         }
       },
       "is_incremental": false,
@@ -8405,7 +8873,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 685,
+          "total_file_count": 724,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

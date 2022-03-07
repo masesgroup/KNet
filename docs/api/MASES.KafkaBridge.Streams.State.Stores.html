@@ -306,7 +306,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static WindowBytesStoreSupplier InMemoryKeyValueStore(string name)</code></pre>
+    <pre><code class="lang-csharp hljs">public static KeyValueBytesStoreSupplier InMemoryKeyValueStore(string name)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -335,7 +335,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MASES.KafkaBridge.Streams.State.WindowBytesStoreSupplier.html">WindowBytesStoreSupplier</a></td>
+        <td><a class="xref" href="MASES.KafkaBridge.Streams.State.KeyValueBytesStoreSupplier.html">KeyValueBytesStoreSupplier</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -456,18 +456,18 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_State_Stores_KeyValueStoreBuilder__2_MASES_KafkaBridge_Streams_State_WindowBytesStoreSupplier_MASES_KafkaBridge_Common_Serialization_Serde___0__MASES_KafkaBridge_Common_Serialization_Serde___1__.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.State.Stores.KeyValueStoreBuilder%60%602(MASES.KafkaBridge.Streams.State.WindowBytesStoreSupplier%2CMASES.KafkaBridge.Common.Serialization.Serde%7B%60%600%7D%2CMASES.KafkaBridge.Common.Serialization.Serde%7B%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_State_Stores_KeyValueStoreBuilder__2_MASES_KafkaBridge_Streams_State_KeyValueBytesStoreSupplier_MASES_KafkaBridge_Common_Serialization_Serde___0__MASES_KafkaBridge_Common_Serialization_Serde___1__.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.State.Stores.KeyValueStoreBuilder%60%602(MASES.KafkaBridge.Streams.State.KeyValueBytesStoreSupplier%2CMASES.KafkaBridge.Common.Serialization.Serde%7B%60%600%7D%2CMASES.KafkaBridge.Common.Serialization.Serde%7B%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/State/Stores.cs/#L85">View Source</a>
   </span>
   <a id="MASES_KafkaBridge_Streams_State_Stores_KeyValueStoreBuilder_" data-uid="MASES.KafkaBridge.Streams.State.Stores.KeyValueStoreBuilder*"></a>
-  <h4 id="MASES_KafkaBridge_Streams_State_Stores_KeyValueStoreBuilder__2_MASES_KafkaBridge_Streams_State_WindowBytesStoreSupplier_MASES_KafkaBridge_Common_Serialization_Serde___0__MASES_KafkaBridge_Common_Serialization_Serde___1__" data-uid="MASES.KafkaBridge.Streams.State.Stores.KeyValueStoreBuilder``2(MASES.KafkaBridge.Streams.State.WindowBytesStoreSupplier,MASES.KafkaBridge.Common.Serialization.Serde{``0},MASES.KafkaBridge.Common.Serialization.Serde{``1})">KeyValueStoreBuilder&lt;K, V&gt;(WindowBytesStoreSupplier, Serde&lt;K&gt;, Serde&lt;V&gt;)</h4>
+  <h4 id="MASES_KafkaBridge_Streams_State_Stores_KeyValueStoreBuilder__2_MASES_KafkaBridge_Streams_State_KeyValueBytesStoreSupplier_MASES_KafkaBridge_Common_Serialization_Serde___0__MASES_KafkaBridge_Common_Serialization_Serde___1__" data-uid="MASES.KafkaBridge.Streams.State.Stores.KeyValueStoreBuilder``2(MASES.KafkaBridge.Streams.State.KeyValueBytesStoreSupplier,MASES.KafkaBridge.Common.Serialization.Serde{``0},MASES.KafkaBridge.Common.Serialization.Serde{``1})">KeyValueStoreBuilder&lt;K, V&gt;(KeyValueBytesStoreSupplier, Serde&lt;K&gt;, Serde&lt;V&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static StoreBuilder&lt;KeyValueStore&lt;K, V&gt;&gt; KeyValueStoreBuilder&lt;K, V&gt;(WindowBytesStoreSupplier supplier, Serde&lt;K&gt; keySerde, Serde&lt;V&gt; valueSerde)</code></pre>
+    <pre><code class="lang-csharp hljs">public static StoreBuilder&lt;KeyValueStore&lt;K, V&gt;&gt; KeyValueStoreBuilder&lt;K, V&gt;(KeyValueBytesStoreSupplier supplier, Serde&lt;K&gt; keySerde, Serde&lt;V&gt; valueSerde)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -480,7 +480,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MASES.KafkaBridge.Streams.State.WindowBytesStoreSupplier.html">WindowBytesStoreSupplier</a></td>
+        <td><a class="xref" href="MASES.KafkaBridge.Streams.State.KeyValueBytesStoreSupplier.html">KeyValueBytesStoreSupplier</a></td>
         <td><span class="parametername">supplier</span></td>
         <td></td>
       </tr>
@@ -543,7 +543,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static WindowBytesStoreSupplier LruMap(string name, int maxCacheSize)</code></pre>
+    <pre><code class="lang-csharp hljs">public static KeyValueBytesStoreSupplier LruMap(string name, int maxCacheSize)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -577,7 +577,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MASES.KafkaBridge.Streams.State.WindowBytesStoreSupplier.html">WindowBytesStoreSupplier</a></td>
+        <td><a class="xref" href="MASES.KafkaBridge.Streams.State.KeyValueBytesStoreSupplier.html">KeyValueBytesStoreSupplier</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -595,7 +595,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static WindowBytesStoreSupplier PersistentKeyValueStore(string name)</code></pre>
+    <pre><code class="lang-csharp hljs">public static KeyValueBytesStoreSupplier PersistentKeyValueStore(string name)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -624,7 +624,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MASES.KafkaBridge.Streams.State.WindowBytesStoreSupplier.html">WindowBytesStoreSupplier</a></td>
+        <td><a class="xref" href="MASES.KafkaBridge.Streams.State.KeyValueBytesStoreSupplier.html">KeyValueBytesStoreSupplier</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -694,7 +694,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static WindowBytesStoreSupplier PersistentTimestampedKeyValueStore(string name)</code></pre>
+    <pre><code class="lang-csharp hljs">public static KeyValueBytesStoreSupplier PersistentTimestampedKeyValueStore(string name)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -723,7 +723,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MASES.KafkaBridge.Streams.State.WindowBytesStoreSupplier.html">WindowBytesStoreSupplier</a></td>
+        <td><a class="xref" href="MASES.KafkaBridge.Streams.State.KeyValueBytesStoreSupplier.html">KeyValueBytesStoreSupplier</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -930,18 +930,18 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_State_Stores_TimestampedKeyValueStoreBuilder__2_MASES_KafkaBridge_Streams_State_WindowBytesStoreSupplier_MASES_KafkaBridge_Common_Serialization_Serde___0__MASES_KafkaBridge_Common_Serialization_Serde___1__.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.State.Stores.TimestampedKeyValueStoreBuilder%60%602(MASES.KafkaBridge.Streams.State.WindowBytesStoreSupplier%2CMASES.KafkaBridge.Common.Serialization.Serde%7B%60%600%7D%2CMASES.KafkaBridge.Common.Serialization.Serde%7B%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_State_Stores_TimestampedKeyValueStoreBuilder__2_MASES_KafkaBridge_Streams_State_KeyValueBytesStoreSupplier_MASES_KafkaBridge_Common_Serialization_Serde___0__MASES_KafkaBridge_Common_Serialization_Serde___1__.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.State.Stores.TimestampedKeyValueStoreBuilder%60%602(MASES.KafkaBridge.Streams.State.KeyValueBytesStoreSupplier%2CMASES.KafkaBridge.Common.Serialization.Serde%7B%60%600%7D%2CMASES.KafkaBridge.Common.Serialization.Serde%7B%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/State/Stores.cs/#L92">View Source</a>
   </span>
   <a id="MASES_KafkaBridge_Streams_State_Stores_TimestampedKeyValueStoreBuilder_" data-uid="MASES.KafkaBridge.Streams.State.Stores.TimestampedKeyValueStoreBuilder*"></a>
-  <h4 id="MASES_KafkaBridge_Streams_State_Stores_TimestampedKeyValueStoreBuilder__2_MASES_KafkaBridge_Streams_State_WindowBytesStoreSupplier_MASES_KafkaBridge_Common_Serialization_Serde___0__MASES_KafkaBridge_Common_Serialization_Serde___1__" data-uid="MASES.KafkaBridge.Streams.State.Stores.TimestampedKeyValueStoreBuilder``2(MASES.KafkaBridge.Streams.State.WindowBytesStoreSupplier,MASES.KafkaBridge.Common.Serialization.Serde{``0},MASES.KafkaBridge.Common.Serialization.Serde{``1})">TimestampedKeyValueStoreBuilder&lt;K, V&gt;(WindowBytesStoreSupplier, Serde&lt;K&gt;, Serde&lt;V&gt;)</h4>
+  <h4 id="MASES_KafkaBridge_Streams_State_Stores_TimestampedKeyValueStoreBuilder__2_MASES_KafkaBridge_Streams_State_KeyValueBytesStoreSupplier_MASES_KafkaBridge_Common_Serialization_Serde___0__MASES_KafkaBridge_Common_Serialization_Serde___1__" data-uid="MASES.KafkaBridge.Streams.State.Stores.TimestampedKeyValueStoreBuilder``2(MASES.KafkaBridge.Streams.State.KeyValueBytesStoreSupplier,MASES.KafkaBridge.Common.Serialization.Serde{``0},MASES.KafkaBridge.Common.Serialization.Serde{``1})">TimestampedKeyValueStoreBuilder&lt;K, V&gt;(KeyValueBytesStoreSupplier, Serde&lt;K&gt;, Serde&lt;V&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static StoreBuilder&lt;TimestampedKeyValueStore&lt;K, V&gt;&gt; TimestampedKeyValueStoreBuilder&lt;K, V&gt;(WindowBytesStoreSupplier supplier, Serde&lt;K&gt; keySerde, Serde&lt;V&gt; valueSerde)</code></pre>
+    <pre><code class="lang-csharp hljs">public static StoreBuilder&lt;TimestampedKeyValueStore&lt;K, V&gt;&gt; TimestampedKeyValueStoreBuilder&lt;K, V&gt;(KeyValueBytesStoreSupplier supplier, Serde&lt;K&gt; keySerde, Serde&lt;V&gt; valueSerde)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -954,7 +954,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MASES.KafkaBridge.Streams.State.WindowBytesStoreSupplier.html">WindowBytesStoreSupplier</a></td>
+        <td><a class="xref" href="MASES.KafkaBridge.Streams.State.KeyValueBytesStoreSupplier.html">KeyValueBytesStoreSupplier</a></td>
         <td><span class="parametername">supplier</span></td>
         <td></td>
       </tr>

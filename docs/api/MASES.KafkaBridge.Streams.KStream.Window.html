@@ -82,6 +82,8 @@
     <div class="level2"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span></div>
     <div class="level3"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span>&lt;<a class="xref" href="MASES.KafkaBridge.Streams.KStream.Window.html">Window</a>&gt;</div>
     <div class="level4"><span class="xref">Window</span></div>
+      <div class="level5"><a class="xref" href="MASES.KafkaBridge.Streams.KStream.Internals.TimeWindow.html">TimeWindow</a></div>
+      <div class="level5"><a class="xref" href="MASES.KafkaBridge.Streams.KStream.Internals.UnlimitedWindow.html">UnlimitedWindow</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -392,18 +394,48 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_KStream_Window_startTime.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.KStream.Window.startTime%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_KStream_Window_Start.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.KStream.Window.Start%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/KStream/Window.cs/#L40">View Source</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/KStream/Window.cs/#L36">View Source</a>
   </span>
-  <a id="MASES_KafkaBridge_Streams_KStream_Window_startTime_" data-uid="MASES.KafkaBridge.Streams.KStream.Window.startTime*"></a>
-  <h4 id="MASES_KafkaBridge_Streams_KStream_Window_startTime" data-uid="MASES.KafkaBridge.Streams.KStream.Window.startTime">startTime</h4>
+  <a id="MASES_KafkaBridge_Streams_KStream_Window_Start_" data-uid="MASES.KafkaBridge.Streams.KStream.Window.Start*"></a>
+  <h4 id="MASES_KafkaBridge_Streams_KStream_Window_Start" data-uid="MASES.KafkaBridge.Streams.KStream.Window.Start">Start</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Instant startTime { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual long Start { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_KStream_Window_StartTime.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.KStream.Window.StartTime%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/KStream/Window.cs/#L40">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Streams_KStream_Window_StartTime_" data-uid="MASES.KafkaBridge.Streams.KStream.Window.StartTime*"></a>
+  <h4 id="MASES_KafkaBridge_Streams_KStream_Window_StartTime" data-uid="MASES.KafkaBridge.Streams.KStream.Window.StartTime">StartTime</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Instant StartTime { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -424,19 +456,36 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_KStream_Window_Start.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.KStream.Window.Start%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_KStream_Window_Overlap_MASES_KafkaBridge_Streams_KStream_Window_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.KStream.Window.Overlap(MASES.KafkaBridge.Streams.KStream.Window)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/KStream/Window.cs/#L36">View Source</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/KStream/Window.cs/#L44">View Source</a>
   </span>
-  <a id="MASES_KafkaBridge_Streams_KStream_Window_Start_" data-uid="MASES.KafkaBridge.Streams.KStream.Window.Start*"></a>
-  <h4 id="MASES_KafkaBridge_Streams_KStream_Window_Start" data-uid="MASES.KafkaBridge.Streams.KStream.Window.Start">Start()</h4>
+  <a id="MASES_KafkaBridge_Streams_KStream_Window_Overlap_" data-uid="MASES.KafkaBridge.Streams.KStream.Window.Overlap*"></a>
+  <h4 id="MASES_KafkaBridge_Streams_KStream_Window_Overlap_MASES_KafkaBridge_Streams_KStream_Window_" data-uid="MASES.KafkaBridge.Streams.KStream.Window.Overlap(MASES.KafkaBridge.Streams.KStream.Window)">Overlap(Window)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual long Start()</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Overlap(Window other)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Streams.KStream.Window.html">Window</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -447,7 +496,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>

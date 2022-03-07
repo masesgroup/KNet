@@ -1,0 +1,2191 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TopicConfigBuilder
+   | Kafka Bridge website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TopicConfigBuilder
+   | Kafka Bridge website ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder">
+  
+  
+  <h1 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder" class="text-break">Class TopicConfigBuilder
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="MASES.KafkaBridge.GenericConfigBuilder-1.html">GenericConfigBuilder</a>&lt;<a class="xref" href="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.html">TopicConfigBuilder</a>&gt;</div>
+    <div class="level2"><span class="xref">TopicConfigBuilder</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="MASES.KafkaBridge.GenericConfigBuilder-1.html#MASES_KafkaBridge_GenericConfigBuilder_1_Create">GenericConfigBuilder&lt;TopicConfigBuilder&gt;.Create()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KafkaBridge.GenericConfigBuilder-1.html#MASES_KafkaBridge_GenericConfigBuilder_1_PropertyChanged">GenericConfigBuilder&lt;TopicConfigBuilder&gt;.PropertyChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KafkaBridge.GenericConfigBuilder-1.html#MASES_KafkaBridge_GenericConfigBuilder_1_GetProperty__1_System_String_">GenericConfigBuilder&lt;TopicConfigBuilder&gt;.GetProperty&lt;TData&gt;(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KafkaBridge.GenericConfigBuilder-1.html#MASES_KafkaBridge_GenericConfigBuilder_1_SetProperty_System_String_System_Object_">GenericConfigBuilder&lt;TopicConfigBuilder&gt;.SetProperty(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KafkaBridge.GenericConfigBuilder-1.html#MASES_KafkaBridge_GenericConfigBuilder_1_Clone">GenericConfigBuilder&lt;TopicConfigBuilder&gt;.Clone()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KafkaBridge.GenericConfigBuilder-1.html#MASES_KafkaBridge_GenericConfigBuilder_1_ToProperties">GenericConfigBuilder&lt;TopicConfigBuilder&gt;.ToProperties()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KafkaBridge.GenericConfigBuilder-1.html#MASES_KafkaBridge_GenericConfigBuilder_1_ToMap">GenericConfigBuilder&lt;TopicConfigBuilder&gt;.ToMap()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#system-object-tostring">Object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#system-object-referenceequals(system-object-system-object)">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#system-object-gethashcode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#system-object-gettype">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#system-object-memberwiseclone">Object.MemberwiseClone()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MASES.KafkaBridge.Common.Config.html">MASES.KafkaBridge.Common.Config</a></h6>
+  <h6><strong>Assembly</strong>: MASES.KafkaBridge.dll</h6>
+  <h5 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TopicConfigBuilder : GenericConfigBuilder&lt;TopicConfigBuilder&gt;, INotifyPropertyChanged</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_CleanupPolicy.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.CleanupPolicy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L274">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_CleanupPolicy_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.CleanupPolicy*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_CleanupPolicy" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.CleanupPolicy">CleanupPolicy</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TopicConfig.CleanupPolicy CleanupPolicy { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Common.Config.TopicConfig.CleanupPolicy.html">TopicConfig.CleanupPolicy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_CompressionType.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.CompressionType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L319">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_CompressionType_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.CompressionType*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_CompressionType" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.CompressionType">CompressionType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TopicConfig.CompressionType CompressionType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Common.Config.TopicConfig.CompressionType.html">TopicConfig.CompressionType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_DeleteRetentionMs.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.DeleteRetentionMs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L238">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_DeleteRetentionMs_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.DeleteRetentionMs*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_DeleteRetentionMs" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.DeleteRetentionMs">DeleteRetentionMs</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int DeleteRetentionMs { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_FileDeleteDelayMs.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.FileDeleteDelayMs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L229">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_FileDeleteDelayMs_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.FileDeleteDelayMs*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_FileDeleteDelayMs" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.FileDeleteDelayMs">FileDeleteDelayMs</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int FileDeleteDelayMs { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_FlushMessageInterval.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.FlushMessageInterval%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L148">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_FlushMessageInterval_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.FlushMessageInterval*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_FlushMessageInterval" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.FlushMessageInterval">FlushMessageInterval</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int FlushMessageInterval { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_FlushMs.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.FlushMs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L157">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_FlushMs_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.FlushMs*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_FlushMs" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.FlushMs">FlushMs</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int FlushMs { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_IndexIntervalBytes.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.IndexIntervalBytes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L220">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_IndexIntervalBytes_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.IndexIntervalBytes*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_IndexIntervalBytes" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.IndexIntervalBytes">IndexIntervalBytes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int IndexIntervalBytes { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_LocalLogRetentionBytes.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.LocalLogRetentionBytes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L202">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_LocalLogRetentionBytes_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.LocalLogRetentionBytes*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_LocalLogRetentionBytes" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.LocalLogRetentionBytes">LocalLogRetentionBytes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int LocalLogRetentionBytes { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_LocalLogRetentionMs.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.LocalLogRetentionMs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L193">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_LocalLogRetentionMs_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.LocalLogRetentionMs*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_LocalLogRetentionMs" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.LocalLogRetentionMs">LocalLogRetentionMs</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int LocalLogRetentionMs { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_MaxCompactationLagMs.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.MaxCompactationLagMs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L256">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_MaxCompactationLagMs_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.MaxCompactationLagMs*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_MaxCompactationLagMs" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.MaxCompactationLagMs">MaxCompactationLagMs</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaxCompactationLagMs { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_MaxMessageBytes.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.MaxMessageBytes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L211">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_MaxMessageBytes_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.MaxMessageBytes*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_MaxMessageBytes" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.MaxMessageBytes">MaxMessageBytes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaxMessageBytes { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_MessageDownConversionEnable.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.MessageDownConversionEnable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L385">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_MessageDownConversionEnable_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.MessageDownConversionEnable*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_MessageDownConversionEnable" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.MessageDownConversionEnable">MessageDownConversionEnable</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool MessageDownConversionEnable { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_MessageTimestampDifferenceMaxMs.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.MessageTimestampDifferenceMaxMs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L376">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_MessageTimestampDifferenceMaxMs_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.MessageTimestampDifferenceMaxMs*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_MessageTimestampDifferenceMaxMs" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.MessageTimestampDifferenceMaxMs">MessageTimestampDifferenceMaxMs</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MessageTimestampDifferenceMaxMs { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_MessageTimestampType.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.MessageTimestampType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L352">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_MessageTimestampType_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.MessageTimestampType*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_MessageTimestampType" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.MessageTimestampType">MessageTimestampType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TopicConfig.MessageTimestampType MessageTimestampType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Common.Config.TopicConfig.MessageTimestampType.html">TopicConfig.MessageTimestampType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_MinCleanableDirtyRatio.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.MinCleanableDirtyRatio%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L265">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_MinCleanableDirtyRatio_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.MinCleanableDirtyRatio*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_MinCleanableDirtyRatio" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.MinCleanableDirtyRatio">MinCleanableDirtyRatio</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MinCleanableDirtyRatio { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_MinCompactationLagMs.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.MinCompactationLagMs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L247">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_MinCompactationLagMs_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.MinCompactationLagMs*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_MinCompactationLagMs" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.MinCompactationLagMs">MinCompactationLagMs</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MinCompactationLagMs { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_MinInSyncReplicas.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.MinInSyncReplicas%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L310">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_MinInSyncReplicas_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.MinInSyncReplicas*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_MinInSyncReplicas" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.MinInSyncReplicas">MinInSyncReplicas</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MinInSyncReplicas { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_Preallocate.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.Preallocate%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L343">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_Preallocate_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.Preallocate*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_Preallocate" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.Preallocate">Preallocate</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Preallocate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_RemoteLogStorageEnable.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.RemoteLogStorageEnable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L184">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_RemoteLogStorageEnable_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.RemoteLogStorageEnable*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_RemoteLogStorageEnable" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.RemoteLogStorageEnable">RemoteLogStorageEnable</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoteLogStorageEnable { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_RetentionBytes.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.RetentionBytes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L166">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_RetentionBytes_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.RetentionBytes*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_RetentionBytes" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.RetentionBytes">RetentionBytes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RetentionBytes { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_RetentionMs.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.RetentionMs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L175">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_RetentionMs_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.RetentionMs*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_RetentionMs" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.RetentionMs">RetentionMs</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RetentionMs { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_SegmentBytes.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.SegmentBytes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L112">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_SegmentBytes_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.SegmentBytes*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_SegmentBytes" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.SegmentBytes">SegmentBytes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int SegmentBytes { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_SegmentIndexBytes.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.SegmentIndexBytes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L139">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_SegmentIndexBytes_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.SegmentIndexBytes*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_SegmentIndexBytes" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.SegmentIndexBytes">SegmentIndexBytes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int SegmentIndexBytes { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_SegmentJitterMs.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.SegmentJitterMs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L130">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_SegmentJitterMs_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.SegmentJitterMs*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_SegmentJitterMs" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.SegmentJitterMs">SegmentJitterMs</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int SegmentJitterMs { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_SegmentMs.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.SegmentMs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L121">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_SegmentMs_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.SegmentMs*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_SegmentMs" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.SegmentMs">SegmentMs</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int SegmentMs { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_UncleanLeaderElectionEnable.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.UncleanLeaderElectionEnable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L301">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_UncleanLeaderElectionEnable_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.UncleanLeaderElectionEnable*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_UncleanLeaderElectionEnable" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.UncleanLeaderElectionEnable">UncleanLeaderElectionEnable</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UncleanLeaderElectionEnable { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithCleanupPolicy_MASES_KafkaBridge_Common_Config_TopicConfig_CleanupPolicy_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithCleanupPolicy(MASES.KafkaBridge.Common.Config.TopicConfig.CleanupPolicy)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L294">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithCleanupPolicy_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithCleanupPolicy*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithCleanupPolicy_MASES_KafkaBridge_Common_Config_TopicConfig_CleanupPolicy_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithCleanupPolicy(MASES.KafkaBridge.Common.Config.TopicConfig.CleanupPolicy)">WithCleanupPolicy(TopicConfig.CleanupPolicy)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithCleanupPolicy(TopicConfig.CleanupPolicy cleanupPolicy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Common.Config.TopicConfig.CleanupPolicy.html">TopicConfig.CleanupPolicy</a></td>
+        <td><span class="parametername">cleanupPolicy</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.html">TopicConfigBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithCompressionType_MASES_KafkaBridge_Common_Config_TopicConfig_CompressionType_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithCompressionType(MASES.KafkaBridge.Common.Config.TopicConfig.CompressionType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L336">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithCompressionType_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithCompressionType*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithCompressionType_MASES_KafkaBridge_Common_Config_TopicConfig_CompressionType_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithCompressionType(MASES.KafkaBridge.Common.Config.TopicConfig.CompressionType)">WithCompressionType(TopicConfig.CompressionType)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithCompressionType(TopicConfig.CompressionType compressionType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Common.Config.TopicConfig.CompressionType.html">TopicConfig.CompressionType</a></td>
+        <td><span class="parametername">compressionType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.html">TopicConfigBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithCompressionType_MASES_KafkaBridge_Common_Config_TopicConfig_MessageTimestampType_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithCompressionType(MASES.KafkaBridge.Common.Config.TopicConfig.MessageTimestampType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L369">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithCompressionType_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithCompressionType*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithCompressionType_MASES_KafkaBridge_Common_Config_TopicConfig_MessageTimestampType_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithCompressionType(MASES.KafkaBridge.Common.Config.TopicConfig.MessageTimestampType)">WithCompressionType(TopicConfig.MessageTimestampType)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithCompressionType(TopicConfig.MessageTimestampType messageTimestampType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Common.Config.TopicConfig.MessageTimestampType.html">TopicConfig.MessageTimestampType</a></td>
+        <td><span class="parametername">messageTimestampType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.html">TopicConfigBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithDeleteRetentionMs_System_Int32_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithDeleteRetentionMs(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L240">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithDeleteRetentionMs_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithDeleteRetentionMs*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithDeleteRetentionMs_System_Int32_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithDeleteRetentionMs(System.Int32)">WithDeleteRetentionMs(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithDeleteRetentionMs(int deleteRetentionMs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">deleteRetentionMs</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.html">TopicConfigBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithFileDeleteDelayMs_System_Int32_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithFileDeleteDelayMs(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L231">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithFileDeleteDelayMs_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithFileDeleteDelayMs*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithFileDeleteDelayMs_System_Int32_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithFileDeleteDelayMs(System.Int32)">WithFileDeleteDelayMs(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithFileDeleteDelayMs(int fileDeleteDelayMs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">fileDeleteDelayMs</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.html">TopicConfigBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithFlushMessageInterval_System_Int32_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithFlushMessageInterval(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L150">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithFlushMessageInterval_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithFlushMessageInterval*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithFlushMessageInterval_System_Int32_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithFlushMessageInterval(System.Int32)">WithFlushMessageInterval(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithFlushMessageInterval(int flushMessageInterval)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">flushMessageInterval</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.html">TopicConfigBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithFlushMs_System_Int32_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithFlushMs(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L159">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithFlushMs_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithFlushMs*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithFlushMs_System_Int32_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithFlushMs(System.Int32)">WithFlushMs(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithFlushMs(int flushMs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">flushMs</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.html">TopicConfigBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithIndexIntervalBytes_System_Int32_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithIndexIntervalBytes(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L222">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithIndexIntervalBytes_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithIndexIntervalBytes*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithIndexIntervalBytes_System_Int32_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithIndexIntervalBytes(System.Int32)">WithIndexIntervalBytes(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithIndexIntervalBytes(int indexIntervalBytes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">indexIntervalBytes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.html">TopicConfigBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithLocalLogRetentionBytes_System_Int32_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithLocalLogRetentionBytes(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L204">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithLocalLogRetentionBytes_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithLocalLogRetentionBytes*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithLocalLogRetentionBytes_System_Int32_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithLocalLogRetentionBytes(System.Int32)">WithLocalLogRetentionBytes(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithLocalLogRetentionBytes(int localLogRetentionBytes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">localLogRetentionBytes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.html">TopicConfigBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithLocalLogRetentionMs_System_Int32_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithLocalLogRetentionMs(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L195">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithLocalLogRetentionMs_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithLocalLogRetentionMs*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithLocalLogRetentionMs_System_Int32_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithLocalLogRetentionMs(System.Int32)">WithLocalLogRetentionMs(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithLocalLogRetentionMs(int localLogRetentionMs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">localLogRetentionMs</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.html">TopicConfigBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithMaxCompactationLagMs_System_Int32_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithMaxCompactationLagMs(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L258">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithMaxCompactationLagMs_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithMaxCompactationLagMs*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithMaxCompactationLagMs_System_Int32_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithMaxCompactationLagMs(System.Int32)">WithMaxCompactationLagMs(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithMaxCompactationLagMs(int maxCompactationLagMs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">maxCompactationLagMs</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.html">TopicConfigBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithMaxMessageBytes_System_Int32_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithMaxMessageBytes(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L213">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithMaxMessageBytes_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithMaxMessageBytes*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithMaxMessageBytes_System_Int32_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithMaxMessageBytes(System.Int32)">WithMaxMessageBytes(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithMaxMessageBytes(int maxMessageBytes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">maxMessageBytes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.html">TopicConfigBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithMessageDownConversionEnable_System_Boolean_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithMessageDownConversionEnable(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L387">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithMessageDownConversionEnable_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithMessageDownConversionEnable*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithMessageDownConversionEnable_System_Boolean_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithMessageDownConversionEnable(System.Boolean)">WithMessageDownConversionEnable(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithMessageDownConversionEnable(bool messageDownConversionEnable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">messageDownConversionEnable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.html">TopicConfigBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithMessageTimestampDifferenceMaxMs_System_Int32_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithMessageTimestampDifferenceMaxMs(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L378">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithMessageTimestampDifferenceMaxMs_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithMessageTimestampDifferenceMaxMs*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithMessageTimestampDifferenceMaxMs_System_Int32_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithMessageTimestampDifferenceMaxMs(System.Int32)">WithMessageTimestampDifferenceMaxMs(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithMessageTimestampDifferenceMaxMs(int messageTimestampDifferenceMaxMs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">messageTimestampDifferenceMaxMs</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.html">TopicConfigBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithMinCleanableDirtyRatio_System_Int32_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithMinCleanableDirtyRatio(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L267">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithMinCleanableDirtyRatio_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithMinCleanableDirtyRatio*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithMinCleanableDirtyRatio_System_Int32_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithMinCleanableDirtyRatio(System.Int32)">WithMinCleanableDirtyRatio(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithMinCleanableDirtyRatio(int minCleanableDirtyRatio)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">minCleanableDirtyRatio</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.html">TopicConfigBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithMinCompactationLagMs_System_Int32_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithMinCompactationLagMs(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L249">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithMinCompactationLagMs_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithMinCompactationLagMs*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithMinCompactationLagMs_System_Int32_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithMinCompactationLagMs(System.Int32)">WithMinCompactationLagMs(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithMinCompactationLagMs(int minCompactationLagMs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">minCompactationLagMs</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.html">TopicConfigBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithMinInSyncReplicas_System_Int32_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithMinInSyncReplicas(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L312">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithMinInSyncReplicas_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithMinInSyncReplicas*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithMinInSyncReplicas_System_Int32_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithMinInSyncReplicas(System.Int32)">WithMinInSyncReplicas(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithMinInSyncReplicas(int minInSyncReplicas)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">minInSyncReplicas</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.html">TopicConfigBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithPreallocate_System_Boolean_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithPreallocate(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L345">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithPreallocate_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithPreallocate*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithPreallocate_System_Boolean_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithPreallocate(System.Boolean)">WithPreallocate(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithPreallocate(bool preallocate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">preallocate</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.html">TopicConfigBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithRemoteLogStorageEnable_System_Boolean_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithRemoteLogStorageEnable(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L186">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithRemoteLogStorageEnable_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithRemoteLogStorageEnable*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithRemoteLogStorageEnable_System_Boolean_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithRemoteLogStorageEnable(System.Boolean)">WithRemoteLogStorageEnable(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithRemoteLogStorageEnable(bool remoteLogStorageEnable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">remoteLogStorageEnable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.html">TopicConfigBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithRetentionBytes_System_Int32_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithRetentionBytes(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L168">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithRetentionBytes_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithRetentionBytes*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithRetentionBytes_System_Int32_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithRetentionBytes(System.Int32)">WithRetentionBytes(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithRetentionBytes(int retentionBytes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">retentionBytes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.html">TopicConfigBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithRetentionMs_System_Int32_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithRetentionMs(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L177">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithRetentionMs_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithRetentionMs*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithRetentionMs_System_Int32_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithRetentionMs(System.Int32)">WithRetentionMs(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithRetentionMs(int retentionMs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">retentionMs</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.html">TopicConfigBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithSegmentBytes_System_Int32_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithSegmentBytes(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L114">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithSegmentBytes_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithSegmentBytes*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithSegmentBytes_System_Int32_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithSegmentBytes(System.Int32)">WithSegmentBytes(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithSegmentBytes(int segmentBytes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">segmentBytes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.html">TopicConfigBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithSegmentIndexBytes_System_Int32_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithSegmentIndexBytes(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L141">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithSegmentIndexBytes_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithSegmentIndexBytes*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithSegmentIndexBytes_System_Int32_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithSegmentIndexBytes(System.Int32)">WithSegmentIndexBytes(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithSegmentIndexBytes(int segmentIndexBytes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">segmentIndexBytes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.html">TopicConfigBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithSegmentJitterMs_System_Int32_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithSegmentJitterMs(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L132">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithSegmentJitterMs_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithSegmentJitterMs*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithSegmentJitterMs_System_Int32_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithSegmentJitterMs(System.Int32)">WithSegmentJitterMs(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithSegmentJitterMs(int segmentJitterMs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">segmentJitterMs</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.html">TopicConfigBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithSegmentMs_System_Int32_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithSegmentMs(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L123">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithSegmentMs_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithSegmentMs*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithSegmentMs_System_Int32_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithSegmentMs(System.Int32)">WithSegmentMs(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithSegmentMs(int segmentMs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">segmentMs</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.html">TopicConfigBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithUncleanLeaderElectionEnable_System_Boolean_.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithUncleanLeaderElectionEnable(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L303">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithUncleanLeaderElectionEnable_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithUncleanLeaderElectionEnable*"></a>
+  <h4 id="MASES_KafkaBridge_Common_Config_TopicConfigBuilder_WithUncleanLeaderElectionEnable_System_Boolean_" data-uid="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.WithUncleanLeaderElectionEnable(System.Boolean)">WithUncleanLeaderElectionEnable(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithUncleanLeaderElectionEnable(bool uncleanLeaderElectionEnable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">uncleanLeaderElectionEnable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KafkaBridge.Common.Config.TopicConfigBuilder.html">TopicConfigBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">System.ComponentModel.INotifyPropertyChanged</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Common_Config_TopicConfigBuilder.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Common.Config.TopicConfigBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Common/Config/TopicConfig.cs/#L110" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2022 MASES s.r.l..<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
