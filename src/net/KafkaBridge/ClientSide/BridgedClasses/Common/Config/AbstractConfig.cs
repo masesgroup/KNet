@@ -16,18 +16,24 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KafkaBridge.Common;
-using MASES.KafkaBridge.Java.Lang;
-using MASES.KafkaBridge.Java.Util;
+using MASES.JCOBridge.C2JBridge;
 
-namespace MASES.KafkaBridge.Clients.Admin
+namespace MASES.KafkaBridge.Common.Config
 {
-    public class AlterUserScramCredentialsResult : JCOBridge.C2JBridge.JVMBridgeBase<AlterUserScramCredentialsResult>
+    public class AbstractConfig<TClass> : JVMBridgeBase<TClass>
+        where TClass : IJVMBridgeBase, new()
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.AlterUserScramCredentialsResult";
+        public override string ClassName => "org.apache.kafka.common.config.AbstractConfig";
 
-        public Map<string, KafkaFuture<Void>> Values => IExecute<Map<string, KafkaFuture<Void>>>("values");
+        [System.Obsolete("This is not public in Apache Kafka API")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public AbstractConfig()
+        {
+        }
 
-        public KafkaFuture<Void> All => IExecute<KafkaFuture<Void>>("all");
+        public AbstractConfig(params object[] args)
+            : base(args)
+        {
+        }
     }
 }

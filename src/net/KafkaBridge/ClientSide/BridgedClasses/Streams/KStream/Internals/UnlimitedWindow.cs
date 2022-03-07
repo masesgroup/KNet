@@ -16,18 +16,20 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KafkaBridge.Common;
-using MASES.KafkaBridge.Java.Lang;
-using MASES.KafkaBridge.Java.Util;
-
-namespace MASES.KafkaBridge.Clients.Admin
+namespace MASES.KafkaBridge.Streams.KStream.Internals
 {
-    public class AlterUserScramCredentialsResult : JCOBridge.C2JBridge.JVMBridgeBase<AlterUserScramCredentialsResult>
+    public class UnlimitedWindow : Window    
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.AlterUserScramCredentialsResult";
+        public override string ClassName => "org.apache.kafka.streams.kstream.internals.UnlimitedWindow";
 
-        public Map<string, KafkaFuture<Void>> Values => IExecute<Map<string, KafkaFuture<Void>>>("values");
+        [System.Obsolete("This is not public in Apache Kafka API")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public UnlimitedWindow() { }
 
-        public KafkaFuture<Void> All => IExecute<KafkaFuture<Void>>("all");
+        public UnlimitedWindow(long startMs)
+            : base(startMs, long.MaxValue)
+        {
+        }
+
     }
 }

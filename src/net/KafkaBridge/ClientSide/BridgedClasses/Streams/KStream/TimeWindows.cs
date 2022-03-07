@@ -16,37 +16,28 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Java.Time;
+using MASES.KafkaBridge.Streams.KStream.Internals;
+
 namespace MASES.KafkaBridge.Streams.KStream
 {
-    public class Windowed : JCOBridge.C2JBridge.JVMBridgeBase<Windowed>
+    public class TimeWindows : Windows<TimeWindow>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.Windowed";
+        public override string ClassName => "org.apache.kafka.streams.kstream.TimeWindows";
 
-        [System.Obsolete("This is not public in Apache Kafka API")]
-        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
-        public Windowed()
+        public static TimeWindows OfSizeWithNoGrace(Duration size)
         {
+            return SExecute<TimeWindows>("ofSizeWithNoGrace", size);
         }
 
-        public Windowed(object key, Window window)
-             : base(key, window)
+        public static TimeWindows OfSizeAndGrace(Duration size, Duration afterWindowEnd)
         {
+            return SExecute<TimeWindows>("ofSizeAndGrace", size, afterWindowEnd);
         }
 
-        public object Key => IExecute("key");
-
-        public Window Window => IExecute<Window>("window");
-    }
-
-    public class Windowed<K> : Windowed
-    {
-        public Windowed() { }
-
-        public Windowed(K key, Window window)
-            : base(key, window)
+        public TimeWindows AdvanceBy(Duration advance)
         {
+            return IExecute<TimeWindows>("advanceBy", advance);
         }
-
-        public new K Key => IExecute<K>("key");
     }
 }

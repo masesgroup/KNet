@@ -16,11 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common.Config;
 using MASES.KafkaBridge.Java.Util;
 
 namespace MASES.KafkaBridge.Clients.Admin
 {
-    public class AdminClientConfig : JCOBridge.C2JBridge.JVMBridgeBase<AdminClientConfig>
+    public class AdminClientConfig : AbstractConfig<AdminClientConfig>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.AdminClientConfig";
 
@@ -64,6 +65,8 @@ namespace MASES.KafkaBridge.Clients.Admin
         public static readonly string RETRIES_CONFIG = Clazz.GetField<string>("RETRIES_CONFIG");
         public static readonly string DEFAULT_API_TIMEOUT_MS_CONFIG = Clazz.GetField<string>("DEFAULT_API_TIMEOUT_MS_CONFIG");
 
+        public static readonly string SECURITY_PROVIDERS_CONFIG = Clazz.GetField<string>("SECURITY_PROVIDERS_CONFIG");
+
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public AdminClientConfig() { }
@@ -71,6 +74,18 @@ namespace MASES.KafkaBridge.Clients.Admin
         public AdminClientConfig(Map props)
             : base(props)
         {
+        }
+    }
+
+    public class AdminClientConfigBuilder : CommonClientConfigsBuilder<AdminClientConfigBuilder>
+    {
+        public string SecurityProviders { get { return GetProperty<string>(AdminClientConfig.SECURITY_PROVIDERS_CONFIG); } set { SetProperty(AdminClientConfig.SECURITY_PROVIDERS_CONFIG, value); } }
+
+        public AdminClientConfigBuilder WithSecurityProviders(string securityProviders)
+        {
+            var clone = Clone();
+            clone.SecurityProviders = securityProviders;
+            return clone;
         }
     }
 }

@@ -30,4 +30,23 @@ namespace MASES.KafkaBridge.Streams.State
 
         long ApproximateNumEntries { get; }
     }
+
+    public class ReadOnlyKeyValueStore<K, V> : JVMBridgeBase<ReadOnlyKeyValueStore<K, V>, IReadOnlyKeyValueStore<K, V>>, IReadOnlyKeyValueStore<K, V>
+    {
+        public override string ClassName => "org.apache.kafka.streams.state.ReadOnlyKeyValueStore";
+
+        public KeyValueIterator<K, V> All => IExecute<KeyValueIterator<K, V>>("all");
+
+        public long ApproximateNumEntries => IExecute<long>("approximateNumEntries");
+
+        public V Get(K key)
+        {
+            return IExecute<V>("get", key);
+        }
+
+        public KeyValueIterator<K, V> Range(K from, K to)
+        {
+            return IExecute<KeyValueIterator<K, V>>("range", from, to);
+        }
+    }
 }

@@ -16,6 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common.Config;
 using MASES.KafkaBridge.Java.Util;
 
 namespace MASES.KafkaBridge.Clients.Admin
@@ -24,6 +25,8 @@ namespace MASES.KafkaBridge.Clients.Admin
     {
         public override string ClassName => "org.apache.kafka.clients.admin.NewTopic";
 
+        [System.Obsolete("This is not public in Apache Kafka API", true)]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public NewTopic()
         {
         }
@@ -33,10 +36,30 @@ namespace MASES.KafkaBridge.Clients.Admin
         {
         }
 
+        public NewTopic(string name, Map<int, List<int>> replicasAssignments)
+            :base(name, replicasAssignments)
+        {
+        }
+
+        public string Name => IExecute<string>("name");
+
+        public int NumPartitions => IExecute<int>("numPartitions");
+
+        public int ReplicationFactor => IExecute<int>("replicationFactor");
+
+        public Map<int, List<int>> ReplicasAssignments => IExecute<Map<int, List<int>>>("replicasAssignments");
+
         public NewTopic Configs(Map<string, string> configs)
         {
             return IExecute<NewTopic>("configs", configs);
         }
+
+        public NewTopic Configs(TopicConfigBuilder config)
+        {
+            return Configs(config.ToMap());
+        }
+
+        public Map<string, string> Configs() => IExecute<Map<string, string>>("configs");
     }
 }
 

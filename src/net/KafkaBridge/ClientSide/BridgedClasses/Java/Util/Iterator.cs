@@ -16,12 +16,16 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KafkaBridge.Java.Lang
-{
-    public sealed class UUID : JCOBridge.C2JBridge.JVMBridgeBase<UUID>
-    {
-        public override bool IsStatic => true;
+using MASES.JCOBridge.C2JBridge;
 
-        public override string ClassName => "java.lang.UUID";
+namespace MASES.KafkaBridge.Java.Util
+{
+    public class Iterator<E> : JVMBridgeBase<Iterator<E>>
+    {
+        public override string ClassName => "java.util.Iterator";
+
+        public bool HasNext => IExecute<bool>("hasNext");
+
+        public E Next => IExecute<E>("next");
     }
 }

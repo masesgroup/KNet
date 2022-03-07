@@ -33,12 +33,17 @@ namespace MASES.KafkaBridge.Streams.KStream
         {
         }
 
-        public virtual long Start() => IExecute<long>("start");
+        public virtual long Start => IExecute<long>("start");
 
         public virtual long End => IExecute<long>("end");
 
-        public virtual Instant startTime => IExecute<Instant>("startTime");
+        public virtual Instant StartTime => IExecute<Instant>("startTime");
 
         public virtual Instant EndTime => IExecute<Instant>("endTime");
+
+        public bool Overlap(Window other)
+        {
+            return IExecute<bool>("overlap", other);
+        }
     }
 }

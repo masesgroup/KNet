@@ -17,12 +17,15 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
+using MASES.KafkaBridge.Java.Util;
 
 namespace MASES.KafkaBridge.Streams.State
 {
-    public class KeyValueIterator<K, V> : JVMBridgeBaseEnumerable<KeyValueIterator<K, V>>
+    public class KeyValueIterator<K, V> : JVMBridgeBaseEnumerable<KeyValueIterator<K, V>, KeyValue<K, V>>
     {
         public override string ClassName => "org.apache.kafka.streams.state.KeyValueIterator";
+
+        public static implicit operator Iterator<KeyValue<K, V>>(KeyValueIterator<K, V> keyValueIterator) { return Wraps<Iterator<KeyValue<K, V>>>(keyValueIterator.Instance); }
 
         public virtual K PeekNextKey => IExecute<K>("peekNextKey");
     }

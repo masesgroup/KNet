@@ -16,37 +16,32 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KafkaBridge.Common.Serialization;
+using MASES.KafkaBridge.Java.Util;
+
 namespace MASES.KafkaBridge.Streams.KStream
 {
-    public class Windowed : JCOBridge.C2JBridge.JVMBridgeBase<Windowed>
+    public class SessionWindowedDeserializer<T> : JCOBridge.C2JBridge.JVMBridgeBase<SessionWindowedDeserializer<T>>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.Windowed";
+        public override bool IsCloseable => true;
 
-        [System.Obsolete("This is not public in Apache Kafka API")]
-        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
-        public Windowed()
+        public override string ClassName => "org.apache.kafka.streams.kstream.SessionWindowedDeserializer";
+
+        public SessionWindowedDeserializer() { }
+
+        public SessionWindowedDeserializer(Deserializer<T> inner)
+            : base(inner)
         {
         }
 
-        public Windowed(object key, Window window)
-             : base(key, window)
+        public void Configure(Map<string, object> configs, bool isKey)
         {
+            IExecute("configure", configs, isKey);
         }
 
-        public object Key => IExecute("key");
-
-        public Window Window => IExecute<Window>("window");
-    }
-
-    public class Windowed<K> : Windowed
-    {
-        public Windowed() { }
-
-        public Windowed(K key, Window window)
-            : base(key, window)
+        public Windowed<T> Deserialize(string topic, byte[] data)
         {
+            return IExecute<Windowed<T>>("deserialize", topic, data);
         }
-
-        public new K Key => IExecute<K>("key");
     }
 }

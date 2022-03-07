@@ -56,15 +56,15 @@ namespace MASES.KafkaBridgeTest
                 serverToUse = args[0];
             }
 
-            createTopic();
+            CreateTopic();
 
-            Thread threadProduce = new Thread(produceSomething)
+            Thread threadProduce = new Thread(ProduceSomething)
             {
                 Name = "produce"
             };
             threadProduce.Start();
 
-            Thread threadConsume = new Thread(consumeSomething)
+            Thread threadConsume = new Thread(ConsumeSomething)
             {
                 Name = "consume"
             };
@@ -75,22 +75,30 @@ namespace MASES.KafkaBridgeTest
             Thread.Sleep(2000);
         }
 
-        static void createTopic()
+        static void CreateTopic()
         {
             try
             {
                 string topicName = topicToUse;
                 int partitions = 1;
                 short replicationFactor = 1;
-                var topicConfig = TopicConfig.DynClazz;
 
                 var topic = new NewTopic(topicName, partitions, replicationFactor);
-                var map = Collections.SingletonMap((string)topicConfig.CLEANUP_POLICY_CONFIG, (string)topicConfig.CLEANUP_POLICY_COMPACT);
+
+                /**** Direct mode ******
+                var map = Collections.SingletonMap(TopicConfig.CLEANUP_POLICY_CONFIG, TopicConfig.CLEANUP_POLICY_COMPACT);
                 topic.Configs(map);
+                *********/
+                topic.Configs(TopicConfigBuilder.Create().WithCleanupPolicy(TopicConfig.CleanupPolicy.Compact));
+
                 var coll = Collections.Singleton(topic);
 
+                /**** Direct mode ******
                 Properties props = new Properties();
                 props.Put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
+                *******/
+
+                Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(serverToUse).ToProperties();
 
                 using (var admin = KafkaAdminClient.Create(props))
                 {
@@ -115,10 +123,11 @@ namespace MASES.KafkaBridgeTest
             }
         }
 
-        static void produceSomething()
+        static void ProduceSomething()
         {
             try
             {
+                /**** Direct mode ******
                 Properties props = new Properties();
                 props.Put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
                 props.Put(ProducerConfig.ACKS_CONFIG, "all");
@@ -126,6 +135,16 @@ namespace MASES.KafkaBridgeTest
                 props.Put(ProducerConfig.LINGER_MS_CONFIG, 1);
                 props.Put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
                 props.Put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
+                ******/
+
+                Properties props = ProducerConfigBuilder.Create()
+                                                        .WithBootstrapServers(serverToUse)
+                                                        .WithAcks(ProducerConfig.Acks.All)
+                                                        .WithRetries(0)
+                                                        .WithLingerMs(1)
+                                                        .WithKeySerializerClass("org.apache.kafka.common.serialization.StringSerializer")
+                                                        .WithValueSerializerClass("org.apache.kafka.common.serialization.StringSerializer")
+                                                        .ToProperties();
 
                 Serializer<string> keySerializer = null;
                 Serializer<string> valueSerializer = null;
@@ -189,10 +208,11 @@ namespace MASES.KafkaBridgeTest
             }
         }
 
-        static void consumeSomething()
+        static void ConsumeSomething()
         {
             try
             {
+                /**** Direct mode ******
                 Properties props = new Properties();
                 props.Put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
                 props.Put(ConsumerConfig.GROUP_ID_CONFIG, "test");
@@ -200,6 +220,16 @@ namespace MASES.KafkaBridgeTest
                 props.Put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG, "1000");
                 props.Put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
                 props.Put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
+                *******/
+
+                Properties props = ConsumerConfigBuilder.Create()
+                                                        .WithBootstrapServers(serverToUse)
+                                                        .WithGroupId("test")
+                                                        .WithEnableAutoCommit(true)
+                                                        .WithAutoCommitIntervalMs(1000)
+                                                        .WithKeyDeserializerClass("org.apache.kafka.common.serialization.StringDeserializer")
+                                                        .WithValueDeserializerClass("org.apache.kafka.common.serialization.StringDeserializer")
+                                                        .ToProperties();
 
                 Deserializer<string> keyDeserializer = null;
                 Deserializer<string> valueDeserializer = null;

@@ -16,18 +16,29 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KafkaBridge.Common;
-using MASES.KafkaBridge.Java.Lang;
-using MASES.KafkaBridge.Java.Util;
-
-namespace MASES.KafkaBridge.Clients.Admin
+namespace MASES.KafkaBridge.Java.Util
 {
-    public class AlterUserScramCredentialsResult : JCOBridge.C2JBridge.JVMBridgeBase<AlterUserScramCredentialsResult>
+    public class HashMap<K, V> : AbstractMap<K, V>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.AlterUserScramCredentialsResult";
+        public override string ClassName => "java.util.HashMap";
 
-        public Map<string, KafkaFuture<Void>> Values => IExecute<Map<string, KafkaFuture<Void>>>("values");
+        public HashMap()
+        {
+        }
 
-        public KafkaFuture<Void> All => IExecute<KafkaFuture<Void>>("all");
+        public HashMap(int initialCapacity)
+            : base(initialCapacity)
+        {
+        }
+
+        public HashMap(int initialCapacity, float loadFactor)
+            : base(initialCapacity, loadFactor)
+        {
+        }
+
+        public HashMap(Map<K, V> m)
+            : base(m)
+        {
+        }
     }
 }

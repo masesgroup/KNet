@@ -9,7 +9,7 @@
 		<Owners>MASES s.r.l.</Owners>
 		<Authors>MASES s.r.l.</Authors>
 		<Company>MASES s.r.l.</Company>
-		<Version>1.1.7.0</Version>
+		<Version>1.1.8.0</Version>
 		<Product>KafkaBridge</Product>
 		<GenerateAssemblyInfo>true</GenerateAssemblyInfo>
 		<TargetFrameworks>net461;netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
@@ -60,5 +60,8 @@
 		<PrivateAssets>None</PrivateAssets>
 	</PackageReference>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ClientSide\BridgedClasses\Java\Lang\Annotation\" />
   </ItemGroup>
 </Project>

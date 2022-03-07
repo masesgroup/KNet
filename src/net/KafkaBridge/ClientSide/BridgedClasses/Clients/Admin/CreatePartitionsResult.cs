@@ -28,7 +28,7 @@ namespace MASES.KafkaBridge.Clients.Admin
 
         public Map<string, KafkaFuture<Void>> Values => IExecute<Map<string, KafkaFuture<Void>>>("values");
 
-        public KafkaFuture<Void> All => IExecute < KafkaFuture<Void>>("all");
+        public KafkaFuture<Void> All => IExecute<KafkaFuture<Void>>("all");
     }
 }
 
