@@ -12,6 +12,6 @@
   </ItemGroup>
   <ItemGroup Condition="!Exists('..\..\..\KafkaBridge\KafkaBridge.csproj')">
     <!--Outside GitHub repo-->
-    <PackageReference Include="MASES.KafkaBridge" Version="1.1.8" />
+    <PackageReference Include="MASES.KafkaBridge" Version="1.1.9" />
   </ItemGroup>
 </Project>
