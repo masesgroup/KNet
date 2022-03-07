@@ -22,7 +22,7 @@ namespace MASES.KafkaBridge.Java.Lang
 {
     public class Annotation : JVMBridgeBase<Annotation>
     {
-        public override string ClassName => "java.lang.Annotation";
+        public override string ClassName => "java.lang.annotation.Annotation";
 
         public Class AnnotationType => IExecute<Class>("annotationType");
     }

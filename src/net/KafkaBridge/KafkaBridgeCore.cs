@@ -599,7 +599,11 @@ namespace MASES.KafkaBridge
 
             if (_logClassPath)
             {
-                Console.WriteLine("ClassPath is: {0}", classPath);
+                Console.WriteLine("ClassPath is defined from:");
+                foreach (var item in classPath.Split(InternalConst.PathSeparator))
+                {
+                    Console.WriteLine(item);
+                }
             }
             return classPath;
         }

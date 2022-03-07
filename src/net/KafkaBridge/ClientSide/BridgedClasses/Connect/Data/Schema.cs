@@ -122,15 +122,8 @@ namespace MASES.KafkaBridge.Connect.Data
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
-        public Schema(Type type)
-            : base(type)
-        {
-        }
-
-        [System.Obsolete("This is not public in Apache Kafka API")]
-        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
-        public Schema(Type type, bool optional, Java.Lang.Object defaultValue, string name, int version, string doc, Map<string, string> parameters, List<Field> fields, Schema keySchema, Schema valueSchema)
-            : base(type, optional, defaultValue, name, version, doc, parameters, fields, keySchema, valueSchema)
+        public Schema(params object[] args)
+            : base(args)
         {
         }
 

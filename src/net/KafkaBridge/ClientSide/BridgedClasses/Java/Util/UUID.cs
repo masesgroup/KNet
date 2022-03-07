@@ -22,6 +22,6 @@ namespace MASES.KafkaBridge.Java.Lang
     {
         public override bool IsStatic => true;
 
-        public override string ClassName => "java.lang.UUID";
+        public override string ClassName => "java.util.UUID";
     }
 }

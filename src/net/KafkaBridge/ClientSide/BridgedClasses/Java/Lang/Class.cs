@@ -30,6 +30,13 @@ namespace MASES.KafkaBridge.Java.Lang
             return SExecute<Class>("forName", className);
         }
 
+        public static Class<T> ForName<T>() where T : IJVMBridgeBase, new()
+        {
+            var className = new T().ClassName;
+            var exType = SExecute("forName", className);
+            return SExecute<Class<T>>("forName", className);
+        }
+
         public string Name => IExecute<string>("getName");
 
         public bool IsAnnotation => IExecute<bool>("isAnnotation");
@@ -65,6 +72,8 @@ namespace MASES.KafkaBridge.Java.Lang
     public class Class<T> : Class
         where T : IJVMBridgeBase, new()
     {
+
+
         public IJavaType JVMType => (new T() as IJVMBridgeBaseStatic).Clazz;     
     }
 }

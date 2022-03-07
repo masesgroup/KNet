@@ -29,9 +29,9 @@ namespace MASES.KafkaBridge.Streams
         {
         }
 
-        public static StoreQueryParameters<TIn> FromNameAndType<TIn>(string storeName, QueryableStoreType<TIn> queryableStoreType)
+        public static StoreQueryParameters<T> FromNameAndType(string storeName, QueryableStoreType<T> queryableStoreType)
         {
-            return SExecute<StoreQueryParameters<TIn>>("fromNameAndType", storeName, queryableStoreType);
+            return SExecute<StoreQueryParameters<T>>("fromNameAndType", storeName, queryableStoreType);
         }
 
         public StoreQueryParameters<T> WithPartition(int partition)

@@ -18,26 +18,12 @@
 
 namespace MASES.KafkaBridge.Streams.KStream
 {
-    public class Windowed<K> : JCOBridge.C2JBridge.JVMBridgeBase<Windowed<K>>
+    public class Windowed : JCOBridge.C2JBridge.JVMBridgeBase<Windowed>
     {
         public override string ClassName => "org.apache.kafka.streams.kstream.Windowed";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
-        public Windowed() { }
-
-        public Windowed(K key, Window window)
-            : base(key, window)
-        {
-        }
-
-        public K Key => IExecute<K>("key");
-
-        public Window Window => IExecute<Window>("window");
-    }
-
-    public class Windowed : Windowed<object>
-    {
         public Windowed()
         {
         }
@@ -46,5 +32,21 @@ namespace MASES.KafkaBridge.Streams.KStream
              : base(key, window)
         {
         }
+
+        public object Key => IExecute("key");
+
+        public Window Window => IExecute<Window>("window");
+    }
+
+    public class Windowed<K> : Windowed
+    {
+        public Windowed() { }
+
+        public Windowed(K key, Window window)
+            : base(key, window)
+        {
+        }
+
+        public new K Key => IExecute<K>("key");
     }
 }
