@@ -34,7 +34,7 @@ jobs:
             ${{ runner.os }}-maven-
 
       - name: Pre compile templates
-        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KafkaBridge\KafkaBridgeTemplates.sln
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KafkaBridgeTemplates.sln
 
       - name: Pre compile
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KafkaBridge\KafkaBridge.csproj
