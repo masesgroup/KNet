@@ -37,13 +37,13 @@ namespace MASES.KafkaBridge.Streams.KStream
     }
 
     /// <summary>
-    /// Listener for Kafka Reducer. Extends <see cref="CLRListener"/>, implements <see cref="IReducer{V}"/>
+    /// Listener for Kafka Reducer. Extends <see cref="JVMBridgeListener"/>, implements <see cref="IReducer{V}"/>
     /// </summary>
     /// <typeparam name="V">The data associated to the event</typeparam>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
-    public class Reducer<V> : CLRListener, IReducer<V>
+    public class Reducer<V> : JVMBridgeListener, IReducer<V>
     {
-        /// <inheritdoc cref="CLRListener.ClassName"/>
+        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
         public sealed override string ClassName => "org.mases.kafkabridge.streams.kstream.ReducerImpl";
 
         readonly Func<V, V, V> executionFunction = null;

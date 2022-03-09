@@ -17,7 +17,7 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using MASES.JCOBridge.C2JBridge.Function;
+using Java.Util.Function;
 
 namespace MASES.KafkaBridge.Streams.KStream
 {

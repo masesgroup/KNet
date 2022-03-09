@@ -41,16 +41,16 @@ namespace MASES.KafkaBridge.Streams.KStream
     }
 
     /// <summary>
-    /// Listener for Kafka ValueJoinerWithKey. Extends <see cref="CLRListener"/>, implements <see cref="IValueJoinerWithKey{K1, V1, V2, VR}"/>
+    /// Listener for Kafka ValueJoinerWithKey. Extends <see cref="JVMBridgeListener"/>, implements <see cref="IValueJoinerWithKey{K1, V1, V2, VR}"/>
     /// </summary>
     /// <typeparam name="K1">The data associated to the event</typeparam>
     /// <typeparam name="V1">The data associated to the event</typeparam>
     /// <typeparam name="V2">The data associated to the event</typeparam>
     /// <typeparam name="VR">Joined value</typeparam>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
-    public class ValueJoinerWithKey<K1, V1, V2, VR> : CLRListener, IValueJoinerWithKey<K1, V1, V2, VR>
+    public class ValueJoinerWithKey<K1, V1, V2, VR> : JVMBridgeListener, IValueJoinerWithKey<K1, V1, V2, VR>
     {
-        /// <inheritdoc cref="CLRListener.ClassName"/>
+        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
         public sealed override string ClassName => "org.mases.kafkabridge.streams.kstream.ValueJoinerWithKeyImpl";
 
         readonly Func<K1, V1, V2, VR> executionFunction = null;

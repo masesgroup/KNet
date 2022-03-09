@@ -17,7 +17,7 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using MASES.JCOBridge.C2JBridge.Function;
+using Java.Util.Function;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
 using MASES.KafkaBridge.Streams.Processor;
 

@@ -17,7 +17,7 @@
 */
 
 using MASES.KafkaBridge.Common.Utils;
-using MASES.KafkaBridge.Java.Lang;
+using Java.Lang;
 using MASES.KafkaBridge.Java.Util;
 using MASES.KafkaBridge.Java.Util.Regex;
 using MASES.KafkaBridge.Streams.KStream;

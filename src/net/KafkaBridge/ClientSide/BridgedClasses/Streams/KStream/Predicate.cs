@@ -38,14 +38,14 @@ namespace MASES.KafkaBridge.Streams.KStream
     }
 
     /// <summary>
-    /// Listener for Kafka Predicate. Extends <see cref="CLRListener"/>, implements <see cref="IPredicate{T, U}"/>
+    /// Listener for Kafka Predicate. Extends <see cref="JVMBridgeListener"/>, implements <see cref="IPredicate{T, U}"/>
     /// </summary>
     /// <typeparam name="T">The data associated to the event</typeparam>
     /// <typeparam name="U">The data associated to the event</typeparam>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
-    public class Predicate<T, U> : CLRListener, IPredicate<T, U>
+    public class Predicate<T, U> : JVMBridgeListener, IPredicate<T, U>
     {
-        /// <inheritdoc cref="CLRListener.ClassName"/>
+        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
         public sealed override string ClassName => "org.mases.kafkabridge.streams.kstream.PredicateImpl";
 
         readonly Func<T, U, bool> executionFunction = null;

@@ -54,13 +54,13 @@ namespace MASES.KafkaBridge.Common.Serialization
         byte[] SerializeWithHeaders(string topic, Headers headers, E data);
     }
     /// <summary>
-    /// Listener for Kafka Serializer. Extends <see cref="CLRListener"/>. Implements <see cref="ISerializer{E}"/>
+    /// Listener for Kafka Serializer. Extends <see cref="JVMBridgeListener"/>. Implements <see cref="ISerializer{E}"/>
     /// </summary>
     /// <typeparam name="E">The data associated to the event</typeparam>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
-    public class Serializer<E> : CLRListener, ISerializer<E>
+    public class Serializer<E> : JVMBridgeListener, ISerializer<E>
     {
-        /// <inheritdoc cref="CLRListener.ClassName"/>
+        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
         public override string ClassName => "org.mases.kafkabridge.clients.common.serialization.SerializerImpl";
 
         readonly Func<string, E, byte[]> serialize = null;

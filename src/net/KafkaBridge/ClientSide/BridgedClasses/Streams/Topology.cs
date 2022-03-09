@@ -17,7 +17,7 @@
 */
 
 using MASES.KafkaBridge.Common.Serialization;
-using MASES.KafkaBridge.Java.Lang;
+using Java.Lang;
 using MASES.KafkaBridge.Java.Util.Regex;
 using MASES.KafkaBridge.Streams.Processor;
 using MASES.KafkaBridge.Streams.State;

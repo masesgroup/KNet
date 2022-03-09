@@ -9,7 +9,7 @@
 		<Owners>MASES s.r.l.</Owners>
 		<Authors>MASES s.r.l.</Authors>
 		<Company>MASES s.r.l.</Company>
-		<Version>1.1.8.0</Version>
+		<Version>1.1.9.0</Version>
 		<Product>KafkaBridge</Product>
 		<GenerateAssemblyInfo>true</GenerateAssemblyInfo>
 		<TargetFrameworks>net461;netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
@@ -19,7 +19,7 @@
 		<PackageProjectUrl>https://github.com/masesgroup/KafkaBridge/</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/masesgroup/KafkaBridge</RepositoryUrl>
 		<PackageReleaseNotes>https://github.com/masesgroup/KafkaBridge/releases</PackageReleaseNotes>
-		<PackageLicense>LICENSE</PackageLicense>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<PackageIcon>JCOB128x128.png</PackageIcon>
 		<PackageTags>kafka apache-kafka dotnet clr netcore net5 net6 kafka connect streams producer consumer providers streamprovider confluent</PackageTags>
 		<PackageId>MASES.KafkaBridge</PackageId>
@@ -51,17 +51,14 @@
     <None Include="..\..\..\jars\*.jar" Pack="true" PackagePath="build\jars" />
     <None Include="..\..\config\**\*" Pack="true" PackagePath="build\config" />
     <None Include="..\Common\KafkaBridge.snk" Link="KafkaBridge.snk" />
-	<None Include="..\Documentation\articles\usage.md" Pack="true" PackagePath="\" />
+    <None Include="..\Documentation\articles\usage.md" Pack="true" PackagePath="\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="MASES.CLIParser" Version="2.2.1" />
-	<PackageReference Include="MASES.JCOBridge" Version="2.4.6">
-		<IncludeAssets>All</IncludeAssets>
-		<PrivateAssets>None</PrivateAssets>
-	</PackageReference>
+    <PackageReference Include="MASES.CLIParser" Version="3.0.0" />
+    <PackageReference Include="MASES.JCOBridge" Version="2.4.7">
+      <IncludeAssets>All</IncludeAssets>
+      <PrivateAssets>None</PrivateAssets>
+      </PackageReference>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ClientSide\BridgedClasses\Java\Lang\Annotation\" />
   </ItemGroup>
 </Project>

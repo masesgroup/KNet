@@ -41,12 +41,12 @@ namespace MASES.KafkaBridge.Clients.Consumer
     }
 
     /// <summary>
-    /// Listener for Kafka ConsumerRebalanceListener. Extends <see cref="CLRListener"/>, implements <see cref="IConsumerRebalanceListener"/>
+    /// Listener for Kafka ConsumerRebalanceListener. Extends <see cref="JVMBridgeListener"/>, implements <see cref="IConsumerRebalanceListener"/>
     /// </summary>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
-    public class ConsumerRebalanceListener : CLRListener, IConsumerRebalanceListener
+    public class ConsumerRebalanceListener : JVMBridgeListener, IConsumerRebalanceListener
     {
-        /// <inheritdoc cref="CLRListener.ClassName"/>
+        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
         public sealed override string ClassName => "org.mases.kafkabridge.clients.consumer.ConsumerRebalanceListenerImpl";
 
         readonly Action<Collection<TopicPartition>> revokedFunction = null;

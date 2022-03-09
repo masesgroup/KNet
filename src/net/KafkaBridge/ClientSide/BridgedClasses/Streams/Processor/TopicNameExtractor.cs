@@ -44,12 +44,12 @@ namespace MASES.KafkaBridge.Streams.Processor
     }
 
     /// <summary>
-    /// Listener for Kafka TopicNameExtractor. Extends <see cref="CLRListener"/>, implements <see cref="ITopicNameExtractor{K, V}"/>
+    /// Listener for Kafka TopicNameExtractor. Extends <see cref="JVMBridgeListener"/>, implements <see cref="ITopicNameExtractor{K, V}"/>
     /// </summary>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
-    public class TopicNameExtractor<K, V> : CLRListener, ITopicNameExtractor<K, V>
+    public class TopicNameExtractor<K, V> : JVMBridgeListener, ITopicNameExtractor<K, V>
     {
-        /// <inheritdoc cref="CLRListener.ClassName"/>
+        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
         public sealed override string ClassName => "org.mases.kafkabridge.streams.processor.TopicNameExtractorImpl";
 
         readonly Func<K, V, RecordContext, string> executionFunction = null;

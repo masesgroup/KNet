@@ -30,9 +30,9 @@ namespace MASES.KafkaBridge.Streams.Processor
         void Close();
     }
 
-    public class Processor<K, V> : CLRListener, IProcessor<K, V>
+    public class Processor<K, V> : JVMBridgeListener, IProcessor<K, V>
     {
-        /// <inheritdoc cref="CLRListener.ClassName"/>
+        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
         public sealed override string ClassName => "org.mases.kafkabridge.streams.processor.ProcessorImpl";
 
         readonly Action<ProcessorContext> executionFunctionInit = null;

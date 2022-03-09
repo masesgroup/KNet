@@ -39,15 +39,15 @@ namespace MASES.KafkaBridge.Streams.KStream
     }
 
     /// <summary>
-    /// Listener for Kafka KeyValueMapper. Extends <see cref="CLRListener"/>, implements <see cref="IKeyValueMapper{T, U, VR}"/>
+    /// Listener for Kafka KeyValueMapper. Extends <see cref="JVMBridgeListener"/>, implements <see cref="IKeyValueMapper{T, U, VR}"/>
     /// </summary>
     /// <typeparam name="T">The data associated to the event</typeparam>
     /// <typeparam name="U">The data associated to the event</typeparam>
     /// <typeparam name="VR">The result value</typeparam>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
-    public class KeyValueMapper<T, U, VR> : CLRListener, IKeyValueMapper<T, U, VR>
+    public class KeyValueMapper<T, U, VR> : JVMBridgeListener, IKeyValueMapper<T, U, VR>
     {
-        /// <inheritdoc cref="CLRListener.ClassName"/>
+        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
         public sealed override string ClassName => "org.mases.kafkabridge.streams.kstream.KeyValueMapperImpl";
 
         readonly Func<T, U, VR> executionFunction = null;

@@ -17,7 +17,6 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using MASES.JCOBridge.C2JBridge.Function;
 using MASES.KafkaBridge.Common.Serialization;
 
 namespace MASES.KafkaBridge.Streams.KStream

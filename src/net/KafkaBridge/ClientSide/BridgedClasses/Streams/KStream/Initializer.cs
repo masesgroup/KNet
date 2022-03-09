@@ -35,13 +35,13 @@ namespace MASES.KafkaBridge.Streams.KStream
     }
 
     /// <summary>
-    /// Listener for Kafka Initializer. Extends <see cref="CLRListener"/>, implements <see cref="IInitializer{VA}"/>
+    /// Listener for Kafka Initializer. Extends <see cref="JVMBridgeListener"/>, implements <see cref="IInitializer{VA}"/>
     /// </summary>
     /// <typeparam name="VA">The Initialized data associated to the event</typeparam>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
-    public class Initializer<VA> : CLRListener, IInitializer<VA>
+    public class Initializer<VA> : JVMBridgeListener, IInitializer<VA>
     {
-        /// <inheritdoc cref="CLRListener.ClassName"/>
+        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
         public sealed override string ClassName => "org.mases.kafkabridge.streams.kstream.InitializerImpl";
 
         readonly Func<VA> executionFunction = null;

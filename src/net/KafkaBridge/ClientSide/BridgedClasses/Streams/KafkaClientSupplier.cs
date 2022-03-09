@@ -41,12 +41,12 @@ namespace MASES.KafkaBridge.Streams.Processor
     }
 
     /// <summary>
-    /// Listener for Kafka KafkaClientSupplier. Extends <see cref="CLRListener"/>, implements <see cref="IKafkaClientSupplier"/>
+    /// Listener for Kafka KafkaClientSupplier. Extends <see cref="JVMBridgeListener"/>, implements <see cref="IKafkaClientSupplier"/>
     /// </summary>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
-    public class KafkaClientSupplier : CLRListener, IKafkaClientSupplier
+    public class KafkaClientSupplier : JVMBridgeListener, IKafkaClientSupplier
     {
-        /// <inheritdoc cref="CLRListener.ClassName"/>
+        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
         public sealed override string ClassName => "org.mases.kafkabridge.streams.KafkaClientSupplierImpl";
 
         readonly Func<Map<string, object>, Clients.Admin.IAdmin> GetAdminFunction = null;

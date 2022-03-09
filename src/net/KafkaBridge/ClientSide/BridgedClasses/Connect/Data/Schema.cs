@@ -18,6 +18,7 @@
 
 using MASES.JCOBridge.C2JBridge;
 using MASES.KafkaBridge.Java.Util;
+using JavaLang = Java.Lang;
 
 namespace MASES.KafkaBridge.Connect.Data
 {
@@ -91,7 +92,7 @@ namespace MASES.KafkaBridge.Connect.Data
 
         bool IsOptional { get; }
 
-        Java.Lang.Object DefaultValue();
+        JavaLang.Object DefaultValue();
 
         string Name();
 
@@ -131,7 +132,7 @@ namespace MASES.KafkaBridge.Connect.Data
 
         public bool IsOptional => IExecute<bool>("isOptional");
 
-        public Java.Lang.Object DefaultValue() { return IExecute<Java.Lang.Object>("defaultValue"); }
+        public JavaLang.Object DefaultValue() { return IExecute<JavaLang.Object>("defaultValue"); }
 
         public string Name() { return IExecute<string>("name"); }
 
