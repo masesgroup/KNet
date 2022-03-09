@@ -32,6 +32,20 @@ namespace MASES.KafkaBridge
         /// </summary>
         /// <returns>The instance of <typeparamref name="T"/></returns>
         public static T Create() { return new T(); }
+        /// <summary>
+        /// Creates an instance of <typeparamref name="T"/>
+        /// </summary>
+        /// <param name="origin">Clone from this original instance</param>
+        /// <returns>The instance of <typeparamref name="T"/> clone from <paramref name="origin"/> or new instance if <paramref name="origin"/> is <see langword="null"/></returns>
+        public static T CreateFrom(T origin)
+        {
+            if (origin == null) return Create();
+            var newT = new T
+            {
+                _options = new System.Collections.Generic.Dictionary<string, object>(origin._options)
+            };
+            return newT;
+        }
 
         public static implicit operator Properties(GenericConfigBuilder<T> clazz) { return clazz.ToProperties(); }
 
