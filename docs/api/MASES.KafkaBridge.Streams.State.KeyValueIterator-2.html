@@ -103,9 +103,6 @@
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBaseEnumerable&lt;MASES.KafkaBridge.Streams.State.KeyValueIterator&lt;K, V&gt;, MASES.KafkaBridge.Streams.KeyValue&lt;K, V&gt;&gt;.GetEnumerator()</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBaseEnumerable&lt;MASES.KafkaBridge.Streams.State.KeyValueIterator&lt;K, V&gt;&gt;.System.Collections.IEnumerable.GetEnumerator()</span>
-    </div>
-    <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Streams.State.KeyValueIterator&lt;K, V&gt;&gt;.SExecute(System.String, System.Object[])</span>
     </div>
     <div>
@@ -137,6 +134,9 @@
     </div>
     <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Streams.State.KeyValueIterator&lt;K, V&gt;&gt;.Clazz</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Streams.State.KeyValueIterator&lt;K, V&gt;&gt;.Class</span>
     </div>
     <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KafkaBridge.Streams.State.KeyValueIterator&lt;K, V&gt;&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.DynClazz</span>
@@ -202,10 +202,16 @@
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Instance</span>
     </div>
     <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInterface</span>
+    </div>
+    <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsStatic</span>
     </div>
     <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsCloseable</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsListener</span>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember#system-dynamic-dynamicobject-trygetmember(system-dynamic-getmemberbinder-system-object@)">DynamicObject.TryGetMember(GetMemberBinder, Object)</a>
@@ -294,7 +300,7 @@
     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_State_KeyValueIterator_2_ClassName.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.State.KeyValueIterator%602.ClassName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/State/KeyValueIterator.cs/#L26">View Source</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/State/KeyValueIterator.cs/#L27">View Source</a>
   </span>
   <a id="MASES_KafkaBridge_Streams_State_KeyValueIterator_2_ClassName_" data-uid="MASES.KafkaBridge.Streams.State.KeyValueIterator`2.ClassName*"></a>
   <h4 id="MASES_KafkaBridge_Streams_State_KeyValueIterator_2_ClassName" data-uid="MASES.KafkaBridge.Streams.State.KeyValueIterator`2.ClassName">ClassName</h4>
@@ -326,7 +332,7 @@
     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_State_KeyValueIterator_2_PeekNextKey.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.State.KeyValueIterator%602.PeekNextKey%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/State/KeyValueIterator.cs/#L30">View Source</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/State/KeyValueIterator.cs/#L36">View Source</a>
   </span>
   <a id="MASES_KafkaBridge_Streams_State_KeyValueIterator_2_PeekNextKey_" data-uid="MASES.KafkaBridge.Streams.State.KeyValueIterator`2.PeekNextKey*"></a>
   <h4 id="MASES_KafkaBridge_Streams_State_KeyValueIterator_2_PeekNextKey" data-uid="MASES.KafkaBridge.Streams.State.KeyValueIterator`2.PeekNextKey">PeekNextKey</h4>
@@ -351,6 +357,40 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_State_KeyValueIterator_2_GetEnumerator.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.State.KeyValueIterator%602.GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/State/KeyValueIterator.cs/#L29">View Source</a>
+  </span>
+  <a id="MASES_KafkaBridge_Streams_State_KeyValueIterator_2_GetEnumerator_" data-uid="MASES.KafkaBridge.Streams.State.KeyValueIterator`2.GetEnumerator*"></a>
+  <h4 id="MASES_KafkaBridge_Streams_State_KeyValueIterator_2_GetEnumerator" data-uid="MASES.KafkaBridge.Streams.State.KeyValueIterator`2.GetEnumerator">GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerator&lt;KeyValue&lt;K, V&gt;&gt; GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1">IEnumerator</a>&lt;<a class="xref" href="MASES.KafkaBridge.Streams.KeyValue-2.html">KeyValue</a>&lt;K, V&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBaseEnumerable&lt;MASES.KafkaBridge.Streams.State.KeyValueIterator&lt;K, V&gt;, MASES.KafkaBridge.Streams.KeyValue&lt;K, V&gt;&gt;.GetEnumerator()</span></div>
   <h3 id="operators">Operators
   </h3>
   <span class="small pull-right mobile-hide">
@@ -358,7 +398,7 @@
     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_State_KeyValueIterator_2_op_Implicit_MASES_KafkaBridge_Streams_State_KeyValueIterator__0__1___MASES_KafkaBridge_Java_Util_Iterator_MASES_KafkaBridge_Streams_KeyValue__0__1__.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.State.KeyValueIterator%602.op_Implicit(MASES.KafkaBridge.Streams.State.KeyValueIterator%7B%600%2C%601%7D)~MASES.KafkaBridge.Java.Util.Iterator%7BMASES.KafkaBridge.Streams.KeyValue%7B%600%2C%601%7D%7D%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/State/KeyValueIterator.cs/#L28">View Source</a>
+    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/State/KeyValueIterator.cs/#L34">View Source</a>
   </span>
   <a id="MASES_KafkaBridge_Streams_State_KeyValueIterator_2_op_Implicit_" data-uid="MASES.KafkaBridge.Streams.State.KeyValueIterator`2.op_Implicit*"></a>
   <h4 id="MASES_KafkaBridge_Streams_State_KeyValueIterator_2_op_Implicit_MASES_KafkaBridge_Streams_State_KeyValueIterator__0__1___MASES_KafkaBridge_Java_Util_Iterator_MASES_KafkaBridge_Streams_KeyValue__0__1__" data-uid="MASES.KafkaBridge.Streams.State.KeyValueIterator`2.op_Implicit(MASES.KafkaBridge.Streams.State.KeyValueIterator{`0,`1})~MASES.KafkaBridge.Java.Util.Iterator{MASES.KafkaBridge.Streams.KeyValue{`0,`1}}">Implicit(KeyValueIterator&lt;K, V&gt; to Iterator&lt;KeyValue&lt;K, V&gt;&gt;)</h4>
@@ -436,7 +476,7 @@
                     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_State_KeyValueIterator_2.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.State.KeyValueIterator%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/State/KeyValueIterator.cs/#L24" class="contribution-link">View Source</a>
+                    <a href="https://github.com/masesgroup/KafkaBridge/blob/master/src/net/KafkaBridge/ClientSide/BridgedClasses/Streams/State/KeyValueIterator.cs/#L25" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -73,19 +73,24 @@
   
   <h1 id="MASES_KafkaBridge_Streams_KStream_Aggregator_3" data-uid="MASES.KafkaBridge.Streams.KStream.Aggregator`3" class="text-break">Class Aggregator&lt;K, V, VA&gt;
   </h1>
-  <div class="markdown level0 summary"><p>Listener for Kafka Aggregator. Extends <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener</span>, implements <a class="xref" href="MASES.KafkaBridge.Streams.KStream.IAggregator-3.html">IAggregator&lt;K, V, VA&gt;</a></p>
+  <div class="markdown level0 summary"><p>Listener for Kafka Aggregator. Extends <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeListener</span>, implements <a class="xref" href="MASES.KafkaBridge.Streams.KStream.IAggregator-3.html">IAggregator&lt;K, V, VA&gt;</a></p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">MASES.JCOBridge.C2JBridge.CLRListener</span></div>
-    <div class="level2"><span class="xref">Aggregator&lt;K, V, VA&gt;</span></div>
+    <div class="level1"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
+    <div class="level2"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span></div>
+    <div class="level3"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span>&lt;<span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeListener</span>&gt;</div>
+    <div class="level4"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeListener</span></div>
+    <div class="level5"><span class="xref">Aggregator&lt;K, V, VA&gt;</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><span class="xref">MASES.JCOBridge.C2JBridge.ICLRListener</span></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span></div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span></div>
     <div><a class="xref" href="MASES.KafkaBridge.Streams.KStream.IAggregator-3.html">IAggregator</a>&lt;K, V, VA&gt;</div>
     <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span></div>
     <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span></div>
@@ -93,52 +98,178 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.AddEventHandler(System.String, System.EventHandler)</span>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeListener.AddEventHandler(System.String, System.EventHandler)</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.AddEventHandler&lt;TDataClass&gt;(System.String, System.EventHandler&lt;MASES.JCOBridge.C2JBridge.CLRListenerEventArgs&lt;TDataClass&gt;&gt;)</span>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeListener.AddEventHandler&lt;TDataClass&gt;(System.String, System.EventHandler&lt;MASES.JCOBridge.C2JBridge.CLRListenerEventArgs&lt;TDataClass&gt;&gt;)</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.Dispose()</span>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeListener.Dispose()</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.JniClass</span>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeListener.AutoInit</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.AutoInit</span>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeListener.Listener</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.Listener</span>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeListener.DynListener</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.DynListener</span>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeListener.IsStatic</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.IsStatic</span>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeListener.IsCloseable</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.IsCloseable</span>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeListener.IsListener</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.Instance</span>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.SExecute(System.String, System.Object[])</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.DynInstance</span>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.SExecute&lt;TReturn&gt;(System.String, System.Object[])</span>
     </div>
     <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#system-object-tostring">Object.ToString()</a>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.SExecute(System.Type, System.String, System.Object[])</span>
     </div>
     <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">Object.Equals(Object)</a>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.SExecute&lt;TNewClass, TReturn&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.SExecute&lt;TReturn&gt;(System.Type, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.SExecute&lt;TReturn, TConverter&gt;(System.Type, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.New(System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.Execute&lt;T&gt;(T[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.DynClazz</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.Clazz</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.Class</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.DynClazz</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.Clazz</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TReturn&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.New&lt;TNewClass&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.New&lt;TNewClass, TReturn&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.New&lt;TNewClass, TReturn, TConverter&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TReturn&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TNewClass, TReturn&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TNewClass, TReturn, TConverter&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.DynInstance</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Instance</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInterface</span>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember#system-dynamic-dynamicobject-trygetmember(system-dynamic-getmemberbinder-system-object@)">DynamicObject.TryGetMember(GetMemberBinder, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetmember#system-dynamic-dynamicobject-trysetmember(system-dynamic-setmemberbinder-system-object)">DynamicObject.TrySetMember(SetMemberBinder, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeletemember#system-dynamic-dynamicobject-trydeletemember(system-dynamic-deletememberbinder)">DynamicObject.TryDeleteMember(DeleteMemberBinder)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvokemember#system-dynamic-dynamicobject-tryinvokemember(system-dynamic-invokememberbinder-system-object()-system-object@)">DynamicObject.TryInvokeMember(InvokeMemberBinder, Object[], Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryconvert#system-dynamic-dynamicobject-tryconvert(system-dynamic-convertbinder-system-object@)">DynamicObject.TryConvert(ConvertBinder, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trycreateinstance#system-dynamic-dynamicobject-trycreateinstance(system-dynamic-createinstancebinder-system-object()-system-object@)">DynamicObject.TryCreateInstance(CreateInstanceBinder, Object[], Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvoke#system-dynamic-dynamicobject-tryinvoke(system-dynamic-invokebinder-system-object()-system-object@)">DynamicObject.TryInvoke(InvokeBinder, Object[], Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trybinaryoperation#system-dynamic-dynamicobject-trybinaryoperation(system-dynamic-binaryoperationbinder-system-object-system-object@)">DynamicObject.TryBinaryOperation(BinaryOperationBinder, Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryunaryoperation#system-dynamic-dynamicobject-tryunaryoperation(system-dynamic-unaryoperationbinder-system-object@)">DynamicObject.TryUnaryOperation(UnaryOperationBinder, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetindex#system-dynamic-dynamicobject-trygetindex(system-dynamic-getindexbinder-system-object()-system-object@)">DynamicObject.TryGetIndex(GetIndexBinder, Object[], Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetindex#system-dynamic-dynamicobject-trysetindex(system-dynamic-setindexbinder-system-object()-system-object)">DynamicObject.TrySetIndex(SetIndexBinder, Object[], Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeleteindex#system-dynamic-dynamicobject-trydeleteindex(system-dynamic-deleteindexbinder-system-object())">DynamicObject.TryDeleteIndex(DeleteIndexBinder, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames#system-dynamic-dynamicobject-getdynamicmembernames">DynamicObject.GetDynamicMemberNames()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getmetaobject#system-dynamic-dynamicobject-getmetaobject(system-linq-expressions-expression)">DynamicObject.GetMetaObject(Expression)</a>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">Object.Equals(Object, Object)</a>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#system-object-referenceequals(system-object-system-object)">Object.ReferenceEquals(Object, Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#system-object-gethashcode">Object.GetHashCode()</a>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#system-object-gettype">Object.GetType()</a>
@@ -151,7 +282,7 @@
   <h6><strong>Assembly</strong>: MASES.KafkaBridge.dll</h6>
   <h5 id="MASES_KafkaBridge_Streams_KStream_Aggregator_3_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Aggregator&lt;K, V, VA&gt; : CLRListener, ICLRListener, IDisposable, IAggregator&lt;K, V, VA&gt;, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
+    <pre><code class="lang-csharp hljs">public class Aggregator&lt;K, V, VA&gt; : JVMBridgeListener, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IAggregator&lt;K, V, VA&gt;, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -257,7 +388,7 @@
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">MASES.JCOBridge.C2JBridge.CLRListener.ClassName</span></div>
+  <div><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeListener.ClassName</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/masesgroup/KafkaBridge/new/master/apiSpec/new?filename=MASES_KafkaBridge_Streams_KStream_Aggregator_3_OnApply.md&amp;value=---%0Auid%3A%20MASES.KafkaBridge.Streams.KStream.Aggregator%603.OnApply%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -355,10 +486,16 @@
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.ICLRListener</span>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">System.Dynamic.IDynamicMetaObjectProvider</a>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span>
   </div>
   <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span>
   </div>
   <div>
       <a class="xref" href="MASES.KafkaBridge.Streams.KStream.IAggregator-3.html">IAggregator&lt;K, V, VA&gt;</a>
