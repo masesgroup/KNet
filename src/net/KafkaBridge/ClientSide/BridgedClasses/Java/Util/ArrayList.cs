@@ -17,12 +17,15 @@
 */
 
 using Java.Lang;
+using MASES.JCOBridge.C2JBridge;
 
 namespace Java.Util
 {
-    public class ArrayList<E> : Iterable<E>
+    public class ArrayList<E> : JVMBridgeBase<ArrayList<E>>
     {
         public override string ClassName => "java.util.ArrayList";
+
+        public static implicit operator Iterable<E>(ArrayList<E> array) { return Wraps<Iterable<E>>(array.Instance); }
 
         public static implicit operator Collection<E>(ArrayList<E> array) { return Wraps<Collection<E>>(array.Instance); }
 
