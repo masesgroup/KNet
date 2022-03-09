@@ -80,7 +80,7 @@ namespace MASES.KafkaBridgeTestAdmin
                 // if creation failed the ExecutionException wraps the underlying cause.
                 future.Get();
             }
-            catch (KafkaBridge.Java.Util.Concurrent.ExecutionException ex)
+            catch (Java.Util.Concurrent.ExecutionException ex)
             {
                 Console.WriteLine(ex.InnerException.Message);
             }
@@ -107,7 +107,7 @@ namespace MASES.KafkaBridgeTestAdmin
                 // if deletion failed the ExecutionException wraps the underlying cause.
                 future.Get();
             }
-            catch (KafkaBridge.Java.Util.Concurrent.ExecutionException ex)
+            catch (Java.Util.Concurrent.ExecutionException ex)
             {
                 Console.WriteLine(ex.InnerException.Message);
             }

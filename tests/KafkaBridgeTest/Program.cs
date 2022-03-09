@@ -113,7 +113,7 @@ namespace MASES.KafkaBridgeTest
                     future.Get();
                 }
             }
-            catch (KafkaBridge.Java.Util.Concurrent.ExecutionException ex)
+            catch (Java.Util.Concurrent.ExecutionException ex)
             {
                 Console.WriteLine(ex.InnerException.Message);
             }
@@ -198,7 +198,7 @@ namespace MASES.KafkaBridgeTest
                     }
                 }
             }
-            catch (KafkaBridge.Java.Util.Concurrent.ExecutionException ex)
+            catch (Java.Util.Concurrent.ExecutionException ex)
             {
                 Console.WriteLine("Producer ended with error: {0}", ex.InnerException.Message);
             }
@@ -289,7 +289,7 @@ namespace MASES.KafkaBridgeTest
                     }
                 }
             }
-            catch (KafkaBridge.Java.Util.Concurrent.ExecutionException ex)
+            catch (Java.Util.Concurrent.ExecutionException ex)
             {
                 Console.WriteLine("Consumer ended with error: {0}", ex.InnerException.Message);
             }

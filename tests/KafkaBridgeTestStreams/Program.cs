@@ -100,7 +100,7 @@ namespace MASES.KafkaBridgeTest
                     }
                 }
             }
-            catch (KafkaBridge.Java.Util.Concurrent.ExecutionException ex)
+            catch (Java.Util.Concurrent.ExecutionException ex)
             {
                 Console.WriteLine("Streams ended with error: {0}", ex.InnerException.Message);
             }
@@ -192,7 +192,7 @@ namespace MASES.KafkaBridgeTest
                     if (errorHandler != null) errorHandler.Dispose();
                 }
             }
-            catch (KafkaBridge.Java.Util.Concurrent.ExecutionException ex)
+            catch (Java.Util.Concurrent.ExecutionException ex)
             {
                 Console.WriteLine("Streams ended with error: {0}", ex.InnerException.Message);
             }
