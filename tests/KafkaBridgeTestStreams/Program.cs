@@ -26,7 +26,6 @@ using MASES.JCOBridge.C2JBridge;
 using MASES.KafkaBridge;
 using MASES.KafkaBridge.Clients.Consumer;
 using MASES.KafkaBridge.Common.Serialization;
-using Java.Lang;
 using MASES.KafkaBridge.Java.Util;
 using MASES.KafkaBridge.Streams;
 using MASES.KafkaBridge.Streams.Errors;
@@ -62,15 +61,15 @@ namespace MASES.KafkaBridgeTest
             }
 
             //Thread threadConsume = new Thread(PipeDemo)
-            System.Threading.Thread threadConsume = new System.Threading.Thread(WordCountDemo)
+            Thread threadConsume = new(WordCountDemo)
             {
                 Name = "DemoThread"
             };
             threadConsume.Start();
 
-            System.Threading.Thread.Sleep(20000);
+            Thread.Sleep(20000);
             resetEvent.Set();
-            System.Threading.Thread.Sleep(2000);
+            Thread.Sleep(2000);
         }
 
         static void PipeDemo()
@@ -105,7 +104,7 @@ namespace MASES.KafkaBridgeTest
             {
                 Console.WriteLine("Streams ended with error: {0}", ex.InnerException.Message);
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine("Streams ended with error: {0}", ex.Message);
             }
@@ -126,7 +125,7 @@ namespace MASES.KafkaBridgeTest
                 // setting offset reset to earliest so that we can re-run the demo code with the same pre-loaded data
                 props.Put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
 
-                ValueMapper<string, Iterable<string>> valueMapper = null;
+                ValueMapper<string, Java.Lang.Iterable<string>> valueMapper = null;
                 KeyValueMapper<string, string, string> keyValuemapper = null;
                 StreamsUncaughtExceptionHandler errorHandler = null;
 
@@ -136,11 +135,11 @@ namespace MASES.KafkaBridgeTest
 
                     KStream<string, string> source = builder.Stream<string, string>(topicToUse);
 
-                    valueMapper = new ValueMapper<string, Iterable<string>>((value) =>
+                    valueMapper = new ValueMapper<string, Java.Lang.Iterable<string>>((value) =>
                     {
-                        Regex regex = new Regex("\\W+");
+                        Regex regex = new("\\W+");
 
-                        ArrayList<string> arrayList = new ArrayList<string>();
+                        ArrayList<string> arrayList = new();
 
                         foreach (var item in regex.Split(value))
                         {
@@ -197,7 +196,7 @@ namespace MASES.KafkaBridgeTest
             {
                 Console.WriteLine("Streams ended with error: {0}", ex.InnerException.Message);
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine("Streams ended with error: {0}", ex.Message);
             }

@@ -22,7 +22,7 @@ using System.Collections.Generic;
 
 namespace MASES.KafkaBridge.Java.Util
 {
-    public class Iterator<E> : JVMBridgeBase<Iterator<E>>, IEnumerator<E>
+    public class Iterator<E> : JVMBridgeBase<Iterator<E>>, IEnumerable<E>
     {
         public override string ClassName => "java.util.Iterator";
 
@@ -30,18 +30,14 @@ namespace MASES.KafkaBridge.Java.Util
 
         public E Next => IExecute<E>("next");
 
-        public E Current => throw new System.NotImplementedException();
-
-        object IEnumerator.Current => throw new System.NotImplementedException();
-
-        public bool MoveNext()
+        public IEnumerator<E> GetEnumerator()
         {
-            throw new System.NotImplementedException();
+            return new JVMBridgeBaseEnumerator<E>(Instance);
         }
 
-        public void Reset()
+        IEnumerator IEnumerable.GetEnumerator()
         {
-            throw new System.NotImplementedException();
+            return GetEnumerator();
         }
     }
 }
