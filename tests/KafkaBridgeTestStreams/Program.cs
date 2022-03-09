@@ -26,7 +26,7 @@ using MASES.JCOBridge.C2JBridge;
 using MASES.KafkaBridge;
 using MASES.KafkaBridge.Clients.Consumer;
 using MASES.KafkaBridge.Common.Serialization;
-using MASES.KafkaBridge.Java.Util;
+using Java.Util;
 using MASES.KafkaBridge.Streams;
 using MASES.KafkaBridge.Streams.Errors;
 using MASES.KafkaBridge.Streams.KStream;
@@ -100,7 +100,7 @@ namespace MASES.KafkaBridgeTest
                     }
                 }
             }
-            catch (KafkaBridge.Java.Util.Concurrent.ExecutionException ex)
+            catch (Java.Util.Concurrent.ExecutionException ex)
             {
                 Console.WriteLine("Streams ended with error: {0}", ex.InnerException.Message);
             }
@@ -192,7 +192,7 @@ namespace MASES.KafkaBridgeTest
                     if (errorHandler != null) errorHandler.Dispose();
                 }
             }
-            catch (KafkaBridge.Java.Util.Concurrent.ExecutionException ex)
+            catch (Java.Util.Concurrent.ExecutionException ex)
             {
                 Console.WriteLine("Streams ended with error: {0}", ex.InnerException.Message);
             }

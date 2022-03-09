@@ -18,7 +18,7 @@
 
 using Java.Lang;
 
-namespace MASES.KafkaBridge.Java.Util
+namespace Java.Util
 {
     public class ArrayList<E> : Iterable<E>
     {

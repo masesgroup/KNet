@@ -24,7 +24,7 @@ using MASES.KafkaBridge.Clients.Producer;
 using MASES.KafkaBridge.Common;
 using MASES.KafkaBridge.Common.Errors;
 using MASES.KafkaBridge.Connect.Errors;
-using MASES.KafkaBridge.Java.Util.Concurrent;
+using Java.Util.Concurrent;
 using MASES.KafkaBridge.Streams.Errors;
 using System;
 using System.Collections.Generic;

@@ -16,9 +16,11 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KafkaBridge.Java.Util.Regex
+using MASES.JCOBridge.C2JBridge;
+
+namespace Java.Util.Regex
 {
-    public sealed class Pattern : JCOBridge.C2JBridge.JVMBridgeBase<Pattern>
+    public sealed class Pattern : JVMBridgeBase<Pattern>
     {
         public override string ClassName => "java.util.regex.Pattern";
 

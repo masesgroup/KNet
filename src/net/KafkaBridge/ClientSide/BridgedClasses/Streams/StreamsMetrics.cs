@@ -19,7 +19,7 @@
 using MASES.JCOBridge.C2JBridge;
 using MASES.KafkaBridge.Common;
 using MASES.KafkaBridge.Common.Metrics;
-using MASES.KafkaBridge.Java.Util;
+using Java.Util;
 
 namespace MASES.KafkaBridge.Streams
 {

@@ -17,7 +17,7 @@
 */
 
 using Java.Lang;
-using MASES.KafkaBridge.Java.Util.Concurrent;
+using Java.Util.Concurrent;
 
 namespace MASES.KafkaBridge.Common
 {

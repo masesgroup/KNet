@@ -14,7 +14,7 @@ A basic producer can be like the following one:
 ```C#
 using MASES.KafkaBridge;
 using MASES.KafkaBridge.Clients.Producer;
-using MASES.KafkaBridge.Java.Util;
+using Java.Util;
 using System;
 
 namespace MASES.KafkaBridgeTemplate.KafkaBridgeProducer
@@ -75,7 +75,7 @@ Surf [JVM callbacks]() to go into detail in the callback management from JVM.
 ```C#
 using MASES.KafkaBridge;
 using MASES.KafkaBridge.Clients.Producer;
-using MASES.KafkaBridge.Java.Util;
+using Java.Util;
 using System;
 
 namespace MASES.KafkaBridgeTemplate.KafkaBridgeProducer
@@ -145,7 +145,7 @@ A basic consumer can be like the following one:
 ```C#
 using MASES.KafkaBridge;
 using MASES.KafkaBridge.Clients.Consumer;
-using MASES.KafkaBridge.Java.Util;
+using Java.Util;
 using System;
 
 namespace MASES.KafkaBridgeTemplate.KafkaBridgeConsumer

@@ -16,9 +16,11 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KafkaBridge.Java.Nio
+using MASES.JCOBridge.C2JBridge;
+
+namespace Java.Nio
 {
-    public class ByteBuffer : JCOBridge.C2JBridge.JVMBridgeBase<ByteBuffer>
+    public class ByteBuffer : JVMBridgeBase<ByteBuffer>
     {
         public override string ClassName => "java.nio.ByteBuffer";
     }

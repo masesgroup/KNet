@@ -16,7 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KafkaBridge.Java.Util;
+using Java.Util;
 
 namespace MASES.KafkaBridge.Common.Metrics
 {

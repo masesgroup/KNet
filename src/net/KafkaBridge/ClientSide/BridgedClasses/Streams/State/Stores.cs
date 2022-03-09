@@ -17,7 +17,7 @@
 */
 
 using MASES.KafkaBridge.Common.Serialization;
-using MASES.KafkaBridge.Java.Time;
+using Java.Time;
 
 namespace MASES.KafkaBridge.Streams.State
 {

@@ -17,8 +17,8 @@
 */
 
 
-using MASES.KafkaBridge.Java.Time;
-using MASES.KafkaBridge.Java.Util;
+using Java.Time;
+using Java.Util;
 using MASES.KafkaBridge.Streams.KStream;
 
 namespace MASES.KafkaBridge.Streams.State

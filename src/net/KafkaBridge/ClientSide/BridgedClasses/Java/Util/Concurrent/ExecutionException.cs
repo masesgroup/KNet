@@ -16,9 +16,11 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KafkaBridge.Java.Util.Concurrent
+using MASES.JCOBridge.C2JBridge;
+
+namespace Java.Util.Concurrent
 {
-    public class ExecutionException : JCOBridge.C2JBridge.JVMBridgeException<ExecutionException>
+    public class ExecutionException : JVMBridgeException<ExecutionException>
     {
         public override string ClassName => "java.util.concurrent.ExecutionException";
     }

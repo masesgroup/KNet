@@ -16,7 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KafkaBridge.Java.Nio;
+using Java.Nio;
 
 namespace MASES.KafkaBridge.Common.Serialization
 {

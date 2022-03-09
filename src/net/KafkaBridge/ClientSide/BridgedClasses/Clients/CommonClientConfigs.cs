@@ -17,7 +17,7 @@
 */
 
 using MASES.KafkaBridge.Common.Metrics;
-using MASES.KafkaBridge.Java.Util;
+using Java.Util;
 
 namespace MASES.KafkaBridge.Clients
 {

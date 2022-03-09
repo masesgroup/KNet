@@ -16,9 +16,11 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KafkaBridge.Java.Io
+using MASES.JCOBridge.C2JBridge;
+
+namespace Java.Io
 {
-    public class File : JCOBridge.C2JBridge.JVMBridgeBase<File>
+    public class File : JVMBridgeBase<File>
     {
         public override string ClassName => "java.io.File";
     }

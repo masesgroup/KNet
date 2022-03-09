@@ -22,8 +22,8 @@ using MASES.KafkaBridge.Common;
 using MASES.KafkaBridge.Common.Acl;
 using MASES.KafkaBridge.Common.Config;
 using MASES.KafkaBridge.Common.Quota;
-using MASES.KafkaBridge.Java.Time;
-using MASES.KafkaBridge.Java.Util;
+using Java.Time;
+using Java.Util;
 
 namespace MASES.KafkaBridge.Clients.Admin
 {

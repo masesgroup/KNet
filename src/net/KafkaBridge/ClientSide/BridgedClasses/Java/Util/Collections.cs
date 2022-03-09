@@ -18,23 +18,21 @@
 
 using MASES.JCOBridge.C2JBridge;
 
-namespace MASES.KafkaBridge.Java.Util
+namespace Java.Util
 {
-    public class Collections : JCOBridge.C2JBridge.JVMBridgeBase<Collections>
+    public class Collections : JVMBridgeBase<Collections>
     {
         public override bool IsStatic => true;
         public override string ClassName => "java.util.Collections";
 
         public static Set<E> Singleton<E>(E element)
         {
-            return SExecute<Set<E>>("singleton", 
-                                    (typeof(JVMBridgeBase).IsAssignableFrom(typeof(E))) ? (object)(element as JVMBridgeBase) : (object)element);
+            return SExecute<Set<E>>("singleton", (typeof(JVMBridgeBase).IsAssignableFrom(typeof(E))) ? (object)(element as JVMBridgeBase) : (object)element);
         }
 
         public static List<E> SingletonList<E>(E element)
         {
-            return SExecute<List<E>>("singleton", 
-                                     (typeof(JVMBridgeBase).IsAssignableFrom(typeof(E))) ? (object)(element as JVMBridgeBase) : (object)element);
+            return SExecute<List<E>>("singleton", (typeof(JVMBridgeBase).IsAssignableFrom(typeof(E))) ? (object)(element as JVMBridgeBase) : (object)element);
         }
 
         public static Map<K, V> SingletonMap<K, V>(K key, V value)

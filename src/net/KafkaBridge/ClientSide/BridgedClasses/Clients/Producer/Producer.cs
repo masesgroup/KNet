@@ -19,8 +19,8 @@
 using MASES.JCOBridge.C2JBridge;
 using MASES.KafkaBridge.Clients.Consumer;
 using MASES.KafkaBridge.Common;
-using MASES.KafkaBridge.Java.Util;
-using MASES.KafkaBridge.Java.Util.Concurrent;
+using Java.Util;
+using Java.Util.Concurrent;
 
 namespace MASES.KafkaBridge.Clients.Producer
 {

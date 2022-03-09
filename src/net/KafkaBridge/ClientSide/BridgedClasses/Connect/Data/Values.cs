@@ -17,8 +17,8 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using MASES.KafkaBridge.Java.Math;
-using MASES.KafkaBridge.Java.Util;
+using Java.Math;
+using Java.Util;
 using JavaLang = Java.Lang;
 
 namespace MASES.KafkaBridge.Connect.Data

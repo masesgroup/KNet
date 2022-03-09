@@ -16,9 +16,11 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KafkaBridge.Java.Util
+using MASES.JCOBridge.C2JBridge;
+
+namespace Java.Util
 {
-    public class Properties : JCOBridge.C2JBridge.JVMBridgeBase<Properties>
+    public class Properties : JVMBridgeBase<Properties>
     {
         public override string ClassName => "java.util.Properties";
 

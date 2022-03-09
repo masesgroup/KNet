@@ -16,9 +16,11 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KafkaBridge.Java.Util.Concurrent
+using MASES.JCOBridge.C2JBridge;
+
+namespace Java.Util.Concurrent
 {
-    public class TimeUnit : JCOBridge.C2JBridge.JVMBridgeBase<TimeUnit>
+    public class TimeUnit : JVMBridgeBase<TimeUnit>
     {
         public override string ClassName => "java.util.concurrent.TimeUnit";
 

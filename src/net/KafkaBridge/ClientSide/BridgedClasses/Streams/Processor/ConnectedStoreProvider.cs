@@ -17,7 +17,7 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using MASES.KafkaBridge.Java.Util;
+using Java.Util;
 using MASES.KafkaBridge.Streams.State;
 
 namespace MASES.KafkaBridge.Streams.Processor

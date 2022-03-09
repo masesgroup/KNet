@@ -28,7 +28,7 @@ using MASES.KafkaBridge.Clients.Consumer;
 using MASES.KafkaBridge.Clients.Producer;
 using MASES.KafkaBridge.Common.Config;
 using MASES.KafkaBridge.Common.Serialization;
-using MASES.KafkaBridge.Java.Util;
+using Java.Util;
 using System;
 using System.Text;
 using System.Threading;
@@ -113,7 +113,7 @@ namespace MASES.KafkaBridgeTest
                     future.Get();
                 }
             }
-            catch (KafkaBridge.Java.Util.Concurrent.ExecutionException ex)
+            catch (Java.Util.Concurrent.ExecutionException ex)
             {
                 Console.WriteLine(ex.InnerException.Message);
             }
@@ -198,7 +198,7 @@ namespace MASES.KafkaBridgeTest
                     }
                 }
             }
-            catch (KafkaBridge.Java.Util.Concurrent.ExecutionException ex)
+            catch (Java.Util.Concurrent.ExecutionException ex)
             {
                 Console.WriteLine("Producer ended with error: {0}", ex.InnerException.Message);
             }
@@ -289,7 +289,7 @@ namespace MASES.KafkaBridgeTest
                     }
                 }
             }
-            catch (KafkaBridge.Java.Util.Concurrent.ExecutionException ex)
+            catch (Java.Util.Concurrent.ExecutionException ex)
             {
                 Console.WriteLine("Consumer ended with error: {0}", ex.InnerException.Message);
             }

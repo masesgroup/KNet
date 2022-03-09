@@ -16,7 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KafkaBridge.Java.Time;
+using Java.Time;
 
 namespace MASES.KafkaBridge.Streams.KStream
 {

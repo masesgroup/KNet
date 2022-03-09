@@ -18,7 +18,7 @@
 
 using MASES.KafkaBridge.Clients;
 using MASES.KafkaBridge.Common.Config;
-using MASES.KafkaBridge.Java.Util;
+using Java.Util;
 
 namespace MASES.KafkaBridge.Streams
 {
