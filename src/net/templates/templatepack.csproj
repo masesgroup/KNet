@@ -17,7 +17,7 @@
     <PackageProjectUrl>https://github.com/masesgroup/KafkaBridge/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/masesgroup/KafkaBridge</RepositoryUrl>
     <PackageReleaseNotes>https://github.com/masesgroup/KafkaBridge/releases</PackageReleaseNotes>
-    <PackageLicense>LICENSE</PackageLicense>
+	<PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageIcon>JCOB128x128.png</PackageIcon>
     <PackageTags>kafka apache-kafka dotnet clr netcore net5 net6 template kafka connect streams producer consumer providers streamprovider confluent</PackageTags>
     <LangVersion>8.0</LangVersion>
