@@ -18,6 +18,7 @@
 
 using MASES.JCOBridge.C2JBridge;
 using MASES.KafkaBridge.Java.Util;
+using JavaLang = Java.Lang;
 
 namespace MASES.KafkaBridge.Connect.Data
 {
@@ -36,19 +37,19 @@ namespace MASES.KafkaBridge.Connect.Data
 
         public Schema Schema => IExecute<Schema>("schema");
 
-        public Java.Lang.Object Get(string fieldName)
+        public JavaLang.Object Get(string fieldName)
         {
-            return IExecute<Java.Lang.Object>("get", fieldName);
+            return IExecute<JavaLang.Object>("get", fieldName);
         }
 
-        public Java.Lang.Object Get(Field field)
+        public JavaLang.Object Get(Field field)
         {
-            return IExecute<Java.Lang.Object>("get", field);
+            return IExecute<JavaLang.Object>("get", field);
         }
 
-        public Java.Lang.Object GetWithoutDefault(string fieldName)
+        public JavaLang.Object GetWithoutDefault(string fieldName)
         {
-            return IExecute<Java.Lang.Object>("getWithoutDefault", fieldName);
+            return IExecute<JavaLang.Object>("getWithoutDefault", fieldName);
         }
 
         public byte GetInt8(string fieldName)
@@ -111,12 +112,12 @@ namespace MASES.KafkaBridge.Connect.Data
             return IExecute<Struct>("getStruct", fieldName);
         }
 
-        public Struct Put(string fieldName, Java.Lang.Object value)
+        public Struct Put(string fieldName, JavaLang.Object value)
         {
             return IExecute<Struct>("put", fieldName, value);
         }
 
-        public Struct Put(Field field, Java.Lang.Object value)
+        public Struct Put(Field field, JavaLang.Object value)
         {
             return IExecute<Struct>("put", field, value);
         }

@@ -573,27 +573,27 @@ namespace MASES.KafkaBridge
             }
 
             classPath = string.Empty;
-            buildClassPath(RootPath, "*.jar");
-            buildClassPath(CoreDependenciesPath);
-            buildClassPath(ExamplesPath);
-            buildClassPath(ClientsPath);
-            buildClassPath(StreamsPath);
-            buildClassPath(StreamsExamplePath);
-            buildClassPath(StreamsDependenciesPath);
-            buildClassPath(ToolsPath);
-            buildClassPath(ToolsDependenciesPath);
-            buildClassPath(ConnectApiPath);
-            buildClassPath(ConnectApiDependenciesPath);
-            buildClassPath(ConnectRuntimePath);
-            buildClassPath(ConnectRuntimeDependenciesPath);
-            buildClassPath(ConnectFilePath);
-            buildClassPath(ConnectFileDependenciesPath);
-            buildClassPath(ConnectJsonPath);
-            buildClassPath(ConnectJsonDependenciesPath);
-            buildClassPath(ConnectToolsPath);
-            buildClassPath(ConnectToolsDependenciesPath);
-            buildClassPath(ReleasePath);
-            buildClassPath(ReleaseAdditionalPath);
+            BuildClassPath(RootPath, "*.jar");
+            BuildClassPath(CoreDependenciesPath);
+            BuildClassPath(ExamplesPath);
+            BuildClassPath(ClientsPath);
+            BuildClassPath(StreamsPath);
+            BuildClassPath(StreamsExamplePath);
+            BuildClassPath(StreamsDependenciesPath);
+            BuildClassPath(ToolsPath);
+            BuildClassPath(ToolsDependenciesPath);
+            BuildClassPath(ConnectApiPath);
+            BuildClassPath(ConnectApiDependenciesPath);
+            BuildClassPath(ConnectRuntimePath);
+            BuildClassPath(ConnectRuntimeDependenciesPath);
+            BuildClassPath(ConnectFilePath);
+            BuildClassPath(ConnectFileDependenciesPath);
+            BuildClassPath(ConnectJsonPath);
+            BuildClassPath(ConnectJsonDependenciesPath);
+            BuildClassPath(ConnectToolsPath);
+            BuildClassPath(ConnectToolsDependenciesPath);
+            BuildClassPath(ReleasePath);
+            BuildClassPath(ReleaseAdditionalPath);
 
             classPath += !string.IsNullOrEmpty(ExtraClassPath) ? InternalConst.PathSeparator + ExtraClassPath : string.Empty;
 
@@ -608,7 +608,7 @@ namespace MASES.KafkaBridge
             return classPath;
         }
 
-        string buildClassPath(string path, string pattern = null)
+        string BuildClassPath(string path, string pattern = null)
         {
             var folder = Path.GetDirectoryName(path);
             if (pattern == null) pattern = Path.GetFileName(path);

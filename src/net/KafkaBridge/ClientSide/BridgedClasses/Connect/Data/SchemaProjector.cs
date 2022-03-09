@@ -17,6 +17,7 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
+using JavaLang = Java.Lang;
 
 namespace MASES.KafkaBridge.Connect.Data
 {
@@ -24,9 +25,9 @@ namespace MASES.KafkaBridge.Connect.Data
     {
         public override string ClassName => "org.apache.kafka.connect.data.SchemaProjector";
 
-        public static Java.Lang.Object Project(Schema source, Java.Lang.Object record, Schema target)
+        public static JavaLang.Object Project(Schema source, JavaLang.Object record, Schema target)
         {
-            return SExecute<Java.Lang.Object>("project", source, record, target);
+            return SExecute<JavaLang.Object>("project", source, record, target);
         }
     }
 }

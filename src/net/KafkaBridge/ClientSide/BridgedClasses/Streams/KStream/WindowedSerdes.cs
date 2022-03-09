@@ -18,7 +18,7 @@
 
 using MASES.JCOBridge.C2JBridge;
 using MASES.KafkaBridge.Common.Serialization;
-using MASES.KafkaBridge.Java.Lang;
+using Java.Lang;
 
 namespace MASES.KafkaBridge.Streams.KStream
 {
@@ -29,12 +29,12 @@ namespace MASES.KafkaBridge.Streams.KStream
 
         public static Serde<Windowed<T>> TimeWindowedSerdeFrom<T>(Class<T> type, long windowSize) where T : IJVMBridgeBase, new()
         {
-            return SExecute<Serde<Windowed<T>>>("timeWindowedSerdeFrom", type.JVMType, windowSize);
+            return SExecute<Serde<Windowed<T>>>("timeWindowedSerdeFrom", type, windowSize);
         }
 
         public static Serde<Windowed<T>> SessionWindowedSerdeFrom<T>(Class<T> type) where T : IJVMBridgeBase, new()
         {
-            return SExecute<Serde<Windowed<T>>>("sessionWindowedSerdeFrom", type.JVMType);
+            return SExecute<Serde<Windowed<T>>>("sessionWindowedSerdeFrom", type);
         }
     }
 }

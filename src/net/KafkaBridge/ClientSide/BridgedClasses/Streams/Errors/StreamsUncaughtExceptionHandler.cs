@@ -43,12 +43,12 @@ namespace MASES.KafkaBridge.Streams.Errors
     }
 
     /// <summary>
-    /// Listener for Kafka StreamsUncaughtExceptionHandler. Extends <see cref="CLRListener"/>, implements <see cref="IStreamsUncaughtExceptionHandler"/>
+    /// Listener for Kafka StreamsUncaughtExceptionHandler. Extends <see cref="JVMBridgeListener"/>, implements <see cref="IStreamsUncaughtExceptionHandler"/>
     /// </summary>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
-    public class StreamsUncaughtExceptionHandler : CLRListener, IStreamsUncaughtExceptionHandler
+    public class StreamsUncaughtExceptionHandler : JVMBridgeListener, IStreamsUncaughtExceptionHandler
     {
-        /// <inheritdoc cref="CLRListener.ClassName"/>
+        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
         public sealed override string ClassName => "org.mases.kafkabridge.streams.errors.StreamsUncaughtExceptionHandlerImpl";
 
         readonly Func<JVMBridgeException, StreamThreadExceptionResponse> executionFunction = null;

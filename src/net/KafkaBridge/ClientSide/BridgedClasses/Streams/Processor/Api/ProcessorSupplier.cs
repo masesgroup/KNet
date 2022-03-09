@@ -16,7 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.JCOBridge.C2JBridge.Function;
+using Java.Util.Function;
 using MASES.KafkaBridge.Java.Util;
 using MASES.KafkaBridge.Streams.State;
 

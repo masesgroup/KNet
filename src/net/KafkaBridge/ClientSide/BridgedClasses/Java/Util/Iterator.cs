@@ -17,15 +17,31 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace MASES.KafkaBridge.Java.Util
 {
-    public class Iterator<E> : JVMBridgeBase<Iterator<E>>
+    public class Iterator<E> : JVMBridgeBase<Iterator<E>>, IEnumerator<E>
     {
         public override string ClassName => "java.util.Iterator";
 
         public bool HasNext => IExecute<bool>("hasNext");
 
         public E Next => IExecute<E>("next");
+
+        public E Current => throw new System.NotImplementedException();
+
+        object IEnumerator.Current => throw new System.NotImplementedException();
+
+        public bool MoveNext()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Reset()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

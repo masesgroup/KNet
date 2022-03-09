@@ -39,14 +39,14 @@ namespace MASES.KafkaBridge.Streams.KStream
 
 
     /// <summary>
-    /// Listener for Kafka ForeachAction. Extends <see cref="CLRListener"/>, implements <see cref="IForeachAction{K, V}"/>
+    /// Listener for Kafka ForeachAction. Extends <see cref="JVMBridgeListener"/>, implements <see cref="IForeachAction{K, V}"/>
     /// </summary>
     /// <typeparam name="K">The data associated to the event</typeparam>
     /// <typeparam name="V">The data associated to the event</typeparam>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
-    public class ForeachAction<K, V> : CLRListener, IForeachAction<K, V>
+    public class ForeachAction<K, V> : JVMBridgeListener, IForeachAction<K, V>
     {
-        /// <inheritdoc cref="CLRListener.ClassName"/>
+        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
         public sealed override string ClassName => "org.mases.kafkabridge.streams.kstream.ForeachActionImpl";
 
         readonly Action<K, V> executionFunction = null;

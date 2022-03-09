@@ -26,7 +26,7 @@ using MASES.JCOBridge.C2JBridge;
 using MASES.KafkaBridge;
 using MASES.KafkaBridge.Clients.Consumer;
 using MASES.KafkaBridge.Common.Serialization;
-using MASES.KafkaBridge.Java.Lang;
+using Java.Lang;
 using MASES.KafkaBridge.Java.Util;
 using MASES.KafkaBridge.Streams;
 using MASES.KafkaBridge.Streams.Errors;
@@ -62,15 +62,15 @@ namespace MASES.KafkaBridgeTest
             }
 
             //Thread threadConsume = new Thread(PipeDemo)
-            Thread threadConsume = new Thread(WordCountDemo)
+            System.Threading.Thread threadConsume = new System.Threading.Thread(WordCountDemo)
             {
                 Name = "DemoThread"
             };
             threadConsume.Start();
 
-            Thread.Sleep(20000);
+            System.Threading.Thread.Sleep(20000);
             resetEvent.Set();
-            Thread.Sleep(2000);
+            System.Threading.Thread.Sleep(2000);
         }
 
         static void PipeDemo()
@@ -105,7 +105,7 @@ namespace MASES.KafkaBridgeTest
             {
                 Console.WriteLine("Streams ended with error: {0}", ex.InnerException.Message);
             }
-            catch (Exception ex)
+            catch (System.Exception ex)
             {
                 Console.WriteLine("Streams ended with error: {0}", ex.Message);
             }
@@ -197,7 +197,7 @@ namespace MASES.KafkaBridgeTest
             {
                 Console.WriteLine("Streams ended with error: {0}", ex.InnerException.Message);
             }
-            catch (Exception ex)
+            catch (System.Exception ex)
             {
                 Console.WriteLine("Streams ended with error: {0}", ex.Message);
             }

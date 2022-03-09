@@ -40,14 +40,14 @@ namespace MASES.KafkaBridge.Streams.Processor
     }
 
     /// <summary>
-    /// Listener for Kafka StreamPartitioner. Extends <see cref="CLRListener"/>, implements <see cref="IStreamPartitioner{K, V}"/>
+    /// Listener for Kafka StreamPartitioner. Extends <see cref="JVMBridgeListener"/>, implements <see cref="IStreamPartitioner{K, V}"/>
     /// </summary>
     /// <typeparam name="K">The data associated to the event</typeparam>
     /// <typeparam name="V">The data associated to the event</typeparam>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
-    public class StreamPartitioner<K, V> : CLRListener, IStreamPartitioner<K, V>
+    public class StreamPartitioner<K, V> : JVMBridgeListener, IStreamPartitioner<K, V>
     {
-        /// <inheritdoc cref="CLRListener.ClassName"/>
+        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
         public sealed override string ClassName => "org.mases.kafkabridge.streams.kstream.StreamPartitionerImpl";
 
         readonly Func<string, K, V, int, int> executionFunction = null;

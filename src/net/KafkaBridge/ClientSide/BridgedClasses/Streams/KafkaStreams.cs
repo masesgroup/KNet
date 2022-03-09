@@ -46,12 +46,12 @@ namespace MASES.KafkaBridge.Streams
     }
 
     /// <summary>
-    /// Listener for Kafka StateListener. Extends <see cref="CLRListener"/>, implements <see cref="IStateListener"/>
+    /// Listener for Kafka StateListener. Extends <see cref="JVMBridgeListener"/>, implements <see cref="IStateListener"/>
     /// </summary>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
-    public class StateListener : CLRListener, IStateListener
+    public class StateListener : JVMBridgeListener, IStateListener
     {
-        /// <inheritdoc cref="CLRListener.ClassName"/>
+        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
         public sealed override string ClassName => "org.mases.kafkabridge.streams.StateListenerImpl";
 
         readonly Action<StateType, StateType> executionFunction = null;

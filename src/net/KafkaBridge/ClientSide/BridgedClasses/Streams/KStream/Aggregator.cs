@@ -40,15 +40,15 @@ namespace MASES.KafkaBridge.Streams.KStream
     }
 
     /// <summary>
-    /// Listener for Kafka Aggregator. Extends <see cref="CLRListener"/>, implements <see cref="IAggregator{K, V, VA}"/>
+    /// Listener for Kafka Aggregator. Extends <see cref="JVMBridgeListener"/>, implements <see cref="IAggregator{K, V, VA}"/>
     /// </summary>
     /// <typeparam name="K">The data associated to the event</typeparam>
     /// <typeparam name="V">The data associated to the event</typeparam>
     /// <typeparam name="VA">Aggregated value</typeparam>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
-    public class Aggregator<K, V, VA> : CLRListener, IAggregator<K, V, VA>
+    public class Aggregator<K, V, VA> : JVMBridgeListener, IAggregator<K, V, VA>
     {
-        /// <inheritdoc cref="CLRListener.ClassName"/>
+        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
         public sealed override string ClassName => "org.mases.kafkabridge.streams.kstream.AggregatorImpl";
 
         readonly Func<K, V, VA, VA> executionFunction = null;

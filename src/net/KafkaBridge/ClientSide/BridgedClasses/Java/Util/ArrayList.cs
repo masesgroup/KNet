@@ -16,7 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KafkaBridge.Java.Lang;
+using Java.Lang;
 
 namespace MASES.KafkaBridge.Java.Util
 {

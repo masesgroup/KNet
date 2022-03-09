@@ -37,12 +37,12 @@ namespace MASES.KafkaBridge.Streams.Processor
     }
 
     /// <summary>
-    /// Listener for Kafka TimestampExtractor. Extends <see cref="CLRListener"/>, implements <see cref="ITimestampExtractor"/>
+    /// Listener for Kafka TimestampExtractor. Extends <see cref="JVMBridgeListener"/>, implements <see cref="ITimestampExtractor"/>
     /// </summary>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
-    public class TimestampExtractor : CLRListener, ITimestampExtractor
+    public class TimestampExtractor : JVMBridgeListener, ITimestampExtractor
     {
-        /// <inheritdoc cref="CLRListener.ClassName"/>
+        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
         public sealed override string ClassName => "org.mases.kafkabridge.streams.processor.TimestampExtractorImpl";
 
         readonly Func<ConsumerRecord<object, object>, long, long> executionFunction = null;

@@ -16,7 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KafkaBridge.Java.Lang
+namespace MASES.KafkaBridge.Java.Util
 {
     public sealed class UUID : JCOBridge.C2JBridge.JVMBridgeBase<UUID>
     {

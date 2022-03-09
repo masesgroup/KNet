@@ -34,5 +34,9 @@ namespace MASES.KafkaBridge.Streams
         public KeyValue(K key, V value)
             : base(key, value)
         { }
+
+        public K Key => Instance.GetField<K>("key");
+
+        public V Value => Instance.GetField<V>("value");
     }
 }

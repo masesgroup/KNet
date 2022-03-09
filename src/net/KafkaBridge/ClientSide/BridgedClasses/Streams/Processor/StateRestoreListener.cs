@@ -44,12 +44,12 @@ namespace MASES.KafkaBridge.Streams.Processor
     }
 
     /// <summary>
-    /// Listener for Kafka StateRestoreListener. Extends <see cref="CLRListener"/>, implements <see cref="IStateRestoreListener"/>
+    /// Listener for Kafka StateRestoreListener. Extends <see cref="JVMBridgeListener"/>, implements <see cref="IStateRestoreListener"/>
     /// </summary>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
-    public class StateRestoreListener : CLRListener, IStateRestoreListener
+    public class StateRestoreListener : JVMBridgeListener, IStateRestoreListener
     {
-        /// <inheritdoc cref="CLRListener.ClassName"/>
+        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
         public sealed override string ClassName => "org.mases.kafkabridge.streams.processor.StateRestoreListenerImpl";
 
         readonly Action<TopicPartition, string, long, long> OnRestoreStartFunction = null;

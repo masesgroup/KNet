@@ -17,7 +17,8 @@
 */
 
 using MASES.KafkaBridge.Common.Utils;
-using MASES.KafkaBridge.Java.Lang;
+using Java.Lang;
+using MASES.KafkaBridge.Java.Util;
 
 namespace MASES.KafkaBridge.Common.Serialization
 {

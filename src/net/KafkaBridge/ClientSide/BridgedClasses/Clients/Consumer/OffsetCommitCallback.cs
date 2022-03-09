@@ -38,12 +38,12 @@ namespace MASES.KafkaBridge.Clients.Consumer
     }
 
     /// <summary>
-    /// Listener for Kafka OffsetCommitCallback. Extends <see cref="CLRListener"/>, implements <see cref="IOffsetCommitCallback"/>
+    /// Listener for Kafka OffsetCommitCallback. Extends <see cref="JVMBridgeListener"/>, implements <see cref="IOffsetCommitCallback"/>
     /// </summary>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
-    public class OffsetCommitCallback : CLRListener, IOffsetCommitCallback
+    public class OffsetCommitCallback : JVMBridgeListener, IOffsetCommitCallback
     {
-        /// <inheritdoc cref="CLRListener.ClassName"/>
+        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
         public sealed override string ClassName => "org.mases.kafkabridge.clients.consumer.OffsetCommitCallbackImpl";
 
         readonly Action<Map<TopicPartition, OffsetAndMetadata>, JVMBridgeException> executionFunction = null;

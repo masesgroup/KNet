@@ -58,9 +58,9 @@ namespace MASES.KafkaBridge.Common.Serialization
     /// </summary>
     /// <typeparam name="E">The data associated to the event</typeparam>
     /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
-    public class Deserializer<E> : CLRListener, IDeserializer<E>
+    public class Deserializer<E> : JVMBridgeListener, IDeserializer<E>
     {
-        /// <inheritdoc cref="CLRListener.ClassName"/>
+        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
         public override string ClassName => "org.mases.kafkabridge.clients.common.serialization.DeserializerImpl";
 
         readonly Func<string, byte[], E> deserialize = null;
