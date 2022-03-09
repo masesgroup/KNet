@@ -345,6 +345,15 @@ references:
   fullName.vb: Java.Util.ArrayList(Of E).IsEmpty
   nameWithType: ArrayList<E>.IsEmpty
   nameWithType.vb: ArrayList(Of E).IsEmpty
+- uid: Java.Util.ArrayList`1.op_Implicit(Java.Util.ArrayList{`0})~Java.Lang.Iterable{`0}
+  name: Implicit(ArrayList<E> to Iterable<E>)
+  href: api/Java.Util.ArrayList-1.html#Java_Util_ArrayList_1_op_Implicit_Java_Util_ArrayList__0___Java_Lang_Iterable__0_
+  commentId: M:Java.Util.ArrayList`1.op_Implicit(Java.Util.ArrayList{`0})~Java.Lang.Iterable{`0}
+  name.vb: Widening(ArrayList(Of E) to Iterable(Of E))
+  fullName: Java.Util.ArrayList<E>.Implicit(Java.Util.ArrayList<E> to Java.Lang.Iterable<E>)
+  fullName.vb: Java.Util.ArrayList(Of E).Widening(Java.Util.ArrayList(Of E) to Java.Lang.Iterable(Of E))
+  nameWithType: ArrayList<E>.Implicit(ArrayList<E> to Iterable<E>)
+  nameWithType.vb: ArrayList(Of E).Widening(ArrayList(Of E) to Iterable(Of E))
 - uid: Java.Util.ArrayList`1.op_Implicit(Java.Util.ArrayList{`0})~Java.Util.Collection{`0}
   name: Implicit(ArrayList<E> to Collection<E>)
   href: api/Java.Util.ArrayList-1.html#Java_Util_ArrayList_1_op_Implicit_Java_Util_ArrayList__0___Java_Util_Collection__0_
