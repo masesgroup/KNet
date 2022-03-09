@@ -18,7 +18,7 @@
 
 using MASES.JCOBridge.C2JBridge;
 
-namespace MASES.KafkaBridge.Java.Util
+namespace Java.Util
 {
     public class Hashtable<K, V> : Dictionary<K, V>
     {

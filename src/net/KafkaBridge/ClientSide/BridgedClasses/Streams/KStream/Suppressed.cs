@@ -17,8 +17,8 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using MASES.KafkaBridge.Java.Time;
-using MASES.KafkaBridge.Java.Util;
+using Java.Time;
+using Java.Util;
 
 namespace MASES.KafkaBridge.Streams.KStream
 {

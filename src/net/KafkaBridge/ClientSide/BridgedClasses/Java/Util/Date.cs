@@ -16,9 +16,11 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KafkaBridge.Java.Util
+using MASES.JCOBridge.C2JBridge;
+
+namespace Java.Util
 {
-    public class Date : JCOBridge.C2JBridge.JVMBridgeBase<Date>
+    public class Date : JVMBridgeBase<Date>
     {
         public override string ClassName => "java.util.Date";
     }

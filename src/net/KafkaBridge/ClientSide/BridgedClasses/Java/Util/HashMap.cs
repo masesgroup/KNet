@@ -16,7 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KafkaBridge.Java.Util
+namespace Java.Util
 {
     public class HashMap<K, V> : AbstractMap<K, V>
     {

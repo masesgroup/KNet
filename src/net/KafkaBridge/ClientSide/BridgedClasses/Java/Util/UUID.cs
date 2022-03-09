@@ -16,9 +16,11 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KafkaBridge.Java.Util
+using MASES.JCOBridge.C2JBridge;
+
+namespace Java.Util
 {
-    public sealed class UUID : JCOBridge.C2JBridge.JVMBridgeBase<UUID>
+    public sealed class UUID : JVMBridgeBase<UUID>
     {
         public override bool IsStatic => true;
 

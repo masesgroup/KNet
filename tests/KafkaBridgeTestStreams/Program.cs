@@ -26,7 +26,7 @@ using MASES.JCOBridge.C2JBridge;
 using MASES.KafkaBridge;
 using MASES.KafkaBridge.Clients.Consumer;
 using MASES.KafkaBridge.Common.Serialization;
-using MASES.KafkaBridge.Java.Util;
+using Java.Util;
 using MASES.KafkaBridge.Streams;
 using MASES.KafkaBridge.Streams.Errors;
 using MASES.KafkaBridge.Streams.KStream;

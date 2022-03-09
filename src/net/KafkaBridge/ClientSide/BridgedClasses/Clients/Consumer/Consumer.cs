@@ -18,9 +18,9 @@
 
 using MASES.JCOBridge.C2JBridge;
 using MASES.KafkaBridge.Common;
-using MASES.KafkaBridge.Java.Time;
-using MASES.KafkaBridge.Java.Util;
-using MASES.KafkaBridge.Java.Util.Regex;
+using Java.Time;
+using Java.Util;
+using Java.Util.Regex;
 
 namespace MASES.KafkaBridge.Clients.Consumer
 {

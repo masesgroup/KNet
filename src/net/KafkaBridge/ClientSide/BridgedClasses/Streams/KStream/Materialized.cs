@@ -18,8 +18,8 @@
 
 using MASES.KafkaBridge.Common.Serialization;
 using MASES.KafkaBridge.Common.Utils;
-using MASES.KafkaBridge.Java.Time;
-using MASES.KafkaBridge.Java.Util;
+using Java.Time;
+using Java.Util;
 using MASES.KafkaBridge.Streams.Processor;
 using MASES.KafkaBridge.Streams.State;
 

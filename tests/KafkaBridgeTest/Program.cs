@@ -28,7 +28,7 @@ using MASES.KafkaBridge.Clients.Consumer;
 using MASES.KafkaBridge.Clients.Producer;
 using MASES.KafkaBridge.Common.Config;
 using MASES.KafkaBridge.Common.Serialization;
-using MASES.KafkaBridge.Java.Util;
+using Java.Util;
 using System;
 using System.Text;
 using System.Threading;

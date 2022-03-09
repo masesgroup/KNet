@@ -25,7 +25,7 @@
 using MASES.KafkaBridge;
 using MASES.KafkaBridge.Clients.Admin;
 using MASES.KafkaBridge.Common.Config;
-using MASES.KafkaBridge.Java.Util;
+using Java.Util;
 using System;
 
 namespace MASES.KafkaBridgeTestAdmin

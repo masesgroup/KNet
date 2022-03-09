@@ -16,9 +16,11 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KafkaBridge.Java.Util
+using MASES.JCOBridge.C2JBridge;
+
+namespace Java.Util
 {
-    public class OptionalInt : JCOBridge.C2JBridge.JVMBridgeBase<OptionalInt>
+    public class OptionalInt : JVMBridgeBase<OptionalInt>
     {
         public override string ClassName => "java.util.OptionalInt";
 

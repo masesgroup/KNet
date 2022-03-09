@@ -19,7 +19,7 @@
 using MASES.KafkaBridge.Common;
 using MASES.KafkaBridge.Common.Quota;
 using Java.Lang;
-using MASES.KafkaBridge.Java.Util;
+using Java.Util;
 
 namespace MASES.KafkaBridge.Clients.Admin
 {

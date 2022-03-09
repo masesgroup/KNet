@@ -16,9 +16,11 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KafkaBridge.Java.Time
+using MASES.JCOBridge.C2JBridge;
+
+namespace Java.Time
 {
-    public sealed class Instant : JCOBridge.C2JBridge.JVMBridgeBase<Instant>
+    public sealed class Instant : JVMBridgeBase<Instant>
     {
         public override string ClassName => "java.time.Instant";
 

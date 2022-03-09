@@ -18,9 +18,9 @@
 
 using MASES.KafkaBridge.Common;
 using MASES.KafkaBridge.Common.Serialization;
-using MASES.KafkaBridge.Java.Time;
-using MASES.KafkaBridge.Java.Util;
-using MASES.KafkaBridge.Java.Util.Regex;
+using Java.Time;
+using Java.Util;
+using Java.Util.Regex;
 
 namespace MASES.KafkaBridge.Clients.Consumer
 {

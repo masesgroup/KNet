@@ -19,9 +19,9 @@
 using MASES.JCOBridge.C2JBridge;
 using MASES.KafkaBridge.Clients.Producer;
 using MASES.KafkaBridge.Common.Serialization;
-using MASES.KafkaBridge.Java.Io;
-using MASES.KafkaBridge.Java.Time;
-using MASES.KafkaBridge.Java.Util;
+using Java.Io;
+using Java.Time;
+using Java.Util;
 
 namespace MASES.KafkaBridge.Streams.Processor.Api
 {

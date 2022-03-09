@@ -16,9 +16,11 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KafkaBridge.Java.Math
+using MASES.JCOBridge.C2JBridge;
+
+namespace Java.Math
 {
-    public class BigDecimal : JCOBridge.C2JBridge.JVMBridgeBase<BigDecimal>
+    public class BigDecimal : JVMBridgeBase<BigDecimal>
     {
         public override string ClassName => "java.math.BigDecimal";
     }

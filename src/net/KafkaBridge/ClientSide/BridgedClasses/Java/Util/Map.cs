@@ -19,7 +19,7 @@
 using MASES.JCOBridge.C2JBridge;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
 
-namespace MASES.KafkaBridge.Java.Util
+namespace Java.Util
 {
     public class Map : JVMBridgeBase<Map>
     {

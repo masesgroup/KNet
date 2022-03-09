@@ -16,15 +16,17 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KafkaBridge.Java.Util
+using MASES.JCOBridge.C2JBridge;
+
+namespace Java.Util
 {
-    public class List : JCOBridge.C2JBridge.JVMBridgeBase<List>
+    public class List : JVMBridgeBase<List>
     {
         public override string ClassName => "java.util.List";
     }
 
     public class List<E> : List
     {
-        public override string ClassName => "java.util.List";
+
     }
 }

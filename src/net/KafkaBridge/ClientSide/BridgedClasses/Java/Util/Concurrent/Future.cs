@@ -16,13 +16,15 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KafkaBridge.Java.Util.Concurrent
+using MASES.JCOBridge.C2JBridge;
+
+namespace Java.Util.Concurrent
 {
-    public class Future<E> : JCOBridge.C2JBridge.JVMBridgeBase<Future<E>>
+    public class Future<E> : JVMBridgeBase<Future<E>>
     {
         public override string ClassName => "java.util.concurrent.Future";
 
-        bool Cancel(bool mayInterruptIfRunning)
+        public bool Cancel(bool mayInterruptIfRunning)
         {
             return IExecute<bool>("cancel", mayInterruptIfRunning);
         }

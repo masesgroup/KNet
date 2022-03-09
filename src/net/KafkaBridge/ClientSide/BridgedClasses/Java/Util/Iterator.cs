@@ -20,7 +20,7 @@ using MASES.JCOBridge.C2JBridge;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace MASES.KafkaBridge.Java.Util
+namespace Java.Util
 {
     public class Iterator<E> : JVMBridgeBase<Iterator<E>>, IEnumerable<E>
     {
