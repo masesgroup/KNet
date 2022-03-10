@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <PackageType>Template</PackageType>
-    <PackageVersion>1.1.10.0</PackageVersion>
+    <PackageVersion>1.1.11.0</PackageVersion>
     <PackageId>MASES.KafkaBridge.Templates</PackageId>
     <Title>KafkaBridge Templates - Templates to use the KafkaBridge</Title>
     <Authors>MASES s.r.l.</Authors>
