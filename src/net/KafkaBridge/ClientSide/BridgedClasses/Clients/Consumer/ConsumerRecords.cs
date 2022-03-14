@@ -16,15 +16,30 @@
 *  Refer to LICENSE for more information.
 */
 
+using Java.Lang;
+using Java.Util;
+using MASES.KafkaBridge.Common;
+
 namespace MASES.KafkaBridge.Clients.Consumer
 {
     public class ConsumerRecords<K, V> : JCOBridge.C2JBridge.JVMBridgeBaseEnumerable<ConsumerRecords<K, V>, ConsumerRecord<K, V>>
     {
         public override string ClassName => "org.apache.kafka.clients.consumer.ConsumerRecords";
-    }
 
-    public class ConsumerRecords : ConsumerRecords<object, object>
-    {
+        public List<ConsumerRecord<K, V>> Records(TopicPartition partition)
+        {
+            return IExecute<List<ConsumerRecord<K, V>>>("records", partition);
+        }
 
+        public Iterable<ConsumerRecord<K, V>> Records(String topic)
+        {
+            return IExecute<Iterable<ConsumerRecord<K, V>>>("records", topic);
+        }
+
+        public Set<TopicPartition> partitions => IExecute<Set<TopicPartition>>("partitions");
+
+        public Iterator<ConsumerRecord<K, V>> Iterator => IExecute<Iterator<ConsumerRecord<K, V>>>("iterator");
+
+        public int Count => IExecute<int>("count");
     }
 }

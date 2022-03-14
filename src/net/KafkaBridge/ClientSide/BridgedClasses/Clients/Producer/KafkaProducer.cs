@@ -24,14 +24,24 @@ using Java.Util.Concurrent;
 
 namespace MASES.KafkaBridge.Clients.Producer
 {
-    public class KafkaProducer<K, V> : JCOBridge.C2JBridge.JVMBridgeBase<KafkaProducer<K, V>>, IProducer<K, V>
+    public class KafkaProducer : JCOBridge.C2JBridge.JVMBridgeBase<KafkaProducer>
     {
         public override bool IsCloseable => true;
 
         public override string ClassName => "org.apache.kafka.clients.producer.KafkaProducer";
 
-        public Map<MetricName, Metric> Metrics => IExecute<Map<MetricName, Metric>>("metrics");
+        public KafkaProducer()
+        {
+        }
 
+        public KafkaProducer(params object[] args)
+            : base(args)
+        {
+        }
+    }
+
+    public class KafkaProducer<K, V> : KafkaProducer, IProducer<K, V>
+    {
         public KafkaProducer()
         {
         }
@@ -45,6 +55,8 @@ namespace MASES.KafkaBridge.Clients.Producer
             : base(props, keySerializer, valueSerializer)
         {
         }
+
+        public Map<MetricName, Metric> Metrics => IExecute<Map<MetricName, Metric>>("metrics");
 
         public void InitTransactions()
         {
@@ -105,10 +117,5 @@ namespace MASES.KafkaBridge.Clients.Producer
         {
             return IExecute<List<PartitionInfo>>("partitionsFor", topic);
         }
-    }
-
-    public class KafkaProducer : KafkaProducer<object, object>
-    {
-        public KafkaProducer(Properties props) : base(props) { }
     }
 }

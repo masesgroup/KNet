@@ -48,6 +48,5 @@ namespace MASES.KafkaBridge.Streams
         public int Partition => IExecute<int>("partition");
 
         public bool StaleStoresEnabled => IExecute<bool>("staleStoresEnabled");
-
     }
 }

@@ -85,11 +85,11 @@ namespace MASES.KafkaBridge.Streams.Processor
         /// <param name="onGetGlobalConsumer">The <see cref="Func{Map{string, object}, IConsumer{byte[], byte[]}}"/> to be executed</param>
         /// <param name="attachEventHandler">Set to false to disable attach of <see cref="EventHandler"/> and set an own one</param>
         public KafkaClientSupplier(Func<Map<string, object>, Clients.Admin.IAdmin> onGetAdmin = null,
-                                       Func<Map<string, object>, IProducer<byte[], byte[]>> onGetProducer = null,
-                                       Func<Map<string, object>, IConsumer<byte[], byte[]>> onGetConsumer = null,
-                                       Func<Map<string, object>, IConsumer<byte[], byte[]>> onGetRestoreConsumer = null,
-                                       Func<Map<string, object>, IConsumer<byte[], byte[]>> onGetGlobalConsumer = null,
-                                       bool attachEventHandler = true)
+                                   Func<Map<string, object>, IProducer<byte[], byte[]>> onGetProducer = null,
+                                   Func<Map<string, object>, IConsumer<byte[], byte[]>> onGetConsumer = null,
+                                   Func<Map<string, object>, IConsumer<byte[], byte[]>> onGetRestoreConsumer = null,
+                                   Func<Map<string, object>, IConsumer<byte[], byte[]>> onGetGlobalConsumer = null,
+                                   bool attachEventHandler = true)
         {
             if (onGetAdmin != null) GetAdminFunction = onGetAdmin;
             else GetAdminFunction = GetAdmin;
