@@ -9,7 +9,7 @@
 		<Owners>MASES s.r.l.</Owners>
 		<Authors>MASES s.r.l.</Authors>
 		<Company>MASES s.r.l.</Company>
-		<Version>1.1.11.0</Version>
+		<Version>1.1.12.0</Version>
 		<Product>KafkaBridge</Product>
 		<GenerateAssemblyInfo>true</GenerateAssemblyInfo>
 		<TargetFrameworks>net461;netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
@@ -21,7 +21,7 @@
 		<PackageReleaseNotes>https://github.com/masesgroup/KafkaBridge/releases</PackageReleaseNotes>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<PackageIcon>JCOB128x128.png</PackageIcon>
-		<PackageTags>kafka apache-kafka dotnet clr netcore net5 net6 kafka connect streams producer consumer providers streamprovider confluent</PackageTags>
+		<PackageTags>kafkabridge kafka apache-kafka dotnet clr netcore net5 net6 kafka connect streams producer consumer providers streamprovider confluent</PackageTags>
 		<PackageId>MASES.KafkaBridge</PackageId>
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
