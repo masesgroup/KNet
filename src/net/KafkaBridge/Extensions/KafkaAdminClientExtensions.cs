@@ -17,6 +17,7 @@
 */
 
 using Java.Util;
+using Java.Util.Concurrent;
 using MASES.KafkaBridge.Clients.Admin;
 using MASES.KafkaBridge.Clients.Consumer;
 using MASES.KafkaBridge.Common;
@@ -24,9 +25,6 @@ using MASES.KafkaBridge.Common.Acl;
 using MASES.KafkaBridge.Common.Config;
 using MASES.KafkaBridge.Common.Quota;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace MASES.KafkaBridge.Extensions
@@ -43,7 +41,12 @@ namespace MASES.KafkaBridge.Extensions
             await task;
             if (task.Status == TaskStatus.Faulted && task.Exception != null)
             {
-                throw task.Exception.Flatten().InnerException;
+                var innerException = task.Exception.Flatten().InnerException;
+                if (innerException is ExecutionException exException)
+                {
+                    throw exException.InnerException;
+                }
+                else throw innerException;
             }
             return task.Result;
         }
@@ -58,7 +61,12 @@ namespace MASES.KafkaBridge.Extensions
             await task;
             if (task.Status == TaskStatus.Faulted && task.Exception != null)
             {
-                throw task.Exception.Flatten().InnerException;
+                var innerException = task.Exception.Flatten().InnerException;
+                if (innerException is ExecutionException exException)
+                {
+                    throw exException.InnerException;
+                }
+                else throw innerException;
             }
             return task.Result;
         }
@@ -73,7 +81,12 @@ namespace MASES.KafkaBridge.Extensions
             await task;
             if (task.Status == TaskStatus.Faulted && task.Exception != null)
             {
-                throw task.Exception.Flatten().InnerException;
+                var innerException = task.Exception.Flatten().InnerException;
+                if (innerException is ExecutionException exException)
+                {
+                    throw exException.InnerException;
+                }
+                else throw innerException;
             }
             return task.Result;
         }
@@ -88,7 +101,12 @@ namespace MASES.KafkaBridge.Extensions
             await task;
             if (task.Status == TaskStatus.Faulted && task.Exception != null)
             {
-                throw task.Exception.Flatten().InnerException;
+                var innerException = task.Exception.Flatten().InnerException;
+                if (innerException is ExecutionException exException)
+                {
+                    throw exException.InnerException;
+                }
+                else throw innerException;
             }
             return task.Result;
         }
@@ -98,9 +116,17 @@ namespace MASES.KafkaBridge.Extensions
             return await Execute(admin.CreateTopics, newTopics);
         }
 
-        public static CreateTopicsResult CreateTopic(this IAdmin admin, string topicName, int numPartitions = 1, short replicationFactor = 1)
+        public static void CreateTopic(this IAdmin admin, string topicName, int numPartitions = 1, short replicationFactor = 1)
         {
-            return admin.CreateTopics(Collections.Singleton(new NewTopic(topicName, numPartitions, replicationFactor)));
+            try
+            {
+                var res = admin.CreateTopics(Collections.Singleton(new NewTopic(topicName, numPartitions, replicationFactor)));
+                res.All.Get();
+            }
+            catch (ExecutionException ex)
+            {
+                throw ex.InnerException;
+            }
         }
 
         public static async Task<CreateTopicsResult> CreateTopicAsync(this IAdmin admin, string topicName, int numPartitions = 1, short replicationFactor = 1)

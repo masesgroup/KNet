@@ -43,12 +43,19 @@ namespace MASES.KafkaBridge.Common.Serialization
         Deserializer<T> Deserializer { get; }
     }
 
-    public class Serde<T> : Serde, ISerde<T>
+    public class Serde<T> : JVMBridgeBase<Serde<T>>, ISerde<T>
     {
         public override string ClassName => "org.apache.kafka.common.serialization.Serde";
+
+        public static implicit operator Serde(Serde<T> serde) { return Wraps<Serde>(serde.Instance); }
 
         public Serializer<T> Serializer => IExecute<Serializer<T>>("serializer");
 
         public Deserializer<T> Deserializer => IExecute<Deserializer<T>>("deserializer");
+
+        public void Configure(Map<string, object> configs, bool isKey)
+        {
+            IExecute("configure", configs, isKey);
+        }
     }
 }
