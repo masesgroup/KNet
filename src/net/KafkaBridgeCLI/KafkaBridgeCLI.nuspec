@@ -6,7 +6,7 @@
     <title>KafkaBridgeCLI - CLI interface of KafkaBridge</title>
     <authors>MASES s.r.l.</authors>
 	<owners>MASES s.r.l.</owners>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectUrl>https://github.com/masesgroup/KafkaBridge/</projectUrl>
 	<repository type="git" url="https://github.com/masesgroup/KafkaBridge/" />
     <description>KafkaBridgeCLI - CLI interface of KafkaBridge</description>

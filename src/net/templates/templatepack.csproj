@@ -13,7 +13,7 @@
     <TargetFrameworks>net6.0;net5.0;netcoreapp3.1;net461</TargetFrameworks>
     <OutputPath>..\..\..\bin\</OutputPath>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageProjectUrl>https://github.com/masesgroup/KafkaBridge/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/masesgroup/KafkaBridge</RepositoryUrl>
     <PackageReleaseNotes>https://github.com/masesgroup/KafkaBridge/releases</PackageReleaseNotes>
