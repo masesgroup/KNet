@@ -24,12 +24,24 @@ using Java.Util.Regex;
 
 namespace MASES.KafkaBridge.Clients.Consumer
 {
-    public class KafkaConsumer<K, V> : JCOBridge.C2JBridge.JVMBridgeBase<KafkaConsumer<K, V>>, IConsumer<K, V>
+    public class KafkaConsumer : JCOBridge.C2JBridge.JVMBridgeBase<KafkaConsumer>
     {
         public override bool IsCloseable => true;
 
         public override string ClassName => "org.apache.kafka.clients.consumer.KafkaConsumer";
 
+        public KafkaConsumer()
+        {
+        }
+
+        public KafkaConsumer(params object[] args)
+            : base(args)
+        {
+        }
+    }
+
+    public class KafkaConsumer<K, V> : KafkaConsumer, IConsumer<K, V>
+    {
         public KafkaConsumer()
         {
         }
@@ -256,10 +268,5 @@ namespace MASES.KafkaBridge.Clients.Consumer
         {
             IExecute("wakeup");
         }
-    }
-
-    public class KafkaConsumer : KafkaConsumer<object, object>
-    {
-        public KafkaConsumer(Properties props) : base(props) { }
     }
 }

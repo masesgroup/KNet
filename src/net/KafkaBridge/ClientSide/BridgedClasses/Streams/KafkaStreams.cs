@@ -83,7 +83,7 @@ namespace MASES.KafkaBridge.Streams
         public virtual void OnChange(StateType newState, StateType oldState) { }
     }
 
-    public class KafkaStreams : JCOBridge.C2JBridge.JVMBridgeBase<KafkaStreams>
+    public class KafkaStreams : JVMBridgeBase<KafkaStreams>
     {
         public override bool IsCloseable => true;
 

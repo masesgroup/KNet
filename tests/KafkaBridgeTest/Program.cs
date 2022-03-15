@@ -32,6 +32,7 @@ using Java.Util;
 using System;
 using System.Text;
 using System.Threading;
+using MASES.KafkaBridge.Extensions;
 
 namespace MASES.KafkaBridgeTest
 {
@@ -100,8 +101,9 @@ namespace MASES.KafkaBridgeTest
 
                 Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(serverToUse).ToProperties();
 
-                using (var admin = KafkaAdminClient.Create(props))
+                using (IAdmin admin = KafkaAdminClient.Create(props))
                 {
+                    /******* standard
                     // Create a compacted topic
                     CreateTopicsResult result = admin.CreateTopics(coll);
 
@@ -111,6 +113,8 @@ namespace MASES.KafkaBridgeTest
                     // Call get() to block until the topic creation is complete or has failed
                     // if creation failed the ExecutionException wraps the underlying cause.
                     future.Get();
+                    ********/
+                    admin.CreateTopic(topicName, partitions, replicationFactor);
                 }
             }
             catch (Java.Util.Concurrent.ExecutionException ex)

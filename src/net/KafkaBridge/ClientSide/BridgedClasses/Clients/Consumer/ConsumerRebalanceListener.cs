@@ -64,15 +64,18 @@ namespace MASES.KafkaBridge.Clients.Consumer
         /// </summary>
         /// <param name="revoked">The <see cref="Action{Collection{TopicPartition}}"/> to be executed on revoked partitions</param>
         /// <param name="assigned">The <see cref="Action{Collection{TopicPartition}}"/> to be executed on assigned partitions</param>
-        public ConsumerRebalanceListener(Action<Collection<TopicPartition>> revoked = null, Action<Collection<TopicPartition>> assigned = null)
+        /// <param name="attachEventHandler">Set to false to disable attach of <see cref="EventHandler"/> and set an own one</param>
+        public ConsumerRebalanceListener(Action<Collection<TopicPartition>> revoked = null, Action<Collection<TopicPartition>> assigned = null, bool attachEventHandler = true)
         {
             if (revoked != null) revokedFunction = revoked;
             else revokedFunction = OnPartitionsRevoked;
             if (assigned != null) assignedFunction = assigned;
             else assignedFunction = OnPartitionsAssigned;
-
-            AddEventHandler("onPartitionsRevoked", new EventHandler<CLRListenerEventArgs<CLREventData<Collection<TopicPartition>>>>(EventHandlerRevoked));
-            AddEventHandler("onPartitionsAssigned", new EventHandler<CLRListenerEventArgs<CLREventData<Collection<TopicPartition>>>>(EventHandlerAssigned));
+            if (attachEventHandler)
+            {
+                AddEventHandler("onPartitionsRevoked", new EventHandler<CLRListenerEventArgs<CLREventData<Collection<TopicPartition>>>>(EventHandlerRevoked));
+                AddEventHandler("onPartitionsAssigned", new EventHandler<CLRListenerEventArgs<CLREventData<Collection<TopicPartition>>>>(EventHandlerAssigned));
+            }
         }
 
         void EventHandlerRevoked(object sender, CLRListenerEventArgs<CLREventData<Collection<TopicPartition>>> data)
