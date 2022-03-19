@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNet", "KNet\KNet.csproj", "{9C1888CC-3151-48AC-AC90-BCC03DC35EB5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNetCLI", "KNetCLI\KNetCLI.csproj", "{9F3FBD10-BD37-48B3-8209-84528A2E1FDF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9C1888CC-3151-48AC-AC90-BCC03DC35EB5} = {9C1888CC-3151-48AC-AC90-BCC03DC35EB5}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "templatepack", "templates\templatepack.csproj", "{8778C196-4145-4140-8E91-9C2475DEB121}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C1888CC-3151-48AC-AC90-BCC03DC35EB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C1888CC-3151-48AC-AC90-BCC03DC35EB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C1888CC-3151-48AC-AC90-BCC03DC35EB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C1888CC-3151-48AC-AC90-BCC03DC35EB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F3FBD10-BD37-48B3-8209-84528A2E1FDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F3FBD10-BD37-48B3-8209-84528A2E1FDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F3FBD10-BD37-48B3-8209-84528A2E1FDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F3FBD10-BD37-48B3-8209-84528A2E1FDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8778C196-4145-4140-8E91-9C2475DEB121}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8778C196-4145-4140-8E91-9C2475DEB121}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8778C196-4145-4140-8E91-9C2475DEB121}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8778C196-4145-4140-8E91-9C2475DEB121}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {337100A8-DBCD-4838-B9C7-74EC0DE78755}
+	EndGlobalSection
+EndGlobal
