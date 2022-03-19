@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>KafkaBridge usage | Kafka Bridge website </title>
+    <title>KNet usage | KNet website </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="KafkaBridge usage | Kafka Bridge website ">
+    <meta name="title" content="KNet usage | KNet website ">
     <meta name="generator" content="docfx 2.59.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -67,20 +67,20 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="kafkabridge-usage">KafkaBridge usage</h1>
+<h1 id="knet-usage">KNet usage</h1>
 
-<p>To use KafkaBridge classes the developer can write code in .NET using the same classes available in the official Apache Kafka package.
+<p>To use KNet classes the developer can write code in .NET using the same classes available in the official Apache Kafka package.
 If classes or methods are not available yet it is possible to use the approach synthetized in <a href="API_extensibility.html">What to do if an API was not yet implemented</a></p>
 <h2 id="producer-example">Producer example</h2>
 <p>Below the reader can found two different version of producer examples.</p>
 <h3 id="simple-producer">Simple producer</h3>
 <p>A basic producer can be like the following one:</p>
-<pre><code class="lang-C#">using MASES.KafkaBridge;
-using MASES.KafkaBridge.Clients.Producer;
+<pre><code class="lang-C#">using MASES.KNet;
+using MASES.KNet.Clients.Producer;
 using Java.Util;
 using System;
 
-namespace MASES.KafkaBridgeTemplate.KafkaBridgeProducer
+namespace MASES.KNetTemplate.KNetProducer
 {
     class Program
     {
@@ -92,7 +92,7 @@ namespace MASES.KafkaBridgeTemplate.KafkaBridgeProducer
 
         static void Main(string[] args)
         {
-            var appArgs = KafkaBridgeCore.ApplicationArgs;
+            var appArgs = KNetCore.ApplicationArgs;
 
             if (appArgs.Length != 0)
             {
@@ -123,7 +123,7 @@ namespace MASES.KafkaBridgeTemplate.KafkaBridgeProducer
     }
 }
 </code></pre>
-<p>The example above can be found in the <a href="https://www.nuget.org/packages/MASES.KafkaBridge.Templates/">templates package</a>. Its behavior is:</p>
+<p>The example above can be found in the <a href="https://www.nuget.org/packages/MASES.KNet.Templates/">templates package</a>. Its behavior is:</p>
 <ul>
 <li>during initialization prepares the properties,</li>
 <li>create a producer using the properties</li>
@@ -133,12 +133,12 @@ namespace MASES.KafkaBridgeTemplate.KafkaBridgeProducer
 <h3 id="producer-with-callback">Producer with Callback</h3>
 <p>A producer with Callback can be like the following one. In this example the reader can highlight a slightly difference from the corresponding Java code.
 Surf <a href="">JVM callbacks</a> to go into detail in the callback management from JVM.</p>
-<pre><code class="lang-C#">using MASES.KafkaBridge;
-using MASES.KafkaBridge.Clients.Producer;
+<pre><code class="lang-C#">using MASES.KNet;
+using MASES.KNet.Clients.Producer;
 using Java.Util;
 using System;
 
-namespace MASES.KafkaBridgeTemplate.KafkaBridgeProducer
+namespace MASES.KNetTemplate.KNetProducer
 {
     class Program
     {
@@ -150,7 +150,7 @@ namespace MASES.KafkaBridgeTemplate.KafkaBridgeProducer
 
         static void Main(string[] args)
         {
-            var appArgs = KafkaBridgeCore.ApplicationArgs;
+            var appArgs = KNetCore.ApplicationArgs;
 
             if (appArgs.Length != 0)
             {
@@ -188,7 +188,7 @@ namespace MASES.KafkaBridgeTemplate.KafkaBridgeProducer
     }
 }
 </code></pre>
-<p>The example above can be found in the <a href="https://www.nuget.org/packages/MASES.KafkaBridge.Templates/">templates package</a>. Its behavior is:</p>
+<p>The example above can be found in the <a href="https://www.nuget.org/packages/MASES.KNet.Templates/">templates package</a>. Its behavior is:</p>
 <ul>
 <li>during initialization prepares the properties</li>
 <li>create a producer using the properties</li>
@@ -203,12 +203,12 @@ namespace MASES.KafkaBridgeTemplate.KafkaBridgeProducer
 </ul>
 <h2 id="consumer-example">Consumer example</h2>
 <p>A basic consumer can be like the following one:</p>
-<pre><code class="lang-C#">using MASES.KafkaBridge;
-using MASES.KafkaBridge.Clients.Consumer;
+<pre><code class="lang-C#">using MASES.KNet;
+using MASES.KNet.Clients.Consumer;
 using Java.Util;
 using System;
 
-namespace MASES.KafkaBridgeTemplate.KafkaBridgeConsumer
+namespace MASES.KNetTemplate.KNetConsumer
 {
     class Program
     {
@@ -220,7 +220,7 @@ namespace MASES.KafkaBridgeTemplate.KafkaBridgeConsumer
 
         static void Main(string[] args)
         {
-            var appArgs = KafkaBridgeCore.ApplicationArgs;
+            var appArgs = KNetCore.ApplicationArgs;
 
             if (appArgs.Length != 0)
             {
@@ -251,7 +251,7 @@ namespace MASES.KafkaBridgeTemplate.KafkaBridgeConsumer
     }
 }
 </code></pre>
-<p>The example above can be found in the <a href="https://www.nuget.org/packages/MASES.KafkaBridge.Templates/">templates package</a>. Its behavior is:</p>
+<p>The example above can be found in the <a href="https://www.nuget.org/packages/MASES.KNet.Templates/">templates package</a>. Its behavior is:</p>
 <ul>
 <li>during initialization prepares the properties,</li>
 <li>create a consumer using the properties</li>

@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>KafkaBridge: JVM callbacks | Kafka Bridge website </title>
+    <title>KNet: JVM callbacks | KNet website </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="KafkaBridge: JVM callbacks | Kafka Bridge website ">
+    <meta name="title" content="KNet: JVM callbacks | KNet website ">
     <meta name="generator" content="docfx 2.59.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -67,16 +67,16 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="kafkabridge-jvm-callbacks">KafkaBridge: JVM callbacks</h1>
+<h1 id="knet-jvm-callbacks">KNet: JVM callbacks</h1>
 
-<p>One of the features of <a href="https://www.jcobridge.com/">JCOBridge</a>, used in KafkaBridge, is the callback management from JVM.
+<p>One of the features of <a href="https://www.jcobridge.com/">JCOBridge</a>, used in KNet, is the callback management from JVM.
 Many applications use the callback mechanism to be informed about events which happens during execution.
 Apache Kakfa exposes many API which have callbacks in the parameters.
-The Java code of a callback can be written with lambda expressions, but KafkaBridge cannot, it needs an object.</p>
-<h2 id="kafkabridge-callback-internals">KafkaBridge Callback internals</h2>
-<p>KafkaBridge is based on <a href="https://www.jcobridge.com/">JCOBridge</a>. JCOBridge as per its name is a bridge between the CLR (CoreCLR) and the JVM.
+The Java code of a callback can be written with lambda expressions, but KNet cannot, it needs an object.</p>
+<h2 id="knet-callback-internals">KNet Callback internals</h2>
+<p>KNet is based on <a href="https://www.jcobridge.com/">JCOBridge</a>. JCOBridge as per its name is a bridge between the CLR (CoreCLR) and the JVM.
 Events, generally are expressed as interfaces in Java, and a lambda expression is translated into an object at compile time. Otherwise the developer can implement a Java class which <strong>implements</strong> the interface: with JCOBridge the developer needs to follow a seamless approach.
-In KafkaBridge some callbacks are ready made. In this tutorial the <strong>Callback</strong> interface (org.apache.kafka.clients.producer.Callback) will be taken as an example.
+In KNet some callbacks are ready made. In this tutorial the <strong>Callback</strong> interface (org.apache.kafka.clients.producer.Callback) will be taken as an example.
 The concrete class implementing the interface is the following one:</p>
 <pre><code class="lang-java">public final class CallbackImpl extends JCListener implements Callback {
     public CallbackImpl(String key) throws JCNativeException {
@@ -164,7 +164,7 @@ Going on to the CLR side a possible concrete class in C# is as the following one
 </ul>
 </li>
 </ul>
-<h2 id="kafkabridge-callback-lifecycle">KafkaBridge Callback lifecycle</h2>
+<h2 id="knet-callback-lifecycle">KNet Callback lifecycle</h2>
 <p>The lifecycle of the callback managed from JCOBridge is slightly different from the standard one.
 A <code>CLRListener</code> to be able to live without to be recovered from the Garbage Collector shall be registered. <code>CLRListener</code> do this automatically within the initialization (this behavior can be avoided with the property <code>AutoInit</code>).
 So at the end of its use it must be disposed to avoid a resource leak. In the <a href="usage.html">Producer with Callback</a> example there is a <strong>using</strong> clause and the class is instantiated only one time.

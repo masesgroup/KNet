@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>KafkaBridge: APIs extendibility | Kafka Bridge website </title>
+    <title>KNet: APIs extendibility | KNet website </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="KafkaBridge: APIs extendibility | Kafka Bridge website ">
+    <meta name="title" content="KNet: APIs extendibility | KNet website ">
     <meta name="generator" content="docfx 2.59.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -67,12 +67,12 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="kafkabridge-apis-extendibility">KafkaBridge: APIs extendibility</h1>
+<h1 id="knet-apis-extendibility">KNet: APIs extendibility</h1>
 
 <p>What to do if an API was not yet implemented? The simplest answer is: help us to make this product reacher :-)
 Anyway there is another answer which is not available with other products: Dynamic code and programmatically API access.</p>
 <p>With <strong>JCOBridge</strong> a developer can use some properties to manage objects in the JVM.
-Each KafkaBridge class implemented contains some methods and two properties: a direct and a dynamic accessor able to analyze the JVM class and executes the code.
+Each KNet class implemented contains some methods and two properties: a direct and a dynamic accessor able to analyze the JVM class and executes the code.
 So it is not necessary at all to have the methods be ready to be used.</p>
 <h2 id="when-a-method-is-not-available">When a method is not available</h2>
 <p>Let's go with an example of a ready made API available in <code>KafkaProducer</code>:</p>
@@ -165,7 +165,7 @@ As exposed before, each object, like <code>KafkaConsumer</code> instance, expose
 <h2 id="api-exendibility-limitation">API exendibility limitation</h2>
 <p>Starting from the assumption that JCOBridge does not make any code injection, or compilation, within JVM side, the actual limitation is related to something missing within the JVM.
 In the <a href="jvm_callbacks.html">JVM callbacks</a> article there is an explanation of how works callbacks.
-<strong>The callback feature needs a concrete class in the JVM and if it does not exist there is no way to use it from KafkaBridge.</strong></p>
+<strong>The callback feature needs a concrete class in the JVM and if it does not exist there is no way to use it from KNet.</strong></p>
 </article>
           </div>
           
