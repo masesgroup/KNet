@@ -1,10 +1,10 @@
-# KafkaBridge: APIs extendibility
+# KNet: APIs extendibility
 
 What to do if an API was not yet implemented? The simplest answer is: help us to make this product reacher :-)
 Anyway there is another answer which is not available with other products: Dynamic code and programmatically API access.
 
 With **JCOBridge** a developer can use some properties to manage objects in the JVM. 
-Each KafkaBridge class implemented contains some methods and two properties: a direct and a dynamic accessor able to analyze the JVM class and executes the code.
+Each KNet class implemented contains some methods and two properties: a direct and a dynamic accessor able to analyze the JVM class and executes the code.
 So it is not necessary at all to have the methods be ready to be used.
 
 ## When a method is not available
@@ -127,4 +127,4 @@ Explaining the code:
 
 Starting from the assumption that JCOBridge does not make any code injection, or compilation, within JVM side, the actual limitation is related to something missing within the JVM.
 In the [JVM callbacks](jvm_callbacks.md) article there is an explanation of how works callbacks.
-**The callback feature needs a concrete class in the JVM and if it does not exist there is no way to use it from KafkaBridge.**
+**The callback feature needs a concrete class in the JVM and if it does not exist there is no way to use it from KNet.**

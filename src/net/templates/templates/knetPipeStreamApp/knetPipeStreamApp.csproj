@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFrameworks>net6.0;net5.0;netcoreapp3.1;net461</TargetFrameworks>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'net461'">
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup Condition="Exists('..\..\..\KNet\KNet.csproj')">
+    <!--Within GitHub repo: used for test purpose-->
+    <ProjectReference Include="..\..\..\KNet\KNet.csproj" />
+  </ItemGroup>
+  <ItemGroup Condition="!Exists('..\..\..\KNet\KNet.csproj')">
+    <!--Outside GitHub repo-->
+    <PackageReference Include="MASES.KNet" Version="1.2.0" IncludeAssets="All" PrivateAssets="None" />
+  </ItemGroup>
+</Project>

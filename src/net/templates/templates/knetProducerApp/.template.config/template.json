@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "MASES s.r.l.",
+  "classifications": [ "Common", "Console", "C#8" ],
+  "identity": "MASES.KNetTemplate.KNetProducer",
+  "name": "Console templates: KNet Producer project",
+  "shortName": "knetProducerApp",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  }
+}

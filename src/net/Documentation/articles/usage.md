@@ -1,6 +1,6 @@
-# KafkaBridge usage
+# KNet usage
 
-To use KafkaBridge classes the developer can write code in .NET using the same classes available in the official Apache Kafka package.
+To use KNet classes the developer can write code in .NET using the same classes available in the official Apache Kafka package.
 If classes or methods are not available yet it is possible to use the approach synthetized in [What to do if an API was not yet implemented](API_extensibility.md)
 
 ## Producer example
@@ -12,12 +12,12 @@ Below the reader can found two different version of producer examples.
 A basic producer can be like the following one:
 
 ```C#
-using MASES.KafkaBridge;
-using MASES.KafkaBridge.Clients.Producer;
+using MASES.KNet;
+using MASES.KNet.Clients.Producer;
 using Java.Util;
 using System;
 
-namespace MASES.KafkaBridgeTemplate.KafkaBridgeProducer
+namespace MASES.KNetTemplate.KNetProducer
 {
     class Program
     {
@@ -29,7 +29,7 @@ namespace MASES.KafkaBridgeTemplate.KafkaBridgeProducer
 
         static void Main(string[] args)
         {
-            var appArgs = KafkaBridgeCore.ApplicationArgs;
+            var appArgs = KNetCore.ApplicationArgs;
 
             if (appArgs.Length != 0)
             {
@@ -61,7 +61,7 @@ namespace MASES.KafkaBridgeTemplate.KafkaBridgeProducer
 }
 ```
 
-The example above can be found in the [templates package](https://www.nuget.org/packages/MASES.KafkaBridge.Templates/). Its behavior is:
+The example above can be found in the [templates package](https://www.nuget.org/packages/MASES.KNet.Templates/). Its behavior is:
 * during initialization prepares the properties, 
 * create a producer using the properties
 * create ProducerRecord and send it
@@ -73,12 +73,12 @@ A producer with Callback can be like the following one. In this example the read
 Surf [JVM callbacks]() to go into detail in the callback management from JVM.
 
 ```C#
-using MASES.KafkaBridge;
-using MASES.KafkaBridge.Clients.Producer;
+using MASES.KNet;
+using MASES.KNet.Clients.Producer;
 using Java.Util;
 using System;
 
-namespace MASES.KafkaBridgeTemplate.KafkaBridgeProducer
+namespace MASES.KNetTemplate.KNetProducer
 {
     class Program
     {
@@ -90,7 +90,7 @@ namespace MASES.KafkaBridgeTemplate.KafkaBridgeProducer
 
         static void Main(string[] args)
         {
-            var appArgs = KafkaBridgeCore.ApplicationArgs;
+            var appArgs = KNetCore.ApplicationArgs;
 
             if (appArgs.Length != 0)
             {
@@ -129,7 +129,7 @@ namespace MASES.KafkaBridgeTemplate.KafkaBridgeProducer
 }
 ```
 
-The example above can be found in the [templates package](https://www.nuget.org/packages/MASES.KafkaBridge.Templates/). Its behavior is:
+The example above can be found in the [templates package](https://www.nuget.org/packages/MASES.KNet.Templates/). Its behavior is:
 * during initialization prepares the properties
 * create a producer using the properties
 * create ProducerRecord and send it using the API Send with the attached Callback
@@ -143,12 +143,12 @@ The example above can be found in the [templates package](https://www.nuget.org/
 A basic consumer can be like the following one:
 
 ```C#
-using MASES.KafkaBridge;
-using MASES.KafkaBridge.Clients.Consumer;
+using MASES.KNet;
+using MASES.KNet.Clients.Consumer;
 using Java.Util;
 using System;
 
-namespace MASES.KafkaBridgeTemplate.KafkaBridgeConsumer
+namespace MASES.KNetTemplate.KNetConsumer
 {
     class Program
     {
@@ -160,7 +160,7 @@ namespace MASES.KafkaBridgeTemplate.KafkaBridgeConsumer
 
         static void Main(string[] args)
         {
-            var appArgs = KafkaBridgeCore.ApplicationArgs;
+            var appArgs = KNetCore.ApplicationArgs;
 
             if (appArgs.Length != 0)
             {
@@ -192,7 +192,7 @@ namespace MASES.KafkaBridgeTemplate.KafkaBridgeConsumer
 }
 ```
 
-The example above can be found in the [templates package](https://www.nuget.org/packages/MASES.KafkaBridge.Templates/). Its behavior is:
+The example above can be found in the [templates package](https://www.nuget.org/packages/MASES.KNet.Templates/). Its behavior is:
 * during initialization prepares the properties, 
 * create a consumer using the properties
 * subscribe and starts consume

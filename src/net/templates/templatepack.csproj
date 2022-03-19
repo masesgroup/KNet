@@ -1,30 +1,30 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <PackageType>Template</PackageType>
-    <PackageVersion>1.1.11.0</PackageVersion>
-    <PackageId>MASES.KafkaBridge.Templates</PackageId>
-    <Title>KafkaBridge Templates - Templates to use the KafkaBridge</Title>
+    <PackageVersion>1.2.0.0</PackageVersion>
+    <PackageId>MASES.KNet.Templates</PackageId>
+    <Title>KNet Templates - Templates to use the KNet</Title>
     <Authors>MASES s.r.l.</Authors>
     <Owners>MASES s.r.l.</Owners>
     <Company>MASES s.r.l.</Company>
     <Copyright>Copyright ©  MASES s.r.l. 2022</Copyright>
-    <Summary>Ready made templates to create applications based on KafkaBridge</Summary>
-    <Description>Ready made templates to create applications based on KafkaBridge. The templates are ready made starting points, all information and APIs are available in the official website https://masesgroup.github.io/KafkaBridge</Description>
+    <Summary>Ready made templates to create applications based on KNet</Summary>
+    <Description>Ready made templates to create applications based on KNet. The templates are ready made starting points, all information and APIs are available in the official website https://masesgroup.github.io/KNet</Description>
     <TargetFrameworks>net6.0;net5.0;netcoreapp3.1;net461</TargetFrameworks>
     <OutputPath>..\..\..\bin\</OutputPath>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageProjectUrl>https://github.com/masesgroup/KafkaBridge/</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/masesgroup/KafkaBridge</RepositoryUrl>
-    <PackageReleaseNotes>https://github.com/masesgroup/KafkaBridge/releases</PackageReleaseNotes>
+    <PackageProjectUrl>https://github.com/masesgroup/KNet/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/masesgroup/KNet</RepositoryUrl>
+    <PackageReleaseNotes>https://github.com/masesgroup/KNet/releases</PackageReleaseNotes>
 	<PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageIcon>JCOB128x128.png</PackageIcon>
-    <PackageTags>kafka apache-kafka dotnet clr netcore net5 net6 template kafka connect streams producer consumer providers streamprovider confluent</PackageTags>
+    <PackageTags>knet kafka apache-kafka dotnet clr netcore net5 net6 template kafka connect streams producer consumer providers streamprovider confluent</PackageTags>
     <LangVersion>8.0</LangVersion>
-    <Product>KafkaBridge Templates</Product>
+    <Product>KNet Templates</Product>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>..\Common\KafkaBridge.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>..\Common\KNet.snk</AssemblyOriginatorKeyFile>
     <IncludeContentInPack>true</IncludeContentInPack>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <ContentTargetFolders>content</ContentTargetFolders>
@@ -44,7 +44,7 @@
   <ItemGroup>
     <None Include="..\..\..\LICENSE" Pack="true" PackagePath="" />
     <None Include="..\Common\JCOB128x128.png" Pack="true" PackagePath="" />
-    <None Include="..\Common\KafkaBridge.snk" Link="KafkaBridge.snk" />
+    <None Include="..\Common\KNet.snk" Link="KNet.snk" />
     <None Include="..\..\..\README.md" Pack="true" PackagePath="\"/>
     <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**;templates\**\.vscode\**" />
     <Compile Remove="**\*" />
