@@ -23,11 +23,6 @@ namespace MASES.KafkaBridge.Tools
     /// </summary>
     public class VerifiableProducer : JCOBridge.C2JBridge.JVMBridgeMain<VerifiableProducer>
     {
-        static VerifiableProducer()
-        {
-            KafkaBridgeCore.GlobalHeapSize = "512M";
-        }
-
         /// <summary>
         /// Initialize a new <see cref="VerifiableProducer"/>
         /// </summary>

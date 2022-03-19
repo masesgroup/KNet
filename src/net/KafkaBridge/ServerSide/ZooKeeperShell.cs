@@ -23,12 +23,6 @@ namespace MASES.KafkaBridge.Tools
     /// </summary>
     public class ZooKeeperShell : JCOBridge.C2JBridge.JVMBridgeMain<ZooKeeperShell>
     {
-        static ZooKeeperShell()
-        {
-            KafkaBridgeCore.GlobalHeapSize = "512M";
-            KafkaBridgeCore.InitialHeapSize = "512M";
-        }
-
         /// <summary>
         /// Initialize a new <see cref="ZooKeeperShell"/>
         /// </summary>

@@ -32,25 +32,14 @@ namespace MASES.KafkaBridgeCLI
             {
                 if (args.Length == 0) { showHelp(); return; }
 
-                Type type = null;
-
-                foreach (var item in typeof(KafkaBridgeCore).Assembly.ExportedTypes)
-                {
-                    if (item.Name == KafkaBridgeCore.MainClassToRun || item.FullName == KafkaBridgeCore.MainClassToRun)
-                    {
-                        type = item;
-                        break;
-                    }
-                }
-
-                if (type == null) throw new ArgumentException($"Requested class {KafkaBridgeCore.MainClassToRun} is not a valid class name.");
+                KafkaBridgeCore.CreateGlobalInstance();
 
                 try
                 {
-                    var core = Activator.CreateInstance(type) as JVMBridgeBase;
+                    var core = Activator.CreateInstance(KafkaBridgeCore.MainClassToRun) as JVMBridgeBase;
                     if (core == null) throw new ArgumentException("Requested class is not a child of JVMBridgeBase.");
 
-                    core.Execute(KafkaBridgeCore.ApplicationArgs);
+                    core.Execute(KafkaBridgeCore.FilteredArgs);
                 }
                 catch (TargetInvocationException tie)
                 {

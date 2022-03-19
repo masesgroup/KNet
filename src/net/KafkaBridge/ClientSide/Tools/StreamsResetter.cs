@@ -23,11 +23,6 @@ namespace MASES.KafkaBridge.Tools
     /// </summary>
     public class StreamsResetter : JCOBridge.C2JBridge.JVMBridgeMain<StreamsResetter>
     {
-        static StreamsResetter()
-        {
-            KafkaBridgeCore.GlobalHeapSize = "512M";
-        }
-
         /// <summary>
         /// Initialize a new <see cref="StreamsResetter"/>
         /// </summary>

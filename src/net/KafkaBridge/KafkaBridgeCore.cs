@@ -17,110 +17,72 @@
 */
 
 using MASES.CLIParser;
-using MASES.JCOBridge.C2JBridge;
-using MASES.JCOBridge.C2JBridge.JVMInterop;
 using MASES.KafkaBridge.Clients.Consumer;
 using MASES.KafkaBridge.Clients.Producer;
 using MASES.KafkaBridge.Common;
 using MASES.KafkaBridge.Common.Errors;
 using MASES.KafkaBridge.Connect.Errors;
-using Java.Util.Concurrent;
 using MASES.KafkaBridge.Streams.Errors;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using MASES.JNet;
 
 namespace MASES.KafkaBridge
 {
     /// <summary>
     /// Public entry point of <see cref="KafkaBridgeCore"/>
     /// </summary>
-    public class KafkaBridgeCore : SetupJVMWrapper<KafkaBridgeCore>
+    public class KafkaBridgeCore : JNetCore<KafkaBridgeCore>
     {
-        static readonly Parser parser = Parser.CreateInstance(new Settings()
+        /// <inheritdoc cref="JNetCore{T}.CommandLineArguments"/>
+        protected override IEnumerable<IArgumentMetadata> CommandLineArguments
         {
-            DefaultType = ArgumentType.Double
-        });
-
-        static IArgumentMetadata[] prepareArguments()
-        {
-            return new IArgumentMetadata[]
+            get
             {
-                new ArgumentMetadata<string>()
+                var lst = new List<IArgumentMetadata>(base.CommandLineArguments);
+                lst.AddRange(new IArgumentMetadata[]
                 {
-                    Name = CLIParam.ClassToRun,
-                    Help = "The class to be instantiated.",
-                },
-                new ArgumentMetadata<string>()
-                {
-                    Name = CLIParam.ScalaVersion,
-                    Default = Const.DefaultScalaVersion,
-                    Help = "The version of scala to be used.",
-                },
-                new ArgumentMetadata<string>()
-                {
-                    Name = CLIParam.KafkaLocation,
-                    Default = Const.DefaultRootPath,
-                    Help = "The folder where Kafka package is available. Default consider the application use the Jars in the package.",
-                },
-                new ArgumentMetadata<string>()
-                {
-                    Name = CLIParam.Log4JConfiguration,
-                    Default = Const.DefaultLog4JPath,
-                    Help = "The file containing the configuration of log4j.",
-                },
-                new ArgumentMetadata<bool>()
-                {
-                    Name = CLIParam.LogClassPath,
-                    Type = ArgumentType.Single,
-                    Help = "Add on command-line to show ClassPath resolution.",
-                },
-            };
+                    new ArgumentMetadata<string>()
+                    {
+                        Name = CLIParam.ClassToRun,
+                        Help = "The class to be instantiated.",
+                    },
+                    new ArgumentMetadata<string>()
+                    {
+                        Name = CLIParam.ScalaVersion,
+                        Default = Const.DefaultScalaVersion,
+                        Help = "The version of scala to be used.",
+                    },
+                    new ArgumentMetadata<string>()
+                    {
+                        Name = CLIParam.KafkaLocation,
+                        Default = Const.DefaultRootPath,
+                        Help = "The folder where Kafka package is available. Default consider the application use the Jars in the package.",
+                    },
+                    new ArgumentMetadata<string>()
+                    {
+                        Name = CLIParam.Log4JConfiguration,
+                        Default = Const.DefaultLog4JPath,
+                        Help = "The file containing the configuration of log4j.",
+                    },
+                });
+                return lst;
+            }
         }
-
-        static readonly bool _logClassPath = false;
-        static IEnumerable<IArgumentMetadataParsed> _parsedArgs = null;
-
-        static KafkaBridgeCore()
+        /// <summary>
+        /// Public initializer
+        /// </summary>
+        public KafkaBridgeCore()
         {
-            GlobalScalaVersion = Const.DefaultScalaVersion;
-            GlobalRootPath = Const.DefaultRootPath;
-            GlobalHeapSize = "256M";
-
-            parser.Add(prepareArguments());
-
-            List<string> args = new(Environment.GetCommandLineArgs());
-            args.RemoveAt(0);
-            _parsedArgs = parser.Parse(args.ToArray());
-            MainClassToRun = _parsedArgs.Get<string>(CLIParam.ClassToRun);
-            ApplicationArgs = parser.UnparsedArgs.FilterJCOBridgeArguments();
-
-            GlobalRootPath = _parsedArgs.Get<string>(CLIParam.KafkaLocation);
-            GlobalLog4JPath = _parsedArgs.Get<string>(CLIParam.Log4JConfiguration);
-            GlobalScalaVersion = _parsedArgs.Get<string>(CLIParam.ScalaVersion);
-
-#if DEBUG
-            _logClassPath = true;
-#else
-            _logClassPath = _parsedArgs.Exist(CLIParam.LogClassPath);
-#endif
-
-            new KafkaBridgeCore();
-
-#region Java Exceptions
-
-            JCOBridge.C2JBridge.JCOBridge.RegisterException<ExecutionException>();
-
-#endregion
-
-#region Base Exceptions
+            #region Base Exceptions
 
             JCOBridge.C2JBridge.JCOBridge.RegisterException<KafkaException>();
             JCOBridge.C2JBridge.JCOBridge.RegisterException<InvalidRecordException>();
 
-#endregion
+            #endregion
 
-#region Common Exceptions
+            #region Common Exceptions
 
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(ApiException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(AuthenticationException));
@@ -242,9 +204,9 @@ namespace MASES.KafkaBridge
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(UnsupportedVersionException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(WakeupException));
 
-#endregion
+            #endregion
 
-#region Consumer Exceptions
+            #region Consumer Exceptions
 
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(CommitFailedException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(Clients.Consumer.InvalidOffsetException));
@@ -253,15 +215,15 @@ namespace MASES.KafkaBridge
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(Clients.Consumer.OffsetOutOfRangeException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(RetriableCommitFailedException));
 
-#endregion
+            #endregion
 
-#region Producer Exceptions
+            #region Producer Exceptions
 
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(BufferExhaustedException));
 
-#endregion
+            #endregion
 
-#region Streams Exceptions
+            #region Streams Exceptions
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(BrokerNotFoundException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidStateStoreException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidStateStorePartitionException));
@@ -279,9 +241,9 @@ namespace MASES.KafkaBridge
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(TaskMigratedException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(TopologyException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(UnknownStateStoreException));
-#endregion
+            #endregion
 
-#region Connect Exceptions
+            #region Connect Exceptions
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(AlreadyExistsException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(ConnectException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(DataException));
@@ -290,22 +252,86 @@ namespace MASES.KafkaBridge
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(Connect.Errors.RetriableException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(SchemaBuilderException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(SchemaProjectorException));
-#endregion
+            #endregion
         }
 
-        KafkaBridgeCore()
+        /// <inheritdoc cref="JNetCore{T}.GlobalHeapSize" />
+        public override string GlobalHeapSize { get { return string.IsNullOrEmpty(base.GlobalHeapSize) ? ApplicationHeapSize : base.GlobalHeapSize; } }
+        /// <inheritdoc cref="JNetCore{T}.InitialHeapSize" />
+        public override string InitialHeapSize { get { return string.IsNullOrEmpty(base.InitialHeapSize) ? ApplicationInitialHeapSize : base.InitialHeapSize; } }
+        /// <inheritdoc cref="JNetCore{T}.ProcessCommandLine" />
+        protected override string[] ProcessCommandLine()
         {
+            var result = base.ProcessCommandLine();
+            GlobalScalaVersion = Const.DefaultScalaVersion;
+            GlobalRootPath = Const.DefaultRootPath;
+            ApplicationHeapSize = "256M";
+
+            var classToRun = ParsedArgs.Get<string>(CLIParam.ClassToRun);
+            GlobalRootPath = ParsedArgs.Get<string>(CLIParam.KafkaLocation);
+            GlobalLog4JPath = ParsedArgs.Get<string>(CLIParam.Log4JConfiguration);
+            GlobalScalaVersion = ParsedArgs.Get<string>(CLIParam.ScalaVersion);
+
+            if (!string.IsNullOrEmpty(classToRun))
+            {
+                Type type = null;
+
+                foreach (var item in typeof(KafkaBridgeCore).Assembly.ExportedTypes)
+                {
+                    if (item.Name == classToRun || item.FullName == classToRun)
+                    {
+                        type = item;
+                        break;
+                    }
+                }
+
+                switch (classToRun)
+                {
+                    case "VerifiableConsumer":
+                        ApplicationHeapSize = "512M";
+                        break;
+                    case "VerifiableProducer":
+                        ApplicationHeapSize = "512M";
+                        break;
+                    case "StreamsResetter":
+                        ApplicationHeapSize = "512M";
+                        break;
+                    case "ZooKeeperStart":
+                        ApplicationHeapSize = "512M";
+                        ApplicationInitialHeapSize = "512M";
+                        break;
+                    case "ZooKeeperShell":
+                        ApplicationHeapSize = "512M";
+                        ApplicationInitialHeapSize = "512M";
+                        break;
+                    case "KafkaStart":
+                        ApplicationHeapSize = Environment.Is64BitOperatingSystem ? "1G" : "512M";
+                        ApplicationInitialHeapSize = Environment.Is64BitOperatingSystem ? "1G" : "512M";
+                        break;
+                    default:
+                        break;
+                }
+
+                MainClassToRun = type ?? throw new ArgumentException($"Requested class {classToRun} is not a valid class name.");
+            }
+
+            return result;
         }
 
         /// <summary>
-        /// Sets the global value of root path
+        /// Sets the <see cref="Type"/> to be invoked at startup
         /// </summary>
-        public static string MainClassToRun { get; protected set; }
+        public static Type MainClassToRun { get; protected set; }
 
         /// <summary>
-        /// The filtered application arguments 
+        /// Sets the global value of the heap size
         /// </summary>
-        public static string[] ApplicationArgs { get; private set; }
+        public static string ApplicationHeapSize { get; set; }
+
+        /// <summary>
+        /// Sets the global value of the heap size
+        /// </summary>
+        public static string ApplicationInitialHeapSize { get; set; }
 
         /// <summary>
         /// Sets the global value of root path
@@ -321,16 +347,6 @@ namespace MASES.KafkaBridge
         /// Sets the global value of root path
         /// </summary>
         public static string GlobalScalaVersion { get; set; }
-
-        /// <summary>
-        /// Sets the global heap size
-        /// </summary>
-        public static string GlobalHeapSize { get; set; }
-
-        /// <summary>
-        /// Sets the initial heap size
-        /// </summary>
-        public static string InitialHeapSize { get; set; }
 
         /// <summary>
         /// The Scala version to be used
@@ -357,49 +373,21 @@ namespace MASES.KafkaBridge
         /// </summary>
         public virtual string Log4JOpts { get { return string.Format("file:{0}", Path.Combine(RootPath, "config", "tools-log4j.properties")); } }
 
-        /// <summary>
-        /// The JMX Port to use
-        /// </summary>
-        public virtual short? JmxPort { get; }
-
-        /// <summary>
-        /// Enables Debug 
-        /// </summary>
-        public virtual bool EnableDebug { get { return false; } }
-
-        /// <summary>
-        /// Java Debug Port
-        /// </summary>
-        public virtual short JavaDebugPort { get { return 5005; } }
-
-        /// <summary>
-        /// Enables Debug 
-        /// </summary>
-        public virtual string DebugSuspendFlag { get { return "n"; } }
-
-        /// <summary>
-        /// Java Debug options used if <see cref="EnableDebug"/> is true
-        /// </summary>
-        public virtual string JavaDebugOpts { get { return $"-agentlib:jdwp=transport=dt_socket,server=y,suspend={DebugSuspendFlag},address={JavaDebugPort}"; } }
-
-        /// <summary>
-        /// Default performance options used in initialization
-        /// </summary>
-        public virtual IDictionary<string, string> PerformanceOptions
+        /// <inheritdoc cref="JNetCore{T}.PerformanceOptions"/>
+        protected override IList<string> PerformanceOptions
         {
             get
             {
-                var dict = new Dictionary<string, string>
+                var lst = new List<string>(base.PerformanceOptions);
+                lst.AddRange(new string[]
                 {
-                   // { "-server", null }, <- Disabled because it avoids starts of embedded JVM
-                    { "-XX:+UseG1GC", null },
-                    { "-XX:MaxGCPauseMillis=20", null },
-                    { "-XX:InitiatingHeapOccupancyPercent=35", null },
-                    { "-XX:+ExplicitGCInvokesConcurrent", null },
-                    { "java.awt.headless", "true" }
-                };
-
-                return dict;
+                    // "-server", <- Disabled because it avoids starts of embedded JVM
+                    "-XX:+UseG1GC",
+                    "-XX:MaxGCPauseMillis=20",
+                    "-XX:InitiatingHeapOccupancyPercent=35",
+                    "-XX:+ExplicitGCInvokesConcurrent",
+                });
+                return lst;
             }
         }
 
@@ -507,35 +495,21 @@ namespace MASES.KafkaBridge
         /// </summary>
         public virtual string ReleaseAdditionalPath { get { return Path.Combine(RootPath, "core", "build", "libs", "kafka_" + ScalaBinaryVersion + "*.jar"); } }
 
-        public sealed override IEnumerable<KeyValuePair<string, string>> JVMOptions
-        {
-            get
-            {
-                IDictionary<string, string> opt = Options;
-                if (base.JVMOptions != null)
-                {
-                    foreach (var item in base.JVMOptions)
-                    {
-                        opt.Add(item);
-                    }
-                }
-                return opt;
-            }
-        }
-
-        protected virtual IDictionary<string, string> Options
+        /// <inheritdoc cref="JNetCore{T}.Options"/>
+        protected override IDictionary<string, string> Options
         {
             get
             {
                 if (!Directory.Exists(LogDir)) Directory.CreateDirectory(LogDir);
 
-                IDictionary<string, string> options = new Dictionary<string, string>(PerformanceOptions)
+                IDictionary<string, string> options = new Dictionary<string, string>(base.Options)
                 {
                     { "-Dcom.sun.management.jmxremote", null },
                     { "com.sun.management.jmxremote.authenticate", "false" },
                     { "com.sun.management.jmxremote.ssl", "false" },
                     { "log4j.configuration", string.IsNullOrEmpty(GlobalLog4JPath) ? ((GlobalRootPath == Const.DefaultRootPath) ? Log4JOpts : null) : $"file:{GlobalLog4JPath}"},
                     { "kafka.logs.dir", LogDir},
+                    { "java.awt.headless", "true" },
                     { "-Xmx" + GlobalHeapSize, null},
                 };
 
@@ -558,77 +532,30 @@ namespace MASES.KafkaBridge
             }
         }
 
-        string classPath = string.Empty;
-        public sealed override string ClassPath => buildClassPath();
-        /// <inheritdoc cref="IKafkaBridgeCore.DynJVM"/>
-        public new dynamic DynJVM { get { return base.DynJVM; } }
-        /// <inheritdoc cref="IKafkaBridgeCore.JVM"/>
-        public new IJVMWrapperDirect JVM { get { return base.JVM; } }
-
-        string buildClassPath()
+        /// <inheritdoc cref="JNetCore{T}.PathToParse"/>
+        protected override IList<string> PathToParse => new List<string>(new string[]
         {
-            if (_logClassPath)
-            {
-                Console.WriteLine("RootPath is: {0}", RootPath);
-            }
-
-            classPath = string.Empty;
-            BuildClassPath(RootPath, "*.jar");
-            BuildClassPath(CoreDependenciesPath);
-            BuildClassPath(ExamplesPath);
-            BuildClassPath(ClientsPath);
-            BuildClassPath(StreamsPath);
-            BuildClassPath(StreamsExamplePath);
-            BuildClassPath(StreamsDependenciesPath);
-            BuildClassPath(ToolsPath);
-            BuildClassPath(ToolsDependenciesPath);
-            BuildClassPath(ConnectApiPath);
-            BuildClassPath(ConnectApiDependenciesPath);
-            BuildClassPath(ConnectRuntimePath);
-            BuildClassPath(ConnectRuntimeDependenciesPath);
-            BuildClassPath(ConnectFilePath);
-            BuildClassPath(ConnectFileDependenciesPath);
-            BuildClassPath(ConnectJsonPath);
-            BuildClassPath(ConnectJsonDependenciesPath);
-            BuildClassPath(ConnectToolsPath);
-            BuildClassPath(ConnectToolsDependenciesPath);
-            BuildClassPath(ReleasePath);
-            BuildClassPath(ReleaseAdditionalPath);
-
-            classPath += !string.IsNullOrEmpty(ExtraClassPath) ? InternalConst.PathSeparator + ExtraClassPath : string.Empty;
-
-            if (_logClassPath)
-            {
-                Console.WriteLine("ClassPath is defined from:");
-                foreach (var item in classPath.Split(InternalConst.PathSeparator))
-                {
-                    Console.WriteLine(item);
-                }
-            }
-            return classPath;
-        }
-
-        string BuildClassPath(string path, string pattern = null)
-        {
-            var folder = Path.GetDirectoryName(path);
-            if (pattern == null) pattern = Path.GetFileName(path);
-            if (_logClassPath)
-            {
-                Console.WriteLine("Search on {0} with pattern {1}", folder, pattern);
-            }
-            if (Directory.Exists(folder))
-            {
-                foreach (var item in Directory.GetFiles(folder, pattern, SearchOption.TopDirectoryOnly))
-                {
-                    classPath += InternalConst.PathSeparator + item;
-                }
-            }
-            if (classPath.StartsWith(InternalConst.PathSeparator.ToString()))
-            {
-                classPath = classPath.Substring(1);
-            }
-
-            return classPath;
-        }
+            RootPath != null ? Path.Combine(RootPath, "*.jar") : RootPath,
+            CoreDependenciesPath,
+            ExamplesPath,
+            ClientsPath,
+            StreamsPath,
+            StreamsExamplePath,
+            StreamsDependenciesPath,
+            ToolsPath,
+            ToolsDependenciesPath,
+            ConnectApiPath,
+            ConnectApiDependenciesPath,
+            ConnectRuntimePath,
+            ConnectRuntimeDependenciesPath,
+            ConnectFilePath,
+            ConnectFileDependenciesPath,
+            ConnectJsonPath,
+            ConnectJsonDependenciesPath,
+            ConnectToolsPath,
+            ConnectToolsDependenciesPath,
+            ReleasePath,
+            ReleaseAdditionalPath,
+        });
     }
 }

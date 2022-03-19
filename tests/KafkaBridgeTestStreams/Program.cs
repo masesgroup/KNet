@@ -47,7 +47,8 @@ namespace MASES.KafkaBridgeTest
 
         static void Main(string[] args)
         {
-            var appArgs = KafkaBridgeCore.ApplicationArgs;
+            KafkaBridgeCore.CreateGlobalInstance();
+            var appArgs = KafkaBridgeCore.FilteredArgs;
 
             if (appArgs.Length != 0)
             {

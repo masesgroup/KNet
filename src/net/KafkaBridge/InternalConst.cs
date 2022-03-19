@@ -53,9 +53,4 @@ namespace MASES.KafkaBridge
         /// </summary>
         public static readonly string DefaultLog4JPath = Path.Combine(AssemblyLocation, "config", "log4j.properties");
     }
-
-    class InternalConst
-    {
-        public static readonly char PathSeparator = (Environment.OSVersion.Platform == PlatformID.Unix || Environment.OSVersion.Platform == PlatformID.MacOSX) ? ':' : ';';
-    }
 }

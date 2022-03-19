@@ -25,12 +25,6 @@ namespace MASES.KafkaBridge.Tools
     /// </summary>
     public class KafkaStart : JCOBridge.C2JBridge.JVMBridgeMain<KafkaStart>
     {
-        static KafkaStart()
-        {
-            KafkaBridgeCore.GlobalHeapSize = Environment.Is64BitOperatingSystem ? "1G": "512M";
-            KafkaBridgeCore.InitialHeapSize = Environment.Is64BitOperatingSystem ? "1G" : "512M";
-        }
-
         /// <summary>
         /// Initialize a new <see cref="KafkaStart"/>
         /// </summary>

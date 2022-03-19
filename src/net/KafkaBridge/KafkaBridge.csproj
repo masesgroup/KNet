@@ -55,7 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MASES.CLIParser" Version="3.0.0" />
-    <PackageReference Include="MASES.JCOBridge" Version="2.4.7">
+    <PackageReference Include="MASES.JNet" Version="1.1.1">
       <IncludeAssets>All</IncludeAssets>
       <PrivateAssets>None</PrivateAssets>
     </PackageReference>

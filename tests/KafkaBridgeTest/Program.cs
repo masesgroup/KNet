@@ -40,11 +40,12 @@ namespace MASES.KafkaBridgeTest
 
         static string serverToUse = theServer;
         static string topicToUse = theTopic;
-        static ManualResetEvent resetEvent = new ManualResetEvent(false);
+        static readonly ManualResetEvent resetEvent = new(false);
 
         static void Main(string[] args)
         {
-            var appArgs = KafkaBridgeCore.ApplicationArgs;
+            KafkaBridgeCore.CreateGlobalInstance();
+            var appArgs = KafkaBridgeCore.FilteredArgs;
 
             if (appArgs.Length != 0)
             {

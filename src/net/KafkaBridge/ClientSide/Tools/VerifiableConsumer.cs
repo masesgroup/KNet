@@ -23,11 +23,6 @@ namespace MASES.KafkaBridge.Tools
     /// </summary>
     public class VerifiableConsumer : JCOBridge.C2JBridge.JVMBridgeMain<VerifiableConsumer>
     {
-        static VerifiableConsumer()
-        {
-            KafkaBridgeCore.GlobalHeapSize = "512M";
-        }
-
         /// <summary>
         /// Initialize a new <see cref="VerifiableConsumer"/>
         /// </summary>
