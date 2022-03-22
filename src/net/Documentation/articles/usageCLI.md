@@ -1,4 +1,4 @@
-# KNetCLI
+# KNet CLI
 
 ## Installation
 
@@ -8,9 +8,9 @@ To install the tool follows the instructions on https://docs.microsoft.com/en-us
 
 To use the CLI interface (KNetCLI) runs a command like the following:
 
-> KNetCLI -ClassToRun ConsoleConsumer --bootstrap-server SERVER-ADDRESS:9093 --topic topic_name --from-beginning
+> knet -ClassToRun ConsoleConsumer --bootstrap-server SERVER-ADDRESS:9093 --topic topic_name --from-beginning
 
-KNetCLI accepts the following command-line switch:
+_knet_ accepts the following command-line switch:
 
 * **ClassToRun**: represents the class to be executed; the list is:
 	* Administration scope:
