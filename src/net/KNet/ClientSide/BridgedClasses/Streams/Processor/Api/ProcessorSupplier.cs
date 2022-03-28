@@ -22,11 +22,11 @@ using MASES.KNet.Streams.State;
 
 namespace MASES.KNet.Streams.Processor.Api
 {
-    public interface IProcessorSupplier<KIn, VIn, KOut, VOut> : IConnectedStoreProvider, Supplier<Processor<KIn, VIn, KOut, VOut>>
+    public interface IProcessorSupplier<KIn, VIn, KOut, VOut> : IConnectedStoreProvider, ISupplier<Processor<KIn, VIn, KOut, VOut>>
     {
     }
 
-    public class ProcessorSupplier<KIn, VIn, KOut, VOut> : SupplierListener<Processor<KIn, VIn, KOut, VOut>>, IProcessorSupplier<KIn, VIn, KOut, VOut>
+    public class ProcessorSupplier<KIn, VIn, KOut, VOut> : Supplier<Processor<KIn, VIn, KOut, VOut>>, IProcessorSupplier<KIn, VIn, KOut, VOut>
     {
         public Set<StoreBuilder> Stores => throw new System.NotImplementedException();
     }
