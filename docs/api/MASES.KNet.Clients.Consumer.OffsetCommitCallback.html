@@ -90,7 +90,7 @@
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
     <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span></div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
-    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span>&lt;<span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeListener</span>&gt;</div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span></div>
     <div><a class="xref" href="MASES.KNet.Clients.Consumer.IOffsetCommitCallback.html">IOffsetCommitCallback</a></div>
     <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span></div>
     <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span></div>
@@ -158,16 +158,16 @@
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.Clazz</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.Class</span>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.DynClazz</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.DynClazz</span>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.Clazz</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.Clazz</span>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClassNameOf&lt;T&gt;()</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic&lt;MASES.JCOBridge.C2JBridge.JVMBridgeListener&gt;.Class</span>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClassOf&lt;T&gt;()</span>
     </div>
     <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
@@ -288,7 +288,7 @@
   <h6><strong>Assembly</strong>: MASES.KNet.dll</h6>
   <h5 id="MASES_KNet_Clients_Consumer_OffsetCommitCallback_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class OffsetCommitCallback : JVMBridgeListener, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic&lt;JVMBridgeListener&gt;, IOffsetCommitCallback, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
+    <pre><code class="lang-csharp hljs">public class OffsetCommitCallback : JVMBridgeListener, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IOffsetCommitCallback, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
   </div>
   <h5 id="MASES_KNet_Clients_Consumer_OffsetCommitCallback_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</p>
@@ -447,7 +447,7 @@
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
   </div>
   <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic&lt;TClass&gt;</span>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span>
   </div>
   <div>
       <a class="xref" href="MASES.KNet.Clients.Consumer.IOffsetCommitCallback.html">IOffsetCommitCallback</a>
