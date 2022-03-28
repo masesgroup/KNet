@@ -23,11 +23,11 @@ using MASES.KNet.Streams.Processor;
 
 namespace MASES.KNet.Streams.KStream
 {
-    public interface IValueTransformerWithKeySupplier<K, V, VR> : IConnectedStoreProvider, Supplier<ValueTransformerWithKey<K, V, VR>>
+    public interface IValueTransformerWithKeySupplier<K, V, VR> : IConnectedStoreProvider, ISupplier<ValueTransformerWithKey<K, V, VR>>
     {
     }
 
-    public class ValueTransformerWithKeySupplier<K, V, VR> : SupplierListener<ValueTransformerWithKey<K, V, VR>>, IValueTransformerWithKeySupplier<K, V, VR>
+    public class ValueTransformerWithKeySupplier<K, V, VR> : Supplier<ValueTransformerWithKey<K, V, VR>>, IValueTransformerWithKeySupplier<K, V, VR>
     {
         public Java.Util.Set<State.StoreBuilder> Stores => throw new System.NotImplementedException();
     }

@@ -25,11 +25,11 @@ using MASES.KNet.Streams.State;
 
 namespace MASES.KNet.Streams.KStream
 {
-    public interface ITransformerSupplier<K, V, R> : IConnectedStoreProvider, Supplier<Transformer<K, V, R>>
+    public interface ITransformerSupplier<K, V, R> : IConnectedStoreProvider, ISupplier<Transformer<K, V, R>>
     {
     }
 
-    public class TransformerSupplier<K, V, R> : SupplierListener<Transformer<K, V, R>>, ITransformerSupplier<K, V, R>
+    public class TransformerSupplier<K, V, R> : Supplier<Transformer<K, V, R>>, ITransformerSupplier<K, V, R>
     {
         public Set<StoreBuilder> Stores => throw new System.NotImplementedException();
     }

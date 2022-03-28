@@ -22,11 +22,11 @@ using MASES.KNet.Streams.State;
 
 namespace MASES.KNet.Streams.Processor
 {
-    public interface IProcessorSupplier<K, V> : IConnectedStoreProvider, Supplier<Processor<K, V>>
+    public interface IProcessorSupplier<K, V> : IConnectedStoreProvider, ISupplier<Processor<K, V>>
     {
     }
 
-    public class ProcessorSupplier<K, V> : SupplierListener<Processor<K, V>>, IProcessorSupplier<K, V>
+    public class ProcessorSupplier<K, V> : Supplier<Processor<K, V>>, IProcessorSupplier<K, V>
     {
         public Set<StoreBuilder> Stores => throw new System.NotImplementedException();
     }
