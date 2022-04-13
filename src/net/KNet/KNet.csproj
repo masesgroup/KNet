@@ -9,7 +9,7 @@
 		<Owners>MASES s.r.l.</Owners>
 		<Authors>MASES s.r.l.</Authors>
 		<Company>MASES s.r.l.</Company>
-		<Version>1.2.1.0</Version>
+		<Version>1.2.2.0</Version>
 		<Product>KNet</Product>
 		<GenerateAssemblyInfo>true</GenerateAssemblyInfo>
 		<TargetFrameworks>net461;netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
@@ -54,7 +54,6 @@
     <None Include="..\Documentation\articles\usage.md" Pack="true" PackagePath="\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="MASES.CLIParser" Version="3.0.0" />
     <PackageReference Include="MASES.JNet" Version="1.3.0">
       <IncludeAssets>All</IncludeAssets>
       <PrivateAssets>None</PrivateAssets>

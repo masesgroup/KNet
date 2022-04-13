@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <PackageType>Template</PackageType>
-    <PackageVersion>1.2.1.0</PackageVersion>
+    <PackageVersion>1.2.2.0</PackageVersion>
     <PackageId>MASES.KNet.Templates</PackageId>
     <Title>KNet Templates - Templates to use the KNet</Title>
     <Authors>MASES s.r.l.</Authors>
