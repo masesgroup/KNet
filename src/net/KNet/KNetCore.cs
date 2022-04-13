@@ -31,9 +31,11 @@ using MASES.JNet;
 namespace MASES.KNet
 {
     /// <summary>
-    /// Public entry point of <see cref="KNetCore"/>
+    /// Public entry point of <see cref="KNetCore{T}"/>
     /// </summary>
-    public class KNetCore : JNetCore<KNetCore>
+    /// <typeparam name="T">A class which inherits from <see cref="KNetCore{T}"/></typeparam>
+    public class KNetCore<T> : JNetCore<T>
+        where T : KNetCore<T>
     {
         /// <inheritdoc cref="JNetCore{T}.CommandLineArguments"/>
         protected override IEnumerable<IArgumentMetadata> CommandLineArguments
@@ -557,5 +559,12 @@ namespace MASES.KNet
             ReleasePath,
             ReleaseAdditionalPath,
         });
+    }
+    /// <summary>
+    /// Directly usable implementation of <see cref="KNetCore{T}"/>
+    /// </summary>
+    public class KNetCore : KNetCore<KNetCore>
+    {
+
     }
 }

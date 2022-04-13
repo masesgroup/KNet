@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31624.102
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNetTest", "KNetTest\KNetTest.csproj", "{C556E8A0-8B06-4D5B-AEAD-B318B48DF150}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNetTestStreams", "KNetTestStreams\KNetTestStreams.csproj", "{17E101E1-A0F8-44F0-929C-498E4A41F551}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNetTestAdmin", "KNetTestAdmin\KNetTestAdmin.csproj", "{DE8D288D-8438-42EA-892F-F59840CFE322}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNetBenchmark", "KNetBenchmark\KNetBenchmark.csproj", "{8A6C9438-A389-4563-98EE-1386E0E62AAA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{DE8D288D-8438-42EA-892F-F59840CFE322}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE8D288D-8438-42EA-892F-F59840CFE322}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE8D288D-8438-42EA-892F-F59840CFE322}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A6C9438-A389-4563-98EE-1386E0E62AAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A6C9438-A389-4563-98EE-1386E0E62AAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A6C9438-A389-4563-98EE-1386E0E62AAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A6C9438-A389-4563-98EE-1386E0E62AAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
