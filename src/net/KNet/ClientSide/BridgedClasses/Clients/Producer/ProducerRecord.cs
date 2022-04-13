@@ -20,10 +20,22 @@ using MASES.KNet.Common.Header;
 
 namespace MASES.KNet.Clients.Producer
 {
-    public class ProducerRecord<K, V> : JCOBridge.C2JBridge.JVMBridgeBase<ProducerRecord<K, V>>
+    public class ProducerRecord : JCOBridge.C2JBridge.JVMBridgeBase<ProducerRecord>
     {
         public override string ClassName => "org.apache.kafka.clients.producer.ProducerRecord";
 
+        public ProducerRecord()
+        {
+        }
+
+        public ProducerRecord(params object[] args)
+            : base(args)
+        {
+        }
+    }
+
+    public class ProducerRecord<K, V> : ProducerRecord
+    {
         public ProducerRecord()
         {
         }
@@ -81,53 +93,6 @@ namespace MASES.KNet.Clients.Producer
         public System.DateTime DateTime => System.DateTimeOffset.FromUnixTimeMilliseconds(Timestamp).DateTime;
 
         public Headers Headers => IExecute<Headers>("headers");
-    }
-
-    public class ProducerRecord : ProducerRecord<object, object>
-    {
-        public ProducerRecord()
-        {
-        }
-
-        public ProducerRecord(string topic, int partition, long timestamp, object key, object value, Headers headers)
-            : base(topic, partition, timestamp, key, value, headers)
-        {
-        }
-
-        public ProducerRecord(string topic, int partition, System.DateTime timestamp, object key, object value, Headers headers)
-            : base(topic, partition, new System.DateTimeOffset(timestamp).ToUnixTimeSeconds(), key, value, headers)
-        {
-        }
-
-        public ProducerRecord(string topic, int partition, long timestamp, object key, object value)
-            : base(topic, partition, timestamp, key, value)
-        {
-        }
-
-        public ProducerRecord(string topic, int partition, System.DateTime timestamp, object key, object value)
-            : base(topic, partition, new System.DateTimeOffset(timestamp).ToUnixTimeSeconds(), key, value)
-        {
-        }
-
-        public ProducerRecord(string topic, int partition, object key, object value, Headers headers)
-            : base(topic, partition, key, value, headers)
-        {
-        }
-
-        public ProducerRecord(string topic, int partition, object key, object value)
-            : base(topic, partition, key, value)
-        {
-        }
-
-        public ProducerRecord(string topic, object key, object value)
-            : base(topic, key, value)
-        {
-        }
-
-        public ProducerRecord(string topic, object value)
-            : base(topic, value)
-        {
-        }
     }
 }
 

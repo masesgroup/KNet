@@ -18,7 +18,9 @@
 
 using Java.Util.Concurrent;
 using MASES.JCOBridge.C2JBridge;
+using MASES.KNet.Clients.Admin;
 using MASES.KNet.Clients.Producer;
+using MASES.KNet.Common.Config;
 using System;
 using System.Threading.Tasks;
 
@@ -26,6 +28,11 @@ namespace MASES.KNet.Extensions
 {
     public static class KafkaProducerExtensions
     {
+        public static NewTopic Configs(this NewTopic newTopic, TopicConfigBuilder config)
+        {
+            return newTopic.Configs(config.ToMap());
+        }
+
         public static void Produce<K, V>(this IProducer<K, V> producer, string topic, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null)
         {
             Produce(producer, new ProducerRecord<K, V>(topic, key, value), action);

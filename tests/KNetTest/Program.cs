@@ -32,7 +32,7 @@ namespace MASES.KNetTest
 {
     class Program
     {
-        static bool useSerdes = true;
+        static bool useSerdes = false;
         static bool useCallback = true;
 
         const string theServer = "localhost:9092";
@@ -233,6 +233,7 @@ namespace MASES.KNetTest
                 Deserializer<string> keyDeserializer = null;
                 Deserializer<string> valueDeserializer = null;
                 ConsumerRebalanceListener rebalanceListener = null;
+                KafkaConsumer<string, string> consumer = null; ;
                 if (useSerdes)
                 {
                     keyDeserializer = new Deserializer<string>(deserializeFun: (topic, data) =>
@@ -262,19 +263,17 @@ namespace MASES.KNetTest
                 }
                 try
                 {
+                    using (consumer = useSerdes ? new KafkaConsumer<string, string>(props, keyDeserializer, valueDeserializer) : new KafkaConsumer<string, string>(props))
                     {
-                        using (var consumer = useSerdes ? new KafkaConsumer<string, string>(props, keyDeserializer, valueDeserializer) : new KafkaConsumer<string, string>(props))
-                        {
-                            if (useCallback) consumer.Subscribe(Collections.Singleton(topicToUse), rebalanceListener);
-                            else consumer.Subscribe(Collections.Singleton(topicToUse));
+                        if (useCallback) consumer.Subscribe(Collections.Singleton(topicToUse), rebalanceListener);
+                        else consumer.Subscribe(Collections.Singleton(topicToUse));
 
-                            while (!resetEvent.WaitOne(0))
+                        while (!resetEvent.WaitOne(0))
+                        {
+                            var records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);
+                            foreach (var item in records)
                             {
-                                var records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);
-                                foreach (var item in records)
-                                {
-                                    Console.WriteLine($"Consuming from Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}");
-                                }
+                                Console.WriteLine($"Consuming from Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}");
                             }
                         }
                     }

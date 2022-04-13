@@ -139,6 +139,19 @@ namespace MASES.KNet.Extensions
             return await Execute(admin.CreateTopics, newTopics, options);
         }
 
+        public static void DeleteTopic(this IAdmin admin, string topicName)
+        {
+            try
+            {
+                var res = admin.DeleteTopics(Collections.Singleton(topicName));
+                res.All.Get();
+            }
+            catch (ExecutionException ex)
+            {
+                throw ex.InnerException;
+            }
+        }
+
         public static async Task<DeleteTopicsResult> DeleteTopicsAsync(this IAdmin admin, Collection<string> topics)
         {
             return await Execute(admin.DeleteTopics, topics);
