@@ -45,7 +45,7 @@ namespace MASES.KNet.Streams.Errors
     /// <summary>
     /// Listener for Kafka StreamsUncaughtExceptionHandler. Extends <see cref="JVMBridgeListener"/>, implements <see cref="IStreamsUncaughtExceptionHandler"/>
     /// </summary>
-    /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
+    /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public class StreamsUncaughtExceptionHandler : JVMBridgeListener, IStreamsUncaughtExceptionHandler
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>

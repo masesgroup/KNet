@@ -45,7 +45,7 @@ namespace MASES.KNet.Streams.KStream
     /// <typeparam name="K">The data associated to the event</typeparam>
     /// <typeparam name="V">The data associated to the event</typeparam>
     /// <typeparam name="VA">Aggregated value</typeparam>
-    /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
+    /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public class Aggregator<K, V, VA> : JVMBridgeListener, IAggregator<K, V, VA>
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
@@ -92,7 +92,7 @@ namespace MASES.KNet.Streams.KStream
     /// <typeparam name="K">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
     /// <typeparam name="V">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
     /// <typeparam name="VA">The aggregated data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
-    /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
+    /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public class JVMBridgeAggregator<K, V, VA> : AggregatorImpl<K, V, VA>
         where K : JVMBridgeBase, new()
         where V : JVMBridgeBase, new()

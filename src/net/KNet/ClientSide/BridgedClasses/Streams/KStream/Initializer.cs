@@ -38,7 +38,7 @@ namespace MASES.KNet.Streams.KStream
     /// Listener for Kafka Initializer. Extends <see cref="JVMBridgeListener"/>, implements <see cref="IInitializer{VA}"/>
     /// </summary>
     /// <typeparam name="VA">The Initialized data associated to the event</typeparam>
-    /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
+    /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public class Initializer<VA> : JVMBridgeListener, IInitializer<VA>
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
@@ -80,7 +80,7 @@ namespace MASES.KNet.Streams.KStream
     /// Listener for Kafka Initializer. Extends <see cref="InitializerImpl{VA}"/>
     /// </summary>
     /// <typeparam name="VA">The aggregated data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
-    /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
+    /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public class JVMBridgeInitializer<VA> : InitializerImpl<VA>
         where VA : JVMBridgeBase, new()
     {

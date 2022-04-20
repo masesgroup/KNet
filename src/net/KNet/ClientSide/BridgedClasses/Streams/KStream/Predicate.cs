@@ -42,7 +42,7 @@ namespace MASES.KNet.Streams.KStream
     /// </summary>
     /// <typeparam name="T">The data associated to the event</typeparam>
     /// <typeparam name="U">The data associated to the event</typeparam>
-    /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
+    /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public class Predicate<T, U> : JVMBridgeListener, IPredicate<T, U>
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
@@ -88,7 +88,7 @@ namespace MASES.KNet.Streams.KStream
     /// </summary>
     /// <typeparam name="T">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
     /// <typeparam name="U">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
-    /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
+    /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public class JVMBridgePredicate<T, U> : PredicateImpl<T, U>
         where T : JVMBridgeBase, new()
         where U : JVMBridgeBase, new()

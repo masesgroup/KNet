@@ -53,7 +53,7 @@ namespace MASES.KNet.Clients.Consumer
     /// <summary>
     /// Listener for Kafka ConsumerRebalanceListener. Extends <see cref="JVMBridgeListener"/>, implements <see cref="IConsumerInterceptor{K, V}"/>
     /// </summary>
-    /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
+    /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public class ConsumerInterceptor<K, V> : JVMBridgeListener, IConsumerInterceptor<K, V>
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>

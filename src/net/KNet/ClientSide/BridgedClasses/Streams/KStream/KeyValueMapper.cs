@@ -44,7 +44,7 @@ namespace MASES.KNet.Streams.KStream
     /// <typeparam name="T">The data associated to the event</typeparam>
     /// <typeparam name="U">The data associated to the event</typeparam>
     /// <typeparam name="VR">The result value</typeparam>
-    /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
+    /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public class KeyValueMapper<T, U, VR> : JVMBridgeListener, IKeyValueMapper<T, U, VR>
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
@@ -90,7 +90,7 @@ namespace MASES.KNet.Streams.KStream
     /// <typeparam name="T">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
     /// <typeparam name="U">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
     /// <typeparam name="VR">The result data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
-    /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
+    /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public class JVMBridgeKeyValueMapper<T, U, VR> : KeyValueMapperImpl<T, U, VR>
         where T : JVMBridgeBase, new()
         where U : JVMBridgeBase, new()

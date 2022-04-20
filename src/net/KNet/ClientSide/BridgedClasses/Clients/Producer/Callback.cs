@@ -38,7 +38,7 @@ namespace MASES.KNet.Clients.Producer
     /// <summary>
     /// Listener for Kafka Callback. Extends <see cref="JVMBridgeListener"/>, implements <see cref="ICallback"/>
     /// </summary>
-    /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
+    /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public class Callback : JVMBridgeListener, ICallback
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>

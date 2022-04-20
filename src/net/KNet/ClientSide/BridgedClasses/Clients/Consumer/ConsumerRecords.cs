@@ -36,7 +36,7 @@ namespace MASES.KNet.Clients.Consumer
             return IExecute<Iterable<ConsumerRecord<K, V>>>("records", topic);
         }
 
-        public Set<TopicPartition> partitions => IExecute<Set<TopicPartition>>("partitions");
+        public Set<TopicPartition> Partitions => IExecute<Set<TopicPartition>>("partitions");
 
         public Iterator<ConsumerRecord<K, V>> Iterator => IExecute<Iterator<ConsumerRecord<K, V>>>("iterator");
 

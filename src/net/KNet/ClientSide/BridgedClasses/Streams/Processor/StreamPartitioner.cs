@@ -44,7 +44,7 @@ namespace MASES.KNet.Streams.Processor
     /// </summary>
     /// <typeparam name="K">The data associated to the event</typeparam>
     /// <typeparam name="V">The data associated to the event</typeparam>
-    /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
+    /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public class StreamPartitioner<K, V> : JVMBridgeListener, IStreamPartitioner<K, V>
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
@@ -92,7 +92,7 @@ namespace MASES.KNet.Streams.Processor
     /// <typeparam name="T">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
     /// <typeparam name="U">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
     /// <typeparam name="VR">The result data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
-    /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
+    /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public class JVMBridgeStreamPartitioner<K, V> : StreamPartitionerImpl<K, V>
         where K : JVMBridgeBase, new()
         where V : JVMBridgeBase, new()
