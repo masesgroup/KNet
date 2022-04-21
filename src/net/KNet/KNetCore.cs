@@ -38,7 +38,7 @@ namespace MASES.KNet
         where T : KNetCore<T>
     {
         /// <inheritdoc cref="JNetCore{T}.CommandLineArguments"/>
-        protected override IEnumerable<IArgumentMetadata> CommandLineArguments
+        public override IEnumerable<IArgumentMetadata> CommandLineArguments
         {
             get
             {

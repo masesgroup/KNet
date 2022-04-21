@@ -9,7 +9,7 @@
     <name>mases.knet</name>
     <description>Interface bridging implementation for Apache Kafka</description>
     <url>https://github.com/masesgroup/KNet</url>
-    <version>1.2.1.0</version>
+    <version>1.2.2.0</version>
 
     <licenses>
         <license>
