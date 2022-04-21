@@ -17,14 +17,13 @@
 */
 
 using MASES.KNet;
-using MASES.KNet.Clients.Admin;
-using Java.Util;
 using System;
-using MASES.KNet.Extensions;
 using System.Collections.Generic;
 using MASES.CLIParser;
-using System.Diagnostics;
 using MASES.KNet.Common.Errors;
+using MASES.JCOBridge.C2JBridge;
+using System.Text;
+using System.IO;
 
 namespace MASES.KNetBenchmark
 {
@@ -32,31 +31,31 @@ namespace MASES.KNetBenchmark
     {
         // CommonArgs
         public const string ShowLogs = "ShowLogs";
+public const string ShowResults = "ShowResults";
+        public const string ResultsPath = "ResultsPath";
         public const string Server = "Server";
         public const string TopicPrefix = "TopicPrefix";
-        public const string TopicPartitions = "TopicPartitions";
-        public const string PacketMaxLength = "PacketMaxLength";
+        public const string PartitionsPerTopic = "PartitionsPerTopic";
+        public const string MaxPacketLength = "MaxPacketLength";
+        public const string MinPacketLength = "MinPacketLength";
+        public const string PacketLengthMultiplier = "PacketLengthMultiplier";
         public const string PacketToExchange = "PacketToExchange";
         public const string UseSerdes = "UseSerdes";
         public const string UseCallback = "UseCallback";
+        public const string SinglePacket = "SinglePacket";
+        public const string ProducePreLoad = "ProducePreLoad";
+        public const string SimpleCount = "SimpleCount";
+        public const string CheckOnConsume = "CheckOnConsume";
+        public const string LeaveTopics = "LeaveTopics";
+        public const string AlwaysCommit = "AlwaysCommit";
         public const string ContinuousFlushKNet = "ContinuousFlushKNet";
         public const string ContinuousFlushConfluent = "ContinuousFlushConfluent";
+        public const string SharedObjects = "SharedObjects";
     }
 
     public class MyKNetCore : KNetCore<MyKNetCore>
     {
-        public static bool ShowLogs;
-        public static string Server;
-        public static string TopicPrefix;
-        public static int TopicPartitions;
-        public static int PacketMaxLength;
-        public static int PacketToExchange;
-        public static bool UseSerdes;
-        public static bool UseCallback;
-        public static bool ContinuousFlushKNet;
-        public static bool ContinuousFlushConfluent;
-
-        protected override IEnumerable<IArgumentMetadata> CommandLineArguments
+        public override IEnumerable<IArgumentMetadata> CommandLineArguments
         {
             get
             {
@@ -69,6 +68,18 @@ namespace MASES.KNetBenchmark
                         Type = ArgumentType.Single,
                         Help = "Show intermediate logs.",
                     },
+                    new ArgumentMetadata<object>()
+                    {
+                        Name = CLIParam.ShowResults,
+                        Type = ArgumentType.Single,
+                        Help = "Show final result logs.",
+                    },
+                    new ArgumentMetadata<string>()
+                    {
+                        Name = CLIParam.ResultsPath,
+                        Default = string.Empty,
+                        Help = "The results path to be used.",
+                    },
                     new ArgumentMetadata<string>()
                     {
                         Name = CLIParam.Server,
@@ -78,20 +89,32 @@ namespace MASES.KNetBenchmark
                     new ArgumentMetadata<string>()
                     {
                         Name = CLIParam.TopicPrefix,
-                        Default = "myTopic",
+                        Default = "testTopic",
                         Help = "The topic prefix to be used.",
                     },
                     new ArgumentMetadata<int>()
                     {
-                        Name = CLIParam.TopicPartitions,
+                        Name = CLIParam.PartitionsPerTopic,
                         Default = 1,
                         Help = "The number of partitions to use.",
                     },
                     new ArgumentMetadata<int>()
                     {
-                        Name = CLIParam.PacketMaxLength,
+                        Name = CLIParam.MaxPacketLength,
                         Default = 1000*1000,
-                        Help = "The packet length to use.",
+                        Help = "The max packet length to use.",
+                    },
+                    new ArgumentMetadata<int>()
+                    {
+                        Name = CLIParam.MinPacketLength,
+                        Default = 10,
+                        Help = "The min packet length to use.",
+                    },
+                    new ArgumentMetadata<int>()
+                    {
+                        Name = CLIParam.PacketLengthMultiplier,
+                        Default = 10,
+                        Help = "The packet length mulitplier to use.",
                     },
                     new ArgumentMetadata<int>()
                     {
@@ -113,6 +136,36 @@ namespace MASES.KNetBenchmark
                     },
                     new ArgumentMetadata<object>()
                     {
+                        Name = CLIParam.SinglePacket,
+                        Type = ArgumentType.Single,
+                        Help = "Use to send always the same packet.",
+                    },
+                    new ArgumentMetadata<object>()
+                    {
+                        Name = CLIParam.ProducePreLoad,
+                        Type = ArgumentType.Single,
+                        Help = "Use to send always the same packet.",
+                    },
+                    new ArgumentMetadata<object>()
+                    {
+                        Name = CLIParam.CheckOnConsume,
+                        Type = ArgumentType.Single,
+                        Help = "Use to check data before count it.",
+                    },
+                    new ArgumentMetadata<object>()
+                    {
+                        Name = CLIParam.LeaveTopics,
+                        Type = ArgumentType.Single,
+                        Help = "Use to do not remove topics.",
+                    },
+                    new ArgumentMetadata<object>()
+                    {
+                        Name = CLIParam.AlwaysCommit,
+                        Type = ArgumentType.Single,
+                        Help = "Use to commit on every cycle.",
+                    },
+                    new ArgumentMetadata<object>()
+                    {
                         Name = CLIParam.ContinuousFlushKNet,
                         Type = ArgumentType.Single,
                         Help = "Use to call Flush on every produce in KNet.",
@@ -123,86 +176,157 @@ namespace MASES.KNetBenchmark
                         Type = ArgumentType.Single,
                         Help = "Use to call Flush on every produce on Confluent.",
                     },
+                    new ArgumentMetadata<object>()
+                    {
+                        Name = CLIParam.SharedObjects,
+                        Type = ArgumentType.Single,
+                        Help = "Use to have shared producer/consumer across tests.",
+                    },
                 });
                 return lst;
             }
-        }
-
-        protected override string[] ProcessCommandLine()
-        {
-            var res = base.ProcessCommandLine();
-            ShowLogs = ParsedArgs.Exist(CLIParam.ShowLogs);
-            Server = ParsedArgs.Get<string>(CLIParam.Server);
-            TopicPrefix = ParsedArgs.Get<string>(CLIParam.TopicPrefix);
-            TopicPartitions = ParsedArgs.Get<int>(CLIParam.TopicPartitions);
-            PacketMaxLength = ParsedArgs.Get<int>(CLIParam.PacketMaxLength);
-            PacketToExchange = ParsedArgs.Get<int>(CLIParam.PacketToExchange);
-            UseSerdes = ParsedArgs.Exist(CLIParam.UseSerdes);
-            UseCallback = ParsedArgs.Exist(CLIParam.UseCallback);
-            ContinuousFlushKNet = ParsedArgs.Exist(CLIParam.ContinuousFlushKNet);
-            ContinuousFlushConfluent = ParsedArgs.Exist(CLIParam.ContinuousFlushConfluent);
-
-            return res;
         }
     }
 
     partial class Program
     {
+        static bool ShowLogs;
+        static bool ShowResults;
+        static string ResultsPath;
+        static string Server;
+        static string TopicPrefix;
+        static int PartitionsPerTopic;
+        static int MaxPacketLength;
+        static int MinPacketLength;
+        static int PacketLengthMultiplier;
+        static int PacketToExchange;
+        static bool UseSerdes;
+        static bool UseCallback;
+        static bool ProducePreLoad;
+        static bool SinglePacket;
+        static bool CheckOnConsume;
+        static bool LeaveTopics;
+        static bool AlwaysCommit;
+        static bool ContinuousFlushKNet;
+        static bool ContinuousFlushConfluent;
+ static bool SharedObjects;
+
         static void Main(string[] args)
         {
-            MyKNetCore.ApplicationHeapSize = "2G";
-            MyKNetCore.CreateGlobalInstance();
-
-            for (int length = 10; length <= MyKNetCore.PacketMaxLength; length *= 10)
+            try
             {
-                try
+                MyKNetCore.ApplicationHeapSize = "4G";
+                MyKNetCore.CreateGlobalInstance();
+
+                ShowLogs = MyKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.ShowLogs);
+                ShowResults = MyKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.ShowResults);
+                ResultsPath = MyKNetCore.GlobalInstance.ParsedArgs.Get<string>(CLIParam.ResultsPath);
+                Server = MyKNetCore.GlobalInstance.ParsedArgs.Get<string>(CLIParam.Server);
+                TopicPrefix = MyKNetCore.GlobalInstance.ParsedArgs.Get<string>(CLIParam.TopicPrefix);
+                PartitionsPerTopic = MyKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.PartitionsPerTopic);
+                MaxPacketLength = MyKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.MaxPacketLength);
+                MinPacketLength = MyKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.MinPacketLength);
+                PacketLengthMultiplier = MyKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.PacketLengthMultiplier);
+                PacketToExchange = MyKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.PacketToExchange);
+                UseSerdes = MyKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.UseSerdes);
+                UseCallback = MyKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.UseCallback);
+                ProducePreLoad = MyKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.ProducePreLoad);
+                SinglePacket = MyKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.SinglePacket);
+                CheckOnConsume = MyKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.CheckOnConsume);
+                LeaveTopics = MyKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.LeaveTopics);
+                AlwaysCommit = MyKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.AlwaysCommit);
+                ContinuousFlushKNet = MyKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.ContinuousFlushKNet);
+                ContinuousFlushConfluent = MyKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.ContinuousFlushConfluent);
+                SharedObjects = MyKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.SharedObjects);
+
+                ProduceConfluent(0, 0); // init lib?
+
+                StringBuilder sb = new();
+                sb.AppendLine("Length;NumPackets;KNETProd;KNETCons;ConfluentProd;ConfluentCons");
+
+                for (int length = MinPacketLength; length <= MaxPacketLength; length *= PacketLengthMultiplier)
                 {
+                    var rand = new Random();
+                    byte[] data = new byte[length];
+                    for (int i = 0; i < length; i++)
+                    {
+                        data[i] = (byte)rand.Next(0, byte.MaxValue);
+                    }
+
                     try
                     {
-                        CreateTopic("KNET", length);
+                        try
+                        {
+                            CreateTopic("KNET", length);
+                        }
+                        catch (TopicExistsException)
+                        {
+                            DeleteTopic("KNET", length);
+                        }
+
+                        if (ShowLogs) Console.WriteLine($"Producing on topic {TopicName("KNET", length)}");
+                        var KNETProdSW = ProduceKNet(length, PacketToExchange, CheckOnConsume ? data : null);
+
+                        if (ShowLogs) Console.WriteLine($"Consuming from topic {TopicName("KNET", length)}");
+                        var KNETConsSW = ConsumeKNet(length, PacketToExchange, CheckOnConsume ? data : null);
+
+                        try
+                        {
+                            CreateTopic("CONFLUENT", length);
+                        }
+                        catch (TopicExistsException)
+                        {
+                            DeleteTopic("CONFLUENT", length);
+                        }
+
+                        if (ShowLogs) Console.WriteLine($"Producing on topic {TopicName("CONFLUENT", length)}");
+                        var ConfluentProdSW = ProduceConfluent(length, PacketToExchange, CheckOnConsume ? data : null);
+
+                        if (ShowLogs) Console.WriteLine($"Consuming from topic {TopicName("CONFLUENT", length)}");
+                        var ConfluentConsSW = ConsumeConfluent(length, PacketToExchange, CheckOnConsume ? data : null);
+
+                        sb.AppendLine($"{length};{PacketToExchange};{KNETProdSW.ElapsedMicroSeconds()};{KNETConsSW.ElapsedMicroSeconds()};{ConfluentProdSW.ElapsedMicroSeconds()};{ConfluentConsSW.ElapsedMicroSeconds()}");
+
+                        if (ShowResults)
+                        {
+                            Console.WriteLine($"Length {length} Produce Diff {KNETProdSW.ElapsedMicroSeconds() - ConfluentProdSW.ElapsedMicroSeconds()} Consume Diff {KNETConsSW.ElapsedMicroSeconds() - ConfluentConsSW.ElapsedMicroSeconds()}");
+                            
+                            Console.WriteLine($"Produce KNET: Total {KNETProdSW.ElapsedMicroSeconds()} us Mean {KNETProdSW.MeanMicroSeconds(PacketToExchange)} us {KNETProdSW.PacketsPerSeconds(PacketToExchange)} packets/s {KNETProdSW.MbPerSecond(PacketToExchange, length)} Mb/s");
+                            Console.WriteLine($"Consume KNET: Total {KNETConsSW.ElapsedMicroSeconds()} us Mean {KNETConsSW.MeanMicroSeconds(PacketToExchange)} us {KNETConsSW.PacketsPerSeconds(PacketToExchange)} packets/s {KNETConsSW.MbPerSecond(PacketToExchange, length)} Mb/s");
+
+                            Console.WriteLine($"Produce Confluent: Total {ConfluentProdSW.ElapsedMicroSeconds()} us Mean {ConfluentProdSW.MeanMicroSeconds(PacketToExchange)} us {ConfluentProdSW.PacketsPerSeconds(PacketToExchange)} packets/s {ConfluentProdSW.MbPerSecond(PacketToExchange, length)} Mb/s");
+                            Console.WriteLine($"Consume Confluent: Total {ConfluentConsSW.ElapsedMicroSeconds()} us Mean {ConfluentConsSW.MeanMicroSeconds(PacketToExchange)} us {ConfluentConsSW.PacketsPerSeconds(PacketToExchange)} packets/s {ConfluentConsSW.MbPerSecond(PacketToExchange, length)} Mb/s");
+                        }
                     }
-                    catch (TopicExistsException)
+                    finally
                     {
-                        DeleteTopic("KNET", length);
+                        if (!LeaveTopics)
+                        {
+                            DeleteTopic("KNET", length);
+                            DeleteTopic("CONFLUENT", length);
+                        }
                     }
-
-                    if (MyKNetCore.ShowLogs) Console.WriteLine($"Producing on topic {TopicName("KNET", length)}");
-                    long produceTime = ProduceKNet(length, MyKNetCore.PacketToExchange);
-
-                    if (MyKNetCore.ShowLogs) Console.WriteLine($"Consuming from topic {TopicName("KNET", length)}");
-                    long consumeTime = ConsumeKNet(length, MyKNetCore.PacketToExchange);
-
-                    Console.WriteLine($"{TopicName("KNET", length)} Length {length} TotalProduceTime {produceTime} us MeanProduceTime {produceTime / MyKNetCore.PacketToExchange} us {(((double)(length * MyKNetCore.PacketToExchange / 2) / (1024 * 1024) / produceTime) * 1000000)} Mb/s");
-                    Console.WriteLine($"{TopicName("KNET", length)} Length {length} TotalConsumeTime {consumeTime} us MeanConsumeTime {consumeTime / MyKNetCore.PacketToExchange} us {(((double)(length * MyKNetCore.PacketToExchange / 2) / (1024 * 1024) / consumeTime) * 1000000)} Mb/s");
                 }
-                finally
+                File.WriteAllText(Path.Combine(ResultsPath, $"results_{DateTime.Now:yyyyMMdd_HHmmss}.csv"), sb.ToString());
+            }
+            catch (JVMBridgeException e)
+            {
+                Console.WriteLine(e.Message);
+                Exception innerException = e.InnerException;
+                while (innerException != null)
                 {
-                    DeleteTopic("KNET", length);
+                    Console.WriteLine(innerException.Message);
+                    innerException = innerException.InnerException;
                 }
-
-                try
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                Exception innerException = e.InnerException;
+                while (innerException != null)
                 {
-                    try
-                    {
-                        CreateTopic("CONFLUENT", length);
-                    }
-                    catch (TopicExistsException)
-                    {
-                        DeleteTopic("CONFLUENT", length);
-                    }
-
-                    if (MyKNetCore.ShowLogs) Console.WriteLine($"Producing on topic {TopicName("CONFLUENT", length)}");
-                    long produceTime = ProduceConfluent(length, MyKNetCore.PacketToExchange);
-
-                    if (MyKNetCore.ShowLogs) Console.WriteLine($"Consuming from topic {TopicName("CONFLUENT", length)}");
-                    long consumeTime = ConsumeConfluent(length, MyKNetCore.PacketToExchange);
-
-                    Console.WriteLine($"{TopicName("CONFLUENT", length)} Length {length} TotalProduceTime {produceTime} us MeanProduceTime {produceTime / MyKNetCore.PacketToExchange} us {(((double)(length * MyKNetCore.PacketToExchange / 2) / (1024 * 1024) / produceTime) * 1000000)} Mb/s");
-                    Console.WriteLine($"{TopicName("CONFLUENT", length)} Length {length} TotalConsumeTime {consumeTime} us MeanConsumeTime {consumeTime / MyKNetCore.PacketToExchange} us {(((double)(length * MyKNetCore.PacketToExchange / 2) / (1024 * 1024) / consumeTime) * 1000000)} Mb/s");
-                }
-                finally
-                {
-                    DeleteTopic("CONFLUENT", length);
+                    Console.WriteLine(innerException.Message);
+                    innerException = innerException.InnerException;
                 }
             }
         }

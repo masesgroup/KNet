@@ -21,82 +21,140 @@ using MASES.KNet.Clients.Producer;
 using MASES.KNet.Common.Serialization;
 using Java.Util;
 using System;
-using System.Text;
 using System.Diagnostics;
+using System.Linq;
 
 namespace MASES.KNetBenchmark
 {
     partial class Program
     {
-        static long ProduceKNet(int length, int numpacket)
+        static IProducer<int, byte[]> knetProducer = null;
+        static Serializer<int> knetKeySerializer = null;
+        static Serializer<byte[]> knetValueSerializer = null;
+
+        static IProducer<int, byte[]> KNetProducer()
         {
-            try
+            if (knetProducer == null || !SharedObjects)
             {
                 Properties props = ProducerConfigBuilder.Create()
-                                                        .WithBootstrapServers(MyKNetCore.Server)
-                                                        .WithAcks(ProducerConfig.Acks.None)
+                                                        .WithBootstrapServers(Server)
+                                                        .WithAcks(ProducerConfig.Acks.One)
                                                         .WithRetries(0)
-                                                        .WithLingerMs(1)
+                                                        .WithLingerMs(5)
+                                                        .WithBatchSize(1000000)
+                                                        .WithMaxInFlightRequestPerConnection(1000000)
+                                                        .WithEnableIdempotence(false)
+                                                        .WithSendBuffer(32 * 1024 * 1024)
+                                                        .WithReceiveBuffer(32 * 1024 * 1024)
+                                                        .WithBufferMemory(128 * 1024 * 1024)
                                                         .WithKeySerializerClass("org.apache.kafka.common.serialization.IntegerSerializer")
                                                         .WithValueSerializerClass("org.apache.kafka.common.serialization.ByteArraySerializer")
                                                         .ToProperties();
-
-                Serializer<int> keySerializer = null;
-                Serializer<byte[]> valueSerializer = null;
-                if (MyKNetCore.UseSerdes)
+                if (UseSerdes)
                 {
-                    keySerializer = new Serializer<int>(serializeWithHeadersFun: (topic, headers, data) =>
+                    knetKeySerializer = new Serializer<int>(serializeWithHeadersFun: (topic, headers, data) =>
                     {
                         var key = BitConverter.GetBytes(data);
                         return key;
                     });
-                    valueSerializer = new Serializer<byte[]>(serializeWithHeadersFun: (topic, headers, data) =>
+                    knetValueSerializer = new Serializer<byte[]>(serializeWithHeadersFun: (topic, headers, data) =>
                     {
                         // var value = Encoding.Unicode.GetBytes(data);
                         return data;
                     });
                 }
+
+                knetProducer = UseSerdes ? new KafkaProducer<int, byte[]>(props, knetKeySerializer, knetValueSerializer) : new KafkaProducer<int, byte[]>(props);
+            }
+            return knetProducer;
+        }
+
+        static Stopwatch ProduceKNet(int length, int numpacket, byte[] data = null)
+        {
+            try
+            {
+                var producer = KNetProducer();
+              //  producer.PartitionsFor(TopicName("KNET", length)); // used to get metadata before do the test
+
+                Callback callback = null;
+                if (UseCallback)
+                {
+                    callback = new Callback((o1, o2) =>
+                    {
+                        if (o2 != null) Console.WriteLine(o2.ToString());
+                        else Console.WriteLine($"Produced on topic {o1.Topic} at offset {o1.Offset}");
+                    });
+                }
+                Stopwatch swCreateRecord = null;
+                Stopwatch swSendRecord = null;
+                Stopwatch stopWatch = null;
                 try
                 {
-                    using (var producer = MyKNetCore.UseSerdes ? new KafkaProducer<int, byte[]>(props, keySerializer, valueSerializer) : new KafkaProducer<int, byte[]>(props))
+                    if (data == null)
                     {
-                        Callback callback = null;
-                        if (MyKNetCore.UseCallback)
+                        var rand = new Random();
+                        data = new byte[length];
+                        for (int i = 0; i < length; i++)
                         {
-                            callback = new Callback((o1, o2) =>
-                            {
-                                if (o2 != null) Console.WriteLine(o2.ToString());
-                                else Console.WriteLine($"Produced on topic {o1.Topic} at offset {o1.Offset}");
-                            });
+                            data[i] = (byte)rand.Next(0, byte.MaxValue);
                         }
-                        var stopWatch = Stopwatch.StartNew();
-                        try
+                    }
+                    var record = new ProducerRecord<int, byte[]>(TopicName("KNET", length), 42, data);
+                    if (ProducePreLoad)
+                    {
+                        swCreateRecord = new();
+                        swSendRecord = new();
+                        System.Collections.Generic.List<ProducerRecord<int, byte[]>> messages = new();
+                        for (int i = 0; i < numpacket; i++)
                         {
                             var rand = new Random();
-                            byte[] data = new byte[length];
-                            for (int i = 0; i < length; i++)
+                            data = new byte[length];
+                            for (int ii = 0; ii < length; ii++)
                             {
-                                data[i] = (byte)rand.Next(0, byte.MaxValue);
+                                data[ii] = (byte)rand.Next(0, byte.MaxValue);
                             }
-                            for (int i = 0; i < numpacket; i++)
-                            {
-                                var record = new ProducerRecord<int, byte[]>(TopicName("KNET", length), i, data);
-                                var result = MyKNetCore.UseCallback ? producer.Send(record, callback) : producer.Send(record);
-                                if (MyKNetCore.ContinuousFlushKNet) producer.Flush();
-                            }
+                            swCreateRecord.Start();
+                            record = new ProducerRecord<int, byte[]>(TopicName("KNET", length), i, data);
+                            swCreateRecord.Stop();
+                            messages.Add(record);
                         }
-                        finally { producer.Flush(); stopWatch.Stop(); if (MyKNetCore.UseCallback) callback.Dispose(); }
-                        return (long)((double)stopWatch.ElapsedTicks / (Stopwatch.Frequency / 1000000));
+                        stopWatch = Stopwatch.StartNew();
+                        foreach (var item in messages)
+                        {
+                            swSendRecord.Start();
+                            var result = UseCallback ? producer.Send(record, callback) : producer.Send(record);
+                            swSendRecord.Stop();
+                            if (ContinuousFlushKNet) producer.Flush();
+                        }
                     }
-                }
-                finally
-                {
-                    if (MyKNetCore.UseSerdes)
+                    else
                     {
-                        keySerializer.Dispose();
-                        valueSerializer.Dispose();
+                        swCreateRecord = new();
+                        swSendRecord = new();
+                        stopWatch = Stopwatch.StartNew();
+                        for (int i = 0; i < numpacket; i++)
+                        {
+                            if (!SinglePacket)
+                            {
+                                swCreateRecord.Start();
+                                byte[] newData = new byte[data.Length];
+                                Array.Copy(data, 0, newData, 0, data.Length);
+                                record = new ProducerRecord<int, byte[]>(TopicName("KNET", length), i, newData);
+                                swCreateRecord.Stop();
+                            }
+                            swSendRecord.Start();
+                            var result = UseCallback ? producer.Send(record, callback) : producer.Send(record);
+                            swSendRecord.Stop();
+                            if (ContinuousFlushKNet) producer.Flush();
+                        }
                     }
                 }
+                finally { producer.Flush(); stopWatch.Stop(); callback?.Dispose(); if (!SharedObjects) producer.Dispose(); }
+                if (ShowResults && !ProducePreLoad)
+                {
+                    Console.WriteLine($"KNET: Create {swCreateRecord.ElapsedMicroSeconds()} Send {swSendRecord.ElapsedMicroSeconds()} -> {swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds()} -> BackTime {stopWatch.ElapsedMicroSeconds() - (swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds())}");
+                }
+                return stopWatch;
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
             {
@@ -104,76 +162,99 @@ namespace MASES.KNetBenchmark
             }
         }
 
-        static long ConsumeKNet(int length, int numpacket)
+        static Deserializer<int> knetKeyDeserializer = null;
+        static Deserializer<byte[]> knetValueDeserializer = null;
+        static IConsumer<int, byte[]> knetConsumer = null;
+
+        static IConsumer<int, byte[]> KNetConsumer()
         {
-            try
+            if (knetConsumer == null || !SharedObjects)
             {
                 Properties props = ConsumerConfigBuilder.Create()
-                                                        .WithBootstrapServers(MyKNetCore.Server)
-                                                        .WithGroupId("test")
+                                                        .WithBootstrapServers(Server)
+                                                        .WithGroupId(Guid.NewGuid().ToString())
                                                         .WithEnableAutoCommit(true)
                                                         .WithAutoCommitIntervalMs(1000)
+                                                        .WithSendBuffer(-1)
+                                                        .WithReceiveBuffer(-1)
+                                                        .WithFetchMinBytes(100000)
                                                         .WithKeyDeserializerClass("org.apache.kafka.common.serialization.IntegerDeserializer")
                                                         .WithValueDeserializerClass("org.apache.kafka.common.serialization.ByteArrayDeserializer")
                                                         .WithAutoOffsetReset(ConsumerConfig.AutoOffsetReset.EARLIEST)
                                                         .ToProperties();
-
-                Deserializer<int> keyDeserializer = null;
-                Deserializer<byte[]> valueDeserializer = null;
-                KafkaConsumer<int, byte[]> consumer = null;
-                if (MyKNetCore.UseSerdes)
+                if (UseSerdes)
                 {
-                    keyDeserializer = new Deserializer<int>(deserializeFun: (topic, data) =>
+                    knetKeyDeserializer = new Deserializer<int>(deserializeFun: (topic, data) =>
                     {
                         var key = BitConverter.ToInt32(data, 0);
                         return key;
                     });
-                    valueDeserializer = new Deserializer<byte[]>(deserializeFun: (topic, data) =>
+                    knetValueDeserializer = new Deserializer<byte[]>(deserializeFun: (topic, data) =>
                     {
-                       // var value = Encoding.Unicode.GetString(data);
+                        // var value = Encoding.Unicode.GetString(data);
                         return data;
                     });
                 }
+
+                knetConsumer = UseSerdes ? new KafkaConsumer<int, byte[]>(props, knetKeyDeserializer, knetValueDeserializer) : new KafkaConsumer<int, byte[]>(props);
+            }
+            return knetConsumer;
+        }
+
+        static Stopwatch ConsumeKNet(int length, int numpacket, byte[] data = null)
+        {
+            try
+            {
                 Stopwatch stopWatch = null;
                 ConsumerRebalanceListener rebalanceListener = new(
                                     revoked: (o) =>
                                     {
-                                        if (MyKNetCore.ShowLogs) Console.WriteLine("Revoked: {0}", o.ToString());
+                                        if (ShowLogs) Console.WriteLine("Revoked: {0}", o.ToString());
                                     },
                                     assigned: (o) =>
                                     {
-                                        if (MyKNetCore.ShowLogs) Console.WriteLine("Assigned: {0}", o.ToString());
+                                        if (ShowLogs) Console.WriteLine("Assigned: {0}", o.ToString());
                                         stopWatch = Stopwatch.StartNew();
                                     });
+
+                var consumer = KNetConsumer();
                 try
                 {
                     int counter = 0;
-                    using (consumer = MyKNetCore.UseSerdes ? new KafkaConsumer<int, byte[]>(props, keyDeserializer, valueDeserializer) : new KafkaConsumer<int, byte[]>(props))
+                    consumer.Subscribe(Collections.Singleton(TopicName("KNET", length)), rebalanceListener);
+                    while (true)
                     {
-                        consumer.Subscribe(Collections.Singleton(TopicName("KNET", length)), rebalanceListener);
-
-                        while (true)
+                        var records = consumer.Poll(TimeSpan.FromMinutes(1));
+                        if (!CheckOnConsume)
                         {
-                            var records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);
+                            counter += records.Count;
+                        }
+                        else
+                        {
                             foreach (var item in records)
                             {
-                                if (item.Value.Length != length) Console.WriteLine($"Incorrect length {item.Value.Length}");
-                                counter++; 
-                                if (counter >= numpacket)
+                                if (!item.Value.SequenceEqual(data)
+                                    || (!SinglePacket && item.Key != counter))
                                 {
-                                    stopWatch.Stop();
-                                    consumer.Unsubscribe();
-                                    return (long)((double)stopWatch.ElapsedTicks / (Stopwatch.Frequency / 1000000));
+                                    throw new InvalidOperationException("Incorrect data");
                                 }
+                                counter++;
                             }
+                        }
+                        if (AlwaysCommit) consumer.CommitSync();
+                        if (counter >= numpacket)
+                        {
+                            consumer.CommitSync();
+                            stopWatch.Stop();
+                            consumer.Unsubscribe();
+                            return stopWatch;
                         }
                     }
                 }
                 finally
                 {
-                    keyDeserializer?.Dispose();
-                    valueDeserializer?.Dispose();
                     rebalanceListener?.Dispose();
+                    if (!SharedObjects) consumer.Dispose();
                 }
             }
             catch (Java.Util.Concurrent.ExecutionException ex)

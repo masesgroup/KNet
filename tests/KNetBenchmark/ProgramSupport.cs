@@ -21,29 +21,58 @@ using Java.Util;
 using System;
 using MASES.KNet.Extensions;
 using MASES.KNet.Common.Errors;
+using System.Diagnostics;
 
 namespace MASES.KNetBenchmark
 {
+    public static class Utility
+    {
+        public static long ElapsedNanoSeconds(this Stopwatch watch)
+        {
+            return (long)((double)watch.ElapsedTicks / Stopwatch.Frequency * 1000000000);
+        }
+        public static long ElapsedMicroSeconds(this Stopwatch watch)
+        {
+            return (long)((double)watch.ElapsedTicks / Stopwatch.Frequency * 1000000);
+        }
+        public static double MeanMicroSeconds(this Stopwatch watch, int numPacket)
+        {
+            return (double)watch.ElapsedMicroSeconds() / numPacket;
+        }
+        public static double PacketsPerSeconds(this Stopwatch watch, int numPacket)
+        {
+            return (double)numPacket * 1000000 / watch.ElapsedMicroSeconds();
+        }
+        public static double MbPerSecond(this Stopwatch watch, int numPacket, int length)
+        {
+            return (double)(length * numPacket) / (1024 * 1024) / ((double)watch.ElapsedMicroSeconds() / 1000000);
+        }
+        public static double KbPerSecond(this Stopwatch watch, int numPacket, int length)
+        {
+            return (double)(length * numPacket) / 1024 / ((double)watch.ElapsedMicroSeconds() / 1000000);
+        }
+    }
+
     partial class Program
     {
         static string TopicName(string testName, int length)
         {
-            return $"{MyKNetCore.TopicPrefix}_{testName}_{length}";
+            return $"{TopicPrefix}_{testName}_{length}";
         }
 
         static void CreateTopic(string testName, int length)
         {
             try
             {
-                int partitions = MyKNetCore.TopicPartitions;
+                int partitions = PartitionsPerTopic;
                 short replicationFactor = 1;
 
-                Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(MyKNetCore.Server).ToProperties();
+                Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(Server).ToProperties();
                 using (IAdmin admin = KafkaAdminClient.Create(props))
                 {
                     admin.CreateTopic(TopicName(testName, length), partitions, replicationFactor);
                 }
-                if (MyKNetCore.ShowLogs) Console.WriteLine($"Created topic {TopicName(testName, length)}");
+                if (ShowLogs) Console.WriteLine($"Created topic {TopicName(testName, length)}");
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
             {
@@ -57,12 +86,12 @@ namespace MASES.KNetBenchmark
             {
                 try
                 {
-                    Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(MyKNetCore.Server).ToProperties();
+                    Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(Server).ToProperties();
                     using (IAdmin admin = KafkaAdminClient.Create(props))
                     {
                         admin.DeleteTopic(TopicName(testName, length));
                     }
-                    if (MyKNetCore.ShowLogs) Console.WriteLine($"Deleted topic {TopicName(testName, length)}");
+                    if (ShowLogs) Console.WriteLine($"Deleted topic {TopicName(testName, length)}");
                 }
                 catch (Java.Util.Concurrent.ExecutionException ex)
                 {
