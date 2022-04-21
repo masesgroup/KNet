@@ -53,12 +53,16 @@ namespace MASES.KNet.Clients.Producer
         /// Initialize a new instance of <see cref="Callback"/>
         /// </summary>
         /// <param name="action">The <see cref="Action{RecordMetadata, JVMBridgeException}"/> to be executed</param>
-        public Callback(Action<RecordMetadata, JVMBridgeException> action = null)
+        /// <param name="attachEventHandler">Set to false to disable attach of <see cref="EventHandler"/> and set an own one</param>
+        public Callback(Action<RecordMetadata, JVMBridgeException> action = null, bool attachEventHandler = true)
         {
             if (action != null) executionFunction = action;
             else executionFunction = OnCompletion;
 
-            AddEventHandler("onCompletion", new EventHandler<CLRListenerEventArgs<CLREventData<RecordMetadata>>>(EventHandler));
+            if (attachEventHandler)
+            {
+                AddEventHandler("onCompletion", new EventHandler<CLRListenerEventArgs<CLREventData<RecordMetadata>>>(EventHandler));
+            }
         }
 
         void EventHandler(object sender, CLRListenerEventArgs<CLREventData<RecordMetadata>> data)

@@ -254,7 +254,7 @@ namespace MASES.KNet.Clients.Producer
 
         public int MaxInFlightRequestPerConnection { get { return GetProperty<int>(ProducerConfig.MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION); } set { SetProperty(ProducerConfig.MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION, value); } }
 
-        public ProducerConfigBuilder WitMaxInFlightRequestPerConnection(int maxInFlightRequestPerConnection)
+        public ProducerConfigBuilder WithMaxInFlightRequestPerConnection(int maxInFlightRequestPerConnection)
         {
             var clone = Clone();
             clone.MaxInFlightRequestPerConnection = maxInFlightRequestPerConnection;
@@ -310,7 +310,7 @@ namespace MASES.KNet.Clients.Producer
 
         public int TransactionTimeout { get { return GetProperty<int>(ProducerConfig.TRANSACTION_TIMEOUT_CONFIG); } set { SetProperty(ProducerConfig.TRANSACTION_TIMEOUT_CONFIG, value); } }
 
-        public ProducerConfigBuilder WitTransactionTimeout(int transactionTimeout)
+        public ProducerConfigBuilder WithTransactionTimeout(int transactionTimeout)
         {
             var clone = Clone();
             clone.TransactionTimeout = transactionTimeout;
@@ -319,7 +319,7 @@ namespace MASES.KNet.Clients.Producer
 
         public string TransactionalId { get { return GetProperty<string>(ProducerConfig.TRANSACTIONAL_ID_CONFIG); } set { SetProperty(ProducerConfig.TRANSACTIONAL_ID_CONFIG, value); } }
 
-        public ProducerConfigBuilder WitTransactionalId(string transactionalId)
+        public ProducerConfigBuilder WithTransactionalId(string transactionalId)
         {
             var clone = Clone();
             clone.TransactionalId = transactionalId;
