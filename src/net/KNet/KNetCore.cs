@@ -68,6 +68,12 @@ namespace MASES.KNet
                         Default = Const.DefaultLog4JPath,
                         Help = "The file containing the configuration of log4j.",
                     },
+                    new ArgumentMetadata<string>()
+                    {
+                        Name = CLIParam.LogPath,
+                        Default = Const.DefaultLogPath,
+                        Help = "The path for log.",
+                    },
                 });
                 return lst;
             }
@@ -267,11 +273,13 @@ namespace MASES.KNet
             var result = base.ProcessCommandLine();
             GlobalScalaVersion = Const.DefaultScalaVersion;
             GlobalRootPath = Const.DefaultRootPath;
+            GlobalLogPath = Const.DefaultLogPath;
             ApplicationHeapSize = "256M";
 
             var classToRun = ParsedArgs.Get<string>(CLIParam.ClassToRun);
             GlobalRootPath = ParsedArgs.Get<string>(CLIParam.KafkaLocation);
             GlobalLog4JPath = ParsedArgs.Get<string>(CLIParam.Log4JConfiguration);
+            GlobalLogPath = ParsedArgs.Get<string>(CLIParam.LogPath);
             GlobalScalaVersion = ParsedArgs.Get<string>(CLIParam.ScalaVersion);
 
             if (!string.IsNullOrEmpty(classToRun))
@@ -346,6 +354,11 @@ namespace MASES.KNet
         public static string GlobalLog4JPath { get; set; }
 
         /// <summary>
+        /// Sets the global value of log path
+        /// </summary>
+        public static string GlobalLogPath { get; set; }
+
+        /// <summary>
         /// Sets the global value of root path
         /// </summary>
         public static string GlobalScalaVersion { get; set; }
@@ -368,7 +381,7 @@ namespace MASES.KNet
         /// <summary>
         /// The log folder
         /// </summary>
-        public virtual string LogDir { get { return Path.Combine(RootPath, "logs"); } }
+        public virtual string LogDir { get { return GlobalLogPath; } }
 
         /// <summary>
         /// The log4j configuration

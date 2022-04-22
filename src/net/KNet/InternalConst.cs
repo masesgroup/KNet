@@ -28,7 +28,7 @@ namespace MASES.KNet
         public const string ScalaVersion = "ScalaVersion";
         public const string KafkaLocation = "KafkaLocation";
         public const string Log4JConfiguration = "Log4JConfiguration";
-        public const string LogClassPath = "LogClassPath";
+        public const string LogPath = "LogPath";
     }
 
     /// <summary>
@@ -52,5 +52,9 @@ namespace MASES.KNet
         /// Default log4j path, i.e. consider installation within bin folder
         /// </summary>
         public static readonly string DefaultLog4JPath = Path.Combine(AssemblyLocation, "config", "log4j.properties");
+        /// <summary>
+        /// Default log path, i.e. consider installation within bin folder
+        /// </summary>
+        public static readonly string DefaultLogPath = Path.Combine(AssemblyLocation, "logs") + Path.DirectorySeparatorChar;
     }
 }
