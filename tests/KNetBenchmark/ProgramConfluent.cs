@@ -22,7 +22,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 
-namespace MASES.KNetBenchmark
+namespace MASES.KNet.Benchmark
 {
     partial class Program
     {
@@ -37,13 +37,13 @@ namespace MASES.KNetBenchmark
                 var producerConfig = new ProducerConfig
                 {
                     BootstrapServers = Server,
-                    Acks = Acks.Leader,
-                    MessageSendMaxRetries = 0,
-                    LingerMs = 5,
-                    BatchSize = 1000000,
-                    MaxInFlight = 1000000,
-                    SocketSendBufferBytes = 32 * 1024 * 1024,
-                    SocketReceiveBufferBytes = 32 * 1024 * 1024,
+                    Acks = Acks ? Confluent.Kafka.Acks.Leader : Confluent.Kafka.Acks.None,
+                    MessageSendMaxRetries = MessageSendMaxRetries,
+                    LingerMs = LingerMs,
+                    BatchSize = BatchSize,
+                    MaxInFlight = MaxInFlight,
+                    SocketSendBufferBytes = SocketSendBufferBytes,
+                    SocketReceiveBufferBytes = SocketReceiveBufferBytes,
                     MessageMaxBytes = MaxPacketLength + 1000,
                     //MessageCopyMaxBytes = length,
                 };
@@ -108,11 +108,20 @@ namespace MASES.KNetBenchmark
                         messages.Add(message);
                     }
                     stopWatch = Stopwatch.StartNew();
-                    foreach (var item in messages)
+                    for (int i = 0; i < numpacket; i++)
                     {
                         swSendRecord.Start();
-                        producer.Produce(TopicName("CONFLUENT", length), message);
+                        producer.Produce(TopicName("CONFLUENT", length), messages[i]);
                         swSendRecord.Stop();
+                        if (WithBurst)
+                        {
+                            if (i % BurstLength == 0)
+                            {
+                                stopWatch.Stop();
+                                System.Threading.Thread.Sleep(BurstInterval);
+                                stopWatch.Start();
+                            }
+                        }
                         if (ContinuousFlushConfluent) producer.Flush();
                     }
                 }
@@ -138,6 +147,15 @@ namespace MASES.KNetBenchmark
                         swSendRecord.Start();
                         producer.Produce(TopicName("CONFLUENT", length), message);
                         swSendRecord.Stop();
+                        if (WithBurst)
+                        {
+                            if (i % BurstLength == 0)
+                            {
+                                stopWatch.Stop();
+                                System.Threading.Thread.Sleep(BurstInterval);
+                                stopWatch.Start();
+                            }
+                        }
                         if (ContinuousFlushConfluent) producer.Flush();
                     }
                 }
@@ -163,11 +181,11 @@ namespace MASES.KNetBenchmark
                 {
                     BootstrapServers = Server,
                     GroupId = Guid.NewGuid().ToString(),
-                    EnableAutoCommit = true,
+                    EnableAutoCommit = !AlwaysCommit,
                     AutoCommitIntervalMs = 1000,
                     AutoOffsetReset = AutoOffsetReset.Earliest,
                     //MessageCopyMaxBytes = length,
-                    FetchMinBytes = 100000,
+                    FetchMinBytes = FetchMinBytes,
                 };
                 var consumerBuilder = new ConsumerBuilder<int, byte[]>(consumerConfig);
                 if (UseSerdes)
@@ -233,6 +251,64 @@ namespace MASES.KNetBenchmark
             finally
             {
                 if (!SharedObjects) consumer.Dispose();
+            }
+        }
+
+        static Stopwatch ConsumeProduceConfluent(int length, int numpacket, byte[] data = null)
+        {
+            Stopwatch stopWatch = null;
+            int counter = 0;
+
+            PartitionsAssignedHandler_trampoline = (o1, o2) =>
+            {
+                if (ShowLogs) Console.WriteLine("Assigned: {0}", string.Join(" ", o2.Select((o) => o.ToString()).ToArray()));
+                stopWatch = Stopwatch.StartNew();
+            };
+
+            var consumer = ConfluentConsumer();
+            var producer = ConfluentProducer();
+            try
+            {
+                consumer.Subscribe(TopicName("CONFLUENT", length));
+                while (true)
+                {
+                    var record = consumer.Consume(TimeSpan.FromMinutes(1));
+                    if (record != null)
+                    {
+                        var message = new Message<int, byte[]>
+                        {
+                            Key = record.Message.Key,
+                            Value = record.Message.Value
+                        };
+                        producer.Produce(TopicName("CONFLUENT_COPY", length), message);
+                        consumer.Commit(record);
+                        counter++;
+                    }
+                    if (counter >= numpacket)
+                    {
+                        try
+                        {
+                            consumer.Commit();
+                        }
+                        catch (Exception ex) { Console.WriteLine($"ConsumeProduceConfluent Commit error: {ex.Message}"); }
+                        try
+                        {
+                            producer.Flush();
+                        }
+                        catch (Exception ex) { Console.WriteLine($"ConsumeProduceConfluent Flush error: {ex.Message}"); }
+                        stopWatch?.Stop();
+                        consumer.Unsubscribe();
+                        return stopWatch;
+                    }
+                }
+            }
+            finally
+            {
+                if (!SharedObjects)
+                {
+                    consumer.Dispose();
+                    producer.Dispose();
+                }
             }
         }
     }

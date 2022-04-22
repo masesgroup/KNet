@@ -23,7 +23,7 @@ using MASES.KNet.Extensions;
 using MASES.KNet.Common.Errors;
 using System.Diagnostics;
 
-namespace MASES.KNetBenchmark
+namespace MASES.KNet.Benchmark
 {
     public static class Utility
     {
@@ -60,7 +60,7 @@ namespace MASES.KNetBenchmark
             return $"{TopicPrefix}_{testName}_{length}";
         }
 
-        static void CreateTopic(string testName, int length)
+        static void CreateTopic(string topicName)
         {
             try
             {
@@ -70,9 +70,9 @@ namespace MASES.KNetBenchmark
                 Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(Server).ToProperties();
                 using (IAdmin admin = KafkaAdminClient.Create(props))
                 {
-                    admin.CreateTopic(TopicName(testName, length), partitions, replicationFactor);
+                    admin.CreateTopic(topicName, partitions, replicationFactor);
                 }
-                if (ShowLogs) Console.WriteLine($"Created topic {TopicName(testName, length)}");
+                if (ShowLogs) Console.WriteLine($"Created topic {topicName}");
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
             {
@@ -80,7 +80,7 @@ namespace MASES.KNetBenchmark
             }
         }
 
-        static void DeleteTopic(string testName, int length)
+        static void DeleteTopic(string topicName)
         {
             try
             {
@@ -89,9 +89,9 @@ namespace MASES.KNetBenchmark
                     Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(Server).ToProperties();
                     using (IAdmin admin = KafkaAdminClient.Create(props))
                     {
-                        admin.DeleteTopic(TopicName(testName, length));
+                        admin.DeleteTopic(topicName);
                     }
-                    if (ShowLogs) Console.WriteLine($"Deleted topic {TopicName(testName, length)}");
+                    if (ShowLogs) Console.WriteLine($"Deleted topic {topicName}");
                 }
                 catch (Java.Util.Concurrent.ExecutionException ex)
                 {

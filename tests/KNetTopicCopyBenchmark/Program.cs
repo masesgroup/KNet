@@ -28,7 +28,7 @@ namespace MASES.KNet.Benchmark
     {
         const bool Acks = true;
         const int MessageSendMaxRetries = 0;
-        const int LingerMs = 100;
+        const int LingerMs = 5;
         const int BatchSize = 1000000;
         const int MaxInFlight = 1000000;
         const int SocketSendBufferBytes = 32 * 1024 * 1024;
@@ -40,8 +40,6 @@ namespace MASES.KNet.Benchmark
             try
             {
                 Init(args);
-
-                ProduceConfluent(0, 0); // init lib?
 
                 StringBuilder sb = new();
                 sb.AppendLine("Length;NumPackets;KNETProd;KNETCons;ConfluentProd;ConfluentCons");
@@ -67,11 +65,21 @@ namespace MASES.KNet.Benchmark
                             CreateTopic(TopicName("KNET", length));
                         }
 
+                        try
+                        {
+                            CreateTopic(TopicName("KNET_COPY", length));
+                        }
+                        catch (TopicExistsException)
+                        {
+                            DeleteTopic(TopicName("KNET_COPY", length));
+                            CreateTopic(TopicName("KNET_COPY", length));
+                        }
+
                         if (ShowLogs) Console.WriteLine($"Producing on topic {TopicName("KNET", length)}");
                         var KNETProdSW = ProduceKNet(length, PacketToExchange, CheckOnConsume ? data : null);
 
                         if (ShowLogs) Console.WriteLine($"Consuming from topic {TopicName("KNET", length)}");
-                        var KNETConsSW = ConsumeKNet(length, PacketToExchange, CheckOnConsume ? data : null);
+                        var KNETConsSW = ConsumeProduceKNet(length, PacketToExchange, CheckOnConsume ? data : null);
 
                         try
                         {
@@ -83,35 +91,47 @@ namespace MASES.KNet.Benchmark
                             CreateTopic(TopicName("CONFLUENT", length));
                         }
 
+                        try
+                        {
+                            CreateTopic(TopicName("CONFLUENT_COPY", length));
+                        }
+                        catch (TopicExistsException)
+                        {
+                            DeleteTopic(TopicName("CONFLUENT_COPY", length));
+                            CreateTopic(TopicName("CONFLUENT_COPY", length));
+                        }
+
                         if (ShowLogs) Console.WriteLine($"Producing on topic {TopicName("CONFLUENT", length)}");
                         var ConfluentProdSW = ProduceConfluent(length, PacketToExchange, CheckOnConsume ? data : null);
 
                         if (ShowLogs) Console.WriteLine($"Consuming from topic {TopicName("CONFLUENT", length)}");
-                        var ConfluentConsSW = ConsumeConfluent(length, PacketToExchange, CheckOnConsume ? data : null);
+                        var ConfluentConsSW = ConsumeProduceConfluent(length, PacketToExchange, CheckOnConsume ? data : null);
 
                         sb.AppendLine($"{length};{PacketToExchange};{KNETProdSW.ElapsedMicroSeconds()};{KNETConsSW.ElapsedMicroSeconds()};{ConfluentProdSW.ElapsedMicroSeconds()};{ConfluentConsSW.ElapsedMicroSeconds()}");
 
                         if (ShowResults)
                         {
-                            Console.WriteLine($"Length {length} Produce Diff {KNETProdSW.ElapsedMicroSeconds() - ConfluentProdSW.ElapsedMicroSeconds()} Consume Diff {KNETConsSW.ElapsedMicroSeconds() - ConfluentConsSW.ElapsedMicroSeconds()}");
+                            Console.WriteLine($"Length {length} Produce Diff {KNETProdSW.ElapsedMicroSeconds() - ConfluentProdSW.ElapsedMicroSeconds()} Copy Diff {KNETConsSW.ElapsedMicroSeconds() - ConfluentConsSW.ElapsedMicroSeconds()}");
 
                             Console.WriteLine($"Produce KNET: Total {KNETProdSW.ElapsedMicroSeconds()} us Mean {KNETProdSW.MeanMicroSeconds(PacketToExchange)} us {KNETProdSW.PacketsPerSeconds(PacketToExchange)} packets/s {KNETProdSW.MbPerSecond(PacketToExchange, length)} Mb/s");
-                            Console.WriteLine($"Consume KNET: Total {KNETConsSW.ElapsedMicroSeconds()} us Mean {KNETConsSW.MeanMicroSeconds(PacketToExchange)} us {KNETConsSW.PacketsPerSeconds(PacketToExchange)} packets/s {KNETConsSW.MbPerSecond(PacketToExchange, length)} Mb/s");
+                            Console.WriteLine($"Copy KNET: Total {KNETConsSW.ElapsedMicroSeconds()} us Mean {KNETConsSW.MeanMicroSeconds(PacketToExchange)} us {KNETConsSW.PacketsPerSeconds(PacketToExchange)} packets/s {KNETConsSW.MbPerSecond(PacketToExchange, length)} Mb/s");
 
                             Console.WriteLine($"Produce Confluent: Total {ConfluentProdSW.ElapsedMicroSeconds()} us Mean {ConfluentProdSW.MeanMicroSeconds(PacketToExchange)} us {ConfluentProdSW.PacketsPerSeconds(PacketToExchange)} packets/s {ConfluentProdSW.MbPerSecond(PacketToExchange, length)} Mb/s");
-                            Console.WriteLine($"Consume Confluent: Total {ConfluentConsSW.ElapsedMicroSeconds()} us Mean {ConfluentConsSW.MeanMicroSeconds(PacketToExchange)} us {ConfluentConsSW.PacketsPerSeconds(PacketToExchange)} packets/s {ConfluentConsSW.MbPerSecond(PacketToExchange, length)} Mb/s");
+                            Console.WriteLine($"Copy Confluent: Total {ConfluentConsSW.ElapsedMicroSeconds()} us Mean {ConfluentConsSW.MeanMicroSeconds(PacketToExchange)} us {ConfluentConsSW.PacketsPerSeconds(PacketToExchange)} packets/s {ConfluentConsSW.MbPerSecond(PacketToExchange, length)} Mb/s");
                         }
                     }
                     finally
                     {
                         if (!LeaveTopics)
                         {
-                            DeleteTopic(TopicName("KNET", length)); 
-                            DeleteTopic(TopicName("CONFLUENT", length)); 
+                            DeleteTopic(TopicName("KNET", length));
+                            DeleteTopic(TopicName("KNET_COPY", length));
+                            DeleteTopic(TopicName("CONFLUENT", length));
+                            DeleteTopic(TopicName("CONFLUENT_COPY", length));
                         }
                     }
                 }
-                File.WriteAllText(Path.Combine(ResultsPath, $"results_{DateTime.Now:yyyyMMdd_HHmmss}.csv"), sb.ToString());
+                File.WriteAllText(Path.Combine(ResultsPath, $"topiccopy_results_{DateTime.Now:yyyyMMdd_HHmmss}.csv"), sb.ToString());
             }
             catch (JVMBridgeException e)
             {

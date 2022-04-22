@@ -24,7 +24,7 @@ using System;
 using System.Diagnostics;
 using System.Linq;
 
-namespace MASES.KNetBenchmark
+namespace MASES.KNet.Benchmark
 {
     partial class Program
     {
@@ -38,14 +38,14 @@ namespace MASES.KNetBenchmark
             {
                 Properties props = ProducerConfigBuilder.Create()
                                                         .WithBootstrapServers(Server)
-                                                        .WithAcks(ProducerConfig.Acks.One)
-                                                        .WithRetries(0)
-                                                        .WithLingerMs(5)
-                                                        .WithBatchSize(1000000)
-                                                        .WithMaxInFlightRequestPerConnection(1000000)
+                                                        .WithAcks(Acks ? ProducerConfig.Acks.One : ProducerConfig.Acks.None)
+                                                        .WithRetries(MessageSendMaxRetries)
+                                                        .WithLingerMs(LingerMs)
+                                                        .WithBatchSize(BatchSize)
+                                                        .WithMaxInFlightRequestPerConnection(MaxInFlight)
                                                         .WithEnableIdempotence(false)
-                                                        .WithSendBuffer(32 * 1024 * 1024)
-                                                        .WithReceiveBuffer(32 * 1024 * 1024)
+                                                        .WithSendBuffer(SocketSendBufferBytes)
+                                                        .WithReceiveBuffer(SocketReceiveBufferBytes)
                                                         .WithBufferMemory(128 * 1024 * 1024)
                                                         .WithKeySerializerClass("org.apache.kafka.common.serialization.IntegerSerializer")
                                                         .WithValueSerializerClass("org.apache.kafka.common.serialization.ByteArraySerializer")
@@ -74,7 +74,7 @@ namespace MASES.KNetBenchmark
             try
             {
                 var producer = KNetProducer();
-              //  producer.PartitionsFor(TopicName("KNET", length)); // used to get metadata before do the test
+                //  producer.PartitionsFor(TopicName("KNET", length)); // used to get metadata before do the test
 
                 Callback callback = null;
                 if (UseCallback)
@@ -119,11 +119,20 @@ namespace MASES.KNetBenchmark
                             messages.Add(record);
                         }
                         stopWatch = Stopwatch.StartNew();
-                        foreach (var item in messages)
+                        for (int i = 0; i < numpacket; i++)
                         {
                             swSendRecord.Start();
-                            var result = UseCallback ? producer.Send(record, callback) : producer.Send(record);
+                            var result = UseCallback ? producer.Send(messages[i], callback) : producer.Send(messages[i]);
                             swSendRecord.Stop();
+                            if (WithBurst)
+                            {
+                                if (i % BurstLength == 0)
+                                {
+                                    stopWatch.Stop();
+                                    System.Threading.Thread.Sleep(BurstInterval);
+                                    stopWatch.Start();
+                                }
+                            }
                             if (ContinuousFlushKNet) producer.Flush();
                         }
                     }
@@ -145,6 +154,15 @@ namespace MASES.KNetBenchmark
                             swSendRecord.Start();
                             var result = UseCallback ? producer.Send(record, callback) : producer.Send(record);
                             swSendRecord.Stop();
+                            if (WithBurst)
+                            {
+                                if (i % BurstLength == 0)
+                                {
+                                    stopWatch.Stop();
+                                    System.Threading.Thread.Sleep(BurstInterval);
+                                    stopWatch.Start();
+                                }
+                            }
                             if (ContinuousFlushKNet) producer.Flush();
                         }
                     }
@@ -173,11 +191,11 @@ namespace MASES.KNetBenchmark
                 Properties props = ConsumerConfigBuilder.Create()
                                                         .WithBootstrapServers(Server)
                                                         .WithGroupId(Guid.NewGuid().ToString())
-                                                        .WithEnableAutoCommit(true)
+                                                        .WithEnableAutoCommit(!AlwaysCommit)
                                                         .WithAutoCommitIntervalMs(1000)
-                                                        .WithSendBuffer(-1)
-                                                        .WithReceiveBuffer(-1)
-                                                        .WithFetchMinBytes(100000)
+                                                        .WithSendBuffer(SocketSendBufferBytes)
+                                                        .WithReceiveBuffer(SocketReceiveBufferBytes)
+                                                        .WithFetchMinBytes(FetchMinBytes)
                                                         .WithKeyDeserializerClass("org.apache.kafka.common.serialization.IntegerDeserializer")
                                                         .WithValueDeserializerClass("org.apache.kafka.common.serialization.ByteArrayDeserializer")
                                                         .WithAutoOffsetReset(ConsumerConfig.AutoOffsetReset.EARLIEST)
@@ -255,6 +273,63 @@ namespace MASES.KNetBenchmark
                 {
                     rebalanceListener?.Dispose();
                     if (!SharedObjects) consumer.Dispose();
+                }
+            }
+            catch (Java.Util.Concurrent.ExecutionException ex)
+            {
+                throw ex.InnerException;
+            }
+        }
+
+        static Stopwatch ConsumeProduceKNet(int length, int numpacket, byte[] data = null)
+        {
+            try
+            {
+                Stopwatch stopWatch = null;
+                ConsumerRebalanceListener rebalanceListener = new(
+                                    revoked: (o) =>
+                                    {
+                                        if (ShowLogs) Console.WriteLine("Revoked: {0}", o.ToString());
+                                    },
+                                    assigned: (o) =>
+                                    {
+                                        if (ShowLogs) Console.WriteLine("Assigned: {0}", o.ToString());
+                                        stopWatch = Stopwatch.StartNew();
+                                    });
+
+                var consumer = KNetConsumer();
+                var producer = KNetProducer();
+                try
+                {
+                    int counter = 0;
+                    consumer.Subscribe(Collections.Singleton(TopicName("KNET", length)), rebalanceListener);
+                    while (true)
+                    {
+                        var records = consumer.Poll(TimeSpan.FromMinutes(1));
+                        foreach (var item in records)
+                        {
+                            var record = new ProducerRecord<int, byte[]>(TopicName("KNET_COPY", length), item.Key, item.Value);
+                            producer.Send(record);
+                            counter++;
+                        }
+                        producer.Flush();
+                        consumer.CommitSync();
+                        if (counter >= numpacket)
+                        {
+                            stopWatch.Stop();
+                            consumer.Unsubscribe();
+                            return stopWatch;
+                        }
+                    }
+                }
+                finally
+                {
+                    rebalanceListener?.Dispose();
+                    if (!SharedObjects)
+                    {
+                        consumer.Dispose();
+                        producer.Dispose();
+                    }
                 }
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
