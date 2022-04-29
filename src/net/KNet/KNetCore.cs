@@ -264,9 +264,9 @@ namespace MASES.KNet
         }
 
         /// <inheritdoc cref="JNetCore{T}.GlobalHeapSize" />
-        public override string GlobalHeapSize { get { return string.IsNullOrEmpty(base.GlobalHeapSize) ? ApplicationHeapSize : base.GlobalHeapSize; } }
+        public override string GlobalHeapSize { get { return null; } }
         /// <inheritdoc cref="JNetCore{T}.InitialHeapSize" />
-        public override string InitialHeapSize { get { return string.IsNullOrEmpty(base.InitialHeapSize) ? ApplicationInitialHeapSize : base.InitialHeapSize; } }
+        public override string InitialHeapSize { get { return null; } }
         /// <inheritdoc cref="JNetCore{T}.ProcessCommandLine" />
         protected override string[] ProcessCommandLine()
         {
@@ -274,7 +274,6 @@ namespace MASES.KNet
             GlobalScalaVersion = Const.DefaultScalaVersion;
             GlobalRootPath = Const.DefaultRootPath;
             GlobalLogPath = Const.DefaultLogPath;
-            ApplicationHeapSize = "256M";
 
             var classToRun = ParsedArgs.Get<string>(CLIParam.ClassToRun);
             GlobalRootPath = ParsedArgs.Get<string>(CLIParam.KafkaLocation);
@@ -294,35 +293,35 @@ namespace MASES.KNet
                         break;
                     }
                 }
-
-                switch (classToRun)
-                {
-                    case "VerifiableConsumer":
-                        ApplicationHeapSize = "512M";
-                        break;
-                    case "VerifiableProducer":
-                        ApplicationHeapSize = "512M";
-                        break;
-                    case "StreamsResetter":
-                        ApplicationHeapSize = "512M";
-                        break;
-                    case "ZooKeeperStart":
-                        ApplicationHeapSize = "512M";
-                        ApplicationInitialHeapSize = "512M";
-                        break;
-                    case "ZooKeeperShell":
-                        ApplicationHeapSize = "512M";
-                        ApplicationInitialHeapSize = "512M";
-                        break;
-                    case "KafkaStart":
-                        ApplicationHeapSize = Environment.Is64BitOperatingSystem ? "1G" : "512M";
-                        ApplicationInitialHeapSize = Environment.Is64BitOperatingSystem ? "1G" : "512M";
-                        break;
-                    default:
-                        break;
-                }
-
                 MainClassToRun = type ?? throw new ArgumentException($"Requested class {classToRun} is not a valid class name.");
+            }
+
+            switch (classToRun)
+            {
+                case "VerifiableConsumer":
+                    ApplicationHeapSize = "512M";
+                    break;
+                case "VerifiableProducer":
+                    ApplicationHeapSize = "512M";
+                    break;
+                case "StreamsResetter":
+                    ApplicationHeapSize = "512M";
+                    break;
+                case "ZooKeeperStart":
+                    ApplicationHeapSize = "512M";
+                    ApplicationInitialHeapSize = "512M";
+                    break;
+                case "ZooKeeperShell":
+                    ApplicationHeapSize = "512M";
+                    ApplicationInitialHeapSize = "512M";
+                    break;
+                case "KafkaStart":
+                    ApplicationHeapSize = Environment.Is64BitOperatingSystem ? "1G" : "512M";
+                    ApplicationInitialHeapSize = Environment.Is64BitOperatingSystem ? "1G" : "512M";
+                    break;
+                default:
+                    ApplicationHeapSize ??= "256M";
+                    break;
             }
 
             return result;
@@ -332,16 +331,6 @@ namespace MASES.KNet
         /// Sets the <see cref="Type"/> to be invoked at startup
         /// </summary>
         public static Type MainClassToRun { get; protected set; }
-
-        /// <summary>
-        /// Sets the global value of the heap size
-        /// </summary>
-        public static string ApplicationHeapSize { get; set; }
-
-        /// <summary>
-        /// Sets the global value of the heap size
-        /// </summary>
-        public static string ApplicationInitialHeapSize { get; set; }
 
         /// <summary>
         /// Sets the global value of root path
@@ -525,22 +514,12 @@ namespace MASES.KNet
                     { "log4j.configuration", string.IsNullOrEmpty(GlobalLog4JPath) ? ((GlobalRootPath == Const.DefaultRootPath) ? Log4JOpts : null) : $"file:{GlobalLog4JPath}"},
                     { "kafka.logs.dir", LogDir},
                     { "java.awt.headless", "true" },
-                    { "-Xmx" + GlobalHeapSize, null},
+                    { "-Xmx" + ApplicationHeapSize, null},
                 };
 
-                if (!string.IsNullOrEmpty(InitialHeapSize))
+                if (!string.IsNullOrEmpty(ApplicationInitialHeapSize))
                 {
-                    options.Add("-Xms" + InitialHeapSize, null);
-                }
-
-                if (JmxPort.HasValue)
-                {
-                    options.Add("com.sun.management.jmxremote.port", JmxPort.Value.ToString());
-                }
-
-                if (EnableDebug)
-                {
-                    options.Add(JavaDebugOpts, null);
+                    options.Add("-Xms" + ApplicationInitialHeapSize, null);
                 }
 
                 return options;
