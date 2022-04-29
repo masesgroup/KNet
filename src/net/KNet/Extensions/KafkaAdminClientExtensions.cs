@@ -118,20 +118,47 @@ namespace MASES.KNet.Extensions
 
         public static void CreateTopic(this IAdmin admin, string topicName, int numPartitions = 1, short replicationFactor = 1)
         {
+            NewTopic topic = null;
+            Set<NewTopic> coll = null;
             try
             {
-                var res = admin.CreateTopics(Collections.Singleton(new NewTopic(topicName, numPartitions, replicationFactor)));
+                topic = new NewTopic(topicName, numPartitions, replicationFactor);
+                coll = Collections.Singleton(topic);
+                var res = admin.CreateTopics(coll);
                 res.All.Get();
             }
             catch (ExecutionException ex)
             {
                 throw ex.InnerException;
             }
+            finally
+            { // this piece of code tryies to mitigate the effect of GC object recall
+                if (coll != null&& coll.IsStatic)
+                {
+                    topic.ToString();
+                    coll.ToString();
+                }
+            }
         }
 
         public static async Task<CreateTopicsResult> CreateTopicAsync(this IAdmin admin, string topicName, int numPartitions = 1, short replicationFactor = 1)
         {
-            return await CreateTopicsAsync(admin, Collections.Singleton(new NewTopic(topicName, numPartitions, replicationFactor)));
+            NewTopic topic = null;
+            Set<NewTopic> coll = null;
+            try
+            {
+                topic = new NewTopic(topicName, numPartitions, replicationFactor);
+                coll = Collections.Singleton(topic);
+                return await CreateTopicsAsync(admin, coll);
+            }
+            finally
+            { // this piece of code tryies to mitigate the effect of GC object recall
+                if (coll != null && coll.IsStatic)
+                {
+                    topic.ToString();
+                    coll.ToString();
+                }
+            }
         }
 
         public static async Task<CreateTopicsResult> CreateTopicsAsync(this IAdmin admin, Collection<NewTopic> newTopics, CreateTopicsOptions options)
@@ -141,14 +168,20 @@ namespace MASES.KNet.Extensions
 
         public static void DeleteTopic(this IAdmin admin, string topicName)
         {
+            Set<string> coll = null;
             try
             {
-                var res = admin.DeleteTopics(Collections.Singleton(topicName));
+                coll = Collections.Singleton(topicName);
+                var res = admin.DeleteTopics(coll);
                 res.All.Get();
             }
             catch (ExecutionException ex)
             {
                 throw ex.InnerException;
+            }
+            finally
+            { // this piece of code tryies to mitigate the effect of GC object recall
+                if (coll != null && coll.IsStatic) coll.ToString();
             }
         }
 
@@ -159,7 +192,16 @@ namespace MASES.KNet.Extensions
 
         public static async Task<DeleteTopicsResult> DeleteTopicAsync(this IAdmin admin, string topicName)
         {
-            return await DeleteTopicsAsync(admin, Collections.Singleton(topicName));
+            Set<string> coll = null;
+            try
+            {
+                coll = Collections.Singleton(topicName);
+                return await DeleteTopicsAsync(admin, coll);
+            }
+            finally
+            { // this piece of code tryies to mitigate the effect of GC object recall
+                if (coll != null && coll.IsStatic) coll.ToString();
+            }
         }
 
         public static async Task<DeleteTopicsResult> DeleteTopicsAsync(this IAdmin admin, Collection<string> topics, DeleteTopicsOptions options)
@@ -194,7 +236,7 @@ namespace MASES.KNet.Extensions
 
         public static async Task<DescribeTopicsResult> DescribeTopicAsync(this IAdmin admin, string topicName)
         {
-            return await Execute(admin.DescribeTopics, Collections.Singleton(topicName)) ;
+            return await Execute(admin.DescribeTopics, Collections.Singleton(topicName));
         }
 
         public static async Task<DescribeTopicsResult> DescribeTopicsAsync(this IAdmin admin, Collection<string> topicNames, DescribeTopicsOptions options)

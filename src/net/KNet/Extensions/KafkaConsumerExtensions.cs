@@ -36,12 +36,13 @@ namespace MASES.KNet.Extensions
         /// <returns>The <see cref="ConsumerRecords{K, V}"/> received</returns>
         public static ConsumerRecords<K, V> Consume<K, V>(this IConsumer<K, V> consumer, CancellationToken token)
         {
+            Java.Time.Duration duration = TimeSpan.FromMilliseconds(internalMs);
             token.ThrowIfCancellationRequested();
             while (true)
             {
                 try
                 {
-                    var records = consumer.Poll(TimeSpan.FromMilliseconds(internalMs));
+                    var records = consumer.Poll(duration);
                     if (records.Count == 0) continue;
                     return records;
                 }
@@ -62,9 +63,10 @@ namespace MASES.KNet.Extensions
         {
             return await Task.Run(() =>
             {
+                Java.Time.Duration duration = TimeSpan.FromMilliseconds(internalMs);
                 while (true)
                 {
-                    var records = consumer.Poll(TimeSpan.FromMilliseconds(internalMs));
+                    var records = consumer.Poll(duration);
                     if (records.Count == 0) continue;
                     return records;
                 }
