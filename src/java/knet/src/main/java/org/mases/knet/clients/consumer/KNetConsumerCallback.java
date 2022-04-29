@@ -19,8 +19,10 @@
 package org.mases.knet.clients.consumer;
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
+import org.apache.kafka.common.annotation.InterfaceStability;
 import org.mases.jcobridge.*;
 
+@InterfaceStability.Evolving
 public class KNetConsumerCallback extends JCListener {
     public KNetConsumerCallback(String key) throws JCNativeException {
         super(key);

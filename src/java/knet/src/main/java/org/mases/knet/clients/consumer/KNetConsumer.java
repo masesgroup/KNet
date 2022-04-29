@@ -21,12 +21,14 @@ package org.mases.knet.clients.consumer;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
+import org.apache.kafka.common.annotation.InterfaceStability;
 import org.apache.kafka.common.serialization.Deserializer;
 
 import java.time.Duration;
 import java.util.Map;
 import java.util.Properties;
 
+@InterfaceStability.Evolving
 public class KNetConsumer<K, V> extends KafkaConsumer<K, V> {
     KNetConsumerCallback _callback = null;
 
