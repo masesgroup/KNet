@@ -30,7 +30,7 @@ namespace MASES.KNetCLI
         {
             try
             {
-                if (args.Length == 0) { showHelp(); return; }
+                if (args.Length == 0) { ShowHelp(); return; }
 
                 KNetCore.CreateGlobalInstance();
 
@@ -45,14 +45,34 @@ namespace MASES.KNetCLI
                 {
                     throw tie.InnerException;
                 }
+                catch (JCOBridge.C2JBridge.JVMInterop.JavaException je)
+                {
+                    throw je.Convert();
+                }
+            }
+            catch (JVMBridgeException e)
+            {
+                Console.WriteLine(e.Message);
+                Exception innerException = e.InnerException;
+                while (innerException != null)
+                {
+                    Console.WriteLine(innerException.Message);
+                    innerException = innerException.InnerException;
+                }
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
+                Exception innerException = e.InnerException;
+                while (innerException != null)
+                {
+                    Console.WriteLine(innerException.Message);
+                    innerException = innerException.InnerException;
+                }
             }
         }
 
-        static void showHelp(string errorString = null)
+        static void ShowHelp(string errorString = null)
         {
             var assembly = typeof(Program).Assembly;
 

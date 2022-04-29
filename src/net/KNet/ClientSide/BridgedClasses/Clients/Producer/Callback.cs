@@ -38,7 +38,7 @@ namespace MASES.KNet.Clients.Producer
     /// <summary>
     /// Listener for Kafka Callback. Extends <see cref="JVMBridgeListener"/>, implements <see cref="ICallback"/>
     /// </summary>
-    /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
+    /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public class Callback : JVMBridgeListener, ICallback
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
@@ -53,12 +53,16 @@ namespace MASES.KNet.Clients.Producer
         /// Initialize a new instance of <see cref="Callback"/>
         /// </summary>
         /// <param name="action">The <see cref="Action{RecordMetadata, JVMBridgeException}"/> to be executed</param>
-        public Callback(Action<RecordMetadata, JVMBridgeException> action = null)
+        /// <param name="attachEventHandler">Set to false to disable attach of <see cref="EventHandler"/> and set an own one</param>
+        public Callback(Action<RecordMetadata, JVMBridgeException> action = null, bool attachEventHandler = true)
         {
             if (action != null) executionFunction = action;
             else executionFunction = OnCompletion;
 
-            AddEventHandler("onCompletion", new EventHandler<CLRListenerEventArgs<CLREventData<RecordMetadata>>>(EventHandler));
+            if (attachEventHandler)
+            {
+                AddEventHandler("onCompletion", new EventHandler<CLRListenerEventArgs<CLREventData<RecordMetadata>>>(EventHandler));
+            }
         }
 
         void EventHandler(object sender, CLRListenerEventArgs<CLREventData<RecordMetadata>> data)

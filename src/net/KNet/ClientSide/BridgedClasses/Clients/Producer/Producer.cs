@@ -24,7 +24,7 @@ using Java.Util.Concurrent;
 
 namespace MASES.KNet.Clients.Producer
 {
-    public interface IProducer<K, V> : IJVMBridgeBase
+    public interface IProducer<K, V> : IJVMBridgeBase, System.IDisposable
     {
         void InitTransactions();
 

@@ -16,7 +16,6 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common.Config;
 using Java.Util;
 
 namespace MASES.KNet.Clients.Admin
@@ -52,11 +51,6 @@ namespace MASES.KNet.Clients.Admin
         public NewTopic Configs(Map<string, string> configs)
         {
             return IExecute<NewTopic>("configs", configs);
-        }
-
-        public NewTopic Configs(TopicConfigBuilder config)
-        {
-            return Configs(config.ToMap());
         }
 
         public Map<string, string> Configs() => IExecute<Map<string, string>>("configs");

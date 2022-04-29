@@ -44,7 +44,7 @@ namespace MASES.KNet.Streams.KStream
     /// <typeparam name="V1">The data associated to the event</typeparam>
     /// <typeparam name="V2">The data associated to the event</typeparam>
     /// <typeparam name="VR">Aggregated value</typeparam>
-    /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
+    /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public class ValueJoiner<V1, V2, VR> : JVMBridgeListener, IValueJoiner<V1, V2, VR>
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
@@ -90,7 +90,7 @@ namespace MASES.KNet.Streams.KStream
     /// <typeparam name="V1">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
     /// <typeparam name="V2">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
     /// <typeparam name="VR">The aggregated data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
-    /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
+    /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public class JVMBridgeValueJoiner<V1, V2, VR> : ValueJoinerImpl<V1, V2, VR>
         where V1 : JVMBridgeBase, new()
         where V2 : JVMBridgeBase, new()

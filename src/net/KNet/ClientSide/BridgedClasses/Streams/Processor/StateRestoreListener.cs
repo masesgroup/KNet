@@ -46,7 +46,7 @@ namespace MASES.KNet.Streams.Processor
     /// <summary>
     /// Listener for Kafka StateRestoreListener. Extends <see cref="JVMBridgeListener"/>, implements <see cref="IStateRestoreListener"/>
     /// </summary>
-    /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
+    /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public class StateRestoreListener : JVMBridgeListener, IStateRestoreListener
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>

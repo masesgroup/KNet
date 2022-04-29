@@ -195,7 +195,7 @@ namespace MASES.KNet.Clients.Consumer
             }
             set
             {
-                SetProperty(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, System.Enum.GetName(typeof(Sensor.RecordingLevel), value).ToLowerInvariant());
+                SetProperty(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, System.Enum.GetName(typeof(ConsumerConfig.AutoOffsetReset), value).ToLowerInvariant());
             }
         }
 

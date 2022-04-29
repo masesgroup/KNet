@@ -24,7 +24,7 @@ using Java.Util.Regex;
 
 namespace MASES.KNet.Clients.Consumer
 {
-    public interface IConsumer<K, V> : IJVMBridgeBase
+    public interface IConsumer<K, V> : IJVMBridgeBase, System.IDisposable
     {
         Set<TopicPartition> Assignment { get; }
 

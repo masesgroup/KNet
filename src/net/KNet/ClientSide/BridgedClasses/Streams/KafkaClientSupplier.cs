@@ -43,7 +43,7 @@ namespace MASES.KNet.Streams.Processor
     /// <summary>
     /// Listener for Kafka KafkaClientSupplier. Extends <see cref="JVMBridgeListener"/>, implements <see cref="IKafkaClientSupplier"/>
     /// </summary>
-    /// <remarks>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</remarks>
+    /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public class KafkaClientSupplier : JVMBridgeListener, IKafkaClientSupplier
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
