@@ -56,7 +56,6 @@ namespace MASES.KNet.Benchmark
                     producerBuilder.SetValueSerializer(confluentValueSerializer);
                 }
 
-
                 confluentProducer = producerBuilder.Build();
             }
             return confluentProducer;
@@ -134,9 +133,11 @@ namespace MASES.KNet.Benchmark
                     {
                         if (!SinglePacket)
                         {
-                            swCreateRecord.Start();
+                            stopWatch.Stop();
                             byte[] newData = new byte[data.Length];
                             Array.Copy(data, 0, newData, 0, data.Length);
+                            stopWatch.Start();
+                            swCreateRecord.Start();
                             message = new Message<int, byte[]>
                             {
                                 Key = i,
@@ -145,7 +146,18 @@ namespace MASES.KNet.Benchmark
                             swCreateRecord.Stop();
                         }
                         swSendRecord.Start();
-                        producer.Produce(TopicName("CONFLUENT", length), message);
+                        if (UseCallback)
+                        {
+                            producer.Produce(TopicName("CONFLUENT", length), message, (o) =>
+                            {
+                                if (o.Error.IsError) Console.WriteLine(o.Error.ToString());
+                                else if (ShowLogs) Console.WriteLine($"Produced on topic {o.Topic} at offset {o.Offset}");
+                            });
+                        }
+                        else
+                        {
+                            producer.Produce(TopicName("CONFLUENT", length), message);
+                        }
                         swSendRecord.Stop();
                         if (WithBurst)
                         {
@@ -164,7 +176,7 @@ namespace MASES.KNet.Benchmark
 
             if (numpacket != 0 && ShowResults && !ProducePreLoad)
             {
-                Console.WriteLine($"Confluent: Create {swCreateRecord.ElapsedMicroSeconds()} Send {swSendRecord.ElapsedMicroSeconds()} -> {swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds()} -> BackTime {stopWatch.ElapsedMicroSeconds() - (swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds())}");
+                Console.WriteLine($"Confluent: Create {swCreateRecord.ElapsedMicroSeconds()} ({swCreateRecord.ElapsedMicroSeconds() / numpacket}) Send {swSendRecord.ElapsedMicroSeconds()} ({swSendRecord.ElapsedMicroSeconds() / numpacket}) -> BackTime {stopWatch.ElapsedMicroSeconds() - (swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds())}");
             }
             return stopWatch;
         }
@@ -275,10 +287,14 @@ namespace MASES.KNet.Benchmark
                     var record = consumer.Consume(TimeSpan.FromMinutes(1));
                     if (record != null)
                     {
+                        stopWatch.Stop();
+                        byte[] newVal = new byte[record.Message.Value.Length];
+                        Array.Copy(record.Message.Value, newVal, record.Message.Value.Length);
+                        stopWatch.Start();
                         var message = new Message<int, byte[]>
                         {
                             Key = record.Message.Key,
-                            Value = record.Message.Value
+                            Value = newVal
                         };
                         producer.Produce(TopicName("CONFLUENT_COPY", length), message);
                         consumer.Commit(record);

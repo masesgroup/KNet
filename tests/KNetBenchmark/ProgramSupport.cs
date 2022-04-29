@@ -60,6 +60,17 @@ namespace MASES.KNet.Benchmark
             return $"{TopicPrefix}_{testName}_{length}";
         }
 
+        static IAdmin knetAdmin = null;
+        static IAdmin GetAdmin()
+        {
+            if (knetAdmin == null)
+            {
+                Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(Server).ToProperties();
+                knetAdmin = KafkaAdminClient.Create(props);
+            }
+            return knetAdmin;
+        }
+
         static void CreateTopic(string topicName)
         {
             try
@@ -67,11 +78,7 @@ namespace MASES.KNet.Benchmark
                 int partitions = PartitionsPerTopic;
                 short replicationFactor = 1;
 
-                Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(Server).ToProperties();
-                using (IAdmin admin = KafkaAdminClient.Create(props))
-                {
-                    admin.CreateTopic(topicName, partitions, replicationFactor);
-                }
+                GetAdmin().CreateTopic(topicName, partitions, replicationFactor);
                 if (ShowLogs) Console.WriteLine($"Created topic {topicName}");
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
@@ -86,11 +93,7 @@ namespace MASES.KNet.Benchmark
             {
                 try
                 {
-                    Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(Server).ToProperties();
-                    using (IAdmin admin = KafkaAdminClient.Create(props))
-                    {
-                        admin.DeleteTopic(topicName);
-                    }
+                    GetAdmin().DeleteTopic(topicName);
                     if (ShowLogs) Console.WriteLine($"Deleted topic {topicName}");
                 }
                 catch (Java.Util.Concurrent.ExecutionException ex)

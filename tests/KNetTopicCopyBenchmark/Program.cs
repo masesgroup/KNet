@@ -26,15 +26,6 @@ namespace MASES.KNet.Benchmark
 {
     partial class Program
     {
-        const bool Acks = true;
-        const int MessageSendMaxRetries = 0;
-        const int LingerMs = 5;
-        const int BatchSize = 1000000;
-        const int MaxInFlight = 1000000;
-        const int SocketSendBufferBytes = 32 * 1024 * 1024;
-        const int SocketReceiveBufferBytes = 32 * 1024 * 1024;
-        const int FetchMinBytes = 100000;
-
         static void Main(string[] args)
         {
             try

@@ -36,10 +36,13 @@ namespace MASES.KNet.Benchmark
         public const string Server = "Server";
         public const string TopicPrefix = "TopicPrefix";
         public const string PartitionsPerTopic = "PartitionsPerTopic";
+        public const string Repeat = "Repeat";
         public const string MaxPacketLength = "MaxPacketLength";
         public const string MinPacketLength = "MinPacketLength";
         public const string PacketLengthMultiplier = "PacketLengthMultiplier";
         public const string PacketToExchange = "PacketToExchange";
+        public const string UseKNetProducer = "UseKNetProducer";
+        public const string UseKNetConsumer = "UseKNetConsumer";
         public const string UseSerdes = "UseSerdes";
         public const string UseCallback = "UseCallback";
         public const string SinglePacket = "SinglePacket";
@@ -54,10 +57,37 @@ namespace MASES.KNet.Benchmark
         public const string BurstLength = "BurstLength";
         public const string BurstInterval = "BurstInterval";
         public const string WithBurst = "WithBurst";
+        public const string ProduceOnly = "ProduceOnly";
+        // setup
+        public const string NoAcks = "NoAcks";
+        public const string MaxRetries = "MaxRetries";
+        public const string LingerMs = "LingerMs";
+        public const string BatchSize = "BatchSize";
+        public const string MaxInFlight = "MaxInFlight";
+        public const string SendBuffer = "SendBuffer";
+        public const string ReceiveBuffer = "ReceiveBuffer";
+        public const string FetchMinBytes = "FetchMinBytes";
     }
 
     public class BenchmarkKNetCore : KNetCore<BenchmarkKNetCore>
     {
+        long baseJNICalls = 0;
+        long baseExceptionJNICalls = 0;
+        public void ShowStats(int numpackets)
+        {
+            long deltaTotal = JVMStats.TotalJNICalls - baseJNICalls;
+            Console.WriteLine($"JNI Calls Total {JVMStats.TotalJNICalls} Delta {deltaTotal} Delta/packet {(double)deltaTotal / numpackets}");
+            long deltaEx = JVMStats.ExceptionJNICalls - baseExceptionJNICalls;
+            Console.WriteLine($"JNI Exception Calls Total {JVMStats.ExceptionJNICalls} Delta {deltaEx} Delta/packet {(double)deltaEx / numpackets}");
+            Console.WriteLine($"Global Ref {JVMStats.GlobalRefCount} Local Ref {JVMStats.LocalRefCount} ");
+            baseJNICalls = JVMStats.TotalJNICalls;
+            baseExceptionJNICalls = JVMStats.ExceptionJNICalls;
+        }
+
+#if DEBUG
+        public override bool EnableDebug => true;
+#endif
+
         public override IEnumerable<IArgumentMetadata> CommandLineArguments
         {
             get
@@ -103,6 +133,12 @@ namespace MASES.KNet.Benchmark
                     },
                     new ArgumentMetadata<int>()
                     {
+                        Name = CLIParam.Repeat,
+                        Default = 1,
+                        Help = "The max number of test repeat.",
+                    },
+                    new ArgumentMetadata<int>()
+                    {
                         Name = CLIParam.MaxPacketLength,
                         Default = 1000*1000,
                         Help = "The max packet length to use.",
@@ -136,6 +172,18 @@ namespace MASES.KNet.Benchmark
                         Name = CLIParam.BurstInterval,
                         Default = 100,
                         Help = "The interval time to wait between each burst.",
+                    },
+                    new ArgumentMetadata<object>()
+                    {
+                        Name = CLIParam.UseKNetProducer,
+                        Type = ArgumentType.Single,
+                        Help = "Use specific KNet producer.",
+                    },
+                    new ArgumentMetadata<object>()
+                    {
+                        Name = CLIParam.UseKNetConsumer,
+                        Type = ArgumentType.Single,
+                        Help = "Use specific KNet consumer.",
                     },
                     new ArgumentMetadata<object>()
                     {
@@ -203,6 +251,53 @@ namespace MASES.KNet.Benchmark
                         Type = ArgumentType.Single,
                         Help = "Use to activate burst produce.",
                     },
+                    new ArgumentMetadata<object>()
+                    {
+                        Name = CLIParam.ProduceOnly,
+                        Type = ArgumentType.Single,
+                        Help = "Use to only produce.",
+                    },
+                    new ArgumentMetadata<object>()
+                    {
+                        Name = CLIParam.NoAcks,
+                        Type = ArgumentType.Single,
+                        Help = "Disable acks.",
+                    },
+                    new ArgumentMetadata<int>()
+                    {
+                        Name = CLIParam.MaxRetries,
+                        Default = 0,
+                    },
+                    new ArgumentMetadata<int>()
+                    {
+                        Name = CLIParam.LingerMs,
+                        Default = 100,
+                    },
+                    new ArgumentMetadata<int>()
+                    {
+                        Name = CLIParam.BatchSize,
+                        Default = 1000000,
+                    },
+                    new ArgumentMetadata<int>()
+                    {
+                        Name = CLIParam.MaxInFlight,
+                        Default = 1000000,
+                    },
+                    new ArgumentMetadata<int>()
+                    {
+                        Name = CLIParam.SendBuffer,
+                        Default = 32 * 1024 * 1024,
+                    },
+                    new ArgumentMetadata<int>()
+                    {
+                        Name = CLIParam.ReceiveBuffer,
+                        Default = 32 * 1024 * 1024,
+                    },
+                    new ArgumentMetadata<int>()
+                    {
+                        Name = CLIParam.FetchMinBytes,
+                        Default = 100000,
+                    },
                 });
                 return lst;
             }
@@ -217,12 +312,15 @@ namespace MASES.KNet.Benchmark
         static string Server;
         static string TopicPrefix;
         static int PartitionsPerTopic;
+        static int Repeat;
         static int MaxPacketLength;
         static int MinPacketLength;
         static int PacketLengthMultiplier;
         static int PacketToExchange;
         static int BurstLength;
         static int BurstInterval;
+        static bool UseKNetProducer;
+        static bool UseKNetConsumer;
         static bool UseSerdes;
         static bool UseCallback;
         static bool ProducePreLoad;
@@ -234,6 +332,15 @@ namespace MASES.KNet.Benchmark
         static bool ContinuousFlushConfluent;
         static bool SharedObjects;
         static bool WithBurst;
+        static bool ProduceOnly;
+        static bool Acks;
+        static int MessageSendMaxRetries;
+        static int LingerMs;
+        static int BatchSize;
+        static int MaxInFlight;
+        static int SocketSendBufferBytes;
+        static int SocketReceiveBufferBytes;
+        static int FetchMinBytes;
 
         static void Init(string[] args)
         {
@@ -246,12 +353,15 @@ namespace MASES.KNet.Benchmark
             Server = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<string>(CLIParam.Server);
             TopicPrefix = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<string>(CLIParam.TopicPrefix);
             PartitionsPerTopic = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.PartitionsPerTopic);
+            Repeat = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.Repeat);
             MaxPacketLength = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.MaxPacketLength);
             MinPacketLength = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.MinPacketLength);
             PacketLengthMultiplier = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.PacketLengthMultiplier);
             PacketToExchange = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.PacketToExchange);
             BurstLength = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.BurstLength);
             BurstInterval = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.BurstInterval);
+            UseKNetProducer = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.UseKNetProducer);
+            UseKNetConsumer = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.UseKNetConsumer);
             UseSerdes = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.UseSerdes);
             UseCallback = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.UseCallback);
             ProducePreLoad = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.ProducePreLoad);
@@ -263,6 +373,15 @@ namespace MASES.KNet.Benchmark
             ContinuousFlushConfluent = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.ContinuousFlushConfluent);
             SharedObjects = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.SharedObjects);
             WithBurst = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.WithBurst);
+            ProduceOnly = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.ProduceOnly);
+            Acks = !BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.NoAcks);
+            MessageSendMaxRetries = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.MaxRetries);
+            LingerMs = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.LingerMs);
+            BatchSize = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.BatchSize);
+            MaxInFlight = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.MaxInFlight);
+            SocketSendBufferBytes = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.SendBuffer);
+            SocketReceiveBufferBytes = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.ReceiveBuffer);
+            FetchMinBytes = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.FetchMinBytes);
         }
     }
 }
