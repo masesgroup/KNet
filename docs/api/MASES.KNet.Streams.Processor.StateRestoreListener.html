@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class StateRestoreListener
    | KNet website ">
-    <meta name="generator" content="docfx 2.59.0.0">
+    <meta name="generator" content="docfx 2.59.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -291,7 +291,7 @@
     <pre><code class="lang-csharp hljs">public class StateRestoreListener : JVMBridgeListener, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IStateRestoreListener, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
   </div>
   <h5 id="MASES_KNet_Streams_Processor_StateRestoreListener_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>Remember to Dispose the object otherwise there is a resource leak, the object contains a reference to the the corresponding JVM object</p>
+  <div class="markdown level0 remarks"><p>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</p>
 </div>
   <h3 id="constructors">Constructors
   </h3>

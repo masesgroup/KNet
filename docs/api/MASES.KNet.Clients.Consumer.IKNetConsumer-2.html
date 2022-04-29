@@ -1,0 +1,356 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IKNetConsumer&lt;K, V&gt;
+   | KNet website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IKNetConsumer&lt;K, V&gt;
+   | KNet website ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MASES.KNet.Clients.Consumer.IKNetConsumer`2">
+  
+  
+  <h1 id="MASES_KNet_Clients_Consumer_IKNetConsumer_2" data-uid="MASES.KNet.Clients.Consumer.IKNetConsumer`2" class="text-break">Interface IKNetConsumer&lt;K, V&gt;
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_Assignment">IConsumer&lt;K, V&gt;.Assignment</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_Subscription">IConsumer&lt;K, V&gt;.Subscription</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_Paused">IConsumer&lt;K, V&gt;.Paused</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_Metrics">IConsumer&lt;K, V&gt;.Metrics</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_Subscribe_Java_Util_Collection_System_String__">IConsumer&lt;K, V&gt;.Subscribe(Collection&lt;String&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_Subscribe_Java_Util_Collection_System_String__MASES_KNet_Clients_Consumer_ConsumerRebalanceListener_">IConsumer&lt;K, V&gt;.Subscribe(Collection&lt;String&gt;, ConsumerRebalanceListener)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_Assign_Java_Util_Collection_MASES_KNet_Common_TopicPartition__">IConsumer&lt;K, V&gt;.Assign(Collection&lt;TopicPartition&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_Subscribe_Java_Util_Regex_Pattern_MASES_KNet_Clients_Consumer_ConsumerRebalanceListener_">IConsumer&lt;K, V&gt;.Subscribe(Pattern, ConsumerRebalanceListener)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_Subscribe_Java_Util_Regex_Pattern_">IConsumer&lt;K, V&gt;.Subscribe(Pattern)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_Unsubscribe">IConsumer&lt;K, V&gt;.Unsubscribe()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_Poll_System_Int64_">IConsumer&lt;K, V&gt;.Poll(Int64)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_Poll_Java_Time_Duration_">IConsumer&lt;K, V&gt;.Poll(Duration)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_CommitSync">IConsumer&lt;K, V&gt;.CommitSync()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_CommitSync_Java_Time_Duration_">IConsumer&lt;K, V&gt;.CommitSync(Duration)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_CommitSync_Java_Util_Map_MASES_KNet_Common_TopicPartition_MASES_KNet_Clients_Consumer_OffsetAndMetadata__">IConsumer&lt;K, V&gt;.CommitSync(Map&lt;TopicPartition, OffsetAndMetadata&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_CommitSync_Java_Util_Map_MASES_KNet_Common_TopicPartition_MASES_KNet_Clients_Consumer_OffsetAndMetadata__Java_Time_Duration_">IConsumer&lt;K, V&gt;.CommitSync(Map&lt;TopicPartition, OffsetAndMetadata&gt;, Duration)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_CommitAsync">IConsumer&lt;K, V&gt;.CommitAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_CommitAsync_MASES_KNet_Clients_Consumer_OffsetCommitCallback_">IConsumer&lt;K, V&gt;.CommitAsync(OffsetCommitCallback)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_CommitAsync_Java_Util_Map_MASES_KNet_Common_TopicPartition_MASES_KNet_Clients_Consumer_OffsetAndMetadata__MASES_KNet_Clients_Consumer_OffsetCommitCallback_">IConsumer&lt;K, V&gt;.CommitAsync(Map&lt;TopicPartition, OffsetAndMetadata&gt;, OffsetCommitCallback)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_Seek_MASES_KNet_Common_TopicPartition_System_Int64_">IConsumer&lt;K, V&gt;.Seek(TopicPartition, Int64)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_Seek_MASES_KNet_Common_TopicPartition_MASES_KNet_Clients_Consumer_OffsetAndMetadata_">IConsumer&lt;K, V&gt;.Seek(TopicPartition, OffsetAndMetadata)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_SeekToBeginning_Java_Util_Collection_MASES_KNet_Common_TopicPartition__">IConsumer&lt;K, V&gt;.SeekToBeginning(Collection&lt;TopicPartition&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_SeekToEnd_Java_Util_Collection_MASES_KNet_Common_TopicPartition__">IConsumer&lt;K, V&gt;.SeekToEnd(Collection&lt;TopicPartition&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_Position_MASES_KNet_Common_TopicPartition_">IConsumer&lt;K, V&gt;.Position(TopicPartition)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_Position_MASES_KNet_Common_TopicPartition_Java_Time_Duration_">IConsumer&lt;K, V&gt;.Position(TopicPartition, Duration)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_Committed_MASES_KNet_Common_TopicPartition_">IConsumer&lt;K, V&gt;.Committed(TopicPartition)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_Committed_MASES_KNet_Common_TopicPartition_Java_Time_Duration_">IConsumer&lt;K, V&gt;.Committed(TopicPartition, Duration)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_Committed_Java_Util_Set_MASES_KNet_Common_TopicPartition__">IConsumer&lt;K, V&gt;.Committed(Set&lt;TopicPartition&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_Committed_Java_Util_Set_MASES_KNet_Common_TopicPartition__Java_Time_Duration_">IConsumer&lt;K, V&gt;.Committed(Set&lt;TopicPartition&gt;, Duration)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_PartitionsFor_System_String_">IConsumer&lt;K, V&gt;.PartitionsFor(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_PartitionsFor_System_String_Java_Time_Duration_">IConsumer&lt;K, V&gt;.PartitionsFor(String, Duration)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_ListTopics">IConsumer&lt;K, V&gt;.ListTopics()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_ListTopics_Java_Time_Duration_">IConsumer&lt;K, V&gt;.ListTopics(Duration)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_Pause_Java_Util_Collection_MASES_KNet_Common_TopicPartition__">IConsumer&lt;K, V&gt;.Pause(Collection&lt;TopicPartition&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_Resume_Java_Util_Collection_MASES_KNet_Common_TopicPartition__">IConsumer&lt;K, V&gt;.Resume(Collection&lt;TopicPartition&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_OffsetsForTimes_Java_Util_Map_MASES_KNet_Common_TopicPartition_System_Int64__">IConsumer&lt;K, V&gt;.OffsetsForTimes(Map&lt;TopicPartition, Int64&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_OffsetsForTimes_Java_Util_Map_MASES_KNet_Common_TopicPartition_System_Int64__Java_Time_Duration_">IConsumer&lt;K, V&gt;.OffsetsForTimes(Map&lt;TopicPartition, Int64&gt;, Duration)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_BeginningOffsets_Java_Util_Collection_MASES_KNet_Common_TopicPartition__">IConsumer&lt;K, V&gt;.BeginningOffsets(Collection&lt;TopicPartition&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_BeginningOffsets_Java_Util_Collection_MASES_KNet_Common_TopicPartition__Java_Time_Duration_">IConsumer&lt;K, V&gt;.BeginningOffsets(Collection&lt;TopicPartition&gt;, Duration)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_EndOffsets_Java_Util_Collection_MASES_KNet_Common_TopicPartition__">IConsumer&lt;K, V&gt;.EndOffsets(Collection&lt;TopicPartition&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_EndOffsets_Java_Util_Collection_MASES_KNet_Common_TopicPartition__Java_Time_Duration_">IConsumer&lt;K, V&gt;.EndOffsets(Collection&lt;TopicPartition&gt;, Duration)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_CurrentLag_MASES_KNet_Common_TopicPartition_">IConsumer&lt;K, V&gt;.CurrentLag(TopicPartition)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_GroupMetadata">IConsumer&lt;K, V&gt;.GroupMetadata()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_EnforceRebalance">IConsumer&lt;K, V&gt;.EnforceRebalance()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html#MASES_KNet_Clients_Consumer_IConsumer_2_Wakeup">IConsumer&lt;K, V&gt;.Wakeup()</a>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase.DynInstance</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase.Instance</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.ClassName</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.IsInterface</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.IsAbstract</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.IsStatic</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.IsCloseable</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.IsListener</span>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable.dispose#system-idisposable-dispose">IDisposable.Dispose()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MASES.KNet.Clients.Consumer.html">MASES.KNet.Clients.Consumer</a></h6>
+  <h6><strong>Assembly</strong>: MASES.KNet.dll</h6>
+  <h5 id="MASES_KNet_Clients_Consumer_IKNetConsumer_2_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IKNetConsumer&lt;K, V&gt; : IConsumer&lt;K, V&gt;, IJVMBridgeBase, IJVMBridgeDefinition, IDisposable</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">K</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">V</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Consumer_IKNetConsumer_2_Consume_System_Int64_System_Action_MASES_KNet_Clients_Consumer_Message__0__1___.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Consumer.IKNetConsumer%602.Consume(System.Int64%2CSystem.Action%7BMASES.KNet.Clients.Consumer.Message%7B%600%2C%601%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Consumer/KNetConsumer.cs/#L76">View Source</a>
+  </span>
+  <a id="MASES_KNet_Clients_Consumer_IKNetConsumer_2_Consume_" data-uid="MASES.KNet.Clients.Consumer.IKNetConsumer`2.Consume*"></a>
+  <h4 id="MASES_KNet_Clients_Consumer_IKNetConsumer_2_Consume_System_Int64_System_Action_MASES_KNet_Clients_Consumer_Message__0__1___" data-uid="MASES.KNet.Clients.Consumer.IKNetConsumer`2.Consume(System.Int64,System.Action{MASES.KNet.Clients.Consumer.Message{`0,`1}})">Consume(Int64, Action&lt;Message&lt;K, V&gt;&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Consume(long timeoutMs, Action&lt;Message&lt;K, V&gt;&gt; callback)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">timeoutMs</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="MASES.KNet.Clients.Consumer.Message-2.html">Message</a>&lt;K, V&gt;&gt;</td>
+        <td><span class="parametername">callback</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaConsumerExtensions.html#MASES_KNet_Extensions_KafkaConsumerExtensions_Consume__2_MASES_KNet_Clients_Consumer_IConsumer___0___1__System_Threading_CancellationToken_">KafkaConsumerExtensions.Consume&lt;K, V&gt;(IConsumer&lt;K, V&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaConsumerExtensions.html#MASES_KNet_Extensions_KafkaConsumerExtensions_ConsumeAsync__2_MASES_KNet_Clients_Consumer_IConsumer___0___1__">KafkaConsumerExtensions.ConsumeAsync&lt;K, V&gt;(IConsumer&lt;K, V&gt;)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Consumer_IKNetConsumer_2.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Consumer.IKNetConsumer%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Consumer/KNetConsumer.cs/#L74" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2022 MASES s.r.l..<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

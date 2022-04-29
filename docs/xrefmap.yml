@@ -7152,12 +7152,6 @@ references:
   fullName.vb: MASES.KNet.Clients.Admin.NewTopic.Configs(Java.Util.Map(Of System.String, System.String))
   nameWithType: NewTopic.Configs(Map<String, String>)
   nameWithType.vb: NewTopic.Configs(Map(Of String, String))
-- uid: MASES.KNet.Clients.Admin.NewTopic.Configs(MASES.KNet.Common.Config.TopicConfigBuilder)
-  name: Configs(TopicConfigBuilder)
-  href: api/MASES.KNet.Clients.Admin.NewTopic.html#MASES_KNet_Clients_Admin_NewTopic_Configs_MASES_KNet_Common_Config_TopicConfigBuilder_
-  commentId: M:MASES.KNet.Clients.Admin.NewTopic.Configs(MASES.KNet.Common.Config.TopicConfigBuilder)
-  fullName: MASES.KNet.Clients.Admin.NewTopic.Configs(MASES.KNet.Common.Config.TopicConfigBuilder)
-  nameWithType: NewTopic.Configs(TopicConfigBuilder)
 - uid: MASES.KNet.Clients.Admin.NewTopic.Configs*
   name: Configs
   href: api/MASES.KNet.Clients.Admin.NewTopic.html#MASES_KNet_Clients_Admin_NewTopic_Configs_
@@ -11130,23 +11124,23 @@ references:
   fullName.vb: MASES.KNet.Clients.Consumer.ConsumerRecords(Of K, V).Iterator
   nameWithType: ConsumerRecords<K, V>.Iterator
   nameWithType.vb: ConsumerRecords(Of K, V).Iterator
-- uid: MASES.KNet.Clients.Consumer.ConsumerRecords`2.partitions
-  name: partitions
-  href: api/MASES.KNet.Clients.Consumer.ConsumerRecords-2.html#MASES_KNet_Clients_Consumer_ConsumerRecords_2_partitions
-  commentId: P:MASES.KNet.Clients.Consumer.ConsumerRecords`2.partitions
-  fullName: MASES.KNet.Clients.Consumer.ConsumerRecords<K, V>.partitions
-  fullName.vb: MASES.KNet.Clients.Consumer.ConsumerRecords(Of K, V).partitions
-  nameWithType: ConsumerRecords<K, V>.partitions
-  nameWithType.vb: ConsumerRecords(Of K, V).partitions
-- uid: MASES.KNet.Clients.Consumer.ConsumerRecords`2.partitions*
-  name: partitions
-  href: api/MASES.KNet.Clients.Consumer.ConsumerRecords-2.html#MASES_KNet_Clients_Consumer_ConsumerRecords_2_partitions_
-  commentId: Overload:MASES.KNet.Clients.Consumer.ConsumerRecords`2.partitions
+- uid: MASES.KNet.Clients.Consumer.ConsumerRecords`2.Partitions
+  name: Partitions
+  href: api/MASES.KNet.Clients.Consumer.ConsumerRecords-2.html#MASES_KNet_Clients_Consumer_ConsumerRecords_2_Partitions
+  commentId: P:MASES.KNet.Clients.Consumer.ConsumerRecords`2.Partitions
+  fullName: MASES.KNet.Clients.Consumer.ConsumerRecords<K, V>.Partitions
+  fullName.vb: MASES.KNet.Clients.Consumer.ConsumerRecords(Of K, V).Partitions
+  nameWithType: ConsumerRecords<K, V>.Partitions
+  nameWithType.vb: ConsumerRecords(Of K, V).Partitions
+- uid: MASES.KNet.Clients.Consumer.ConsumerRecords`2.Partitions*
+  name: Partitions
+  href: api/MASES.KNet.Clients.Consumer.ConsumerRecords-2.html#MASES_KNet_Clients_Consumer_ConsumerRecords_2_Partitions_
+  commentId: Overload:MASES.KNet.Clients.Consumer.ConsumerRecords`2.Partitions
   isSpec: "True"
-  fullName: MASES.KNet.Clients.Consumer.ConsumerRecords<K, V>.partitions
-  fullName.vb: MASES.KNet.Clients.Consumer.ConsumerRecords(Of K, V).partitions
-  nameWithType: ConsumerRecords<K, V>.partitions
-  nameWithType.vb: ConsumerRecords(Of K, V).partitions
+  fullName: MASES.KNet.Clients.Consumer.ConsumerRecords<K, V>.Partitions
+  fullName.vb: MASES.KNet.Clients.Consumer.ConsumerRecords(Of K, V).Partitions
+  nameWithType: ConsumerRecords<K, V>.Partitions
+  nameWithType.vb: ConsumerRecords(Of K, V).Partitions
 - uid: MASES.KNet.Clients.Consumer.ConsumerRecords`2.Records(Java.Lang.String)
   name: Records(String)
   href: api/MASES.KNet.Clients.Consumer.ConsumerRecords-2.html#MASES_KNet_Clients_Consumer_ConsumerRecords_2_Records_Java_Lang_String_
@@ -11911,6 +11905,60 @@ references:
   isSpec: "True"
   fullName: MASES.KNet.Clients.Consumer.IConsumerRebalanceListener.OnPartitionsRevoked
   nameWithType: IConsumerRebalanceListener.OnPartitionsRevoked
+- uid: MASES.KNet.Clients.Consumer.IKNetConsumer`2
+  name: IKNetConsumer<K, V>
+  href: api/MASES.KNet.Clients.Consumer.IKNetConsumer-2.html
+  commentId: T:MASES.KNet.Clients.Consumer.IKNetConsumer`2
+  name.vb: IKNetConsumer(Of K, V)
+  fullName: MASES.KNet.Clients.Consumer.IKNetConsumer<K, V>
+  fullName.vb: MASES.KNet.Clients.Consumer.IKNetConsumer(Of K, V)
+  nameWithType: IKNetConsumer<K, V>
+  nameWithType.vb: IKNetConsumer(Of K, V)
+- uid: MASES.KNet.Clients.Consumer.IKNetConsumer`2.Consume(System.Int64,System.Action{MASES.KNet.Clients.Consumer.Message{`0,`1}})
+  name: Consume(Int64, Action<Message<K, V>>)
+  href: api/MASES.KNet.Clients.Consumer.IKNetConsumer-2.html#MASES_KNet_Clients_Consumer_IKNetConsumer_2_Consume_System_Int64_System_Action_MASES_KNet_Clients_Consumer_Message__0__1___
+  commentId: M:MASES.KNet.Clients.Consumer.IKNetConsumer`2.Consume(System.Int64,System.Action{MASES.KNet.Clients.Consumer.Message{`0,`1}})
+  name.vb: Consume(Int64, Action(Of Message(Of K, V)))
+  fullName: MASES.KNet.Clients.Consumer.IKNetConsumer<K, V>.Consume(System.Int64, System.Action<MASES.KNet.Clients.Consumer.Message<K, V>>)
+  fullName.vb: MASES.KNet.Clients.Consumer.IKNetConsumer(Of K, V).Consume(System.Int64, System.Action(Of MASES.KNet.Clients.Consumer.Message(Of K, V)))
+  nameWithType: IKNetConsumer<K, V>.Consume(Int64, Action<Message<K, V>>)
+  nameWithType.vb: IKNetConsumer(Of K, V).Consume(Int64, Action(Of Message(Of K, V)))
+- uid: MASES.KNet.Clients.Consumer.IKNetConsumer`2.Consume*
+  name: Consume
+  href: api/MASES.KNet.Clients.Consumer.IKNetConsumer-2.html#MASES_KNet_Clients_Consumer_IKNetConsumer_2_Consume_
+  commentId: Overload:MASES.KNet.Clients.Consumer.IKNetConsumer`2.Consume
+  isSpec: "True"
+  fullName: MASES.KNet.Clients.Consumer.IKNetConsumer<K, V>.Consume
+  fullName.vb: MASES.KNet.Clients.Consumer.IKNetConsumer(Of K, V).Consume
+  nameWithType: IKNetConsumer<K, V>.Consume
+  nameWithType.vb: IKNetConsumer(Of K, V).Consume
+- uid: MASES.KNet.Clients.Consumer.IKNetConsumerCallback`2
+  name: IKNetConsumerCallback<K, V>
+  href: api/MASES.KNet.Clients.Consumer.IKNetConsumerCallback-2.html
+  commentId: T:MASES.KNet.Clients.Consumer.IKNetConsumerCallback`2
+  name.vb: IKNetConsumerCallback(Of K, V)
+  fullName: MASES.KNet.Clients.Consumer.IKNetConsumerCallback<K, V>
+  fullName.vb: MASES.KNet.Clients.Consumer.IKNetConsumerCallback(Of K, V)
+  nameWithType: IKNetConsumerCallback<K, V>
+  nameWithType.vb: IKNetConsumerCallback(Of K, V)
+- uid: MASES.KNet.Clients.Consumer.IKNetConsumerCallback`2.RecordReady(MASES.KNet.Clients.Consumer.Message{`0,`1})
+  name: RecordReady(Message<K, V>)
+  href: api/MASES.KNet.Clients.Consumer.IKNetConsumerCallback-2.html#MASES_KNet_Clients_Consumer_IKNetConsumerCallback_2_RecordReady_MASES_KNet_Clients_Consumer_Message__0__1__
+  commentId: M:MASES.KNet.Clients.Consumer.IKNetConsumerCallback`2.RecordReady(MASES.KNet.Clients.Consumer.Message{`0,`1})
+  name.vb: RecordReady(Message(Of K, V))
+  fullName: MASES.KNet.Clients.Consumer.IKNetConsumerCallback<K, V>.RecordReady(MASES.KNet.Clients.Consumer.Message<K, V>)
+  fullName.vb: MASES.KNet.Clients.Consumer.IKNetConsumerCallback(Of K, V).RecordReady(MASES.KNet.Clients.Consumer.Message(Of K, V))
+  nameWithType: IKNetConsumerCallback<K, V>.RecordReady(Message<K, V>)
+  nameWithType.vb: IKNetConsumerCallback(Of K, V).RecordReady(Message(Of K, V))
+- uid: MASES.KNet.Clients.Consumer.IKNetConsumerCallback`2.RecordReady*
+  name: RecordReady
+  href: api/MASES.KNet.Clients.Consumer.IKNetConsumerCallback-2.html#MASES_KNet_Clients_Consumer_IKNetConsumerCallback_2_RecordReady_
+  commentId: Overload:MASES.KNet.Clients.Consumer.IKNetConsumerCallback`2.RecordReady
+  isSpec: "True"
+  fullName: MASES.KNet.Clients.Consumer.IKNetConsumerCallback<K, V>.RecordReady
+  fullName.vb: MASES.KNet.Clients.Consumer.IKNetConsumerCallback(Of K, V).RecordReady
+  nameWithType: IKNetConsumerCallback<K, V>.RecordReady
+  nameWithType.vb: IKNetConsumerCallback(Of K, V).RecordReady
 - uid: MASES.KNet.Clients.Consumer.InvalidOffsetException
   name: InvalidOffsetException
   href: api/MASES.KNet.Clients.Consumer.InvalidOffsetException.html
@@ -12674,6 +12722,180 @@ references:
   fullName.vb: MASES.KNet.Clients.Consumer.KafkaConsumer(Of K, V).Wakeup
   nameWithType: KafkaConsumer<K, V>.Wakeup
   nameWithType.vb: KafkaConsumer(Of K, V).Wakeup
+- uid: MASES.KNet.Clients.Consumer.KNetConsumer`2
+  name: KNetConsumer<K, V>
+  href: api/MASES.KNet.Clients.Consumer.KNetConsumer-2.html
+  commentId: T:MASES.KNet.Clients.Consumer.KNetConsumer`2
+  name.vb: KNetConsumer(Of K, V)
+  fullName: MASES.KNet.Clients.Consumer.KNetConsumer<K, V>
+  fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumer(Of K, V)
+  nameWithType: KNetConsumer<K, V>
+  nameWithType.vb: KNetConsumer(Of K, V)
+- uid: MASES.KNet.Clients.Consumer.KNetConsumer`2.#ctor
+  name: KNetConsumer()
+  href: api/MASES.KNet.Clients.Consumer.KNetConsumer-2.html#MASES_KNet_Clients_Consumer_KNetConsumer_2__ctor
+  commentId: M:MASES.KNet.Clients.Consumer.KNetConsumer`2.#ctor
+  fullName: MASES.KNet.Clients.Consumer.KNetConsumer<K, V>.KNetConsumer()
+  fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumer(Of K, V).KNetConsumer()
+  nameWithType: KNetConsumer<K, V>.KNetConsumer()
+  nameWithType.vb: KNetConsumer(Of K, V).KNetConsumer()
+- uid: MASES.KNet.Clients.Consumer.KNetConsumer`2.#ctor(Java.Util.Properties)
+  name: KNetConsumer(Properties)
+  href: api/MASES.KNet.Clients.Consumer.KNetConsumer-2.html#MASES_KNet_Clients_Consumer_KNetConsumer_2__ctor_Java_Util_Properties_
+  commentId: M:MASES.KNet.Clients.Consumer.KNetConsumer`2.#ctor(Java.Util.Properties)
+  fullName: MASES.KNet.Clients.Consumer.KNetConsumer<K, V>.KNetConsumer(Java.Util.Properties)
+  fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumer(Of K, V).KNetConsumer(Java.Util.Properties)
+  nameWithType: KNetConsumer<K, V>.KNetConsumer(Properties)
+  nameWithType.vb: KNetConsumer(Of K, V).KNetConsumer(Properties)
+- uid: MASES.KNet.Clients.Consumer.KNetConsumer`2.#ctor(Java.Util.Properties,MASES.KNet.Common.Serialization.Deserializer{`0},MASES.KNet.Common.Serialization.Deserializer{`1})
+  name: KNetConsumer(Properties, Deserializer<K>, Deserializer<V>)
+  href: api/MASES.KNet.Clients.Consumer.KNetConsumer-2.html#MASES_KNet_Clients_Consumer_KNetConsumer_2__ctor_Java_Util_Properties_MASES_KNet_Common_Serialization_Deserializer__0__MASES_KNet_Common_Serialization_Deserializer__1__
+  commentId: M:MASES.KNet.Clients.Consumer.KNetConsumer`2.#ctor(Java.Util.Properties,MASES.KNet.Common.Serialization.Deserializer{`0},MASES.KNet.Common.Serialization.Deserializer{`1})
+  name.vb: KNetConsumer(Properties, Deserializer(Of K), Deserializer(Of V))
+  fullName: MASES.KNet.Clients.Consumer.KNetConsumer<K, V>.KNetConsumer(Java.Util.Properties, MASES.KNet.Common.Serialization.Deserializer<K>, MASES.KNet.Common.Serialization.Deserializer<V>)
+  fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumer(Of K, V).KNetConsumer(Java.Util.Properties, MASES.KNet.Common.Serialization.Deserializer(Of K), MASES.KNet.Common.Serialization.Deserializer(Of V))
+  nameWithType: KNetConsumer<K, V>.KNetConsumer(Properties, Deserializer<K>, Deserializer<V>)
+  nameWithType.vb: KNetConsumer(Of K, V).KNetConsumer(Properties, Deserializer(Of K), Deserializer(Of V))
+- uid: MASES.KNet.Clients.Consumer.KNetConsumer`2.#ctor*
+  name: KNetConsumer
+  href: api/MASES.KNet.Clients.Consumer.KNetConsumer-2.html#MASES_KNet_Clients_Consumer_KNetConsumer_2__ctor_
+  commentId: Overload:MASES.KNet.Clients.Consumer.KNetConsumer`2.#ctor
+  isSpec: "True"
+  fullName: MASES.KNet.Clients.Consumer.KNetConsumer<K, V>.KNetConsumer
+  fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumer(Of K, V).KNetConsumer
+  nameWithType: KNetConsumer<K, V>.KNetConsumer
+  nameWithType.vb: KNetConsumer(Of K, V).KNetConsumer
+- uid: MASES.KNet.Clients.Consumer.KNetConsumer`2.ClassName
+  name: ClassName
+  href: api/MASES.KNet.Clients.Consumer.KNetConsumer-2.html#MASES_KNet_Clients_Consumer_KNetConsumer_2_ClassName
+  commentId: P:MASES.KNet.Clients.Consumer.KNetConsumer`2.ClassName
+  fullName: MASES.KNet.Clients.Consumer.KNetConsumer<K, V>.ClassName
+  fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumer(Of K, V).ClassName
+  nameWithType: KNetConsumer<K, V>.ClassName
+  nameWithType.vb: KNetConsumer(Of K, V).ClassName
+- uid: MASES.KNet.Clients.Consumer.KNetConsumer`2.ClassName*
+  name: ClassName
+  href: api/MASES.KNet.Clients.Consumer.KNetConsumer-2.html#MASES_KNet_Clients_Consumer_KNetConsumer_2_ClassName_
+  commentId: Overload:MASES.KNet.Clients.Consumer.KNetConsumer`2.ClassName
+  isSpec: "True"
+  fullName: MASES.KNet.Clients.Consumer.KNetConsumer<K, V>.ClassName
+  fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumer(Of K, V).ClassName
+  nameWithType: KNetConsumer<K, V>.ClassName
+  nameWithType.vb: KNetConsumer(Of K, V).ClassName
+- uid: MASES.KNet.Clients.Consumer.KNetConsumer`2.Consume(System.Int64,System.Action{MASES.KNet.Clients.Consumer.Message{`0,`1}})
+  name: Consume(Int64, Action<Message<K, V>>)
+  href: api/MASES.KNet.Clients.Consumer.KNetConsumer-2.html#MASES_KNet_Clients_Consumer_KNetConsumer_2_Consume_System_Int64_System_Action_MASES_KNet_Clients_Consumer_Message__0__1___
+  commentId: M:MASES.KNet.Clients.Consumer.KNetConsumer`2.Consume(System.Int64,System.Action{MASES.KNet.Clients.Consumer.Message{`0,`1}})
+  name.vb: Consume(Int64, Action(Of Message(Of K, V)))
+  fullName: MASES.KNet.Clients.Consumer.KNetConsumer<K, V>.Consume(System.Int64, System.Action<MASES.KNet.Clients.Consumer.Message<K, V>>)
+  fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumer(Of K, V).Consume(System.Int64, System.Action(Of MASES.KNet.Clients.Consumer.Message(Of K, V)))
+  nameWithType: KNetConsumer<K, V>.Consume(Int64, Action<Message<K, V>>)
+  nameWithType.vb: KNetConsumer(Of K, V).Consume(Int64, Action(Of Message(Of K, V)))
+- uid: MASES.KNet.Clients.Consumer.KNetConsumer`2.Consume*
+  name: Consume
+  href: api/MASES.KNet.Clients.Consumer.KNetConsumer-2.html#MASES_KNet_Clients_Consumer_KNetConsumer_2_Consume_
+  commentId: Overload:MASES.KNet.Clients.Consumer.KNetConsumer`2.Consume
+  isSpec: "True"
+  fullName: MASES.KNet.Clients.Consumer.KNetConsumer<K, V>.Consume
+  fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumer(Of K, V).Consume
+  nameWithType: KNetConsumer<K, V>.Consume
+  nameWithType.vb: KNetConsumer(Of K, V).Consume
+- uid: MASES.KNet.Clients.Consumer.KNetConsumer`2.Dispose
+  name: Dispose()
+  href: api/MASES.KNet.Clients.Consumer.KNetConsumer-2.html#MASES_KNet_Clients_Consumer_KNetConsumer_2_Dispose
+  commentId: M:MASES.KNet.Clients.Consumer.KNetConsumer`2.Dispose
+  fullName: MASES.KNet.Clients.Consumer.KNetConsumer<K, V>.Dispose()
+  fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumer(Of K, V).Dispose()
+  nameWithType: KNetConsumer<K, V>.Dispose()
+  nameWithType.vb: KNetConsumer(Of K, V).Dispose()
+- uid: MASES.KNet.Clients.Consumer.KNetConsumer`2.Dispose*
+  name: Dispose
+  href: api/MASES.KNet.Clients.Consumer.KNetConsumer-2.html#MASES_KNet_Clients_Consumer_KNetConsumer_2_Dispose_
+  commentId: Overload:MASES.KNet.Clients.Consumer.KNetConsumer`2.Dispose
+  isSpec: "True"
+  fullName: MASES.KNet.Clients.Consumer.KNetConsumer<K, V>.Dispose
+  fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumer(Of K, V).Dispose
+  nameWithType: KNetConsumer<K, V>.Dispose
+  nameWithType.vb: KNetConsumer(Of K, V).Dispose
+- uid: MASES.KNet.Clients.Consumer.KNetConsumerCallback`2
+  name: KNetConsumerCallback<K, V>
+  href: api/MASES.KNet.Clients.Consumer.KNetConsumerCallback-2.html
+  commentId: T:MASES.KNet.Clients.Consumer.KNetConsumerCallback`2
+  name.vb: KNetConsumerCallback(Of K, V)
+  fullName: MASES.KNet.Clients.Consumer.KNetConsumerCallback<K, V>
+  fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumerCallback(Of K, V)
+  nameWithType: KNetConsumerCallback<K, V>
+  nameWithType.vb: KNetConsumerCallback(Of K, V)
+- uid: MASES.KNet.Clients.Consumer.KNetConsumerCallback`2.#ctor(System.Action{MASES.KNet.Clients.Consumer.Message{`0,`1}})
+  name: KNetConsumerCallback(Action<Message<K, V>>)
+  href: api/MASES.KNet.Clients.Consumer.KNetConsumerCallback-2.html#MASES_KNet_Clients_Consumer_KNetConsumerCallback_2__ctor_System_Action_MASES_KNet_Clients_Consumer_Message__0__1___
+  commentId: M:MASES.KNet.Clients.Consumer.KNetConsumerCallback`2.#ctor(System.Action{MASES.KNet.Clients.Consumer.Message{`0,`1}})
+  name.vb: KNetConsumerCallback(Action(Of Message(Of K, V)))
+  fullName: MASES.KNet.Clients.Consumer.KNetConsumerCallback<K, V>.KNetConsumerCallback(System.Action<MASES.KNet.Clients.Consumer.Message<K, V>>)
+  fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumerCallback(Of K, V).KNetConsumerCallback(System.Action(Of MASES.KNet.Clients.Consumer.Message(Of K, V)))
+  nameWithType: KNetConsumerCallback<K, V>.KNetConsumerCallback(Action<Message<K, V>>)
+  nameWithType.vb: KNetConsumerCallback(Of K, V).KNetConsumerCallback(Action(Of Message(Of K, V)))
+- uid: MASES.KNet.Clients.Consumer.KNetConsumerCallback`2.#ctor*
+  name: KNetConsumerCallback
+  href: api/MASES.KNet.Clients.Consumer.KNetConsumerCallback-2.html#MASES_KNet_Clients_Consumer_KNetConsumerCallback_2__ctor_
+  commentId: Overload:MASES.KNet.Clients.Consumer.KNetConsumerCallback`2.#ctor
+  isSpec: "True"
+  fullName: MASES.KNet.Clients.Consumer.KNetConsumerCallback<K, V>.KNetConsumerCallback
+  fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumerCallback(Of K, V).KNetConsumerCallback
+  nameWithType: KNetConsumerCallback<K, V>.KNetConsumerCallback
+  nameWithType.vb: KNetConsumerCallback(Of K, V).KNetConsumerCallback
+- uid: MASES.KNet.Clients.Consumer.KNetConsumerCallback`2.ClassName
+  name: ClassName
+  href: api/MASES.KNet.Clients.Consumer.KNetConsumerCallback-2.html#MASES_KNet_Clients_Consumer_KNetConsumerCallback_2_ClassName
+  commentId: P:MASES.KNet.Clients.Consumer.KNetConsumerCallback`2.ClassName
+  fullName: MASES.KNet.Clients.Consumer.KNetConsumerCallback<K, V>.ClassName
+  fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumerCallback(Of K, V).ClassName
+  nameWithType: KNetConsumerCallback<K, V>.ClassName
+  nameWithType.vb: KNetConsumerCallback(Of K, V).ClassName
+- uid: MASES.KNet.Clients.Consumer.KNetConsumerCallback`2.ClassName*
+  name: ClassName
+  href: api/MASES.KNet.Clients.Consumer.KNetConsumerCallback-2.html#MASES_KNet_Clients_Consumer_KNetConsumerCallback_2_ClassName_
+  commentId: Overload:MASES.KNet.Clients.Consumer.KNetConsumerCallback`2.ClassName
+  isSpec: "True"
+  fullName: MASES.KNet.Clients.Consumer.KNetConsumerCallback<K, V>.ClassName
+  fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumerCallback(Of K, V).ClassName
+  nameWithType: KNetConsumerCallback<K, V>.ClassName
+  nameWithType.vb: KNetConsumerCallback(Of K, V).ClassName
+- uid: MASES.KNet.Clients.Consumer.KNetConsumerCallback`2.OnRecordReady
+  name: OnRecordReady
+  href: api/MASES.KNet.Clients.Consumer.KNetConsumerCallback-2.html#MASES_KNet_Clients_Consumer_KNetConsumerCallback_2_OnRecordReady
+  commentId: P:MASES.KNet.Clients.Consumer.KNetConsumerCallback`2.OnRecordReady
+  fullName: MASES.KNet.Clients.Consumer.KNetConsumerCallback<K, V>.OnRecordReady
+  fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumerCallback(Of K, V).OnRecordReady
+  nameWithType: KNetConsumerCallback<K, V>.OnRecordReady
+  nameWithType.vb: KNetConsumerCallback(Of K, V).OnRecordReady
+- uid: MASES.KNet.Clients.Consumer.KNetConsumerCallback`2.OnRecordReady*
+  name: OnRecordReady
+  href: api/MASES.KNet.Clients.Consumer.KNetConsumerCallback-2.html#MASES_KNet_Clients_Consumer_KNetConsumerCallback_2_OnRecordReady_
+  commentId: Overload:MASES.KNet.Clients.Consumer.KNetConsumerCallback`2.OnRecordReady
+  isSpec: "True"
+  fullName: MASES.KNet.Clients.Consumer.KNetConsumerCallback<K, V>.OnRecordReady
+  fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumerCallback(Of K, V).OnRecordReady
+  nameWithType: KNetConsumerCallback<K, V>.OnRecordReady
+  nameWithType.vb: KNetConsumerCallback(Of K, V).OnRecordReady
+- uid: MASES.KNet.Clients.Consumer.KNetConsumerCallback`2.RecordReady(MASES.KNet.Clients.Consumer.Message{`0,`1})
+  name: RecordReady(Message<K, V>)
+  href: api/MASES.KNet.Clients.Consumer.KNetConsumerCallback-2.html#MASES_KNet_Clients_Consumer_KNetConsumerCallback_2_RecordReady_MASES_KNet_Clients_Consumer_Message__0__1__
+  commentId: M:MASES.KNet.Clients.Consumer.KNetConsumerCallback`2.RecordReady(MASES.KNet.Clients.Consumer.Message{`0,`1})
+  name.vb: RecordReady(Message(Of K, V))
+  fullName: MASES.KNet.Clients.Consumer.KNetConsumerCallback<K, V>.RecordReady(MASES.KNet.Clients.Consumer.Message<K, V>)
+  fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumerCallback(Of K, V).RecordReady(MASES.KNet.Clients.Consumer.Message(Of K, V))
+  nameWithType: KNetConsumerCallback<K, V>.RecordReady(Message<K, V>)
+  nameWithType.vb: KNetConsumerCallback(Of K, V).RecordReady(Message(Of K, V))
+- uid: MASES.KNet.Clients.Consumer.KNetConsumerCallback`2.RecordReady*
+  name: RecordReady
+  href: api/MASES.KNet.Clients.Consumer.KNetConsumerCallback-2.html#MASES_KNet_Clients_Consumer_KNetConsumerCallback_2_RecordReady_
+  commentId: Overload:MASES.KNet.Clients.Consumer.KNetConsumerCallback`2.RecordReady
+  isSpec: "True"
+  fullName: MASES.KNet.Clients.Consumer.KNetConsumerCallback<K, V>.RecordReady
+  fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumerCallback(Of K, V).RecordReady
+  nameWithType: KNetConsumerCallback<K, V>.RecordReady
+  nameWithType.vb: KNetConsumerCallback(Of K, V).RecordReady
 - uid: MASES.KNet.Clients.Consumer.LogTruncationException
   name: LogTruncationException
   href: api/MASES.KNet.Clients.Consumer.LogTruncationException.html
@@ -12706,6 +12928,49 @@ references:
   isSpec: "True"
   fullName: MASES.KNet.Clients.Consumer.LogTruncationException.DivergentOffsets
   nameWithType: LogTruncationException.DivergentOffsets
+- uid: MASES.KNet.Clients.Consumer.Message`2
+  name: Message<K, V>
+  href: api/MASES.KNet.Clients.Consumer.Message-2.html
+  commentId: T:MASES.KNet.Clients.Consumer.Message`2
+  name.vb: Message(Of K, V)
+  fullName: MASES.KNet.Clients.Consumer.Message<K, V>
+  fullName.vb: MASES.KNet.Clients.Consumer.Message(Of K, V)
+  nameWithType: Message<K, V>
+  nameWithType.vb: Message(Of K, V)
+- uid: MASES.KNet.Clients.Consumer.Message`2.Key
+  name: Key
+  href: api/MASES.KNet.Clients.Consumer.Message-2.html#MASES_KNet_Clients_Consumer_Message_2_Key
+  commentId: P:MASES.KNet.Clients.Consumer.Message`2.Key
+  fullName: MASES.KNet.Clients.Consumer.Message<K, V>.Key
+  fullName.vb: MASES.KNet.Clients.Consumer.Message(Of K, V).Key
+  nameWithType: Message<K, V>.Key
+  nameWithType.vb: Message(Of K, V).Key
+- uid: MASES.KNet.Clients.Consumer.Message`2.Key*
+  name: Key
+  href: api/MASES.KNet.Clients.Consumer.Message-2.html#MASES_KNet_Clients_Consumer_Message_2_Key_
+  commentId: Overload:MASES.KNet.Clients.Consumer.Message`2.Key
+  isSpec: "True"
+  fullName: MASES.KNet.Clients.Consumer.Message<K, V>.Key
+  fullName.vb: MASES.KNet.Clients.Consumer.Message(Of K, V).Key
+  nameWithType: Message<K, V>.Key
+  nameWithType.vb: Message(Of K, V).Key
+- uid: MASES.KNet.Clients.Consumer.Message`2.Value
+  name: Value
+  href: api/MASES.KNet.Clients.Consumer.Message-2.html#MASES_KNet_Clients_Consumer_Message_2_Value
+  commentId: P:MASES.KNet.Clients.Consumer.Message`2.Value
+  fullName: MASES.KNet.Clients.Consumer.Message<K, V>.Value
+  fullName.vb: MASES.KNet.Clients.Consumer.Message(Of K, V).Value
+  nameWithType: Message<K, V>.Value
+  nameWithType.vb: Message(Of K, V).Value
+- uid: MASES.KNet.Clients.Consumer.Message`2.Value*
+  name: Value
+  href: api/MASES.KNet.Clients.Consumer.Message-2.html#MASES_KNet_Clients_Consumer_Message_2_Value_
+  commentId: Overload:MASES.KNet.Clients.Consumer.Message`2.Value
+  isSpec: "True"
+  fullName: MASES.KNet.Clients.Consumer.Message<K, V>.Value
+  fullName.vb: MASES.KNet.Clients.Consumer.Message(Of K, V).Value
+  nameWithType: Message<K, V>.Value
+  nameWithType.vb: Message(Of K, V).Value
 - uid: MASES.KNet.Clients.Consumer.NoOffsetForPartitionException
   name: NoOffsetForPartitionException
   href: api/MASES.KNet.Clients.Consumer.NoOffsetForPartitionException.html
@@ -12987,15 +13252,15 @@ references:
   commentId: T:MASES.KNet.Clients.Producer.Callback
   fullName: MASES.KNet.Clients.Producer.Callback
   nameWithType: Callback
-- uid: MASES.KNet.Clients.Producer.Callback.#ctor(System.Action{MASES.KNet.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})
-  name: Callback(Action<RecordMetadata, JVMBridgeException>)
-  href: api/MASES.KNet.Clients.Producer.Callback.html#MASES_KNet_Clients_Producer_Callback__ctor_System_Action_MASES_KNet_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__
-  commentId: M:MASES.KNet.Clients.Producer.Callback.#ctor(System.Action{MASES.KNet.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})
-  name.vb: Callback(Action(Of RecordMetadata, JVMBridgeException))
-  fullName: MASES.KNet.Clients.Producer.Callback.Callback(System.Action<MASES.KNet.Clients.Producer.RecordMetadata, MASES.JCOBridge.C2JBridge.JVMBridgeException>)
-  fullName.vb: MASES.KNet.Clients.Producer.Callback.Callback(System.Action(Of MASES.KNet.Clients.Producer.RecordMetadata, MASES.JCOBridge.C2JBridge.JVMBridgeException))
-  nameWithType: Callback.Callback(Action<RecordMetadata, JVMBridgeException>)
-  nameWithType.vb: Callback.Callback(Action(Of RecordMetadata, JVMBridgeException))
+- uid: MASES.KNet.Clients.Producer.Callback.#ctor(System.Action{MASES.KNet.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException},System.Boolean)
+  name: Callback(Action<RecordMetadata, JVMBridgeException>, Boolean)
+  href: api/MASES.KNet.Clients.Producer.Callback.html#MASES_KNet_Clients_Producer_Callback__ctor_System_Action_MASES_KNet_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__System_Boolean_
+  commentId: M:MASES.KNet.Clients.Producer.Callback.#ctor(System.Action{MASES.KNet.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException},System.Boolean)
+  name.vb: Callback(Action(Of RecordMetadata, JVMBridgeException), Boolean)
+  fullName: MASES.KNet.Clients.Producer.Callback.Callback(System.Action<MASES.KNet.Clients.Producer.RecordMetadata, MASES.JCOBridge.C2JBridge.JVMBridgeException>, System.Boolean)
+  fullName.vb: MASES.KNet.Clients.Producer.Callback.Callback(System.Action(Of MASES.KNet.Clients.Producer.RecordMetadata, MASES.JCOBridge.C2JBridge.JVMBridgeException), System.Boolean)
+  nameWithType: Callback.Callback(Action<RecordMetadata, JVMBridgeException>, Boolean)
+  nameWithType.vb: Callback.Callback(Action(Of RecordMetadata, JVMBridgeException), Boolean)
 - uid: MASES.KNet.Clients.Producer.Callback.#ctor*
   name: Callback
   href: api/MASES.KNet.Clients.Producer.Callback.html#MASES_KNet_Clients_Producer_Callback__ctor_
@@ -13061,6 +13326,91 @@ references:
   isSpec: "True"
   fullName: MASES.KNet.Clients.Producer.ICallback.OnCompletion
   nameWithType: ICallback.OnCompletion
+- uid: MASES.KNet.Clients.Producer.IKNetProducer`2
+  name: IKNetProducer<K, V>
+  href: api/MASES.KNet.Clients.Producer.IKNetProducer-2.html
+  commentId: T:MASES.KNet.Clients.Producer.IKNetProducer`2
+  name.vb: IKNetProducer(Of K, V)
+  fullName: MASES.KNet.Clients.Producer.IKNetProducer<K, V>
+  fullName.vb: MASES.KNet.Clients.Producer.IKNetProducer(Of K, V)
+  nameWithType: IKNetProducer<K, V>
+  nameWithType.vb: IKNetProducer(Of K, V)
+- uid: MASES.KNet.Clients.Producer.IKNetProducer`2.Send(System.String,`0,`1)
+  name: Send(String, K, V)
+  href: api/MASES.KNet.Clients.Producer.IKNetProducer-2.html#MASES_KNet_Clients_Producer_IKNetProducer_2_Send_System_String__0__1_
+  commentId: M:MASES.KNet.Clients.Producer.IKNetProducer`2.Send(System.String,`0,`1)
+  fullName: MASES.KNet.Clients.Producer.IKNetProducer<K, V>.Send(System.String, K, V)
+  fullName.vb: MASES.KNet.Clients.Producer.IKNetProducer(Of K, V).Send(System.String, K, V)
+  nameWithType: IKNetProducer<K, V>.Send(String, K, V)
+  nameWithType.vb: IKNetProducer(Of K, V).Send(String, K, V)
+- uid: MASES.KNet.Clients.Producer.IKNetProducer`2.Send(System.String,`1)
+  name: Send(String, V)
+  href: api/MASES.KNet.Clients.Producer.IKNetProducer-2.html#MASES_KNet_Clients_Producer_IKNetProducer_2_Send_System_String__1_
+  commentId: M:MASES.KNet.Clients.Producer.IKNetProducer`2.Send(System.String,`1)
+  fullName: MASES.KNet.Clients.Producer.IKNetProducer<K, V>.Send(System.String, V)
+  fullName.vb: MASES.KNet.Clients.Producer.IKNetProducer(Of K, V).Send(System.String, V)
+  nameWithType: IKNetProducer<K, V>.Send(String, V)
+  nameWithType.vb: IKNetProducer(Of K, V).Send(String, V)
+- uid: MASES.KNet.Clients.Producer.IKNetProducer`2.Send(System.String,System.Int32,`0,`1)
+  name: Send(String, Int32, K, V)
+  href: api/MASES.KNet.Clients.Producer.IKNetProducer-2.html#MASES_KNet_Clients_Producer_IKNetProducer_2_Send_System_String_System_Int32__0__1_
+  commentId: M:MASES.KNet.Clients.Producer.IKNetProducer`2.Send(System.String,System.Int32,`0,`1)
+  fullName: MASES.KNet.Clients.Producer.IKNetProducer<K, V>.Send(System.String, System.Int32, K, V)
+  fullName.vb: MASES.KNet.Clients.Producer.IKNetProducer(Of K, V).Send(System.String, System.Int32, K, V)
+  nameWithType: IKNetProducer<K, V>.Send(String, Int32, K, V)
+  nameWithType.vb: IKNetProducer(Of K, V).Send(String, Int32, K, V)
+- uid: MASES.KNet.Clients.Producer.IKNetProducer`2.Send(System.String,System.Int32,`0,`1,Java.Lang.Iterable{MASES.KNet.Common.Header.Header})
+  name: Send(String, Int32, K, V, Iterable<Header>)
+  href: api/MASES.KNet.Clients.Producer.IKNetProducer-2.html#MASES_KNet_Clients_Producer_IKNetProducer_2_Send_System_String_System_Int32__0__1_Java_Lang_Iterable_MASES_KNet_Common_Header_Header__
+  commentId: M:MASES.KNet.Clients.Producer.IKNetProducer`2.Send(System.String,System.Int32,`0,`1,Java.Lang.Iterable{MASES.KNet.Common.Header.Header})
+  name.vb: Send(String, Int32, K, V, Iterable(Of Header))
+  fullName: MASES.KNet.Clients.Producer.IKNetProducer<K, V>.Send(System.String, System.Int32, K, V, Java.Lang.Iterable<MASES.KNet.Common.Header.Header>)
+  fullName.vb: MASES.KNet.Clients.Producer.IKNetProducer(Of K, V).Send(System.String, System.Int32, K, V, Java.Lang.Iterable(Of MASES.KNet.Common.Header.Header))
+  nameWithType: IKNetProducer<K, V>.Send(String, Int32, K, V, Iterable<Header>)
+  nameWithType.vb: IKNetProducer(Of K, V).Send(String, Int32, K, V, Iterable(Of Header))
+- uid: MASES.KNet.Clients.Producer.IKNetProducer`2.Send(System.String,System.Int32,System.Int64,`0,`1)
+  name: Send(String, Int32, Int64, K, V)
+  href: api/MASES.KNet.Clients.Producer.IKNetProducer-2.html#MASES_KNet_Clients_Producer_IKNetProducer_2_Send_System_String_System_Int32_System_Int64__0__1_
+  commentId: M:MASES.KNet.Clients.Producer.IKNetProducer`2.Send(System.String,System.Int32,System.Int64,`0,`1)
+  fullName: MASES.KNet.Clients.Producer.IKNetProducer<K, V>.Send(System.String, System.Int32, System.Int64, K, V)
+  fullName.vb: MASES.KNet.Clients.Producer.IKNetProducer(Of K, V).Send(System.String, System.Int32, System.Int64, K, V)
+  nameWithType: IKNetProducer<K, V>.Send(String, Int32, Int64, K, V)
+  nameWithType.vb: IKNetProducer(Of K, V).Send(String, Int32, Int64, K, V)
+- uid: MASES.KNet.Clients.Producer.IKNetProducer`2.Send(System.String,System.Int32,System.Int64,`0,`1,Java.Lang.Iterable{MASES.KNet.Common.Header.Header})
+  name: Send(String, Int32, Int64, K, V, Iterable<Header>)
+  href: api/MASES.KNet.Clients.Producer.IKNetProducer-2.html#MASES_KNet_Clients_Producer_IKNetProducer_2_Send_System_String_System_Int32_System_Int64__0__1_Java_Lang_Iterable_MASES_KNet_Common_Header_Header__
+  commentId: M:MASES.KNet.Clients.Producer.IKNetProducer`2.Send(System.String,System.Int32,System.Int64,`0,`1,Java.Lang.Iterable{MASES.KNet.Common.Header.Header})
+  name.vb: Send(String, Int32, Int64, K, V, Iterable(Of Header))
+  fullName: MASES.KNet.Clients.Producer.IKNetProducer<K, V>.Send(System.String, System.Int32, System.Int64, K, V, Java.Lang.Iterable<MASES.KNet.Common.Header.Header>)
+  fullName.vb: MASES.KNet.Clients.Producer.IKNetProducer(Of K, V).Send(System.String, System.Int32, System.Int64, K, V, Java.Lang.Iterable(Of MASES.KNet.Common.Header.Header))
+  nameWithType: IKNetProducer<K, V>.Send(String, Int32, Int64, K, V, Iterable<Header>)
+  nameWithType.vb: IKNetProducer(Of K, V).Send(String, Int32, Int64, K, V, Iterable(Of Header))
+- uid: MASES.KNet.Clients.Producer.IKNetProducer`2.Send*
+  name: Send
+  href: api/MASES.KNet.Clients.Producer.IKNetProducer-2.html#MASES_KNet_Clients_Producer_IKNetProducer_2_Send_
+  commentId: Overload:MASES.KNet.Clients.Producer.IKNetProducer`2.Send
+  isSpec: "True"
+  fullName: MASES.KNet.Clients.Producer.IKNetProducer<K, V>.Send
+  fullName.vb: MASES.KNet.Clients.Producer.IKNetProducer(Of K, V).Send
+  nameWithType: IKNetProducer<K, V>.Send
+  nameWithType.vb: IKNetProducer(Of K, V).Send
+- uid: MASES.KNet.Clients.Producer.IKNetProducer`2.SetCallback(MASES.KNet.Clients.Producer.Callback)
+  name: SetCallback(Callback)
+  href: api/MASES.KNet.Clients.Producer.IKNetProducer-2.html#MASES_KNet_Clients_Producer_IKNetProducer_2_SetCallback_MASES_KNet_Clients_Producer_Callback_
+  commentId: M:MASES.KNet.Clients.Producer.IKNetProducer`2.SetCallback(MASES.KNet.Clients.Producer.Callback)
+  fullName: MASES.KNet.Clients.Producer.IKNetProducer<K, V>.SetCallback(MASES.KNet.Clients.Producer.Callback)
+  fullName.vb: MASES.KNet.Clients.Producer.IKNetProducer(Of K, V).SetCallback(MASES.KNet.Clients.Producer.Callback)
+  nameWithType: IKNetProducer<K, V>.SetCallback(Callback)
+  nameWithType.vb: IKNetProducer(Of K, V).SetCallback(Callback)
+- uid: MASES.KNet.Clients.Producer.IKNetProducer`2.SetCallback*
+  name: SetCallback
+  href: api/MASES.KNet.Clients.Producer.IKNetProducer-2.html#MASES_KNet_Clients_Producer_IKNetProducer_2_SetCallback_
+  commentId: Overload:MASES.KNet.Clients.Producer.IKNetProducer`2.SetCallback
+  isSpec: "True"
+  fullName: MASES.KNet.Clients.Producer.IKNetProducer<K, V>.SetCallback
+  fullName.vb: MASES.KNet.Clients.Producer.IKNetProducer(Of K, V).SetCallback
+  nameWithType: IKNetProducer<K, V>.SetCallback
+  nameWithType.vb: IKNetProducer(Of K, V).SetCallback
 - uid: MASES.KNet.Clients.Producer.IProducer`2
   name: IProducer<K, V>
   href: api/MASES.KNet.Clients.Producer.IProducer-2.html
@@ -13545,6 +13895,142 @@ references:
   fullName.vb: MASES.KNet.Clients.Producer.KafkaProducer(Of K, V).SendOffsetsToTransaction
   nameWithType: KafkaProducer<K, V>.SendOffsetsToTransaction
   nameWithType.vb: KafkaProducer(Of K, V).SendOffsetsToTransaction
+- uid: MASES.KNet.Clients.Producer.KNetProducer`2
+  name: KNetProducer<K, V>
+  href: api/MASES.KNet.Clients.Producer.KNetProducer-2.html
+  commentId: T:MASES.KNet.Clients.Producer.KNetProducer`2
+  name.vb: KNetProducer(Of K, V)
+  fullName: MASES.KNet.Clients.Producer.KNetProducer<K, V>
+  fullName.vb: MASES.KNet.Clients.Producer.KNetProducer(Of K, V)
+  nameWithType: KNetProducer<K, V>
+  nameWithType.vb: KNetProducer(Of K, V)
+- uid: MASES.KNet.Clients.Producer.KNetProducer`2.#ctor
+  name: KNetProducer()
+  href: api/MASES.KNet.Clients.Producer.KNetProducer-2.html#MASES_KNet_Clients_Producer_KNetProducer_2__ctor
+  commentId: M:MASES.KNet.Clients.Producer.KNetProducer`2.#ctor
+  fullName: MASES.KNet.Clients.Producer.KNetProducer<K, V>.KNetProducer()
+  fullName.vb: MASES.KNet.Clients.Producer.KNetProducer(Of K, V).KNetProducer()
+  nameWithType: KNetProducer<K, V>.KNetProducer()
+  nameWithType.vb: KNetProducer(Of K, V).KNetProducer()
+- uid: MASES.KNet.Clients.Producer.KNetProducer`2.#ctor(Java.Util.Properties)
+  name: KNetProducer(Properties)
+  href: api/MASES.KNet.Clients.Producer.KNetProducer-2.html#MASES_KNet_Clients_Producer_KNetProducer_2__ctor_Java_Util_Properties_
+  commentId: M:MASES.KNet.Clients.Producer.KNetProducer`2.#ctor(Java.Util.Properties)
+  fullName: MASES.KNet.Clients.Producer.KNetProducer<K, V>.KNetProducer(Java.Util.Properties)
+  fullName.vb: MASES.KNet.Clients.Producer.KNetProducer(Of K, V).KNetProducer(Java.Util.Properties)
+  nameWithType: KNetProducer<K, V>.KNetProducer(Properties)
+  nameWithType.vb: KNetProducer(Of K, V).KNetProducer(Properties)
+- uid: MASES.KNet.Clients.Producer.KNetProducer`2.#ctor(Java.Util.Properties,MASES.KNet.Common.Serialization.Serializer{`0},MASES.KNet.Common.Serialization.Serializer{`1})
+  name: KNetProducer(Properties, Serializer<K>, Serializer<V>)
+  href: api/MASES.KNet.Clients.Producer.KNetProducer-2.html#MASES_KNet_Clients_Producer_KNetProducer_2__ctor_Java_Util_Properties_MASES_KNet_Common_Serialization_Serializer__0__MASES_KNet_Common_Serialization_Serializer__1__
+  commentId: M:MASES.KNet.Clients.Producer.KNetProducer`2.#ctor(Java.Util.Properties,MASES.KNet.Common.Serialization.Serializer{`0},MASES.KNet.Common.Serialization.Serializer{`1})
+  name.vb: KNetProducer(Properties, Serializer(Of K), Serializer(Of V))
+  fullName: MASES.KNet.Clients.Producer.KNetProducer<K, V>.KNetProducer(Java.Util.Properties, MASES.KNet.Common.Serialization.Serializer<K>, MASES.KNet.Common.Serialization.Serializer<V>)
+  fullName.vb: MASES.KNet.Clients.Producer.KNetProducer(Of K, V).KNetProducer(Java.Util.Properties, MASES.KNet.Common.Serialization.Serializer(Of K), MASES.KNet.Common.Serialization.Serializer(Of V))
+  nameWithType: KNetProducer<K, V>.KNetProducer(Properties, Serializer<K>, Serializer<V>)
+  nameWithType.vb: KNetProducer(Of K, V).KNetProducer(Properties, Serializer(Of K), Serializer(Of V))
+- uid: MASES.KNet.Clients.Producer.KNetProducer`2.#ctor*
+  name: KNetProducer
+  href: api/MASES.KNet.Clients.Producer.KNetProducer-2.html#MASES_KNet_Clients_Producer_KNetProducer_2__ctor_
+  commentId: Overload:MASES.KNet.Clients.Producer.KNetProducer`2.#ctor
+  isSpec: "True"
+  fullName: MASES.KNet.Clients.Producer.KNetProducer<K, V>.KNetProducer
+  fullName.vb: MASES.KNet.Clients.Producer.KNetProducer(Of K, V).KNetProducer
+  nameWithType: KNetProducer<K, V>.KNetProducer
+  nameWithType.vb: KNetProducer(Of K, V).KNetProducer
+- uid: MASES.KNet.Clients.Producer.KNetProducer`2.ClassName
+  name: ClassName
+  href: api/MASES.KNet.Clients.Producer.KNetProducer-2.html#MASES_KNet_Clients_Producer_KNetProducer_2_ClassName
+  commentId: P:MASES.KNet.Clients.Producer.KNetProducer`2.ClassName
+  fullName: MASES.KNet.Clients.Producer.KNetProducer<K, V>.ClassName
+  fullName.vb: MASES.KNet.Clients.Producer.KNetProducer(Of K, V).ClassName
+  nameWithType: KNetProducer<K, V>.ClassName
+  nameWithType.vb: KNetProducer(Of K, V).ClassName
+- uid: MASES.KNet.Clients.Producer.KNetProducer`2.ClassName*
+  name: ClassName
+  href: api/MASES.KNet.Clients.Producer.KNetProducer-2.html#MASES_KNet_Clients_Producer_KNetProducer_2_ClassName_
+  commentId: Overload:MASES.KNet.Clients.Producer.KNetProducer`2.ClassName
+  isSpec: "True"
+  fullName: MASES.KNet.Clients.Producer.KNetProducer<K, V>.ClassName
+  fullName.vb: MASES.KNet.Clients.Producer.KNetProducer(Of K, V).ClassName
+  nameWithType: KNetProducer<K, V>.ClassName
+  nameWithType.vb: KNetProducer(Of K, V).ClassName
+- uid: MASES.KNet.Clients.Producer.KNetProducer`2.Send(System.String,`0,`1)
+  name: Send(String, K, V)
+  href: api/MASES.KNet.Clients.Producer.KNetProducer-2.html#MASES_KNet_Clients_Producer_KNetProducer_2_Send_System_String__0__1_
+  commentId: M:MASES.KNet.Clients.Producer.KNetProducer`2.Send(System.String,`0,`1)
+  fullName: MASES.KNet.Clients.Producer.KNetProducer<K, V>.Send(System.String, K, V)
+  fullName.vb: MASES.KNet.Clients.Producer.KNetProducer(Of K, V).Send(System.String, K, V)
+  nameWithType: KNetProducer<K, V>.Send(String, K, V)
+  nameWithType.vb: KNetProducer(Of K, V).Send(String, K, V)
+- uid: MASES.KNet.Clients.Producer.KNetProducer`2.Send(System.String,`1)
+  name: Send(String, V)
+  href: api/MASES.KNet.Clients.Producer.KNetProducer-2.html#MASES_KNet_Clients_Producer_KNetProducer_2_Send_System_String__1_
+  commentId: M:MASES.KNet.Clients.Producer.KNetProducer`2.Send(System.String,`1)
+  fullName: MASES.KNet.Clients.Producer.KNetProducer<K, V>.Send(System.String, V)
+  fullName.vb: MASES.KNet.Clients.Producer.KNetProducer(Of K, V).Send(System.String, V)
+  nameWithType: KNetProducer<K, V>.Send(String, V)
+  nameWithType.vb: KNetProducer(Of K, V).Send(String, V)
+- uid: MASES.KNet.Clients.Producer.KNetProducer`2.Send(System.String,System.Int32,`0,`1)
+  name: Send(String, Int32, K, V)
+  href: api/MASES.KNet.Clients.Producer.KNetProducer-2.html#MASES_KNet_Clients_Producer_KNetProducer_2_Send_System_String_System_Int32__0__1_
+  commentId: M:MASES.KNet.Clients.Producer.KNetProducer`2.Send(System.String,System.Int32,`0,`1)
+  fullName: MASES.KNet.Clients.Producer.KNetProducer<K, V>.Send(System.String, System.Int32, K, V)
+  fullName.vb: MASES.KNet.Clients.Producer.KNetProducer(Of K, V).Send(System.String, System.Int32, K, V)
+  nameWithType: KNetProducer<K, V>.Send(String, Int32, K, V)
+  nameWithType.vb: KNetProducer(Of K, V).Send(String, Int32, K, V)
+- uid: MASES.KNet.Clients.Producer.KNetProducer`2.Send(System.String,System.Int32,`0,`1,Java.Lang.Iterable{MASES.KNet.Common.Header.Header})
+  name: Send(String, Int32, K, V, Iterable<Header>)
+  href: api/MASES.KNet.Clients.Producer.KNetProducer-2.html#MASES_KNet_Clients_Producer_KNetProducer_2_Send_System_String_System_Int32__0__1_Java_Lang_Iterable_MASES_KNet_Common_Header_Header__
+  commentId: M:MASES.KNet.Clients.Producer.KNetProducer`2.Send(System.String,System.Int32,`0,`1,Java.Lang.Iterable{MASES.KNet.Common.Header.Header})
+  name.vb: Send(String, Int32, K, V, Iterable(Of Header))
+  fullName: MASES.KNet.Clients.Producer.KNetProducer<K, V>.Send(System.String, System.Int32, K, V, Java.Lang.Iterable<MASES.KNet.Common.Header.Header>)
+  fullName.vb: MASES.KNet.Clients.Producer.KNetProducer(Of K, V).Send(System.String, System.Int32, K, V, Java.Lang.Iterable(Of MASES.KNet.Common.Header.Header))
+  nameWithType: KNetProducer<K, V>.Send(String, Int32, K, V, Iterable<Header>)
+  nameWithType.vb: KNetProducer(Of K, V).Send(String, Int32, K, V, Iterable(Of Header))
+- uid: MASES.KNet.Clients.Producer.KNetProducer`2.Send(System.String,System.Int32,System.Int64,`0,`1)
+  name: Send(String, Int32, Int64, K, V)
+  href: api/MASES.KNet.Clients.Producer.KNetProducer-2.html#MASES_KNet_Clients_Producer_KNetProducer_2_Send_System_String_System_Int32_System_Int64__0__1_
+  commentId: M:MASES.KNet.Clients.Producer.KNetProducer`2.Send(System.String,System.Int32,System.Int64,`0,`1)
+  fullName: MASES.KNet.Clients.Producer.KNetProducer<K, V>.Send(System.String, System.Int32, System.Int64, K, V)
+  fullName.vb: MASES.KNet.Clients.Producer.KNetProducer(Of K, V).Send(System.String, System.Int32, System.Int64, K, V)
+  nameWithType: KNetProducer<K, V>.Send(String, Int32, Int64, K, V)
+  nameWithType.vb: KNetProducer(Of K, V).Send(String, Int32, Int64, K, V)
+- uid: MASES.KNet.Clients.Producer.KNetProducer`2.Send(System.String,System.Int32,System.Int64,`0,`1,Java.Lang.Iterable{MASES.KNet.Common.Header.Header})
+  name: Send(String, Int32, Int64, K, V, Iterable<Header>)
+  href: api/MASES.KNet.Clients.Producer.KNetProducer-2.html#MASES_KNet_Clients_Producer_KNetProducer_2_Send_System_String_System_Int32_System_Int64__0__1_Java_Lang_Iterable_MASES_KNet_Common_Header_Header__
+  commentId: M:MASES.KNet.Clients.Producer.KNetProducer`2.Send(System.String,System.Int32,System.Int64,`0,`1,Java.Lang.Iterable{MASES.KNet.Common.Header.Header})
+  name.vb: Send(String, Int32, Int64, K, V, Iterable(Of Header))
+  fullName: MASES.KNet.Clients.Producer.KNetProducer<K, V>.Send(System.String, System.Int32, System.Int64, K, V, Java.Lang.Iterable<MASES.KNet.Common.Header.Header>)
+  fullName.vb: MASES.KNet.Clients.Producer.KNetProducer(Of K, V).Send(System.String, System.Int32, System.Int64, K, V, Java.Lang.Iterable(Of MASES.KNet.Common.Header.Header))
+  nameWithType: KNetProducer<K, V>.Send(String, Int32, Int64, K, V, Iterable<Header>)
+  nameWithType.vb: KNetProducer(Of K, V).Send(String, Int32, Int64, K, V, Iterable(Of Header))
+- uid: MASES.KNet.Clients.Producer.KNetProducer`2.Send*
+  name: Send
+  href: api/MASES.KNet.Clients.Producer.KNetProducer-2.html#MASES_KNet_Clients_Producer_KNetProducer_2_Send_
+  commentId: Overload:MASES.KNet.Clients.Producer.KNetProducer`2.Send
+  isSpec: "True"
+  fullName: MASES.KNet.Clients.Producer.KNetProducer<K, V>.Send
+  fullName.vb: MASES.KNet.Clients.Producer.KNetProducer(Of K, V).Send
+  nameWithType: KNetProducer<K, V>.Send
+  nameWithType.vb: KNetProducer(Of K, V).Send
+- uid: MASES.KNet.Clients.Producer.KNetProducer`2.SetCallback(MASES.KNet.Clients.Producer.Callback)
+  name: SetCallback(Callback)
+  href: api/MASES.KNet.Clients.Producer.KNetProducer-2.html#MASES_KNet_Clients_Producer_KNetProducer_2_SetCallback_MASES_KNet_Clients_Producer_Callback_
+  commentId: M:MASES.KNet.Clients.Producer.KNetProducer`2.SetCallback(MASES.KNet.Clients.Producer.Callback)
+  fullName: MASES.KNet.Clients.Producer.KNetProducer<K, V>.SetCallback(MASES.KNet.Clients.Producer.Callback)
+  fullName.vb: MASES.KNet.Clients.Producer.KNetProducer(Of K, V).SetCallback(MASES.KNet.Clients.Producer.Callback)
+  nameWithType: KNetProducer<K, V>.SetCallback(Callback)
+  nameWithType.vb: KNetProducer(Of K, V).SetCallback(Callback)
+- uid: MASES.KNet.Clients.Producer.KNetProducer`2.SetCallback*
+  name: SetCallback
+  href: api/MASES.KNet.Clients.Producer.KNetProducer-2.html#MASES_KNet_Clients_Producer_KNetProducer_2_SetCallback_
+  commentId: Overload:MASES.KNet.Clients.Producer.KNetProducer`2.SetCallback
+  isSpec: "True"
+  fullName: MASES.KNet.Clients.Producer.KNetProducer<K, V>.SetCallback
+  fullName.vb: MASES.KNet.Clients.Producer.KNetProducer(Of K, V).SetCallback
+  nameWithType: KNetProducer<K, V>.SetCallback
+  nameWithType.vb: KNetProducer(Of K, V).SetCallback
 - uid: MASES.KNet.Clients.Producer.ProducerConfig
   name: ProducerConfig
   href: api/MASES.KNet.Clients.Producer.ProducerConfig.html
@@ -14238,6 +14724,19 @@ references:
   isSpec: "True"
   fullName: MASES.KNet.Clients.Producer.ProducerConfigBuilder.WithMaxBlockMs
   nameWithType: ProducerConfigBuilder.WithMaxBlockMs
+- uid: MASES.KNet.Clients.Producer.ProducerConfigBuilder.WithMaxInFlightRequestPerConnection(System.Int32)
+  name: WithMaxInFlightRequestPerConnection(Int32)
+  href: api/MASES.KNet.Clients.Producer.ProducerConfigBuilder.html#MASES_KNet_Clients_Producer_ProducerConfigBuilder_WithMaxInFlightRequestPerConnection_System_Int32_
+  commentId: M:MASES.KNet.Clients.Producer.ProducerConfigBuilder.WithMaxInFlightRequestPerConnection(System.Int32)
+  fullName: MASES.KNet.Clients.Producer.ProducerConfigBuilder.WithMaxInFlightRequestPerConnection(System.Int32)
+  nameWithType: ProducerConfigBuilder.WithMaxInFlightRequestPerConnection(Int32)
+- uid: MASES.KNet.Clients.Producer.ProducerConfigBuilder.WithMaxInFlightRequestPerConnection*
+  name: WithMaxInFlightRequestPerConnection
+  href: api/MASES.KNet.Clients.Producer.ProducerConfigBuilder.html#MASES_KNet_Clients_Producer_ProducerConfigBuilder_WithMaxInFlightRequestPerConnection_
+  commentId: Overload:MASES.KNet.Clients.Producer.ProducerConfigBuilder.WithMaxInFlightRequestPerConnection
+  isSpec: "True"
+  fullName: MASES.KNet.Clients.Producer.ProducerConfigBuilder.WithMaxInFlightRequestPerConnection
+  nameWithType: ProducerConfigBuilder.WithMaxInFlightRequestPerConnection
 - uid: MASES.KNet.Clients.Producer.ProducerConfigBuilder.WithMaxRequestSize(System.Int32)
   name: WithMaxRequestSize(Int32)
   href: api/MASES.KNet.Clients.Producer.ProducerConfigBuilder.html#MASES_KNet_Clients_Producer_ProducerConfigBuilder_WithMaxRequestSize_System_Int32_
@@ -14290,6 +14789,32 @@ references:
   isSpec: "True"
   fullName: MASES.KNet.Clients.Producer.ProducerConfigBuilder.WithSecurityProviders
   nameWithType: ProducerConfigBuilder.WithSecurityProviders
+- uid: MASES.KNet.Clients.Producer.ProducerConfigBuilder.WithTransactionalId(System.String)
+  name: WithTransactionalId(String)
+  href: api/MASES.KNet.Clients.Producer.ProducerConfigBuilder.html#MASES_KNet_Clients_Producer_ProducerConfigBuilder_WithTransactionalId_System_String_
+  commentId: M:MASES.KNet.Clients.Producer.ProducerConfigBuilder.WithTransactionalId(System.String)
+  fullName: MASES.KNet.Clients.Producer.ProducerConfigBuilder.WithTransactionalId(System.String)
+  nameWithType: ProducerConfigBuilder.WithTransactionalId(String)
+- uid: MASES.KNet.Clients.Producer.ProducerConfigBuilder.WithTransactionalId*
+  name: WithTransactionalId
+  href: api/MASES.KNet.Clients.Producer.ProducerConfigBuilder.html#MASES_KNet_Clients_Producer_ProducerConfigBuilder_WithTransactionalId_
+  commentId: Overload:MASES.KNet.Clients.Producer.ProducerConfigBuilder.WithTransactionalId
+  isSpec: "True"
+  fullName: MASES.KNet.Clients.Producer.ProducerConfigBuilder.WithTransactionalId
+  nameWithType: ProducerConfigBuilder.WithTransactionalId
+- uid: MASES.KNet.Clients.Producer.ProducerConfigBuilder.WithTransactionTimeout(System.Int32)
+  name: WithTransactionTimeout(Int32)
+  href: api/MASES.KNet.Clients.Producer.ProducerConfigBuilder.html#MASES_KNet_Clients_Producer_ProducerConfigBuilder_WithTransactionTimeout_System_Int32_
+  commentId: M:MASES.KNet.Clients.Producer.ProducerConfigBuilder.WithTransactionTimeout(System.Int32)
+  fullName: MASES.KNet.Clients.Producer.ProducerConfigBuilder.WithTransactionTimeout(System.Int32)
+  nameWithType: ProducerConfigBuilder.WithTransactionTimeout(Int32)
+- uid: MASES.KNet.Clients.Producer.ProducerConfigBuilder.WithTransactionTimeout*
+  name: WithTransactionTimeout
+  href: api/MASES.KNet.Clients.Producer.ProducerConfigBuilder.html#MASES_KNet_Clients_Producer_ProducerConfigBuilder_WithTransactionTimeout_
+  commentId: Overload:MASES.KNet.Clients.Producer.ProducerConfigBuilder.WithTransactionTimeout
+  isSpec: "True"
+  fullName: MASES.KNet.Clients.Producer.ProducerConfigBuilder.WithTransactionTimeout
+  nameWithType: ProducerConfigBuilder.WithTransactionTimeout
 - uid: MASES.KNet.Clients.Producer.ProducerConfigBuilder.WithValueSerializerClass(System.String)
   name: WithValueSerializerClass(String)
   href: api/MASES.KNet.Clients.Producer.ProducerConfigBuilder.html#MASES_KNet_Clients_Producer_ProducerConfigBuilder_WithValueSerializerClass_System_String_
@@ -14303,45 +14828,6 @@ references:
   isSpec: "True"
   fullName: MASES.KNet.Clients.Producer.ProducerConfigBuilder.WithValueSerializerClass
   nameWithType: ProducerConfigBuilder.WithValueSerializerClass
-- uid: MASES.KNet.Clients.Producer.ProducerConfigBuilder.WitMaxInFlightRequestPerConnection(System.Int32)
-  name: WitMaxInFlightRequestPerConnection(Int32)
-  href: api/MASES.KNet.Clients.Producer.ProducerConfigBuilder.html#MASES_KNet_Clients_Producer_ProducerConfigBuilder_WitMaxInFlightRequestPerConnection_System_Int32_
-  commentId: M:MASES.KNet.Clients.Producer.ProducerConfigBuilder.WitMaxInFlightRequestPerConnection(System.Int32)
-  fullName: MASES.KNet.Clients.Producer.ProducerConfigBuilder.WitMaxInFlightRequestPerConnection(System.Int32)
-  nameWithType: ProducerConfigBuilder.WitMaxInFlightRequestPerConnection(Int32)
-- uid: MASES.KNet.Clients.Producer.ProducerConfigBuilder.WitMaxInFlightRequestPerConnection*
-  name: WitMaxInFlightRequestPerConnection
-  href: api/MASES.KNet.Clients.Producer.ProducerConfigBuilder.html#MASES_KNet_Clients_Producer_ProducerConfigBuilder_WitMaxInFlightRequestPerConnection_
-  commentId: Overload:MASES.KNet.Clients.Producer.ProducerConfigBuilder.WitMaxInFlightRequestPerConnection
-  isSpec: "True"
-  fullName: MASES.KNet.Clients.Producer.ProducerConfigBuilder.WitMaxInFlightRequestPerConnection
-  nameWithType: ProducerConfigBuilder.WitMaxInFlightRequestPerConnection
-- uid: MASES.KNet.Clients.Producer.ProducerConfigBuilder.WitTransactionalId(System.String)
-  name: WitTransactionalId(String)
-  href: api/MASES.KNet.Clients.Producer.ProducerConfigBuilder.html#MASES_KNet_Clients_Producer_ProducerConfigBuilder_WitTransactionalId_System_String_
-  commentId: M:MASES.KNet.Clients.Producer.ProducerConfigBuilder.WitTransactionalId(System.String)
-  fullName: MASES.KNet.Clients.Producer.ProducerConfigBuilder.WitTransactionalId(System.String)
-  nameWithType: ProducerConfigBuilder.WitTransactionalId(String)
-- uid: MASES.KNet.Clients.Producer.ProducerConfigBuilder.WitTransactionalId*
-  name: WitTransactionalId
-  href: api/MASES.KNet.Clients.Producer.ProducerConfigBuilder.html#MASES_KNet_Clients_Producer_ProducerConfigBuilder_WitTransactionalId_
-  commentId: Overload:MASES.KNet.Clients.Producer.ProducerConfigBuilder.WitTransactionalId
-  isSpec: "True"
-  fullName: MASES.KNet.Clients.Producer.ProducerConfigBuilder.WitTransactionalId
-  nameWithType: ProducerConfigBuilder.WitTransactionalId
-- uid: MASES.KNet.Clients.Producer.ProducerConfigBuilder.WitTransactionTimeout(System.Int32)
-  name: WitTransactionTimeout(Int32)
-  href: api/MASES.KNet.Clients.Producer.ProducerConfigBuilder.html#MASES_KNet_Clients_Producer_ProducerConfigBuilder_WitTransactionTimeout_System_Int32_
-  commentId: M:MASES.KNet.Clients.Producer.ProducerConfigBuilder.WitTransactionTimeout(System.Int32)
-  fullName: MASES.KNet.Clients.Producer.ProducerConfigBuilder.WitTransactionTimeout(System.Int32)
-  nameWithType: ProducerConfigBuilder.WitTransactionTimeout(Int32)
-- uid: MASES.KNet.Clients.Producer.ProducerConfigBuilder.WitTransactionTimeout*
-  name: WitTransactionTimeout
-  href: api/MASES.KNet.Clients.Producer.ProducerConfigBuilder.html#MASES_KNet_Clients_Producer_ProducerConfigBuilder_WitTransactionTimeout_
-  commentId: Overload:MASES.KNet.Clients.Producer.ProducerConfigBuilder.WitTransactionTimeout
-  isSpec: "True"
-  fullName: MASES.KNet.Clients.Producer.ProducerConfigBuilder.WitTransactionTimeout
-  nameWithType: ProducerConfigBuilder.WitTransactionTimeout
 - uid: MASES.KNet.Clients.Producer.ProducerRecord
   name: ProducerRecord
   href: api/MASES.KNet.Clients.Producer.ProducerRecord.html
@@ -14354,54 +14840,15 @@ references:
   commentId: M:MASES.KNet.Clients.Producer.ProducerRecord.#ctor
   fullName: MASES.KNet.Clients.Producer.ProducerRecord.ProducerRecord()
   nameWithType: ProducerRecord.ProducerRecord()
-- uid: MASES.KNet.Clients.Producer.ProducerRecord.#ctor(System.String,System.Int32,System.DateTime,System.Object,System.Object)
-  name: ProducerRecord(String, Int32, DateTime, Object, Object)
-  href: api/MASES.KNet.Clients.Producer.ProducerRecord.html#MASES_KNet_Clients_Producer_ProducerRecord__ctor_System_String_System_Int32_System_DateTime_System_Object_System_Object_
-  commentId: M:MASES.KNet.Clients.Producer.ProducerRecord.#ctor(System.String,System.Int32,System.DateTime,System.Object,System.Object)
-  fullName: MASES.KNet.Clients.Producer.ProducerRecord.ProducerRecord(System.String, System.Int32, System.DateTime, System.Object, System.Object)
-  nameWithType: ProducerRecord.ProducerRecord(String, Int32, DateTime, Object, Object)
-- uid: MASES.KNet.Clients.Producer.ProducerRecord.#ctor(System.String,System.Int32,System.DateTime,System.Object,System.Object,MASES.KNet.Common.Header.Headers)
-  name: ProducerRecord(String, Int32, DateTime, Object, Object, Headers)
-  href: api/MASES.KNet.Clients.Producer.ProducerRecord.html#MASES_KNet_Clients_Producer_ProducerRecord__ctor_System_String_System_Int32_System_DateTime_System_Object_System_Object_MASES_KNet_Common_Header_Headers_
-  commentId: M:MASES.KNet.Clients.Producer.ProducerRecord.#ctor(System.String,System.Int32,System.DateTime,System.Object,System.Object,MASES.KNet.Common.Header.Headers)
-  fullName: MASES.KNet.Clients.Producer.ProducerRecord.ProducerRecord(System.String, System.Int32, System.DateTime, System.Object, System.Object, MASES.KNet.Common.Header.Headers)
-  nameWithType: ProducerRecord.ProducerRecord(String, Int32, DateTime, Object, Object, Headers)
-- uid: MASES.KNet.Clients.Producer.ProducerRecord.#ctor(System.String,System.Int32,System.Int64,System.Object,System.Object)
-  name: ProducerRecord(String, Int32, Int64, Object, Object)
-  href: api/MASES.KNet.Clients.Producer.ProducerRecord.html#MASES_KNet_Clients_Producer_ProducerRecord__ctor_System_String_System_Int32_System_Int64_System_Object_System_Object_
-  commentId: M:MASES.KNet.Clients.Producer.ProducerRecord.#ctor(System.String,System.Int32,System.Int64,System.Object,System.Object)
-  fullName: MASES.KNet.Clients.Producer.ProducerRecord.ProducerRecord(System.String, System.Int32, System.Int64, System.Object, System.Object)
-  nameWithType: ProducerRecord.ProducerRecord(String, Int32, Int64, Object, Object)
-- uid: MASES.KNet.Clients.Producer.ProducerRecord.#ctor(System.String,System.Int32,System.Int64,System.Object,System.Object,MASES.KNet.Common.Header.Headers)
-  name: ProducerRecord(String, Int32, Int64, Object, Object, Headers)
-  href: api/MASES.KNet.Clients.Producer.ProducerRecord.html#MASES_KNet_Clients_Producer_ProducerRecord__ctor_System_String_System_Int32_System_Int64_System_Object_System_Object_MASES_KNet_Common_Header_Headers_
-  commentId: M:MASES.KNet.Clients.Producer.ProducerRecord.#ctor(System.String,System.Int32,System.Int64,System.Object,System.Object,MASES.KNet.Common.Header.Headers)
-  fullName: MASES.KNet.Clients.Producer.ProducerRecord.ProducerRecord(System.String, System.Int32, System.Int64, System.Object, System.Object, MASES.KNet.Common.Header.Headers)
-  nameWithType: ProducerRecord.ProducerRecord(String, Int32, Int64, Object, Object, Headers)
-- uid: MASES.KNet.Clients.Producer.ProducerRecord.#ctor(System.String,System.Int32,System.Object,System.Object)
-  name: ProducerRecord(String, Int32, Object, Object)
-  href: api/MASES.KNet.Clients.Producer.ProducerRecord.html#MASES_KNet_Clients_Producer_ProducerRecord__ctor_System_String_System_Int32_System_Object_System_Object_
-  commentId: M:MASES.KNet.Clients.Producer.ProducerRecord.#ctor(System.String,System.Int32,System.Object,System.Object)
-  fullName: MASES.KNet.Clients.Producer.ProducerRecord.ProducerRecord(System.String, System.Int32, System.Object, System.Object)
-  nameWithType: ProducerRecord.ProducerRecord(String, Int32, Object, Object)
-- uid: MASES.KNet.Clients.Producer.ProducerRecord.#ctor(System.String,System.Int32,System.Object,System.Object,MASES.KNet.Common.Header.Headers)
-  name: ProducerRecord(String, Int32, Object, Object, Headers)
-  href: api/MASES.KNet.Clients.Producer.ProducerRecord.html#MASES_KNet_Clients_Producer_ProducerRecord__ctor_System_String_System_Int32_System_Object_System_Object_MASES_KNet_Common_Header_Headers_
-  commentId: M:MASES.KNet.Clients.Producer.ProducerRecord.#ctor(System.String,System.Int32,System.Object,System.Object,MASES.KNet.Common.Header.Headers)
-  fullName: MASES.KNet.Clients.Producer.ProducerRecord.ProducerRecord(System.String, System.Int32, System.Object, System.Object, MASES.KNet.Common.Header.Headers)
-  nameWithType: ProducerRecord.ProducerRecord(String, Int32, Object, Object, Headers)
-- uid: MASES.KNet.Clients.Producer.ProducerRecord.#ctor(System.String,System.Object)
-  name: ProducerRecord(String, Object)
-  href: api/MASES.KNet.Clients.Producer.ProducerRecord.html#MASES_KNet_Clients_Producer_ProducerRecord__ctor_System_String_System_Object_
-  commentId: M:MASES.KNet.Clients.Producer.ProducerRecord.#ctor(System.String,System.Object)
-  fullName: MASES.KNet.Clients.Producer.ProducerRecord.ProducerRecord(System.String, System.Object)
-  nameWithType: ProducerRecord.ProducerRecord(String, Object)
-- uid: MASES.KNet.Clients.Producer.ProducerRecord.#ctor(System.String,System.Object,System.Object)
-  name: ProducerRecord(String, Object, Object)
-  href: api/MASES.KNet.Clients.Producer.ProducerRecord.html#MASES_KNet_Clients_Producer_ProducerRecord__ctor_System_String_System_Object_System_Object_
-  commentId: M:MASES.KNet.Clients.Producer.ProducerRecord.#ctor(System.String,System.Object,System.Object)
-  fullName: MASES.KNet.Clients.Producer.ProducerRecord.ProducerRecord(System.String, System.Object, System.Object)
-  nameWithType: ProducerRecord.ProducerRecord(String, Object, Object)
+- uid: MASES.KNet.Clients.Producer.ProducerRecord.#ctor(System.Object[])
+  name: ProducerRecord(Object[])
+  href: api/MASES.KNet.Clients.Producer.ProducerRecord.html#MASES_KNet_Clients_Producer_ProducerRecord__ctor_System_Object___
+  commentId: M:MASES.KNet.Clients.Producer.ProducerRecord.#ctor(System.Object[])
+  name.vb: ProducerRecord(Object())
+  fullName: MASES.KNet.Clients.Producer.ProducerRecord.ProducerRecord(System.Object[])
+  fullName.vb: MASES.KNet.Clients.Producer.ProducerRecord.ProducerRecord(System.Object())
+  nameWithType: ProducerRecord.ProducerRecord(Object[])
+  nameWithType.vb: ProducerRecord.ProducerRecord(Object())
 - uid: MASES.KNet.Clients.Producer.ProducerRecord.#ctor*
   name: ProducerRecord
   href: api/MASES.KNet.Clients.Producer.ProducerRecord.html#MASES_KNet_Clients_Producer_ProducerRecord__ctor_
@@ -14409,6 +14856,19 @@ references:
   isSpec: "True"
   fullName: MASES.KNet.Clients.Producer.ProducerRecord.ProducerRecord
   nameWithType: ProducerRecord.ProducerRecord
+- uid: MASES.KNet.Clients.Producer.ProducerRecord.ClassName
+  name: ClassName
+  href: api/MASES.KNet.Clients.Producer.ProducerRecord.html#MASES_KNet_Clients_Producer_ProducerRecord_ClassName
+  commentId: P:MASES.KNet.Clients.Producer.ProducerRecord.ClassName
+  fullName: MASES.KNet.Clients.Producer.ProducerRecord.ClassName
+  nameWithType: ProducerRecord.ClassName
+- uid: MASES.KNet.Clients.Producer.ProducerRecord.ClassName*
+  name: ClassName
+  href: api/MASES.KNet.Clients.Producer.ProducerRecord.html#MASES_KNet_Clients_Producer_ProducerRecord_ClassName_
+  commentId: Overload:MASES.KNet.Clients.Producer.ProducerRecord.ClassName
+  isSpec: "True"
+  fullName: MASES.KNet.Clients.Producer.ProducerRecord.ClassName
+  nameWithType: ProducerRecord.ClassName
 - uid: MASES.KNet.Clients.Producer.ProducerRecord`2
   name: ProducerRecord<K, V>
   href: api/MASES.KNet.Clients.Producer.ProducerRecord-2.html
@@ -14499,23 +14959,6 @@ references:
   fullName.vb: MASES.KNet.Clients.Producer.ProducerRecord(Of K, V).ProducerRecord
   nameWithType: ProducerRecord<K, V>.ProducerRecord
   nameWithType.vb: ProducerRecord(Of K, V).ProducerRecord
-- uid: MASES.KNet.Clients.Producer.ProducerRecord`2.ClassName
-  name: ClassName
-  href: api/MASES.KNet.Clients.Producer.ProducerRecord-2.html#MASES_KNet_Clients_Producer_ProducerRecord_2_ClassName
-  commentId: P:MASES.KNet.Clients.Producer.ProducerRecord`2.ClassName
-  fullName: MASES.KNet.Clients.Producer.ProducerRecord<K, V>.ClassName
-  fullName.vb: MASES.KNet.Clients.Producer.ProducerRecord(Of K, V).ClassName
-  nameWithType: ProducerRecord<K, V>.ClassName
-  nameWithType.vb: ProducerRecord(Of K, V).ClassName
-- uid: MASES.KNet.Clients.Producer.ProducerRecord`2.ClassName*
-  name: ClassName
-  href: api/MASES.KNet.Clients.Producer.ProducerRecord-2.html#MASES_KNet_Clients_Producer_ProducerRecord_2_ClassName_
-  commentId: Overload:MASES.KNet.Clients.Producer.ProducerRecord`2.ClassName
-  isSpec: "True"
-  fullName: MASES.KNet.Clients.Producer.ProducerRecord<K, V>.ClassName
-  fullName.vb: MASES.KNet.Clients.Producer.ProducerRecord(Of K, V).ClassName
-  nameWithType: ProducerRecord<K, V>.ClassName
-  nameWithType.vb: ProducerRecord(Of K, V).ClassName
 - uid: MASES.KNet.Clients.Producer.ProducerRecord`2.DateTime
   name: DateTime
   href: api/MASES.KNet.Clients.Producer.ProducerRecord-2.html#MASES_KNet_Clients_Producer_ProducerRecord_2_DateTime
@@ -18717,6 +19160,102 @@ references:
   isSpec: "True"
   fullName: MASES.KNet.Common.MetricName.Tags
   nameWithType: MetricName.Tags
+- uid: MASES.KNet.Common.MetricNameTemplate
+  name: MetricNameTemplate
+  href: api/MASES.KNet.Common.MetricNameTemplate.html
+  commentId: T:MASES.KNet.Common.MetricNameTemplate
+  fullName: MASES.KNet.Common.MetricNameTemplate
+  nameWithType: MetricNameTemplate
+- uid: MASES.KNet.Common.MetricNameTemplate.#ctor(System.String,System.String,System.String,Java.Util.Set{System.String})
+  name: MetricNameTemplate(String, String, String, Set<String>)
+  href: api/MASES.KNet.Common.MetricNameTemplate.html#MASES_KNet_Common_MetricNameTemplate__ctor_System_String_System_String_System_String_Java_Util_Set_System_String__
+  commentId: M:MASES.KNet.Common.MetricNameTemplate.#ctor(System.String,System.String,System.String,Java.Util.Set{System.String})
+  name.vb: MetricNameTemplate(String, String, String, Set(Of String))
+  fullName: MASES.KNet.Common.MetricNameTemplate.MetricNameTemplate(System.String, System.String, System.String, Java.Util.Set<System.String>)
+  fullName.vb: MASES.KNet.Common.MetricNameTemplate.MetricNameTemplate(System.String, System.String, System.String, Java.Util.Set(Of System.String))
+  nameWithType: MetricNameTemplate.MetricNameTemplate(String, String, String, Set<String>)
+  nameWithType.vb: MetricNameTemplate.MetricNameTemplate(String, String, String, Set(Of String))
+- uid: MASES.KNet.Common.MetricNameTemplate.#ctor(System.String,System.String,System.String,System.String[])
+  name: MetricNameTemplate(String, String, String, String[])
+  href: api/MASES.KNet.Common.MetricNameTemplate.html#MASES_KNet_Common_MetricNameTemplate__ctor_System_String_System_String_System_String_System_String___
+  commentId: M:MASES.KNet.Common.MetricNameTemplate.#ctor(System.String,System.String,System.String,System.String[])
+  name.vb: MetricNameTemplate(String, String, String, String())
+  fullName: MASES.KNet.Common.MetricNameTemplate.MetricNameTemplate(System.String, System.String, System.String, System.String[])
+  fullName.vb: MASES.KNet.Common.MetricNameTemplate.MetricNameTemplate(System.String, System.String, System.String, System.String())
+  nameWithType: MetricNameTemplate.MetricNameTemplate(String, String, String, String[])
+  nameWithType.vb: MetricNameTemplate.MetricNameTemplate(String, String, String, String())
+- uid: MASES.KNet.Common.MetricNameTemplate.#ctor*
+  name: MetricNameTemplate
+  href: api/MASES.KNet.Common.MetricNameTemplate.html#MASES_KNet_Common_MetricNameTemplate__ctor_
+  commentId: Overload:MASES.KNet.Common.MetricNameTemplate.#ctor
+  isSpec: "True"
+  fullName: MASES.KNet.Common.MetricNameTemplate.MetricNameTemplate
+  nameWithType: MetricNameTemplate.MetricNameTemplate
+- uid: MASES.KNet.Common.MetricNameTemplate.ClassName
+  name: ClassName
+  href: api/MASES.KNet.Common.MetricNameTemplate.html#MASES_KNet_Common_MetricNameTemplate_ClassName
+  commentId: P:MASES.KNet.Common.MetricNameTemplate.ClassName
+  fullName: MASES.KNet.Common.MetricNameTemplate.ClassName
+  nameWithType: MetricNameTemplate.ClassName
+- uid: MASES.KNet.Common.MetricNameTemplate.ClassName*
+  name: ClassName
+  href: api/MASES.KNet.Common.MetricNameTemplate.html#MASES_KNet_Common_MetricNameTemplate_ClassName_
+  commentId: Overload:MASES.KNet.Common.MetricNameTemplate.ClassName
+  isSpec: "True"
+  fullName: MASES.KNet.Common.MetricNameTemplate.ClassName
+  nameWithType: MetricNameTemplate.ClassName
+- uid: MASES.KNet.Common.MetricNameTemplate.Description
+  name: Description
+  href: api/MASES.KNet.Common.MetricNameTemplate.html#MASES_KNet_Common_MetricNameTemplate_Description
+  commentId: P:MASES.KNet.Common.MetricNameTemplate.Description
+  fullName: MASES.KNet.Common.MetricNameTemplate.Description
+  nameWithType: MetricNameTemplate.Description
+- uid: MASES.KNet.Common.MetricNameTemplate.Description*
+  name: Description
+  href: api/MASES.KNet.Common.MetricNameTemplate.html#MASES_KNet_Common_MetricNameTemplate_Description_
+  commentId: Overload:MASES.KNet.Common.MetricNameTemplate.Description
+  isSpec: "True"
+  fullName: MASES.KNet.Common.MetricNameTemplate.Description
+  nameWithType: MetricNameTemplate.Description
+- uid: MASES.KNet.Common.MetricNameTemplate.Group
+  name: Group
+  href: api/MASES.KNet.Common.MetricNameTemplate.html#MASES_KNet_Common_MetricNameTemplate_Group
+  commentId: P:MASES.KNet.Common.MetricNameTemplate.Group
+  fullName: MASES.KNet.Common.MetricNameTemplate.Group
+  nameWithType: MetricNameTemplate.Group
+- uid: MASES.KNet.Common.MetricNameTemplate.Group*
+  name: Group
+  href: api/MASES.KNet.Common.MetricNameTemplate.html#MASES_KNet_Common_MetricNameTemplate_Group_
+  commentId: Overload:MASES.KNet.Common.MetricNameTemplate.Group
+  isSpec: "True"
+  fullName: MASES.KNet.Common.MetricNameTemplate.Group
+  nameWithType: MetricNameTemplate.Group
+- uid: MASES.KNet.Common.MetricNameTemplate.Name
+  name: Name
+  href: api/MASES.KNet.Common.MetricNameTemplate.html#MASES_KNet_Common_MetricNameTemplate_Name
+  commentId: P:MASES.KNet.Common.MetricNameTemplate.Name
+  fullName: MASES.KNet.Common.MetricNameTemplate.Name
+  nameWithType: MetricNameTemplate.Name
+- uid: MASES.KNet.Common.MetricNameTemplate.Name*
+  name: Name
+  href: api/MASES.KNet.Common.MetricNameTemplate.html#MASES_KNet_Common_MetricNameTemplate_Name_
+  commentId: Overload:MASES.KNet.Common.MetricNameTemplate.Name
+  isSpec: "True"
+  fullName: MASES.KNet.Common.MetricNameTemplate.Name
+  nameWithType: MetricNameTemplate.Name
+- uid: MASES.KNet.Common.MetricNameTemplate.Tags
+  name: Tags
+  href: api/MASES.KNet.Common.MetricNameTemplate.html#MASES_KNet_Common_MetricNameTemplate_Tags
+  commentId: P:MASES.KNet.Common.MetricNameTemplate.Tags
+  fullName: MASES.KNet.Common.MetricNameTemplate.Tags
+  nameWithType: MetricNameTemplate.Tags
+- uid: MASES.KNet.Common.MetricNameTemplate.Tags*
+  name: Tags
+  href: api/MASES.KNet.Common.MetricNameTemplate.html#MASES_KNet_Common_MetricNameTemplate_Tags_
+  commentId: Overload:MASES.KNet.Common.MetricNameTemplate.Tags
+  isSpec: "True"
+  fullName: MASES.KNet.Common.MetricNameTemplate.Tags
+  nameWithType: MetricNameTemplate.Tags
 - uid: MASES.KNet.Common.Metrics
   name: MASES.KNet.Common.Metrics
   href: api/MASES.KNet.Common.Metrics.html
@@ -18799,6 +19338,160 @@ references:
   commentId: T:MASES.KNet.Common.Metrics.IMeasurableStat
   fullName: MASES.KNet.Common.Metrics.IMeasurableStat
   nameWithType: IMeasurableStat
+- uid: MASES.KNet.Common.Metrics.IMetricsContext
+  name: IMetricsContext
+  href: api/MASES.KNet.Common.Metrics.IMetricsContext.html
+  commentId: T:MASES.KNet.Common.Metrics.IMetricsContext
+  fullName: MASES.KNet.Common.Metrics.IMetricsContext
+  nameWithType: IMetricsContext
+- uid: MASES.KNet.Common.Metrics.IMetricsContext.ContextLabels
+  name: ContextLabels
+  href: api/MASES.KNet.Common.Metrics.IMetricsContext.html#MASES_KNet_Common_Metrics_IMetricsContext_ContextLabels
+  commentId: P:MASES.KNet.Common.Metrics.IMetricsContext.ContextLabels
+  fullName: MASES.KNet.Common.Metrics.IMetricsContext.ContextLabels
+  nameWithType: IMetricsContext.ContextLabels
+- uid: MASES.KNet.Common.Metrics.IMetricsContext.ContextLabels*
+  name: ContextLabels
+  href: api/MASES.KNet.Common.Metrics.IMetricsContext.html#MASES_KNet_Common_Metrics_IMetricsContext_ContextLabels_
+  commentId: Overload:MASES.KNet.Common.Metrics.IMetricsContext.ContextLabels
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.IMetricsContext.ContextLabels
+  nameWithType: IMetricsContext.ContextLabels
+- uid: MASES.KNet.Common.Metrics.IMetricsReporter
+  name: IMetricsReporter
+  href: api/MASES.KNet.Common.Metrics.IMetricsReporter.html
+  commentId: T:MASES.KNet.Common.Metrics.IMetricsReporter
+  fullName: MASES.KNet.Common.Metrics.IMetricsReporter
+  nameWithType: IMetricsReporter
+- uid: MASES.KNet.Common.Metrics.IMetricsReporter.Close
+  name: Close()
+  href: api/MASES.KNet.Common.Metrics.IMetricsReporter.html#MASES_KNet_Common_Metrics_IMetricsReporter_Close
+  commentId: M:MASES.KNet.Common.Metrics.IMetricsReporter.Close
+  fullName: MASES.KNet.Common.Metrics.IMetricsReporter.Close()
+  nameWithType: IMetricsReporter.Close()
+- uid: MASES.KNet.Common.Metrics.IMetricsReporter.Close*
+  name: Close
+  href: api/MASES.KNet.Common.Metrics.IMetricsReporter.html#MASES_KNet_Common_Metrics_IMetricsReporter_Close_
+  commentId: Overload:MASES.KNet.Common.Metrics.IMetricsReporter.Close
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.IMetricsReporter.Close
+  nameWithType: IMetricsReporter.Close
+- uid: MASES.KNet.Common.Metrics.IMetricsReporter.Configure(Java.Util.Map{System.String,System.Object})
+  name: Configure(Map<String, Object>)
+  href: api/MASES.KNet.Common.Metrics.IMetricsReporter.html#MASES_KNet_Common_Metrics_IMetricsReporter_Configure_Java_Util_Map_System_String_System_Object__
+  commentId: M:MASES.KNet.Common.Metrics.IMetricsReporter.Configure(Java.Util.Map{System.String,System.Object})
+  name.vb: Configure(Map(Of String, Object))
+  fullName: MASES.KNet.Common.Metrics.IMetricsReporter.Configure(Java.Util.Map<System.String, System.Object>)
+  fullName.vb: MASES.KNet.Common.Metrics.IMetricsReporter.Configure(Java.Util.Map(Of System.String, System.Object))
+  nameWithType: IMetricsReporter.Configure(Map<String, Object>)
+  nameWithType.vb: IMetricsReporter.Configure(Map(Of String, Object))
+- uid: MASES.KNet.Common.Metrics.IMetricsReporter.Configure*
+  name: Configure
+  href: api/MASES.KNet.Common.Metrics.IMetricsReporter.html#MASES_KNet_Common_Metrics_IMetricsReporter_Configure_
+  commentId: Overload:MASES.KNet.Common.Metrics.IMetricsReporter.Configure
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.IMetricsReporter.Configure
+  nameWithType: IMetricsReporter.Configure
+- uid: MASES.KNet.Common.Metrics.IMetricsReporter.ContextChange(MASES.KNet.Common.Metrics.MetricsContext)
+  name: ContextChange(MetricsContext)
+  href: api/MASES.KNet.Common.Metrics.IMetricsReporter.html#MASES_KNet_Common_Metrics_IMetricsReporter_ContextChange_MASES_KNet_Common_Metrics_MetricsContext_
+  commentId: M:MASES.KNet.Common.Metrics.IMetricsReporter.ContextChange(MASES.KNet.Common.Metrics.MetricsContext)
+  fullName: MASES.KNet.Common.Metrics.IMetricsReporter.ContextChange(MASES.KNet.Common.Metrics.MetricsContext)
+  nameWithType: IMetricsReporter.ContextChange(MetricsContext)
+- uid: MASES.KNet.Common.Metrics.IMetricsReporter.ContextChange*
+  name: ContextChange
+  href: api/MASES.KNet.Common.Metrics.IMetricsReporter.html#MASES_KNet_Common_Metrics_IMetricsReporter_ContextChange_
+  commentId: Overload:MASES.KNet.Common.Metrics.IMetricsReporter.ContextChange
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.IMetricsReporter.ContextChange
+  nameWithType: IMetricsReporter.ContextChange
+- uid: MASES.KNet.Common.Metrics.IMetricsReporter.Init(Java.Util.List{MASES.KNet.Common.Metrics.KafkaMetric})
+  name: Init(List<KafkaMetric>)
+  href: api/MASES.KNet.Common.Metrics.IMetricsReporter.html#MASES_KNet_Common_Metrics_IMetricsReporter_Init_Java_Util_List_MASES_KNet_Common_Metrics_KafkaMetric__
+  commentId: M:MASES.KNet.Common.Metrics.IMetricsReporter.Init(Java.Util.List{MASES.KNet.Common.Metrics.KafkaMetric})
+  name.vb: Init(List(Of KafkaMetric))
+  fullName: MASES.KNet.Common.Metrics.IMetricsReporter.Init(Java.Util.List<MASES.KNet.Common.Metrics.KafkaMetric>)
+  fullName.vb: MASES.KNet.Common.Metrics.IMetricsReporter.Init(Java.Util.List(Of MASES.KNet.Common.Metrics.KafkaMetric))
+  nameWithType: IMetricsReporter.Init(List<KafkaMetric>)
+  nameWithType.vb: IMetricsReporter.Init(List(Of KafkaMetric))
+- uid: MASES.KNet.Common.Metrics.IMetricsReporter.Init*
+  name: Init
+  href: api/MASES.KNet.Common.Metrics.IMetricsReporter.html#MASES_KNet_Common_Metrics_IMetricsReporter_Init_
+  commentId: Overload:MASES.KNet.Common.Metrics.IMetricsReporter.Init
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.IMetricsReporter.Init
+  nameWithType: IMetricsReporter.Init
+- uid: MASES.KNet.Common.Metrics.IMetricsReporter.MetricChange(MASES.KNet.Common.Metrics.KafkaMetric)
+  name: MetricChange(KafkaMetric)
+  href: api/MASES.KNet.Common.Metrics.IMetricsReporter.html#MASES_KNet_Common_Metrics_IMetricsReporter_MetricChange_MASES_KNet_Common_Metrics_KafkaMetric_
+  commentId: M:MASES.KNet.Common.Metrics.IMetricsReporter.MetricChange(MASES.KNet.Common.Metrics.KafkaMetric)
+  fullName: MASES.KNet.Common.Metrics.IMetricsReporter.MetricChange(MASES.KNet.Common.Metrics.KafkaMetric)
+  nameWithType: IMetricsReporter.MetricChange(KafkaMetric)
+- uid: MASES.KNet.Common.Metrics.IMetricsReporter.MetricChange*
+  name: MetricChange
+  href: api/MASES.KNet.Common.Metrics.IMetricsReporter.html#MASES_KNet_Common_Metrics_IMetricsReporter_MetricChange_
+  commentId: Overload:MASES.KNet.Common.Metrics.IMetricsReporter.MetricChange
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.IMetricsReporter.MetricChange
+  nameWithType: IMetricsReporter.MetricChange
+- uid: MASES.KNet.Common.Metrics.IMetricsReporter.MetricRemoval(MASES.KNet.Common.Metrics.KafkaMetric)
+  name: MetricRemoval(KafkaMetric)
+  href: api/MASES.KNet.Common.Metrics.IMetricsReporter.html#MASES_KNet_Common_Metrics_IMetricsReporter_MetricRemoval_MASES_KNet_Common_Metrics_KafkaMetric_
+  commentId: M:MASES.KNet.Common.Metrics.IMetricsReporter.MetricRemoval(MASES.KNet.Common.Metrics.KafkaMetric)
+  fullName: MASES.KNet.Common.Metrics.IMetricsReporter.MetricRemoval(MASES.KNet.Common.Metrics.KafkaMetric)
+  nameWithType: IMetricsReporter.MetricRemoval(KafkaMetric)
+- uid: MASES.KNet.Common.Metrics.IMetricsReporter.MetricRemoval*
+  name: MetricRemoval
+  href: api/MASES.KNet.Common.Metrics.IMetricsReporter.html#MASES_KNet_Common_Metrics_IMetricsReporter_MetricRemoval_
+  commentId: Overload:MASES.KNet.Common.Metrics.IMetricsReporter.MetricRemoval
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.IMetricsReporter.MetricRemoval
+  nameWithType: IMetricsReporter.MetricRemoval
+- uid: MASES.KNet.Common.Metrics.IMetricsReporter.ReconfigurableConfigs
+  name: ReconfigurableConfigs()
+  href: api/MASES.KNet.Common.Metrics.IMetricsReporter.html#MASES_KNet_Common_Metrics_IMetricsReporter_ReconfigurableConfigs
+  commentId: M:MASES.KNet.Common.Metrics.IMetricsReporter.ReconfigurableConfigs
+  fullName: MASES.KNet.Common.Metrics.IMetricsReporter.ReconfigurableConfigs()
+  nameWithType: IMetricsReporter.ReconfigurableConfigs()
+- uid: MASES.KNet.Common.Metrics.IMetricsReporter.ReconfigurableConfigs*
+  name: ReconfigurableConfigs
+  href: api/MASES.KNet.Common.Metrics.IMetricsReporter.html#MASES_KNet_Common_Metrics_IMetricsReporter_ReconfigurableConfigs_
+  commentId: Overload:MASES.KNet.Common.Metrics.IMetricsReporter.ReconfigurableConfigs
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.IMetricsReporter.ReconfigurableConfigs
+  nameWithType: IMetricsReporter.ReconfigurableConfigs
+- uid: MASES.KNet.Common.Metrics.IMetricsReporter.Reconfigure(Java.Util.Map{System.String,System.Object})
+  name: Reconfigure(Map<String, Object>)
+  href: api/MASES.KNet.Common.Metrics.IMetricsReporter.html#MASES_KNet_Common_Metrics_IMetricsReporter_Reconfigure_Java_Util_Map_System_String_System_Object__
+  commentId: M:MASES.KNet.Common.Metrics.IMetricsReporter.Reconfigure(Java.Util.Map{System.String,System.Object})
+  name.vb: Reconfigure(Map(Of String, Object))
+  fullName: MASES.KNet.Common.Metrics.IMetricsReporter.Reconfigure(Java.Util.Map<System.String, System.Object>)
+  fullName.vb: MASES.KNet.Common.Metrics.IMetricsReporter.Reconfigure(Java.Util.Map(Of System.String, System.Object))
+  nameWithType: IMetricsReporter.Reconfigure(Map<String, Object>)
+  nameWithType.vb: IMetricsReporter.Reconfigure(Map(Of String, Object))
+- uid: MASES.KNet.Common.Metrics.IMetricsReporter.Reconfigure*
+  name: Reconfigure
+  href: api/MASES.KNet.Common.Metrics.IMetricsReporter.html#MASES_KNet_Common_Metrics_IMetricsReporter_Reconfigure_
+  commentId: Overload:MASES.KNet.Common.Metrics.IMetricsReporter.Reconfigure
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.IMetricsReporter.Reconfigure
+  nameWithType: IMetricsReporter.Reconfigure
+- uid: MASES.KNet.Common.Metrics.IMetricsReporter.ValidateReconfiguration(Java.Util.Map{System.String,System.Object})
+  name: ValidateReconfiguration(Map<String, Object>)
+  href: api/MASES.KNet.Common.Metrics.IMetricsReporter.html#MASES_KNet_Common_Metrics_IMetricsReporter_ValidateReconfiguration_Java_Util_Map_System_String_System_Object__
+  commentId: M:MASES.KNet.Common.Metrics.IMetricsReporter.ValidateReconfiguration(Java.Util.Map{System.String,System.Object})
+  name.vb: ValidateReconfiguration(Map(Of String, Object))
+  fullName: MASES.KNet.Common.Metrics.IMetricsReporter.ValidateReconfiguration(Java.Util.Map<System.String, System.Object>)
+  fullName.vb: MASES.KNet.Common.Metrics.IMetricsReporter.ValidateReconfiguration(Java.Util.Map(Of System.String, System.Object))
+  nameWithType: IMetricsReporter.ValidateReconfiguration(Map<String, Object>)
+  nameWithType.vb: IMetricsReporter.ValidateReconfiguration(Map(Of String, Object))
+- uid: MASES.KNet.Common.Metrics.IMetricsReporter.ValidateReconfiguration*
+  name: ValidateReconfiguration
+  href: api/MASES.KNet.Common.Metrics.IMetricsReporter.html#MASES_KNet_Common_Metrics_IMetricsReporter_ValidateReconfiguration_
+  commentId: Overload:MASES.KNet.Common.Metrics.IMetricsReporter.ValidateReconfiguration
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.IMetricsReporter.ValidateReconfiguration
+  nameWithType: IMetricsReporter.ValidateReconfiguration
 - uid: MASES.KNet.Common.Metrics.IMetricValueProvider`1
   name: IMetricValueProvider<T>
   href: api/MASES.KNet.Common.Metrics.IMetricValueProvider-1.html
@@ -18827,6 +19520,153 @@ references:
   isSpec: "True"
   fullName: MASES.KNet.Common.Metrics.IStat.Record
   nameWithType: IStat.Record
+- uid: MASES.KNet.Common.Metrics.KafkaMetric
+  name: KafkaMetric
+  href: api/MASES.KNet.Common.Metrics.KafkaMetric.html
+  commentId: T:MASES.KNet.Common.Metrics.KafkaMetric
+  fullName: MASES.KNet.Common.Metrics.KafkaMetric
+  nameWithType: KafkaMetric
+- uid: MASES.KNet.Common.Metrics.KafkaMetric.ClassName
+  name: ClassName
+  href: api/MASES.KNet.Common.Metrics.KafkaMetric.html#MASES_KNet_Common_Metrics_KafkaMetric_ClassName
+  commentId: P:MASES.KNet.Common.Metrics.KafkaMetric.ClassName
+  fullName: MASES.KNet.Common.Metrics.KafkaMetric.ClassName
+  nameWithType: KafkaMetric.ClassName
+- uid: MASES.KNet.Common.Metrics.KafkaMetric.ClassName*
+  name: ClassName
+  href: api/MASES.KNet.Common.Metrics.KafkaMetric.html#MASES_KNet_Common_Metrics_KafkaMetric_ClassName_
+  commentId: Overload:MASES.KNet.Common.Metrics.KafkaMetric.ClassName
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.KafkaMetric.ClassName
+  nameWithType: KafkaMetric.ClassName
+- uid: MASES.KNet.Common.Metrics.KafkaMetric.Config
+  name: Config
+  href: api/MASES.KNet.Common.Metrics.KafkaMetric.html#MASES_KNet_Common_Metrics_KafkaMetric_Config
+  commentId: P:MASES.KNet.Common.Metrics.KafkaMetric.Config
+  fullName: MASES.KNet.Common.Metrics.KafkaMetric.Config
+  nameWithType: KafkaMetric.Config
+- uid: MASES.KNet.Common.Metrics.KafkaMetric.Config*
+  name: Config
+  href: api/MASES.KNet.Common.Metrics.KafkaMetric.html#MASES_KNet_Common_Metrics_KafkaMetric_Config_
+  commentId: Overload:MASES.KNet.Common.Metrics.KafkaMetric.Config
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.KafkaMetric.Config
+  nameWithType: KafkaMetric.Config
+- uid: MASES.KNet.Common.Metrics.KafkaMetric.Measurable
+  name: Measurable
+  href: api/MASES.KNet.Common.Metrics.KafkaMetric.html#MASES_KNet_Common_Metrics_KafkaMetric_Measurable
+  commentId: P:MASES.KNet.Common.Metrics.KafkaMetric.Measurable
+  fullName: MASES.KNet.Common.Metrics.KafkaMetric.Measurable
+  nameWithType: KafkaMetric.Measurable
+- uid: MASES.KNet.Common.Metrics.KafkaMetric.Measurable*
+  name: Measurable
+  href: api/MASES.KNet.Common.Metrics.KafkaMetric.html#MASES_KNet_Common_Metrics_KafkaMetric_Measurable_
+  commentId: Overload:MASES.KNet.Common.Metrics.KafkaMetric.Measurable
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.KafkaMetric.Measurable
+  nameWithType: KafkaMetric.Measurable
+- uid: MASES.KNet.Common.Metrics.KafkaMetric.MetricName
+  name: MetricName
+  href: api/MASES.KNet.Common.Metrics.KafkaMetric.html#MASES_KNet_Common_Metrics_KafkaMetric_MetricName
+  commentId: P:MASES.KNet.Common.Metrics.KafkaMetric.MetricName
+  fullName: MASES.KNet.Common.Metrics.KafkaMetric.MetricName
+  nameWithType: KafkaMetric.MetricName
+- uid: MASES.KNet.Common.Metrics.KafkaMetric.MetricName*
+  name: MetricName
+  href: api/MASES.KNet.Common.Metrics.KafkaMetric.html#MASES_KNet_Common_Metrics_KafkaMetric_MetricName_
+  commentId: Overload:MASES.KNet.Common.Metrics.KafkaMetric.MetricName
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.KafkaMetric.MetricName
+  nameWithType: KafkaMetric.MetricName
+- uid: MASES.KNet.Common.Metrics.KafkaMetric.MetricValue
+  name: MetricValue
+  href: api/MASES.KNet.Common.Metrics.KafkaMetric.html#MASES_KNet_Common_Metrics_KafkaMetric_MetricValue
+  commentId: P:MASES.KNet.Common.Metrics.KafkaMetric.MetricValue
+  fullName: MASES.KNet.Common.Metrics.KafkaMetric.MetricValue
+  nameWithType: KafkaMetric.MetricValue
+- uid: MASES.KNet.Common.Metrics.KafkaMetric.MetricValue*
+  name: MetricValue
+  href: api/MASES.KNet.Common.Metrics.KafkaMetric.html#MASES_KNet_Common_Metrics_KafkaMetric_MetricValue_
+  commentId: Overload:MASES.KNet.Common.Metrics.KafkaMetric.MetricValue
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.KafkaMetric.MetricValue
+  nameWithType: KafkaMetric.MetricValue
+- uid: MASES.KNet.Common.Metrics.KafkaMetricsContext
+  name: KafkaMetricsContext
+  href: api/MASES.KNet.Common.Metrics.KafkaMetricsContext.html
+  commentId: T:MASES.KNet.Common.Metrics.KafkaMetricsContext
+  fullName: MASES.KNet.Common.Metrics.KafkaMetricsContext
+  nameWithType: KafkaMetricsContext
+- uid: MASES.KNet.Common.Metrics.KafkaMetricsContext.#ctor(System.String)
+  name: KafkaMetricsContext(String)
+  href: api/MASES.KNet.Common.Metrics.KafkaMetricsContext.html#MASES_KNet_Common_Metrics_KafkaMetricsContext__ctor_System_String_
+  commentId: M:MASES.KNet.Common.Metrics.KafkaMetricsContext.#ctor(System.String)
+  fullName: MASES.KNet.Common.Metrics.KafkaMetricsContext.KafkaMetricsContext(System.String)
+  nameWithType: KafkaMetricsContext.KafkaMetricsContext(String)
+- uid: MASES.KNet.Common.Metrics.KafkaMetricsContext.#ctor*
+  name: KafkaMetricsContext
+  href: api/MASES.KNet.Common.Metrics.KafkaMetricsContext.html#MASES_KNet_Common_Metrics_KafkaMetricsContext__ctor_
+  commentId: Overload:MASES.KNet.Common.Metrics.KafkaMetricsContext.#ctor
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.KafkaMetricsContext.KafkaMetricsContext
+  nameWithType: KafkaMetricsContext.KafkaMetricsContext
+- uid: MASES.KNet.Common.Metrics.KafkaMetricsContext.ClassName
+  name: ClassName
+  href: api/MASES.KNet.Common.Metrics.KafkaMetricsContext.html#MASES_KNet_Common_Metrics_KafkaMetricsContext_ClassName
+  commentId: P:MASES.KNet.Common.Metrics.KafkaMetricsContext.ClassName
+  fullName: MASES.KNet.Common.Metrics.KafkaMetricsContext.ClassName
+  nameWithType: KafkaMetricsContext.ClassName
+- uid: MASES.KNet.Common.Metrics.KafkaMetricsContext.ClassName*
+  name: ClassName
+  href: api/MASES.KNet.Common.Metrics.KafkaMetricsContext.html#MASES_KNet_Common_Metrics_KafkaMetricsContext_ClassName_
+  commentId: Overload:MASES.KNet.Common.Metrics.KafkaMetricsContext.ClassName
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.KafkaMetricsContext.ClassName
+  nameWithType: KafkaMetricsContext.ClassName
+- uid: MASES.KNet.Common.Metrics.KafkaMetricsContext`1
+  name: KafkaMetricsContext<T>
+  href: api/MASES.KNet.Common.Metrics.KafkaMetricsContext-1.html
+  commentId: T:MASES.KNet.Common.Metrics.KafkaMetricsContext`1
+  name.vb: KafkaMetricsContext(Of T)
+  fullName: MASES.KNet.Common.Metrics.KafkaMetricsContext<T>
+  fullName.vb: MASES.KNet.Common.Metrics.KafkaMetricsContext(Of T)
+  nameWithType: KafkaMetricsContext<T>
+  nameWithType.vb: KafkaMetricsContext(Of T)
+- uid: MASES.KNet.Common.Metrics.KafkaMetricsContext`1.#ctor(System.String,Java.Util.Map{System.String,`0})
+  name: KafkaMetricsContext(String, Map<String, T>)
+  href: api/MASES.KNet.Common.Metrics.KafkaMetricsContext-1.html#MASES_KNet_Common_Metrics_KafkaMetricsContext_1__ctor_System_String_Java_Util_Map_System_String__0__
+  commentId: M:MASES.KNet.Common.Metrics.KafkaMetricsContext`1.#ctor(System.String,Java.Util.Map{System.String,`0})
+  name.vb: KafkaMetricsContext(String, Map(Of String, T))
+  fullName: MASES.KNet.Common.Metrics.KafkaMetricsContext<T>.KafkaMetricsContext(System.String, Java.Util.Map<System.String, T>)
+  fullName.vb: MASES.KNet.Common.Metrics.KafkaMetricsContext(Of T).KafkaMetricsContext(System.String, Java.Util.Map(Of System.String, T))
+  nameWithType: KafkaMetricsContext<T>.KafkaMetricsContext(String, Map<String, T>)
+  nameWithType.vb: KafkaMetricsContext(Of T).KafkaMetricsContext(String, Map(Of String, T))
+- uid: MASES.KNet.Common.Metrics.KafkaMetricsContext`1.#ctor*
+  name: KafkaMetricsContext
+  href: api/MASES.KNet.Common.Metrics.KafkaMetricsContext-1.html#MASES_KNet_Common_Metrics_KafkaMetricsContext_1__ctor_
+  commentId: Overload:MASES.KNet.Common.Metrics.KafkaMetricsContext`1.#ctor
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.KafkaMetricsContext<T>.KafkaMetricsContext
+  fullName.vb: MASES.KNet.Common.Metrics.KafkaMetricsContext(Of T).KafkaMetricsContext
+  nameWithType: KafkaMetricsContext<T>.KafkaMetricsContext
+  nameWithType.vb: KafkaMetricsContext(Of T).KafkaMetricsContext
+- uid: MASES.KNet.Common.Metrics.KafkaMetricsContext`1.ClassName
+  name: ClassName
+  href: api/MASES.KNet.Common.Metrics.KafkaMetricsContext-1.html#MASES_KNet_Common_Metrics_KafkaMetricsContext_1_ClassName
+  commentId: P:MASES.KNet.Common.Metrics.KafkaMetricsContext`1.ClassName
+  fullName: MASES.KNet.Common.Metrics.KafkaMetricsContext<T>.ClassName
+  fullName.vb: MASES.KNet.Common.Metrics.KafkaMetricsContext(Of T).ClassName
+  nameWithType: KafkaMetricsContext<T>.ClassName
+  nameWithType.vb: KafkaMetricsContext(Of T).ClassName
+- uid: MASES.KNet.Common.Metrics.KafkaMetricsContext`1.ClassName*
+  name: ClassName
+  href: api/MASES.KNet.Common.Metrics.KafkaMetricsContext-1.html#MASES_KNet_Common_Metrics_KafkaMetricsContext_1_ClassName_
+  commentId: Overload:MASES.KNet.Common.Metrics.KafkaMetricsContext`1.ClassName
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.KafkaMetricsContext<T>.ClassName
+  fullName.vb: MASES.KNet.Common.Metrics.KafkaMetricsContext(Of T).ClassName
+  nameWithType: KafkaMetricsContext<T>.ClassName
+  nameWithType.vb: KafkaMetricsContext(Of T).ClassName
 - uid: MASES.KNet.Common.Metrics.Measurable
   name: Measurable
   href: api/MASES.KNet.Common.Metrics.Measurable.html
@@ -19008,6 +19848,537 @@ references:
   isSpec: "True"
   fullName: MASES.KNet.Common.Metrics.MetricConfig.TimeWindowMs
   nameWithType: MetricConfig.TimeWindowMs
+- uid: MASES.KNet.Common.Metrics.Metrics
+  name: Metrics
+  href: api/MASES.KNet.Common.Metrics.Metrics.html
+  commentId: T:MASES.KNet.Common.Metrics.Metrics
+  fullName: MASES.KNet.Common.Metrics.Metrics
+  nameWithType: Metrics
+- uid: MASES.KNet.Common.Metrics.Metrics.#ctor
+  name: Metrics()
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics__ctor
+  commentId: M:MASES.KNet.Common.Metrics.Metrics.#ctor
+  fullName: MASES.KNet.Common.Metrics.Metrics.Metrics()
+  nameWithType: Metrics.Metrics()
+- uid: MASES.KNet.Common.Metrics.Metrics.#ctor(MASES.KNet.Common.Metrics.MetricConfig)
+  name: Metrics(MetricConfig)
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics__ctor_MASES_KNet_Common_Metrics_MetricConfig_
+  commentId: M:MASES.KNet.Common.Metrics.Metrics.#ctor(MASES.KNet.Common.Metrics.MetricConfig)
+  fullName: MASES.KNet.Common.Metrics.Metrics.Metrics(MASES.KNet.Common.Metrics.MetricConfig)
+  nameWithType: Metrics.Metrics(MetricConfig)
+- uid: MASES.KNet.Common.Metrics.Metrics.#ctor(MASES.KNet.Common.Metrics.MetricConfig,MASES.KNet.Common.Utils.Time)
+  name: Metrics(MetricConfig, Time)
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics__ctor_MASES_KNet_Common_Metrics_MetricConfig_MASES_KNet_Common_Utils_Time_
+  commentId: M:MASES.KNet.Common.Metrics.Metrics.#ctor(MASES.KNet.Common.Metrics.MetricConfig,MASES.KNet.Common.Utils.Time)
+  fullName: MASES.KNet.Common.Metrics.Metrics.Metrics(MASES.KNet.Common.Metrics.MetricConfig, MASES.KNet.Common.Utils.Time)
+  nameWithType: Metrics.Metrics(MetricConfig, Time)
+- uid: MASES.KNet.Common.Metrics.Metrics.#ctor(MASES.KNet.Common.Utils.Time)
+  name: Metrics(Time)
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics__ctor_MASES_KNet_Common_Utils_Time_
+  commentId: M:MASES.KNet.Common.Metrics.Metrics.#ctor(MASES.KNet.Common.Utils.Time)
+  fullName: MASES.KNet.Common.Metrics.Metrics.Metrics(MASES.KNet.Common.Utils.Time)
+  nameWithType: Metrics.Metrics(Time)
+- uid: MASES.KNet.Common.Metrics.Metrics.#ctor*
+  name: Metrics
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics__ctor_
+  commentId: Overload:MASES.KNet.Common.Metrics.Metrics.#ctor
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.Metrics.Metrics
+  nameWithType: Metrics.Metrics
+- uid: MASES.KNet.Common.Metrics.Metrics.AddMetric(MASES.KNet.Common.MetricName,MASES.KNet.Common.Metrics.Measurable)
+  name: AddMetric(MetricName, Measurable)
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_AddMetric_MASES_KNet_Common_MetricName_MASES_KNet_Common_Metrics_Measurable_
+  commentId: M:MASES.KNet.Common.Metrics.Metrics.AddMetric(MASES.KNet.Common.MetricName,MASES.KNet.Common.Metrics.Measurable)
+  fullName: MASES.KNet.Common.Metrics.Metrics.AddMetric(MASES.KNet.Common.MetricName, MASES.KNet.Common.Metrics.Measurable)
+  nameWithType: Metrics.AddMetric(MetricName, Measurable)
+- uid: MASES.KNet.Common.Metrics.Metrics.AddMetric(MASES.KNet.Common.MetricName,MASES.KNet.Common.Metrics.MetricConfig,MASES.KNet.Common.Metrics.Measurable)
+  name: AddMetric(MetricName, MetricConfig, Measurable)
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_AddMetric_MASES_KNet_Common_MetricName_MASES_KNet_Common_Metrics_MetricConfig_MASES_KNet_Common_Metrics_Measurable_
+  commentId: M:MASES.KNet.Common.Metrics.Metrics.AddMetric(MASES.KNet.Common.MetricName,MASES.KNet.Common.Metrics.MetricConfig,MASES.KNet.Common.Metrics.Measurable)
+  fullName: MASES.KNet.Common.Metrics.Metrics.AddMetric(MASES.KNet.Common.MetricName, MASES.KNet.Common.Metrics.MetricConfig, MASES.KNet.Common.Metrics.Measurable)
+  nameWithType: Metrics.AddMetric(MetricName, MetricConfig, Measurable)
+- uid: MASES.KNet.Common.Metrics.Metrics.AddMetric*
+  name: AddMetric
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_AddMetric_
+  commentId: Overload:MASES.KNet.Common.Metrics.Metrics.AddMetric
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.Metrics.AddMetric
+  nameWithType: Metrics.AddMetric
+- uid: MASES.KNet.Common.Metrics.Metrics.AddMetric``1(MASES.KNet.Common.MetricName,MASES.KNet.Common.Metrics.MetricConfig,MASES.KNet.Common.Metrics.MetricValueProvider{``0})
+  name: AddMetric<T>(MetricName, MetricConfig, MetricValueProvider<T>)
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_AddMetric__1_MASES_KNet_Common_MetricName_MASES_KNet_Common_Metrics_MetricConfig_MASES_KNet_Common_Metrics_MetricValueProvider___0__
+  commentId: M:MASES.KNet.Common.Metrics.Metrics.AddMetric``1(MASES.KNet.Common.MetricName,MASES.KNet.Common.Metrics.MetricConfig,MASES.KNet.Common.Metrics.MetricValueProvider{``0})
+  name.vb: AddMetric(Of T)(MetricName, MetricConfig, MetricValueProvider(Of T))
+  fullName: MASES.KNet.Common.Metrics.Metrics.AddMetric<T>(MASES.KNet.Common.MetricName, MASES.KNet.Common.Metrics.MetricConfig, MASES.KNet.Common.Metrics.MetricValueProvider<T>)
+  fullName.vb: MASES.KNet.Common.Metrics.Metrics.AddMetric(Of T)(MASES.KNet.Common.MetricName, MASES.KNet.Common.Metrics.MetricConfig, MASES.KNet.Common.Metrics.MetricValueProvider(Of T))
+  nameWithType: Metrics.AddMetric<T>(MetricName, MetricConfig, MetricValueProvider<T>)
+  nameWithType.vb: Metrics.AddMetric(Of T)(MetricName, MetricConfig, MetricValueProvider(Of T))
+- uid: MASES.KNet.Common.Metrics.Metrics.AddMetric``1(MASES.KNet.Common.MetricName,MASES.KNet.Common.Metrics.MetricValueProvider{``0})
+  name: AddMetric<T>(MetricName, MetricValueProvider<T>)
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_AddMetric__1_MASES_KNet_Common_MetricName_MASES_KNet_Common_Metrics_MetricValueProvider___0__
+  commentId: M:MASES.KNet.Common.Metrics.Metrics.AddMetric``1(MASES.KNet.Common.MetricName,MASES.KNet.Common.Metrics.MetricValueProvider{``0})
+  name.vb: AddMetric(Of T)(MetricName, MetricValueProvider(Of T))
+  fullName: MASES.KNet.Common.Metrics.Metrics.AddMetric<T>(MASES.KNet.Common.MetricName, MASES.KNet.Common.Metrics.MetricValueProvider<T>)
+  fullName.vb: MASES.KNet.Common.Metrics.Metrics.AddMetric(Of T)(MASES.KNet.Common.MetricName, MASES.KNet.Common.Metrics.MetricValueProvider(Of T))
+  nameWithType: Metrics.AddMetric<T>(MetricName, MetricValueProvider<T>)
+  nameWithType.vb: Metrics.AddMetric(Of T)(MetricName, MetricValueProvider(Of T))
+- uid: MASES.KNet.Common.Metrics.Metrics.AllMetrics
+  name: AllMetrics
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_AllMetrics
+  commentId: P:MASES.KNet.Common.Metrics.Metrics.AllMetrics
+  fullName: MASES.KNet.Common.Metrics.Metrics.AllMetrics
+  nameWithType: Metrics.AllMetrics
+- uid: MASES.KNet.Common.Metrics.Metrics.AllMetrics*
+  name: AllMetrics
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_AllMetrics_
+  commentId: Overload:MASES.KNet.Common.Metrics.Metrics.AllMetrics
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.Metrics.AllMetrics
+  nameWithType: Metrics.AllMetrics
+- uid: MASES.KNet.Common.Metrics.Metrics.ClassName
+  name: ClassName
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_ClassName
+  commentId: P:MASES.KNet.Common.Metrics.Metrics.ClassName
+  fullName: MASES.KNet.Common.Metrics.Metrics.ClassName
+  nameWithType: Metrics.ClassName
+- uid: MASES.KNet.Common.Metrics.Metrics.ClassName*
+  name: ClassName
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_ClassName_
+  commentId: Overload:MASES.KNet.Common.Metrics.Metrics.ClassName
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.Metrics.ClassName
+  nameWithType: Metrics.ClassName
+- uid: MASES.KNet.Common.Metrics.Metrics.Config
+  name: Config
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_Config
+  commentId: P:MASES.KNet.Common.Metrics.Metrics.Config
+  fullName: MASES.KNet.Common.Metrics.Metrics.Config
+  nameWithType: Metrics.Config
+- uid: MASES.KNet.Common.Metrics.Metrics.Config*
+  name: Config
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_Config_
+  commentId: Overload:MASES.KNet.Common.Metrics.Metrics.Config
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.Metrics.Config
+  nameWithType: Metrics.Config
+- uid: MASES.KNet.Common.Metrics.Metrics.GetSensor(System.String)
+  name: GetSensor(String)
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_GetSensor_System_String_
+  commentId: M:MASES.KNet.Common.Metrics.Metrics.GetSensor(System.String)
+  fullName: MASES.KNet.Common.Metrics.Metrics.GetSensor(System.String)
+  nameWithType: Metrics.GetSensor(String)
+- uid: MASES.KNet.Common.Metrics.Metrics.GetSensor*
+  name: GetSensor
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_GetSensor_
+  commentId: Overload:MASES.KNet.Common.Metrics.Metrics.GetSensor
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.Metrics.GetSensor
+  nameWithType: Metrics.GetSensor
+- uid: MASES.KNet.Common.Metrics.Metrics.IsCloseable
+  name: IsCloseable
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_IsCloseable
+  commentId: P:MASES.KNet.Common.Metrics.Metrics.IsCloseable
+  fullName: MASES.KNet.Common.Metrics.Metrics.IsCloseable
+  nameWithType: Metrics.IsCloseable
+- uid: MASES.KNet.Common.Metrics.Metrics.IsCloseable*
+  name: IsCloseable
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_IsCloseable_
+  commentId: Overload:MASES.KNet.Common.Metrics.Metrics.IsCloseable
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.Metrics.IsCloseable
+  nameWithType: Metrics.IsCloseable
+- uid: MASES.KNet.Common.Metrics.Metrics.Metric(MASES.KNet.Common.MetricName)
+  name: Metric(MetricName)
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_Metric_MASES_KNet_Common_MetricName_
+  commentId: M:MASES.KNet.Common.Metrics.Metrics.Metric(MASES.KNet.Common.MetricName)
+  fullName: MASES.KNet.Common.Metrics.Metrics.Metric(MASES.KNet.Common.MetricName)
+  nameWithType: Metrics.Metric(MetricName)
+- uid: MASES.KNet.Common.Metrics.Metrics.Metric*
+  name: Metric
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_Metric_
+  commentId: Overload:MASES.KNet.Common.Metrics.Metrics.Metric
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.Metrics.Metric
+  nameWithType: Metrics.Metric
+- uid: MASES.KNet.Common.Metrics.Metrics.MetricInstance(MASES.KNet.Common.MetricNameTemplate,Java.Util.Map{System.String,System.String})
+  name: MetricInstance(MetricNameTemplate, Map<String, String>)
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_MetricInstance_MASES_KNet_Common_MetricNameTemplate_Java_Util_Map_System_String_System_String__
+  commentId: M:MASES.KNet.Common.Metrics.Metrics.MetricInstance(MASES.KNet.Common.MetricNameTemplate,Java.Util.Map{System.String,System.String})
+  name.vb: MetricInstance(MetricNameTemplate, Map(Of String, String))
+  fullName: MASES.KNet.Common.Metrics.Metrics.MetricInstance(MASES.KNet.Common.MetricNameTemplate, Java.Util.Map<System.String, System.String>)
+  fullName.vb: MASES.KNet.Common.Metrics.Metrics.MetricInstance(MASES.KNet.Common.MetricNameTemplate, Java.Util.Map(Of System.String, System.String))
+  nameWithType: Metrics.MetricInstance(MetricNameTemplate, Map<String, String>)
+  nameWithType.vb: Metrics.MetricInstance(MetricNameTemplate, Map(Of String, String))
+- uid: MASES.KNet.Common.Metrics.Metrics.MetricInstance(MASES.KNet.Common.MetricNameTemplate,System.String[])
+  name: MetricInstance(MetricNameTemplate, String[])
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_MetricInstance_MASES_KNet_Common_MetricNameTemplate_System_String___
+  commentId: M:MASES.KNet.Common.Metrics.Metrics.MetricInstance(MASES.KNet.Common.MetricNameTemplate,System.String[])
+  name.vb: MetricInstance(MetricNameTemplate, String())
+  fullName: MASES.KNet.Common.Metrics.Metrics.MetricInstance(MASES.KNet.Common.MetricNameTemplate, System.String[])
+  fullName.vb: MASES.KNet.Common.Metrics.Metrics.MetricInstance(MASES.KNet.Common.MetricNameTemplate, System.String())
+  nameWithType: Metrics.MetricInstance(MetricNameTemplate, String[])
+  nameWithType.vb: Metrics.MetricInstance(MetricNameTemplate, String())
+- uid: MASES.KNet.Common.Metrics.Metrics.MetricInstance*
+  name: MetricInstance
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_MetricInstance_
+  commentId: Overload:MASES.KNet.Common.Metrics.Metrics.MetricInstance
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.Metrics.MetricInstance
+  nameWithType: Metrics.MetricInstance
+- uid: MASES.KNet.Common.Metrics.Metrics.MetricName(System.String,System.String)
+  name: MetricName(String, String)
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_MetricName_System_String_System_String_
+  commentId: M:MASES.KNet.Common.Metrics.Metrics.MetricName(System.String,System.String)
+  fullName: MASES.KNet.Common.Metrics.Metrics.MetricName(System.String, System.String)
+  nameWithType: Metrics.MetricName(String, String)
+- uid: MASES.KNet.Common.Metrics.Metrics.MetricName(System.String,System.String,Java.Util.Map{System.String,System.String})
+  name: MetricName(String, String, Map<String, String>)
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_MetricName_System_String_System_String_Java_Util_Map_System_String_System_String__
+  commentId: M:MASES.KNet.Common.Metrics.Metrics.MetricName(System.String,System.String,Java.Util.Map{System.String,System.String})
+  name.vb: MetricName(String, String, Map(Of String, String))
+  fullName: MASES.KNet.Common.Metrics.Metrics.MetricName(System.String, System.String, Java.Util.Map<System.String, System.String>)
+  fullName.vb: MASES.KNet.Common.Metrics.Metrics.MetricName(System.String, System.String, Java.Util.Map(Of System.String, System.String))
+  nameWithType: Metrics.MetricName(String, String, Map<String, String>)
+  nameWithType.vb: Metrics.MetricName(String, String, Map(Of String, String))
+- uid: MASES.KNet.Common.Metrics.Metrics.MetricName(System.String,System.String,System.String)
+  name: MetricName(String, String, String)
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_MetricName_System_String_System_String_System_String_
+  commentId: M:MASES.KNet.Common.Metrics.Metrics.MetricName(System.String,System.String,System.String)
+  fullName: MASES.KNet.Common.Metrics.Metrics.MetricName(System.String, System.String, System.String)
+  nameWithType: Metrics.MetricName(String, String, String)
+- uid: MASES.KNet.Common.Metrics.Metrics.MetricName(System.String,System.String,System.String,Java.Util.Map{System.String,System.String})
+  name: MetricName(String, String, String, Map<String, String>)
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_MetricName_System_String_System_String_System_String_Java_Util_Map_System_String_System_String__
+  commentId: M:MASES.KNet.Common.Metrics.Metrics.MetricName(System.String,System.String,System.String,Java.Util.Map{System.String,System.String})
+  name.vb: MetricName(String, String, String, Map(Of String, String))
+  fullName: MASES.KNet.Common.Metrics.Metrics.MetricName(System.String, System.String, System.String, Java.Util.Map<System.String, System.String>)
+  fullName.vb: MASES.KNet.Common.Metrics.Metrics.MetricName(System.String, System.String, System.String, Java.Util.Map(Of System.String, System.String))
+  nameWithType: Metrics.MetricName(String, String, String, Map<String, String>)
+  nameWithType.vb: Metrics.MetricName(String, String, String, Map(Of String, String))
+- uid: MASES.KNet.Common.Metrics.Metrics.MetricName(System.String,System.String,System.String,System.String[])
+  name: MetricName(String, String, String, String[])
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_MetricName_System_String_System_String_System_String_System_String___
+  commentId: M:MASES.KNet.Common.Metrics.Metrics.MetricName(System.String,System.String,System.String,System.String[])
+  name.vb: MetricName(String, String, String, String())
+  fullName: MASES.KNet.Common.Metrics.Metrics.MetricName(System.String, System.String, System.String, System.String[])
+  fullName.vb: MASES.KNet.Common.Metrics.Metrics.MetricName(System.String, System.String, System.String, System.String())
+  nameWithType: Metrics.MetricName(String, String, String, String[])
+  nameWithType.vb: Metrics.MetricName(String, String, String, String())
+- uid: MASES.KNet.Common.Metrics.Metrics.MetricName*
+  name: MetricName
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_MetricName_
+  commentId: Overload:MASES.KNet.Common.Metrics.Metrics.MetricName
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.Metrics.MetricName
+  nameWithType: Metrics.MetricName
+- uid: MASES.KNet.Common.Metrics.Metrics.RemoveMetric(MASES.KNet.Common.MetricName)
+  name: RemoveMetric(MetricName)
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_RemoveMetric_MASES_KNet_Common_MetricName_
+  commentId: M:MASES.KNet.Common.Metrics.Metrics.RemoveMetric(MASES.KNet.Common.MetricName)
+  fullName: MASES.KNet.Common.Metrics.Metrics.RemoveMetric(MASES.KNet.Common.MetricName)
+  nameWithType: Metrics.RemoveMetric(MetricName)
+- uid: MASES.KNet.Common.Metrics.Metrics.RemoveMetric*
+  name: RemoveMetric
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_RemoveMetric_
+  commentId: Overload:MASES.KNet.Common.Metrics.Metrics.RemoveMetric
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.Metrics.RemoveMetric
+  nameWithType: Metrics.RemoveMetric
+- uid: MASES.KNet.Common.Metrics.Metrics.RemoveSensor(System.String)
+  name: RemoveSensor(String)
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_RemoveSensor_System_String_
+  commentId: M:MASES.KNet.Common.Metrics.Metrics.RemoveSensor(System.String)
+  fullName: MASES.KNet.Common.Metrics.Metrics.RemoveSensor(System.String)
+  nameWithType: Metrics.RemoveSensor(String)
+- uid: MASES.KNet.Common.Metrics.Metrics.RemoveSensor*
+  name: RemoveSensor
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_RemoveSensor_
+  commentId: Overload:MASES.KNet.Common.Metrics.Metrics.RemoveSensor
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.Metrics.RemoveSensor
+  nameWithType: Metrics.RemoveSensor
+- uid: MASES.KNet.Common.Metrics.Metrics.Sensor(System.String)
+  name: Sensor(String)
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_Sensor_System_String_
+  commentId: M:MASES.KNet.Common.Metrics.Metrics.Sensor(System.String)
+  fullName: MASES.KNet.Common.Metrics.Metrics.Sensor(System.String)
+  nameWithType: Metrics.Sensor(String)
+- uid: MASES.KNet.Common.Metrics.Metrics.Sensor(System.String,MASES.KNet.Common.Metrics.MetricConfig,MASES.KNet.Common.Metrics.Sensor.RecordingLevel,MASES.KNet.Common.Metrics.Sensor[])
+  name: Sensor(String, MetricConfig, Sensor.RecordingLevel, Sensor[])
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_Sensor_System_String_MASES_KNet_Common_Metrics_MetricConfig_MASES_KNet_Common_Metrics_Sensor_RecordingLevel_MASES_KNet_Common_Metrics_Sensor___
+  commentId: M:MASES.KNet.Common.Metrics.Metrics.Sensor(System.String,MASES.KNet.Common.Metrics.MetricConfig,MASES.KNet.Common.Metrics.Sensor.RecordingLevel,MASES.KNet.Common.Metrics.Sensor[])
+  name.vb: Sensor(String, MetricConfig, Sensor.RecordingLevel, Sensor())
+  fullName: MASES.KNet.Common.Metrics.Metrics.Sensor(System.String, MASES.KNet.Common.Metrics.MetricConfig, MASES.KNet.Common.Metrics.Sensor.RecordingLevel, MASES.KNet.Common.Metrics.Sensor[])
+  fullName.vb: MASES.KNet.Common.Metrics.Metrics.Sensor(System.String, MASES.KNet.Common.Metrics.MetricConfig, MASES.KNet.Common.Metrics.Sensor.RecordingLevel, MASES.KNet.Common.Metrics.Sensor())
+  nameWithType: Metrics.Sensor(String, MetricConfig, Sensor.RecordingLevel, Sensor[])
+  nameWithType.vb: Metrics.Sensor(String, MetricConfig, Sensor.RecordingLevel, Sensor())
+- uid: MASES.KNet.Common.Metrics.Metrics.Sensor(System.String,MASES.KNet.Common.Metrics.MetricConfig,MASES.KNet.Common.Metrics.Sensor[])
+  name: Sensor(String, MetricConfig, Sensor[])
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_Sensor_System_String_MASES_KNet_Common_Metrics_MetricConfig_MASES_KNet_Common_Metrics_Sensor___
+  commentId: M:MASES.KNet.Common.Metrics.Metrics.Sensor(System.String,MASES.KNet.Common.Metrics.MetricConfig,MASES.KNet.Common.Metrics.Sensor[])
+  name.vb: Sensor(String, MetricConfig, Sensor())
+  fullName: MASES.KNet.Common.Metrics.Metrics.Sensor(System.String, MASES.KNet.Common.Metrics.MetricConfig, MASES.KNet.Common.Metrics.Sensor[])
+  fullName.vb: MASES.KNet.Common.Metrics.Metrics.Sensor(System.String, MASES.KNet.Common.Metrics.MetricConfig, MASES.KNet.Common.Metrics.Sensor())
+  nameWithType: Metrics.Sensor(String, MetricConfig, Sensor[])
+  nameWithType.vb: Metrics.Sensor(String, MetricConfig, Sensor())
+- uid: MASES.KNet.Common.Metrics.Metrics.Sensor(System.String,MASES.KNet.Common.Metrics.MetricConfig,System.Int64,MASES.KNet.Common.Metrics.Sensor.RecordingLevel,MASES.KNet.Common.Metrics.Sensor[])
+  name: Sensor(String, MetricConfig, Int64, Sensor.RecordingLevel, Sensor[])
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_Sensor_System_String_MASES_KNet_Common_Metrics_MetricConfig_System_Int64_MASES_KNet_Common_Metrics_Sensor_RecordingLevel_MASES_KNet_Common_Metrics_Sensor___
+  commentId: M:MASES.KNet.Common.Metrics.Metrics.Sensor(System.String,MASES.KNet.Common.Metrics.MetricConfig,System.Int64,MASES.KNet.Common.Metrics.Sensor.RecordingLevel,MASES.KNet.Common.Metrics.Sensor[])
+  name.vb: Sensor(String, MetricConfig, Int64, Sensor.RecordingLevel, Sensor())
+  fullName: MASES.KNet.Common.Metrics.Metrics.Sensor(System.String, MASES.KNet.Common.Metrics.MetricConfig, System.Int64, MASES.KNet.Common.Metrics.Sensor.RecordingLevel, MASES.KNet.Common.Metrics.Sensor[])
+  fullName.vb: MASES.KNet.Common.Metrics.Metrics.Sensor(System.String, MASES.KNet.Common.Metrics.MetricConfig, System.Int64, MASES.KNet.Common.Metrics.Sensor.RecordingLevel, MASES.KNet.Common.Metrics.Sensor())
+  nameWithType: Metrics.Sensor(String, MetricConfig, Int64, Sensor.RecordingLevel, Sensor[])
+  nameWithType.vb: Metrics.Sensor(String, MetricConfig, Int64, Sensor.RecordingLevel, Sensor())
+- uid: MASES.KNet.Common.Metrics.Metrics.Sensor(System.String,MASES.KNet.Common.Metrics.MetricConfig,System.Int64,MASES.KNet.Common.Metrics.Sensor[])
+  name: Sensor(String, MetricConfig, Int64, Sensor[])
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_Sensor_System_String_MASES_KNet_Common_Metrics_MetricConfig_System_Int64_MASES_KNet_Common_Metrics_Sensor___
+  commentId: M:MASES.KNet.Common.Metrics.Metrics.Sensor(System.String,MASES.KNet.Common.Metrics.MetricConfig,System.Int64,MASES.KNet.Common.Metrics.Sensor[])
+  name.vb: Sensor(String, MetricConfig, Int64, Sensor())
+  fullName: MASES.KNet.Common.Metrics.Metrics.Sensor(System.String, MASES.KNet.Common.Metrics.MetricConfig, System.Int64, MASES.KNet.Common.Metrics.Sensor[])
+  fullName.vb: MASES.KNet.Common.Metrics.Metrics.Sensor(System.String, MASES.KNet.Common.Metrics.MetricConfig, System.Int64, MASES.KNet.Common.Metrics.Sensor())
+  nameWithType: Metrics.Sensor(String, MetricConfig, Int64, Sensor[])
+  nameWithType.vb: Metrics.Sensor(String, MetricConfig, Int64, Sensor())
+- uid: MASES.KNet.Common.Metrics.Metrics.Sensor(System.String,MASES.KNet.Common.Metrics.Sensor.RecordingLevel)
+  name: Sensor(String, Sensor.RecordingLevel)
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_Sensor_System_String_MASES_KNet_Common_Metrics_Sensor_RecordingLevel_
+  commentId: M:MASES.KNet.Common.Metrics.Metrics.Sensor(System.String,MASES.KNet.Common.Metrics.Sensor.RecordingLevel)
+  fullName: MASES.KNet.Common.Metrics.Metrics.Sensor(System.String, MASES.KNet.Common.Metrics.Sensor.RecordingLevel)
+  nameWithType: Metrics.Sensor(String, Sensor.RecordingLevel)
+- uid: MASES.KNet.Common.Metrics.Metrics.Sensor(System.String,MASES.KNet.Common.Metrics.Sensor.RecordingLevel,MASES.KNet.Common.Metrics.Sensor[])
+  name: Sensor(String, Sensor.RecordingLevel, Sensor[])
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_Sensor_System_String_MASES_KNet_Common_Metrics_Sensor_RecordingLevel_MASES_KNet_Common_Metrics_Sensor___
+  commentId: M:MASES.KNet.Common.Metrics.Metrics.Sensor(System.String,MASES.KNet.Common.Metrics.Sensor.RecordingLevel,MASES.KNet.Common.Metrics.Sensor[])
+  name.vb: Sensor(String, Sensor.RecordingLevel, Sensor())
+  fullName: MASES.KNet.Common.Metrics.Metrics.Sensor(System.String, MASES.KNet.Common.Metrics.Sensor.RecordingLevel, MASES.KNet.Common.Metrics.Sensor[])
+  fullName.vb: MASES.KNet.Common.Metrics.Metrics.Sensor(System.String, MASES.KNet.Common.Metrics.Sensor.RecordingLevel, MASES.KNet.Common.Metrics.Sensor())
+  nameWithType: Metrics.Sensor(String, Sensor.RecordingLevel, Sensor[])
+  nameWithType.vb: Metrics.Sensor(String, Sensor.RecordingLevel, Sensor())
+- uid: MASES.KNet.Common.Metrics.Metrics.Sensor(System.String,MASES.KNet.Common.Metrics.Sensor[])
+  name: Sensor(String, Sensor[])
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_Sensor_System_String_MASES_KNet_Common_Metrics_Sensor___
+  commentId: M:MASES.KNet.Common.Metrics.Metrics.Sensor(System.String,MASES.KNet.Common.Metrics.Sensor[])
+  name.vb: Sensor(String, Sensor())
+  fullName: MASES.KNet.Common.Metrics.Metrics.Sensor(System.String, MASES.KNet.Common.Metrics.Sensor[])
+  fullName.vb: MASES.KNet.Common.Metrics.Metrics.Sensor(System.String, MASES.KNet.Common.Metrics.Sensor())
+  nameWithType: Metrics.Sensor(String, Sensor[])
+  nameWithType.vb: Metrics.Sensor(String, Sensor())
+- uid: MASES.KNet.Common.Metrics.Metrics.Sensor*
+  name: Sensor
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_Sensor_
+  commentId: Overload:MASES.KNet.Common.Metrics.Metrics.Sensor
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.Metrics.Sensor
+  nameWithType: Metrics.Sensor
+- uid: MASES.KNet.Common.Metrics.Metrics.ToHtmlTable(System.String,Java.Lang.Iterable{MASES.KNet.Common.MetricNameTemplate})
+  name: ToHtmlTable(String, Iterable<MetricNameTemplate>)
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_ToHtmlTable_System_String_Java_Lang_Iterable_MASES_KNet_Common_MetricNameTemplate__
+  commentId: M:MASES.KNet.Common.Metrics.Metrics.ToHtmlTable(System.String,Java.Lang.Iterable{MASES.KNet.Common.MetricNameTemplate})
+  name.vb: ToHtmlTable(String, Iterable(Of MetricNameTemplate))
+  fullName: MASES.KNet.Common.Metrics.Metrics.ToHtmlTable(System.String, Java.Lang.Iterable<MASES.KNet.Common.MetricNameTemplate>)
+  fullName.vb: MASES.KNet.Common.Metrics.Metrics.ToHtmlTable(System.String, Java.Lang.Iterable(Of MASES.KNet.Common.MetricNameTemplate))
+  nameWithType: Metrics.ToHtmlTable(String, Iterable<MetricNameTemplate>)
+  nameWithType.vb: Metrics.ToHtmlTable(String, Iterable(Of MetricNameTemplate))
+- uid: MASES.KNet.Common.Metrics.Metrics.ToHtmlTable*
+  name: ToHtmlTable
+  href: api/MASES.KNet.Common.Metrics.Metrics.html#MASES_KNet_Common_Metrics_Metrics_ToHtmlTable_
+  commentId: Overload:MASES.KNet.Common.Metrics.Metrics.ToHtmlTable
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.Metrics.ToHtmlTable
+  nameWithType: Metrics.ToHtmlTable
+- uid: MASES.KNet.Common.Metrics.MetricsContext
+  name: MetricsContext
+  href: api/MASES.KNet.Common.Metrics.MetricsContext.html
+  commentId: T:MASES.KNet.Common.Metrics.MetricsContext
+  fullName: MASES.KNet.Common.Metrics.MetricsContext
+  nameWithType: MetricsContext
+- uid: MASES.KNet.Common.Metrics.MetricsContext.ClassName
+  name: ClassName
+  href: api/MASES.KNet.Common.Metrics.MetricsContext.html#MASES_KNet_Common_Metrics_MetricsContext_ClassName
+  commentId: P:MASES.KNet.Common.Metrics.MetricsContext.ClassName
+  fullName: MASES.KNet.Common.Metrics.MetricsContext.ClassName
+  nameWithType: MetricsContext.ClassName
+- uid: MASES.KNet.Common.Metrics.MetricsContext.ClassName*
+  name: ClassName
+  href: api/MASES.KNet.Common.Metrics.MetricsContext.html#MASES_KNet_Common_Metrics_MetricsContext_ClassName_
+  commentId: Overload:MASES.KNet.Common.Metrics.MetricsContext.ClassName
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.MetricsContext.ClassName
+  nameWithType: MetricsContext.ClassName
+- uid: MASES.KNet.Common.Metrics.MetricsContext.ContextLabels
+  name: ContextLabels
+  href: api/MASES.KNet.Common.Metrics.MetricsContext.html#MASES_KNet_Common_Metrics_MetricsContext_ContextLabels
+  commentId: P:MASES.KNet.Common.Metrics.MetricsContext.ContextLabels
+  fullName: MASES.KNet.Common.Metrics.MetricsContext.ContextLabels
+  nameWithType: MetricsContext.ContextLabels
+- uid: MASES.KNet.Common.Metrics.MetricsContext.ContextLabels*
+  name: ContextLabels
+  href: api/MASES.KNet.Common.Metrics.MetricsContext.html#MASES_KNet_Common_Metrics_MetricsContext_ContextLabels_
+  commentId: Overload:MASES.KNet.Common.Metrics.MetricsContext.ContextLabels
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.MetricsContext.ContextLabels
+  nameWithType: MetricsContext.ContextLabels
+- uid: MASES.KNet.Common.Metrics.MetricsReporter
+  name: MetricsReporter
+  href: api/MASES.KNet.Common.Metrics.MetricsReporter.html
+  commentId: T:MASES.KNet.Common.Metrics.MetricsReporter
+  fullName: MASES.KNet.Common.Metrics.MetricsReporter
+  nameWithType: MetricsReporter
+- uid: MASES.KNet.Common.Metrics.MetricsReporter.#ctor
+  name: MetricsReporter()
+  href: api/MASES.KNet.Common.Metrics.MetricsReporter.html#MASES_KNet_Common_Metrics_MetricsReporter__ctor
+  commentId: M:MASES.KNet.Common.Metrics.MetricsReporter.#ctor
+  fullName: MASES.KNet.Common.Metrics.MetricsReporter.MetricsReporter()
+  nameWithType: MetricsReporter.MetricsReporter()
+- uid: MASES.KNet.Common.Metrics.MetricsReporter.#ctor*
+  name: MetricsReporter
+  href: api/MASES.KNet.Common.Metrics.MetricsReporter.html#MASES_KNet_Common_Metrics_MetricsReporter__ctor_
+  commentId: Overload:MASES.KNet.Common.Metrics.MetricsReporter.#ctor
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.MetricsReporter.MetricsReporter
+  nameWithType: MetricsReporter.MetricsReporter
+- uid: MASES.KNet.Common.Metrics.MetricsReporter.ClassName
+  name: ClassName
+  href: api/MASES.KNet.Common.Metrics.MetricsReporter.html#MASES_KNet_Common_Metrics_MetricsReporter_ClassName
+  commentId: P:MASES.KNet.Common.Metrics.MetricsReporter.ClassName
+  fullName: MASES.KNet.Common.Metrics.MetricsReporter.ClassName
+  nameWithType: MetricsReporter.ClassName
+- uid: MASES.KNet.Common.Metrics.MetricsReporter.ClassName*
+  name: ClassName
+  href: api/MASES.KNet.Common.Metrics.MetricsReporter.html#MASES_KNet_Common_Metrics_MetricsReporter_ClassName_
+  commentId: Overload:MASES.KNet.Common.Metrics.MetricsReporter.ClassName
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.MetricsReporter.ClassName
+  nameWithType: MetricsReporter.ClassName
+- uid: MASES.KNet.Common.Metrics.MetricsReporter.Close
+  name: Close()
+  href: api/MASES.KNet.Common.Metrics.MetricsReporter.html#MASES_KNet_Common_Metrics_MetricsReporter_Close
+  commentId: M:MASES.KNet.Common.Metrics.MetricsReporter.Close
+  fullName: MASES.KNet.Common.Metrics.MetricsReporter.Close()
+  nameWithType: MetricsReporter.Close()
+- uid: MASES.KNet.Common.Metrics.MetricsReporter.Close*
+  name: Close
+  href: api/MASES.KNet.Common.Metrics.MetricsReporter.html#MASES_KNet_Common_Metrics_MetricsReporter_Close_
+  commentId: Overload:MASES.KNet.Common.Metrics.MetricsReporter.Close
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.MetricsReporter.Close
+  nameWithType: MetricsReporter.Close
+- uid: MASES.KNet.Common.Metrics.MetricsReporter.Configure(Java.Util.Map{System.String,System.Object})
+  name: Configure(Map<String, Object>)
+  href: api/MASES.KNet.Common.Metrics.MetricsReporter.html#MASES_KNet_Common_Metrics_MetricsReporter_Configure_Java_Util_Map_System_String_System_Object__
+  commentId: M:MASES.KNet.Common.Metrics.MetricsReporter.Configure(Java.Util.Map{System.String,System.Object})
+  name.vb: Configure(Map(Of String, Object))
+  fullName: MASES.KNet.Common.Metrics.MetricsReporter.Configure(Java.Util.Map<System.String, System.Object>)
+  fullName.vb: MASES.KNet.Common.Metrics.MetricsReporter.Configure(Java.Util.Map(Of System.String, System.Object))
+  nameWithType: MetricsReporter.Configure(Map<String, Object>)
+  nameWithType.vb: MetricsReporter.Configure(Map(Of String, Object))
+- uid: MASES.KNet.Common.Metrics.MetricsReporter.Configure*
+  name: Configure
+  href: api/MASES.KNet.Common.Metrics.MetricsReporter.html#MASES_KNet_Common_Metrics_MetricsReporter_Configure_
+  commentId: Overload:MASES.KNet.Common.Metrics.MetricsReporter.Configure
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.MetricsReporter.Configure
+  nameWithType: MetricsReporter.Configure
+- uid: MASES.KNet.Common.Metrics.MetricsReporter.ContextChange(MASES.KNet.Common.Metrics.MetricsContext)
+  name: ContextChange(MetricsContext)
+  href: api/MASES.KNet.Common.Metrics.MetricsReporter.html#MASES_KNet_Common_Metrics_MetricsReporter_ContextChange_MASES_KNet_Common_Metrics_MetricsContext_
+  commentId: M:MASES.KNet.Common.Metrics.MetricsReporter.ContextChange(MASES.KNet.Common.Metrics.MetricsContext)
+  fullName: MASES.KNet.Common.Metrics.MetricsReporter.ContextChange(MASES.KNet.Common.Metrics.MetricsContext)
+  nameWithType: MetricsReporter.ContextChange(MetricsContext)
+- uid: MASES.KNet.Common.Metrics.MetricsReporter.ContextChange*
+  name: ContextChange
+  href: api/MASES.KNet.Common.Metrics.MetricsReporter.html#MASES_KNet_Common_Metrics_MetricsReporter_ContextChange_
+  commentId: Overload:MASES.KNet.Common.Metrics.MetricsReporter.ContextChange
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.MetricsReporter.ContextChange
+  nameWithType: MetricsReporter.ContextChange
+- uid: MASES.KNet.Common.Metrics.MetricsReporter.Init(Java.Util.List{MASES.KNet.Common.Metrics.KafkaMetric})
+  name: Init(List<KafkaMetric>)
+  href: api/MASES.KNet.Common.Metrics.MetricsReporter.html#MASES_KNet_Common_Metrics_MetricsReporter_Init_Java_Util_List_MASES_KNet_Common_Metrics_KafkaMetric__
+  commentId: M:MASES.KNet.Common.Metrics.MetricsReporter.Init(Java.Util.List{MASES.KNet.Common.Metrics.KafkaMetric})
+  name.vb: Init(List(Of KafkaMetric))
+  fullName: MASES.KNet.Common.Metrics.MetricsReporter.Init(Java.Util.List<MASES.KNet.Common.Metrics.KafkaMetric>)
+  fullName.vb: MASES.KNet.Common.Metrics.MetricsReporter.Init(Java.Util.List(Of MASES.KNet.Common.Metrics.KafkaMetric))
+  nameWithType: MetricsReporter.Init(List<KafkaMetric>)
+  nameWithType.vb: MetricsReporter.Init(List(Of KafkaMetric))
+- uid: MASES.KNet.Common.Metrics.MetricsReporter.Init*
+  name: Init
+  href: api/MASES.KNet.Common.Metrics.MetricsReporter.html#MASES_KNet_Common_Metrics_MetricsReporter_Init_
+  commentId: Overload:MASES.KNet.Common.Metrics.MetricsReporter.Init
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.MetricsReporter.Init
+  nameWithType: MetricsReporter.Init
+- uid: MASES.KNet.Common.Metrics.MetricsReporter.MetricChange(MASES.KNet.Common.Metrics.KafkaMetric)
+  name: MetricChange(KafkaMetric)
+  href: api/MASES.KNet.Common.Metrics.MetricsReporter.html#MASES_KNet_Common_Metrics_MetricsReporter_MetricChange_MASES_KNet_Common_Metrics_KafkaMetric_
+  commentId: M:MASES.KNet.Common.Metrics.MetricsReporter.MetricChange(MASES.KNet.Common.Metrics.KafkaMetric)
+  fullName: MASES.KNet.Common.Metrics.MetricsReporter.MetricChange(MASES.KNet.Common.Metrics.KafkaMetric)
+  nameWithType: MetricsReporter.MetricChange(KafkaMetric)
+- uid: MASES.KNet.Common.Metrics.MetricsReporter.MetricChange*
+  name: MetricChange
+  href: api/MASES.KNet.Common.Metrics.MetricsReporter.html#MASES_KNet_Common_Metrics_MetricsReporter_MetricChange_
+  commentId: Overload:MASES.KNet.Common.Metrics.MetricsReporter.MetricChange
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.MetricsReporter.MetricChange
+  nameWithType: MetricsReporter.MetricChange
+- uid: MASES.KNet.Common.Metrics.MetricsReporter.MetricRemoval(MASES.KNet.Common.Metrics.KafkaMetric)
+  name: MetricRemoval(KafkaMetric)
+  href: api/MASES.KNet.Common.Metrics.MetricsReporter.html#MASES_KNet_Common_Metrics_MetricsReporter_MetricRemoval_MASES_KNet_Common_Metrics_KafkaMetric_
+  commentId: M:MASES.KNet.Common.Metrics.MetricsReporter.MetricRemoval(MASES.KNet.Common.Metrics.KafkaMetric)
+  fullName: MASES.KNet.Common.Metrics.MetricsReporter.MetricRemoval(MASES.KNet.Common.Metrics.KafkaMetric)
+  nameWithType: MetricsReporter.MetricRemoval(KafkaMetric)
+- uid: MASES.KNet.Common.Metrics.MetricsReporter.MetricRemoval*
+  name: MetricRemoval
+  href: api/MASES.KNet.Common.Metrics.MetricsReporter.html#MASES_KNet_Common_Metrics_MetricsReporter_MetricRemoval_
+  commentId: Overload:MASES.KNet.Common.Metrics.MetricsReporter.MetricRemoval
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.MetricsReporter.MetricRemoval
+  nameWithType: MetricsReporter.MetricRemoval
+- uid: MASES.KNet.Common.Metrics.MetricsReporter.ReconfigurableConfigs
+  name: ReconfigurableConfigs()
+  href: api/MASES.KNet.Common.Metrics.MetricsReporter.html#MASES_KNet_Common_Metrics_MetricsReporter_ReconfigurableConfigs
+  commentId: M:MASES.KNet.Common.Metrics.MetricsReporter.ReconfigurableConfigs
+  fullName: MASES.KNet.Common.Metrics.MetricsReporter.ReconfigurableConfigs()
+  nameWithType: MetricsReporter.ReconfigurableConfigs()
+- uid: MASES.KNet.Common.Metrics.MetricsReporter.ReconfigurableConfigs*
+  name: ReconfigurableConfigs
+  href: api/MASES.KNet.Common.Metrics.MetricsReporter.html#MASES_KNet_Common_Metrics_MetricsReporter_ReconfigurableConfigs_
+  commentId: Overload:MASES.KNet.Common.Metrics.MetricsReporter.ReconfigurableConfigs
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.MetricsReporter.ReconfigurableConfigs
+  nameWithType: MetricsReporter.ReconfigurableConfigs
+- uid: MASES.KNet.Common.Metrics.MetricsReporter.Reconfigure(Java.Util.Map{System.String,System.Object})
+  name: Reconfigure(Map<String, Object>)
+  href: api/MASES.KNet.Common.Metrics.MetricsReporter.html#MASES_KNet_Common_Metrics_MetricsReporter_Reconfigure_Java_Util_Map_System_String_System_Object__
+  commentId: M:MASES.KNet.Common.Metrics.MetricsReporter.Reconfigure(Java.Util.Map{System.String,System.Object})
+  name.vb: Reconfigure(Map(Of String, Object))
+  fullName: MASES.KNet.Common.Metrics.MetricsReporter.Reconfigure(Java.Util.Map<System.String, System.Object>)
+  fullName.vb: MASES.KNet.Common.Metrics.MetricsReporter.Reconfigure(Java.Util.Map(Of System.String, System.Object))
+  nameWithType: MetricsReporter.Reconfigure(Map<String, Object>)
+  nameWithType.vb: MetricsReporter.Reconfigure(Map(Of String, Object))
+- uid: MASES.KNet.Common.Metrics.MetricsReporter.Reconfigure*
+  name: Reconfigure
+  href: api/MASES.KNet.Common.Metrics.MetricsReporter.html#MASES_KNet_Common_Metrics_MetricsReporter_Reconfigure_
+  commentId: Overload:MASES.KNet.Common.Metrics.MetricsReporter.Reconfigure
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.MetricsReporter.Reconfigure
+  nameWithType: MetricsReporter.Reconfigure
+- uid: MASES.KNet.Common.Metrics.MetricsReporter.ValidateReconfiguration(Java.Util.Map{System.String,System.Object})
+  name: ValidateReconfiguration(Map<String, Object>)
+  href: api/MASES.KNet.Common.Metrics.MetricsReporter.html#MASES_KNet_Common_Metrics_MetricsReporter_ValidateReconfiguration_Java_Util_Map_System_String_System_Object__
+  commentId: M:MASES.KNet.Common.Metrics.MetricsReporter.ValidateReconfiguration(Java.Util.Map{System.String,System.Object})
+  name.vb: ValidateReconfiguration(Map(Of String, Object))
+  fullName: MASES.KNet.Common.Metrics.MetricsReporter.ValidateReconfiguration(Java.Util.Map<System.String, System.Object>)
+  fullName.vb: MASES.KNet.Common.Metrics.MetricsReporter.ValidateReconfiguration(Java.Util.Map(Of System.String, System.Object))
+  nameWithType: MetricsReporter.ValidateReconfiguration(Map<String, Object>)
+  nameWithType.vb: MetricsReporter.ValidateReconfiguration(Map(Of String, Object))
+- uid: MASES.KNet.Common.Metrics.MetricsReporter.ValidateReconfiguration*
+  name: ValidateReconfiguration
+  href: api/MASES.KNet.Common.Metrics.MetricsReporter.html#MASES_KNet_Common_Metrics_MetricsReporter_ValidateReconfiguration_
+  commentId: Overload:MASES.KNet.Common.Metrics.MetricsReporter.ValidateReconfiguration
+  isSpec: "True"
+  fullName: MASES.KNet.Common.Metrics.MetricsReporter.ValidateReconfiguration
+  nameWithType: MetricsReporter.ValidateReconfiguration
 - uid: MASES.KNet.Common.Metrics.MetricValueProvider`1
   name: MetricValueProvider<T>
   href: api/MASES.KNet.Common.Metrics.MetricValueProvider-1.html
@@ -24620,6 +25991,12 @@ references:
   commentId: F:MASES.KNet.Const.DefaultLog4JPath
   fullName: MASES.KNet.Const.DefaultLog4JPath
   nameWithType: Const.DefaultLog4JPath
+- uid: MASES.KNet.Const.DefaultLogPath
+  name: DefaultLogPath
+  href: api/MASES.KNet.Const.html#MASES_KNet_Const_DefaultLogPath
+  commentId: F:MASES.KNet.Const.DefaultLogPath
+  fullName: MASES.KNet.Const.DefaultLogPath
+  nameWithType: Const.DefaultLogPath
 - uid: MASES.KNet.Const.DefaultRootPath
   name: DefaultRootPath
   href: api/MASES.KNet.Const.html#MASES_KNet_Const_DefaultRootPath
@@ -25008,6 +26385,19 @@ references:
   isSpec: "True"
   fullName: MASES.KNet.Extensions.KafkaAdminClientExtensions.DeleteRecordsAsync
   nameWithType: KafkaAdminClientExtensions.DeleteRecordsAsync
+- uid: MASES.KNet.Extensions.KafkaAdminClientExtensions.DeleteTopic(MASES.KNet.Clients.Admin.IAdmin,System.String)
+  name: DeleteTopic(IAdmin, String)
+  href: api/MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DeleteTopic_MASES_KNet_Clients_Admin_IAdmin_System_String_
+  commentId: M:MASES.KNet.Extensions.KafkaAdminClientExtensions.DeleteTopic(MASES.KNet.Clients.Admin.IAdmin,System.String)
+  fullName: MASES.KNet.Extensions.KafkaAdminClientExtensions.DeleteTopic(MASES.KNet.Clients.Admin.IAdmin, System.String)
+  nameWithType: KafkaAdminClientExtensions.DeleteTopic(IAdmin, String)
+- uid: MASES.KNet.Extensions.KafkaAdminClientExtensions.DeleteTopic*
+  name: DeleteTopic
+  href: api/MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DeleteTopic_
+  commentId: Overload:MASES.KNet.Extensions.KafkaAdminClientExtensions.DeleteTopic
+  isSpec: "True"
+  fullName: MASES.KNet.Extensions.KafkaAdminClientExtensions.DeleteTopic
+  nameWithType: KafkaAdminClientExtensions.DeleteTopic
 - uid: MASES.KNet.Extensions.KafkaAdminClientExtensions.DeleteTopicAsync(MASES.KNet.Clients.Admin.IAdmin,System.String)
   name: DeleteTopicAsync(IAdmin, String)
   href: api/MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DeleteTopicAsync_MASES_KNet_Clients_Admin_IAdmin_System_String_
@@ -25711,6 +27101,19 @@ references:
   commentId: T:MASES.KNet.Extensions.KafkaProducerExtensions
   fullName: MASES.KNet.Extensions.KafkaProducerExtensions
   nameWithType: KafkaProducerExtensions
+- uid: MASES.KNet.Extensions.KafkaProducerExtensions.Configs(MASES.KNet.Clients.Admin.NewTopic,MASES.KNet.Common.Config.TopicConfigBuilder)
+  name: Configs(NewTopic, TopicConfigBuilder)
+  href: api/MASES.KNet.Extensions.KafkaProducerExtensions.html#MASES_KNet_Extensions_KafkaProducerExtensions_Configs_MASES_KNet_Clients_Admin_NewTopic_MASES_KNet_Common_Config_TopicConfigBuilder_
+  commentId: M:MASES.KNet.Extensions.KafkaProducerExtensions.Configs(MASES.KNet.Clients.Admin.NewTopic,MASES.KNet.Common.Config.TopicConfigBuilder)
+  fullName: MASES.KNet.Extensions.KafkaProducerExtensions.Configs(MASES.KNet.Clients.Admin.NewTopic, MASES.KNet.Common.Config.TopicConfigBuilder)
+  nameWithType: KafkaProducerExtensions.Configs(NewTopic, TopicConfigBuilder)
+- uid: MASES.KNet.Extensions.KafkaProducerExtensions.Configs*
+  name: Configs
+  href: api/MASES.KNet.Extensions.KafkaProducerExtensions.html#MASES_KNet_Extensions_KafkaProducerExtensions_Configs_
+  commentId: Overload:MASES.KNet.Extensions.KafkaProducerExtensions.Configs
+  isSpec: "True"
+  fullName: MASES.KNet.Extensions.KafkaProducerExtensions.Configs
+  nameWithType: KafkaProducerExtensions.Configs
 - uid: MASES.KNet.Extensions.KafkaProducerExtensions.Produce*
   name: Produce
   href: api/MASES.KNet.Extensions.KafkaProducerExtensions.html#MASES_KNet_Extensions_KafkaProducerExtensions_Produce_
@@ -25983,526 +27386,678 @@ references:
   commentId: T:MASES.KNet.KNetCore
   fullName: MASES.KNet.KNetCore
   nameWithType: KNetCore
-- uid: MASES.KNet.KNetCore.#ctor
+- uid: MASES.KNet.KNetCore`1
+  name: KNetCore<T>
+  href: api/MASES.KNet.KNetCore-1.html
+  commentId: T:MASES.KNet.KNetCore`1
+  name.vb: KNetCore(Of T)
+  fullName: MASES.KNet.KNetCore<T>
+  fullName.vb: MASES.KNet.KNetCore(Of T)
+  nameWithType: KNetCore<T>
+  nameWithType.vb: KNetCore(Of T)
+- uid: MASES.KNet.KNetCore`1.#ctor
   name: KNetCore()
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore__ctor
-  commentId: M:MASES.KNet.KNetCore.#ctor
-  fullName: MASES.KNet.KNetCore.KNetCore()
-  nameWithType: KNetCore.KNetCore()
-- uid: MASES.KNet.KNetCore.#ctor*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1__ctor
+  commentId: M:MASES.KNet.KNetCore`1.#ctor
+  fullName: MASES.KNet.KNetCore<T>.KNetCore()
+  fullName.vb: MASES.KNet.KNetCore(Of T).KNetCore()
+  nameWithType: KNetCore<T>.KNetCore()
+  nameWithType.vb: KNetCore(Of T).KNetCore()
+- uid: MASES.KNet.KNetCore`1.#ctor*
   name: KNetCore
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore__ctor_
-  commentId: Overload:MASES.KNet.KNetCore.#ctor
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1__ctor_
+  commentId: Overload:MASES.KNet.KNetCore`1.#ctor
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.KNetCore
-  nameWithType: KNetCore.KNetCore
-- uid: MASES.KNet.KNetCore.ApplicationHeapSize
-  name: ApplicationHeapSize
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ApplicationHeapSize
-  commentId: P:MASES.KNet.KNetCore.ApplicationHeapSize
-  fullName: MASES.KNet.KNetCore.ApplicationHeapSize
-  nameWithType: KNetCore.ApplicationHeapSize
-- uid: MASES.KNet.KNetCore.ApplicationHeapSize*
-  name: ApplicationHeapSize
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ApplicationHeapSize_
-  commentId: Overload:MASES.KNet.KNetCore.ApplicationHeapSize
-  isSpec: "True"
-  fullName: MASES.KNet.KNetCore.ApplicationHeapSize
-  nameWithType: KNetCore.ApplicationHeapSize
-- uid: MASES.KNet.KNetCore.ApplicationInitialHeapSize
-  name: ApplicationInitialHeapSize
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ApplicationInitialHeapSize
-  commentId: P:MASES.KNet.KNetCore.ApplicationInitialHeapSize
-  fullName: MASES.KNet.KNetCore.ApplicationInitialHeapSize
-  nameWithType: KNetCore.ApplicationInitialHeapSize
-- uid: MASES.KNet.KNetCore.ApplicationInitialHeapSize*
-  name: ApplicationInitialHeapSize
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ApplicationInitialHeapSize_
-  commentId: Overload:MASES.KNet.KNetCore.ApplicationInitialHeapSize
-  isSpec: "True"
-  fullName: MASES.KNet.KNetCore.ApplicationInitialHeapSize
-  nameWithType: KNetCore.ApplicationInitialHeapSize
-- uid: MASES.KNet.KNetCore.ClientsPath
+  fullName: MASES.KNet.KNetCore<T>.KNetCore
+  fullName.vb: MASES.KNet.KNetCore(Of T).KNetCore
+  nameWithType: KNetCore<T>.KNetCore
+  nameWithType.vb: KNetCore(Of T).KNetCore
+- uid: MASES.KNet.KNetCore`1.ClientsPath
   name: ClientsPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ClientsPath
-  commentId: P:MASES.KNet.KNetCore.ClientsPath
-  fullName: MASES.KNet.KNetCore.ClientsPath
-  nameWithType: KNetCore.ClientsPath
-- uid: MASES.KNet.KNetCore.ClientsPath*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ClientsPath
+  commentId: P:MASES.KNet.KNetCore`1.ClientsPath
+  fullName: MASES.KNet.KNetCore<T>.ClientsPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).ClientsPath
+  nameWithType: KNetCore<T>.ClientsPath
+  nameWithType.vb: KNetCore(Of T).ClientsPath
+- uid: MASES.KNet.KNetCore`1.ClientsPath*
   name: ClientsPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ClientsPath_
-  commentId: Overload:MASES.KNet.KNetCore.ClientsPath
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ClientsPath_
+  commentId: Overload:MASES.KNet.KNetCore`1.ClientsPath
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.ClientsPath
-  nameWithType: KNetCore.ClientsPath
-- uid: MASES.KNet.KNetCore.CommandLineArguments
+  fullName: MASES.KNet.KNetCore<T>.ClientsPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).ClientsPath
+  nameWithType: KNetCore<T>.ClientsPath
+  nameWithType.vb: KNetCore(Of T).ClientsPath
+- uid: MASES.KNet.KNetCore`1.CommandLineArguments
   name: CommandLineArguments
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_CommandLineArguments
-  commentId: P:MASES.KNet.KNetCore.CommandLineArguments
-  fullName: MASES.KNet.KNetCore.CommandLineArguments
-  nameWithType: KNetCore.CommandLineArguments
-- uid: MASES.KNet.KNetCore.CommandLineArguments*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_CommandLineArguments
+  commentId: P:MASES.KNet.KNetCore`1.CommandLineArguments
+  fullName: MASES.KNet.KNetCore<T>.CommandLineArguments
+  fullName.vb: MASES.KNet.KNetCore(Of T).CommandLineArguments
+  nameWithType: KNetCore<T>.CommandLineArguments
+  nameWithType.vb: KNetCore(Of T).CommandLineArguments
+- uid: MASES.KNet.KNetCore`1.CommandLineArguments*
   name: CommandLineArguments
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_CommandLineArguments_
-  commentId: Overload:MASES.KNet.KNetCore.CommandLineArguments
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_CommandLineArguments_
+  commentId: Overload:MASES.KNet.KNetCore`1.CommandLineArguments
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.CommandLineArguments
-  nameWithType: KNetCore.CommandLineArguments
-- uid: MASES.KNet.KNetCore.ConnectApiDependenciesPath
+  fullName: MASES.KNet.KNetCore<T>.CommandLineArguments
+  fullName.vb: MASES.KNet.KNetCore(Of T).CommandLineArguments
+  nameWithType: KNetCore<T>.CommandLineArguments
+  nameWithType.vb: KNetCore(Of T).CommandLineArguments
+- uid: MASES.KNet.KNetCore`1.ConnectApiDependenciesPath
   name: ConnectApiDependenciesPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ConnectApiDependenciesPath
-  commentId: P:MASES.KNet.KNetCore.ConnectApiDependenciesPath
-  fullName: MASES.KNet.KNetCore.ConnectApiDependenciesPath
-  nameWithType: KNetCore.ConnectApiDependenciesPath
-- uid: MASES.KNet.KNetCore.ConnectApiDependenciesPath*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ConnectApiDependenciesPath
+  commentId: P:MASES.KNet.KNetCore`1.ConnectApiDependenciesPath
+  fullName: MASES.KNet.KNetCore<T>.ConnectApiDependenciesPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).ConnectApiDependenciesPath
+  nameWithType: KNetCore<T>.ConnectApiDependenciesPath
+  nameWithType.vb: KNetCore(Of T).ConnectApiDependenciesPath
+- uid: MASES.KNet.KNetCore`1.ConnectApiDependenciesPath*
   name: ConnectApiDependenciesPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ConnectApiDependenciesPath_
-  commentId: Overload:MASES.KNet.KNetCore.ConnectApiDependenciesPath
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ConnectApiDependenciesPath_
+  commentId: Overload:MASES.KNet.KNetCore`1.ConnectApiDependenciesPath
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.ConnectApiDependenciesPath
-  nameWithType: KNetCore.ConnectApiDependenciesPath
-- uid: MASES.KNet.KNetCore.ConnectApiPath
+  fullName: MASES.KNet.KNetCore<T>.ConnectApiDependenciesPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).ConnectApiDependenciesPath
+  nameWithType: KNetCore<T>.ConnectApiDependenciesPath
+  nameWithType.vb: KNetCore(Of T).ConnectApiDependenciesPath
+- uid: MASES.KNet.KNetCore`1.ConnectApiPath
   name: ConnectApiPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ConnectApiPath
-  commentId: P:MASES.KNet.KNetCore.ConnectApiPath
-  fullName: MASES.KNet.KNetCore.ConnectApiPath
-  nameWithType: KNetCore.ConnectApiPath
-- uid: MASES.KNet.KNetCore.ConnectApiPath*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ConnectApiPath
+  commentId: P:MASES.KNet.KNetCore`1.ConnectApiPath
+  fullName: MASES.KNet.KNetCore<T>.ConnectApiPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).ConnectApiPath
+  nameWithType: KNetCore<T>.ConnectApiPath
+  nameWithType.vb: KNetCore(Of T).ConnectApiPath
+- uid: MASES.KNet.KNetCore`1.ConnectApiPath*
   name: ConnectApiPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ConnectApiPath_
-  commentId: Overload:MASES.KNet.KNetCore.ConnectApiPath
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ConnectApiPath_
+  commentId: Overload:MASES.KNet.KNetCore`1.ConnectApiPath
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.ConnectApiPath
-  nameWithType: KNetCore.ConnectApiPath
-- uid: MASES.KNet.KNetCore.ConnectFileDependenciesPath
+  fullName: MASES.KNet.KNetCore<T>.ConnectApiPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).ConnectApiPath
+  nameWithType: KNetCore<T>.ConnectApiPath
+  nameWithType.vb: KNetCore(Of T).ConnectApiPath
+- uid: MASES.KNet.KNetCore`1.ConnectFileDependenciesPath
   name: ConnectFileDependenciesPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ConnectFileDependenciesPath
-  commentId: P:MASES.KNet.KNetCore.ConnectFileDependenciesPath
-  fullName: MASES.KNet.KNetCore.ConnectFileDependenciesPath
-  nameWithType: KNetCore.ConnectFileDependenciesPath
-- uid: MASES.KNet.KNetCore.ConnectFileDependenciesPath*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ConnectFileDependenciesPath
+  commentId: P:MASES.KNet.KNetCore`1.ConnectFileDependenciesPath
+  fullName: MASES.KNet.KNetCore<T>.ConnectFileDependenciesPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).ConnectFileDependenciesPath
+  nameWithType: KNetCore<T>.ConnectFileDependenciesPath
+  nameWithType.vb: KNetCore(Of T).ConnectFileDependenciesPath
+- uid: MASES.KNet.KNetCore`1.ConnectFileDependenciesPath*
   name: ConnectFileDependenciesPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ConnectFileDependenciesPath_
-  commentId: Overload:MASES.KNet.KNetCore.ConnectFileDependenciesPath
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ConnectFileDependenciesPath_
+  commentId: Overload:MASES.KNet.KNetCore`1.ConnectFileDependenciesPath
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.ConnectFileDependenciesPath
-  nameWithType: KNetCore.ConnectFileDependenciesPath
-- uid: MASES.KNet.KNetCore.ConnectFilePath
+  fullName: MASES.KNet.KNetCore<T>.ConnectFileDependenciesPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).ConnectFileDependenciesPath
+  nameWithType: KNetCore<T>.ConnectFileDependenciesPath
+  nameWithType.vb: KNetCore(Of T).ConnectFileDependenciesPath
+- uid: MASES.KNet.KNetCore`1.ConnectFilePath
   name: ConnectFilePath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ConnectFilePath
-  commentId: P:MASES.KNet.KNetCore.ConnectFilePath
-  fullName: MASES.KNet.KNetCore.ConnectFilePath
-  nameWithType: KNetCore.ConnectFilePath
-- uid: MASES.KNet.KNetCore.ConnectFilePath*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ConnectFilePath
+  commentId: P:MASES.KNet.KNetCore`1.ConnectFilePath
+  fullName: MASES.KNet.KNetCore<T>.ConnectFilePath
+  fullName.vb: MASES.KNet.KNetCore(Of T).ConnectFilePath
+  nameWithType: KNetCore<T>.ConnectFilePath
+  nameWithType.vb: KNetCore(Of T).ConnectFilePath
+- uid: MASES.KNet.KNetCore`1.ConnectFilePath*
   name: ConnectFilePath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ConnectFilePath_
-  commentId: Overload:MASES.KNet.KNetCore.ConnectFilePath
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ConnectFilePath_
+  commentId: Overload:MASES.KNet.KNetCore`1.ConnectFilePath
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.ConnectFilePath
-  nameWithType: KNetCore.ConnectFilePath
-- uid: MASES.KNet.KNetCore.ConnectJsonDependenciesPath
+  fullName: MASES.KNet.KNetCore<T>.ConnectFilePath
+  fullName.vb: MASES.KNet.KNetCore(Of T).ConnectFilePath
+  nameWithType: KNetCore<T>.ConnectFilePath
+  nameWithType.vb: KNetCore(Of T).ConnectFilePath
+- uid: MASES.KNet.KNetCore`1.ConnectJsonDependenciesPath
   name: ConnectJsonDependenciesPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ConnectJsonDependenciesPath
-  commentId: P:MASES.KNet.KNetCore.ConnectJsonDependenciesPath
-  fullName: MASES.KNet.KNetCore.ConnectJsonDependenciesPath
-  nameWithType: KNetCore.ConnectJsonDependenciesPath
-- uid: MASES.KNet.KNetCore.ConnectJsonDependenciesPath*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ConnectJsonDependenciesPath
+  commentId: P:MASES.KNet.KNetCore`1.ConnectJsonDependenciesPath
+  fullName: MASES.KNet.KNetCore<T>.ConnectJsonDependenciesPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).ConnectJsonDependenciesPath
+  nameWithType: KNetCore<T>.ConnectJsonDependenciesPath
+  nameWithType.vb: KNetCore(Of T).ConnectJsonDependenciesPath
+- uid: MASES.KNet.KNetCore`1.ConnectJsonDependenciesPath*
   name: ConnectJsonDependenciesPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ConnectJsonDependenciesPath_
-  commentId: Overload:MASES.KNet.KNetCore.ConnectJsonDependenciesPath
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ConnectJsonDependenciesPath_
+  commentId: Overload:MASES.KNet.KNetCore`1.ConnectJsonDependenciesPath
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.ConnectJsonDependenciesPath
-  nameWithType: KNetCore.ConnectJsonDependenciesPath
-- uid: MASES.KNet.KNetCore.ConnectJsonPath
+  fullName: MASES.KNet.KNetCore<T>.ConnectJsonDependenciesPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).ConnectJsonDependenciesPath
+  nameWithType: KNetCore<T>.ConnectJsonDependenciesPath
+  nameWithType.vb: KNetCore(Of T).ConnectJsonDependenciesPath
+- uid: MASES.KNet.KNetCore`1.ConnectJsonPath
   name: ConnectJsonPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ConnectJsonPath
-  commentId: P:MASES.KNet.KNetCore.ConnectJsonPath
-  fullName: MASES.KNet.KNetCore.ConnectJsonPath
-  nameWithType: KNetCore.ConnectJsonPath
-- uid: MASES.KNet.KNetCore.ConnectJsonPath*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ConnectJsonPath
+  commentId: P:MASES.KNet.KNetCore`1.ConnectJsonPath
+  fullName: MASES.KNet.KNetCore<T>.ConnectJsonPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).ConnectJsonPath
+  nameWithType: KNetCore<T>.ConnectJsonPath
+  nameWithType.vb: KNetCore(Of T).ConnectJsonPath
+- uid: MASES.KNet.KNetCore`1.ConnectJsonPath*
   name: ConnectJsonPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ConnectJsonPath_
-  commentId: Overload:MASES.KNet.KNetCore.ConnectJsonPath
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ConnectJsonPath_
+  commentId: Overload:MASES.KNet.KNetCore`1.ConnectJsonPath
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.ConnectJsonPath
-  nameWithType: KNetCore.ConnectJsonPath
-- uid: MASES.KNet.KNetCore.ConnectRuntimeDependenciesPath
+  fullName: MASES.KNet.KNetCore<T>.ConnectJsonPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).ConnectJsonPath
+  nameWithType: KNetCore<T>.ConnectJsonPath
+  nameWithType.vb: KNetCore(Of T).ConnectJsonPath
+- uid: MASES.KNet.KNetCore`1.ConnectRuntimeDependenciesPath
   name: ConnectRuntimeDependenciesPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ConnectRuntimeDependenciesPath
-  commentId: P:MASES.KNet.KNetCore.ConnectRuntimeDependenciesPath
-  fullName: MASES.KNet.KNetCore.ConnectRuntimeDependenciesPath
-  nameWithType: KNetCore.ConnectRuntimeDependenciesPath
-- uid: MASES.KNet.KNetCore.ConnectRuntimeDependenciesPath*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ConnectRuntimeDependenciesPath
+  commentId: P:MASES.KNet.KNetCore`1.ConnectRuntimeDependenciesPath
+  fullName: MASES.KNet.KNetCore<T>.ConnectRuntimeDependenciesPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).ConnectRuntimeDependenciesPath
+  nameWithType: KNetCore<T>.ConnectRuntimeDependenciesPath
+  nameWithType.vb: KNetCore(Of T).ConnectRuntimeDependenciesPath
+- uid: MASES.KNet.KNetCore`1.ConnectRuntimeDependenciesPath*
   name: ConnectRuntimeDependenciesPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ConnectRuntimeDependenciesPath_
-  commentId: Overload:MASES.KNet.KNetCore.ConnectRuntimeDependenciesPath
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ConnectRuntimeDependenciesPath_
+  commentId: Overload:MASES.KNet.KNetCore`1.ConnectRuntimeDependenciesPath
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.ConnectRuntimeDependenciesPath
-  nameWithType: KNetCore.ConnectRuntimeDependenciesPath
-- uid: MASES.KNet.KNetCore.ConnectRuntimePath
+  fullName: MASES.KNet.KNetCore<T>.ConnectRuntimeDependenciesPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).ConnectRuntimeDependenciesPath
+  nameWithType: KNetCore<T>.ConnectRuntimeDependenciesPath
+  nameWithType.vb: KNetCore(Of T).ConnectRuntimeDependenciesPath
+- uid: MASES.KNet.KNetCore`1.ConnectRuntimePath
   name: ConnectRuntimePath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ConnectRuntimePath
-  commentId: P:MASES.KNet.KNetCore.ConnectRuntimePath
-  fullName: MASES.KNet.KNetCore.ConnectRuntimePath
-  nameWithType: KNetCore.ConnectRuntimePath
-- uid: MASES.KNet.KNetCore.ConnectRuntimePath*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ConnectRuntimePath
+  commentId: P:MASES.KNet.KNetCore`1.ConnectRuntimePath
+  fullName: MASES.KNet.KNetCore<T>.ConnectRuntimePath
+  fullName.vb: MASES.KNet.KNetCore(Of T).ConnectRuntimePath
+  nameWithType: KNetCore<T>.ConnectRuntimePath
+  nameWithType.vb: KNetCore(Of T).ConnectRuntimePath
+- uid: MASES.KNet.KNetCore`1.ConnectRuntimePath*
   name: ConnectRuntimePath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ConnectRuntimePath_
-  commentId: Overload:MASES.KNet.KNetCore.ConnectRuntimePath
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ConnectRuntimePath_
+  commentId: Overload:MASES.KNet.KNetCore`1.ConnectRuntimePath
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.ConnectRuntimePath
-  nameWithType: KNetCore.ConnectRuntimePath
-- uid: MASES.KNet.KNetCore.ConnectToolsDependenciesPath
+  fullName: MASES.KNet.KNetCore<T>.ConnectRuntimePath
+  fullName.vb: MASES.KNet.KNetCore(Of T).ConnectRuntimePath
+  nameWithType: KNetCore<T>.ConnectRuntimePath
+  nameWithType.vb: KNetCore(Of T).ConnectRuntimePath
+- uid: MASES.KNet.KNetCore`1.ConnectToolsDependenciesPath
   name: ConnectToolsDependenciesPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ConnectToolsDependenciesPath
-  commentId: P:MASES.KNet.KNetCore.ConnectToolsDependenciesPath
-  fullName: MASES.KNet.KNetCore.ConnectToolsDependenciesPath
-  nameWithType: KNetCore.ConnectToolsDependenciesPath
-- uid: MASES.KNet.KNetCore.ConnectToolsDependenciesPath*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ConnectToolsDependenciesPath
+  commentId: P:MASES.KNet.KNetCore`1.ConnectToolsDependenciesPath
+  fullName: MASES.KNet.KNetCore<T>.ConnectToolsDependenciesPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).ConnectToolsDependenciesPath
+  nameWithType: KNetCore<T>.ConnectToolsDependenciesPath
+  nameWithType.vb: KNetCore(Of T).ConnectToolsDependenciesPath
+- uid: MASES.KNet.KNetCore`1.ConnectToolsDependenciesPath*
   name: ConnectToolsDependenciesPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ConnectToolsDependenciesPath_
-  commentId: Overload:MASES.KNet.KNetCore.ConnectToolsDependenciesPath
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ConnectToolsDependenciesPath_
+  commentId: Overload:MASES.KNet.KNetCore`1.ConnectToolsDependenciesPath
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.ConnectToolsDependenciesPath
-  nameWithType: KNetCore.ConnectToolsDependenciesPath
-- uid: MASES.KNet.KNetCore.ConnectToolsPath
+  fullName: MASES.KNet.KNetCore<T>.ConnectToolsDependenciesPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).ConnectToolsDependenciesPath
+  nameWithType: KNetCore<T>.ConnectToolsDependenciesPath
+  nameWithType.vb: KNetCore(Of T).ConnectToolsDependenciesPath
+- uid: MASES.KNet.KNetCore`1.ConnectToolsPath
   name: ConnectToolsPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ConnectToolsPath
-  commentId: P:MASES.KNet.KNetCore.ConnectToolsPath
-  fullName: MASES.KNet.KNetCore.ConnectToolsPath
-  nameWithType: KNetCore.ConnectToolsPath
-- uid: MASES.KNet.KNetCore.ConnectToolsPath*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ConnectToolsPath
+  commentId: P:MASES.KNet.KNetCore`1.ConnectToolsPath
+  fullName: MASES.KNet.KNetCore<T>.ConnectToolsPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).ConnectToolsPath
+  nameWithType: KNetCore<T>.ConnectToolsPath
+  nameWithType.vb: KNetCore(Of T).ConnectToolsPath
+- uid: MASES.KNet.KNetCore`1.ConnectToolsPath*
   name: ConnectToolsPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ConnectToolsPath_
-  commentId: Overload:MASES.KNet.KNetCore.ConnectToolsPath
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ConnectToolsPath_
+  commentId: Overload:MASES.KNet.KNetCore`1.ConnectToolsPath
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.ConnectToolsPath
-  nameWithType: KNetCore.ConnectToolsPath
-- uid: MASES.KNet.KNetCore.CoreDependenciesPath
+  fullName: MASES.KNet.KNetCore<T>.ConnectToolsPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).ConnectToolsPath
+  nameWithType: KNetCore<T>.ConnectToolsPath
+  nameWithType.vb: KNetCore(Of T).ConnectToolsPath
+- uid: MASES.KNet.KNetCore`1.CoreDependenciesPath
   name: CoreDependenciesPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_CoreDependenciesPath
-  commentId: P:MASES.KNet.KNetCore.CoreDependenciesPath
-  fullName: MASES.KNet.KNetCore.CoreDependenciesPath
-  nameWithType: KNetCore.CoreDependenciesPath
-- uid: MASES.KNet.KNetCore.CoreDependenciesPath*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_CoreDependenciesPath
+  commentId: P:MASES.KNet.KNetCore`1.CoreDependenciesPath
+  fullName: MASES.KNet.KNetCore<T>.CoreDependenciesPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).CoreDependenciesPath
+  nameWithType: KNetCore<T>.CoreDependenciesPath
+  nameWithType.vb: KNetCore(Of T).CoreDependenciesPath
+- uid: MASES.KNet.KNetCore`1.CoreDependenciesPath*
   name: CoreDependenciesPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_CoreDependenciesPath_
-  commentId: Overload:MASES.KNet.KNetCore.CoreDependenciesPath
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_CoreDependenciesPath_
+  commentId: Overload:MASES.KNet.KNetCore`1.CoreDependenciesPath
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.CoreDependenciesPath
-  nameWithType: KNetCore.CoreDependenciesPath
-- uid: MASES.KNet.KNetCore.ExamplesPath
+  fullName: MASES.KNet.KNetCore<T>.CoreDependenciesPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).CoreDependenciesPath
+  nameWithType: KNetCore<T>.CoreDependenciesPath
+  nameWithType.vb: KNetCore(Of T).CoreDependenciesPath
+- uid: MASES.KNet.KNetCore`1.ExamplesPath
   name: ExamplesPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ExamplesPath
-  commentId: P:MASES.KNet.KNetCore.ExamplesPath
-  fullName: MASES.KNet.KNetCore.ExamplesPath
-  nameWithType: KNetCore.ExamplesPath
-- uid: MASES.KNet.KNetCore.ExamplesPath*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ExamplesPath
+  commentId: P:MASES.KNet.KNetCore`1.ExamplesPath
+  fullName: MASES.KNet.KNetCore<T>.ExamplesPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).ExamplesPath
+  nameWithType: KNetCore<T>.ExamplesPath
+  nameWithType.vb: KNetCore(Of T).ExamplesPath
+- uid: MASES.KNet.KNetCore`1.ExamplesPath*
   name: ExamplesPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ExamplesPath_
-  commentId: Overload:MASES.KNet.KNetCore.ExamplesPath
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ExamplesPath_
+  commentId: Overload:MASES.KNet.KNetCore`1.ExamplesPath
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.ExamplesPath
-  nameWithType: KNetCore.ExamplesPath
-- uid: MASES.KNet.KNetCore.ExtraClassPath
+  fullName: MASES.KNet.KNetCore<T>.ExamplesPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).ExamplesPath
+  nameWithType: KNetCore<T>.ExamplesPath
+  nameWithType.vb: KNetCore(Of T).ExamplesPath
+- uid: MASES.KNet.KNetCore`1.ExtraClassPath
   name: ExtraClassPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ExtraClassPath
-  commentId: P:MASES.KNet.KNetCore.ExtraClassPath
-  fullName: MASES.KNet.KNetCore.ExtraClassPath
-  nameWithType: KNetCore.ExtraClassPath
-- uid: MASES.KNet.KNetCore.ExtraClassPath*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ExtraClassPath
+  commentId: P:MASES.KNet.KNetCore`1.ExtraClassPath
+  fullName: MASES.KNet.KNetCore<T>.ExtraClassPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).ExtraClassPath
+  nameWithType: KNetCore<T>.ExtraClassPath
+  nameWithType.vb: KNetCore(Of T).ExtraClassPath
+- uid: MASES.KNet.KNetCore`1.ExtraClassPath*
   name: ExtraClassPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ExtraClassPath_
-  commentId: Overload:MASES.KNet.KNetCore.ExtraClassPath
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ExtraClassPath_
+  commentId: Overload:MASES.KNet.KNetCore`1.ExtraClassPath
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.ExtraClassPath
-  nameWithType: KNetCore.ExtraClassPath
-- uid: MASES.KNet.KNetCore.GlobalHeapSize
+  fullName: MASES.KNet.KNetCore<T>.ExtraClassPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).ExtraClassPath
+  nameWithType: KNetCore<T>.ExtraClassPath
+  nameWithType.vb: KNetCore(Of T).ExtraClassPath
+- uid: MASES.KNet.KNetCore`1.GlobalHeapSize
   name: GlobalHeapSize
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_GlobalHeapSize
-  commentId: P:MASES.KNet.KNetCore.GlobalHeapSize
-  fullName: MASES.KNet.KNetCore.GlobalHeapSize
-  nameWithType: KNetCore.GlobalHeapSize
-- uid: MASES.KNet.KNetCore.GlobalHeapSize*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_GlobalHeapSize
+  commentId: P:MASES.KNet.KNetCore`1.GlobalHeapSize
+  fullName: MASES.KNet.KNetCore<T>.GlobalHeapSize
+  fullName.vb: MASES.KNet.KNetCore(Of T).GlobalHeapSize
+  nameWithType: KNetCore<T>.GlobalHeapSize
+  nameWithType.vb: KNetCore(Of T).GlobalHeapSize
+- uid: MASES.KNet.KNetCore`1.GlobalHeapSize*
   name: GlobalHeapSize
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_GlobalHeapSize_
-  commentId: Overload:MASES.KNet.KNetCore.GlobalHeapSize
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_GlobalHeapSize_
+  commentId: Overload:MASES.KNet.KNetCore`1.GlobalHeapSize
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.GlobalHeapSize
-  nameWithType: KNetCore.GlobalHeapSize
-- uid: MASES.KNet.KNetCore.GlobalLog4JPath
+  fullName: MASES.KNet.KNetCore<T>.GlobalHeapSize
+  fullName.vb: MASES.KNet.KNetCore(Of T).GlobalHeapSize
+  nameWithType: KNetCore<T>.GlobalHeapSize
+  nameWithType.vb: KNetCore(Of T).GlobalHeapSize
+- uid: MASES.KNet.KNetCore`1.GlobalLog4JPath
   name: GlobalLog4JPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_GlobalLog4JPath
-  commentId: P:MASES.KNet.KNetCore.GlobalLog4JPath
-  fullName: MASES.KNet.KNetCore.GlobalLog4JPath
-  nameWithType: KNetCore.GlobalLog4JPath
-- uid: MASES.KNet.KNetCore.GlobalLog4JPath*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_GlobalLog4JPath
+  commentId: P:MASES.KNet.KNetCore`1.GlobalLog4JPath
+  fullName: MASES.KNet.KNetCore<T>.GlobalLog4JPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).GlobalLog4JPath
+  nameWithType: KNetCore<T>.GlobalLog4JPath
+  nameWithType.vb: KNetCore(Of T).GlobalLog4JPath
+- uid: MASES.KNet.KNetCore`1.GlobalLog4JPath*
   name: GlobalLog4JPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_GlobalLog4JPath_
-  commentId: Overload:MASES.KNet.KNetCore.GlobalLog4JPath
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_GlobalLog4JPath_
+  commentId: Overload:MASES.KNet.KNetCore`1.GlobalLog4JPath
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.GlobalLog4JPath
-  nameWithType: KNetCore.GlobalLog4JPath
-- uid: MASES.KNet.KNetCore.GlobalRootPath
+  fullName: MASES.KNet.KNetCore<T>.GlobalLog4JPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).GlobalLog4JPath
+  nameWithType: KNetCore<T>.GlobalLog4JPath
+  nameWithType.vb: KNetCore(Of T).GlobalLog4JPath
+- uid: MASES.KNet.KNetCore`1.GlobalLogPath
+  name: GlobalLogPath
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_GlobalLogPath
+  commentId: P:MASES.KNet.KNetCore`1.GlobalLogPath
+  fullName: MASES.KNet.KNetCore<T>.GlobalLogPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).GlobalLogPath
+  nameWithType: KNetCore<T>.GlobalLogPath
+  nameWithType.vb: KNetCore(Of T).GlobalLogPath
+- uid: MASES.KNet.KNetCore`1.GlobalLogPath*
+  name: GlobalLogPath
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_GlobalLogPath_
+  commentId: Overload:MASES.KNet.KNetCore`1.GlobalLogPath
+  isSpec: "True"
+  fullName: MASES.KNet.KNetCore<T>.GlobalLogPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).GlobalLogPath
+  nameWithType: KNetCore<T>.GlobalLogPath
+  nameWithType.vb: KNetCore(Of T).GlobalLogPath
+- uid: MASES.KNet.KNetCore`1.GlobalRootPath
   name: GlobalRootPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_GlobalRootPath
-  commentId: P:MASES.KNet.KNetCore.GlobalRootPath
-  fullName: MASES.KNet.KNetCore.GlobalRootPath
-  nameWithType: KNetCore.GlobalRootPath
-- uid: MASES.KNet.KNetCore.GlobalRootPath*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_GlobalRootPath
+  commentId: P:MASES.KNet.KNetCore`1.GlobalRootPath
+  fullName: MASES.KNet.KNetCore<T>.GlobalRootPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).GlobalRootPath
+  nameWithType: KNetCore<T>.GlobalRootPath
+  nameWithType.vb: KNetCore(Of T).GlobalRootPath
+- uid: MASES.KNet.KNetCore`1.GlobalRootPath*
   name: GlobalRootPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_GlobalRootPath_
-  commentId: Overload:MASES.KNet.KNetCore.GlobalRootPath
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_GlobalRootPath_
+  commentId: Overload:MASES.KNet.KNetCore`1.GlobalRootPath
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.GlobalRootPath
-  nameWithType: KNetCore.GlobalRootPath
-- uid: MASES.KNet.KNetCore.GlobalScalaVersion
+  fullName: MASES.KNet.KNetCore<T>.GlobalRootPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).GlobalRootPath
+  nameWithType: KNetCore<T>.GlobalRootPath
+  nameWithType.vb: KNetCore(Of T).GlobalRootPath
+- uid: MASES.KNet.KNetCore`1.GlobalScalaVersion
   name: GlobalScalaVersion
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_GlobalScalaVersion
-  commentId: P:MASES.KNet.KNetCore.GlobalScalaVersion
-  fullName: MASES.KNet.KNetCore.GlobalScalaVersion
-  nameWithType: KNetCore.GlobalScalaVersion
-- uid: MASES.KNet.KNetCore.GlobalScalaVersion*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_GlobalScalaVersion
+  commentId: P:MASES.KNet.KNetCore`1.GlobalScalaVersion
+  fullName: MASES.KNet.KNetCore<T>.GlobalScalaVersion
+  fullName.vb: MASES.KNet.KNetCore(Of T).GlobalScalaVersion
+  nameWithType: KNetCore<T>.GlobalScalaVersion
+  nameWithType.vb: KNetCore(Of T).GlobalScalaVersion
+- uid: MASES.KNet.KNetCore`1.GlobalScalaVersion*
   name: GlobalScalaVersion
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_GlobalScalaVersion_
-  commentId: Overload:MASES.KNet.KNetCore.GlobalScalaVersion
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_GlobalScalaVersion_
+  commentId: Overload:MASES.KNet.KNetCore`1.GlobalScalaVersion
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.GlobalScalaVersion
-  nameWithType: KNetCore.GlobalScalaVersion
-- uid: MASES.KNet.KNetCore.InitialHeapSize
+  fullName: MASES.KNet.KNetCore<T>.GlobalScalaVersion
+  fullName.vb: MASES.KNet.KNetCore(Of T).GlobalScalaVersion
+  nameWithType: KNetCore<T>.GlobalScalaVersion
+  nameWithType.vb: KNetCore(Of T).GlobalScalaVersion
+- uid: MASES.KNet.KNetCore`1.InitialHeapSize
   name: InitialHeapSize
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_InitialHeapSize
-  commentId: P:MASES.KNet.KNetCore.InitialHeapSize
-  fullName: MASES.KNet.KNetCore.InitialHeapSize
-  nameWithType: KNetCore.InitialHeapSize
-- uid: MASES.KNet.KNetCore.InitialHeapSize*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_InitialHeapSize
+  commentId: P:MASES.KNet.KNetCore`1.InitialHeapSize
+  fullName: MASES.KNet.KNetCore<T>.InitialHeapSize
+  fullName.vb: MASES.KNet.KNetCore(Of T).InitialHeapSize
+  nameWithType: KNetCore<T>.InitialHeapSize
+  nameWithType.vb: KNetCore(Of T).InitialHeapSize
+- uid: MASES.KNet.KNetCore`1.InitialHeapSize*
   name: InitialHeapSize
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_InitialHeapSize_
-  commentId: Overload:MASES.KNet.KNetCore.InitialHeapSize
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_InitialHeapSize_
+  commentId: Overload:MASES.KNet.KNetCore`1.InitialHeapSize
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.InitialHeapSize
-  nameWithType: KNetCore.InitialHeapSize
-- uid: MASES.KNet.KNetCore.Log4JOpts
+  fullName: MASES.KNet.KNetCore<T>.InitialHeapSize
+  fullName.vb: MASES.KNet.KNetCore(Of T).InitialHeapSize
+  nameWithType: KNetCore<T>.InitialHeapSize
+  nameWithType.vb: KNetCore(Of T).InitialHeapSize
+- uid: MASES.KNet.KNetCore`1.Log4JOpts
   name: Log4JOpts
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_Log4JOpts
-  commentId: P:MASES.KNet.KNetCore.Log4JOpts
-  fullName: MASES.KNet.KNetCore.Log4JOpts
-  nameWithType: KNetCore.Log4JOpts
-- uid: MASES.KNet.KNetCore.Log4JOpts*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_Log4JOpts
+  commentId: P:MASES.KNet.KNetCore`1.Log4JOpts
+  fullName: MASES.KNet.KNetCore<T>.Log4JOpts
+  fullName.vb: MASES.KNet.KNetCore(Of T).Log4JOpts
+  nameWithType: KNetCore<T>.Log4JOpts
+  nameWithType.vb: KNetCore(Of T).Log4JOpts
+- uid: MASES.KNet.KNetCore`1.Log4JOpts*
   name: Log4JOpts
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_Log4JOpts_
-  commentId: Overload:MASES.KNet.KNetCore.Log4JOpts
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_Log4JOpts_
+  commentId: Overload:MASES.KNet.KNetCore`1.Log4JOpts
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.Log4JOpts
-  nameWithType: KNetCore.Log4JOpts
-- uid: MASES.KNet.KNetCore.LogDir
+  fullName: MASES.KNet.KNetCore<T>.Log4JOpts
+  fullName.vb: MASES.KNet.KNetCore(Of T).Log4JOpts
+  nameWithType: KNetCore<T>.Log4JOpts
+  nameWithType.vb: KNetCore(Of T).Log4JOpts
+- uid: MASES.KNet.KNetCore`1.LogDir
   name: LogDir
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_LogDir
-  commentId: P:MASES.KNet.KNetCore.LogDir
-  fullName: MASES.KNet.KNetCore.LogDir
-  nameWithType: KNetCore.LogDir
-- uid: MASES.KNet.KNetCore.LogDir*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_LogDir
+  commentId: P:MASES.KNet.KNetCore`1.LogDir
+  fullName: MASES.KNet.KNetCore<T>.LogDir
+  fullName.vb: MASES.KNet.KNetCore(Of T).LogDir
+  nameWithType: KNetCore<T>.LogDir
+  nameWithType.vb: KNetCore(Of T).LogDir
+- uid: MASES.KNet.KNetCore`1.LogDir*
   name: LogDir
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_LogDir_
-  commentId: Overload:MASES.KNet.KNetCore.LogDir
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_LogDir_
+  commentId: Overload:MASES.KNet.KNetCore`1.LogDir
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.LogDir
-  nameWithType: KNetCore.LogDir
-- uid: MASES.KNet.KNetCore.MainClassToRun
+  fullName: MASES.KNet.KNetCore<T>.LogDir
+  fullName.vb: MASES.KNet.KNetCore(Of T).LogDir
+  nameWithType: KNetCore<T>.LogDir
+  nameWithType.vb: KNetCore(Of T).LogDir
+- uid: MASES.KNet.KNetCore`1.MainClassToRun
   name: MainClassToRun
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_MainClassToRun
-  commentId: P:MASES.KNet.KNetCore.MainClassToRun
-  fullName: MASES.KNet.KNetCore.MainClassToRun
-  nameWithType: KNetCore.MainClassToRun
-- uid: MASES.KNet.KNetCore.MainClassToRun*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_MainClassToRun
+  commentId: P:MASES.KNet.KNetCore`1.MainClassToRun
+  fullName: MASES.KNet.KNetCore<T>.MainClassToRun
+  fullName.vb: MASES.KNet.KNetCore(Of T).MainClassToRun
+  nameWithType: KNetCore<T>.MainClassToRun
+  nameWithType.vb: KNetCore(Of T).MainClassToRun
+- uid: MASES.KNet.KNetCore`1.MainClassToRun*
   name: MainClassToRun
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_MainClassToRun_
-  commentId: Overload:MASES.KNet.KNetCore.MainClassToRun
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_MainClassToRun_
+  commentId: Overload:MASES.KNet.KNetCore`1.MainClassToRun
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.MainClassToRun
-  nameWithType: KNetCore.MainClassToRun
-- uid: MASES.KNet.KNetCore.Options
+  fullName: MASES.KNet.KNetCore<T>.MainClassToRun
+  fullName.vb: MASES.KNet.KNetCore(Of T).MainClassToRun
+  nameWithType: KNetCore<T>.MainClassToRun
+  nameWithType.vb: KNetCore(Of T).MainClassToRun
+- uid: MASES.KNet.KNetCore`1.Options
   name: Options
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_Options
-  commentId: P:MASES.KNet.KNetCore.Options
-  fullName: MASES.KNet.KNetCore.Options
-  nameWithType: KNetCore.Options
-- uid: MASES.KNet.KNetCore.Options*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_Options
+  commentId: P:MASES.KNet.KNetCore`1.Options
+  fullName: MASES.KNet.KNetCore<T>.Options
+  fullName.vb: MASES.KNet.KNetCore(Of T).Options
+  nameWithType: KNetCore<T>.Options
+  nameWithType.vb: KNetCore(Of T).Options
+- uid: MASES.KNet.KNetCore`1.Options*
   name: Options
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_Options_
-  commentId: Overload:MASES.KNet.KNetCore.Options
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_Options_
+  commentId: Overload:MASES.KNet.KNetCore`1.Options
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.Options
-  nameWithType: KNetCore.Options
-- uid: MASES.KNet.KNetCore.PathToParse
+  fullName: MASES.KNet.KNetCore<T>.Options
+  fullName.vb: MASES.KNet.KNetCore(Of T).Options
+  nameWithType: KNetCore<T>.Options
+  nameWithType.vb: KNetCore(Of T).Options
+- uid: MASES.KNet.KNetCore`1.PathToParse
   name: PathToParse
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_PathToParse
-  commentId: P:MASES.KNet.KNetCore.PathToParse
-  fullName: MASES.KNet.KNetCore.PathToParse
-  nameWithType: KNetCore.PathToParse
-- uid: MASES.KNet.KNetCore.PathToParse*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_PathToParse
+  commentId: P:MASES.KNet.KNetCore`1.PathToParse
+  fullName: MASES.KNet.KNetCore<T>.PathToParse
+  fullName.vb: MASES.KNet.KNetCore(Of T).PathToParse
+  nameWithType: KNetCore<T>.PathToParse
+  nameWithType.vb: KNetCore(Of T).PathToParse
+- uid: MASES.KNet.KNetCore`1.PathToParse*
   name: PathToParse
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_PathToParse_
-  commentId: Overload:MASES.KNet.KNetCore.PathToParse
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_PathToParse_
+  commentId: Overload:MASES.KNet.KNetCore`1.PathToParse
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.PathToParse
-  nameWithType: KNetCore.PathToParse
-- uid: MASES.KNet.KNetCore.PerformanceOptions
+  fullName: MASES.KNet.KNetCore<T>.PathToParse
+  fullName.vb: MASES.KNet.KNetCore(Of T).PathToParse
+  nameWithType: KNetCore<T>.PathToParse
+  nameWithType.vb: KNetCore(Of T).PathToParse
+- uid: MASES.KNet.KNetCore`1.PerformanceOptions
   name: PerformanceOptions
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_PerformanceOptions
-  commentId: P:MASES.KNet.KNetCore.PerformanceOptions
-  fullName: MASES.KNet.KNetCore.PerformanceOptions
-  nameWithType: KNetCore.PerformanceOptions
-- uid: MASES.KNet.KNetCore.PerformanceOptions*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_PerformanceOptions
+  commentId: P:MASES.KNet.KNetCore`1.PerformanceOptions
+  fullName: MASES.KNet.KNetCore<T>.PerformanceOptions
+  fullName.vb: MASES.KNet.KNetCore(Of T).PerformanceOptions
+  nameWithType: KNetCore<T>.PerformanceOptions
+  nameWithType.vb: KNetCore(Of T).PerformanceOptions
+- uid: MASES.KNet.KNetCore`1.PerformanceOptions*
   name: PerformanceOptions
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_PerformanceOptions_
-  commentId: Overload:MASES.KNet.KNetCore.PerformanceOptions
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_PerformanceOptions_
+  commentId: Overload:MASES.KNet.KNetCore`1.PerformanceOptions
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.PerformanceOptions
-  nameWithType: KNetCore.PerformanceOptions
-- uid: MASES.KNet.KNetCore.ProcessCommandLine
+  fullName: MASES.KNet.KNetCore<T>.PerformanceOptions
+  fullName.vb: MASES.KNet.KNetCore(Of T).PerformanceOptions
+  nameWithType: KNetCore<T>.PerformanceOptions
+  nameWithType.vb: KNetCore(Of T).PerformanceOptions
+- uid: MASES.KNet.KNetCore`1.ProcessCommandLine
   name: ProcessCommandLine()
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ProcessCommandLine
-  commentId: M:MASES.KNet.KNetCore.ProcessCommandLine
-  fullName: MASES.KNet.KNetCore.ProcessCommandLine()
-  nameWithType: KNetCore.ProcessCommandLine()
-- uid: MASES.KNet.KNetCore.ProcessCommandLine*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ProcessCommandLine
+  commentId: M:MASES.KNet.KNetCore`1.ProcessCommandLine
+  fullName: MASES.KNet.KNetCore<T>.ProcessCommandLine()
+  fullName.vb: MASES.KNet.KNetCore(Of T).ProcessCommandLine()
+  nameWithType: KNetCore<T>.ProcessCommandLine()
+  nameWithType.vb: KNetCore(Of T).ProcessCommandLine()
+- uid: MASES.KNet.KNetCore`1.ProcessCommandLine*
   name: ProcessCommandLine
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ProcessCommandLine_
-  commentId: Overload:MASES.KNet.KNetCore.ProcessCommandLine
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ProcessCommandLine_
+  commentId: Overload:MASES.KNet.KNetCore`1.ProcessCommandLine
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.ProcessCommandLine
-  nameWithType: KNetCore.ProcessCommandLine
-- uid: MASES.KNet.KNetCore.ReleaseAdditionalPath
+  fullName: MASES.KNet.KNetCore<T>.ProcessCommandLine
+  fullName.vb: MASES.KNet.KNetCore(Of T).ProcessCommandLine
+  nameWithType: KNetCore<T>.ProcessCommandLine
+  nameWithType.vb: KNetCore(Of T).ProcessCommandLine
+- uid: MASES.KNet.KNetCore`1.ReleaseAdditionalPath
   name: ReleaseAdditionalPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ReleaseAdditionalPath
-  commentId: P:MASES.KNet.KNetCore.ReleaseAdditionalPath
-  fullName: MASES.KNet.KNetCore.ReleaseAdditionalPath
-  nameWithType: KNetCore.ReleaseAdditionalPath
-- uid: MASES.KNet.KNetCore.ReleaseAdditionalPath*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ReleaseAdditionalPath
+  commentId: P:MASES.KNet.KNetCore`1.ReleaseAdditionalPath
+  fullName: MASES.KNet.KNetCore<T>.ReleaseAdditionalPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).ReleaseAdditionalPath
+  nameWithType: KNetCore<T>.ReleaseAdditionalPath
+  nameWithType.vb: KNetCore(Of T).ReleaseAdditionalPath
+- uid: MASES.KNet.KNetCore`1.ReleaseAdditionalPath*
   name: ReleaseAdditionalPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ReleaseAdditionalPath_
-  commentId: Overload:MASES.KNet.KNetCore.ReleaseAdditionalPath
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ReleaseAdditionalPath_
+  commentId: Overload:MASES.KNet.KNetCore`1.ReleaseAdditionalPath
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.ReleaseAdditionalPath
-  nameWithType: KNetCore.ReleaseAdditionalPath
-- uid: MASES.KNet.KNetCore.ReleasePath
+  fullName: MASES.KNet.KNetCore<T>.ReleaseAdditionalPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).ReleaseAdditionalPath
+  nameWithType: KNetCore<T>.ReleaseAdditionalPath
+  nameWithType.vb: KNetCore(Of T).ReleaseAdditionalPath
+- uid: MASES.KNet.KNetCore`1.ReleasePath
   name: ReleasePath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ReleasePath
-  commentId: P:MASES.KNet.KNetCore.ReleasePath
-  fullName: MASES.KNet.KNetCore.ReleasePath
-  nameWithType: KNetCore.ReleasePath
-- uid: MASES.KNet.KNetCore.ReleasePath*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ReleasePath
+  commentId: P:MASES.KNet.KNetCore`1.ReleasePath
+  fullName: MASES.KNet.KNetCore<T>.ReleasePath
+  fullName.vb: MASES.KNet.KNetCore(Of T).ReleasePath
+  nameWithType: KNetCore<T>.ReleasePath
+  nameWithType.vb: KNetCore(Of T).ReleasePath
+- uid: MASES.KNet.KNetCore`1.ReleasePath*
   name: ReleasePath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ReleasePath_
-  commentId: Overload:MASES.KNet.KNetCore.ReleasePath
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ReleasePath_
+  commentId: Overload:MASES.KNet.KNetCore`1.ReleasePath
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.ReleasePath
-  nameWithType: KNetCore.ReleasePath
-- uid: MASES.KNet.KNetCore.RootPath
+  fullName: MASES.KNet.KNetCore<T>.ReleasePath
+  fullName.vb: MASES.KNet.KNetCore(Of T).ReleasePath
+  nameWithType: KNetCore<T>.ReleasePath
+  nameWithType.vb: KNetCore(Of T).ReleasePath
+- uid: MASES.KNet.KNetCore`1.RootPath
   name: RootPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_RootPath
-  commentId: P:MASES.KNet.KNetCore.RootPath
-  fullName: MASES.KNet.KNetCore.RootPath
-  nameWithType: KNetCore.RootPath
-- uid: MASES.KNet.KNetCore.RootPath*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_RootPath
+  commentId: P:MASES.KNet.KNetCore`1.RootPath
+  fullName: MASES.KNet.KNetCore<T>.RootPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).RootPath
+  nameWithType: KNetCore<T>.RootPath
+  nameWithType.vb: KNetCore(Of T).RootPath
+- uid: MASES.KNet.KNetCore`1.RootPath*
   name: RootPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_RootPath_
-  commentId: Overload:MASES.KNet.KNetCore.RootPath
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_RootPath_
+  commentId: Overload:MASES.KNet.KNetCore`1.RootPath
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.RootPath
-  nameWithType: KNetCore.RootPath
-- uid: MASES.KNet.KNetCore.ScalaBinaryVersion
+  fullName: MASES.KNet.KNetCore<T>.RootPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).RootPath
+  nameWithType: KNetCore<T>.RootPath
+  nameWithType.vb: KNetCore(Of T).RootPath
+- uid: MASES.KNet.KNetCore`1.ScalaBinaryVersion
   name: ScalaBinaryVersion
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ScalaBinaryVersion
-  commentId: P:MASES.KNet.KNetCore.ScalaBinaryVersion
-  fullName: MASES.KNet.KNetCore.ScalaBinaryVersion
-  nameWithType: KNetCore.ScalaBinaryVersion
-- uid: MASES.KNet.KNetCore.ScalaBinaryVersion*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ScalaBinaryVersion
+  commentId: P:MASES.KNet.KNetCore`1.ScalaBinaryVersion
+  fullName: MASES.KNet.KNetCore<T>.ScalaBinaryVersion
+  fullName.vb: MASES.KNet.KNetCore(Of T).ScalaBinaryVersion
+  nameWithType: KNetCore<T>.ScalaBinaryVersion
+  nameWithType.vb: KNetCore(Of T).ScalaBinaryVersion
+- uid: MASES.KNet.KNetCore`1.ScalaBinaryVersion*
   name: ScalaBinaryVersion
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ScalaBinaryVersion_
-  commentId: Overload:MASES.KNet.KNetCore.ScalaBinaryVersion
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ScalaBinaryVersion_
+  commentId: Overload:MASES.KNet.KNetCore`1.ScalaBinaryVersion
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.ScalaBinaryVersion
-  nameWithType: KNetCore.ScalaBinaryVersion
-- uid: MASES.KNet.KNetCore.ScalaVersion
+  fullName: MASES.KNet.KNetCore<T>.ScalaBinaryVersion
+  fullName.vb: MASES.KNet.KNetCore(Of T).ScalaBinaryVersion
+  nameWithType: KNetCore<T>.ScalaBinaryVersion
+  nameWithType.vb: KNetCore(Of T).ScalaBinaryVersion
+- uid: MASES.KNet.KNetCore`1.ScalaVersion
   name: ScalaVersion
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ScalaVersion
-  commentId: P:MASES.KNet.KNetCore.ScalaVersion
-  fullName: MASES.KNet.KNetCore.ScalaVersion
-  nameWithType: KNetCore.ScalaVersion
-- uid: MASES.KNet.KNetCore.ScalaVersion*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ScalaVersion
+  commentId: P:MASES.KNet.KNetCore`1.ScalaVersion
+  fullName: MASES.KNet.KNetCore<T>.ScalaVersion
+  fullName.vb: MASES.KNet.KNetCore(Of T).ScalaVersion
+  nameWithType: KNetCore<T>.ScalaVersion
+  nameWithType.vb: KNetCore(Of T).ScalaVersion
+- uid: MASES.KNet.KNetCore`1.ScalaVersion*
   name: ScalaVersion
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ScalaVersion_
-  commentId: Overload:MASES.KNet.KNetCore.ScalaVersion
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ScalaVersion_
+  commentId: Overload:MASES.KNet.KNetCore`1.ScalaVersion
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.ScalaVersion
-  nameWithType: KNetCore.ScalaVersion
-- uid: MASES.KNet.KNetCore.StreamsDependenciesPath
+  fullName: MASES.KNet.KNetCore<T>.ScalaVersion
+  fullName.vb: MASES.KNet.KNetCore(Of T).ScalaVersion
+  nameWithType: KNetCore<T>.ScalaVersion
+  nameWithType.vb: KNetCore(Of T).ScalaVersion
+- uid: MASES.KNet.KNetCore`1.StreamsDependenciesPath
   name: StreamsDependenciesPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_StreamsDependenciesPath
-  commentId: P:MASES.KNet.KNetCore.StreamsDependenciesPath
-  fullName: MASES.KNet.KNetCore.StreamsDependenciesPath
-  nameWithType: KNetCore.StreamsDependenciesPath
-- uid: MASES.KNet.KNetCore.StreamsDependenciesPath*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_StreamsDependenciesPath
+  commentId: P:MASES.KNet.KNetCore`1.StreamsDependenciesPath
+  fullName: MASES.KNet.KNetCore<T>.StreamsDependenciesPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).StreamsDependenciesPath
+  nameWithType: KNetCore<T>.StreamsDependenciesPath
+  nameWithType.vb: KNetCore(Of T).StreamsDependenciesPath
+- uid: MASES.KNet.KNetCore`1.StreamsDependenciesPath*
   name: StreamsDependenciesPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_StreamsDependenciesPath_
-  commentId: Overload:MASES.KNet.KNetCore.StreamsDependenciesPath
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_StreamsDependenciesPath_
+  commentId: Overload:MASES.KNet.KNetCore`1.StreamsDependenciesPath
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.StreamsDependenciesPath
-  nameWithType: KNetCore.StreamsDependenciesPath
-- uid: MASES.KNet.KNetCore.StreamsExamplePath
+  fullName: MASES.KNet.KNetCore<T>.StreamsDependenciesPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).StreamsDependenciesPath
+  nameWithType: KNetCore<T>.StreamsDependenciesPath
+  nameWithType.vb: KNetCore(Of T).StreamsDependenciesPath
+- uid: MASES.KNet.KNetCore`1.StreamsExamplePath
   name: StreamsExamplePath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_StreamsExamplePath
-  commentId: P:MASES.KNet.KNetCore.StreamsExamplePath
-  fullName: MASES.KNet.KNetCore.StreamsExamplePath
-  nameWithType: KNetCore.StreamsExamplePath
-- uid: MASES.KNet.KNetCore.StreamsExamplePath*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_StreamsExamplePath
+  commentId: P:MASES.KNet.KNetCore`1.StreamsExamplePath
+  fullName: MASES.KNet.KNetCore<T>.StreamsExamplePath
+  fullName.vb: MASES.KNet.KNetCore(Of T).StreamsExamplePath
+  nameWithType: KNetCore<T>.StreamsExamplePath
+  nameWithType.vb: KNetCore(Of T).StreamsExamplePath
+- uid: MASES.KNet.KNetCore`1.StreamsExamplePath*
   name: StreamsExamplePath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_StreamsExamplePath_
-  commentId: Overload:MASES.KNet.KNetCore.StreamsExamplePath
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_StreamsExamplePath_
+  commentId: Overload:MASES.KNet.KNetCore`1.StreamsExamplePath
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.StreamsExamplePath
-  nameWithType: KNetCore.StreamsExamplePath
-- uid: MASES.KNet.KNetCore.StreamsPath
+  fullName: MASES.KNet.KNetCore<T>.StreamsExamplePath
+  fullName.vb: MASES.KNet.KNetCore(Of T).StreamsExamplePath
+  nameWithType: KNetCore<T>.StreamsExamplePath
+  nameWithType.vb: KNetCore(Of T).StreamsExamplePath
+- uid: MASES.KNet.KNetCore`1.StreamsPath
   name: StreamsPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_StreamsPath
-  commentId: P:MASES.KNet.KNetCore.StreamsPath
-  fullName: MASES.KNet.KNetCore.StreamsPath
-  nameWithType: KNetCore.StreamsPath
-- uid: MASES.KNet.KNetCore.StreamsPath*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_StreamsPath
+  commentId: P:MASES.KNet.KNetCore`1.StreamsPath
+  fullName: MASES.KNet.KNetCore<T>.StreamsPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).StreamsPath
+  nameWithType: KNetCore<T>.StreamsPath
+  nameWithType.vb: KNetCore(Of T).StreamsPath
+- uid: MASES.KNet.KNetCore`1.StreamsPath*
   name: StreamsPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_StreamsPath_
-  commentId: Overload:MASES.KNet.KNetCore.StreamsPath
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_StreamsPath_
+  commentId: Overload:MASES.KNet.KNetCore`1.StreamsPath
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.StreamsPath
-  nameWithType: KNetCore.StreamsPath
-- uid: MASES.KNet.KNetCore.ToolsDependenciesPath
+  fullName: MASES.KNet.KNetCore<T>.StreamsPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).StreamsPath
+  nameWithType: KNetCore<T>.StreamsPath
+  nameWithType.vb: KNetCore(Of T).StreamsPath
+- uid: MASES.KNet.KNetCore`1.ToolsDependenciesPath
   name: ToolsDependenciesPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ToolsDependenciesPath
-  commentId: P:MASES.KNet.KNetCore.ToolsDependenciesPath
-  fullName: MASES.KNet.KNetCore.ToolsDependenciesPath
-  nameWithType: KNetCore.ToolsDependenciesPath
-- uid: MASES.KNet.KNetCore.ToolsDependenciesPath*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ToolsDependenciesPath
+  commentId: P:MASES.KNet.KNetCore`1.ToolsDependenciesPath
+  fullName: MASES.KNet.KNetCore<T>.ToolsDependenciesPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).ToolsDependenciesPath
+  nameWithType: KNetCore<T>.ToolsDependenciesPath
+  nameWithType.vb: KNetCore(Of T).ToolsDependenciesPath
+- uid: MASES.KNet.KNetCore`1.ToolsDependenciesPath*
   name: ToolsDependenciesPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ToolsDependenciesPath_
-  commentId: Overload:MASES.KNet.KNetCore.ToolsDependenciesPath
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ToolsDependenciesPath_
+  commentId: Overload:MASES.KNet.KNetCore`1.ToolsDependenciesPath
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.ToolsDependenciesPath
-  nameWithType: KNetCore.ToolsDependenciesPath
-- uid: MASES.KNet.KNetCore.ToolsPath
+  fullName: MASES.KNet.KNetCore<T>.ToolsDependenciesPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).ToolsDependenciesPath
+  nameWithType: KNetCore<T>.ToolsDependenciesPath
+  nameWithType.vb: KNetCore(Of T).ToolsDependenciesPath
+- uid: MASES.KNet.KNetCore`1.ToolsPath
   name: ToolsPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ToolsPath
-  commentId: P:MASES.KNet.KNetCore.ToolsPath
-  fullName: MASES.KNet.KNetCore.ToolsPath
-  nameWithType: KNetCore.ToolsPath
-- uid: MASES.KNet.KNetCore.ToolsPath*
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ToolsPath
+  commentId: P:MASES.KNet.KNetCore`1.ToolsPath
+  fullName: MASES.KNet.KNetCore<T>.ToolsPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).ToolsPath
+  nameWithType: KNetCore<T>.ToolsPath
+  nameWithType.vb: KNetCore(Of T).ToolsPath
+- uid: MASES.KNet.KNetCore`1.ToolsPath*
   name: ToolsPath
-  href: api/MASES.KNet.KNetCore.html#MASES_KNet_KNetCore_ToolsPath_
-  commentId: Overload:MASES.KNet.KNetCore.ToolsPath
+  href: api/MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_ToolsPath_
+  commentId: Overload:MASES.KNet.KNetCore`1.ToolsPath
   isSpec: "True"
-  fullName: MASES.KNet.KNetCore.ToolsPath
-  nameWithType: KNetCore.ToolsPath
+  fullName: MASES.KNet.KNetCore<T>.ToolsPath
+  fullName.vb: MASES.KNet.KNetCore(Of T).ToolsPath
+  nameWithType: KNetCore<T>.ToolsPath
+  nameWithType.vb: KNetCore(Of T).ToolsPath
 - uid: MASES.KNet.Shell
   name: MASES.KNet.Shell
   href: api/MASES.KNet.Shell.html
