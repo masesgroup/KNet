@@ -55,9 +55,9 @@ namespace MASES.KNet.Benchmark
 
     partial class Program
     {
-        static string TopicName(string testName, int length)
+        static string TopicName(string testName, int length, int testNum)
         {
-            return $"{TopicPrefix}_{testName}_{length}";
+            return $"{TopicPrefix}_{testName}_{length}_{testNum}";
         }
 
         static IAdmin knetAdmin = null;

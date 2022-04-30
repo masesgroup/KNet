@@ -109,12 +109,12 @@ namespace MASES.KNet.Benchmark
 
         static Callback kNetCallback = null;
 
-        static Stopwatch ProduceKNet(int length, int numpacket, byte[] data = null)
+        static Stopwatch ProduceKNet(string topicName, int length, int numpacket, byte[] data = null)
         {
             try
             {
                 var kafkaproducer = KNetProducer();
-                kafkaproducer.PartitionsFor(TopicName("KNET", length)); // used to get metadata before do the test
+                kafkaproducer.PartitionsFor(topicName); // used to get metadata before do the test
 
                 if (UseCallback && kNetCallback == null)
                 {
@@ -161,13 +161,13 @@ namespace MASES.KNet.Benchmark
                                 Array.Copy(data, 0, newData, 0, data.Length);
                                 stopWatch.Start();
                                 swSendRecord.Start();
-                                kafkaproducer.Send(TopicName("KNET", length), i, newData);
+                                kafkaproducer.Send(topicName, i, newData);
                                 swSendRecord.Stop();
                             }
                             else
                             {
                                 swSendRecord.Start();
-                                kafkaproducer.Send(TopicName("KNET", length), i, data);
+                                kafkaproducer.Send(topicName, i, data);
                                 swSendRecord.Stop();
                             }
                             if (WithBurst)
@@ -196,12 +196,12 @@ namespace MASES.KNet.Benchmark
             }
         }
 
-        static Stopwatch ProduceKafka(int length, int numpacket, byte[] data = null)
+        static Stopwatch ProduceKafka(string topicName, int length, int numpacket, byte[] data = null)
         {
             try
             {
                 var kafkaproducer = KafkaProducer();
-                kafkaproducer.PartitionsFor(TopicName("KNET", length)); // used to get metadata before do the test
+                kafkaproducer.PartitionsFor(topicName); // used to get metadata before do the test
 
                 if (UseCallback && kNetCallback == null)
                 {
@@ -226,7 +226,7 @@ namespace MASES.KNet.Benchmark
                             data[i] = (byte)rand.Next(0, byte.MaxValue);
                         }
                     }
-                    var record = new ProducerRecord<int, byte[]>(TopicName("KNET", length), 42, data);
+                    var record = new ProducerRecord<int, byte[]>(topicName, 42, data);
                     if (ProducePreLoad)
                     {
                         swCreateRecord = new();
@@ -241,7 +241,7 @@ namespace MASES.KNet.Benchmark
                                 data[ii] = (byte)rand.Next(0, byte.MaxValue);
                             }
                             swCreateRecord.Start();
-                            record = new ProducerRecord<int, byte[]>(TopicName("KNET", length), i, data);
+                            record = new ProducerRecord<int, byte[]>(topicName, i, data);
                             swCreateRecord.Stop();
                             messages.Add(record);
                         }
@@ -278,7 +278,7 @@ namespace MASES.KNet.Benchmark
                                 Array.Copy(data, 0, newData, 0, data.Length);
                                 stopWatch.Start();
                                 swCreateRecord.Start();
-                                record = new ProducerRecord<int, byte[]>(TopicName("KNET", length), i, newData);
+                                record = new ProducerRecord<int, byte[]>(topicName, i, newData);
                                 swCreateRecord.Stop();
                             }
                             swSendRecord.Start();
@@ -388,7 +388,7 @@ namespace MASES.KNet.Benchmark
             return knetConsumer;
         }
 
-        static Stopwatch ConsumeKafka(int length, int numpacket, byte[] data = null)
+        static Stopwatch ConsumeKafka(string topicName, int length, int numpacket, byte[] data = null)
         {
             try
             {
@@ -409,7 +409,7 @@ namespace MASES.KNet.Benchmark
                 {
                     Java.Time.Duration duration = TimeSpan.FromMinutes(1);
                     int counter = 0;
-                    consumer.Subscribe(Collections.Singleton(TopicName("KNET", length)), rebalanceListener);
+                    consumer.Subscribe(Collections.Singleton(topicName), rebalanceListener);
                     while (true)
                     {
                         var records = consumer.Poll(duration);
@@ -451,7 +451,7 @@ namespace MASES.KNet.Benchmark
             }
         }
 
-        static Stopwatch ConsumeKNet(int length, int numpacket, byte[] data = null)
+        static Stopwatch ConsumeKNet(string topicName, int length, int numpacket, byte[] data = null)
         {
             try
             {
@@ -471,7 +471,7 @@ namespace MASES.KNet.Benchmark
                 try
                 {
                     int counter = 0;
-                    consumer.Subscribe(Collections.Singleton(TopicName("KNET", length)), rebalanceListener);
+                    consumer.Subscribe(Collections.Singleton(topicName), rebalanceListener);
                     while (true)
                     {
                         consumer.Consume((long)TimeSpan.FromMilliseconds(100).TotalMilliseconds, (message) =>
@@ -509,7 +509,7 @@ namespace MASES.KNet.Benchmark
             }
         }
 
-        static Stopwatch ConsumeProduceKNet(int length, int numpacket, byte[] data = null)
+        static Stopwatch ConsumeProduceKNet(string topicName, int length, int numpacket, byte[] data = null)
         {
             try
             {
@@ -530,7 +530,7 @@ namespace MASES.KNet.Benchmark
                 try
                 {
                     int counter = 0;
-                    consumer.Subscribe(Collections.Singleton(TopicName("KNET", length)), rebalanceListener);
+                    consumer.Subscribe(Collections.Singleton(topicName), rebalanceListener);
                     while (true)
                     {
                         var records = consumer.Poll(TimeSpan.FromMinutes(1));
@@ -540,8 +540,8 @@ namespace MASES.KNet.Benchmark
                             byte[] newVal = new byte[item.Value.Length];
                             Array.Copy(item.Value, newVal, item.Value.Length);
                             stopWatch.Start();
-                            var record = new ProducerRecord<int, byte[]>(TopicName("KNET_COPY", length), item.Key, newVal);
-                            producer.Send(record);
+                            var record = new ProducerRecord<int, byte[]>(topicName + "_COPY", item.Key, newVal);
+                            producer.Send(record );
                             counter++;
                         }
                         producer.Flush();
