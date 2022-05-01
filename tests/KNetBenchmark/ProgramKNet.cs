@@ -424,7 +424,7 @@ namespace MASES.KNet.Benchmark
                                 if (!item.Value.SequenceEqual(data)
                                     || (!SinglePacket && item.Key != counter))
                                 {
-                                    throw new InvalidOperationException("Incorrect data");
+                                    throw new InvalidOperationException($"Incorrect data counter {counter} item.Key {item.Key}");
                                 }
                                 counter++;
                             }
@@ -441,8 +441,8 @@ namespace MASES.KNet.Benchmark
                 }
                 finally
                 {
-                    rebalanceListener?.Dispose();
                     if (!SharedObjects) consumer.Dispose();
+                    rebalanceListener?.Dispose();
                 }
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
@@ -481,7 +481,7 @@ namespace MASES.KNet.Benchmark
                                 if (!message.Value.SequenceEqual(data)
                                     || (!SinglePacket && message.Key != counter))
                                 {
-                                    throw new InvalidOperationException("Incorrect data");
+                                    throw new InvalidOperationException($"Incorrect data counter {counter} item.Key {message.Key}");
                                 }
                             }
                             counter++;
@@ -499,8 +499,8 @@ namespace MASES.KNet.Benchmark
                 }
                 finally
                 {
-                    rebalanceListener?.Dispose();
                     if (!SharedObjects) consumer.Dispose();
+                    rebalanceListener?.Dispose();
                 }
             }
             catch (Java.Util.Concurrent.ExecutionException ex)

@@ -22,6 +22,8 @@ using System;
 using MASES.KNet.Extensions;
 using MASES.KNet.Common.Errors;
 using System.Diagnostics;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace MASES.KNet.Benchmark
 {
@@ -50,6 +52,40 @@ namespace MASES.KNet.Benchmark
         public static double KbPerSecond(this Stopwatch watch, int numPacket, int length)
         {
             return (double)(length * numPacket) / 1024 / ((double)watch.ElapsedMicroSeconds() / 1000000);
+        }
+
+        public static double StandardDeviation(this IEnumerable<long> values)
+        {
+            return StandardDeviation(values.Select(p => (double)p));
+        }
+
+        public static double StandardDeviation(this IEnumerable<double> values)
+        {
+            double standardDeviation = 0;
+
+            if (values.Any())
+            {
+                // Compute the average.     
+                double avg = values.Average();
+
+                // Perform the Sum of (value-avg)_2_2.      
+                double sum = values.Sum(d => Math.Pow(d - avg, 2));
+
+                // Put it all together.      
+                standardDeviation = Math.Sqrt((sum) / (values.Count() - 1));
+            }
+
+            return standardDeviation;
+        }
+
+        public static double CoefficientOfVariation(this IEnumerable<long> values)
+        {
+            return values.StandardDeviation() / values.Average();
+        }
+
+        public static double CoefficientOfVariation(this IEnumerable<double> values)
+        {
+            return values.StandardDeviation() / values.Average();
         }
     }
 

@@ -242,7 +242,7 @@ namespace MASES.KNet.Benchmark
                             && (!record.Message.Value.SequenceEqual(data)
                                 || (!SinglePacket && record.Message.Key != counter)))
                         {
-                            throw new InvalidOperationException("Incorrect data");
+                            throw new InvalidOperationException($"Incorrect data counter {counter} item.Key {record.Message.Key}");
                         }
                         if (AlwaysCommit) consumer.Commit(record);
                         counter++;

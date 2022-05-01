@@ -22,6 +22,8 @@ using MASES.JCOBridge.C2JBridge;
 using System.Text;
 using System.IO;
 using System.Diagnostics;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace MASES.KNet.Benchmark
 {
@@ -34,10 +36,10 @@ namespace MASES.KNet.Benchmark
                 Init(args);
 
                 ProduceConfluent("", 0, 0); // init lib?
-                long totalKNetProduce = 0;
-                long totalConfluentProduce = 0;
-                long totalKNetConsume = 0;
-                long totalConfluentConsume = 0;
+                List<long> kNetProduceTimes = new();
+                List<long> confluentProduceTimes = new();
+                List<long> kNetConsumeTimes = new();
+                List<long> confluentConsumeTimes = new();
                 StringBuilder sb = new();
                 sb.AppendLine("Length;NumPackets;KNETProd;KNETCons;ConfluentProd;ConfluentCons");
 
@@ -81,7 +83,6 @@ namespace MASES.KNet.Benchmark
                                 KNETConsSW = UseKNetConsumer ? ConsumeKNet(topicNameKNet, length, PacketToExchange, CheckOnConsume ? data : null) : ConsumeKafka(topicNameKNet, length, PacketToExchange, CheckOnConsume ? data : null);
                             }
 
-                            
                             try
                             {
                                 CreateTopic(topicNameConfluent);
@@ -102,10 +103,10 @@ namespace MASES.KNet.Benchmark
                                 ConfluentConsSW = ConsumeConfluent(topicNameConfluent, length, PacketToExchange, CheckOnConsume ? data : null);
                             }
 
-                            totalKNetProduce += KNETProdSW.ElapsedMicroSeconds();
-                            totalConfluentProduce += ConfluentProdSW.ElapsedMicroSeconds();
-                            totalKNetConsume += KNETConsSW.ElapsedMicroSeconds();
-                            totalConfluentConsume += ConfluentConsSW.ElapsedMicroSeconds();
+                            kNetProduceTimes.Add(KNETProdSW.ElapsedMicroSeconds());
+                            confluentProduceTimes.Add(ConfluentProdSW.ElapsedMicroSeconds());
+                            kNetConsumeTimes.Add(KNETConsSW.ElapsedMicroSeconds());
+                            confluentConsumeTimes.Add(ConfluentConsSW.ElapsedMicroSeconds());
 
                             sb.AppendLine($"{length};{PacketToExchange};{KNETProdSW.ElapsedMicroSeconds()};{KNETConsSW?.ElapsedMicroSeconds()};{ConfluentProdSW.ElapsedMicroSeconds()};{ConfluentConsSW?.ElapsedMicroSeconds()}");
 
@@ -139,13 +140,25 @@ namespace MASES.KNet.Benchmark
                     }
                 }
 
+                Console.WriteLine($"FINAL REPORT Exchanged {PacketToExchange} packets with size from {MinPacketLength} to {MaxPacketLength} repeated {Repeat} times");
+
                 if (ProduceOnly)
                 {
-                    Console.WriteLine($"KNet/Confluent produce time: {100 * (double)totalKNetProduce / totalConfluentProduce} %");
+                    Console.WriteLine("Produce");
+                    Console.WriteLine($"KNet       microseconds - Max {kNetProduceTimes.Max():####.##} Min {kNetProduceTimes.Min():####.##} Avg {kNetProduceTimes.Average():####.##} stdev {kNetProduceTimes.StandardDeviation():####.##} CV {100 * kNetProduceTimes.CoefficientOfVariation():####.##} %");
+                    Console.WriteLine($"Confluent  microseconds - Max {confluentProduceTimes.Max():####.##} Min {confluentProduceTimes.Min():####.##} Avg {confluentProduceTimes.Average():####.##} stdev {confluentProduceTimes.StandardDeviation():####.##} CV {100 * confluentProduceTimes.CoefficientOfVariation():####.##} %");
+                    Console.WriteLine($"KNet/Confluent ratio(%) - Max {100 * (double)kNetProduceTimes.Max() / confluentProduceTimes.Max():####.##} Min {100 * (double)kNetProduceTimes.Min() / confluentProduceTimes.Min():####.##} Avg {100 * (double)kNetProduceTimes.Average() / confluentProduceTimes.Average():####.##} stdev {100 * (double)kNetProduceTimes.StandardDeviation() / confluentProduceTimes.StandardDeviation():####.##} CV {100 * kNetProduceTimes.CoefficientOfVariation() / confluentProduceTimes.CoefficientOfVariation():####.##} %");
                 }
                 else
                 {
-                    Console.WriteLine($"KNet/Confluent produce time: {100 * (double)totalKNetProduce / totalConfluentProduce} % consume time: {100 * (double)totalKNetConsume / totalConfluentConsume} %");
+                    Console.WriteLine("Produce");
+                    Console.WriteLine($"KNet       microseconds - Max {kNetProduceTimes.Max():####.##} Min {kNetProduceTimes.Min():####.##} Avg {kNetProduceTimes.Average():####.##} stdev {kNetProduceTimes.StandardDeviation():####.##} CV {100 * kNetProduceTimes.StandardDeviation() / kNetProduceTimes.Average():####.##} %");
+                    Console.WriteLine($"Confluent  microseconds - Max {confluentProduceTimes.Max():####.##} Min {confluentProduceTimes.Min():####.##} Avg {confluentProduceTimes.Average():####.##} stdev {confluentProduceTimes.StandardDeviation():####.##} CV {100 * confluentProduceTimes.StandardDeviation() / confluentProduceTimes.Average():####.##} %");
+                    Console.WriteLine($"KNet/Confluent ratio(%) - Max {100 * (double)kNetProduceTimes.Max() / confluentProduceTimes.Max():####.##} Min {100 * (double)kNetProduceTimes.Min() / confluentProduceTimes.Min():####.##} Avg {100 * (double)kNetProduceTimes.Average() / confluentProduceTimes.Average():####.##} stdev {100 * (double)kNetProduceTimes.StandardDeviation() / confluentProduceTimes.StandardDeviation():####.##} CV {100 * kNetProduceTimes.CoefficientOfVariation() / confluentProduceTimes.CoefficientOfVariation():####.##}");
+                    Console.WriteLine("Consume");
+                    Console.WriteLine($"KNet       microseconds - Max {kNetConsumeTimes.Max():####.##} Min {kNetConsumeTimes.Min():####.##} Avg {kNetConsumeTimes.Average():####.##} stdev {kNetConsumeTimes.StandardDeviation():####.##} CV {100 * kNetConsumeTimes.CoefficientOfVariation():####.##} %");
+                    Console.WriteLine($"Confluent  microseconds - Max {confluentConsumeTimes.Max():####.##} Min {confluentConsumeTimes.Min():####.##} Avg {confluentConsumeTimes.Average():####.##} stdev {confluentConsumeTimes.StandardDeviation():####.##} CV {100 * confluentConsumeTimes.CoefficientOfVariation():####.##} %");
+                    Console.WriteLine($"KNet/Confluent ratio(%) - Max {100 * (double)kNetConsumeTimes.Max() / confluentConsumeTimes.Max():########.##} Min {100 * (double)kNetConsumeTimes.Min() / confluentConsumeTimes.Min():####.##} Avg {100 * (double)kNetConsumeTimes.Average() / confluentConsumeTimes.Average():####.##} stdev {100 * (double)kNetConsumeTimes.StandardDeviation() / confluentConsumeTimes.StandardDeviation():####.##} CV {100 * kNetConsumeTimes.CoefficientOfVariation() / confluentConsumeTimes.CoefficientOfVariation():####.##}");
                 }
 
                 File.WriteAllText(Path.Combine(ResultsPath, $"results_{DateTime.Now:yyyyMMdd_HHmmss}.csv"), sb.ToString());
