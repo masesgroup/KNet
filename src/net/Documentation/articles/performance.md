@@ -92,7 +92,7 @@ Here below a set of results:
 
 KNet/Confluent.Kafka Produce Average ratio percentage (stdev ratio percentage):
 |  | 10 bytes | 100 bytes | 1000 bytes | 10000 bytes | 100000 bytes |
-|---	|---	|---	|---	|---	|---	|---	|
+|---	|---	|---	|---	|---	|---	|
 | 10 messages | 9,04 (4,34) | 5,47 (3,1) | 15,45 (5,29) | 7,54 (4,38) | 19,73 (4,23) |
 | 100 messages | 18,9 (18,9) | 38,1 (8,1) | 30,34 (5,44) | 26 (3,04) | 69,4 (13,09) |
 | 1000 messages | 197,73 (10,54) | 109,92 (6,13) | 57,6 (7,32) | 52,71 (8,17) | 75,76 (43,7) |
@@ -100,7 +100,7 @@ KNet/Confluent.Kafka Produce Average ratio percentage (stdev ratio percentage):
 
 KNet/Confluent.Kafka Consume Average ratio percentage (stdev ratio percentage):
 |  | 10 bytes | 100 bytes | 1000 bytes | 10000 bytes | 100000 bytes |
-|---	|---	|---	|---	|---	|---	|---	|
+|---	|---	|---	|---	|---	|---	|
 | 10 messages | 85,93 (399,84)| 85,41 (282,85) | 85,14 (297,98)| 24,07 (229,23) | 36,23 (285,77) |
 | 100 messages | 94,54 (94,54) | 94,7 (287,78) | 68,49 (389,25) | 71,97 (276,56) | 108,57 (89,45) |
 | 1000 messages | 192,27 (906,94) | 521,86 (867,93) | 103,62 (1854,84) | 255,52 (287,33) | 163,24 (124,23) |
