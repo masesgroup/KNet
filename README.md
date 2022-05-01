@@ -21,7 +21,8 @@ This project aims to create a library to direct access, from .NET, all the featu
 There are many client libraries written to manage communication with Apache Kafka. Conversely, this project use directly the Java packages released from The Apache Foundation giving more than one benefit:
 * all implemented features are availables at no extra implementation costs, see [KNet usage](src/net/Documentation/articles/usage.md);
 * avoids any third party communication protocol implementation;
-* access all features made available from Apache Kafka: the most important one is Kafka Streams which does not have any C# implementation.
+* access all features made available from Apache Kafka: the most important one is Kafka Streams which does not have any C# implementation;
+* measured high [performance](src/net/Documentation/articles/performance.md).
 
 ## Runtime engine
 
@@ -48,6 +49,7 @@ Have a look at the following resources:
 
 * [Roadmap](src/net/Documentation/articles/roadmap.md)
 * [Actual state](src/net/Documentation/articles/actualstate.md)
+* [Performance](src/net/Documentation/articles/performance.md)
 * [KNet usage](src/net/Documentation/articles/usage.md)
 * [KNet APIs extensibility](src/net/Documentation/articles/API_extensibility.md)
 * [KNetCLI usage](src/net/Documentation/articles/usageCLI.md)
