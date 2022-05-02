@@ -23,24 +23,30 @@ using Java.Util;
 using Java.Util.Regex;
 using MASES.JCOBridge.C2JBridge;
 using System;
+using System.Collections.Concurrent;
 
 namespace MASES.KNet.Clients.Consumer
 {
     public class Message<K, V>
     {
+        readonly ConsumerRecord<K, V> record;
         readonly KNetConsumerCallback<K, V> obj;
         internal Message(KNetConsumerCallback<K, V> obj)
         {
             this.obj = obj;
         }
+        internal Message(ConsumerRecord<K, V> record)
+        {
+            this.record = record;
+        }
 
-        //public string Topic => data.TypedEventData;
+        public string Topic => record != null ? record.Topic : obj.Instance.Invoke<string>("getTopic");
 
-        //public int Partition => data.GetAt<int>(0);
+        public int Partition => record != null ? record.Partition : obj.Instance.Invoke<int>("getPartition");
 
-        public K Key => obj.Instance.Invoke<K>("getKey");
+        public K Key => record != null ? record.Key : obj.Instance.Invoke<K>("getKey");
 
-        public V Value => obj.Instance.Invoke<V>("getValue");
+        public V Value => record != null ? record.Value : obj.Instance.Invoke<V>("getValue");
     }
 
     public interface IKNetConsumerCallback<K, V> : IJVMBridgeBase
@@ -73,11 +79,26 @@ namespace MASES.KNet.Clients.Consumer
 
     public interface IKNetConsumer<K, V> : IConsumer<K, V>
     {
+        bool IsCompleting { get; }
+
+        bool IsEmpty { get; }
+
+        int WaitingMessages { get; }
+
+        void SetCallback(Action<Message<K, V>> cb);
+
+        void ConsumeAsync(long timeoutMs);
+
         void Consume(long timeoutMs, Action<Message<K, V>> callback);
     }
 
     public class KNetConsumer<K, V> : KafkaConsumer<K, V>, IKNetConsumer<K, V>
     {
+        bool threadRunning = false;
+        long dequeing = 0;
+        readonly System.Threading.Thread consumeThread = null;
+        readonly System.Threading.ManualResetEvent threadExited = null;
+        readonly ConcurrentQueue<ConsumerRecords<K, V>> consumedRecords = null;
         readonly KNetConsumerCallback<K, V> consumerCallback = null;
 
         public override string ClassName => "org.mases.knet.clients.consumer.KNetConsumer";
@@ -86,18 +107,40 @@ namespace MASES.KNet.Clients.Consumer
         {
         }
 
-        public KNetConsumer(Properties props)
+        public KNetConsumer(Properties props, bool useJVMCallback = false)
             : base(props)
         {
-            consumerCallback = new KNetConsumerCallback<K, V>(CallbackMessage);
-            IExecute("setCallback", consumerCallback);
+            if (useJVMCallback)
+            {
+                consumerCallback = new KNetConsumerCallback<K, V>(CallbackMessage);
+                IExecute("setCallback", consumerCallback);
+            }
+            else
+            {
+                consumedRecords = new();
+                threadRunning = true;
+                threadExited = new(false);
+                consumeThread = new(ConsumeHandler);
+                consumeThread.Start();
+            }
         }
 
-        public KNetConsumer(Properties props, Deserializer<K> keyDeserializer, Deserializer<V> valueDeserializer)
+        public KNetConsumer(Properties props, Deserializer<K> keyDeserializer, Deserializer<V> valueDeserializer, bool useJVMCallback = false)
             : base(props, keyDeserializer, valueDeserializer)
         {
-            consumerCallback = new KNetConsumerCallback<K, V>(CallbackMessage);
-            IExecute("setCallback", consumerCallback);
+            if (useJVMCallback)
+            {
+                consumerCallback = new KNetConsumerCallback<K, V>(CallbackMessage);
+                IExecute("setCallback", consumerCallback);
+            }
+            else
+            {
+                consumedRecords = new();
+                threadRunning = true;
+                threadExited = new(false);
+                consumeThread = new(ConsumeHandler);
+                consumeThread.Start();
+            }
         }
 
         Action<Message<K, V>> actionCallback = null;
@@ -112,11 +155,81 @@ namespace MASES.KNet.Clients.Consumer
             base.Dispose();
             IExecute("setCallback", null);
             consumerCallback?.Dispose();
+            threadRunning = false;
+            if (consumedRecords != null)
+            {
+                lock (consumedRecords)
+                {
+                    System.Threading.Monitor.Pulse(consumedRecords);
+                }
+                while (IsCompleting) { threadExited.WaitOne(100); };
+                actionCallback = null;
+            }
+        }
+
+        public void SetCallback(Action<Message<K, V>> cb)
+        {
+            actionCallback = cb;
+        }
+
+        void ConsumeHandler(object o)
+        {
+            try
+            {
+                while (threadRunning)
+                {
+                    if (consumedRecords.TryDequeue(out ConsumerRecords<K, V> records))
+                    {
+                        System.Threading.Interlocked.Increment(ref dequeing);
+                        try
+                        {
+                            foreach (var item in records)
+                            {
+                                actionCallback?.Invoke(new Message<K, V>(item));
+                            }
+                        }
+                        catch { }
+                        finally
+                        {
+                            System.Threading.Interlocked.Decrement(ref dequeing);
+                        }
+                    }
+                    else
+                    {
+                        lock (consumedRecords)
+                        {
+                            System.Threading.Monitor.Wait(consumedRecords);
+                        }
+                    }
+                }
+            }
+            catch { }
+            finally { threadExited.Set(); threadRunning = false; }
+        }
+
+        public bool IsCompleting => !consumedRecords.IsEmpty || System.Threading.Interlocked.Read(ref dequeing) != 0;
+
+        public bool IsEmpty => consumedRecords.IsEmpty;
+
+        public int WaitingMessages => consumedRecords.Count;
+
+        public void ConsumeAsync(long timeoutMs)
+        {
+            Duration duration = TimeSpan.FromMilliseconds(timeoutMs);
+            if (consumedRecords == null) throw new ArgumentException("Cannot be used since constructor was called with useJVMCallback set to true.");
+            if (!threadRunning) throw new InvalidOperationException("Dispatching thread is not running.");
+            var results = this.Poll(duration);
+            consumedRecords.Enqueue(results);
+            lock (consumedRecords)
+            {
+                System.Threading.Monitor.Pulse(consumedRecords);
+            }
         }
 
         public void Consume(long timeoutMs, Action<Message<K, V>> callback)
         {
             Duration duration = TimeSpan.FromMilliseconds(timeoutMs);
+            if (consumerCallback == null) throw new ArgumentException("Cannot be used since constructor was called with useJVMCallback set to false.");
             try
             {
                 actionCallback = callback;

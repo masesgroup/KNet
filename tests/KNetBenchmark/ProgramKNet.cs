@@ -472,20 +472,21 @@ namespace MASES.KNet.Benchmark
                 {
                     int counter = 0;
                     consumer.Subscribe(Collections.Singleton(topicName), rebalanceListener);
+                    consumer.SetCallback((message) =>
+                    {
+                        if (CheckOnConsume)
+                        {
+                            if (!message.Value.SequenceEqual(data)
+                                || (!SinglePacket && message.Key != counter))
+                            {
+                                throw new InvalidOperationException($"Incorrect data counter {counter} item.Key {message.Key}");
+                            }
+                        }
+                        counter++;
+                    });
                     while (true)
                     {
-                        consumer.Consume((long)TimeSpan.FromMilliseconds(100).TotalMilliseconds, (message) =>
-                        {
-                            if (CheckOnConsume)
-                            {
-                                if (!message.Value.SequenceEqual(data)
-                                    || (!SinglePacket && message.Key != counter))
-                                {
-                                    throw new InvalidOperationException($"Incorrect data counter {counter} item.Key {message.Key}");
-                                }
-                            }
-                            counter++;
-                        });
+                        consumer.ConsumeAsync((long)TimeSpan.FromMilliseconds(100).TotalMilliseconds);
 
                         if (AlwaysCommit) consumer.CommitSync();
                         if (counter >= numpacket)
