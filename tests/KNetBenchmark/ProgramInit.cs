@@ -39,6 +39,7 @@ namespace MASES.KNet.Benchmark
         public const string Repeat = "Repeat";
         public const string MaxPacketLength = "MaxPacketLength";
         public const string MinPacketLength = "MinPacketLength";
+        public const string FixedPacketLength = "FixedPacketLength";
         public const string PacketLengthMultiplier = "PacketLengthMultiplier";
         public const string PacketToExchange = "PacketToExchange";
         public const string UseKNetProducer = "UseKNetProducer";
@@ -148,6 +149,12 @@ namespace MASES.KNet.Benchmark
                         Name = CLIParam.MinPacketLength,
                         Default = 10,
                         Help = "The min packet length to use.",
+                    },
+                    new ArgumentMetadata<int>()
+                    {
+                        Name = CLIParam.FixedPacketLength,
+                        Default = 0,
+                        Help = "The fixed packet length to use, overrides MaxPacketLength and MinPacketLength.",
                     },
                     new ArgumentMetadata<int>()
                     {
@@ -315,6 +322,7 @@ namespace MASES.KNet.Benchmark
         static int Repeat;
         static int MaxPacketLength;
         static int MinPacketLength;
+        static int FixedPacketLength;
         static int PacketLengthMultiplier;
         static int PacketToExchange;
         static int BurstLength;
@@ -356,6 +364,11 @@ namespace MASES.KNet.Benchmark
             Repeat = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.Repeat);
             MaxPacketLength = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.MaxPacketLength);
             MinPacketLength = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.MinPacketLength);
+            FixedPacketLength = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.FixedPacketLength);
+            if (FixedPacketLength != 0)
+            {
+                MinPacketLength = MaxPacketLength = FixedPacketLength;
+            }
             PacketLengthMultiplier = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.PacketLengthMultiplier);
             PacketToExchange = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.PacketToExchange);
             BurstLength = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Get<int>(CLIParam.BurstLength);

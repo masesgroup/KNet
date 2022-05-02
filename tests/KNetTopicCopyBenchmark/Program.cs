@@ -44,59 +44,61 @@ namespace MASES.KNet.Benchmark
                         data[i] = (byte)rand.Next(0, byte.MaxValue);
                     }
 
+                    var topicNameKNet = TopicName("KNET", length, 0);
+                    var topicNameConfluent = TopicName("CONF", length, 0);
                     try
                     {
                         try
                         {
-                            CreateTopic(TopicName("KNET", length));
+                            CreateTopic(topicNameKNet);
                         }
                         catch (TopicExistsException)
                         {
-                            DeleteTopic(TopicName("KNET", length));
-                            CreateTopic(TopicName("KNET", length));
+                            DeleteTopic(topicNameKNet);
+                            CreateTopic(topicNameKNet);
                         }
 
                         try
                         {
-                            CreateTopic(TopicName("KNET_COPY", length));
+                            CreateTopic(topicNameKNet + "_COPY");
                         }
                         catch (TopicExistsException)
                         {
-                            DeleteTopic(TopicName("KNET_COPY", length));
-                            CreateTopic(TopicName("KNET_COPY", length));
+                            DeleteTopic(topicNameKNet + "_COPY");
+                            CreateTopic(topicNameKNet + "_COPY");
                         }
 
-                        if (ShowLogs) Console.WriteLine($"Producing on topic {TopicName("KNET", length)}");
-                        var KNETProdSW = ProduceKNet(length, PacketToExchange, CheckOnConsume ? data : null);
+                        if (ShowLogs) Console.WriteLine($"Producing on topic {topicNameKNet}");
+                        var KNETProdSW = ProduceKNet(topicNameKNet, length, PacketToExchange, CheckOnConsume ? data : null);
 
-                        if (ShowLogs) Console.WriteLine($"Consuming from topic {TopicName("KNET", length)}");
-                        var KNETConsSW = ConsumeProduceKNet(length, PacketToExchange, CheckOnConsume ? data : null);
+                        if (ShowLogs) Console.WriteLine($"Consuming from topic {topicNameKNet}");
+                        var KNETConsSW = ConsumeProduceKNet(topicNameKNet, length, PacketToExchange, CheckOnConsume ? data : null);
 
                         try
                         {
-                            CreateTopic(TopicName("CONFLUENT", length));
+                            CreateTopic(topicNameConfluent);
                         }
                         catch (TopicExistsException)
                         {
-                            DeleteTopic(TopicName("CONFLUENT", length));
-                            CreateTopic(TopicName("CONFLUENT", length));
+                            DeleteTopic(topicNameConfluent);
+                            CreateTopic(topicNameConfluent);
                         }
 
                         try
                         {
-                            CreateTopic(TopicName("CONFLUENT_COPY", length));
+                            CreateTopic(topicNameConfluent + "_COPY");
                         }
                         catch (TopicExistsException)
                         {
-                            DeleteTopic(TopicName("CONFLUENT_COPY", length));
-                            CreateTopic(TopicName("CONFLUENT_COPY", length));
+                            DeleteTopic(topicNameConfluent + "_COPY");
+                            CreateTopic(topicNameConfluent + "_COPY");
                         }
 
-                        if (ShowLogs) Console.WriteLine($"Producing on topic {TopicName("CONFLUENT", length)}");
-                        var ConfluentProdSW = ProduceConfluent(length, PacketToExchange, CheckOnConsume ? data : null);
+                        if (ShowLogs) Console.WriteLine($"Producing on topic {topicNameConfluent}");
+                        var ConfluentProdSW = ProduceConfluent(topicNameConfluent, length, PacketToExchange, CheckOnConsume ? data : null);
 
-                        if (ShowLogs) Console.WriteLine($"Consuming from topic {TopicName("CONFLUENT", length)}");
-                        var ConfluentConsSW = ConsumeProduceConfluent(length, PacketToExchange, CheckOnConsume ? data : null);
+                        if (ShowLogs) Console.WriteLine($"Consuming from topic {topicNameConfluent}");
+                        var ConfluentConsSW = ConsumeProduceConfluent(topicNameConfluent, length, PacketToExchange, CheckOnConsume ? data : null);
 
                         sb.AppendLine($"{length};{PacketToExchange};{KNETProdSW.ElapsedMicroSeconds()};{KNETConsSW.ElapsedMicroSeconds()};{ConfluentProdSW.ElapsedMicroSeconds()};{ConfluentConsSW.ElapsedMicroSeconds()}");
 
@@ -115,10 +117,10 @@ namespace MASES.KNet.Benchmark
                     {
                         if (!LeaveTopics)
                         {
-                            DeleteTopic(TopicName("KNET", length));
-                            DeleteTopic(TopicName("KNET_COPY", length));
-                            DeleteTopic(TopicName("CONFLUENT", length));
-                            DeleteTopic(TopicName("CONFLUENT_COPY", length));
+                            DeleteTopic(topicNameKNet);
+                            DeleteTopic(topicNameKNet + "_COPY");
+                            DeleteTopic(topicNameConfluent);
+                            DeleteTopic(topicNameConfluent + "_COPY");
                         }
                     }
                 }

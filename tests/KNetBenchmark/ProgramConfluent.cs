@@ -62,7 +62,7 @@ namespace MASES.KNet.Benchmark
         }
 
 
-        static Stopwatch ProduceConfluent(int length, int numpacket, byte[] data = null)
+        static Stopwatch ProduceConfluent(string topicName, int length, int numpacket, byte[] data = null)
         {
             Stopwatch swCreateRecord = null;
             Stopwatch swSendRecord = null;
@@ -110,7 +110,7 @@ namespace MASES.KNet.Benchmark
                     for (int i = 0; i < numpacket; i++)
                     {
                         swSendRecord.Start();
-                        producer.Produce(TopicName("CONFLUENT", length), messages[i]);
+                        producer.Produce(topicName, messages[i]);
                         swSendRecord.Stop();
                         if (WithBurst)
                         {
@@ -148,7 +148,7 @@ namespace MASES.KNet.Benchmark
                         swSendRecord.Start();
                         if (UseCallback)
                         {
-                            producer.Produce(TopicName("CONFLUENT", length), message, (o) =>
+                            producer.Produce(topicName, message, (o) =>
                             {
                                 if (o.Error.IsError) Console.WriteLine(o.Error.ToString());
                                 else if (ShowLogs) Console.WriteLine($"Produced on topic {o.Topic} at offset {o.Offset}");
@@ -156,7 +156,7 @@ namespace MASES.KNet.Benchmark
                         }
                         else
                         {
-                            producer.Produce(TopicName("CONFLUENT", length), message);
+                            producer.Produce(topicName, message);
                         }
                         swSendRecord.Stop();
                         if (WithBurst)
@@ -218,7 +218,7 @@ namespace MASES.KNet.Benchmark
             PartitionsAssignedHandler_trampoline?.Invoke(consumer, lst);
         }
 
-        static Stopwatch ConsumeConfluent(int length, int numpacket, byte[] data = null)
+        static Stopwatch ConsumeConfluent(string topicName, int length, int numpacket, byte[] data = null)
         {
             Stopwatch stopWatch = null;
             int counter = 0;
@@ -232,7 +232,7 @@ namespace MASES.KNet.Benchmark
             var consumer = ConfluentConsumer();
             try
             {
-                consumer.Subscribe(TopicName("CONFLUENT", length));
+                consumer.Subscribe(topicName);
                 while (true)
                 {
                     var record = consumer.Consume(TimeSpan.FromMinutes(1));
@@ -242,7 +242,7 @@ namespace MASES.KNet.Benchmark
                             && (!record.Message.Value.SequenceEqual(data)
                                 || (!SinglePacket && record.Message.Key != counter)))
                         {
-                            throw new InvalidOperationException("Incorrect data");
+                            throw new InvalidOperationException($"Incorrect data counter {counter} item.Key {record.Message.Key}");
                         }
                         if (AlwaysCommit) consumer.Commit(record);
                         counter++;
@@ -266,7 +266,7 @@ namespace MASES.KNet.Benchmark
             }
         }
 
-        static Stopwatch ConsumeProduceConfluent(int length, int numpacket, byte[] data = null)
+        static Stopwatch ConsumeProduceConfluent(string topicName, int length, int numpacket, byte[] data = null)
         {
             Stopwatch stopWatch = null;
             int counter = 0;
@@ -281,7 +281,7 @@ namespace MASES.KNet.Benchmark
             var producer = ConfluentProducer();
             try
             {
-                consumer.Subscribe(TopicName("CONFLUENT", length));
+                consumer.Subscribe(topicName);
                 while (true)
                 {
                     var record = consumer.Consume(TimeSpan.FromMinutes(1));
@@ -296,7 +296,7 @@ namespace MASES.KNet.Benchmark
                             Key = record.Message.Key,
                             Value = newVal
                         };
-                        producer.Produce(TopicName("CONFLUENT_COPY", length), message);
+                        producer.Produce(topicName + "_COPY", message);
                         consumer.Commit(record);
                         counter++;
                     }

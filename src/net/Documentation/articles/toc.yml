@@ -4,6 +4,8 @@
   href: roadmap.md
 - name: Actual state
   href: actualstate.md
+- name: Performance
+  href: performance.md
 - name: APIs extendibility
   href: API_extensibility.md
 - name: JVM callbacks
