@@ -22,7 +22,7 @@ There are many client libraries written to manage communication with Apache Kafk
 * all implemented features are availables at no extra implementation costs, see [KNet usage](src/net/Documentation/articles/usage.md);
 * avoids any third party communication protocol implementation;
 * access all features made available from Apache Kafka: the most important one is Kafka Streams which does not have any C# implementation;
-* measured high [performance](src/net/Documentation/articles/performance.md).
+* measured high [performance](src/net/Documentation/articles/performance.md) in many operating conditions.
 
 ## Runtime engine
 
