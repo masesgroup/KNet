@@ -88,32 +88,39 @@ The tests was done with:
 - different number of messages for each benchmark execution: from 10 to 10000 messages;
 - for each benchmark execution the tests are repeated at least 20 times.
 
-Here below a set of results:
+The configuration is:
+- LingerMs: 100 ms
+- BatchSize: 1000000
+- MaxInFlight: 1000000
+- SendBuffer: 32 Mb
+- ReceiveBuffer: 32 Mb
+- FetchMinBytes: 100000
 
-KNet/Confluent.Kafka Produce Average ratio percentage (stdev ratio percentage):
+Here below a set of results, in bold the results which are better using KNet:
+
+- KNet/Confluent.Kafka Produce Average ratio percentage (stdev ratio percentage):
+
 |  | 10 bytes | 100 bytes | 1000 bytes | 10000 bytes | 100000 bytes |
 |---	|---	|---	|---	|---	|---	|
-| 10 messages | 9,04 (4,34) | 5,47 (3,1) | 15,45 (5,29) | 7,54 (4,38) | 19,73 (4,23) |
-| 100 messages | 18,9 (18,9) | 38,1 (8,1) | 30,34 (5,44) | 26 (3,04) | 69,4 (13,09) |
-| 1000 messages | 197,73 (10,54) | 109,92 (6,13) | 57,6 (7,32) | 52,71 (8,17) | 75,76 (43,7) |
-| 10000 messages | 2102,28 (736,54) | 796,84 (514,28) | 173,39 (401,76) | 123,62 (620,46) | 99,5 (108,3) |
+| 10 messages | **9,04 (4,34)** | **5,47 (3,1)** | **15,45 (5,29)** | **7,54 (4,38)** | **19,73 (4,23)** |
+| 100 messages | **18,9 (18,9)** | **38,1 (8,1)** | **30,34 (5,44)** | **26 (3,04)** | **69,4 (13,09)** |
+| 1000 messages | 197,73 (10,54) | 109,92 (6,13) | **57,6 (7,32)** | **52,71 (8,17)** | **75,76 (43,7)** |
+| 10000 messages | 2102,28 (736,54) | 796,84 (514,28) | 173,39 (401,76) | 123,62 (620,46) | **99,5 (108,3)** |
 
-KNet/Confluent.Kafka Consume Average ratio percentage (stdev ratio percentage):
+- KNet/Confluent.Kafka Consume Average ratio percentage (stdev ratio percentage):
+
 |  | 10 bytes | 100 bytes | 1000 bytes | 10000 bytes | 100000 bytes |
 |---	|---	|---	|---	|---	|---	|
-| 10 messages | 85,93 (399,84)| 85,41 (282,85) | 85,14 (297,98)| 24,07 (229,23) | 36,23 (285,77) |
-| 100 messages | 94,54 (94,54) | 94,7 (287,78) | 68,49 (389,25) | 71,97 (276,56) | 108,57 (89,45) |
+| 10 messages | **85,93 (399,84)**| **85,41 (282,85)** | **85,14 (297,98)** | **24,07 (229,23)** | **36,23 (285,77)** |
+| 100 messages | **94,54 (94,54)** | **94,7 (287,78)** | **68,49 (389,25)** | **71,97 (276,56)** | 108,57 (89,45) |
 | 1000 messages | 192,27 (906,94) | 521,86 (867,93) | 103,62 (1854,84) | 255,52 (287,33) | 163,24 (124,23) |
 | 10000 messages | 9153,56 (77543,04) | 7948,76 (69701,75) | 3848,12 (23910,64) | 706,83 (3905,89) | 213,46 (1013,16) |
-
-
 
 ## Final considerations
 
 The KNet library performs better when the massages are larger; when the messages are small Confluent.Kafka performs better. The comparison has made with a similar configuration.
-Of course KNet suffers the JNI interface overhead needed to performs the operations: the evidence comes from the difference between KNetProducer and KafkaProducer.
+Of course KNet suffers the JNI interface overhead needed to performs the operations: the evidence comes from the difference between KNetProducer and KafkaProducer (without _UseKNetProducer_ command-switch).
 With KNetProducer the numbers of JNI invocation are less than using KafkaProducer, so reducing the number of JNI calls have a great impact on overall performance.
 The same consideration can be applied on the consume side: KNetConsumer does not reduce the impact of JNI interface and it does not give any great improvement.
 
 With the upcoming JCOBridge major version the JNI impact will be reduced and KNet will get extra performance both in produce and in consume.
-
