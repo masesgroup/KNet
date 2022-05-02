@@ -115,11 +115,24 @@ Here below a set of results, in bold the results which are better using KNet:
 | 1000 messages | 192,27 (906,94) | 521,86 (867,93) | 103,62 (1854,84) | 255,52 (287,33) | 163,24 (124,23) |
 | 10000 messages | 9153,56 (77543,04) | 7948,76 (69701,75) | 3848,12 (23910,64) | 706,83 (3905,89) | 213,46 (1013,16) |
 
+### Average ratio percentage 
+
+Looking at the above table KNet performs better than Confluent.Kafka with burst of few messages (10/100 messages); if the number of messages is higher (e.g. 1000/10000) KNet performs better when the size of the messages is large.
+The best produce performance was obtained with 10 messages of 100, or 10000, bytes: KNet is 20 times fast than Confluent.Kafka.
+The best consume performance was obtained with 10 messages of 10000 bytes: KNet is 4 times fast than Confluent.Kafka.
+
+### Stdev ratio percentage
+
+Looking at value within the brackets that represents the ratio of the stdev it is possible to highlight that:
+- in produce KNet has more stable measures except when the number of messages is high (10000 messages);
+- in consume KNet has less stable measures.
+
 ## Final considerations
 
-The KNet library performs better when the massages are larger; when the messages are small Confluent.Kafka performs better. The comparison has made with a similar configuration.
-Of course KNet suffers the JNI interface overhead needed to performs the operations: the evidence comes from the difference between KNetProducer and KafkaProducer (without _UseKNetProducer_ command-switch).
-With KNetProducer the numbers of JNI invocation are less than using KafkaProducer, so reducing the number of JNI calls have a great impact on overall performance.
+The KNet library performs better when the massages are larger; when the messages are small Confluent.Kafka performs better.
+From some measurement done KNet suffers the JNI interface overhead needed to performs the operations (the user can activate JNI calls measurement): the evidence comes from the difference between KNetProducer and KafkaProducer (without _UseKNetProducer_ command-line switch).
+Using KNetProducer the numbers of JNI invocation are less than using KafkaProducer, so reducing the number of JNI calls have a great impact on overall performance.
 The same consideration can be applied on the consume side: KNetConsumer does not reduce the impact of JNI interface and it does not give any great improvement.
+The JNI interface has an impact even when the number of messages is high because during processing the Garbage Collector is activated many times increasing the JNI overhead.
 
 With the upcoming JCOBridge major version the JNI impact will be reduced and KNet will get extra performance both in produce and in consume.
