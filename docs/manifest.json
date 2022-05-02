@@ -8504,6 +8504,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/performance.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/performance.html",
+          "hash": "R4RsKWZbelF9mEGVB7UHJchNrKuylsXtsv2J8rKSFZ4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/roadmap.md",
       "output": {
         ".html": {
@@ -8520,7 +8532,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "gCdZ6dPzjXAAjIguUpOPQhw0bL+OBcIhKCswomr3Jmg="
+          "hash": "Ht1bgO9zkb+4dvAagDSU145g1lZrqBL2SgfSPVKe7E8="
         }
       },
       "is_incremental": false,
@@ -8603,7 +8615,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 9,
+          "total_file_count": 10,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
