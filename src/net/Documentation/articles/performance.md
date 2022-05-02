@@ -5,7 +5,6 @@ To measure KNet performance a specifc project is available under the `tests` fol
 ## Initial considerations
 
 Apache Kafka is a client-server architecture which relies on the network for communication. 
-Apache Kafka is a client-server architecture which relies on the network for communication. 
 The entire infrastructure performance depends on some elements:
   1. The HW where Apache Kafka server is running on: see https://kafka.apache.org/documentation/#hwandos for further information
   2. The network between clients and servers
@@ -26,22 +25,22 @@ The benchmark was designed to compare performances between KNet and Confluent.Ka
 - KNet uses official JARs from The Apache Foundation while Confluent.Kafka is a layer over librdkafka;
 - thread model and data enqueing is different;
 - serializer/deserializer are different;
-- the libraries shares many configuration parameters;
+- the libraries share many configuration parameters;
 
 To create a well-done comparison some configuration parameters are set in the same way during each test: e.g. linger time, batch size, etc.
 Others have different meaning: KNet use the concept of memory pool to store messages (bytes that fills the buffer), while Confluent.Kafka (i.e. librdkafka) can configure how many messages stores (maximum messages to be stored); to reduce the impact from these specific parameters the tests were made to finalize the send/receive so all messages shall be sent or received.
 
 The tests:
 - are divided in two different main areas: produce and consume;
-- uses their own topic to avoid impacts from the previous tests: schema is {TopicPrefix}_{testName}_{length}_{testNum} where 
+- uses their own topic to avoid impacts from the previous tests: schema is {TopicPrefix}__{testName}__{length}__{testNum} where 
   - **TopicPrefix** is an user definible string (default is _testTopic_
   - **testName** is KNET or CONF
   - **length** is the payload length
   - **testNum** is the actual execution repetition
 - to reduce impacts from different implementations of serializer/deserializer the most simple data types are used in the messages:
   - **key** is an integer and represents the incremental ordinal of the message sent starting from 0 which is the first message sent;
-  - **value** (payload) is a byte array of data built from the application so the data does not have to be manipulated;
-- the tests are repeated multiple times (with a command line option specific option) and alternate the usage of KNet and Confluent.Kafka to statistically distribute external effects;
+  - **value** (payload) is a byte array of data built from the application so the data does not have to be manipulated from the library;
+- the tests are repeated multiple times (with a command line specific option: Repeat) and alternate the usage of KNet and Confluent.Kafka to statistically distribute external effects;
 - stores info in a CSV for other external processing;
 - finally reports an aggregated info comparing total execution time of the overall tests done.
 
@@ -51,23 +50,23 @@ Many configuration parameters can be applied in the command-line to manipulate b
 
 The approach followed in the benchmark test is to:
 1. create a topic
-2. produce on it measuring the time by a Stopwatch; the produce cycle ends always with a flush to be sure that all data produced are sent to the server before stops any measure;
+2. produce on it measuring the time elapsed; the produce cycle ends always with a flush to be sure that all data produced are sent to the server before stops any measure;
 3. then consume the data produced in step 2 (checking or not the received data) until the number of records expected are received.
 
 The produce cycle is like the following one:
-- create an array with random data within it: this time is not measured to avoid to add application time on library measures;
+- create an array with random data within it (note: the time elapsed in data creation is not measured to avoid to add application time on library measures);
 - create message and send it: both of these are measured to verify how they impact on the test;
-- finally execute a _flush_ and then stop the measure.
+- finally execute a _flush_ and then stops the measure.
 
 The consume cycle is like the following one:
 - subscribe on topic;
-- when the callback informs the application that the topic was assigned the measure are started;
+- when the callback informs the application that the topic was assigned the measures are started;
 - on every consume cycle the messages conuter is updated;
-- when the number of expected messages are received the consumer is unsubscribe and the measure are stopped.
+- when the number of expected messages are received the consumer is unsubscribe and the measures are stopped.
 
 The cycles are repeated many times; the test repetition has a dual meaning: it creates a population of data for statistics purpose, meanwhile it represents burst of data produced/consumed from an user application.
-At the end will be measured many information like the number of JNI calls (this is important for KNet) and an aggregated info related to the overrall time needed to perform the operations (produce/consume) of both libraies.
-The information collected are analyzed with statists in mind; for every test the application reports:
+Meanwhile are measured many information like the number of JNI calls (this is important for KNet) and, finally, an aggregated info related to the overrall time needed to perform the operations (produce/consume) of both libraies.
+The information collected are analyzed with statistics in mind; for every test the application reports:
 - Max value
 - Min value
 - Average
