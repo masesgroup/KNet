@@ -87,7 +87,7 @@ jobs:
 
     - name: Maven preparation (step 2)
       if: matrix.language == 'java' 
-      run: mvn "install:install-file" "-DgroupId=JCOBridge" "-DartifactId=JCOBridge" "-Dversion=2.4.11" "-Dpackaging=jar" "-Dfile=./bin/net5.0/JCOBridge.jar"
+      run: mvn "install:install-file" "-DgroupId=JCOBridge" "-DartifactId=JCOBridge" "-Dversion=2.5.0" "-Dpackaging=jar" "-Dfile=./bin/net5.0/JCOBridge.jar"
 
     - if: matrix.language == 'java' 
       run: mvn --file ./src/java/knet/pom.xml --no-transfer-progress package
