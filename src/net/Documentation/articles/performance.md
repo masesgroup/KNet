@@ -136,3 +136,16 @@ The same consideration can be applied on the consume side: KNetConsumer does not
 The JNI interface has an impact even when the number of messages is high because during processing the Garbage Collector is activated many times increasing the JNI overhead.
 
 **With the upcoming JCOBridge major version the JNI impact will be reduced and KNet will get extra performance both in produce and in consume.**
+
+The first measures done with an internal alfa release reports big improvements. Here some cases:
+- 1000 messages:
+  - 10 bytes: Produce Average ratio percentage from 197 to 111, Consume Average ratio percentage from 192 to 137
+  - 100 bytes: Produce Average ratio percentage from 109 to 86, Consume Average ratio percentage from 521 to 276
+- 10000 messages:
+  - 10 bytes: Produce Average ratio percentage from 2102 to 656, Consume Average ratio percentage from 9153 to 4139
+  - 100 bytes: Produce Average ratio percentage from 796 to 410, Consume Average ratio percentage from 7948 to 3378
+  - 1000 bytes: Produce Average ratio percentage from 173 to 81, Consume Average ratio percentage from 3848 to 1668
+  - 10000 bytes: Produce Average ratio percentage from 123 to 80, Consume Average ratio percentage from 706 to 390
+  - 100000 bytes: Produce Average ratio percentage from 100 to 98, Consume Average ratio percentage from 213 to 172
+
+
