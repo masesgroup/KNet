@@ -77,7 +77,7 @@ namespace MASES.KNet.Benchmark
             return StandardDeviation(values.Select(p => (double)p));
         }
 
-        public static double StandardDeviation(this IEnumerable<double> values)
+        public static double StandardDeviation(this IEnumerable<double> values) // from stackoverflow
         {
             double standardDeviation = 0;
 

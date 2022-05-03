@@ -97,7 +97,7 @@ The configuration is:
 
 Here below a set of results, in bold the results which are better using KNet:
 
-- KNet/Confluent.Kafka Produce Average ratio percentage (stdev ratio percentage):
+- KNet/Confluent.Kafka Produce Average ratio percentage (SD ratio percentage):
 
 |  | 10 bytes | 100 bytes | 1000 bytes | 10000 bytes | 100000 bytes |
 |---	|---	|---	|---	|---	|---	|
@@ -106,7 +106,7 @@ Here below a set of results, in bold the results which are better using KNet:
 | 1000 messages | 197,73 (10,54) | 109,92 (6,13) | **57,6 (7,32)** | **52,71 (8,17)** | **75,76 (43,7)** |
 | 10000 messages | 2102,28 (736,54) | 796,84 (514,28) | 173,39 (401,76) | 123,62 (620,46) | **99,5 (108,3)** |
 
-- KNet/Confluent.Kafka Consume Average ratio percentage (stdev ratio percentage):
+- KNet/Confluent.Kafka Consume Average ratio percentage (SD ratio percentage):
 
 |  | 10 bytes | 100 bytes | 1000 bytes | 10000 bytes | 100000 bytes |
 |---	|---	|---	|---	|---	|---	|
@@ -121,9 +121,9 @@ Looking at the above table KNet performs better than Confluent.Kafka with burst 
 The best produce performance was obtained with 10 messages of 100, or 10000, bytes: KNet is 20 times fast than Confluent.Kafka.
 The best consume performance was obtained with 10 messages of 10000 bytes: KNet is 4 times fast than Confluent.Kafka.
 
-### Stdev ratio percentage
+### SD ratio percentage
 
-Looking at value within the brackets, that represents the ratio of the stdev, it is possible to highlight that:
+Looking at value within the brackets, that represents the ratio of the SD, it is possible to highlight that:
 - in produce KNet has more stable measures except when the number of messages is high (10000 messages);
 - in consume KNet has less stable measures.
 
