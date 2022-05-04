@@ -138,9 +138,18 @@ The JNI interface has an impact even when the number of messages is high because
 **With the upcoming JCOBridge major version the JNI impact will be reduced and KNet will get extra performance both in produce and in consume.**
 
 The first measures done with an internal alfa release reports big improvements. Here some cases:
+- 100 messages:
+  - 10 bytes: Produce Average ratio percentage from 18 to 11, Consume Average ratio percentage from 94 to 88
+  - 100 bytes: Produce Average ratio percentage from 38 to 17, Consume Average ratio percentage from 94 to 88
+  - 1000 bytes: Produce Average ratio percentage from 30 to 16, Consume Average ratio percentage from 68 to 38
+  - 10000 bytes: Produce Average ratio percentage from 26 to 24, Consume Average ratio percentage from 71 to 47
+  - 100000 bytes: Produce Average ratio percentage from 69 to 43, Consume Average ratio percentage from 108 to 101
 - 1000 messages:
   - 10 bytes: Produce Average ratio percentage from 197 to 111, Consume Average ratio percentage from 192 to 137
   - 100 bytes: Produce Average ratio percentage from 109 to 86, Consume Average ratio percentage from 521 to 276
+  - 1000 bytes: Produce Average ratio percentage from 57 to 53, Consume Average ratio percentage from 103 to 56
+  - 10000 bytes: Produce Average ratio percentage from 52 to 48, Consume Average ratio percentage from 255 to 177
+  - 100000 bytes: Produce Average ratio percentage from 75 to 71, Consume Average ratio percentage from 163 to 146
 - 10000 messages:
   - 10 bytes: Produce Average ratio percentage from 2102 to 656, Consume Average ratio percentage from 9153 to 4139
   - 100 bytes: Produce Average ratio percentage from 796 to 410, Consume Average ratio percentage from 7948 to 3378
