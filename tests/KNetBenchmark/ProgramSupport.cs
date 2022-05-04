@@ -54,12 +54,30 @@ namespace MASES.KNet.Benchmark
             return (double)(length * numPacket) / 1024 / ((double)watch.ElapsedMicroSeconds() / 1000000);
         }
 
+        public static IEnumerable<double> FilterMinMax(this IEnumerable<long> values)
+        {
+            return FilterMinMax(values.Select(p => (double)p));
+        }
+
+        public static IEnumerable<double> FilterMinMax(this IEnumerable<double> values)
+        {
+            System.Collections.Generic.List<double> result = new(values);
+            if (result.Count > 2)
+            {
+                var min = result.Min();
+                var max = result.Max();
+                result.Remove(min);
+                result.Remove(max);
+            }
+            return result;
+        }
+
         public static double StandardDeviation(this IEnumerable<long> values)
         {
             return StandardDeviation(values.Select(p => (double)p));
         }
 
-        public static double StandardDeviation(this IEnumerable<double> values)
+        public static double StandardDeviation(this IEnumerable<double> values) // from stackoverflow
         {
             double standardDeviation = 0;
 
