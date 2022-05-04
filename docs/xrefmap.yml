@@ -11932,6 +11932,92 @@ references:
   fullName.vb: MASES.KNet.Clients.Consumer.IKNetConsumer(Of K, V).Consume
   nameWithType: IKNetConsumer<K, V>.Consume
   nameWithType.vb: IKNetConsumer(Of K, V).Consume
+- uid: MASES.KNet.Clients.Consumer.IKNetConsumer`2.ConsumeAsync(System.Int64)
+  name: ConsumeAsync(Int64)
+  href: api/MASES.KNet.Clients.Consumer.IKNetConsumer-2.html#MASES_KNet_Clients_Consumer_IKNetConsumer_2_ConsumeAsync_System_Int64_
+  commentId: M:MASES.KNet.Clients.Consumer.IKNetConsumer`2.ConsumeAsync(System.Int64)
+  fullName: MASES.KNet.Clients.Consumer.IKNetConsumer<K, V>.ConsumeAsync(System.Int64)
+  fullName.vb: MASES.KNet.Clients.Consumer.IKNetConsumer(Of K, V).ConsumeAsync(System.Int64)
+  nameWithType: IKNetConsumer<K, V>.ConsumeAsync(Int64)
+  nameWithType.vb: IKNetConsumer(Of K, V).ConsumeAsync(Int64)
+- uid: MASES.KNet.Clients.Consumer.IKNetConsumer`2.ConsumeAsync*
+  name: ConsumeAsync
+  href: api/MASES.KNet.Clients.Consumer.IKNetConsumer-2.html#MASES_KNet_Clients_Consumer_IKNetConsumer_2_ConsumeAsync_
+  commentId: Overload:MASES.KNet.Clients.Consumer.IKNetConsumer`2.ConsumeAsync
+  isSpec: "True"
+  fullName: MASES.KNet.Clients.Consumer.IKNetConsumer<K, V>.ConsumeAsync
+  fullName.vb: MASES.KNet.Clients.Consumer.IKNetConsumer(Of K, V).ConsumeAsync
+  nameWithType: IKNetConsumer<K, V>.ConsumeAsync
+  nameWithType.vb: IKNetConsumer(Of K, V).ConsumeAsync
+- uid: MASES.KNet.Clients.Consumer.IKNetConsumer`2.IsCompleting
+  name: IsCompleting
+  href: api/MASES.KNet.Clients.Consumer.IKNetConsumer-2.html#MASES_KNet_Clients_Consumer_IKNetConsumer_2_IsCompleting
+  commentId: P:MASES.KNet.Clients.Consumer.IKNetConsumer`2.IsCompleting
+  fullName: MASES.KNet.Clients.Consumer.IKNetConsumer<K, V>.IsCompleting
+  fullName.vb: MASES.KNet.Clients.Consumer.IKNetConsumer(Of K, V).IsCompleting
+  nameWithType: IKNetConsumer<K, V>.IsCompleting
+  nameWithType.vb: IKNetConsumer(Of K, V).IsCompleting
+- uid: MASES.KNet.Clients.Consumer.IKNetConsumer`2.IsCompleting*
+  name: IsCompleting
+  href: api/MASES.KNet.Clients.Consumer.IKNetConsumer-2.html#MASES_KNet_Clients_Consumer_IKNetConsumer_2_IsCompleting_
+  commentId: Overload:MASES.KNet.Clients.Consumer.IKNetConsumer`2.IsCompleting
+  isSpec: "True"
+  fullName: MASES.KNet.Clients.Consumer.IKNetConsumer<K, V>.IsCompleting
+  fullName.vb: MASES.KNet.Clients.Consumer.IKNetConsumer(Of K, V).IsCompleting
+  nameWithType: IKNetConsumer<K, V>.IsCompleting
+  nameWithType.vb: IKNetConsumer(Of K, V).IsCompleting
+- uid: MASES.KNet.Clients.Consumer.IKNetConsumer`2.IsEmpty
+  name: IsEmpty
+  href: api/MASES.KNet.Clients.Consumer.IKNetConsumer-2.html#MASES_KNet_Clients_Consumer_IKNetConsumer_2_IsEmpty
+  commentId: P:MASES.KNet.Clients.Consumer.IKNetConsumer`2.IsEmpty
+  fullName: MASES.KNet.Clients.Consumer.IKNetConsumer<K, V>.IsEmpty
+  fullName.vb: MASES.KNet.Clients.Consumer.IKNetConsumer(Of K, V).IsEmpty
+  nameWithType: IKNetConsumer<K, V>.IsEmpty
+  nameWithType.vb: IKNetConsumer(Of K, V).IsEmpty
+- uid: MASES.KNet.Clients.Consumer.IKNetConsumer`2.IsEmpty*
+  name: IsEmpty
+  href: api/MASES.KNet.Clients.Consumer.IKNetConsumer-2.html#MASES_KNet_Clients_Consumer_IKNetConsumer_2_IsEmpty_
+  commentId: Overload:MASES.KNet.Clients.Consumer.IKNetConsumer`2.IsEmpty
+  isSpec: "True"
+  fullName: MASES.KNet.Clients.Consumer.IKNetConsumer<K, V>.IsEmpty
+  fullName.vb: MASES.KNet.Clients.Consumer.IKNetConsumer(Of K, V).IsEmpty
+  nameWithType: IKNetConsumer<K, V>.IsEmpty
+  nameWithType.vb: IKNetConsumer(Of K, V).IsEmpty
+- uid: MASES.KNet.Clients.Consumer.IKNetConsumer`2.SetCallback(System.Action{MASES.KNet.Clients.Consumer.Message{`0,`1}})
+  name: SetCallback(Action<Message<K, V>>)
+  href: api/MASES.KNet.Clients.Consumer.IKNetConsumer-2.html#MASES_KNet_Clients_Consumer_IKNetConsumer_2_SetCallback_System_Action_MASES_KNet_Clients_Consumer_Message__0__1___
+  commentId: M:MASES.KNet.Clients.Consumer.IKNetConsumer`2.SetCallback(System.Action{MASES.KNet.Clients.Consumer.Message{`0,`1}})
+  name.vb: SetCallback(Action(Of Message(Of K, V)))
+  fullName: MASES.KNet.Clients.Consumer.IKNetConsumer<K, V>.SetCallback(System.Action<MASES.KNet.Clients.Consumer.Message<K, V>>)
+  fullName.vb: MASES.KNet.Clients.Consumer.IKNetConsumer(Of K, V).SetCallback(System.Action(Of MASES.KNet.Clients.Consumer.Message(Of K, V)))
+  nameWithType: IKNetConsumer<K, V>.SetCallback(Action<Message<K, V>>)
+  nameWithType.vb: IKNetConsumer(Of K, V).SetCallback(Action(Of Message(Of K, V)))
+- uid: MASES.KNet.Clients.Consumer.IKNetConsumer`2.SetCallback*
+  name: SetCallback
+  href: api/MASES.KNet.Clients.Consumer.IKNetConsumer-2.html#MASES_KNet_Clients_Consumer_IKNetConsumer_2_SetCallback_
+  commentId: Overload:MASES.KNet.Clients.Consumer.IKNetConsumer`2.SetCallback
+  isSpec: "True"
+  fullName: MASES.KNet.Clients.Consumer.IKNetConsumer<K, V>.SetCallback
+  fullName.vb: MASES.KNet.Clients.Consumer.IKNetConsumer(Of K, V).SetCallback
+  nameWithType: IKNetConsumer<K, V>.SetCallback
+  nameWithType.vb: IKNetConsumer(Of K, V).SetCallback
+- uid: MASES.KNet.Clients.Consumer.IKNetConsumer`2.WaitingMessages
+  name: WaitingMessages
+  href: api/MASES.KNet.Clients.Consumer.IKNetConsumer-2.html#MASES_KNet_Clients_Consumer_IKNetConsumer_2_WaitingMessages
+  commentId: P:MASES.KNet.Clients.Consumer.IKNetConsumer`2.WaitingMessages
+  fullName: MASES.KNet.Clients.Consumer.IKNetConsumer<K, V>.WaitingMessages
+  fullName.vb: MASES.KNet.Clients.Consumer.IKNetConsumer(Of K, V).WaitingMessages
+  nameWithType: IKNetConsumer<K, V>.WaitingMessages
+  nameWithType.vb: IKNetConsumer(Of K, V).WaitingMessages
+- uid: MASES.KNet.Clients.Consumer.IKNetConsumer`2.WaitingMessages*
+  name: WaitingMessages
+  href: api/MASES.KNet.Clients.Consumer.IKNetConsumer-2.html#MASES_KNet_Clients_Consumer_IKNetConsumer_2_WaitingMessages_
+  commentId: Overload:MASES.KNet.Clients.Consumer.IKNetConsumer`2.WaitingMessages
+  isSpec: "True"
+  fullName: MASES.KNet.Clients.Consumer.IKNetConsumer<K, V>.WaitingMessages
+  fullName.vb: MASES.KNet.Clients.Consumer.IKNetConsumer(Of K, V).WaitingMessages
+  nameWithType: IKNetConsumer<K, V>.WaitingMessages
+  nameWithType.vb: IKNetConsumer(Of K, V).WaitingMessages
 - uid: MASES.KNet.Clients.Consumer.IKNetConsumerCallback`2
   name: IKNetConsumerCallback<K, V>
   href: api/MASES.KNet.Clients.Consumer.IKNetConsumerCallback-2.html
@@ -12739,23 +12825,23 @@ references:
   fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumer(Of K, V).KNetConsumer()
   nameWithType: KNetConsumer<K, V>.KNetConsumer()
   nameWithType.vb: KNetConsumer(Of K, V).KNetConsumer()
-- uid: MASES.KNet.Clients.Consumer.KNetConsumer`2.#ctor(Java.Util.Properties)
-  name: KNetConsumer(Properties)
-  href: api/MASES.KNet.Clients.Consumer.KNetConsumer-2.html#MASES_KNet_Clients_Consumer_KNetConsumer_2__ctor_Java_Util_Properties_
-  commentId: M:MASES.KNet.Clients.Consumer.KNetConsumer`2.#ctor(Java.Util.Properties)
-  fullName: MASES.KNet.Clients.Consumer.KNetConsumer<K, V>.KNetConsumer(Java.Util.Properties)
-  fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumer(Of K, V).KNetConsumer(Java.Util.Properties)
-  nameWithType: KNetConsumer<K, V>.KNetConsumer(Properties)
-  nameWithType.vb: KNetConsumer(Of K, V).KNetConsumer(Properties)
-- uid: MASES.KNet.Clients.Consumer.KNetConsumer`2.#ctor(Java.Util.Properties,MASES.KNet.Common.Serialization.Deserializer{`0},MASES.KNet.Common.Serialization.Deserializer{`1})
-  name: KNetConsumer(Properties, Deserializer<K>, Deserializer<V>)
-  href: api/MASES.KNet.Clients.Consumer.KNetConsumer-2.html#MASES_KNet_Clients_Consumer_KNetConsumer_2__ctor_Java_Util_Properties_MASES_KNet_Common_Serialization_Deserializer__0__MASES_KNet_Common_Serialization_Deserializer__1__
-  commentId: M:MASES.KNet.Clients.Consumer.KNetConsumer`2.#ctor(Java.Util.Properties,MASES.KNet.Common.Serialization.Deserializer{`0},MASES.KNet.Common.Serialization.Deserializer{`1})
-  name.vb: KNetConsumer(Properties, Deserializer(Of K), Deserializer(Of V))
-  fullName: MASES.KNet.Clients.Consumer.KNetConsumer<K, V>.KNetConsumer(Java.Util.Properties, MASES.KNet.Common.Serialization.Deserializer<K>, MASES.KNet.Common.Serialization.Deserializer<V>)
-  fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumer(Of K, V).KNetConsumer(Java.Util.Properties, MASES.KNet.Common.Serialization.Deserializer(Of K), MASES.KNet.Common.Serialization.Deserializer(Of V))
-  nameWithType: KNetConsumer<K, V>.KNetConsumer(Properties, Deserializer<K>, Deserializer<V>)
-  nameWithType.vb: KNetConsumer(Of K, V).KNetConsumer(Properties, Deserializer(Of K), Deserializer(Of V))
+- uid: MASES.KNet.Clients.Consumer.KNetConsumer`2.#ctor(Java.Util.Properties,MASES.KNet.Common.Serialization.Deserializer{`0},MASES.KNet.Common.Serialization.Deserializer{`1},System.Boolean)
+  name: KNetConsumer(Properties, Deserializer<K>, Deserializer<V>, Boolean)
+  href: api/MASES.KNet.Clients.Consumer.KNetConsumer-2.html#MASES_KNet_Clients_Consumer_KNetConsumer_2__ctor_Java_Util_Properties_MASES_KNet_Common_Serialization_Deserializer__0__MASES_KNet_Common_Serialization_Deserializer__1__System_Boolean_
+  commentId: M:MASES.KNet.Clients.Consumer.KNetConsumer`2.#ctor(Java.Util.Properties,MASES.KNet.Common.Serialization.Deserializer{`0},MASES.KNet.Common.Serialization.Deserializer{`1},System.Boolean)
+  name.vb: KNetConsumer(Properties, Deserializer(Of K), Deserializer(Of V), Boolean)
+  fullName: MASES.KNet.Clients.Consumer.KNetConsumer<K, V>.KNetConsumer(Java.Util.Properties, MASES.KNet.Common.Serialization.Deserializer<K>, MASES.KNet.Common.Serialization.Deserializer<V>, System.Boolean)
+  fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumer(Of K, V).KNetConsumer(Java.Util.Properties, MASES.KNet.Common.Serialization.Deserializer(Of K), MASES.KNet.Common.Serialization.Deserializer(Of V), System.Boolean)
+  nameWithType: KNetConsumer<K, V>.KNetConsumer(Properties, Deserializer<K>, Deserializer<V>, Boolean)
+  nameWithType.vb: KNetConsumer(Of K, V).KNetConsumer(Properties, Deserializer(Of K), Deserializer(Of V), Boolean)
+- uid: MASES.KNet.Clients.Consumer.KNetConsumer`2.#ctor(Java.Util.Properties,System.Boolean)
+  name: KNetConsumer(Properties, Boolean)
+  href: api/MASES.KNet.Clients.Consumer.KNetConsumer-2.html#MASES_KNet_Clients_Consumer_KNetConsumer_2__ctor_Java_Util_Properties_System_Boolean_
+  commentId: M:MASES.KNet.Clients.Consumer.KNetConsumer`2.#ctor(Java.Util.Properties,System.Boolean)
+  fullName: MASES.KNet.Clients.Consumer.KNetConsumer<K, V>.KNetConsumer(Java.Util.Properties, System.Boolean)
+  fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumer(Of K, V).KNetConsumer(Java.Util.Properties, System.Boolean)
+  nameWithType: KNetConsumer<K, V>.KNetConsumer(Properties, Boolean)
+  nameWithType.vb: KNetConsumer(Of K, V).KNetConsumer(Properties, Boolean)
 - uid: MASES.KNet.Clients.Consumer.KNetConsumer`2.#ctor*
   name: KNetConsumer
   href: api/MASES.KNet.Clients.Consumer.KNetConsumer-2.html#MASES_KNet_Clients_Consumer_KNetConsumer_2__ctor_
@@ -12800,6 +12886,23 @@ references:
   fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumer(Of K, V).Consume
   nameWithType: KNetConsumer<K, V>.Consume
   nameWithType.vb: KNetConsumer(Of K, V).Consume
+- uid: MASES.KNet.Clients.Consumer.KNetConsumer`2.ConsumeAsync(System.Int64)
+  name: ConsumeAsync(Int64)
+  href: api/MASES.KNet.Clients.Consumer.KNetConsumer-2.html#MASES_KNet_Clients_Consumer_KNetConsumer_2_ConsumeAsync_System_Int64_
+  commentId: M:MASES.KNet.Clients.Consumer.KNetConsumer`2.ConsumeAsync(System.Int64)
+  fullName: MASES.KNet.Clients.Consumer.KNetConsumer<K, V>.ConsumeAsync(System.Int64)
+  fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumer(Of K, V).ConsumeAsync(System.Int64)
+  nameWithType: KNetConsumer<K, V>.ConsumeAsync(Int64)
+  nameWithType.vb: KNetConsumer(Of K, V).ConsumeAsync(Int64)
+- uid: MASES.KNet.Clients.Consumer.KNetConsumer`2.ConsumeAsync*
+  name: ConsumeAsync
+  href: api/MASES.KNet.Clients.Consumer.KNetConsumer-2.html#MASES_KNet_Clients_Consumer_KNetConsumer_2_ConsumeAsync_
+  commentId: Overload:MASES.KNet.Clients.Consumer.KNetConsumer`2.ConsumeAsync
+  isSpec: "True"
+  fullName: MASES.KNet.Clients.Consumer.KNetConsumer<K, V>.ConsumeAsync
+  fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumer(Of K, V).ConsumeAsync
+  nameWithType: KNetConsumer<K, V>.ConsumeAsync
+  nameWithType.vb: KNetConsumer(Of K, V).ConsumeAsync
 - uid: MASES.KNet.Clients.Consumer.KNetConsumer`2.Dispose
   name: Dispose()
   href: api/MASES.KNet.Clients.Consumer.KNetConsumer-2.html#MASES_KNet_Clients_Consumer_KNetConsumer_2_Dispose
@@ -12817,6 +12920,75 @@ references:
   fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumer(Of K, V).Dispose
   nameWithType: KNetConsumer<K, V>.Dispose
   nameWithType.vb: KNetConsumer(Of K, V).Dispose
+- uid: MASES.KNet.Clients.Consumer.KNetConsumer`2.IsCompleting
+  name: IsCompleting
+  href: api/MASES.KNet.Clients.Consumer.KNetConsumer-2.html#MASES_KNet_Clients_Consumer_KNetConsumer_2_IsCompleting
+  commentId: P:MASES.KNet.Clients.Consumer.KNetConsumer`2.IsCompleting
+  fullName: MASES.KNet.Clients.Consumer.KNetConsumer<K, V>.IsCompleting
+  fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumer(Of K, V).IsCompleting
+  nameWithType: KNetConsumer<K, V>.IsCompleting
+  nameWithType.vb: KNetConsumer(Of K, V).IsCompleting
+- uid: MASES.KNet.Clients.Consumer.KNetConsumer`2.IsCompleting*
+  name: IsCompleting
+  href: api/MASES.KNet.Clients.Consumer.KNetConsumer-2.html#MASES_KNet_Clients_Consumer_KNetConsumer_2_IsCompleting_
+  commentId: Overload:MASES.KNet.Clients.Consumer.KNetConsumer`2.IsCompleting
+  isSpec: "True"
+  fullName: MASES.KNet.Clients.Consumer.KNetConsumer<K, V>.IsCompleting
+  fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumer(Of K, V).IsCompleting
+  nameWithType: KNetConsumer<K, V>.IsCompleting
+  nameWithType.vb: KNetConsumer(Of K, V).IsCompleting
+- uid: MASES.KNet.Clients.Consumer.KNetConsumer`2.IsEmpty
+  name: IsEmpty
+  href: api/MASES.KNet.Clients.Consumer.KNetConsumer-2.html#MASES_KNet_Clients_Consumer_KNetConsumer_2_IsEmpty
+  commentId: P:MASES.KNet.Clients.Consumer.KNetConsumer`2.IsEmpty
+  fullName: MASES.KNet.Clients.Consumer.KNetConsumer<K, V>.IsEmpty
+  fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumer(Of K, V).IsEmpty
+  nameWithType: KNetConsumer<K, V>.IsEmpty
+  nameWithType.vb: KNetConsumer(Of K, V).IsEmpty
+- uid: MASES.KNet.Clients.Consumer.KNetConsumer`2.IsEmpty*
+  name: IsEmpty
+  href: api/MASES.KNet.Clients.Consumer.KNetConsumer-2.html#MASES_KNet_Clients_Consumer_KNetConsumer_2_IsEmpty_
+  commentId: Overload:MASES.KNet.Clients.Consumer.KNetConsumer`2.IsEmpty
+  isSpec: "True"
+  fullName: MASES.KNet.Clients.Consumer.KNetConsumer<K, V>.IsEmpty
+  fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumer(Of K, V).IsEmpty
+  nameWithType: KNetConsumer<K, V>.IsEmpty
+  nameWithType.vb: KNetConsumer(Of K, V).IsEmpty
+- uid: MASES.KNet.Clients.Consumer.KNetConsumer`2.SetCallback(System.Action{MASES.KNet.Clients.Consumer.Message{`0,`1}})
+  name: SetCallback(Action<Message<K, V>>)
+  href: api/MASES.KNet.Clients.Consumer.KNetConsumer-2.html#MASES_KNet_Clients_Consumer_KNetConsumer_2_SetCallback_System_Action_MASES_KNet_Clients_Consumer_Message__0__1___
+  commentId: M:MASES.KNet.Clients.Consumer.KNetConsumer`2.SetCallback(System.Action{MASES.KNet.Clients.Consumer.Message{`0,`1}})
+  name.vb: SetCallback(Action(Of Message(Of K, V)))
+  fullName: MASES.KNet.Clients.Consumer.KNetConsumer<K, V>.SetCallback(System.Action<MASES.KNet.Clients.Consumer.Message<K, V>>)
+  fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumer(Of K, V).SetCallback(System.Action(Of MASES.KNet.Clients.Consumer.Message(Of K, V)))
+  nameWithType: KNetConsumer<K, V>.SetCallback(Action<Message<K, V>>)
+  nameWithType.vb: KNetConsumer(Of K, V).SetCallback(Action(Of Message(Of K, V)))
+- uid: MASES.KNet.Clients.Consumer.KNetConsumer`2.SetCallback*
+  name: SetCallback
+  href: api/MASES.KNet.Clients.Consumer.KNetConsumer-2.html#MASES_KNet_Clients_Consumer_KNetConsumer_2_SetCallback_
+  commentId: Overload:MASES.KNet.Clients.Consumer.KNetConsumer`2.SetCallback
+  isSpec: "True"
+  fullName: MASES.KNet.Clients.Consumer.KNetConsumer<K, V>.SetCallback
+  fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumer(Of K, V).SetCallback
+  nameWithType: KNetConsumer<K, V>.SetCallback
+  nameWithType.vb: KNetConsumer(Of K, V).SetCallback
+- uid: MASES.KNet.Clients.Consumer.KNetConsumer`2.WaitingMessages
+  name: WaitingMessages
+  href: api/MASES.KNet.Clients.Consumer.KNetConsumer-2.html#MASES_KNet_Clients_Consumer_KNetConsumer_2_WaitingMessages
+  commentId: P:MASES.KNet.Clients.Consumer.KNetConsumer`2.WaitingMessages
+  fullName: MASES.KNet.Clients.Consumer.KNetConsumer<K, V>.WaitingMessages
+  fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumer(Of K, V).WaitingMessages
+  nameWithType: KNetConsumer<K, V>.WaitingMessages
+  nameWithType.vb: KNetConsumer(Of K, V).WaitingMessages
+- uid: MASES.KNet.Clients.Consumer.KNetConsumer`2.WaitingMessages*
+  name: WaitingMessages
+  href: api/MASES.KNet.Clients.Consumer.KNetConsumer-2.html#MASES_KNet_Clients_Consumer_KNetConsumer_2_WaitingMessages_
+  commentId: Overload:MASES.KNet.Clients.Consumer.KNetConsumer`2.WaitingMessages
+  isSpec: "True"
+  fullName: MASES.KNet.Clients.Consumer.KNetConsumer<K, V>.WaitingMessages
+  fullName.vb: MASES.KNet.Clients.Consumer.KNetConsumer(Of K, V).WaitingMessages
+  nameWithType: KNetConsumer<K, V>.WaitingMessages
+  nameWithType.vb: KNetConsumer(Of K, V).WaitingMessages
 - uid: MASES.KNet.Clients.Consumer.KNetConsumerCallback`2
   name: KNetConsumerCallback<K, V>
   href: api/MASES.KNet.Clients.Consumer.KNetConsumerCallback-2.html
@@ -12954,6 +13126,40 @@ references:
   fullName.vb: MASES.KNet.Clients.Consumer.Message(Of K, V).Key
   nameWithType: Message<K, V>.Key
   nameWithType.vb: Message(Of K, V).Key
+- uid: MASES.KNet.Clients.Consumer.Message`2.Partition
+  name: Partition
+  href: api/MASES.KNet.Clients.Consumer.Message-2.html#MASES_KNet_Clients_Consumer_Message_2_Partition
+  commentId: P:MASES.KNet.Clients.Consumer.Message`2.Partition
+  fullName: MASES.KNet.Clients.Consumer.Message<K, V>.Partition
+  fullName.vb: MASES.KNet.Clients.Consumer.Message(Of K, V).Partition
+  nameWithType: Message<K, V>.Partition
+  nameWithType.vb: Message(Of K, V).Partition
+- uid: MASES.KNet.Clients.Consumer.Message`2.Partition*
+  name: Partition
+  href: api/MASES.KNet.Clients.Consumer.Message-2.html#MASES_KNet_Clients_Consumer_Message_2_Partition_
+  commentId: Overload:MASES.KNet.Clients.Consumer.Message`2.Partition
+  isSpec: "True"
+  fullName: MASES.KNet.Clients.Consumer.Message<K, V>.Partition
+  fullName.vb: MASES.KNet.Clients.Consumer.Message(Of K, V).Partition
+  nameWithType: Message<K, V>.Partition
+  nameWithType.vb: Message(Of K, V).Partition
+- uid: MASES.KNet.Clients.Consumer.Message`2.Topic
+  name: Topic
+  href: api/MASES.KNet.Clients.Consumer.Message-2.html#MASES_KNet_Clients_Consumer_Message_2_Topic
+  commentId: P:MASES.KNet.Clients.Consumer.Message`2.Topic
+  fullName: MASES.KNet.Clients.Consumer.Message<K, V>.Topic
+  fullName.vb: MASES.KNet.Clients.Consumer.Message(Of K, V).Topic
+  nameWithType: Message<K, V>.Topic
+  nameWithType.vb: Message(Of K, V).Topic
+- uid: MASES.KNet.Clients.Consumer.Message`2.Topic*
+  name: Topic
+  href: api/MASES.KNet.Clients.Consumer.Message-2.html#MASES_KNet_Clients_Consumer_Message_2_Topic_
+  commentId: Overload:MASES.KNet.Clients.Consumer.Message`2.Topic
+  isSpec: "True"
+  fullName: MASES.KNet.Clients.Consumer.Message<K, V>.Topic
+  fullName.vb: MASES.KNet.Clients.Consumer.Message(Of K, V).Topic
+  nameWithType: Message<K, V>.Topic
+  nameWithType.vb: Message(Of K, V).Topic
 - uid: MASES.KNet.Clients.Consumer.Message`2.Value
   name: Value
   href: api/MASES.KNet.Clients.Consumer.Message-2.html#MASES_KNet_Clients_Consumer_Message_2_Value
