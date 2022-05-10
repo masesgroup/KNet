@@ -19,14 +19,14 @@
 namespace MASES.KNet.Connect.Mirror
 {
     /// <summary>
-    /// Class managing MirrorMaker
+    /// Class managing MirrorMaker2
     /// </summary>
-    public class MirrorMaker : JCOBridge.C2JBridge.JVMBridgeMain<MirrorMaker>
+    public class MirrorMaker2 : JCOBridge.C2JBridge.JVMBridgeMain<MirrorMaker2>
     {
         /// <summary>
-        /// Initialize a new <see cref="MirrorMaker"/>
+        /// Initialize a new <see cref="MirrorMaker2"/>
         /// </summary>
-        public MirrorMaker()
+        public MirrorMaker2()
             : base("org.apache.kafka.connect.mirror.MirrorMaker")
         {
         }

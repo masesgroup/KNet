@@ -345,6 +345,19 @@ namespace MASES.KNet
                         result = tmpResult.ToArray();
                     }
                     break;
+                case "MirrorMaker2":
+                    {
+                        ApplicationHeapSize = "2G";
+                        ApplicationInitialHeapSize = "256M";
+                        var tmpResult = new List<string>(result);
+                        if (tmpResult.Contains("-daemon"))
+                        {
+                            tmpResult.Add("-name");
+                            tmpResult.Add("mirrorMaker");
+                        }
+                        result = tmpResult.ToArray();
+                    }
+                    break;
                 default:
                     ApplicationHeapSize ??= "256M";
                     break;

@@ -19,6 +19,7 @@
 using MASES.JCOBridge.C2JBridge;
 using MASES.KNet;
 using System;
+using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
 
@@ -83,15 +84,24 @@ namespace MASES.KNetCLI
             {
                 Console.WriteLine("Error: {0}", errorString);
             }
-            StringBuilder avTypes = new StringBuilder();
+            SortedDictionary<string, Type> implementedClasses = new();
             foreach (var item in typeof(KNetCore).Assembly.ExportedTypes)
             {
                 var baseType = item.GetTypeInfo().BaseType;
                 if (baseType != null && baseType.IsGenericType && baseType.GetGenericTypeDefinition() == typeof(JVMBridgeMain<>))
                 {
-                    avTypes.AppendFormat("{0}, ", item.Name);
+#if DEBUG
+                    Console.WriteLine($"Adding {item.Name}");
+#endif
+                    implementedClasses.Add(item.Name, item);
                 }
             }
+
+            StringBuilder avTypes = new();
+            foreach (var item in implementedClasses.Keys)
+            {
+                avTypes.AppendFormat("{0}, ", item);
+            }      
 
             Console.WriteLine("ClassToRun: the class to be invoked ({0}...). ", avTypes.ToString());
             Console.WriteLine("KafkaLocation: The folder where Kafka package is available. Default consider this application uses the package jars folder.");
