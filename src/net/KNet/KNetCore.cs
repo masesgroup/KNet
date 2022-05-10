@@ -319,6 +319,45 @@ namespace MASES.KNet
                     ApplicationHeapSize = Environment.Is64BitOperatingSystem ? "1G" : "512M";
                     ApplicationInitialHeapSize = Environment.Is64BitOperatingSystem ? "1G" : "512M";
                     break;
+                case "ConnectStandalone":
+                    {
+                        ApplicationHeapSize = "2G";
+                        ApplicationInitialHeapSize = "256M";
+                        var tmpResult = new List<string>(result);
+                        if (tmpResult.Contains("-daemon"))
+                        {
+                            tmpResult.Add("-name");
+                            tmpResult.Add("connectStandalone");
+                        }
+                        result = tmpResult.ToArray();
+                    }
+                    break;
+                case "ConnectDistributed":
+                    {
+                        ApplicationHeapSize = "2G";
+                        ApplicationInitialHeapSize = "256M";
+                        var tmpResult = new List<string>(result);
+                        if (tmpResult.Contains("-daemon"))
+                        {
+                            tmpResult.Add("-name");
+                            tmpResult.Add("connectDistributed");
+                        }
+                        result = tmpResult.ToArray();
+                    }
+                    break;
+                case "MirrorMaker2":
+                    {
+                        ApplicationHeapSize = "2G";
+                        ApplicationInitialHeapSize = "256M";
+                        var tmpResult = new List<string>(result);
+                        if (tmpResult.Contains("-daemon"))
+                        {
+                            tmpResult.Add("-name");
+                            tmpResult.Add("mirrorMaker");
+                        }
+                        result = tmpResult.ToArray();
+                    }
+                    break;
                 default:
                     ApplicationHeapSize ??= "256M";
                     break;

@@ -30,6 +30,7 @@
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\Common\KNet.snk</AssemblyOriginatorKeyFile>
     <PackageReadmeFile>usageCLI.md</PackageReadmeFile>
+    <LangVersion>Latest</LangVersion>
   </PropertyGroup>
   <!-- Fix start https://github.com/dotnet/sourcelink/issues/572 -->
   <PropertyGroup>
