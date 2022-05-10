@@ -2337,7 +2337,31 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Common.Config.AbstractConfig-1.html",
-          "hash": "IZc/QkwkcbOuFTS+sTmyI/w+sNFfJjLFKxvbsIE199w="
+          "hash": "bPex2zSgdUi9txIdZ/66H1DxpSTXDjqlgVlBTfOk1N8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Common.Config.Config.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Common.Config.Config.html",
+          "hash": "xufwA7g19ziHKF5izoCNTzyl1ymoWaFAREZlXEuhXSs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Common.Config.ConfigDef.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Common.Config.ConfigDef.html",
+          "hash": "xTytxGqhPS/k1neLxHySxOBUo0DApua8vSVzT0zmXcg="
         }
       },
       "is_incremental": false,
@@ -2350,6 +2374,18 @@
         ".html": {
           "relative_path": "api/MASES.KNet.Common.Config.ConfigResource.html",
           "hash": "EeHpgDDnUPFVzXWmZMpOmzinVHAChlyBh7EZyarCSh4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Common.Config.ConfigValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Common.Config.ConfigValue.html",
+          "hash": "uioXX2wZtGvJDWB4JQe85Znt8wdPiSiRi40czNHwqT8="
         }
       },
       "is_incremental": false,
@@ -2421,7 +2457,19 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Common.Config.html",
-          "hash": "qvBPDJy7NKp+fk8t2yukCuL48JZ6x09r3qAXbU6bKYc="
+          "hash": "nthxesmaOFhQsVM6UaWL3IWpHbv17nzCHQuM7wuhRjE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Common.Configurable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Common.Configurable.html",
+          "hash": "dOX6mfOXwMAamx7iA5+2HfEUqNN99/u1NGc0JdIoX24="
         }
       },
       "is_incremental": false,
@@ -3929,6 +3977,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Common.IConfigurable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Common.IConfigurable.html",
+          "hash": "0uA0t7+QCyFAXJlBg1dtKIy03tQNaxYXogm3md+gq5g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MASES.KNet.Common.IMetric.yml",
       "output": {
         ".html": {
@@ -5073,7 +5133,331 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Common.html",
-          "hash": "McENd+Zl8rxVb5agqUg/YIp6NbDRHD3d4Mj7cbkVFLo="
+          "hash": "0FXDABrFdvIla4s47ReQGWtEpbn/wbHgu0s94ScfNP4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Cli.ConnectDistributed.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Cli.ConnectDistributed.html",
+          "hash": "JB0slcqm1whhU1NIJG1CTpgn5hMoRJa/LRVuLgn60jA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Cli.ConnectStandalone.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Cli.ConnectStandalone.html",
+          "hash": "C0CSKWN+G8Egaep704GdaJGxsCOZzMbW673krRmH2Go="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Cli.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Cli.html",
+          "hash": "0CV00NapDIX2ktVJReesKQq9fI5bDaFMxSxPfHUA654="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Components.Versioned.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Components.Versioned.html",
+          "hash": "xEeval4eihvqt+wcMcfVgLumov4e2T4jL5UbTuh2STk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Components.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Components.html",
+          "hash": "ivPgVm1l0P1EaWJ6+oL6EQTwuRxixPSLuOcYWW2ib5I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Connector.ConnectRecord-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Connector.ConnectRecord-1.html",
+          "hash": "H9M5SpN3AclvMtt27YKnebh0x4MLam/Qtsq9ZoO5JyA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Connector.Connector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Connector.Connector.html",
+          "hash": "OagT3y2J5imPNnoUJoZOo7kmRQ1JVMJ1TsxVjQRDPJE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Connector.ConnectorContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Connector.ConnectorContext.html",
+          "hash": "XM+BVDB35lqJuUAJfkPIEU26ChlY4oXh3GK4z0V7Yo0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Connector.Policy.AbstractConnectorClientConfigOverridePolicy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Connector.Policy.AbstractConnectorClientConfigOverridePolicy.html",
+          "hash": "Ib/HXjMXn68ummUE6tVAfUN10olb9YuVqEdumpN1Zbs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Connector.Policy.AllConnectorClientConfigOverridePolicy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Connector.Policy.AllConnectorClientConfigOverridePolicy.html",
+          "hash": "OFlpVnFWl9kjEKvevyOaKZGBkfpZs8YnYWx253EhrNo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Connector.Policy.ConnectorClientConfigOverridePolicy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Connector.Policy.ConnectorClientConfigOverridePolicy.html",
+          "hash": "dChlcXaqZEQj7bvWj8WIjGBEYE4KlonKHksUABjva6E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Connector.Policy.ConnectorClientConfigRequest.ClientTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Connector.Policy.ConnectorClientConfigRequest.ClientTypes.html",
+          "hash": "//XWGvf2zvZaRabQtOdQ/Tk1t+UXQ/OqX1M+ByjVVPk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Connector.Policy.ConnectorClientConfigRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Connector.Policy.ConnectorClientConfigRequest.html",
+          "hash": "EcWk0M8EDi508TknE0WnVseRsGMsL/FMOR79FukzwH4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Connector.Policy.NoneConnectorClientConfigOverridePolicy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Connector.Policy.NoneConnectorClientConfigOverridePolicy.html",
+          "hash": "NiNBCGG7yCvydTnuAw1AOXH5vtRQwpHl7vXj2rnswFk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Connector.Policy.PrincipalConnectorClientConfigOverridePolicy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Connector.Policy.PrincipalConnectorClientConfigOverridePolicy.html",
+          "hash": "IvmzVdab1Fmv7M+c31kmajLwu+ff017p6hkgNm1VOrg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Connector.Policy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Connector.Policy.html",
+          "hash": "5ZbgXVVicC2NUuNQTHq+OT0itUgUllF06NV2Ero4d54="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Connector.Task.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Connector.Task.html",
+          "hash": "98UIBEuY6stmdII++kl1raGBeOTF3KBLwbgTX/Fp+Iw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Connector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Connector.html",
+          "hash": "JpLD9wnyQRk/HQpogrssea98OLQ1nko7+eke/bcHBfI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Converters.ByteArrayConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Converters.ByteArrayConverter.html",
+          "hash": "0Pzhzvxe//yYWFhPEJAFYu3ouVWA6rm8eOp/DUN9DGA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Converters.DoubleConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Converters.DoubleConverter.html",
+          "hash": "W3Ch68EJcb7o2XnpDd2lB1pOKGt7oZ3luiUT5LG+ggA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Converters.FloatConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Converters.FloatConverter.html",
+          "hash": "aMy2JzzsBtl3x+gtIWFuuwblc7mhrgLFv0p8wgV4ne4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Converters.IntegerConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Converters.IntegerConverter.html",
+          "hash": "QxqFNRBxI/kUDl/CTk2ilEqm3d49RKnSM1MbEof+sEU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Converters.LongConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Converters.LongConverter.html",
+          "hash": "LWt6V3wq9MfMv8ILQ+EUXHWiqI0y5tXH+4+8PNKtld4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Converters.NumberConverter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Converters.NumberConverter-1.html",
+          "hash": "OVQLxgGvmeGDJkauWu+RDvjw3EFBjEWWptJ8KeEXxF0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Converters.NumberConverterConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Converters.NumberConverterConfig.html",
+          "hash": "30Su4fLzoxw6nLS6xssi6434XuTU/PDLX04fyP0DRV4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Converters.ShortConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Converters.ShortConverter.html",
+          "hash": "aBYn777q9ZlQv0KNlbA/tdzPmK5XjMq6rHl/mIZBSpA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Converters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Converters.html",
+          "hash": "PSiZThvj0HpoBKzwpTPMS3qHdRLGjx9YwO2VnIhJ7D8="
         }
       },
       "is_incremental": false,
@@ -5369,6 +5753,618 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.File.FileStreamSinkConnector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.File.FileStreamSinkConnector.html",
+          "hash": "1codfwN+GYdsfdsOBzj/RD5FQ6rzSi01mGGT1ZZrqEg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.File.FileStreamSinkTask.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.File.FileStreamSinkTask.html",
+          "hash": "g6Bd3zwJ68/xs0Gd5UQLGBYMAbzHzxy7etxbeb9XUmA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.File.FileStreamSourceConnector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.File.FileStreamSourceConnector.html",
+          "hash": "het9yF3PXc1l6bNTipHGLk9FdysCGJ7Dxz0G/ZM9sxc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.File.FileStreamSourceTask.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.File.FileStreamSourceTask.html",
+          "hash": "2z0oY5JN5zHzyYoLG+kFsfM3QDkwvCKXXgkImSBHjWw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.File.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.File.html",
+          "hash": "7xopyXI+aP5iP2sWPfAqKeEYLjWo2BzW0GBhKh5GmYg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Header.ConnectHeader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Header.ConnectHeader.html",
+          "hash": "CrdGbKG2qTQ5BiQ8o5JENTbf00D9MKRw4LiRO8sXiVI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Header.ConnectHeaders.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Header.ConnectHeaders.html",
+          "hash": "Oynqg/dsyMaA877cMqs9ld0bOOiSaRXsKNvb0WlPmYM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Header.Header.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Header.Header.html",
+          "hash": "CyUFciiZTkG/fWEoVZE2tbBgYfuZQdx/MJo02vxlS1g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Header.Headers.HeaderTransform.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Header.Headers.HeaderTransform.html",
+          "hash": "1opQMujmKziQyjn31mykMkLjWCXvcGPkVuGtxlBw2zw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Header.Headers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Header.Headers.html",
+          "hash": "m68ov31hTB9BnSB7ZbziBQzC56yOMgegWq3i/6N862Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Header.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Header.html",
+          "hash": "tRdxFDIEdDqa2AdjdFWfaOWZJrZq/x1nk9mgwlJFdew="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Health.AbstractState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Health.AbstractState.html",
+          "hash": "6wJ4uCJUNHVAhRJWIRhFHxmA+UmCLqRWiE1uG2jWWvA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Health.ConnectClusterDetails.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Health.ConnectClusterDetails.html",
+          "hash": "dlDFRjAvUz8vNTEZ2R3mG2JbcIZ9G8kIUeqorD3ClH0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Health.ConnectClusterState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Health.ConnectClusterState.html",
+          "hash": "EkzCrzkwYc+V3lQm0QpGU0AsXLpwRjsrzcCtsJc24hs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Health.ConnectRestExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Health.ConnectRestExtension.html",
+          "hash": "N7jX1eHSbA1F6KKLt9QfjyRMHAgFPxExTI5adkEsKw0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Health.ConnectRestExtensionContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Health.ConnectRestExtensionContext.html",
+          "hash": "TL3k0prDHmrEKANEoyLnSzYlMQMBwqhiNI4tuRC7x0M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Health.ConnectorHealth.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Health.ConnectorHealth.html",
+          "hash": "P6FRBs1TvbukMwjZ9FU+ht7Skf3I08me/1sgfqyyeC0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Health.ConnectorState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Health.ConnectorState.html",
+          "hash": "WJ3obOTF2GJK5ba5M/ArbEzzWpSjJiScyjjmrVBrWXw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Health.ConnectorType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Health.ConnectorType.html",
+          "hash": "m2adJ1Y8MKWNdUsIPZn1oSyFpcnOrKl4158eld6mdGY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Health.TaskState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Health.TaskState.html",
+          "hash": "E1VgXq39489xLNU7vETomozJXe6vsNrSgXPrLg30tjU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Health.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Health.html",
+          "hash": "6KU1yzaFwFTNNWWtITiHUJ5UxH8KIJEuITJpiu4xdSE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Mirror.MirrorMaker2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Mirror.MirrorMaker2.html",
+          "hash": "Xza6Vq7Sii4GloT/6W68D5WVZ3UcDkYiJ2LZDaAvHj0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Mirror.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Mirror.html",
+          "hash": "tzZsxBq4cQI2fd6MrWcr7QOE1P/sqUlKsM24tB7XQM0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Sink.ErrantRecordReporter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Sink.ErrantRecordReporter.html",
+          "hash": "o/8ttv9kyRvhtYY40cEjdnrG6s3RkbhODTy5cwVEE3o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Sink.SinkConnector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Sink.SinkConnector.html",
+          "hash": "i+nCEJJ7gBNuRKRfTrZtY7a/+ZnHiQEHF1IFvc6KHTI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Sink.SinkConnectorContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Sink.SinkConnectorContext.html",
+          "hash": "A+f70JRCK6WCM8GdF94cebyxO/CjE8HhmotznhpyBKY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Sink.SinkRecord.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Sink.SinkRecord.html",
+          "hash": "hMWPBLvVYHlH6XwJxUvL5mJQs2oL+0ns7ZRJ/MyDoPs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Sink.SinkTask.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Sink.SinkTask.html",
+          "hash": "kBVVcesEm0eAEVkAQ1V1rOmFIt8FD/rKvUjR3sCu1cY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Sink.SinkTaskContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Sink.SinkTaskContext.html",
+          "hash": "rm+AatH7yCIdCbOz/kuIt4HxrksbnTjr6Dg0W/dkb7I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Sink.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Sink.html",
+          "hash": "hHMDqBD7P62ohHx6xnqyzpkK2tIGqT8UDdu/vKMoavo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Source.SourceConnector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Source.SourceConnector.html",
+          "hash": "TO6oCZRsPaZe+vKsp6ZbYBKLV4Kv6o/GFqnlms0gR74="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Source.SourceConnectorContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Source.SourceConnectorContext.html",
+          "hash": "orwVsjEsmF3SS/OZx+EGD7Pbz02qgz4Aw6NwW3e++2E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Source.SourceRecord.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Source.SourceRecord.html",
+          "hash": "xUFZLnxZx+Buuxxpt0X1QSlgqgUa05Mb2pyYfRbbWxk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Source.SourceTask.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Source.SourceTask.html",
+          "hash": "Mf8qnfhBfuomywc5D7Y61WBCs9FKBcpHlRGnyHDguQ0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Source.SourceTaskContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Source.SourceTaskContext.html",
+          "hash": "Zi8iBEPywBwDNU1osaVWcCjsJB3RTRv9if7K0pcXGtE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Source.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Source.html",
+          "hash": "1GZs2MpNMUA3PAvzuEy5RE1GP/Ie+FjHWQHZlLTwDP0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Storage.Converter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Storage.Converter.html",
+          "hash": "c8/jQPeL+qTML2H9Tjkq0XLDjFLIXOGv50P9XKTyCy8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Storage.ConverterConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Storage.ConverterConfig.html",
+          "hash": "COGlnLHQRgXie3Yf+AdN6QGdzak3dtpO0x2aR5cxJgY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Storage.ConverterType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Storage.ConverterType.html",
+          "hash": "IKGHeRY8duXrH5GwTxwgY/egtDAA1SB65daRj3YLtrs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Storage.HeaderConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Storage.HeaderConverter.html",
+          "hash": "vhu/khXt8iTO7ld6aW0TZo5yEu7tm2tBRj28DVMt/sM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Storage.OffsetStorageReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Storage.OffsetStorageReader.html",
+          "hash": "WOactc8uGKTLSoEycIHfwY7u98kOhYiSOJ6dnsExUUk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Storage.SimpleHeaderConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Storage.SimpleHeaderConverter.html",
+          "hash": "5+QC9K66K09dA+FdqwJbzWX2GUuQlfH3VlrSj9VnILE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Storage.StringConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Storage.StringConverter.html",
+          "hash": "0KySjDO97M81oiSL1fQvLPIBNpT3B/3eSj2TmxWsCyo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Storage.StringConverterConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Storage.StringConverterConfig.html",
+          "hash": "myCTQMciOU8byfJre+RlPwf4n+gSrpHZQRjW+qFJEzE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Storage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Storage.html",
+          "hash": "zHgGpbx8Qnj4AFlDoloACK4oC8vS1D2vpMfqvCmobeE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Transforms.Predicates.Predicate-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Transforms.Predicates.Predicate-1.html",
+          "hash": "qHd8/Kxz2tKfR4UdHo1XYvzdb0spyGZ6zlVxhU+TT/M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Transforms.Predicates.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Transforms.Predicates.html",
+          "hash": "adHLQXfHCH9MmalzUZwjZn7jnkhLLOy5RBqG93CMjJ4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Transforms.Transformation-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Transforms.Transformation-1.html",
+          "hash": "xDuMZ50JajwmyTdC1BQabpXZn2Hog24Yxvbho71kBJU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Transforms.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Transforms.html",
+          "hash": "PLfvNIRqrubaYnZBaTHlR9ofcWOTLpIaGGJBk2dYqPw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Util.ConnectorUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Util.ConnectorUtils.html",
+          "hash": "IRg5NoLiTcuit1K0Uk4wJaA1H73zo/20/YT6RybNtrU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Util.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Util.html",
+          "hash": "p0A5rumB9Iyzx99AAGUvbkouOhTHO31W2K5UK/QYawM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MASES.KNet.Const.yml",
       "output": {
         ".html": {
@@ -5457,7 +6453,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.KNetCore-1.html",
-          "hash": "q1nXW9F0KDFbh+YA/4FMdBoaJ9K4SMtYOixB+e+7TYM="
+          "hash": "gUW0p1Oan0a3Ufnz66Tn5UACQvybYNcpYC6nQPTzygo="
         }
       },
       "is_incremental": false,
@@ -5469,7 +6465,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.KNetCore.html",
-          "hash": "uePyReFDB/iKbZTS5dT1uXgqzw5CjgnvlH8FbYxIRtk="
+          "hash": "4hLg8zO0Qhzek/dVBRXuyZmFHA0mG4dQkQvYJRu6BvA="
         }
       },
       "is_incremental": false,
@@ -8445,7 +9441,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "tRmTnfuCBqBcGrdkcM+WtQW2gJ6hB7VQW/b1JEQiiTk="
+          "hash": "5MyxNKiVQnu2aFN6fLcFGCpkDa0jj48HcDmo3t7J8Jg="
         }
       },
       "is_incremental": false,
@@ -8556,7 +9552,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/usageCLI.html",
-          "hash": "bUl1brU/x7REStMQ0pERUL9D6YM+/LNf9nOK3rZmbZY="
+          "hash": "pLAsX4VZ9JiKvTbhoH4NGWfdTgMr7sYS7qHkVlYODAY="
         }
       },
       "is_incremental": false,
@@ -8621,7 +9617,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 702,
+          "total_file_count": 785,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
