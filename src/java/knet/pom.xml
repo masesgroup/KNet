@@ -253,5 +253,20 @@
             <artifactId>connect-runtime</artifactId>
             <version>${kafkaVersion}</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>connect-mirror</artifactId>
+            <version>${kafkaVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>connect-file</artifactId>
+            <version>${kafkaVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>connect-basic-auth-extension</artifactId>
+            <version>${kafkaVersion}</version>
+        </dependency>
     </dependencies>
 </project>
