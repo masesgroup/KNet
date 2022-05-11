@@ -1,4 +1,4 @@
-# KNet performance
+# KNet: performance evaluation
 
 To measure KNet performance a specifc project is available under the `tests` folder of the repository. The following chapters describe some initial considerations, the benchmark test programs, benchmark approach, results and final considerations.
 

@@ -1,12 +1,12 @@
-# KNet development state
+# KNet: development state
 
 This release comes with some ready made classes:
 
-* The command line interface classes (i.e. the executables Apache Kafka classes), the ones available under the _bin_ folder of any Apache Kafka binary distribution, can be managed using the [KNetCLI](usageCLI.md), e.g. ConsoleConsumer, ConsoleProducer and so on. 
-* Producer/Consumer classes
-* Apache Kafka Admin Client covering all available APIs: since many classes are marked with @InterfaceStability.Evolving annotation some properties or methods can be missed; use **dynamic** code to interact with Admin API types.
-* Almost completed Apache Kafka Streams
-* Almost completed Apache Kafka Connect
-* .NET Apache Kafka Connect SDK (under development)
+* [X] The command line interface classes (i.e. the executables Apache Kafka classes), the ones available under the _bin_ folder of any Apache Kafka binary distribution, can be managed using the [KNetCLI](usageCLI.md), e.g. ConsoleConsumer, ConsoleProducer and so on. 
+* [X] Producer/Consumer classes
+* [X] Apache Kafka Admin Client covering all available APIs: since many classes are marked with @InterfaceStability.Evolving annotation some properties or methods can be missed; use **dynamic** code to interact with Admin API types.
+* [X] Almost completed Apache Kafka Streams
+* [X] Almost completed Apache Kafka Connect
+* [ ] .NET Apache Kafka Connect SDK (under development)
 
 If something is not available use [API extensibility](API_extensibility.md) to cover missing features.
