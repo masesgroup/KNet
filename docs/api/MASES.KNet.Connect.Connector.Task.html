@@ -81,9 +81,10 @@
     <div class="level1"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
     <div class="level2"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span></div>
     <div class="level3"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span>&lt;<a class="xref" href="MASES.KNet.Connect.Connector.Task.html">Task</a>&gt;</div>
-    <div class="level4"><span class="xref">Task</span></div>
-      <div class="level5"><a class="xref" href="MASES.KNet.Connect.Sink.SinkTask.html">SinkTask</a></div>
-      <div class="level5"><a class="xref" href="MASES.KNet.Connect.Source.SourceTask.html">SourceTask</a></div>
+    <div class="level4"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span>&lt;<a class="xref" href="MASES.KNet.Connect.Connector.Task.html">Task</a>, <a class="xref" href="MASES.KNet.Connect.Connector.ITask.html">ITask</a>&gt;</div>
+    <div class="level5"><span class="xref">Task</span></div>
+      <div class="level6"><a class="xref" href="MASES.KNet.Connect.Sink.SinkTask.html">SinkTask</a></div>
+      <div class="level6"><a class="xref" href="MASES.KNet.Connect.Source.SourceTask.html">SourceTask</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -93,6 +94,7 @@
     <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span></div>
     <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span></div>
     <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span></div>
+    <div><a class="xref" href="MASES.KNet.Connect.Connector.ITask.html">ITask</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -269,7 +271,7 @@
   <h6><strong>Assembly</strong>: MASES.KNet.dll</h6>
   <h5 id="MASES_KNet_Connect_Connector_Task_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Task : JVMBridgeBase&lt;Task&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
+    <pre><code class="lang-csharp hljs">public class Task : JVMBridgeBase&lt;Task, ITask&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, ITask</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -278,7 +280,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Connector_Task_ClassName.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Connector.Task.ClassName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/Task.cs/#L27">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/Task.cs/#L37">View Source</a>
   </span>
   <a id="MASES_KNet_Connect_Connector_Task_ClassName_" data-uid="MASES.KNet.Connect.Connector.Task.ClassName*"></a>
   <h4 id="MASES_KNet_Connect_Connector_Task_ClassName" data-uid="MASES.KNet.Connect.Connector.Task.ClassName">ClassName</h4>
@@ -310,7 +312,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Connector_Task_IsInterface.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Connector.Task.IsInterface%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/Task.cs/#L26">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/Task.cs/#L35">View Source</a>
   </span>
   <a id="MASES_KNet_Connect_Connector_Task_IsInterface_" data-uid="MASES.KNet.Connect.Connector.Task.IsInterface*"></a>
   <h4 id="MASES_KNet_Connect_Connector_Task_IsInterface" data-uid="MASES.KNet.Connect.Connector.Task.IsInterface">IsInterface</h4>
@@ -337,36 +339,6 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInterface</span></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Connector_Task_Version.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Connector.Task.Version%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/Task.cs/#L29">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_Connector_Task_Version_" data-uid="MASES.KNet.Connect.Connector.Task.Version*"></a>
-  <h4 id="MASES_KNet_Connect_Connector_Task_Version" data-uid="MASES.KNet.Connect.Connector.Task.Version">Version</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Version { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
@@ -374,7 +346,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Connector_Task_Start_Java_Util_Map_System_String_System_String__.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Connector.Task.Start(Java.Util.Map%7BSystem.String%2CSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/Task.cs/#L31">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/Task.cs/#L41">View Source</a>
   </span>
   <a id="MASES_KNet_Connect_Connector_Task_Start_" data-uid="MASES.KNet.Connect.Connector.Task.Start*"></a>
   <h4 id="MASES_KNet_Connect_Connector_Task_Start_Java_Util_Map_System_String_System_String__" data-uid="MASES.KNet.Connect.Connector.Task.Start(Java.Util.Map{System.String,System.String})">Start(Map&lt;String, String&gt;)</h4>
@@ -406,7 +378,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Connector_Task_Stop.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Connector.Task.Stop%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/Task.cs/#L33">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/Task.cs/#L43">View Source</a>
   </span>
   <a id="MASES_KNet_Connect_Connector_Task_Stop_" data-uid="MASES.KNet.Connect.Connector.Task.Stop*"></a>
   <h4 id="MASES_KNet_Connect_Connector_Task_Stop" data-uid="MASES.KNet.Connect.Connector.Task.Stop">Stop()</h4>
@@ -416,6 +388,36 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Stop()</code></pre>
   </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Connector_Task_Version.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Connector.Task.Version%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/Task.cs/#L39">View Source</a>
+  </span>
+  <a id="MASES_KNet_Connect_Connector_Task_Version_" data-uid="MASES.KNet.Connect.Connector.Task.Version*"></a>
+  <h4 id="MASES_KNet_Connect_Connector_Task_Version" data-uid="MASES.KNet.Connect.Connector.Task.Version">Version()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Version()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">System.Dynamic.IDynamicMetaObjectProvider</a>
@@ -435,6 +437,9 @@
   <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span>
   </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Connect.Connector.ITask.html">ITask</a>
+  </div>
 </article>
           </div>
           
@@ -446,7 +451,7 @@
                     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Connector_Task.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Connector.Task%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/Task.cs/#L24" class="contribution-link">View Source</a>
+                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/Task.cs/#L33" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

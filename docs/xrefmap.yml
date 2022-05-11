@@ -24503,6 +24503,25 @@ references:
   commentId: N:MASES.KNet.Connect.Components
   fullName: MASES.KNet.Connect.Components
   nameWithType: MASES.KNet.Connect.Components
+- uid: MASES.KNet.Connect.Components.IVersion
+  name: IVersion
+  href: api/MASES.KNet.Connect.Components.IVersion.html
+  commentId: T:MASES.KNet.Connect.Components.IVersion
+  fullName: MASES.KNet.Connect.Components.IVersion
+  nameWithType: IVersion
+- uid: MASES.KNet.Connect.Components.IVersion.Version
+  name: Version()
+  href: api/MASES.KNet.Connect.Components.IVersion.html#MASES_KNet_Connect_Components_IVersion_Version
+  commentId: M:MASES.KNet.Connect.Components.IVersion.Version
+  fullName: MASES.KNet.Connect.Components.IVersion.Version()
+  nameWithType: IVersion.Version()
+- uid: MASES.KNet.Connect.Components.IVersion.Version*
+  name: Version
+  href: api/MASES.KNet.Connect.Components.IVersion.html#MASES_KNet_Connect_Components_IVersion_Version_
+  commentId: Overload:MASES.KNet.Connect.Components.IVersion.Version
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Components.IVersion.Version
+  nameWithType: IVersion.Version
 - uid: MASES.KNet.Connect.Components.Versioned
   name: Versioned
   href: api/MASES.KNet.Connect.Components.Versioned.html
@@ -24536,11 +24555,11 @@ references:
   fullName: MASES.KNet.Connect.Components.Versioned.IsInterface
   nameWithType: Versioned.IsInterface
 - uid: MASES.KNet.Connect.Components.Versioned.Version
-  name: Version
+  name: Version()
   href: api/MASES.KNet.Connect.Components.Versioned.html#MASES_KNet_Connect_Components_Versioned_Version
-  commentId: P:MASES.KNet.Connect.Components.Versioned.Version
-  fullName: MASES.KNet.Connect.Components.Versioned.Version
-  nameWithType: Versioned.Version
+  commentId: M:MASES.KNet.Connect.Components.Versioned.Version
+  fullName: MASES.KNet.Connect.Components.Versioned.Version()
+  nameWithType: Versioned.Version()
 - uid: MASES.KNet.Connect.Components.Versioned.Version*
   name: Version
   href: api/MASES.KNet.Connect.Components.Versioned.html#MASES_KNet_Connect_Components_Versioned_Version_
@@ -24574,11 +24593,11 @@ references:
   fullName: MASES.KNet.Connect.Connector.Connector.ClassName
   nameWithType: Connector.ClassName
 - uid: MASES.KNet.Connect.Connector.Connector.Config
-  name: Config
+  name: Config()
   href: api/MASES.KNet.Connect.Connector.Connector.html#MASES_KNet_Connect_Connector_Connector_Config
-  commentId: P:MASES.KNet.Connect.Connector.Connector.Config
-  fullName: MASES.KNet.Connect.Connector.Connector.Config
-  nameWithType: Connector.Config
+  commentId: M:MASES.KNet.Connect.Connector.Connector.Config
+  fullName: MASES.KNet.Connect.Connector.Connector.Config()
+  nameWithType: Connector.Config()
 - uid: MASES.KNet.Connect.Connector.Connector.Config*
   name: Config
   href: api/MASES.KNet.Connect.Connector.Connector.html#MASES_KNet_Connect_Connector_Connector_Config_
@@ -24667,11 +24686,11 @@ references:
   fullName: MASES.KNet.Connect.Connector.Connector.Stop
   nameWithType: Connector.Stop
 - uid: MASES.KNet.Connect.Connector.Connector.TaskClass
-  name: TaskClass
+  name: TaskClass()
   href: api/MASES.KNet.Connect.Connector.Connector.html#MASES_KNet_Connect_Connector_Connector_TaskClass
-  commentId: P:MASES.KNet.Connect.Connector.Connector.TaskClass
-  fullName: MASES.KNet.Connect.Connector.Connector.TaskClass
-  nameWithType: Connector.TaskClass
+  commentId: M:MASES.KNet.Connect.Connector.Connector.TaskClass
+  fullName: MASES.KNet.Connect.Connector.Connector.TaskClass()
+  nameWithType: Connector.TaskClass()
 - uid: MASES.KNet.Connect.Connector.Connector.TaskClass*
   name: TaskClass
   href: api/MASES.KNet.Connect.Connector.Connector.html#MASES_KNet_Connect_Connector_Connector_TaskClass_
@@ -24679,26 +24698,26 @@ references:
   isSpec: "True"
   fullName: MASES.KNet.Connect.Connector.Connector.TaskClass
   nameWithType: Connector.TaskClass
-- uid: MASES.KNet.Connect.Connector.Connector.taskConfigs(System.Int32)
-  name: taskConfigs(Int32)
-  href: api/MASES.KNet.Connect.Connector.Connector.html#MASES_KNet_Connect_Connector_Connector_taskConfigs_System_Int32_
-  commentId: M:MASES.KNet.Connect.Connector.Connector.taskConfigs(System.Int32)
-  fullName: MASES.KNet.Connect.Connector.Connector.taskConfigs(System.Int32)
-  nameWithType: Connector.taskConfigs(Int32)
-- uid: MASES.KNet.Connect.Connector.Connector.taskConfigs*
-  name: taskConfigs
-  href: api/MASES.KNet.Connect.Connector.Connector.html#MASES_KNet_Connect_Connector_Connector_taskConfigs_
-  commentId: Overload:MASES.KNet.Connect.Connector.Connector.taskConfigs
+- uid: MASES.KNet.Connect.Connector.Connector.TaskConfigs(System.Int32)
+  name: TaskConfigs(Int32)
+  href: api/MASES.KNet.Connect.Connector.Connector.html#MASES_KNet_Connect_Connector_Connector_TaskConfigs_System_Int32_
+  commentId: M:MASES.KNet.Connect.Connector.Connector.TaskConfigs(System.Int32)
+  fullName: MASES.KNet.Connect.Connector.Connector.TaskConfigs(System.Int32)
+  nameWithType: Connector.TaskConfigs(Int32)
+- uid: MASES.KNet.Connect.Connector.Connector.TaskConfigs*
+  name: TaskConfigs
+  href: api/MASES.KNet.Connect.Connector.Connector.html#MASES_KNet_Connect_Connector_Connector_TaskConfigs_
+  commentId: Overload:MASES.KNet.Connect.Connector.Connector.TaskConfigs
   isSpec: "True"
-  fullName: MASES.KNet.Connect.Connector.Connector.taskConfigs
-  nameWithType: Connector.taskConfigs
-- uid: MASES.KNet.Connect.Connector.Connector.Validate(Java.Util.Map{Java.Lang.String,Java.Lang.String})
+  fullName: MASES.KNet.Connect.Connector.Connector.TaskConfigs
+  nameWithType: Connector.TaskConfigs
+- uid: MASES.KNet.Connect.Connector.Connector.Validate(Java.Util.Map{System.String,System.String})
   name: Validate(Map<String, String>)
-  href: api/MASES.KNet.Connect.Connector.Connector.html#MASES_KNet_Connect_Connector_Connector_Validate_Java_Util_Map_Java_Lang_String_Java_Lang_String__
-  commentId: M:MASES.KNet.Connect.Connector.Connector.Validate(Java.Util.Map{Java.Lang.String,Java.Lang.String})
+  href: api/MASES.KNet.Connect.Connector.Connector.html#MASES_KNet_Connect_Connector_Connector_Validate_Java_Util_Map_System_String_System_String__
+  commentId: M:MASES.KNet.Connect.Connector.Connector.Validate(Java.Util.Map{System.String,System.String})
   name.vb: Validate(Map(Of String, String))
-  fullName: MASES.KNet.Connect.Connector.Connector.Validate(Java.Util.Map<Java.Lang.String, Java.Lang.String>)
-  fullName.vb: MASES.KNet.Connect.Connector.Connector.Validate(Java.Util.Map(Of Java.Lang.String, Java.Lang.String))
+  fullName: MASES.KNet.Connect.Connector.Connector.Validate(Java.Util.Map<System.String, System.String>)
+  fullName.vb: MASES.KNet.Connect.Connector.Connector.Validate(Java.Util.Map(Of System.String, System.String))
   nameWithType: Connector.Validate(Map<String, String>)
   nameWithType.vb: Connector.Validate(Map(Of String, String))
 - uid: MASES.KNet.Connect.Connector.Connector.Validate*
@@ -25006,6 +25025,182 @@ references:
   fullName.vb: MASES.KNet.Connect.Connector.ConnectRecord(Of R).ValueSchema
   nameWithType: ConnectRecord<R>.ValueSchema
   nameWithType.vb: ConnectRecord(Of R).ValueSchema
+- uid: MASES.KNet.Connect.Connector.IConnector
+  name: IConnector
+  href: api/MASES.KNet.Connect.Connector.IConnector.html
+  commentId: T:MASES.KNet.Connect.Connector.IConnector
+  fullName: MASES.KNet.Connect.Connector.IConnector
+  nameWithType: IConnector
+- uid: MASES.KNet.Connect.Connector.IConnector.Config
+  name: Config()
+  href: api/MASES.KNet.Connect.Connector.IConnector.html#MASES_KNet_Connect_Connector_IConnector_Config
+  commentId: M:MASES.KNet.Connect.Connector.IConnector.Config
+  fullName: MASES.KNet.Connect.Connector.IConnector.Config()
+  nameWithType: IConnector.Config()
+- uid: MASES.KNet.Connect.Connector.IConnector.Config*
+  name: Config
+  href: api/MASES.KNet.Connect.Connector.IConnector.html#MASES_KNet_Connect_Connector_IConnector_Config_
+  commentId: Overload:MASES.KNet.Connect.Connector.IConnector.Config
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Connector.IConnector.Config
+  nameWithType: IConnector.Config
+- uid: MASES.KNet.Connect.Connector.IConnector.Initialize(MASES.KNet.Connect.Connector.ConnectorContext)
+  name: Initialize(ConnectorContext)
+  href: api/MASES.KNet.Connect.Connector.IConnector.html#MASES_KNet_Connect_Connector_IConnector_Initialize_MASES_KNet_Connect_Connector_ConnectorContext_
+  commentId: M:MASES.KNet.Connect.Connector.IConnector.Initialize(MASES.KNet.Connect.Connector.ConnectorContext)
+  fullName: MASES.KNet.Connect.Connector.IConnector.Initialize(MASES.KNet.Connect.Connector.ConnectorContext)
+  nameWithType: IConnector.Initialize(ConnectorContext)
+- uid: MASES.KNet.Connect.Connector.IConnector.Initialize(MASES.KNet.Connect.Connector.ConnectorContext,Java.Util.List{Java.Util.Map{System.String,System.String}})
+  name: Initialize(ConnectorContext, List<Map<String, String>>)
+  href: api/MASES.KNet.Connect.Connector.IConnector.html#MASES_KNet_Connect_Connector_IConnector_Initialize_MASES_KNet_Connect_Connector_ConnectorContext_Java_Util_List_Java_Util_Map_System_String_System_String___
+  commentId: M:MASES.KNet.Connect.Connector.IConnector.Initialize(MASES.KNet.Connect.Connector.ConnectorContext,Java.Util.List{Java.Util.Map{System.String,System.String}})
+  name.vb: Initialize(ConnectorContext, List(Of Map(Of String, String)))
+  fullName: MASES.KNet.Connect.Connector.IConnector.Initialize(MASES.KNet.Connect.Connector.ConnectorContext, Java.Util.List<Java.Util.Map<System.String, System.String>>)
+  fullName.vb: MASES.KNet.Connect.Connector.IConnector.Initialize(MASES.KNet.Connect.Connector.ConnectorContext, Java.Util.List(Of Java.Util.Map(Of System.String, System.String)))
+  nameWithType: IConnector.Initialize(ConnectorContext, List<Map<String, String>>)
+  nameWithType.vb: IConnector.Initialize(ConnectorContext, List(Of Map(Of String, String)))
+- uid: MASES.KNet.Connect.Connector.IConnector.Initialize*
+  name: Initialize
+  href: api/MASES.KNet.Connect.Connector.IConnector.html#MASES_KNet_Connect_Connector_IConnector_Initialize_
+  commentId: Overload:MASES.KNet.Connect.Connector.IConnector.Initialize
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Connector.IConnector.Initialize
+  nameWithType: IConnector.Initialize
+- uid: MASES.KNet.Connect.Connector.IConnector.Reconfigure(Java.Util.Map{System.String,System.String})
+  name: Reconfigure(Map<String, String>)
+  href: api/MASES.KNet.Connect.Connector.IConnector.html#MASES_KNet_Connect_Connector_IConnector_Reconfigure_Java_Util_Map_System_String_System_String__
+  commentId: M:MASES.KNet.Connect.Connector.IConnector.Reconfigure(Java.Util.Map{System.String,System.String})
+  name.vb: Reconfigure(Map(Of String, String))
+  fullName: MASES.KNet.Connect.Connector.IConnector.Reconfigure(Java.Util.Map<System.String, System.String>)
+  fullName.vb: MASES.KNet.Connect.Connector.IConnector.Reconfigure(Java.Util.Map(Of System.String, System.String))
+  nameWithType: IConnector.Reconfigure(Map<String, String>)
+  nameWithType.vb: IConnector.Reconfigure(Map(Of String, String))
+- uid: MASES.KNet.Connect.Connector.IConnector.Reconfigure*
+  name: Reconfigure
+  href: api/MASES.KNet.Connect.Connector.IConnector.html#MASES_KNet_Connect_Connector_IConnector_Reconfigure_
+  commentId: Overload:MASES.KNet.Connect.Connector.IConnector.Reconfigure
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Connector.IConnector.Reconfigure
+  nameWithType: IConnector.Reconfigure
+- uid: MASES.KNet.Connect.Connector.IConnector.Start(Java.Util.Map{System.String,System.String})
+  name: Start(Map<String, String>)
+  href: api/MASES.KNet.Connect.Connector.IConnector.html#MASES_KNet_Connect_Connector_IConnector_Start_Java_Util_Map_System_String_System_String__
+  commentId: M:MASES.KNet.Connect.Connector.IConnector.Start(Java.Util.Map{System.String,System.String})
+  name.vb: Start(Map(Of String, String))
+  fullName: MASES.KNet.Connect.Connector.IConnector.Start(Java.Util.Map<System.String, System.String>)
+  fullName.vb: MASES.KNet.Connect.Connector.IConnector.Start(Java.Util.Map(Of System.String, System.String))
+  nameWithType: IConnector.Start(Map<String, String>)
+  nameWithType.vb: IConnector.Start(Map(Of String, String))
+- uid: MASES.KNet.Connect.Connector.IConnector.Start*
+  name: Start
+  href: api/MASES.KNet.Connect.Connector.IConnector.html#MASES_KNet_Connect_Connector_IConnector_Start_
+  commentId: Overload:MASES.KNet.Connect.Connector.IConnector.Start
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Connector.IConnector.Start
+  nameWithType: IConnector.Start
+- uid: MASES.KNet.Connect.Connector.IConnector.Stop
+  name: Stop()
+  href: api/MASES.KNet.Connect.Connector.IConnector.html#MASES_KNet_Connect_Connector_IConnector_Stop
+  commentId: M:MASES.KNet.Connect.Connector.IConnector.Stop
+  fullName: MASES.KNet.Connect.Connector.IConnector.Stop()
+  nameWithType: IConnector.Stop()
+- uid: MASES.KNet.Connect.Connector.IConnector.Stop*
+  name: Stop
+  href: api/MASES.KNet.Connect.Connector.IConnector.html#MASES_KNet_Connect_Connector_IConnector_Stop_
+  commentId: Overload:MASES.KNet.Connect.Connector.IConnector.Stop
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Connector.IConnector.Stop
+  nameWithType: IConnector.Stop
+- uid: MASES.KNet.Connect.Connector.IConnector.TaskClass
+  name: TaskClass()
+  href: api/MASES.KNet.Connect.Connector.IConnector.html#MASES_KNet_Connect_Connector_IConnector_TaskClass
+  commentId: M:MASES.KNet.Connect.Connector.IConnector.TaskClass
+  fullName: MASES.KNet.Connect.Connector.IConnector.TaskClass()
+  nameWithType: IConnector.TaskClass()
+- uid: MASES.KNet.Connect.Connector.IConnector.TaskClass*
+  name: TaskClass
+  href: api/MASES.KNet.Connect.Connector.IConnector.html#MASES_KNet_Connect_Connector_IConnector_TaskClass_
+  commentId: Overload:MASES.KNet.Connect.Connector.IConnector.TaskClass
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Connector.IConnector.TaskClass
+  nameWithType: IConnector.TaskClass
+- uid: MASES.KNet.Connect.Connector.IConnector.TaskConfigs(System.Int32)
+  name: TaskConfigs(Int32)
+  href: api/MASES.KNet.Connect.Connector.IConnector.html#MASES_KNet_Connect_Connector_IConnector_TaskConfigs_System_Int32_
+  commentId: M:MASES.KNet.Connect.Connector.IConnector.TaskConfigs(System.Int32)
+  fullName: MASES.KNet.Connect.Connector.IConnector.TaskConfigs(System.Int32)
+  nameWithType: IConnector.TaskConfigs(Int32)
+- uid: MASES.KNet.Connect.Connector.IConnector.TaskConfigs*
+  name: TaskConfigs
+  href: api/MASES.KNet.Connect.Connector.IConnector.html#MASES_KNet_Connect_Connector_IConnector_TaskConfigs_
+  commentId: Overload:MASES.KNet.Connect.Connector.IConnector.TaskConfigs
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Connector.IConnector.TaskConfigs
+  nameWithType: IConnector.TaskConfigs
+- uid: MASES.KNet.Connect.Connector.IConnector.Validate(Java.Util.Map{System.String,System.String})
+  name: Validate(Map<String, String>)
+  href: api/MASES.KNet.Connect.Connector.IConnector.html#MASES_KNet_Connect_Connector_IConnector_Validate_Java_Util_Map_System_String_System_String__
+  commentId: M:MASES.KNet.Connect.Connector.IConnector.Validate(Java.Util.Map{System.String,System.String})
+  name.vb: Validate(Map(Of String, String))
+  fullName: MASES.KNet.Connect.Connector.IConnector.Validate(Java.Util.Map<System.String, System.String>)
+  fullName.vb: MASES.KNet.Connect.Connector.IConnector.Validate(Java.Util.Map(Of System.String, System.String))
+  nameWithType: IConnector.Validate(Map<String, String>)
+  nameWithType.vb: IConnector.Validate(Map(Of String, String))
+- uid: MASES.KNet.Connect.Connector.IConnector.Validate*
+  name: Validate
+  href: api/MASES.KNet.Connect.Connector.IConnector.html#MASES_KNet_Connect_Connector_IConnector_Validate_
+  commentId: Overload:MASES.KNet.Connect.Connector.IConnector.Validate
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Connector.IConnector.Validate
+  nameWithType: IConnector.Validate
+- uid: MASES.KNet.Connect.Connector.ITask
+  name: ITask
+  href: api/MASES.KNet.Connect.Connector.ITask.html
+  commentId: T:MASES.KNet.Connect.Connector.ITask
+  fullName: MASES.KNet.Connect.Connector.ITask
+  nameWithType: ITask
+- uid: MASES.KNet.Connect.Connector.ITask.Start(Java.Util.Map{System.String,System.String})
+  name: Start(Map<String, String>)
+  href: api/MASES.KNet.Connect.Connector.ITask.html#MASES_KNet_Connect_Connector_ITask_Start_Java_Util_Map_System_String_System_String__
+  commentId: M:MASES.KNet.Connect.Connector.ITask.Start(Java.Util.Map{System.String,System.String})
+  name.vb: Start(Map(Of String, String))
+  fullName: MASES.KNet.Connect.Connector.ITask.Start(Java.Util.Map<System.String, System.String>)
+  fullName.vb: MASES.KNet.Connect.Connector.ITask.Start(Java.Util.Map(Of System.String, System.String))
+  nameWithType: ITask.Start(Map<String, String>)
+  nameWithType.vb: ITask.Start(Map(Of String, String))
+- uid: MASES.KNet.Connect.Connector.ITask.Start*
+  name: Start
+  href: api/MASES.KNet.Connect.Connector.ITask.html#MASES_KNet_Connect_Connector_ITask_Start_
+  commentId: Overload:MASES.KNet.Connect.Connector.ITask.Start
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Connector.ITask.Start
+  nameWithType: ITask.Start
+- uid: MASES.KNet.Connect.Connector.ITask.Stop
+  name: Stop()
+  href: api/MASES.KNet.Connect.Connector.ITask.html#MASES_KNet_Connect_Connector_ITask_Stop
+  commentId: M:MASES.KNet.Connect.Connector.ITask.Stop
+  fullName: MASES.KNet.Connect.Connector.ITask.Stop()
+  nameWithType: ITask.Stop()
+- uid: MASES.KNet.Connect.Connector.ITask.Stop*
+  name: Stop
+  href: api/MASES.KNet.Connect.Connector.ITask.html#MASES_KNet_Connect_Connector_ITask_Stop_
+  commentId: Overload:MASES.KNet.Connect.Connector.ITask.Stop
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Connector.ITask.Stop
+  nameWithType: ITask.Stop
+- uid: MASES.KNet.Connect.Connector.ITask.Version
+  name: Version()
+  href: api/MASES.KNet.Connect.Connector.ITask.html#MASES_KNet_Connect_Connector_ITask_Version
+  commentId: M:MASES.KNet.Connect.Connector.ITask.Version
+  fullName: MASES.KNet.Connect.Connector.ITask.Version()
+  nameWithType: ITask.Version()
+- uid: MASES.KNet.Connect.Connector.ITask.Version*
+  name: Version
+  href: api/MASES.KNet.Connect.Connector.ITask.html#MASES_KNet_Connect_Connector_ITask_Version_
+  commentId: Overload:MASES.KNet.Connect.Connector.ITask.Version
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Connector.ITask.Version
+  nameWithType: ITask.Version
 - uid: MASES.KNet.Connect.Connector.Policy
   name: MASES.KNet.Connect.Connector.Policy
   href: api/MASES.KNet.Connect.Connector.Policy.html
@@ -25306,11 +25501,11 @@ references:
   fullName: MASES.KNet.Connect.Connector.Task.Stop
   nameWithType: Task.Stop
 - uid: MASES.KNet.Connect.Connector.Task.Version
-  name: Version
+  name: Version()
   href: api/MASES.KNet.Connect.Connector.Task.html#MASES_KNet_Connect_Connector_Task_Version
-  commentId: P:MASES.KNet.Connect.Connector.Task.Version
-  fullName: MASES.KNet.Connect.Connector.Task.Version
-  nameWithType: Task.Version
+  commentId: M:MASES.KNet.Connect.Connector.Task.Version
+  fullName: MASES.KNet.Connect.Connector.Task.Version()
+  nameWithType: Task.Version()
 - uid: MASES.KNet.Connect.Connector.Task.Version*
   name: Version
   href: api/MASES.KNet.Connect.Connector.Task.html#MASES_KNet_Connect_Connector_Task_Version_
@@ -29006,96 +29201,6 @@ references:
   commentId: F:MASES.KNet.Connect.Health.ConnectorType.UNKNOWN
   fullName: MASES.KNet.Connect.Health.ConnectorType.UNKNOWN
   nameWithType: ConnectorType.UNKNOWN
-- uid: MASES.KNet.Connect.Health.ConnectRestExtension
-  name: ConnectRestExtension
-  href: api/MASES.KNet.Connect.Health.ConnectRestExtension.html
-  commentId: T:MASES.KNet.Connect.Health.ConnectRestExtension
-  fullName: MASES.KNet.Connect.Health.ConnectRestExtension
-  nameWithType: ConnectRestExtension
-- uid: MASES.KNet.Connect.Health.ConnectRestExtension.ClassName
-  name: ClassName
-  href: api/MASES.KNet.Connect.Health.ConnectRestExtension.html#MASES_KNet_Connect_Health_ConnectRestExtension_ClassName
-  commentId: P:MASES.KNet.Connect.Health.ConnectRestExtension.ClassName
-  fullName: MASES.KNet.Connect.Health.ConnectRestExtension.ClassName
-  nameWithType: ConnectRestExtension.ClassName
-- uid: MASES.KNet.Connect.Health.ConnectRestExtension.ClassName*
-  name: ClassName
-  href: api/MASES.KNet.Connect.Health.ConnectRestExtension.html#MASES_KNet_Connect_Health_ConnectRestExtension_ClassName_
-  commentId: Overload:MASES.KNet.Connect.Health.ConnectRestExtension.ClassName
-  isSpec: "True"
-  fullName: MASES.KNet.Connect.Health.ConnectRestExtension.ClassName
-  nameWithType: ConnectRestExtension.ClassName
-- uid: MASES.KNet.Connect.Health.ConnectRestExtension.IsInterface
-  name: IsInterface
-  href: api/MASES.KNet.Connect.Health.ConnectRestExtension.html#MASES_KNet_Connect_Health_ConnectRestExtension_IsInterface
-  commentId: P:MASES.KNet.Connect.Health.ConnectRestExtension.IsInterface
-  fullName: MASES.KNet.Connect.Health.ConnectRestExtension.IsInterface
-  nameWithType: ConnectRestExtension.IsInterface
-- uid: MASES.KNet.Connect.Health.ConnectRestExtension.IsInterface*
-  name: IsInterface
-  href: api/MASES.KNet.Connect.Health.ConnectRestExtension.html#MASES_KNet_Connect_Health_ConnectRestExtension_IsInterface_
-  commentId: Overload:MASES.KNet.Connect.Health.ConnectRestExtension.IsInterface
-  isSpec: "True"
-  fullName: MASES.KNet.Connect.Health.ConnectRestExtension.IsInterface
-  nameWithType: ConnectRestExtension.IsInterface
-- uid: MASES.KNet.Connect.Health.ConnectRestExtension.Register(MASES.KNet.Connect.Health.ConnectRestExtensionContext)
-  name: Register(ConnectRestExtensionContext)
-  href: api/MASES.KNet.Connect.Health.ConnectRestExtension.html#MASES_KNet_Connect_Health_ConnectRestExtension_Register_MASES_KNet_Connect_Health_ConnectRestExtensionContext_
-  commentId: M:MASES.KNet.Connect.Health.ConnectRestExtension.Register(MASES.KNet.Connect.Health.ConnectRestExtensionContext)
-  fullName: MASES.KNet.Connect.Health.ConnectRestExtension.Register(MASES.KNet.Connect.Health.ConnectRestExtensionContext)
-  nameWithType: ConnectRestExtension.Register(ConnectRestExtensionContext)
-- uid: MASES.KNet.Connect.Health.ConnectRestExtension.Register*
-  name: Register
-  href: api/MASES.KNet.Connect.Health.ConnectRestExtension.html#MASES_KNet_Connect_Health_ConnectRestExtension_Register_
-  commentId: Overload:MASES.KNet.Connect.Health.ConnectRestExtension.Register
-  isSpec: "True"
-  fullName: MASES.KNet.Connect.Health.ConnectRestExtension.Register
-  nameWithType: ConnectRestExtension.Register
-- uid: MASES.KNet.Connect.Health.ConnectRestExtensionContext
-  name: ConnectRestExtensionContext
-  href: api/MASES.KNet.Connect.Health.ConnectRestExtensionContext.html
-  commentId: T:MASES.KNet.Connect.Health.ConnectRestExtensionContext
-  fullName: MASES.KNet.Connect.Health.ConnectRestExtensionContext
-  nameWithType: ConnectRestExtensionContext
-- uid: MASES.KNet.Connect.Health.ConnectRestExtensionContext.ClassName
-  name: ClassName
-  href: api/MASES.KNet.Connect.Health.ConnectRestExtensionContext.html#MASES_KNet_Connect_Health_ConnectRestExtensionContext_ClassName
-  commentId: P:MASES.KNet.Connect.Health.ConnectRestExtensionContext.ClassName
-  fullName: MASES.KNet.Connect.Health.ConnectRestExtensionContext.ClassName
-  nameWithType: ConnectRestExtensionContext.ClassName
-- uid: MASES.KNet.Connect.Health.ConnectRestExtensionContext.ClassName*
-  name: ClassName
-  href: api/MASES.KNet.Connect.Health.ConnectRestExtensionContext.html#MASES_KNet_Connect_Health_ConnectRestExtensionContext_ClassName_
-  commentId: Overload:MASES.KNet.Connect.Health.ConnectRestExtensionContext.ClassName
-  isSpec: "True"
-  fullName: MASES.KNet.Connect.Health.ConnectRestExtensionContext.ClassName
-  nameWithType: ConnectRestExtensionContext.ClassName
-- uid: MASES.KNet.Connect.Health.ConnectRestExtensionContext.ClusterState
-  name: ClusterState
-  href: api/MASES.KNet.Connect.Health.ConnectRestExtensionContext.html#MASES_KNet_Connect_Health_ConnectRestExtensionContext_ClusterState
-  commentId: P:MASES.KNet.Connect.Health.ConnectRestExtensionContext.ClusterState
-  fullName: MASES.KNet.Connect.Health.ConnectRestExtensionContext.ClusterState
-  nameWithType: ConnectRestExtensionContext.ClusterState
-- uid: MASES.KNet.Connect.Health.ConnectRestExtensionContext.ClusterState*
-  name: ClusterState
-  href: api/MASES.KNet.Connect.Health.ConnectRestExtensionContext.html#MASES_KNet_Connect_Health_ConnectRestExtensionContext_ClusterState_
-  commentId: Overload:MASES.KNet.Connect.Health.ConnectRestExtensionContext.ClusterState
-  isSpec: "True"
-  fullName: MASES.KNet.Connect.Health.ConnectRestExtensionContext.ClusterState
-  nameWithType: ConnectRestExtensionContext.ClusterState
-- uid: MASES.KNet.Connect.Health.ConnectRestExtensionContext.IsInterface
-  name: IsInterface
-  href: api/MASES.KNet.Connect.Health.ConnectRestExtensionContext.html#MASES_KNet_Connect_Health_ConnectRestExtensionContext_IsInterface
-  commentId: P:MASES.KNet.Connect.Health.ConnectRestExtensionContext.IsInterface
-  fullName: MASES.KNet.Connect.Health.ConnectRestExtensionContext.IsInterface
-  nameWithType: ConnectRestExtensionContext.IsInterface
-- uid: MASES.KNet.Connect.Health.ConnectRestExtensionContext.IsInterface*
-  name: IsInterface
-  href: api/MASES.KNet.Connect.Health.ConnectRestExtensionContext.html#MASES_KNet_Connect_Health_ConnectRestExtensionContext_IsInterface_
-  commentId: Overload:MASES.KNet.Connect.Health.ConnectRestExtensionContext.IsInterface
-  isSpec: "True"
-  fullName: MASES.KNet.Connect.Health.ConnectRestExtensionContext.IsInterface
-  nameWithType: ConnectRestExtensionContext.IsInterface
 - uid: MASES.KNet.Connect.Health.TaskState
   name: TaskState
   href: api/MASES.KNet.Connect.Health.TaskState.html
@@ -29154,6 +29259,401 @@ references:
   isSpec: "True"
   fullName: MASES.KNet.Connect.Health.TaskState.TaskId
   nameWithType: TaskState.TaskId
+- uid: MASES.KNet.Connect.Json
+  name: MASES.KNet.Connect.Json
+  href: api/MASES.KNet.Connect.Json.html
+  commentId: N:MASES.KNet.Connect.Json
+  fullName: MASES.KNet.Connect.Json
+  nameWithType: MASES.KNet.Connect.Json
+- uid: MASES.KNet.Connect.Json.DecimalFormat
+  name: DecimalFormat
+  href: api/MASES.KNet.Connect.Json.DecimalFormat.html
+  commentId: T:MASES.KNet.Connect.Json.DecimalFormat
+  fullName: MASES.KNet.Connect.Json.DecimalFormat
+  nameWithType: DecimalFormat
+- uid: MASES.KNet.Connect.Json.DecimalFormat.BASE64
+  name: BASE64
+  href: api/MASES.KNet.Connect.Json.DecimalFormat.html#MASES_KNet_Connect_Json_DecimalFormat_BASE64
+  commentId: F:MASES.KNet.Connect.Json.DecimalFormat.BASE64
+  fullName: MASES.KNet.Connect.Json.DecimalFormat.BASE64
+  nameWithType: DecimalFormat.BASE64
+- uid: MASES.KNet.Connect.Json.DecimalFormat.NUMERIC
+  name: NUMERIC
+  href: api/MASES.KNet.Connect.Json.DecimalFormat.html#MASES_KNet_Connect_Json_DecimalFormat_NUMERIC
+  commentId: F:MASES.KNet.Connect.Json.DecimalFormat.NUMERIC
+  fullName: MASES.KNet.Connect.Json.DecimalFormat.NUMERIC
+  nameWithType: DecimalFormat.NUMERIC
+- uid: MASES.KNet.Connect.Json.JsonConverter
+  name: JsonConverter
+  href: api/MASES.KNet.Connect.Json.JsonConverter.html
+  commentId: T:MASES.KNet.Connect.Json.JsonConverter
+  fullName: MASES.KNet.Connect.Json.JsonConverter
+  nameWithType: JsonConverter
+- uid: MASES.KNet.Connect.Json.JsonConverter.ClassName
+  name: ClassName
+  href: api/MASES.KNet.Connect.Json.JsonConverter.html#MASES_KNet_Connect_Json_JsonConverter_ClassName
+  commentId: P:MASES.KNet.Connect.Json.JsonConverter.ClassName
+  fullName: MASES.KNet.Connect.Json.JsonConverter.ClassName
+  nameWithType: JsonConverter.ClassName
+- uid: MASES.KNet.Connect.Json.JsonConverter.ClassName*
+  name: ClassName
+  href: api/MASES.KNet.Connect.Json.JsonConverter.html#MASES_KNet_Connect_Json_JsonConverter_ClassName_
+  commentId: Overload:MASES.KNet.Connect.Json.JsonConverter.ClassName
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Json.JsonConverter.ClassName
+  nameWithType: JsonConverter.ClassName
+- uid: MASES.KNet.Connect.Json.JsonConverter.Config
+  name: Config
+  href: api/MASES.KNet.Connect.Json.JsonConverter.html#MASES_KNet_Connect_Json_JsonConverter_Config
+  commentId: P:MASES.KNet.Connect.Json.JsonConverter.Config
+  fullName: MASES.KNet.Connect.Json.JsonConverter.Config
+  nameWithType: JsonConverter.Config
+- uid: MASES.KNet.Connect.Json.JsonConverter.Config*
+  name: Config
+  href: api/MASES.KNet.Connect.Json.JsonConverter.html#MASES_KNet_Connect_Json_JsonConverter_Config_
+  commentId: Overload:MASES.KNet.Connect.Json.JsonConverter.Config
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Json.JsonConverter.Config
+  nameWithType: JsonConverter.Config
+- uid: MASES.KNet.Connect.Json.JsonConverter.Configure(Java.Util.Map{System.String,System.Object},System.Boolean)
+  name: Configure(Map<String, Object>, Boolean)
+  href: api/MASES.KNet.Connect.Json.JsonConverter.html#MASES_KNet_Connect_Json_JsonConverter_Configure_Java_Util_Map_System_String_System_Object__System_Boolean_
+  commentId: M:MASES.KNet.Connect.Json.JsonConverter.Configure(Java.Util.Map{System.String,System.Object},System.Boolean)
+  name.vb: Configure(Map(Of String, Object), Boolean)
+  fullName: MASES.KNet.Connect.Json.JsonConverter.Configure(Java.Util.Map<System.String, System.Object>, System.Boolean)
+  fullName.vb: MASES.KNet.Connect.Json.JsonConverter.Configure(Java.Util.Map(Of System.String, System.Object), System.Boolean)
+  nameWithType: JsonConverter.Configure(Map<String, Object>, Boolean)
+  nameWithType.vb: JsonConverter.Configure(Map(Of String, Object), Boolean)
+- uid: MASES.KNet.Connect.Json.JsonConverter.Configure*
+  name: Configure
+  href: api/MASES.KNet.Connect.Json.JsonConverter.html#MASES_KNet_Connect_Json_JsonConverter_Configure_
+  commentId: Overload:MASES.KNet.Connect.Json.JsonConverter.Configure
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Json.JsonConverter.Configure
+  nameWithType: JsonConverter.Configure
+- uid: MASES.KNet.Connect.Json.JsonConverter.FromConnectData(System.String,MASES.KNet.Connect.Data.Schema,System.Object)
+  name: FromConnectData(String, Schema, Object)
+  href: api/MASES.KNet.Connect.Json.JsonConverter.html#MASES_KNet_Connect_Json_JsonConverter_FromConnectData_System_String_MASES_KNet_Connect_Data_Schema_System_Object_
+  commentId: M:MASES.KNet.Connect.Json.JsonConverter.FromConnectData(System.String,MASES.KNet.Connect.Data.Schema,System.Object)
+  fullName: MASES.KNet.Connect.Json.JsonConverter.FromConnectData(System.String, MASES.KNet.Connect.Data.Schema, System.Object)
+  nameWithType: JsonConverter.FromConnectData(String, Schema, Object)
+- uid: MASES.KNet.Connect.Json.JsonConverter.FromConnectData(System.String,MASES.KNet.Connect.Header.Headers,MASES.KNet.Connect.Data.Schema,System.Object)
+  name: FromConnectData(String, Headers, Schema, Object)
+  href: api/MASES.KNet.Connect.Json.JsonConverter.html#MASES_KNet_Connect_Json_JsonConverter_FromConnectData_System_String_MASES_KNet_Connect_Header_Headers_MASES_KNet_Connect_Data_Schema_System_Object_
+  commentId: M:MASES.KNet.Connect.Json.JsonConverter.FromConnectData(System.String,MASES.KNet.Connect.Header.Headers,MASES.KNet.Connect.Data.Schema,System.Object)
+  fullName: MASES.KNet.Connect.Json.JsonConverter.FromConnectData(System.String, MASES.KNet.Connect.Header.Headers, MASES.KNet.Connect.Data.Schema, System.Object)
+  nameWithType: JsonConverter.FromConnectData(String, Headers, Schema, Object)
+- uid: MASES.KNet.Connect.Json.JsonConverter.FromConnectData*
+  name: FromConnectData
+  href: api/MASES.KNet.Connect.Json.JsonConverter.html#MASES_KNet_Connect_Json_JsonConverter_FromConnectData_
+  commentId: Overload:MASES.KNet.Connect.Json.JsonConverter.FromConnectData
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Json.JsonConverter.FromConnectData
+  nameWithType: JsonConverter.FromConnectData
+- uid: MASES.KNet.Connect.Json.JsonConverter.FromConnectHeader(System.String,System.String,MASES.KNet.Connect.Data.Schema,System.Object)
+  name: FromConnectHeader(String, String, Schema, Object)
+  href: api/MASES.KNet.Connect.Json.JsonConverter.html#MASES_KNet_Connect_Json_JsonConverter_FromConnectHeader_System_String_System_String_MASES_KNet_Connect_Data_Schema_System_Object_
+  commentId: M:MASES.KNet.Connect.Json.JsonConverter.FromConnectHeader(System.String,System.String,MASES.KNet.Connect.Data.Schema,System.Object)
+  fullName: MASES.KNet.Connect.Json.JsonConverter.FromConnectHeader(System.String, System.String, MASES.KNet.Connect.Data.Schema, System.Object)
+  nameWithType: JsonConverter.FromConnectHeader(String, String, Schema, Object)
+- uid: MASES.KNet.Connect.Json.JsonConverter.FromConnectHeader*
+  name: FromConnectHeader
+  href: api/MASES.KNet.Connect.Json.JsonConverter.html#MASES_KNet_Connect_Json_JsonConverter_FromConnectHeader_
+  commentId: Overload:MASES.KNet.Connect.Json.JsonConverter.FromConnectHeader
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Json.JsonConverter.FromConnectHeader
+  nameWithType: JsonConverter.FromConnectHeader
+- uid: MASES.KNet.Connect.Json.JsonConverter.op_Implicit(MASES.KNet.Connect.Json.JsonConverter)~MASES.KNet.Connect.Storage.Converter
+  name: Implicit(JsonConverter to Converter)
+  href: api/MASES.KNet.Connect.Json.JsonConverter.html#MASES_KNet_Connect_Json_JsonConverter_op_Implicit_MASES_KNet_Connect_Json_JsonConverter__MASES_KNet_Connect_Storage_Converter
+  commentId: M:MASES.KNet.Connect.Json.JsonConverter.op_Implicit(MASES.KNet.Connect.Json.JsonConverter)~MASES.KNet.Connect.Storage.Converter
+  name.vb: Widening(JsonConverter to Converter)
+  fullName: MASES.KNet.Connect.Json.JsonConverter.Implicit(MASES.KNet.Connect.Json.JsonConverter to MASES.KNet.Connect.Storage.Converter)
+  fullName.vb: MASES.KNet.Connect.Json.JsonConverter.Widening(MASES.KNet.Connect.Json.JsonConverter to MASES.KNet.Connect.Storage.Converter)
+  nameWithType: JsonConverter.Implicit(JsonConverter to Converter)
+  nameWithType.vb: JsonConverter.Widening(JsonConverter to Converter)
+- uid: MASES.KNet.Connect.Json.JsonConverter.op_Implicit(MASES.KNet.Connect.Json.JsonConverter)~MASES.KNet.Connect.Storage.HeaderConverter
+  name: Implicit(JsonConverter to HeaderConverter)
+  href: api/MASES.KNet.Connect.Json.JsonConverter.html#MASES_KNet_Connect_Json_JsonConverter_op_Implicit_MASES_KNet_Connect_Json_JsonConverter__MASES_KNet_Connect_Storage_HeaderConverter
+  commentId: M:MASES.KNet.Connect.Json.JsonConverter.op_Implicit(MASES.KNet.Connect.Json.JsonConverter)~MASES.KNet.Connect.Storage.HeaderConverter
+  name.vb: Widening(JsonConverter to HeaderConverter)
+  fullName: MASES.KNet.Connect.Json.JsonConverter.Implicit(MASES.KNet.Connect.Json.JsonConverter to MASES.KNet.Connect.Storage.HeaderConverter)
+  fullName.vb: MASES.KNet.Connect.Json.JsonConverter.Widening(MASES.KNet.Connect.Json.JsonConverter to MASES.KNet.Connect.Storage.HeaderConverter)
+  nameWithType: JsonConverter.Implicit(JsonConverter to HeaderConverter)
+  nameWithType.vb: JsonConverter.Widening(JsonConverter to HeaderConverter)
+- uid: MASES.KNet.Connect.Json.JsonConverter.op_Implicit*
+  name: Implicit
+  href: api/MASES.KNet.Connect.Json.JsonConverter.html#MASES_KNet_Connect_Json_JsonConverter_op_Implicit_
+  commentId: Overload:MASES.KNet.Connect.Json.JsonConverter.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: MASES.KNet.Connect.Json.JsonConverter.Implicit
+  fullName.vb: MASES.KNet.Connect.Json.JsonConverter.Widening
+  nameWithType: JsonConverter.Implicit
+  nameWithType.vb: JsonConverter.Widening
+- uid: MASES.KNet.Connect.Json.JsonConverter.ToConnectData(System.String,MASES.KNet.Connect.Header.Headers,System.Byte[])
+  name: ToConnectData(String, Headers, Byte[])
+  href: api/MASES.KNet.Connect.Json.JsonConverter.html#MASES_KNet_Connect_Json_JsonConverter_ToConnectData_System_String_MASES_KNet_Connect_Header_Headers_System_Byte___
+  commentId: M:MASES.KNet.Connect.Json.JsonConverter.ToConnectData(System.String,MASES.KNet.Connect.Header.Headers,System.Byte[])
+  name.vb: ToConnectData(String, Headers, Byte())
+  fullName: MASES.KNet.Connect.Json.JsonConverter.ToConnectData(System.String, MASES.KNet.Connect.Header.Headers, System.Byte[])
+  fullName.vb: MASES.KNet.Connect.Json.JsonConverter.ToConnectData(System.String, MASES.KNet.Connect.Header.Headers, System.Byte())
+  nameWithType: JsonConverter.ToConnectData(String, Headers, Byte[])
+  nameWithType.vb: JsonConverter.ToConnectData(String, Headers, Byte())
+- uid: MASES.KNet.Connect.Json.JsonConverter.ToConnectData(System.String,System.Byte[])
+  name: ToConnectData(String, Byte[])
+  href: api/MASES.KNet.Connect.Json.JsonConverter.html#MASES_KNet_Connect_Json_JsonConverter_ToConnectData_System_String_System_Byte___
+  commentId: M:MASES.KNet.Connect.Json.JsonConverter.ToConnectData(System.String,System.Byte[])
+  name.vb: ToConnectData(String, Byte())
+  fullName: MASES.KNet.Connect.Json.JsonConverter.ToConnectData(System.String, System.Byte[])
+  fullName.vb: MASES.KNet.Connect.Json.JsonConverter.ToConnectData(System.String, System.Byte())
+  nameWithType: JsonConverter.ToConnectData(String, Byte[])
+  nameWithType.vb: JsonConverter.ToConnectData(String, Byte())
+- uid: MASES.KNet.Connect.Json.JsonConverter.ToConnectData*
+  name: ToConnectData
+  href: api/MASES.KNet.Connect.Json.JsonConverter.html#MASES_KNet_Connect_Json_JsonConverter_ToConnectData_
+  commentId: Overload:MASES.KNet.Connect.Json.JsonConverter.ToConnectData
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Json.JsonConverter.ToConnectData
+  nameWithType: JsonConverter.ToConnectData
+- uid: MASES.KNet.Connect.Json.JsonConverter.ToConnectHeader(System.String,System.String,System.Byte[])
+  name: ToConnectHeader(String, String, Byte[])
+  href: api/MASES.KNet.Connect.Json.JsonConverter.html#MASES_KNet_Connect_Json_JsonConverter_ToConnectHeader_System_String_System_String_System_Byte___
+  commentId: M:MASES.KNet.Connect.Json.JsonConverter.ToConnectHeader(System.String,System.String,System.Byte[])
+  name.vb: ToConnectHeader(String, String, Byte())
+  fullName: MASES.KNet.Connect.Json.JsonConverter.ToConnectHeader(System.String, System.String, System.Byte[])
+  fullName.vb: MASES.KNet.Connect.Json.JsonConverter.ToConnectHeader(System.String, System.String, System.Byte())
+  nameWithType: JsonConverter.ToConnectHeader(String, String, Byte[])
+  nameWithType.vb: JsonConverter.ToConnectHeader(String, String, Byte())
+- uid: MASES.KNet.Connect.Json.JsonConverter.ToConnectHeader*
+  name: ToConnectHeader
+  href: api/MASES.KNet.Connect.Json.JsonConverter.html#MASES_KNet_Connect_Json_JsonConverter_ToConnectHeader_
+  commentId: Overload:MASES.KNet.Connect.Json.JsonConverter.ToConnectHeader
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Json.JsonConverter.ToConnectHeader
+  nameWithType: JsonConverter.ToConnectHeader
+- uid: MASES.KNet.Connect.Json.JsonConverterConfig
+  name: JsonConverterConfig
+  href: api/MASES.KNet.Connect.Json.JsonConverterConfig.html
+  commentId: T:MASES.KNet.Connect.Json.JsonConverterConfig
+  fullName: MASES.KNet.Connect.Json.JsonConverterConfig
+  nameWithType: JsonConverterConfig
+- uid: MASES.KNet.Connect.Json.JsonConverterConfig.#ctor(Java.Util.Map{System.String,System.Object})
+  name: JsonConverterConfig(Map<String, Object>)
+  href: api/MASES.KNet.Connect.Json.JsonConverterConfig.html#MASES_KNet_Connect_Json_JsonConverterConfig__ctor_Java_Util_Map_System_String_System_Object__
+  commentId: M:MASES.KNet.Connect.Json.JsonConverterConfig.#ctor(Java.Util.Map{System.String,System.Object})
+  name.vb: JsonConverterConfig(Map(Of String, Object))
+  fullName: MASES.KNet.Connect.Json.JsonConverterConfig.JsonConverterConfig(Java.Util.Map<System.String, System.Object>)
+  fullName.vb: MASES.KNet.Connect.Json.JsonConverterConfig.JsonConverterConfig(Java.Util.Map(Of System.String, System.Object))
+  nameWithType: JsonConverterConfig.JsonConverterConfig(Map<String, Object>)
+  nameWithType.vb: JsonConverterConfig.JsonConverterConfig(Map(Of String, Object))
+- uid: MASES.KNet.Connect.Json.JsonConverterConfig.#ctor*
+  name: JsonConverterConfig
+  href: api/MASES.KNet.Connect.Json.JsonConverterConfig.html#MASES_KNet_Connect_Json_JsonConverterConfig__ctor_
+  commentId: Overload:MASES.KNet.Connect.Json.JsonConverterConfig.#ctor
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Json.JsonConverterConfig.JsonConverterConfig
+  nameWithType: JsonConverterConfig.JsonConverterConfig
+- uid: MASES.KNet.Connect.Json.JsonConverterConfig.ClassName
+  name: ClassName
+  href: api/MASES.KNet.Connect.Json.JsonConverterConfig.html#MASES_KNet_Connect_Json_JsonConverterConfig_ClassName
+  commentId: P:MASES.KNet.Connect.Json.JsonConverterConfig.ClassName
+  fullName: MASES.KNet.Connect.Json.JsonConverterConfig.ClassName
+  nameWithType: JsonConverterConfig.ClassName
+- uid: MASES.KNet.Connect.Json.JsonConverterConfig.ClassName*
+  name: ClassName
+  href: api/MASES.KNet.Connect.Json.JsonConverterConfig.html#MASES_KNet_Connect_Json_JsonConverterConfig_ClassName_
+  commentId: Overload:MASES.KNet.Connect.Json.JsonConverterConfig.ClassName
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Json.JsonConverterConfig.ClassName
+  nameWithType: JsonConverterConfig.ClassName
+- uid: MASES.KNet.Connect.Json.JsonConverterConfig.ConfigDef
+  name: ConfigDef
+  href: api/MASES.KNet.Connect.Json.JsonConverterConfig.html#MASES_KNet_Connect_Json_JsonConverterConfig_ConfigDef
+  commentId: P:MASES.KNet.Connect.Json.JsonConverterConfig.ConfigDef
+  fullName: MASES.KNet.Connect.Json.JsonConverterConfig.ConfigDef
+  nameWithType: JsonConverterConfig.ConfigDef
+- uid: MASES.KNet.Connect.Json.JsonConverterConfig.ConfigDef*
+  name: ConfigDef
+  href: api/MASES.KNet.Connect.Json.JsonConverterConfig.html#MASES_KNet_Connect_Json_JsonConverterConfig_ConfigDef_
+  commentId: Overload:MASES.KNet.Connect.Json.JsonConverterConfig.ConfigDef
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Json.JsonConverterConfig.ConfigDef
+  nameWithType: JsonConverterConfig.ConfigDef
+- uid: MASES.KNet.Connect.Json.JsonConverterConfig.DECIMAL_FORMAT_CONFIG
+  name: DECIMAL_FORMAT_CONFIG
+  href: api/MASES.KNet.Connect.Json.JsonConverterConfig.html#MASES_KNet_Connect_Json_JsonConverterConfig_DECIMAL_FORMAT_CONFIG
+  commentId: P:MASES.KNet.Connect.Json.JsonConverterConfig.DECIMAL_FORMAT_CONFIG
+  fullName: MASES.KNet.Connect.Json.JsonConverterConfig.DECIMAL_FORMAT_CONFIG
+  nameWithType: JsonConverterConfig.DECIMAL_FORMAT_CONFIG
+- uid: MASES.KNet.Connect.Json.JsonConverterConfig.DECIMAL_FORMAT_CONFIG*
+  name: DECIMAL_FORMAT_CONFIG
+  href: api/MASES.KNet.Connect.Json.JsonConverterConfig.html#MASES_KNet_Connect_Json_JsonConverterConfig_DECIMAL_FORMAT_CONFIG_
+  commentId: Overload:MASES.KNet.Connect.Json.JsonConverterConfig.DECIMAL_FORMAT_CONFIG
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Json.JsonConverterConfig.DECIMAL_FORMAT_CONFIG
+  nameWithType: JsonConverterConfig.DECIMAL_FORMAT_CONFIG
+- uid: MASES.KNet.Connect.Json.JsonConverterConfig.DECIMAL_FORMAT_DEFAULT
+  name: DECIMAL_FORMAT_DEFAULT
+  href: api/MASES.KNet.Connect.Json.JsonConverterConfig.html#MASES_KNet_Connect_Json_JsonConverterConfig_DECIMAL_FORMAT_DEFAULT
+  commentId: P:MASES.KNet.Connect.Json.JsonConverterConfig.DECIMAL_FORMAT_DEFAULT
+  fullName: MASES.KNet.Connect.Json.JsonConverterConfig.DECIMAL_FORMAT_DEFAULT
+  nameWithType: JsonConverterConfig.DECIMAL_FORMAT_DEFAULT
+- uid: MASES.KNet.Connect.Json.JsonConverterConfig.DECIMAL_FORMAT_DEFAULT*
+  name: DECIMAL_FORMAT_DEFAULT
+  href: api/MASES.KNet.Connect.Json.JsonConverterConfig.html#MASES_KNet_Connect_Json_JsonConverterConfig_DECIMAL_FORMAT_DEFAULT_
+  commentId: Overload:MASES.KNet.Connect.Json.JsonConverterConfig.DECIMAL_FORMAT_DEFAULT
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Json.JsonConverterConfig.DECIMAL_FORMAT_DEFAULT
+  nameWithType: JsonConverterConfig.DECIMAL_FORMAT_DEFAULT
+- uid: MASES.KNet.Connect.Json.JsonConverterConfig.DecimalFormat
+  name: DecimalFormat
+  href: api/MASES.KNet.Connect.Json.JsonConverterConfig.html#MASES_KNet_Connect_Json_JsonConverterConfig_DecimalFormat
+  commentId: P:MASES.KNet.Connect.Json.JsonConverterConfig.DecimalFormat
+  fullName: MASES.KNet.Connect.Json.JsonConverterConfig.DecimalFormat
+  nameWithType: JsonConverterConfig.DecimalFormat
+- uid: MASES.KNet.Connect.Json.JsonConverterConfig.DecimalFormat*
+  name: DecimalFormat
+  href: api/MASES.KNet.Connect.Json.JsonConverterConfig.html#MASES_KNet_Connect_Json_JsonConverterConfig_DecimalFormat_
+  commentId: Overload:MASES.KNet.Connect.Json.JsonConverterConfig.DecimalFormat
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Json.JsonConverterConfig.DecimalFormat
+  nameWithType: JsonConverterConfig.DecimalFormat
+- uid: MASES.KNet.Connect.Json.JsonConverterConfig.SchemaCacheSize
+  name: SchemaCacheSize
+  href: api/MASES.KNet.Connect.Json.JsonConverterConfig.html#MASES_KNet_Connect_Json_JsonConverterConfig_SchemaCacheSize
+  commentId: P:MASES.KNet.Connect.Json.JsonConverterConfig.SchemaCacheSize
+  fullName: MASES.KNet.Connect.Json.JsonConverterConfig.SchemaCacheSize
+  nameWithType: JsonConverterConfig.SchemaCacheSize
+- uid: MASES.KNet.Connect.Json.JsonConverterConfig.SchemaCacheSize*
+  name: SchemaCacheSize
+  href: api/MASES.KNet.Connect.Json.JsonConverterConfig.html#MASES_KNet_Connect_Json_JsonConverterConfig_SchemaCacheSize_
+  commentId: Overload:MASES.KNet.Connect.Json.JsonConverterConfig.SchemaCacheSize
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Json.JsonConverterConfig.SchemaCacheSize
+  nameWithType: JsonConverterConfig.SchemaCacheSize
+- uid: MASES.KNet.Connect.Json.JsonConverterConfig.SCHEMAS_CACHE_SIZE_CONFIG
+  name: SCHEMAS_CACHE_SIZE_CONFIG
+  href: api/MASES.KNet.Connect.Json.JsonConverterConfig.html#MASES_KNet_Connect_Json_JsonConverterConfig_SCHEMAS_CACHE_SIZE_CONFIG
+  commentId: P:MASES.KNet.Connect.Json.JsonConverterConfig.SCHEMAS_CACHE_SIZE_CONFIG
+  fullName: MASES.KNet.Connect.Json.JsonConverterConfig.SCHEMAS_CACHE_SIZE_CONFIG
+  nameWithType: JsonConverterConfig.SCHEMAS_CACHE_SIZE_CONFIG
+- uid: MASES.KNet.Connect.Json.JsonConverterConfig.SCHEMAS_CACHE_SIZE_CONFIG*
+  name: SCHEMAS_CACHE_SIZE_CONFIG
+  href: api/MASES.KNet.Connect.Json.JsonConverterConfig.html#MASES_KNet_Connect_Json_JsonConverterConfig_SCHEMAS_CACHE_SIZE_CONFIG_
+  commentId: Overload:MASES.KNet.Connect.Json.JsonConverterConfig.SCHEMAS_CACHE_SIZE_CONFIG
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Json.JsonConverterConfig.SCHEMAS_CACHE_SIZE_CONFIG
+  nameWithType: JsonConverterConfig.SCHEMAS_CACHE_SIZE_CONFIG
+- uid: MASES.KNet.Connect.Json.JsonConverterConfig.SCHEMAS_CACHE_SIZE_DEFAULT
+  name: SCHEMAS_CACHE_SIZE_DEFAULT
+  href: api/MASES.KNet.Connect.Json.JsonConverterConfig.html#MASES_KNet_Connect_Json_JsonConverterConfig_SCHEMAS_CACHE_SIZE_DEFAULT
+  commentId: P:MASES.KNet.Connect.Json.JsonConverterConfig.SCHEMAS_CACHE_SIZE_DEFAULT
+  fullName: MASES.KNet.Connect.Json.JsonConverterConfig.SCHEMAS_CACHE_SIZE_DEFAULT
+  nameWithType: JsonConverterConfig.SCHEMAS_CACHE_SIZE_DEFAULT
+- uid: MASES.KNet.Connect.Json.JsonConverterConfig.SCHEMAS_CACHE_SIZE_DEFAULT*
+  name: SCHEMAS_CACHE_SIZE_DEFAULT
+  href: api/MASES.KNet.Connect.Json.JsonConverterConfig.html#MASES_KNet_Connect_Json_JsonConverterConfig_SCHEMAS_CACHE_SIZE_DEFAULT_
+  commentId: Overload:MASES.KNet.Connect.Json.JsonConverterConfig.SCHEMAS_CACHE_SIZE_DEFAULT
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Json.JsonConverterConfig.SCHEMAS_CACHE_SIZE_DEFAULT
+  nameWithType: JsonConverterConfig.SCHEMAS_CACHE_SIZE_DEFAULT
+- uid: MASES.KNet.Connect.Json.JsonConverterConfig.SCHEMAS_ENABLE_CONFIG
+  name: SCHEMAS_ENABLE_CONFIG
+  href: api/MASES.KNet.Connect.Json.JsonConverterConfig.html#MASES_KNet_Connect_Json_JsonConverterConfig_SCHEMAS_ENABLE_CONFIG
+  commentId: P:MASES.KNet.Connect.Json.JsonConverterConfig.SCHEMAS_ENABLE_CONFIG
+  fullName: MASES.KNet.Connect.Json.JsonConverterConfig.SCHEMAS_ENABLE_CONFIG
+  nameWithType: JsonConverterConfig.SCHEMAS_ENABLE_CONFIG
+- uid: MASES.KNet.Connect.Json.JsonConverterConfig.SCHEMAS_ENABLE_CONFIG*
+  name: SCHEMAS_ENABLE_CONFIG
+  href: api/MASES.KNet.Connect.Json.JsonConverterConfig.html#MASES_KNet_Connect_Json_JsonConverterConfig_SCHEMAS_ENABLE_CONFIG_
+  commentId: Overload:MASES.KNet.Connect.Json.JsonConverterConfig.SCHEMAS_ENABLE_CONFIG
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Json.JsonConverterConfig.SCHEMAS_ENABLE_CONFIG
+  nameWithType: JsonConverterConfig.SCHEMAS_ENABLE_CONFIG
+- uid: MASES.KNet.Connect.Json.JsonConverterConfig.SCHEMAS_ENABLE_DEFAULT
+  name: SCHEMAS_ENABLE_DEFAULT
+  href: api/MASES.KNet.Connect.Json.JsonConverterConfig.html#MASES_KNet_Connect_Json_JsonConverterConfig_SCHEMAS_ENABLE_DEFAULT
+  commentId: P:MASES.KNet.Connect.Json.JsonConverterConfig.SCHEMAS_ENABLE_DEFAULT
+  fullName: MASES.KNet.Connect.Json.JsonConverterConfig.SCHEMAS_ENABLE_DEFAULT
+  nameWithType: JsonConverterConfig.SCHEMAS_ENABLE_DEFAULT
+- uid: MASES.KNet.Connect.Json.JsonConverterConfig.SCHEMAS_ENABLE_DEFAULT*
+  name: SCHEMAS_ENABLE_DEFAULT
+  href: api/MASES.KNet.Connect.Json.JsonConverterConfig.html#MASES_KNet_Connect_Json_JsonConverterConfig_SCHEMAS_ENABLE_DEFAULT_
+  commentId: Overload:MASES.KNet.Connect.Json.JsonConverterConfig.SCHEMAS_ENABLE_DEFAULT
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Json.JsonConverterConfig.SCHEMAS_ENABLE_DEFAULT
+  nameWithType: JsonConverterConfig.SCHEMAS_ENABLE_DEFAULT
+- uid: MASES.KNet.Connect.Json.JsonConverterConfig.SchemasEnabled
+  name: SchemasEnabled
+  href: api/MASES.KNet.Connect.Json.JsonConverterConfig.html#MASES_KNet_Connect_Json_JsonConverterConfig_SchemasEnabled
+  commentId: P:MASES.KNet.Connect.Json.JsonConverterConfig.SchemasEnabled
+  fullName: MASES.KNet.Connect.Json.JsonConverterConfig.SchemasEnabled
+  nameWithType: JsonConverterConfig.SchemasEnabled
+- uid: MASES.KNet.Connect.Json.JsonConverterConfig.SchemasEnabled*
+  name: SchemasEnabled
+  href: api/MASES.KNet.Connect.Json.JsonConverterConfig.html#MASES_KNet_Connect_Json_JsonConverterConfig_SchemasEnabled_
+  commentId: Overload:MASES.KNet.Connect.Json.JsonConverterConfig.SchemasEnabled
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Json.JsonConverterConfig.SchemasEnabled
+  nameWithType: JsonConverterConfig.SchemasEnabled
+- uid: MASES.KNet.Connect.Json.JsonDeserializer
+  name: JsonDeserializer
+  href: api/MASES.KNet.Connect.Json.JsonDeserializer.html
+  commentId: T:MASES.KNet.Connect.Json.JsonDeserializer
+  fullName: MASES.KNet.Connect.Json.JsonDeserializer
+  nameWithType: JsonDeserializer
+- uid: MASES.KNet.Connect.Json.JsonDeserializer.ClassName
+  name: ClassName
+  href: api/MASES.KNet.Connect.Json.JsonDeserializer.html#MASES_KNet_Connect_Json_JsonDeserializer_ClassName
+  commentId: P:MASES.KNet.Connect.Json.JsonDeserializer.ClassName
+  fullName: MASES.KNet.Connect.Json.JsonDeserializer.ClassName
+  nameWithType: JsonDeserializer.ClassName
+- uid: MASES.KNet.Connect.Json.JsonDeserializer.ClassName*
+  name: ClassName
+  href: api/MASES.KNet.Connect.Json.JsonDeserializer.html#MASES_KNet_Connect_Json_JsonDeserializer_ClassName_
+  commentId: Overload:MASES.KNet.Connect.Json.JsonDeserializer.ClassName
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Json.JsonDeserializer.ClassName
+  nameWithType: JsonDeserializer.ClassName
+- uid: MASES.KNet.Connect.Json.JsonSchema
+  name: JsonSchema
+  href: api/MASES.KNet.Connect.Json.JsonSchema.html
+  commentId: T:MASES.KNet.Connect.Json.JsonSchema
+  fullName: MASES.KNet.Connect.Json.JsonSchema
+  nameWithType: JsonSchema
+- uid: MASES.KNet.Connect.Json.JsonSchema.ClassName
+  name: ClassName
+  href: api/MASES.KNet.Connect.Json.JsonSchema.html#MASES_KNet_Connect_Json_JsonSchema_ClassName
+  commentId: P:MASES.KNet.Connect.Json.JsonSchema.ClassName
+  fullName: MASES.KNet.Connect.Json.JsonSchema.ClassName
+  nameWithType: JsonSchema.ClassName
+- uid: MASES.KNet.Connect.Json.JsonSchema.ClassName*
+  name: ClassName
+  href: api/MASES.KNet.Connect.Json.JsonSchema.html#MASES_KNet_Connect_Json_JsonSchema_ClassName_
+  commentId: Overload:MASES.KNet.Connect.Json.JsonSchema.ClassName
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Json.JsonSchema.ClassName
+  nameWithType: JsonSchema.ClassName
+- uid: MASES.KNet.Connect.Json.JsonSerializer
+  name: JsonSerializer
+  href: api/MASES.KNet.Connect.Json.JsonSerializer.html
+  commentId: T:MASES.KNet.Connect.Json.JsonSerializer
+  fullName: MASES.KNet.Connect.Json.JsonSerializer
+  nameWithType: JsonSerializer
+- uid: MASES.KNet.Connect.Json.JsonSerializer.ClassName
+  name: ClassName
+  href: api/MASES.KNet.Connect.Json.JsonSerializer.html#MASES_KNet_Connect_Json_JsonSerializer_ClassName
+  commentId: P:MASES.KNet.Connect.Json.JsonSerializer.ClassName
+  fullName: MASES.KNet.Connect.Json.JsonSerializer.ClassName
+  nameWithType: JsonSerializer.ClassName
+- uid: MASES.KNet.Connect.Json.JsonSerializer.ClassName*
+  name: ClassName
+  href: api/MASES.KNet.Connect.Json.JsonSerializer.html#MASES_KNet_Connect_Json_JsonSerializer_ClassName_
+  commentId: Overload:MASES.KNet.Connect.Json.JsonSerializer.ClassName
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Json.JsonSerializer.ClassName
+  nameWithType: JsonSerializer.ClassName
 - uid: MASES.KNet.Connect.Mirror
   name: MASES.KNet.Connect.Mirror
   href: api/MASES.KNet.Connect.Mirror.html
@@ -29179,6 +29679,217 @@ references:
   isSpec: "True"
   fullName: MASES.KNet.Connect.Mirror.MirrorMaker2.MirrorMaker2
   nameWithType: MirrorMaker2.MirrorMaker2
+- uid: MASES.KNet.Connect.Rest
+  name: MASES.KNet.Connect.Rest
+  href: api/MASES.KNet.Connect.Rest.html
+  commentId: N:MASES.KNet.Connect.Rest
+  fullName: MASES.KNet.Connect.Rest
+  nameWithType: MASES.KNet.Connect.Rest
+- uid: MASES.KNet.Connect.Rest.Basic.Auth.Extension
+  name: MASES.KNet.Connect.Rest.Basic.Auth.Extension
+  href: api/MASES.KNet.Connect.Rest.Basic.Auth.Extension.html
+  commentId: N:MASES.KNet.Connect.Rest.Basic.Auth.Extension
+  fullName: MASES.KNet.Connect.Rest.Basic.Auth.Extension
+  nameWithType: MASES.KNet.Connect.Rest.Basic.Auth.Extension
+- uid: MASES.KNet.Connect.Rest.Basic.Auth.Extension.BasicAuthSecurityRestExtension
+  name: BasicAuthSecurityRestExtension
+  href: api/MASES.KNet.Connect.Rest.Basic.Auth.Extension.BasicAuthSecurityRestExtension.html
+  commentId: T:MASES.KNet.Connect.Rest.Basic.Auth.Extension.BasicAuthSecurityRestExtension
+  fullName: MASES.KNet.Connect.Rest.Basic.Auth.Extension.BasicAuthSecurityRestExtension
+  nameWithType: BasicAuthSecurityRestExtension
+- uid: MASES.KNet.Connect.Rest.Basic.Auth.Extension.BasicAuthSecurityRestExtension.ClassName
+  name: ClassName
+  href: api/MASES.KNet.Connect.Rest.Basic.Auth.Extension.BasicAuthSecurityRestExtension.html#MASES_KNet_Connect_Rest_Basic_Auth_Extension_BasicAuthSecurityRestExtension_ClassName
+  commentId: P:MASES.KNet.Connect.Rest.Basic.Auth.Extension.BasicAuthSecurityRestExtension.ClassName
+  fullName: MASES.KNet.Connect.Rest.Basic.Auth.Extension.BasicAuthSecurityRestExtension.ClassName
+  nameWithType: BasicAuthSecurityRestExtension.ClassName
+- uid: MASES.KNet.Connect.Rest.Basic.Auth.Extension.BasicAuthSecurityRestExtension.ClassName*
+  name: ClassName
+  href: api/MASES.KNet.Connect.Rest.Basic.Auth.Extension.BasicAuthSecurityRestExtension.html#MASES_KNet_Connect_Rest_Basic_Auth_Extension_BasicAuthSecurityRestExtension_ClassName_
+  commentId: Overload:MASES.KNet.Connect.Rest.Basic.Auth.Extension.BasicAuthSecurityRestExtension.ClassName
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Rest.Basic.Auth.Extension.BasicAuthSecurityRestExtension.ClassName
+  nameWithType: BasicAuthSecurityRestExtension.ClassName
+- uid: MASES.KNet.Connect.Rest.Basic.Auth.Extension.JaasBasicAuthFilter
+  name: JaasBasicAuthFilter
+  href: api/MASES.KNet.Connect.Rest.Basic.Auth.Extension.JaasBasicAuthFilter.html
+  commentId: T:MASES.KNet.Connect.Rest.Basic.Auth.Extension.JaasBasicAuthFilter
+  fullName: MASES.KNet.Connect.Rest.Basic.Auth.Extension.JaasBasicAuthFilter
+  nameWithType: JaasBasicAuthFilter
+- uid: MASES.KNet.Connect.Rest.Basic.Auth.Extension.JaasBasicAuthFilter.ClassName
+  name: ClassName
+  href: api/MASES.KNet.Connect.Rest.Basic.Auth.Extension.JaasBasicAuthFilter.html#MASES_KNet_Connect_Rest_Basic_Auth_Extension_JaasBasicAuthFilter_ClassName
+  commentId: P:MASES.KNet.Connect.Rest.Basic.Auth.Extension.JaasBasicAuthFilter.ClassName
+  fullName: MASES.KNet.Connect.Rest.Basic.Auth.Extension.JaasBasicAuthFilter.ClassName
+  nameWithType: JaasBasicAuthFilter.ClassName
+- uid: MASES.KNet.Connect.Rest.Basic.Auth.Extension.JaasBasicAuthFilter.ClassName*
+  name: ClassName
+  href: api/MASES.KNet.Connect.Rest.Basic.Auth.Extension.JaasBasicAuthFilter.html#MASES_KNet_Connect_Rest_Basic_Auth_Extension_JaasBasicAuthFilter_ClassName_
+  commentId: Overload:MASES.KNet.Connect.Rest.Basic.Auth.Extension.JaasBasicAuthFilter.ClassName
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Rest.Basic.Auth.Extension.JaasBasicAuthFilter.ClassName
+  nameWithType: JaasBasicAuthFilter.ClassName
+- uid: MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule
+  name: PropertyFileLoginModule
+  href: api/MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.html
+  commentId: T:MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule
+  fullName: MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule
+  nameWithType: PropertyFileLoginModule
+- uid: MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.Abort
+  name: Abort()
+  href: api/MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.html#MASES_KNet_Connect_Rest_Basic_Auth_Extension_PropertyFileLoginModule_Abort
+  commentId: M:MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.Abort
+  fullName: MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.Abort()
+  nameWithType: PropertyFileLoginModule.Abort()
+- uid: MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.Abort*
+  name: Abort
+  href: api/MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.html#MASES_KNet_Connect_Rest_Basic_Auth_Extension_PropertyFileLoginModule_Abort_
+  commentId: Overload:MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.Abort
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.Abort
+  nameWithType: PropertyFileLoginModule.Abort
+- uid: MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.ClassName
+  name: ClassName
+  href: api/MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.html#MASES_KNet_Connect_Rest_Basic_Auth_Extension_PropertyFileLoginModule_ClassName
+  commentId: P:MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.ClassName
+  fullName: MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.ClassName
+  nameWithType: PropertyFileLoginModule.ClassName
+- uid: MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.ClassName*
+  name: ClassName
+  href: api/MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.html#MASES_KNet_Connect_Rest_Basic_Auth_Extension_PropertyFileLoginModule_ClassName_
+  commentId: Overload:MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.ClassName
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.ClassName
+  nameWithType: PropertyFileLoginModule.ClassName
+- uid: MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.Commit
+  name: Commit()
+  href: api/MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.html#MASES_KNet_Connect_Rest_Basic_Auth_Extension_PropertyFileLoginModule_Commit
+  commentId: M:MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.Commit
+  fullName: MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.Commit()
+  nameWithType: PropertyFileLoginModule.Commit()
+- uid: MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.Commit*
+  name: Commit
+  href: api/MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.html#MASES_KNet_Connect_Rest_Basic_Auth_Extension_PropertyFileLoginModule_Commit_
+  commentId: Overload:MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.Commit
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.Commit
+  nameWithType: PropertyFileLoginModule.Commit
+- uid: MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.Login
+  name: Login()
+  href: api/MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.html#MASES_KNet_Connect_Rest_Basic_Auth_Extension_PropertyFileLoginModule_Login
+  commentId: M:MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.Login
+  fullName: MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.Login()
+  nameWithType: PropertyFileLoginModule.Login()
+- uid: MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.Login*
+  name: Login
+  href: api/MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.html#MASES_KNet_Connect_Rest_Basic_Auth_Extension_PropertyFileLoginModule_Login_
+  commentId: Overload:MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.Login
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.Login
+  nameWithType: PropertyFileLoginModule.Login
+- uid: MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.Logout
+  name: Logout()
+  href: api/MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.html#MASES_KNet_Connect_Rest_Basic_Auth_Extension_PropertyFileLoginModule_Logout
+  commentId: M:MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.Logout
+  fullName: MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.Logout()
+  nameWithType: PropertyFileLoginModule.Logout()
+- uid: MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.Logout*
+  name: Logout
+  href: api/MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.html#MASES_KNet_Connect_Rest_Basic_Auth_Extension_PropertyFileLoginModule_Logout_
+  commentId: Overload:MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.Logout
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Rest.Basic.Auth.Extension.PropertyFileLoginModule.Logout
+  nameWithType: PropertyFileLoginModule.Logout
+- uid: MASES.KNet.Connect.Rest.ConnectRestExtension
+  name: ConnectRestExtension
+  href: api/MASES.KNet.Connect.Rest.ConnectRestExtension.html
+  commentId: T:MASES.KNet.Connect.Rest.ConnectRestExtension
+  fullName: MASES.KNet.Connect.Rest.ConnectRestExtension
+  nameWithType: ConnectRestExtension
+- uid: MASES.KNet.Connect.Rest.ConnectRestExtension.ClassName
+  name: ClassName
+  href: api/MASES.KNet.Connect.Rest.ConnectRestExtension.html#MASES_KNet_Connect_Rest_ConnectRestExtension_ClassName
+  commentId: P:MASES.KNet.Connect.Rest.ConnectRestExtension.ClassName
+  fullName: MASES.KNet.Connect.Rest.ConnectRestExtension.ClassName
+  nameWithType: ConnectRestExtension.ClassName
+- uid: MASES.KNet.Connect.Rest.ConnectRestExtension.ClassName*
+  name: ClassName
+  href: api/MASES.KNet.Connect.Rest.ConnectRestExtension.html#MASES_KNet_Connect_Rest_ConnectRestExtension_ClassName_
+  commentId: Overload:MASES.KNet.Connect.Rest.ConnectRestExtension.ClassName
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Rest.ConnectRestExtension.ClassName
+  nameWithType: ConnectRestExtension.ClassName
+- uid: MASES.KNet.Connect.Rest.ConnectRestExtension.IsInterface
+  name: IsInterface
+  href: api/MASES.KNet.Connect.Rest.ConnectRestExtension.html#MASES_KNet_Connect_Rest_ConnectRestExtension_IsInterface
+  commentId: P:MASES.KNet.Connect.Rest.ConnectRestExtension.IsInterface
+  fullName: MASES.KNet.Connect.Rest.ConnectRestExtension.IsInterface
+  nameWithType: ConnectRestExtension.IsInterface
+- uid: MASES.KNet.Connect.Rest.ConnectRestExtension.IsInterface*
+  name: IsInterface
+  href: api/MASES.KNet.Connect.Rest.ConnectRestExtension.html#MASES_KNet_Connect_Rest_ConnectRestExtension_IsInterface_
+  commentId: Overload:MASES.KNet.Connect.Rest.ConnectRestExtension.IsInterface
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Rest.ConnectRestExtension.IsInterface
+  nameWithType: ConnectRestExtension.IsInterface
+- uid: MASES.KNet.Connect.Rest.ConnectRestExtension.Register(MASES.KNet.Connect.Rest.ConnectRestExtensionContext)
+  name: Register(ConnectRestExtensionContext)
+  href: api/MASES.KNet.Connect.Rest.ConnectRestExtension.html#MASES_KNet_Connect_Rest_ConnectRestExtension_Register_MASES_KNet_Connect_Rest_ConnectRestExtensionContext_
+  commentId: M:MASES.KNet.Connect.Rest.ConnectRestExtension.Register(MASES.KNet.Connect.Rest.ConnectRestExtensionContext)
+  fullName: MASES.KNet.Connect.Rest.ConnectRestExtension.Register(MASES.KNet.Connect.Rest.ConnectRestExtensionContext)
+  nameWithType: ConnectRestExtension.Register(ConnectRestExtensionContext)
+- uid: MASES.KNet.Connect.Rest.ConnectRestExtension.Register*
+  name: Register
+  href: api/MASES.KNet.Connect.Rest.ConnectRestExtension.html#MASES_KNet_Connect_Rest_ConnectRestExtension_Register_
+  commentId: Overload:MASES.KNet.Connect.Rest.ConnectRestExtension.Register
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Rest.ConnectRestExtension.Register
+  nameWithType: ConnectRestExtension.Register
+- uid: MASES.KNet.Connect.Rest.ConnectRestExtensionContext
+  name: ConnectRestExtensionContext
+  href: api/MASES.KNet.Connect.Rest.ConnectRestExtensionContext.html
+  commentId: T:MASES.KNet.Connect.Rest.ConnectRestExtensionContext
+  fullName: MASES.KNet.Connect.Rest.ConnectRestExtensionContext
+  nameWithType: ConnectRestExtensionContext
+- uid: MASES.KNet.Connect.Rest.ConnectRestExtensionContext.ClassName
+  name: ClassName
+  href: api/MASES.KNet.Connect.Rest.ConnectRestExtensionContext.html#MASES_KNet_Connect_Rest_ConnectRestExtensionContext_ClassName
+  commentId: P:MASES.KNet.Connect.Rest.ConnectRestExtensionContext.ClassName
+  fullName: MASES.KNet.Connect.Rest.ConnectRestExtensionContext.ClassName
+  nameWithType: ConnectRestExtensionContext.ClassName
+- uid: MASES.KNet.Connect.Rest.ConnectRestExtensionContext.ClassName*
+  name: ClassName
+  href: api/MASES.KNet.Connect.Rest.ConnectRestExtensionContext.html#MASES_KNet_Connect_Rest_ConnectRestExtensionContext_ClassName_
+  commentId: Overload:MASES.KNet.Connect.Rest.ConnectRestExtensionContext.ClassName
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Rest.ConnectRestExtensionContext.ClassName
+  nameWithType: ConnectRestExtensionContext.ClassName
+- uid: MASES.KNet.Connect.Rest.ConnectRestExtensionContext.ClusterState
+  name: ClusterState
+  href: api/MASES.KNet.Connect.Rest.ConnectRestExtensionContext.html#MASES_KNet_Connect_Rest_ConnectRestExtensionContext_ClusterState
+  commentId: P:MASES.KNet.Connect.Rest.ConnectRestExtensionContext.ClusterState
+  fullName: MASES.KNet.Connect.Rest.ConnectRestExtensionContext.ClusterState
+  nameWithType: ConnectRestExtensionContext.ClusterState
+- uid: MASES.KNet.Connect.Rest.ConnectRestExtensionContext.ClusterState*
+  name: ClusterState
+  href: api/MASES.KNet.Connect.Rest.ConnectRestExtensionContext.html#MASES_KNet_Connect_Rest_ConnectRestExtensionContext_ClusterState_
+  commentId: Overload:MASES.KNet.Connect.Rest.ConnectRestExtensionContext.ClusterState
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Rest.ConnectRestExtensionContext.ClusterState
+  nameWithType: ConnectRestExtensionContext.ClusterState
+- uid: MASES.KNet.Connect.Rest.ConnectRestExtensionContext.IsInterface
+  name: IsInterface
+  href: api/MASES.KNet.Connect.Rest.ConnectRestExtensionContext.html#MASES_KNet_Connect_Rest_ConnectRestExtensionContext_IsInterface
+  commentId: P:MASES.KNet.Connect.Rest.ConnectRestExtensionContext.IsInterface
+  fullName: MASES.KNet.Connect.Rest.ConnectRestExtensionContext.IsInterface
+  nameWithType: ConnectRestExtensionContext.IsInterface
+- uid: MASES.KNet.Connect.Rest.ConnectRestExtensionContext.IsInterface*
+  name: IsInterface
+  href: api/MASES.KNet.Connect.Rest.ConnectRestExtensionContext.html#MASES_KNet_Connect_Rest_ConnectRestExtensionContext_IsInterface_
+  commentId: Overload:MASES.KNet.Connect.Rest.ConnectRestExtensionContext.IsInterface
+  isSpec: "True"
+  fullName: MASES.KNet.Connect.Rest.ConnectRestExtensionContext.IsInterface
+  nameWithType: ConnectRestExtensionContext.IsInterface
 - uid: MASES.KNet.Connect.Sink
   name: MASES.KNet.Connect.Sink
   href: api/MASES.KNet.Connect.Sink.html

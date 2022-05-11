@@ -81,8 +81,9 @@
     <div class="level1"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
     <div class="level2"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span></div>
     <div class="level3"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span>&lt;<a class="xref" href="MASES.KNet.Connect.Components.Versioned.html">Versioned</a>&gt;</div>
-    <div class="level4"><span class="xref">Versioned</span></div>
-      <div class="level5"><a class="xref" href="MASES.KNet.Connect.Connector.Connector.html">Connector</a></div>
+    <div class="level4"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span>&lt;<a class="xref" href="MASES.KNet.Connect.Components.Versioned.html">Versioned</a>, <a class="xref" href="MASES.KNet.Connect.Components.IVersion.html">IVersion</a>&gt;</div>
+    <div class="level5"><span class="xref">Versioned</span></div>
+      <div class="level6"><a class="xref" href="MASES.KNet.Connect.Connector.Connector.html">Connector</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -92,6 +93,7 @@
     <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span></div>
     <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span></div>
     <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span></div>
+    <div><a class="xref" href="MASES.KNet.Connect.Components.IVersion.html">IVersion</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -268,7 +270,7 @@
   <h6><strong>Assembly</strong>: MASES.KNet.dll</h6>
   <h5 id="MASES_KNet_Connect_Components_Versioned_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Versioned : JVMBridgeBase&lt;Versioned&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
+    <pre><code class="lang-csharp hljs">public class Versioned : JVMBridgeBase&lt;Versioned, IVersion&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IVersion</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -277,7 +279,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Components_Versioned_ClassName.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Components.Versioned.ClassName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Components/Versioned.cs/#L26">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Components/Versioned.cs/#L31">View Source</a>
   </span>
   <a id="MASES_KNet_Connect_Components_Versioned_ClassName_" data-uid="MASES.KNet.Connect.Components.Versioned.ClassName*"></a>
   <h4 id="MASES_KNet_Connect_Components_Versioned_ClassName" data-uid="MASES.KNet.Connect.Components.Versioned.ClassName">ClassName</h4>
@@ -309,7 +311,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Components_Versioned_IsInterface.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Components.Versioned.IsInterface%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Components/Versioned.cs/#L25">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Components/Versioned.cs/#L30">View Source</a>
   </span>
   <a id="MASES_KNet_Connect_Components_Versioned_IsInterface_" data-uid="MASES.KNet.Connect.Components.Versioned.IsInterface*"></a>
   <h4 id="MASES_KNet_Connect_Components_Versioned_IsInterface" data-uid="MASES.KNet.Connect.Components.Versioned.IsInterface">IsInterface</h4>
@@ -336,22 +338,24 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInterface</span></div>
+  <h3 id="methods">Methods
+  </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Components_Versioned_Version.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Components.Versioned.Version%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Components/Versioned.cs/#L28">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Components/Versioned.cs/#L33">View Source</a>
   </span>
   <a id="MASES_KNet_Connect_Components_Versioned_Version_" data-uid="MASES.KNet.Connect.Components.Versioned.Version*"></a>
-  <h4 id="MASES_KNet_Connect_Components_Versioned_Version" data-uid="MASES.KNet.Connect.Components.Versioned.Version">Version</h4>
+  <h4 id="MASES_KNet_Connect_Components_Versioned_Version" data-uid="MASES.KNet.Connect.Components.Versioned.Version">Version()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Version { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Version()</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -385,6 +389,9 @@
   <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span>
   </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Connect.Components.IVersion.html">IVersion</a>
+  </div>
 </article>
           </div>
           
@@ -396,7 +403,7 @@
                     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Components_Versioned.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Components.Versioned%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Components/Versioned.cs/#L23" class="contribution-link">View Source</a>
+                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Components/Versioned.cs/#L28" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -5,11 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Namespace MASES.KNet.Connect.Connector
-   | KNet website </title>
+    <title>KNet How to build from scratch | KNet website </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Namespace MASES.KNet.Connect.Connector
-   | KNet website ">
+    <meta name="title" content="KNet How to build from scratch | KNet website ">
     <meta name="generator" content="docfx 2.59.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -68,29 +66,88 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="MASES.KNet.Connect.Connector">
-  
-  <h1 id="MASES_KNet_Connect_Connector" data-uid="MASES.KNet.Connect.Connector" class="text-break">Namespace MASES.KNet.Connect.Connector
-  </h1>
-  <div class="markdown level0 summary"></div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="markdown level0 remarks"></div>
-    <h3 id="classes">Classes
-  </h3>
-      <h4><a class="xref" href="MASES.KNet.Connect.Connector.Connector.html">Connector</a></h4>
-      <section></section>
-      <h4><a class="xref" href="MASES.KNet.Connect.Connector.ConnectorContext.html">ConnectorContext</a></h4>
-      <section></section>
-      <h4><a class="xref" href="MASES.KNet.Connect.Connector.ConnectRecord-1.html">ConnectRecord&lt;R&gt;</a></h4>
-      <section></section>
-      <h4><a class="xref" href="MASES.KNet.Connect.Connector.Task.html">Task</a></h4>
-      <section></section>
-    <h3 id="interfaces">Interfaces
-  </h3>
-      <h4><a class="xref" href="MASES.KNet.Connect.Connector.IConnector.html">IConnector</a></h4>
-      <section></section>
-      <h4><a class="xref" href="MASES.KNet.Connect.Connector.ITask.html">ITask</a></h4>
-      <section></section>
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="knet-how-to-build-from-scratch">KNet How to build from scratch</h1>
+
+<p>If the user clones the repo, the following steps shall be done to use the project. The full steps can be found within the repo, under the <strong>.github\workflows</strong> folder.</p>
+<p>Let's start with the tools needed to achieve the goal:</p>
+<ul>
+<li>An installed version of <strong>git for Windows</strong></li>
+<li>An installed version of .NET 6 SDK</li>
+<li>An installed version of Apache Maven (&gt; 3.8.1)</li>
+</ul>
+<p>Then the steps are the following (the steps are made for Windows shell):</p>
+<ul>
+<li><p>Clone the repository in a folder (named for convenience RootFolder)</p>
+<blockquote>
+<p>cd RootFolder
+git clone <a href="https://github.com/masesgroup/KNet.git">https://github.com/masesgroup/KNet.git</a></p>
+</blockquote>
+</li>
+<li><p>The project now needs to compile Java classes and obtains the Maven artifacts; this is done with a single step (it is important to use the <strong>package</strong> key as command for Maven):</p>
+<blockquote>
+<p>cd RootFolder
+{PathToMavenInstallation}\bin\mvn -f src/java/knet/pom.xml package</p>
+</blockquote>
+<ul>
+<li>The result of this step produces the artifacts within RootFolder\jars folder.</li>
+</ul>
+</li>
+<li><p>The next step builds the executables:</p>
+<blockquote>
+<p>cd RootFolder
+dotnet build --no-incremental --configuration Release /p:Platform=&quot;Any CPU&quot; src\net\KNetCLI\KNetCLI.csproj</p>
+</blockquote>
+<ul>
+<li>The previous command generates many folders under RootFolder\bin folder; each folder refers to the usable .NET version;</li>
+</ul>
+</li>
+<li><p>The compilation does not complete the preparation; in the last step the developer shall make some manual copy:</p>
+<ul>
+<li>Copy the <strong>RootFolder\jars</strong> folder within each runtime folder under <strong>RootFolder\bin</strong></li>
+<li>Copy the <strong>RootFolder\src\config</strong> folder within each runtime folder under <strong>RootFolder\bin</strong>.</li>
+</ul>
+</li>
+</ul>
+<p>The final result shall look like this:</p>
+<ul>
+<li>RootFolder
+<ul>
+<li>bin
+<ul>
+<li>net5.0
+<ul>
+<li>config</li>
+<li>jars</li>
+<li>other folders</li>
+</ul>
+</li>
+<li>net6.0
+<ul>
+<li>config</li>
+<li>jars</li>
+<li>other folders</li>
+</ul>
+</li>
+<li>net461
+<ul>
+<li>config</li>
+<li>jars</li>
+</ul>
+</li>
+<li>netcoreapp3.1
+<ul>
+<li>config</li>
+<li>jars</li>
+<li>other folders</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Other folders</li>
+</ul>
+</li>
+</ul>
 </article>
           </div>
           
@@ -98,6 +155,9 @@
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/Documentation/articles/howtobuild.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
