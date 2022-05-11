@@ -1,4 +1,4 @@
-# KNet CLI
+# KNet: CLI
 
 ## Installation
 

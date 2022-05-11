@@ -321,41 +321,56 @@ namespace MASES.KNet
                     break;
                 case "ConnectStandalone":
                     {
+                        GlobalLog4JPath = Path.Combine(Const.AssemblyLocation, "config", "connect-log4j.properties");
                         ApplicationHeapSize = "2G";
                         ApplicationInitialHeapSize = "256M";
-                        var tmpResult = new List<string>(result);
-                        if (tmpResult.Contains("-daemon"))
+                        if (result == null || result.Length == 0) Console.WriteLine($"USAGE: MASES.KNetCLI -ClassToRun {classToRun} [-daemon] connect-standalone.properties");
+                        else
                         {
-                            tmpResult.Add("-name");
-                            tmpResult.Add("connectStandalone");
+                            var tmpResult = new List<string>(result);
+                            if (tmpResult.Contains("-daemon"))
+                            {
+                                tmpResult.Add("-name");
+                                tmpResult.Add("connectStandalone");
+                            }
+                            result = tmpResult.ToArray();
                         }
-                        result = tmpResult.ToArray();
                     }
                     break;
                 case "ConnectDistributed":
                     {
+                        GlobalLog4JPath = Path.Combine(Const.AssemblyLocation, "config", "connect-log4j.properties");
                         ApplicationHeapSize = "2G";
                         ApplicationInitialHeapSize = "256M";
-                        var tmpResult = new List<string>(result);
-                        if (tmpResult.Contains("-daemon"))
+                        if (result == null || result.Length == 0) Console.WriteLine($"USAGE: MASES.KNetCLI -ClassToRun {classToRun} [-daemon] connect-distributed.properties");
+                        else
                         {
-                            tmpResult.Add("-name");
-                            tmpResult.Add("connectDistributed");
+                            var tmpResult = new List<string>(result);
+                            if (tmpResult.Contains("-daemon"))
+                            {
+                                tmpResult.Add("-name");
+                                tmpResult.Add("connectDistributed");
+                            }
+                            result = tmpResult.ToArray();
                         }
-                        result = tmpResult.ToArray();
                     }
                     break;
                 case "MirrorMaker2":
                     {
+                        GlobalLog4JPath = Path.Combine(Const.AssemblyLocation, "config", "connect-log4j.properties");
                         ApplicationHeapSize = "2G";
                         ApplicationInitialHeapSize = "256M";
-                        var tmpResult = new List<string>(result);
-                        if (tmpResult.Contains("-daemon"))
+                        if (result == null || result.Length == 0) Console.WriteLine($"USAGE: MASES.KNetCLI -ClassToRun {classToRun} [-daemon] mm2.properties");
+                        else
                         {
-                            tmpResult.Add("-name");
-                            tmpResult.Add("mirrorMaker");
+                            var tmpResult = new List<string>(result);
+                            if (tmpResult.Contains("-daemon"))
+                            {
+                                tmpResult.Add("-name");
+                                tmpResult.Add("mirrorMaker");
+                            }
+                            result = tmpResult.ToArray();
                         }
-                        result = tmpResult.ToArray();
                     }
                     break;
                 default:

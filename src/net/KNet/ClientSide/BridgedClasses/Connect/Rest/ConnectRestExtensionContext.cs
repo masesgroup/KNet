@@ -17,8 +17,9 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
+using MASES.KNet.Connect.Health;
 
-namespace MASES.KNet.Connect.Health
+namespace MASES.KNet.Connect.Rest
 {
     public class ConnectRestExtensionContext : JVMBridgeBase<ConnectRestExtensionContext>
     {
