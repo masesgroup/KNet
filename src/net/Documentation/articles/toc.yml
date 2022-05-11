@@ -14,3 +14,5 @@
   href: usage.md
 - name: Usage CLI
   href: usageCLI.md
+- name: How to build from scratch
+  href: howtobuild.md
