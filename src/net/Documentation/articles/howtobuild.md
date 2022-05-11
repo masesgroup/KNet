@@ -1,42 +1,41 @@
 # KNet How to build from scratch
 
-If the user clones the repo, the following steps shall be done to use the project. 
+If the user clones the repo, the following steps shall be done to use the project. The full steps can be found within the repo, under the **.github\workflows** folder.
+
 Let's start with the tools needed to achieve the goal:
 * An installed version of __git for Windows__
 * An installed version of .NET 6 SDK
 * An installed version of Apache Maven (> 3.8.1)
 
-The full steps 
-
 Then the steps are the following (the steps are made for Windows shell):
 
-* Clone the repository in a folder (named for convenience TheFolder)
+* Clone the repository in a folder (named for convenience RootFolder)
 
-> cd TheFolder
-> git clone https://github.com/masesgroup/KNet.git
->
+  > cd RootFolder
+  > git clone https://github.com/masesgroup/KNet.git
+  >
 
-* The project now needs to compile Java classes and obtains the Maven artifacts; this is done with a single step (it is important to use the **package** key as command for Maven); 
+* The project now needs to compile Java classes and obtains the Maven artifacts; this is done with a single step (it is important to use the **package** key as command for Maven):
 
-> cd TheFolder
-> {PathToMavenInstallation}\bin\mvn -f src/java/knet/pom.xml package
->
+  > cd RootFolder
+  > {PathToMavenInstallation}\bin\mvn -f src/java/knet/pom.xml package
+  >
 
-  * The result of this step produces the artifacts within TheFolder\jars folder.
+  * The result of this step produces the artifacts within RootFolder\jars folder.
 
-* The next step is to build the executables:
+* The next step builds the executables:
 
-> cd TheFolder
-> dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KNetCLI\KNetCLI.csproj
->
+  > cd RootFolder
+  > dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KNetCLI\KNetCLI.csproj
+  >
 
-  * The previous command generates many folders under TheFolder\bin folder; each folder refers to the usable .NET version;
+  * The previous command generates many folders under RootFolder\bin folder; each folder refers to the usable .NET version;
 * The compilation does not complete the preparation; in the last step the developer shall make some manual copy:
-  * Copy the **TheFolder\jars** folder within each runtime folder under **TheFolder\bin**
-  * Copy the **TheFolder\src\config** folder within each runtime folder under **TheFolder\bin**.
+  * Copy the **RootFolder\jars** folder within each runtime folder under **RootFolder\bin**
+  * Copy the **RootFolder\src\config** folder within each runtime folder under **RootFolder\bin**.
   
-The final result will be something like this:
-* TheFolder
+The final result shall look like this:
+* RootFolder
   * bin
     * net5.0
       * config
