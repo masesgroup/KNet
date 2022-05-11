@@ -16,20 +16,21 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.JCOBridge.C2JBridge;
-
-namespace MASES.KNet.Connect.Components
+namespace MASES.KNet.Connect.Json
 {
-    public interface IVersion
+    public enum DecimalFormat
     {
-        string Version();
-    }
 
-    public class Versioned : JVMBridgeBase<Versioned, IVersion>, IVersion
-    {
-        public override bool IsInterface => true;
-        public override string ClassName => "org.apache.kafka.connect.components.Versioned";
+        /**
+         * Serializes the JSON Decimal as a base-64 string. For example, serializing the value
+         * `10.2345` with the BASE64 setting will result in `"D3J5"`.
+         */
+        BASE64,
 
-        public string Version() => IExecute<string>("version");
+        /**
+         * Serializes the JSON Decimal as a JSON number. For example, serializing the value
+         * `10.2345` with the NUMERIC setting will result in `10.2345`.
+         */
+        NUMERIC
     }
 }

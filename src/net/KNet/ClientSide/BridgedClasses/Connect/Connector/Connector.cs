@@ -23,7 +23,28 @@ using MASES.KNet.Connect.Components;
 
 namespace MASES.KNet.Connect.Connector
 {
-    public class Connector : Versioned
+    public interface IConnector : IVersion
+    {
+        void Initialize(ConnectorContext ctx);
+
+        void Initialize(ConnectorContext ctx, List<Map<string, string>> taskConfigs);
+
+        void Start(Map<string, string> props);
+
+        void Reconfigure(Map<string, string> props);
+
+        Class TaskClass();
+
+        List<Map<string, string>> TaskConfigs(int maxTasks);
+
+        void Stop();
+
+        Config Validate(Map<string, string> connectorConfigs);
+
+        ConfigDef Config();
+    }
+
+    public class Connector : Versioned, IConnector
     {
         public override bool IsAbstract => true;
         public override string ClassName => "org.apache.kafka.connect.connector.Connector";
@@ -36,14 +57,14 @@ namespace MASES.KNet.Connect.Connector
 
         public void Reconfigure(Map<string, string> props) => IExecute("reconfigure", props);
 
-        public Class TaskClass => IExecute<Class>("taskClass");
+        public Class TaskClass() => IExecute<Class>("taskClass");
 
-        public List<Map<string, string>> taskConfigs(int maxTasks) => IExecute<List<Map<string, string>>>("taskConfigs", maxTasks);
+        public List<Map<string, string>> TaskConfigs(int maxTasks) => IExecute<List<Map<string, string>>>("taskConfigs", maxTasks);
 
         public void Stop() => IExecute("stop");
 
-        public Config Validate(Map<String, String> connectorConfigs) => IExecute<Config>("validate", connectorConfigs);
+        public Config Validate(Map<string, string> connectorConfigs) => IExecute<Config>("validate", connectorConfigs);
 
-        public ConfigDef Config => IExecute<ConfigDef>("config");
+        public ConfigDef Config() => IExecute<ConfigDef>("config");
     }
 }

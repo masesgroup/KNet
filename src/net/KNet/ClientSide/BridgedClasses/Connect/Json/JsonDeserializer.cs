@@ -18,18 +18,12 @@
 
 using MASES.JCOBridge.C2JBridge;
 
-namespace MASES.KNet.Connect.Components
+namespace MASES.KNet.Connect.Json
 {
-    public interface IVersion
+    public class JsonDeserializer : JVMBridgeBase<JsonDeserializer>
     {
-        string Version();
-    }
+        public override string ClassName => "org.apache.kafka.connect.json.JsonDeserializer";
 
-    public class Versioned : JVMBridgeBase<Versioned, IVersion>, IVersion
-    {
-        public override bool IsInterface => true;
-        public override string ClassName => "org.apache.kafka.connect.components.Versioned";
-
-        public string Version() => IExecute<string>("version");
+        // MISSING SOME METHOD DUE TO MISSING com.fasterxml.jackson.databind.*
     }
 }

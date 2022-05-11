@@ -21,12 +21,22 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace MASES.KNet.Connect.Connector
 {
-    public class Task : JVMBridgeBase<Task>
+    public interface ITask
+    {
+        string Version();
+
+        void Start(Map<string, string> props);
+
+        void Stop();
+    }
+
+    public class Task : JVMBridgeBase<Task, ITask>, ITask
     {
         public override bool IsInterface => true;
+
         public override string ClassName => "org.apache.kafka.connect.connector.Task";
 
-        public string Version => IExecute<string>("version");
+        public string Version() => IExecute<string>("version");
 
         public void Start(Map<string, string> props) => IExecute("start", props);
 

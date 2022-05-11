@@ -16,20 +16,15 @@
 *  Refer to LICENSE for more information.
 */
 
+using Java.Util;
 using MASES.JCOBridge.C2JBridge;
 
-namespace MASES.KNet.Connect.Components
+namespace MASES.KNet.Connect.Rest.Basic.Auth.Extension
 {
-    public interface IVersion
+    public class JaasBasicAuthFilter : JVMBridgeBase<JaasBasicAuthFilter>
     {
-        string Version();
-    }
+        public override string ClassName => "org.apache.kafka.connect.rest.basic.auth.extension.JaasBasicAuthFilter";
 
-    public class Versioned : JVMBridgeBase<Versioned, IVersion>, IVersion
-    {
-        public override bool IsInterface => true;
-        public override string ClassName => "org.apache.kafka.connect.components.Versioned";
-
-        public string Version() => IExecute<string>("version");
+        // TO BE DONE AFTER EVOLUTION OF JNET: use dynamic until now
     }
 }
