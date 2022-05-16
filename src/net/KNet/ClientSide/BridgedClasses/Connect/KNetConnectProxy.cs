@@ -51,7 +51,7 @@ namespace MASES.KNet.Connect
                     KNetCore.GlobalInstance.RegisterCLRGlobal(SinkConnector.ConnectorName, SinkConnector);
                     return true;
                 }
-                catch (Exception e)
+                catch
                 {
                     return false;
                 }
@@ -69,30 +69,10 @@ namespace MASES.KNet.Connect
                     KNetCore.GlobalInstance.RegisterCLRGlobal(SourceConnector.ConnectorName, SourceConnector);
                     return true;
                 }
-                catch (Exception e)
+                catch
                 {
                     return false;
                 }
-            }
-        }
-
-        public static void Register<TTask>(KNetSinkConnector<TTask> instance) where TTask : KNetSinkTask
-        {
-            lock (globalInstanceLock)
-            {
-                if (SinkConnector != null) throw new InvalidOperationException("Cannot register multiple KNetSinkConnector");
-                SinkConnector = instance;
-                KNetCore.GlobalInstance.RegisterCLRGlobal(SinkConnector.ConnectorName, SinkConnector);
-            }
-        }
-
-        public static void Register<TTask>(KNetSourceConnector<TTask> instance) where TTask : KNetSourceTask
-        {
-            lock (globalInstanceLock)
-            {
-                if (SourceConnector != null) throw new InvalidOperationException("Cannot register multiple KNetSourceConnector");
-                SourceConnector = instance;
-                KNetCore.GlobalInstance.RegisterCLRGlobal(SourceConnector.ConnectorName, SourceConnector);
             }
         }
 
