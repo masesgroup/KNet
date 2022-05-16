@@ -605,6 +605,10 @@ namespace MASES.KNet
             ReleasePath,
             ReleaseAdditionalPath,
         });
+
+#if DEBUG
+        public override bool EnableDebug => true;
+#endif
     }
     /// <summary>
     /// Directly usable implementation of <see cref="KNetCore{T}"/>
