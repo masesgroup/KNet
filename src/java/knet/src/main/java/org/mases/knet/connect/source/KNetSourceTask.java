@@ -18,6 +18,7 @@
 
 package org.mases.knet.connect.source;
 
+import org.apache.kafka.common.config.ConfigException;
 import org.apache.kafka.connect.source.SourceRecord;
 import org.apache.kafka.connect.source.SourceTask;
 import org.mases.jcobridge.*;
@@ -46,11 +47,13 @@ public class KNetSourceTask extends SourceTask {
         dataToExchange = dte;
     }
 
-    public KNetSourceTask() throws JCException, IOException {
+    public KNetSourceTask() throws ConfigException, JCException, IOException {
         super();
         long taskid = taskId.incrementAndGet();
         JCOBridge.RegisterJVMGlobal(String.format("KNetSourceTask_%d", taskid), this);
-        sourceTask = (JCObject) KNetConnectProxy.getSourceConnector().Invoke("AllocateTask", taskid);
+        JCObject source = KNetConnectProxy.getSourceConnector();
+        if (source == null) throw new ConfigException("getSourceConnector returned null.");
+        sourceTask = (JCObject) source.Invoke("AllocateTask", taskid);
     }
 
     @Override

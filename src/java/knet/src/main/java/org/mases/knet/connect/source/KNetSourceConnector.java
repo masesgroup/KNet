@@ -36,6 +36,8 @@ import java.util.Map;
 public class KNetSourceConnector extends SourceConnector {
     private static final Logger log = LoggerFactory.getLogger(KNetSourceConnector.class);
 
+    private static final String registrationName = "KNetSourceConnector";
+
     Object dataToExchange = null;
 
     public Object getDataToExchange() {
@@ -53,16 +55,17 @@ public class KNetSourceConnector extends SourceConnector {
                 log.error("Failed Invoke of \"initializeSourceConnector\"");
                 throw new ConfigException("Failed Invoke of \"initializeSourceConnector\"");
             } else {
-                JCOBridge.RegisterJVMGlobal("KNetSourceConnector", this);
+                JCOBridge.RegisterJVMGlobal(registrationName, this);
                 try {
                     dataToExchange = props;
-                    KNetConnectProxy.getSourceConnector().Invoke("StartInternal");
+                    JCObject source = KNetConnectProxy.getSourceConnector();
+                    if (source == null) throw new ConfigException("getSourceConnector returned null.");
+                    source.Invoke("StartInternal");
                 } finally {
                     dataToExchange = null;
                 }
             }
-        } catch (JCException |
-                IOException jcne) {
+        } catch (JCException | IOException jcne) {
             log.error("Failed Invoke of \"start\"", jcne);
         }
     }
@@ -79,7 +82,9 @@ public class KNetSourceConnector extends SourceConnector {
             Map<String, String> config = new HashMap<>();
             try {
                 dataToExchange = config;
-                KNetConnectProxy.getSourceConnector().Invoke("TaskConfigsInternal", i);
+                JCObject source = KNetConnectProxy.getSourceConnector();
+                if (source == null) throw new ConfigException("getSourceConnector returned null.");
+                source.Invoke("TaskConfigsInternal", i);
             } catch (JCException | IOException jcne) {
                 log.error("Failed Invoke of \"start\"", jcne);
             } finally {
@@ -94,9 +99,11 @@ public class KNetSourceConnector extends SourceConnector {
     public void stop() {
         try {
             try {
-                KNetConnectProxy.getSourceConnector().Invoke("StopInternal");
+                JCObject source = KNetConnectProxy.getSourceConnector();
+                if (source == null) throw new ConfigException("getSourceConnector returned null.");
+                source.Invoke("StopInternal");
             } finally {
-                JCOBridge.UnregisterJVMGlobal("KNetSourceConnector");
+                JCOBridge.UnregisterJVMGlobal(registrationName);
             }
         } catch (JCException | IOException jcne) {
             log.error("Failed Invoke of \"stop\"", jcne);

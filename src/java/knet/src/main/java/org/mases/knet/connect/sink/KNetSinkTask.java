@@ -18,6 +18,7 @@
 
 package org.mases.knet.connect.sink;
 
+import org.apache.kafka.common.config.ConfigException;
 import org.apache.kafka.connect.sink.SinkRecord;
 import org.apache.kafka.connect.sink.SinkTask;
 import org.apache.kafka.connect.sink.SinkTaskContext;
@@ -47,11 +48,13 @@ public class KNetSinkTask extends SinkTask {
         dataToExchange = dte;
     }
 
-    public KNetSinkTask() throws JCException, IOException {
+    public KNetSinkTask() throws ConfigException, JCException, IOException {
         super();
         long taskid = taskId.incrementAndGet();
         JCOBridge.RegisterJVMGlobal(String.format("KNetSinkTask_%d", taskid), this);
-        sinkTask = (JCObject) KNetConnectProxy.getSinkConnector().Invoke("AllocateTask", taskid);
+        JCObject sink = KNetConnectProxy.getSinkConnector();
+        if (sink == null) throw new ConfigException("getSinkConnector returned null.");
+        sinkTask = (JCObject) sink.Invoke("AllocateTask", taskid);
     }
 
     @Override
