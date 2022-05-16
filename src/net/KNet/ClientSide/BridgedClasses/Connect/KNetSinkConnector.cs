@@ -16,6 +16,8 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KNet.Connect.Sink;
+using MASES.KNet.Connect.Source;
 using System;
 
 namespace MASES.KNet.Connect
@@ -26,6 +28,10 @@ namespace MASES.KNet.Connect
     /// <typeparam name="TTask">The task class inherited from <see cref="KNetSinkTask"/></typeparam>
     public abstract class KNetSinkConnector<TTask> : KNetConnector where TTask : KNetSinkTask
     {
+        /// <summary>
+        /// The <see cref="SinkConnectorContext"/>
+        /// </summary>
+        public SinkConnectorContext Context => Context<SinkConnectorContext>();
         /// <summary>
         /// Set the <see cref="ReflectedConnectorClassName"/> of the connector to a fixed value
         /// </summary>

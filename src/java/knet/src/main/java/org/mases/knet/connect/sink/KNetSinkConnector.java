@@ -22,6 +22,7 @@ import org.apache.kafka.common.config.ConfigDef;
 import org.apache.kafka.common.config.ConfigException;
 import org.apache.kafka.connect.connector.Task;
 import org.apache.kafka.connect.sink.SinkConnector;
+import org.apache.kafka.connect.sink.SinkConnectorContext;
 import org.mases.jcobridge.*;
 import org.mases.knet.connect.KNetConnectProxy;
 import org.slf4j.Logger;
@@ -46,6 +47,10 @@ public class KNetSinkConnector extends SinkConnector {
 
     public void setDataToExchange(Object dte) {
         dataToExchange = dte;
+    }
+
+    public SinkConnectorContext getContext() {
+        return context();
     }
 
     @Override

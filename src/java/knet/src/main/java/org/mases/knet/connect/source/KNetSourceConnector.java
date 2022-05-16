@@ -22,6 +22,7 @@ import org.apache.kafka.common.config.ConfigDef;
 import org.apache.kafka.common.config.ConfigException;
 import org.apache.kafka.connect.connector.Task;
 import org.apache.kafka.connect.source.SourceConnector;
+import org.apache.kafka.connect.source.SourceConnectorContext;
 import org.mases.jcobridge.*;
 import org.mases.knet.connect.KNetConnectProxy;
 import org.slf4j.Logger;
@@ -46,6 +47,10 @@ public class KNetSourceConnector extends SourceConnector {
 
     public void setDataToExchange(Object dte) {
         dataToExchange = dte;
+    }
+
+    public SourceConnectorContext getContext() {
+        return context();
     }
 
     @Override

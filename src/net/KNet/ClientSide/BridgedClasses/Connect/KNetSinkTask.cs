@@ -27,6 +27,10 @@ namespace MASES.KNet.Connect
     public abstract class KNetSinkTask : KNetTask
     {
         /// <summary>
+        /// The <see cref="SinkTaskContext"/>
+        /// </summary>
+        public SinkTaskContext Context => Context<SinkTaskContext>();
+        /// <summary>
         /// Set the <see cref="ReflectedTaskClassName"/> of the connector to a fixed value
         /// </summary>
         public override string ReflectedTaskClassName => "KNetSinkTask";

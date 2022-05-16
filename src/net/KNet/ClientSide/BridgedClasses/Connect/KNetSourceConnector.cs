@@ -16,6 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KNet.Connect.Source;
 using System;
 
 namespace MASES.KNet.Connect
@@ -26,6 +27,10 @@ namespace MASES.KNet.Connect
     /// <typeparam name="TTask">The task class inherited from <see cref="KNetSourceTask"/></typeparam>
     public abstract class KNetSourceConnector<TTask> : KNetConnector where TTask : KNetSourceTask
     {
+        /// <summary>
+        /// The <see cref="SourceConnectorContext"/>
+        /// </summary>
+        public SourceConnectorContext Context => Context<SourceConnectorContext>();
         /// <summary>
         /// Set the <see cref="ReflectedConnectorClassName"/> of the connector to a fixed value
         /// </summary>

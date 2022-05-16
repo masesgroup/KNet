@@ -21,6 +21,7 @@ package org.mases.knet.connect.source;
 import org.apache.kafka.common.config.ConfigException;
 import org.apache.kafka.connect.source.SourceRecord;
 import org.apache.kafka.connect.source.SourceTask;
+import org.apache.kafka.connect.source.SourceTaskContext;
 import org.mases.jcobridge.*;
 import org.mases.knet.connect.KNetConnectProxy;
 import org.slf4j.Logger;
@@ -54,6 +55,10 @@ public class KNetSourceTask extends SourceTask {
         JCObject source = KNetConnectProxy.getSourceConnector();
         if (source == null) throw new ConfigException("getSourceConnector returned null.");
         sourceTask = (JCObject) source.Invoke("AllocateTask", taskid);
+    }
+
+    public SourceTaskContext getContext() {
+        return context;
     }
 
     @Override

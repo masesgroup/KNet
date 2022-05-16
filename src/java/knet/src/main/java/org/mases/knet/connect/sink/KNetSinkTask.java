@@ -57,6 +57,10 @@ public class KNetSinkTask extends SinkTask {
         sinkTask = (JCObject) sink.Invoke("AllocateTask", taskid);
     }
 
+    public SinkTaskContext getContext() {
+        return context;
+    }
+
     @Override
     public String version() {
         try {
