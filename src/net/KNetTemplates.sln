@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31624.102
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNet", "KNet\KNet.csproj", "{3DB45E58-F79C-448E-A028-2CD17A55EFF6}"
 EndProject
@@ -10,6 +10,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "knetConsumerApp", "templates\templates\knetConsumerApp\knetConsumerApp.csproj", "{A1CF5D0C-C76C-4E44-A113-8F73DC7F3732}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "knetPipeStreamApp", "templates\templates\knetPipeStreamApp\knetPipeStreamApp.csproj", "{D022E0DE-0B84-4C83-9530-C3B9D797D6C3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "knetConnectSource", "templates\templates\knetConnectSource\knetConnectSource.csproj", "{2E5B6053-82B6-4109-97DE-BCD3C1976D8C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "knetConnectSink", "templates\templates\knetConnectSink\knetConnectSink.csproj", "{FC5B7EBE-067F-43EB-A530-DCA2263FCBA8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{D022E0DE-0B84-4C83-9530-C3B9D797D6C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D022E0DE-0B84-4C83-9530-C3B9D797D6C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D022E0DE-0B84-4C83-9530-C3B9D797D6C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E5B6053-82B6-4109-97DE-BCD3C1976D8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E5B6053-82B6-4109-97DE-BCD3C1976D8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E5B6053-82B6-4109-97DE-BCD3C1976D8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E5B6053-82B6-4109-97DE-BCD3C1976D8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC5B7EBE-067F-43EB-A530-DCA2263FCBA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC5B7EBE-067F-43EB-A530-DCA2263FCBA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC5B7EBE-067F-43EB-A530-DCA2263FCBA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC5B7EBE-067F-43EB-A530-DCA2263FCBA8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
