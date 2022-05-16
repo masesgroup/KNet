@@ -16,20 +16,21 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Connect.Cli
+using Java.Util;
+using MASES.KNet.Connect.Sink;
+
+namespace MASES.KNet.Connect
 {
-    /// <summary>
-    /// Class managing ConnectDistributed
-    /// </summary>
-    public class ConnectDistributed : JCOBridge.C2JBridge.JVMBridgeMain<ConnectDistributed>
+    public abstract class KNetSinkTask : KNetTask
     {
-        /// <summary>
-        /// Initialize a new <see cref="ConnectDistributed"/>
-        /// </summary>
-        public ConnectDistributed()
-            : base("org.apache.kafka.connect.cli.ConnectDistributed")
+        public override string ReflectedTaskClassName => "KNetSinkTask";
+
+        public void PutInternal()
         {
-            Connect.KNetConnectProxy.Register();
+            Collection<SinkRecord> collection = DataToExchange<Collection<SinkRecord>>();
+            Put(collection);
         }
+
+        public abstract void Put(Collection<SinkRecord> collection);
     }
 }
