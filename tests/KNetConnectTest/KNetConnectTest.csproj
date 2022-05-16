@@ -2,7 +2,7 @@
   <PropertyGroup>
     <AssemblyName>KNetConnectTest</AssemblyName>
     <RootNamespace>MASES.KNetConnectTest</RootNamespace>
-    <Title>KNetTest - a test tool for KNet</Title>
+    <Title>KNetConnectTest - a test tool for KNet Connect</Title>
     <Description>KNetConnectTest - a test tool for KNet Connect</Description>
     <Copyright>Copyright ©  MASES s.r.l. 2022</Copyright>
     <Authors>MASES s.r.l.</Authors>
