@@ -23,9 +23,9 @@ using MASES.KNet.Connect.Source;
 
 namespace MASES.KNetConnectTest
 {
-    public class KnetSourceTestConnector : KNetSourceConnector<KnetSourceTestTask>
+    public class KNetSourceTestConnector : KNetSourceConnector<KNetSourceTestTask>
     {
-        public override string ConnectorName => "MASES.KNetConnectTest.KnetSourceTestConnector";
+        public override string ConnectorName => "MASES.KNetConnectTest.KNetSourceTestConnector";
 
         public override void Start(Map<string, string> props)
         {
@@ -41,14 +41,9 @@ namespace MASES.KNetConnectTest
         {
             
         }
-
-        public override Config Validate(Map<string, string> connectorConfigs)
-        {
-            return null;
-        }
     }
 
-    public class KnetSourceTestTask : KNetSourceTask
+    public class KNetSourceTestTask : KNetSourceTask
     {
         public override List<SourceRecord> Poll()
         {

@@ -1,5 +1,4 @@
 ﻿using Java.Util;
-using MASES.KNet.Common.Config;
 using MASES.KNet.Connect;
 using MASES.KNet.Connect.Source;
 
@@ -22,11 +21,6 @@ namespace MASES.KNetTemplate.KNetConnect
         public override void TaskConfigs(int index, Map<string, string> config)
         {
 
-        }
-
-        public override Config Validate(Map<string, string> connectorConfigs)
-        {
-            return null;
         }
     }
 

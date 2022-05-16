@@ -23,9 +23,9 @@ using MASES.KNet.Connect.Sink;
 
 namespace MASES.KNetConnectTest
 {
-    public class KnetSinkTestConnector : KNetSinkConnector<KnetSinkTestTask>
+    public class KNetSinkTestConnector : KNetSinkConnector<KNetSinkTestTask>
     {
-        public override string ConnectorName => "MASES.KNetConnectTest.KnetSinkTestConnector";
+        public override string ConnectorName => "MASES.KNetConnectTest.KNetSinkTestConnector";
 
         public override void Start(Map<string, string> props)
         {
@@ -42,13 +42,9 @@ namespace MASES.KNetConnectTest
 
         }
 
-        public override Config Validate(Map<string, string> connectorConfigs)
-        {
-            return null;
-        }
     }
 
-    public class KnetSinkTestTask : KNetSinkTask
+    public class KNetSinkTestTask : KNetSinkTask
     {
         public override void Put(Collection<SinkRecord> collection)
         {
@@ -67,7 +63,7 @@ namespace MASES.KNetConnectTest
 
         public override string Version()
         {
-            return "KnetSinkTestTask";
+            return "KNetSinkTestTask";
         }
     }
 }
