@@ -32,10 +32,10 @@ import java.util.Map;
 public class KNetConnectProxy {
     private static final Logger log = LoggerFactory.getLogger(KNetSourceTask.class);
 
-    public static final String DOTNET_CLASSNAME_CONFIG = "classname";
+    public static final String DOTNET_CLASSNAME_CONFIG = "knet.dotnet.classname";
 
     public static final ConfigDef CONFIG_DEF = new ConfigDef()
-            .define(DOTNET_CLASSNAME_CONFIG, ConfigDef.Type.STRING, null, ConfigDef.Importance.HIGH, ".NET class name.");
+            .define(DOTNET_CLASSNAME_CONFIG, ConfigDef.Type.STRING, null, ConfigDef.Importance.HIGH, ".NET class name in the form usable from .NET like \"classname, assembly name\".");
 
     static JCObject knetConnectProxy = null;
     static String sinkConnectorName = null;
