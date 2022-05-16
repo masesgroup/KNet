@@ -20,10 +20,19 @@ using System;
 
 namespace MASES.KNet.Connect
 {
+    /// <summary>
+    /// An implementation of <see cref="KNetConnector"/> for source connectors
+    /// </summary>
+    /// <typeparam name="TTask">The task class inherited from <see cref="KNetSourceTask"/></typeparam>
     public abstract class KNetSourceConnector<TTask> : KNetConnector where TTask : KNetSourceTask
     {
-        public sealed override string ReflectedConnectorName => "KNetSourceConnector";
-
+        /// <summary>
+        /// Set the <see cref="ReflectedConnectorClassName"/> of the connector to a fixed value
+        /// </summary>
+        public sealed override string ReflectedConnectorClassName => "KNetSourceConnector";
+        /// <summary>
+        /// Set the <see cref="TaskClassType"/> of the connector to the value defined from <typeparamref name="TTask"/>
+        /// </summary>
         public sealed override Type TaskClassType => typeof(TTask);
     }
 }

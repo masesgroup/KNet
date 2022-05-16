@@ -21,15 +21,26 @@ using MASES.KNet.Connect.Source;
 
 namespace MASES.KNet.Connect
 {
+    /// <summary>
+    /// An implementation of <see cref="KNetTask"/> for source task
+    /// </summary>
     public abstract class KNetSourceTask : KNetTask
     {
+        /// <summary>
+        /// Set the <see cref="ReflectedTaskClassName"/> of the connector to a fixed value
+        /// </summary>
         public override string ReflectedTaskClassName => "KNetSourceTask";
-
+        /// <summary>
+        /// Public method used from Java to trigger <see cref="Poll"/>
+        /// </summary>
         public List<SourceRecord> PollInternal()
         {
             return Poll();
         }
-
+        /// <summary>
+        /// Implement the method to execute the Poll action
+        /// </summary>
+        /// <returns>The list of <see cref="SourceRecord"/> to return to Apache Kafka Connect framework</returns>
         public abstract List<SourceRecord> Poll();
     }
 }
