@@ -1,10 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <AssemblyName>KNetBenchmark</AssemblyName>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>MASES.KNet.Benchmark</RootNamespace>
-    <Title>KNetTest - a test tool for KNet</Title>
-    <Description>KNetTest - a test tool for KNet</Description>
+    <AssemblyName>KNetConnectTest</AssemblyName>
+    <RootNamespace>MASES.KNetConnectTest</RootNamespace>
+    <Title>KNetConnectTest - a test tool for KNet Connect</Title>
+    <Description>KNetConnectTest - a test tool for KNet Connect</Description>
     <Copyright>Copyright ©  MASES s.r.l. 2022</Copyright>
     <Authors>MASES s.r.l.</Authors>
     <Company>MASES s.r.l.</Company>
@@ -15,9 +14,6 @@
   </PropertyGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'net461'">
     <Reference Include="Microsoft.CSharp" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Confluent.Kafka" Version="1.8.2" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\net\KNet\KNet.csproj" />

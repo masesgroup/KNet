@@ -16,20 +16,14 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Connect.Cli
+using System;
+
+namespace MASES.KNet.Connect
 {
-    /// <summary>
-    /// Class managing ConnectDistributed
-    /// </summary>
-    public class ConnectDistributed : JCOBridge.C2JBridge.JVMBridgeMain<ConnectDistributed>
+    public abstract class KNetSourceConnector<TTask> : KNetConnector where TTask : KNetSourceTask
     {
-        /// <summary>
-        /// Initialize a new <see cref="ConnectDistributed"/>
-        /// </summary>
-        public ConnectDistributed()
-            : base("org.apache.kafka.connect.cli.ConnectDistributed")
-        {
-            Connect.KNetConnectProxy.Register();
-        }
+        public sealed override string ReflectedConnectorName => "KNetSourceConnector";
+
+        public sealed override Type TaskClassType => typeof(TTask);
     }
 }
