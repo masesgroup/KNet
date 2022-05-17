@@ -4,10 +4,8 @@ using MASES.KNet.Connect.Source;
 
 namespace MASES.KNetTemplate.KNetConnect
 {
-    public class KNetConnectSource : KNetSourceConnector<KnetConnectSourceTask>
+    public class KNetConnectSource : KNetSourceConnector<KNetConnectSource, KnetConnectSourceTask>
     {
-        public override string ConnectorName => "MASES.KNetTemplate.KNetConnect.KNetConnectSource";
-
         public override void Start(Map<string, string> props)
         {
 
@@ -24,7 +22,7 @@ namespace MASES.KNetTemplate.KNetConnect
         }
     }
 
-    public class KnetConnectSourceTask : KNetSourceTask
+    public class KnetConnectSourceTask : KNetSourceTask<KnetConnectSourceTask>
     {
         public override List<SourceRecord> Poll()
         {
@@ -39,11 +37,6 @@ namespace MASES.KNetTemplate.KNetConnect
         public override void Stop()
         {
 
-        }
-
-        public override string Version()
-        {
-            return "KnetConnectSourceTask";
         }
     }
 }

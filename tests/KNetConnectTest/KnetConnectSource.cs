@@ -17,16 +17,13 @@
 */
 
 using Java.Util;
-using MASES.KNet.Common.Config;
 using MASES.KNet.Connect;
 using MASES.KNet.Connect.Source;
 
 namespace MASES.KNetConnectTest
 {
-    public class KNetSourceTestConnector : KNetSourceConnector<KNetSourceTestTask>
+    public class KNetSourceTestConnector : KNetSourceConnector<KNetSourceTestConnector, KNetSourceTestTask>
     {
-        public override string ConnectorName => "MASES.KNetConnectTest.KNetSourceTestConnector";
-
         public override void Start(Map<string, string> props)
         {
 
@@ -43,7 +40,7 @@ namespace MASES.KNetConnectTest
         }
     }
 
-    public class KNetSourceTestTask : KNetSourceTask
+    public class KNetSourceTestTask : KNetSourceTask<KNetSourceTestTask>
     {
         public override List<SourceRecord> Poll()
         {
@@ -60,11 +57,6 @@ namespace MASES.KNetConnectTest
         public override void Stop()
         {
 
-        }
-
-        public override string Version()
-        {
-            return "KnetSourceTestTask";
         }
     }
 }

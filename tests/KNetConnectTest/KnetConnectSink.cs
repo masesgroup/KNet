@@ -17,16 +17,13 @@
 */
 
 using Java.Util;
-using MASES.KNet.Common.Config;
 using MASES.KNet.Connect;
 using MASES.KNet.Connect.Sink;
 
 namespace MASES.KNetConnectTest
 {
-    public class KNetSinkTestConnector : KNetSinkConnector<KNetSinkTestTask>
+    public class KNetSinkTestConnector : KNetSinkConnector<KNetSinkTestConnector, KNetSinkTestTask>
     {
-        public override string ConnectorName => "MASES.KNetConnectTest.KNetSinkTestConnector";
-
         public override void Start(Map<string, string> props)
         {
 
@@ -43,7 +40,7 @@ namespace MASES.KNetConnectTest
         }
     }
 
-    public class KNetSinkTestTask : KNetSinkTask
+    public class KNetSinkTestTask : KNetSinkTask<KNetSinkTestTask>
     {
         public override void Put(Collection<SinkRecord> collection)
         {
@@ -58,11 +55,6 @@ namespace MASES.KNetConnectTest
         public override void Stop()
         {
 
-        }
-
-        public override string Version()
-        {
-            return "KNetSinkTestTask";
         }
     }
 }
