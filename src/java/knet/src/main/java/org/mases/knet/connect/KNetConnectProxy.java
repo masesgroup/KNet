@@ -63,7 +63,7 @@ public class KNetConnectProxy {
         AbstractConfig parsedConfig = new AbstractConfig(CONFIG_DEF, props);
         String className = parsedConfig.getString(DOTNET_CLASSNAME_CONFIG);
         if (className == null)
-            throw new ConfigException("'knet.dotnet.classname' in KNetSinkConnector configuration requires a definition");
+            throw new ConfigException("'knet.dotnet.classname' in KNetSourceConnector configuration requires a definition");
         return (boolean) getConnectProxy().Invoke("AllocateSourceConnector", className);
     }
 

@@ -19,8 +19,8 @@
 package org.mases.knet.connect.source;
 
 import org.apache.kafka.common.config.ConfigDef;
-import org.apache.kafka.common.config.ConfigException;
 import org.apache.kafka.connect.connector.Task;
+import org.apache.kafka.connect.errors.ConnectException;
 import org.apache.kafka.connect.source.SourceConnector;
 import org.apache.kafka.connect.source.SourceConnectorContext;
 import org.mases.jcobridge.*;
@@ -58,13 +58,13 @@ public class KNetSourceConnector extends SourceConnector {
         try {
             if (!KNetConnectProxy.initializeSourceConnector(props)) {
                 log.error("Failed Invoke of \"initializeSourceConnector\"");
-                throw new ConfigException("Failed Invoke of \"initializeSourceConnector\"");
+                throw new ConnectException("Failed Invoke of \"initializeSourceConnector\"");
             } else {
                 JCOBridge.RegisterJVMGlobal(registrationName, this);
                 try {
                     dataToExchange = props;
                     JCObject source = KNetConnectProxy.getSourceConnector();
-                    if (source == null) throw new ConfigException("getSourceConnector returned null.");
+                    if (source == null) throw new ConnectException("getSourceConnector returned null.");
                     source.Invoke("StartInternal");
                 } finally {
                     dataToExchange = null;
@@ -88,7 +88,7 @@ public class KNetSourceConnector extends SourceConnector {
             try {
                 dataToExchange = config;
                 JCObject source = KNetConnectProxy.getSourceConnector();
-                if (source == null) throw new ConfigException("getSourceConnector returned null.");
+                if (source == null) throw new ConnectException("getSourceConnector returned null.");
                 source.Invoke("TaskConfigsInternal", i);
             } catch (JCException | IOException jcne) {
                 log.error("Failed Invoke of \"start\"", jcne);
@@ -105,7 +105,7 @@ public class KNetSourceConnector extends SourceConnector {
         try {
             try {
                 JCObject source = KNetConnectProxy.getSourceConnector();
-                if (source == null) throw new ConfigException("getSourceConnector returned null.");
+                if (source == null) throw new ConnectException("getSourceConnector returned null.");
                 source.Invoke("StopInternal");
             } finally {
                 JCOBridge.UnregisterJVMGlobal(registrationName);
