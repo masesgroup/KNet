@@ -22,9 +22,11 @@ using MASES.KNet.Connect.Source;
 namespace MASES.KNet.Connect
 {
     /// <summary>
-    /// An implementation of <see cref="KNetTask"/> for source task
+    /// An implementation of <see cref="KNetTask{TTask}"/> for source task
     /// </summary>
-    public abstract class KNetSourceTask : KNetTask
+    /// <typeparam name="TTask">The class which extends <see cref="KNetSourceTask{TTask}"/></typeparam>
+    public abstract class KNetSourceTask<TTask> : KNetTask<TTask>
+        where TTask : KNetSourceTask<TTask>
     {
         protected Map<string, V> OffsetForKey<V>(string key, V value) => Collections.SingletonMap(key, value);
 

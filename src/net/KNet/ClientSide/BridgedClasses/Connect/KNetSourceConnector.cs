@@ -22,10 +22,13 @@ using System;
 namespace MASES.KNet.Connect
 {
     /// <summary>
-    /// An implementation of <see cref="KNetConnector"/> for source connectors
+    /// An implementation of <see cref="KNetConnector{TSourceConnector}"/> for source connectors
     /// </summary>
-    /// <typeparam name="TTask">The task class inherited from <see cref="KNetSourceTask"/></typeparam>
-    public abstract class KNetSourceConnector<TTask> : KNetConnector where TTask : KNetSourceTask
+    /// <typeparam name="TSourceConnector">The connector class inherited from <see cref="KNetSinkConnector{TSourceConnector, TTask}"/></typeparam>
+    /// <typeparam name="TTask">The task class inherited from <see cref="KNetSourceTask{TTask}"/></typeparam>
+    public abstract class KNetSourceConnector<TSourceConnector, TTask> : KNetConnector<TSourceConnector>
+        where TSourceConnector : KNetSourceConnector<TSourceConnector, TTask>
+        where TTask : KNetSourceTask<TTask>
     {
         /// <summary>
         /// The <see cref="SourceConnectorContext"/>

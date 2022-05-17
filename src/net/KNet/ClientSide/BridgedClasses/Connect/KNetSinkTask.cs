@@ -22,9 +22,11 @@ using MASES.KNet.Connect.Sink;
 namespace MASES.KNet.Connect
 {
     /// <summary>
-    /// An implementation of <see cref="KNetTask"/> for sink task
+    /// An implementation of <see cref="KNetTask{TTask}"/> for sink task
     /// </summary>
-    public abstract class KNetSinkTask : KNetTask
+    /// <typeparam name="TTask">The class which extends <see cref="KNetSinkTask{TTask}"/></typeparam>
+    public abstract class KNetSinkTask<TTask> : KNetTask<TTask>
+        where TTask : KNetSinkTask<TTask>
     {
         /// <summary>
         /// The <see cref="SinkTaskContext"/>

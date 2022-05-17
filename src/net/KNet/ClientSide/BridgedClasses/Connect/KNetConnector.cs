@@ -185,4 +185,16 @@ namespace MASES.KNet.Connect
 
         public string Version() => throw new NotImplementedException("Invoked in Java before any initialization.");
     }
+    /// <summary>
+    /// The base connector class which is the base of both source or sink connectors and receives information about implementing class with <typeparamref name="TConnector"/> 
+    /// </summary>
+    /// <typeparam name="TConnector">The class which extends <see cref="KNetConnector{TConnector}"/></typeparam>
+    public abstract class KNetConnector<TConnector> : KNetConnector
+        where TConnector : KNetConnector<TConnector>
+    {
+        /// <summary>
+        /// Set the <see cref="IKNetConnector.ConnectorName"/> of the connector to the value defined from <typeparamref name="TConnector"/>
+        /// </summary>
+        public override string ConnectorName => typeof(TConnector).FullName;
+    }
 }

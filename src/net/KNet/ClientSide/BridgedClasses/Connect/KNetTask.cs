@@ -134,4 +134,16 @@ namespace MASES.KNet.Connect
         /// </summary>
         public abstract string Version();
     }
+    /// <summary>
+    /// The base task class which is the base of both source or sink task and receives information about implementing class with <typeparamref name="TTask"/> 
+    /// </summary>
+    /// <typeparam name="TTask">The class which extends <see cref="KNetTask{TTask}"/></typeparam>
+    public abstract class KNetTask<TTask> : KNetTask
+        where TTask : KNetTask<TTask>
+    {
+        /// <summary>
+        /// Set the <see cref="IKNetTask.Version"/> of the task to the value defined from <typeparamref name="TTask"/>
+        /// </summary>
+        public override string Version() => typeof(TTask).Assembly.GetName().Version.ToString();
+    }
 }

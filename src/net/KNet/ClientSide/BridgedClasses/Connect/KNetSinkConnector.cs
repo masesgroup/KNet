@@ -17,27 +17,29 @@
 */
 
 using MASES.KNet.Connect.Sink;
-using MASES.KNet.Connect.Source;
 using System;
 
 namespace MASES.KNet.Connect
 {
     /// <summary>
-    /// An implementation of <see cref="KNetConnector"/> for sink connectors
+    /// An implementation of <see cref="KNetConnector{TSinkConnector}"/> for sink connectors
     /// </summary>
-    /// <typeparam name="TTask">The task class inherited from <see cref="KNetSinkTask"/></typeparam>
-    public abstract class KNetSinkConnector<TTask> : KNetConnector where TTask : KNetSinkTask
+    /// <typeparam name="TSinkConnector">The connector class inherited from <see cref="KNetSinkConnector{TSinkConnector, TTask}"/></typeparam>
+    /// <typeparam name="TTask">The task class inherited from <see cref="KNetSinkTask{TTask}"/></typeparam>
+    public abstract class KNetSinkConnector<TSinkConnector, TTask> : KNetConnector<TSinkConnector>
+        where TSinkConnector : KNetSinkConnector<TSinkConnector, TTask>
+        where TTask : KNetSinkTask<TTask>
     {
         /// <summary>
         /// The <see cref="SinkConnectorContext"/>
         /// </summary>
         public SinkConnectorContext Context => Context<SinkConnectorContext>();
         /// <summary>
-        /// Set the <see cref="ReflectedConnectorClassName"/> of the connector to a fixed value
+        /// Set the <see cref="IKNetConnector.ReflectedConnectorClassName"/> of the connector to a fixed value
         /// </summary>
         public sealed override string ReflectedConnectorClassName => "KNetSinkConnector";
         /// <summary>
-        /// Set the <see cref="TaskClassType"/> of the connector to the value defined from <typeparamref name="TTask"/>
+        /// Set the <see cref="IKNetConnector.TaskClassType"/> of the connector to the value defined from <typeparamref name="TTask"/>
         /// </summary>
         public sealed override Type TaskClassType => typeof(TTask);
     }
