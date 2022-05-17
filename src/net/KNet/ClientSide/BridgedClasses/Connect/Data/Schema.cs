@@ -18,7 +18,6 @@
 
 using MASES.JCOBridge.C2JBridge;
 using Java.Util;
-using JavaLang = Java.Lang;
 
 namespace MASES.KNet.Connect.Data
 {
@@ -88,19 +87,19 @@ namespace MASES.KNet.Connect.Data
 
     public interface ISchema : IJVMBridgeBase
     {
-        Type Type();
+        Type Type { get; }
 
         bool IsOptional { get; }
 
-        JavaLang.Object DefaultValue();
+        Java.Lang.Object DefaultValue { get; }
 
-        string Name();
+        string Name { get; }
 
-        int Version();
+        int Version { get; }
 
-        string Doc();
+        string Doc { get; }
 
-        Map<string, string> Parameters();
+        Map<string, string> Parameters { get; }
 
         Schema KeySchema { get; }
 
@@ -128,19 +127,19 @@ namespace MASES.KNet.Connect.Data
         {
         }
 
-        public Type Type() { return IExecute<Type>("type"); }
+        public Type Type => IExecute<Type>("type"); 
 
         public bool IsOptional => IExecute<bool>("isOptional");
 
-        public JavaLang.Object DefaultValue() { return IExecute<JavaLang.Object>("defaultValue"); }
+        public Java.Lang.Object DefaultValue =>  IExecute<Java.Lang.Object>("defaultValue"); 
 
-        public string Name() { return IExecute<string>("name"); }
+        public string Name => IExecute<string>("name"); 
 
-        public int Version() { return IExecute<int>("version"); }
+        public int Version => IExecute<int>("version"); 
 
-        public string Doc() { return IExecute<string>("doc"); }
+        public string Doc => IExecute<string>("doc"); 
 
-        public Map<string, string> Parameters() { return IExecute<Map<string, string>>("parameters"); }
+        public Map<string, string> Parameters => IExecute<Map<string, string>>("parameters"); 
 
         public Schema KeySchema => IExecute<Schema>("keySchema");
 

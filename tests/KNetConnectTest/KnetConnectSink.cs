@@ -41,7 +41,6 @@ namespace MASES.KNetConnectTest
         {
 
         }
-
     }
 
     public class KNetSinkTestTask : KNetSinkTask

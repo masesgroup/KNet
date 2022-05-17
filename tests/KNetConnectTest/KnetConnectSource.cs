@@ -47,7 +47,9 @@ namespace MASES.KNetConnectTest
     {
         public override List<SourceRecord> Poll()
         {
-            return null;
+            ArrayList<SourceRecord> records = new();
+
+            return records;
         }
 
         public override void Start(Map<string, string> props)
