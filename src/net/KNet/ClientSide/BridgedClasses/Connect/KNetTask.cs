@@ -68,6 +68,24 @@ namespace MASES.KNet.Connect
         /// <typeparam name="T">The expected return <see cref="Type"/></typeparam>
         /// <returns>The <typeparamref name="T"/></returns>
         /// <exception cref="InvalidOperationException"> </exception>
+        protected void DataToExchange(object data)
+        {
+            if (reflectedTask != null)
+            {
+                JCOBridge.C2JBridge.IJVMBridgeBase jvmBBD = data as JCOBridge.C2JBridge.IJVMBridgeBase;
+                reflectedTask.Invoke("setDataToExchange", jvmBBD != null ? jvmBBD.Instance : data);
+            }
+            else
+            {
+                throw new InvalidOperationException($"{ReflectedTaskClassName} was not registered in global JVM");
+            }
+        }
+        /// <summary>
+        /// An helper function to read the data from Java side
+        /// </summary>
+        /// <typeparam name="T">The expected return <see cref="Type"/></typeparam>
+        /// <returns>The <typeparamref name="T"/></returns>
+        /// <exception cref="InvalidOperationException"> </exception>
         protected T Context<T>()
         {
             return (reflectedTask != null) ? reflectedTask.Invoke<T>("getContext") : throw new InvalidOperationException($"{ReflectedTaskClassName} was not registered in global JVM");

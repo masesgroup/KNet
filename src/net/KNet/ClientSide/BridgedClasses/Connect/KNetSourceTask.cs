@@ -37,9 +37,10 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// Public method used from Java to trigger <see cref="Poll"/>
         /// </summary>
-        public List<SourceRecord> PollInternal()
+        public void PollInternal()
         {
-            return Poll();
+            var result = Poll();
+            DataToExchange(result);
         }
         /// <summary>
         /// Implement the method to execute the Poll action

@@ -90,8 +90,13 @@ public class KNetSourceTask extends SourceTask {
     @Override
     public List<SourceRecord> poll() throws InterruptedException {
         try {
-            Object result = sourceTask.Invoke("PollInternal");
-            if (result != null) return (List<SourceRecord>) result;
+            try {
+                dataToExchange = null;
+                sourceTask.Invoke("PollInternal");
+                if (dataToExchange != null) return (List<SourceRecord>) dataToExchange;
+            } finally {
+                dataToExchange = null;
+            }
         } catch (JCNativeException jcne) {
             log.error("Failed Invoke of \"poll\"", jcne);
         }
