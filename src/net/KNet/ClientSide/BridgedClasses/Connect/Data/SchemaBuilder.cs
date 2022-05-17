@@ -22,6 +22,8 @@ namespace MASES.KNet.Connect.Data
 {
     public class SchemaBuilder : Schema
     {
+        public override bool IsInterface => false;
+
         public override string ClassName => "org.apache.kafka.connect.data.SchemaBuilder";
 
         [System.Obsolete("This is not public in Apache Kafka API")]

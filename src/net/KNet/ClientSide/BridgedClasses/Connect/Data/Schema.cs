@@ -87,19 +87,19 @@ namespace MASES.KNet.Connect.Data
 
     public interface ISchema : IJVMBridgeBase
     {
-        Type Type { get; }
+        Type Type();
 
         bool IsOptional { get; }
 
-        Java.Lang.Object DefaultValue { get; }
+        Java.Lang.Object DefaultValue();
 
-        string Name { get; }
+        string Name();
 
-        int Version { get; }
+        int Version();
 
-        string Doc { get; }
+        string Doc();
 
-        Map<string, string> Parameters { get; }
+        Map<string, string> Parameters();
 
         Schema KeySchema { get; }
 
@@ -114,6 +114,8 @@ namespace MASES.KNet.Connect.Data
 
     public class Schema : JVMBridgeBase<Schema>, ISchema
     {
+        public override bool IsInterface => true;
+
         public override string ClassName => "org.apache.kafka.connect.data.Schema";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
@@ -127,19 +129,39 @@ namespace MASES.KNet.Connect.Data
         {
         }
 
-        public Type Type => IExecute<Type>("type"); 
+        public static Schema INT8_SCHEMA => SExecute<Schema>("INT8_SCHEMA");
+        public static Schema INT16_SCHEMA => SExecute<Schema>("INT16_SCHEMA");
+        public static Schema INT32_SCHEMA => SExecute<Schema>("INT32_SCHEMA");
+        public static Schema INT64_SCHEMA => SExecute<Schema>("INT64_SCHEMA");
+        public static Schema FLOAT32_SCHEMA => SExecute<Schema>("FLOAT32_SCHEMA");
+        public static Schema FLOAT64_SCHEMA => SExecute<Schema>("FLOAT64_SCHEMA");
+        public static Schema BOOLEAN_SCHEMA => SExecute<Schema>("BOOLEAN_SCHEMA");
+        public static Schema STRING_SCHEMA => SExecute<Schema>("STRING_SCHEMA");
+        public static Schema BYTES_SCHEMA => SExecute<Schema>("BYTES_SCHEMA");
+
+        public static Schema OPTIONAL_INT8_SCHEMA => SExecute<Schema>("OPTIONAL_INT8_SCHEMA");
+        public static Schema OPTIONAL_INT16_SCHEMA => SExecute<Schema>("OPTIONAL_INT16_SCHEMA");
+        public static Schema OPTIONAL_INT32_SCHEMA => SExecute<Schema>("OPTIONAL_INT32_SCHEMA");
+        public static Schema OPTIONAL_INT64_SCHEMA => SExecute<Schema>("OPTIONAL_INT64_SCHEMA");
+        public static Schema OPTIONAL_FLOAT32_SCHEMA => SExecute<Schema>("OPTIONAL_FLOAT32_SCHEMA");
+        public static Schema OPTIONAL_FLOAT64_SCHEMA => SExecute<Schema>("OPTIONAL_FLOAT64_SCHEMA");
+        public static Schema OPTIONAL_BOOLEAN_SCHEMA => SExecute<Schema>("OPTIONAL_BOOLEAN_SCHEMA");
+        public static Schema OPTIONAL_STRING_SCHEMA => SExecute<Schema>("OPTIONAL_STRING_SCHEMA");
+        public static Schema OPTIONAL_BYTES_SCHEMA => SExecute<Schema>("OPTIONAL_BYTES_SCHEMA");
+
+        public Type Type() => IExecute<Type>("type"); 
 
         public bool IsOptional => IExecute<bool>("isOptional");
 
-        public Java.Lang.Object DefaultValue =>  IExecute<Java.Lang.Object>("defaultValue"); 
+        public Java.Lang.Object DefaultValue() =>  IExecute<Java.Lang.Object>("defaultValue"); 
 
-        public string Name => IExecute<string>("name"); 
+        public string Name() => IExecute<string>("name"); 
 
-        public int Version => IExecute<int>("version"); 
+        public int Version() => IExecute<int>("version"); 
 
-        public string Doc => IExecute<string>("doc"); 
+        public string Doc() => IExecute<string>("doc"); 
 
-        public Map<string, string> Parameters => IExecute<Map<string, string>>("parameters"); 
+        public Map<string, string> Parameters() => IExecute<Map<string, string>>("parameters"); 
 
         public Schema KeySchema => IExecute<Schema>("keySchema");
 
