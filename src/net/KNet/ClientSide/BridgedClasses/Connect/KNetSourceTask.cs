@@ -26,6 +26,10 @@ namespace MASES.KNet.Connect
     /// </summary>
     public abstract class KNetSourceTask : KNetTask
     {
+        protected Map<string, V> OffsetForKey<V>(string key, V value) => Collections.SingletonMap(key, value);
+
+        protected Map<string, object> OffsetAt<V>(string key, V value) => Context.OffsetStorageReader.Offset(Collections.SingletonMap(key, value));
+
         /// <summary>
         /// The <see cref="SourceTaskContext"/>
         /// </summary>
