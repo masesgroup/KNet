@@ -18,9 +18,10 @@
 
 package org.mases.knet.connect.source;
 
-import org.apache.kafka.common.config.ConfigException;
+import org.apache.kafka.connect.errors.ConnectException;
 import org.apache.kafka.connect.source.SourceRecord;
 import org.apache.kafka.connect.source.SourceTask;
+import org.apache.kafka.connect.source.SourceTaskContext;
 import org.mases.jcobridge.*;
 import org.mases.knet.connect.KNetConnectProxy;
 import org.slf4j.Logger;
@@ -47,13 +48,17 @@ public class KNetSourceTask extends SourceTask {
         dataToExchange = dte;
     }
 
-    public KNetSourceTask() throws ConfigException, JCException, IOException {
+    public KNetSourceTask() throws ConnectException, JCException, IOException {
         super();
         long taskid = taskId.incrementAndGet();
         JCOBridge.RegisterJVMGlobal(String.format("KNetSourceTask_%d", taskid), this);
         JCObject source = KNetConnectProxy.getSourceConnector();
-        if (source == null) throw new ConfigException("getSourceConnector returned null.");
+        if (source == null) throw new ConnectException("getSourceConnector returned null.");
         sourceTask = (JCObject) source.Invoke("AllocateTask", taskid);
+    }
+
+    public SourceTaskContext getContext() {
+        return context;
     }
 
     @Override
@@ -85,8 +90,13 @@ public class KNetSourceTask extends SourceTask {
     @Override
     public List<SourceRecord> poll() throws InterruptedException {
         try {
-            Object result = sourceTask.Invoke("PollInternal");
-            if (result != null) return (List<SourceRecord>) result;
+            try {
+                dataToExchange = null;
+                sourceTask.Invoke("PollInternal");
+                if (dataToExchange != null) return (List<SourceRecord>) dataToExchange;
+            } finally {
+                dataToExchange = null;
+            }
         } catch (JCNativeException jcne) {
             log.error("Failed Invoke of \"poll\"", jcne);
         }

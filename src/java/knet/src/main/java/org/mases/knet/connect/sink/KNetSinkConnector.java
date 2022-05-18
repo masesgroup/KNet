@@ -19,9 +19,10 @@
 package org.mases.knet.connect.sink;
 
 import org.apache.kafka.common.config.ConfigDef;
-import org.apache.kafka.common.config.ConfigException;
 import org.apache.kafka.connect.connector.Task;
+import org.apache.kafka.connect.errors.ConnectException;
 import org.apache.kafka.connect.sink.SinkConnector;
+import org.apache.kafka.connect.sink.SinkConnectorContext;
 import org.mases.jcobridge.*;
 import org.mases.knet.connect.KNetConnectProxy;
 import org.slf4j.Logger;
@@ -48,18 +49,22 @@ public class KNetSinkConnector extends SinkConnector {
         dataToExchange = dte;
     }
 
+    public SinkConnectorContext getContext() {
+        return context();
+    }
+
     @Override
     public void start(Map<String, String> props) {
         try {
             if (!KNetConnectProxy.initializeSinkConnector(props)) {
                 log.error("Failed Invoke of \"initializeSinkConnector\"");
-                throw new ConfigException("Failed Invoke of \"initializeSinkConnector\"");
+                throw new ConnectException("Failed Invoke of \"initializeSinkConnector\"");
             } else {
                 JCOBridge.RegisterJVMGlobal(registrationName, this);
                 try {
                     dataToExchange = props;
                     JCObject sink = KNetConnectProxy.getSinkConnector();
-                    if (sink == null) throw new ConfigException("getSinkConnector returned null.");
+                    if (sink == null) throw new ConnectException("getSinkConnector returned null.");
                     sink.Invoke("StartInternal");
                 } finally {
                     dataToExchange = null;
@@ -83,7 +88,7 @@ public class KNetSinkConnector extends SinkConnector {
             try {
                 dataToExchange = config;
                 JCObject sink = KNetConnectProxy.getSinkConnector();
-                if (sink == null) throw new ConfigException("getSinkConnector returned null.");
+                if (sink == null) throw new ConnectException("getSinkConnector returned null.");
                 sink.Invoke("TaskConfigsInternal", i);
             } catch (JCException | IOException jcne) {
                 log.error("Failed Invoke of \"start\"", jcne);
@@ -100,7 +105,7 @@ public class KNetSinkConnector extends SinkConnector {
         try {
             try {
                 JCObject sink = KNetConnectProxy.getSinkConnector();
-                if (sink == null) throw new ConfigException("getSinkConnector returned null.");
+                if (sink == null) throw new ConnectException("getSinkConnector returned null.");
                 sink.Invoke("StopInternal");
             } finally {
                 JCOBridge.UnregisterJVMGlobal(registrationName);

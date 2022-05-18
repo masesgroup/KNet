@@ -21,16 +21,33 @@ using MASES.KNet.Connect.Sink;
 
 namespace MASES.KNet.Connect
 {
-    public abstract class KNetSinkTask : KNetTask
+    /// <summary>
+    /// An implementation of <see cref="KNetTask{TTask}"/> for sink task
+    /// </summary>
+    /// <typeparam name="TTask">The class which extends <see cref="KNetSinkTask{TTask}"/></typeparam>
+    public abstract class KNetSinkTask<TTask> : KNetTask<TTask>
+        where TTask : KNetSinkTask<TTask>
     {
+        /// <summary>
+        /// The <see cref="SinkTaskContext"/>
+        /// </summary>
+        public SinkTaskContext Context => Context<SinkTaskContext>();
+        /// <summary>
+        /// Set the <see cref="ReflectedTaskClassName"/> of the connector to a fixed value
+        /// </summary>
         public override string ReflectedTaskClassName => "KNetSinkTask";
-
+        /// <summary>
+        /// Public method used from Java to trigger <see cref="Put(Collection{SinkRecord})"/>
+        /// </summary>
         public void PutInternal()
         {
             Collection<SinkRecord> collection = DataToExchange<Collection<SinkRecord>>();
             Put(collection);
         }
-
+        /// <summary>
+        /// Implement the method to execute the Put action
+        /// </summary>
+        /// <param name="collection">The set of <see cref="SinkRecord"/> from Apache Kafka Connect framework</param>
         public abstract void Put(Collection<SinkRecord> collection);
     }
 }

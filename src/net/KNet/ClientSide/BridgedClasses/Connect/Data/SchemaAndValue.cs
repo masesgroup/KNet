@@ -17,7 +17,6 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using JavaLang = Java.Lang;
 
 namespace MASES.KNet.Connect.Data
 {
@@ -31,13 +30,13 @@ namespace MASES.KNet.Connect.Data
         {
         }
 
-        public SchemaAndValue(Schema schema, JavaLang.Object value)
+        public SchemaAndValue(Schema schema, Java.Lang.Object value)
             :base(schema, value)
         {
         }
 
         public Schema Schema => IExecute<Schema>("schema");
 
-        public JavaLang.Object Value => IExecute<JavaLang.Object>("value");
+        public Java.Lang.Object Value => IExecute<Java.Lang.Object>("value");
     }
 }

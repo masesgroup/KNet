@@ -21,15 +21,37 @@ using MASES.KNet.Connect.Source;
 
 namespace MASES.KNet.Connect
 {
-    public abstract class KNetSourceTask : KNetTask
+    /// <summary>
+    /// An implementation of <see cref="KNetTask{TTask}"/> for source task
+    /// </summary>
+    /// <typeparam name="TTask">The class which extends <see cref="KNetSourceTask{TTask}"/></typeparam>
+    public abstract class KNetSourceTask<TTask> : KNetTask<TTask>
+        where TTask : KNetSourceTask<TTask>
     {
+        protected Map<string, V> OffsetForKey<V>(string key, V value) => Collections.SingletonMap(key, value);
+
+        protected Map<string, object> OffsetAt<V>(string key, V value) => Context.OffsetStorageReader.Offset(Collections.SingletonMap(key, value));
+
+        /// <summary>
+        /// The <see cref="SourceTaskContext"/>
+        /// </summary>
+        public SourceTaskContext Context => Context<SourceTaskContext>();
+        /// <summary>
+        /// Set the <see cref="ReflectedTaskClassName"/> of the connector to a fixed value
+        /// </summary>
         public override string ReflectedTaskClassName => "KNetSourceTask";
-
-        public List<SourceRecord> PollInternal()
+        /// <summary>
+        /// Public method used from Java to trigger <see cref="Poll"/>
+        /// </summary>
+        public void PollInternal()
         {
-            return Poll();
+            var result = Poll();
+            DataToExchange(result);
         }
-
+        /// <summary>
+        /// Implement the method to execute the Poll action
+        /// </summary>
+        /// <returns>The list of <see cref="SourceRecord"/> to return to Apache Kafka Connect framework</returns>
         public abstract List<SourceRecord> Poll();
     }
 }

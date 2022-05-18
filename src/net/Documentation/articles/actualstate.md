@@ -7,6 +7,6 @@ This release comes with some ready made classes:
 * [X] Apache Kafka Admin Client covering all available APIs: since many classes are marked with @InterfaceStability.Evolving annotation some properties or methods can be missed; use **dynamic** code to interact with Admin API types.
 * [X] Almost completed Apache Kafka Streams
 * [X] Almost completed Apache Kafka Connect
-* [ ] .NET Apache Kafka Connect SDK (under development)
+* [X] .NET Apache Kafka Connect SDK (a basic version)
 
 If something is not available use [API extensibility](API_extensibility.md) to cover missing features.

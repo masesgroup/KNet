@@ -20,6 +20,9 @@ using System;
 
 namespace MASES.KNet.Connect
 {
+    /// <summary>
+    /// Internal class used to proxy and pairs data exchange with Java side
+    /// </summary>
     public class KNetConnectProxy
     {
         static readonly object globalInstanceLock = new();
@@ -27,7 +30,9 @@ namespace MASES.KNet.Connect
 
         static KNetConnector SinkConnector = null;
         static KNetConnector SourceConnector = null;
-
+        /// <summary>
+        /// Register the proxy
+        /// </summary>
         public static void Register()
         {
             lock (globalInstanceLock)
@@ -39,7 +44,11 @@ namespace MASES.KNet.Connect
                 }
             }
         }
-
+        /// <summary>
+        /// Allocates a sink connector
+        /// </summary>
+        /// <param name="connectorClassName">The class name read from Java within the configuration parameters</param>
+        /// <returns><see langword="true"/> if successfully</returns>
         public bool AllocateSinkConnector(string connectorClassName)
         {
             lock (globalInstanceLock)
@@ -57,7 +66,11 @@ namespace MASES.KNet.Connect
                 }
             }
         }
-
+        /// <summary>
+        /// Allocates a source connector
+        /// </summary>
+        /// <param name="connectorClassName">The class name read from Java within the configuration parameters</param>
+        /// <returns><see langword="true"/> if successfully</returns>
         public bool AllocateSourceConnector(string connectorClassName)
         {
             lock (globalInstanceLock)
@@ -75,7 +88,10 @@ namespace MASES.KNet.Connect
                 }
             }
         }
-
+        /// <summary>
+        /// Returns the registration name of the sink connector
+        /// </summary>
+        /// <returns>The content of <see cref="IKNetConnector.ConnectorName"/></returns>
         public string SinkConnectorName()
         {
             lock (globalInstanceLock)
@@ -84,7 +100,10 @@ namespace MASES.KNet.Connect
                 return null;
             }
         }
-
+        /// <summary>
+        /// Returns the registration name of the sourcce connector
+        /// </summary>
+        /// <returns>The content of <see cref="IKNetConnector.ConnectorName"/></returns>
         public string SourceConnectorName()
         {
             lock (globalInstanceLock)
