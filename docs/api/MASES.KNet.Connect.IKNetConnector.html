@@ -73,7 +73,8 @@
   
   <h1 id="MASES_KNet_Connect_IKNetConnector" data-uid="MASES.KNet.Connect.IKNetConnector" class="text-break">Interface IKNetConnector
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Specific implementation of <a class="xref" href="MASES.KNet.Connect.Connector.IConnector.html">IConnector</a> to support KNet Connect SDK</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -121,11 +122,12 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_IKNetConnector_ConnectorName.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.IKNetConnector.ConnectorName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/KNetConnector.cs/#L33">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/KNetConnector.cs/#L43">View Source</a>
   </span>
   <a id="MASES_KNet_Connect_IKNetConnector_ConnectorName_" data-uid="MASES.KNet.Connect.IKNetConnector.ConnectorName*"></a>
   <h4 id="MASES_KNet_Connect_IKNetConnector_ConnectorName" data-uid="MASES.KNet.Connect.IKNetConnector.ConnectorName">ConnectorName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The unique name of the connector</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -151,11 +153,12 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_IKNetConnector_TaskClassType.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.IKNetConnector.TaskClassType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/KNetConnector.cs/#L35">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/KNetConnector.cs/#L47">View Source</a>
   </span>
   <a id="MASES_KNet_Connect_IKNetConnector_TaskClassType_" data-uid="MASES.KNet.Connect.IKNetConnector.TaskClassType*"></a>
   <h4 id="MASES_KNet_Connect_IKNetConnector_TaskClassType" data-uid="MASES.KNet.Connect.IKNetConnector.TaskClassType">TaskClassType</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a> of task to be allocated, it shall inherits from <a class="xref" href="MASES.KNet.Connect.KNetTask.html">KNetTask</a></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -183,11 +186,12 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_IKNetConnector_AllocateTask_System_Int64_.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.IKNetConnector.AllocateTask(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/KNetConnector.cs/#L31">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/KNetConnector.cs/#L39">View Source</a>
   </span>
   <a id="MASES_KNet_Connect_IKNetConnector_AllocateTask_" data-uid="MASES.KNet.Connect.IKNetConnector.AllocateTask*"></a>
   <h4 id="MASES_KNet_Connect_IKNetConnector_AllocateTask_System_Int64_" data-uid="MASES.KNet.Connect.IKNetConnector.AllocateTask(System.Int64)">AllocateTask(Int64)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Allocates a task object based on <a class="xref" href="MASES.KNet.Connect.KNetTask.html">KNetTask</a></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -206,7 +210,8 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td><span class="parametername">taskId</span></td>
-        <td></td>
+        <td><p>The unique id generated from JAva side</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -221,7 +226,48 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td></td>
+        <td><p>The local .NET object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_IKNetConnector_TaskConfigs_System_Int32_Java_Util_Map_System_String_System_String__.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.IKNetConnector.TaskConfigs(System.Int32%2CJava.Util.Map%7BSystem.String%2CSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/KNetConnector.cs/#L53">View Source</a>
+  </span>
+  <a id="MASES_KNet_Connect_IKNetConnector_TaskConfigs_" data-uid="MASES.KNet.Connect.IKNetConnector.TaskConfigs*"></a>
+  <h4 id="MASES_KNet_Connect_IKNetConnector_TaskConfigs_System_Int32_Java_Util_Map_System_String_System_String__" data-uid="MASES.KNet.Connect.IKNetConnector.TaskConfigs(System.Int32,Java.Util.Map{System.String,System.String})">TaskConfigs(Int32, Map&lt;String, String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Invoked during allocation of tasks from Apache Kafka Connect</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void TaskConfigs(int index, Map&lt;string, string&gt; config)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>The actual index</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Java.Util.Map</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">config</span></td>
+        <td><p>The <span class="xref">Java.Util.Map&lt;K, V&gt;</span> to be filled in with properties for the task: the same will be received from <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_Start_Java_Util_Map_System_String_System_String__">Start(Map&lt;String, String&gt;)</a></p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -236,7 +282,7 @@
                     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_IKNetConnector.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.IKNetConnector%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/KNetConnector.cs/#L29" class="contribution-link">View Source</a>
+                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/KNetConnector.cs/#L32" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

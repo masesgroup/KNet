@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>KNet: Connect SDK | KNet website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="KNet: Connect SDK | KNet website ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="knet-connect-sdk">KNet: Connect SDK</h1>
+
+<p>This is only a quick start guide, many other information related to Apache Kafka Connect can be found at the following link <a href="https://kafka.apache.org/documentation/#connect">https://kafka.apache.org/documentation/#connect</a></p>
+<h2 id="general">General</h2>
+<p>To start a Connect session the user shall use the <a href="usageCLI.html">KNet CLI</a>.</p>
+<p>The commands related to Apache Kafka Connect are:</p>
+<ul>
+<li>ConnectDistributed</li>
+<li>ConnectStandalone</li>
+</ul>
+<p>To go in detail look at <a href="https://kafka.apache.org/documentation/#connect">https://kafka.apache.org/documentation/#connect</a> and <a href="https://kafka.apache.org/quickstart#quickstart_kafkaconnect">https://kafka.apache.org/quickstart#quickstart_kafkaconnect</a>.</p>
+<h2 id="standalone">Standalone</h2>
+<p>In this guide we focus on the standalone version.
+The guide start from the assumption that an assembly was generated: see <a href="usageTemplates.html">Template Usage Guide</a>.
+Put the assembly within a folder (<strong>C:\MyConnect</strong>), then go within it.
+As explained in <a href="https://kafka.apache.org/documentation/#connect">https://kafka.apache.org/documentation/#connect</a> Apache Kafka Connect needs at least one configuration file, in standalone mode it needs two configuration files:</p>
+<ol>
+<li>The first file is <strong>connect-standalone.properties</strong> (or <strong>connect-distributed.properties</strong> for distributed environments): this file contains configuration information for Apache Kafka Connect;</li>
+<li>The second optional file defines the connector to use and its options.</li>
+</ol>
+<p>In the <a href="https://github.com/masesgroup/KNet/tree/master/src/config">config folder</a> the user can found many configuration files.
+The files named <strong>connect-knet-sink.properties</strong> and <strong>connect-knet-source.properties</strong> contain examples for sink and source connectors.</p>
+<p>Copy within <strong>C:\MyConnect</strong> <strong>connect-standalone.properties</strong> and update it especially on line containing <strong>bootstrap.servers</strong>, then copy <strong>connect-knet-sink.properties</strong> or <strong>connect-knet-source.properties</strong> depending on the connector type.
+The main options related to KNet Connect SDK are:</p>
+<ul>
+<li><strong>connector.class=<strong>KNetSinkConnector</strong></strong> where the value is the connector Java class and must be:
+<ul>
+<li><strong>KNetSinkConnector</strong> for sink connectors</li>
+<li><strong>KNetSourceConnector</strong> for source connectors</li>
+</ul>
+</li>
+<li><strong>knet.dotnet.classname=MASES.KNetTemplate.KNetConnect.KNetConnectSink, knetConnectSink</strong> where the value is the .NET class name in the form of <strong><strong>FullName</strong>, <strong>AssemblyName</strong></strong></li>
+</ul>
+<p>When the <strong>C:\MyConnect</strong> folder contains all the files it is possible to run Apache Kafka Connect:</p>
+<blockquote>
+<p>knet -ClassToRun ConnectStandalone connect-standalone.properties connect-knet-sink.properties</p>
+</blockquote>
+<h2 id="distributed">Distributed</h2>
+<p>As stated in <a href="https://kafka.apache.org/documentation/#connect">Apache Kafka Connect Guide</a> the distributed version does not use the connector file definition, instead it shall be managed using the REST interface.
+The start-up command within <strong>C:\MyConnect</strong> folder becomes:</p>
+<blockquote>
+<p>knet -ClassToRun ConnectDistributed connect-distributed.properties</p>
+</blockquote>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/Documentation/articles/connectSDK.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2022 MASES s.r.l..<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
