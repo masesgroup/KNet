@@ -17,7 +17,6 @@
 */
 
 using Java.Util;
-using JavaLang = Java.Lang;
 
 namespace MASES.KNet.Connect.Data
 {
@@ -31,12 +30,12 @@ namespace MASES.KNet.Connect.Data
         {
         }
 
-        public ConnectSchema(Type type, bool optional, JavaLang.Object defaultValue, string name, int version, string doc, Map<string, string> parameters, List<Field> fields, Schema keySchema, Schema valueSchema)
+        public ConnectSchema(Type type, bool optional, Java.Lang.Object defaultValue, string name, int version, string doc, Map<string, string> parameters, List<Field> fields, Schema keySchema, Schema valueSchema)
             : base(type, optional, defaultValue, name, version, doc, parameters, fields, keySchema, valueSchema)
         {
         }
 
-        public ConnectSchema(Type type, bool optional, JavaLang.Object defaultValue, string name, int version, string doc)
+        public ConnectSchema(Type type, bool optional, Java.Lang.Object defaultValue, string name, int version, string doc)
             :this(type, optional, defaultValue, name, version, doc, null, null, null, null)
         {
         }
