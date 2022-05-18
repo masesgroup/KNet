@@ -1,18 +1,22 @@
 - name: Introduction
   href: intro.md
-- name: Roadmap
+- name: KNet Roadmap
   href: roadmap.md
-- name: Actual state
+- name: KNet Actual state
   href: actualstate.md
-- name: Performance
+- name: KNet Performance
   href: performance.md
-- name: APIs extendibility
+- name: KNet APIs extendibility
   href: API_extensibility.md
-- name: JVM callbacks
+- name: KNet JVM callbacks
   href: jvm_callbacks.md
-- name: Usage
+- name: KNet Connect SDK
+  href: connectSDK.md  
+- name: KNet Usage
   href: usage.md
-- name: Usage CLI
+- name: KNet CLI Usage
   href: usageCLI.md
+- name: KNet Template Usage Guide
+  href: usageTemplates.md  
 - name: How to build from scratch
   href: howtobuild.md

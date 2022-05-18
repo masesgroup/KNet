@@ -50,9 +50,11 @@ Have a look at the following resources:
 * [Roadmap](src/net/Documentation/articles/roadmap.md)
 * [Actual state](src/net/Documentation/articles/actualstate.md)
 * [Performance](src/net/Documentation/articles/performance.md)
+* [Connect SDK](src/net/Documentation/articles/connectSDK.md)
 * [KNet usage](src/net/Documentation/articles/usage.md)
 * [KNet APIs extensibility](src/net/Documentation/articles/API_extensibility.md)
 * [KNetCLI usage](src/net/Documentation/articles/usageCLI.md)
+* [Template Usage Guide](src/net/Documentation/articles/usageTemplates.md)
 * [How to build from scratch](src/net/Documentation/articles/howtobuild.md)
 
 ---
