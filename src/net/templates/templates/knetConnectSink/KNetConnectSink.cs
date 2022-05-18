@@ -4,7 +4,7 @@ using MASES.KNet.Connect.Sink;
 
 namespace MASES.KNetTemplate.KNetConnect
 {
-    public class KNetConnectSink : KNetSinkConnector<KNetConnectSink, KnetConnectSinkTask>
+    public class KNetConnectSink : KNetSinkConnector<KNetConnectSink, KNetConnectSinkTask>
     {
         public override void Start(Map<string, string> props)
         {
@@ -22,7 +22,7 @@ namespace MASES.KNetTemplate.KNetConnect
         }
     }
 
-    public class KnetConnectSinkTask : KNetSinkTask<KnetConnectSinkTask>
+    public class KNetConnectSinkTask : KNetSinkTask<KNetConnectSinkTask>
     {
         public override void Put(Collection<SinkRecord> collection)
         {

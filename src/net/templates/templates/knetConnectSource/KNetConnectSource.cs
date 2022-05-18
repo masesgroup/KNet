@@ -4,7 +4,7 @@ using MASES.KNet.Connect.Source;
 
 namespace MASES.KNetTemplate.KNetConnect
 {
-    public class KNetConnectSource : KNetSourceConnector<KNetConnectSource, KnetConnectSourceTask>
+    public class KNetConnectSource : KNetSourceConnector<KNetConnectSource, KNetConnectSourceTask>
     {
         public override void Start(Map<string, string> props)
         {
@@ -22,7 +22,7 @@ namespace MASES.KNetTemplate.KNetConnect
         }
     }
 
-    public class KnetConnectSourceTask : KNetSourceTask<KnetConnectSourceTask>
+    public class KNetConnectSourceTask : KNetSourceTask<KNetConnectSourceTask>
     {
         public override List<SourceRecord> Poll()
         {
