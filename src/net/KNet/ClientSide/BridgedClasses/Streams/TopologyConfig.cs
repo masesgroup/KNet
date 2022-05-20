@@ -50,7 +50,7 @@ namespace MASES.KNet.Streams
 
         public class TaskConfig : JVMBridgeBase<TaskConfig>
         {
-            public override string ClassName => "org.apache.kafka.streams.TopologyConfig.TaskConfig";
+            public override string ClassName => "org.apache.kafka.streams.TopologyConfig$TaskConfig";
 
             // TO BE COMPETED
         }

@@ -52,7 +52,7 @@ namespace MASES.KNet.Streams.Query
 
         public class InStore : JCOBridge.C2JBridge.JVMBridgeBase<StateQueryRequest<R>>
         {
-            public override string ClassName => "org.apache.kafka.streams.query.StateQueryRequest.InStore";
+            public override string ClassName => "org.apache.kafka.streams.query.StateQueryRequest$InStore";
 
             public StateQueryRequest<T> WithQuery<T>(Query<T> query) => SExecute<StateQueryRequest<T>>("withQuery", query);
         }

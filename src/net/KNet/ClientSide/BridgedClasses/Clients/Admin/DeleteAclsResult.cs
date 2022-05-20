@@ -33,14 +33,14 @@ namespace MASES.KNet.Clients.Admin
 
         public class FilterResults : JCOBridge.C2JBridge.JVMBridgeBase<FilterResults>
         {
-            public override string ClassName => "org.apache.kafka.clients.admin.DeleteAclsResult.FilterResults";
+            public override string ClassName => "org.apache.kafka.clients.admin.DeleteAclsResult$FilterResults";
 
             public List<FilterResult> Values => IExecute<List<FilterResult>>("values");
         }
 
         public class FilterResult : JCOBridge.C2JBridge.JVMBridgeBase<FilterResult>
         {
-            public override string ClassName => "org.apache.kafka.clients.admin.DeleteAclsResult.FilterResult";
+            public override string ClassName => "org.apache.kafka.clients.admin.DeleteAclsResult$FilterResult";
 
             public AclBinding Binding => IExecute<AclBinding>("binding");
 

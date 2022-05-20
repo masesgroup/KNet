@@ -106,7 +106,7 @@ namespace MASES.KNet.Connect.Header
         public class HeaderTransform : JVMBridgeBase<HeaderTransform>
         {
             public override bool IsInterface => true;
-            public override string ClassName => "org.apache.kafka.connect.header.Headers.HeaderTransform";
+            public override string ClassName => "org.apache.kafka.connect.header.Headers$HeaderTransform";
 
             public Header Apply(Header header) => IExecute<Header>("apply", header);
         }
