@@ -75,7 +75,7 @@ namespace MASES.KNet.Clients.Admin
 
         public class ConfigSynonym : JCOBridge.C2JBridge.JVMBridgeBase<Config>
         {
-            public override string ClassName => "org.apache.kafka.clients.admin.ConfigEntry.ConfigSynonym";
+            public override string ClassName => "org.apache.kafka.clients.admin.ConfigEntry$ConfigSynonym";
 
             public string Name => IExecute<string>("name");
 

@@ -47,7 +47,7 @@ namespace MASES.KNet.Clients.Admin
 
         public class ListOffsetsResultInfo : JCOBridge.C2JBridge.JVMBridgeBase<ListOffsetsResultInfo>
         {
-            public override string ClassName => "org.apache.kafka.clients.admin.ListOffsetsResult.ListOffsetsResultInfo";
+            public override string ClassName => "org.apache.kafka.clients.admin.ListOffsetsResult$ListOffsetsResultInfo";
 
             [System.Obsolete("This is not public in Apache Kafka API")]
             [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]

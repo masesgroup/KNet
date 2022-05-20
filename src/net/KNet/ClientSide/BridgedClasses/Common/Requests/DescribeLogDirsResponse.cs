@@ -24,7 +24,7 @@ namespace MASES.KNet.Common.Requests
 
         public class LogDirInfo : JCOBridge.C2JBridge.JVMBridgeBase<LogDirInfo>
         {
-            public override string ClassName => "org.apache.kafka.common.requests.DescribeLogDirsResponse.LogDirInfo";
+            public override string ClassName => "org.apache.kafka.common.requests.DescribeLogDirsResponse$LogDirInfo";
         }
     }
 }
