@@ -30,6 +30,16 @@ namespace MASES.KNet.Streams
     {
         public override string ClassName => "org.apache.kafka.streams.StreamsBuilder";
 
+        public StreamsBuilder()
+        {
+
+        }
+
+        public StreamsBuilder(TopologyConfig topologyConfigs)
+            :base(topologyConfigs)
+        {
+        }
+
         public KStream<K, V> Stream<K, V>(string topic)
         {
             return IExecute<KStream<K, V>>("stream", topic);

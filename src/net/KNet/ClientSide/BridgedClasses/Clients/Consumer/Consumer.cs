@@ -117,6 +117,8 @@ namespace MASES.KNet.Clients.Consumer
 
         void EnforceRebalance();
 
+        void EnforceRebalance(string reason);
+
         void Wakeup();
     }
 }

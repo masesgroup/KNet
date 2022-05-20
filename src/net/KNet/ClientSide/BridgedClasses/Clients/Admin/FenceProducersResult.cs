@@ -16,27 +16,22 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KNet.Common;
+using Java.Lang;
 using Java.Util;
 
 namespace MASES.KNet.Clients.Admin
 {
-    public class RemoveMembersFromConsumerGroupOptions : AbstractOptions<RemoveMembersFromConsumerGroupOptions>
+    public class FenceProducersResult : JCOBridge.C2JBridge.JVMBridgeBase<FenceProducersResult>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.RemoveMembersFromConsumerGroupOptions";
+        public override string ClassName => "org.apache.kafka.clients.admin.FenceProducersResult";
 
-        public RemoveMembersFromConsumerGroupOptions(Collection<MemberToRemove> members)
-            : base(members)
-        {
-        }
+        public Map<String, KafkaFuture<Void>> FencedProducers => IExecute<Map<String, KafkaFuture<Void>>>("fencedProducers");
 
-        public string Reason
-        {
-            get { return IExecute<string>("reason"); }
-            set { IExecute<string>("reason", value); }
-        }
+        public KafkaFuture<long> ProducerId(string transactionalId) => IExecute<KafkaFuture<long>>("producerId", transactionalId); 
 
-        public Set<MemberToRemove> Members => IExecute<Set<MemberToRemove>>("members");
+        public KafkaFuture<short> EpochId(String transactionalId) => IExecute<KafkaFuture<short>>("epochId", transactionalId);
 
-        public bool RemoveAll => IExecute<bool>("removeAll");
+        public KafkaFuture<Void> All => IExecute<KafkaFuture<Void>>("all");
     }
 }

@@ -16,27 +16,20 @@
 *  Refer to LICENSE for more information.
 */
 
-using Java.Util;
-
-namespace MASES.KNet.Clients.Admin
+namespace MASES.KNet.Streams.Query
 {
-    public class RemoveMembersFromConsumerGroupOptions : AbstractOptions<RemoveMembersFromConsumerGroupOptions>
+    public class QueryConfig : JCOBridge.C2JBridge.JVMBridgeBase<QueryConfig>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.RemoveMembersFromConsumerGroupOptions";
+        public override string ClassName => "org.apache.kafka.streams.query.QueryConfig";
 
-        public RemoveMembersFromConsumerGroupOptions(Collection<MemberToRemove> members)
-            : base(members)
+        public QueryConfig()
         {
         }
 
-        public string Reason
+        public QueryConfig(bool collectExecutionInfo) : base(collectExecutionInfo)
         {
-            get { return IExecute<string>("reason"); }
-            set { IExecute<string>("reason", value); }
         }
 
-        public Set<MemberToRemove> Members => IExecute<Set<MemberToRemove>>("members");
-
-        public bool RemoveAll => IExecute<bool>("removeAll");
+        public bool IsCollectExecutionInfo => IExecute<bool>("isCollectExecutionInfo");
     }
 }

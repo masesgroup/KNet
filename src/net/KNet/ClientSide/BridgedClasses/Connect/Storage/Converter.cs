@@ -18,6 +18,7 @@
 
 using Java.Util;
 using MASES.JCOBridge.C2JBridge;
+using MASES.KNet.Common.Config;
 using MASES.KNet.Connect.Data;
 using MASES.KNet.Connect.Header;
 
@@ -38,5 +39,7 @@ namespace MASES.KNet.Connect.Storage
         public SchemaAndValue ToConnectData(string topic, byte[] value) => IExecute<SchemaAndValue>("toConnectData", topic, value);
 
         public SchemaAndValue ToConnectData(string topic, Headers headers, byte[] value) => IExecute<SchemaAndValue>("toConnectData", topic, headers, value);
+
+        public ConfigDef Config => IExecute<ConfigDef>("config");
     }
 }

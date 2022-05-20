@@ -482,6 +482,16 @@ namespace MASES.KNet.Clients.Admin
         {
             return IExecute<ListTransactionsResult>("listTransactions", options);
         }
+
+        public FenceProducersResult FenceProducers(Collection<string> transactionalIds)
+        {
+            return IExecute<FenceProducersResult>("fenceProducers", transactionalIds);
+        }
+
+        public FenceProducersResult FenceProducers(Collection<string> transactionalIds, FenceProducersOptions options)
+        {
+            return IExecute<FenceProducersResult>("fenceProducers", transactionalIds, options);
+        }
     }
 }
 

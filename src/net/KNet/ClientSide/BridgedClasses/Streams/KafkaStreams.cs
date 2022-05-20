@@ -26,6 +26,7 @@ using Java.Util;
 using MASES.KNet.Streams.Errors;
 using MASES.KNet.Streams.Processor;
 using System;
+using MASES.KNet.Streams.Query;
 
 namespace MASES.KNet.Streams
 {
@@ -171,6 +172,8 @@ namespace MASES.KNet.Streams
         public Set<TaskMetadata> MetadataForLocalThreads => IExecute<Set<TaskMetadata>>("metadataForLocalThreads");
 
         public Map<string, Map<int, LagInfo>> AllLocalStorePartitionLags => IExecute<Map<string, Map<int, LagInfo>>>("allLocalStorePartitionLags");
+
+        public StateQueryResult<R> Query<R>(StateQueryRequest<R> request) => IExecute<StateQueryResult<R>>("query", request);
     }
 }
 

@@ -17,6 +17,7 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
+using MASES.KNet.Streams.Query;
 
 namespace MASES.KNet.Streams.Processor
 {
@@ -31,6 +32,10 @@ namespace MASES.KNet.Streams.Processor
         bool Persistent { get; }
 
         bool IsOpen { get; }
+
+        QueryResult<R> Query<R>(Query<R> query, PositionBound positionBound, QueryConfig config);
+
+        Position Position { get; }
     }
 
     public class StateStore : JVMBridgeBase<StateStore, IStateStore>, IStateStore
@@ -43,14 +48,12 @@ namespace MASES.KNet.Streams.Processor
 
         public bool IsOpen => IExecute<bool>("isOpen");
 
-        public void Close()
-        {
-            IExecute("close");
-        }
+        public void Close() => IExecute("close");
 
-        public void Flush()
-        {
-            IExecute("flush");
-        }
+        public void Flush() => IExecute("flush");
+
+        public QueryResult<R> Query<R>(Query<R> query, PositionBound positionBound, QueryConfig config) => IExecute<QueryResult<R>>("query", query, positionBound, config);
+
+        public Position Position => IExecute<Position>("getPosition");
     }
 }

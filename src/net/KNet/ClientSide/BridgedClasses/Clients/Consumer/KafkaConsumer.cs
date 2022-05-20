@@ -264,6 +264,11 @@ namespace MASES.KNet.Clients.Consumer
             IExecute("enforceRebalance");
         }
 
+        public void EnforceRebalance(string reason)
+        {
+            IExecute("enforceRebalance", reason);
+        }
+
         public void Wakeup()
         {
             IExecute("wakeup");
