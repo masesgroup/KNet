@@ -25,10 +25,24 @@ using MASES.KNet.Streams.State;
 
 namespace MASES.KNet.Streams.KStream
 {
-    public class Materialized<K, V, S> : JCOBridge.C2JBridge.JVMBridgeBase<Materialized<K, V, S>>
-        where S : IStateStore
+    public class Materialized : JCOBridge.C2JBridge.JVMBridgeBase<Materialized>
     {
         public override string ClassName => "org.apache.kafka.streams.kstream.Materialized";
+
+        public enum StoreType
+        {
+            ROCKS_DB,
+            IN_MEMORY
+        }
+    }
+
+    public class Materialized<K, V, S> : Materialized
+        where S : StateStore
+    {
+        public static Materialized<K, V, S> As(StoreType storeType)
+        {
+            return SExecute<Materialized<K, V, S>>("as", storeType);
+        }
 
         public static Materialized<K, V, S> As(string storeName)
         {
@@ -88,6 +102,11 @@ namespace MASES.KNet.Streams.KStream
         public Materialized<K, V, S> WithRetention(Duration retention)
         {
             return IExecute<Materialized<K, V, S>>("withRetention", retention);
+        }
+
+        public Materialized<K, V, S> WithStoreType(StoreType storeType)
+        {
+            return IExecute<Materialized<K, V, S>>("withStoreType", storeType);
         }
     }
 }

@@ -206,6 +206,10 @@ namespace MASES.KNet.Clients.Admin
         ListTransactionsResult ListTransactions();
 
         ListTransactionsResult ListTransactions(ListTransactionsOptions options);
+
+        FenceProducersResult FenceProducers(Collection<string> transactionalIds);
+
+        FenceProducersResult FenceProducers(Collection<string> transactionalIds, FenceProducersOptions options);
     }
 }
 

@@ -243,12 +243,14 @@ namespace MASES.KNet
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(StreamsException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(StreamsNotStartedException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(StreamsRebalancingException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(StreamsStoppedException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(TaskAssignmentException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(TaskCorruptedException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(TaskIdFormatException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(TaskMigratedException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(TopologyException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(UnknownStateStoreException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(UnknownTopologyException));
             #endregion
 
             #region Connect Exceptions

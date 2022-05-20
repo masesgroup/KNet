@@ -60,6 +60,10 @@ namespace MASES.KNet.Streams.Processor.Api
         Map<string, object> AppConfigs { get; }
 
         Map<string, object> AppConfigsWithPrefix(string prefix);
+
+        long CurrentSystemTimeMs { get; }
+
+        long CurrentStreamTimeMs { get; }
     }
 
     public class ProcessorContext<KForward, VForward> : JVMBridgeBase<ProcessorContext<KForward, VForward>, IProcessorContext<KForward, VForward>>, IProcessorContext<KForward, VForward>
@@ -115,5 +119,9 @@ namespace MASES.KNet.Streams.Processor.Api
         {
             return IExecute<StateStore>("setStateStore", name);
         }
+
+        public long CurrentSystemTimeMs => IExecute<long>("currentSystemTimeMs");
+
+        public long CurrentStreamTimeMs => IExecute<long>("currentStreamTimeMs");
     }
 }
