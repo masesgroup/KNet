@@ -793,7 +793,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AGG FetchSession(K key, Instant earliestSessionEndTime, Instant latestSessionStartTime)</code></pre>
+    <pre><code class="lang-csharp hljs">public AGG FetchSession(K key, Instant sessionStartTime, Instant sessionEndTime)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -812,12 +812,12 @@
       </tr>
       <tr>
         <td><span class="xref">Java.Time.Instant</span></td>
-        <td><span class="parametername">earliestSessionEndTime</span></td>
+        <td><span class="parametername">sessionStartTime</span></td>
         <td></td>
       </tr>
       <tr>
         <td><span class="xref">Java.Time.Instant</span></td>
-        <td><span class="parametername">latestSessionStartTime</span></td>
+        <td><span class="parametername">sessionEndTime</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -850,7 +850,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AGG FetchSession(K key, long earliestSessionEndTime, long latestSessionStartTime)</code></pre>
+    <pre><code class="lang-csharp hljs">public AGG FetchSession(K key, long sessionStartTime, long sessionEndTime)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -869,12 +869,12 @@
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
-        <td><span class="parametername">earliestSessionEndTime</span></td>
+        <td><span class="parametername">sessionStartTime</span></td>
         <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
-        <td><span class="parametername">latestSessionStartTime</span></td>
+        <td><span class="parametername">sessionEndTime</span></td>
         <td></td>
       </tr>
     </tbody>
