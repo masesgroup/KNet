@@ -33,7 +33,7 @@ namespace MASES.KNet.Streams
 
         public class Subtopology : JVMBridgeBase<Subtopology>
         {
-            public override string ClassName => "org.apache.kafka.streams.TopologyDescription.Subtopology";
+            public override string ClassName => "org.apache.kafka.streams.TopologyDescription$Subtopology";
 
             public int Id => IExecute<int>("id");
 
@@ -42,7 +42,7 @@ namespace MASES.KNet.Streams
 
         public class GlobalStore : JVMBridgeBase<GlobalStore>
         {
-            public override string ClassName => "org.apache.kafka.streams.TopologyDescription.GlobalStore";
+            public override string ClassName => "org.apache.kafka.streams.TopologyDescription$GlobalStore";
 
             public Source Source => IExecute<Source>("source");
 
@@ -53,7 +53,7 @@ namespace MASES.KNet.Streams
 
         public class Node : JVMBridgeBase<Node>
         {
-            public override string ClassName => "org.apache.kafka.streams.TopologyDescription.Node";
+            public override string ClassName => "org.apache.kafka.streams.TopologyDescription$Node";
 
             public string Name => IExecute<string>("name");
 
@@ -64,7 +64,7 @@ namespace MASES.KNet.Streams
 
         public class Source : Node
         {
-            public override string ClassName => "org.apache.kafka.streams.TopologyDescription.Source";
+            public override string ClassName => "org.apache.kafka.streams.TopologyDescription$Source";
 
             public Set<string> TopicSet => IExecute<Set<string>>("topicSet");
 
@@ -73,7 +73,7 @@ namespace MASES.KNet.Streams
 
         public class Sink : Node
         {
-            public override string ClassName => "org.apache.kafka.streams.TopologyDescription.Sink";
+            public override string ClassName => "org.apache.kafka.streams.TopologyDescription$Sink";
 
             public string Topic => IExecute<string>("topic");
 
@@ -82,7 +82,7 @@ namespace MASES.KNet.Streams
 
         public class Processor : Node
         {
-            public override string ClassName => "org.apache.kafka.streams.TopologyDescription.Processor";
+            public override string ClassName => "org.apache.kafka.streams.TopologyDescription$Processor";
 
             public Set<string> Stores => IExecute<Set<string>>("stores");
         }
