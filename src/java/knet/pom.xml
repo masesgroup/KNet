@@ -9,7 +9,7 @@
     <name>mases.knet</name>
     <description>Interface bridging implementation for Apache Kafka</description>
     <url>https://github.com/masesgroup/KNet</url>
-    <version>1.3.0.0</version>
+    <version>1.3.1.0</version>
 
     <licenses>
         <license>
@@ -132,7 +132,7 @@
                 <configuration>
                     <compilerArgs>
                         <arg>-cp</arg>
-                        <arg>${originalClassPath}${path.separator}${basedir}/../../../bin/net5.0/JCOBridge.jar</arg>
+                        <arg>${originalClassPath}${path.separator}${basedir}/../../../bin/net6.0/JCOBridge.jar</arg>
                     </compilerArgs>
                 </configuration>
             </plugin>

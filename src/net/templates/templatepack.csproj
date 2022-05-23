@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <PackageType>Template</PackageType>
-    <PackageVersion>1.2.4.0</PackageVersion>
+    <PackageVersion>1.3.1.0</PackageVersion>
     <PackageId>MASES.KNet.Templates</PackageId>
     <Title>KNet Templates - Templates to use the KNet</Title>
     <Authors>MASES s.r.l.</Authors>
@@ -10,7 +10,7 @@
     <Copyright>Copyright ©  MASES s.r.l. 2022</Copyright>
     <Summary>Ready made templates to create applications based on KNet</Summary>
     <Description>Ready made templates to create applications based on KNet. The templates are ready made starting points, all information and APIs are available in the official website https://masesgroup.github.io/KNet</Description>
-    <TargetFrameworks>net6.0;net5.0;netcoreapp3.1;net462</TargetFrameworks>
+    <TargetFrameworks>net6.0;netcoreapp3.1;net462</TargetFrameworks>
     <OutputPath>..\..\..\bin\</OutputPath>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>

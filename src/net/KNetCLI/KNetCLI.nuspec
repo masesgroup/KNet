@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>MASES.KNetCLI</id>
-    <version>1.3.0</version>
+    <version>1.3.1</version>
     <title>KNetCLI - CLI interface of KNet</title>
     <authors>MASES s.r.l.</authors>
 	<owners>MASES s.r.l.</owners>
@@ -25,13 +25,10 @@
 		<file src="..\Common\JCOB128x128.png" target="" />
 		<file src="..\Documentation\articles\usageCLI.md" target="" />
 		<file src="..\..\..\jars\" target="tools\netcoreapp3.1\any\jars\" />
-		<file src="..\..\..\jars\" target="tools\net5.0\any\jars\" />
 		<file src="..\..\..\jars\" target="tools\net6.0\any\jars\" />
 		<file src="..\..\config\" target="tools\netcoreapp3.1\any\config\" />
-		<file src="..\..\config\" target="tools\net5.0\any\config\" />
 		<file src="..\..\config\" target="tools\net6.0\any\config\" />
 		<file src="..\..\..\bin\netcoreapp3.1\" target="tools\netcoreapp3.1\any\" />
-		<file src="..\..\..\bin\net5.0\" target="tools\net5.0\any\" />
 		<file src="..\..\..\bin\net6.0\" target="tools\net6.0\any\" />
 	</files>
 </package>

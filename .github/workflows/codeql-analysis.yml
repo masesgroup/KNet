@@ -55,10 +55,6 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.x
-    - name: Setup .NET 5.0
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 5.0.x
     - name: Setup .NET 6.0
       uses: actions/setup-dotnet@v1
       with:
@@ -83,11 +79,11 @@ jobs:
 
     - name: Maven preparation (step 1)
       if: matrix.language == 'java' 
-      run: dotnet build --no-incremental --configuration Release --framework net5.0 /p:Platform="Any CPU" ./src/net/KNet.sln
+      run: dotnet build --no-incremental --configuration Release --framework net6.0 /p:Platform="Any CPU" ./src/net/KNet.sln
 
     - name: Maven preparation (step 2)
       if: matrix.language == 'java' 
-      run: mvn "install:install-file" "-DgroupId=JCOBridge" "-DartifactId=JCOBridge" "-Dversion=2.4.12" "-Dpackaging=jar" "-Dfile=./bin/net5.0/JCOBridge.jar"
+      run: mvn "install:install-file" "-DgroupId=JCOBridge" "-DartifactId=JCOBridge" "-Dversion=2.4.12" "-Dpackaging=jar" "-Dfile=./bin/net6.0/JCOBridge.jar"
 
     - if: matrix.language == 'java' 
       run: mvn --file ./src/java/knet/pom.xml --no-transfer-progress package
