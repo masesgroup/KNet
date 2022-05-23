@@ -132,7 +132,7 @@
                 <configuration>
                     <compilerArgs>
                         <arg>-cp</arg>
-                        <arg>${originalClassPath}${path.separator}${basedir}/../../../bin/net5.0/JCOBridge.jar</arg>
+                        <arg>${originalClassPath}${path.separator}${basedir}/../../../bin/net6.0/JCOBridge.jar</arg>
                     </compilerArgs>
                 </configuration>
             </plugin>
