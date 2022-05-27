@@ -6,7 +6,9 @@ name: CI_BUILD
 # events but only for the master branch
 on:
   push:
-
+    # only trigger on branches, not on tags
+    branches: '**'
+    
 # This workflow contains two jobs called "check_changes", "build_windows"
 jobs:
   # Verify if a build is needed
