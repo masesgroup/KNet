@@ -27,7 +27,7 @@ namespace MASES.KNetTestAdmin
     class Program
     {
         const string theServer = "localhost:9092";
-        const string theTopic = "myTopic";
+        const string theTopic = "myTopicAdmin";
 
         static string serverToUse = theServer;
         static string topicToUse = theTopic;
@@ -42,10 +42,12 @@ namespace MASES.KNetTestAdmin
                 serverToUse = args[0];
             }
 
-            Properties props = new Properties();
-            props.Put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
+            var builder = AdminClientConfigBuilder.Create().WithBootstrapServers(serverToUse);
 
-            using (var admin = KafkaAdminClient.Create(props))
+            //Properties props = new Properties();
+            //props.Put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
+
+            using (var admin = KafkaAdminClient.Create(builder))
             {
                 CreateTopic(admin);
                 DeleteTopic(admin);

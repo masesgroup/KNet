@@ -54,13 +54,13 @@ namespace MASES.KNetTest
 
             CreateTopic();
 
-            Thread threadProduce = new Thread(ProduceSomething)
+            Thread threadProduce = new(ProduceSomething)
             {
                 Name = "produce"
             };
             threadProduce.Start();
 
-            Thread threadConsume = new Thread(ConsumeSomething)
+            Thread threadConsume = new(ConsumeSomething)
             {
                 Name = "consume"
             };
