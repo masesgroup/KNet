@@ -9,7 +9,7 @@
     <name>mases.knet</name>
     <description>Interface bridging implementation for Apache Kafka</description>
     <url>https://github.com/masesgroup/KNet</url>
-    <version>1.3.1.0</version>
+    <version>1.3.2.0</version>
 
     <licenses>
         <license>
@@ -41,6 +41,7 @@
         <maven.compiler.target>8</maven.compiler.target>
         <classpathfile>${basedir}/classpathfile.classpath</classpathfile>
         <kafkaVersion>3.2.0</kafkaVersion>
+		<jcobridgeVersion>2.4.12</jcobridgeVersion>
     </properties>
     <distributionManagement>
         <snapshotRepository>
@@ -167,7 +168,7 @@
                 <version>2.9.1</version>
                 <configuration>
                     <links>
-                        <link>https://www.jcobridge.com/api-java</link>
+                        <link>https://www.jcobridge.com/api-java_${jcobridgeVersion}</link>
                     </links>
                     <quiet>true</quiet>
                     <source>8</source>
@@ -175,7 +176,7 @@
                         <additionalDependency>
                             <groupId>JCOBridge</groupId>
                             <artifactId>JCOBridge</artifactId>
-                            <version>2.4.12</version>
+                            <version>${jcobridgeVersion}</version>
                         </additionalDependency>
                     </additionalDependencies>
                 </configuration>
