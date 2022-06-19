@@ -2,13 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>MASES.KNetCLI</id>
-    <version>1.3.1</version>
+    <version>1.3.2</version>
     <title>KNetCLI - CLI interface of KNet</title>
     <authors>MASES s.r.l.</authors>
-	<owners>MASES s.r.l.</owners>
+    <owners>MASES s.r.l.</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectUrl>https://github.com/masesgroup/KNet/</projectUrl>
-	<repository type="git" url="https://github.com/masesgroup/KNet/" />
+    <repository type="git" url="https://github.com/masesgroup/KNet/" />
     <description>KNetCLI - CLI interface of KNet</description>
     <releaseNotes>https://github.com/masesgroup/KNet/releases</releaseNotes>
     <copyright>Copyright ©  MASES s.r.l. 2022</copyright>
@@ -16,9 +16,9 @@
     <icon>JCOB128x128.png</icon>
     <tags>knet cli kafka apache-kafka dotnet clr netcore net5 net6 kafka connect streams producer consumer providers streamprovider confluent</tags>
     <packageTypes>
-      <packageType name="DotnetTool" />
+    <packageType name="DotnetTool" />
     </packageTypes>
-	<readme>usageCLI.md</readme>
+    <readme>usageCLI.md</readme>
   </metadata>
 	<files>
 		<file src="..\..\..\LICENSE" target="LICENSE" />
