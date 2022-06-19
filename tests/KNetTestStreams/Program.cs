@@ -148,11 +148,11 @@ namespace MASES.KNetTest
                     {
                         return value;
                     });
-                    
+
                     KTable<string, long> counts = source.FlatMapValues(valueMapper)
                                                         .GroupBy(keyValuemapper)
                                                         .Count();
-                    
+
                     /***** version using Dynamic engine ******
                     
                     KTable<string, long> counts = JVMBridgeBase.Wraps<KTable<string, long>>(source.Dyn()
