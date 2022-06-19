@@ -36,7 +36,7 @@ namespace MASES.KNetConnectTest
 
         public override void TaskConfigs(int index, Map<string, string> config)
         {
-            
+
         }
     }
 

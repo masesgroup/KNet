@@ -16,10 +16,10 @@
 *  Refer to LICENSE for more information.
 */
 
+using Java.Util;
 using MASES.KNet.Clients.Consumer;
 using MASES.KNet.Clients.Producer;
 using MASES.KNet.Common.Serialization;
-using Java.Util;
 using System;
 using System.Diagnostics;
 using System.Linq;
@@ -542,7 +542,7 @@ namespace MASES.KNet.Benchmark
                             Array.Copy(item.Value, newVal, item.Value.Length);
                             stopWatch.Start();
                             var record = new ProducerRecord<int, byte[]>(topicName + "_COPY", item.Key, newVal);
-                            producer.Send(record );
+                            producer.Send(record);
                             counter++;
                         }
                         producer.Flush();

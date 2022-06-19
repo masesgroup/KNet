@@ -16,17 +16,17 @@
 *  Refer to LICENSE for more information.
 */
 
+using Java.Util;
 using MASES.KNet;
 using MASES.KNet.Clients.Admin;
 using MASES.KNet.Clients.Consumer;
 using MASES.KNet.Clients.Producer;
 using MASES.KNet.Common.Config;
 using MASES.KNet.Common.Serialization;
-using Java.Util;
+using MASES.KNet.Extensions;
 using System;
 using System.Text;
 using System.Threading;
-using MASES.KNet.Extensions;
 
 namespace MASES.KNetTest
 {
