@@ -1,3 +1,3 @@
-# KNet: the .NET API mirror for Apache Kafka
+# KNet: .NET gateway for Apache Kafka APIs
 
 Open left menu to browse API
