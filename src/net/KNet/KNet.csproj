@@ -3,13 +3,13 @@
 		<LangVersion>latest</LangVersion>
 		<AssemblyName>MASES.KNet</AssemblyName>
 		<RootNamespace>MASES.KNet</RootNamespace>
-		<Title>KNet - the .NET API mirror for Apache Kafka</Title>
-		<Description>KNet - the .NET API mirror for Apache Kafka</Description>
+		<Title>KNet - .NET gateway for Apache Kafka APIs</Title>
+		<Description>KNet - .NET gateway for Apache Kafka APIs</Description>
 		<Copyright>Copyright ©  MASES s.r.l. 2022</Copyright>
 		<Owners>MASES s.r.l.</Owners>
 		<Authors>MASES s.r.l.</Authors>
 		<Company>MASES s.r.l.</Company>
-		<Version>1.3.2.0</Version>
+		<Version>1.3.3.0</Version>
 		<Product>KNet</Product>
 		<GenerateAssemblyInfo>true</GenerateAssemblyInfo>
 		<TargetFrameworks>net462;netcoreapp3.1;net6.0</TargetFrameworks>
@@ -21,7 +21,7 @@
 		<PackageReleaseNotes>https://github.com/masesgroup/KNet/releases</PackageReleaseNotes>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<PackageIcon>JCOB128x128.png</PackageIcon>
-		<PackageTags>knet kafka apache-kafka dotnet clr netcore net5 net6 kafka connect streams producer consumer providers streamprovider confluent</PackageTags>
+		<PackageTags>knet kafka apache-kafka dotnet clr netcore net5 net6 kafka connect streams producer consumer providers streamprovider gateway</PackageTags>
 		<PackageId>MASES.KNet</PackageId>
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
@@ -54,7 +54,7 @@
     <None Include="..\Documentation\articles\usage.md" Pack="true" PackagePath="\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="MASES.JNet" Version="1.4.4">
+    <PackageReference Include="MASES.JNet" Version="1.4.5">
       <IncludeAssets>All</IncludeAssets>
       <PrivateAssets>None</PrivateAssets>
     </PackageReference>
