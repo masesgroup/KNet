@@ -4,8 +4,8 @@
     <OutputType>Exe</OutputType>
     <AssemblyName>MASES.KNetCLI</AssemblyName>
     <RootNamespace>MASES.KNetCLI</RootNamespace>
-    <Title>KNetCLI - CLI interface of KNet</Title>
-    <Description>KNetCLI - CLI interface of KNet</Description>
+    <Title>KNetCLI - KNet command line interface</Title>
+    <Description>KNetCLI - KNet command line interface</Description>
     <Copyright>Copyright ©  MASES s.r.l. 2022</Copyright>
     <Owners>MASES s.r.l.</Owners>
     <Authors>MASES s.r.l.</Authors>
@@ -22,7 +22,7 @@
     <PackageReleaseNotes>https://github.com/masesgroup/KNet/releases</PackageReleaseNotes>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageIcon>JCOB128x128.png</PackageIcon>
-    <PackageTags>knet cli kafka apache-kafka dotnet clr netcore net5 net6 kafka connect streams producer consumer providers streamprovider confluent</PackageTags>
+    <PackageTags>knet cli kafka apache-kafka dotnet clr netcore net5 net6 kafka connect streams producer consumer providers streamprovider gateway</PackageTags>
     <PackageId>MASES.KNetCLI</PackageId>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>

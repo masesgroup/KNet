@@ -3,7 +3,7 @@
   <metadata>
     <id>MASES.KNetCLI</id>
     <version>1.3.3</version>
-    <title>KNetCLI - CLI interface of KNet</title>
+    <title>KNetCLI - KNet command line interface</title>
     <authors>MASES s.r.l.</authors>
     <owners>MASES s.r.l.</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
@@ -14,7 +14,7 @@
     <copyright>Copyright ©  MASES s.r.l. 2022</copyright>
     <license type="file">LICENSE</license>
     <icon>JCOB128x128.png</icon>
-    <tags>knet cli kafka apache-kafka dotnet clr netcore net5 net6 kafka connect streams producer consumer providers streamprovider confluent</tags>
+    <tags>knet cli kafka apache-kafka dotnet clr netcore net5 net6 kafka connect streams producer consumer providers streamprovider gateway</tags>
     <packageTypes>
     <packageType name="DotnetTool" />
     </packageTypes>
