@@ -51,7 +51,7 @@ jobs:
           gpg-passphrase: MAVEN_GPG_PASSPHRASE # env variable for GPG private key passphrase
 
       - name: Install local file to be used within Javadoc plugin of generated POM
-        run: mvn install:install-file -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.4.12 -Dpackaging=jar -Dfile=./bin/net6.0/JCOBridge.jar
+        run: mvn install:install-file -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.4.14 -Dpackaging=jar -Dfile=./bin/net6.0/JCOBridge.jar
         shell: bash
 
       - name: Create Jars
