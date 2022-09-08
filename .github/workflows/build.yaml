@@ -112,9 +112,10 @@ jobs:
 
       - name: Build documentation
         run: |
-          # choco install docfx
+          choco install docfx
           cd src\net\Documentation
-          ..\..\..\docfx\docfx
+          docfx
+          # ..\..\..\docfx\docfx
 
       - uses: actions/upload-artifact@v2
         with:
