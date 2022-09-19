@@ -1,6 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 	<Import Project="..\Common\Common.props" />
 	<PropertyGroup>
+		<OutputPath>..\..\..\bin\</OutputPath>
 		<AssemblyName>MASES.KNet</AssemblyName>
 		<RootNamespace>MASES.KNet</RootNamespace>
 		<Title>KNet - .NET gateway for Apache Kafka APIs</Title>

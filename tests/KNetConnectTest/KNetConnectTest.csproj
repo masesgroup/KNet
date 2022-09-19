@@ -5,7 +5,7 @@
 		<RootNamespace>MASES.KNetConnectTest</RootNamespace>
 		<Title>KNetConnectTest - a test tool for KNet Connect</Title>
 		<Description>KNetConnectTest - a test tool for KNet Connect</Description>
-		<LangVersion>latest</LangVersion>
+		<OutputPath>..\..\bin\</OutputPath>	
 	</PropertyGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\..\src\net\KNet\KNet.csproj" />

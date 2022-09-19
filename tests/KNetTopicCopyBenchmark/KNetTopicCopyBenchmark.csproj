@@ -6,6 +6,7 @@
 		<RootNamespace>MASES.KNet.Benchmark</RootNamespace>
 		<Title>KNetTest - a test tool for KNet</Title>
 		<Description>KNetTest - a test tool for KNet</Description>
+		<OutputPath>..\..\bin\</OutputPath>
 	</PropertyGroup>
 	<ItemGroup>
 		<Compile Include="..\KNetBenchmark\ProgramConfluent.cs" Link="ProgramConfluent.cs" />

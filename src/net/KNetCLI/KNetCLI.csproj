@@ -1,6 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 	<Import Project="..\Common\Common.props" />
 	<PropertyGroup>
+		<OutputPath>..\..\..\bin\</OutputPath>
 		<PackageType>DotnetTool</PackageType>
 		<OutputType>Exe</OutputType>
 		<AssemblyName>MASES.KNetCLI</AssemblyName>
