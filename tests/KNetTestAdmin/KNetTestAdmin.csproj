@@ -1,22 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <AssemblyName>KNetTestAdmin</AssemblyName>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>MASES.KNetTestAdmin</RootNamespace>
-    <Title>KNetTest - a test tool for KNet</Title>
-    <Description>KNetTest - a test tool for KNet</Description>
-    <Copyright>Copyright ©  MASES s.r.l. 2022</Copyright>
-    <Authors>MASES s.r.l.</Authors>
-    <Company>MASES s.r.l.</Company>
-    <Version>1.3.5.0</Version>
-    <TargetFrameworks>net462;netcoreapp3.1;net6.0</TargetFrameworks>
-    <OutputPath>..\..\bin\</OutputPath>
-	<LangVersion>latest</LangVersion>
-  </PropertyGroup>
-  <ItemGroup Condition="'$(TargetFramework)' == 'net462'">
-    <Reference Include="Microsoft.CSharp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\net\KNet\KNet.csproj" />
-  </ItemGroup>
+	<Import Project="..\..\src\net\Common\Common.props" />
+	<PropertyGroup>
+		<AssemblyName>KNetTestAdmin</AssemblyName>
+		<OutputType>Exe</OutputType>
+		<RootNamespace>MASES.KNetTestAdmin</RootNamespace>
+		<Title>KNetTest - a test tool for KNet</Title>
+		<Description>KNetTest - a test tool for KNet</Description>
+		<OutputPath>..\..\bin\</OutputPath>
+	</PropertyGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\src\net\KNet\KNet.csproj" />
+	</ItemGroup>
 </Project>
