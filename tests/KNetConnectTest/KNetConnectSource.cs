@@ -38,6 +38,16 @@ namespace MASES.KNetConnectTest
         {
 
         }
+
+        public override ExactlyOnceSupport ExactlyOnceSupport()
+        {
+            return KNet.Connect.Source.ExactlyOnceSupport.UNSUPPORTED;
+        }
+
+        public override ConnectorTransactionBoundaries CanDefineTransactionBoundaries()
+        {
+            return ConnectorTransactionBoundaries.UNSUPPORTED;
+        }
     }
 
     public class KNetSourceTestTask : KNetSourceTask<KNetSourceTestTask>
