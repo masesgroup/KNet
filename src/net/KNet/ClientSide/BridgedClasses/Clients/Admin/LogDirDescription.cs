@@ -38,11 +38,20 @@ namespace MASES.KNet.Clients.Admin
         {
         }
 
+        public LogDirDescription(ApiException error, Map<TopicPartition, ReplicaInfo> replicaInfos, long totalBytes, long usableBytes)
+            : base(error, replicaInfos, totalBytes, usableBytes)
+        {
+        }
+
         public ApiException Error
         {
             get { return JCOBridge.C2JBridge.JVMBridgeException.New(IExecute<IJavaObject>("error")) as ApiException; }
         }
 
         public Map<TopicPartition, ReplicaInfo> ReplicaInfos => IExecute<Map<TopicPartition, ReplicaInfo>>("replicaInfos");
+
+        public OptionalLong TotalBytes => IExecute<OptionalLong>("totalBytes");
+
+        public OptionalLong UsableBytes => IExecute<OptionalLong>("usableBytes");
     }
 }

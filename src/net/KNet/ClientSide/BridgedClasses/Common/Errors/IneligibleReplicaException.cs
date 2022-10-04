@@ -16,14 +16,10 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Clients.Admin
+namespace MASES.KNet.Common.Errors
 {
-    public class UpdateFeaturesOptions : AbstractOptions<UpdateFeaturesOptions>
+    public class IneligibleReplicaException : ApiException
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.UpdateFeaturesOptions";
-
-        public bool ValidateOnly() => IExecute<bool>("validateOnly");
-
-        public UpdateFeaturesOptions ValidateOnly(bool validateOnly) => IExecute<UpdateFeaturesOptions>("validateOnly", validateOnly);
+        public override string ClassName => "org.apache.kafka.common.errors.IneligibleReplicaException";
     }
 }

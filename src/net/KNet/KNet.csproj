@@ -15,7 +15,7 @@
 		<PackageReleaseNotes>https://github.com/masesgroup/KNet/releases</PackageReleaseNotes>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<PackageIcon>JCOB128x128.png</PackageIcon>
-		<PackageTags>knet kafka apache-kafka dotnet clr netcore net5 net6 kafka connect streams producer consumer providers streamprovider gateway</PackageTags>
+		<PackageTags>knet kafka apache-kafka dotnet clr netcore net6 kafka connect streams producer consumer providers streamprovider gateway</PackageTags>
 		<PackageId>MASES.KNet</PackageId>
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>

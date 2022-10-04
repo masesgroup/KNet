@@ -16,6 +16,8 @@
 *  Refer to LICENSE for more information.
 */
 
+using static MASES.KNet.Clients.Admin.FeatureUpdate;
+
 namespace MASES.KNet.Clients.Admin
 {
     public class FeatureUpdate : JCOBridge.C2JBridge.JVMBridgeBase<FeatureUpdate>
@@ -29,12 +31,25 @@ namespace MASES.KNet.Clients.Admin
         }
 
         public FeatureUpdate(short maxVersionLevel, bool allowDowngrade)
-            :base(maxVersionLevel, allowDowngrade)
+            : base(maxVersionLevel, allowDowngrade)
+        {
+        }
+
+        public FeatureUpdate(short maxVersionLevel, UpgradeType upgradeType)
+            : base(maxVersionLevel, upgradeType)
         {
         }
 
         public short MaxVersionLevel => IExecute<short>("maxVersionLevel");
 
         public bool AllowDowngrade => IExecute<bool>("allowDowngrade");
+
+        public enum UpgradeType
+        {
+            UNKNOWN = 0,
+            UPGRADE = 1,
+            SAFE_DOWNGRADE = 2,
+            UNSAFE_DOWNGRADE = 3,
+        }
     }
 }

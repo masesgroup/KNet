@@ -16,14 +16,26 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Clients.Admin
+using MASES.JCOBridge.C2JBridge;
+
+namespace MASES.KNet.Streams.KStream
 {
-    public class UpdateFeaturesOptions : AbstractOptions<UpdateFeaturesOptions>
+    public class EmitStrategy : JVMBridgeBase<EmitStrategy>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.UpdateFeaturesOptions";
+        public override bool IsInterface => true;
 
-        public bool ValidateOnly() => IExecute<bool>("validateOnly");
+        public override string ClassName => "org.apache.kafka.streams.kstream.EmitStrategy";
 
-        public UpdateFeaturesOptions ValidateOnly(bool validateOnly) => IExecute<UpdateFeaturesOptions>("validateOnly", validateOnly);
+        public enum StrategyType
+        {
+            ON_WINDOW_UPDATE,
+            ON_WINDOW_CLOSE,
+        }
+
+        public StrategyType Type => IExecute<StrategyType>("type");
+
+        public static EmitStrategy OnWindowClose => SExecute<EmitStrategy>("onWindowClose");
+
+        public static EmitStrategy OnWindowUpdate => SExecute<EmitStrategy>("onWindowUpdate");
     }
 }

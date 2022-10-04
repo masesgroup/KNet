@@ -33,5 +33,7 @@ namespace MASES.KNet.Common.Acl
         DESCRIBE_CONFIGS,
         ALTER_CONFIGS,
         IDEMPOTENT_WRITE,
+        CREATE_TOKENS,
+        DESCRIBE_TOKENS,
     }
 }

@@ -44,7 +44,6 @@ namespace MASES.KNet.Common.Metrics
             : base(defaultConfig)
         {
         }
-/* TO BE COMPLETED
         public Metrics(MetricConfig defaultConfig, List<MetricsReporter> reporters, Time time)
             : base(defaultConfig, reporters, time)
         {
@@ -64,7 +63,7 @@ namespace MASES.KNet.Common.Metrics
             : base(defaultConfig, reporters, time, enableExpiration, metricsContext)
         {
         }
-*/
+
         public static string ToHtmlTable(string domain, Java.Lang.Iterable<MetricNameTemplate> allMetrics)
         {
             return SExecute<string>(domain, allMetrics);
@@ -146,8 +145,13 @@ namespace MASES.KNet.Common.Metrics
             IExecute("addMetric", metricName, metricValueProvider);
         }
 
+        public KafkaMetric AddMetricIfAbsent<T>(MetricName metricName, MetricConfig config, MetricValueProvider<T> metricValueProvider)
+        {
+            return IExecute<KafkaMetric>("addMetricIfAbsent", metricName, config, metricValueProvider);
+        }
+
         public KafkaMetric RemoveMetric(MetricName metricName) => IExecute<KafkaMetric>("removeMetric", metricName);
-        /* TO BE COMPLETED
+
         public void AddReporter(MetricsReporter reporter)
         {
             IExecute("addReporter", reporter);
@@ -159,7 +163,7 @@ namespace MASES.KNet.Common.Metrics
         }
 
         public List<MetricsReporter> Reporters => IExecute<List<MetricsReporter>>("reporters");
-        */
+        
         public Map<MetricName, KafkaMetric> AllMetrics => IExecute<Map<MetricName, KafkaMetric>>("metrics");
 
         public KafkaMetric Metric(MetricName metricName) => IExecute<KafkaMetric>("metric", metricName);

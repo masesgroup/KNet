@@ -16,6 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
+using Java.Util;
 using MASES.KNet.Connect.Source;
 using System;
 
@@ -34,6 +35,31 @@ namespace MASES.KNet.Connect
         /// The <see cref="SourceConnectorContext"/>
         /// </summary>
         public SourceConnectorContext Context => Context<SourceConnectorContext>();
+
+        /// <summary>
+        /// Public method used from Java to trigger <see cref="ExactlyOnceSupport"/>
+        /// </summary>
+        public ExactlyOnceSupport ExactlyOnceSupportInternal()
+        {
+            return ExactlyOnceSupport();
+        }
+        /// <summary>
+        /// Implement the method to execute the exactlyOnceSupport action
+        /// </summary>
+        public abstract ExactlyOnceSupport ExactlyOnceSupport();
+
+        /// <summary>
+        /// Public method used from Java to trigger <see cref="CanDefineTransactionBoundaries"/>
+        /// </summary>
+        public ConnectorTransactionBoundaries CanDefineTransactionBoundariesInternal()
+        {
+            return CanDefineTransactionBoundaries();
+        }
+        /// <summary>
+        /// Implement the method to execute the canDefineTransactionBoundaries action
+        /// </summary>
+        public abstract ConnectorTransactionBoundaries CanDefineTransactionBoundaries();
+
         /// <summary>
         /// Set the <see cref="ReflectedConnectorClassName"/> of the connector to a fixed value
         /// </summary>

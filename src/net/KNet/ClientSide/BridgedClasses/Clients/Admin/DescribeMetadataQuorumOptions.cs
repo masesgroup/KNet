@@ -18,12 +18,8 @@
 
 namespace MASES.KNet.Clients.Admin
 {
-    public class UpdateFeaturesOptions : AbstractOptions<UpdateFeaturesOptions>
+    public class DescribeMetadataQuorumOptions : AbstractOptions<DescribeMetadataQuorumOptions>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.UpdateFeaturesOptions";
-
-        public bool ValidateOnly() => IExecute<bool>("validateOnly");
-
-        public UpdateFeaturesOptions ValidateOnly(bool validateOnly) => IExecute<UpdateFeaturesOptions>("validateOnly", validateOnly);
+        public override string ClassName => "org.apache.kafka.clients.admin.DescribeMetadataQuorumOptions";
     }
 }

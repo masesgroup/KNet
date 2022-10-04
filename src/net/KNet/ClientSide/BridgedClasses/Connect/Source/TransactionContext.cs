@@ -16,14 +16,21 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Clients.Admin
+using MASES.JCOBridge.C2JBridge;
+
+namespace MASES.KNet.Connect.Source
 {
-    public class UpdateFeaturesOptions : AbstractOptions<UpdateFeaturesOptions>
+    public class TransactionContext : JVMBridgeBase<TransactionContext>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.UpdateFeaturesOptions";
+        public override bool IsInterface => true;
+        public override string ClassName => "org.apache.kafka.connect.source.TransactionContext";
 
-        public bool ValidateOnly() => IExecute<bool>("validateOnly");
+        public void CommitTransaction() => IExecute("commitTransaction");
 
-        public UpdateFeaturesOptions ValidateOnly(bool validateOnly) => IExecute<UpdateFeaturesOptions>("validateOnly", validateOnly);
+        public void CommitTransaction(SourceRecord record) => IExecute("commitTransaction", record);
+
+        public void AbortTransaction() => IExecute("abortTransaction");
+
+        public void AbortTransaction(SourceRecord record) => IExecute("abortTransaction", record);
     }
 }

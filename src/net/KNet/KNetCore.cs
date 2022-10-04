@@ -95,6 +95,7 @@ namespace MASES.KNet
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(ApiException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(AuthenticationException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(AuthorizationException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(AuthorizerNotReadyException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(BrokerIdNotRegisteredException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(BrokerNotAvailableException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(ClusterAuthorizationException));
@@ -129,6 +130,7 @@ namespace MASES.KNet
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InconsistentGroupProtocolException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InconsistentTopicIdException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InconsistentVoterSetException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(IneligibleReplicaException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InterruptException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidCommitOffsetSizeException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidConfigurationException));
@@ -157,6 +159,7 @@ namespace MASES.KNet
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(LogDirNotFoundException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(MemberIdRequiredException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(NetworkException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(NewLeaderElectedException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(NoReassignmentInProgressException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(NotControllerException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(NotCoordinatorException));

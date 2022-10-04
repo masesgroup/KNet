@@ -16,14 +16,23 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Clients.Admin
+using System;
+
+namespace MASES.KNet.Streams.Processor.Api
 {
-    public class UpdateFeaturesOptions : AbstractOptions<UpdateFeaturesOptions>
+    public class ContextualProcessor<KIn, VIn, KOut, VOut> : Processor<KIn, VIn, KOut, VOut>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.UpdateFeaturesOptions";
+        public ContextualProcessor(Action<Record<KIn, VIn>> process = null, Action close = null)
+            : base(null, process, close)
+        {
+        }
 
-        public bool ValidateOnly() => IExecute<bool>("validateOnly");
+        ProcessorContext<KOut, VOut> _context = null;
+        protected ProcessorContext<KOut, VOut> Context => _context;
 
-        public UpdateFeaturesOptions ValidateOnly(bool validateOnly) => IExecute<UpdateFeaturesOptions>("validateOnly", validateOnly);
+        public override void Init(ProcessorContext<KOut, VOut> context)
+        {
+            _context = context;
+        }
     }
 }

@@ -16,14 +16,14 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KNet.Common;
+
 namespace MASES.KNet.Clients.Admin
 {
-    public class UpdateFeaturesOptions : AbstractOptions<UpdateFeaturesOptions>
+    public class DescribeMetadataQuorumResult : JCOBridge.C2JBridge.JVMBridgeBase<DescribeMetadataQuorumResult>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.UpdateFeaturesOptions";
+        public override string ClassName => "org.apache.kafka.clients.admin.DescribeMetadataQuorumResult";
 
-        public bool ValidateOnly() => IExecute<bool>("validateOnly");
-
-        public UpdateFeaturesOptions ValidateOnly(bool validateOnly) => IExecute<UpdateFeaturesOptions>("validateOnly", validateOnly);
+        public KafkaFuture<QuorumInfo> QuorumInfo => IExecute<KafkaFuture<QuorumInfo>>("quorumInfo");
     }
 }

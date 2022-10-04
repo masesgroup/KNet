@@ -20,6 +20,16 @@ namespace MASES.KNetTemplate.KNetConnect
         {
 
         }
+
+        public override ExactlyOnceSupport ExactlyOnceSupport()
+        {
+            return KNet.Connect.Source.ExactlyOnceSupport.UNSUPPORTED;
+        }
+
+        public override ConnectorTransactionBoundaries CanDefineTransactionBoundaries()
+        {
+            return ConnectorTransactionBoundaries.UNSUPPORTED;
+        }
     }
 
     public class KNetConnectSourceTask : KNetSourceTask<KNetConnectSourceTask>

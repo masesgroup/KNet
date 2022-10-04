@@ -37,6 +37,10 @@ namespace MASES.KNet.Clients.Admin
             return IExecute<CreateDelegationTokenOptions>("maxlifeTimeMs", maxLifeTimeMs);
         }
 
+        public CreateDelegationTokenOptions Owner(KafkaPrincipal owner) => IExecute<CreateDelegationTokenOptions>("owner", owner);
+
+        public Optional<KafkaPrincipal> Owner() => IExecute<Optional<KafkaPrincipal>>("owner");
+
         public long MaxlifeTimeMs() => IExecute<long>("maxlifeTimeMs");
     }
 }
