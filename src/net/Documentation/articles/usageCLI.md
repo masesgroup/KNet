@@ -23,6 +23,7 @@ _knet_ accepts the following command-line switch:
 		* FeatureCommand
 		* LeaderElectionCommand
 		* LogDirsCommand
+		* MetadataQuorumCommand
 		* ReassignPartitionsCommand
 		* TopicCommand
 		* ZkSecurityMigrator
