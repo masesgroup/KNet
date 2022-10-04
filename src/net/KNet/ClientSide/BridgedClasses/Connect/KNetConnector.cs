@@ -70,6 +70,21 @@ namespace MASES.KNet.Connect
         {
             KNetCore.GlobalInstance.RegisterCLRGlobal(ReflectedConnectorClassName, this);
         }
+
+        /// <summary>
+        /// An helper function to read the data from Java side
+        /// </summary>
+        /// <typeparam name="T">The expected return <see cref="Type"/></typeparam>
+        /// <param name="method">Method name to be invoked</param>
+        /// <param name="args">Arguments of the <paramref name="method"/> to be invoked</param>
+        /// <returns>The <typeparamref name="T"/></returns>
+        /// <exception cref="InvalidOperationException"> </exception>
+        protected T ExecuteOnConnector<T>(string method, params object[] args)
+        {
+            reflectedConnector ??= KNetCore.GlobalInstance.GetJVMGlobal(ReflectedConnectorClassName);
+            return (reflectedConnector != null) ? reflectedConnector.Invoke<T>(method, args) : throw new InvalidOperationException($"{ReflectedConnectorClassName} was not registered in global JVM");
+        }
+
         /// <summary>
         /// An helper function to read the data from Java side
         /// </summary>
@@ -78,11 +93,7 @@ namespace MASES.KNet.Connect
         /// <exception cref="InvalidOperationException"> </exception>
         protected T DataToExchange<T>()
         {
-            if (reflectedConnector == null)
-            {
-                reflectedConnector = KNetCore.GlobalInstance.GetJVMGlobal(ReflectedConnectorClassName);
-            }
-            return (reflectedConnector != null) ? reflectedConnector.Invoke<T>("getDataToExchange") : throw new InvalidOperationException($"{ReflectedConnectorClassName} was not registered in global JVM");
+            return ExecuteOnConnector<T>("getDataToExchange");
         }
         /// <summary>
         /// An helper function to read the data from Java side
@@ -102,20 +113,18 @@ namespace MASES.KNet.Connect
                 throw new InvalidOperationException($"{ReflectedConnectorClassName} was not registered in global JVM");
             }
         }
+
         /// <summary>
-        /// An helper function to read the data from Java side
+        /// An helper function to read context data from Java side
         /// </summary>
         /// <typeparam name="T">The expected return <see cref="Type"/></typeparam>
         /// <returns>The <typeparamref name="T"/></returns>
         /// <exception cref="InvalidOperationException"> </exception>
         protected T Context<T>()
         {
-            if (reflectedConnector == null)
-            {
-                reflectedConnector = KNetCore.GlobalInstance.GetJVMGlobal(ReflectedConnectorClassName);
-            }
-            return (reflectedConnector != null) ? reflectedConnector.Invoke<T>("getContext") : throw new InvalidOperationException($"{ReflectedConnectorClassName} was not registered in global JVM");
+            return ExecuteOnConnector<T>("getContext");
         }
+
         /// <inheritdoc cref="IKNetConnector.AllocateTask(long)"/>
         public object AllocateTask(long taskId)
         {

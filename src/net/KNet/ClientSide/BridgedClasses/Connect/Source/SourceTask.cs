@@ -29,6 +29,26 @@ namespace MASES.KNet.Connect.Source
 
         public override string ClassName => "org.apache.kafka.connect.source.SourceTask";
 
+        public static readonly string TRANSACTION_BOUNDARY_CONFIG = Clazz.GetField<string>("TRANSACTION_BOUNDARY_CONFIG");
+
+        public static readonly TransactionBoundary DEFAULT = TransactionBoundary.POLL;
+
+        public enum TransactionBoundary
+        {
+            /**
+             * A new transaction will be started and committed for every batch of records returned by {@link #poll()}.
+             */
+            POLL,
+            /**
+             * Transactions will be started and committed on a user-defined time interval.
+             */
+            INTERVAL,
+            /**
+             * Transactions will be defined by the connector itself, via a {@link TransactionContext}.
+             */
+            CONNECTOR,
+        }
+
         public void Initialize(SourceTaskContext context) => IExecute("initialize", context);
 
         public List<SourceRecord> Poll() => IExecute<List<SourceRecord>>("poll");

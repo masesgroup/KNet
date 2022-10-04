@@ -21,8 +21,7 @@ package org.mases.knet.connect.source;
 import org.apache.kafka.common.config.ConfigDef;
 import org.apache.kafka.connect.connector.Task;
 import org.apache.kafka.connect.errors.ConnectException;
-import org.apache.kafka.connect.source.SourceConnector;
-import org.apache.kafka.connect.source.SourceConnectorContext;
+import org.apache.kafka.connect.source.*;
 import org.mases.jcobridge.*;
 import org.mases.knet.connect.KNetConnectProxy;
 import org.slf4j.Logger;
@@ -131,5 +130,38 @@ public class KNetSourceConnector extends SourceConnector {
             log.error("Failed Invoke of \"version\"", jcne);
         }
         return "NOT AVAILABLE";
+    }
+    @Override
+    public ExactlyOnceSupport exactlyOnceSupport(Map<String, String> connectorConfig) {
+        try {
+            try {
+                JCObject source = KNetConnectProxy.getSourceConnector();
+                dataToExchange = null;
+                source.Invoke("ExactlyOnceSupportInternal", connectorConfig);
+                if (dataToExchange != null) return (ExactlyOnceSupport) dataToExchange;
+            } finally {
+                dataToExchange = null;
+            }
+        } catch (JCException | IOException jcne) {
+            log.error("Failed Invoke of \"exactlyOnceSupport\"", jcne);
+        }
+        return null;
+    }
+
+    @Override
+    public ConnectorTransactionBoundaries canDefineTransactionBoundaries(Map<String, String> connectorConfig) {
+        try {
+            try {
+                JCObject source = KNetConnectProxy.getSourceConnector();
+                dataToExchange = null;
+                source.Invoke("CanDefineTransactionBoundariesInternal", connectorConfig);
+                if (dataToExchange != null) return (ConnectorTransactionBoundaries) dataToExchange;
+            } finally {
+                dataToExchange = null;
+            }
+        } catch (JCException | IOException jcne) {
+            log.error("Failed Invoke of \"canDefineTransactionBoundaries\"", jcne);
+        }
+        return ConnectorTransactionBoundaries.UNSUPPORTED;
     }
 }

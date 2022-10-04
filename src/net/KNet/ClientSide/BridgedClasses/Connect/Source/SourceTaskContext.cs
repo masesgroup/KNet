@@ -30,5 +30,7 @@ namespace MASES.KNet.Connect.Source
         public Map<string, string> Configs => IExecute<Map<string, string>>("configs");
 
         public OffsetStorageReader OffsetStorageReader => IExecute<OffsetStorageReader>("offsetStorageReader");
+
+        public TransactionContext TransactionContext => IExecute<TransactionContext>("transactionContext");
     }
 }
