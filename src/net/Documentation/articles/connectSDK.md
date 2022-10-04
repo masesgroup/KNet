@@ -37,6 +37,14 @@ When the __C:\MyConnect__ folder contains all the files it is possible to run Ap
 > knet -ClassToRun ConnectStandalone connect-standalone.properties connect-knet-sink.properties
 >
 
+### Exactly Once and Transaction properties for Source Connector
+
+From version 3.3.1 of Apache Kafka Connect it is possible to manage Exactly Once and Transaction in the source connector.
+
+Two new fallback options are available in case the infrastructure is not ready to receive request in .NET side to obtain values related to Exactly Once and Transaction:
+- `knet.dotnet.source.exactlyOnceSupport`: set to true if .NET Source Connector supports Exactly Once
+- `knet.dotnet.source.canDefineTransactionBoundaries`: set to true if .NET Source Connector can define Transaction Boundaries
+
 ## Distributed
 
 As stated in [Apache Kafka Connect Guide](https://kafka.apache.org/documentation/#connect ) the distributed version does not use the connector file definition, instead it shall be managed using the REST interface.
