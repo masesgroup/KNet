@@ -39,11 +39,11 @@ public class KNetSourceConnector extends SourceConnector {
 
     private static final String registrationName = "KNetSourceConnector";
 
-    public static final String DOTNET_EXACTLYONESUPPORT_CONFIG = "knet.dotnet.source.exactlyOnceSupport";
+    public static final String DOTNET_EXACTLYONCESUPPORT_CONFIG = "knet.dotnet.source.exactlyOnceSupport";
     public static final String DOTNET_CANDEFINETRANSACTIONBOUNDARIES_CONFIG = "knet.dotnet.source.canDefineTransactionBoundaries";
 
     public static final ConfigDef CONFIG_DEF = new ConfigDef(KNetConnectProxy.CONFIG_DEF)
-            .define(DOTNET_EXACTLYONESUPPORT_CONFIG, ConfigDef.Type.BOOLEAN, false, ConfigDef.Importance.LOW, "Fallback value if infrastructure is not ready to receive request in .NET side to get exactlyOnceSupport")
+            .define(DOTNET_EXACTLYONCESUPPORT_CONFIG, ConfigDef.Type.BOOLEAN, false, ConfigDef.Importance.LOW, "Fallback value if infrastructure is not ready to receive request in .NET side to get exactlyOnceSupport")
             .define(DOTNET_CANDEFINETRANSACTIONBOUNDARIES_CONFIG, ConfigDef.Type.BOOLEAN, false, ConfigDef.Importance.LOW, "Fallback value if infrastructure is not ready to receive request in .NET side to get canDefineTransactionBoundaries");
 
     Object dataToExchange = null;
@@ -156,7 +156,7 @@ public class KNetSourceConnector extends SourceConnector {
         }
         log.info("Fallback Invoke of \"exactlyOnceSupport\" to configuration");
         AbstractConfig parsedConfig = new AbstractConfig(CONFIG_DEF, connectorConfig);
-        Boolean exactlyOnceSupport = parsedConfig.getBoolean(DOTNET_EXACTLYONESUPPORT_CONFIG);
+        Boolean exactlyOnceSupport = parsedConfig.getBoolean(DOTNET_EXACTLYONCESUPPORT_CONFIG);
         if (exactlyOnceSupport.booleanValue()) return ExactlyOnceSupport.SUPPORTED;
         return ExactlyOnceSupport.UNSUPPORTED;
     }
