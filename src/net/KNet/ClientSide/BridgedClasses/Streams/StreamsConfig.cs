@@ -66,6 +66,22 @@ namespace MASES.KNet.Streams
 
         public static readonly string UPGRADE_FROM_23 = Clazz.GetField<string>("UPGRADE_FROM_23");
 
+        public static readonly string UPGRADE_FROM_24 = Clazz.GetField<string>("UPGRADE_FROM_24");
+
+        public static readonly string UPGRADE_FROM_25 = Clazz.GetField<string>("UPGRADE_FROM_25");
+
+        public static readonly string UPGRADE_FROM_26 = Clazz.GetField<string>("UPGRADE_FROM_26");
+
+        public static readonly string UPGRADE_FROM_27 = Clazz.GetField<string>("UPGRADE_FROM_27");
+
+        public static readonly string UPGRADE_FROM_28 = Clazz.GetField<string>("UPGRADE_FROM_28");
+
+        public static readonly string UPGRADE_FROM_30 = Clazz.GetField<string>("UPGRADE_FROM_30");
+
+        public static readonly string UPGRADE_FROM_31 = Clazz.GetField<string>("UPGRADE_FROM_31");
+
+        public static readonly string UPGRADE_FROM_32 = Clazz.GetField<string>("UPGRADE_FROM_32");
+
         public static readonly string AT_LEAST_ONCE = Clazz.GetField<string>("AT_LEAST_ONCE");
 
         [System.Obsolete]

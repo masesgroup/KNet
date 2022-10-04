@@ -32,11 +32,18 @@ namespace MASES.KNet.Common.Security.Token.Delegation
         }
 
         public TokenInformation(string tokenId, KafkaPrincipal owner, Collection<KafkaPrincipal> renewers, long issueTimestamp, long maxTimestamp, long expiryTimestamp)
-            :base(tokenId,  owner,  renewers,  issueTimestamp,  maxTimestamp,  expiryTimestamp)
+            : base(tokenId, owner, renewers, issueTimestamp, maxTimestamp, expiryTimestamp)
         {
         }
 
-        public KafkaPrincipal owner => IExecute<KafkaPrincipal>("owner");
+        public TokenInformation(string tokenId, KafkaPrincipal owner, KafkaPrincipal tokenRequester, Collection<KafkaPrincipal> renewers, long issueTimestamp, long maxTimestamp, long expiryTimestamp)
+            : base(tokenId, owner, tokenRequester, renewers, issueTimestamp, maxTimestamp, expiryTimestamp)
+        {
+        }
+
+        public KafkaPrincipal Owner => IExecute<KafkaPrincipal>("owner");
+
+        public KafkaPrincipal TokenRequester => IExecute<KafkaPrincipal>("tokenRequester");
 
         public string OwnerAsString => IExecute<string>("ownerAsString");
 

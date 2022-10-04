@@ -25,31 +25,29 @@ using Java.Util;
 
 namespace MASES.KNet.Streams.Processor.Api
 {
-    public interface IProcessorContext<KForward, VForward> : IJVMBridgeBase
+    public interface IFixedKeyProcessorContext<KForward, VForward> : IProcessingContext
     {
-        void Forward<K, V>(Record<K, V> record)
+        void Forward<K, V>(FixedKeyRecord<K, V> record)
             where K : KForward
             where V : VForward;
 
-        void Forward<K, V>(Record<K, V> record, string childName)
+        void Forward<K, V>(FixedKeyRecord<K, V> record, string childName)
             where K : KForward
             where V : VForward;
     }
 
-    public class ProcessorContext<KForward, VForward> : ProcessingContext, IProcessorContext<KForward, VForward>
+    public class FixedKeyProcessorContext<KForward, VForward> : ProcessingContext, IFixedKeyProcessorContext<KForward, VForward>
     {
-        public override bool IsInterface => true;
+        public override string ClassName => "org.apache.kafka.streams.processor.api.FixedKeyProcessorContext";
 
-        public override string ClassName => "org.apache.kafka.streams.processor.api.ProcessorContext";
-
-        public void Forward<K, V>(Record<K, V> record)
+        public void Forward<K, V>(FixedKeyRecord<K, V> record)
             where K : KForward
             where V : VForward
         {
             IExecute("forward", record);
         }
 
-        public void Forward<K, V>(Record<K, V> record, string childName)
+        public void Forward<K, V>(FixedKeyRecord<K, V> record, string childName)
             where K : KForward
             where V : VForward
         {

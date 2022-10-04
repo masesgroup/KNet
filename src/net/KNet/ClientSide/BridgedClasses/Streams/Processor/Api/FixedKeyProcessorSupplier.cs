@@ -16,14 +16,18 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Clients.Admin
+using Java.Util.Function;
+using Java.Util;
+using MASES.KNet.Streams.State;
+
+namespace MASES.KNet.Streams.Processor.Api
 {
-    public class UpdateFeaturesOptions : AbstractOptions<UpdateFeaturesOptions>
+    public interface IFixedKeyProcessorSupplier<KIn, VIn, VOut> : IConnectedStoreProvider, ISupplier<FixedKeyProcessorSupplier<KIn, VIn, VOut>>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.UpdateFeaturesOptions";
+    }
 
-        public bool ValidateOnly() => IExecute<bool>("validateOnly");
-
-        public UpdateFeaturesOptions ValidateOnly(bool validateOnly) => IExecute<UpdateFeaturesOptions>("validateOnly", validateOnly);
+    public class FixedKeyProcessorSupplier<KIn, VIn, VOut> : Supplier<FixedKeyProcessorSupplier<KIn, VIn, VOut>>, IFixedKeyProcessorSupplier<KIn, VIn, VOut>
+    {
+        public Set<StoreBuilder> Stores => throw new System.NotImplementedException();
     }
 }

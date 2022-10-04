@@ -27,6 +27,8 @@ using MASES.KNet.Streams.Errors;
 using MASES.KNet.Streams.Processor;
 using System;
 using MASES.KNet.Streams.Query;
+using Java.Lang;
+using System.Threading;
 
 namespace MASES.KNet.Streams
 {
@@ -145,6 +147,8 @@ namespace MASES.KNet.Streams
             return IExecute<bool>("close", timeout);
         }
 
+        public bool Close(CloseOptions options) => IExecute<bool>("close", options);
+
         public void CleanUp() { IExecute("cleanUp"); }
 
         public Collection<StreamsMetadata> MetadataForAllStreamsClients => IExecute<Collection<StreamsMetadata>>("metadataForAllStreamsClients");
@@ -169,11 +173,26 @@ namespace MASES.KNet.Streams
             return IExecute<T>("store", storeQueryParameters);
         }
 
+        public void Pause() => IExecute<bool>("pause");
+
+        public bool IsPaused => IExecute<bool>("isPaused");
+
+        public void Resume() => IExecute("resume");
+
         public Set<TaskMetadata> MetadataForLocalThreads => IExecute<Set<TaskMetadata>>("metadataForLocalThreads");
 
         public Map<string, Map<int, LagInfo>> AllLocalStorePartitionLags => IExecute<Map<string, Map<int, LagInfo>>>("allLocalStorePartitionLags");
 
         public StateQueryResult<R> Query<R>(StateQueryRequest<R> request) => IExecute<StateQueryResult<R>>("query", request);
+
+        public class CloseOptions :JVMBridgeBase<CloseOptions>
+        {
+            public override string ClassName => "org.apache.kafka.streams.KafkaStreams$CloseOptions";
+
+            public CloseOptions Timeout(Duration timeout) => IExecute<CloseOptions>("timeout", timeout);
+
+            public CloseOptions LeaveGroup(bool leaveGroup) => IExecute<CloseOptions>("leaveGroup", leaveGroup);
+        }
     }
 }
 

@@ -16,14 +16,19 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Clients.Admin
+namespace MASES.KNet.Admin
 {
-    public class UpdateFeaturesOptions : AbstractOptions<UpdateFeaturesOptions>
+    /// <summary>
+    /// Class managing MetadataQuorumCommand
+    /// </summary>
+    public class MetadataQuorumCommand : JCOBridge.C2JBridge.JVMBridgeMain<MetadataQuorumCommand>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.UpdateFeaturesOptions";
-
-        public bool ValidateOnly() => IExecute<bool>("validateOnly");
-
-        public UpdateFeaturesOptions ValidateOnly(bool validateOnly) => IExecute<UpdateFeaturesOptions>("validateOnly", validateOnly);
+        /// <summary>
+        /// Initialize a new <see cref="ZkSecurityMigrator"/>
+        /// </summary>
+        public MetadataQuorumCommand()
+            : base("kafka.admin.MetadataQuorumCommand")
+        {
+        }
     }
 }

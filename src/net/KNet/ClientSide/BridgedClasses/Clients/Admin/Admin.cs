@@ -127,6 +127,10 @@ namespace MASES.KNet.Clients.Admin
 
         ListConsumerGroupOffsetsResult ListConsumerGroupOffsets(string groupId);
 
+        ListConsumerGroupOffsetsResult ListConsumerGroupOffsets(Map<string, ListConsumerGroupOffsetsSpec> groupSpecs, ListConsumerGroupOffsetsOptions options);
+
+        ListConsumerGroupOffsetsResult ListConsumerGroupOffsets(Map<string, ListConsumerGroupOffsetsSpec> groupSpecs);
+
         DeleteConsumerGroupsResult DeleteConsumerGroups(Collection<string> groupIds, DeleteConsumerGroupsOptions options);
 
         DeleteConsumerGroupsResult DeleteConsumerGroups(Collection<string> groupIds);
@@ -186,6 +190,10 @@ namespace MASES.KNet.Clients.Admin
         DescribeFeaturesResult DescribeFeatures(DescribeFeaturesOptions options);
 
         UpdateFeaturesResult UpdateFeatures(Map<string, FeatureUpdate> featureUpdates, UpdateFeaturesOptions options);
+
+        DescribeMetadataQuorumResult DescribeMetadataQuorum();
+
+        DescribeMetadataQuorumResult DescribeMetadataQuorum(DescribeMetadataQuorumOptions options);
 
         UnregisterBrokerResult UnregisterBroker(int brokerId);
 

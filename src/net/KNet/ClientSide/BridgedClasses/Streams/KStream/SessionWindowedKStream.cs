@@ -70,6 +70,8 @@ namespace MASES.KNet.Streams.KStream
         KTable<Windowed<K>, V> Reduce(Reducer<V> reducer,
                                       Named named,
                                       Materialized<K, V, SessionStore<Bytes, byte[]>> materialized);
+
+        SessionWindowedKStream<K, V> EmitStrategy(EmitStrategy emitStrategy);
     }
 
     public class SessionWindowedKStream<K, V> : JVMBridgeBase<SessionWindowedKStream<K, V>, ISessionWindowedKStream<K, V>>, ISessionWindowedKStream<K, V>
@@ -142,6 +144,11 @@ namespace MASES.KNet.Streams.KStream
         public KTable<Windowed<K>, V> Reduce(Reducer<V> reducer, Named named, Materialized<K, V, SessionStore<Bytes, byte[]>> materialized)
         {
             return IExecute<KTable<Windowed<K>, V>>("reduce", reducer, named, materialized);
+        }
+
+        public SessionWindowedKStream<K, V> EmitStrategy(EmitStrategy emitStrategy)
+        {
+            return IExecute<SessionWindowedKStream<K, V>>("emitStrategy", emitStrategy);
         }
     }
 }

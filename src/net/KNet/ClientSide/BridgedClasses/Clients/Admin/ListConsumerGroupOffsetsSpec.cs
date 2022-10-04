@@ -16,14 +16,18 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KNet.Common;
+using Java.Util;
+using MASES.JCOBridge.C2JBridge;
+
 namespace MASES.KNet.Clients.Admin
 {
-    public class UpdateFeaturesOptions : AbstractOptions<UpdateFeaturesOptions>
+    public class ListConsumerGroupOffsetsSpec : JVMBridgeBase<ListConsumerGroupOffsetsSpec>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.UpdateFeaturesOptions";
+        public override string ClassName => "org.apache.kafka.clients.admin.ListConsumerGroupOffsetsSpec";
 
-        public bool ValidateOnly() => IExecute<bool>("validateOnly");
+        public ListConsumerGroupOffsetsSpec TopicPartitions(Collection<TopicPartition> topicPartitions) => IExecute<ListConsumerGroupOffsetsSpec>("topicPartitions", topicPartitions);
 
-        public UpdateFeaturesOptions ValidateOnly(bool validateOnly) => IExecute<UpdateFeaturesOptions>("validateOnly", validateOnly);
+        public Collection<TopicPartition> TopicPartitions() => IExecute<Collection<TopicPartition>>("topicPartitions");
     }
 }
