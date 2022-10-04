@@ -18,6 +18,7 @@
 
 package org.mases.knet.connect.source;
 
+import org.apache.kafka.common.config.AbstractConfig;
 import org.apache.kafka.common.config.ConfigDef;
 import org.apache.kafka.connect.connector.Task;
 import org.apache.kafka.connect.errors.ConnectException;
@@ -37,6 +38,13 @@ public class KNetSourceConnector extends SourceConnector {
     private static final Logger log = LoggerFactory.getLogger(KNetSourceConnector.class);
 
     private static final String registrationName = "KNetSourceConnector";
+
+    public static final String DOTNET_EXACTLYONCESUPPORT_CONFIG = "knet.dotnet.source.exactlyOnceSupport";
+    public static final String DOTNET_CANDEFINETRANSACTIONBOUNDARIES_CONFIG = "knet.dotnet.source.canDefineTransactionBoundaries";
+
+    public static final ConfigDef CONFIG_DEF = new ConfigDef(KNetConnectProxy.CONFIG_DEF)
+            .define(DOTNET_EXACTLYONCESUPPORT_CONFIG, ConfigDef.Type.BOOLEAN, false, ConfigDef.Importance.LOW, "Fallback value if infrastructure is not ready to receive request in .NET side to get exactlyOnceSupport")
+            .define(DOTNET_CANDEFINETRANSACTIONBOUNDARIES_CONFIG, ConfigDef.Type.BOOLEAN, false, ConfigDef.Importance.LOW, "Fallback value if infrastructure is not ready to receive request in .NET side to get canDefineTransactionBoundaries");
 
     Object dataToExchange = null;
 
@@ -116,7 +124,7 @@ public class KNetSourceConnector extends SourceConnector {
 
     @Override
     public ConfigDef config() {
-        return KNetConnectProxy.CONFIG_DEF;
+        return CONFIG_DEF;
     }
 
     @Override
@@ -131,6 +139,7 @@ public class KNetSourceConnector extends SourceConnector {
         }
         return "NOT AVAILABLE";
     }
+
     @Override
     public ExactlyOnceSupport exactlyOnceSupport(Map<String, String> connectorConfig) {
         try {
@@ -145,7 +154,11 @@ public class KNetSourceConnector extends SourceConnector {
         } catch (JCException | IOException jcne) {
             log.error("Failed Invoke of \"exactlyOnceSupport\"", jcne);
         }
-        return null;
+        log.info("Fallback Invoke of \"exactlyOnceSupport\" to configuration");
+        AbstractConfig parsedConfig = new AbstractConfig(CONFIG_DEF, connectorConfig);
+        Boolean exactlyOnceSupport = parsedConfig.getBoolean(DOTNET_EXACTLYONCESUPPORT_CONFIG);
+        if (exactlyOnceSupport.booleanValue()) return ExactlyOnceSupport.SUPPORTED;
+        return ExactlyOnceSupport.UNSUPPORTED;
     }
 
     @Override
@@ -162,6 +175,10 @@ public class KNetSourceConnector extends SourceConnector {
         } catch (JCException | IOException jcne) {
             log.error("Failed Invoke of \"canDefineTransactionBoundaries\"", jcne);
         }
+        log.info("Fallback Invoke of \"canDefineTransactionBoundaries\" to configuration");
+        AbstractConfig parsedConfig = new AbstractConfig(CONFIG_DEF, connectorConfig);
+        Boolean canDefineTransactionBoundaries = parsedConfig.getBoolean(DOTNET_CANDEFINETRANSACTIONBOUNDARIES_CONFIG);
+        if (canDefineTransactionBoundaries.booleanValue()) return ConnectorTransactionBoundaries.SUPPORTED;
         return ConnectorTransactionBoundaries.UNSUPPORTED;
     }
 }
