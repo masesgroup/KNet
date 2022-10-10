@@ -68,6 +68,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
+      - name: Build Docker Image
+        run: docker build -t mases.knetcli --output type=tar,dest=out.linux.tar -f Dockerfile.linux .
+
       - name: Pre compile templates
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KNetTemplates.sln
 
