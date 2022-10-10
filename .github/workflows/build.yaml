@@ -40,6 +40,53 @@ jobs:
       - name: Get run_build_windows
         run: echo "The selected run_build_windows is ${{ steps.check_files.outputs.run_build_windows }}"
 
+  build_container_linux:
+    needs: check_changes
+    if: "always() && needs.check_changes.outputs.run_build_windows == 'true'"
+    runs-on: ubuntu-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:    
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: '1'
+          submodules: 'true'
+
+      - name: Cache local Maven repository
+        uses: actions/cache@v2
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+      - name: Pre compile
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src/net/KNet/KNet.csproj
+        
+      - name: Set up Apache Maven Central
+        uses: actions/setup-java@v1
+        with: # running setup-java again overwrites the settings.xml
+          java-version: 11
+          server-id: ossrh # Value of the distributionManagement/repository/id field of the pom.xml
+          server-username: MAVEN_USERNAME # env variable for username in deploy
+          server-password: MAVEN_CENTRAL_TOKEN # env variable for token in deploy
+          gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }} # Value of the GPG private key to import
+          gpg-passphrase: MAVEN_GPG_PASSPHRASE # env variable for GPG private key passphrase
+
+      - name: Install local file to be used within Javadoc plugin of generated POM
+        run: mvn install:install-file -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.4.14 -Dpackaging=jar -Dfile=./bin/net6.0/JCOBridge.jar
+        shell: bash
+
+      - name: Create Jars
+        run: mvn --file ./src/java/knet/pom.xml --no-transfer-progress package
+        env:
+          MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
+          MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
+          MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
+        
+      - name: Build Docker Image
+        run: docker build -t mases.knetcli -f Dockerfile.linux .
+
   # Now run "build_windows"
   build_windows:
     needs: check_changes
@@ -115,6 +162,17 @@ jobs:
           choco install docfx
           cd src\net\Documentation
           docfx
+
+#       - name: Build Docker Image
+#         run: docker build -t mases.knetcli -f Dockerfile.windows .
+#
+#       - name: Save Docker Image
+#         run: docker save -o container.windows.zip mases.knetcli
+# 
+#       - uses: actions/upload-artifact@v2
+#         with:
+#           name: container.windows.zip
+#           path: .\container.windows.zip
 
       - uses: actions/upload-artifact@v2
         with:
