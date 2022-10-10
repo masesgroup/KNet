@@ -11,7 +11,7 @@ on:
       - edited
 
 jobs:
-  build_container:
+  build_container_linux:
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:    
@@ -70,6 +70,9 @@ jobs:
           asset_name: container.linux.tar.gz
           tag: ${{ github.ref }}
           overwrite: true
+          
+      - name: Push Docker Image
+        run: docker push ghcr.io/${{ env.GITHUB_REPOSITORY_OWNE }}/mases.knetcli:latest       
 
   # This workflow contains a single job called "build_release"
   build_release:

@@ -98,6 +98,9 @@ jobs:
           name: container.linux.tar.gz
           path: ./container.linux.tar.gz
 
+      - name: Push Docker Image
+        run: docker push ghcr.io/${{ env.GITHUB_REPOSITORY_OWNE }}/mases.knetcli:latest  
+
   # Now run "build_windows"
   build_windows:
     needs: check_changes
