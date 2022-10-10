@@ -87,7 +87,12 @@ jobs:
       - name: Build Docker Image
         run: |
           docker build -t mases.knetcli -f Dockerfile.linux .
-          docker save -o linux.tar mases.knetcli
+          docker save -o container.linux.tar mases.knetcli
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: container.linux.tar
+          path: .\container.linux.tar
 
   # Now run "build_windows"
   build_windows:
@@ -116,11 +121,6 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
             ${{ runner.os }}-maven-
-
-      - name: Build Docker Image
-        run: |
-          docker build -t mases.knetcli -f Dockerfile.linux .
-          docker save -o linux.tar mases.knetcli
 
       - name: Pre compile templates
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KNetTemplates.sln
@@ -170,15 +170,15 @@ jobs:
           cd src\net\Documentation
           docfx
 
-      - name: Build Docker Image
-        run: |
-          "C:\Program Files\Docker\Docker\DockerCli.exe" -SwitchLinuxEngine
-          docker build -t mases.knetcli --output type=tar,dest=out.linux.tar -f Dockerfile.linux .
-
-      - uses: actions/upload-artifact@v2
-        with:
-          name: out.linux.tar
-          path: .\out.linux.tar
+#       - name: Build Docker Image
+#         run: |
+#           "C:\Program Files\Docker\Docker\DockerCli.exe" -SwitchLinuxEngine
+#           docker build -t mases.knetcli --output type=tar,dest=out.linux.tar -f Dockerfile.linux .
+# 
+#       - uses: actions/upload-artifact@v2
+#         with:
+#           name: container.windows.tar
+#           path: .\container.windows.tar
 
       - uses: actions/upload-artifact@v2
         with:
