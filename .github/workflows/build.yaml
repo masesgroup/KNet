@@ -85,9 +85,10 @@ jobs:
           MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
         
       - name: Build Docker Image
-        run: |
-          docker build -t mases.knetcli -f Dockerfile.linux .
-          docker save -o container.linux.tar mases.knetcli
+        run: docker build -t mases.knetcli -f Dockerfile.linux .
+
+      - name: Save Docker Image
+        run: docker save -o container.linux.tar mases.knetcli
 
       - uses: actions/upload-artifact@v2
         with:
@@ -171,14 +172,15 @@ jobs:
           docfx
 
 #       - name: Build Docker Image
-#         run: |
-#           "C:\Program Files\Docker\Docker\DockerCli.exe" -SwitchLinuxEngine
-#           docker build -t mases.knetcli --output type=tar,dest=out.linux.tar -f Dockerfile.linux .
+#         run: docker build -t mases.knetcli -f Dockerfile.windows .
+#
+#       - name: Save Docker Image
+#         run: docker save -o container.windows.zip mases.knetcli
 # 
 #       - uses: actions/upload-artifact@v2
 #         with:
-#           name: container.windows.tar
-#           path: .\container.windows.tar
+#           name: container.windows.zip
+#           path: .\container.windows.zip
 
       - uses: actions/upload-artifact@v2
         with:
