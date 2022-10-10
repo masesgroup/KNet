@@ -96,7 +96,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: container.linux.tar.gz
-          path: .\container.linux.tar.gz
+          path: ./container.linux.tar.gz
 
   # Now run "build_windows"
   build_windows:
