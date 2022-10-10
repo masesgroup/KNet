@@ -99,7 +99,7 @@ jobs:
           path: ./container.linux.tar.gz
 
       - name: Push Docker Image
-        run: docker push ghcr.io/${{ env.GITHUB_REPOSITORY_OWNER }}/mases.knetcli:latest  
+        run: docker push ghcr.io/${{ github.repository_owner }}/mases.knetcli:latest  
 
   # Now run "build_windows"
   build_windows:
