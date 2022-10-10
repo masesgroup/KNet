@@ -98,8 +98,11 @@ jobs:
           name: container.linux.tar.gz
           path: ./container.linux.tar.gz
 
+      - name: Tag Docker Image
+        run: docker tag mases.knetcli ghcr.io/${{ github.repository_owner }}/mases.knetcli:latest
+
       - name: Push Docker Image
-        run: docker image push mases.knetcli:latest ghcr.io/${{ github.repository_owner }}/  
+        run: docker image push ghcr.io/${{ github.repository_owner }}/mases.knetcli:latest
 
   # Now run "build_windows"
   build_windows:
