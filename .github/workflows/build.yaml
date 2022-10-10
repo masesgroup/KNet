@@ -45,12 +45,7 @@ jobs:
     if: "always() && needs.check_changes.outputs.run_build_windows == 'true'"
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:   
-      # Runs a set of commands using the runners shell
-      # Support longpaths
-      - name: Support long paths
-        run: git config --system core.longpaths true
-      
+    steps:    
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
         with:
