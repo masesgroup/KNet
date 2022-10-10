@@ -88,12 +88,15 @@ jobs:
         run: docker build -t mases.knetcli -f Dockerfile.linux .
 
       - name: Save Docker Image
-        run: docker save -o container.linux.tar mases.knetcli
+        run: docker save mases.knetcli:latest > container.linux.tar
+
+      - name: Compress Docker Image
+        run: gzip container.linux.tar
 
       - uses: actions/upload-artifact@v2
         with:
-          name: container.linux.tar
-          path: .\container.linux.tar
+          name: container.linux.tar.gz
+          path: .\container.linux.tar.gz
 
   # Now run "build_windows"
   build_windows:
