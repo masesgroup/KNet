@@ -2,13 +2,24 @@
 
 ## Installation
 
-To install the tool follows the instructions on https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools.
+KNet CLI is available in two different formats:
+
+- dotnet tool hosted on NuGet.org: check https://www.nuget.org/packages/MASES.KNetCLI/ and https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools for installation deep instructions.
+- Docker image hosted on https://github.com/masesgroup/KNet/pkgs/container/mases.knetcli: follow instruction within the page and general instruction on https://docs.docker.com
 
 ## Usage
 
 To use the CLI interface (KNetCLI) runs a command like the following:
 
+- **dotnet tool**
+
 > knet -ClassToRun ConsoleConsumer --bootstrap-server SERVER-ADDRESS:9093 --topic topic_name --from-beginning
+
+- **Docker image**
+
+> docker run ghcr.io/masesgroup/mases.knetcli -ClassToRun ConsoleConsumer --bootstrap-server SERVER-ADDRESS:9093 --topic topic_name --from-beginning
+
+### Commands available
 
 _knet_ accepts the following command-line switch:
 
