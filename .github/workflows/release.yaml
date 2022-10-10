@@ -72,7 +72,7 @@ jobs:
           overwrite: true
           
       - name: Push Docker Image
-        run: docker push ghcr.io/${{ env.GITHUB_REPOSITORY_OWNE }}/mases.knetcli:latest       
+        run: docker push ghcr.io/${{ env.GITHUB_REPOSITORY_OWNER }}/mases.knetcli:latest       
 
   # This workflow contains a single job called "build_release"
   build_release:
