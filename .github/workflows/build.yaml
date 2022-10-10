@@ -116,6 +116,16 @@ jobs:
           cd src\net\Documentation
           docfx
 
+      - name: Build Docker Image
+        run: |
+          "C:\Program Files\Docker\Docker\DockerCli.exe" -SwitchLinuxEngine
+          docker build -t mases.knetcli --output type=tar,dest=out.linux.tar -f Dockerfile.linux .
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: out.linux.tar
+          path: .\out.linux.tar
+
       - uses: actions/upload-artifact@v2
         with:
           name: KNet
