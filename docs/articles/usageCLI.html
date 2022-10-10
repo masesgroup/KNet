@@ -70,12 +70,26 @@
 <h1 id="knet-cli">KNet: CLI</h1>
 
 <h2 id="installation">Installation</h2>
-<p>To install the tool follows the instructions on <a href="https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools">https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools</a>.</p>
+<p>KNet CLI is available in two different formats:</p>
+<ul>
+<li>dotnet tool hosted on NuGet.org: check <a href="https://www.nuget.org/packages/MASES.KNetCLI/">https://www.nuget.org/packages/MASES.KNetCLI/</a> and <a href="https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools">https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools</a> for installation deep instructions.</li>
+<li>Docker image hosted on <a href="https://github.com/masesgroup/KNet/pkgs/container/mases.knetcli">https://github.com/masesgroup/KNet/pkgs/container/mases.knetcli</a>: follow instruction within the page and general instruction on <a href="https://docs.docker.com">https://docs.docker.com</a></li>
+</ul>
 <h2 id="usage">Usage</h2>
 <p>To use the CLI interface (KNetCLI) runs a command like the following:</p>
+<ul>
+<li><strong>dotnet tool</strong></li>
+</ul>
 <blockquote>
 <p>knet -ClassToRun ConsoleConsumer --bootstrap-server SERVER-ADDRESS:9093 --topic topic_name --from-beginning</p>
 </blockquote>
+<ul>
+<li><strong>Docker image</strong></li>
+</ul>
+<blockquote>
+<p>docker run ghcr.io/masesgroup/mases.knetcli -ClassToRun ConsoleConsumer --bootstrap-server SERVER-ADDRESS:9093 --topic topic_name --from-beginning</p>
+</blockquote>
+<h3 id="commands-available">Commands available</h3>
 <p><em>knet</em> accepts the following command-line switch:</p>
 <ul>
 <li><strong>ClassToRun</strong>: represents the class to be executed; the list is:
