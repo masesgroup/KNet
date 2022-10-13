@@ -85,7 +85,18 @@ jobs:
           MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
         
       - name: Build Docker Image
-        run: docker build -t mases.knetcli -f Dockerfile.linux .
+        run: docker build -t mases.knet -f Dockerfile.linux .
+
+      - name: Save Docker Image
+        run: docker image save -o mases.knet.linux.tar mases.knet
+        
+      - name: Compress Docker Image
+        run: gzip mases.knet.linux.tar
+        
+      - uses: actions/upload-artifact@v2
+        with:
+          name: mases.knet.linux.tar.gz
+          path: ./*.tar.gz
 
   # Now run "build_windows"
   build_windows:
