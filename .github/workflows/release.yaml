@@ -73,7 +73,7 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/mases.knetcli:latest  
+          tags: ghcr.io/${{ github.repository_owner }}/mases.knet:latest  
 
   # This workflow contains a single job called "build_release"
   build_release:
@@ -127,6 +127,14 @@ jobs:
 
       - name: Recompile to create nuget packages
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KNet.sln
+
+      - name: Authnticate to GitHub
+        run: dotnet nuget add source --username ${{ github.actor }} --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json"
+
+      - name: Publish to GitHub
+        run: |
+          nuget push .\bin\*.nupkg -ApiKey ${{ secrets.GITHUB_TOKEN }} -Source "github" -SkipDuplicate
+          nuget push .\bin\*.snupkg -ApiKey ${{ secrets.GITHUB_TOKEN }} -Source "github" -SkipDuplicate
 
       - name: Publish to NuGet
         run: |
