@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>MASES.KNetCLI</id>
-    <version>1.4.1</version>
+    <version>1.4.2</version>
     <title>KNetCLI - KNet command line interface</title>
     <authors>MASES s.r.l.</authors>
     <owners>MASES s.r.l.</owners>
@@ -14,7 +14,7 @@
     <copyright>Copyright ©  MASES s.r.l. 2022</copyright>
     <license type="file">LICENSE</license>
     <icon>JCOB128x128.png</icon>
-    <tags>knet cli kafka apache-kafka dotnet clr netcore net5 net6 kafka connect streams producer consumer providers streamprovider gateway</tags>
+    <tags>knet cli kafka apache-kafka dotnet clr netcore net6 kafka connect streams producer consumer providers streamprovider gateway</tags>
     <packageTypes>
     <packageType name="DotnetTool" />
     </packageTypes>

@@ -4,11 +4,40 @@
 		<Owners>MASES s.r.l.</Owners>
 		<Authors>MASES s.r.l.</Authors>
 		<Company>MASES s.r.l.</Company>
-		<Version>1.4.1.0</Version>
+		<Version>1.4.2.0</Version>
 		<TargetFrameworks>net462;netcoreapp3.1;net6.0</TargetFrameworks>
 		<LangVersion>latest</LangVersion>
+		<GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<PackageProjectUrl>https://github.com/masesgroup/KNet/</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/masesgroup/KNet</RepositoryUrl>
+		<PackageReleaseNotes>https://github.com/masesgroup/KNet/releases</PackageReleaseNotes>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<PackageIcon>JCOB128x128.png</PackageIcon>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+		<SignAssembly>true</SignAssembly>
+		<AssemblyOriginatorKeyFile>..\Common\KNet.snk</AssemblyOriginatorKeyFile>
 	</PropertyGroup>
+	<ItemGroup>
+		<None Include="..\..\..\LICENSE" Pack="true" PackagePath="" />
+		<None Include="..\Common\JCOB128x128.png" Pack="true" PackagePath="" />
+		<None Include="..\Common\KNet.snk" Link="KNet.snk" />
+	</ItemGroup>
 	<ItemGroup Condition="'$(TargetFramework)' == 'net462'">
 		<Reference Include="Microsoft.CSharp" />
 	</ItemGroup>
+	<!-- Fix start https://github.com/dotnet/sourcelink/issues/572 -->
+	<PropertyGroup>
+		<TargetFrameworkMonikerAssemblyAttributesPath>$([System.IO.Path]::Combine('$(IntermediateOutputPath)','$(TargetFrameworkMoniker).AssemblyAttributes$(DefaultLanguageSourceExtension)'))</TargetFrameworkMonikerAssemblyAttributesPath>
+	</PropertyGroup>
+	<ItemGroup>
+		<EmbeddedFiles Include="$(GeneratedAssemblyInfoFile)" />
+	</ItemGroup>
+	<!-- Fix end -->
+	<PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
+		<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+	</PropertyGroup>
 </Project>

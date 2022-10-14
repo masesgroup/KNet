@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 	<Import Project="..\Common\Common.props" />
 	<PropertyGroup>
 		<OutputPath>..\..\..\bin\</OutputPath>
@@ -7,45 +7,18 @@
 		<Title>KNet - .NET gateway for Apache Kafka APIs</Title>
 		<Description>KNet - .NET gateway for Apache Kafka APIs</Description>
 		<Product>KNet</Product>
-		<GenerateAssemblyInfo>true</GenerateAssemblyInfo>
-		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-		<PackageProjectUrl>https://github.com/masesgroup/KNet/</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/masesgroup/KNet</RepositoryUrl>
-		<PackageReleaseNotes>https://github.com/masesgroup/KNet/releases</PackageReleaseNotes>
-		<PackageLicenseFile>LICENSE</PackageLicenseFile>
-		<PackageIcon>JCOB128x128.png</PackageIcon>
 		<PackageTags>knet kafka apache-kafka dotnet clr netcore net6 kafka connect streams producer consumer providers streamprovider gateway</PackageTags>
 		<PackageId>MASES.KNet</PackageId>
-		<IncludeSymbols>true</IncludeSymbols>
-		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
-		<EmbedUntrackedSources>true</EmbedUntrackedSources>
-		<SignAssembly>true</SignAssembly>
-		<AssemblyOriginatorKeyFile>..\Common\KNet.snk</AssemblyOriginatorKeyFile>
 		<PackageReadmeFile>usage.md</PackageReadmeFile>
 	</PropertyGroup>
-	<!-- Fix start https://github.com/dotnet/sourcelink/issues/572 -->
-	<PropertyGroup>
-		<TargetFrameworkMonikerAssemblyAttributesPath>$([System.IO.Path]::Combine('$(IntermediateOutputPath)','$(TargetFrameworkMoniker).AssemblyAttributes$(DefaultLanguageSourceExtension)'))</TargetFrameworkMonikerAssemblyAttributesPath>
-	</PropertyGroup>
 	<ItemGroup>
-		<EmbeddedFiles Include="$(GeneratedAssemblyInfoFile)" />
-	</ItemGroup>
-	<!-- Fix end -->
-	<PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
-		<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
-	</PropertyGroup>
-	<ItemGroup>
-		<None Include="..\..\..\LICENSE" Pack="true" PackagePath="" />
-		<None Include="..\Common\JCOB128x128.png" Pack="true" PackagePath="" />
 		<None Include="mases.knet.targets" Pack="true" PackagePath="build" />
 		<None Include="..\..\..\jars\*.jar" Pack="true" PackagePath="build\jars" />
 		<None Include="..\..\config\**\*" Pack="true" PackagePath="build\config" />
-		<None Include="..\Common\KNet.snk" Link="KNet.snk" />
 		<None Include="..\Documentation\articles\usage.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="MASES.JNet" Version="1.4.6">
+		<PackageReference Include="MASES.JNet" Version="1.4.7">
 			<IncludeAssets>All</IncludeAssets>
 			<PrivateAssets>None</PrivateAssets>
 		</PackageReference>
