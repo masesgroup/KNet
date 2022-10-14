@@ -9,16 +9,12 @@
 		<Title>KNetCLI - KNet command line interface</Title>
 		<Description>KNetCLI - KNet command line interface</Description>
 		<Product>KNetCLI</Product>
-
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 		<PackageTags>knet cli kafka apache-kafka dotnet clr netcore net6 kafka connect streams producer consumer providers streamprovider gateway</PackageTags>
 		<PackageId>MASES.KNetCLI</PackageId>
 		<PackageReadmeFile>usageCLI.md</PackageReadmeFile>
 	</PropertyGroup>
 	<ItemGroup>
-		<None Include="..\..\..\LICENSE" Pack="true" PackagePath="" />
-		<None Include="..\Common\JCOB128x128.png" Pack="true" PackagePath="" />
-		<None Include="..\Common\KNet.snk" Link="KNet.snk" />
 		<None Include="..\Documentation\articles\usageCLI.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
 	<ItemGroup>
