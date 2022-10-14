@@ -25,17 +25,7 @@
 		<ContentTargetFolders>content</ContentTargetFolders>
 		<PackageReadmeFile>usageTemplates.md</PackageReadmeFile>
 	</PropertyGroup>
-	<!-- Fix start https://github.com/dotnet/sourcelink/issues/572 -->
-	<PropertyGroup>
-		<TargetFrameworkMonikerAssemblyAttributesPath>$([System.IO.Path]::Combine('$(IntermediateOutputPath)','$(TargetFrameworkMoniker).AssemblyAttributes$(DefaultLanguageSourceExtension)'))</TargetFrameworkMonikerAssemblyAttributesPath>
-	</PropertyGroup>
-	<ItemGroup>
-		<EmbeddedFiles Include="$(GeneratedAssemblyInfoFile)" />
-	</ItemGroup>
-	<!-- Fix end -->
-	<PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
-		<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
-	</PropertyGroup>
+
 	<ItemGroup>
 		<None Include="..\..\..\LICENSE" Pack="true" PackagePath="" />
 		<None Include="..\Common\JCOB128x128.png" Pack="true" PackagePath="" />
