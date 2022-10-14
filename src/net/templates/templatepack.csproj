@@ -7,29 +7,15 @@
 		<Title>KNet Templates - Templates to use KNet</Title>
 		<Summary>Ready made templates to create applications based on KNet</Summary>
 		<Description>Ready made templates to create applications based on KNet. The templates are ready made starting points, all information and APIs are available in the official website https://masesgroup.github.io/KNet</Description>
-		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-		<PackageProjectUrl>https://github.com/masesgroup/KNet/</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/masesgroup/KNet</RepositoryUrl>
-		<PackageReleaseNotes>https://github.com/masesgroup/KNet/releases</PackageReleaseNotes>
-		<PackageLicenseFile>LICENSE</PackageLicenseFile>
-		<PackageIcon>JCOB128x128.png</PackageIcon>
 		<PackageTags>knet kafka apache-kafka dotnet clr netcore net6 template kafka connect streams producer consumer providers streamprovider confluent</PackageTags>
-		<LangVersion>8.0</LangVersion>
 		<Product>KNet Templates</Product>
-		<EmbedUntrackedSources>true</EmbedUntrackedSources>
-		<SignAssembly>true</SignAssembly>
-		<AssemblyOriginatorKeyFile>..\Common\KNet.snk</AssemblyOriginatorKeyFile>
-		<IncludeContentInPack>true</IncludeContentInPack>
+		<IncludeSymbols>false</IncludeSymbols>
 		<IncludeBuildOutput>false</IncludeBuildOutput>
+		<IncludeContentInPack>true</IncludeContentInPack>
 		<ContentTargetFolders>content</ContentTargetFolders>
 		<PackageReadmeFile>usageTemplates.md</PackageReadmeFile>
 	</PropertyGroup>
-
 	<ItemGroup>
-		<None Include="..\..\..\LICENSE" Pack="true" PackagePath="" />
-		<None Include="..\Common\JCOB128x128.png" Pack="true" PackagePath="" />
-		<None Include="..\Common\KNet.snk" Link="KNet.snk" />
 		<None Include="..\Documentation\articles\usageTemplates.md" Pack="true" PackagePath="\" />
 		<Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**;templates\**\.vscode\**" />
 		<Compile Remove="**\*" />

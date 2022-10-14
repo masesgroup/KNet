@@ -1,13 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-	<Import Project="..\..\src\net\Common\Common.props" />
+	<Import Project="..\Common\Common.props" />
 	<PropertyGroup>
 		<AssemblyName>KNetConnectTest</AssemblyName>
 		<RootNamespace>MASES.KNetConnectTest</RootNamespace>
 		<Title>KNetConnectTest - a test tool for KNet Connect</Title>
 		<Description>KNetConnectTest - a test tool for KNet Connect</Description>
-		<OutputPath>..\..\bin\</OutputPath>	
 	</PropertyGroup>
-	<ItemGroup>
-		<ProjectReference Include="..\..\src\net\KNet\KNet.csproj" />
-	</ItemGroup>
 </Project>

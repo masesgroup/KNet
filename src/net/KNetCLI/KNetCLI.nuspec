@@ -14,7 +14,7 @@
     <copyright>Copyright ©  MASES s.r.l. 2022</copyright>
     <license type="file">LICENSE</license>
     <icon>JCOB128x128.png</icon>
-    <tags>knet cli kafka apache-kafka dotnet clr netcore net5 net6 kafka connect streams producer consumer providers streamprovider gateway</tags>
+    <tags>knet cli kafka apache-kafka dotnet clr netcore net6 kafka connect streams producer consumer providers streamprovider gateway</tags>
     <packageTypes>
     <packageType name="DotnetTool" />
     </packageTypes>

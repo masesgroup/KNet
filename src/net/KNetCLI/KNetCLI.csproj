@@ -9,34 +9,11 @@
 		<Title>KNetCLI - KNet command line interface</Title>
 		<Description>KNetCLI - KNet command line interface</Description>
 		<Product>KNetCLI</Product>
-		<GenerateAssemblyInfo>true</GenerateAssemblyInfo>
-		<!--<GeneratePackageOnBuild>true</GeneratePackageOnBuild>-->
-		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-		<PackageProjectUrl>https://github.com/masesgroup/KNet/</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/masesgroup/KNet</RepositoryUrl>
-		<PackageReleaseNotes>https://github.com/masesgroup/KNet/releases</PackageReleaseNotes>
-		<PackageLicenseFile>LICENSE</PackageLicenseFile>
-		<PackageIcon>JCOB128x128.png</PackageIcon>
+
+		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 		<PackageTags>knet cli kafka apache-kafka dotnet clr netcore net6 kafka connect streams producer consumer providers streamprovider gateway</PackageTags>
 		<PackageId>MASES.KNetCLI</PackageId>
-		<IncludeSymbols>true</IncludeSymbols>
-		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
-		<EmbedUntrackedSources>true</EmbedUntrackedSources>
-		<SignAssembly>true</SignAssembly>
-		<AssemblyOriginatorKeyFile>..\Common\KNet.snk</AssemblyOriginatorKeyFile>
 		<PackageReadmeFile>usageCLI.md</PackageReadmeFile>
-		<LangVersion>Latest</LangVersion>
-	</PropertyGroup>
-	<!-- Fix start https://github.com/dotnet/sourcelink/issues/572 -->
-	<PropertyGroup>
-		<TargetFrameworkMonikerAssemblyAttributesPath>$([System.IO.Path]::Combine('$(IntermediateOutputPath)','$(TargetFrameworkMoniker).AssemblyAttributes$(DefaultLanguageSourceExtension)'))</TargetFrameworkMonikerAssemblyAttributesPath>
-	</PropertyGroup>
-	<ItemGroup>
-		<EmbeddedFiles Include="$(GeneratedAssemblyInfoFile)" />
-	</ItemGroup>
-	<!-- Fix end -->
-	<PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
-		<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
 	</PropertyGroup>
 	<ItemGroup>
 		<None Include="..\..\..\LICENSE" Pack="true" PackagePath="" />
