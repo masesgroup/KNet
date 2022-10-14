@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 	<Import Project="..\Common\Common.props" />
 	<PropertyGroup>
 		<AssemblyName>KNetTopicCopyBenchmark</AssemblyName>
@@ -14,6 +14,6 @@
 		<Compile Include="..\KNetBenchmark\ProgramSupport.cs" Link="ProgramSupport.cs" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Confluent.Kafka" Version="1.8.2" />
+		<PackageReference Include="Confluent.Kafka" Version="1.9.3" />
 	</ItemGroup>
 </Project>
