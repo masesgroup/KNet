@@ -25,10 +25,9 @@ using Java.Time;
 using Java.Util;
 using MASES.KNet.Streams.Errors;
 using MASES.KNet.Streams.Processor;
-using System;
 using MASES.KNet.Streams.Query;
 using Java.Lang;
-using System.Threading;
+using System;
 
 namespace MASES.KNet.Streams
 {
@@ -110,7 +109,7 @@ namespace MASES.KNet.Streams
 
         public KafkaStreams(Topology topology, StreamsConfig config, Time time) : base(topology, config, time) { }
 
-        public StateType State => (StateType)Enum.Parse(typeof(StateType), IExecute<IJavaObject>("state").Invoke<string>("name"));
+        public StateType State => (StateType)System.Enum.Parse(typeof(StateType), IExecute<IJavaObject>("state").Invoke<string>("name"));
 
         public void SetStateListener(StateListener listener)
         {
