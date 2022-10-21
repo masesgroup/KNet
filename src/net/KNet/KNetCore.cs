@@ -620,6 +620,7 @@ namespace MASES.KNet
     /// </summary>
     public class KNetCore : KNetCore<KNetCore>
     {
-
+        /// <inheritdoc cref="Parser.HelpInfo(int?)"/>
+        public static string HelpInfo(int? width = null) => Parser.HelpInfo(width);
     }
 }
