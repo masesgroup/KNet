@@ -1,7 +1,6 @@
 # KNet: .NET gateway for Apache Kafka APIs
 
 [![CI_BUILD](https://github.com/masesgroup/KNet/actions/workflows/build.yaml/badge.svg)](https://github.com/masesgroup/KNet/actions/workflows/build.yaml)
-[![CI_PULLREQUEST](https://github.com/masesgroup/KNet/actions/workflows/pullrequest.yaml/badge.svg)](https://github.com/masesgroup/KNet/actions/workflows/pullrequest.yaml)
 [![CodeQL](https://github.com/masesgroup/KNet/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/masesgroup/KNet/actions/workflows/codeql-analysis.yml)
 [![CI_RELEASE](https://github.com/masesgroup/KNet/actions/workflows/release.yaml/badge.svg)](https://github.com/masesgroup/KNet/actions/workflows/release.yaml) 
 
