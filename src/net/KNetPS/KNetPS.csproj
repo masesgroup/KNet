@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<Import Project="..\Common\Common.props" />
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+		<AssemblyName>MASES.KNetPS</AssemblyName>
+		<RootNamespace>MASES.KNetPS</RootNamespace>
+		<Title>KNetPS - PowerShell command line interface for KNet</Title>
+		<Description>KNetPS - PowerShell command line interface for KNet</Description>
+		<Product>KNetPS</Product>
+		<OutputPath>..\..\..\MASES.KNetPS\</OutputPath>
+		<TargetFrameworks>net462;net6.0</TargetFrameworks>
+	</PropertyGroup>
+
+	<ItemGroup Condition="True">
+		<jnetps_jars Include="$(ProjectDir)\..\..\..\jars\*.*" />
+		<jnetps_config Include="$(ProjectDir)\..\..\config\*.*" />
+		<jnetps_kraft Include="$(ProjectDir)\..\..\config\kraft\*.*" />
+	</ItemGroup>
+
+	<Target Name="CopyCustomContent" AfterTargets="AfterBuild">
+		<Copy SourceFiles="@(jnetps_jars)" DestinationFolder="$(OutDir)\jars" />
+		<Copy SourceFiles="@(jnetps_config)" DestinationFolder="$(OutDir)\config" />
+		<Copy SourceFiles="@(jnetps_kraft)" DestinationFolder="$(OutDir)\config\kraft" />
+	</Target>
+	<Target Name="CopyCustomContentOnPublish" AfterTargets="Publish">
+		<Copy SourceFiles="@(jnetps_jars)" DestinationFolder="$(OutDir)\jars" />
+		<Copy SourceFiles="@(jnetps_config)" DestinationFolder="$(OutDir)\config" />
+		<Copy SourceFiles="@(jnetps_kraft)" DestinationFolder="$(OutDir)\config\kraft" />
+	</Target>
+	
+	<ItemGroup>
+		<ProjectReference Include="..\KNet\KNet.csproj">
+			<!--<IncludeAssets>All</IncludeAssets>-->
+			<!--<PrivateAssets>None</PrivateAssets>-->
+		</ProjectReference>
+		<PackageReference Include="MASES.JNetPSCore" Version="1.4.11" />
+		<PackageReference Include="PowerShellStandard.Library" Version="5.1.1">
+			<PrivateAssets>All</PrivateAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="MASES.KNetPSFramework.psd1" Condition="'$(TargetFramework)' == 'net462'">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="MASES.KNetPSCore.psd1" Condition="'$(TargetFramework)' == 'net6.0'">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+</Project>
