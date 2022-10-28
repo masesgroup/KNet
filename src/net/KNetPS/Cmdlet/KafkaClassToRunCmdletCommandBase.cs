@@ -47,7 +47,7 @@ namespace MASES.JNetPS.Cmdlet
         public override void CreateGlobalInstance()
         {
             base.CreateGlobalInstance();
-            string[] arguments = null;
+            string[] arguments = Array.Empty<string>();
             if (Arguments != null)
             {
                 arguments = Arguments.Split(' ');
