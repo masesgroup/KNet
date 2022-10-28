@@ -48,7 +48,7 @@ namespace MASES.KNet
                     new ArgumentMetadata<string>()
                     {
                         Name = CLIParam.ClassToRun,
-                        Help = "The class to be instantiated.",
+                        Help = "The class to be instantiated from CLI.",
                     },
                     new ArgumentMetadata<string>()
                     {
@@ -60,7 +60,7 @@ namespace MASES.KNet
                     {
                         Name = CLIParam.KafkaLocation,
                         Default = Const.DefaultRootPath,
-                        Help = "The folder where Kafka package is available. Default consider the application use the Jars in the package.",
+                        Help = "The folder where Kafka package are stored. Default consider the application use the Jars in the package.",
                     },
                     new ArgumentMetadata<string>()
                     {
@@ -72,7 +72,7 @@ namespace MASES.KNet
                     {
                         Name = CLIParam.LogPath,
                         Default = Const.DefaultLogPath,
-                        Help = "The path for log.",
+                        Help = "The path where log will be stored.",
                     },
                 });
                 return lst;
@@ -268,40 +268,33 @@ namespace MASES.KNet
             #endregion
         }
 
-        /// <inheritdoc cref="JNetCore{T}.GlobalHeapSize" />
-        public override string GlobalHeapSize { get { return null; } }
-        /// <inheritdoc cref="JNetCore{T}.InitialHeapSize" />
-        public override string InitialHeapSize { get { return null; } }
         /// <inheritdoc cref="JNetCore{T}.ProcessCommandLine" />
         protected override string[] ProcessCommandLine()
         {
             var result = base.ProcessCommandLine();
-            GlobalScalaVersion = Const.DefaultScalaVersion;
-            GlobalRootPath = Const.DefaultRootPath;
-            GlobalLogPath = Const.DefaultLogPath;
 
-            var classToRun = ParsedArgs.Get<string>(CLIParam.ClassToRun);
-            GlobalRootPath = ParsedArgs.Get<string>(CLIParam.KafkaLocation);
-            GlobalLog4JPath = ParsedArgs.Get<string>(CLIParam.Log4JConfiguration);
-            GlobalLogPath = ParsedArgs.Get<string>(CLIParam.LogPath);
-            GlobalScalaVersion = ParsedArgs.Get<string>(CLIParam.ScalaVersion);
+            _classToRun = ParsedArgs.Get<string>(CLIParam.ClassToRun);
+            _JarRootPath = ParsedArgs.Get<string>(CLIParam.KafkaLocation);
+            _log4JPath = ParsedArgs.Get<string>(CLIParam.Log4JConfiguration);
+            _logPath = ParsedArgs.Get<string>(CLIParam.LogPath);
+            _scalaVersion = ParsedArgs.Get<string>(CLIParam.ScalaVersion);
 
-            if (!string.IsNullOrEmpty(classToRun))
+            if (!string.IsNullOrEmpty(ClassToRun))
             {
                 Type type = null;
 
                 foreach (var item in typeof(KNetCore).Assembly.ExportedTypes)
                 {
-                    if (item.Name == classToRun || item.FullName == classToRun)
+                    if (item.Name == ClassToRun || item.FullName == ClassToRun)
                     {
                         type = item;
                         break;
                     }
                 }
-                MainClassToRun = type ?? throw new ArgumentException($"Requested class {classToRun} is not a valid class name.");
+                MainClassToRun = type ?? throw new ArgumentException($"Requested class {ClassToRun} is not a valid class name.");
             }
 
-            switch (classToRun)
+            switch (ClassToRun)
             {
                 case "VerifiableConsumer":
                     ApplicationHeapSize = "512M";
@@ -326,10 +319,10 @@ namespace MASES.KNet
                     break;
                 case "ConnectStandalone":
                     {
-                        GlobalLog4JPath = Path.Combine(Const.AssemblyLocation, "config", "connect-log4j.properties");
+                        ApplicationLog4JPath = Path.Combine(Const.AssemblyLocation, "config", "connect-log4j.properties");
                         ApplicationHeapSize = "2G";
                         ApplicationInitialHeapSize = "256M";
-                        if (result == null || result.Length == 0) Console.WriteLine($"USAGE: MASES.KNetCLI -ClassToRun {classToRun} [-daemon] connect-standalone.properties");
+                        if (result == null || result.Length == 0) Console.WriteLine($"USAGE: MASES.KNetCLI -ClassToRun {ClassToRun} [-daemon] connect-standalone.properties");
                         else
                         {
                             var tmpResult = new List<string>(result);
@@ -344,10 +337,10 @@ namespace MASES.KNet
                     break;
                 case "ConnectDistributed":
                     {
-                        GlobalLog4JPath = Path.Combine(Const.AssemblyLocation, "config", "connect-log4j.properties");
+                        ApplicationLog4JPath = Path.Combine(Const.AssemblyLocation, "config", "connect-log4j.properties");
                         ApplicationHeapSize = "2G";
                         ApplicationInitialHeapSize = "256M";
-                        if (result == null || result.Length == 0) Console.WriteLine($"USAGE: MASES.KNetCLI -ClassToRun {classToRun} [-daemon] connect-distributed.properties");
+                        if (result == null || result.Length == 0) Console.WriteLine($"USAGE: MASES.KNetCLI -ClassToRun {ClassToRun} [-daemon] connect-distributed.properties");
                         else
                         {
                             var tmpResult = new List<string>(result);
@@ -362,10 +355,10 @@ namespace MASES.KNet
                     break;
                 case "MirrorMaker2":
                     {
-                        GlobalLog4JPath = Path.Combine(Const.AssemblyLocation, "config", "connect-log4j.properties");
+                        ApplicationLog4JPath = Path.Combine(Const.AssemblyLocation, "config", "connect-log4j.properties");
                         ApplicationHeapSize = "2G";
                         ApplicationInitialHeapSize = "256M";
-                        if (result == null || result.Length == 0) Console.WriteLine($"USAGE: MASES.KNetCLI -ClassToRun {classToRun} [-daemon] mm2.properties");
+                        if (result == null || result.Length == 0) Console.WriteLine($"USAGE: MASES.KNetCLI -ClassToRun {ClassToRun} [-daemon] mm2.properties");
                         else
                         {
                             var tmpResult = new List<string>(result);
@@ -392,49 +385,69 @@ namespace MASES.KNet
         public static Type MainClassToRun { get; protected set; }
 
         /// <summary>
-        /// Sets the global value of root path
+        /// Sets the global value of class to run
         /// </summary>
-        public static string GlobalRootPath { get; set; }
+        public static string ApplicationClassToRun { get; set; }
+
+        /// <summary>
+        /// Sets the global value of Jar root path
+        /// </summary>
+        public static string ApplicationJarRootPath { get; set; }
 
         /// <summary>
         /// Sets the global value of log4j path
         /// </summary>
-        public static string GlobalLog4JPath { get; set; }
+        public static string ApplicationLog4JPath { get; set; }
 
         /// <summary>
         /// Sets the global value of log path
         /// </summary>
-        public static string GlobalLogPath { get; set; }
+        public static string ApplicationLogPath { get; set; }
 
         /// <summary>
         /// Sets the global value of root path
         /// </summary>
-        public static string GlobalScalaVersion { get; set; }
+        public static string ApplicationScalaVersion { get; set; }
 
+        string _classToRun;
+        /// <summary>
+        /// The class to run in CLI version
+        /// </summary>
+        public virtual string ClassToRun { get { return ApplicationClassToRun ?? _classToRun; } }
+
+        string _scalaVersion;
         /// <summary>
         /// The Scala version to be used
         /// </summary>
-        public virtual string ScalaVersion { get { return GlobalScalaVersion; } }
+        public virtual string ScalaVersion { get { return ApplicationScalaVersion ?? _scalaVersion; } }
 
         /// <summary>
         /// The Scala binary version to be used
         /// </summary>
         public virtual string ScalaBinaryVersion { get { var ver = Version.Parse(ScalaVersion); return (ver.Revision == 0) ? string.Format("{0}", ver.Minor) : string.Format("{0}.{1}", ver.Minor, ver.Revision); } }
 
+        string _JarRootPath;
         /// <summary>
         /// The root path where Apache Kafka is installed
         /// </summary>
-        public virtual string RootPath { get { return GlobalRootPath; } }
+        public virtual string JarRootPath { get { return ApplicationJarRootPath ?? _JarRootPath; } }
 
+        string _log4JPath;
+        /// <summary>
+        /// The log4j folder
+        /// </summary>
+        public virtual string Log4JPath { get { return ApplicationLog4JPath ?? _log4JPath; } }
+
+        string _logPath;
         /// <summary>
         /// The log folder
         /// </summary>
-        public virtual string LogDir { get { return GlobalLogPath; } }
+        public virtual string LogDir { get { return ApplicationLogPath ?? _logPath; } }
 
         /// <summary>
         /// The log4j configuration
         /// </summary>
-        public virtual string Log4JOpts { get { return string.Format("file:{0}", Path.Combine(RootPath, "config", "tools-log4j.properties")); } }
+        public virtual string Log4JOpts { get { return string.Format("file:{0}", Path.Combine(JarRootPath, "config", "tools-log4j.properties")); } }
 
         /// <inheritdoc cref="JNetCore{T}.PerformanceOptions"/>
         protected override IList<string> PerformanceOptions
@@ -454,110 +467,6 @@ namespace MASES.KNet
             }
         }
 
-        /// <summary>
-        /// The path where Apache Kafka core dependencies Jars are installed
-        /// </summary>
-        public virtual string CoreDependenciesPath { get { return Path.Combine(RootPath, "core", "build", "dependant-libs-" + ScalaVersion, "*.jar"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka examples Jars are installed
-        /// </summary>
-        public virtual string ExamplesPath { get { return Path.Combine(RootPath, "examples", "build", "libs", "kafka-examples*.jar"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka clients Jars are installed
-        /// </summary>
-        public virtual string ClientsPath { get { return Path.Combine(RootPath, "clients", "build", "libs", "kafka-clients*.jar"); } }
-        /// <summary>
-        /// The path where Apache Kafka Streams Jars are installed
-        /// </summary>
-        public virtual string StreamsPath { get { return Path.Combine(RootPath, "streams", "build", "libs", "kafka-streams*.jar"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka Streams examples Jars are installed
-        /// </summary>
-        public virtual string StreamsExamplePath { get { return Path.Combine(RootPath, "streams", "examples", "build", "libs", "kafka-streams-examples*.jar"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka Streams dependencies Jars are installed
-        /// </summary>
-        public virtual string StreamsDependenciesPath { get { return Path.Combine(RootPath, "streams", "build", "dependant-libs-" + ScalaVersion, "rocksdb*.jar"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka tools Jars are installed
-        /// </summary>
-        public virtual string ToolsPath { get { return Path.Combine(RootPath, "tools", "build", "libs", "kafka-tools*.jar"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka tools Jars are installed
-        /// </summary>
-        public virtual string ToolsDependenciesPath { get { return Path.Combine(RootPath, "tools", "build", "dependant-libs-" + ScalaVersion, "*.jar"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka Connect API Jars are installed
-        /// </summary>
-        public virtual string ConnectApiPath { get { return Path.Combine(RootPath, "connect", "api", "build", "libs", "connect-api*.jar"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka Connect API dependencies Jars are installed
-        /// </summary>
-        public virtual string ConnectApiDependenciesPath { get { return Path.Combine(RootPath, "connect", "api", "build", "dependant-libs", "*"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka Connect runtime Jars are installed
-        /// </summary>
-        public virtual string ConnectRuntimePath { get { return Path.Combine(RootPath, "connect", "runtime", "build", "libs", "connect-runtime*.jar"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka Connect runtime dependencies Jars are installed
-        /// </summary>
-        public virtual string ConnectRuntimeDependenciesPath { get { return Path.Combine(RootPath, "connect", "runtime", "build", "dependant-libs", "*"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka Connect file Jars are installed
-        /// </summary>
-        public virtual string ConnectFilePath { get { return Path.Combine(RootPath, "connect", "file", "build", "libs", "connect-file*.jar"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka Connect file dependencies Jars are installed
-        /// </summary>
-        public virtual string ConnectFileDependenciesPath { get { return Path.Combine(RootPath, "connect", "file", "build", "dependant-libs", "*"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka Connect json Jars are installed
-        /// </summary>
-        public virtual string ConnectJsonPath { get { return Path.Combine(RootPath, "connect", "json", "build", "libs", "connect-json*.jar"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka Connect json dependencies Jars are installed
-        /// </summary>
-        public virtual string ConnectJsonDependenciesPath { get { return Path.Combine(RootPath, "connect", "json", "build", "dependant-libs", "*"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka Connect tools Jars are installed
-        /// </summary>
-        public virtual string ConnectToolsPath { get { return Path.Combine(RootPath, "connect", "tools", "build", "libs", "connect-tools*.jar"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka Connect tools dependencies Jars are installed
-        /// </summary>
-        public virtual string ConnectToolsDependenciesPath { get { return Path.Combine(RootPath, "connect", "tools", "build", "dependant-libs", "*"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka tools Jars are installed
-        /// </summary>
-        public virtual string ExtraClassPath { get { return string.Empty; } }
-
-        /// <summary>
-        /// The path where Apache Kafka libs Jars are installed
-        /// </summary>
-        public virtual string ReleasePath { get { return Path.Combine(RootPath, "libs", "*"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka additional Jars are installed
-        /// </summary>
-        public virtual string ReleaseAdditionalPath { get { return Path.Combine(RootPath, "core", "build", "libs", "kafka_" + ScalaBinaryVersion + "*.jar"); } }
-
         /// <inheritdoc cref="JNetCore{T}.Options"/>
         protected override IDictionary<string, string> Options
         {
@@ -570,46 +479,25 @@ namespace MASES.KNet
                     { "-Dcom.sun.management.jmxremote", null },
                     { "com.sun.management.jmxremote.authenticate", "false" },
                     { "com.sun.management.jmxremote.ssl", "false" },
-                    { "log4j.configuration", string.IsNullOrEmpty(GlobalLog4JPath) ? ((GlobalRootPath == Const.DefaultRootPath) ? Log4JOpts : null) : $"file:{GlobalLog4JPath}"},
+                    { "log4j.configuration", string.IsNullOrEmpty(Log4JPath) ? ((JarRootPath == Const.DefaultRootPath) ? Log4JOpts : null) : $"file:{Log4JPath}"},
                     { "kafka.logs.dir", LogDir},
                     { "java.awt.headless", "true" },
-                    { "-Xmx" + ApplicationHeapSize, null},
                 };
-
-                if (!string.IsNullOrEmpty(ApplicationInitialHeapSize))
-                {
-                    options.Add("-Xms" + ApplicationInitialHeapSize, null);
-                }
 
                 return options;
             }
         }
 
         /// <inheritdoc cref="JNetCore{T}.PathToParse"/>
-        protected override IList<string> PathToParse => new List<string>(new string[]
+        protected override IList<string> PathToParse
         {
-            RootPath != null ? Path.Combine(RootPath, "*.jar") : RootPath,
-            CoreDependenciesPath,
-            ExamplesPath,
-            ClientsPath,
-            StreamsPath,
-            StreamsExamplePath,
-            StreamsDependenciesPath,
-            ToolsPath,
-            ToolsDependenciesPath,
-            ConnectApiPath,
-            ConnectApiDependenciesPath,
-            ConnectRuntimePath,
-            ConnectRuntimeDependenciesPath,
-            ConnectFilePath,
-            ConnectFileDependenciesPath,
-            ConnectJsonPath,
-            ConnectJsonDependenciesPath,
-            ConnectToolsPath,
-            ConnectToolsDependenciesPath,
-            ReleasePath,
-            ReleaseAdditionalPath,
-        });
+            get
+            {
+                var lst = new List<string>(base.PathToParse);
+                lst.Add(JarRootPath != null ? Path.Combine(JarRootPath, "*.jar") : JarRootPath);
+                return lst;
+            }
+        }
 
 #if DEBUG
         public override bool EnableDebug => true;
@@ -620,7 +508,5 @@ namespace MASES.KNet
     /// </summary>
     public class KNetCore : KNetCore<KNetCore>
     {
-        /// <inheritdoc cref="Parser.HelpInfo(int?)"/>
-        public static string HelpInfo(int? width = null) => Parser.HelpInfo(width);
     }
 }

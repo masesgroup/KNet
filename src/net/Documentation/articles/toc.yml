@@ -16,6 +16,8 @@
   href: usage.md
 - name: KNet CLI Usage
   href: usageCLI.md
+- name: KNet PoerShell Usage
+  href: usagePS.md
 - name: KNet Template Usage Guide
   href: usageTemplates.md  
 - name: How to build from scratch
