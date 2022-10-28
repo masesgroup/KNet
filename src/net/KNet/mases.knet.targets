@@ -1,19 +1,19 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <jars Include="$(MSBuildThisFileDirectory)\jars\*.*" />
-    <config Include="$(MSBuildThisFileDirectory)\config\*.*" />
-    <configKraft Include="$(MSBuildThisFileDirectory)\config\kraft\*.*" />
+    <knet_jars Include="$(MSBuildThisFileDirectory)\jars\*.*" />
+    <knet_config Include="$(MSBuildThisFileDirectory)\config\*.*" />
+    <knet_configKraft Include="$(MSBuildThisFileDirectory)\config\kraft\*.*" />
   </ItemGroup>
 
   <Target Name="CopyFilesNative" BeforeTargets="Build">
-    <Copy SourceFiles="@(jars)" DestinationFolder="$(TargetDir)/jars" />
-    <Copy SourceFiles="@(config)" DestinationFolder="$(TargetDir)/config" />
-    <Copy SourceFiles="@(configKraft)" DestinationFolder="$(TargetDir)/config/kraft" />
+    <Copy SourceFiles="@(knet_jars)" DestinationFolder="$(TargetDir)/jars" />
+    <Copy SourceFiles="@(knet_config)" DestinationFolder="$(TargetDir)/config" />
+    <Copy SourceFiles="@(knet_configKraft)" DestinationFolder="$(TargetDir)/config/kraft" />
   </Target>
   
   <Target Name="CopyFilesNativePublish" BeforeTargets="Publish">
-    <Copy SourceFiles="@(jars)" DestinationFolder="$(PublishDir)/jars" />
-    <Copy SourceFiles="@(config)" DestinationFolder="$(PublishDir)/config" />
-    <Copy SourceFiles="@(configKraft)" DestinationFolder="$(PublishDir)/config/kraft" />
+    <Copy SourceFiles="@(knet_jars)" DestinationFolder="$(PublishDir)/jars" />
+    <Copy SourceFiles="@(knet_config)" DestinationFolder="$(PublishDir)/config" />
+    <Copy SourceFiles="@(knet_configKraft)" DestinationFolder="$(PublishDir)/config/kraft" />
   </Target>
 </Project>
