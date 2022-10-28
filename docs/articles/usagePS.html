@@ -1,0 +1,381 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>KNet: PowerShell Module | KNet website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="KNet: PowerShell Module | KNet website ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="knet-powershell-module">KNet: PowerShell Module</h1>
+
+<h2 id="installation">Installation</h2>
+<p>To install the tool executes the following command within a PowerShell shell:</p>
+<blockquote>
+<p>Install-Module -Name MASES.KNetPS</p>
+</blockquote>
+<h2 id="usage">Usage</h2>
+<p>To use the PowerShell interface (JNetPS) runs the following commands within a <strong>PowerShell</strong> shell:</p>
+<h3 id="initialization">Initialization</h3>
+<ul>
+<li>The following cmdlet initialize the environment:</li>
+</ul>
+<blockquote>
+<p>Start-KNetPS [arguments]</p>
+</blockquote>
+<p>then the user can use objects created using <strong>New-KObject</strong>, otherwise it is possible to invoke the desired command listed below.</p>
+<h3 id="commands-available">Commands available</h3>
+<p><em>knetps</em> accepts the following cmdlets:</p>
+<ul>
+<li><strong>Start-KNetPS</strong>: Initialize the engine and can be the first command to be invoked. The arguments are:
+<ul>
+<li>Inherited from JnetPS:
+<ul>
+<li>LicensePath</li>
+<li>JDKHome</li>
+<li>JVMPath</li>
+<li>JNIVerbosity</li>
+<li>JNIOutputFile</li>
+<li>JmxPort</li>
+<li>EnableDebug</li>
+<li>JavaDebugPort</li>
+<li>DebugSuspendFlag</li>
+<li>JavaDebugOpts</li>
+<li>HeapSize</li>
+<li>InitialHeapSize</li>
+<li>LogClassPath</li>
+</ul>
+</li>
+<li>Specific of KnetPS:
+<ul>
+<li>ScalaVersion</li>
+<li>KafkaJarLocation</li>
+<li>Log4JPath</li>
+<li>LogPath</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>New-KObject</strong>: Creates a new JVM object of the class specified in argument using the parameters within command line for constructor. The arguments are:
+<ul>
+<li>Inherited from JnetPS:
+<ul>
+<li>Class</li>
+<li>Arguments</li>
+</ul>
+</li>
+<li>Specific of KnetPS:
+<ul>
+<li>ScalaVersion</li>
+<li>KafkaJarLocation</li>
+<li>Log4JPath</li>
+<li>LogPath</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>**Start-AclCommand: start AclCommand. The arguments are:
+<ul>
+<li>All available arguments of Start-KNetPS;</li>
+<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
+</ul>
+</li>
+<li>**Start-BrokerApiVersionsCommand: start AclCommand. The arguments are:
+<ul>
+<li>All available arguments of Start-KNetPS;</li>
+<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
+</ul>
+</li>
+<li>**Start-ConfigCommand: start AclCommand. The arguments are:
+<ul>
+<li>All available arguments of Start-KNetPS;</li>
+<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
+</ul>
+</li>
+<li>**Start-ConsumerGroupCommand: start AclCommand. The arguments are:
+<ul>
+<li>All available arguments of Start-KNetPS;</li>
+<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
+</ul>
+</li>
+<li>**Start-DelegationTokenCommand: start AclCommand. The arguments are:
+<ul>
+<li>All available arguments of Start-KNetPS;</li>
+<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
+</ul>
+</li>
+<li>**Start-DeleteRecordsCommand: start AclCommand. The arguments are:
+<ul>
+<li>All available arguments of Start-KNetPS;</li>
+<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
+</ul>
+</li>
+<li>**Start-FeatureCommand: start AclCommand. The arguments are:
+<ul>
+<li>All available arguments of Start-KNetPS;</li>
+<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
+</ul>
+</li>
+<li>**Start-LeaderElectionCommand: start AclCommand. The arguments are:
+<ul>
+<li>All available arguments of Start-KNetPS;</li>
+<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
+</ul>
+</li>
+<li>**Start-LogDirsCommand: start AclCommand. The arguments are:
+<ul>
+<li>All available arguments of Start-KNetPS;</li>
+<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
+</ul>
+</li>
+<li>**Start-MetadataQuorumCommand: start AclCommand. The arguments are:
+<ul>
+<li>All available arguments of Start-KNetPS;</li>
+<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
+</ul>
+</li>
+<li>**Start-ReassignPartitionsCommand: start AclCommand. The arguments are:
+<ul>
+<li>All available arguments of Start-KNetPS;</li>
+<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
+</ul>
+</li>
+<li>**Start-TopicCommand: start AclCommand. The arguments are:
+<ul>
+<li>All available arguments of Start-KNetPS;</li>
+<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
+</ul>
+</li>
+<li>**Start-ZkSecurityMigrator: start AclCommand. The arguments are:
+<ul>
+<li>All available arguments of Start-KNetPS;</li>
+<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
+</ul>
+</li>
+<li>**Start-KafkaStart: start AclCommand. The arguments are:
+<ul>
+<li>All available arguments of Start-KNetPS;</li>
+<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
+</ul>
+</li>
+<li>**Start-ZooKeeperShell: start AclCommand. The arguments are:
+<ul>
+<li>All available arguments of Start-KNetPS;</li>
+<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
+</ul>
+</li>
+<li>**Start-ZooKeeperStart: start AclCommand. The arguments are:
+<ul>
+<li>All available arguments of Start-KNetPS;</li>
+<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
+</ul>
+</li>
+<li>**Start-MetadataShell: start AclCommand. The arguments are:
+<ul>
+<li>All available arguments of Start-KNetPS;</li>
+<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
+</ul>
+</li>
+<li>**Start-ClusterTool: start AclCommand. The arguments are:
+<ul>
+<li>All available arguments of Start-KNetPS;</li>
+<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
+</ul>
+</li>
+<li>**Start-ConsoleConsumer: start AclCommand. The arguments are:
+<ul>
+<li>All available arguments of Start-KNetPS;</li>
+<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
+</ul>
+</li>
+<li>**Start-ConsoleProducer: start AclCommand. The arguments are:
+<ul>
+<li>All available arguments of Start-KNetPS;</li>
+<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
+</ul>
+</li>
+<li>**Start-ConsumerPerformance: start AclCommand. The arguments are:
+<ul>
+<li>All available arguments of Start-KNetPS;</li>
+<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
+</ul>
+</li>
+<li>**Start-DumpLogSegments: start AclCommand. The arguments are:
+<ul>
+<li>All available arguments of Start-KNetPS;</li>
+<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
+</ul>
+</li>
+<li>**Start-GetOffsetShell: start AclCommand. The arguments are:
+<ul>
+<li>All available arguments of Start-KNetPS;</li>
+<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
+</ul>
+</li>
+<li>**Start-MirrorMaker: start AclCommand. The arguments are:
+<ul>
+<li>All available arguments of Start-KNetPS;</li>
+<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
+</ul>
+</li>
+<li>**Start-ProducerPerformance: start AclCommand. The arguments are:
+<ul>
+<li>All available arguments of Start-KNetPS;</li>
+<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
+</ul>
+</li>
+<li>**Start-ReplicaVerificationTool: start AclCommand. The arguments are:
+<ul>
+<li>All available arguments of Start-KNetPS;</li>
+<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
+</ul>
+</li>
+<li>**Start-StorageTool: start AclCommand. The arguments are:
+<ul>
+<li>All available arguments of Start-KNetPS;</li>
+<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
+</ul>
+</li>
+<li>**Start-StreamsResetter: start AclCommand. The arguments are:
+<ul>
+<li>All available arguments of Start-KNetPS;</li>
+<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
+</ul>
+</li>
+<li>**Start-TransactionsCommand: start AclCommand. The arguments are:
+<ul>
+<li>All available arguments of Start-KNetPS;</li>
+<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
+</ul>
+</li>
+<li>**Start-VerifiableConsumer: start AclCommand. The arguments are:
+<ul>
+<li>All available arguments of Start-KNetPS;</li>
+<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
+</ul>
+</li>
+<li>**Start-VerifiableProducer: start AclCommand. The arguments are:
+<ul>
+<li>All available arguments of Start-KNetPS;</li>
+<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
+</ul>
+</li>
+<li>**Start-ConnectDistributed: start AclCommand. The arguments are:
+<ul>
+<li>All available arguments of Start-KNetPS;</li>
+<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
+</ul>
+</li>
+<li>**Start-ConnectStandalone: start AclCommand. The arguments are:
+<ul>
+<li>All available arguments of Start-KNetPS;</li>
+<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
+</ul>
+</li>
+<li>**Start-MirrorMaker2: start AclCommand. The arguments are:
+<ul>
+<li>All available arguments of Start-KNetPS;</li>
+<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
+</ul>
+</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/Documentation/articles/usagePS.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2022 MASES s.r.l..<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
