@@ -2,67 +2,155 @@
 
 ## Installation
 
-KNet CLI is available in two different formats:
+To install the tool executes the following command within a PowerShell shell:
 
-- dotnet tool hosted on NuGet.org: check https://www.nuget.org/packages/MASES.KNetCLI/ and https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools for installation deep instructions.
-- Docker image hosted on https://github.com/masesgroup/KNet/pkgs/container/mases.knetcli: follow instruction within the page and general instruction on https://docs.docker.com
+> Install-Module -Name MASES.KNetPS
 
 ## Usage
 
-To use the CLI interface (KNetCLI) runs a command like the following:
+To use the PowerShell interface (JNetPS) runs the following commands within a **PowerShell** shell:
 
-- **dotnet tool**
+### Initialization
 
-> knet -ClassToRun ConsoleConsumer --bootstrap-server SERVER-ADDRESS:9093 --topic topic_name --from-beginning
+* The following cmdlet initialize the environment:
 
-- **Docker image**
+> Start-KNetPS [arguments]
 
-> docker run ghcr.io/masesgroup/mases.knetcli -ClassToRun ConsoleConsumer --bootstrap-server SERVER-ADDRESS:9093 --topic topic_name --from-beginning
+then the user can use objects created using **New-KObject**, otherwise it is possible to invoke the desired command listed below.
 
 ### Commands available
 
-_knet_ accepts the following command-line switch:
+_knetps_ accepts the following cmdlets:
 
-* **ClassToRun**: represents the class to be executed; the list is:
-	* Administration scope:
-		* AclCommand
-		* BrokerApiVersionsCommand
-		* ConfigCommand
-		* ConsumerGroupCommand
-		* DelegationTokenCommand
-		* DeleteRecordsCommand
-		* FeatureCommand
-		* LeaderElectionCommand
-		* LogDirsCommand
-		* MetadataQuorumCommand
-		* ReassignPartitionsCommand
-		* TopicCommand
-		* ZkSecurityMigrator
-	* Server scope:
-		* KafkaStart
-		* ZooKeeperShell
-		* ZooKeeperStart
-	* Shell scope:
-		* MetadataShell
-	* Tools scope:
-		* ClusterTool
-		* ConsoleConsumer
-		* ConsoleProducer
-		* ConsumerPerformance
-		* DumpLogSegments
-		* GetOffsetShell
-		* MirrorMaker
-		* ProducerPerformance
-		* ReplicaVerificationTool
-		* StorageTool
-		* StreamsResetter
-		* TransactionsCommand
-		* VerifiableConsumer
-		* VerifiableProducer
-	* Connect scope:
-		* ConnectDistributed
-		* ConnectStandalone
-		* MirrorMaker2
-* **KafkaLocation**: represents the path to the root folder of Apache Kafka binary distribution; default value consider that KNetCLI uses the Apache Kafka jars available under the jars folder prepared from the package;
-* **ScalaVersion**: the scala version to be used. The default version (_2.13.6_) is binded to the deafult Apache Kafka version available in the package;
-* **Log4JConfiguration**: the log4j configuration file; the default uses the file within the package.
+* **Start-KNetPS**: Initialize the engine and can be the first command to be invoked. The arguments are:
+  * Inherited from JnetPS:
+	* LicensePath
+	* JDKHome
+	* JVMPath
+	* JNIVerbosity
+	* JNIOutputFile
+	* JmxPort
+	* EnableDebug
+	* JavaDebugPort
+	* DebugSuspendFlag
+	* JavaDebugOpts
+	* HeapSize
+	* InitialHeapSize
+	* LogClassPath
+  * Specific of KnetPS:
+    * ScalaVersion
+	* KafkaJarLocation
+	* Log4JPath
+	* LogPath
+* **New-KObject**: Creates a new JVM object of the class specified in argument using the parameters within command line for constructor. The arguments are:
+  * Inherited from JnetPS:
+    * Class
+    * Arguments
+  * Specific of KnetPS:
+      * ScalaVersion
+	  * KafkaJarLocation
+	  * Log4JPath
+	  * LogPath	  
+* **Start-AclCommand: start AclCommand. The arguments are:
+  * All available arguments of Start-KNetPS;
+  * Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-BrokerApiVersionsCommand: start AclCommand. The arguments are:
+  * All available arguments of Start-KNetPS;
+  * Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-ConfigCommand: start AclCommand. The arguments are:
+  * All available arguments of Start-KNetPS;
+  * Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-ConsumerGroupCommand: start AclCommand. The arguments are:
+  * All available arguments of Start-KNetPS;
+  * Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-DelegationTokenCommand: start AclCommand. The arguments are:
+  * All available arguments of Start-KNetPS;
+  * Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-DeleteRecordsCommand: start AclCommand. The arguments are:
+  * All available arguments of Start-KNetPS;
+  * Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-FeatureCommand: start AclCommand. The arguments are:
+  * All available arguments of Start-KNetPS;
+  * Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-LeaderElectionCommand: start AclCommand. The arguments are:
+  * All available arguments of Start-KNetPS;
+  * Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-LogDirsCommand: start AclCommand. The arguments are:
+  * All available arguments of Start-KNetPS;
+  * Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-MetadataQuorumCommand: start AclCommand. The arguments are:
+  * All available arguments of Start-KNetPS;
+  * Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-ReassignPartitionsCommand: start AclCommand. The arguments are:
+  * All available arguments of Start-KNetPS;
+  * Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-TopicCommand: start AclCommand. The arguments are:
+  * All available arguments of Start-KNetPS;
+  * Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-ZkSecurityMigrator: start AclCommand. The arguments are:
+  * All available arguments of Start-KNetPS;
+  * Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-KafkaStart: start AclCommand. The arguments are:
+  * All available arguments of Start-KNetPS;
+  * Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-ZooKeeperShell: start AclCommand. The arguments are:
+  * All available arguments of Start-KNetPS;
+  * Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-ZooKeeperStart: start AclCommand. The arguments are:
+  * All available arguments of Start-KNetPS;
+  * Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-MetadataShell: start AclCommand. The arguments are:
+  * All available arguments of Start-KNetPS;
+  * Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-ClusterTool: start AclCommand. The arguments are:
+  * All available arguments of Start-KNetPS;
+  * Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-ConsoleConsumer: start AclCommand. The arguments are:
+  * All available arguments of Start-KNetPS;
+  * Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-ConsoleProducer: start AclCommand. The arguments are:
+  * All available arguments of Start-KNetPS;
+  * Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-ConsumerPerformance: start AclCommand. The arguments are:
+  * All available arguments of Start-KNetPS;
+  * Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-DumpLogSegments: start AclCommand. The arguments are:
+  * All available arguments of Start-KNetPS;
+  * Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-GetOffsetShell: start AclCommand. The arguments are:
+  * All available arguments of Start-KNetPS;
+  * Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-MirrorMaker: start AclCommand. The arguments are:
+  * All available arguments of Start-KNetPS;
+  * Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-ProducerPerformance: start AclCommand. The arguments are:
+  * All available arguments of Start-KNetPS;
+  * Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-ReplicaVerificationTool: start AclCommand. The arguments are:
+  * All available arguments of Start-KNetPS;
+  * Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-StorageTool: start AclCommand. The arguments are:
+  * All available arguments of Start-KNetPS;
+  * Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-StreamsResetter: start AclCommand. The arguments are:
+  * All available arguments of Start-KNetPS;
+  * Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-TransactionsCommand: start AclCommand. The arguments are:
+  * All available arguments of Start-KNetPS;
+  * Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-VerifiableConsumer: start AclCommand. The arguments are:
+  * All available arguments of Start-KNetPS;
+  * Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-VerifiableProducer: start AclCommand. The arguments are:
+  * All available arguments of Start-KNetPS;
+  * Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-ConnectDistributed: start AclCommand. The arguments are:
+  * All available arguments of Start-KNetPS;
+  * Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-ConnectStandalone: start AclCommand. The arguments are:
+  * All available arguments of Start-KNetPS;
+  * Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-MirrorMaker2: start AclCommand. The arguments are:
+  * All available arguments of Start-KNetPS;
+  * Arguments: a string containing the arguments accepted from the Java Main-Class
+	  

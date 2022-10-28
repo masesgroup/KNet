@@ -19,8 +19,11 @@ Author = 'MASES s.r.l.'
 CompanyName = 'MASES s.r.l.'
 
 Copyright = 'Copyright ©  MASES s.r.l. 2022'
+Description = 'KNet PowerShell (aka KNetPS) is a PowerShell Module to use Apache Kafka and PowerShell side-by-side. With KNetPS it is possible to:
+- execute all commands of Apache Kafka within a PowerShell shell: Administration, Consumer, Producer, Stream, Connect, server side (Kafka and ZooKeeper)
+- create Apache Kafka objects: consumers, producers, etc
 
-Description = 'PowerShell command line interface for Apache Kafka'
+More information within the project hosted on GitHub at https://github.com/masesgroup/KNet for further information.'
 
 # PowerShellVersion = ''
 
@@ -101,7 +104,7 @@ PrivateData = @{
 
     PSData = @{
 
-        Tags = @('KNetPS', 'PSEdition_Core', 'PSEdition_Desktop', 'Windows', 'Linux', 'Kafka', 'Apache Kafka', 'Admin', 'conusmer', 'producer')
+        Tags = @('KNetPS', 'PSEdition_Core', 'PSEdition_Desktop', 'Windows', 'Linux', 'ZooKeeper', 'Kafka', 'Apache Kafka', 'Admin', 'Consumer', 'Producer')
 
         LicenseUri = 'https://github.com/masesgroup/JNet/blob/master/LICENSE'
 
