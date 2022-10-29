@@ -23,6 +23,7 @@ using System.Management.Automation;
 namespace MASES.KNetPS.CodeCmdlet
 {
     [Cmdlet(VerbsCommon.New, "KafkaProducer")]
+    [OutputType(typeof(KafkaProducer<,>))]
     public class NewKafkaProducerCmdletCommand : PSCmdlet
     {
         [Parameter(

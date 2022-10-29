@@ -17,59 +17,36 @@
 */
 
 using MASES.KNet.Clients.Consumer;
-using System;
 using System.Management.Automation;
 
 namespace MASES.KNetPS.CodeCmdlet
 {
-    [Cmdlet(VerbsCommon.New, "KafkaConsumer")]
-    [OutputType(typeof(KafkaConsumer<,>))]
-    public class NewKafkaConsumerCmdletCommand : PSCmdlet
+    [Cmdlet(VerbsLifecycle.Invoke, "Unsubscribe")]
+    public class InvokeUnsubscribeCmdletCommand : PSCmdlet
     {
         [Parameter(
             Mandatory = true,
             Position = 0,
-            ValueFromPipeline = true,
             ValueFromPipelineByPropertyName = true,
-            HelpMessage = "The dotnet class of the key")]
-        public string KeyClass { get; set; }
-
-        [Parameter(
-            Mandatory = true,
-            Position = 1,
-            ValueFromPipeline = true,
-            ValueFromPipelineByPropertyName = true,
-            HelpMessage = "The dotnet class of the value")]
-        public string ValueClass { get; set; }
-
-        [Parameter(
-            Mandatory = true,
-            Position = 2,
-            ValueFromPipelineByPropertyName = true,
-            HelpMessage = "The configuration to be used as a ConsumerConfigBuilder object")]
-        public ConsumerConfigBuilder Configuration { get; set; }
+            HelpMessage = "The KafkaConsumer where execute the Unsubscribe operation")]
+        public KafkaConsumer Consumer { get; set; }
 
         // This method gets called once for each cmdlet in the pipeline when the pipeline starts executing
         protected override void BeginProcessing()
         {
-            WriteVerbose("Begin KafkaConsumer!");
+            WriteVerbose("Begin Unsubscribe!");
         }
 
         // This method will be called for each input received from the pipeline to this cmdlet; if no input is received, this method is not called
         protected override void ProcessRecord()
         {
-            System.Type keyType = System.Type.GetType(KeyClass);
-            System.Type valueType = System.Type.GetType(ValueClass);
-
-            var kafkaConsumerType = typeof(KafkaConsumer<,>).MakeGenericType(keyType, valueType);
-            var kafkaConsumer = Activator.CreateInstance(kafkaConsumerType, Configuration.ToProperties());
-            WriteObject(kafkaConsumer);
+            Consumer.Unsubscribe();
         }
 
         // This method will be called once at the end of pipeline execution; if no input is received, this method is not called
         protected override void EndProcessing()
         {
-            WriteVerbose("End KafkaConsumer!");
+            WriteVerbose("End Unsubscribe!");
         }
     }
 }

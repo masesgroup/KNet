@@ -16,15 +16,19 @@
 *  Refer to LICENSE for more information.
 */
 
+using Java.Util.Function;
+using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Clients.Consumer;
 using System;
+using System.Collections;
 using System.Management.Automation;
+using System.Reflection;
 
 namespace MASES.KNetPS.CodeCmdlet
 {
-    [Cmdlet(VerbsCommon.New, "KafkaConsumer")]
-    [OutputType(typeof(KafkaConsumer<,>))]
-    public class NewKafkaConsumerCmdletCommand : PSCmdlet
+    [Cmdlet(VerbsCommon.Get, "ConsumerRecord")]
+    [OutputType(typeof(ConsumerRecord<,>))]
+    public class GetConsumerRecordCmdletCommand : PSCmdlet
     {
         [Parameter(
             Mandatory = true,
@@ -46,13 +50,20 @@ namespace MASES.KNetPS.CodeCmdlet
             Mandatory = true,
             Position = 2,
             ValueFromPipelineByPropertyName = true,
-            HelpMessage = "The configuration to be used as a ConsumerConfigBuilder object")]
-        public ConsumerConfigBuilder Configuration { get; set; }
+            HelpMessage = "The object returned from Invoke-Poll")]
+        public object ConsumerRecords { get; set; }
+
+        [Parameter(
+            Position = 3,
+            ValueFromPipeline = true,
+            ValueFromPipelineByPropertyName = true,
+            HelpMessage = "The topic where operate on, otherwise all elements")]
+        public string Topic { get; set; }
 
         // This method gets called once for each cmdlet in the pipeline when the pipeline starts executing
         protected override void BeginProcessing()
         {
-            WriteVerbose("Begin KafkaConsumer!");
+            WriteVerbose("Begin ConsumerRecords!");
         }
 
         // This method will be called for each input received from the pipeline to this cmdlet; if no input is received, this method is not called
@@ -60,16 +71,30 @@ namespace MASES.KNetPS.CodeCmdlet
         {
             System.Type keyType = System.Type.GetType(KeyClass);
             System.Type valueType = System.Type.GetType(ValueClass);
+            var consumerRecordsType = typeof(ConsumerRecords<,>).MakeGenericType(keyType, valueType);
+            MethodInfo recordsMethod = consumerRecordsType.GetMethod("Records");
+            if (Topic == null)
+            {
+                var consumerRecordType = typeof(ConsumerRecord<,>).MakeGenericType(keyType, valueType);
 
-            var kafkaConsumerType = typeof(KafkaConsumer<,>).MakeGenericType(keyType, valueType);
-            var kafkaConsumer = Activator.CreateInstance(kafkaConsumerType, Configuration.ToProperties());
-            WriteObject(kafkaConsumer);
+                foreach (var item in ConsumerRecords as IEnumerable)
+                {
+                    IJVMBridgeBase ijbb = item as IJVMBridgeBase;
+                    var res = JVMBridgeBase.Wraps(consumerRecordType, ijbb.Instance);
+                    WriteObject(res);
+                }
+            }
+            else
+            {
+                var records = recordsMethod.Invoke(ConsumerRecords, new object[] { Topic });
+                throw new NotImplementedException();
+            }
         }
 
         // This method will be called once at the end of pipeline execution; if no input is received, this method is not called
         protected override void EndProcessing()
         {
-            WriteVerbose("End KafkaConsumer!");
+            WriteVerbose("End ConsumerRecords!");
         }
     }
 }

@@ -22,6 +22,7 @@ using System.Management.Automation;
 namespace MASES.KNetPS.CodeCmdlet
 {
     [Cmdlet(VerbsCommon.New, "KafkaAdminClient")]
+    [OutputType(typeof(KafkaAdminClient))]
     public class NewKafkaAdminClientCmdletCommand : PSCmdlet
     {
         [Parameter(

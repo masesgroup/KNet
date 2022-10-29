@@ -20,10 +20,10 @@ CompanyName = 'MASES s.r.l.'
 
 Copyright = 'Copyright ©  MASES s.r.l. 2022'
 Description = 'KNet PowerShell (aka KNetPS) is a PowerShell Module to use Apache Kafka and PowerShell side-by-side. With KNetPS it is possible to:
-- execute all commands of Apache Kafka within a PowerShell shell: Administration, Consumer, Producer, Stream, Connect, server side (Kafka and ZooKeeper)
-- create consumers, producers objects to interact with an Apache Kafka
+- execute all tools of Apache Kafka within a PowerShell shell: Administration tools, Console Consumer, Console Producer, manage Apache Kafka Streams, activate Apache Kafka Connect, server side (start Kafka and ZooKeeper), etc
+- create consumers and producers objects to interact with an Apache Kafka cluster
 - send data to and receive data from an Apache Kafka cluster
-- create a Kafka Admin Client to manage an Apache Kafka cluster
+- create a Kafka Admin Client object to manage an Apache Kafka cluster
 
 More information within the project hosted on GitHub at https://github.com/masesgroup/KNet for further information.'
 
@@ -89,7 +89,20 @@ CmdletsToExport = @(
     'Start-VerifiableProducer',
     'Start-ConnectDistributed',
     'Start-ConnectStandalone',
-    'Start-MirrorMaker2'
+    'Start-MirrorMaker2',
+    'New-AdminClientConfigBuilder',
+    'New-ConsumerConfigBuilder',
+    'New-KafkaAdminClient',
+    'New-KafkaConsumer',
+    'New-KafkaProducer',
+    'New-KNetConsumer',
+    'New-KNetProducer',
+    'New-ProducerConfigBuilder',
+    'Invoke-Poll',
+    'Get-ConsumerRecord',
+    'Get-ConsumerGroupMetadata',
+    'Invoke-Subscribe',
+    'Invoke-Unsubscribe'
 )
 
 VariablesToExport = '*'
@@ -108,19 +121,19 @@ PrivateData = @{
 
         Tags = @('KNetPS', 'PSEdition_Core', 'PSEdition_Desktop', 'Windows', 'Linux', 'ZooKeeper', 'Kafka', 'Apache Kafka', 'Admin', 'Consumer', 'Producer')
 
-        LicenseUri = 'https://github.com/masesgroup/JNet/blob/master/LICENSE'
+        LicenseUri = 'https://github.com/masesgroup/KNet/blob/master/LICENSE'
 
-        ProjectUri = 'https://github.com/masesgroup/JNet'
+        ProjectUri = 'https://github.com/masesgroup/KNet'
 
-        IconUri = 'https://github.com/masesgroup/JNet/blob/master/src/net/Common/JCOB128x128.png'
+        IconUri = 'https://raw.githubusercontent.com/masesgroup/KNet/master/src/net/Common/JCOB128x128.png'
 
-        ReleaseNotes = 'https://github.com/masesgroup/JNet/releases'
+        ReleaseNotes = 'https://github.com/masesgroup/KNet/releases'
 
     }
 
 } 
 
-HelpInfoURI = 'https://masesgroup.github.io/JNet/articles/usagePS.html'
+HelpInfoURI = 'https://masesgroup.github.io/KNet/articles/usagePS.html'
 
 # DefaultCommandPrefix = ''
 }

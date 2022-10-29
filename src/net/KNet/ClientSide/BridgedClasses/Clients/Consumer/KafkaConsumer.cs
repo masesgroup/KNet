@@ -24,7 +24,7 @@ using Java.Util.Regex;
 
 namespace MASES.KNet.Clients.Consumer
 {
-    public class KafkaConsumer : JCOBridge.C2JBridge.JVMBridgeBase<KafkaConsumer>
+    public class KafkaConsumer : JCOBridge.C2JBridge.JVMBridgeBase<KafkaConsumer>, IConsumer
     {
         public override bool IsCloseable => true;
 
@@ -36,23 +36,6 @@ namespace MASES.KNet.Clients.Consumer
 
         public KafkaConsumer(params object[] args)
             : base(args)
-        {
-        }
-    }
-
-    public class KafkaConsumer<K, V> : KafkaConsumer, IConsumer<K, V>
-    {
-        public KafkaConsumer()
-        {
-        }
-
-        public KafkaConsumer(Properties props)
-            : base(props)
-        {
-        }
-
-        public KafkaConsumer(Properties props, Deserializer<K> keyDeserializer, Deserializer<V> valueDeserializer)
-            : base(props, keyDeserializer, valueDeserializer)
         {
         }
 
@@ -94,15 +77,6 @@ namespace MASES.KNet.Clients.Consumer
             IExecute("assign", partitions);
         }
 
-        public ConsumerRecords<K, V> Poll(long timeoutMs)
-        {
-            return IExecute<ConsumerRecords<K, V>>("poll", timeoutMs);
-        }
-
-        public ConsumerRecords<K, V> Poll(Duration timeout)
-        {
-            return IExecute<ConsumerRecords<K, V>>("poll", timeout);
-        }
 
         public void CommitSync()
         {
@@ -272,6 +246,33 @@ namespace MASES.KNet.Clients.Consumer
         public void Wakeup()
         {
             IExecute("wakeup");
+        }
+    }
+
+    public class KafkaConsumer<K, V> : KafkaConsumer, IConsumer<K, V>
+    {
+        public KafkaConsumer()
+        {
+        }
+
+        public KafkaConsumer(Properties props)
+            : base(props)
+        {
+        }
+
+        public KafkaConsumer(Properties props, Deserializer<K> keyDeserializer, Deserializer<V> valueDeserializer)
+            : base(props, keyDeserializer, valueDeserializer)
+        {
+        }
+
+        public ConsumerRecords<K, V> Poll(long timeoutMs)
+        {
+            return IExecute<ConsumerRecords<K, V>>("poll", timeoutMs);
+        }
+
+        public ConsumerRecords<K, V> Poll(Duration timeout)
+        {
+            return IExecute<ConsumerRecords<K, V>>("poll", timeout);
         }
     }
 }

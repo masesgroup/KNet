@@ -22,6 +22,7 @@ using System.Management.Automation;
 namespace MASES.KNetPS.CodeCmdlet
 {
     [Cmdlet(VerbsCommon.New, "ConsumerConfigBuilder")]
+    [OutputType(typeof(ConsumerConfigBuilder))]
     public class NewConsumerConfigBuilderCmdletCommand : PSCmdlet
     {
         // This method gets called once for each cmdlet in the pipeline when the pipeline starts executing

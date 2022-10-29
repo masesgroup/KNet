@@ -23,6 +23,7 @@ using System.Management.Automation;
 namespace MASES.KNetPS.CodeCmdlet
 {
     [Cmdlet(VerbsCommon.New, "KNetProducer")]
+    [OutputType(typeof(KNetProducer<,>))]
     public class NewKNetProducerCmdletCommand : PSCmdlet
     {
         [Parameter(

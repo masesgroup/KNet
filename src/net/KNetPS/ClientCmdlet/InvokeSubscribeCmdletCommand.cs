@@ -16,60 +16,59 @@
 *  Refer to LICENSE for more information.
 */
 
+using Java.Util;
+using Java.Util.Regex;
 using MASES.KNet.Clients.Consumer;
-using System;
 using System.Management.Automation;
 
 namespace MASES.KNetPS.CodeCmdlet
 {
-    [Cmdlet(VerbsCommon.New, "KafkaConsumer")]
-    [OutputType(typeof(KafkaConsumer<,>))]
-    public class NewKafkaConsumerCmdletCommand : PSCmdlet
+    [Cmdlet(VerbsLifecycle.Invoke, "Subscribe")]
+    public class InvokeSubscribeCmdletCommand : PSCmdlet
     {
         [Parameter(
             Mandatory = true,
             Position = 0,
-            ValueFromPipeline = true,
             ValueFromPipelineByPropertyName = true,
-            HelpMessage = "The dotnet class of the key")]
-        public string KeyClass { get; set; }
+            HelpMessage = "The KafkaConsumer where execute the Subscribe operation")]
+        public KafkaConsumer Consumer { get; set; }
 
         [Parameter(
-            Mandatory = true,
-            Position = 1,
             ValueFromPipeline = true,
             ValueFromPipelineByPropertyName = true,
-            HelpMessage = "The dotnet class of the value")]
-        public string ValueClass { get; set; }
+            HelpMessage = "The topic where subscribe on")]
+        public string Topic { get; set; }
 
         [Parameter(
-            Mandatory = true,
-            Position = 2,
+            ValueFromPipeline = true,
             ValueFromPipelineByPropertyName = true,
-            HelpMessage = "The configuration to be used as a ConsumerConfigBuilder object")]
-        public ConsumerConfigBuilder Configuration { get; set; }
+            HelpMessage = "The pattern where subscribe on")]
+        public string PatternRegEx { get; set; }
 
         // This method gets called once for each cmdlet in the pipeline when the pipeline starts executing
         protected override void BeginProcessing()
         {
-            WriteVerbose("Begin KafkaConsumer!");
+            WriteVerbose("Begin Subscribe!");
         }
 
         // This method will be called for each input received from the pipeline to this cmdlet; if no input is received, this method is not called
         protected override void ProcessRecord()
         {
-            System.Type keyType = System.Type.GetType(KeyClass);
-            System.Type valueType = System.Type.GetType(ValueClass);
-
-            var kafkaConsumerType = typeof(KafkaConsumer<,>).MakeGenericType(keyType, valueType);
-            var kafkaConsumer = Activator.CreateInstance(kafkaConsumerType, Configuration.ToProperties());
-            WriteObject(kafkaConsumer);
+            if (Topic != null)
+            {
+                Consumer.Subscribe(Collections.Singleton(Topic));
+            }
+            else if (PatternRegEx != null)
+            {
+                Consumer.Subscribe(Pattern.Compile(PatternRegEx));
+            }
+            else throw new PSArgumentException("At least one of Topic or PatternRegEx shall be supplied.");
         }
 
         // This method will be called once at the end of pipeline execution; if no input is received, this method is not called
         protected override void EndProcessing()
         {
-            WriteVerbose("End KafkaConsumer!");
+            WriteVerbose("End Subscribe!");
         }
     }
 }
