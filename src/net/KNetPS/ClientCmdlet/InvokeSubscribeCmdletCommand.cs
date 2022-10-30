@@ -18,13 +18,15 @@
 
 using Java.Util;
 using Java.Util.Regex;
+using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Clients.Consumer;
+using MASES.KNetPS.Cmdlet;
 using System.Management.Automation;
 
 namespace MASES.KNetPS.ClientCmdlet
 {
     [Cmdlet(VerbsLifecycle.Invoke, "Subscribe")]
-    public class InvokeSubscribeCmdletCommand : PSCmdlet
+    public class InvokeSubscribeCmdletCommand : KNetPSCmdlet
     {
         [Parameter(
             Mandatory = true,
@@ -52,7 +54,7 @@ namespace MASES.KNetPS.ClientCmdlet
         }
 
         // This method will be called for each input received from the pipeline to this cmdlet; if no input is received, this method is not called
-        protected override void ProcessRecord()
+        protected override void ProcessCommand()
         {
             if (Topic != null)
             {

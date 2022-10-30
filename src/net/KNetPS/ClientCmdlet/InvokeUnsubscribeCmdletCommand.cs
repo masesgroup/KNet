@@ -16,13 +16,15 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Clients.Consumer;
+using MASES.KNetPS.Cmdlet;
 using System.Management.Automation;
 
 namespace MASES.KNetPS.ClientCmdlet
 {
     [Cmdlet(VerbsLifecycle.Invoke, "Unsubscribe")]
-    public class InvokeUnsubscribeCmdletCommand : PSCmdlet
+    public class InvokeUnsubscribeCmdletCommand : KNetPSCmdlet
     {
         [Parameter(
             Mandatory = true,
@@ -38,7 +40,7 @@ namespace MASES.KNetPS.ClientCmdlet
         }
 
         // This method will be called for each input received from the pipeline to this cmdlet; if no input is received, this method is not called
-        protected override void ProcessRecord()
+        protected override void ProcessCommand()
         {
             Consumer.Unsubscribe();
         }

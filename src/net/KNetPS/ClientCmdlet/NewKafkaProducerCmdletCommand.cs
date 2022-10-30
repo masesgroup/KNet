@@ -16,15 +16,19 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Clients.Producer;
+using MASES.KNet.Extensions;
+using MASES.KNetPS.Cmdlet;
 using System;
 using System.Management.Automation;
+using System.Reflection;
 
 namespace MASES.KNetPS.ClientCmdlet
 {
     [Cmdlet(VerbsCommon.New, "KafkaProducer")]
     [OutputType(typeof(KafkaProducer<,>))]
-    public class NewKafkaProducerCmdletCommand : PSCmdlet
+    public class NewKafkaProducerCmdletCommand : KNetPSCmdlet
     {
         [Parameter(
             Mandatory = true,
@@ -56,13 +60,16 @@ namespace MASES.KNetPS.ClientCmdlet
         }
 
         // This method will be called for each input received from the pipeline to this cmdlet; if no input is received, this method is not called
-        protected override void ProcessRecord()
+        protected override void ProcessCommand()
         {
             System.Type keyType = System.Type.GetType(KeyClass);
             System.Type valueType = System.Type.GetType(ValueClass);
 
             var kafkaProducerType = typeof(KafkaProducer<,>).MakeGenericType(keyType, valueType);
-            var kafkaProducer = Activator.CreateInstance(kafkaProducerType, Configuration.ToProperties());
+
+            var newConf = Configuration.WithKeySerializerClass(keyType).WithValueSerializerClass(valueType);
+
+            var kafkaProducer = Activator.CreateInstance(kafkaProducerType, newConf.ToProperties());
             WriteObject(kafkaProducer);
         }
 

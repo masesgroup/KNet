@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using MASES.JNet;
+using MASES.KNet.Common.Config;
 
 namespace MASES.KNet
 {
@@ -91,6 +92,8 @@ namespace MASES.KNet
             #endregion
 
             #region Common Exceptions
+
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(ConfigException));
 
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(ApiException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(AuthenticationException));

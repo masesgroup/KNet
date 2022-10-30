@@ -19,6 +19,7 @@
 using Java.Util.Function;
 using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Clients.Consumer;
+using MASES.KNetPS.Cmdlet;
 using System;
 using System.Collections;
 using System.Management.Automation;
@@ -28,7 +29,7 @@ namespace MASES.KNetPS.ClientCmdlet
 {
     [Cmdlet(VerbsCommon.Get, "ConsumerRecord")]
     [OutputType(typeof(ConsumerRecord<,>))]
-    public class GetConsumerRecordCmdletCommand : PSCmdlet
+    public class GetConsumerRecordCmdletCommand : KNetPSCmdlet
     {
         [Parameter(
             Mandatory = true,
@@ -67,7 +68,7 @@ namespace MASES.KNetPS.ClientCmdlet
         }
 
         // This method will be called for each input received from the pipeline to this cmdlet; if no input is received, this method is not called
-        protected override void ProcessRecord()
+        protected override void ProcessCommand()
         {
             System.Type keyType = System.Type.GetType(KeyClass);
             System.Type valueType = System.Type.GetType(ValueClass);

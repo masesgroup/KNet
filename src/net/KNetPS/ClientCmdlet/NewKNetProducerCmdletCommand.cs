@@ -16,15 +16,19 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Clients.Producer;
+using MASES.KNet.Extensions;
+using MASES.KNetPS.Cmdlet;
 using System;
 using System.Management.Automation;
+using System.Reflection;
 
 namespace MASES.KNetPS.ClientCmdlet
 {
     [Cmdlet(VerbsCommon.New, "KNetProducer")]
     [OutputType(typeof(KNetProducer<,>))]
-    public class NewKNetProducerCmdletCommand : PSCmdlet
+    public class NewKNetProducerCmdletCommand : KNetPSCmdlet
     {
         [Parameter(
             Mandatory = true,
@@ -56,13 +60,16 @@ namespace MASES.KNetPS.ClientCmdlet
         }
 
         // This method will be called for each input received from the pipeline to this cmdlet; if no input is received, this method is not called
-        protected override void ProcessRecord()
+        protected override void ProcessCommand()
         {
             System.Type keyType = System.Type.GetType(KeyClass);
             System.Type valueType = System.Type.GetType(ValueClass);
 
             var knetProducerType = typeof(KNetProducer<,>).MakeGenericType(keyType, valueType);
-            var knetProducer= Activator.CreateInstance(knetProducerType, Configuration.ToProperties());
+
+            var newConf = Configuration.WithKeySerializerClass(keyType).WithValueSerializerClass(valueType);
+
+            var knetProducer = Activator.CreateInstance(knetProducerType, newConf.ToProperties());
             WriteObject(knetProducer);
         }
 
@@ -71,5 +78,7 @@ namespace MASES.KNetPS.ClientCmdlet
         {
             WriteVerbose("End KNetProducer!");
         }
+
+
     }
 }

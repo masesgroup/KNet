@@ -16,14 +16,16 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Clients.Admin;
+using MASES.KNetPS.Cmdlet;
 using System.Management.Automation;
 
 namespace MASES.KNetPS.ClientCmdlet
 {
     [Cmdlet(VerbsCommon.New, "KafkaAdminClient")]
     [OutputType(typeof(KafkaAdminClient))]
-    public class NewKafkaAdminClientCmdletCommand : PSCmdlet
+    public class NewKafkaAdminClientCmdletCommand : KNetPSCmdlet
     {
         [Parameter(
             Mandatory = true,
@@ -39,7 +41,7 @@ namespace MASES.KNetPS.ClientCmdlet
         }
 
         // This method will be called for each input received from the pipeline to this cmdlet; if no input is received, this method is not called
-        protected override void ProcessRecord()
+        protected override void ProcessCommand()
         {
             WriteObject(KafkaAdminClient.Create(Configuration.ToProperties()));
         }

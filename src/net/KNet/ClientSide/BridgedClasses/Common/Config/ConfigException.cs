@@ -16,14 +16,10 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.JNetPSCore.Cmdlet;
-using MASES.KNet;
-using System.Management.Automation;
-
-namespace MASES.KNetPS.Cmdlet
+namespace MASES.KNet.Common.Config
 {
-    [Cmdlet(VerbsLifecycle.Start, "KNetPS")]
-    public class StartKNetPSCmdletCommand : StartKNetPSCmdletCommandBase<StartKNetPSCmdletCommand>
+    public class ConfigException : KafkaException
     {
+        public override string ClassName => "org.apache.kafka.common.config.ConfigException";
     }
 }

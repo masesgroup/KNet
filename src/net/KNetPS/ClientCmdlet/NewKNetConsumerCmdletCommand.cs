@@ -17,6 +17,8 @@
 */
 
 using MASES.KNet.Clients.Consumer;
+using MASES.KNet.Extensions;
+using MASES.KNetPS.Cmdlet;
 using System;
 using System.Management.Automation;
 
@@ -24,7 +26,7 @@ namespace MASES.KNetPS.ClientCmdlet
 {
     [Cmdlet(VerbsCommon.New, "KNetConsumer")]
     [OutputType(typeof(KNetConsumer<,>))]
-    public class NewKNetConsumerCmdletCommand : PSCmdlet
+    public class NewKNetConsumerCmdletCommand : KNetPSCmdlet
     {
         [Parameter(
             Mandatory = true,
@@ -56,13 +58,16 @@ namespace MASES.KNetPS.ClientCmdlet
         }
 
         // This method will be called for each input received from the pipeline to this cmdlet; if no input is received, this method is not called
-        protected override void ProcessRecord()
+        protected override void ProcessCommand()
         {
             System.Type keyType = System.Type.GetType(KeyClass);
             System.Type valueType = System.Type.GetType(ValueClass);
 
             var knetConsumerType = typeof(KNetConsumer<,>).MakeGenericType(keyType, valueType);
-            var knetConsumer = Activator.CreateInstance(knetConsumerType, Configuration.ToProperties());
+
+            var newConf = Configuration.WithKeyDeserializerClass(keyType).WithValueDeserializerClass(valueType);
+
+            var knetConsumer = Activator.CreateInstance(knetConsumerType, newConf.ToProperties());
             WriteObject(knetConsumer);
         }
 

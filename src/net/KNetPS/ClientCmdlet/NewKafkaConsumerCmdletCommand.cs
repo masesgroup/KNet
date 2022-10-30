@@ -16,15 +16,20 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
+using MASES.KNet;
 using MASES.KNet.Clients.Consumer;
+using MASES.KNet.Extensions;
+using MASES.KNetPS.Cmdlet;
 using System;
 using System.Management.Automation;
+using System.Reflection;
 
 namespace MASES.KNetPS.ClientCmdlet
 {
     [Cmdlet(VerbsCommon.New, "KafkaConsumer")]
     [OutputType(typeof(KafkaConsumer<,>))]
-    public class NewKafkaConsumerCmdletCommand : PSCmdlet
+    public class NewKafkaConsumerCmdletCommand : KNetPSCmdlet
     {
         [Parameter(
             Mandatory = true,
@@ -56,13 +61,16 @@ namespace MASES.KNetPS.ClientCmdlet
         }
 
         // This method will be called for each input received from the pipeline to this cmdlet; if no input is received, this method is not called
-        protected override void ProcessRecord()
+        protected override void ProcessCommand()
         {
             System.Type keyType = System.Type.GetType(KeyClass);
             System.Type valueType = System.Type.GetType(ValueClass);
 
             var kafkaConsumerType = typeof(KafkaConsumer<,>).MakeGenericType(keyType, valueType);
-            var kafkaConsumer = Activator.CreateInstance(kafkaConsumerType, Configuration.ToProperties());
+
+            var newConf = Configuration.WithKeyDeserializerClass(keyType).WithValueDeserializerClass(valueType);
+
+            var kafkaConsumer = Activator.CreateInstance(kafkaConsumerType, newConf.ToProperties());
             WriteObject(kafkaConsumer);
         }
 

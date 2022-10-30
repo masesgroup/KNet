@@ -16,7 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Clients.Consumer;
+using MASES.KNetPS.Cmdlet;
 using System.Management.Automation;
 using System.Reflection;
 
@@ -24,7 +26,7 @@ namespace MASES.KNetPS.ClientCmdlet
 {
     [Cmdlet(VerbsLifecycle.Invoke, "Poll")]
     [OutputType(typeof(ConsumerRecords<,>))]
-    public class InvokePollCmdletCommand : PSCmdlet
+    public class InvokePollCmdletCommand : KNetPSCmdlet
     {
         [Parameter(
             Mandatory = true,
@@ -64,12 +66,12 @@ namespace MASES.KNetPS.ClientCmdlet
         }
 
         // This method will be called for each input received from the pipeline to this cmdlet; if no input is received, this method is not called
-        protected override void ProcessRecord()
+        protected override void ProcessCommand()
         {
             System.Type keyType = System.Type.GetType(KeyClass);
             System.Type valueType = System.Type.GetType(ValueClass);
             var kafkaConsumerType = typeof(KafkaConsumer<,>).MakeGenericType(keyType, valueType);
-            MethodInfo poll = kafkaConsumerType.GetMethod("Poll");
+            MethodInfo poll = kafkaConsumerType.GetMethod("Poll", new System.Type[] { typeof(long) });
             var result = poll.Invoke(Consumer, new object[] { PollTimeout });
             WriteObject(result);
         }
