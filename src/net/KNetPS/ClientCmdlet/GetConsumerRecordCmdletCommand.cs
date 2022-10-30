@@ -18,6 +18,7 @@
 
 using Java.Util.Function;
 using MASES.JCOBridge.C2JBridge;
+using MASES.JCOBridge.C2JBridge.JVMInterop;
 using MASES.KNet.Clients.Consumer;
 using MASES.KNetPS.Cmdlet;
 using System;
@@ -73,21 +74,24 @@ namespace MASES.KNetPS.ClientCmdlet
             System.Type keyType = System.Type.GetType(KeyClass);
             System.Type valueType = System.Type.GetType(ValueClass);
             var consumerRecordsType = typeof(ConsumerRecords<,>).MakeGenericType(keyType, valueType);
-            MethodInfo recordsMethod = consumerRecordsType.GetMethod("Records");
+
+            var consumerRecords = ConsumerRecords;
+            if (consumerRecords is PSObject psRecords) consumerRecords = psRecords.BaseObject;
+
             if (Topic == null)
             {
                 var consumerRecordType = typeof(ConsumerRecord<,>).MakeGenericType(keyType, valueType);
 
-                foreach (var item in ConsumerRecords as IEnumerable)
+                foreach (IJavaObject item in consumerRecords as IEnumerable)
                 {
-                    IJVMBridgeBase ijbb = item as IJVMBridgeBase;
-                    var res = JVMBridgeBase.Wraps(consumerRecordType, ijbb.Instance);
+                    var res = JVMBridgeBase.Wraps(consumerRecordType, item);
                     WriteObject(res);
                 }
             }
             else
             {
-                var records = recordsMethod.Invoke(ConsumerRecords, new object[] { Topic });
+                MethodInfo recordsMethod = consumerRecordsType.GetMethod("Records", new Type[] { typeof(string) });
+                var records = recordsMethod.Invoke(consumerRecords, new object[] { Topic });
                 throw new NotImplementedException();
             }
         }

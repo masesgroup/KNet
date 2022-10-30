@@ -19,6 +19,7 @@
 using MASES.JCOBridge.C2JBridge;
 using MASES.JNetPSCore;
 using MASES.KNet;
+using System;
 using System.Management.Automation;
 using System.Reflection;
 
@@ -49,6 +50,10 @@ namespace MASES.KNetPS.Cmdlet
             try
             {
                 ProcessCommand();
+            }
+            catch (TypeInitializationException tinite)
+            {
+                WriteError(new ErrorRecord(tinite, tinite.Source, ErrorCategory.InvalidOperation, tinite));
             }
             catch (TargetInvocationException tie)
             {
