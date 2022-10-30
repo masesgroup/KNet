@@ -16,11 +16,13 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JNetPSCore.Cmdlet;
 using System.Management.Automation;
 
 namespace MASES.JNetPS.Cmdlet
 {
     [Cmdlet(VerbsLifecycle.Start, "ReassignPartitionsCommand")]
+    [JNetPSExternalize]
     public class ReassignPartitionsCommandCmdletCommand : KafkaClassToRunCmdletCommandBase<ReassignPartitionsCommandCmdletCommand> 
     {
     }

@@ -23,8 +23,8 @@ using System.Management.Automation;
 namespace MASES.JNetPS.Cmdlet
 {
     [Cmdlet(VerbsCommon.New, "KObject")]
-    public class NewObjectCmdletCommand : NewObjectCmdletCommandBase<KNetCore>
+    public class NewObjectCmdletCommand : NewObjectCmdletCommandBase<NewObjectCmdletCommand, KNetCore>
     {
- 
+
     }
 }
