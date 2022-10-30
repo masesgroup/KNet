@@ -102,7 +102,9 @@ CmdletsToExport = @(
     'Get-ConsumerRecord',
     'Get-ConsumerGroupMetadata',
     'Invoke-Subscribe',
-    'Invoke-Unsubscribe'
+    'Invoke-Unsubscribe',
+    'New-ProducerRecord',
+    'Invoke-Send'
 )
 
 VariablesToExport = '*'
