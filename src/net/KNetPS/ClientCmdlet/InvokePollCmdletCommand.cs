@@ -20,7 +20,7 @@ using MASES.KNet.Clients.Consumer;
 using System.Management.Automation;
 using System.Reflection;
 
-namespace MASES.KNetPS.CodeCmdlet
+namespace MASES.KNetPS.ClientCmdlet
 {
     [Cmdlet(VerbsLifecycle.Invoke, "Poll")]
     [OutputType(typeof(ConsumerRecords<,>))]

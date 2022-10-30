@@ -16,10 +16,11 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KNetPS.Cmdlet;
 using MASES.JNetPSCore.Cmdlet;
 using System.Management.Automation;
 
-namespace MASES.JNetPS.Cmdlet
+namespace MASES.KNetPS.ToolsCmdlet
 {
     [Cmdlet(VerbsLifecycle.Start, "GetOffsetShell")]
     [JNetPSExternalize]

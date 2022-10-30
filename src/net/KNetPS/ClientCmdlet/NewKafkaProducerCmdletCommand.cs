@@ -20,7 +20,7 @@ using MASES.KNet.Clients.Producer;
 using System;
 using System.Management.Automation;
 
-namespace MASES.KNetPS.CodeCmdlet
+namespace MASES.KNetPS.ClientCmdlet
 {
     [Cmdlet(VerbsCommon.New, "KafkaProducer")]
     [OutputType(typeof(KafkaProducer<,>))]

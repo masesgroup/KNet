@@ -24,7 +24,7 @@ using System.Linq;
 using System.Management.Automation;
 using System.Reflection;
 
-namespace MASES.JNetPS.Cmdlet
+namespace MASES.KNetPS.Cmdlet
 {
     public class KafkaClassToRunCmdletCommandBase<T> : StartKNetPSCmdletCommandBase<T>
         where T : KafkaClassToRunCmdletCommandBase<T>

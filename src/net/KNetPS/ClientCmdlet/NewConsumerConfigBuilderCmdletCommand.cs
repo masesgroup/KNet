@@ -19,7 +19,7 @@
 using MASES.KNet.Clients.Consumer;
 using System.Management.Automation;
 
-namespace MASES.KNetPS.CodeCmdlet
+namespace MASES.KNetPS.ClientCmdlet
 {
     [Cmdlet(VerbsCommon.New, "ConsumerConfigBuilder")]
     [OutputType(typeof(ConsumerConfigBuilder))]

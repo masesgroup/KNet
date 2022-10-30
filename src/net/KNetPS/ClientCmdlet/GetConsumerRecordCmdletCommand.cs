@@ -24,7 +24,7 @@ using System.Collections;
 using System.Management.Automation;
 using System.Reflection;
 
-namespace MASES.KNetPS.CodeCmdlet
+namespace MASES.KNetPS.ClientCmdlet
 {
     [Cmdlet(VerbsCommon.Get, "ConsumerRecord")]
     [OutputType(typeof(ConsumerRecord<,>))]

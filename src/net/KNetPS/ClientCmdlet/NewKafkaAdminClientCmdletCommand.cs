@@ -19,7 +19,7 @@
 using MASES.KNet.Clients.Admin;
 using System.Management.Automation;
 
-namespace MASES.KNetPS.CodeCmdlet
+namespace MASES.KNetPS.ClientCmdlet
 {
     [Cmdlet(VerbsCommon.New, "KafkaAdminClient")]
     [OutputType(typeof(KafkaAdminClient))]

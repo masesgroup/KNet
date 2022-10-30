@@ -18,9 +18,8 @@
 
 using MASES.KNet.Clients.Consumer;
 using System.Management.Automation;
-using System.Reflection;
 
-namespace MASES.KNetPS.CodeCmdlet
+namespace MASES.KNetPS.ClientCmdlet
 {
     [Cmdlet(VerbsCommon.Get, "ConsumerGroupMetadata")]
     [OutputType(typeof(ConsumerGroupMetadata))]

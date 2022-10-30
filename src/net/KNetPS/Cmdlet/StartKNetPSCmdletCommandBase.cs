@@ -21,7 +21,7 @@ using MASES.KNet;
 using MASES.KNetPS;
 using System.Management.Automation;
 
-namespace MASES.JNetPS.Cmdlet
+namespace MASES.KNetPS.Cmdlet
 {
     public class StartKNetPSCmdletCommandBase<TCmdlet> : StartJNetPSCmdletCommandBase<TCmdlet, KNetCore>
         where TCmdlet : StartKNetPSCmdletCommandBase<TCmdlet>
