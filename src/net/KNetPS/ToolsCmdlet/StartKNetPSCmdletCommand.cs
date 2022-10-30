@@ -16,13 +16,15 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JNetPSCore.Cmdlet;
 using MASES.KNet;
 using System.Management.Automation;
 
 namespace MASES.JNetPS.Cmdlet
 {
     [Cmdlet(VerbsLifecycle.Start, "KNetPS")]
-    public class StartKNetPSCmdletCommand : StartKNetPSCmdletCommandBase
+    [JNetPSExternalize]
+    public class StartKNetPSCmdletCommand : StartKNetPSCmdletCommandBase<StartKNetPSCmdletCommand>
     {
     }
 }

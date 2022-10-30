@@ -26,7 +26,7 @@ using System.Reflection;
 
 namespace MASES.JNetPS.Cmdlet
 {
-    public class KafkaClassToRunCmdletCommandBase<T> : StartKNetPSCmdletCommandBase
+    public class KafkaClassToRunCmdletCommandBase<T> : StartKNetPSCmdletCommandBase<T>
         where T : KafkaClassToRunCmdletCommandBase<T>
     {
         [Parameter(
@@ -44,7 +44,7 @@ namespace MASES.JNetPS.Cmdlet
             KNetPSHelper<KNetCore>.SetClassToRun(attribute.NounName);
         }
 
-        public override void CreateGlobalInstance()
+        protected override void CreateGlobalInstance()
         {
             base.CreateGlobalInstance();
             string[] arguments = Array.Empty<string>();
