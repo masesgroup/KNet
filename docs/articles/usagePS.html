@@ -75,17 +75,65 @@
 <p>Install-Module -Name MASES.KNetPS</p>
 </blockquote>
 <h2 id="usage">Usage</h2>
-<p>To use the PowerShell interface (JNetPS) runs the following commands within a <strong>PowerShell</strong> shell:</p>
+<p>To use the PowerShell interface (KNetPS) runs the following commands within a <strong>PowerShell</strong> shell:</p>
 <h3 id="initialization">Initialization</h3>
 <ul>
-<li>The following cmdlet initialize the environment:</li>
+<li>The following cmdlet must be called prior anything else to initialize the environment:</li>
 </ul>
 <blockquote>
 <p>Start-KNetPS [arguments]</p>
 </blockquote>
-<p>then the user can use objects created using <strong>New-KObject</strong>, otherwise it is possible to invoke the desired command listed below.</p>
-<h3 id="commands-available">Commands available</h3>
-<p><em>knetps</em> accepts the following cmdlets:</p>
+<p>then the user can use objects created using <strong>New-KObject</strong> and other cmdlets, otherwise it is possible to invoke the desired Main-Class command which automatically executes <strong>Start-KNetPS</strong>.</p>
+<p>Here below two simple examples of producer/consumer from PowerShell.
+The examples are very minimal, but demonstrate how send to and receive from an Apache Kafka cluster.</p>
+<h3 id="producer">Producer</h3>
+<p>The following snippet builds needed objects to send a record to an Apache Kafka cluster:</p>
+<pre><code class="lang-powershell">
+Start-KNetPS
+$prodConfig = New-ProducerConfigBuilder
+$prodConfig = $prodConfig.WithBootstrapServers(&quot;MY_KAFKA_CLUSTER:9092&quot;)
+$producer = New-KafkaProducer -KeyClass &quot;System.String&quot; -ValueClass &quot;System.String&quot; -Configuration $prodConfig
+$record = New-ProducerRecord -KeyClass &quot;System.String&quot; -Key &quot;MyKey&quot; -ValueClass &quot;System.String&quot; -Value &quot;MyPayload&quot; -Topic &quot;testTopic&quot;
+$sendResult = Invoke-Send -Producer $producer -ProducerRecord $record
+
+</code></pre>
+<h3 id="consumer">Consumer</h3>
+<p>The following snippet builds needed objects to subscribe to an Apache Kafka cluster and receives records from the specified topic:</p>
+<pre><code class="lang-powershell">
+Start-KNetPS
+$builder = New-ConsumerConfigBuilder
+$builder = $builder.WithBootstrapServers(&quot;MY_KAFKA_CLUSTER:9092&quot;)
+$builder = $builder.WithGroupId(&quot;myGroup&quot;)
+$builder = $builder.WithClientId(&quot;myCLient&quot;)
+$consumer = New-KafkaConsumer -KeyClass &quot;System.String&quot; -ValueClass &quot;System.String&quot; -Configuration $builder
+Invoke-Subscribe -Consumer $consumer -Topic &quot;testTopic&quot;
+$results = Invoke-Poll -KeyClass &quot;System.String&quot; -ValueClass &quot;System.String&quot; -Consumer $consumer -PollTimeout 10000
+$record = Get-ConsumerRecord -KeyClass &quot;System.String&quot; -ValueClass &quot;System.String&quot; -ConsumerRecords $results
+
+</code></pre>
+<h2 id="cmdlets-available">Cmdlets available</h2>
+<p><em>knetps</em> accepts cmdlets divided by two main groups: Main-Class command cmdlets and Scriptable cmdlets.</p>
+<h3 id="scriptable-cmdlets">Scriptable cmdlets</h3>
+<p>Here a list of cmdlets usable within a script:</p>
+<ul>
+<li><strong>New-AdminClientConfigBuilder</strong>: creates an AdminClientConfigBuilder object which can be extended using fluent APIs</li>
+<li><strong>New-ConsumerConfigBuilder</strong>: creates a ConsumerConfigBuilder object which can be extended using fluent APIs</li>
+<li><strong>New-ProducerConfigBuilder</strong>: creates a ProducerConfigBuilder object which can be extended using fluent APIs</li>
+<li><strong>New-KafkaAdminClient</strong>: creates a KafkaAdminClient object to invoke administration APIs</li>
+<li><strong>New-KafkaConsumer</strong>: creates a KafkaConsumer object</li>
+<li><strong>New-KafkaProducer</strong>: creates a KafkaProducer object</li>
+<li><strong>New-KNetConsumer</strong>: creates a KNetConsumer object</li>
+<li><strong>New-KNetProducer</strong>: creates a KNetProducer object</li>
+<li><strong>Invoke-Subscribe</strong>: invokes a Subscribe on an instance of KafkaConsumer</li>
+<li><strong>Invoke-Poll</strong>: invokes a Poll on an instance of KafkaConsumer</li>
+<li><strong>Get-ConsumerRecord</strong>: retrieve a ConsumerRecord from the result of Invoke-Poll</li>
+<li><strong>Get-ConsumerGroupMetadata</strong>: retrieve a ConsumerGroupMetadata from an instance of KafkaConsumer</li>
+<li><strong>Invoke-Unsubscribe</strong>: invokes a Unsubscribe on an instance of KafkaConsumer</li>
+<li><strong>New-ProducerRecord</strong>: creates a new instance of ProducerRecord</li>
+<li><strong>Invoke-Send</strong>: sends an instance of ProducerRecord to an instance of KafkaProducer</li>
+</ul>
+<h3 id="main-class-command-cmdlets">Main-Class command cmdlets</h3>
+<p>Here a list of cmdlets which executes well known tasks defined from Apache Kafka like you use the scripts available in the Apache Kafka release:</p>
 <ul>
 <li><strong>Start-KNetPS</strong>: Initialize the engine and can be the first command to be invoked. The arguments are:
 <ul>

@@ -88,10 +88,11 @@
     <h5>Implements</h5>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
     <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span></div>
-    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
     <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span></div>
+    <div><a class="xref" href="MASES.KNet.Clients.Producer.IProducer.html">IProducer</a></div>
     <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span></div>
     <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -268,7 +269,7 @@
   <h6><strong>Assembly</strong>: MASES.KNet.dll</h6>
   <h5 id="MASES_KNet_Clients_Producer_KafkaProducer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class KafkaProducer : JVMBridgeBase&lt;KafkaProducer&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
+    <pre><code class="lang-csharp hljs">public class KafkaProducer : JVMBridgeBase&lt;KafkaProducer&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IJVMBridgeBaseStatic, IProducer, IJVMBridgeBase, IJVMBridgeDefinition, IDisposable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -385,6 +386,333 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsCloseable</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_KafkaProducer_Metrics.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.KafkaProducer.Metrics%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KafkaProducer.cs/#L43">View Source</a>
+  </span>
+  <a id="MASES_KNet_Clients_Producer_KafkaProducer_Metrics_" data-uid="MASES.KNet.Clients.Producer.KafkaProducer.Metrics*"></a>
+  <h4 id="MASES_KNet_Clients_Producer_KafkaProducer_Metrics" data-uid="MASES.KNet.Clients.Producer.KafkaProducer.Metrics">Metrics</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Map&lt;MetricName, Metric&gt; Metrics { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Java.Util.Map</span>&lt;<a class="xref" href="MASES.KNet.Common.MetricName.html">MetricName</a>, <a class="xref" href="MASES.KNet.Common.Metric.html">Metric</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_KafkaProducer_AbortTransaction.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.KafkaProducer.AbortTransaction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KafkaProducer.cs/#L70">View Source</a>
+  </span>
+  <a id="MASES_KNet_Clients_Producer_KafkaProducer_AbortTransaction_" data-uid="MASES.KNet.Clients.Producer.KafkaProducer.AbortTransaction*"></a>
+  <h4 id="MASES_KNet_Clients_Producer_KafkaProducer_AbortTransaction" data-uid="MASES.KNet.Clients.Producer.KafkaProducer.AbortTransaction">AbortTransaction()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AbortTransaction()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_KafkaProducer_BeginTransaction.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.KafkaProducer.BeginTransaction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KafkaProducer.cs/#L50">View Source</a>
+  </span>
+  <a id="MASES_KNet_Clients_Producer_KafkaProducer_BeginTransaction_" data-uid="MASES.KNet.Clients.Producer.KafkaProducer.BeginTransaction*"></a>
+  <h4 id="MASES_KNet_Clients_Producer_KafkaProducer_BeginTransaction" data-uid="MASES.KNet.Clients.Producer.KafkaProducer.BeginTransaction">BeginTransaction()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BeginTransaction()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_KafkaProducer_CommitTransaction.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.KafkaProducer.CommitTransaction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KafkaProducer.cs/#L65">View Source</a>
+  </span>
+  <a id="MASES_KNet_Clients_Producer_KafkaProducer_CommitTransaction_" data-uid="MASES.KNet.Clients.Producer.KafkaProducer.CommitTransaction*"></a>
+  <h4 id="MASES_KNet_Clients_Producer_KafkaProducer_CommitTransaction" data-uid="MASES.KNet.Clients.Producer.KafkaProducer.CommitTransaction">CommitTransaction()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CommitTransaction()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_KafkaProducer_Flush.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.KafkaProducer.Flush%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KafkaProducer.cs/#L85">View Source</a>
+  </span>
+  <a id="MASES_KNet_Clients_Producer_KafkaProducer_Flush_" data-uid="MASES.KNet.Clients.Producer.KafkaProducer.Flush*"></a>
+  <h4 id="MASES_KNet_Clients_Producer_KafkaProducer_Flush" data-uid="MASES.KNet.Clients.Producer.KafkaProducer.Flush">Flush()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Flush()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_KafkaProducer_InitTransactions.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.KafkaProducer.InitTransactions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KafkaProducer.cs/#L45">View Source</a>
+  </span>
+  <a id="MASES_KNet_Clients_Producer_KafkaProducer_InitTransactions_" data-uid="MASES.KNet.Clients.Producer.KafkaProducer.InitTransactions*"></a>
+  <h4 id="MASES_KNet_Clients_Producer_KafkaProducer_InitTransactions" data-uid="MASES.KNet.Clients.Producer.KafkaProducer.InitTransactions">InitTransactions()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InitTransactions()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_KafkaProducer_PartitionsFor_System_String_.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.KafkaProducer.PartitionsFor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KafkaProducer.cs/#L90">View Source</a>
+  </span>
+  <a id="MASES_KNet_Clients_Producer_KafkaProducer_PartitionsFor_" data-uid="MASES.KNet.Clients.Producer.KafkaProducer.PartitionsFor*"></a>
+  <h4 id="MASES_KNet_Clients_Producer_KafkaProducer_PartitionsFor_System_String_" data-uid="MASES.KNet.Clients.Producer.KafkaProducer.PartitionsFor(System.String)">PartitionsFor(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;PartitionInfo&gt; PartitionsFor(string topic)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">topic</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Java.Util.List</span>&lt;<a class="xref" href="MASES.KNet.Common.PartitionInfo.html">PartitionInfo</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_KafkaProducer_Send_MASES_KNet_Clients_Producer_ProducerRecord_.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.KafkaProducer.Send(MASES.KNet.Clients.Producer.ProducerRecord)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KafkaProducer.cs/#L75">View Source</a>
+  </span>
+  <a id="MASES_KNet_Clients_Producer_KafkaProducer_Send_" data-uid="MASES.KNet.Clients.Producer.KafkaProducer.Send*"></a>
+  <h4 id="MASES_KNet_Clients_Producer_KafkaProducer_Send_MASES_KNet_Clients_Producer_ProducerRecord_" data-uid="MASES.KNet.Clients.Producer.KafkaProducer.Send(MASES.KNet.Clients.Producer.ProducerRecord)">Send(ProducerRecord)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Future&lt;RecordMetadata&gt; Send(ProducerRecord record)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KNet.Clients.Producer.ProducerRecord.html">ProducerRecord</a></td>
+        <td><span class="parametername">record</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Java.Util.Concurrent.Future</span>&lt;<a class="xref" href="MASES.KNet.Clients.Producer.RecordMetadata.html">RecordMetadata</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_KafkaProducer_Send_MASES_KNet_Clients_Producer_ProducerRecord_MASES_KNet_Clients_Producer_Callback_.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.KafkaProducer.Send(MASES.KNet.Clients.Producer.ProducerRecord%2CMASES.KNet.Clients.Producer.Callback)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KafkaProducer.cs/#L80">View Source</a>
+  </span>
+  <a id="MASES_KNet_Clients_Producer_KafkaProducer_Send_" data-uid="MASES.KNet.Clients.Producer.KafkaProducer.Send*"></a>
+  <h4 id="MASES_KNet_Clients_Producer_KafkaProducer_Send_MASES_KNet_Clients_Producer_ProducerRecord_MASES_KNet_Clients_Producer_Callback_" data-uid="MASES.KNet.Clients.Producer.KafkaProducer.Send(MASES.KNet.Clients.Producer.ProducerRecord,MASES.KNet.Clients.Producer.Callback)">Send(ProducerRecord, Callback)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Future&lt;RecordMetadata&gt; Send(ProducerRecord record, Callback callback)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KNet.Clients.Producer.ProducerRecord.html">ProducerRecord</a></td>
+        <td><span class="parametername">record</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MASES.KNet.Clients.Producer.Callback.html">Callback</a></td>
+        <td><span class="parametername">callback</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Java.Util.Concurrent.Future</span>&lt;<a class="xref" href="MASES.KNet.Clients.Producer.RecordMetadata.html">RecordMetadata</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_KafkaProducer_SendOffsetsToTransaction_Java_Util_Map_MASES_KNet_Common_TopicPartition_MASES_KNet_Clients_Consumer_OffsetAndMetadata__MASES_KNet_Clients_Consumer_ConsumerGroupMetadata_.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.KafkaProducer.SendOffsetsToTransaction(Java.Util.Map%7BMASES.KNet.Common.TopicPartition%2CMASES.KNet.Clients.Consumer.OffsetAndMetadata%7D%2CMASES.KNet.Clients.Consumer.ConsumerGroupMetadata)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KafkaProducer.cs/#L60">View Source</a>
+  </span>
+  <a id="MASES_KNet_Clients_Producer_KafkaProducer_SendOffsetsToTransaction_" data-uid="MASES.KNet.Clients.Producer.KafkaProducer.SendOffsetsToTransaction*"></a>
+  <h4 id="MASES_KNet_Clients_Producer_KafkaProducer_SendOffsetsToTransaction_Java_Util_Map_MASES_KNet_Common_TopicPartition_MASES_KNet_Clients_Consumer_OffsetAndMetadata__MASES_KNet_Clients_Consumer_ConsumerGroupMetadata_" data-uid="MASES.KNet.Clients.Producer.KafkaProducer.SendOffsetsToTransaction(Java.Util.Map{MASES.KNet.Common.TopicPartition,MASES.KNet.Clients.Consumer.OffsetAndMetadata},MASES.KNet.Clients.Consumer.ConsumerGroupMetadata)">SendOffsetsToTransaction(Map&lt;TopicPartition, OffsetAndMetadata&gt;, ConsumerGroupMetadata)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SendOffsetsToTransaction(Map&lt;TopicPartition, OffsetAndMetadata&gt; offsets, ConsumerGroupMetadata groupMetadata)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Java.Util.Map</span>&lt;<a class="xref" href="MASES.KNet.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="MASES.KNet.Clients.Consumer.OffsetAndMetadata.html">OffsetAndMetadata</a>&gt;</td>
+        <td><span class="parametername">offsets</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MASES.KNet.Clients.Consumer.ConsumerGroupMetadata.html">ConsumerGroupMetadata</a></td>
+        <td><span class="parametername">groupMetadata</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_KafkaProducer_SendOffsetsToTransaction_Java_Util_Map_MASES_KNet_Common_TopicPartition_MASES_KNet_Clients_Consumer_OffsetAndMetadata__System_String_.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.KafkaProducer.SendOffsetsToTransaction(Java.Util.Map%7BMASES.KNet.Common.TopicPartition%2CMASES.KNet.Clients.Consumer.OffsetAndMetadata%7D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KafkaProducer.cs/#L55">View Source</a>
+  </span>
+  <a id="MASES_KNet_Clients_Producer_KafkaProducer_SendOffsetsToTransaction_" data-uid="MASES.KNet.Clients.Producer.KafkaProducer.SendOffsetsToTransaction*"></a>
+  <h4 id="MASES_KNet_Clients_Producer_KafkaProducer_SendOffsetsToTransaction_Java_Util_Map_MASES_KNet_Common_TopicPartition_MASES_KNet_Clients_Consumer_OffsetAndMetadata__System_String_" data-uid="MASES.KNet.Clients.Producer.KafkaProducer.SendOffsetsToTransaction(Java.Util.Map{MASES.KNet.Common.TopicPartition,MASES.KNet.Clients.Consumer.OffsetAndMetadata},System.String)">SendOffsetsToTransaction(Map&lt;TopicPartition, OffsetAndMetadata&gt;, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SendOffsetsToTransaction(Map&lt;TopicPartition, OffsetAndMetadata&gt; offsets, string consumerGroupId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Java.Util.Map</span>&lt;<a class="xref" href="MASES.KNet.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="MASES.KNet.Clients.Consumer.OffsetAndMetadata.html">OffsetAndMetadata</a>&gt;</td>
+        <td><span class="parametername">offsets</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">consumerGroupId</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">System.Dynamic.IDynamicMetaObjectProvider</a>
@@ -393,16 +721,19 @@
       <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span>
   </div>
   <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span>
   </div>
   <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span>
+      <a class="xref" href="MASES.KNet.Clients.Producer.IProducer.html">IProducer</a>
   </div>
   <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span>
   </div>
   <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span>
+  </div>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
   </div>
 </article>
           </div>

@@ -5,474 +5,6 @@
   "files": [
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.AclCommandCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.AclCommandCmdletCommand.html",
-          "hash": "thRwoROXr14q2RI1nq8Jdodf93ARR38XTmkJJ4Rkv9o="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.BrokerApiVersionsCommandCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.BrokerApiVersionsCommandCmdletCommand.html",
-          "hash": "tlejW1XKHhwarjROFiOV7q8j0afr+v0S10iurVLRD/w="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.ClusterToolCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.ClusterToolCmdletCommand.html",
-          "hash": "asC556kDfErC+pnq4nf0nBRpLFKg4HsR4hr6wShfWEo="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.ConfigCommandCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.ConfigCommandCmdletCommand.html",
-          "hash": "bxUrUCbhW2B4GiVd/izpw+YA1F2G/CDP32OwXDbXCsg="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.ConnectDistributedCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.ConnectDistributedCmdletCommand.html",
-          "hash": "UuXBjTB1H5hMm5MnILr1dkuP1tyPtkWeTSjWVcsI+LQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.ConnectStandaloneCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.ConnectStandaloneCmdletCommand.html",
-          "hash": "YpOuiVxs0suTXTAXXijTTDdty1ivDae5SZ1nvkiz2OU="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.ConsoleConsumerCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.ConsoleConsumerCmdletCommand.html",
-          "hash": "V9yUdpfgdjgLamVCZhpitXv+kLxAgKegRCi+IpbcUSM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.ConsoleProducerCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.ConsoleProducerCmdletCommand.html",
-          "hash": "i1T/36Z9pOHv/OZfitKO0G+GDVImrjihQAgDhpVTkOc="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.ConsumerGroupCommandCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.ConsumerGroupCommandCmdletCommand.html",
-          "hash": "j1IkwwtBmCYoBoglIIXiZtO2Z2XYheCIjcbFobAxk/s="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.ConsumerPerformanceCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.ConsumerPerformanceCmdletCommand.html",
-          "hash": "eFaZfNULqJKLZ8gUNg2jLaUV/c0k31MSW1CzhkplZIQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.DelegationTokenCommandCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.DelegationTokenCommandCmdletCommand.html",
-          "hash": "knlm3+oTQ/FONlBxFrzRft/TpGpCPL/khhH/4v5Pi1Q="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.DeleteRecordsCommandCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.DeleteRecordsCommandCmdletCommand.html",
-          "hash": "FT0Sfc9t3G3el0Fc/9YFPcOSFyXQTCfojT+LF7MBjrc="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.DumpLogSegmentsCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.DumpLogSegmentsCmdletCommand.html",
-          "hash": "FQ6NRpRkrxBGvHZWM7SB4LIpHlRGQdLZMiEPvYaxsQE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.FeatureCommandCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.FeatureCommandCmdletCommand.html",
-          "hash": "bjcaPWodINPfH3dIFicY0ELKjM+cfz1d1MDNOKMHbXk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.GetOffsetShellCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.GetOffsetShellCmdletCommand.html",
-          "hash": "o1JZveEOE8M88/KbToLIAmwf6YvvKNE02iIBTTLmmkI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.KafkaClassToRunCmdletCommandBase-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.KafkaClassToRunCmdletCommandBase-1.html",
-          "hash": "W84ypC6A25fbLnE0vHH6BSOji9f5Cj3JPcknhk4iWWM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.KafkaStartCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.KafkaStartCmdletCommand.html",
-          "hash": "FxhQJnsuvSK85v8auocWysyRuu5Nz5C8ntaYQWC5lqs="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.LeaderElectionCommandCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.LeaderElectionCommandCmdletCommand.html",
-          "hash": "7KsPumMB8+6zjbYmdloi6D2agUuhApyylb/dFK9oFnU="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.LogDirsCommandCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.LogDirsCommandCmdletCommand.html",
-          "hash": "cTokccGHgokjY/dxSly53zE2lljCEr9Fi8KZqR+mWrA="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.MetadataQuorumCommandCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.MetadataQuorumCommandCmdletCommand.html",
-          "hash": "r/p/Bnb5jP8lFh/+05+GUv43QxOZV8GAl4p4knOCPlg="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.MetadataShellCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.MetadataShellCmdletCommand.html",
-          "hash": "qTOdObYw9NdKeLdqCWygzHxwD6OZwLdbpRBCzefOzVk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.MirrorMaker2CmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.MirrorMaker2CmdletCommand.html",
-          "hash": "hD+GBmD/69qBp1iO9ssGp/7GC19DMdI/KuoCzNo8Dhg="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.MirrorMakerCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.MirrorMakerCmdletCommand.html",
-          "hash": "Yak3A80cPICYdCPti7V36c+9+7DyWQrBySkICEsNzAI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.NewObjectCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.NewObjectCmdletCommand.html",
-          "hash": "zK5YRLZCfCdRPY6SBliqcLinVbsY1C2nDYIXOPcwrXQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.ProducerPerformanceCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.ProducerPerformanceCmdletCommand.html",
-          "hash": "RpBGj7Kg3t6gBIAiQp2TQm9gEQJbrj6+h3DT1wrZ8e8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.ReassignPartitionsCommandCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.ReassignPartitionsCommandCmdletCommand.html",
-          "hash": "Z8kWomMO0LBEYE2fvGzv6iztMFgQ/XqNLzwrw+JDnAg="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.ReplicaVerificationToolCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.ReplicaVerificationToolCmdletCommand.html",
-          "hash": "r84bOHJFfWAAJ2QrtUFqURKftVRQ5RDzEI0F3vet3FA="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.StartKNetPSCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.StartKNetPSCmdletCommand.html",
-          "hash": "Ba8wtBDiTVek7hXDn6bSIbEBfyMfExN52kqyFP4G6KM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.StartKNetPSCmdletCommandBase.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.StartKNetPSCmdletCommandBase.html",
-          "hash": "nqSPM8sGy0KrFbPPi19+S36zrQxttjST7+xwZGpIkqU="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.StorageToolCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.StorageToolCmdletCommand.html",
-          "hash": "qlaDT0YC38p2GSb1UnWX46U53+KYjP8zqpFLkBbB9rc="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.StreamsResetterCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.StreamsResetterCmdletCommand.html",
-          "hash": "io4/ghkFtSVaaeYMK1vJDEnpwHsyxALg4JFwVl/3P14="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.TopicCommandCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.TopicCommandCmdletCommand.html",
-          "hash": "x1+KAaWMx5OZqyankmiOZ+vxSOmP1xphpLwbAvdYwao="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.TransactionsCommandCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.TransactionsCommandCmdletCommand.html",
-          "hash": "DVTIkiHDJOgWkpRLL+eaGDeSIyUPMP2YAWK1a6+nj68="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.VerifiableConsumerCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.VerifiableConsumerCmdletCommand.html",
-          "hash": "rEb7l9/KGcMQKrfDePmLqFOT2uo0EIGS8EydhCNEnOE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.VerifiableProducerCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.VerifiableProducerCmdletCommand.html",
-          "hash": "VkdIVSxFExorsbvk1fgXUxukwX8BEgTfQNjSvUtET8M="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.ZkSecurityMigratorCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.ZkSecurityMigratorCmdletCommand.html",
-          "hash": "IlInvPUeWPkYyTrH8qIWckjjc8cxZyXdloWgPJKbXCE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.ZooKeeperShellCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.ZooKeeperShellCmdletCommand.html",
-          "hash": "zNO0OYYHcZAz/kQqiaLg8FO51T9jZAwfoWrcjrg7cZc="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.ZooKeeperStartCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.ZooKeeperStartCmdletCommand.html",
-          "hash": "cNeKE0Ilswq+aNDf61biS423teexscf+FtsOivNWlyk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JNetPS.Cmdlet.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.JNetPS.Cmdlet.html",
-          "hash": "h1c+14X7Ti6VesWuhck2eNwG6Vpm7/5RkHjLefRl978="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/MASES.KNet.Admin.AclCommand.yml",
       "output": {
         ".html": {
@@ -2337,7 +1869,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Clients.Consumer.ConsumerConfigBuilder.html",
-          "hash": "HKkdG2SC9ElH5/IHkLNKbKWbbvXf8IkrpOabOyiJEoM="
+          "hash": "Es4TZdVOc6Vp1M11WbtAaM0NXhZJekg5UP5mXDcT848="
         }
       },
       "is_incremental": false,
@@ -2385,7 +1917,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Clients.Consumer.ConsumerRecord-2.html",
-          "hash": "rSkpogTD9z9aQehlzkQbaHtTKeIqmMSjv5Q4Lks39vU="
+          "hash": "f3EoEWE7Uh/IlariZbqShvUR+AQeX740QPkdJ0c1PW8="
         }
       },
       "is_incremental": false,
@@ -2397,7 +1929,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Clients.Consumer.ConsumerRecord.html",
-          "hash": "XsZlunfy1Z7+DX5q0iY1zElI/t5Zuq1RBbV32FIXvWM="
+          "hash": "afsTAE0L0roeNeaXIjGS1NAZxsJFEZvBNEBwHCj7fSI="
         }
       },
       "is_incremental": false,
@@ -2409,7 +1941,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Clients.Consumer.ConsumerRecords-2.html",
-          "hash": "XS8g2k3fPCSKVfzF6p9y4Mv2VzUhl8c/Npjrwj+G7Ec="
+          "hash": "lSmQD2juLYJfGOJPB92kW7IE3qXGDT5Ix4mX4PvzC/I="
         }
       },
       "is_incremental": false,
@@ -2421,7 +1953,19 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Clients.Consumer.IConsumer-2.html",
-          "hash": "9uVCpy3DxWsBo2H0cUX07l50Wq7hQMpoI4yWE6z5dYQ="
+          "hash": "gmCicyGMWSMmQcBg462pd0InqXYXFDr/M9SF+1Wz6lA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Clients.Consumer.IConsumer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Clients.Consumer.IConsumer.html",
+          "hash": "7gMNDF3MZIVtIjZQ1c3llbTMXAU4Pff2iZZ+dn9hjBs="
         }
       },
       "is_incremental": false,
@@ -2457,7 +2001,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Clients.Consumer.IKNetConsumer-2.html",
-          "hash": "aU8L+bXpUIFerdCPWixdSfzTq4pjwRGI9qUWxugxnZc="
+          "hash": "pFdA4VW4ioi14PFa8hU8tcTqtUYuc57cfNrrYoQOIVY="
         }
       },
       "is_incremental": false,
@@ -2469,7 +2013,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Clients.Consumer.IKNetConsumerCallback-2.html",
-          "hash": "tpL+6kmu75ih5UvsF0hBGqOv1JYc2JmXrBGHstGH1QM="
+          "hash": "ZR3mo5cObFYQZmKo5QBvZXf90YAtmJO/a3Ue85pB1UQ="
         }
       },
       "is_incremental": false,
@@ -2505,7 +2049,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Clients.Consumer.KNetConsumer-2.html",
-          "hash": "3hFZgxeNBpou8+hXf4d/ijnPXWH7ONEzXaZNFrg8ScI="
+          "hash": "5ytitPkhRTJD0K1ga3XV7yMRRSwckSLsw9+cKXn+JVo="
         }
       },
       "is_incremental": false,
@@ -2517,7 +2061,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Clients.Consumer.KNetConsumerCallback-2.html",
-          "hash": "f2iQwPf4as+JAuVUBMBWu3l6wISlN7kd1L+eA82x5FQ="
+          "hash": "UAxmjFhD9WQRFUDoCm23e5zlkSGwiIrqNUltfe2/5Rw="
         }
       },
       "is_incremental": false,
@@ -2529,7 +2073,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Clients.Consumer.KafkaConsumer-2.html",
-          "hash": "3cjygy7Ez2GFRG+OZxk8EChBer1yQOziwhQLdRMPOWg="
+          "hash": "0k6W4E2NC98IuLUXxhtZKqaK9zKgVrst/BWSlylijrk="
         }
       },
       "is_incremental": false,
@@ -2541,7 +2085,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Clients.Consumer.KafkaConsumer.html",
-          "hash": "GfSZBvu16Jhm0uK+W6aEpISWkHiPp7DA+mBSeH26wQA="
+          "hash": "AmVViw4vw8xffhlxbXppZvaMlRCk8D1+K7OOxTvqZi8="
         }
       },
       "is_incremental": false,
@@ -2565,7 +2109,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Clients.Consumer.Message-2.html",
-          "hash": "N45Vhi9frduWSiPEsxZLlCXbAOIMUWihrV4xfwCxOZw="
+          "hash": "0uzXEEaMxXixCcDVGM1GFhky6wZVUndl2AqrSRs5ckw="
         }
       },
       "is_incremental": false,
@@ -2649,7 +2193,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Clients.Consumer.html",
-          "hash": "7fAYmOCKKhq14IEf14LIH7bnWhpeNaSr5hTirp9NPYM="
+          "hash": "n2IPgA+wwqeFKJsIFY7QwHU2H0zkfLYMT84waBzr3y8="
         }
       },
       "is_incremental": false,
@@ -2697,7 +2241,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Clients.Producer.IKNetProducer-2.html",
-          "hash": "1Yq5W9brECvSepAwxufjiKl08KqqzBj3AeZnITrGD80="
+          "hash": "wHnX/cMxn7oe7kUwSt5J/FrVxRxNOmtVXFbOR26msv4="
         }
       },
       "is_incremental": false,
@@ -2709,7 +2253,19 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Clients.Producer.IProducer-2.html",
-          "hash": "YExFSfRmLn0x8ifo9vVpATEN4MJT82MTn3uViCOWXAM="
+          "hash": "kI7XuuOjqOrYa1h2+EQwuPqpHtDy5iWbBIQGraxpJfU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Clients.Producer.IProducer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Clients.Producer.IProducer.html",
+          "hash": "AMW34iQ4bVMmKkp50EfJQjJpTzzcDQgHABLgwABpPME="
         }
       },
       "is_incremental": false,
@@ -2721,7 +2277,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Clients.Producer.KNetProducer-2.html",
-          "hash": "eXUai1gPV3wR/waOStew42dq8gJ1x0RHzvHjJKC53vs="
+          "hash": "EjBtbUZeog3JAFjQL/WNlbCbij4UZdpO10Yut7MKj6M="
         }
       },
       "is_incremental": false,
@@ -2733,7 +2289,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Clients.Producer.KafkaProducer-2.html",
-          "hash": "URf9Tth/JKPMBbFYLHc/3TdSWG3Ip7LbcT1a/FpAvXU="
+          "hash": "dl4U7VYyr/5ovqUX0nPNQXa2cXkT9St/4j9nR38I/uE="
         }
       },
       "is_incremental": false,
@@ -2745,7 +2301,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Clients.Producer.KafkaProducer.html",
-          "hash": "0kBtVT3vKaxsWZgFHvYePK+crah+ho84UbzPhdKlxXo="
+          "hash": "McSDz3wgiL6DwDf88x6Sn1xqW2IOFDDdbZUl9OfsZwA="
         }
       },
       "is_incremental": false,
@@ -2793,7 +2349,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Clients.Producer.ProducerConfigBuilder.html",
-          "hash": "hFeeVcfbc1PC/HLJn1N8YMY6p8bqWoeS6ZbwWijVmCY="
+          "hash": "E/AapkWjv6QuF0+AMiwNj9/7kB9wePK//GICM2XPd04="
         }
       },
       "is_incremental": false,
@@ -2841,7 +2397,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Clients.Producer.html",
-          "hash": "kOdylICX2X9eVrVtwaWU8knhbUPOhAV8SIUtxG3QeHk="
+          "hash": "NX/k/SJ1EZlWQgjFEZ5Y+cJN1PHzDhqF6dMCVHO3w1I="
         }
       },
       "is_incremental": false,
@@ -2945,6 +2501,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Common.Config.ConfigException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Common.Config.ConfigException.html",
+          "hash": "JryhFWxqDoUu54s8QsNcE5wucWMkDLxlqD+QwUEg2VA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MASES.KNet.Common.Config.ConfigResource.yml",
       "output": {
         ".html": {
@@ -3033,7 +2601,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Common.Config.html",
-          "hash": "GjNPH4wQcIpAvjDih+YJdKMY48QuFpgyAa/KN1XnsH8="
+          "hash": "bRTnIU/JRCzLoNNCXqtng1f7rfAPItY96jKdeOvzej0="
         }
       },
       "is_incremental": false,
@@ -4641,7 +4209,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Common.KafkaException.html",
-          "hash": "r6xvaXQ41PCflaXrXNtInW98wqlBIKMR3k9X4aUMrxE="
+          "hash": "UezNH8JOk+c9K1rUClWCTLgjx5pVSREGsVv59TpvrGA="
         }
       },
       "is_incremental": false,
@@ -7361,6 +6929,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Extensions.ConsumerConfigBuilderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Extensions.ConsumerConfigBuilderExtensions.html",
+          "hash": "JMsTRbtKDe4OifXTBYTQLr7L5H7K2B1LcamDEN6jtGU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MASES.KNet.Extensions.KafkaAdminClientExtensions.yml",
       "output": {
         ".html": {
@@ -7409,11 +6989,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Extensions.ProducerConfigBuilderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Extensions.ProducerConfigBuilderExtensions.html",
+          "hash": "e36ZMjFhqQZwWgikq92NzuBZWdCY+HBAYtFAiv6Cg+c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MASES.KNet.Extensions.yml",
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Extensions.html",
-          "hash": "9qHHmXUQ221JU7DVWXoluLnzRz49ftAUzJ6Fi2Oz2iU="
+          "hash": "w4cOeA6Fa8CIa1HJOWZrLk0RSzgToxxuETvqnZoxypY="
         }
       },
       "is_incremental": false,
@@ -7437,7 +7029,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.KNetCore-1.html",
-          "hash": "db0c1QA3jQM18hV3e9tyXBtfoxKQrhKPTc1qhbXVbmk="
+          "hash": "15qvFnl7BalSlFhoY/oXfNQXzsNoqUvdQJdtPj7khrg="
         }
       },
       "is_incremental": false,
@@ -7449,7 +7041,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.KNetCore.html",
-          "hash": "0F93i28iwv30cE/YEXJIOrRwlSkYKuBFXwX9UkZY4HQ="
+          "hash": "+6CmmoqTk7I6OxFVeqfbD2mSjZQe85fjTq0ZfTsYZ/o="
         }
       },
       "is_incremental": false,
@@ -10817,11 +10409,707 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ClientCmdlet.GetConsumerGroupMetadataCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ClientCmdlet.GetConsumerGroupMetadataCmdletCommand.html",
+          "hash": "UzLo2w1cKEmBkXne3MccO1cykSvfyHIW9Xwv4CCd80E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ClientCmdlet.GetConsumerRecordCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ClientCmdlet.GetConsumerRecordCmdletCommand.html",
+          "hash": "FlsK2MI//peA9SWq8GCBzS29CbxkJkq1yW52n2r9/3o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ClientCmdlet.InvokePollCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ClientCmdlet.InvokePollCmdletCommand.html",
+          "hash": "oRIJqBMawm4eaG+asZZWAL7ODy+0S1Bwcix2j+YyLJo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ClientCmdlet.InvokeSendCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ClientCmdlet.InvokeSendCmdletCommand.html",
+          "hash": "BDaLnQ6WZHW40b9ViL7vRkgsNT50V8bu9X5Qxxt/iSA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ClientCmdlet.InvokeSubscribeCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ClientCmdlet.InvokeSubscribeCmdletCommand.html",
+          "hash": "SaRg+hCRXP1AD4iF/tgI7LbRm+uc7+9e219bCb8eW+E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ClientCmdlet.InvokeUnsubscribeCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ClientCmdlet.InvokeUnsubscribeCmdletCommand.html",
+          "hash": "8bZ2WSA+CEEQjqYy9VhJ5f7b0/nuaumulo5/DJfaUu8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ClientCmdlet.NewAdminClientConfigBuilderCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ClientCmdlet.NewAdminClientConfigBuilderCmdletCommand.html",
+          "hash": "YxTvjNQ/YJ9XqTFvThCSCx02YbDZEd7TaUYEjmsugEE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ClientCmdlet.NewConsumerConfigBuilderCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ClientCmdlet.NewConsumerConfigBuilderCmdletCommand.html",
+          "hash": "pKKxe8rJWnSU9z+MkdPUHq6DBgfBO6PI4gbylIqg9cw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ClientCmdlet.NewKNetConsumerCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ClientCmdlet.NewKNetConsumerCmdletCommand.html",
+          "hash": "/cp3MWZbgLIPP9kOdmBOAh5R5BbEHHV7xePp8CYyAI4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ClientCmdlet.NewKNetProducerCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ClientCmdlet.NewKNetProducerCmdletCommand.html",
+          "hash": "97H9yPZLmEtXMPE3LEZ3pPrQbn/CSfoaeHTA4dZZWU8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ClientCmdlet.NewKafkaAdminClientCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ClientCmdlet.NewKafkaAdminClientCmdletCommand.html",
+          "hash": "BRVUBuiqUeTUY5cekVJKMtvLkC1xURlbJFhZqTPByKU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ClientCmdlet.NewKafkaConsumerCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ClientCmdlet.NewKafkaConsumerCmdletCommand.html",
+          "hash": "BgWRYjW8OtFSCyHkJhbAEZyMHGoRmqlaLMn5Il/4SVk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ClientCmdlet.NewKafkaProducerCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ClientCmdlet.NewKafkaProducerCmdletCommand.html",
+          "hash": "jxtXmj/6ExFB+eFUa7jkXyCZ49qdrQUNUWI84+Xh4e8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ClientCmdlet.NewProducerConfigBuilderCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ClientCmdlet.NewProducerConfigBuilderCmdletCommand.html",
+          "hash": "Ch8XvkhMVeQFiNHf87BmYg/kvE1i6ZE4VonNbMAxsS8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ClientCmdlet.NewProducerRecordCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ClientCmdlet.NewProducerRecordCmdletCommand.html",
+          "hash": "hk96rJa8FtINoPpngzIqxcJuhp6cmqj6vB7km3KPaIo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ClientCmdlet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ClientCmdlet.html",
+          "hash": "kqtyLI8LgvIVDSkOUYAoa30eF1eeZofDs2mhFF+dnnY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.Cmdlet.KNetPSCmdlet-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.Cmdlet.KNetPSCmdlet-1.html",
+          "hash": "cCq4BKkkQqy8+VGF8Ea1A/PJZgRUyH2mf1vRfFRY3Qw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.Cmdlet.KNetPSCmdlet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.Cmdlet.KNetPSCmdlet.html",
+          "hash": "Px0e/ik5BPKMXwRjt3ErPe3QxbCRPkszA+xk4cIHp3Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.Cmdlet.KafkaClassToRunCmdletCommandBase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.Cmdlet.KafkaClassToRunCmdletCommandBase-1.html",
+          "hash": "1hjMHio46SNdaBFU4Ut5AMZnc/9BXroV/bCiT30Rij0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.Cmdlet.NewObjectCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.Cmdlet.NewObjectCmdletCommand.html",
+          "hash": "sAFl6jA/GeI0abn+uhGeVjZKcLzu4kqxF7BEx2+TX9c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.Cmdlet.StartKNetPSCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.Cmdlet.StartKNetPSCmdletCommand.html",
+          "hash": "eLZ0b6QNnsuu4LzmjKXfvpS1RXC5LatGR3XGvJoajRo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.Cmdlet.StartKNetPSCmdletCommandBase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.Cmdlet.StartKNetPSCmdletCommandBase-1.html",
+          "hash": "sab9HSqJBw9R7Wjrh89Rda0uV5hYGRpSo+z7pVGOpys="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.Cmdlet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.Cmdlet.html",
+          "hash": "FlzjqU3vuKyKAu1XuIxDMZgiSAZZIdgA1immzbpzsOQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MASES.KNetPS.KNetPSHelper-1.yml",
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNetPS.KNetPSHelper-1.html",
           "hash": "4DklypeEaYV3QknciJDcBpBtAKpWSOkqbwqQxXjFsKs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.AclCommandCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.AclCommandCmdletCommand.html",
+          "hash": "IU55reX2ojyei8SLE2nH9Z48o8iZQYnbof3254hzIk4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.BrokerApiVersionsCommandCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.BrokerApiVersionsCommandCmdletCommand.html",
+          "hash": "5OTJbb0SrnyabLXPo13/78E8kHWuCe9h8Lrkt7Frgmg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.ClusterToolCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.ClusterToolCmdletCommand.html",
+          "hash": "eJ99UXXJnivv/tMR6iZhgDpYzrAhOa2WR9KbAZ/0TnQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.ConfigCommandCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.ConfigCommandCmdletCommand.html",
+          "hash": "Me1smKdQvgt7K/16bT1BPVpBlfeipwUHBHa1ad/te7k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.ConnectDistributedCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.ConnectDistributedCmdletCommand.html",
+          "hash": "pbtTGjdQvied4L5Bw7G2XborC7ZpOcJoKTcj3Gtdr5I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.ConnectStandaloneCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.ConnectStandaloneCmdletCommand.html",
+          "hash": "il3B2C3HSXm61FXwtzR0EFsOKUQEmfahZXNvf02/nWc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.ConsoleConsumerCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.ConsoleConsumerCmdletCommand.html",
+          "hash": "UiEkd9DBrA6EkPeIdmB1z12LAQ7basCF2KhLVSpurdo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.ConsoleProducerCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.ConsoleProducerCmdletCommand.html",
+          "hash": "ziebdy7DUzAB1+/80XNqCmMgfBEuhF8fog7Uz9spvhM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.ConsumerGroupCommandCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.ConsumerGroupCommandCmdletCommand.html",
+          "hash": "JGdaOt2YfCyt1D8mKuvcRpwVQP3t4Ea4+96A4r7W9r4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.ConsumerPerformanceCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.ConsumerPerformanceCmdletCommand.html",
+          "hash": "30aLEespc0KTDBtiUAwEX3BenwHLue8uVFG0w9jvHdg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.DelegationTokenCommandCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.DelegationTokenCommandCmdletCommand.html",
+          "hash": "v20za7mEdTwEKD/obL+0MZkHj7BMBpITnGDYW18sEXI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.DeleteRecordsCommandCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.DeleteRecordsCommandCmdletCommand.html",
+          "hash": "bn8V/VJcp2hJ/V3eGztTMQR4cbHGgjZeYaQGXewpwEk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.DumpLogSegmentsCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.DumpLogSegmentsCmdletCommand.html",
+          "hash": "ILe2bxq3uxI+PjfwDScnnj9Az0PZHxBFbpGB0QP5Jp0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.FeatureCommandCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.FeatureCommandCmdletCommand.html",
+          "hash": "8v9SrwRzU2UCCoASBEOnFSk1McPYy90adSxEJ9l068Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.GetOffsetShellCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.GetOffsetShellCmdletCommand.html",
+          "hash": "vTaJ/AyQdIizvVnMgR6HBWQnYW+jfvhCBz4P7XiEm2Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.KafkaStartCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.KafkaStartCmdletCommand.html",
+          "hash": "rccVHa5e2/HlGor2Kq994m30pN/hhIXuzeG/8YOCHMw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.LeaderElectionCommandCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.LeaderElectionCommandCmdletCommand.html",
+          "hash": "czv7AwyVLuAj+U00w5WsckAnEfS/Kndp9SCyzzOzBgU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.LogDirsCommandCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.LogDirsCommandCmdletCommand.html",
+          "hash": "o1XjszLDS44a0CkutPgFiE/rMAfl8wVBc7K1Ddsw1tY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.MetadataQuorumCommandCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.MetadataQuorumCommandCmdletCommand.html",
+          "hash": "Fzo/EUNm2XViXmpTuBJm726prNSarDkXJM0PH8S+s1g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.MetadataShellCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.MetadataShellCmdletCommand.html",
+          "hash": "WQ9ShcGyrfay6nfOegWmjL8onb2JHOyPu0kHVbLGLrE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.MirrorMaker2CmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.MirrorMaker2CmdletCommand.html",
+          "hash": "0/4iP/2pVRd2CVHVTiPldiWbp27cZmMycTahpnIoX0A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.MirrorMakerCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.MirrorMakerCmdletCommand.html",
+          "hash": "q4tBflSMDdDIgAFtgXYT2ekcT2ez9ZnyI4XJ244bsgE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.ProducerPerformanceCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.ProducerPerformanceCmdletCommand.html",
+          "hash": "3cA8OEthXc7uWV8qfqVJcrSQjS1WviQ5xI0gdW7znDM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.ReassignPartitionsCommandCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.ReassignPartitionsCommandCmdletCommand.html",
+          "hash": "u/AJAqc4mpHGkxYwomN2Z6Rm9Cvv3XIGFQ6+66dytCg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.ReplicaVerificationToolCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.ReplicaVerificationToolCmdletCommand.html",
+          "hash": "fgensmRAxQgP73ey0bumWaUie9zPfJDr1uYdqhzkN+A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.StorageToolCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.StorageToolCmdletCommand.html",
+          "hash": "ob9l0WQJei9qkemrjZmPktEXXLtLmxmbUjNcD2UDWAs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.StreamsResetterCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.StreamsResetterCmdletCommand.html",
+          "hash": "VEEj+sSpBV+bdG27rkielA7kG46omQX729eEg5CoEb0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.TopicCommandCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.TopicCommandCmdletCommand.html",
+          "hash": "netlTutckpcQJ58h1mqHecSoJBEXm1P1Jshi+kn3ob8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.TransactionsCommandCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.TransactionsCommandCmdletCommand.html",
+          "hash": "1Zy8BIVziGC7Uq+MYZ9tnfsZaXHI31wECEUlzOZTWiE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.VerifiableConsumerCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.VerifiableConsumerCmdletCommand.html",
+          "hash": "mDYOyKERkcOAlC9e3KULMO8W4EeN8OdWAUFX1YqFtRw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.VerifiableProducerCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.VerifiableProducerCmdletCommand.html",
+          "hash": "Tfd9ZaCpW6wPzO+KUIrDT811U36UmIJN2IcXs7qh2NM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.ZkSecurityMigratorCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.ZkSecurityMigratorCmdletCommand.html",
+          "hash": "k1RYaTM4ZJ45o5AIMY67Q1HN25aaur1ZJQ2J4A/AQ1Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.ZooKeeperShellCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.ZooKeeperShellCmdletCommand.html",
+          "hash": "hyXvFwN7Bf9habiVs1WYbsYuAUHc7UpsOMeQzhGxQsU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.ZooKeeperStartCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.ZooKeeperStartCmdletCommand.html",
+          "hash": "m7G31/g0UK1HkXbfkFDzb4r3vpMsYPaaCTBWHyw/KQ4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.html",
+          "hash": "zIZ+byY17ORXGfojlOtm3SCSk9Hwe2oKIvN+iOHt0Ks="
         }
       },
       "is_incremental": false,
@@ -10917,7 +11205,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "+hEhblj5RnFtaGmMiTynsDxigGpGnzvf0RBnAqCJr9U="
+          "hash": "xHa1wZnFIDCMUgUUvQoIvmmLhLw93JEdOhqBaeLr3bk="
         }
       },
       "is_incremental": false,
@@ -11064,7 +11352,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/usagePS.html",
-          "hash": "gjYrBvYRJTPQhRVrWGPfyJLTX77uocSJ3bbQdguvIzE="
+          "hash": "4O9tMJpknOxX23v5djSTS5RSMbXF4A2PGHBY9VDsDsk="
         }
       },
       "is_incremental": false,
@@ -11141,7 +11429,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 908,
+          "total_file_count": 932,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
