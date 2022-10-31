@@ -16,16 +16,17 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KNet;
 using System;
 
-namespace MASES.JNetCLI
+namespace MASES.KNetPS
 {
     class Program
     {
         static void Main(string[] args)
         {
             // this code is a workaround to copy some library to the output path
-            JNetPSCore.JNetPSCore core = new JNetPSCore.JNetPSCore();
+            KNetCore core = new KNetCore();
             Console.WriteLine(core.ClassPath);
         }
     }

@@ -24,9 +24,9 @@ using System.Linq;
 using System.Management.Automation;
 using System.Reflection;
 
-namespace MASES.JNetPS.Cmdlet
+namespace MASES.KNetPS.Cmdlet
 {
-    public class KafkaClassToRunCmdletCommandBase<T> : StartKNetPSCmdletCommandBase
+    public class KafkaClassToRunCmdletCommandBase<T> : StartKNetPSCmdletCommandBase<T>
         where T : KafkaClassToRunCmdletCommandBase<T>
     {
         [Parameter(
@@ -35,19 +35,18 @@ namespace MASES.JNetPS.Cmdlet
             HelpMessage = "The arguments to be sent to the Kafka command.")]
         public string Arguments { get; set; }
 
-        protected override void BeginProcessing()
+        protected override void OnBeforeCreateGlobalInstance()
         {
-            base.BeginProcessing();
+            base.OnBeforeCreateGlobalInstance();
             var t = typeof(T);
             if (!t.IsDefined(typeof(CmdletAttribute), false)) throw new PSInvalidOperationException("Missing Cmdlet attribute");
             var attribute = t.GetCustomAttributes(typeof(CmdletAttribute), false).First() as CmdletAttribute;
             KNetPSHelper<KNetCore>.SetClassToRun(attribute.NounName);
         }
 
-        public override void CreateGlobalInstance()
+        protected override void OnAfterCreateGlobalInstance()
         {
-            base.CreateGlobalInstance();
-            string[] arguments = null;
+            string[] arguments = Array.Empty<string>();
             if (Arguments != null)
             {
                 arguments = Arguments.Split(' ');

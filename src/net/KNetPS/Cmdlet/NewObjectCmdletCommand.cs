@@ -20,11 +20,11 @@ using MASES.JNetPSCore.Cmdlet;
 using MASES.KNet;
 using System.Management.Automation;
 
-namespace MASES.JNetPS.Cmdlet
+namespace MASES.KNetPS.Cmdlet
 {
     [Cmdlet(VerbsCommon.New, "KObject")]
-    public class NewObjectCmdletCommand : NewObjectCmdletCommandBase<KNetCore>
+    public class NewObjectCmdletCommand : NewObjectCmdletCommandBase<NewObjectCmdletCommand, KNetCore>
     {
- 
+
     }
 }

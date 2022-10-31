@@ -8,19 +8,79 @@ To install the tool executes the following command within a PowerShell shell:
 
 ## Usage
 
-To use the PowerShell interface (JNetPS) runs the following commands within a **PowerShell** shell:
+To use the PowerShell interface (KNetPS) runs the following commands within a **PowerShell** shell:
 
 ### Initialization
 
-* The following cmdlet initialize the environment:
+* The following cmdlet must be called prior anything else to initialize the environment:
 
 > Start-KNetPS [arguments]
 
-then the user can use objects created using **New-KObject**, otherwise it is possible to invoke the desired command listed below.
+then the user can use objects created using **New-KObject** and other cmdlets, otherwise it is possible to invoke the desired Main-Class command which automatically executes **Start-KNetPS**.
 
-### Commands available
+Here below two simple examples of producer/consumer from PowerShell.
+The examples are very minimal, but demonstrate how send to and receive from an Apache Kafka cluster.
 
-_knetps_ accepts the following cmdlets:
+### Producer
+
+The following snippet builds needed objects to send a record to an Apache Kafka cluster:
+
+```powershell
+
+Start-KNetPS
+$prodConfig = New-ProducerConfigBuilder
+$prodConfig = $prodConfig.WithBootstrapServers("MY_KAFKA_CLUSTER:9092")
+$producer = New-KafkaProducer -KeyClass "System.String" -ValueClass "System.String" -Configuration $prodConfig
+$record = New-ProducerRecord -KeyClass "System.String" -Key "MyKey" -ValueClass "System.String" -Value "MyPayload" -Topic "testTopic"
+$sendResult = Invoke-Send -Producer $producer -ProducerRecord $record
+
+```
+
+### Consumer 
+
+The following snippet builds needed objects to subscribe to an Apache Kafka cluster and receives records from the specified topic:
+
+```powershell
+
+Start-KNetPS
+$builder = New-ConsumerConfigBuilder
+$builder = $builder.WithBootstrapServers("MY_KAFKA_CLUSTER:9092")
+$builder = $builder.WithGroupId("myGroup")
+$builder = $builder.WithClientId("myCLient")
+$consumer = New-KafkaConsumer -KeyClass "System.String" -ValueClass "System.String" -Configuration $builder
+Invoke-Subscribe -Consumer $consumer -Topic "testTopic"
+$results = Invoke-Poll -KeyClass "System.String" -ValueClass "System.String" -Consumer $consumer -PollTimeout 10000
+$record = Get-ConsumerRecord -KeyClass "System.String" -ValueClass "System.String" -ConsumerRecords $results
+
+```
+
+## Cmdlets available
+
+_knetps_ accepts cmdlets divided by two main groups: Main-Class command cmdlets and Scriptable cmdlets.
+
+### Scriptable cmdlets
+
+Here a list of cmdlets usable within a script:
+
+* **New-AdminClientConfigBuilder**: creates an AdminClientConfigBuilder object which can be extended using fluent APIs
+* **New-ConsumerConfigBuilder**: creates a ConsumerConfigBuilder object which can be extended using fluent APIs
+* **New-ProducerConfigBuilder**: creates a ProducerConfigBuilder object which can be extended using fluent APIs
+* **New-KafkaAdminClient**: creates a KafkaAdminClient object to invoke administration APIs
+* **New-KafkaConsumer**: creates a KafkaConsumer object
+* **New-KafkaProducer**: creates a KafkaProducer object
+* **New-KNetConsumer**: creates a KNetConsumer object
+* **New-KNetProducer**: creates a KNetProducer object
+* **Invoke-Subscribe**: invokes a Subscribe on an instance of KafkaConsumer
+* **Invoke-Poll**: invokes a Poll on an instance of KafkaConsumer
+* **Get-ConsumerRecord**: retrieve a ConsumerRecord from the result of Invoke-Poll
+* **Get-ConsumerGroupMetadata**: retrieve a ConsumerGroupMetadata from an instance of KafkaConsumer
+* **Invoke-Unsubscribe**: invokes a Unsubscribe on an instance of KafkaConsumer
+* **New-ProducerRecord**: creates a new instance of ProducerRecord
+* **Invoke-Send**: sends an instance of ProducerRecord to an instance of KafkaProducer
+
+### Main-Class command cmdlets
+
+Here a list of cmdlets which executes well known tasks defined from Apache Kafka like you use the scripts available in the Apache Kafka release:
 
 * **Start-KNetPS**: Initialize the engine and can be the first command to be invoked. The arguments are:
   * Inherited from JnetPS:

@@ -24,7 +24,7 @@ using Java.Util.Concurrent;
 
 namespace MASES.KNet.Clients.Producer
 {
-    public class KafkaProducer : JCOBridge.C2JBridge.JVMBridgeBase<KafkaProducer>
+    public class KafkaProducer : JCOBridge.C2JBridge.JVMBridgeBase<KafkaProducer>, IProducer
     {
         public override bool IsCloseable => true;
 
@@ -38,23 +38,7 @@ namespace MASES.KNet.Clients.Producer
             : base(args)
         {
         }
-    }
 
-    public class KafkaProducer<K, V> : KafkaProducer, IProducer<K, V>
-    {
-        public KafkaProducer()
-        {
-        }
-
-        public KafkaProducer(Properties props)
-            : base(props)
-        {
-        }
-
-        public KafkaProducer(Properties props, Serializer<K> keySerializer, Serializer<V> valueSerializer)
-            : base(props, keySerializer, valueSerializer)
-        {
-        }
 
         public Map<MetricName, Metric> Metrics => IExecute<Map<MetricName, Metric>>("metrics");
 
@@ -98,16 +82,6 @@ namespace MASES.KNet.Clients.Producer
             return IExecute<Future<RecordMetadata>>("send", record, callback);
         }
 
-        public Future<RecordMetadata> Send(ProducerRecord<K, V> record)
-        {
-            return IExecute<Future<RecordMetadata>>("send", record);
-        }
-
-        public Future<RecordMetadata> Send(ProducerRecord<K, V> record, Callback callback)
-        {
-            return IExecute<Future<RecordMetadata>>("send", record, callback);
-        }
-
         public void Flush()
         {
             IExecute("flush");
@@ -116,6 +90,33 @@ namespace MASES.KNet.Clients.Producer
         public List<PartitionInfo> PartitionsFor(string topic)
         {
             return IExecute<List<PartitionInfo>>("partitionsFor", topic);
+        }
+    }
+
+    public class KafkaProducer<K, V> : KafkaProducer, IProducer<K, V>
+    {
+        public KafkaProducer()
+        {
+        }
+
+        public KafkaProducer(Properties props)
+            : base(props)
+        {
+        }
+
+        public KafkaProducer(Properties props, Serializer<K> keySerializer, Serializer<V> valueSerializer)
+            : base(props, keySerializer, valueSerializer)
+        {
+        }
+
+        public Future<RecordMetadata> Send(ProducerRecord<K, V> record)
+        {
+            return IExecute<Future<RecordMetadata>>("send", record);
+        }
+
+        public Future<RecordMetadata> Send(ProducerRecord<K, V> record, Callback callback)
+        {
+            return IExecute<Future<RecordMetadata>>("send", record, callback);
         }
     }
 }

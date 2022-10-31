@@ -13,7 +13,7 @@ ModuleToProcess = 'MASES.KNetPS.dll'
 ModuleVersion = '1.4.4'
 
 # ID used to uniquely identify this module
-GUID = '85834DBD-838A-4B04-8303-DB4CF8FA44A7'
+GUID = 'F7C13891-7BC6-4025-ACF5-04509852F87D'
 
 # Author of this module
 Author = 'MASES s.r.l.'

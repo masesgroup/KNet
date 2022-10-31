@@ -21,9 +21,10 @@ using MASES.KNet;
 using MASES.KNetPS;
 using System.Management.Automation;
 
-namespace MASES.JNetPS.Cmdlet
+namespace MASES.KNetPS.Cmdlet
 {
-    public class StartKNetPSCmdletCommandBase : StartJNetPSCmdletCommandBase<KNetCore>
+    public class StartKNetPSCmdletCommandBase<TCmdlet> : StartJNetPSCmdletCommandBase<TCmdlet, KNetCore>
+        where TCmdlet : StartKNetPSCmdletCommandBase<TCmdlet>
     {
         /// <inheritdoc cref="KNetCore{T}.ApplicationScalaVersion" />
         [Parameter(
@@ -53,7 +54,7 @@ namespace MASES.JNetPS.Cmdlet
             HelpMessage = "The path where log will be stored.")]
         public string LogPath { get; set; }
 
-        public override void OnBeforeCreateGlobalInstance()
+        protected override void OnBeforeCreateGlobalInstance()
         {
             KNetPSHelper<KNetCore>.SetScalaVersion(ScalaVersion);
             KNetPSHelper<KNetCore>.SetJarRootPath(KafkaJarLocation);
