@@ -261,10 +261,10 @@ namespace MASES.KNet.Streams
         }
 
         [System.Obsolete("To be checked")]
-        public dynamic DefaultDeserializationExceptionHandlerClass { get { return GetProperty<dynamic>(StreamsConfig.DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG, value); } }
+        public Java.Lang.Class DefaultDeserializationExceptionHandlerClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG, value); } }
 
         [System.Obsolete("To be checked")]
-        public StreamsConfigBuilder WithDefaultDeserializationExceptionHandlerClass(dynamic defaultDeserializationExceptionHandlerClass)
+        public StreamsConfigBuilder WithDefaultDeserializationExceptionHandlerClass(Java.Lang.Class defaultDeserializationExceptionHandlerClass)
         {
             var clone = Clone();
             clone.DefaultDeserializationExceptionHandlerClass = defaultDeserializationExceptionHandlerClass;
@@ -272,10 +272,10 @@ namespace MASES.KNet.Streams
         }
 
         [System.Obsolete("To be checked")]
-        public dynamic DefaultKeySerdeClass { get { return GetProperty<dynamic>(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, value); } }
+        public Java.Lang.Class DefaultKeySerdeClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, value); } }
 
         [System.Obsolete("To be checked")]
-        public StreamsConfigBuilder WithDefaultKeySerdeClass(dynamic defaultKeySerdeClass)
+        public StreamsConfigBuilder WithDefaultKeySerdeClass(Java.Lang.Class defaultKeySerdeClass)
         {
             var clone = Clone();
             clone.DefaultKeySerdeClass = defaultKeySerdeClass;
@@ -283,10 +283,10 @@ namespace MASES.KNet.Streams
         }
 
         [System.Obsolete("To be checked")]
-        public dynamic DefaultProductionExceptionHandlerClass { get { return GetProperty<dynamic>(StreamsConfig.DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG, value); } }
+        public Java.Lang.Class DefaultProductionExceptionHandlerClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG, value); } }
 
         [System.Obsolete("To be checked")]
-        public StreamsConfigBuilder WithDefaultProductionExceptionHandlerClass(dynamic defaultProductionExceptionHandlerClass)
+        public StreamsConfigBuilder WithDefaultProductionExceptionHandlerClass(Java.Lang.Class defaultProductionExceptionHandlerClass)
         {
             var clone = Clone();
             clone.DefaultProductionExceptionHandlerClass = defaultProductionExceptionHandlerClass;
@@ -303,10 +303,10 @@ namespace MASES.KNet.Streams
         }
 
         [System.Obsolete("To be checked")]
-        public dynamic DefaultTimestampExtractorClass { get { return GetProperty<dynamic>(StreamsConfig.DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIG, value); } }
+        public Java.Lang.Class DefaultTimestampExtractorClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIG, value); } }
 
         [System.Obsolete("To be checked")]
-        public StreamsConfigBuilder WithDefaultTimestampExtractorClass(dynamic defaultTimestampExtractorClass)
+        public StreamsConfigBuilder WithDefaultTimestampExtractorClass(Java.Lang.Class defaultTimestampExtractorClass)
         {
             var clone = Clone();
             clone.DefaultTimestampExtractorClass = defaultTimestampExtractorClass;
@@ -314,10 +314,10 @@ namespace MASES.KNet.Streams
         }
 
         [System.Obsolete("To be checked")]
-        public dynamic DefaultValueSerdeClass { get { return GetProperty<dynamic>(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, value); } }
+        public Java.Lang.Class DefaultValueSerdeClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, value); } }
 
         [System.Obsolete("To be checked")]
-        public StreamsConfigBuilder WithDefaultValueSerdeClass(dynamic defaultValueSerdeClass)
+        public StreamsConfigBuilder WithDefaultValueSerdeClass(Java.Lang.Class defaultValueSerdeClass)
         {
             var clone = Clone();
             clone.DefaultValueSerdeClass = defaultValueSerdeClass;
@@ -433,10 +433,10 @@ namespace MASES.KNet.Streams
         }
 
         [System.Obsolete("To be checked")]
-        public dynamic RocksDbConfigSetterClass { get { return GetProperty<dynamic>(StreamsConfig.ROCKSDB_CONFIG_SETTER_CLASS_CONFIG); } set { SetProperty(StreamsConfig.ROCKSDB_CONFIG_SETTER_CLASS_CONFIG, value); } }
+        public Java.Lang.Class RocksDbConfigSetterClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.ROCKSDB_CONFIG_SETTER_CLASS_CONFIG); } set { SetProperty(StreamsConfig.ROCKSDB_CONFIG_SETTER_CLASS_CONFIG, value); } }
 
         [System.Obsolete("To be checked")]
-        public StreamsConfigBuilder WithRocksDbConfigSetterClass(dynamic rocksDbConfigSetterClass)
+        public StreamsConfigBuilder WithRocksDbConfigSetterClass(Java.Lang.Class rocksDbConfigSetterClass)
         {
             var clone = Clone();
             clone.RocksDbConfigSetterClass = rocksDbConfigSetterClass;

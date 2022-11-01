@@ -312,9 +312,9 @@ namespace MASES.KNet.Clients.Producer
             return clone;
         }
 
-        public dynamic PartitionerClass { get => GetProperty<dynamic>(ProducerConfig.PARTITIONER_CLASS_CONFIG); set { SetProperty(ProducerConfig.PARTITIONER_CLASS_CONFIG, value); } }
+        public Java.Lang.Class PartitionerClass { get => GetProperty<Java.Lang.Class>(ProducerConfig.PARTITIONER_CLASS_CONFIG); set { SetProperty(ProducerConfig.PARTITIONER_CLASS_CONFIG, value); } }
 
-        public ProducerConfigBuilder WithPartitionerClass(dynamic partitionerClass)
+        public ProducerConfigBuilder WithPartitionerClass(Java.Lang.Class partitionerClass)
         {
             var clone = Clone();
             clone.PartitionerClass = partitionerClass;
