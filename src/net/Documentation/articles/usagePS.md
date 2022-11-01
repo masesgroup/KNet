@@ -20,6 +20,7 @@ then the user can use objects created using **New-KObject** and other cmdlets, o
 
 Here below two simple examples of producer/consumer from PowerShell.
 The examples are very minimal, but demonstrate how send to and receive from an Apache Kafka cluster.
+The terms __MY_KAFKA_CLUSTER__ shall be replaced with the address of Apache Kafka cluster.
 
 ### Producer
 
@@ -111,106 +112,106 @@ Here a list of cmdlets which executes well known tasks defined from Apache Kafka
 	  * KafkaJarLocation
 	  * Log4JPath
 	  * LogPath	  
-* **Start-AclCommand: start AclCommand. The arguments are:
+* **Start-AclCommand**: start AclCommand. The arguments are:
   * All available arguments of Start-KNetPS;
   * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-BrokerApiVersionsCommand: start AclCommand. The arguments are:
+* **Start-BrokerApiVersionsCommand**: start AclCommand. The arguments are:
   * All available arguments of Start-KNetPS;
   * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-ConfigCommand: start AclCommand. The arguments are:
+* **Start-ConfigCommand**: start AclCommand. The arguments are:
   * All available arguments of Start-KNetPS;
   * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-ConsumerGroupCommand: start AclCommand. The arguments are:
+* **Start-ConsumerGroupCommand**: start AclCommand. The arguments are:
   * All available arguments of Start-KNetPS;
   * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-DelegationTokenCommand: start AclCommand. The arguments are:
+* **Start-DelegationTokenCommand**: start AclCommand. The arguments are:
   * All available arguments of Start-KNetPS;
   * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-DeleteRecordsCommand: start AclCommand. The arguments are:
+* **Start-DeleteRecordsCommand**: start AclCommand. The arguments are:
   * All available arguments of Start-KNetPS;
   * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-FeatureCommand: start AclCommand. The arguments are:
+* **Start-FeatureCommand**: start AclCommand. The arguments are:
   * All available arguments of Start-KNetPS;
   * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-LeaderElectionCommand: start AclCommand. The arguments are:
+* **Start-LeaderElectionCommand**: start AclCommand. The arguments are:
   * All available arguments of Start-KNetPS;
   * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-LogDirsCommand: start AclCommand. The arguments are:
+* **Start-LogDirsCommand**: start AclCommand. The arguments are:
   * All available arguments of Start-KNetPS;
   * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-MetadataQuorumCommand: start AclCommand. The arguments are:
+* **Start-MetadataQuorumCommand**: start AclCommand. The arguments are:
   * All available arguments of Start-KNetPS;
   * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-ReassignPartitionsCommand: start AclCommand. The arguments are:
+* **Start-ReassignPartitionsCommand**: start AclCommand. The arguments are:
   * All available arguments of Start-KNetPS;
   * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-TopicCommand: start AclCommand. The arguments are:
+* **Start-TopicCommand**: start AclCommand. The arguments are:
   * All available arguments of Start-KNetPS;
   * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-ZkSecurityMigrator: start AclCommand. The arguments are:
+* **Start-ZkSecurityMigrator**: start AclCommand. The arguments are:
   * All available arguments of Start-KNetPS;
   * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-KafkaStart: start AclCommand. The arguments are:
+* **Start-KafkaStart**: start AclCommand. The arguments are:
   * All available arguments of Start-KNetPS;
   * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-ZooKeeperShell: start AclCommand. The arguments are:
+* **Start-ZooKeeperShell**: start AclCommand. The arguments are:
   * All available arguments of Start-KNetPS;
   * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-ZooKeeperStart: start AclCommand. The arguments are:
+* **Start-ZooKeeperStart**: start AclCommand. The arguments are:
   * All available arguments of Start-KNetPS;
   * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-MetadataShell: start AclCommand. The arguments are:
+* **Start-MetadataShell**: start AclCommand. The arguments are:
   * All available arguments of Start-KNetPS;
   * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-ClusterTool: start AclCommand. The arguments are:
+* **Start-ClusterTool**: start AclCommand. The arguments are:
   * All available arguments of Start-KNetPS;
   * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-ConsoleConsumer: start AclCommand. The arguments are:
+* **Start-ConsoleConsumer**: start AclCommand. The arguments are:
   * All available arguments of Start-KNetPS;
   * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-ConsoleProducer: start AclCommand. The arguments are:
+* **Start-ConsoleProducer**: start AclCommand. The arguments are:
   * All available arguments of Start-KNetPS;
   * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-ConsumerPerformance: start AclCommand. The arguments are:
+* **Start-ConsumerPerformance**: start AclCommand. The arguments are:
   * All available arguments of Start-KNetPS;
   * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-DumpLogSegments: start AclCommand. The arguments are:
+* **Start-DumpLogSegments**: start AclCommand. The arguments are:
   * All available arguments of Start-KNetPS;
   * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-GetOffsetShell: start AclCommand. The arguments are:
+* **Start-GetOffsetShell**: start AclCommand. The arguments are:
   * All available arguments of Start-KNetPS;
   * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-MirrorMaker: start AclCommand. The arguments are:
+* **Start-MirrorMaker**: start AclCommand. The arguments are:
   * All available arguments of Start-KNetPS;
   * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-ProducerPerformance: start AclCommand. The arguments are:
+* **Start-ProducerPerformance**: start AclCommand. The arguments are:
   * All available arguments of Start-KNetPS;
   * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-ReplicaVerificationTool: start AclCommand. The arguments are:
+* **Start-ReplicaVerificationTool**: start AclCommand. The arguments are:
   * All available arguments of Start-KNetPS;
   * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-StorageTool: start AclCommand. The arguments are:
+* **Start-StorageTool**: start AclCommand. The arguments are:
   * All available arguments of Start-KNetPS;
   * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-StreamsResetter: start AclCommand. The arguments are:
+* **Start-StreamsResetter**: start AclCommand. The arguments are:
   * All available arguments of Start-KNetPS;
   * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-TransactionsCommand: start AclCommand. The arguments are:
+* **Start-TransactionsCommand**: start AclCommand. The arguments are:
   * All available arguments of Start-KNetPS;
   * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-VerifiableConsumer: start AclCommand. The arguments are:
+* **Start-VerifiableConsumer**: start AclCommand. The arguments are:
   * All available arguments of Start-KNetPS;
   * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-VerifiableProducer: start AclCommand. The arguments are:
+* **Start-VerifiableProducer**: start AclCommand. The arguments are:
   * All available arguments of Start-KNetPS;
   * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-ConnectDistributed: start AclCommand. The arguments are:
+* **Start-ConnectDistributed**: start AclCommand. The arguments are:
   * All available arguments of Start-KNetPS;
   * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-ConnectStandalone: start AclCommand. The arguments are:
+* **Start-ConnectStandalone**: start AclCommand. The arguments are:
   * All available arguments of Start-KNetPS;
   * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-MirrorMaker2: start AclCommand. The arguments are:
+* **Start-MirrorMaker2**: start AclCommand. The arguments are:
   * All available arguments of Start-KNetPS;
   * Arguments: a string containing the arguments accepted from the Java Main-Class
 	  

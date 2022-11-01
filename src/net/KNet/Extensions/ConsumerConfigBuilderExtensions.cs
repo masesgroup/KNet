@@ -19,6 +19,7 @@
 using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Clients.Consumer;
 using MASES.KNet.Common.Serialization;
+using System;
 
 namespace MASES.KNet.Extensions
 {
@@ -31,9 +32,41 @@ namespace MASES.KNet.Extensions
 
         public static ConsumerConfigBuilder WithKeyDeserializerClass(this ConsumerConfigBuilder builder, System.Type type)
         {
-            if (type == typeof(string))
+            if (type == typeof(byte[]))
+            {
+                return builder.WithKeyDeserializerClass(JVMBridgeBase.ClassNameOf<ByteArrayDeserializer>());
+            }
+            else if (type == typeof(double))
+            {
+                return builder.WithKeyDeserializerClass(JVMBridgeBase.ClassNameOf<DoubleDeserializer>());
+            }
+            else if (type == typeof(float))
+            {
+                return builder.WithKeyDeserializerClass(JVMBridgeBase.ClassNameOf<FloatDeserializer>());
+            }
+            else if (type == typeof(int))
+            {
+                return builder.WithKeyDeserializerClass(JVMBridgeBase.ClassNameOf<IntegerDeserializer>());
+            }
+            else if (type == typeof(long))
+            {
+                return builder.WithKeyDeserializerClass(JVMBridgeBase.ClassNameOf<LongDeserializer>());
+            }
+            else if (type == typeof(short))
+            {
+                return builder.WithKeyDeserializerClass(JVMBridgeBase.ClassNameOf<ShortDeserializer>());
+            }
+            else if (type == typeof(string))
             {
                 return builder.WithKeyDeserializerClass(JVMBridgeBase.ClassNameOf<StringDeserializer>());
+            }
+            else if (type == typeof(Guid))
+            {
+                return builder.WithKeyDeserializerClass(JVMBridgeBase.ClassNameOf<UUIDDeserializer>());
+            }
+            else if (type == typeof(void))
+            {
+                return builder.WithKeyDeserializerClass(JVMBridgeBase.ClassNameOf<VoidDeserializer>());
             }
             // add other
 

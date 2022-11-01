@@ -292,10 +292,10 @@ namespace MASES.KNet.Clients
         }
 
         [System.Obsolete("To be checked")]
-        public dynamic DefaultListKeySerdeInnerClass { get { return GetProperty<dynamic>(CommonClientConfigs.DEFAULT_LIST_KEY_SERDE_INNER_CLASS); } set { SetProperty(CommonClientConfigs.DEFAULT_LIST_KEY_SERDE_INNER_CLASS, value); } }
+        public Java.Lang.Class DefaultListKeySerdeInnerClass { get { return GetProperty<Java.Lang.Class>(CommonClientConfigs.DEFAULT_LIST_KEY_SERDE_INNER_CLASS); } set { SetProperty(CommonClientConfigs.DEFAULT_LIST_KEY_SERDE_INNER_CLASS, value); } }
 
         [System.Obsolete("To be checked")]
-        public T WithDefaultListKeySerdeInnerClass(dynamic defaultListKeySerdeInnerClass)
+        public T WithDefaultListKeySerdeInnerClass(Java.Lang.Class defaultListKeySerdeInnerClass)
         {
             var clone = Clone();
             clone.DefaultListKeySerdeInnerClass = defaultListKeySerdeInnerClass;
@@ -303,10 +303,10 @@ namespace MASES.KNet.Clients
         }
 
         [System.Obsolete("To be checked")]
-        public dynamic DefaultListValueSerdeInnerClass { get { return GetProperty<dynamic>(CommonClientConfigs.DEFAULT_LIST_VALUE_SERDE_INNER_CLASS); } set { SetProperty(CommonClientConfigs.DEFAULT_LIST_VALUE_SERDE_INNER_CLASS, value); } }
+        public Java.Lang.Class DefaultListValueSerdeInnerClass { get { return GetProperty<Java.Lang.Class>(CommonClientConfigs.DEFAULT_LIST_VALUE_SERDE_INNER_CLASS); } set { SetProperty(CommonClientConfigs.DEFAULT_LIST_VALUE_SERDE_INNER_CLASS, value); } }
 
         [System.Obsolete("To be checked")]
-        public T WithDefaultListValueSerdeInnerClass(dynamic defaultListValueSerdeInnerClass)
+        public T WithDefaultListValueSerdeInnerClass(Java.Lang.Class defaultListValueSerdeInnerClass)
         {
             var clone = Clone();
             clone.DefaultListValueSerdeInnerClass = defaultListValueSerdeInnerClass;
@@ -314,10 +314,10 @@ namespace MASES.KNet.Clients
         }
 
         [System.Obsolete("To be checked")]
-        public dynamic DefaultListKeySerdeTypeClass { get { return GetProperty<dynamic>(CommonClientConfigs.DEFAULT_LIST_KEY_SERDE_TYPE_CLASS); } set { SetProperty(CommonClientConfigs.DEFAULT_LIST_KEY_SERDE_TYPE_CLASS, value); } }
+        public Java.Lang.Class DefaultListKeySerdeTypeClass { get { return GetProperty<Java.Lang.Class>(CommonClientConfigs.DEFAULT_LIST_KEY_SERDE_TYPE_CLASS); } set { SetProperty(CommonClientConfigs.DEFAULT_LIST_KEY_SERDE_TYPE_CLASS, value); } }
 
         [System.Obsolete("To be checked")]
-        public T WithDefaultListKeySerdeTypeClass(dynamic defaultListKeySerdeTypeClass)
+        public T WithDefaultListKeySerdeTypeClass(Java.Lang.Class defaultListKeySerdeTypeClass)
         {
             var clone = Clone();
             clone.DefaultListKeySerdeTypeClass = defaultListKeySerdeTypeClass;
@@ -325,10 +325,10 @@ namespace MASES.KNet.Clients
         }
 
         [System.Obsolete("To be checked")]
-        public dynamic DefaultListValueSerdeTypeClass { get { return GetProperty<dynamic>(CommonClientConfigs.DEFAULT_LIST_VALUE_SERDE_TYPE_CLASS); } set { SetProperty(CommonClientConfigs.DEFAULT_LIST_VALUE_SERDE_TYPE_CLASS, value); } }
+        public Java.Lang.Class DefaultListValueSerdeTypeClass { get { return GetProperty<Java.Lang.Class>(CommonClientConfigs.DEFAULT_LIST_VALUE_SERDE_TYPE_CLASS); } set { SetProperty(CommonClientConfigs.DEFAULT_LIST_VALUE_SERDE_TYPE_CLASS, value); } }
 
         [System.Obsolete("To be checked")]
-        public T WithDefaultListValueSerdeTypeClass(dynamic defaultListValueSerdeTypeClass)
+        public T WithDefaultListValueSerdeTypeClass(Java.Lang.Class defaultListValueSerdeTypeClass)
         {
             var clone = Clone();
             clone.DefaultListValueSerdeTypeClass = defaultListValueSerdeTypeClass;

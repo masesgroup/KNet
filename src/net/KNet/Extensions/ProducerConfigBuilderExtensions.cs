@@ -19,6 +19,7 @@
 using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Clients.Producer;
 using MASES.KNet.Common.Serialization;
+using System;
 
 namespace MASES.KNet.Extensions
 {
@@ -31,9 +32,41 @@ namespace MASES.KNet.Extensions
 
         public static ProducerConfigBuilder WithKeySerializerClass(this ProducerConfigBuilder builder, System.Type type)
         {
-            if (type == typeof(string))
+            if (type == typeof(byte[]))
+            {
+                return builder.WithKeySerializerClass(JVMBridgeBase.ClassNameOf<ByteArraySerializer>());
+            }
+            else if (type == typeof(double))
+            {
+                return builder.WithKeySerializerClass(JVMBridgeBase.ClassNameOf<DoubleSerializer>());
+            }
+            else if (type == typeof(float))
+            {
+                return builder.WithKeySerializerClass(JVMBridgeBase.ClassNameOf<FloatSerializer>());
+            }
+            else if (type == typeof(int))
+            {
+                return builder.WithKeySerializerClass(JVMBridgeBase.ClassNameOf<IntegerSerializer>());
+            }
+            else if (type == typeof(long))
+            {
+                return builder.WithKeySerializerClass(JVMBridgeBase.ClassNameOf<LongSerializer>());
+            }
+            else if (type == typeof(short))
+            {
+                return builder.WithKeySerializerClass(JVMBridgeBase.ClassNameOf<ShortSerializer>());
+            }
+            else if (type == typeof(string))
             {
                 return builder.WithKeySerializerClass(JVMBridgeBase.ClassNameOf<StringSerializer>());
+            }
+            else if (type == typeof(Guid))
+            {
+                return builder.WithKeySerializerClass(JVMBridgeBase.ClassNameOf<UUIDSerializer>());
+            }
+            else if (type == typeof(void))
+            {
+                return builder.WithKeySerializerClass(JVMBridgeBase.ClassNameOf<VoidSerializer>());
             }
             // add other
 
