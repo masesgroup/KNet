@@ -16,7 +16,7 @@
   href: usage.md
 - name: KNet CLI Usage
   href: usageCLI.md
-- name: KNet PoerShell Usage
+- name: KNet PowerShell Usage
   href: usagePS.md
 - name: KNet Template Usage Guide
   href: usageTemplates.md  
