@@ -8,5 +8,6 @@ This release comes with some ready made classes:
 * [X] Almost completed Apache Kafka Streams
 * [X] Almost completed Apache Kafka Connect
 * [X] .NET Apache Kafka Connect SDK (a basic version)
+* [X] KNet PowerShell: added some cmdlets
 
 If something is not available use [API extensibility](API_extensibility.md) to cover missing features.

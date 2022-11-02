@@ -12,13 +12,13 @@
   href: jvm_callbacks.md
 - name: KNet Connect SDK
   href: connectSDK.md  
-- name: KNet Usage
+- name: KNet usage
   href: usage.md
-- name: KNet CLI Usage
+- name: KNet CLI usage
   href: usageCLI.md
-- name: KNet PoerShell Usage
+- name: KNet PowerShell usage
   href: usagePS.md
-- name: KNet Template Usage Guide
+- name: KNet Template usage
   href: usageTemplates.md  
 - name: How to build from scratch
   href: howtobuild.md
