@@ -74,6 +74,9 @@
 <th>kafka-tools</th>
 <th>kafka_2.13</th>
 <th>connect-runtime</th>
+<th>connect-mirror</th>
+<th>connect-file</th>
+<th>connect-basic-auth-extension</th>
 </tr>
 </thead>
 <tbody>
@@ -83,6 +86,9 @@
 <td><a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22kafka-tools%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/kafka-tools.svg?label=Maven%20Central" alt="Maven Central"></a></td>
 <td><a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22kafka_2.13%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/kafka_2.13.svg?label=Maven%20Central" alt="Maven Central"></a></td>
 <td><a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22connect-runtime%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/connect-runtime.svg?label=Maven%20Central" alt="Maven Central"></a></td>
+<td><a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22connect-mirror%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/connect-mirror.svg?label=Maven%20Central" alt="Maven Central"></a></td>
+<td><a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22connect-file%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/connect-file.svg?label=Maven%20Central" alt="Maven Central"></a></td>
+<td><a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22connect-basic-auth-extension%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/connect-basic-auth-extension.svg?label=Maven%20Central" alt="Maven Central"></a></td>
 </tr>
 </tbody>
 </table>
@@ -90,7 +96,12 @@
 <ul>
 <li>all implemented features are availables at no extra implementation costs, see <a href="articles/usage.html">KNet usage</a>;</li>
 <li>avoids any third party communication protocol implementation;</li>
-<li>access all features made available from Apache Kafka: the most important one is Kafka Streams which does not have any C# implementation.</li>
+<li>access all features made available from Apache Kafka: the most important are Apache Kafka Streams and Apache Kafka Connect which does not have any C# implementation;</li>
+<li>measured high <a href="articles/performance.html">performance</a> in many operating conditions.</li>
+</ul>
+<h3 id="news">News</h3>
+<ul>
+<li>V1.4.4+: From version 1.4.4 there is a new project, named KNetPS, which permits to write PowerShell client scripts for an Apache Kafka cluster and many other things, <a href="articles/usagePS.html">here full usage</a>.</li>
 </ul>
 <h2 id="runtime-engine">Runtime engine</h2>
 <p>KNet uses <a href="https://github.com/masesgroup/JNet">JNet</a>, and indeed <a href="https://www.jcobridge.com/">JCOBridge</a> with its <a href="https://www.jcobridge.com/features/">features</a>, to obtain many benefits:</p>
@@ -116,7 +127,8 @@
 <p>Have a look at the following resources:</p>
 <ul>
 <li><a href="https://www.jcobridge.com/release-notes/">Release notes</a></li>
-<li><a href="https://www.jcobridge.com/pricing/">Commercial info</a></li>
+<li><a href="https://www.jcobridge.com/pricing/">Non Profit or University</a></li>
+<li><a href="https://www.jcobridge.com/pricing/">Commercial info: Professional or Enterprise</a></li>
 <li><a href="https://www.nuget.org/packages/MASES.JCOBridge"><img src="https://img.shields.io/nuget/v/MASES.JCOBridge" alt="JCOBridge nuget"></a></li>
 </ul>
 <hr>
@@ -124,11 +136,17 @@
 <ul>
 <li><a href="articles/roadmap.html">Roadmap</a></li>
 <li><a href="articles/actualstate.html">Actual state</a></li>
+<li><a href="articles/performance.html">Performance</a></li>
+<li><a href="articles/connectSDK.html">Connect SDK</a></li>
 <li><a href="articles/usage.html">KNet usage</a></li>
 <li><a href="articles/API_extensibility.html">KNet APIs extensibility</a></li>
 <li><a href="articles/usageCLI.html">KNetCLI usage</a></li>
+<li><a href="articles/usagePS.html">KNet PowerShell usage</a></li>
+<li><a href="articles/usageTemplates.html">KNet Template usage</a></li>
+<li><a href="articles/howtobuild.html">How to build from scratch</a></li>
 </ul>
 <hr>
+<p>KAFKA is a registered trademark of The Apache Software Foundation. KNet has no affiliation with and is not endorsed by The Apache Software Foundation.</p>
 </article>
           </div>
           
