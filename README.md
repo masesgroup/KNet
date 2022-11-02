@@ -62,7 +62,7 @@ Have a look at the following resources:
 * [KNet APIs extensibility](src/net/Documentation/articles/API_extensibility.md)
 * [KNetCLI usage](src/net/Documentation/articles/usageCLI.md)
 * [KNet PowerShell usage](src/net/Documentation/articles/usagePS.md)
-* [Template Usage Guide](src/net/Documentation/articles/usageTemplates.md)
+* [KNet Template usage](src/net/Documentation/articles/usageTemplates.md)
 * [How to build from scratch](src/net/Documentation/articles/howtobuild.md)
 
 ---
