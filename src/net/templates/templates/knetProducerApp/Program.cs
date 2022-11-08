@@ -19,7 +19,7 @@ namespace MASES.KNetTemplate.KNetProducer
         static string serverToUse = theServer;
         static string topicToUse = theTopic;
 
-        static readonly ManualResetEvent resetEvent = new(false);
+        static readonly ManualResetEvent resetEvent = new ManualResetEvent(false);
 
         static void Main(string[] args)
         {
