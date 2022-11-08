@@ -28,12 +28,12 @@ jobs:
           for added_modified_file in "${added_modified_files[@]}"; do
               if [[ $added_modified_file == ".github/workflows/build.yaml"* ]]; then
                 echo "$added_modified_file is myself."
-                echo "::set-output name=run_build_windows::true"
+                echo "run_build_windows=true" >> $GITHUB_OUTPUT
                 break
               fi
               if [[ $added_modified_file == "src/"* ]]; then
                 echo "$added_modified_file file is under the directory 'src/'."
-                echo "::set-output name=run_build_windows::true"
+                echo "run_build_windows=true" >> $GITHUB_OUTPUT
                 break
               fi
           done
@@ -47,13 +47,13 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:    
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: '1'
           submodules: 'true'
 
       - name: Cache local Maven repository
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ~/.m2/repository
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
@@ -64,8 +64,9 @@ jobs:
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src/net/KNet/KNet.csproj
         
       - name: Set up Apache Maven Central
-        uses: actions/setup-java@v1
+        uses: actions/setup-java@v3
         with: # running setup-java again overwrites the settings.xml
+          distribution: temurin
           java-version: 11
           server-id: ossrh # Value of the distributionManagement/repository/id field of the pom.xml
           server-username: MAVEN_USERNAME # env variable for username in deploy
@@ -93,7 +94,7 @@ jobs:
       - name: Compress Docker Image
         run: gzip mases.knet.linux.tar
         
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: mases.knet.linux.tar.gz
           path: ./*.tar.gz
@@ -113,13 +114,13 @@ jobs:
         run: git config --system core.longpaths true
       
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: '1'
           submodules: 'true'
 
       - name: Cache local Maven repository
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ~/.m2/repository
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
@@ -133,8 +134,9 @@ jobs:
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KNet\KNet.csproj
 
       - name: Set up Apache Maven Central
-        uses: actions/setup-java@v1
+        uses: actions/setup-java@v3
         with: # running setup-java again overwrites the settings.xml
+          distribution: temurin
           java-version: 11
           server-id: ossrh # Value of the distributionManagement/repository/id field of the pom.xml
           server-username: MAVEN_USERNAME # env variable for username in deploy
@@ -159,7 +161,7 @@ jobs:
       - name: Compile KNetPS
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KNetPS\KNetPS.csproj
 
-      - uses: nuget/setup-nuget@v1
+      - uses: nuget/setup-nuget@v1.1.1
         with:
           nuget-version: '5.x'
           
@@ -202,7 +204,7 @@ jobs:
 #           name: container.windows.zip
 #           path: .\container.windows.zip
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: KNet
           path: .\bin\*nupkg
@@ -214,7 +216,7 @@ jobs:
 
       - name: Commit changes
         if: ${{ github.repository_owner == 'masesgroup'}} #do not push any changes outside main repo
-        uses: EndBug/add-and-commit@v5
+        uses: EndBug/add-and-commit@v9
         with:
           author_name: github-actions
           author_email: 41898282+github-actions[bot]@users.noreply.github.com
