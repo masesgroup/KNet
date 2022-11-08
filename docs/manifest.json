@@ -11237,6 +11237,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/commandlineswitch.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/commandlineswitch.html",
+          "hash": "aJXkOMJOFs1K4igh0PJDe3DNBms9ht1YnvNc90xUXkc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/connectSDK.md",
       "output": {
         ".html": {
@@ -11316,7 +11328,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "vqLb6UG+lNwEHC9QPfDB5Xcs0m1YZjvfiduPzBNLZWE="
+          "hash": "dTxDpoZXy3zIpI4cfRRuVEw8DnCocjzyMzjELtyS+qc="
         }
       },
       "is_incremental": false,
@@ -11328,7 +11340,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/usage.html",
-          "hash": "2MSrAAFAj1ZV5NITkqnPRI2PBQP/Btc9BL0NONHw7Fw="
+          "hash": "uoFcOe/swMvJdU6nduRU6VUKAzDPvBBivfWxl0pYJj4="
         }
       },
       "is_incremental": false,
@@ -11340,7 +11352,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/usageCLI.html",
-          "hash": "b8SIdVlhafBzR8FMcnl7DHneUbmEvGc+9TaQcfQKpwk="
+          "hash": "UTduTPRwCfShTpBrUzAC74MshxeiCri8BVQ3/yV/Lyw="
         }
       },
       "is_incremental": false,
@@ -11423,7 +11435,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 14,
+          "total_file_count": 15,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {

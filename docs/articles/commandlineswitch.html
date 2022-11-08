@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>KNet: CLI | KNet website </title>
+    <title>KNet: Command line switches available | KNet website </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="KNet: CLI | KNet website ">
+    <meta name="title" content="KNet: Command line switches available | KNet website ">
     <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -67,31 +67,101 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="knet-cli">KNet: CLI</h1>
+<h1 id="knet-command-line-switches-available">KNet: Command line switches available</h1>
 
-<h2 id="installation">Installation</h2>
-<p>KNet CLI is available in two different formats:</p>
+<p><em>knet</em> accepts the following command-line switches:</p>
 <ul>
-<li>dotnet tool hosted on NuGet.org: check <a href="https://www.nuget.org/packages/MASES.KNetCLI/">https://www.nuget.org/packages/MASES.KNetCLI/</a> and <a href="https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools">https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools</a> for installation deep instructions.</li>
-<li>Docker image hosted on <a href="https://github.com/masesgroup/KNet/pkgs/container/mases.knet">https://github.com/masesgroup/KNet/pkgs/container/mases.knet</a>: follow instruction within the page and general instruction on <a href="https://docs.docker.com">https://docs.docker.com</a></li>
-</ul>
-<h2 id="usage">Usage</h2>
-<p>To use the CLI interface (KNetCLI) runs a command like the following:</p>
+<li><strong>ClassToRun</strong>: represents the class to be executed; the list is:
 <ul>
-<li><strong>dotnet tool</strong></li>
-</ul>
-<blockquote>
-<p>knet -ClassToRun ConsoleConsumer --bootstrap-server SERVER-ADDRESS:9093 --topic topic_name --from-beginning</p>
-</blockquote>
+<li>Administration scope:
 <ul>
-<li><strong>Docker image</strong></li>
+<li>AclCommand</li>
+<li>BrokerApiVersionsCommand</li>
+<li>ConfigCommand</li>
+<li>ConsumerGroupCommand</li>
+<li>DelegationTokenCommand</li>
+<li>DeleteRecordsCommand</li>
+<li>FeatureCommand</li>
+<li>LeaderElectionCommand</li>
+<li>LogDirsCommand</li>
+<li>MetadataQuorumCommand</li>
+<li>ReassignPartitionsCommand</li>
+<li>TopicCommand</li>
+<li>ZkSecurityMigrator</li>
 </ul>
-<blockquote>
-<p>docker run ghcr.io/masesgroup/mases.knet -ClassToRun ConsoleConsumer --bootstrap-server SERVER-ADDRESS:9093 --topic topic_name --from-beginning</p>
-</blockquote>
-<h3 id="command-line-switch-available">Command line switch available</h3>
-<p><em>knetcli</em> needs at least <strong>ClassToRun</strong> command-line switch to identify its behavior.
-Other options on <a href="commandlineswitch.html">Command line switch</a> page.</p>
+</li>
+<li>Server scope:
+<ul>
+<li>KafkaStart</li>
+<li>ZooKeeperShell</li>
+<li>ZooKeeperStart</li>
+</ul>
+</li>
+<li>Shell scope:
+<ul>
+<li>MetadataShell</li>
+</ul>
+</li>
+<li>Tools scope:
+<ul>
+<li>ClusterTool</li>
+<li>ConsoleConsumer</li>
+<li>ConsoleProducer</li>
+<li>ConsumerPerformance</li>
+<li>DumpLogSegments</li>
+<li>GetOffsetShell</li>
+<li>MirrorMaker</li>
+<li>ProducerPerformance</li>
+<li>ReplicaVerificationTool</li>
+<li>StorageTool</li>
+<li>StreamsResetter</li>
+<li>TransactionsCommand</li>
+<li>VerifiableConsumer</li>
+<li>VerifiableProducer</li>
+</ul>
+</li>
+<li>Connect scope:
+<ul>
+<li>ConnectDistributed</li>
+<li>ConnectStandalone</li>
+<li>MirrorMaker2</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>KafkaLocation</strong>: represents the path to the root folder of Apache Kafka binary distribution; default value consider that KNetCLI uses the Apache Kafka jars available under the jars folder prepared from the package;</li>
+<li><strong>ScalaVersion</strong>: the scala version to be used. The default version (<em>2.13.6</em>) is binded to the deafult Apache Kafka version available in the package;</li>
+<li><strong>Log4JConfiguration</strong>: the log4j configuration file; the default uses the file within the package.</li>
+<li><strong>LogPath</strong>: the path where the logs are stored</li>
+</ul>
+<p>Plus it accepts from:</p>
+<ul>
+<li><strong>JNet</strong>:
+<ul>
+<li><strong>LogClassPath</strong>: put in command line the switch to output all Jars found</li>
+</ul>
+</li>
+<li><strong>JCOBridge</strong>:
+<ul>
+<li>All command-line switches of JCOBridge available at <a href="https://www.jcobridge.com/net-examples/command-line-options/">https://www.jcobridge.com/net-examples/command-line-options/</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="jvm-identification">JVM identification</h2>
+<p>One of the most important command-line switch is <strong>JVMPath</strong> and it is available in <a href="https://www.jcobridge.com/net-examples/command-line-options/">JCOBridge switches</a>: it can be used to set-up the location of the JVM library if JCOBridge is not able to identify a suitable JRE installation.
+If a developer is using KNet within its own product it is possible to override the <strong>JVMPath</strong> property with a snippet like the following one:</p>
+<pre><code class="lang-c#">    class MyKNetCore : KNetCore
+    {
+        public override string JVMPath
+        {
+            get
+            {
+                string pathToJVM = &quot;Set here the path to JVM library or use your own search method&quot;;
+                return pathToJVM;
+            }
+        }
+    }
+</code></pre>
 </article>
           </div>
           
@@ -100,7 +170,7 @@ Other options on <a href="commandlineswitch.html">Command line switch</a> page.<
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/Documentation/articles/usageCLI.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/Documentation/articles/commandlineswitch.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
