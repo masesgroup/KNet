@@ -19,14 +19,6 @@ jobs:
           fetch-depth: '1'
           submodules: 'true'
 
-      - name: Cache local Maven repository
-        uses: actions/cache@v3
-        with:
-          path: ~/.m2/repository
-          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-maven-
-
       - name: Pre compile
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src/net/KNet/KNet.csproj
         
@@ -35,6 +27,7 @@ jobs:
         with: # running setup-java again overwrites the settings.xml
           distribution: temurin
           java-version: 11
+          cache: 'maven'
           server-id: ossrh # Value of the distributionManagement/repository/id field of the pom.xml
           server-username: MAVEN_USERNAME # env variable for username in deploy
           server-password: MAVEN_CENTRAL_TOKEN # env variable for token in deploy
@@ -72,14 +65,6 @@ jobs:
           fetch-depth: '1'
           submodules: 'true'
 
-      - name: Cache local Maven repository
-        uses: actions/cache@v3
-        with:
-          path: ~/.m2/repository
-          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-maven-
-
       - name: Pre compile templates
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KNetTemplates.sln
 
@@ -91,6 +76,7 @@ jobs:
         with: # running setup-java again overwrites the settings.xml
           distribution: temurin
           java-version: 11
+          cache: 'maven'
           server-id: ossrh # Value of the distributionManagement/repository/id field of the pom.xml
           server-username: MAVEN_USERNAME # env variable for username in deploy
           server-password: MAVEN_CENTRAL_TOKEN # env variable for token in deploy
