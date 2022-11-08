@@ -1,6 +1,6 @@
 # KNet: Command line switches available
 
-_knet_ accepts the following command-line switch:
+_knet_ accepts the following command-line switches:
 
 * **ClassToRun**: represents the class to be executed; the list is:
 	* Administration scope:
