@@ -4,6 +4,7 @@ using MASES.KNet.Common.Serialization;
 using Java.Util;
 using System;
 using System.Text;
+using System.Threading;
 
 namespace MASES.KNetTemplate.KNetProducer
 {
@@ -18,6 +19,8 @@ namespace MASES.KNetTemplate.KNetProducer
         static string serverToUse = theServer;
         static string topicToUse = theTopic;
 
+        static readonly ManualResetEvent resetEvent = new(false);
+
         static void Main(string[] args)
         {
             KNetCore.CreateGlobalInstance();
@@ -30,6 +33,7 @@ namespace MASES.KNetTemplate.KNetProducer
 
             Console.WriteLine("Server in use {0}", serverToUse);
 
+            /**** Direct mode ******
             Properties props = new Properties();
             props.Put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
             props.Put(ProducerConfig.ACKS_CONFIG, "all");
@@ -37,6 +41,16 @@ namespace MASES.KNetTemplate.KNetProducer
             props.Put(ProducerConfig.LINGER_MS_CONFIG, 1);
             props.Put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
             props.Put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
+            ******/
+
+            Properties props = ProducerConfigBuilder.Create()
+                                                    .WithBootstrapServers(serverToUse)
+                                                    .WithAcks(ProducerConfig.Acks.All)
+                                                    .WithRetries(0)
+                                                    .WithLingerMs(1)
+                                                    .WithKeySerializerClass("org.apache.kafka.common.serialization.StringSerializer")
+                                                    .WithValueSerializerClass("org.apache.kafka.common.serialization.StringSerializer")
+                                                    .ToProperties();
 
             Serializer<string> keySerializer = null;
             Serializer<string> valueSerializer = null;
@@ -65,10 +79,13 @@ namespace MASES.KNetTemplate.KNetProducer
                     });
                 }
 
+                Console.CancelKeyPress += Console_CancelKeyPress;
+                Console.WriteLine("Press Ctrl-C to exit");
+
                 using (var producer = useSerdes ? new KafkaProducer<string, string>(props, keySerializer, valueSerializer) : new KafkaProducer<string, string>(props))
-            {
+                {
                     int i = 0;
-                    while (true)
+                    while (!resetEvent.WaitOne(0))
                     {
                         var record = new ProducerRecord<string, string>(topicToUse, i.ToString(), i.ToString());
                         var result = useCallback ? producer.Send(record, callback) : producer.Send(record);
@@ -84,7 +101,11 @@ namespace MASES.KNetTemplate.KNetProducer
                 if (keySerializer != null) keySerializer.Dispose();
                 if (valueSerializer != null) valueSerializer.Dispose();
             }
+        }
 
+        private static void Console_CancelKeyPress(object sender, ConsoleCancelEventArgs e)
+        {
+            if (e.Cancel) resetEvent.Set();
         }
     }
 }

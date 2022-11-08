@@ -3,6 +3,29 @@
 To use KNet classes the developer can write code in .NET using the same classes available in the official Apache Kafka package.
 If classes or methods are not available yet it is possible to use the approach synthetized in [What to do if an API was not yet implemented](API_extensibility.md)
 
+## Environment setup
+
+KNet accepts many command-line switches to customize its behavior. The full list is available at [Command line switch](commandlineswitch.md) page.
+
+### JVM identification
+
+One of the most important command-line switch is **JVMPath** and it is available in [JCOBridge switches](https://www.jcobridge.com/net-examples/command-line-options/): it can be used to set-up the location of the JVM library if JCOBridge is not able to identify a suitable JRE installation.
+If a developer is using KNet within its own product it is possible to override the **JVMPath** property with a snippet like the following one:
+
+```c#
+    class MyKNetCore : KNetCore
+    {
+        public override string JVMPath
+        {
+            get
+            {
+                string pathToJVM = "Set here the path to JVM library or use your own search method";
+                return pathToJVM;
+            }
+        }
+    }
+```
+
 ## Producer example
 
 Below the reader can found two different version of producer examples.
@@ -16,6 +39,7 @@ using MASES.KNet;
 using MASES.KNet.Clients.Producer;
 using Java.Util;
 using System;
+using System.Threading;
 
 namespace MASES.KNetTemplate.KNetProducer
 {
@@ -27,22 +51,39 @@ namespace MASES.KNetTemplate.KNetProducer
         static string serverToUse = theServer;
         static string topicToUse = theTopic;
 
+        static readonly ManualResetEvent resetEvent = new(false);
+
         static void Main(string[] args)
         {
-            var appArgs = KNetCore.ApplicationArgs;
+            KNetCore.CreateGlobalInstance();
+            var appArgs = KNetCore.FilteredArgs;
 
             if (appArgs.Length != 0)
             {
                 serverToUse = args[0];
             }
 
-			Properties props = new Properties();
-			props.Put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
-			props.Put(ProducerConfig.ACKS_CONFIG, "all");
-			props.Put(ProducerConfig.RETRIES_CONFIG, 0);
-			props.Put(ProducerConfig.LINGER_MS_CONFIG, 1);
-			props.Put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
-			props.Put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
+            /**** Direct mode ******
+            Properties props = new Properties();
+            props.Put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
+            props.Put(ProducerConfig.ACKS_CONFIG, "all");
+            props.Put(ProducerConfig.RETRIES_CONFIG, 0);
+            props.Put(ProducerConfig.LINGER_MS_CONFIG, 1);
+            props.Put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
+            props.Put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
+            ******/
+
+            Properties props = ProducerConfigBuilder.Create()
+                                                    .WithBootstrapServers(serverToUse)
+                                                    .WithAcks(ProducerConfig.Acks.All)
+                                                    .WithRetries(0)
+                                                    .WithLingerMs(1)
+                                                    .WithKeySerializerClass("org.apache.kafka.common.serialization.StringSerializer")
+                                                    .WithValueSerializerClass("org.apache.kafka.common.serialization.StringSerializer")
+                                                    .ToProperties();
+
+            Console.CancelKeyPress += Console_CancelKeyPress;
+            Console.WriteLine("Press Ctrl-C to exit");
 
 			using (KafkaProducer producer = new KafkaProducer(props))
 			{
@@ -56,6 +97,11 @@ namespace MASES.KNetTemplate.KNetProducer
 					i++;
 				}
 			}
+        }
+
+        private static void Console_CancelKeyPress(object sender, ConsoleCancelEventArgs e)
+        {
+            if (e.Cancel) resetEvent.Set();
         }
     }
 }
@@ -77,6 +123,7 @@ using MASES.KNet;
 using MASES.KNet.Clients.Producer;
 using Java.Util;
 using System;
+using System.Threading;
 
 namespace MASES.KNetTemplate.KNetProducer
 {
@@ -88,22 +135,39 @@ namespace MASES.KNetTemplate.KNetProducer
         static string serverToUse = theServer;
         static string topicToUse = theTopic;
 
+        static readonly ManualResetEvent resetEvent = new(false);
+
         static void Main(string[] args)
         {
-            var appArgs = KNetCore.ApplicationArgs;
+            KNetCore.CreateGlobalInstance();
+            var appArgs = KNetCore.FilteredArgs;
 
             if (appArgs.Length != 0)
             {
                 serverToUse = args[0];
             }
 
-			Properties props = new Properties();
-			props.Put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
-			props.Put(ProducerConfig.ACKS_CONFIG, "all");
-			props.Put(ProducerConfig.RETRIES_CONFIG, 0);
-			props.Put(ProducerConfig.LINGER_MS_CONFIG, 1);
-			props.Put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
-			props.Put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
+            /**** Direct mode ******
+            Properties props = new Properties();
+            props.Put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
+            props.Put(ProducerConfig.ACKS_CONFIG, "all");
+            props.Put(ProducerConfig.RETRIES_CONFIG, 0);
+            props.Put(ProducerConfig.LINGER_MS_CONFIG, 1);
+            props.Put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
+            props.Put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
+            ******/
+
+            Properties props = ProducerConfigBuilder.Create()
+                                                    .WithBootstrapServers(serverToUse)
+                                                    .WithAcks(ProducerConfig.Acks.All)
+                                                    .WithRetries(0)
+                                                    .WithLingerMs(1)
+                                                    .WithKeySerializerClass("org.apache.kafka.common.serialization.StringSerializer")
+                                                    .WithValueSerializerClass("org.apache.kafka.common.serialization.StringSerializer")
+                                                    .ToProperties();
+
+            Console.CancelKeyPress += Console_CancelKeyPress;
+            Console.WriteLine("Press Ctrl-C to exit");
 
 			using (KafkaProducer producer = new KafkaProducer(props))
 			{
@@ -124,6 +188,11 @@ namespace MASES.KNetTemplate.KNetProducer
 					}
 				}
 			}
+        }
+
+        private static void Console_CancelKeyPress(object sender, ConsoleCancelEventArgs e)
+        {
+            if (e.Cancel) resetEvent.Set();
         }
     }
 }
@@ -158,15 +227,19 @@ namespace MASES.KNetTemplate.KNetConsumer
         static string serverToUse = theServer;
         static string topicToUse = theTopic;
 
+        static readonly ManualResetEvent resetEvent = new(false);
+
         static void Main(string[] args)
         {
-            var appArgs = KNetCore.ApplicationArgs;
+            KNetCore.CreateGlobalInstance();
+            var appArgs = KNetCore.FilteredArgs;
 
             if (appArgs.Length != 0)
             {
                 serverToUse = args[0];
             }
 
+            /**** Direct mode ******
             Properties props = new Properties();
             props.Put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
             props.Put(ConsumerConfig.GROUP_ID_CONFIG, "test");
@@ -174,11 +247,24 @@ namespace MASES.KNetTemplate.KNetConsumer
             props.Put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG, "1000");
             props.Put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
             props.Put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
+            *******/
+
+            Properties props = ConsumerConfigBuilder.Create()
+                                                    .WithBootstrapServers(serverToUse)
+                                                    .WithGroupId("test")
+                                                    .WithEnableAutoCommit(true)
+                                                    .WithAutoCommitIntervalMs(1000)
+                                                    .WithKeyDeserializerClass("org.apache.kafka.common.serialization.StringDeserializer")
+                                                    .WithValueDeserializerClass("org.apache.kafka.common.serialization.StringDeserializer")
+                                                    .ToProperties();
+
+            Console.CancelKeyPress += Console_CancelKeyPress;
+            Console.WriteLine("Press Ctrl-C to exit");
 
             using (var consumer = new KafkaConsumer<string, string>(props))
             {
                 consumer.Subscribe(Collections.singleton(topicToUse));
-                while (true)
+                while (!resetEvent.WaitOne(0))
                 {
                     var records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);
                     foreach (var item in records)
@@ -187,6 +273,11 @@ namespace MASES.KNetTemplate.KNetConsumer
                     }
                 }
             }
+        }
+
+        private static void Console_CancelKeyPress(object sender, ConsoleCancelEventArgs e)
+        {
+            if (e.Cancel) resetEvent.Set();
         }
     }
 }

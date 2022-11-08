@@ -11,7 +11,7 @@
 - name: KNet JVM callbacks
   href: jvm_callbacks.md
 - name: KNet Connect SDK
-  href: connectSDK.md  
+  href: connectSDK.md
 - name: KNet usage
   href: usage.md
 - name: KNet CLI usage
@@ -22,3 +22,5 @@
   href: usageTemplates.md  
 - name: How to build from scratch
   href: howtobuild.md
+- name: Command-line switches
+  href: commandlineswitch.md

@@ -4,6 +4,7 @@ using MASES.KNet.Common.Serialization;
 using Java.Util;
 using System;
 using System.Text;
+using System.Threading;
 
 namespace MASES.KNetTemplate.KNetConsumer
 {
@@ -18,6 +19,8 @@ namespace MASES.KNetTemplate.KNetConsumer
         static string serverToUse = theServer;
         static string topicToUse = theTopic;
 
+        static readonly ManualResetEvent resetEvent = new(false);
+
         static void Main(string[] args)
         {
             KNetCore.CreateGlobalInstance();
@@ -30,6 +33,7 @@ namespace MASES.KNetTemplate.KNetConsumer
 
             Console.WriteLine("Server in use {0}", serverToUse);
 
+            /**** Direct mode ******
             Properties props = new Properties();
             props.Put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
             props.Put(ConsumerConfig.GROUP_ID_CONFIG, "test");
@@ -37,6 +41,16 @@ namespace MASES.KNetTemplate.KNetConsumer
             props.Put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG, "1000");
             props.Put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
             props.Put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
+            *******/
+
+            Properties props = ConsumerConfigBuilder.Create()
+                                                    .WithBootstrapServers(serverToUse)
+                                                    .WithGroupId("test")
+                                                    .WithEnableAutoCommit(true)
+                                                    .WithAutoCommitIntervalMs(1000)
+                                                    .WithKeyDeserializerClass("org.apache.kafka.common.serialization.StringDeserializer")
+                                                    .WithValueDeserializerClass("org.apache.kafka.common.serialization.StringDeserializer")
+                                                    .ToProperties();
 
             ConsumerRebalanceListener rebalanceListener = null;
             Deserializer<string> keyDeserializer = null;
@@ -72,12 +86,15 @@ namespace MASES.KNetTemplate.KNetConsumer
                         });
                 }
 
+                Console.CancelKeyPress += Console_CancelKeyPress;
+                Console.WriteLine("Press Ctrl-C to exit");
+
                 using (var consumer = useSerdes ? new KafkaConsumer<string, string>(props, keyDeserializer, valueDeserializer) : new KafkaConsumer<string, string>(props))
                 {
                     if (useCallback) consumer.Subscribe(Collections.Singleton(topicToUse), rebalanceListener);
                     else consumer.Subscribe(Collections.Singleton(topicToUse));
 
-                    while (true)
+                    while (!resetEvent.WaitOne(0))
                     {
                         var records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);
                         foreach (var item in records)
@@ -93,6 +110,11 @@ namespace MASES.KNetTemplate.KNetConsumer
                 if (keyDeserializer != null) keyDeserializer.Dispose();
                 if (valueDeserializer != null) valueDeserializer.Dispose();
             }
+        }
+
+        private static void Console_CancelKeyPress(object sender, ConsoleCancelEventArgs e)
+        {
+            if (e.Cancel) resetEvent.Set();
         }
     }
 }
