@@ -66,9 +66,15 @@ namespace MASES.KNetTest
             };
             threadConsume.Start();
 
-            Thread.Sleep(20000);
-            resetEvent.Set();
-            Thread.Sleep(2000);
+            Console.CancelKeyPress += Console_CancelKeyPress;
+            Console.WriteLine("Press Ctrl-C to exit");
+            resetEvent.WaitOne();
+            Thread.Sleep(2000); // wait the threads exit
+        }
+
+        private static void Console_CancelKeyPress(object sender, ConsoleCancelEventArgs e)
+        {
+            if (e.Cancel) resetEvent.Set();
         }
 
         static void CreateTopic()
@@ -233,7 +239,7 @@ namespace MASES.KNetTest
                 Deserializer<string> keyDeserializer = null;
                 Deserializer<string> valueDeserializer = null;
                 ConsumerRebalanceListener rebalanceListener = null;
-                KafkaConsumer<string, string> consumer = null; ;
+                KafkaConsumer<string, string> consumer = null;
                 if (useSerdes)
                 {
                     keyDeserializer = new Deserializer<string>(deserializeFun: (topic, data) =>
