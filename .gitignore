@@ -23,6 +23,7 @@ launchSettings.json
 /**/TEMP/
 /**/packages/
 /**/bin/
+/**/binCLI/
 /**/MASES.KNetPS/
 /**/obj/
 /**/jars/
