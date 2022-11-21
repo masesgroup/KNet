@@ -18,7 +18,6 @@
 
 using MASES.JNetPSCore.Cmdlet;
 using MASES.KNet;
-using MASES.KNetPS;
 using System.Management.Automation;
 
 namespace MASES.KNetPS.Cmdlet

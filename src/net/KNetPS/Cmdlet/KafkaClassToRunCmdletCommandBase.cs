@@ -17,6 +17,7 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
+using MASES.JNetPSCore;
 using MASES.KNet;
 using MASES.KNetPS;
 using System;
@@ -26,8 +27,8 @@ using System.Reflection;
 
 namespace MASES.KNetPS.Cmdlet
 {
-    public class KafkaClassToRunCmdletCommandBase<T> : StartKNetPSCmdletCommandBase<T>
-        where T : KafkaClassToRunCmdletCommandBase<T>
+    public class KafkaClassToRunCmdletCommandBase<TCmdlet> : StartKNetPSCmdletCommandBase<TCmdlet>
+        where TCmdlet : KafkaClassToRunCmdletCommandBase<TCmdlet>
     {
         [Parameter(
             ValueFromPipeline = true,
@@ -38,10 +39,8 @@ namespace MASES.KNetPS.Cmdlet
         protected override void OnBeforeCreateGlobalInstance()
         {
             base.OnBeforeCreateGlobalInstance();
-            var t = typeof(T);
-            if (!t.IsDefined(typeof(CmdletAttribute), false)) throw new PSInvalidOperationException("Missing Cmdlet attribute");
-            var attribute = t.GetCustomAttributes(typeof(CmdletAttribute), false).First() as CmdletAttribute;
-            KNetPSHelper<KNetCore>.SetClassToRun(attribute.NounName);
+            var nounName = JNetPSHelper.NounName<TCmdlet>();
+            KNetPSHelper<KNetCore>.SetClassToRun(nounName);
         }
 
         protected override void OnAfterCreateGlobalInstance()

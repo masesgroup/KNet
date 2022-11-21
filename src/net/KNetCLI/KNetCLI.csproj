@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 	<Import Project="..\Common\Common.props" />
 	<PropertyGroup>
-		<OutputPath>..\..\..\bin\</OutputPath>
+		<OutputPath>..\..\..\binCLI\</OutputPath>
 		<PackageType>DotnetTool</PackageType>
 		<OutputType>Exe</OutputType>
 		<AssemblyName>MASES.KNetCLI</AssemblyName>
@@ -14,6 +14,24 @@
 		<PackageId>MASES.KNetCLI</PackageId>
 		<PackageReadmeFile>usageCLI.md</PackageReadmeFile>
 	</PropertyGroup>
+
+	<ItemGroup Condition="True">
+		<knetcli_jars Include="$(ProjectDir)\..\..\..\jars\*.*" />
+		<knetcli_config Include="$(ProjectDir)\..\..\config\*.*" />
+		<knetcli_kraft Include="$(ProjectDir)\..\..\config\kraft\*.*" />
+	</ItemGroup>
+
+	<Target Name="CopyCustomContent" AfterTargets="AfterBuild">
+		<Copy SourceFiles="@(knetcli_jars)" DestinationFolder="$(OutDir)\jars" />
+		<Copy SourceFiles="@(knetcli_config)" DestinationFolder="$(OutDir)\config" />
+		<Copy SourceFiles="@(knetcli_kraft)" DestinationFolder="$(OutDir)\config\kraft" />
+	</Target>
+	<Target Name="CopyCustomContentOnPublish" AfterTargets="Publish">
+		<Copy SourceFiles="@(knetcli_jars)" DestinationFolder="$(OutDir)\jars" />
+		<Copy SourceFiles="@(knetcli_config)" DestinationFolder="$(OutDir)\config" />
+		<Copy SourceFiles="@(knetcli_kraft)" DestinationFolder="$(OutDir)\config\kraft" />
+	</Target>
+	
 	<ItemGroup>
 		<None Include="..\Documentation\articles\usageCLI.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
