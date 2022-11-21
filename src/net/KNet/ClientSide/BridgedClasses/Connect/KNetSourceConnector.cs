@@ -16,7 +16,6 @@
 *  Refer to LICENSE for more information.
 */
 
-using Java.Util;
 using MASES.KNet.Connect.Source;
 using System;
 
@@ -44,9 +43,9 @@ namespace MASES.KNet.Connect
             return ExactlyOnceSupport();
         }
         /// <summary>
-        /// Implement the method to execute the exactlyOnceSupport action
+        /// Implement the method to return the <see cref="KNet.Connect.Source.ExactlyOnceSupport"/> value
         /// </summary>
-        public abstract ExactlyOnceSupport ExactlyOnceSupport();
+        public virtual ExactlyOnceSupport ExactlyOnceSupport() => KNet.Connect.Source.ExactlyOnceSupport.UNSUPPORTED;
 
         /// <summary>
         /// Public method used from Java to trigger <see cref="CanDefineTransactionBoundaries"/>
@@ -56,9 +55,9 @@ namespace MASES.KNet.Connect
             return CanDefineTransactionBoundaries();
         }
         /// <summary>
-        /// Implement the method to execute the canDefineTransactionBoundaries action
+        /// Implement the method to return the <see cref="ConnectorTransactionBoundaries"/> value
         /// </summary>
-        public abstract ConnectorTransactionBoundaries CanDefineTransactionBoundaries();
+        public virtual ConnectorTransactionBoundaries CanDefineTransactionBoundaries() => ConnectorTransactionBoundaries.UNSUPPORTED;
 
         /// <summary>
         /// Set the <see cref="ReflectedConnectorClassName"/> of the connector to a fixed value

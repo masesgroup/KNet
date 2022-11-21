@@ -18,8 +18,10 @@
 
 using Java.Util;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
+using MASES.JNet.Extensions;
 using MASES.KNet.Connect.Connector;
 using System;
+using System.Collections.Generic;
 
 namespace MASES.KNet.Connect
 {
@@ -29,6 +31,10 @@ namespace MASES.KNet.Connect
     public interface IKNetTask : ITask
     {
         /// <summary>
+        /// The properties retrieved from <see cref="KNetTask.StartInternal"/>
+        /// </summary>
+        IReadOnlyDictionary<string, string> Properties { get; }
+        /// <summary>
         /// The associated <see cref="IConnector"/>
         /// </summary>
         IKNetConnector Connector { get; }
@@ -36,6 +42,11 @@ namespace MASES.KNet.Connect
         /// The id received during initialization
         /// </summary>
         long TaskId { get; }
+        /// <summary>
+        /// Implement the method to execute the start action
+        /// </summary>
+        /// <param name="props">The set of properties returned from Apache Kafka Connect framework: the <see cref="IReadOnlyDictionary{string, string}"/> contains the info from <see cref="IKNetConnector.TaskConfigs(int, Map{string, string})"/>.</param>
+        void Start(IReadOnlyDictionary<string, string> props);
     }
     /// <summary>
     /// The generic class which is the base of both source or sink task
@@ -90,6 +101,9 @@ namespace MASES.KNet.Connect
         {
             return (reflectedTask != null) ? reflectedTask.Invoke<T>("getContext") : throw new InvalidOperationException($"{ReflectedTaskClassName} was not registered in global JVM");
         }
+
+        /// <inheritdoc cref="IKNetTask.Properties"/>
+        public IReadOnlyDictionary<string, string> Properties { get; private set; }
         /// <inheritdoc cref="IKNetTask.Connector"/>
         public IKNetConnector Connector => connector;
         /// <inheritdoc cref="IKNetTask.TaskId"/>
@@ -103,14 +117,15 @@ namespace MASES.KNet.Connect
         /// </summary>
         public void StartInternal()
         {
-            Map<string, string> props = DataToExchange<Map<string, string>>();
-            Start(props);
+            Map<string, string> props = DataToExchange<Map<string, string>>(); 
+            Properties = props.ToDictiony();
+            Start(Properties);
         }
-        /// <summary>
-        /// Implement the method to execute the start action
-        /// </summary>
-        /// <param name="props">The set of properties returned from Apache Kafka Connect framework: the <see cref="Map{string, string}"/> contains the info from <see cref="IKNetConnector.TaskConfigs(int, Map{string, string})"/>.</param>
-        public abstract void Start(Map<string, string> props);
+
+        public void Start(Map<string, string> props) => throw new NotImplementedException("Local version with a different signature");
+
+        /// <inheritdoc cref="IKNetTask.Start(IReadOnlyDictionary{string, string})"/>
+        public abstract void Start(IReadOnlyDictionary<string, string> props);
         /// <summary>
         /// Public method used from Java to trigger <see cref="Stop"/>
         /// </summary>

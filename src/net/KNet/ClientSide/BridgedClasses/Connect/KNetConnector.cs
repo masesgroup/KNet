@@ -19,10 +19,12 @@
 using Java.Lang;
 using Java.Util;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
+using MASES.JNet.Extensions;
 using MASES.KNet.Common.Config;
 using MASES.KNet.Connect.Connector;
 using System;
 using System.Collections.Concurrent;
+using System.Collections.Generic;
 
 namespace MASES.KNet.Connect
 {
@@ -31,6 +33,10 @@ namespace MASES.KNet.Connect
     /// </summary>
     public interface IKNetConnector : IConnector
     {
+        /// <summary>
+        /// The properties retrieved from <see cref="KNetConnector.StartInternal"/>
+        /// </summary>
+        IReadOnlyDictionary<string, string> Properties { get; }
         /// <summary>
         /// Allocates a task object based on <see cref="KNetTask"/>
         /// </summary>
@@ -46,11 +52,16 @@ namespace MASES.KNet.Connect
         /// </summary>
         Type TaskClassType { get; }
         /// <summary>
+        /// Implement the method to execute the start action
+        /// </summary>
+        /// <param name="props">The set of properties returned from Apache Kafka Connect framework: the <see cref="IReadOnlyDictionary{string, string}"/> contains the same info from configuration file.</param>
+        void Start(IReadOnlyDictionary<string, string> props);
+        /// <summary>
         /// Invoked during allocation of tasks from Apache Kafka Connect
         /// </summary>
         /// <param name="index">The actual index</param>
-        /// <param name="config">The <see cref="Map{string, string}"/> to be filled in with properties for the task: the same will be received from <see cref="KNetTask.Start(Map{string, string})"/></param>
-        void TaskConfigs(int index, Map<string, string> config);
+        /// <param name="config">The <see cref="IDictionary{string, string}"/> to be filled in with properties for the task: the same will be received from <see cref="KNetTask.Start(IReadOnlyDictionary{string, string})"/></param>
+        void TaskConfigs(int index, IDictionary<string, string> config);
     }
     /// <summary>
     /// The generic class which is the base of both source or sink connectors
@@ -125,6 +136,9 @@ namespace MASES.KNet.Connect
             return ExecuteOnConnector<T>("getContext");
         }
 
+        /// <inheritdoc cref="IKNetConnector.Properties"/>
+        public IReadOnlyDictionary<string, string> Properties { get; private set; }
+
         /// <inheritdoc cref="IKNetConnector.AllocateTask(long)"/>
         public object AllocateTask(long taskId)
         {
@@ -146,20 +160,21 @@ namespace MASES.KNet.Connect
 
         public void Initialize(ConnectorContext ctx) => throw new NotImplementedException("Invoked in Java before any initialization.");
 
-        public void Initialize(ConnectorContext ctx, List<Map<string, string>> taskConfigs) => throw new NotImplementedException("Invoked in Java before any initialization.");
+        public void Initialize(ConnectorContext ctx, Java.Util.List<Map<string, string>> taskConfigs) => throw new NotImplementedException("Invoked in Java before any initialization.");
         /// <summary>
         /// Public method used from Java to trigger <see cref="Start(Map{string, string})"/>
         /// </summary>
         public void StartInternal()
         {
             Map<string, string> props = DataToExchange<Map<string, string>>();
-            Start(props);
+            Properties = props.ToDictiony();
+            Start(Properties);
         }
-        /// <summary>
-        /// Implement the method to execute the start action
-        /// </summary>
-        /// <param name="props">The set of properties returned from Apache Kafka Connect framework: the <see cref="Map{string, string}"/> contains the same info from configuration file.</param>
-        public abstract void Start(Map<string, string> props);
+
+        public void Start(Map<string, string> props) => throw new NotImplementedException("Local version with a different signature");
+
+        /// <inheritdoc cref="IKNetConnector.Start(IReadOnlyDictionary{string, string})"/>
+        public abstract void Start(IReadOnlyDictionary<string, string> props);
 
         public void Reconfigure(Map<string, string> props) => throw new NotImplementedException("Invoked in Java before any initialization.");
 
@@ -170,12 +185,18 @@ namespace MASES.KNet.Connect
         public void TaskConfigsInternal(int index)
         {
             Map<string, string> props = DataToExchange<Map<string, string>>();
-            TaskConfigs(index, props);
+            System.Collections.Generic.Dictionary<string, string> dict = new System.Collections.Generic.Dictionary<string, string>(props.ToDictiony());
+            TaskConfigs(index, dict);
+            props.Clear();
+            foreach (var item in dict)
+            {
+                props.Put(item.Key, item.Value);
+            }
         }
-        /// <inheritdoc cref="IKNetConnector.TaskConfigs(int, Map{string, string})"/>
-        public abstract void TaskConfigs(int index, Map<string, string> config);
+        /// <inheritdoc cref="IKNetConnector.TaskConfigs(int, IDictionary{string, string})"/>
+        public abstract void TaskConfigs(int index, IDictionary<string, string> config);
 
-        public List<Map<string, string>> TaskConfigs(int maxTasks) => throw new NotImplementedException("Invoked using the other signature.");
+        public Java.Util.List<Map<string, string>> TaskConfigs(int maxTasks) => throw new NotImplementedException("Invoked using the other signature.");
         /// <summary>
         /// Public method used from Java to trigger <see cref="Stop"/>
         /// </summary>

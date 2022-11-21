@@ -19,12 +19,13 @@
 using Java.Util;
 using MASES.KNet.Connect;
 using MASES.KNet.Connect.Sink;
+using System.Collections.Generic;
 
 namespace MASES.KNetConnectTest
 {
     public class KNetSinkTestConnector : KNetSinkConnector<KNetSinkTestConnector, KNetSinkTestTask>
     {
-        public override void Start(Map<string, string> props)
+        public override void Start(IReadOnlyDictionary<string, string> props)
         {
 
         }
@@ -34,7 +35,7 @@ namespace MASES.KNetConnectTest
 
         }
 
-        public override void TaskConfigs(int index, Map<string, string> config)
+        public override void TaskConfigs(int index, IDictionary<string, string> config)
         {
 
         }
@@ -42,12 +43,12 @@ namespace MASES.KNetConnectTest
 
     public class KNetSinkTestTask : KNetSinkTask<KNetSinkTestTask>
     {
-        public override void Put(Collection<SinkRecord> collection)
+        public override void Put(IEnumerable<SinkRecord> collection)
         {
 
         }
 
-        public override void Start(Map<string, string> props)
+        public override void Start(IReadOnlyDictionary<string, string> props)
         {
 
         }
