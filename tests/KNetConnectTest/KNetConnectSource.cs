@@ -16,15 +16,15 @@
 *  Refer to LICENSE for more information.
 */
 
-using Java.Util;
 using MASES.KNet.Connect;
 using MASES.KNet.Connect.Source;
+using System.Collections.Generic;
 
 namespace MASES.KNetConnectTest
 {
     public class KNetSourceTestConnector : KNetSourceConnector<KNetSourceTestConnector, KNetSourceTestTask>
     {
-        public override void Start(Map<string, string> props)
+        public override void Start(IReadOnlyDictionary<string, string> props)
         {
 
         }
@@ -34,32 +34,22 @@ namespace MASES.KNetConnectTest
 
         }
 
-        public override void TaskConfigs(int index, Map<string, string> config)
+        public override void TaskConfigs(int index, IDictionary<string, string> config)
         {
 
-        }
-
-        public override ExactlyOnceSupport ExactlyOnceSupport()
-        {
-            return KNet.Connect.Source.ExactlyOnceSupport.UNSUPPORTED;
-        }
-
-        public override ConnectorTransactionBoundaries CanDefineTransactionBoundaries()
-        {
-            return ConnectorTransactionBoundaries.UNSUPPORTED;
         }
     }
 
     public class KNetSourceTestTask : KNetSourceTask<KNetSourceTestTask>
     {
-        public override List<SourceRecord> Poll()
+        public override IList<SourceRecord> Poll()
         {
-            ArrayList<SourceRecord> records = new();
+            System.Collections.Generic.List<SourceRecord> records = new();
 
             return records;
         }
 
-        public override void Start(Map<string, string> props)
+        public override void Start(IReadOnlyDictionary<string, string> props)
         {
 
         }
