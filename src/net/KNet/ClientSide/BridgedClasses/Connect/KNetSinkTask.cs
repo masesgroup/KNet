@@ -17,7 +17,9 @@
 */
 
 using Java.Util;
+using MASES.JNet.Extensions;
 using MASES.KNet.Connect.Sink;
+using System.Collections.Generic;
 
 namespace MASES.KNet.Connect
 {
@@ -42,12 +44,13 @@ namespace MASES.KNet.Connect
         public void PutInternal()
         {
             Collection<SinkRecord> collection = DataToExchange<Collection<SinkRecord>>();
-            Put(collection);
+            var list = collection.ToList();
+            Put(list);
         }
         /// <summary>
         /// Implement the method to execute the Put action
         /// </summary>
         /// <param name="collection">The set of <see cref="SinkRecord"/> from Apache Kafka Connect framework</param>
-        public abstract void Put(Collection<SinkRecord> collection);
+        public abstract void Put(IEnumerable<SinkRecord> collection);
     }
 }

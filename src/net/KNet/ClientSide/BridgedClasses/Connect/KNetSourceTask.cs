@@ -17,7 +17,9 @@
 */
 
 using Java.Util;
+using MASES.JNet.Extensions;
 using MASES.KNet.Connect.Source;
+using System.Collections.Generic;
 
 namespace MASES.KNet.Connect
 {
@@ -46,12 +48,12 @@ namespace MASES.KNet.Connect
         public void PollInternal()
         {
             var result = Poll();
-            DataToExchange(result);
+            DataToExchange(result.ToJCollection());
         }
         /// <summary>
         /// Implement the method to execute the Poll action
         /// </summary>
         /// <returns>The list of <see cref="SourceRecord"/> to return to Apache Kafka Connect framework</returns>
-        public abstract List<SourceRecord> Poll();
+        public abstract IList<SourceRecord> Poll();
     }
 }
