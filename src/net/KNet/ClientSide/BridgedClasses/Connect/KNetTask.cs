@@ -17,6 +17,7 @@
 */
 
 using Java.Util;
+using MASES.JCOBridge.C2JBridge;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
 using MASES.JNet.Extensions;
 using MASES.KNet.Connect.Connector;
@@ -51,7 +52,7 @@ namespace MASES.KNet.Connect
     /// <summary>
     /// The generic class which is the base of both source or sink task
     /// </summary>
-    public abstract class KNetTask : IKNetTask
+    public abstract class KNetTask : IKNetTask, IKNetConnectLogging
     {
         IKNetConnector connector;
         long taskId;
@@ -66,12 +67,35 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// An helper function to read the data from Java side
         /// </summary>
+        /// <param name="method">Method name to be invoked</param>
+        /// <param name="args">Arguments of the <paramref name="method"/> to be invoked</param>
+        /// <exception cref="InvalidOperationException"> </exception>
+        protected void ExecuteOnTask(string method, params object[] args)
+        {
+            if (reflectedTask != null) reflectedTask.Invoke(method, args);
+            else throw new InvalidOperationException($"{ReflectedTaskClassName} was not registered in global JVM");
+        }
+        /// <summary>
+        /// An helper function to read the data from Java side
+        /// </summary>
+        /// <typeparam name="T">The expected return <see cref="Type"/></typeparam>
+        /// <param name="method">Method name to be invoked</param>
+        /// <param name="args">Arguments of the <paramref name="method"/> to be invoked</param>
+        /// <returns>The <typeparamref name="T"/></returns>
+        /// <exception cref="InvalidOperationException"> </exception>
+        protected T ExecuteOnTask<T>(string method, params object[] args)
+        {
+            return (reflectedTask != null) ? reflectedTask.Invoke<T>(method, args) : throw new InvalidOperationException($"{ReflectedTaskClassName} was not registered in global JVM");
+        }
+        /// <summary>
+        /// An helper function to read the data from Java side
+        /// </summary>
         /// <typeparam name="T">The expected return <see cref="Type"/></typeparam>
         /// <returns>The <typeparamref name="T"/></returns>
         /// <exception cref="InvalidOperationException"> </exception>
         protected T DataToExchange<T>()
         {
-            return (reflectedTask != null) ? reflectedTask.Invoke<T>("getDataToExchange") : throw new InvalidOperationException($"{ReflectedTaskClassName} was not registered in global JVM");
+            return ExecuteOnTask<T>("getDataToExchange");
         }
         /// <summary>
         /// An helper function to read the data from Java side
@@ -99,7 +123,7 @@ namespace MASES.KNet.Connect
         /// <exception cref="InvalidOperationException"> </exception>
         protected T Context<T>()
         {
-            return (reflectedTask != null) ? reflectedTask.Invoke<T>("getContext") : throw new InvalidOperationException($"{ReflectedTaskClassName} was not registered in global JVM");
+            return ExecuteOnTask<T>("getContext");
         }
 
         /// <inheritdoc cref="IKNetTask.Properties"/>
@@ -148,6 +172,39 @@ namespace MASES.KNet.Connect
         /// Implement the method to execute the version action
         /// </summary>
         public abstract string Version();
+
+        #region IKNetConnectLogging
+
+        public bool IsTraceEnabled => ExecuteOnTask<bool>("isTraceEnabled");
+
+        public bool IsDebugEnabled => ExecuteOnTask<bool>("isDebugEnabled");
+
+        public bool IsInfoEnabled => ExecuteOnTask<bool>("isInfoEnabled");
+
+        public bool IsWarnEnabled => ExecuteOnTask<bool>("isWarnEnabled");
+
+        public bool IsErrorEnabled => ExecuteOnTask<bool>("isErrorEnabled");
+
+        public void LogTrace(string var1) => ExecuteOnTask("trace", var1);
+
+        public void LogTrace(string var1, JVMBridgeException var2) => ExecuteOnTask("trace", var1, var2.Instance);
+
+        public void LogDebug(string var1) => ExecuteOnTask("debug", var1);
+
+        public void LogDebug(string var1, JVMBridgeException var2) => ExecuteOnTask("debug", var1, var2.Instance);
+
+        public void LogInfo(string var1) => ExecuteOnTask("info", var1);
+
+        public void LogInfo(string var1, JVMBridgeException var2) => ExecuteOnTask("info", var1, var2.Instance);
+
+        public void LogWarn(string var1) => ExecuteOnTask("warn", var1);
+
+        public void LogWarn(string var1, JVMBridgeException var2) => ExecuteOnTask("warn", var1, var2.Instance);
+
+        public void LogError(string var1) => ExecuteOnTask("error", var1);
+
+        public void LogError(string var1, JVMBridgeException var2) => ExecuteOnTask("error", var1, var2.Instance);
+        #endregion
     }
     /// <summary>
     /// The base task class which is the base of both source or sink task and receives information about implementing class with <typeparamref name="TTask"/> 
