@@ -88,6 +88,7 @@
     <div><a class="xref" href="MASES.KNet.Connect.IKNetConnector.html">IKNetConnector</a></div>
     <div><a class="xref" href="MASES.KNet.Connect.Connector.IConnector.html">IConnector</a></div>
     <div><a class="xref" href="MASES.KNet.Connect.Components.IVersion.html">IVersion</a></div>
+    <div><a class="xref" href="MASES.KNet.Connect.IKNetConnectLogging.html">IKNetConnectLogging</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -105,6 +106,9 @@
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_taskDictionary">KNetConnector.taskDictionary</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_ExecuteOnConnector_System_String_System_Object___">KNetConnector.ExecuteOnConnector(String, Object[])</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_ExecuteOnConnector__1_System_String_System_Object___">KNetConnector.ExecuteOnConnector&lt;T&gt;(String, Object[])</a>
@@ -167,6 +171,51 @@
       <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Version">KNetConnector.Version()</a>
     </div>
     <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_IsTraceEnabled">KNetConnector.IsTraceEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_IsDebugEnabled">KNetConnector.IsDebugEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_IsInfoEnabled">KNetConnector.IsInfoEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_IsWarnEnabled">KNetConnector.IsWarnEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_IsErrorEnabled">KNetConnector.IsErrorEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_LogTrace_System_String_">KNetConnector.LogTrace(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_LogTrace_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_">KNetConnector.LogTrace(String, JVMBridgeException)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_LogDebug_System_String_">KNetConnector.LogDebug(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_LogDebug_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_">KNetConnector.LogDebug(String, JVMBridgeException)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_LogInfo_System_String_">KNetConnector.LogInfo(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_LogInfo_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_">KNetConnector.LogInfo(String, JVMBridgeException)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_LogWarn_System_String_">KNetConnector.LogWarn(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_LogWarn_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_">KNetConnector.LogWarn(String, JVMBridgeException)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_LogError_System_String_">KNetConnector.LogError(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_LogError_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_">KNetConnector.LogError(String, JVMBridgeException)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">Object.Equals(Object)</a>
     </div>
     <div>
@@ -192,7 +241,7 @@
   <h6><strong>Assembly</strong>: knetConnectSink.dll</h6>
   <h5 id="MASES_KNetTemplate_KNetConnect_KNetConnectSink_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class KNetConnectSink : KNetSinkConnector&lt;KNetConnectSink, KNetConnectSinkTask&gt;, IKNetConnector, IConnector, IVersion</code></pre>
+    <pre><code class="lang-csharp hljs">public class KNetConnectSink : KNetSinkConnector&lt;KNetConnectSink, KNetConnectSinkTask&gt;, IKNetConnector, IConnector, IVersion, IKNetConnectLogging</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
@@ -295,6 +344,9 @@
   </div>
   <div>
       <a class="xref" href="MASES.KNet.Connect.Components.IVersion.html">IVersion</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Connect.IKNetConnectLogging.html">IKNetConnectLogging</a>
   </div>
 </article>
           </div>
