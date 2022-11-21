@@ -18,6 +18,7 @@
 
 using Java.Lang;
 using Java.Util;
+using MASES.JCOBridge.C2JBridge;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
 using MASES.JNet.Extensions;
 using MASES.KNet.Common.Config;
@@ -66,7 +67,7 @@ namespace MASES.KNet.Connect
     /// <summary>
     /// The generic class which is the base of both source or sink connectors
     /// </summary>
-    public abstract class KNetConnector : IKNetConnector
+    public abstract class KNetConnector : IKNetConnector, IKNetConnectLogging
     {
         /// <summary>
         /// The set of allocated <see cref="KNetTask"/> with their associated identifiers
@@ -80,6 +81,19 @@ namespace MASES.KNet.Connect
         public KNetConnector()
         {
             KNetCore.GlobalInstance.RegisterCLRGlobal(ReflectedConnectorClassName, this);
+        }
+
+        /// <summary>
+        /// An helper function to read the data from Java side
+        /// </summary>
+        /// <param name="method">Method name to be invoked</param>
+        /// <param name="args">Arguments of the <paramref name="method"/> to be invoked</param>
+        /// <exception cref="InvalidOperationException"> </exception>
+        protected void ExecuteOnConnector(string method, params object[] args)
+        {
+            reflectedConnector ??= KNetCore.GlobalInstance.GetJVMGlobal(ReflectedConnectorClassName);
+            if (reflectedConnector != null) reflectedConnector.Invoke(method, args);
+            else throw new InvalidOperationException($"{ReflectedConnectorClassName} was not registered in global JVM");
         }
 
         /// <summary>
@@ -114,6 +128,7 @@ namespace MASES.KNet.Connect
         /// <exception cref="InvalidOperationException"> </exception>
         protected void DataToExchange(object data)
         {
+            reflectedConnector ??= KNetCore.GlobalInstance.GetJVMGlobal(ReflectedConnectorClassName);
             if (reflectedConnector != null)
             {
                 JCOBridge.C2JBridge.IJVMBridgeBase jvmBBD = data as JCOBridge.C2JBridge.IJVMBridgeBase;
@@ -214,6 +229,39 @@ namespace MASES.KNet.Connect
         public ConfigDef Config() => throw new NotImplementedException("Invoked in Java before any initialization.");
 
         public string Version() => throw new NotImplementedException("Invoked in Java before any initialization.");
+
+        #region IKNetConnectLogging
+
+        public bool IsTraceEnabled => ExecuteOnConnector<bool>("isTraceEnabled");
+
+        public bool IsDebugEnabled => ExecuteOnConnector<bool>("isDebugEnabled");
+
+        public bool IsInfoEnabled => ExecuteOnConnector<bool>("isInfoEnabled");
+
+        public bool IsWarnEnabled => ExecuteOnConnector<bool>("isWarnEnabled");
+
+        public bool IsErrorEnabled => ExecuteOnConnector<bool>("isErrorEnabled");
+
+        public void LogTrace(string var1) => ExecuteOnConnector("trace", var1);
+
+        public void LogTrace(string var1, JVMBridgeException var2) => ExecuteOnConnector("trace", var1, var2.Instance);
+
+        public void LogDebug(string var1) => ExecuteOnConnector("debug", var1);
+
+        public void LogDebug(string var1, JVMBridgeException var2) => ExecuteOnConnector("debug", var1, var2.Instance);
+
+        public void LogInfo(string var1) => ExecuteOnConnector("info", var1);
+
+        public void LogInfo(string var1, JVMBridgeException var2) => ExecuteOnConnector("info", var1, var2.Instance);
+
+        public void LogWarn(string var1) => ExecuteOnConnector("warn", var1);
+
+        public void LogWarn(string var1, JVMBridgeException var2) => ExecuteOnConnector("warn", var1, var2.Instance);
+
+        public void LogError(string var1) => ExecuteOnConnector("error", var1);
+
+        public void LogError(string var1, JVMBridgeException var2) => ExecuteOnConnector("error", var1, var2.Instance);
+        #endregion
     }
     /// <summary>
     /// The base connector class which is the base of both source or sink connectors and receives information about implementing class with <typeparamref name="TConnector"/> 
