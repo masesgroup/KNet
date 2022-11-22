@@ -62,7 +62,7 @@ namespace MASES.KNet.Connect
         {
             this.connector = connector;
             this.taskId = taskId;
-            reflectedTask = KNetCore.GlobalInstance.GetJVMGlobal($"{ReflectedTaskClassName}_{taskId}");
+            reflectedTask = KNetConnectProxy.GetJVMGlobal($"{ReflectedTaskClassName}_{taskId}");
         }
         /// <summary>
         /// An helper function to read the data from Java side

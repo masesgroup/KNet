@@ -16,12 +16,14 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.JNetPSCore.Cmdlet;
-using MASES.KNet;
+using MASES.KNetCLI;
 
-namespace MASES.KNetPS.Cmdlet
+namespace MASES.KNetPS
 {
-    public abstract class KNetPSCmdlet : JNetPSCmdlet<KNetPSCore>
+    /// <summary>
+    /// Directly usable implementation of <see cref="KNetCLICore{T}"/>
+    /// </summary>
+    public class KNetPSCore : KNetCLICore<KNetPSCore>
     {
     }
 }

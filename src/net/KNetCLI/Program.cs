@@ -31,16 +31,16 @@ namespace MASES.KNetCLI
         {
             try
             {
-                KNetCore.CreateGlobalInstance();
+                KNetCLICore.CreateGlobalInstance();
 
-                if (KNetCore.MainClassToRun == null) { ShowHelp(); return; }
+                if (KNetCLICore.MainClassToRun == null) { ShowHelp(); return; }
 
                 try
                 {
-                    var core = Activator.CreateInstance(KNetCore.MainClassToRun) as JVMBridgeBase;
+                    var core = Activator.CreateInstance(KNetCLICore.MainClassToRun) as JVMBridgeBase;
                     if (core == null) throw new ArgumentException("Requested class is not a child of JVMBridgeBase.");
 
-                    core.Execute(KNetCore.FilteredArgs);
+                    core.Execute(KNetCLICore.FilteredArgs);
                 }
                 catch (TargetInvocationException tie)
                 {
@@ -89,7 +89,7 @@ namespace MASES.KNetCLI
                 Console.WriteLine("Error: {0}", errorString);
             }
             SortedDictionary<string, Type> implementedClasses = new();
-            foreach (var item in typeof(KNetCore).Assembly.ExportedTypes)
+            foreach (var item in typeof(KNetCLICore).Assembly.ExportedTypes)
             {
                 var baseType = item.GetTypeInfo().BaseType;
                 if (baseType != null && baseType.IsGenericType && baseType.GetGenericTypeDefinition() == typeof(JVMBridgeMain<>))

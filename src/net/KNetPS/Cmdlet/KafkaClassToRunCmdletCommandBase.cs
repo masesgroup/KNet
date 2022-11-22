@@ -40,7 +40,7 @@ namespace MASES.KNetPS.Cmdlet
         {
             base.OnBeforeCreateGlobalInstance();
             var nounName = JNetPSHelper.NounName<TCmdlet>();
-            KNetPSHelper<KNetCore>.SetClassToRun(nounName);
+            KNetPSHelper<KNetPSCore>.SetClassToRun(nounName);
         }
 
         protected override void OnAfterCreateGlobalInstance()
@@ -53,7 +53,7 @@ namespace MASES.KNetPS.Cmdlet
 
             try
             {
-                var core = Activator.CreateInstance(KNetCore.MainClassToRun) as JVMBridgeBase;
+                var core = Activator.CreateInstance(KNetPSCore.MainClassToRun) as JVMBridgeBase;
                 if (core == null) throw new ArgumentException("Requested class is not a child of JVMBridgeBase.");
 
                 core.Execute(arguments);

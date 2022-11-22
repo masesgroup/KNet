@@ -16,12 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.JNetPSCore.Cmdlet;
-using MASES.KNet;
-
-namespace MASES.KNetPS.Cmdlet
+namespace MASES.KNet.TestCommon
 {
-    public abstract class KNetPSCmdlet : JNetPSCmdlet<KNetPSCore>
+    internal class SharedKNetCore : KNetCore<SharedKNetCore>
     {
     }
 }

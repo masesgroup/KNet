@@ -24,6 +24,7 @@ using MASES.KNet.Common.Serialization;
 using MASES.KNet.Streams;
 using MASES.KNet.Streams.Errors;
 using MASES.KNet.Streams.KStream;
+using MASES.KNet.TestCommon;
 using System;
 using System.Text.RegularExpressions;
 using System.Threading;
@@ -47,8 +48,8 @@ namespace MASES.KNetTest
 
         static void Main(string[] args)
         {
-            KNetCore.CreateGlobalInstance();
-            var appArgs = KNetCore.FilteredArgs;
+            SharedKNetCore.CreateGlobalInstance();
+            var appArgs = SharedKNetCore.FilteredArgs;
 
             if (appArgs.Length != 0)
             {

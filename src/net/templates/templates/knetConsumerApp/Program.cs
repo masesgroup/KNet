@@ -8,6 +8,8 @@ using System.Threading;
 
 namespace MASES.KNetTemplate.KNetConsumer
 {
+    class LocalKNetCore : KNetCore<LocalKNetCore> { }
+
     class Program
     {
         const bool useSerdes = true;
@@ -23,8 +25,8 @@ namespace MASES.KNetTemplate.KNetConsumer
 
         static void Main(string[] args)
         {
-            KNetCore.CreateGlobalInstance();
-            var appArgs = KNetCore.FilteredArgs;
+            LocalKNetCore.CreateGlobalInstance();
+            var appArgs = LocalKNetCore.FilteredArgs;
 
             if (appArgs.Length != 0)
             {
