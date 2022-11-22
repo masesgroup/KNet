@@ -28,6 +28,9 @@
 		<Copy SourceFiles="@(knetps_config)" DestinationFolder="$(OutDir)\config" />
 		<Copy SourceFiles="@(knetps_kraft)" DestinationFolder="$(OutDir)\config\kraft" />
 	</Target>
+	<ItemGroup>
+	  <Compile Include="..\KNetCLI\KNetCLICore.cs" Link="KNetCLICore.cs" />
+	</ItemGroup>
 	
 	<ItemGroup>
 		<ProjectReference Include="..\KNet\KNet.csproj">

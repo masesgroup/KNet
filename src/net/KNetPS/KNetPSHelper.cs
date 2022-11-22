@@ -26,14 +26,14 @@ namespace MASES.KNetPS
     /// </summary>
     public static class KNetPSHelper<TClass> where TClass : KNetCore<TClass>
     {
-        public static void SetClassToRun(string classToRun) { JNetPSHelper<TClass>.Set(typeof(KNetCore<>), nameof(KNetCore.ApplicationClassToRun), classToRun); }
+        public static void SetClassToRun(string classToRun) { JNetPSHelper<TClass>.Set(typeof(KNetCore<>), nameof(KNetPSCore.ApplicationClassToRun), classToRun); }
 
-        public static void SetJarRootPath(string jarRootPath) { JNetPSHelper<TClass>.Set(typeof(KNetCore<>), nameof(KNetCore.ApplicationJarRootPath), jarRootPath); }
+        public static void SetJarRootPath(string jarRootPath) { JNetPSHelper<TClass>.Set(typeof(KNetCore<>), nameof(KNetPSCore.ApplicationJarRootPath), jarRootPath); }
 
-        public static void SetLog4JPath(string log4JPath) { JNetPSHelper<TClass>.Set(typeof(KNetCore<>), nameof(KNetCore.ApplicationLog4JPath), log4JPath); }
+        public static void SetLog4JPath(string log4JPath) { JNetPSHelper<TClass>.Set(typeof(KNetCore<>), nameof(KNetPSCore.ApplicationLog4JPath), log4JPath); }
 
-        public static void SetLogPath(string logPath) { JNetPSHelper<TClass>.Set(typeof(KNetCore<>), nameof(KNetCore.ApplicationLogPath), logPath); }
+        public static void SetLogPath(string logPath) { JNetPSHelper<TClass>.Set(typeof(KNetCore<>), nameof(KNetPSCore.ApplicationLogPath), logPath); }
 
-        public static void SetScalaVersion(string scalaVersion) { JNetPSHelper<TClass>.Set(typeof(KNetCore<>), nameof(KNetCore.ApplicationScalaVersion), scalaVersion); }
+        public static void SetScalaVersion(string scalaVersion) { JNetPSHelper<TClass>.Set(typeof(KNetCore<>), nameof(KNetPSCore.ApplicationScalaVersion), scalaVersion); }
     }
 }

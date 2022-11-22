@@ -21,7 +21,7 @@ using MASES.KNet;
 
 namespace MASES.KNetPS.Cmdlet
 {
-    public abstract class KNetPSCmdlet : JNetPSCmdlet<KNetCore>
+    public abstract class KNetPSCmdlet : JNetPSCmdlet<KNetPSCore>
     {
     }
 }
