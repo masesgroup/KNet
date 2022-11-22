@@ -13,13 +13,13 @@ To use the Connect interface (KNetConnect) runs a command like the following:
 
 - **dotnet tool**
 
-> knetconnect -s connect-standalone.properties
+> knetconnect -s connect-standalone.properties specific-connector.properties
 
 > knetconnect -d connect-distributed.properties
 
 - **Docker image**
 
-> docker run ghcr.io/masesgroup/mases.knetconnect -s connect-standalone.properties
+> docker run ghcr.io/masesgroup/mases.knetconnect -s connect-standalone.properties specific-connector.properties
 
 > docker run ghcr.io/masesgroup/mases.knetconnect -d connect-distributed.properties
 
@@ -28,3 +28,11 @@ To use the Connect interface (KNetConnect) runs a command like the following:
 _knetconnect_ accepts the following command-line switch to identify its behavior:
 - **d**: starts a distributed version of Connector defined in the file identified from the subsequent parameter
 - **s**: starts a standalone version of Connector defined in the file identified from the subsequent parameter
+- other parameters in sequence are:
+  - Apache Kafka Connect configuration file
+  - KNet Connector configuration file
+  
+### Connector properties
+
+For an overview of configuration see [Connect SDK](connectSDK.md)
+
