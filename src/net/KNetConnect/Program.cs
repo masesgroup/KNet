@@ -81,33 +81,16 @@ namespace MASES.KNetCLI
         {
             var assembly = typeof(Program).Assembly;
 
-            Console.WriteLine("KNetCLI - CLI interface for KNet - Version " + assembly.GetName().Version.ToString());
-            Console.WriteLine(assembly.GetName().Name + " -ClassToRun classname [-KafkaLocation kafkaFolder] <JCOBridgeArguments> <ClassArguments>");
+            Console.WriteLine("KNetConnect - KNet Connect command line interface - Version " + assembly.GetName().Version.ToString());
+            Console.WriteLine(assembly.GetName().Name + " -[d|s] connect-standalone.properties [-KafkaLocation kafkaFolder] <JCOBridgeArguments> <ClassArguments>");
             Console.WriteLine();
             if (!string.IsNullOrEmpty(errorString))
             {
                 Console.WriteLine("Error: {0}", errorString);
             }
-            SortedDictionary<string, Type> implementedClasses = new();
-            foreach (var item in typeof(KNetConnectCore).Assembly.ExportedTypes)
-            {
-                var baseType = item.GetTypeInfo().BaseType;
-                if (baseType != null && baseType.IsGenericType && baseType.GetGenericTypeDefinition() == typeof(JVMBridgeMain<>))
-                {
-#if DEBUG
-                    Console.WriteLine($"Adding {item.Name}");
-#endif
-                    implementedClasses.Add(item.Name, item);
-                }
-            }
 
-            StringBuilder avTypes = new();
-            foreach (var item in implementedClasses.Keys)
-            {
-                avTypes.AppendFormat("{0}, ", item);
-            }      
-
-            Console.WriteLine("ClassToRun: the class to be invoked ({0}...). ", avTypes.ToString());
+            Console.WriteLine("s: start Connect in standalone mode. ");
+            Console.WriteLine("d: start Connect in distributed mode. ");
             Console.WriteLine("KafkaLocation: The folder where Kafka package is available. Default consider this application uses the package jars folder.");
             Console.WriteLine("ScalaVersion: the scala version to be used. The default version (2.13.6) is binded to the deafult Apache Kafka version available in the package.");
             Console.WriteLine("Log4JConfiguration: the log4j configuration file; the default uses the file within the package.");

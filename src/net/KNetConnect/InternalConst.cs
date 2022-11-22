@@ -18,6 +18,13 @@
 
 namespace MASES.KNetCLI
 {
+    class CLIParam
+    {
+        // CommonArgs
+        public const string Distributed = "Distributed";
+        public const string Standalone = "Standalone";
+    }
+
     class InternalConst
     {
 

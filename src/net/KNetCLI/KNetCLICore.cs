@@ -37,7 +37,7 @@ namespace MASES.KNetCLI
             {
                 Type type = null;
 
-                foreach (var item in typeof(KNetCLICore).Assembly.ExportedTypes)
+                foreach (var item in typeof(KNetCore<>).Assembly.ExportedTypes)
                 {
                     if (item.Name == ClassToRun || item.FullName == ClassToRun)
                     {
