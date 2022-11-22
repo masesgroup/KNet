@@ -29,7 +29,7 @@ There are many client libraries written to manage communication with Apache Kafk
 ### News
 
 * V1.4.4+: From version 1.4.4 there is a new project, named KNetPS, which permits to write PowerShell client scripts for an Apache Kafka cluster and many other things, [here full usage](src/net/Documentation/articles/usagePS.md).
-* V1.4.7+: From version 1.4.7 there is a new project, named KNetConnect, to execute Apache KAfka Connect related jobs, [here full usage](src/net/Documentation/articles/usageConnect.md).
+* V1.4.7+: From version 1.4.7 there is a new project, named KNetConnect, to execute Apache Kafka Connect related jobs, [here full usage](src/net/Documentation/articles/usageConnect.md).
 
 ## Runtime engine
 
