@@ -94,6 +94,5 @@ namespace MASES.KNetCLI
 
             return result;
         }
-
     }
 }
