@@ -86,11 +86,6 @@ jobs:
         
       - name: Compress KNet Docker Image
         run: gzip mases.knet.linux.tar
-        
-      - uses: actions/upload-artifact@v3
-        with:
-          name: mases.knet.linux.tar.gz
-          path: ./*.tar.gz
           
       - name: Build KNetConnect Docker Image
         run: docker build -t mases.knetconnect -f DockerfileKNetConnect.linux .
@@ -103,7 +98,7 @@ jobs:
         
       - uses: actions/upload-artifact@v3
         with:
-          name: mases.knetconnect.linux.tar.gz
+          name: Docker Images
           path: ./*.tar.gz
 
   # Now run "build_windows"
