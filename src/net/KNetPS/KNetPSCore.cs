@@ -16,92 +16,14 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet;
-using System;
-using System.Collections.Generic;
-using System.IO;
+using MASES.KNetCLI;
 
 namespace MASES.KNetPS
 {
     /// <summary>
-    /// Directly usable implementation of <see cref="KNetCore{T}"/>
+    /// Directly usable implementation of <see cref="KNetCLICore{T}"/>
     /// </summary>
-    public class KNetPSCore : KNetCore<KNetPSCore>
+    public class KNetPSCore : KNetCLICore<KNetPSCore>
     {
-        protected override string[] ProcessCommandLine()
-        {
-            var result = base.ProcessCommandLine();
-
-            if (!string.IsNullOrEmpty(ClassToRun))
-            {
-                Type type = null;
-
-                foreach (var item in typeof(KNetPSCore).Assembly.ExportedTypes)
-                {
-                    if (item.Name == ClassToRun || item.FullName == ClassToRun)
-                    {
-                        type = item;
-                        break;
-                    }
-                }
-                MainClassToRun = type ?? throw new ArgumentException($"Requested class {ClassToRun} is not a valid class name.");
-            }
-
-            switch (ClassToRun)
-            {
-                case "VerifiableConsumer":
-                    ApplicationHeapSize = "512M";
-                    break;
-                case "VerifiableProducer":
-                    ApplicationHeapSize = "512M";
-                    break;
-                case "StreamsResetter":
-                    ApplicationHeapSize = "512M";
-                    break;
-                case "ZooKeeperStart":
-                    ApplicationHeapSize = "512M";
-                    ApplicationInitialHeapSize = "512M";
-                    break;
-                case "ZooKeeperShell":
-                    ApplicationHeapSize = "512M";
-                    ApplicationInitialHeapSize = "512M";
-                    break;
-                case "KafkaStart":
-                    ApplicationHeapSize = Environment.Is64BitOperatingSystem ? "1G" : "512M";
-                    ApplicationInitialHeapSize = Environment.Is64BitOperatingSystem ? "1G" : "512M";
-                    break;
-                case "ConnectStandalone":
-                    {
-                        throw new ArgumentException($"Use KNetConnect to run KNet Connect SDK");
-                    }
-                case "ConnectDistributed":
-                    {
-                        throw new ArgumentException($"Use KNetConnect to run KNet Connect SDK");
-                    }
-                case "MirrorMaker2":
-                    {
-                        ApplicationLog4JPath = Path.Combine(Const.AssemblyLocation, "config", "connect-log4j.properties");
-                        ApplicationHeapSize = "2G";
-                        ApplicationInitialHeapSize = "256M";
-                        if (result == null || result.Length == 0) Console.WriteLine($"USAGE: MASES.KNetCLI -ClassToRun {ClassToRun} [-daemon] mm2.properties");
-                        else
-                        {
-                            var tmpResult = new List<string>(result);
-                            if (tmpResult.Contains("-daemon"))
-                            {
-                                tmpResult.Add("-name");
-                                tmpResult.Add("mirrorMaker");
-                            }
-                            result = tmpResult.ToArray();
-                        }
-                    }
-                    break;
-                default:
-                    ApplicationHeapSize ??= "256M";
-                    break;
-            }
-
-            return result;
-        }
     }
 }

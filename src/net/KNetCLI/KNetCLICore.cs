@@ -24,9 +24,10 @@ using System.IO;
 namespace MASES.KNetCLI
 {
     /// <summary>
-    /// Directly usable implementation of <see cref="KNetCore{T}"/>
+    /// Overridable implementation of <see cref="KNetCore{T}"/>
     /// </summary>
-    internal class KNetCLICore : KNetCore<KNetCLICore>
+    public class KNetCLICore<T> : KNetCore<T>
+        where T : KNetCLICore<T>
     {
         protected override string[] ProcessCommandLine()
         {
@@ -103,5 +104,12 @@ namespace MASES.KNetCLI
 
             return result;
         }
+    }
+
+    /// <summary>
+    /// Directly usable implementation of <see cref="KNetCLICore{T}"/>
+    /// </summary>
+    internal class KNetCLICore : KNetCLICore<KNetCLICore>
+    {
     }
 }
