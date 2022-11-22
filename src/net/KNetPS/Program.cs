@@ -26,7 +26,7 @@ namespace MASES.KNetPS
         static void Main(string[] args)
         {
             // this code is a workaround to copy some library to the output path
-            KNetCore core = new KNetCore();
+            KNetPSCore core = new KNetPSCore();
             Console.WriteLine(core.ClassPath);
         }
     }

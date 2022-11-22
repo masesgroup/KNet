@@ -80,7 +80,7 @@ namespace MASES.KNet.Connect
         /// </summary>
         public KNetConnector()
         {
-            KNetCore.GlobalInstance.RegisterCLRGlobal(ReflectedConnectorClassName, this);
+            KNetConnectProxy.RegisterCLRGlobal(ReflectedConnectorClassName, this);
         }
 
         /// <summary>
@@ -91,7 +91,7 @@ namespace MASES.KNet.Connect
         /// <exception cref="InvalidOperationException"> </exception>
         protected void ExecuteOnConnector(string method, params object[] args)
         {
-            reflectedConnector ??= KNetCore.GlobalInstance.GetJVMGlobal(ReflectedConnectorClassName);
+            reflectedConnector ??= KNetConnectProxy.GetJVMGlobal(ReflectedConnectorClassName);
             if (reflectedConnector != null) reflectedConnector.Invoke(method, args);
             else throw new InvalidOperationException($"{ReflectedConnectorClassName} was not registered in global JVM");
         }
@@ -106,7 +106,7 @@ namespace MASES.KNet.Connect
         /// <exception cref="InvalidOperationException"> </exception>
         protected T ExecuteOnConnector<T>(string method, params object[] args)
         {
-            reflectedConnector ??= KNetCore.GlobalInstance.GetJVMGlobal(ReflectedConnectorClassName);
+            reflectedConnector ??= KNetConnectProxy.GetJVMGlobal(ReflectedConnectorClassName);
             return (reflectedConnector != null) ? reflectedConnector.Invoke<T>(method, args) : throw new InvalidOperationException($"{ReflectedConnectorClassName} was not registered in global JVM");
         }
 
@@ -128,7 +128,7 @@ namespace MASES.KNet.Connect
         /// <exception cref="InvalidOperationException"> </exception>
         protected void DataToExchange(object data)
         {
-            reflectedConnector ??= KNetCore.GlobalInstance.GetJVMGlobal(ReflectedConnectorClassName);
+            reflectedConnector ??= KNetConnectProxy.GetJVMGlobal(ReflectedConnectorClassName);
             if (reflectedConnector != null)
             {
                 JCOBridge.C2JBridge.IJVMBridgeBase jvmBBD = data as JCOBridge.C2JBridge.IJVMBridgeBase;

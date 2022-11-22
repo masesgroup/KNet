@@ -9,6 +9,8 @@ using System.Threading;
 
 namespace MASES.KNetTemplate.KNetStreamPipe
 {
+    class LocalKNetCore : KNetCore<LocalKNetCore> { }
+
     class Program
     {
         const string theServer = "localhost:9092";
@@ -21,8 +23,8 @@ namespace MASES.KNetTemplate.KNetStreamPipe
 
         static void Main(string[] args)
         {
-            KNetCore.CreateGlobalInstance();
-            var appArgs = KNetCore.FilteredArgs;
+            LocalKNetCore.CreateGlobalInstance();
+            var appArgs = LocalKNetCore.FilteredArgs;
 
             if (appArgs.Length != 0)
             {

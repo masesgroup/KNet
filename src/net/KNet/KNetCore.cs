@@ -282,103 +282,6 @@ namespace MASES.KNet
             _logPath = ParsedArgs.Get<string>(CLIParam.LogPath);
             _scalaVersion = ParsedArgs.Get<string>(CLIParam.ScalaVersion);
 
-            if (!string.IsNullOrEmpty(ClassToRun))
-            {
-                Type type = null;
-
-                foreach (var item in typeof(KNetCore).Assembly.ExportedTypes)
-                {
-                    if (item.Name == ClassToRun || item.FullName == ClassToRun)
-                    {
-                        type = item;
-                        break;
-                    }
-                }
-                MainClassToRun = type ?? throw new ArgumentException($"Requested class {ClassToRun} is not a valid class name.");
-            }
-
-            switch (ClassToRun)
-            {
-                case "VerifiableConsumer":
-                    ApplicationHeapSize = "512M";
-                    break;
-                case "VerifiableProducer":
-                    ApplicationHeapSize = "512M";
-                    break;
-                case "StreamsResetter":
-                    ApplicationHeapSize = "512M";
-                    break;
-                case "ZooKeeperStart":
-                    ApplicationHeapSize = "512M";
-                    ApplicationInitialHeapSize = "512M";
-                    break;
-                case "ZooKeeperShell":
-                    ApplicationHeapSize = "512M";
-                    ApplicationInitialHeapSize = "512M";
-                    break;
-                case "KafkaStart":
-                    ApplicationHeapSize = Environment.Is64BitOperatingSystem ? "1G" : "512M";
-                    ApplicationInitialHeapSize = Environment.Is64BitOperatingSystem ? "1G" : "512M";
-                    break;
-                case "ConnectStandalone":
-                    {
-                        ApplicationLog4JPath = Path.Combine(Const.AssemblyLocation, "config", "connect-log4j.properties");
-                        ApplicationHeapSize = "2G";
-                        ApplicationInitialHeapSize = "256M";
-                        if (result == null || result.Length == 0) Console.WriteLine($"USAGE: MASES.KNetCLI -ClassToRun {ClassToRun} [-daemon] connect-standalone.properties");
-                        else
-                        {
-                            var tmpResult = new List<string>(result);
-                            if (tmpResult.Contains("-daemon"))
-                            {
-                                tmpResult.Add("-name");
-                                tmpResult.Add("connectStandalone");
-                            }
-                            result = tmpResult.ToArray();
-                        }
-                    }
-                    break;
-                case "ConnectDistributed":
-                    {
-                        ApplicationLog4JPath = Path.Combine(Const.AssemblyLocation, "config", "connect-log4j.properties");
-                        ApplicationHeapSize = "2G";
-                        ApplicationInitialHeapSize = "256M";
-                        if (result == null || result.Length == 0) Console.WriteLine($"USAGE: MASES.KNetCLI -ClassToRun {ClassToRun} [-daemon] connect-distributed.properties");
-                        else
-                        {
-                            var tmpResult = new List<string>(result);
-                            if (tmpResult.Contains("-daemon"))
-                            {
-                                tmpResult.Add("-name");
-                                tmpResult.Add("connectDistributed");
-                            }
-                            result = tmpResult.ToArray();
-                        }
-                    }
-                    break;
-                case "MirrorMaker2":
-                    {
-                        ApplicationLog4JPath = Path.Combine(Const.AssemblyLocation, "config", "connect-log4j.properties");
-                        ApplicationHeapSize = "2G";
-                        ApplicationInitialHeapSize = "256M";
-                        if (result == null || result.Length == 0) Console.WriteLine($"USAGE: MASES.KNetCLI -ClassToRun {ClassToRun} [-daemon] mm2.properties");
-                        else
-                        {
-                            var tmpResult = new List<string>(result);
-                            if (tmpResult.Contains("-daemon"))
-                            {
-                                tmpResult.Add("-name");
-                                tmpResult.Add("mirrorMaker");
-                            }
-                            result = tmpResult.ToArray();
-                        }
-                    }
-                    break;
-                default:
-                    ApplicationHeapSize ??= "256M";
-                    break;
-            }
-
             return result;
         }
 
@@ -505,11 +408,5 @@ namespace MASES.KNet
 #if DEBUG
         public override bool EnableDebug => true;
 #endif
-    }
-    /// <summary>
-    /// Directly usable implementation of <see cref="KNetCore{T}"/>
-    /// </summary>
-    public class KNetCore : KNetCore<KNetCore>
-    {
     }
 }

@@ -20,6 +20,7 @@ using Java.Util;
 using MASES.KNet;
 using MASES.KNet.Clients.Admin;
 using MASES.KNet.Common.Config;
+using MASES.KNet.TestCommon;
 using System;
 
 namespace MASES.KNetTestAdmin
@@ -34,8 +35,8 @@ namespace MASES.KNetTestAdmin
 
         static void Main(string[] args)
         {
-            KNetCore.CreateGlobalInstance();
-            var appArgs = KNetCore.FilteredArgs;
+            SharedKNetCore.CreateGlobalInstance();
+            var appArgs = SharedKNetCore.FilteredArgs;
 
             if (appArgs.Length != 0)
             {

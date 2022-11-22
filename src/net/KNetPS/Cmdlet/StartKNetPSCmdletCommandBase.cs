@@ -22,7 +22,7 @@ using System.Management.Automation;
 
 namespace MASES.KNetPS.Cmdlet
 {
-    public class StartKNetPSCmdletCommandBase<TCmdlet> : StartJNetPSCmdletCommandBase<TCmdlet, KNetCore>
+    public class StartKNetPSCmdletCommandBase<TCmdlet> : StartJNetPSCmdletCommandBase<TCmdlet, KNetPSCore>
         where TCmdlet : StartKNetPSCmdletCommandBase<TCmdlet>
     {
         /// <inheritdoc cref="KNetCore{T}.ApplicationScalaVersion" />
@@ -55,10 +55,10 @@ namespace MASES.KNetPS.Cmdlet
 
         protected override void OnBeforeCreateGlobalInstance()
         {
-            KNetPSHelper<KNetCore>.SetScalaVersion(ScalaVersion);
-            KNetPSHelper<KNetCore>.SetJarRootPath(KafkaJarLocation);
-            KNetPSHelper<KNetCore>.SetLog4JPath(Log4JPath);
-            KNetPSHelper<KNetCore>.SetLogPath(LogPath);
+            KNetPSHelper<KNetPSCore>.SetScalaVersion(ScalaVersion);
+            KNetPSHelper<KNetPSCore>.SetJarRootPath(KafkaJarLocation);
+            KNetPSHelper<KNetPSCore>.SetLog4JPath(Log4JPath);
+            KNetPSHelper<KNetPSCore>.SetLogPath(LogPath);
         }
     }
 }

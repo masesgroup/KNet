@@ -23,7 +23,7 @@ using System.Management.Automation;
 namespace MASES.KNetPS.Cmdlet
 {
     [Cmdlet(VerbsCommon.New, "KObject")]
-    public class NewObjectCmdletCommand : NewObjectCmdletCommandBase<NewObjectCmdletCommand, KNetCore>
+    public class NewObjectCmdletCommand : NewObjectCmdletCommandBase<NewObjectCmdletCommand, KNetPSCore>
     {
 
     }

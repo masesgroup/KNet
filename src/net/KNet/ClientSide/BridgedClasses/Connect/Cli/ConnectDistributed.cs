@@ -29,7 +29,7 @@ namespace MASES.KNet.Connect.Cli
         public ConnectDistributed()
             : base("org.apache.kafka.connect.cli.ConnectDistributed")
         {
-            Connect.KNetConnectProxy.Register();
+            KNetConnectProxy.Register();
         }
     }
 }

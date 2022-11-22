@@ -16,7 +16,11 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
+using MASES.JCOBridge.C2JBridge.JVMInterop;
+using MASES.JNet;
 using System;
+using System.Reflection;
 
 namespace MASES.KNet.Connect
 {
@@ -25,11 +29,85 @@ namespace MASES.KNet.Connect
     /// </summary>
     public class KNetConnectProxy
     {
+        static internal object RunningCore { get; set; }
+
         static readonly object globalInstanceLock = new();
         static KNetConnectProxy globalInstance = null;
 
         static KNetConnector SinkConnector = null;
         static KNetConnector SourceConnector = null;
+
+        static MethodInfo RegisterCLRGlobalMethod = null;
+        static MethodInfo GetJVMGlobalMethod = null;
+
+        static Type CheckOn(Type source, Type t)
+        {
+            if (t.IsGenericTypeDefinition)
+            {
+                if (source.IsGenericType)
+                {
+                    return source.GetGenericTypeDefinition();
+                }
+                else
+                {
+                    return source;
+                }
+            }
+            return source;
+        }
+
+        public static Type TraverseUntil(Type source, Type t)
+        {
+            var baseType = source;
+            while (baseType != null && CheckOn(baseType, t) != t)
+            {
+                baseType = baseType.BaseType;
+            }
+
+            return baseType;
+        }
+
+        /// <summary>
+        /// Initialize the proxy
+        /// </summary>
+        public static void Initialize<TIn>(TIn core) where TIn : KNetCore<TIn>
+        {
+            lock (globalInstanceLock)
+            {
+                if (globalInstance == null)
+                {
+                    RegisterCLRGlobalMethod = TraverseUntil(typeof(TIn), typeof(SetupJVMWrapper)).GetMethod(nameof(SetupJVMWrapper.RegisterCLRGlobal));
+                    GetJVMGlobalMethod = TraverseUntil(typeof(TIn), typeof(SetupJVMWrapper)).GetMethod(nameof(SetupJVMWrapper.GetJVMGlobal));
+                    RunningCore = core;
+                    globalInstance = new KNetConnectProxy();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Initialize the proxy
+        /// </summary>
+        public static void RegisterCLRGlobal(string key, object value)
+        {
+            lock (globalInstanceLock)
+            {
+                if (globalInstance == null) throw new InvalidOperationException("Method Initialized was never called.");
+                RegisterCLRGlobalMethod.Invoke(RunningCore, new object[] { key, value });
+            }
+        }
+
+        /// <summary>
+        /// Initialize the proxy
+        /// </summary>
+        public static IJavaObject GetJVMGlobal(string key)
+        {
+            lock (globalInstanceLock)
+            {
+                if (globalInstance == null) throw new InvalidOperationException("Method Initialized was never called.");
+                return GetJVMGlobalMethod.Invoke(RunningCore, new object[] { key }) as IJavaObject;
+            }
+        }
+
         /// <summary>
         /// Register the proxy
         /// </summary>
@@ -37,11 +115,8 @@ namespace MASES.KNet.Connect
         {
             lock (globalInstanceLock)
             {
-                if (globalInstance == null)
-                {
-                    globalInstance = new KNetConnectProxy();
-                    KNetCore.GlobalInstance.RegisterCLRGlobal("KNetConnectProxy", globalInstance);
-                }
+                if (globalInstance == null) throw new InvalidOperationException("Method Initialized was never called.");
+                RegisterCLRGlobal("KNetConnectProxy", globalInstance);
             }
         }
         /// <summary>
@@ -57,7 +132,7 @@ namespace MASES.KNet.Connect
                 {
                     var type = Type.GetType(connectorClassName, true);
                     SinkConnector = Activator.CreateInstance(type) as KNetConnector;
-                    KNetCore.GlobalInstance.RegisterCLRGlobal(SinkConnector.ConnectorName, SinkConnector);
+                    RegisterCLRGlobal(SinkConnector.ConnectorName, SinkConnector);
                     return true;
                 }
                 catch
@@ -79,7 +154,7 @@ namespace MASES.KNet.Connect
                 {
                     var type = Type.GetType(connectorClassName, true);
                     SourceConnector = Activator.CreateInstance(type) as KNetConnector;
-                    KNetCore.GlobalInstance.RegisterCLRGlobal(SourceConnector.ConnectorName, SourceConnector);
+                    RegisterCLRGlobal(SourceConnector.ConnectorName, SourceConnector);
                     return true;
                 }
                 catch
