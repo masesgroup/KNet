@@ -13,13 +13,18 @@ To use the Connect interface (KNetConnect) runs a command like the following:
 
 - **dotnet tool**
 
-> knetconnect -ClassToRun ConsoleConsumer --bootstrap-server SERVER-ADDRESS:9093 --topic topic_name --from-beginning
+> knetconnect -s connect-standalone.properties
+
+> knetconnect -d connect-distributed.properties
 
 - **Docker image**
 
-> docker run ghcr.io/masesgroup/mases.knetconnect -ClassToRun ConsoleConsumer --bootstrap-server SERVER-ADDRESS:9093 --topic topic_name --from-beginning
+> docker run ghcr.io/masesgroup/mases.knetconnect -s connect-standalone.properties
+
+> docker run ghcr.io/masesgroup/mases.knetconnect -d connect-distributed.properties
 
 ### Command line switch available
 
-_knetcli_ needs at least **ClassToRun** command-line switch to identify its behavior.
-Other options on [Command line switch](commandlineswitch.md) page.
+_knetconnect_ accepts the following command-line switch to identify its behavior:
+- **d**: starts a distributed version of Connector defined in the file identified from the subsequent parameter
+- **s**: starts a standalone version of Connector defined in the file identified from the subsequent parameter
