@@ -14,6 +14,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "templatepack", "templates\t
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNetPS", "KNetPS\KNetPS.csproj", "{17CFAF93-A49D-48C7-B6CD-13B9A45DD48A}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNetConnect", "KNetConnect\KNetConnect.csproj", "{22AB323C-1165-47DD-9428-CB577256B3C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +38,10 @@ Global
 		{17CFAF93-A49D-48C7-B6CD-13B9A45DD48A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17CFAF93-A49D-48C7-B6CD-13B9A45DD48A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17CFAF93-A49D-48C7-B6CD-13B9A45DD48A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22AB323C-1165-47DD-9428-CB577256B3C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22AB323C-1165-47DD-9428-CB577256B3C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22AB323C-1165-47DD-9428-CB577256B3C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22AB323C-1165-47DD-9428-CB577256B3C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

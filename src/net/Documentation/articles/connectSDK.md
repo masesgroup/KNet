@@ -4,7 +4,7 @@ This is only a quick start guide, many other information related to Apache Kafka
 
 ## General 
 
-To start a Connect session the user shall use the [KNet CLI](usageCLI.md).
+To start a Connect session the user shall use the [KNet Connect](usageConnect.md).
 
 The commands related to Apache Kafka Connect are:
 - ConnectDistributed
@@ -34,7 +34,7 @@ The main options related to KNet Connect SDK are:
 When the __C:\MyConnect__ folder contains all the files it is possible to run Apache Kafka Connect:
 
 >
-> knet -ClassToRun ConnectStandalone connect-standalone.properties connect-knet-sink.properties
+> knetconnect -s connect-standalone.properties connect-knet-sink.properties
 >
 
 ### Exactly Once and Transaction properties for Source Connector
@@ -51,5 +51,5 @@ As stated in [Apache Kafka Connect Guide](https://kafka.apache.org/documentation
 The start-up command within __C:\MyConnect__ folder becomes:
 
 >
-> knet -ClassToRun ConnectDistributed connect-distributed.properties
+> knetconnect -d connect-distributed.properties
 >

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>MASES.KNetConnect</id>
+    <version>1.4.6</version>
+    <title>KNetConnect - KNet Connect command line interface</title>
+    <authors>MASES s.r.l.</authors>
+    <owners>MASES s.r.l.</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectUrl>https://github.com/masesgroup/KNet/</projectUrl>
+    <repository type="git" url="https://github.com/masesgroup/KNet/" />
+    <description>KNetConnect - KNet Connect command line interface</description>
+    <releaseNotes>https://github.com/masesgroup/KNet/releases</releaseNotes>
+    <copyright>Copyright ©  MASES s.r.l. 2022</copyright>
+    <license type="file">LICENSE</license>
+    <icon>JCOB128x128.png</icon>
+    <tags>knet cli kafka apache-kafka dotnet clr netcore net6 kafka connect streams producer consumer providers streamprovider gateway</tags>
+    <packageTypes>
+    <packageType name="DotnetTool" />
+    </packageTypes>
+    <readme>usageCLI.md</readme>
+  </metadata>
+	<files>
+		<file src="..\..\..\LICENSE" target="LICENSE" />
+		<file src="..\Common\JCOB128x128.png" target="" />
+		<file src="..\Documentation\articles\usageCLI.md" target="" />
+		<file src="..\..\..\binConnect\net6.0\" target="tools\net6.0\any\" />
+	</files>
+</package>

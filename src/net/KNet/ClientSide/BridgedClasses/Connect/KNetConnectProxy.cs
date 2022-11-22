@@ -32,6 +32,7 @@ namespace MASES.KNet.Connect
         static internal object RunningCore { get; set; }
 
         static readonly object globalInstanceLock = new();
+        static bool registrationDone = false;
         static KNetConnectProxy globalInstance = null;
 
         static KNetConnector SinkConnector = null;
@@ -116,7 +117,11 @@ namespace MASES.KNet.Connect
             lock (globalInstanceLock)
             {
                 if (globalInstance == null) throw new InvalidOperationException("Method Initialized was never called.");
-                RegisterCLRGlobal("KNetConnectProxy", globalInstance);
+                if (!registrationDone)
+                {
+                    RegisterCLRGlobal("KNetConnectProxy", globalInstance);
+                    registrationDone = true;
+                }
             }
         }
         /// <summary>

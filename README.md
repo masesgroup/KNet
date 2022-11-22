@@ -4,9 +4,9 @@
 [![CodeQL](https://github.com/masesgroup/KNet/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/masesgroup/KNet/actions/workflows/codeql-analysis.yml)
 [![CI_RELEASE](https://github.com/masesgroup/KNet/actions/workflows/release.yaml/badge.svg)](https://github.com/masesgroup/KNet/actions/workflows/release.yaml) 
 
-|KNet | KNetCLI | KNet.Templates | KNetPS<br/>(version 1.4.4+) |
-|---	|---	|---	|---	|
-|[![KNet nuget](https://img.shields.io/nuget/v/MASES.KNet)](https://www.nuget.org/packages/MASES.KNet) [![downloads](https://img.shields.io/nuget/dt/MASES.KNet)](https://www.nuget.org/packages/MASES.KNet) | [![KNetCLI nuget](https://img.shields.io/nuget/v/MASES.KNetCLI)](https://www.nuget.org/packages/MASES.KNetCLI) [![downloads](https://img.shields.io/nuget/dt/MASES.KNetCLI)](https://www.nuget.org/packages/MASES.KNetCLI) | [![KNet.Templates nuget](https://img.shields.io/nuget/v/MASES.KNet.Templates)](https://www.nuget.org/packages/MASES.KNet.Templates) [![downloads](https://img.shields.io/nuget/dt/MASES.KNet.Templates)](https://www.nuget.org/packages/MASES.KNet.Templates)| [![KNetPS](https://img.shields.io/powershellgallery/v/MASES.KNetPS.svg?style=flat-square&label=MASES.KNetPS)](https://www.powershellgallery.com/packages/MASES.KNetPS/)|
+|KNet | KNetCLI | KNet.Templates | KNetPS<br/>(version 1.4.4+) | KNetConnect<br/>(version 1.4.7+) |
+|---	|---	|---	|---	|---	|
+|[![KNet nuget](https://img.shields.io/nuget/v/MASES.KNet)](https://www.nuget.org/packages/MASES.KNet) [![downloads](https://img.shields.io/nuget/dt/MASES.KNet)](https://www.nuget.org/packages/MASES.KNet) | [![KNetCLI nuget](https://img.shields.io/nuget/v/MASES.KNetCLI)](https://www.nuget.org/packages/MASES.KNetCLI) [![downloads](https://img.shields.io/nuget/dt/MASES.KNetCLI)](https://www.nuget.org/packages/MASES.KNetCLI) | [![KNet.Templates nuget](https://img.shields.io/nuget/v/MASES.KNet.Templates)](https://www.nuget.org/packages/MASES.KNet.Templates) [![downloads](https://img.shields.io/nuget/dt/MASES.KNet.Templates)](https://www.nuget.org/packages/MASES.KNet.Templates)| [![KNetPS](https://img.shields.io/powershellgallery/v/MASES.KNetPS.svg?style=flat-square&label=MASES.KNetPS)](https://www.powershellgallery.com/packages/MASES.KNetPS/)| [![KNetConnect nuget](https://img.shields.io/nuget/v/MASES.KNetConnect)](https://www.nuget.org/packages/MASES.KNetConnect) [![downloads](https://img.shields.io/nuget/dt/MASES.KNetConnect)](https://www.nuget.org/packages/MASES.KNetConnect) |
 
 KNet is a .NET gateway for [Apache Kafka](https://kafka.apache.org/) [APIs](https://kafka.apache.org/documentation/#api) providing all features: Producer, Consumer, Admin, Streams, Connect, backends (ZooKeeper and Kafka).
 
@@ -29,6 +29,7 @@ There are many client libraries written to manage communication with Apache Kafk
 ### News
 
 * V1.4.4+: From version 1.4.4 there is a new project, named KNetPS, which permits to write PowerShell client scripts for an Apache Kafka cluster and many other things, [here full usage](src/net/Documentation/articles/usagePS.md).
+* V1.4.7+: From version 1.4.7 there is a new project, named KNetConnect, to execute Apache Kafka Connect related jobs, [here full usage](src/net/Documentation/articles/usageConnect.md).
 
 ## Runtime engine
 
@@ -61,6 +62,7 @@ Have a look at the following resources:
 * [KNet usage](src/net/Documentation/articles/usage.md)
 * [KNet APIs extensibility](src/net/Documentation/articles/API_extensibility.md)
 * [KNetCLI usage](src/net/Documentation/articles/usageCLI.md)
+* [KNetConnect usage](src/net/Documentation/articles/usageConnect.md)
 * [KNet PowerShell usage](src/net/Documentation/articles/usagePS.md)
 * [KNet Template usage](src/net/Documentation/articles/usageTemplates.md)
 * [How to build from scratch](src/net/Documentation/articles/howtobuild.md)

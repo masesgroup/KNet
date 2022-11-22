@@ -78,18 +78,27 @@ jobs:
           MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
           MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
         
-      - name: Build Docker Image
-        run: docker build -t mases.knet -f Dockerfile.linux .
+      - name: Build KNet Docker Image
+        run: docker build -t mases.knet -f DockerfileKNet.linux .
 
       - name: Save Docker Image
         run: docker image save -o mases.knet.linux.tar mases.knet
         
-      - name: Compress Docker Image
+      - name: Compress KNet Docker Image
         run: gzip mases.knet.linux.tar
+          
+      - name: Build KNetConnect Docker Image
+        run: docker build -t mases.knetconnect -f DockerfileKNetConnect.linux .
+
+      - name: Save KNetConnect Docker Image
+        run: docker image save -o mases.knetconnect.linux.tar mases.knetconnect
+        
+      - name: Compress KNetConnect Docker Image
+        run: gzip mases.knetconnect.linux.tar
         
       - uses: actions/upload-artifact@v3
         with:
-          name: mases.knet.linux.tar.gz
+          name: Docker Images
           path: ./*.tar.gz
 
   # Now run "build_windows"
@@ -144,6 +153,9 @@ jobs:
       - name: Compile command line
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KNetCLI\KNetCLI.csproj
 
+      - name: Compile KNet Connect
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KNetConnect\KNetConnect.csproj
+
       - name: Compile KNetPS
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KNetPS\KNetPS.csproj
 
@@ -152,6 +164,7 @@ jobs:
           nuget-version: '5.x'
           
       - run: nuget pack src\net\KNetCLI\KNetCLI.nuspec -OutputDirectory .\bin
+      - run: nuget pack src\net\KNetConnect\KNetConnect.nuspec -OutputDirectory .\bin
 
       - name: Recompile to create nuget packages
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KNet.sln

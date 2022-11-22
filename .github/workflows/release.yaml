@@ -63,11 +63,20 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
-          file: Dockerfile.linux
+          file: DockerfileKNet.linux
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/mases.knet:latest  
+          tags: ghcr.io/${{ github.repository_owner }}/mases.knet:latest
+          
+      - name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          file: DockerfileConnect.linux
+          context: .
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ghcr.io/${{ github.repository_owner }}/mases.knetconnect:latest 
 
   # This workflow contains a single job called "build_release"
   build_release:
@@ -123,6 +132,7 @@ jobs:
           nuget-version: '5.x'
           
       - run: nuget pack src\net\KNetCLI\KNetCLI.nuspec -OutputDirectory .\bin
+      - run: nuget pack src\net\KNetConnect\KNetConnect.nuspec -OutputDirectory .\bin
 
       - name: Prepare PowerShell package
         run: |
