@@ -71,7 +71,7 @@
 
 <p>This is only a quick start guide, many other information related to Apache Kafka Connect can be found at the following link <a href="https://kafka.apache.org/documentation/#connect">https://kafka.apache.org/documentation/#connect</a></p>
 <h2 id="general">General</h2>
-<p>To start a Connect session the user shall use the <a href="usageCLI.html">KNet CLI</a>.</p>
+<p>To start a Connect session the user shall use the <a href="usageConnect.html">KNet Connect</a>.</p>
 <p>The commands related to Apache Kafka Connect are:</p>
 <ul>
 <li>ConnectDistributed</li>
@@ -102,7 +102,7 @@ The main options related to KNet Connect SDK are:</p>
 </ul>
 <p>When the <strong>C:\MyConnect</strong> folder contains all the files it is possible to run Apache Kafka Connect:</p>
 <blockquote>
-<p>knet -ClassToRun ConnectStandalone connect-standalone.properties connect-knet-sink.properties</p>
+<p>knetconnect -s connect-standalone.properties connect-knet-sink.properties</p>
 </blockquote>
 <h3 id="exactly-once-and-transaction-properties-for-source-connector">Exactly Once and Transaction properties for Source Connector</h3>
 <p>From version 3.3.1 of Apache Kafka Connect it is possible to manage Exactly Once and Transaction in the source connector.</p>
@@ -115,7 +115,7 @@ The main options related to KNet Connect SDK are:</p>
 <p>As stated in <a href="https://kafka.apache.org/documentation/#connect">Apache Kafka Connect Guide</a> the distributed version does not use the connector file definition, instead it shall be managed using the REST interface.
 The start-up command within <strong>C:\MyConnect</strong> folder becomes:</p>
 <blockquote>
-<p>knet -ClassToRun ConnectDistributed connect-distributed.properties</p>
+<p>knetconnect -d connect-distributed.properties</p>
 </blockquote>
 </article>
           </div>

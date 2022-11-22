@@ -6321,7 +6321,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Connect.KNetConnectProxy.html",
-          "hash": "SQ4T0zmkampvQbjss0Vv//15VkfE4B42reICVjxjDiM="
+          "hash": "UsvWznZH97/pJr33hY5Fk47L123KdhlAYUF9CACdhhA="
         }
       },
       "is_incremental": false,
@@ -11277,7 +11277,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectSDK.html",
-          "hash": "vTjPLg9dbveEQhRA2cH1ak1wbOzv2WeVBZpHzCG4X90="
+          "hash": "VZl7xKKJUAMHg8v/DH9b10jlqm/AIXgrIGuumofW+xI="
         }
       },
       "is_incremental": false,
@@ -11352,7 +11352,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "dTxDpoZXy3zIpI4cfRRuVEw8DnCocjzyMzjELtyS+qc="
+          "hash": "iTSAR2tVLfUcNOUkA8m+CimW/rc0p41Hi1JbEU/pfo0="
         }
       },
       "is_incremental": false,
@@ -11377,6 +11377,18 @@
         ".html": {
           "relative_path": "articles/usageCLI.html",
           "hash": "UTduTPRwCfShTpBrUzAC74MshxeiCri8BVQ3/yV/Lyw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/usageConnect.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/usageConnect.html",
+          "hash": "Z6RWBnFrRyz8uZB5JBnKAX4oKJ8B4lhCwcGKy+RFQ7s="
         }
       },
       "is_incremental": false,
@@ -11459,7 +11471,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 15,
+          "total_file_count": 16,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
