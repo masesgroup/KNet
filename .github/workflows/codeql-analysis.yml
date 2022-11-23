@@ -21,7 +21,33 @@ on:
     - cron: '26 23 * * 3'
 
 jobs:
+  # Verify if a check is needed
+  check_changes:
+    name: Check changed files
+    outputs:
+      run_build_windows: ${{ steps.check_files.outputs.run_build_windows }}
+    runs-on: ubuntu-latest
+    steps:
+      - id: get_changed_files
+        uses: masesgroup/retrieve-changed-files@v2
+        with:
+          format: 'csv'
+      - id: check_files
+        run: |
+          mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.get_changed_files.outputs.added_modified }}')
+          for added_modified_file in "${added_modified_files[@]}"; do
+              if [[ $added_modified_file == "src/"* ]]; then
+                echo "$added_modified_file file is under the directory 'src/'."
+                echo "run_build_windows=true" >> $GITHUB_OUTPUT
+                break
+              fi
+          done
+      - name: Get run_build_windows
+        run: echo "The selected run_build_windows is ${{ steps.check_files.outputs.run_build_windows }}"
+        
   analyze:
+    needs: check_changes
+    if: "always() && needs.check_changes.outputs.run_build_windows == 'true'"
     name: Analyze
     runs-on: ubuntu-latest
     permissions:

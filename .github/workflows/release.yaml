@@ -72,7 +72,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
-          file: DockerfileConnect.linux
+          file: DockerfileKNetConnect.linux
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
@@ -121,8 +121,11 @@ jobs:
           MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
           MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
 
-      - name: Compile command line
+      - name: Compile KNet CLI
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KNetCLI\KNetCLI.csproj
+
+      - name: Compile KNet Connect
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KNetConnect\KNetConnect.csproj
 
       - name: Compile KNetPS
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KNetPS\KNetPS.csproj
