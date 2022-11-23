@@ -17,8 +17,9 @@ on:
   pull_request:
     # The branches below must be a subset of the branches above
     branches: [ master ]
-  schedule:
-    - cron: '26 23 * * 3'
+# Disabled to avoid error on schedule from check_changes job
+#  schedule:
+#    - cron: '26 23 * * 3'
 
 jobs:
   # Verify if a check is needed
