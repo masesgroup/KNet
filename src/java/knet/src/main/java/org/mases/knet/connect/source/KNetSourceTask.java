@@ -29,6 +29,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
@@ -102,6 +103,12 @@ public class KNetSourceTask extends SourceTask implements KNetConnectLogging {
             log.error("Failed Invoke of \"poll\"", jcne);
         }
         return null;
+    }
+
+    public <V> Map<String, Object> offsetAt(String key, V value)
+    {
+        if (context == null || context.offsetStorageReader() == null) return null;
+        return context.offsetStorageReader().offset(Collections.singletonMap(key, value));
     }
 
     @Override
