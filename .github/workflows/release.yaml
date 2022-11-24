@@ -11,7 +11,7 @@ on:
       - edited
 
 jobs:
-  build_container_linux:
+  build_container_knet:
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:    
@@ -69,6 +69,55 @@ jobs:
           push: true
           tags: ghcr.io/${{ github.repository_owner }}/mases.knet:latest
           
+  build_container_knetconnect:
+    runs-on: ubuntu-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:    
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: '1'
+          submodules: 'true'
+
+      - name: Pre compile
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src/net/KNet/KNet.csproj
+        
+      - name: Set up Apache Maven Central
+        uses: actions/setup-java@v3
+        with: # running setup-java again overwrites the settings.xml
+          distribution: temurin
+          java-version: 11
+          cache: 'maven'
+          server-id: ossrh # Value of the distributionManagement/repository/id field of the pom.xml
+          server-username: MAVEN_USERNAME # env variable for username in deploy
+          server-password: MAVEN_CENTRAL_TOKEN # env variable for token in deploy
+          gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }} # Value of the GPG private key to import
+          gpg-passphrase: MAVEN_GPG_PASSPHRASE # env variable for GPG private key passphrase
+
+      - name: Install local file to be used within Javadoc plugin of generated POM
+        run: mvn install:install-file -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.4.14 -Dpackaging=jar -Dfile=./bin/net6.0/JCOBridge.jar
+        shell: bash
+
+      - name: Create Jars
+        run: mvn --file ./src/java/knet/pom.xml --no-transfer-progress package
+        env:
+          MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
+          MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
+          MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
+        
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+        
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
@@ -80,6 +129,7 @@ jobs:
 
   # This workflow contains a single job called "build_release"
   build_release:
+    if: ${{ github.repository_owner == 'masesgroup'}} #do not execute outside main repo toavoid push of packages in testing mode 
     # The type of runner that the job will run on
     runs-on: windows-2022
     # Steps represent a sequence of tasks that will be executed as part of the job
