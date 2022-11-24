@@ -129,6 +129,7 @@ jobs:
 
   # This workflow contains a single job called "build_release"
   build_release:
+    if: ${{ github.repository_owner == 'masesgroup'}} #do not execute outside main repo toavoid push of packages in testing mode 
     # The type of runner that the job will run on
     runs-on: windows-2022
     # Steps represent a sequence of tasks that will be executed as part of the job
