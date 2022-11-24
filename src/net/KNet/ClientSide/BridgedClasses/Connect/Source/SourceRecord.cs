@@ -30,7 +30,7 @@ namespace MASES.KNet.Connect.Source
         public override string ClassName => "org.apache.kafka.connect.source.SourceRecord";
 
         public SourceRecord(Map<string, object> sourcePartition, Map<string, object> sourceOffset,
-                              string topic, int partition, Schema valueSchema, object value)
+                              string topic, int? partition, Schema valueSchema, object value)
             : base(sourcePartition, sourceOffset, topic, partition, valueSchema, value)
         {
         }
@@ -39,7 +39,6 @@ namespace MASES.KNet.Connect.Source
                             string topic, Schema valueSchema, object value)
             : base(sourcePartition, sourceOffset, topic, valueSchema, value)
         {
-
         }
 
         public SourceRecord(Map<string, object> sourcePartition, Map<string, object> sourceOffset,
@@ -49,24 +48,23 @@ namespace MASES.KNet.Connect.Source
         }
 
         public SourceRecord(Map<string, object> sourcePartition, Map<string, object> sourceOffset,
-                            string topic, int partition,
+                            string topic, int? partition,
                             Schema keySchema, object key, Schema valueSchema, object value)
                  : base(sourcePartition, sourceOffset, topic, partition, keySchema, key, valueSchema, value)
         {
         }
 
         public SourceRecord(Map<string, object> sourcePartition, Map<string, object> sourceOffset,
-                            string topic, int partition,
+                            string topic, int? partition,
                             Schema keySchema, object key,
                             Schema valueSchema, object value,
                             long timestamp)
                   : base(sourcePartition, sourceOffset, topic, partition, keySchema, key, valueSchema, value, timestamp)
         {
-
         }
 
         public SourceRecord(Map<string, object> sourcePartition, Map<string, object> sourceOffset,
-                            string topic, int partition,
+                            string topic, int? partition,
                             Schema keySchema, object key,
                             Schema valueSchema, object value,
                             long timestamp, Iterable<Header.Header> headers)
