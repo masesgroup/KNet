@@ -36,6 +36,16 @@ jobs:
                 echo "run_build_windows=true" >> $GITHUB_OUTPUT
                 break
               fi
+              if [[ $added_modified_file == "DockerfileKNet.linux"* ]]; then
+                echo "$added_modified_file file changed"
+                echo "run_build_windows=true" >> $GITHUB_OUTPUT
+                break
+              fi
+              if [[ $added_modified_file == "DockerfileKNetConnect.linux"* ]]; then
+                echo "$added_modified_file file changed"
+                echo "run_build_windows=true" >> $GITHUB_OUTPUT
+                break
+              fi
           done
       - name: Get run_build_windows
         run: echo "The selected run_build_windows is ${{ steps.check_files.outputs.run_build_windows }}"
