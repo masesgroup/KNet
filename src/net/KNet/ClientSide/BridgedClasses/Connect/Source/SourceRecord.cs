@@ -25,36 +25,42 @@ namespace MASES.KNet.Connect.Source
 {
     public class SourceRecord : ConnectRecord<SourceRecord>
     {
-        public override bool IsAbstract => false;
-
         public override string ClassName => "org.apache.kafka.connect.source.SourceRecord";
 
-        public SourceRecord(Map<string, object> sourcePartition, Map<string, object> sourceOffset,
+        public SourceRecord(params object[] args)
+            : base(args)
+        {
+        }
+    }
+
+    public class SourceRecord<TKey, TOffset> : SourceRecord
+    {
+        public SourceRecord(Map<string, TKey> sourcePartition, Map<string, TOffset> sourceOffset,
                               string topic, int? partition, Schema valueSchema, object value)
             : base(sourcePartition, sourceOffset, topic, partition, valueSchema, value)
         {
         }
 
-        public SourceRecord(Map<string, object> sourcePartition, Map<string, object> sourceOffset,
+        public SourceRecord(Map<string, TKey> sourcePartition, Map<string, TOffset> sourceOffset,
                             string topic, Schema valueSchema, object value)
             : base(sourcePartition, sourceOffset, topic, valueSchema, value)
         {
         }
 
-        public SourceRecord(Map<string, object> sourcePartition, Map<string, object> sourceOffset,
+        public SourceRecord(Map<string, TKey> sourcePartition, Map<string, TOffset> sourceOffset,
                             string topic, Schema keySchema, object key, Schema valueSchema, object value)
             : base(sourcePartition, sourceOffset, topic, keySchema, key, valueSchema, value)
         {
         }
 
-        public SourceRecord(Map<string, object> sourcePartition, Map<string, object> sourceOffset,
+        public SourceRecord(Map<string, TKey> sourcePartition, Map<string, TOffset> sourceOffset,
                             string topic, int? partition,
                             Schema keySchema, object key, Schema valueSchema, object value)
                  : base(sourcePartition, sourceOffset, topic, partition, keySchema, key, valueSchema, value)
         {
         }
 
-        public SourceRecord(Map<string, object> sourcePartition, Map<string, object> sourceOffset,
+        public SourceRecord(Map<string, TKey> sourcePartition, Map<string, TOffset> sourceOffset,
                             string topic, int? partition,
                             Schema keySchema, object key,
                             Schema valueSchema, object value,
@@ -63,7 +69,7 @@ namespace MASES.KNet.Connect.Source
         {
         }
 
-        public SourceRecord(Map<string, object> sourcePartition, Map<string, object> sourceOffset,
+        public SourceRecord(Map<string, TKey> sourcePartition, Map<string, object> sourceOffset,
                             string topic, int? partition,
                             Schema keySchema, object key,
                             Schema valueSchema, object value,
@@ -72,8 +78,9 @@ namespace MASES.KNet.Connect.Source
         {
         }
 
-        public Map<string, object> SourcePartition => IExecute<Map<string, object>>("sourcePartition");
+        public Map<string, TKey> SourcePartition => IExecute<Map<string, TKey>>("sourcePartition");
 
-        public Map<string, object> SourceOffset => IExecute<Map<string, object>>("sourceOffset");
+        public Map<string, TOffset> SourceOffset => IExecute<Map<string, TOffset>>("sourceOffset");
     }
+
 }

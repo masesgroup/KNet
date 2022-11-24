@@ -41,12 +41,12 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// Get the offset for the specified partition. If the data isn't already available locally, this gets it from the backing store, which may require some network round trips.
         /// </summary>
-        /// <typeparam name="TType">The type of the key set when was called <see cref="OffsetForKey{K}(string, K)"/> to generated first parameter of <see cref="SourceRecord"/></typeparam>
+        /// <typeparam name="TKey">The type of the key set when was called <see cref="OffsetForKey{K}(string, K)"/> to generated first parameter of <see cref="SourceRecord"/></typeparam>
         /// <typeparam name="TOffset">The type of the offset set when was called <see cref="OffsetForKey{K}(string, K)"/> to generated second parameter of <see cref="SourceRecord"/></typeparam>
         /// <param name="keyName">The identifier used when was called <see cref="OffsetForKey{K}(string, K)"/></param>
         /// <param name="keyValue">The value used when was called <see cref="OffsetForKey{K}(string, K)"/></param>
         /// <returns>Return the <see cref="Map{string, TOffset}"/> associated to the element identified from <paramref name="keyName"/> and <paramref name="keyValue"/> which is an object uniquely identifying the offset in the partition of data</returns>
-        protected Map<string, TOffset> OffsetAt<TType, TOffset>(string keyName, TType keyValue) => ExecuteOnTask<Map<string, TOffset>>("offsetAt", keyName, keyValue);
+        protected Map<string, TOffset> OffsetAt<TKey, TOffset>(string keyName, TKey keyValue) => ExecuteOnTask<Map<string, TOffset>>("offsetAt", keyName, keyValue);
 
         /// <summary>
         /// The <see cref="SourceTaskContext"/>
