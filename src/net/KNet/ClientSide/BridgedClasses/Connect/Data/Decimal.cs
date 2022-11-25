@@ -25,9 +25,9 @@ namespace MASES.KNet.Connect.Data
     {
         public override string ClassName => "org.apache.kafka.connect.data.Decimal";
 
-        public static string LOGICAL_NAME => SExecute<string>("LOGICAL_NAME");
+        public static string LOGICAL_NAME => Clazz.GetField<string>("LOGICAL_NAME");
 
-        public static string SCALE_FIELD => SExecute<string>("SCALE_FIELD");
+        public static string SCALE_FIELD => Clazz.GetField<string>("SCALE_FIELD");
 
         public static SchemaBuilder Builder(int scale) { return SExecute<SchemaBuilder>("builder", scale); }
 

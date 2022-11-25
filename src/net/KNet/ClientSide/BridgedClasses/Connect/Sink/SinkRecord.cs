@@ -16,10 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-using Java.Lang;
+using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Common.Record;
 using MASES.KNet.Connect.Connector;
 using MASES.KNet.Connect.Data;
+using MASES.KNet.Connect.Header;
+using System;
 
 namespace MASES.KNet.Connect.Sink
 {
@@ -29,25 +31,57 @@ namespace MASES.KNet.Connect.Sink
 
         public override string ClassName => "org.apache.kafka.connect.sink.SinkRecord";
 
-        public SinkRecord(string topic, int partition, Schema keySchema, object key, Schema valueSchema, object value, long kafkaOffset)
+        /// <summary>
+        /// Offset in Kafka
+        /// </summary>
+        public long KafkaOffset => IExecute<long>("kafkaOffset");
+        /// <summary>
+        /// The <see cref="MASES.KNet.Common.Record.TimestampType"/>
+        /// </summary>
+        public TimestampType TimestampType => IExecute<TimestampType>("timestampType");
+
+        public SinkRecord<TKey, TValue> CastTo<TKey, TValue>() => this.Cast<SinkRecord<TKey, TValue>>();
+    }
+
+    public class SinkRecord<TKey, TValue> : ConnectRecord<SinkRecord<TKey, TValue>, TKey, TValue>
+    {
+        public override bool IsAbstract => false;
+
+        public override string ClassName => "org.apache.kafka.connect.sink.SinkRecord";
+
+        /// <summary>
+        /// Converts an <see cref="SinkRecord{TKey, TValue}"/> in <see cref="SinkRecord"/>
+        /// </summary>
+        /// <param name="source">The <see cref="SinkRecord{TKey, TValue}"/> to convert</param>
+        public static implicit operator SinkRecord(SinkRecord<TKey, TValue> source) => source.Cast<SinkRecord>();
+
+        public SinkRecord()
+        {
+        }
+
+        public SinkRecord(string topic, int partition, Schema keySchema, TKey key, Schema valueSchema, TValue value, long kafkaOffset)
             : base(topic, partition, keySchema, key, valueSchema, value, kafkaOffset)
         {
         }
 
-        public SinkRecord(string topic, int partition, Schema keySchema, object key, Schema valueSchema, object value, long kafkaOffset,
-                          long timestamp, TimestampType timestampType)
+        public SinkRecord(string topic, int partition, Schema keySchema, TKey key, Schema valueSchema, TValue value, long kafkaOffset,
+                          DateTime timestamp, TimestampType timestampType)
             : base(topic, partition, keySchema, key, valueSchema, value, kafkaOffset, timestamp, timestampType)
         {
         }
 
-        public SinkRecord(string topic, int partition, Schema keySchema, object key, Schema valueSchema, object value, long kafkaOffset,
-                          long timestamp, TimestampType timestampType, Iterable<Header.Header> headers)
+        public SinkRecord(string topic, int partition, Schema keySchema, TKey key, Schema valueSchema, TValue value, long kafkaOffset,
+                          DateTime timestamp, TimestampType timestampType, Headers headers)
             : base(topic, partition, keySchema, key, valueSchema, value, kafkaOffset, timestamp, timestampType, headers)
         {
         }
-
+        /// <summary>
+        /// Offset in Kafka
+        /// </summary>
         public long KafkaOffset => IExecute<long>("kafkaOffset");
-
+        /// <summary>
+        /// The <see cref="MASES.KNet.Common.Record.TimestampType"/>
+        /// </summary>
         public TimestampType TimestampType => IExecute<TimestampType>("timestampType");
     }
 }

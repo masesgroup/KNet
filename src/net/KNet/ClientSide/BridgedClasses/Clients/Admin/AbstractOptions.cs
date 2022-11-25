@@ -29,7 +29,7 @@ namespace MASES.KNet.Clients.Admin
         }
 
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
-        public AbstractOptions(params object[] args) : base(args) { }
+        protected AbstractOptions(params object[] args) : base(args) { }
 
         public T TimeoutMs(int timeoutMs)
         {

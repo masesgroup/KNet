@@ -36,7 +36,7 @@ namespace MASES.KNet.Common.Metrics
         }
 
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
-        public MetricsContext(params object[] args) : base(args) { }
+        protected MetricsContext(params object[] args) : base(args) { }
 
         public Map<string, string> ContextLabels => IExecute<Map<string, string>>("contextLabels");
     }

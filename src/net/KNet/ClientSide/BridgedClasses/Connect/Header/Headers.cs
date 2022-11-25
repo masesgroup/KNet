@@ -29,14 +29,13 @@ namespace MASES.KNet.Connect.Header
         public override bool IsInterface => true;
         public override string ClassName => "org.apache.kafka.connect.header.Headers";
 
-        [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public Headers()
         {
         }
-        [System.Obsolete("This is not public in Apache Kafka API")]
+
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
-        public Headers(params object[] args)
+        protected Headers(params object[] args)
             : base(args)
         {
         }

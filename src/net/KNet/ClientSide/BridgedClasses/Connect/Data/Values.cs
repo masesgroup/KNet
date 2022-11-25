@@ -110,6 +110,5 @@ namespace MASES.KNet.Connect.Data
         {
             return SExecute<SchemaAndValue>("parseString", value);
         }
-
     }
 }
