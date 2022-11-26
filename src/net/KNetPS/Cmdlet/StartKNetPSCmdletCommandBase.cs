@@ -53,12 +53,20 @@ namespace MASES.KNetPS.Cmdlet
             HelpMessage = "The path where log will be stored.")]
         public string LogPath { get; set; }
 
+        /// <inheritdoc cref="KNetCore{T}.ApplicationDisableJMX" />
+        [Parameter(
+            ValueFromPipeline = true,
+            ValueFromPipelineByPropertyName = true,
+            HelpMessage = "Disable JMX. Default is JMX enabled without security.")]
+        public bool? DisableJMX { get; set; }
+
         protected override void OnBeforeCreateGlobalInstance()
         {
             KNetPSHelper<KNetPSCore>.SetScalaVersion(ScalaVersion);
             KNetPSHelper<KNetPSCore>.SetJarRootPath(KafkaJarLocation);
             KNetPSHelper<KNetPSCore>.SetLog4JPath(Log4JPath);
             KNetPSHelper<KNetPSCore>.SetLogPath(LogPath);
+            KNetPSHelper<KNetPSCore>.SetDisableJMX(DisableJMX);
         }
     }
 }
