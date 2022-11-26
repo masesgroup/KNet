@@ -400,6 +400,19 @@ namespace MASES.KNet
             get
             {
                 var lst = new List<string>(base.PathToParse);
+                var assembly = typeof(KNetCore<>).Assembly;
+                var version = assembly.GetName().Version.ToString();
+                // 1. check first full version
+                var knetFile = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(assembly.Location), JARsSubFolder, $"knet-{version}.jar");
+                if (!System.IO.File.Exists(knetFile) && version.EndsWith(".0"))
+                {
+                    // 2. if not exist remove last part of version
+                    version = version.Substring(0, version.LastIndexOf(".0"));
+                    knetFile = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(assembly.Location), JARsSubFolder, $"knet-{version}.jar");
+                }
+                // 3. add knet at this version first...
+                lst.Add(knetFile);
+                // 2. ...then add everything else
                 lst.Add(JarRootPath != null ? Path.Combine(JarRootPath, "*.jar") : JarRootPath);
                 return lst;
             }
