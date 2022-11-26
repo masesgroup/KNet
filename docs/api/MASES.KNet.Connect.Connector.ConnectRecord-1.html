@@ -73,7 +73,8 @@
   
   <h1 id="MASES_KNet_Connect_Connector_ConnectRecord_1" data-uid="MASES.KNet.Connect.Connector.ConnectRecord`1" class="text-break">Class ConnectRecord&lt;R&gt;
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Base type for <a class="xref" href="MASES.KNet.Connect.Sink.SinkRecord.html">SinkRecord</a> and <a class="xref" href="MASES.KNet.Connect.Source.SourceRecord.html">SourceRecord</a></p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -282,170 +283,8 @@
     <tbody>
       <tr>
         <td><span class="parametername">R</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="constructors">Constructors
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Connector_ConnectRecord_1__ctor_System_Object___.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Connector.ConnectRecord%601.%23ctor(System.Object%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/ConnectRecord.cs/#L54">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_Connector_ConnectRecord_1__ctor_" data-uid="MASES.KNet.Connect.Connector.ConnectRecord`1.#ctor*"></a>
-  <h4 id="MASES_KNet_Connect_Connector_ConnectRecord_1__ctor_System_Object___" data-uid="MASES.KNet.Connect.Connector.ConnectRecord`1.#ctor(System.Object[])">ConnectRecord(Object[])</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConnectRecord(params object[] args)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a>[]</td>
-        <td><span class="parametername">args</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Connector_ConnectRecord_1__ctor_System_String_System_Int32_MASES_KNet_Connect_Data_Schema_System_Object_MASES_KNet_Connect_Data_Schema_System_Object_System_Int64_.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Connector.ConnectRecord%601.%23ctor(System.String%2CSystem.Int32%2CMASES.KNet.Connect.Data.Schema%2CSystem.Object%2CMASES.KNet.Connect.Data.Schema%2CSystem.Object%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/ConnectRecord.cs/#L38">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_Connector_ConnectRecord_1__ctor_" data-uid="MASES.KNet.Connect.Connector.ConnectRecord`1.#ctor*"></a>
-  <h4 id="MASES_KNet_Connect_Connector_ConnectRecord_1__ctor_System_String_System_Int32_MASES_KNet_Connect_Data_Schema_System_Object_MASES_KNet_Connect_Data_Schema_System_Object_System_Int64_" data-uid="MASES.KNet.Connect.Connector.ConnectRecord`1.#ctor(System.String,System.Int32,MASES.KNet.Connect.Data.Schema,System.Object,MASES.KNet.Connect.Data.Schema,System.Object,System.Int64)">ConnectRecord(String, Int32, Schema, Object, Schema, Object, Int64)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConnectRecord(string topic, int kafkaPartition, Schema keySchema, object key, Schema valueSchema, object value, long timestamp)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">topic</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">kafkaPartition</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Connect.Data.Schema.html">Schema</a></td>
-        <td><span class="parametername">keySchema</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><span class="parametername">key</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Connect.Data.Schema.html">Schema</a></td>
-        <td><span class="parametername">valueSchema</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
-        <td><span class="parametername">timestamp</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Connector_ConnectRecord_1__ctor_System_String_System_Int32_MASES_KNet_Connect_Data_Schema_System_Object_MASES_KNet_Connect_Data_Schema_System_Object_System_Int64_Java_Lang_Iterable_MASES_KNet_Connect_Header_Header__.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Connector.ConnectRecord%601.%23ctor(System.String%2CSystem.Int32%2CMASES.KNet.Connect.Data.Schema%2CSystem.Object%2CMASES.KNet.Connect.Data.Schema%2CSystem.Object%2CSystem.Int64%2CJava.Lang.Iterable%7BMASES.KNet.Connect.Header.Header%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/ConnectRecord.cs/#L46">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_Connector_ConnectRecord_1__ctor_" data-uid="MASES.KNet.Connect.Connector.ConnectRecord`1.#ctor*"></a>
-  <h4 id="MASES_KNet_Connect_Connector_ConnectRecord_1__ctor_System_String_System_Int32_MASES_KNet_Connect_Data_Schema_System_Object_MASES_KNet_Connect_Data_Schema_System_Object_System_Int64_Java_Lang_Iterable_MASES_KNet_Connect_Header_Header__" data-uid="MASES.KNet.Connect.Connector.ConnectRecord`1.#ctor(System.String,System.Int32,MASES.KNet.Connect.Data.Schema,System.Object,MASES.KNet.Connect.Data.Schema,System.Object,System.Int64,Java.Lang.Iterable{MASES.KNet.Connect.Header.Header})">ConnectRecord(String, Int32, Schema, Object, Schema, Object, Int64, Iterable&lt;Header&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConnectRecord(string topic, int kafkaPartition, Schema keySchema, object key, Schema valueSchema, object value, long timestamp, Iterable&lt;Header&gt; headers)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">topic</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">kafkaPartition</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Connect.Data.Schema.html">Schema</a></td>
-        <td><span class="parametername">keySchema</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><span class="parametername">key</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Connect.Data.Schema.html">Schema</a></td>
-        <td><span class="parametername">valueSchema</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
-        <td><span class="parametername">timestamp</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Java.Lang.Iterable</span>&lt;<a class="xref" href="MASES.KNet.Connect.Header.Header.html">Header</a>&gt;</td>
-        <td><span class="parametername">headers</span></td>
-        <td></td>
+        <td><p>The class extending <a class="xref" href="MASES.KNet.Connect.Connector.ConnectRecord-1.html">ConnectRecord&lt;R&gt;</a></p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -456,7 +295,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Connector_ConnectRecord_1_ClassName.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Connector.ConnectRecord%601.ClassName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/ConnectRecord.cs/#L29">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/ConnectRecord.cs/#L33">View Source</a>
   </span>
   <a id="MASES_KNet_Connect_Connector_ConnectRecord_1_ClassName_" data-uid="MASES.KNet.Connect.Connector.ConnectRecord`1.ClassName*"></a>
   <h4 id="MASES_KNet_Connect_Connector_ConnectRecord_1_ClassName" data-uid="MASES.KNet.Connect.Connector.ConnectRecord`1.ClassName">ClassName</h4>
@@ -488,11 +327,12 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Connector_ConnectRecord_1_Headers.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Connector.ConnectRecord%601.Headers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/ConnectRecord.cs/#L72">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/ConnectRecord.cs/#L66">View Source</a>
   </span>
   <a id="MASES_KNet_Connect_Connector_ConnectRecord_1_Headers_" data-uid="MASES.KNet.Connect.Connector.ConnectRecord`1.Headers*"></a>
   <h4 id="MASES_KNet_Connect_Connector_ConnectRecord_1_Headers" data-uid="MASES.KNet.Connect.Connector.ConnectRecord`1.Headers">Headers</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="MASES.KNet.Connect.Connector.ConnectRecord-1.html#MASES_KNet_Connect_Connector_ConnectRecord_1_Headers">Headers</a></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -518,7 +358,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Connector_ConnectRecord_1_IsAbstract.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Connector.ConnectRecord%601.IsAbstract%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/ConnectRecord.cs/#L28">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/ConnectRecord.cs/#L32">View Source</a>
   </span>
   <a id="MASES_KNet_Connect_Connector_ConnectRecord_1_IsAbstract_" data-uid="MASES.KNet.Connect.Connector.ConnectRecord`1.IsAbstract*"></a>
   <h4 id="MASES_KNet_Connect_Connector_ConnectRecord_1_IsAbstract" data-uid="MASES.KNet.Connect.Connector.ConnectRecord`1.IsAbstract">IsAbstract</h4>
@@ -550,11 +390,12 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Connector_ConnectRecord_1_KafkaPartition.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Connector.ConnectRecord%601.KafkaPartition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/ConnectRecord.cs/#L60">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/ConnectRecord.cs/#L42">View Source</a>
   </span>
   <a id="MASES_KNet_Connect_Connector_ConnectRecord_1_KafkaPartition_" data-uid="MASES.KNet.Connect.Connector.ConnectRecord`1.KafkaPartition*"></a>
   <h4 id="MASES_KNet_Connect_Connector_ConnectRecord_1_KafkaPartition" data-uid="MASES.KNet.Connect.Connector.ConnectRecord`1.KafkaPartition">KafkaPartition</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Partition</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -580,11 +421,12 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Connector_ConnectRecord_1_Key.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Connector.ConnectRecord%601.Key%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/ConnectRecord.cs/#L62">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/ConnectRecord.cs/#L46">View Source</a>
   </span>
   <a id="MASES_KNet_Connect_Connector_ConnectRecord_1_Key_" data-uid="MASES.KNet.Connect.Connector.ConnectRecord`1.Key*"></a>
   <h4 id="MASES_KNet_Connect_Connector_ConnectRecord_1_Key" data-uid="MASES.KNet.Connect.Connector.ConnectRecord`1.Key">Key</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Key</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -610,11 +452,12 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Connector_ConnectRecord_1_KeySchema.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Connector.ConnectRecord%601.KeySchema%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/ConnectRecord.cs/#L64">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/ConnectRecord.cs/#L50">View Source</a>
   </span>
   <a id="MASES_KNet_Connect_Connector_ConnectRecord_1_KeySchema_" data-uid="MASES.KNet.Connect.Connector.ConnectRecord`1.KeySchema*"></a>
   <h4 id="MASES_KNet_Connect_Connector_ConnectRecord_1_KeySchema" data-uid="MASES.KNet.Connect.Connector.ConnectRecord`1.KeySchema">KeySchema</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>KeySchema</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -640,15 +483,16 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Connector_ConnectRecord_1_Timestamp.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Connector.ConnectRecord%601.Timestamp%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/ConnectRecord.cs/#L70">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/ConnectRecord.cs/#L62">View Source</a>
   </span>
   <a id="MASES_KNet_Connect_Connector_ConnectRecord_1_Timestamp_" data-uid="MASES.KNet.Connect.Connector.ConnectRecord`1.Timestamp*"></a>
   <h4 id="MASES_KNet_Connect_Connector_ConnectRecord_1_Timestamp" data-uid="MASES.KNet.Connect.Connector.ConnectRecord`1.Timestamp">Timestamp</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Timestamp</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public long Timestamp { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public DateTime Timestamp { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -660,7 +504,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -670,11 +514,12 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Connector_ConnectRecord_1_Topic.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Connector.ConnectRecord%601.Topic%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/ConnectRecord.cs/#L58">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/ConnectRecord.cs/#L38">View Source</a>
   </span>
   <a id="MASES_KNet_Connect_Connector_ConnectRecord_1_Topic_" data-uid="MASES.KNet.Connect.Connector.ConnectRecord`1.Topic*"></a>
   <h4 id="MASES_KNet_Connect_Connector_ConnectRecord_1_Topic" data-uid="MASES.KNet.Connect.Connector.ConnectRecord`1.Topic">Topic</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Topic</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -700,11 +545,12 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Connector_ConnectRecord_1_Value.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Connector.ConnectRecord%601.Value%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/ConnectRecord.cs/#L66">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/ConnectRecord.cs/#L54">View Source</a>
   </span>
   <a id="MASES_KNet_Connect_Connector_ConnectRecord_1_Value_" data-uid="MASES.KNet.Connect.Connector.ConnectRecord`1.Value*"></a>
   <h4 id="MASES_KNet_Connect_Connector_ConnectRecord_1_Value" data-uid="MASES.KNet.Connect.Connector.ConnectRecord`1.Value">Value</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Value</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -730,11 +576,12 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Connector_ConnectRecord_1_ValueSchema.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Connector.ConnectRecord%601.ValueSchema%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/ConnectRecord.cs/#L68">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/ConnectRecord.cs/#L58">View Source</a>
   </span>
   <a id="MASES_KNet_Connect_Connector_ConnectRecord_1_ValueSchema_" data-uid="MASES.KNet.Connect.Connector.ConnectRecord`1.ValueSchema*"></a>
   <h4 id="MASES_KNet_Connect_Connector_ConnectRecord_1_ValueSchema" data-uid="MASES.KNet.Connect.Connector.ConnectRecord`1.ValueSchema">ValueSchema</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>ValueSchema</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -751,167 +598,6 @@
     <tbody>
       <tr>
         <td><a class="xref" href="MASES.KNet.Connect.Data.Schema.html">Schema</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Connector_ConnectRecord_1_NewRecord_System_String_System_Int32_MASES_KNet_Connect_Data_Schema_System_Object_MASES_KNet_Connect_Data_Schema_System_Object_System_Int64_.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Connector.ConnectRecord%601.NewRecord(System.String%2CSystem.Int32%2CMASES.KNet.Connect.Data.Schema%2CSystem.Object%2CMASES.KNet.Connect.Data.Schema%2CSystem.Object%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/ConnectRecord.cs/#L74">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_Connector_ConnectRecord_1_NewRecord_" data-uid="MASES.KNet.Connect.Connector.ConnectRecord`1.NewRecord*"></a>
-  <h4 id="MASES_KNet_Connect_Connector_ConnectRecord_1_NewRecord_System_String_System_Int32_MASES_KNet_Connect_Data_Schema_System_Object_MASES_KNet_Connect_Data_Schema_System_Object_System_Int64_" data-uid="MASES.KNet.Connect.Connector.ConnectRecord`1.NewRecord(System.String,System.Int32,MASES.KNet.Connect.Data.Schema,System.Object,MASES.KNet.Connect.Data.Schema,System.Object,System.Int64)">NewRecord(String, Int32, Schema, Object, Schema, Object, Int64)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public R NewRecord(string topic, int kafkaPartition, Schema keySchema, object key, Schema valueSchema, object value, long timestamp)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">topic</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">kafkaPartition</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Connect.Data.Schema.html">Schema</a></td>
-        <td><span class="parametername">keySchema</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><span class="parametername">key</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Connect.Data.Schema.html">Schema</a></td>
-        <td><span class="parametername">valueSchema</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
-        <td><span class="parametername">timestamp</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">R</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Connector_ConnectRecord_1_NewRecord_System_String_System_Int32_MASES_KNet_Connect_Data_Schema_System_Object_MASES_KNet_Connect_Data_Schema_System_Object_System_Int64_Java_Lang_Iterable_MASES_KNet_Connect_Header_Header__.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Connector.ConnectRecord%601.NewRecord(System.String%2CSystem.Int32%2CMASES.KNet.Connect.Data.Schema%2CSystem.Object%2CMASES.KNet.Connect.Data.Schema%2CSystem.Object%2CSystem.Int64%2CJava.Lang.Iterable%7BMASES.KNet.Connect.Header.Header%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/ConnectRecord.cs/#L76">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_Connector_ConnectRecord_1_NewRecord_" data-uid="MASES.KNet.Connect.Connector.ConnectRecord`1.NewRecord*"></a>
-  <h4 id="MASES_KNet_Connect_Connector_ConnectRecord_1_NewRecord_System_String_System_Int32_MASES_KNet_Connect_Data_Schema_System_Object_MASES_KNet_Connect_Data_Schema_System_Object_System_Int64_Java_Lang_Iterable_MASES_KNet_Connect_Header_Header__" data-uid="MASES.KNet.Connect.Connector.ConnectRecord`1.NewRecord(System.String,System.Int32,MASES.KNet.Connect.Data.Schema,System.Object,MASES.KNet.Connect.Data.Schema,System.Object,System.Int64,Java.Lang.Iterable{MASES.KNet.Connect.Header.Header})">NewRecord(String, Int32, Schema, Object, Schema, Object, Int64, Iterable&lt;Header&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public R NewRecord(string topic, int kafkaPartition, Schema keySchema, object key, Schema valueSchema, object value, long timestamp, Iterable&lt;Header&gt; headers)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">topic</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">kafkaPartition</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Connect.Data.Schema.html">Schema</a></td>
-        <td><span class="parametername">keySchema</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><span class="parametername">key</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Connect.Data.Schema.html">Schema</a></td>
-        <td><span class="parametername">valueSchema</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
-        <td><span class="parametername">timestamp</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Java.Lang.Iterable</span>&lt;<a class="xref" href="MASES.KNet.Connect.Header.Header.html">Header</a>&gt;</td>
-        <td><span class="parametername">headers</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">R</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -946,7 +632,7 @@
                     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Connector_ConnectRecord_1.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Connector.ConnectRecord%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/ConnectRecord.cs/#L26" class="contribution-link">View Source</a>
+                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Connector/ConnectRecord.cs/#L30" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

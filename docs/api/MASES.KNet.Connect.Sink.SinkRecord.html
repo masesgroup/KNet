@@ -120,12 +120,6 @@
       <a class="xref" href="MASES.KNet.Connect.Connector.ConnectRecord-1.html#MASES_KNet_Connect_Connector_ConnectRecord_1_Headers">ConnectRecord&lt;SinkRecord&gt;.Headers</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Connect.Connector.ConnectRecord-1.html#MASES_KNet_Connect_Connector_ConnectRecord_1_NewRecord_System_String_System_Int32_MASES_KNet_Connect_Data_Schema_System_Object_MASES_KNet_Connect_Data_Schema_System_Object_System_Int64_">ConnectRecord&lt;SinkRecord&gt;.NewRecord(String, Int32, Schema, Object, Schema, Object, Int64)</a>
-    </div>
-    <div>
-      <a class="xref" href="MASES.KNet.Connect.Connector.ConnectRecord-1.html#MASES_KNet_Connect_Connector_ConnectRecord_1_NewRecord_System_String_System_Int32_MASES_KNet_Connect_Data_Schema_System_Object_MASES_KNet_Connect_Data_Schema_System_Object_System_Int64_Java_Lang_Iterable_MASES_KNet_Connect_Header_Header__">ConnectRecord&lt;SinkRecord&gt;.NewRecord(String, Int32, Schema, Object, Schema, Object, Int64, Iterable&lt;Header&gt;)</a>
-    </div>
-    <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;MASES.KNet.Connect.Connector.ConnectRecord&lt;MASES.KNet.Connect.Sink.SinkRecord&gt;&gt;.SExecute(System.String, System.Object[])</span>
     </div>
     <div>
@@ -300,219 +294,6 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class SinkRecord : ConnectRecord&lt;SinkRecord&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
   </div>
-  <h3 id="constructors">Constructors
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Sink_SinkRecord__ctor_System_String_System_Int32_MASES_KNet_Connect_Data_Schema_System_Object_MASES_KNet_Connect_Data_Schema_System_Object_System_Int64_.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Sink.SinkRecord.%23ctor(System.String%2CSystem.Int32%2CMASES.KNet.Connect.Data.Schema%2CSystem.Object%2CMASES.KNet.Connect.Data.Schema%2CSystem.Object%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Sink/SinkRecord.cs/#L32">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_Sink_SinkRecord__ctor_" data-uid="MASES.KNet.Connect.Sink.SinkRecord.#ctor*"></a>
-  <h4 id="MASES_KNet_Connect_Sink_SinkRecord__ctor_System_String_System_Int32_MASES_KNet_Connect_Data_Schema_System_Object_MASES_KNet_Connect_Data_Schema_System_Object_System_Int64_" data-uid="MASES.KNet.Connect.Sink.SinkRecord.#ctor(System.String,System.Int32,MASES.KNet.Connect.Data.Schema,System.Object,MASES.KNet.Connect.Data.Schema,System.Object,System.Int64)">SinkRecord(String, Int32, Schema, Object, Schema, Object, Int64)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SinkRecord(string topic, int partition, Schema keySchema, object key, Schema valueSchema, object value, long kafkaOffset)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">topic</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">partition</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Connect.Data.Schema.html">Schema</a></td>
-        <td><span class="parametername">keySchema</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><span class="parametername">key</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Connect.Data.Schema.html">Schema</a></td>
-        <td><span class="parametername">valueSchema</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
-        <td><span class="parametername">kafkaOffset</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Sink_SinkRecord__ctor_System_String_System_Int32_MASES_KNet_Connect_Data_Schema_System_Object_MASES_KNet_Connect_Data_Schema_System_Object_System_Int64_System_Int64_MASES_KNet_Common_Record_TimestampType_.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Sink.SinkRecord.%23ctor(System.String%2CSystem.Int32%2CMASES.KNet.Connect.Data.Schema%2CSystem.Object%2CMASES.KNet.Connect.Data.Schema%2CSystem.Object%2CSystem.Int64%2CSystem.Int64%2CMASES.KNet.Common.Record.TimestampType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Sink/SinkRecord.cs/#L37">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_Sink_SinkRecord__ctor_" data-uid="MASES.KNet.Connect.Sink.SinkRecord.#ctor*"></a>
-  <h4 id="MASES_KNet_Connect_Sink_SinkRecord__ctor_System_String_System_Int32_MASES_KNet_Connect_Data_Schema_System_Object_MASES_KNet_Connect_Data_Schema_System_Object_System_Int64_System_Int64_MASES_KNet_Common_Record_TimestampType_" data-uid="MASES.KNet.Connect.Sink.SinkRecord.#ctor(System.String,System.Int32,MASES.KNet.Connect.Data.Schema,System.Object,MASES.KNet.Connect.Data.Schema,System.Object,System.Int64,System.Int64,MASES.KNet.Common.Record.TimestampType)">SinkRecord(String, Int32, Schema, Object, Schema, Object, Int64, Int64, TimestampType)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SinkRecord(string topic, int partition, Schema keySchema, object key, Schema valueSchema, object value, long kafkaOffset, long timestamp, TimestampType timestampType)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">topic</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">partition</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Connect.Data.Schema.html">Schema</a></td>
-        <td><span class="parametername">keySchema</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><span class="parametername">key</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Connect.Data.Schema.html">Schema</a></td>
-        <td><span class="parametername">valueSchema</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
-        <td><span class="parametername">kafkaOffset</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
-        <td><span class="parametername">timestamp</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Common.Record.TimestampType.html">TimestampType</a></td>
-        <td><span class="parametername">timestampType</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Sink_SinkRecord__ctor_System_String_System_Int32_MASES_KNet_Connect_Data_Schema_System_Object_MASES_KNet_Connect_Data_Schema_System_Object_System_Int64_System_Int64_MASES_KNet_Common_Record_TimestampType_Java_Lang_Iterable_MASES_KNet_Connect_Header_Header__.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Sink.SinkRecord.%23ctor(System.String%2CSystem.Int32%2CMASES.KNet.Connect.Data.Schema%2CSystem.Object%2CMASES.KNet.Connect.Data.Schema%2CSystem.Object%2CSystem.Int64%2CSystem.Int64%2CMASES.KNet.Common.Record.TimestampType%2CJava.Lang.Iterable%7BMASES.KNet.Connect.Header.Header%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Sink/SinkRecord.cs/#L43">View Source</a>
-  </span>
-  <a id="MASES_KNet_Connect_Sink_SinkRecord__ctor_" data-uid="MASES.KNet.Connect.Sink.SinkRecord.#ctor*"></a>
-  <h4 id="MASES_KNet_Connect_Sink_SinkRecord__ctor_System_String_System_Int32_MASES_KNet_Connect_Data_Schema_System_Object_MASES_KNet_Connect_Data_Schema_System_Object_System_Int64_System_Int64_MASES_KNet_Common_Record_TimestampType_Java_Lang_Iterable_MASES_KNet_Connect_Header_Header__" data-uid="MASES.KNet.Connect.Sink.SinkRecord.#ctor(System.String,System.Int32,MASES.KNet.Connect.Data.Schema,System.Object,MASES.KNet.Connect.Data.Schema,System.Object,System.Int64,System.Int64,MASES.KNet.Common.Record.TimestampType,Java.Lang.Iterable{MASES.KNet.Connect.Header.Header})">SinkRecord(String, Int32, Schema, Object, Schema, Object, Int64, Int64, TimestampType, Iterable&lt;Header&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SinkRecord(string topic, int partition, Schema keySchema, object key, Schema valueSchema, object value, long kafkaOffset, long timestamp, TimestampType timestampType, Iterable&lt;Header&gt; headers)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">topic</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">partition</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Connect.Data.Schema.html">Schema</a></td>
-        <td><span class="parametername">keySchema</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><span class="parametername">key</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Connect.Data.Schema.html">Schema</a></td>
-        <td><span class="parametername">valueSchema</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
-        <td><span class="parametername">kafkaOffset</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
-        <td><span class="parametername">timestamp</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Common.Record.TimestampType.html">TimestampType</a></td>
-        <td><span class="parametername">timestampType</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Java.Lang.Iterable</span>&lt;<a class="xref" href="MASES.KNet.Connect.Header.Header.html">Header</a>&gt;</td>
-        <td><span class="parametername">headers</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
@@ -520,7 +301,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Sink_SinkRecord_ClassName.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Sink.SinkRecord.ClassName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Sink/SinkRecord.cs/#L30">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Sink/SinkRecord.cs/#L32">View Source</a>
   </span>
   <a id="MASES_KNet_Connect_Sink_SinkRecord_ClassName_" data-uid="MASES.KNet.Connect.Sink.SinkRecord.ClassName*"></a>
   <h4 id="MASES_KNet_Connect_Sink_SinkRecord_ClassName" data-uid="MASES.KNet.Connect.Sink.SinkRecord.ClassName">ClassName</h4>
@@ -552,7 +333,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Sink_SinkRecord_IsAbstract.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Sink.SinkRecord.IsAbstract%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Sink/SinkRecord.cs/#L28">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Sink/SinkRecord.cs/#L30">View Source</a>
   </span>
   <a id="MASES_KNet_Connect_Sink_SinkRecord_IsAbstract_" data-uid="MASES.KNet.Connect.Sink.SinkRecord.IsAbstract*"></a>
   <h4 id="MASES_KNet_Connect_Sink_SinkRecord_IsAbstract" data-uid="MASES.KNet.Connect.Sink.SinkRecord.IsAbstract">IsAbstract</h4>
@@ -584,11 +365,12 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Sink_SinkRecord_KafkaOffset.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Sink.SinkRecord.KafkaOffset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Sink/SinkRecord.cs/#L49">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Sink/SinkRecord.cs/#L37">View Source</a>
   </span>
   <a id="MASES_KNet_Connect_Sink_SinkRecord_KafkaOffset_" data-uid="MASES.KNet.Connect.Sink.SinkRecord.KafkaOffset*"></a>
   <h4 id="MASES_KNet_Connect_Sink_SinkRecord_KafkaOffset" data-uid="MASES.KNet.Connect.Sink.SinkRecord.KafkaOffset">KafkaOffset</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Offset in Kafka</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -614,11 +396,12 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Sink_SinkRecord_TimestampType.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Sink.SinkRecord.TimestampType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Sink/SinkRecord.cs/#L51">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Sink/SinkRecord.cs/#L41">View Source</a>
   </span>
   <a id="MASES_KNet_Connect_Sink_SinkRecord_TimestampType_" data-uid="MASES.KNet.Connect.Sink.SinkRecord.TimestampType*"></a>
   <h4 id="MASES_KNet_Connect_Sink_SinkRecord_TimestampType" data-uid="MASES.KNet.Connect.Sink.SinkRecord.TimestampType">TimestampType</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="MASES.KNet.Common.Record.TimestampType.html">TimestampType</a></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -635,6 +418,57 @@
     <tbody>
       <tr>
         <td><a class="xref" href="MASES.KNet.Common.Record.TimestampType.html">TimestampType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Sink_SinkRecord_CastTo__2.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Sink.SinkRecord.CastTo%60%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Sink/SinkRecord.cs/#L43">View Source</a>
+  </span>
+  <a id="MASES_KNet_Connect_Sink_SinkRecord_CastTo_" data-uid="MASES.KNet.Connect.Sink.SinkRecord.CastTo*"></a>
+  <h4 id="MASES_KNet_Connect_Sink_SinkRecord_CastTo__2" data-uid="MASES.KNet.Connect.Sink.SinkRecord.CastTo``2">CastTo&lt;TKey, TValue&gt;()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SinkRecord&lt;TKey, TValue&gt; CastTo&lt;TKey, TValue&gt;()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KNet.Connect.Sink.SinkRecord-2.html">SinkRecord</a>&lt;TKey, TValue&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -669,7 +503,7 @@
                     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_Sink_SinkRecord.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.Sink.SinkRecord%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Sink/SinkRecord.cs/#L26" class="contribution-link">View Source</a>
+                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/Sink/SinkRecord.cs/#L28" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
