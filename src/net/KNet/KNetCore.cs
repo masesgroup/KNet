@@ -75,6 +75,24 @@ namespace MASES.KNet
                         Default = Const.DefaultLogPath,
                         Help = "The path where log will be stored.",
                     },
+                    new ArgumentMetadata<string>()
+                    {
+                        Name = CLIParam.DisableJMX,
+                        Type = ArgumentType.Single,
+                        Help = "Disable JMX. Default is true.",
+                    },
+                    new ArgumentMetadata<string>()
+                    {
+                        Name = CLIParam.EnableJMXAuth,
+                        Type = ArgumentType.Single,
+                        Help = "Enable authenticate on JMX. Default is false",
+                    },
+                    new ArgumentMetadata<string>()
+                    {
+                        Name = CLIParam.EnableJMXSSL,
+                        Type = ArgumentType.Single,
+                        Help = "Enable SSL on JMX. Default is false.",
+                    },
                 });
                 return lst;
             }
@@ -382,13 +400,17 @@ namespace MASES.KNet
 
                 IDictionary<string, string> options = new Dictionary<string, string>(base.Options)
                 {
-                    { "-Dcom.sun.management.jmxremote", null },
-                    { "com.sun.management.jmxremote.authenticate", "false" },
-                    { "com.sun.management.jmxremote.ssl", "false" },
                     { "log4j.configuration", string.IsNullOrEmpty(Log4JPath) ? ((JarRootPath == Const.DefaultRootPath) ? Log4JOpts : null) : $"file:{Log4JPath}"},
                     { "kafka.logs.dir", LogDir},
                     { "java.awt.headless", "true" },
                 };
+
+                if (!ParsedArgs.Exist(CLIParam.DisableJMX))
+                {
+                    options.Add("-Dcom.sun.management.jmxremote", null);
+                    options.Add("com.sun.management.jmxremote.authenticate", ParsedArgs.Exist(CLIParam.EnableJMXAuth) ? "true" : "false");
+                    options.Add("com.sun.management.jmxremote.ssl", ParsedArgs.Exist(CLIParam.EnableJMXSSL) ? "true" : "false");
+                }
 
                 return options;
             }
