@@ -25,13 +25,12 @@ namespace MASES.KNet.Common.Config
     {
         public override string ClassName => "org.apache.kafka.common.config.AbstractConfig";
 
-        [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public AbstractConfig()
         {
         }
 
-        public AbstractConfig(params object[] args)
+        protected AbstractConfig(params object[] args)
             : base(args)
         {
         }

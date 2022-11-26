@@ -34,7 +34,7 @@ namespace MASES.KNet.Clients.Consumer
         {
         }
 
-        public KafkaConsumer(params object[] args)
+        protected KafkaConsumer(params object[] args)
             : base(args)
         {
         }

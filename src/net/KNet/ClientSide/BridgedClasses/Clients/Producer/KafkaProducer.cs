@@ -34,7 +34,7 @@ namespace MASES.KNet.Clients.Producer
         {
         }
 
-        public KafkaProducer(params object[] args)
+        protected KafkaProducer(params object[] args)
             : base(args)
         {
         }

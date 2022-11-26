@@ -28,7 +28,7 @@ namespace MASES.KNet.Clients.Producer
         {
         }
 
-        public ProducerRecord(params object[] args)
+        protected ProducerRecord(params object[] args)
             : base(args)
         {
         }

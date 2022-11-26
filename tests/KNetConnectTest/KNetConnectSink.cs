@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-using Java.Util;
 using MASES.KNet.Connect;
 using MASES.KNet.Connect.Sink;
+using System;
 using System.Collections.Generic;
 
 namespace MASES.KNetConnectTest
@@ -27,17 +27,23 @@ namespace MASES.KNetConnectTest
     {
         public override void Start(IReadOnlyDictionary<string, string> props)
         {
-
+            LogInfo($"KNetSinkTestConnector Start");
         }
 
         public override void Stop()
         {
-
+            LogInfo($"KNetSinkTestConnector Stop");
         }
 
         public override void TaskConfigs(int index, IDictionary<string, string> config)
         {
+            LogInfo($"Fill in task {index}");
 
+            foreach (var item in Properties)
+            {
+                LogInfo($"{item.Key}={item.Value}");
+                config.Add(item); // fill in all properties
+            }
         }
     }
 
@@ -45,17 +51,26 @@ namespace MASES.KNetConnectTest
     {
         public override void Put(IEnumerable<SinkRecord> collection)
         {
+            var castedValues = collection.CastTo<string>();
 
+            foreach (var item in castedValues)
+            {
+                Console.WriteLine($"Topic: {item.Topic} - Partition: {item.KafkaPartition} - Offset: {item.KafkaOffset} - Value: {item.Value}");
+            }
         }
 
         public override void Start(IReadOnlyDictionary<string, string> props)
         {
-
+            LogInfo($"KNetSinkTestTask start");
+            foreach (var item in props)
+            {
+                LogInfo($"Task config {item.Key}={item.Value}");
+            }
         }
 
         public override void Stop()
         {
-
+            LogInfo($"KNetSinkTestTask stop");
         }
     }
 }
