@@ -122,8 +122,8 @@
 </li>
 <li>Connect scope:
 <ul>
-<li>ConnectDistributed</li>
-<li>ConnectStandalone</li>
+<li>ConnectDistributed: moved to KNetConnect (see <a href="usageConnect.html">KNetConnect</a>)</li>
+<li>ConnectStandalone: moved to KNetConnect (see <a href="usageConnect.html">KNetConnect</a>)</li>
 <li>MirrorMaker2</li>
 </ul>
 </li>
@@ -131,8 +131,9 @@
 </li>
 <li><strong>KafkaLocation</strong>: represents the path to the root folder of Apache Kafka binary distribution; default value consider that KNetCLI uses the Apache Kafka jars available under the jars folder prepared from the package;</li>
 <li><strong>ScalaVersion</strong>: the scala version to be used. The default version (<em>2.13.6</em>) is binded to the deafult Apache Kafka version available in the package;</li>
-<li><strong>Log4JConfiguration</strong>: the log4j configuration file; the default uses the file within the package.</li>
-<li><strong>LogPath</strong>: the path where the logs are stored</li>
+<li><strong>Log4JConfiguration</strong>: the log4j configuration file; the default uses the file within the package;</li>
+<li><strong>LogPath</strong>: the path where the logs are stored;</li>
+<li><strong>DisableJMX</strong>: disable JMX, JMX is enabled by default.</li>
 </ul>
 <p>Plus it accepts from:</p>
 <ul>
@@ -170,7 +171,7 @@ If a developer is using KNet within its own product it is possible to override t
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/Documentation/articles/commandlineswitch.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/masesgroup/KNet/blob/121-centralize-better-versioning-1-4-8/src/net/Documentation/articles/commandlineswitch.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
