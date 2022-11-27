@@ -1,5 +1,9 @@
 # Welcome to KNet
 
+|KNet | KNetCLI | KNet.Templates | KNetPS<br/>(version 1.4.4+) | KNetConnect<br/>(version 1.4.7+) |
+|---	|---	|---	|---	|---	|
+|[![KNet nuget](https://img.shields.io/nuget/v/MASES.KNet)](https://www.nuget.org/packages/MASES.KNet) [![downloads](https://img.shields.io/nuget/dt/MASES.KNet)](https://www.nuget.org/packages/MASES.KNet) | [![KNetCLI nuget](https://img.shields.io/nuget/v/MASES.KNetCLI)](https://www.nuget.org/packages/MASES.KNetCLI) [![downloads](https://img.shields.io/nuget/dt/MASES.KNetCLI)](https://www.nuget.org/packages/MASES.KNetCLI) | [![KNet.Templates nuget](https://img.shields.io/nuget/v/MASES.KNet.Templates)](https://www.nuget.org/packages/MASES.KNet.Templates) [![downloads](https://img.shields.io/nuget/dt/MASES.KNet.Templates)](https://www.nuget.org/packages/MASES.KNet.Templates)| [![KNetPS](https://img.shields.io/powershellgallery/v/MASES.KNetPS.svg?style=flat-square&label=MASES.KNetPS)](https://www.powershellgallery.com/packages/MASES.KNetPS/)| [![KNetConnect nuget](https://img.shields.io/nuget/v/MASES.KNetConnect)](https://www.nuget.org/packages/MASES.KNetConnect) [![downloads](https://img.shields.io/nuget/dt/MASES.KNetConnect)](https://www.nuget.org/packages/MASES.KNetConnect) |
+
 KNet is a .NET gateway for [Apache Kafka](https://kafka.apache.org/) [APIs](https://kafka.apache.org/documentation/#api) providing all features: Producer, Consumer, Admin, Streams, Connect, backends (ZooKeeper and Kafka).
 
 This project adheres to the Contributor [Covenant code of conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to coc_reporting@masesgroup.com.
@@ -53,8 +57,8 @@ Have a look at the following resources:
 * [Connect SDK](articles/connectSDK.md)
 * [KNet usage](articles/usage.md)
 * [KNet APIs extensibility](articles/API_extensibility.md)
-* [KNetCLI usage](articles/usageCLI.md)
-* [KNetConnect usage](articles/usageConnect.md)
+* [KNet CLI usage](articles/usageCLI.md)
+* [KNet Connect usage](articles/usageConnect.md)
 * [KNet PowerShell usage](articles/usagePS.md)
 * [KNet Template usage](articles/usageTemplates.md)
 * [How to build from scratch](articles/howtobuild.md)
