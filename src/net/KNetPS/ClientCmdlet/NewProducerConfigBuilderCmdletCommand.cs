@@ -16,7 +16,6 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Clients.Producer;
 using MASES.KNetPS.Cmdlet;
 using System.Management.Automation;

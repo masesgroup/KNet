@@ -17,7 +17,6 @@
 */
 
 using MASES.JNetPSCore.Cmdlet;
-using MASES.KNet;
 
 namespace MASES.KNetPS.Cmdlet
 {

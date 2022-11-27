@@ -16,14 +16,11 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.JCOBridge.C2JBridge;
-using MASES.KNet;
 using MASES.KNet.Clients.Consumer;
 using MASES.KNet.Extensions;
 using MASES.KNetPS.Cmdlet;
 using System;
 using System.Management.Automation;
-using System.Reflection;
 
 namespace MASES.KNetPS.ClientCmdlet
 {
