@@ -75,6 +75,26 @@ namespace MASES.KNet
                         Default = Const.DefaultLogPath,
                         Help = "The path where log will be stored.",
                     },
+                    new ArgumentMetadata<string>()
+                    {
+                        Name = CLIParam.DisableJMX,
+                        Type = ArgumentType.Single,
+                        Help = "Disable JMX. Default is JMX enabled without security.",
+                    },
+                    /* hide until other arguments will be added
+                    new ArgumentMetadata<string>()
+                    {
+                        Name = CLIParam.EnableJMXAuth,
+                        Type = ArgumentType.Single,
+                        Help = "Enable authenticate on JMX. Default is not enabled",
+                    },
+                    new ArgumentMetadata<string>()
+                    {
+                        Name = CLIParam.EnableJMXSSL,
+                        Type = ArgumentType.Single,
+                        Help = "Enable SSL on JMX. Default is not enabled.",
+                    },
+                    */
                 });
                 return lst;
             }
@@ -281,7 +301,7 @@ namespace MASES.KNet
             _log4JPath = ParsedArgs.Get<string>(CLIParam.Log4JConfiguration);
             _logPath = ParsedArgs.Get<string>(CLIParam.LogPath);
             _scalaVersion = ParsedArgs.Get<string>(CLIParam.ScalaVersion);
-
+            _disableJMX = ParsedArgs.Exist(CLIParam.DisableJMX);
             return result;
         }
 
@@ -311,9 +331,14 @@ namespace MASES.KNet
         public static string ApplicationLogPath { get; set; }
 
         /// <summary>
-        /// Sets the global value of root path
+        /// Sets the global value of scala version
         /// </summary>
         public static string ApplicationScalaVersion { get; set; }
+
+        /// <summary>
+        /// Sets the global value to disable JMX
+        /// </summary>
+        public static bool? ApplicationDisableJMX { get; set; }
 
         string _classToRun;
         /// <summary>
@@ -355,6 +380,12 @@ namespace MASES.KNet
         /// </summary>
         public virtual string Log4JOpts { get { return string.Format("file:{0}", Path.Combine(JarRootPath, "config", "tools-log4j.properties")); } }
 
+        bool _disableJMX;
+        /// <summary>
+        /// Disable JMX
+        /// </summary>
+        public virtual bool DisableJMX { get { return ApplicationDisableJMX ?? _disableJMX; } }
+
         /// <inheritdoc cref="JNetCore{T}.PerformanceOptions"/>
         protected override IList<string> PerformanceOptions
         {
@@ -382,13 +413,17 @@ namespace MASES.KNet
 
                 IDictionary<string, string> options = new Dictionary<string, string>(base.Options)
                 {
-                    { "-Dcom.sun.management.jmxremote", null },
-                    { "com.sun.management.jmxremote.authenticate", "false" },
-                    { "com.sun.management.jmxremote.ssl", "false" },
                     { "log4j.configuration", string.IsNullOrEmpty(Log4JPath) ? ((JarRootPath == Const.DefaultRootPath) ? Log4JOpts : null) : $"file:{Log4JPath}"},
                     { "kafka.logs.dir", LogDir},
                     { "java.awt.headless", "true" },
                 };
+
+                if (!_disableJMX)
+                {
+                    options.Add("-Dcom.sun.management.jmxremote", null);
+                    options.Add("com.sun.management.jmxremote.authenticate", ParsedArgs.Exist(CLIParam.EnableJMXAuth) ? "true" : "false");
+                    options.Add("com.sun.management.jmxremote.ssl", ParsedArgs.Exist(CLIParam.EnableJMXSSL) ? "true" : "false");
+                }
 
                 return options;
             }

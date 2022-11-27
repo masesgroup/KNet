@@ -35,5 +35,7 @@ namespace MASES.KNetPS
         public static void SetLogPath(string logPath) { JNetPSHelper<TClass>.Set(typeof(KNetCore<>), nameof(KNetPSCore.ApplicationLogPath), logPath); }
 
         public static void SetScalaVersion(string scalaVersion) { JNetPSHelper<TClass>.Set(typeof(KNetCore<>), nameof(KNetPSCore.ApplicationScalaVersion), scalaVersion); }
+
+        public static void SetDisableJMX(bool? disableJMX) { JNetPSHelper<TClass>.Set(typeof(KNetCore<>), nameof(KNetPSCore.ApplicationDisableJMX), disableJMX); }
     }
 }
