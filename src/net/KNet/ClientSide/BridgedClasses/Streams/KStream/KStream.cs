@@ -21,6 +21,7 @@ using MASES.KNet.Common.Utils;
 using Java.Lang;
 using MASES.KNet.Streams.Processor;
 using MASES.KNet.Streams.State;
+using MASES.KNet.Streams.Processor.Api;
 
 namespace MASES.KNet.Streams.KStream
 {
@@ -402,6 +403,14 @@ namespace MASES.KNet.Streams.KStream
         void Process<TSuperK, TSuperV>(Streams.Processor.Api.ProcessorSupplier<TSuperK, TSuperV, Void, Void> processorSupplier, params string[] stateStoreNames);
 
         void Process<TSuperK, TSuperV>(Streams.Processor.Api.ProcessorSupplier<TSuperK, TSuperV, Void, Void> processorSupplier, Named named, params string[] stateStoreNames);
+
+        KStream<KOut, VOut> Process<TSuperK, TSuperV, KOut, VOut>(ProcessorSupplier<TSuperK, TSuperV, KOut, VOut> processorSupplier, params string[] stateStoreNames);
+
+        KStream<KOut, VOut> Process<TSuperK, TSuperV, KOut, VOut>(ProcessorSupplier<TSuperK, TSuperV, KOut, VOut> processorSupplier, Named named, params string[] stateStoreNames);
+
+        KStream<K, VOut> ProcessValues<TSuperK, TSuperV, VOut>(FixedKeyProcessorSupplier<TSuperK, TSuperV, VOut> processorSupplier, params string[] stateStoreNames);
+
+        KStream<K, VOut> ProcessValues<TSuperK, TSuperV, VOut>(FixedKeyProcessorSupplier<TSuperK, TSuperV, VOut> processorSupplier, Named named, params string[] stateStoreNames);
     }
 
     public class KStream<K, V> : JVMBridgeBase<KStream<K, V>, IKStream<K, V>>, IKStream<K, V>
@@ -887,6 +896,27 @@ namespace MASES.KNet.Streams.KStream
         public void Process<TSuperK, TSuperV>(Streams.Processor.Api.ProcessorSupplier<TSuperK, TSuperV, Void, Void> processorSupplier, Named named, params string[] stateStoreNames)
         {
             IExecute("process", processorSupplier, named, stateStoreNames);
+        }
+
+
+        public KStream<KOut, VOut> Process<TSuperK, TSuperV, KOut, VOut>(ProcessorSupplier<TSuperK, TSuperV, KOut, VOut> processorSupplier, params string[] stateStoreNames)
+        {
+            return IExecute<KStream<KOut, VOut>>("process", processorSupplier, stateStoreNames);
+        }
+
+        public KStream<KOut, VOut> Process<TSuperK, TSuperV, KOut, VOut>(ProcessorSupplier<TSuperK, TSuperV, KOut, VOut> processorSupplier, Named named, params string[] stateStoreNames)
+        {
+            return IExecute<KStream<KOut, VOut>>("process", processorSupplier, named, stateStoreNames);
+        }
+
+        public KStream<K, VOut> ProcessValues<TSuperK, TSuperV, VOut>(FixedKeyProcessorSupplier<TSuperK, TSuperV, VOut> processorSupplier, params string[] stateStoreNames)
+        {
+            return IExecute<KStream<K, VOut>>("processValues", processorSupplier, stateStoreNames);
+        }
+
+        public KStream<K, VOut> ProcessValues<TSuperK, TSuperV, VOut>(FixedKeyProcessorSupplier<TSuperK, TSuperV, VOut> processorSupplier, Named named, params string[] stateStoreNames)
+        {
+            return IExecute<KStream<K, VOut>>("processValues", processorSupplier, named, stateStoreNames);
         }
 
         public KStream<K, V> Repartition()

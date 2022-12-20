@@ -24,7 +24,7 @@ using Java.Util.Regex;
 
 namespace MASES.KNet.Clients.Consumer
 {
-    public interface IConsumer<K, V> : IJVMBridgeBase, System.IDisposable
+    public interface IConsumer: IJVMBridgeBase, System.IDisposable
     {
         Set<TopicPartition> Assignment { get; }
 
@@ -45,11 +45,6 @@ namespace MASES.KNet.Clients.Consumer
         void Subscribe(Pattern pattern);
 
         void Unsubscribe();
-
-        [System.Obsolete]
-        ConsumerRecords<K, V> Poll(long timeoutMs);
-
-        ConsumerRecords<K, V> Poll(Duration timeout);
 
         void CommitSync();
 
@@ -117,6 +112,16 @@ namespace MASES.KNet.Clients.Consumer
 
         void EnforceRebalance();
 
+        void EnforceRebalance(string reason);
+
         void Wakeup();
+    }
+
+    public interface IConsumer<K, V> : IConsumer
+    {
+        [System.Obsolete]
+        ConsumerRecords<K, V> Poll(long timeoutMs);
+
+        ConsumerRecords<K, V> Poll(Duration timeout);
     }
 }

@@ -5,9 +5,12 @@ using MASES.KNet.Common.Serialization;
 using Java.Util;
 using MASES.KNet.Streams;
 using System;
+using System.Threading;
 
 namespace MASES.KNetTemplate.KNetStreamPipe
 {
+    class LocalKNetCore : KNetCore<LocalKNetCore> { }
+
     class Program
     {
         const string theServer = "localhost:9092";
@@ -16,10 +19,12 @@ namespace MASES.KNetTemplate.KNetStreamPipe
         static string serverToUse = theServer;
         static string topicToUse = theTopic;
 
+        static readonly ManualResetEvent resetEvent = new ManualResetEvent(false);
+
         static void Main(string[] args)
         {
-            KNetCore.CreateGlobalInstance();
-            var appArgs = KNetCore.FilteredArgs;
+            LocalKNetCore.CreateGlobalInstance();
+            var appArgs = LocalKNetCore.FilteredArgs;
 
             if (appArgs.Length != 0)
             {
@@ -42,15 +47,23 @@ namespace MASES.KNetTemplate.KNetStreamPipe
 
             builder.Stream<string, string>(topicToUse).To("streams-pipe-output");
 
+            Console.CancelKeyPress += Console_CancelKeyPress;
+            Console.WriteLine("Press Ctrl-C to exit");
+
             using (var streams = new KafkaStreams(builder.Build(), props))
             {
                 streams.Start();
-                while (true)
+                while (!resetEvent.WaitOne(0))
                 {
                     var state = streams.State;
                     Console.WriteLine($"KafkaStreams state: {state}");
                 }
             }
+        }
+
+        private static void Console_CancelKeyPress(object sender, ConsoleCancelEventArgs e)
+        {
+            if (e.Cancel) resetEvent.Set();
         }
     }
 }

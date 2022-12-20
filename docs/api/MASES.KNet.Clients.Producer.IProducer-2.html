@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface IProducer&lt;K, V&gt;
    | KNet website ">
-    <meta name="generator" content="docfx 2.59.2.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,6 +78,39 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
+      <a class="xref" href="MASES.KNet.Clients.Producer.IProducer.html#MASES_KNet_Clients_Producer_IProducer_InitTransactions">IProducer.InitTransactions()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Producer.IProducer.html#MASES_KNet_Clients_Producer_IProducer_BeginTransaction">IProducer.BeginTransaction()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Producer.IProducer.html#MASES_KNet_Clients_Producer_IProducer_SendOffsetsToTransaction_Java_Util_Map_MASES_KNet_Common_TopicPartition_MASES_KNet_Clients_Consumer_OffsetAndMetadata__System_String_">IProducer.SendOffsetsToTransaction(Map&lt;TopicPartition, OffsetAndMetadata&gt;, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Producer.IProducer.html#MASES_KNet_Clients_Producer_IProducer_SendOffsetsToTransaction_Java_Util_Map_MASES_KNet_Common_TopicPartition_MASES_KNet_Clients_Consumer_OffsetAndMetadata__MASES_KNet_Clients_Consumer_ConsumerGroupMetadata_">IProducer.SendOffsetsToTransaction(Map&lt;TopicPartition, OffsetAndMetadata&gt;, ConsumerGroupMetadata)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Producer.IProducer.html#MASES_KNet_Clients_Producer_IProducer_CommitTransaction">IProducer.CommitTransaction()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Producer.IProducer.html#MASES_KNet_Clients_Producer_IProducer_AbortTransaction">IProducer.AbortTransaction()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Producer.IProducer.html#MASES_KNet_Clients_Producer_IProducer_Send_MASES_KNet_Clients_Producer_ProducerRecord_">IProducer.Send(ProducerRecord)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Producer.IProducer.html#MASES_KNet_Clients_Producer_IProducer_Send_MASES_KNet_Clients_Producer_ProducerRecord_MASES_KNet_Clients_Producer_Callback_">IProducer.Send(ProducerRecord, Callback)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Producer.IProducer.html#MASES_KNet_Clients_Producer_IProducer_Flush">IProducer.Flush()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Producer.IProducer.html#MASES_KNet_Clients_Producer_IProducer_PartitionsFor_System_String_">IProducer.PartitionsFor(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Clients.Producer.IProducer.html#MASES_KNet_Clients_Producer_IProducer_Metrics">IProducer.Metrics</a>
+    </div>
+    <div>
       <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase.DynInstance</span>
     </div>
     <div>
@@ -102,14 +135,14 @@
       <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.IsListener</span>
     </div>
     <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable.dispose#system-idisposable-dispose">IDisposable.Dispose()</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose#system-idisposable-dispose">IDisposable.Dispose()</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="MASES.KNet.Clients.Producer.html">MASES.KNet.Clients.Producer</a></h6>
   <h6><strong>Assembly</strong>: MASES.KNet.dll</h6>
   <h5 id="MASES_KNet_Clients_Producer_IProducer_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IProducer&lt;K, V&gt; : IJVMBridgeBase, IJVMBridgeDefinition, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IProducer&lt;K, V&gt; : IProducer, IJVMBridgeBase, IJVMBridgeDefinition, IDisposable</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -130,267 +163,14 @@
       </tr>
     </tbody>
   </table>
-  <h3 id="properties">Properties
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IProducer_2_Metrics.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IProducer%602.Metrics%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/Producer.cs/#L54">View Source</a>
-  </span>
-  <a id="MASES_KNet_Clients_Producer_IProducer_2_Metrics_" data-uid="MASES.KNet.Clients.Producer.IProducer`2.Metrics*"></a>
-  <h4 id="MASES_KNet_Clients_Producer_IProducer_2_Metrics" data-uid="MASES.KNet.Clients.Producer.IProducer`2.Metrics">Metrics</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Map&lt;MetricName, Metric&gt; Metrics { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Util.Map</span>&lt;<a class="xref" href="MASES.KNet.Common.MetricName.html">MetricName</a>, <a class="xref" href="MASES.KNet.Common.Metric.html">Metric</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IProducer_2_AbortTransaction.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IProducer%602.AbortTransaction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/Producer.cs/#L40">View Source</a>
-  </span>
-  <a id="MASES_KNet_Clients_Producer_IProducer_2_AbortTransaction_" data-uid="MASES.KNet.Clients.Producer.IProducer`2.AbortTransaction*"></a>
-  <h4 id="MASES_KNet_Clients_Producer_IProducer_2_AbortTransaction" data-uid="MASES.KNet.Clients.Producer.IProducer`2.AbortTransaction">AbortTransaction()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void AbortTransaction()</code></pre>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IProducer_2_BeginTransaction.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IProducer%602.BeginTransaction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/Producer.cs/#L31">View Source</a>
-  </span>
-  <a id="MASES_KNet_Clients_Producer_IProducer_2_BeginTransaction_" data-uid="MASES.KNet.Clients.Producer.IProducer`2.BeginTransaction*"></a>
-  <h4 id="MASES_KNet_Clients_Producer_IProducer_2_BeginTransaction" data-uid="MASES.KNet.Clients.Producer.IProducer`2.BeginTransaction">BeginTransaction()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void BeginTransaction()</code></pre>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IProducer_2_CommitTransaction.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IProducer%602.CommitTransaction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/Producer.cs/#L38">View Source</a>
-  </span>
-  <a id="MASES_KNet_Clients_Producer_IProducer_2_CommitTransaction_" data-uid="MASES.KNet.Clients.Producer.IProducer`2.CommitTransaction*"></a>
-  <h4 id="MASES_KNet_Clients_Producer_IProducer_2_CommitTransaction" data-uid="MASES.KNet.Clients.Producer.IProducer`2.CommitTransaction">CommitTransaction()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void CommitTransaction()</code></pre>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IProducer_2_Flush.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IProducer%602.Flush%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/Producer.cs/#L50">View Source</a>
-  </span>
-  <a id="MASES_KNet_Clients_Producer_IProducer_2_Flush_" data-uid="MASES.KNet.Clients.Producer.IProducer`2.Flush*"></a>
-  <h4 id="MASES_KNet_Clients_Producer_IProducer_2_Flush" data-uid="MASES.KNet.Clients.Producer.IProducer`2.Flush">Flush()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Flush()</code></pre>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IProducer_2_InitTransactions.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IProducer%602.InitTransactions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/Producer.cs/#L29">View Source</a>
-  </span>
-  <a id="MASES_KNet_Clients_Producer_IProducer_2_InitTransactions_" data-uid="MASES.KNet.Clients.Producer.IProducer`2.InitTransactions*"></a>
-  <h4 id="MASES_KNet_Clients_Producer_IProducer_2_InitTransactions" data-uid="MASES.KNet.Clients.Producer.IProducer`2.InitTransactions">InitTransactions()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void InitTransactions()</code></pre>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IProducer_2_PartitionsFor_System_String_.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IProducer%602.PartitionsFor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/Producer.cs/#L52">View Source</a>
-  </span>
-  <a id="MASES_KNet_Clients_Producer_IProducer_2_PartitionsFor_" data-uid="MASES.KNet.Clients.Producer.IProducer`2.PartitionsFor*"></a>
-  <h4 id="MASES_KNet_Clients_Producer_IProducer_2_PartitionsFor_System_String_" data-uid="MASES.KNet.Clients.Producer.IProducer`2.PartitionsFor(System.String)">PartitionsFor(String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">List&lt;PartitionInfo&gt; PartitionsFor(string topic)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">topic</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Util.List</span>&lt;<a class="xref" href="MASES.KNet.Common.PartitionInfo.html">PartitionInfo</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IProducer_2_Send_MASES_KNet_Clients_Producer_ProducerRecord_.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IProducer%602.Send(MASES.KNet.Clients.Producer.ProducerRecord)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/Producer.cs/#L42">View Source</a>
-  </span>
-  <a id="MASES_KNet_Clients_Producer_IProducer_2_Send_" data-uid="MASES.KNet.Clients.Producer.IProducer`2.Send*"></a>
-  <h4 id="MASES_KNet_Clients_Producer_IProducer_2_Send_MASES_KNet_Clients_Producer_ProducerRecord_" data-uid="MASES.KNet.Clients.Producer.IProducer`2.Send(MASES.KNet.Clients.Producer.ProducerRecord)">Send(ProducerRecord)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Future&lt;RecordMetadata&gt; Send(ProducerRecord record)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Clients.Producer.ProducerRecord.html">ProducerRecord</a></td>
-        <td><span class="parametername">record</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Util.Concurrent.Future</span>&lt;<a class="xref" href="MASES.KNet.Clients.Producer.RecordMetadata.html">RecordMetadata</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IProducer_2_Send_MASES_KNet_Clients_Producer_ProducerRecord_MASES_KNet_Clients_Producer_Callback_.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IProducer%602.Send(MASES.KNet.Clients.Producer.ProducerRecord%2CMASES.KNet.Clients.Producer.Callback)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/Producer.cs/#L44">View Source</a>
-  </span>
-  <a id="MASES_KNet_Clients_Producer_IProducer_2_Send_" data-uid="MASES.KNet.Clients.Producer.IProducer`2.Send*"></a>
-  <h4 id="MASES_KNet_Clients_Producer_IProducer_2_Send_MASES_KNet_Clients_Producer_ProducerRecord_MASES_KNet_Clients_Producer_Callback_" data-uid="MASES.KNet.Clients.Producer.IProducer`2.Send(MASES.KNet.Clients.Producer.ProducerRecord,MASES.KNet.Clients.Producer.Callback)">Send(ProducerRecord, Callback)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Future&lt;RecordMetadata&gt; Send(ProducerRecord record, Callback callback)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Clients.Producer.ProducerRecord.html">ProducerRecord</a></td>
-        <td><span class="parametername">record</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Clients.Producer.Callback.html">Callback</a></td>
-        <td><span class="parametername">callback</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Util.Concurrent.Future</span>&lt;<a class="xref" href="MASES.KNet.Clients.Producer.RecordMetadata.html">RecordMetadata</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IProducer_2_Send_MASES_KNet_Clients_Producer_ProducerRecord__0__1__.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IProducer%602.Send(MASES.KNet.Clients.Producer.ProducerRecord%7B%600%2C%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/Producer.cs/#L46">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/Producer.cs/#L55">View Source</a>
   </span>
   <a id="MASES_KNet_Clients_Producer_IProducer_2_Send_" data-uid="MASES.KNet.Clients.Producer.IProducer`2.Send*"></a>
   <h4 id="MASES_KNet_Clients_Producer_IProducer_2_Send_MASES_KNet_Clients_Producer_ProducerRecord__0__1__" data-uid="MASES.KNet.Clients.Producer.IProducer`2.Send(MASES.KNet.Clients.Producer.ProducerRecord{`0,`1})">Send(ProducerRecord&lt;K, V&gt;)</h4>
@@ -437,7 +217,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IProducer_2_Send_MASES_KNet_Clients_Producer_ProducerRecord__0__1__MASES_KNet_Clients_Producer_Callback_.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IProducer%602.Send(MASES.KNet.Clients.Producer.ProducerRecord%7B%600%2C%601%7D%2CMASES.KNet.Clients.Producer.Callback)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/Producer.cs/#L48">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/Producer.cs/#L57">View Source</a>
   </span>
   <a id="MASES_KNet_Clients_Producer_IProducer_2_Send_" data-uid="MASES.KNet.Clients.Producer.IProducer`2.Send*"></a>
   <h4 id="MASES_KNet_Clients_Producer_IProducer_2_Send_MASES_KNet_Clients_Producer_ProducerRecord__0__1__MASES_KNet_Clients_Producer_Callback_" data-uid="MASES.KNet.Clients.Producer.IProducer`2.Send(MASES.KNet.Clients.Producer.ProducerRecord{`0,`1},MASES.KNet.Clients.Producer.Callback)">Send(ProducerRecord&lt;K, V&gt;, Callback)</h4>
@@ -484,81 +264,6 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IProducer_2_SendOffsetsToTransaction_Java_Util_Map_MASES_KNet_Common_TopicPartition_MASES_KNet_Clients_Consumer_OffsetAndMetadata__MASES_KNet_Clients_Consumer_ConsumerGroupMetadata_.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IProducer%602.SendOffsetsToTransaction(Java.Util.Map%7BMASES.KNet.Common.TopicPartition%2CMASES.KNet.Clients.Consumer.OffsetAndMetadata%7D%2CMASES.KNet.Clients.Consumer.ConsumerGroupMetadata)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/Producer.cs/#L36">View Source</a>
-  </span>
-  <a id="MASES_KNet_Clients_Producer_IProducer_2_SendOffsetsToTransaction_" data-uid="MASES.KNet.Clients.Producer.IProducer`2.SendOffsetsToTransaction*"></a>
-  <h4 id="MASES_KNet_Clients_Producer_IProducer_2_SendOffsetsToTransaction_Java_Util_Map_MASES_KNet_Common_TopicPartition_MASES_KNet_Clients_Consumer_OffsetAndMetadata__MASES_KNet_Clients_Consumer_ConsumerGroupMetadata_" data-uid="MASES.KNet.Clients.Producer.IProducer`2.SendOffsetsToTransaction(Java.Util.Map{MASES.KNet.Common.TopicPartition,MASES.KNet.Clients.Consumer.OffsetAndMetadata},MASES.KNet.Clients.Consumer.ConsumerGroupMetadata)">SendOffsetsToTransaction(Map&lt;TopicPartition, OffsetAndMetadata&gt;, ConsumerGroupMetadata)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void SendOffsetsToTransaction(Map&lt;TopicPartition, OffsetAndMetadata&gt; offsets, ConsumerGroupMetadata groupMetadata)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Util.Map</span>&lt;<a class="xref" href="MASES.KNet.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="MASES.KNet.Clients.Consumer.OffsetAndMetadata.html">OffsetAndMetadata</a>&gt;</td>
-        <td><span class="parametername">offsets</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MASES.KNet.Clients.Consumer.ConsumerGroupMetadata.html">ConsumerGroupMetadata</a></td>
-        <td><span class="parametername">groupMetadata</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IProducer_2_SendOffsetsToTransaction_Java_Util_Map_MASES_KNet_Common_TopicPartition_MASES_KNet_Clients_Consumer_OffsetAndMetadata__System_String_.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IProducer%602.SendOffsetsToTransaction(Java.Util.Map%7BMASES.KNet.Common.TopicPartition%2CMASES.KNet.Clients.Consumer.OffsetAndMetadata%7D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/Producer.cs/#L33">View Source</a>
-  </span>
-  <a id="MASES_KNet_Clients_Producer_IProducer_2_SendOffsetsToTransaction_" data-uid="MASES.KNet.Clients.Producer.IProducer`2.SendOffsetsToTransaction*"></a>
-  <h4 id="MASES_KNet_Clients_Producer_IProducer_2_SendOffsetsToTransaction_Java_Util_Map_MASES_KNet_Common_TopicPartition_MASES_KNet_Clients_Consumer_OffsetAndMetadata__System_String_" data-uid="MASES.KNet.Clients.Producer.IProducer`2.SendOffsetsToTransaction(Java.Util.Map{MASES.KNet.Common.TopicPartition,MASES.KNet.Clients.Consumer.OffsetAndMetadata},System.String)">SendOffsetsToTransaction(Map&lt;TopicPartition, OffsetAndMetadata&gt;, String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete]
-void SendOffsetsToTransaction(Map&lt;TopicPartition, OffsetAndMetadata&gt; offsets, string consumerGroupId)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Java.Util.Map</span>&lt;<a class="xref" href="MASES.KNet.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="MASES.KNet.Clients.Consumer.OffsetAndMetadata.html">OffsetAndMetadata</a>&gt;</td>
-        <td><span class="parametername">offsets</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">consumerGroupId</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
       <a class="xref" href="MASES.KNet.Extensions.KafkaProducerExtensions.html#MASES_KNet_Extensions_KafkaProducerExtensions_Produce__2_MASES_KNet_Clients_Producer_IProducer___0___1__System_String___0___1_System_Action_MASES_KNet_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__">KafkaProducerExtensions.Produce&lt;K, V&gt;(IProducer&lt;K, V&gt;, String, K, V, Action&lt;RecordMetadata, JVMBridgeException&gt;)</a>
@@ -601,7 +306,7 @@ void SendOffsetsToTransaction(Map&lt;TopicPartition, OffsetAndMetadata&gt; offse
                     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IProducer_2.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IProducer%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/Producer.cs/#L27" class="contribution-link">View Source</a>
+                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/Producer.cs/#L53" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

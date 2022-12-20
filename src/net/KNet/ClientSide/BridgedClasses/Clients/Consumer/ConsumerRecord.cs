@@ -22,7 +22,7 @@ using MASES.KNet.Common.Record;
 
 namespace MASES.KNet.Clients.Consumer
 {
-    public class ConsumerRecord<K, V> : JCOBridge.C2JBridge.JVMBridgeBase<ConsumerRecord<K, V>>
+    public class ConsumerRecord : JCOBridge.C2JBridge.JVMBridgeBase<ConsumerRecord>
     {
         public override string ClassName => "org.apache.kafka.clients.consumer.ConsumerRecord";
 
@@ -32,9 +32,9 @@ namespace MASES.KNet.Clients.Consumer
 
         public Headers Headers => IExecute<Headers>("headers");
 
-        public K Key => IExecute<K>("key");
+        public object RawKey => IExecute("key");
 
-        public V Value => IExecute<V>("value");
+        public object RawValue => IExecute("value");
 
         public long Offset => IExecute<long>("offset");
 
@@ -49,8 +49,10 @@ namespace MASES.KNet.Clients.Consumer
         public int SerializedValueSize => IExecute<int>("serializedValueSize");
     }
 
-    public class ConsumerRecord : ConsumerRecord<object, object>
+    public class ConsumerRecord<K, V> : ConsumerRecord
     {
+        public K Key => IExecute<K>("key");
 
+        public V Value => IExecute<V>("value");
     }
 }

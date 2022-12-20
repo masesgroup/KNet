@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<Import Project="..\Common\Common.props" />
+	<PropertyGroup>
+		<OutputPath>..\..\binConnect\</OutputPath>
+		<AssemblyName>KNetConnectTest</AssemblyName>
+		<RootNamespace>MASES.KNetConnectTest</RootNamespace>
+		<Title>KNetConnectTest - a test tool for KNet Connect</Title>
+		<Description>KNetConnectTest - a test tool for KNet Connect</Description>
+	</PropertyGroup>
+	<ItemGroup>
+	  <None Update="connect-knet-sink.properties">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="connect-knet-source.properties">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="connect-standalone.properties">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="TestFileInput.txt">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+</Project>

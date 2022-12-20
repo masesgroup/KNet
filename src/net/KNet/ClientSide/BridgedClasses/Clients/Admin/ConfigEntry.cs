@@ -30,6 +30,12 @@ namespace MASES.KNet.Clients.Admin
         {
         }
 
+        public ConfigEntry(string name, string value, ConfigSource source, bool isSensitive, bool isReadOnly, List<ConfigSynonym> synonyms, ConfigType type, string documentation)
+            : base(name, value, source, isSensitive, isReadOnly, synonyms, type, documentation)
+        {
+
+        }
+
         public string Name => IExecute<string>("name");
 
         public string Value => IExecute<string>("value");
@@ -75,7 +81,7 @@ namespace MASES.KNet.Clients.Admin
 
         public class ConfigSynonym : JCOBridge.C2JBridge.JVMBridgeBase<Config>
         {
-            public override string ClassName => "org.apache.kafka.clients.admin.ConfigEntry.ConfigSynonym";
+            public override string ClassName => "org.apache.kafka.clients.admin.ConfigEntry$ConfigSynonym";
 
             public string Name => IExecute<string>("name");
 

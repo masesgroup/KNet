@@ -288,6 +288,16 @@ namespace MASES.KNet.Clients.Admin
             return IExecute<ListConsumerGroupOffsetsResult>("listConsumerGroupOffsets", groupId);
         }
 
+        public ListConsumerGroupOffsetsResult ListConsumerGroupOffsets(Map<string, ListConsumerGroupOffsetsSpec> groupSpecs, ListConsumerGroupOffsetsOptions options)
+        {
+            return IExecute<ListConsumerGroupOffsetsResult>("listConsumerGroupOffsets", groupSpecs, options);
+        }
+
+        public ListConsumerGroupOffsetsResult ListConsumerGroupOffsets(Map<string, ListConsumerGroupOffsetsSpec> groupSpecs)
+        {
+            return IExecute<ListConsumerGroupOffsetsResult>("listConsumerGroupOffsets", groupSpecs);
+        }
+
         public DeleteConsumerGroupsResult DeleteConsumerGroups(Collection<string> groupIds, DeleteConsumerGroupsOptions options)
         {
             return IExecute<DeleteConsumerGroupsResult>("deleteConsumerGroups", groupIds, options);
@@ -433,6 +443,17 @@ namespace MASES.KNet.Clients.Admin
             return IExecute<UpdateFeaturesResult>("updateFeatures", featureUpdates, options);
         }
 
+        public DescribeMetadataQuorumResult DescribeMetadataQuorum()
+        {
+            return IExecute<DescribeMetadataQuorumResult>("describeMetadataQuorum");
+        }
+
+        public DescribeMetadataQuorumResult DescribeMetadataQuorum(DescribeMetadataQuorumOptions options)
+        {
+            return IExecute<DescribeMetadataQuorumResult>("describeMetadataQuorum", options);
+        }
+
+
         public UnregisterBrokerResult UnregisterBroker(int brokerId)
         {
             return IExecute<UnregisterBrokerResult>("unregisterBroker", brokerId);
@@ -481,6 +502,16 @@ namespace MASES.KNet.Clients.Admin
         public ListTransactionsResult ListTransactions(ListTransactionsOptions options)
         {
             return IExecute<ListTransactionsResult>("listTransactions", options);
+        }
+
+        public FenceProducersResult FenceProducers(Collection<string> transactionalIds)
+        {
+            return IExecute<FenceProducersResult>("fenceProducers", transactionalIds);
+        }
+
+        public FenceProducersResult FenceProducers(Collection<string> transactionalIds, FenceProducersOptions options)
+        {
+            return IExecute<FenceProducersResult>("fenceProducers", transactionalIds, options);
         }
     }
 }

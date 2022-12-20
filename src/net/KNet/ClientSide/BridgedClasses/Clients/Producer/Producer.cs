@@ -24,7 +24,7 @@ using Java.Util.Concurrent;
 
 namespace MASES.KNet.Clients.Producer
 {
-    public interface IProducer<K, V> : IJVMBridgeBase, System.IDisposable
+    public interface IProducer : IJVMBridgeBase, System.IDisposable
     {
         void InitTransactions();
 
@@ -43,14 +43,17 @@ namespace MASES.KNet.Clients.Producer
 
         Future<RecordMetadata> Send(ProducerRecord record, Callback callback);
 
-        Future<RecordMetadata> Send(ProducerRecord<K, V> record);
-
-        Future<RecordMetadata> Send(ProducerRecord<K, V> record, Callback callback);
-
         void Flush();
 
         List<PartitionInfo> PartitionsFor(string topic);
 
         Map<MetricName, Metric> Metrics { get; }
+    }
+
+    public interface IProducer<K, V> : IProducer
+    {
+        Future<RecordMetadata> Send(ProducerRecord<K, V> record);
+
+        Future<RecordMetadata> Send(ProducerRecord<K, V> record, Callback callback);
     }
 }

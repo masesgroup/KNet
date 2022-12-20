@@ -9,7 +9,7 @@
     <name>mases.knet</name>
     <description>Interface bridging implementation for Apache Kafka</description>
     <url>https://github.com/masesgroup/KNet</url>
-    <version>1.3.0.0</version>
+    <version>${knetVersion}</version>
 
     <licenses>
         <license>
@@ -40,7 +40,9 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <classpathfile>${basedir}/classpathfile.classpath</classpathfile>
-        <kafkaVersion>3.1.0</kafkaVersion>
+        <kafkaVersion>3.3.1</kafkaVersion>
+		<knetVersion>1.5.0.0</knetVersion>
+        <jcobridgeVersion>2.5.0</jcobridgeVersion>
     </properties>
     <distributionManagement>
         <snapshotRepository>
@@ -132,7 +134,7 @@
                 <configuration>
                     <compilerArgs>
                         <arg>-cp</arg>
-                        <arg>${originalClassPath}${path.separator}${basedir}/../../../bin/net5.0/JCOBridge.jar</arg>
+                        <arg>${originalClassPath}${path.separator}${basedir}/../../../bin/net6.0/JCOBridge.jar</arg>
                     </compilerArgs>
                 </configuration>
             </plugin>
@@ -167,7 +169,7 @@
                 <version>2.9.1</version>
                 <configuration>
                     <links>
-                        <link>https://www.jcobridge.com/api-java</link>
+                        <link>https://www.jcobridge.com/api-java_${jcobridgeVersion}</link>
                     </links>
                     <quiet>true</quiet>
                     <source>8</source>
@@ -175,7 +177,7 @@
                         <additionalDependency>
                             <groupId>JCOBridge</groupId>
                             <artifactId>JCOBridge</artifactId>
-                            <version>2.5.0</version>
+                            <version>${jcobridgeVersion}</version>
                         </additionalDependency>
                     </additionalDependencies>
                 </configuration>
@@ -229,6 +231,11 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.36</version>
+        </dependency>
+        <dependency>
             <groupId>org.apache.kafka</groupId>
             <artifactId>kafka-clients</artifactId>
             <version>${kafkaVersion}</version>
@@ -251,6 +258,21 @@
         <dependency>
             <groupId>org.apache.kafka</groupId>
             <artifactId>connect-runtime</artifactId>
+            <version>${kafkaVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>connect-mirror</artifactId>
+            <version>${kafkaVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>connect-file</artifactId>
+            <version>${kafkaVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>connect-basic-auth-extension</artifactId>
             <version>${kafkaVersion}</version>
         </dependency>
     </dependencies>

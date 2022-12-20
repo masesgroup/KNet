@@ -18,7 +18,6 @@
 
 using MASES.JCOBridge.C2JBridge;
 using Java.Util;
-using JavaLang = Java.Lang;
 
 namespace MASES.KNet.Connect.Data
 {
@@ -92,7 +91,7 @@ namespace MASES.KNet.Connect.Data
 
         bool IsOptional { get; }
 
-        JavaLang.Object DefaultValue();
+        Java.Lang.Object DefaultValue();
 
         string Name();
 
@@ -115,32 +114,51 @@ namespace MASES.KNet.Connect.Data
 
     public class Schema : JVMBridgeBase<Schema>, ISchema
     {
+        public override bool IsInterface => true;
+
         public override string ClassName => "org.apache.kafka.connect.data.Schema";
 
-        [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public Schema() { }
 
-        [System.Obsolete("This is not public in Apache Kafka API")]
-        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
-        public Schema(params object[] args)
+        protected Schema(params object[] args)
             : base(args)
         {
         }
 
-        public Type Type() { return IExecute<Type>("type"); }
+        public static Schema INT8_SCHEMA => Clazz.GetField<Schema>("INT8_SCHEMA");
+        public static Schema INT16_SCHEMA => Clazz.GetField<Schema>("INT16_SCHEMA");
+        public static Schema INT32_SCHEMA => Clazz.GetField<Schema>("INT32_SCHEMA");
+        public static Schema INT64_SCHEMA => Clazz.GetField<Schema>("INT64_SCHEMA");
+        public static Schema FLOAT32_SCHEMA => Clazz.GetField<Schema>("FLOAT32_SCHEMA");
+        public static Schema FLOAT64_SCHEMA => Clazz.GetField<Schema>("FLOAT64_SCHEMA");
+        public static Schema BOOLEAN_SCHEMA => Clazz.GetField<Schema>("BOOLEAN_SCHEMA");
+        public static Schema STRING_SCHEMA => Clazz.GetField<Schema>("STRING_SCHEMA");
+        public static Schema BYTES_SCHEMA => Clazz.GetField<Schema>("BYTES_SCHEMA");
+
+        public static Schema OPTIONAL_INT8_SCHEMA => Clazz.GetField<Schema>("OPTIONAL_INT8_SCHEMA");
+        public static Schema OPTIONAL_INT16_SCHEMA => Clazz.GetField<Schema>("OPTIONAL_INT16_SCHEMA");
+        public static Schema OPTIONAL_INT32_SCHEMA => Clazz.GetField<Schema>("OPTIONAL_INT32_SCHEMA");
+        public static Schema OPTIONAL_INT64_SCHEMA => Clazz.GetField<Schema>("OPTIONAL_INT64_SCHEMA");
+        public static Schema OPTIONAL_FLOAT32_SCHEMA => Clazz.GetField<Schema>("OPTIONAL_FLOAT32_SCHEMA");
+        public static Schema OPTIONAL_FLOAT64_SCHEMA => Clazz.GetField<Schema>("OPTIONAL_FLOAT64_SCHEMA");
+        public static Schema OPTIONAL_BOOLEAN_SCHEMA => Clazz.GetField<Schema>("OPTIONAL_BOOLEAN_SCHEMA");
+        public static Schema OPTIONAL_STRING_SCHEMA => Clazz.GetField<Schema>("OPTIONAL_STRING_SCHEMA");
+        public static Schema OPTIONAL_BYTES_SCHEMA => Clazz.GetField<Schema>("OPTIONAL_BYTES_SCHEMA");
+
+        public Type Type() => IExecute<Type>("type"); 
 
         public bool IsOptional => IExecute<bool>("isOptional");
 
-        public JavaLang.Object DefaultValue() { return IExecute<JavaLang.Object>("defaultValue"); }
+        public Java.Lang.Object DefaultValue() =>  IExecute<Java.Lang.Object>("defaultValue"); 
 
-        public string Name() { return IExecute<string>("name"); }
+        public string Name() => IExecute<string>("name"); 
 
-        public int Version() { return IExecute<int>("version"); }
+        public int Version() => IExecute<int>("version"); 
 
-        public string Doc() { return IExecute<string>("doc"); }
+        public string Doc() => IExecute<string>("doc"); 
 
-        public Map<string, string> Parameters() { return IExecute<Map<string, string>>("parameters"); }
+        public Map<string, string> Parameters() => IExecute<Map<string, string>>("parameters"); 
 
         public Schema KeySchema => IExecute<Schema>("keySchema");
 

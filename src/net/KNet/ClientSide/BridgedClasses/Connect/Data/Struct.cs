@@ -18,7 +18,6 @@
 
 using MASES.JCOBridge.C2JBridge;
 using Java.Util;
-using JavaLang = Java.Lang;
 
 namespace MASES.KNet.Connect.Data
 {
@@ -26,7 +25,6 @@ namespace MASES.KNet.Connect.Data
     {
         public override string ClassName => "org.apache.kafka.connect.data.Struct";
 
-        [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public Struct() { }
 
@@ -37,19 +35,19 @@ namespace MASES.KNet.Connect.Data
 
         public Schema Schema => IExecute<Schema>("schema");
 
-        public JavaLang.Object Get(string fieldName)
+        public Java.Lang.Object Get(string fieldName)
         {
-            return IExecute<JavaLang.Object>("get", fieldName);
+            return IExecute<Java.Lang.Object>("get", fieldName);
         }
 
-        public JavaLang.Object Get(Field field)
+        public Java.Lang.Object Get(Field field)
         {
-            return IExecute<JavaLang.Object>("get", field);
+            return IExecute<Java.Lang.Object>("get", field);
         }
 
-        public JavaLang.Object GetWithoutDefault(string fieldName)
+        public Java.Lang.Object GetWithoutDefault(string fieldName)
         {
-            return IExecute<JavaLang.Object>("getWithoutDefault", fieldName);
+            return IExecute<Java.Lang.Object>("getWithoutDefault", fieldName);
         }
 
         public byte GetInt8(string fieldName)
@@ -112,12 +110,12 @@ namespace MASES.KNet.Connect.Data
             return IExecute<Struct>("getStruct", fieldName);
         }
 
-        public Struct Put(string fieldName, JavaLang.Object value)
+        public Struct Put(string fieldName, Java.Lang.Object value)
         {
             return IExecute<Struct>("put", fieldName, value);
         }
 
-        public Struct Put(Field field, JavaLang.Object value)
+        public Struct Put(Field field, Java.Lang.Object value)
         {
             return IExecute<Struct>("put", field, value);
         }

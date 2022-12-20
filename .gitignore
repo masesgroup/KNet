@@ -23,6 +23,10 @@ launchSettings.json
 /**/TEMP/
 /**/packages/
 /**/bin/
+/**/binCLI/
+/**/binConnect/
+/**/MASES.KNetPS/
 /**/obj/
 /**/jars/
 _site
+/**/.AssemblyAttributes

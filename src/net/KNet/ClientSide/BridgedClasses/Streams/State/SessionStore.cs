@@ -24,6 +24,8 @@ namespace MASES.KNet.Streams.State
 {
     public interface ISessionStore<K, AGG> : IStateStore, IReadOnlySessionStore<K, AGG>
     {
+        KeyValueIterator<Windowed<K>, AGG> FindSessions(long earliestSessionEndTime, long latestSessionEndTime);
+
         void Remove(Windowed<K> sessionKey);
 
         void Put(Windowed<K> sessionKey, AGG aggregate);
@@ -32,6 +34,11 @@ namespace MASES.KNet.Streams.State
     public class SessionStore<K, AGG> : StateStore, ISessionStore<K, AGG>
     {
         public override string ClassName => "org.apache.kafka.streams.state.SessionStore";
+
+        public KeyValueIterator<Windowed<K>, AGG> FindSessions(long earliestSessionEndTime, long latestSessionEndTime)
+        {
+            return IExecute<KeyValueIterator<Windowed<K>, AGG>>("findSessions", earliestSessionEndTime, latestSessionEndTime);
+        }
 
         public KeyValueIterator<Windowed<K>, AGG> BackwardFetch(K key)
         {

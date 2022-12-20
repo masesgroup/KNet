@@ -59,12 +59,12 @@ namespace MASES.KNet.Streams.State
                                                                 Instant latestSessionStartTime);
 
         AGG FetchSession(K key,
-                        long earliestSessionEndTime,
-                        long latestSessionStartTime);
+                        long sessionStartTime,
+                        long sessionEndTime);
 
         AGG FetchSession(K key,
-                        Instant earliestSessionEndTime,
-                        Instant latestSessionStartTime);
+                        Instant sessionStartTime,
+                        Instant sessionEndTime);
 
         KeyValueIterator<Windowed<K>, AGG> Fetch(K key);
 
@@ -124,14 +124,14 @@ namespace MASES.KNet.Streams.State
             return IExecute<KeyValueIterator<Windowed<K>, AGG>>("fetch", keyFrom, keyTo);
         }
 
-        public AGG FetchSession(K key, long earliestSessionEndTime, long latestSessionStartTime)
+        public AGG FetchSession(K key, long sessionStartTime, long sessionEndTime)
         {
-            return IExecute<AGG>("fetchSession", key, earliestSessionEndTime, latestSessionStartTime);
+            return IExecute<AGG>("fetchSession", key, sessionStartTime, sessionEndTime);
         }
 
-        public AGG FetchSession(K key, Instant earliestSessionEndTime, Instant latestSessionStartTime)
+        public AGG FetchSession(K key, Instant sessionStartTime, Instant sessionEndTime)
         {
-            return IExecute<AGG>("fetchSession", key, earliestSessionEndTime, latestSessionStartTime);
+            return IExecute<AGG>("fetchSession", key, sessionStartTime, sessionEndTime);
         }
 
         public KeyValueIterator<Windowed<K>, AGG> FindSessions(K key, long earliestSessionEndTime, long latestSessionStartTime)

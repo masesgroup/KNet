@@ -19,6 +19,7 @@
 using MASES.JCOBridge.C2JBridge;
 using MASES.KNet;
 using System;
+using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
 
@@ -30,16 +31,16 @@ namespace MASES.KNetCLI
         {
             try
             {
-                if (args.Length == 0) { ShowHelp(); return; }
+                KNetCLICore.CreateGlobalInstance();
 
-                KNetCore.CreateGlobalInstance();
+                if (KNetCLICore.MainClassToRun == null) { ShowHelp(); return; }
 
                 try
                 {
-                    var core = Activator.CreateInstance(KNetCore.MainClassToRun) as JVMBridgeBase;
+                    var core = Activator.CreateInstance(KNetCLICore.MainClassToRun) as JVMBridgeBase;
                     if (core == null) throw new ArgumentException("Requested class is not a child of JVMBridgeBase.");
 
-                    core.Execute(KNetCore.FilteredArgs);
+                    core.Execute(KNetCLICore.FilteredArgs);
                 }
                 catch (TargetInvocationException tie)
                 {
@@ -52,23 +53,27 @@ namespace MASES.KNetCLI
             }
             catch (JVMBridgeException e)
             {
-                Console.WriteLine(e.Message);
+                StringBuilder sb = new StringBuilder();
+                sb.AppendLine(e.Message);
                 Exception innerException = e.InnerException;
                 while (innerException != null)
                 {
-                    Console.WriteLine(innerException.Message);
+                    sb.AppendLine(innerException.Message);
                     innerException = innerException.InnerException;
                 }
+                ShowHelp(sb.ToString());
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                StringBuilder sb = new StringBuilder();
+                sb.AppendLine(e.Message);
                 Exception innerException = e.InnerException;
                 while (innerException != null)
                 {
-                    Console.WriteLine(innerException.Message);
+                    sb.AppendLine(innerException.Message);
                     innerException = innerException.InnerException;
                 }
+                ShowHelp(sb.ToString());
             }
         }
 
@@ -83,15 +88,24 @@ namespace MASES.KNetCLI
             {
                 Console.WriteLine("Error: {0}", errorString);
             }
-            StringBuilder avTypes = new StringBuilder();
-            foreach (var item in typeof(KNetCore).Assembly.ExportedTypes)
+            SortedDictionary<string, Type> implementedClasses = new();
+            foreach (var item in typeof(KNetCLICore).Assembly.ExportedTypes)
             {
                 var baseType = item.GetTypeInfo().BaseType;
                 if (baseType != null && baseType.IsGenericType && baseType.GetGenericTypeDefinition() == typeof(JVMBridgeMain<>))
                 {
-                    avTypes.AppendFormat("{0}, ", item.Name);
+#if DEBUG
+                    Console.WriteLine($"Adding {item.Name}");
+#endif
+                    implementedClasses.Add(item.Name, item);
                 }
             }
+
+            StringBuilder avTypes = new();
+            foreach (var item in implementedClasses.Keys)
+            {
+                avTypes.AppendFormat("{0}, ", item);
+            }      
 
             Console.WriteLine("ClassToRun: the class to be invoked ({0}...). ", avTypes.ToString());
             Console.WriteLine("KafkaLocation: The folder where Kafka package is available. Default consider this application uses the package jars folder.");

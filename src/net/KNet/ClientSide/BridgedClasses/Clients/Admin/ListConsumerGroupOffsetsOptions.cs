@@ -30,6 +30,10 @@ namespace MASES.KNet.Clients.Admin
             return IExecute<ListConsumerGroupOffsetsOptions>("topicPartitions", topicPartitions);
         }
 
+        public ListConsumerGroupOffsetsOptions RequireStable(bool requireStable) => IExecute<ListConsumerGroupOffsetsOptions>("requireStable", requireStable);
+
         public List<TopicPartition> TopicPartitions() => IExecute<List<TopicPartition>>("topicPartitions");
+
+        public bool RequireStable() => IExecute<bool>("requireStable");
     }
 }

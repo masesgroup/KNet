@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>KNet development state | KNet website </title>
+    <title>KNet: development state | KNet website </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="KNet development state | KNet website ">
-    <meta name="generator" content="docfx 2.59.2.0">
+    <meta name="title" content="KNet: development state | KNet website ">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -67,15 +67,18 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="knet-development-state">KNet development state</h1>
+<h1 id="knet-development-state">KNet: development state</h1>
 
 <p>This release comes with some ready made classes:</p>
 <ul>
-<li>The command line interface classes (i.e. the executables Apache Kafka classes), the ones available under the <em>bin</em> folder of any Apache Kafka binary distribution, can be managed using the <a href="usageCLI.html">KNetCLI</a>, e.g. ConsoleConsumer, ConsoleProducer and so on.</li>
-<li>Producer/Consumer classes</li>
-<li>Kafka Admin Client covering all available APIs: since many classes are marked with @InterfaceStability.Evolving annotation some properties or methods can be missed; use <strong>dynamic</strong> code to interact with Admin API types.</li>
-<li>Almost completed Kafka Streams</li>
-<li>Initial development of Kafka Connect (under development)</li>
+<li>[X] The command line interface classes (i.e. the executables Apache Kafka classes), the ones available under the <em>bin</em> folder of any Apache Kafka binary distribution, can be managed using the <a href="usageCLI.html">KNetCLI</a>, e.g. ConsoleConsumer, ConsoleProducer and so on.</li>
+<li>[X] Producer/Consumer classes</li>
+<li>[X] Apache Kafka Admin Client covering all available APIs: since many classes are marked with @InterfaceStability.Evolving annotation some properties or methods can be missed; use <strong>dynamic</strong> code to interact with Admin API types.</li>
+<li>[X] Almost completed Apache Kafka Streams</li>
+<li>[X] Almost completed Apache Kafka Connect</li>
+<li>[X] .NET Apache Kafka Connect SDK (a basic version)</li>
+<li>[X] KNet Connect: added autonomous executable to start connectors based on KNet Connect SDK</li>
+<li>[X] KNet PowerShell: added some cmdlets</li>
 </ul>
 <p>If something is not available use <a href="API_extensibility.html">API extensibility</a> to cover missing features.</p>
 </article>

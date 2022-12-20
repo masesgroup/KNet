@@ -31,7 +31,7 @@ namespace MASES.KNet.Clients.Consumer
             return IExecute<List<ConsumerRecord<K, V>>>("records", partition);
         }
 
-        public Iterable<ConsumerRecord<K, V>> Records(String topic)
+        public Iterable<ConsumerRecord<K, V>> Records(string topic)
         {
             return IExecute<Iterable<ConsumerRecord<K, V>>>("records", topic);
         }

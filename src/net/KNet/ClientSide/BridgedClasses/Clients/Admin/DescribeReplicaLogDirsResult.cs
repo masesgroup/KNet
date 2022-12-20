@@ -31,7 +31,7 @@ namespace MASES.KNet.Clients.Admin
 
         public class ReplicaLogDirInfo : JCOBridge.C2JBridge.JVMBridgeBase<DescribeReplicaLogDirsResult>
         {
-            public override string ClassName => "org.apache.kafka.clients.admin.DescribeReplicaLogDirsResult.ReplicaLogDirInfo";
+            public override string ClassName => "org.apache.kafka.clients.admin.DescribeReplicaLogDirsResult$ReplicaLogDirInfo";
 
             public string GetCurrentReplicaLogDir => IExecute<string>("getCurrentReplicaLogDir");
 

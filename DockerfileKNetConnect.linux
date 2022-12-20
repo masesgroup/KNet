@@ -1,0 +1,19 @@
+﻿FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
+WORKDIR /app
+
+# Copy everything
+COPY ./src/net ./
+# Restore as distinct layers
+RUN dotnet restore KNet.sln
+# Build and publish a release
+RUN dotnet publish ./KNetConnect/KNetConnect.csproj --framework net6.0 -c Release -o out
+
+# Build runtime image
+FROM ghcr.io/masesgroup/mases.jnet:latest
+
+ADD ./jars /app/jars
+ADD ./src/config /app/config
+
+WORKDIR /app
+COPY --from=build-env /app/out .
+ENTRYPOINT ["dotnet", "MASES.KNetConnect.dll", "--JVMPath:/usr/lib/jvm/java-17-openjdk-amd64/lib/server/libjvm.so"]

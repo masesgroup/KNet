@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<LangVersion>latest</LangVersion>
+		<TargetFrameworks>net462;net6.0;net7.0</TargetFrameworks>
+	</PropertyGroup>
+	<ItemGroup Condition="'$(TargetFramework)' == 'net462'">
+		<Reference Include="Microsoft.CSharp" />
+	</ItemGroup>
+	<ItemGroup Condition="Exists('..\..\..\KNet\KNet.csproj')">
+		<!--Within GitHub repo: used for test purpose-->
+		<ProjectReference Include="..\..\..\KNet\KNet.csproj" />
+	</ItemGroup>
+	<ItemGroup Condition="!Exists('..\..\..\KNet\KNet.csproj')">
+		<!--Outside GitHub repo-->
+		<PackageReference Include="MASES.KNet" Version="1.5.0" IncludeAssets="All" PrivateAssets="None" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Update="connect-knet-sink.properties">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="connect-standalone.properties">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+</Project>

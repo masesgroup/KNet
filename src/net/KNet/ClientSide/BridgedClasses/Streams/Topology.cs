@@ -33,6 +33,15 @@ namespace MASES.KNet.Streams
 
         public override string ClassName => "org.apache.kafka.streams.Topology";
 
+        public Topology()
+        {
+        }
+
+        public Topology(TopologyConfig topologyConfigs)
+            :base(topologyConfigs)
+        {
+        }
+
         public Topology AddSource(string name, params string[] topics)
         {
             return IExecute<Topology>("addSource", name, topics);

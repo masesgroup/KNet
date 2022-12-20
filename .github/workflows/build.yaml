@@ -6,6 +6,8 @@ name: CI_BUILD
 # events but only for the master branch
 on:
   push:
+    # only trigger on branches, not on tags
+    branches: '**'
 
 # This workflow contains two jobs called "check_changes", "build_windows"
 jobs:
@@ -17,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: get_changed_files
-        uses: jitterbit/get-changed-files@v1
+        uses: masesgroup/retrieve-changed-files@v2
         with:
           format: 'csv'
       - id: check_files
@@ -26,17 +28,88 @@ jobs:
           for added_modified_file in "${added_modified_files[@]}"; do
               if [[ $added_modified_file == ".github/workflows/build.yaml"* ]]; then
                 echo "$added_modified_file is myself."
-                echo "::set-output name=run_build_windows::true"
+                echo "run_build_windows=true" >> $GITHUB_OUTPUT
                 break
               fi
               if [[ $added_modified_file == "src/"* ]]; then
                 echo "$added_modified_file file is under the directory 'src/'."
-                echo "::set-output name=run_build_windows::true"
+                echo "run_build_windows=true" >> $GITHUB_OUTPUT
+                break
+              fi
+              if [[ $added_modified_file == "DockerfileKNet.linux"* ]]; then
+                echo "$added_modified_file file changed"
+                echo "run_build_windows=true" >> $GITHUB_OUTPUT
+                break
+              fi
+              if [[ $added_modified_file == "DockerfileKNetConnect.linux"* ]]; then
+                echo "$added_modified_file file changed"
+                echo "run_build_windows=true" >> $GITHUB_OUTPUT
                 break
               fi
           done
       - name: Get run_build_windows
         run: echo "The selected run_build_windows is ${{ steps.check_files.outputs.run_build_windows }}"
+
+  build_container_linux:
+    needs: check_changes
+    if: "always() && needs.check_changes.outputs.run_build_windows == 'true'"
+    runs-on: ubuntu-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:    
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: '1'
+          submodules: 'true'
+
+      - name: Pre compile
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src/net/KNet/KNet.csproj
+        
+      - name: Set up Apache Maven Central
+        uses: actions/setup-java@v3
+        with: # running setup-java again overwrites the settings.xml
+          distribution: temurin
+          java-version: 11
+          cache: 'maven'
+          server-id: ossrh # Value of the distributionManagement/repository/id field of the pom.xml
+          server-username: MAVEN_USERNAME # env variable for username in deploy
+          server-password: MAVEN_CENTRAL_TOKEN # env variable for token in deploy
+          gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }} # Value of the GPG private key to import
+          gpg-passphrase: MAVEN_GPG_PASSPHRASE # env variable for GPG private key passphrase
+
+      - name: Install local file to be used within Javadoc plugin of generated POM
+        run: mvn install:install-file -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.0 -Dpackaging=jar -Dfile=./bin/net6.0/JCOBridge.jar
+        shell: bash
+
+      - name: Create Jars
+        run: mvn --file ./src/java/knet/pom.xml --no-transfer-progress package
+        env:
+          MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
+          MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
+          MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
+        
+      - name: Build KNet Docker Image
+        run: docker build -t mases.knet -f DockerfileKNet.linux .
+
+      - name: Save Docker Image
+        run: docker image save -o mases.knet.linux.tar mases.knet
+        
+      - name: Compress KNet Docker Image
+        run: gzip mases.knet.linux.tar
+          
+      - name: Build KNetConnect Docker Image
+        run: docker build -t mases.knetconnect -f DockerfileKNetConnect.linux .
+
+      - name: Save KNetConnect Docker Image
+        run: docker image save -o mases.knetconnect.linux.tar mases.knetconnect
+        
+      - name: Compress KNetConnect Docker Image
+        run: gzip mases.knetconnect.linux.tar
+        
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Docker Images
+          path: ./*.tar.gz
 
   # Now run "build_windows"
   build_windows:
@@ -53,18 +126,10 @@ jobs:
         run: git config --system core.longpaths true
       
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: '1'
           submodules: 'true'
-
-      - name: Cache local Maven repository
-        uses: actions/cache@v2
-        with:
-          path: ~/.m2/repository
-          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-maven-
 
       - name: Pre compile templates
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KNetTemplates.sln
@@ -73,9 +138,11 @@ jobs:
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KNet\KNet.csproj
 
       - name: Set up Apache Maven Central
-        uses: actions/setup-java@v1
+        uses: actions/setup-java@v3
         with: # running setup-java again overwrites the settings.xml
+          distribution: temurin
           java-version: 11
+          cache: 'maven'
           server-id: ossrh # Value of the distributionManagement/repository/id field of the pom.xml
           server-username: MAVEN_USERNAME # env variable for username in deploy
           server-password: MAVEN_CENTRAL_TOKEN # env variable for token in deploy
@@ -83,7 +150,7 @@ jobs:
           gpg-passphrase: MAVEN_GPG_PASSPHRASE # env variable for GPG private key passphrase
 
       - name: Install local file to be used within Javadoc plugin of generated POM
-        run: mvn install:install-file -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.0 -Dpackaging=jar -Dfile=./bin/net5.0/JCOBridge.jar
+        run: mvn install:install-file -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.0 -Dpackaging=jar -Dfile=./bin/net6.0/JCOBridge.jar
         shell: bash
 
       - name: Create Jars
@@ -96,14 +163,35 @@ jobs:
       - name: Compile command line
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KNetCLI\KNetCLI.csproj
 
-      - uses: nuget/setup-nuget@v1
+      - name: Compile KNet Connect
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KNetConnect\KNetConnect.csproj
+
+      - name: Compile KNetPS
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KNetPS\KNetPS.csproj
+
+      - uses: nuget/setup-nuget@v1.1.1
         with:
           nuget-version: '5.x'
           
       - run: nuget pack src\net\KNetCLI\KNetCLI.nuspec -OutputDirectory .\bin
+      - run: nuget pack src\net\KNetConnect\KNetConnect.nuspec -OutputDirectory .\bin
 
       - name: Recompile to create nuget packages
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KNet.sln
+
+      - name: Prepare PowerShell package
+        run: |
+          Copy-Item .\src\net\KNetPS\MASES.KNetPS.psd1 -Destination .\MASES.KNetPS\MASES.KNetPS.psd1 -Force
+          Copy-Item .\src\net\KNetPS\MASES.KNetPS.psm1 -Destination .\MASES.KNetPS\MASES.KNetPS.psm1 -Force
+          New-FileCatalog -Path .\MASES.KNetPS\ -CatalogFilePath .\MASES.KNetPS\MASES.KNetPS.cat
+        shell: pwsh
+     
+      - name: Create PowerShell package
+        run: |
+          $env:DOTNET_CLI_UI_LANGUAGE="en_US"
+          Register-PSRepository -Name Local_Nuget_Feed -SourceLocation $env:GITHUB_WORKSPACE\bin -PublishLocation $env:GITHUB_WORKSPACE\bin -InstallationPolicy Trusted
+          Publish-Module -Path .\MASES.KNetPS -Repository Local_Nuget_Feed -NuGetApiKey 'ABC123'
+        shell: pwsh
 
       - name: Clear documentation folder 
         run: Remove-Item .\docs\* -Recurse -Force -Exclude _config.yml
@@ -114,7 +202,18 @@ jobs:
           cd src\net\Documentation
           docfx
 
-      - uses: actions/upload-artifact@v2
+#       - name: Build Docker Image
+#         run: docker build -t mases.knetcli -f Dockerfile.windows .
+#
+#       - name: Save Docker Image
+#         run: docker save -o container.windows.zip mases.knetcli
+# 
+#       - uses: actions/upload-artifact@v2
+#         with:
+#           name: container.windows.zip
+#           path: .\container.windows.zip
+
+      - uses: actions/upload-artifact@v3
         with:
           name: KNet
           path: .\bin\*nupkg
@@ -126,7 +225,7 @@ jobs:
 
       - name: Commit changes
         if: ${{ github.repository_owner == 'masesgroup'}} #do not push any changes outside main repo
-        uses: EndBug/add-and-commit@v5
+        uses: EndBug/add-and-commit@v9
         with:
           author_name: github-actions
           author_email: 41898282+github-actions[bot]@users.noreply.github.com

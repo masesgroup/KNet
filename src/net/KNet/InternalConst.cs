@@ -29,6 +29,9 @@ namespace MASES.KNet
         public const string KafkaLocation = "KafkaLocation";
         public const string Log4JConfiguration = "Log4JConfiguration";
         public const string LogPath = "LogPath";
+        public const string DisableJMX = "DisableJMX";
+        public const string EnableJMXAuth = "EnableJMXAuth";
+        public const string EnableJMXSSL = "EnableJMXAuth";
     }
 
     /// <summary>

@@ -24,11 +24,11 @@ namespace MASES.KNet.Connect.Data
     {
         public override string ClassName => "org.apache.kafka.connect.data.Timestamp";
 
-        public static string LOGICAL_NAME => SExecute<string>("LOGICAL_NAME");
+        public static string LOGICAL_NAME => Clazz.GetField<string>("LOGICAL_NAME");
 
         public static SchemaBuilder Builder() { return SExecute<SchemaBuilder>("builder"); }
 
-        public static Schema SCHEMA => SExecute<Schema>("SCHEMA");
+        public static Schema SCHEMA => Clazz.GetField<Schema>("SCHEMA");
 
         public static long FromLogical(Schema schema, Java.Util.Date value)
         {

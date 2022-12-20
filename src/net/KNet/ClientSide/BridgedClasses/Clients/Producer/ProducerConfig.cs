@@ -52,6 +52,12 @@ namespace MASES.KNet.Clients.Producer
 
         public static readonly string BATCH_SIZE_CONFIG = Clazz.GetField<string>("BATCH_SIZE_CONFIG");
 
+        public static readonly string PARTITIONER_ADAPTIVE_PARTITIONING_ENABLE_CONFIG = Clazz.GetField<string>("PARTITIONER_ADPATIVE_PARTITIONING_ENABLE_CONFIG");
+
+        public static readonly string PARTITIONER_AVAILABILITY_TIMEOUT_MS_CONFIG = Clazz.GetField<string>("PARTITIONER_AVAILABILITY_TIMEOUT_MS_CONFIG");
+
+        public static readonly string PARTITIONER_IGNORE_KEYS_CONFIG = Clazz.GetField<string>("PARTITIONER_IGNORE_KEYS_CONFIG");
+
         public static readonly string ACKS_CONFIG = Clazz.GetField<string>("ACKS_CONFIG");
 
         public static readonly string LINGER_MS_CONFIG = Clazz.GetField<string>("LINGER_MS_CONFIG");
@@ -146,6 +152,33 @@ namespace MASES.KNet.Clients.Producer
         {
             var clone = Clone();
             clone.BatchSize = batchSize;
+            return clone;
+        }
+
+        public bool PartitionerAdaptivePartitioningEnable { get { return GetProperty<bool>(ProducerConfig.PARTITIONER_ADAPTIVE_PARTITIONING_ENABLE_CONFIG); } set { SetProperty(ProducerConfig.PARTITIONER_ADAPTIVE_PARTITIONING_ENABLE_CONFIG, value); } }
+
+        public ProducerConfigBuilder WithPartitionerAdaptivePartitioningEnable(bool partitionerAdaptivePartitioningEnable)
+        {
+            var clone = Clone();
+            clone.PartitionerAdaptivePartitioningEnable = partitionerAdaptivePartitioningEnable;
+            return clone;
+        }
+
+        public long PartitionerAvailabilityTimeoutMs { get { return GetProperty<long>(ProducerConfig.PARTITIONER_AVAILABILITY_TIMEOUT_MS_CONFIG); } set { SetProperty(ProducerConfig.PARTITIONER_AVAILABILITY_TIMEOUT_MS_CONFIG, value); } }
+
+        public ProducerConfigBuilder WithPartitionerAvailabilityTimeoutMs(long partitionerAvailabilityTimeoutMs)
+        {
+            var clone = Clone();
+            clone.PartitionerAvailabilityTimeoutMs = partitionerAvailabilityTimeoutMs;
+            return clone;
+        }
+
+        public bool PartitionerIgnoreKeys { get { return GetProperty<bool>(ProducerConfig.PARTITIONER_IGNORE_KEYS_CONFIG); } set { SetProperty(ProducerConfig.PARTITIONER_IGNORE_KEYS_CONFIG, value); } }
+
+        public ProducerConfigBuilder WithPartitionerIgnoreKeys(bool partitionerIgnoreKeys)
+        {
+            var clone = Clone();
+            clone.PartitionerIgnoreKeys = partitionerIgnoreKeys;
             return clone;
         }
 
@@ -279,9 +312,9 @@ namespace MASES.KNet.Clients.Producer
             return clone;
         }
 
-        public dynamic PartitionerClass { get => GetProperty<dynamic>(ProducerConfig.PARTITIONER_CLASS_CONFIG); set { SetProperty(ProducerConfig.PARTITIONER_CLASS_CONFIG, value); } }
+        public Java.Lang.Class PartitionerClass { get => GetProperty<Java.Lang.Class>(ProducerConfig.PARTITIONER_CLASS_CONFIG); set { SetProperty(ProducerConfig.PARTITIONER_CLASS_CONFIG, value); } }
 
-        public ProducerConfigBuilder WithPartitionerClass(dynamic partitionerClass)
+        public ProducerConfigBuilder WithPartitionerClass(Java.Lang.Class partitionerClass)
         {
             var clone = Clone();
             clone.PartitionerClass = partitionerClass;

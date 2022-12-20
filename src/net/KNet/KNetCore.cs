@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using MASES.JNet;
+using MASES.KNet.Common.Config;
 
 namespace MASES.KNet
 {
@@ -48,7 +49,7 @@ namespace MASES.KNet
                     new ArgumentMetadata<string>()
                     {
                         Name = CLIParam.ClassToRun,
-                        Help = "The class to be instantiated.",
+                        Help = "The class to be instantiated from CLI.",
                     },
                     new ArgumentMetadata<string>()
                     {
@@ -60,7 +61,7 @@ namespace MASES.KNet
                     {
                         Name = CLIParam.KafkaLocation,
                         Default = Const.DefaultRootPath,
-                        Help = "The folder where Kafka package is available. Default consider the application use the Jars in the package.",
+                        Help = "The folder where Kafka package are stored. Default consider the application use the Jars in the package.",
                     },
                     new ArgumentMetadata<string>()
                     {
@@ -72,8 +73,28 @@ namespace MASES.KNet
                     {
                         Name = CLIParam.LogPath,
                         Default = Const.DefaultLogPath,
-                        Help = "The path for log.",
+                        Help = "The path where log will be stored.",
                     },
+                    new ArgumentMetadata<string>()
+                    {
+                        Name = CLIParam.DisableJMX,
+                        Type = ArgumentType.Single,
+                        Help = "Disable JMX. Default is JMX enabled without security.",
+                    },
+                    /* hide until other arguments will be added
+                    new ArgumentMetadata<string>()
+                    {
+                        Name = CLIParam.EnableJMXAuth,
+                        Type = ArgumentType.Single,
+                        Help = "Enable authenticate on JMX. Default is not enabled",
+                    },
+                    new ArgumentMetadata<string>()
+                    {
+                        Name = CLIParam.EnableJMXSSL,
+                        Type = ArgumentType.Single,
+                        Help = "Enable SSL on JMX. Default is not enabled.",
+                    },
+                    */
                 });
                 return lst;
             }
@@ -92,9 +113,12 @@ namespace MASES.KNet
 
             #region Common Exceptions
 
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(ConfigException));
+
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(ApiException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(AuthenticationException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(AuthorizationException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(AuthorizerNotReadyException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(BrokerIdNotRegisteredException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(BrokerNotAvailableException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(ClusterAuthorizationException));
@@ -129,6 +153,7 @@ namespace MASES.KNet
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InconsistentGroupProtocolException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InconsistentTopicIdException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InconsistentVoterSetException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(IneligibleReplicaException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InterruptException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidCommitOffsetSizeException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidConfigurationException));
@@ -157,6 +182,7 @@ namespace MASES.KNet
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(LogDirNotFoundException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(MemberIdRequiredException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(NetworkException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(NewLeaderElectedException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(NoReassignmentInProgressException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(NotControllerException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(NotCoordinatorException));
@@ -243,12 +269,14 @@ namespace MASES.KNet
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(StreamsException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(StreamsNotStartedException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(StreamsRebalancingException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(StreamsStoppedException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(TaskAssignmentException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(TaskCorruptedException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(TaskIdFormatException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(TaskMigratedException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(TopologyException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(UnknownStateStoreException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(UnknownTopologyException));
             #endregion
 
             #region Connect Exceptions
@@ -263,67 +291,17 @@ namespace MASES.KNet
             #endregion
         }
 
-        /// <inheritdoc cref="JNetCore{T}.GlobalHeapSize" />
-        public override string GlobalHeapSize { get { return null; } }
-        /// <inheritdoc cref="JNetCore{T}.InitialHeapSize" />
-        public override string InitialHeapSize { get { return null; } }
         /// <inheritdoc cref="JNetCore{T}.ProcessCommandLine" />
         protected override string[] ProcessCommandLine()
         {
             var result = base.ProcessCommandLine();
-            GlobalScalaVersion = Const.DefaultScalaVersion;
-            GlobalRootPath = Const.DefaultRootPath;
-            GlobalLogPath = Const.DefaultLogPath;
 
-            var classToRun = ParsedArgs.Get<string>(CLIParam.ClassToRun);
-            GlobalRootPath = ParsedArgs.Get<string>(CLIParam.KafkaLocation);
-            GlobalLog4JPath = ParsedArgs.Get<string>(CLIParam.Log4JConfiguration);
-            GlobalLogPath = ParsedArgs.Get<string>(CLIParam.LogPath);
-            GlobalScalaVersion = ParsedArgs.Get<string>(CLIParam.ScalaVersion);
-
-            if (!string.IsNullOrEmpty(classToRun))
-            {
-                Type type = null;
-
-                foreach (var item in typeof(KNetCore).Assembly.ExportedTypes)
-                {
-                    if (item.Name == classToRun || item.FullName == classToRun)
-                    {
-                        type = item;
-                        break;
-                    }
-                }
-                MainClassToRun = type ?? throw new ArgumentException($"Requested class {classToRun} is not a valid class name.");
-            }
-
-            switch (classToRun)
-            {
-                case "VerifiableConsumer":
-                    ApplicationHeapSize = "512M";
-                    break;
-                case "VerifiableProducer":
-                    ApplicationHeapSize = "512M";
-                    break;
-                case "StreamsResetter":
-                    ApplicationHeapSize = "512M";
-                    break;
-                case "ZooKeeperStart":
-                    ApplicationHeapSize = "512M";
-                    ApplicationInitialHeapSize = "512M";
-                    break;
-                case "ZooKeeperShell":
-                    ApplicationHeapSize = "512M";
-                    ApplicationInitialHeapSize = "512M";
-                    break;
-                case "KafkaStart":
-                    ApplicationHeapSize = Environment.Is64BitOperatingSystem ? "1G" : "512M";
-                    ApplicationInitialHeapSize = Environment.Is64BitOperatingSystem ? "1G" : "512M";
-                    break;
-                default:
-                    ApplicationHeapSize ??= "256M";
-                    break;
-            }
-
+            _classToRun = ParsedArgs.Get<string>(CLIParam.ClassToRun);
+            _JarRootPath = ParsedArgs.Get<string>(CLIParam.KafkaLocation);
+            _log4JPath = ParsedArgs.Get<string>(CLIParam.Log4JConfiguration);
+            _logPath = ParsedArgs.Get<string>(CLIParam.LogPath);
+            _scalaVersion = ParsedArgs.Get<string>(CLIParam.ScalaVersion);
+            _disableJMX = ParsedArgs.Exist(CLIParam.DisableJMX);
             return result;
         }
 
@@ -333,49 +311,80 @@ namespace MASES.KNet
         public static Type MainClassToRun { get; protected set; }
 
         /// <summary>
-        /// Sets the global value of root path
+        /// Sets the global value of class to run
         /// </summary>
-        public static string GlobalRootPath { get; set; }
+        public static string ApplicationClassToRun { get; set; }
+
+        /// <summary>
+        /// Sets the global value of Jar root path
+        /// </summary>
+        public static string ApplicationJarRootPath { get; set; }
 
         /// <summary>
         /// Sets the global value of log4j path
         /// </summary>
-        public static string GlobalLog4JPath { get; set; }
+        public static string ApplicationLog4JPath { get; set; }
 
         /// <summary>
         /// Sets the global value of log path
         /// </summary>
-        public static string GlobalLogPath { get; set; }
+        public static string ApplicationLogPath { get; set; }
 
         /// <summary>
-        /// Sets the global value of root path
+        /// Sets the global value of scala version
         /// </summary>
-        public static string GlobalScalaVersion { get; set; }
+        public static string ApplicationScalaVersion { get; set; }
 
+        /// <summary>
+        /// Sets the global value to disable JMX
+        /// </summary>
+        public static bool? ApplicationDisableJMX { get; set; }
+
+        string _classToRun;
+        /// <summary>
+        /// The class to run in CLI version
+        /// </summary>
+        public virtual string ClassToRun { get { return ApplicationClassToRun ?? _classToRun; } }
+
+        string _scalaVersion;
         /// <summary>
         /// The Scala version to be used
         /// </summary>
-        public virtual string ScalaVersion { get { return GlobalScalaVersion; } }
+        public virtual string ScalaVersion { get { return ApplicationScalaVersion ?? _scalaVersion; } }
 
         /// <summary>
         /// The Scala binary version to be used
         /// </summary>
         public virtual string ScalaBinaryVersion { get { var ver = Version.Parse(ScalaVersion); return (ver.Revision == 0) ? string.Format("{0}", ver.Minor) : string.Format("{0}.{1}", ver.Minor, ver.Revision); } }
 
+        string _JarRootPath;
         /// <summary>
         /// The root path where Apache Kafka is installed
         /// </summary>
-        public virtual string RootPath { get { return GlobalRootPath; } }
+        public virtual string JarRootPath { get { return ApplicationJarRootPath ?? _JarRootPath; } }
 
+        string _log4JPath;
+        /// <summary>
+        /// The log4j folder
+        /// </summary>
+        public virtual string Log4JPath { get { return ApplicationLog4JPath ?? _log4JPath; } }
+
+        string _logPath;
         /// <summary>
         /// The log folder
         /// </summary>
-        public virtual string LogDir { get { return GlobalLogPath; } }
+        public virtual string LogDir { get { return ApplicationLogPath ?? _logPath; } }
 
         /// <summary>
         /// The log4j configuration
         /// </summary>
-        public virtual string Log4JOpts { get { return string.Format("file:{0}", Path.Combine(RootPath, "config", "tools-log4j.properties")); } }
+        public virtual string Log4JOpts { get { return string.Format("file:{0}", Path.Combine(JarRootPath, "config", "tools-log4j.properties")); } }
+
+        bool _disableJMX;
+        /// <summary>
+        /// Disable JMX
+        /// </summary>
+        public virtual bool DisableJMX { get { return ApplicationDisableJMX ?? _disableJMX; } }
 
         /// <inheritdoc cref="JNetCore{T}.PerformanceOptions"/>
         protected override IList<string> PerformanceOptions
@@ -395,110 +404,6 @@ namespace MASES.KNet
             }
         }
 
-        /// <summary>
-        /// The path where Apache Kafka core dependencies Jars are installed
-        /// </summary>
-        public virtual string CoreDependenciesPath { get { return Path.Combine(RootPath, "core", "build", "dependant-libs-" + ScalaVersion, "*.jar"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka examples Jars are installed
-        /// </summary>
-        public virtual string ExamplesPath { get { return Path.Combine(RootPath, "examples", "build", "libs", "kafka-examples*.jar"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka clients Jars are installed
-        /// </summary>
-        public virtual string ClientsPath { get { return Path.Combine(RootPath, "clients", "build", "libs", "kafka-clients*.jar"); } }
-        /// <summary>
-        /// The path where Apache Kafka Streams Jars are installed
-        /// </summary>
-        public virtual string StreamsPath { get { return Path.Combine(RootPath, "streams", "build", "libs", "kafka-streams*.jar"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka Streams examples Jars are installed
-        /// </summary>
-        public virtual string StreamsExamplePath { get { return Path.Combine(RootPath, "streams", "examples", "build", "libs", "kafka-streams-examples*.jar"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka Streams dependencies Jars are installed
-        /// </summary>
-        public virtual string StreamsDependenciesPath { get { return Path.Combine(RootPath, "streams", "build", "dependant-libs-" + ScalaVersion, "rocksdb*.jar"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka tools Jars are installed
-        /// </summary>
-        public virtual string ToolsPath { get { return Path.Combine(RootPath, "tools", "build", "libs", "kafka-tools*.jar"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka tools Jars are installed
-        /// </summary>
-        public virtual string ToolsDependenciesPath { get { return Path.Combine(RootPath, "tools", "build", "dependant-libs-" + ScalaVersion, "*.jar"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka Connect API Jars are installed
-        /// </summary>
-        public virtual string ConnectApiPath { get { return Path.Combine(RootPath, "connect", "api", "build", "libs", "connect-api*.jar"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka Connect API dependencies Jars are installed
-        /// </summary>
-        public virtual string ConnectApiDependenciesPath { get { return Path.Combine(RootPath, "connect", "api", "build", "dependant-libs", "*"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka Connect runtime Jars are installed
-        /// </summary>
-        public virtual string ConnectRuntimePath { get { return Path.Combine(RootPath, "connect", "runtime", "build", "libs", "connect-runtime*.jar"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka Connect runtime dependencies Jars are installed
-        /// </summary>
-        public virtual string ConnectRuntimeDependenciesPath { get { return Path.Combine(RootPath, "connect", "runtime", "build", "dependant-libs", "*"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka Connect file Jars are installed
-        /// </summary>
-        public virtual string ConnectFilePath { get { return Path.Combine(RootPath, "connect", "file", "build", "libs", "connect-file*.jar"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka Connect file dependencies Jars are installed
-        /// </summary>
-        public virtual string ConnectFileDependenciesPath { get { return Path.Combine(RootPath, "connect", "file", "build", "dependant-libs", "*"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka Connect json Jars are installed
-        /// </summary>
-        public virtual string ConnectJsonPath { get { return Path.Combine(RootPath, "connect", "json", "build", "libs", "connect-json*.jar"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka Connect json dependencies Jars are installed
-        /// </summary>
-        public virtual string ConnectJsonDependenciesPath { get { return Path.Combine(RootPath, "connect", "json", "build", "dependant-libs", "*"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka Connect tools Jars are installed
-        /// </summary>
-        public virtual string ConnectToolsPath { get { return Path.Combine(RootPath, "connect", "tools", "build", "libs", "connect-tools*.jar"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka Connect tools dependencies Jars are installed
-        /// </summary>
-        public virtual string ConnectToolsDependenciesPath { get { return Path.Combine(RootPath, "connect", "tools", "build", "dependant-libs", "*"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka tools Jars are installed
-        /// </summary>
-        public virtual string ExtraClassPath { get { return string.Empty; } }
-
-        /// <summary>
-        /// The path where Apache Kafka libs Jars are installed
-        /// </summary>
-        public virtual string ReleasePath { get { return Path.Combine(RootPath, "libs", "*"); } }
-
-        /// <summary>
-        /// The path where Apache Kafka additional Jars are installed
-        /// </summary>
-        public virtual string ReleaseAdditionalPath { get { return Path.Combine(RootPath, "core", "build", "libs", "kafka_" + ScalaBinaryVersion + "*.jar"); } }
-
         /// <inheritdoc cref="JNetCore{T}.Options"/>
         protected override IDictionary<string, string> Options
         {
@@ -508,18 +413,16 @@ namespace MASES.KNet
 
                 IDictionary<string, string> options = new Dictionary<string, string>(base.Options)
                 {
-                    { "-Dcom.sun.management.jmxremote", null },
-                    { "com.sun.management.jmxremote.authenticate", "false" },
-                    { "com.sun.management.jmxremote.ssl", "false" },
-                    { "log4j.configuration", string.IsNullOrEmpty(GlobalLog4JPath) ? ((GlobalRootPath == Const.DefaultRootPath) ? Log4JOpts : null) : $"file:{GlobalLog4JPath}"},
+                    { "log4j.configuration", string.IsNullOrEmpty(Log4JPath) ? ((JarRootPath == Const.DefaultRootPath) ? Log4JOpts : null) : $"file:{Log4JPath}"},
                     { "kafka.logs.dir", LogDir},
                     { "java.awt.headless", "true" },
-                    { "-Xmx" + ApplicationHeapSize, null},
                 };
 
-                if (!string.IsNullOrEmpty(ApplicationInitialHeapSize))
+                if (!_disableJMX)
                 {
-                    options.Add("-Xms" + ApplicationInitialHeapSize, null);
+                    options.Add("-Dcom.sun.management.jmxremote", null);
+                    options.Add("com.sun.management.jmxremote.authenticate", ParsedArgs.Exist(CLIParam.EnableJMXAuth) ? "true" : "false");
+                    options.Add("com.sun.management.jmxremote.ssl", ParsedArgs.Exist(CLIParam.EnableJMXSSL) ? "true" : "false");
                 }
 
                 return options;
@@ -527,36 +430,31 @@ namespace MASES.KNet
         }
 
         /// <inheritdoc cref="JNetCore{T}.PathToParse"/>
-        protected override IList<string> PathToParse => new List<string>(new string[]
+        protected override IList<string> PathToParse
         {
-            RootPath != null ? Path.Combine(RootPath, "*.jar") : RootPath,
-            CoreDependenciesPath,
-            ExamplesPath,
-            ClientsPath,
-            StreamsPath,
-            StreamsExamplePath,
-            StreamsDependenciesPath,
-            ToolsPath,
-            ToolsDependenciesPath,
-            ConnectApiPath,
-            ConnectApiDependenciesPath,
-            ConnectRuntimePath,
-            ConnectRuntimeDependenciesPath,
-            ConnectFilePath,
-            ConnectFileDependenciesPath,
-            ConnectJsonPath,
-            ConnectJsonDependenciesPath,
-            ConnectToolsPath,
-            ConnectToolsDependenciesPath,
-            ReleasePath,
-            ReleaseAdditionalPath,
-        });
-    }
-    /// <summary>
-    /// Directly usable implementation of <see cref="KNetCore{T}"/>
-    /// </summary>
-    public class KNetCore : KNetCore<KNetCore>
-    {
+            get
+            {
+                var lst = new List<string>(base.PathToParse);
+                var assembly = typeof(KNetCore<>).Assembly;
+                var version = assembly.GetName().Version.ToString();
+                // 1. check first full version
+                var knetFile = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(assembly.Location), JARsSubFolder, $"knet-{version}.jar");
+                if (!System.IO.File.Exists(knetFile) && version.EndsWith(".0"))
+                {
+                    // 2. if not exist remove last part of version
+                    version = version.Substring(0, version.LastIndexOf(".0"));
+                    knetFile = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(assembly.Location), JARsSubFolder, $"knet-{version}.jar");
+                }
+                // 3. add knet at this version first...
+                lst.Add(knetFile);
+                // 2. ...then add everything else
+                lst.Add(JarRootPath != null ? Path.Combine(JarRootPath, "*.jar") : JarRootPath);
+                return lst;
+            }
+        }
 
+#if DEBUG
+        public override bool EnableDebug => true;
+#endif
     }
 }

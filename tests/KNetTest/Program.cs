@@ -16,17 +16,18 @@
 *  Refer to LICENSE for more information.
 */
 
+using Java.Util;
 using MASES.KNet;
 using MASES.KNet.Clients.Admin;
 using MASES.KNet.Clients.Consumer;
 using MASES.KNet.Clients.Producer;
 using MASES.KNet.Common.Config;
 using MASES.KNet.Common.Serialization;
-using Java.Util;
+using MASES.KNet.Extensions;
+using MASES.KNet.TestCommon;
 using System;
 using System.Text;
 using System.Threading;
-using MASES.KNet.Extensions;
 
 namespace MASES.KNetTest
 {
@@ -44,8 +45,8 @@ namespace MASES.KNetTest
 
         static void Main(string[] args)
         {
-            KNetCore.CreateGlobalInstance();
-            var appArgs = KNetCore.FilteredArgs;
+            SharedKNetCore.CreateGlobalInstance();
+            var appArgs = SharedKNetCore.FilteredArgs;
 
             if (appArgs.Length != 0)
             {
@@ -54,21 +55,27 @@ namespace MASES.KNetTest
 
             CreateTopic();
 
-            Thread threadProduce = new Thread(ProduceSomething)
+            Thread threadProduce = new(ProduceSomething)
             {
                 Name = "produce"
             };
             threadProduce.Start();
 
-            Thread threadConsume = new Thread(ConsumeSomething)
+            Thread threadConsume = new(ConsumeSomething)
             {
                 Name = "consume"
             };
             threadConsume.Start();
 
-            Thread.Sleep(20000);
-            resetEvent.Set();
-            Thread.Sleep(2000);
+            Console.CancelKeyPress += Console_CancelKeyPress;
+            Console.WriteLine("Press Ctrl-C to exit");
+            resetEvent.WaitOne();
+            Thread.Sleep(2000); // wait the threads exit
+        }
+
+        private static void Console_CancelKeyPress(object sender, ConsoleCancelEventArgs e)
+        {
+            if (e.Cancel) resetEvent.Set();
         }
 
         static void CreateTopic()
@@ -233,7 +240,7 @@ namespace MASES.KNetTest
                 Deserializer<string> keyDeserializer = null;
                 Deserializer<string> valueDeserializer = null;
                 ConsumerRebalanceListener rebalanceListener = null;
-                KafkaConsumer<string, string> consumer = null; ;
+                KafkaConsumer<string, string> consumer = null;
                 if (useSerdes)
                 {
                     keyDeserializer = new Deserializer<string>(deserializeFun: (topic, data) =>

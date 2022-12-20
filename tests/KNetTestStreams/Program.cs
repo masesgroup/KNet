@@ -24,6 +24,7 @@ using MASES.KNet.Common.Serialization;
 using MASES.KNet.Streams;
 using MASES.KNet.Streams.Errors;
 using MASES.KNet.Streams.KStream;
+using MASES.KNet.TestCommon;
 using System;
 using System.Text.RegularExpressions;
 using System.Threading;
@@ -47,8 +48,8 @@ namespace MASES.KNetTest
 
         static void Main(string[] args)
         {
-            KNetCore.CreateGlobalInstance();
-            var appArgs = KNetCore.FilteredArgs;
+            SharedKNetCore.CreateGlobalInstance();
+            var appArgs = SharedKNetCore.FilteredArgs;
 
             if (appArgs.Length != 0)
             {
@@ -62,9 +63,15 @@ namespace MASES.KNetTest
             };
             threadConsume.Start();
 
-            Thread.Sleep(20000);
-            resetEvent.Set();
-            Thread.Sleep(2000);
+            Console.CancelKeyPress += Console_CancelKeyPress;
+            Console.WriteLine("Press Ctrl-C to exit");
+            resetEvent.WaitOne();
+            Thread.Sleep(2000); // wait the threads exit
+        }
+
+        private static void Console_CancelKeyPress(object sender, ConsoleCancelEventArgs e)
+        {
+            if (e.Cancel) resetEvent.Set();
         }
 
         static void PipeDemo()
@@ -148,11 +155,11 @@ namespace MASES.KNetTest
                     {
                         return value;
                     });
-                    
+
                     KTable<string, long> counts = source.FlatMapValues(valueMapper)
                                                         .GroupBy(keyValuemapper)
                                                         .Count();
-                    
+
                     /***** version using Dynamic engine ******
                     
                     KTable<string, long> counts = JVMBridgeBase.Wraps<KTable<string, long>>(source.Dyn()

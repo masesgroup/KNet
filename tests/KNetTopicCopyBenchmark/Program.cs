@@ -16,11 +16,11 @@
 *  Refer to LICENSE for more information.
 */
 
-using System;
-using MASES.KNet.Common.Errors;
 using MASES.JCOBridge.C2JBridge;
-using System.Text;
+using MASES.KNet.Common.Errors;
+using System;
 using System.IO;
+using System.Text;
 
 namespace MASES.KNet.Benchmark
 {

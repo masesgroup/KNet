@@ -17,11 +17,38 @@ on:
   pull_request:
     # The branches below must be a subset of the branches above
     branches: [ master ]
-  schedule:
-    - cron: '26 23 * * 3'
+# Disabled to avoid error on schedule from check_changes job
+#  schedule:
+#    - cron: '26 23 * * 3'
 
 jobs:
+  # Verify if a check is needed
+  check_changes:
+    name: Check changed files
+    outputs:
+      run_build_windows: ${{ steps.check_files.outputs.run_build_windows }}
+    runs-on: ubuntu-latest
+    steps:
+      - id: get_changed_files
+        uses: masesgroup/retrieve-changed-files@v2
+        with:
+          format: 'csv'
+      - id: check_files
+        run: |
+          mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.get_changed_files.outputs.added_modified }}')
+          for added_modified_file in "${added_modified_files[@]}"; do
+              if [[ $added_modified_file == "src/"* ]]; then
+                echo "$added_modified_file file is under the directory 'src/'."
+                echo "run_build_windows=true" >> $GITHUB_OUTPUT
+                break
+              fi
+          done
+      - name: Get run_build_windows
+        run: echo "The selected run_build_windows is ${{ steps.check_files.outputs.run_build_windows }}"
+        
   analyze:
+    needs: check_changes
+    if: "always() && needs.check_changes.outputs.run_build_windows == 'true'"
     name: Analyze
     runs-on: ubuntu-latest
     permissions:
@@ -38,11 +65,11 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
-      uses: github/codeql-action/init@v1
+      uses: github/codeql-action/init@v2
       with:
         languages: ${{ matrix.language }}
         # If you wish to specify custom queries, you can do so here or in a config file.
@@ -52,15 +79,11 @@ jobs:
 
     # Install .NET SDKs
     - name: Setup .NET Core 3.1
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 3.1.x
-    - name: Setup .NET 5.0
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 5.0.x
     - name: Setup .NET 6.0
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
 
@@ -68,7 +91,7 @@ jobs:
     # If this step fails, then you should remove it and run the build manually (see below)
     - name: Autobuild
       if: matrix.language == 'csharp'
-      uses: github/codeql-action/autobuild@v1
+      uses: github/codeql-action/autobuild@v2
 
     # ℹ️ Command-line programs to run using the OS shell.
     # 📚 https://git.io/JvXDl
@@ -83,14 +106,14 @@ jobs:
 
     - name: Maven preparation (step 1)
       if: matrix.language == 'java' 
-      run: dotnet build --no-incremental --configuration Release --framework net5.0 /p:Platform="Any CPU" ./src/net/KNet.sln
+      run: dotnet build --no-incremental --configuration Release --framework net6.0 /p:Platform="Any CPU" ./src/net/KNet.sln
 
     - name: Maven preparation (step 2)
       if: matrix.language == 'java' 
-      run: mvn "install:install-file" "-DgroupId=JCOBridge" "-DartifactId=JCOBridge" "-Dversion=2.5.0" "-Dpackaging=jar" "-Dfile=./bin/net5.0/JCOBridge.jar"
+      run: mvn "install:install-file" "-DgroupId=JCOBridge" "-DartifactId=JCOBridge" "-Dversion=2.5.0" "-Dpackaging=jar" "-Dfile=./bin/net6.0/JCOBridge.jar"
 
     - if: matrix.language == 'java' 
       run: mvn --file ./src/java/knet/pom.xml --no-transfer-progress package
 
     - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v1
+      uses: github/codeql-action/analyze@v2

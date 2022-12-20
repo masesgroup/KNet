@@ -27,26 +27,6 @@ namespace MASES.KNet.Streams.Processor.Api
 {
     public interface IProcessorContext<KForward, VForward> : IJVMBridgeBase
     {
-        string ApplicationId { get; }
-
-        TaskId TaskId { get; }
-
-        Optional<RecordMetadata> RecordMetadata { get; }
-
-        Serde KeySerde { get; }
-
-        Serde ValueSerde { get; }
-
-        File StateDir { get; }
-
-        StreamsMetrics Metrics { get; }
-
-        StateStore SetStateStore(string name);
-
-        Cancellable Schedule(Duration interval,
-                             PunctuationType type,
-                             Punctuator callback);
-
         void Forward<K, V>(Record<K, V> record)
             where K : KForward
             where V : VForward;
@@ -54,43 +34,13 @@ namespace MASES.KNet.Streams.Processor.Api
         void Forward<K, V>(Record<K, V> record, string childName)
             where K : KForward
             where V : VForward;
-
-        void Commit();
-
-        Map<string, object> AppConfigs { get; }
-
-        Map<string, object> AppConfigsWithPrefix(string prefix);
     }
 
-    public class ProcessorContext<KForward, VForward> : JVMBridgeBase<ProcessorContext<KForward, VForward>, IProcessorContext<KForward, VForward>>, IProcessorContext<KForward, VForward>
+    public class ProcessorContext<KForward, VForward> : ProcessingContext, IProcessorContext<KForward, VForward>
     {
+        public override bool IsInterface => true;
+
         public override string ClassName => "org.apache.kafka.streams.processor.api.ProcessorContext";
-
-        public string ApplicationId => IExecute<string>("applicationId");
-
-        public TaskId TaskId => IExecute<TaskId>("taskId");
-
-        public Optional<RecordMetadata> RecordMetadata => IExecute<Optional<RecordMetadata>>("recordMetadata");
-
-        public Serde KeySerde => IExecute<Serde>("keySerde");
-
-        public Serde ValueSerde => IExecute<Serde>("valueSerde");
-
-        public File StateDir => IExecute<File>("stateDir");
-
-        public StreamsMetrics Metrics => IExecute<StreamsMetrics>("metrics");
-
-        public Map<string, object> AppConfigs => IExecute<Map<string, object>>("appConfigs");
-
-        public Map<string, object> AppConfigsWithPrefix(string prefix)
-        {
-            return IExecute<Map<string, object>>("appConfigsWithPrefix", prefix);
-        }
-
-        public void Commit()
-        {
-            IExecute("commit");
-        }
 
         public void Forward<K, V>(Record<K, V> record)
             where K : KForward
@@ -104,16 +54,6 @@ namespace MASES.KNet.Streams.Processor.Api
             where V : VForward
         {
             IExecute("forward", record, childName);
-        }
-
-        public Cancellable Schedule(Duration interval, PunctuationType type, Punctuator callback)
-        {
-            return IExecute<Cancellable>("schedule", interval, type, callback);
-        }
-
-        public StateStore SetStateStore(string name)
-        {
-            return IExecute<StateStore>("setStateStore", name);
         }
     }
 }

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface ISessionStore&lt;K, AGG&gt;
    | KNet website ">
-    <meta name="generator" content="docfx 2.59.2.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -91,6 +91,12 @@
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Streams.Processor.IStateStore.html#MASES_KNet_Streams_Processor_IStateStore_IsOpen">IStateStore.IsOpen</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Streams.Processor.IStateStore.html#MASES_KNet_Streams_Processor_IStateStore_Query__1_MASES_KNet_Streams_Query_Query___0__MASES_KNet_Streams_Query_PositionBound_MASES_KNet_Streams_Query_QueryConfig_">IStateStore.Query&lt;R&gt;(Query&lt;R&gt;, PositionBound, QueryConfig)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Streams.Processor.IStateStore.html#MASES_KNet_Streams_Processor_IStateStore_Position">IStateStore.Position</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Streams.State.IReadOnlySessionStore-2.html#MASES_KNet_Streams_State_IReadOnlySessionStore_2_FindSessions__0_System_Int64_System_Int64_">IReadOnlySessionStore&lt;K, AGG&gt;.FindSessions(K, Int64, Int64)</a>
@@ -188,10 +194,62 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Streams_State_ISessionStore_2_FindSessions_System_Int64_System_Int64_.md&amp;value=---%0Auid%3A%20MASES.KNet.Streams.State.ISessionStore%602.FindSessions(System.Int64%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Streams/State/SessionStore.cs/#L27">View Source</a>
+  </span>
+  <a id="MASES_KNet_Streams_State_ISessionStore_2_FindSessions_" data-uid="MASES.KNet.Streams.State.ISessionStore`2.FindSessions*"></a>
+  <h4 id="MASES_KNet_Streams_State_ISessionStore_2_FindSessions_System_Int64_System_Int64_" data-uid="MASES.KNet.Streams.State.ISessionStore`2.FindSessions(System.Int64,System.Int64)">FindSessions(Int64, Int64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">KeyValueIterator&lt;Windowed&lt;K&gt;, AGG&gt; FindSessions(long earliestSessionEndTime, long latestSessionEndTime)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">earliestSessionEndTime</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">latestSessionEndTime</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KNet.Streams.State.KeyValueIterator-2.html">KeyValueIterator</a>&lt;<a class="xref" href="MASES.KNet.Streams.KStream.Windowed-1.html">Windowed</a>&lt;K&gt;, AGG&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Streams_State_ISessionStore_2_Put_MASES_KNet_Streams_KStream_Windowed__0___1_.md&amp;value=---%0Auid%3A%20MASES.KNet.Streams.State.ISessionStore%602.Put(MASES.KNet.Streams.KStream.Windowed%7B%600%7D%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Streams/State/SessionStore.cs/#L29">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Streams/State/SessionStore.cs/#L31">View Source</a>
   </span>
   <a id="MASES_KNet_Streams_State_ISessionStore_2_Put_" data-uid="MASES.KNet.Streams.State.ISessionStore`2.Put*"></a>
   <h4 id="MASES_KNet_Streams_State_ISessionStore_2_Put_MASES_KNet_Streams_KStream_Windowed__0___1_" data-uid="MASES.KNet.Streams.State.ISessionStore`2.Put(MASES.KNet.Streams.KStream.Windowed{`0},`1)">Put(Windowed&lt;K&gt;, AGG)</h4>
@@ -228,7 +286,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Streams_State_ISessionStore_2_Remove_MASES_KNet_Streams_KStream_Windowed__0__.md&amp;value=---%0Auid%3A%20MASES.KNet.Streams.State.ISessionStore%602.Remove(MASES.KNet.Streams.KStream.Windowed%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Streams/State/SessionStore.cs/#L27">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Streams/State/SessionStore.cs/#L29">View Source</a>
   </span>
   <a id="MASES_KNet_Streams_State_ISessionStore_2_Remove_" data-uid="MASES.KNet.Streams.State.ISessionStore`2.Remove*"></a>
   <h4 id="MASES_KNet_Streams_State_ISessionStore_2_Remove_MASES_KNet_Streams_KStream_Windowed__0__" data-uid="MASES.KNet.Streams.State.ISessionStore`2.Remove(MASES.KNet.Streams.KStream.Windowed{`0})">Remove(Windowed&lt;K&gt;)</h4>

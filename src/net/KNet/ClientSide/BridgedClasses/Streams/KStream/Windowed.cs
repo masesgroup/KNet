@@ -22,7 +22,6 @@ namespace MASES.KNet.Streams.KStream
     {
         public override string ClassName => "org.apache.kafka.streams.kstream.Windowed";
 
-        [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public Windowed()
         {

@@ -16,10 +16,11 @@
 *  Refer to LICENSE for more information.
 */
 
+using Java.Util;
 using MASES.KNet;
 using MASES.KNet.Clients.Admin;
 using MASES.KNet.Common.Config;
-using Java.Util;
+using MASES.KNet.TestCommon;
 using System;
 
 namespace MASES.KNetTestAdmin
@@ -27,25 +28,27 @@ namespace MASES.KNetTestAdmin
     class Program
     {
         const string theServer = "localhost:9092";
-        const string theTopic = "myTopic";
+        const string theTopic = "myTopicAdmin";
 
         static string serverToUse = theServer;
         static string topicToUse = theTopic;
 
         static void Main(string[] args)
         {
-            KNetCore.CreateGlobalInstance();
-            var appArgs = KNetCore.FilteredArgs;
+            SharedKNetCore.CreateGlobalInstance();
+            var appArgs = SharedKNetCore.FilteredArgs;
 
             if (appArgs.Length != 0)
             {
                 serverToUse = args[0];
             }
 
-            Properties props = new Properties();
-            props.Put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
+            var builder = AdminClientConfigBuilder.Create().WithBootstrapServers(serverToUse);
 
-            using (var admin = KafkaAdminClient.Create(props))
+            //Properties props = new Properties();
+            //props.Put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
+
+            using (var admin = KafkaAdminClient.Create(builder))
             {
                 CreateTopic(admin);
                 DeleteTopic(admin);

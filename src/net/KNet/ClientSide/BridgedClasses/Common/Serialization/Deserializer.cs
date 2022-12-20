@@ -127,43 +127,4 @@ namespace MASES.KNet.Common.Serialization
         /// <returns>The deserialized <typeparamref name="E"/></returns>
         public virtual E DeserializeWithHeaders(string topic, Headers headers, byte[] data) { return OnDeserialize(topic, data); }
     }
-    /*
-        /// <summary>
-        /// Listener for Kafka Serializer. Extends <see cref="DeserializerImpl{E}"/>
-        /// </summary>
-        /// <typeparam name="E">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
-        /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
-        public class JVMBridgeDeserializer<E> : DeserializerImpl<E>
-            where E : JVMBridgeBase, new()
-        {
-            /// <summary>
-            /// Initialize a new instance of <see cref="JVMBridgeDeserializer{E}"/>
-            /// </summary>
-            /// <param name="deserializeFun">The <see cref="Func{String, Byte[], E}"/> to be executed on deserialize</param>
-            /// <param name="deserializeWithHeadersFun">The <see cref="Func{String, Headers, Byte[], E}"/> to be executed on deserialize</param>
-            public JVMBridgeDeserializer(Func<string, byte[], E> deserializeFun = null, Func<string, Headers, byte[], E> deserializeWithHeadersFun = null)
-                : base(deserializeFun, deserializeWithHeadersFun, false)
-            {
-                AddEventHandler("deserialize", new EventHandler<CLRListenerEventArgs<CLREventData<string>>>(EventHandler));
-                AddEventHandler("deserializeWithHeaders", new EventHandler<CLRListenerEventArgs<CLREventData<string>>>(EventHandlerWithHeaders));
-            }
-
-            void EventHandler(object sender, CLRListenerEventArgs<CLREventData<string>> data)
-            {
-                var array = data.EventData.ExtraData.Get(0) as IJavaArray; // it is a byte[]
-                byte[] bytes = (byte[])array.ToPrimitive();
-                var retVal = OnDeserialize(data.EventData.TypedEventData, bytes);
-                data.CLRReturnValue = retVal?;
-            }
-
-            void EventHandlerWithHeaders(object sender, CLRListenerEventArgs<CLREventData<string>> data)
-            {
-                var headers = data.EventData.ExtraData.Get(0) as IJavaObject; // it is a Headers
-                var array = data.EventData.ExtraData.Get(1) as IJavaArray; // it is a byte[]
-                byte[] bytes = (byte[])array.ToPrimitive();
-                var retVal = OnDeserializeWithHeaders(data.EventData.TypedEventData, JVMBridgeBase.Wraps<Headers>(headers), bytes);
-                data.CLRReturnValue = retVal?;
-            }
-        }
-    */
 }

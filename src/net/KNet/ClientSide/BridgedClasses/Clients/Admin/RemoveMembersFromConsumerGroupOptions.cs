@@ -29,6 +29,12 @@ namespace MASES.KNet.Clients.Admin
         {
         }
 
+        public string Reason
+        {
+            get { return IExecute<string>("reason"); }
+            set { IExecute<string>("reason", value); }
+        }
+
         public Set<MemberToRemove> Members => IExecute<Set<MemberToRemove>>("members");
 
         public bool RemoveAll => IExecute<bool>("removeAll");
