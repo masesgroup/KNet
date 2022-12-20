@@ -18,7 +18,7 @@ Author = 'MASES s.r.l.'
 
 CompanyName = 'MASES s.r.l.'
 
-Copyright = 'Copyright ©  MASES s.r.l. 2022'
+Copyright = 'Copyright ©  MASES s.r.l. 2023'
 Description = 'KNet PowerShell (aka KNetPS) is a PowerShell Module to use Apache Kafka and PowerShell side-by-side. With KNetPS it is possible to:
 - execute all tools of Apache Kafka within a PowerShell shell: Administration tools, Console Consumer, Console Producer, manage Apache Kafka Streams, activate Apache Kafka Connect, server side (start Kafka and ZooKeeper), etc
 - create consumers and producers objects to interact with an Apache Kafka cluster
