@@ -502,7 +502,8 @@ namespace MASES.KNet.Streams.KStream
             where TSuperV : V
             where TExtendsVR : VR
         {
-            return IExecute<KTable<K, VR>>("transformValues", transformerSupplier, stateStoreNames);
+            return stateStoreNames.Length == 0 ? IExecute<KTable<K, VR>>("transformValues", transformerSupplier)
+                                               : IExecute<KTable<K, VR>>("transformValues", transformerSupplier, stateStoreNames);
         }
 
         public KTable<K, VR> TransformValues<TSuperK, TSuperV, TExtendsVR, VR>(ValueTransformerWithKeySupplier<TSuperK, TSuperV, TExtendsVR> transformerSupplier, Named named, params string[] stateStoreNames)
@@ -510,7 +511,8 @@ namespace MASES.KNet.Streams.KStream
             where TSuperV : V
             where TExtendsVR : VR
         {
-            return IExecute<KTable<K, VR>>("transformValues", transformerSupplier, named, stateStoreNames);
+            return stateStoreNames.Length == 0 ? IExecute<KTable<K, VR>>("transformValues", transformerSupplier, named)
+                                               : IExecute<KTable<K, VR>>("transformValues", transformerSupplier, named, stateStoreNames);
         }
 
         public KTable<K, VR> TransformValues<TSuperK, TSuperV, TExtendsVR, VR>(ValueTransformerWithKeySupplier<TSuperK, TSuperV, TExtendsVR> transformerSupplier, Materialized<K, VR, KeyValueStore<Bytes, byte[]>> materialized, params string[] stateStoreNames)
@@ -518,7 +520,8 @@ namespace MASES.KNet.Streams.KStream
             where TSuperV : V
             where TExtendsVR : VR
         {
-            return IExecute<KTable<K, VR>>("transformValues", transformerSupplier, materialized, stateStoreNames);
+            return stateStoreNames.Length == 0 ? IExecute<KTable<K, VR>>("transformValues", transformerSupplier, materialized)
+                                               : IExecute<KTable<K, VR>>("transformValues", transformerSupplier, materialized, stateStoreNames);
         }
 
         public KTable<K, VR> TransformValues<TSuperK, TSuperV, TExtendsVR, VR>(ValueTransformerWithKeySupplier<TSuperK, TSuperV, TExtendsVR> transformerSupplier, Materialized<K, VR, KeyValueStore<Bytes, byte[]>> materialized, Named named, params string[] stateStoreNames)
@@ -526,7 +529,8 @@ namespace MASES.KNet.Streams.KStream
             where TSuperV : V
             where TExtendsVR : VR
         {
-            return IExecute<KTable<K, VR>>("transformValues", transformerSupplier, materialized, named, stateStoreNames);
+            return stateStoreNames.Length == 0 ? IExecute<KTable<K, VR>>("transformValues", transformerSupplier, materialized, named)
+                                               : IExecute<KTable<K, VR>>("transformValues", transformerSupplier, materialized, named, stateStoreNames);
         }
     }
 }

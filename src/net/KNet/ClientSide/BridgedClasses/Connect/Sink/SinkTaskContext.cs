@@ -38,9 +38,15 @@ namespace MASES.KNet.Connect.Sink
 
         public Set<TopicPartition> Assignment => IExecute<Set<TopicPartition>>("assignment");
 
-        public void Pause(params TopicPartition[] partitions) => IExecute("pause", partitions);
+        public void Pause(params TopicPartition[] partitions)
+        {
+            if (partitions.Length == 0) IExecute("pause"); else IExecute("pause", partitions);
+        }
 
-        public void Resume(params TopicPartition[] partitions) => IExecute("resume", partitions);
+        public void Resume(params TopicPartition[] partitions)
+        {
+            if (partitions.Length == 0) IExecute("resume"); else IExecute("resume", partitions);
+        }
 
         public void RequestCommit() => IExecute("requestCommit");
 

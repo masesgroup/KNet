@@ -57,12 +57,14 @@ namespace MASES.KNet.Streams
 
         public Sensor AddLatencyRateTotalSensor(string scopeName, string entityName, string operationName, Sensor.RecordingLevel recordingLevel, params string[] tags)
         {
-            return IExecute<Sensor>("addLatencyRateTotalSensor", scopeName, entityName, operationName, recordingLevel, tags);
+            return tags.Length == 0 ? IExecute<Sensor>("addLatencyRateTotalSensor", scopeName, entityName, operationName, recordingLevel)
+                                    : IExecute<Sensor>("addLatencyRateTotalSensor", scopeName, entityName, operationName, recordingLevel, tags);
         }
 
         public Sensor AddRateTotalSensor(string scopeName, string entityName, string operationName, Sensor.RecordingLevel recordingLevel, params string[] tags)
         {
-            return IExecute<Sensor>("addRateTotalSensor", scopeName, entityName, operationName, recordingLevel, tags);
+            return tags.Length == 0 ? IExecute<Sensor>("addRateTotalSensor", scopeName, entityName, operationName, recordingLevel)
+                                    : IExecute<Sensor>("addRateTotalSensor", scopeName, entityName, operationName, recordingLevel, tags);
         }
 
         public Sensor AddSensor(string name, Sensor.RecordingLevel recordingLevel)
@@ -72,7 +74,8 @@ namespace MASES.KNet.Streams
 
         public Sensor AddSensor(string name, Sensor.RecordingLevel recordingLevel, params Sensor[] parents)
         {
-            return IExecute<Sensor>("addSensor", name, recordingLevel, ((object[])parents).ToNative());
+            return parents.Length == 0 ? IExecute<Sensor>("addSensor", name, recordingLevel)
+                                       : IExecute<Sensor>("addSensor", name, recordingLevel, ((object[])parents).ToNative());
         }
 
         public void RemoveSensor(Sensor sensor)

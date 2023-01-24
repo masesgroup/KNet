@@ -104,11 +104,11 @@ namespace MASES.KNet.Common.Metrics
 
         public Sensor Sensor(string name, params Sensor[] parents) => IExecute<Sensor>("sensor", name, parents);
 
-        public Sensor Sensor(string name, Sensor.RecordingLevel recordingLevel, params Sensor[] parents) => IExecute<Sensor>("sensor", name, recordingLevel, parents);
+        public Sensor Sensor(string name, Sensor.RecordingLevel recordingLevel, params Sensor[] parents) => parents.Length == 0 ? IExecute<Sensor>("sensor", name, recordingLevel) : IExecute<Sensor>("sensor", name, recordingLevel, parents);
 
         public Sensor Sensor(string name, MetricConfig config, params Sensor[] parents) => IExecute<Sensor>("sensor", name, config, parents);
 
-        public Sensor Sensor(string name, MetricConfig config, Sensor.RecordingLevel recordingLevel, params Sensor[] parents) => IExecute<Sensor>("sensor", name, config, recordingLevel, parents);
+        public Sensor Sensor(string name, MetricConfig config, Sensor.RecordingLevel recordingLevel, params Sensor[] parents) => parents.Length == 0 ? IExecute<Sensor>("sensor", name, config, recordingLevel) : IExecute<Sensor>("sensor", name, config, recordingLevel, parents);
 
         public Sensor Sensor(string name, MetricConfig config, long inactiveSensorExpirationTimeSeconds, Sensor.RecordingLevel recordingLevel, params Sensor[] parents)
         {
@@ -163,12 +163,12 @@ namespace MASES.KNet.Common.Metrics
         }
 
         public List<MetricsReporter> Reporters => IExecute<List<MetricsReporter>>("reporters");
-        
+
         public Map<MetricName, KafkaMetric> AllMetrics => IExecute<Map<MetricName, KafkaMetric>>("metrics");
 
         public KafkaMetric Metric(MetricName metricName) => IExecute<KafkaMetric>("metric", metricName);
 
-        public MetricName MetricInstance(MetricNameTemplate template, params string[] keyValue) => IExecute<MetricName>("metricInstance", template, keyValue);
+        public MetricName MetricInstance(MetricNameTemplate template, params string[] keyValue) => keyValue.Length == 0 ? IExecute<MetricName>("metricInstance", template) : IExecute<MetricName>("metricInstance", template, keyValue);
 
         public MetricName MetricInstance(MetricNameTemplate template, Map<string, string> tags) => IExecute<MetricName>("metricInstance", template, tags);
     }
