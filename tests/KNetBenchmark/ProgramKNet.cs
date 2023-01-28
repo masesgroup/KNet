@@ -132,7 +132,7 @@ namespace MASES.KNet.Benchmark
                 {
                     if (data == null)
                     {
-                        var rand = new Random();
+                        var rand = new System.Random();
                         data = new byte[length];
                         for (int i = 0; i < length; i++)
                         {
@@ -219,7 +219,7 @@ namespace MASES.KNet.Benchmark
                 {
                     if (data == null)
                     {
-                        var rand = new Random();
+                        var rand = new System.Random();
                         data = new byte[length];
                         for (int i = 0; i < length; i++)
                         {
@@ -234,7 +234,7 @@ namespace MASES.KNet.Benchmark
                         System.Collections.Generic.List<ProducerRecord<int, byte[]>> messages = new();
                         for (int i = 0; i < numpacket; i++)
                         {
-                            var rand = new Random();
+                            var rand = new System.Random();
                             data = new byte[length];
                             for (int ii = 0; ii < length; ii++)
                             {
