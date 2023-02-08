@@ -10,7 +10,7 @@
 ModuleToProcess = 'MASES.KNetPS.dll'
 
 # Version number of this module.
-ModuleVersion = '1.4.8'
+ModuleVersion = '1.5.0'
 
 # ID used to uniquely identify this module
 GUID = 'F7C13891-7BC6-4025-ACF5-04509852F87D'
@@ -22,7 +22,7 @@ Author = 'MASES s.r.l.'
 CompanyName = 'MASES s.r.l.'
 
 # Copyright statement for this module
-Copyright = 'Copyright ©  MASES s.r.l. 2022'
+Copyright = 'Copyright ©  MASES s.r.l. 2023'
 
 # Description of the functionality provided by this module
 Description = 'PowerShell command line interface for KNet'

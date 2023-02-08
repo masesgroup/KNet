@@ -2,7 +2,7 @@
 	<PropertyGroup>
 		<LangVersion>latest</LangVersion>
 		<OutputType>Exe</OutputType>
-		<TargetFrameworks>net6.0;netcoreapp3.1;net462</TargetFrameworks>
+		<TargetFrameworks>net462;net6.0;net7.0</TargetFrameworks>
 	</PropertyGroup>
 	<ItemGroup Condition="'$(TargetFramework)' == 'net462'">
 		<Reference Include="Microsoft.CSharp" />
@@ -13,6 +13,6 @@
 	</ItemGroup>
 	<ItemGroup Condition="!Exists('..\..\..\KNet\KNet.csproj')">
 		<!--Outside GitHub repo-->
-		<PackageReference Include="MASES.KNet" Version="1.4.8" IncludeAssets="All" PrivateAssets="None" />
+		<PackageReference Include="MASES.KNet" Version="1.5.0" IncludeAssets="All" PrivateAssets="None" />
 	</ItemGroup>
 </Project>
