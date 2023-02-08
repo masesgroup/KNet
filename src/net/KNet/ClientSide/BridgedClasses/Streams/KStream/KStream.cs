@@ -487,38 +487,44 @@ namespace MASES.KNet.Streams.KStream
             where TSuperK : K
             where TSuperV : V
         {
-            return IExecute<KStream<K1, V1>>("flatTransform", transformerSupplier, stateStoreNames);
+            return stateStoreNames.Length == 0 ? IExecute<KStream<K1, V1>>("flatTransform", transformerSupplier)
+                                               : IExecute<KStream<K1, V1>>("flatTransform", transformerSupplier, stateStoreNames);
         }
 
         public KStream<K1, V1> FlatTransform<TSuperK, TSuperV, K1, V1>(TransformerSupplier<TSuperK, TSuperV, Iterable<KeyValue<K1, V1>>> transformerSupplier, Named named, params string[] stateStoreNames)
             where TSuperK : K
             where TSuperV : V
         {
-            return IExecute<KStream<K1, V1>>("flatTransform", transformerSupplier, named, stateStoreNames);
+            return stateStoreNames.Length == 0 ? IExecute<KStream<K1, V1>>("flatTransform", transformerSupplier, named)
+                                               : IExecute<KStream<K1, V1>>("flatTransform", transformerSupplier, named, stateStoreNames);
         }
 
         public KStream<K, VR> FlatTransformValues<TSuperV, VR>(ValueTransformerSupplier<TSuperV, Iterable<VR>> valueTransformerSupplier, params string[] stateStoreNames) where TSuperV : V
         {
-            return IExecute<KStream<K, VR>>("flatTransformValues", valueTransformerSupplier, stateStoreNames);
+            return stateStoreNames.Length == 0 ? IExecute<KStream<K, VR>>("flatTransformValues", valueTransformerSupplier)
+                                               : IExecute<KStream<K, VR>>("flatTransformValues", valueTransformerSupplier, stateStoreNames);
         }
 
         public KStream<K, VR> FlatTransformValues<TSuperV, VR>(ValueTransformerSupplier<TSuperV, Iterable<VR>> valueTransformerSupplier, Named named, params string[] stateStoreNames) where TSuperV : V
         {
-            return IExecute<KStream<K, VR>>("flatTransformValues", valueTransformerSupplier, named, stateStoreNames);
+            return stateStoreNames.Length == 0 ? IExecute<KStream<K, VR>>("flatTransformValues", valueTransformerSupplier, named)
+                                               : IExecute<KStream<K, VR>>("flatTransformValues", valueTransformerSupplier, named, stateStoreNames);
         }
 
         public KStream<K, VR> FlatTransformValues<TSuperK, TSuperV, VR>(ValueTransformerWithKeySupplier<TSuperK, TSuperV, Iterable<VR>> valueTransformerSupplier, params string[] stateStoreNames)
             where TSuperK : K
             where TSuperV : V
         {
-            return IExecute<KStream<K, VR>>("flatTransformValues", valueTransformerSupplier, stateStoreNames);
+            return stateStoreNames.Length == 0 ? IExecute<KStream<K, VR>>("flatTransformValues", valueTransformerSupplier)
+                                               : IExecute<KStream<K, VR>>("flatTransformValues", valueTransformerSupplier, stateStoreNames);
         }
 
         public KStream<K, VR> FlatTransformValues<TSuperK, TSuperV, VR>(ValueTransformerWithKeySupplier<TSuperK, TSuperV, Iterable<VR>> valueTransformerSupplier, Named named, params string[] stateStoreNames)
             where TSuperK : K
             where TSuperV : V
         {
-            return IExecute<KStream<K, VR>>("flatTransformValues", valueTransformerSupplier, named, stateStoreNames);
+            return stateStoreNames.Length == 0 ? IExecute<KStream<K, VR>>("flatTransformValues", valueTransformerSupplier, named)
+                                               : IExecute<KStream<K, VR>>("flatTransformValues", valueTransformerSupplier, named, stateStoreNames);
         }
 
         public void Foreach<TKey, TValue>(ForeachAction<TKey, TValue> action)
@@ -895,28 +901,33 @@ namespace MASES.KNet.Streams.KStream
 
         public void Process<TSuperK, TSuperV>(Streams.Processor.Api.ProcessorSupplier<TSuperK, TSuperV, Void, Void> processorSupplier, Named named, params string[] stateStoreNames)
         {
-            IExecute("process", processorSupplier, named, stateStoreNames);
+            if (stateStoreNames.Length == 0) IExecute("process", processorSupplier, named);
+            else IExecute("process", processorSupplier, named, stateStoreNames);
         }
 
 
         public KStream<KOut, VOut> Process<TSuperK, TSuperV, KOut, VOut>(ProcessorSupplier<TSuperK, TSuperV, KOut, VOut> processorSupplier, params string[] stateStoreNames)
         {
-            return IExecute<KStream<KOut, VOut>>("process", processorSupplier, stateStoreNames);
+            return stateStoreNames.Length == 0 ? IExecute<KStream<KOut, VOut>>("process", processorSupplier)
+                                               : IExecute<KStream<KOut, VOut>>("process", processorSupplier, stateStoreNames);
         }
 
         public KStream<KOut, VOut> Process<TSuperK, TSuperV, KOut, VOut>(ProcessorSupplier<TSuperK, TSuperV, KOut, VOut> processorSupplier, Named named, params string[] stateStoreNames)
         {
-            return IExecute<KStream<KOut, VOut>>("process", processorSupplier, named, stateStoreNames);
+            return stateStoreNames.Length == 0 ? IExecute<KStream<KOut, VOut>>("process", processorSupplier, named)
+                                               : IExecute<KStream<KOut, VOut>>("process", processorSupplier, named, stateStoreNames);
         }
 
         public KStream<K, VOut> ProcessValues<TSuperK, TSuperV, VOut>(FixedKeyProcessorSupplier<TSuperK, TSuperV, VOut> processorSupplier, params string[] stateStoreNames)
         {
-            return IExecute<KStream<K, VOut>>("processValues", processorSupplier, stateStoreNames);
+            return stateStoreNames.Length == 0 ? IExecute<KStream<K, VOut>>("processValues", processorSupplier)
+                                               : IExecute<KStream<K, VOut>>("processValues", processorSupplier, stateStoreNames);
         }
 
         public KStream<K, VOut> ProcessValues<TSuperK, TSuperV, VOut>(FixedKeyProcessorSupplier<TSuperK, TSuperV, VOut> processorSupplier, Named named, params string[] stateStoreNames)
         {
-            return IExecute<KStream<K, VOut>>("processValues", processorSupplier, named, stateStoreNames);
+            return stateStoreNames.Length == 0 ? IExecute<KStream<K, VOut>>("processValues", processorSupplier, named)
+                                               : IExecute<KStream<K, VOut>>("processValues", processorSupplier, named, stateStoreNames);
         }
 
         public KStream<K, V> Repartition()
@@ -999,28 +1010,32 @@ namespace MASES.KNet.Streams.KStream
             where TSuperK : K
             where TSuperV : V
         {
-            return IExecute<KStream<K1, V1>>("transform", transformerSupplier, stateStoreNames);
+            return stateStoreNames.Length == 0 ? IExecute<KStream<K1, V1>>("transform", transformerSupplier)
+                                               : IExecute<KStream<K1, V1>>("transform", transformerSupplier, stateStoreNames);
         }
 
         public KStream<K1, V1> Transform<TSuperK, TSuperV, K1, V1>(TransformerSupplier<TSuperK, TSuperV, KeyValue<K1, V1>> transformerSupplier, Named named, params string[] stateStoreNames)
             where TSuperK : K
             where TSuperV : V
         {
-            return IExecute<KStream<K1, V1>>("transform", transformerSupplier, named, stateStoreNames);
+            return stateStoreNames.Length == 0 ? IExecute<KStream<K1, V1>>("transform", transformerSupplier, named)
+                                               : IExecute<KStream<K1, V1>>("transform", transformerSupplier, named, stateStoreNames);
         }
 
         public KStream<K, VR> TransformValues<TSuperV, TSuperVR, VR>(ValueTransformerSupplier<TSuperV, TSuperVR> valueTransformerSupplier, params string[] stateStoreNames)
             where TSuperV : V
             where TSuperVR : VR
         {
-            return IExecute<KStream<K, VR>>("transformValues", valueTransformerSupplier, stateStoreNames);
+            return stateStoreNames.Length == 0 ? IExecute<KStream<K, VR>>("transformValues", valueTransformerSupplier)
+                                               : IExecute<KStream<K, VR>>("transformValues", valueTransformerSupplier, stateStoreNames);
         }
 
         public KStream<K, VR> TransformValues<TSuperV, TSuperVR, VR>(ValueTransformerSupplier<TSuperV, TSuperVR> valueTransformerSupplier, Named named, params string[] stateStoreNames)
             where TSuperV : V
             where TSuperVR : VR
         {
-            return IExecute<KStream<K, VR>>("transformValues", valueTransformerSupplier, named, stateStoreNames);
+            return stateStoreNames.Length == 0 ? IExecute<KStream<K, VR>>("transformValues", valueTransformerSupplier, named)
+                                               : IExecute<KStream<K, VR>>("transformValues", valueTransformerSupplier, named, stateStoreNames);
         }
 
         public KStream<K, VR> TransformValues<TSuperK, TSuperV, TSuperVR, VR>(ValueTransformerWithKeySupplier<TSuperK, TSuperV, TSuperVR> valueTransformerSupplier, params string[] stateStoreNames)
@@ -1028,7 +1043,8 @@ namespace MASES.KNet.Streams.KStream
             where TSuperV : V
             where TSuperVR : VR
         {
-            return IExecute<KStream<K, VR>>("transformValues", valueTransformerSupplier, stateStoreNames);
+            return stateStoreNames.Length == 0 ? IExecute<KStream<K, VR>>("transformValues", valueTransformerSupplier)
+                                               : IExecute<KStream<K, VR>>("transformValues", valueTransformerSupplier, stateStoreNames);
         }
 
         public KStream<K, VR> TransformValues<TSuperK, TSuperV, TSuperVR, VR>(ValueTransformerWithKeySupplier<TSuperK, TSuperV, TSuperVR> valueTransformerSupplier, Named named, params string[] stateStoreNames)
@@ -1036,7 +1052,8 @@ namespace MASES.KNet.Streams.KStream
             where TSuperV : V
             where TSuperVR : VR
         {
-            return IExecute<KStream<K, VR>>("transformValues", valueTransformerSupplier, named, stateStoreNames);
+            return stateStoreNames.Length == 0 ? IExecute<KStream<K, VR>>("transformValues", valueTransformerSupplier, named)
+                                               : IExecute<KStream<K, VR>>("transformValues", valueTransformerSupplier, named, stateStoreNames);
         }
     }
 }

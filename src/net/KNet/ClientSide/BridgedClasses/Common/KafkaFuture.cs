@@ -27,7 +27,7 @@ namespace MASES.KNet.Common
 
         public static KafkaFuture<Void> AllOf<T>(params KafkaFuture<T>[] futures) where T : JCOBridge.C2JBridge.JVMBridgeBase, new()
         {
-            return SExecute<KafkaFuture<Void>>("allOf", futures);
+            return futures.Length == 0 ? SExecute<KafkaFuture<Void>>("allOf") : SExecute<KafkaFuture<Void>>("allOf", futures);
         }
 
         public bool IsCompletedExceptionally => IExecute<bool>("isCompletedExceptionally");
