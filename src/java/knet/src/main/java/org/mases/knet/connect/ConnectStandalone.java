@@ -71,7 +71,7 @@ public class ConnectStandalone {
 
         try {
             Time time = Time.SYSTEM;
-            log.info("Kafka Connect standalone worker initializing ...");
+            log.info("KNet Connect standalone worker initializing ...");
             long initStart = time.hiResClockMs();
             WorkerInfo initInfo = new WorkerInfo();
             initInfo.logAll();
@@ -116,7 +116,7 @@ public class ConnectStandalone {
                     Map<String, String> connectorProps = Utils.parseMap(connectorPropsData, keyValueSeparator, elementSeparator);
                     FutureCallback<Herder.Created<ConnectorInfo>> cb = new FutureCallback<>((error, info) -> {
                         if (error != null)
-                            log.error("Failed to create job for {}", connectorPropsFile);
+                            log.error("Failed to create job for {}", connectorPropsEnv);
                         else
                             log.info("Created connector {}", info.result().name());
                     });

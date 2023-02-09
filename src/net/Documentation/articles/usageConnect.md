@@ -32,7 +32,10 @@ _knetconnect_ accepts the following command-line switch to identify its behavior
 - other parameters in sequence are:
   - Apache Kafka Connect configuration file
   - KNet Connector configuration file
-  - or in case of **k** switch is used the parameters are the environemnt variables containing the configuration data in the following form: key1**=**value1**||**key2**=**value2**||**key3...
+  - or in case of **k** switch is used the parameters are the environemnt variables containing the configuration data in the following form:
+	- key and value separated with **=**
+	- key-value pair separated with **||**
+	- an example is key1=value1||key2=value2||key3
   
 ### Connector properties
 
