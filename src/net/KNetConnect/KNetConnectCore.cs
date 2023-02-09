@@ -37,6 +37,13 @@ namespace MASES.KNetCLI
                 var lst = new List<IArgumentMetadata>(base.CommandLineArguments);
                 lst.AddRange(new IArgumentMetadata[]
                 {
+                    new ArgumentMetadata<object>()
+                    {
+                        Name = CLIParam.KNetVersion,
+                        ShortName = CLIParam.KNetVersion[0].ToString(),
+                        Type = ArgumentType.Single,
+                        Help = "Connect will run using KNet version of Standalone or Distributed.",
+                    },
                     new ArgumentMetadata<string>()
                     {
                         Name = CLIParam.Distributed,
@@ -73,19 +80,19 @@ namespace MASES.KNetCLI
 
             if (ParsedArgs.Exist(CLIParam.Standalone))
             {
-                _classToRun = "ConnectStandalone";
+                _classToRun = ParsedArgs.Exist(CLIParam.KNetVersion) ? "KNetConnectStandalone" : "ConnectStandalone";
                 KNetConnectProxy.Initialize(this);
                 ApplicationLog4JPath = Path.Combine(Const.AssemblyLocation, "config", "connect-log4j.properties");
                 ApplicationHeapSize = "2G";
                 ApplicationInitialHeapSize = "256M";
-                if (result == null || result.Length == 0) Console.WriteLine($"USAGE: MASES.KNetConnect -[s|d] [-daemon] connect-standalone.properties");
+                if (result == null || result.Length == 0) Console.WriteLine($"USAGE: MASES.KNetConnect -[s|d] [-k] [-daemon] <connect-standalone.properties or env variable with connect-standalone.properties> [<connector1.properties or env variable with connector1.properties> <connector2.properties or env variable with connector2.properties> ...]");
                 else
                 {
                     var tmpResult = new List<string>(result);
                     if (tmpResult.Contains("-daemon"))
                     {
                         tmpResult.Add("-name");
-                        tmpResult.Add("connectStandalone");
+                        tmpResult.Add(ParsedArgs.Exist(CLIParam.KNetVersion) ? "kNetConnectStandalone" : "connectStandalone");
                     }
                     result = tmpResult.ToArray();
                 }
@@ -93,19 +100,19 @@ namespace MASES.KNetCLI
 
             if (ParsedArgs.Exist(CLIParam.Distributed))
             {
-                _classToRun = "ConnectDistributed";
+                _classToRun = ParsedArgs.Exist(CLIParam.KNetVersion) ? "KNetConnectDistributed" : "ConnectDistributed";
                 KNetConnectProxy.Initialize(this);
                 ApplicationLog4JPath = Path.Combine(Const.AssemblyLocation, "config", "connect-log4j.properties");
                 ApplicationHeapSize = "2G";
                 ApplicationInitialHeapSize = "256M";
-                if (result == null || result.Length == 0) Console.WriteLine($"USAGE: MASES.KNetConnect -[s|d] [-daemon] connect-distributed.properties");
+                if (result == null || result.Length == 0) Console.WriteLine($"USAGE: MASES.KNetConnect -[s|d] [-k] [-daemon] <connect-distributed.properties or env variable with connect-distributed.properties>");
                 else
                 {
                     var tmpResult = new List<string>(result);
                     if (tmpResult.Contains("-daemon"))
                     {
                         tmpResult.Add("-name");
-                        tmpResult.Add("connectDistributed");
+                        tmpResult.Add(ParsedArgs.Exist(CLIParam.KNetVersion) ? "kNetConnectDistributed" : "connectDistributed");
                     }
                     result = tmpResult.ToArray();
                 }

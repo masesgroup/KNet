@@ -16,18 +16,20 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNetCLI
+namespace MASES.KNet.Connect.Cli
 {
-    class CLIParam
+    /// <summary>
+    /// Class managing KNetConnectDistributed
+    /// </summary>
+    public class KNetConnectDistributed : JCOBridge.C2JBridge.JVMBridgeMain<KNetConnectDistributed>
     {
-        // CommonArgs
-        public const string KNetVersion = "KNetVersion";
-        public const string Distributed = "Distributed";
-        public const string Standalone = "Standalone";
-    }
-
-    class InternalConst
-    {
-
+        /// <summary>
+        /// Initialize a new <see cref="KNetConnectDistributed"/>
+        /// </summary>
+        public KNetConnectDistributed()
+            : base("org.mases.knet.connect.ConnectDistributed")
+        {
+            KNetConnectProxy.Register();
+        }
     }
 }

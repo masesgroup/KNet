@@ -72,10 +72,9 @@ namespace MASES.KNetCLI
                     ApplicationInitialHeapSize = Environment.Is64BitOperatingSystem ? "1G" : "512M";
                     break;
                 case "ConnectStandalone":
-                    {
-                        throw new ArgumentException($"Use KNetConnect to run KNet Connect SDK");
-                    }
                 case "ConnectDistributed":
+                case "KNetConnectStandalone":
+                case "KNetConnectDistributed":
                     {
                         throw new ArgumentException($"Use KNetConnect to run KNet Connect SDK");
                     }

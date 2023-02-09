@@ -28,9 +28,11 @@ To use the Connect interface (KNetConnect) runs a command like the following:
 _knetconnect_ accepts the following command-line switch to identify its behavior:
 - **d**: starts a distributed version of Connector defined in the file identified from the subsequent parameter
 - **s**: starts a standalone version of Connector defined in the file identified from the subsequent parameter
+- **k**: starts a KNet version (Distributed or Standalone) accepting environment variables names containing the data associated to the parameters expected from the stanard version
 - other parameters in sequence are:
   - Apache Kafka Connect configuration file
   - KNet Connector configuration file
+  - or in case of **k** switch is used the parameters are the environemnt variables containing the configuration data in the following form: key1**=**value1**||**key2**=**value2**||**key3...
   
 ### Connector properties
 
