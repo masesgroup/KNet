@@ -5,10 +5,8 @@
 		<Authors>MASES s.r.l.</Authors>
 		<Company>MASES s.r.l.</Company>
 		<Version>1.5.0.0</Version>
-		<TargetFrameworks>net462;net6.0;net7.0</TargetFrameworks>
 		<LangVersion>latest</LangVersion>
 		<GenerateAssemblyInfo>true</GenerateAssemblyInfo>
-		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 		<PackageProjectUrl>https://github.com/masesgroup/KNet/</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/masesgroup/KNet</RepositoryUrl>
@@ -21,8 +19,18 @@
 		<SignAssembly>true</SignAssembly>
 		<AssemblyOriginatorKeyFile>..\Common\KNet.snk</AssemblyOriginatorKeyFile>
 	</PropertyGroup>
-	<ItemGroup>
+	<PropertyGroup Condition="'$(KNET_DOCKER_BUILD_ACTIONS)' != 'true'">
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<TargetFrameworks>net462;net6.0;net7.0</TargetFrameworks>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(KNET_DOCKER_BUILD_ACTIONS)' == 'true'">
+		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+		<TargetFramework>net6.0</TargetFramework>
+	</PropertyGroup>
+	<ItemGroup Condition="'$(KNET_DOCKER_BUILD_ACTIONS)' != 'true'">
 		<None Include="..\..\..\LICENSE" Pack="true" PackagePath="" />
+	</ItemGroup>
+	<ItemGroup>
 		<None Include="..\Common\JCOB128x128.png" Pack="true" PackagePath="" />
 		<None Include="..\Common\KNet.snk" Link="KNet.snk" />
 	</ItemGroup>
