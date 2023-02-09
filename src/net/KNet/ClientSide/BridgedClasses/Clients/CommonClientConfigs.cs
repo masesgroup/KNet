@@ -55,6 +55,8 @@ namespace MASES.KNet.Clients
 
         public static readonly string METRIC_REPORTER_CLASSES_CONFIG = Clazz.GetField<string>("METRIC_REPORTER_CLASSES_CONFIG");
 
+        public static readonly string AUTO_INCLUDE_JMX_REPORTER_CONFIG = Clazz.GetField<string>("AUTO_INCLUDE_JMX_REPORTER_CONFIG");
+
         public static readonly string SECURITY_PROTOCOL_CONFIG = Clazz.GetField<string>("SECURITY_PROTOCOL_CONFIG");
 
         public static readonly string SOCKET_CONNECTION_SETUP_TIMEOUT_MS_CONFIG = Clazz.GetField<string>("SOCKET_CONNECTION_SETUP_TIMEOUT_MS_CONFIG");
@@ -237,6 +239,15 @@ namespace MASES.KNet.Clients
 
         [System.Obsolete("To be checked")]
         public List MetricReporterClasses { get { return GetProperty<List>(CommonClientConfigs.METRIC_REPORTER_CLASSES_CONFIG); } set { SetProperty(CommonClientConfigs.METRIC_REPORTER_CLASSES_CONFIG, value); } }
+
+        public bool AutoIncludeJMXReporter { get { return GetProperty<bool>(CommonClientConfigs.AUTO_INCLUDE_JMX_REPORTER_CONFIG); } set { SetProperty(CommonClientConfigs.AUTO_INCLUDE_JMX_REPORTER_CONFIG, value); } }
+
+        public T WithAutoIncludeJMXReporter(bool autoIncludeJMXReporter)
+        {
+            var clone = Clone();
+            clone.AutoIncludeJMXReporter = autoIncludeJMXReporter;
+            return clone;
+        }
 
         [System.Obsolete("To be checked")]
         public T WithMetricReporterClasses(List metricReporterClasses)

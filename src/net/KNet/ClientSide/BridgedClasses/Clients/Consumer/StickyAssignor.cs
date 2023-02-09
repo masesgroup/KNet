@@ -16,10 +16,10 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Common.Errors
+namespace MASES.KNet.Clients.Consumer
 {
-    public class ConcurrentTransactionsException : RetriableException
+    public class StickyAssignor : JCOBridge.C2JBridge.JVMBridgeBase<StickyAssignor>
     {
-        public override string ClassName => "org.apache.kafka.common.errors.ConcurrentTransactionsException";
+        public override string ClassName => "org.apache.kafka.clients.consumer.StickyAssignor";
     }
 }

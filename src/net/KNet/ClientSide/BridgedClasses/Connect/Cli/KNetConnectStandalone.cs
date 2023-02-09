@@ -16,10 +16,20 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Common.Errors
+namespace MASES.KNet.Connect.Cli
 {
-    public class ConcurrentTransactionsException : RetriableException
+    /// <summary>
+    /// Class managing KNetConnectStandalone
+    /// </summary>
+    public class KNetConnectStandalone : JCOBridge.C2JBridge.JVMBridgeMain<KNetConnectStandalone>
     {
-        public override string ClassName => "org.apache.kafka.common.errors.ConcurrentTransactionsException";
+        /// <summary>
+        /// Initialize a new <see cref="KNetConnectStandalone"/>
+        /// </summary>
+        public KNetConnectStandalone()
+            : base("org.mases.knet.connect.ConnectStandalone")
+        {
+            KNetConnectProxy.Register();
+        }
     }
 }

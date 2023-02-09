@@ -30,6 +30,7 @@ _knet_ accepts the following command-line switches:
 		* ConsumerPerformance
 		* DumpLogSegments
 		* GetOffsetShell
+		* MetadataQuorumCommand
 		* MirrorMaker
 		* ProducerPerformance
 		* ReplicaVerificationTool
@@ -41,6 +42,8 @@ _knet_ accepts the following command-line switches:
 	* Connect scope:
 		* ConnectDistributed: moved to KNetConnect (see [KNetConnect](usageConnect.md))
 		* ConnectStandalone: moved to KNetConnect (see [KNetConnect](usageConnect.md))
+		* KNetConnectDistributed: available into KNetConnect (see [KNetConnect](usageConnect.md))
+		* KNetConnectStandalone: available into KNetConnect (see [KNetConnect](usageConnect.md))
 		* MirrorMaker2
 * **KafkaLocation**: represents the path to the root folder of Apache Kafka binary distribution; default value consider that KNetCLI uses the Apache Kafka jars available under the jars folder prepared from the package;
 * **ScalaVersion**: the scala version to be used. The default version (_2.13.6_) is binded to the deafult Apache Kafka version available in the package;

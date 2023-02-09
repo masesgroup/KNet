@@ -94,6 +94,8 @@ namespace MASES.KNet.Clients.Producer
 
         public static readonly string METRIC_REPORTER_CLASSES_CONFIG = Clazz.GetField<string>("METRIC_REPORTER_CLASSES_CONFIG");
 
+        public static readonly string AUTO_INCLUDE_JMX_REPORTER_CONFIG = Clazz.GetField<string>("AUTO_INCLUDE_JMX_REPORTER_CONFIG");
+
         public static readonly string MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION = Clazz.GetField<string>("MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION");
 
         public static readonly string RETRIES_CONFIG = Clazz.GetField<string>("RETRIES_CONFIG");
