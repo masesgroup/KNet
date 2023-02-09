@@ -100,10 +100,18 @@
 <ul>
 <li><strong>d</strong>: starts a distributed version of Connector defined in the file identified from the subsequent parameter</li>
 <li><strong>s</strong>: starts a standalone version of Connector defined in the file identified from the subsequent parameter</li>
+<li><strong>k</strong>: starts a KNet version (Distributed or Standalone) accepting environment variables names containing the data associated to the parameters expected from the stanard version</li>
 <li>other parameters in sequence are:
 <ul>
 <li>Apache Kafka Connect configuration file</li>
 <li>KNet Connector configuration file</li>
+<li>or in case of <strong>k</strong> switch is used the parameters are the environemnt variables containing the configuration data in the following form:
+<ul>
+<li>key and value separated with <strong>=</strong></li>
+<li>key-value pair separated with <strong>||</strong></li>
+<li>an example is key1=value1||key2=value2||key3</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

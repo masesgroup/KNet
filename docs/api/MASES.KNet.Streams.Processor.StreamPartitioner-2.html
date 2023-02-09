@@ -330,19 +330,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Streams_Processor_StreamPartitioner_2__ctor_System_Func_System_String__0__1_System_Int32_System_Int32__System_Boolean_.md&amp;value=---%0Auid%3A%20MASES.KNet.Streams.Processor.StreamPartitioner%602.%23ctor(System.Func%7BSystem.String%2C%600%2C%601%2CSystem.Int32%2CSystem.Int32%7D%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Streams_Processor_StreamPartitioner_2__ctor_System_Func_System_String__0__1_System_Int32_System_Int32__System_Func_System_String__0__1_System_Int32_Java_Util_Optional_Java_Util_Set_Java_Lang_Integer____System_Boolean_.md&amp;value=---%0Auid%3A%20MASES.KNet.Streams.Processor.StreamPartitioner%602.%23ctor(System.Func%7BSystem.String%2C%600%2C%601%2CSystem.Int32%2CSystem.Int32%7D%2CSystem.Func%7BSystem.String%2C%600%2C%601%2CSystem.Int32%2CJava.Util.Optional%7BJava.Util.Set%7BJava.Lang.Integer%7D%7D%7D%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Streams/Processor/StreamPartitioner.cs/#L63">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Streams/Processor/StreamPartitioner.cs/#L80">View Source</a>
   </span>
   <a id="MASES_KNet_Streams_Processor_StreamPartitioner_2__ctor_" data-uid="MASES.KNet.Streams.Processor.StreamPartitioner`2.#ctor*"></a>
-  <h4 id="MASES_KNet_Streams_Processor_StreamPartitioner_2__ctor_System_Func_System_String__0__1_System_Int32_System_Int32__System_Boolean_" data-uid="MASES.KNet.Streams.Processor.StreamPartitioner`2.#ctor(System.Func{System.String,`0,`1,System.Int32,System.Int32},System.Boolean)">StreamPartitioner(Func&lt;String, K, V, Int32, Int32&gt;, Boolean)</h4>
+  <h4 id="MASES_KNet_Streams_Processor_StreamPartitioner_2__ctor_System_Func_System_String__0__1_System_Int32_System_Int32__System_Func_System_String__0__1_System_Int32_Java_Util_Optional_Java_Util_Set_Java_Lang_Integer____System_Boolean_" data-uid="MASES.KNet.Streams.Processor.StreamPartitioner`2.#ctor(System.Func{System.String,`0,`1,System.Int32,System.Int32},System.Func{System.String,`0,`1,System.Int32,Java.Util.Optional{Java.Util.Set{Java.Lang.Integer}}},System.Boolean)">StreamPartitioner(Func&lt;String, K, V, Int32, Int32&gt;, Func&lt;String, K, V, Int32, Optional&lt;Set&lt;Integer&gt;&gt;&gt;, Boolean)</h4>
   <div class="markdown level1 summary"><p>Initialize a new instance of <a class="xref" href="MASES.KNet.Streams.Processor.StreamPartitioner-2.html">StreamPartitioner&lt;K, V&gt;</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StreamPartitioner(Func&lt;string, K, V, int, int&gt; func = null, bool attachEventHandler = true)</code></pre>
+    <pre><code class="lang-csharp hljs">public StreamPartitioner(Func&lt;string, K, V, int, int&gt; partition = null, Func&lt;string, K, V, int, Optional&lt;Set&lt;Integer&gt;&gt;&gt; partitions = null, bool attachEventHandler = true)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -356,14 +356,20 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-5">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
-        <td><span class="parametername">func</span></td>
+        <td><span class="parametername">partition</span></td>
+        <td><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-5">Func&lt;T1,T2,T3,T4,TResult&gt;</a> to be executed</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-5">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>, <span class="xref">Java.Util.Optional</span>&lt;<span class="xref">Java.Util.Set</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/java.lang.integer">Integer</a>&gt;&gt;&gt;</td>
+        <td><span class="parametername">partitions</span></td>
         <td><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-5">Func&lt;T1,T2,T3,T4,TResult&gt;</a> to be executed</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">attachEventHandler</span></td>
-        <td><p>Set to false to disable attach of <span class="xref">MASES.KNet.Streams.Processor.StreamPartitioner`2.EventHandler(System.Object,MASES.JCOBridge.C2JBridge.CLRListenerEventArgs{MASES.JCOBridge.C2JBridge.CLREventData{System.String}})</span> and set an own one</p>
+        <td><p>Set to false to disable attach of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a> and set an own one</p>
 </td>
       </tr>
     </tbody>
@@ -375,7 +381,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Streams_Processor_StreamPartitioner_2_ClassName.md&amp;value=---%0Auid%3A%20MASES.KNet.Streams.Processor.StreamPartitioner%602.ClassName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Streams/Processor/StreamPartitioner.cs/#L51">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Streams/Processor/StreamPartitioner.cs/#L62">View Source</a>
   </span>
   <a id="MASES_KNet_Streams_Processor_StreamPartitioner_2_ClassName_" data-uid="MASES.KNet.Streams.Processor.StreamPartitioner`2.ClassName*"></a>
   <h4 id="MASES_KNet_Streams_Processor_StreamPartitioner_2_ClassName" data-uid="MASES.KNet.Streams.Processor.StreamPartitioner`2.ClassName">ClassName</h4>
@@ -407,7 +413,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Streams_Processor_StreamPartitioner_2_OnPartition.md&amp;value=---%0Auid%3A%20MASES.KNet.Streams.Processor.StreamPartitioner%602.OnPartition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Streams/Processor/StreamPartitioner.cs/#L57">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Streams/Processor/StreamPartitioner.cs/#L69">View Source</a>
   </span>
   <a id="MASES_KNet_Streams_Processor_StreamPartitioner_2_OnPartition_" data-uid="MASES.KNet.Streams.Processor.StreamPartitioner`2.OnPartition*"></a>
   <h4 id="MASES_KNet_Streams_Processor_StreamPartitioner_2_OnPartition" data-uid="MASES.KNet.Streams.Processor.StreamPartitioner`2.OnPartition">OnPartition</h4>
@@ -433,6 +439,37 @@
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Streams_Processor_StreamPartitioner_2_OnPartitions.md&amp;value=---%0Auid%3A%20MASES.KNet.Streams.Processor.StreamPartitioner%602.OnPartitions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Streams/Processor/StreamPartitioner.cs/#L73">View Source</a>
+  </span>
+  <a id="MASES_KNet_Streams_Processor_StreamPartitioner_2_OnPartitions_" data-uid="MASES.KNet.Streams.Processor.StreamPartitioner`2.OnPartitions*"></a>
+  <h4 id="MASES_KNet_Streams_Processor_StreamPartitioner_2_OnPartitions" data-uid="MASES.KNet.Streams.Processor.StreamPartitioner`2.OnPartitions">OnPartitions</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-5">Func&lt;T1,T2,T3,T4,TResult&gt;</a> to be executed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Func&lt;string, K, V, int, Optional&lt;Set&lt;Integer&gt;&gt;&gt; OnPartitions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-5">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, K, V, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>, <span class="xref">Java.Util.Optional</span>&lt;<span class="xref">Java.Util.Set</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/java.lang.integer">Integer</a>&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
@@ -440,7 +477,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Streams_Processor_StreamPartitioner_2_Partition_System_String__0__1_System_Int32_.md&amp;value=---%0Auid%3A%20MASES.KNet.Streams.Processor.StreamPartitioner%602.Partition(System.String%2C%600%2C%601%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Streams/Processor/StreamPartitioner.cs/#L86">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Streams/Processor/StreamPartitioner.cs/#L113">View Source</a>
   </span>
   <a id="MASES_KNet_Streams_Processor_StreamPartitioner_2_Partition_" data-uid="MASES.KNet.Streams.Processor.StreamPartitioner`2.Partition*"></a>
   <h4 id="MASES_KNet_Streams_Processor_StreamPartitioner_2_Partition_System_String__0__1_System_Int32_" data-uid="MASES.KNet.Streams.Processor.StreamPartitioner`2.Partition(System.String,`0,`1,System.Int32)">Partition(String, K, V, Int32)</h4>
@@ -503,6 +540,68 @@
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Streams_Processor_StreamPartitioner_2_Partitions_System_String__0__1_System_Int32_.md&amp;value=---%0Auid%3A%20MASES.KNet.Streams.Processor.StreamPartitioner%602.Partitions(System.String%2C%600%2C%601%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Streams/Processor/StreamPartitioner.cs/#L115">View Source</a>
+  </span>
+  <a id="MASES_KNet_Streams_Processor_StreamPartitioner_2_Partitions_" data-uid="MASES.KNet.Streams.Processor.StreamPartitioner`2.Partitions*"></a>
+  <h4 id="MASES_KNet_Streams_Processor_StreamPartitioner_2_Partitions_System_String__0__1_System_Int32_" data-uid="MASES.KNet.Streams.Processor.StreamPartitioner`2.Partitions(System.String,`0,`1,System.Int32)">Partitions(String, K, V, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Optional&lt;Set&lt;Integer&gt;&gt; Partitions(string topic, K key, V value, int numPartitions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">topic</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">K</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">V</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">numPartitions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Java.Util.Optional</span>&lt;<span class="xref">Java.Util.Set</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/java.lang.integer">Integer</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">System.Dynamic.IDynamicMetaObjectProvider</a>
@@ -536,7 +635,7 @@
                     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Streams_Processor_StreamPartitioner_2.md&amp;value=---%0Auid%3A%20MASES.KNet.Streams.Processor.StreamPartitioner%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Streams/Processor/StreamPartitioner.cs/#L48" class="contribution-link">View Source</a>
+                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Streams/Processor/StreamPartitioner.cs/#L59" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -83,7 +83,8 @@
     <div class="level3"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeException</span>&lt;<a class="xref" href="MASES.KNet.Common.KafkaException.html">KafkaException</a>&gt;</div>
     <div class="level4"><a class="xref" href="MASES.KNet.Common.KafkaException.html">KafkaException</a></div>
     <div class="level5"><a class="xref" href="MASES.KNet.Common.Errors.ApiException.html">ApiException</a></div>
-    <div class="level6"><span class="xref">ConcurrentTransactionsException</span></div>
+    <div class="level6"><a class="xref" href="MASES.KNet.Common.Errors.RetriableException.html">RetriableException</a></div>
+    <div class="level7"><span class="xref">ConcurrentTransactionsException</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
@@ -188,7 +189,7 @@
   <h6><strong>Assembly</strong>: MASES.KNet.dll</h6>
   <h5 id="MASES_KNet_Common_Errors_ConcurrentTransactionsException_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ConcurrentTransactionsException : ApiException, ISerializable, _Exception, IJVMBridgeCore</code></pre>
+    <pre><code class="lang-csharp hljs">public class ConcurrentTransactionsException : RetriableException, ISerializable, _Exception, IJVMBridgeCore</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -223,7 +224,7 @@
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="MASES.KNet.Common.Errors.ApiException.html#MASES_KNet_Common_Errors_ApiException_ClassName">ApiException.ClassName</a></div>
+  <div><a class="xref" href="MASES.KNet.Common.Errors.RetriableException.html#MASES_KNet_Common_Errors_RetriableException_ClassName">RetriableException.ClassName</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.serialization.iserializable">System.Runtime.Serialization.ISerializable</a>
