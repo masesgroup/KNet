@@ -53,6 +53,8 @@ namespace MASES.KNet.Clients.Admin
 
         public static readonly string METRIC_REPORTER_CLASSES_CONFIG = Clazz.GetField<string>("METRIC_REPORTER_CLASSES_CONFIG");
 
+        public static readonly string AUTO_INCLUDE_JMX_REPORTER_CONFIG = Clazz.GetField<string>("AUTO_INCLUDE_JMX_REPORTER_CONFIG");
+
         public static readonly string METRICS_NUM_SAMPLES_CONFIG = Clazz.GetField<string>("METRICS_NUM_SAMPLES_CONFIG");
 
         public static readonly string METRICS_SAMPLE_WINDOW_MS_CONFIG = Clazz.GetField<string>("METRICS_SAMPLE_WINDOW_MS_CONFIG");

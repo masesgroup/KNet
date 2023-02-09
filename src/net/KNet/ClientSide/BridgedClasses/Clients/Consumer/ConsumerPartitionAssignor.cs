@@ -16,10 +16,14 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Common.Errors
+using MASES.JCOBridge.C2JBridge;
+
+namespace MASES.KNet.Clients.Consumer
 {
-    public class ConcurrentTransactionsException : RetriableException
+    public class ConsumerPartitionAssignor : JVMBridgeListener
     {
-        public override string ClassName => "org.apache.kafka.common.errors.ConcurrentTransactionsException";
+        public override string ClassName => "org.apache.kafka.clients.consumer.ConsumerPartitionAssignor";
+
+#warning missing implementation
     }
 }

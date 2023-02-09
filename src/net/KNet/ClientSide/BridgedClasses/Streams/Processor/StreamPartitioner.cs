@@ -16,6 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
+using Java.Util;
 using MASES.JCOBridge.C2JBridge;
 using System;
 
@@ -37,6 +38,16 @@ namespace MASES.KNet.Streams.Processor
         /// <param name="numPartitions">The StreamPartitioner object</param>
         /// <returns>an integer between 0 and <paramref name="numPartitions"/> -1, or -1 if the default partitioning logic should be used</returns>
         int Partition(string topic, K key, V value, int numPartitions);
+
+        /// <summary>
+        /// Executes the StreamPartitioner action in the CLR
+        /// </summary>
+        /// <param name="topic">The StreamPartitioner object</param>
+        /// <param name="key">The StreamPartitioner object</param>
+        /// <param name="value">The StreamPartitioner object</param>
+        /// <param name="numPartitions">The StreamPartitioner object</param>
+        /// <returns>an Optional of Set of integers between 0 and <paramref name="numPartitions"/> -1, Empty optional means using default partitioner</returns>
+        Optional<Set<Java.Lang.Integer>> Partitions(string topic, K key, V value, int numPartitions);
     }
 
     /// <summary>
@@ -50,29 +61,45 @@ namespace MASES.KNet.Streams.Processor
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
         public sealed override string ClassName => "org.mases.knet.streams.kstream.StreamPartitionerImpl";
 
-        readonly Func<string, K, V, int, int> executionFunction = null;
+        readonly Func<string, K, V, int, int> executionFunctionPartition = null;
+        readonly Func<string, K, V, int, Optional<Set<Java.Lang.Integer>>> executionFunctionPartitions = null;
         /// <summary>
         /// The <see cref="Func{string, K, V, int, int}"/> to be executed
         /// </summary>
-        public virtual Func<string, K, V, int, int> OnPartition { get { return executionFunction; } }
+        public virtual Func<string, K, V, int, int> OnPartition { get { return executionFunctionPartition; } }
+        /// <summary>
+        /// The <see cref="Func{string, K, V, int, Optional{Set{Java.Lang.Integer}}}"/> to be executed
+        /// </summary>
+        public virtual Func<string, K, V, int, Optional<Set<Java.Lang.Integer>>> OnPartitions { get { return executionFunctionPartitions; } }
         /// <summary>
         /// Initialize a new instance of <see cref="StreamPartitioner{K, V}"/>
         /// </summary>
-        /// <param name="func">The <see cref="Func{string, K, V, int, int}"/> to be executed</param>
+        /// <param name="partition">The <see cref="Func{string, K, V, int, int}"/> to be executed</param>
+        /// <param name="partitions">The <see cref="Func{string, K, V, int, Optional{Set{Java.Lang.Integer}}}"/> to be executed</param>
         /// <param name="attachEventHandler">Set to false to disable attach of <see cref="EventHandler"/> and set an own one</param>
-        public StreamPartitioner(Func<string, K, V, int, int> func = null, bool attachEventHandler = true)
+        public StreamPartitioner(Func<string, K, V, int, int> partition = null, Func<string, K, V, int, Optional<Set<Java.Lang.Integer>>> partitions = null, bool attachEventHandler = true)
         {
-            if (func != null) executionFunction = func;
-            else executionFunction = Partition;
+            if (partition != null) executionFunctionPartition = partition;
+            else executionFunctionPartition = Partition;
+            if (partitions != null) executionFunctionPartitions = partitions;
+            else executionFunctionPartitions = Partitions;
+
             if (attachEventHandler)
             {
-                AddEventHandler("partition", new EventHandler<CLRListenerEventArgs<CLREventData<string>>>(EventHandler));
+                AddEventHandler("partition", new EventHandler<CLRListenerEventArgs<CLREventData<string>>>(EventHandlerPartition));
+                AddEventHandler("partitions", new EventHandler<CLRListenerEventArgs<CLREventData<string>>>(EventHandlerPartitions));
             }
         }
 
-        void EventHandler(object sender, CLRListenerEventArgs<CLREventData<string>> data)
+        void EventHandlerPartition(object sender, CLRListenerEventArgs<CLREventData<string>> data)
         {
             var retVal = OnPartition(data.EventData.TypedEventData, data.EventData.To<K>(0), data.EventData.To<V>(1), data.EventData.To<int>(2));
+            data.SetReturnValue(retVal);
+        }
+
+        void EventHandlerPartitions(object sender, CLRListenerEventArgs<CLREventData<string>> data)
+        {
+            var retVal = OnPartitions(data.EventData.TypedEventData, data.EventData.To<K>(0), data.EventData.To<V>(1), data.EventData.To<int>(2));
             data.SetReturnValue(retVal);
         }
         /// <summary>
@@ -84,33 +111,10 @@ namespace MASES.KNet.Streams.Processor
         /// <param name="numPartitions">The StreamPartitioner object</param>
         /// <returns>an integer between 0 and <paramref name="numPartitions"/> -1, or -1 if the default partitioning logic should be used</returns>
         public virtual int Partition(string topic, K key, V value, int numPartitions) { return -1; }
-    }
-    /*
-    /// <summary>
-    /// Listener for Kafka StreamPartitioner. Extends <see cref="StreamPartitionerImpl{K, V}"/>
-    /// </summary>
-    /// <typeparam name="T">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
-    /// <typeparam name="U">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
-    /// <typeparam name="VR">The result data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
-    /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
-    public class JVMBridgeStreamPartitioner<K, V> : StreamPartitionerImpl<K, V>
-        where K : JVMBridgeBase, new()
-        where V : JVMBridgeBase, new()
-    {
-        /// <summary>
-        /// Initialize a new instance of <see cref="JVMBridgeStreamPartitioner{K, V}"/>
-        /// </summary>
-        /// <param name="func">The <see cref="Func{string, K, V, int, int}"/> to be executed</param>
-        public JVMBridgeStreamPartitioner(Func<string, K, V, int, int> func = null) : base(func, false)
-        {
-            AddEventHandler("partition", new EventHandler<CLRListenerEventArgs<CLREventData<string>>>(EventHandler));
-        }
 
-        void EventHandler(object sender, CLRListenerEventArgs<CLREventData<string>> data)
+        public virtual Optional<Set<Java.Lang.Integer>> Partitions(string topic, K key, V value, int numPartitions)
         {
-            var retVal = OnPartition(data.EventData.TypedEventData, data.EventData.To<K>(0), data.EventData.To<V>(1), data.EventData.To<int>(2));
-            data.CLRReturnValue = retVal;
+            return new Optional<Set<Java.Lang.Integer>>();
         }
     }
-    */
 }

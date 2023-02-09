@@ -42,9 +42,17 @@ namespace MASES.KNet.Streams
 
         public static readonly string CLIENT_TAG_PREFIX = Clazz.GetField<string>("CLIENT_TAG_PREFIX");
 
+        public static readonly string TOPOLOGY_OPTIMIZATION_CONFIG = Clazz.GetField<string>("TOPOLOGY_OPTIMIZATION_CONFIG");
+
         public static readonly string NO_OPTIMIZATION = Clazz.GetField<string>("NO_OPTIMIZATION");
 
         public static readonly string OPTIMIZE = Clazz.GetField<string>("OPTIMIZE");
+
+        public static readonly string REUSE_KTABLE_SOURCE_TOPICS = Clazz.GetField<string>("REUSE_KTABLE_SOURCE_TOPICS");
+
+        public static readonly string MERGE_REPARTITION_TOPICS = Clazz.GetField<string>("MERGE_REPARTITION_TOPICS");
+
+        public static readonly string SINGLE_STORE_SELF_JOIN = Clazz.GetField<string>("SINGLE_STORE_SELF_JOIN");
 
         public static readonly string UPGRADE_FROM_0100 = Clazz.GetField<string>("UPGRADE_FROM_0100");
 
@@ -82,6 +90,8 @@ namespace MASES.KNet.Streams
 
         public static readonly string UPGRADE_FROM_32 = Clazz.GetField<string>("UPGRADE_FROM_32");
 
+        public static readonly string UPGRADE_FROM_33 = Clazz.GetField<string>("UPGRADE_FROM_33");
+
         public static readonly string AT_LEAST_ONCE = Clazz.GetField<string>("AT_LEAST_ONCE");
 
         [System.Obsolete]
@@ -107,6 +117,8 @@ namespace MASES.KNet.Streams
         public static readonly string BUILT_IN_METRICS_VERSION_CONFIG = Clazz.GetField<string>("BUILT_IN_METRICS_VERSION_CONFIG");
 
         public static readonly string CACHE_MAX_BYTES_BUFFERING_CONFIG = Clazz.GetField<string>("CACHE_MAX_BYTES_BUFFERING_CONFIG");
+
+        public static readonly string STATESTORE_CACHE_MAX_BYTES_CONFIG = Clazz.GetField<string>("STATESTORE_CACHE_MAX_BYTES_CONFIG");
 
         public static readonly string CLIENT_ID_CONFIG = Clazz.GetField<string>("CLIENT_ID_CONFIG");
 
@@ -154,6 +166,8 @@ namespace MASES.KNet.Streams
 
         public static readonly string METRICS_SAMPLE_WINDOW_MS_CONFIG = Clazz.GetField<string>("METRICS_SAMPLE_WINDOW_MS_CONFIG");
 
+        public static readonly string AUTO_INCLUDE_JMX_REPORTER_CONFIG = Clazz.GetField<string>("AUTO_INCLUDE_JMX_REPORTER_CONFIG");
+
         public static readonly string NUM_STANDBY_REPLICAS_CONFIG = Clazz.GetField<string>("NUM_STANDBY_REPLICAS_CONFIG");
 
         public static readonly string NUM_STREAM_THREADS_CONFIG = Clazz.GetField<string>("NUM_STREAM_THREADS_CONFIG");
@@ -191,8 +205,6 @@ namespace MASES.KNet.Streams
         public static readonly string STATE_DIR_CONFIG = Clazz.GetField<string>("STATE_DIR_CONFIG");
 
         public static readonly string TASK_TIMEOUT_MS_CONFIG = Clazz.GetField<string>("TASK_TIMEOUT_MS_CONFIG");
-
-        public static readonly string TOPOLOGY_OPTIMIZATION_CONFIG = Clazz.GetField<string>("TOPOLOGY_OPTIMIZATION_CONFIG");
 
         public static readonly string WINDOW_SIZE_MS_CONFIG = Clazz.GetField<string>("WINDOW_SIZE_MS_CONFIG");
 
@@ -257,6 +269,15 @@ namespace MASES.KNet.Streams
         {
             var clone = Clone();
             clone.CacheMaxBytesBuffering = cacheMaxBytesBuffering;
+            return clone;
+        }
+
+        public long StateStoreMaxBytesBuffering { get { return GetProperty<int>(StreamsConfig.STATESTORE_CACHE_MAX_BYTES_CONFIG); } set { SetProperty(StreamsConfig.STATESTORE_CACHE_MAX_BYTES_CONFIG, value); } }
+
+        public StreamsConfigBuilder WithStateStoreMaxBytesBuffering(long stateStoreMaxBytesBuffering)
+        {
+            var clone = Clone();
+            clone.StateStoreMaxBytesBuffering = stateStoreMaxBytesBuffering;
             return clone;
         }
 

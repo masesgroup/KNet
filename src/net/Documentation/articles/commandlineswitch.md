@@ -30,6 +30,7 @@ _knet_ accepts the following command-line switches:
 		* ConsumerPerformance
 		* DumpLogSegments
 		* GetOffsetShell
+		* MetadataQuorumCommand
 		* MirrorMaker
 		* ProducerPerformance
 		* ReplicaVerificationTool

@@ -21,6 +21,9 @@ package org.mases.knet.streams.processor;
 import org.apache.kafka.streams.processor.StreamPartitioner;
 import org.mases.jcobridge.*;
 
+import java.util.Optional;
+import java.util.Set;
+
 public final class StreamPartitionerImpl extends JCListener implements StreamPartitioner {
     public StreamPartitionerImpl(String key) throws JCNativeException {
         super(key);
@@ -30,8 +33,17 @@ public final class StreamPartitionerImpl extends JCListener implements StreamPar
     public Integer partition(String topic, Object key, Object value, int numPartitions) {
         raiseEvent("partition", topic, key, value, numPartitions);
         Object retVal = getReturnData();
-        int ret = (int)retVal;
+        int ret = (int) retVal;
         if (ret == -1) return null;
-        return new Integer((int)retVal);
+        return new Integer((int) retVal);
+    }
+
+    @Override
+    public Optional<Set<Integer>> partitions(String topic, Object key, Object value, int numPartitions) {
+        raiseEvent("partitions", topic, key, value, numPartitions);
+        Object retVal = getReturnData();
+        int ret = (int) retVal;
+        if (ret == -1) return null;
+        return (Optional<Set<Integer>>) retVal;
     }
 }

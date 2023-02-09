@@ -16,10 +16,19 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Common.Errors
+namespace MASES.KNet.Tools
 {
-    public class ConcurrentTransactionsException : RetriableException
+    /// <summary>
+    /// Class managing MetadataQuorumCommand
+    /// </summary>
+    public class MetadataQuorumCommand : JCOBridge.C2JBridge.JVMBridgeMain<MetadataQuorumCommand>
     {
-        public override string ClassName => "org.apache.kafka.common.errors.ConcurrentTransactionsException";
+        /// <summary>
+        /// Initialize a new <see cref="MetadataQuorumCommand"/>
+        /// </summary>
+        public MetadataQuorumCommand()
+            : base("org.apache.kafka.tools.MetadataQuorumCommand")
+        {
+        }
     }
 }
