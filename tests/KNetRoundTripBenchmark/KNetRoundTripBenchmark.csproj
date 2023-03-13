@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<Import Project="..\Common\Common.props" />
+	<PropertyGroup>
+		<AssemblyName>KNetRoundTripBenchmark</AssemblyName>
+		<OutputType>Exe</OutputType>
+		<RootNamespace>MASES.KNet.Benchmark</RootNamespace>
+		<Title>KNetTest - a test tool for KNet</Title>
+		<Description>KNetTest - a test tool for KNet</Description>
+	</PropertyGroup>
+	<ItemGroup>
+		<Compile Include="..\KNetBenchmark\ProgramConfluent.cs" Link="ProgramConfluent.cs" />
+		<Compile Include="..\KNetBenchmark\ProgramInit.cs" Link="ProgramInit.cs" />
+		<Compile Include="..\KNetBenchmark\ProgramKNet.cs" Link="ProgramKNet.cs" />
+		<Compile Include="..\KNetBenchmark\ProgramSupport.cs" Link="ProgramSupport.cs" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Confluent.Kafka" Version="1.9.3" />
+	</ItemGroup>
+</Project>

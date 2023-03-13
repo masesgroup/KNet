@@ -26,11 +26,11 @@ namespace MASES.KNet.Benchmark
 {
     partial class Program
     {
-        static ISerializer<int> confluentKeySerializer = null;
+        static ISerializer<long> confluentKeySerializer = null;
         static ISerializer<byte[]> confluentValueSerializer = null;
-        static IProducer<int, byte[]> confluentProducer = null;
+        static IProducer<long, byte[]> confluentProducer = null;
 
-        static IProducer<int, byte[]> ConfluentProducer()
+        static IProducer<long, byte[]> ConfluentProducer()
         {
             if (confluentProducer == null || !SharedObjects)
             {
@@ -48,7 +48,7 @@ namespace MASES.KNet.Benchmark
                     //MessageCopyMaxBytes = length,
                 };
 
-                var producerBuilder = new ProducerBuilder<int, byte[]>(producerConfig);
+                var producerBuilder = new ProducerBuilder<long, byte[]>(producerConfig);
 
                 if (UseSerdes)
                 {
@@ -67,7 +67,7 @@ namespace MASES.KNet.Benchmark
             Stopwatch swCreateRecord = null;
             Stopwatch swSendRecord = null;
             Stopwatch stopWatch = null;
-            IProducer<int, byte[]> producer = ConfluentProducer();
+            IProducer<long, byte[]> producer = ConfluentProducer();
             try
             {
                 if (data == null)
@@ -79,7 +79,7 @@ namespace MASES.KNet.Benchmark
                         data[i] = (byte)rand.Next(0, byte.MaxValue);
                     }
                 }
-                var message = new Message<int, byte[]>
+                var message = new Message<long, byte[]>
                 {
                     Key = 42,
                     Value = data
@@ -88,7 +88,7 @@ namespace MASES.KNet.Benchmark
                 {
                     swCreateRecord = new();
                     swSendRecord = new();
-                    List<Message<int, byte[]>> messages = new();
+                    List<Message<long, byte[]>> messages = new();
                     for (int i = 0; i < numpacket; i++)
                     {
                         var rand = new Random();
@@ -98,7 +98,7 @@ namespace MASES.KNet.Benchmark
                             data[ii] = (byte)rand.Next(0, byte.MaxValue);
                         }
                         swCreateRecord.Start();
-                        message = new Message<int, byte[]>
+                        message = new Message<long, byte[]>
                         {
                             Key = i,
                             Value = data
@@ -138,7 +138,7 @@ namespace MASES.KNet.Benchmark
                             Array.Copy(data, 0, newData, 0, data.Length);
                             stopWatch.Start();
                             swCreateRecord.Start();
-                            message = new Message<int, byte[]>
+                            message = new Message<long, byte[]>
                             {
                                 Key = i,
                                 Value = newData
@@ -181,11 +181,11 @@ namespace MASES.KNet.Benchmark
             return stopWatch;
         }
 
-        static IDeserializer<int> confluentKeyDeserializer = null;
+        static IDeserializer<long> confluentKeyDeserializer = null;
         static IDeserializer<byte[]> confluentValueDeserializer = null;
-        static IConsumer<int, byte[]> confluentConsumer = null;
+        static IConsumer<long, byte[]> confluentConsumer = null;
 
-        static IConsumer<int, byte[]> ConfluentConsumer()
+        static IConsumer<long, byte[]> ConfluentConsumer()
         {
             if (confluentConsumer == null || !SharedObjects)
             {
@@ -199,7 +199,7 @@ namespace MASES.KNet.Benchmark
                     //MessageCopyMaxBytes = length,
                     FetchMinBytes = FetchMinBytes,
                 };
-                var consumerBuilder = new ConsumerBuilder<int, byte[]>(consumerConfig);
+                var consumerBuilder = new ConsumerBuilder<long, byte[]>(consumerConfig);
                 if (UseSerdes)
                 {
                     consumerBuilder.SetKeyDeserializer(confluentKeyDeserializer);
@@ -211,14 +211,14 @@ namespace MASES.KNet.Benchmark
             return confluentConsumer;
         }
 
-        static Action<IConsumer<int, byte[]>, List<TopicPartition>> PartitionsAssignedHandler_trampoline;
+        static Action<IConsumer<long, byte[]>, List<TopicPartition>> PartitionsAssignedHandler_trampoline;
 
-        static void PartitionsAssignedHandler(IConsumer<int, byte[]> consumer, List<TopicPartition> lst)
+        static void PartitionsAssignedHandler(IConsumer<long, byte[]> consumer, List<TopicPartition> lst)
         {
             PartitionsAssignedHandler_trampoline?.Invoke(consumer, lst);
         }
 
-        static Stopwatch ConsumeConfluent(string topicName, int length, int numpacket, byte[] data = null)
+        static Stopwatch ConsumeConfluent(int testNum, string topicName, int length, int numpacket, byte[] data = null)
         {
             Stopwatch stopWatch = null;
             int counter = 0;
@@ -242,7 +242,7 @@ namespace MASES.KNet.Benchmark
                             && (!record.Message.Value.SequenceEqual(data)
                                 || (!SinglePacket && record.Message.Key != counter)))
                         {
-                            throw new InvalidOperationException($"Incorrect data counter {counter} item.Key {record.Message.Key}");
+                            throw new InvalidOperationException($"ConsumeConfluent test {testNum}: Incorrect data counter {counter} item.Key {record.Message.Key}");
                         }
                         if (AlwaysCommit) consumer.Commit(record);
                         counter++;
@@ -291,7 +291,7 @@ namespace MASES.KNet.Benchmark
                         byte[] newVal = new byte[record.Message.Value.Length];
                         Array.Copy(record.Message.Value, newVal, record.Message.Value.Length);
                         stopWatch.Start();
-                        var message = new Message<int, byte[]>
+                        var message = new Message<long, byte[]>
                         {
                             Key = record.Message.Key,
                             Value = newVal
