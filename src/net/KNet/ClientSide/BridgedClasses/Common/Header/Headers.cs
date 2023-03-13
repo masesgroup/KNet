@@ -16,9 +16,11 @@
 *  Refer to LICENSE for more information.
 */
 
+using Java.Lang;
+
 namespace MASES.KNet.Common.Header
 {
-    public class Headers : JCOBridge.C2JBridge.JVMBridgeBaseEnumerable<Headers, Header>
+    public class Headers : Iterable<Header>
     {
         public override string ClassName => "org.apache.kafka.common.header.Headers";
 
