@@ -22,7 +22,7 @@ using MASES.KNet.Common;
 
 namespace MASES.KNet.Clients.Consumer
 {
-    public class ConsumerRecords<K, V> : JCOBridge.C2JBridge.JVMBridgeBaseEnumerable<ConsumerRecords<K, V>, ConsumerRecord<K, V>>
+    public class ConsumerRecords<K, V> : Iterable<ConsumerRecord<K, V>>
     {
         public override string ClassName => "org.apache.kafka.clients.consumer.ConsumerRecords";
 
@@ -37,8 +37,6 @@ namespace MASES.KNet.Clients.Consumer
         }
 
         public Set<TopicPartition> Partitions => IExecute<Set<TopicPartition>>("partitions");
-
-        public Iterator<ConsumerRecord<K, V>> Iterator => IExecute<Iterator<ConsumerRecord<K, V>>>("iterator");
 
         public int Count => IExecute<int>("count");
     }
