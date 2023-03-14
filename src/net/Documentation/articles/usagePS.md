@@ -4,7 +4,15 @@
 
 To install the tool executes the following command within a PowerShell shell:
 
-> Install-Module -Name MASES.KNetPS
+```powershell
+Install-Module -Name MASES.KNetPS
+```
+
+If the above command fails, reporting errors related to _authenticode_, use the following command:
+
+```powershell
+Install-Module -Name MASES.KNetPS -SkipPublisherCheck
+```
 
 ## Usage
 
@@ -12,9 +20,11 @@ To use the PowerShell interface (KNetPS) runs the following commands within a **
 
 ### Initialization
 
-* The following cmdlet must be called prior anything else to initialize the environment:
+The following cmdlet must be called prior anything else to initialize the environment:
 
-> Start-KNetPS [arguments]
+```powershell
+Start-KNetPS [arguments]
+```
 
 then the user can use objects created using **New-KObject** and other cmdlets, otherwise it is possible to invoke the desired Main-Class command which automatically executes **Start-KNetPS**.
 
@@ -57,7 +67,7 @@ $record = Get-ConsumerRecord -KeyClass "System.String" -ValueClass "System.Strin
 
 ## Cmdlets available
 
-_knetps_ accepts cmdlets divided by two main groups: Main-Class command cmdlets and Scriptable cmdlets.
+KNetPS accepts cmdlets divided by two main groups: Main-Class command cmdlets and Scriptable cmdlets.
 
 ### Scriptable cmdlets
 
