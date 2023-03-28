@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Tools
+namespace Kafka.Tools
 {
     /// <summary>
     /// Class managing ConsumerPerformance
     /// </summary>
-    public class ConsumerPerformance : JCOBridge.C2JBridge.JVMBridgeMain<ConsumerPerformance>
+    public class ConsumerPerformance : MASES.JCOBridge.C2JBridge.JVMBridgeMain<ConsumerPerformance>
     {
         /// <summary>
         /// Initialize a new <see cref="ConsumerPerformance"/>

@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Shell
+namespace Org.Apache.Kafka.Shell
 {
     /// <summary>
     /// Class managing MetadataShell
     /// </summary>
-    public class MetadataShell : JCOBridge.C2JBridge.JVMBridgeMain<MetadataShell>
+    public class MetadataShell : MASES.JCOBridge.C2JBridge.JVMBridgeMain<MetadataShell>
     {
         /// <summary>
         /// Initialize a new <see cref="MetadataShell"/>

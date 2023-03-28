@@ -18,9 +18,9 @@
 
 using MASES.JCOBridge.C2JBridge;
 using Java.Time;
-using MASES.KNet.Streams.KStream;
+using Org.Apache.Kafka.Streams.KStream;
 
-namespace MASES.KNet.Streams.State
+namespace Org.Apache.Kafka.Streams.State
 {
     public interface IReadOnlyWindowStore<K, V> : IJVMBridgeBase
     {

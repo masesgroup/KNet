@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Streams
+namespace Org.Apache.Kafka.Streams
 {
-    public class LagInfo : JCOBridge.C2JBridge.JVMBridgeBase<LagInfo>
+    public class LagInfo : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LagInfo>
     {
         public override string ClassName => "org.apache.kafka.streams.LagInfo";
 

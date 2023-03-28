@@ -18,9 +18,9 @@
 
 using Java.Util;
 
-namespace MASES.KNet.Streams.Query
+namespace Org.Apache.Kafka.Streams.Query
 {
-    public class StateQueryResult<R> : JCOBridge.C2JBridge.JVMBridgeBase<StateQueryResult<R>>
+    public class StateQueryResult<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StateQueryResult<R>>
     {
         public override string ClassName => "org.apache.kafka.streams.query.StateQueryResult";
 

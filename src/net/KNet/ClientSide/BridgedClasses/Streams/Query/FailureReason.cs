@@ -16,7 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Streams.Query
+namespace Org.Apache.Kafka.Streams.Query
 {
     public enum FailureReason
     {

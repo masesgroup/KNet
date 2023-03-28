@@ -18,9 +18,9 @@
 
 using Java.Util;
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class ConfigEntry : JCOBridge.C2JBridge.JVMBridgeBase<Config>
+    public class ConfigEntry : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Config>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.ConfigEntry";
 
@@ -79,7 +79,7 @@ namespace MASES.KNet.Clients.Admin
             UNKNOWN                         // source unknown e.g. in the ConfigEntry used for alter requests where source is not set
         }
 
-        public class ConfigSynonym : JCOBridge.C2JBridge.JVMBridgeBase<Config>
+        public class ConfigSynonym : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Config>
         {
             public override string ClassName => "org.apache.kafka.clients.admin.ConfigEntry$ConfigSynonym";
 

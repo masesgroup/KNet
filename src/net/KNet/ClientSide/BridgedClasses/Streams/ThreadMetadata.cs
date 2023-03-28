@@ -19,7 +19,7 @@
 using MASES.JCOBridge.C2JBridge;
 using Java.Util;
 
-namespace MASES.KNet.Streams
+namespace Org.Apache.Kafka.Streams
 {
     public interface IThreadMetadata : IJVMBridgeBase
     {

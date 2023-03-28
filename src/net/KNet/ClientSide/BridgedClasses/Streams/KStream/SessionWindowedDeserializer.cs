@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common.Serialization;
+using Org.Apache.Kafka.Common.Serialization;
 using Java.Util;
 
-namespace MASES.KNet.Streams.KStream
+namespace Org.Apache.Kafka.Streams.KStream
 {
-    public class SessionWindowedDeserializer<T> : JCOBridge.C2JBridge.JVMBridgeBase<SessionWindowedDeserializer<T>>
+    public class SessionWindowedDeserializer<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SessionWindowedDeserializer<T>>
     {
         public override bool IsCloseable => true;
 

@@ -18,7 +18,7 @@
 
 using Java.Nio;
 
-namespace MASES.KNet.Common.Serialization
+namespace Org.Apache.Kafka.Common.Serialization
 {
     public class ByteBufferDeserializer : Deserializer<ByteBuffer>
     {

@@ -16,13 +16,13 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common;
+using Org.Apache.Kafka.Common;
 using Java.Lang;
 using Java.Util;
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class AlterReplicaLogDirsResult : JCOBridge.C2JBridge.JVMBridgeBase<AlterReplicaLogDirsResult>
+    public class AlterReplicaLogDirsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AlterReplicaLogDirsResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.AlterReplicaLogDirsResult";
 

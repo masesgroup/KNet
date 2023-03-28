@@ -19,11 +19,11 @@
 using Java.Util;
 using MASES.JCOBridge.C2JBridge;
 using MASES.KNet;
-using MASES.KNet.Clients.Consumer;
-using MASES.KNet.Common.Serialization;
-using MASES.KNet.Streams;
-using MASES.KNet.Streams.Errors;
-using MASES.KNet.Streams.KStream;
+using Org.Apache.Kafka.Clients.Consumer;
+using Org.Apache.Kafka.Common.Serialization;
+using Org.Apache.Kafka.Streams;
+using Org.Apache.Kafka.Streams.Errors;
+using Org.Apache.Kafka.Streams.KStream;
 using MASES.KNet.TestCommon;
 using System;
 using System.Text.RegularExpressions;

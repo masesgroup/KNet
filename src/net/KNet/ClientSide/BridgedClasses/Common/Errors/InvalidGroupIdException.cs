@@ -16,7 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Common.Errors
+namespace Org.Apache.Kafka.Common.Errors
 {
     public class InvalidGroupIdException : ApiException
     {

@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class RecordsToDelete : JCOBridge.C2JBridge.JVMBridgeBase<RecordsToDelete>
+    public class RecordsToDelete : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RecordsToDelete>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.RecordsToDelete";
 

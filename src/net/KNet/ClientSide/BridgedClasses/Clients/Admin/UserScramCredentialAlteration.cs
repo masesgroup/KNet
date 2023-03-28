@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class UserScramCredentialAlteration : JCOBridge.C2JBridge.JVMBridgeBase<UserScramCredentialAlteration>
+    public class UserScramCredentialAlteration : MASES.JCOBridge.C2JBridge.JVMBridgeBase<UserScramCredentialAlteration>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.UserScramCredentialAlteration";
     }

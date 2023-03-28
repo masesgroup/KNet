@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Tools
+namespace Org.Apache.Kafka.Tools
 {
     /// <summary>
     /// Class managing VerifiableProducer
     /// </summary>
-    public class VerifiableProducer : JCOBridge.C2JBridge.JVMBridgeMain<VerifiableProducer>
+    public class VerifiableProducer : MASES.JCOBridge.C2JBridge.JVMBridgeMain<VerifiableProducer>
     {
         /// <summary>
         /// Initialize a new <see cref="VerifiableProducer"/>

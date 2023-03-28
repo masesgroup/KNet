@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Tools
+namespace Kafka.Tools
 {
     /// <summary>
     /// Class managing ReplicaVerificationTool
     /// </summary>
-    public class ReplicaVerificationTool : JCOBridge.C2JBridge.JVMBridgeMain<ReplicaVerificationTool>
+    public class ReplicaVerificationTool : MASES.JCOBridge.C2JBridge.JVMBridgeMain<ReplicaVerificationTool>
     {
         /// <summary>
         /// Initialize a new <see cref="ReplicaVerificationTool"/>

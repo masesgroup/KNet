@@ -16,7 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Connect.Converters
+namespace Org.Apache.Kafka.Connect.Converters
 {
     public class ShortConverter : NumberConverter<short>
     {

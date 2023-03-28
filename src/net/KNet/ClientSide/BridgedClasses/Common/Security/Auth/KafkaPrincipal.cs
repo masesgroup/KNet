@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Common.Security.Auth
+namespace Org.Apache.Kafka.Common.Security.Auth
 {
-    public class KafkaPrincipal : JCOBridge.C2JBridge.JVMBridgeBase<KafkaPrincipal>
+    public class KafkaPrincipal : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KafkaPrincipal>
     {
         public override string ClassName => "org.apache.kafka.common.security.auth.KafkaPrincipal";
 

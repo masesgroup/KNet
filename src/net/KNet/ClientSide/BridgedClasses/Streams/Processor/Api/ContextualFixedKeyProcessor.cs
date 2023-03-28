@@ -18,7 +18,7 @@
 
 using System;
 
-namespace MASES.KNet.Streams.Processor.Api
+namespace Org.Apache.Kafka.Streams.Processor.Api
 {
     public class ContextualFixedKeyProcessor<KIn, VIn, VOut> : FixedKeyProcessor<KIn, VIn, VOut>
     {

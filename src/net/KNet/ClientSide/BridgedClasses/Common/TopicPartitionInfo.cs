@@ -18,9 +18,9 @@
 
 using Java.Util;
 
-namespace MASES.KNet.Common
+namespace Org.Apache.Kafka.Common
 {
-    public class TopicPartitionInfo : JCOBridge.C2JBridge.JVMBridgeBase<TopicPartitionInfo>
+    public class TopicPartitionInfo : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicPartitionInfo>
     {
         public override string ClassName => "org.apache.kafka.common.TopicPartitionInfo";
 

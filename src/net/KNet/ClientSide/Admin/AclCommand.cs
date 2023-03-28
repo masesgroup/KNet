@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Admin
+namespace Kafka.Admin
 {
     /// <summary>
     /// Class managing AclCommand
     /// </summary>
-    public class AclCommand : JCOBridge.C2JBridge.JVMBridgeMain<AclCommand>
+    public class AclCommand : MASES.JCOBridge.C2JBridge.JVMBridgeMain<AclCommand>
     {
         /// <summary>
         /// Initialize a new <see cref="AclCommand"/>

@@ -18,9 +18,9 @@
 
 using Java.Util;
 
-namespace MASES.KNet.Clients.Consumer
+namespace Org.Apache.Kafka.Clients.Consumer
 {
-    public class OffsetAndTimestamp : JCOBridge.C2JBridge.JVMBridgeBase<OffsetAndTimestamp>
+    public class OffsetAndTimestamp : MASES.JCOBridge.C2JBridge.JVMBridgeBase<OffsetAndTimestamp>
     {
         public override string ClassName => "org.apache.kafka.clients.consumer.OffsetAndTimestamp";
 

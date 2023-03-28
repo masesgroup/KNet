@@ -16,14 +16,14 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common;
-using MASES.KNet.Common.Acl;
-using MASES.KNet.Common.Errors;
+using Org.Apache.Kafka.Common;
+using Org.Apache.Kafka.Common.Acl;
+using Org.Apache.Kafka.Common.Errors;
 using Java.Util;
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class DeleteAclsResult : JCOBridge.C2JBridge.JVMBridgeBase<DeleteAclsResult>
+    public class DeleteAclsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DeleteAclsResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DeleteAclsResult";
 
@@ -31,14 +31,14 @@ namespace MASES.KNet.Clients.Admin
 
         public KafkaFuture<Collection<AclBinding>> All => IExecute<KafkaFuture<Collection<AclBinding>>>("all");
 
-        public class FilterResults : JCOBridge.C2JBridge.JVMBridgeBase<FilterResults>
+        public class FilterResults : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FilterResults>
         {
             public override string ClassName => "org.apache.kafka.clients.admin.DeleteAclsResult$FilterResults";
 
             public List<FilterResult> Values => IExecute<List<FilterResult>>("values");
         }
 
-        public class FilterResult : JCOBridge.C2JBridge.JVMBridgeBase<FilterResult>
+        public class FilterResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FilterResult>
         {
             public override string ClassName => "org.apache.kafka.clients.admin.DeleteAclsResult$FilterResult";
 

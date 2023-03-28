@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Tools
+namespace Kafka.Tools
 {
     /// <summary>
     /// Class managing ClusterTool
     /// </summary>
-    public class ClusterTool : JCOBridge.C2JBridge.JVMBridgeMain<ClusterTool>
+    public class ClusterTool : MASES.JCOBridge.C2JBridge.JVMBridgeMain<ClusterTool>
     {
         /// <summary>
         /// Initialize a new <see cref="ClusterTool"/>

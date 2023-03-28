@@ -17,9 +17,9 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using MASES.KNet.Common.Serialization;
+using Org.Apache.Kafka.Common.Serialization;
 
-namespace MASES.KNet.Streams.KStream
+namespace Org.Apache.Kafka.Streams.KStream
 {
     public class Grouped<K, V> : JVMBridgeBase<Grouped<K, V>>, INamedOperation<Grouped<K, V>>
     {

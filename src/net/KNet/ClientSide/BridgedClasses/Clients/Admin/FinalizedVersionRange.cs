@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class FinalizedVersionRange : JCOBridge.C2JBridge.JVMBridgeBase<FinalizedVersionRange>
+    public class FinalizedVersionRange : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FinalizedVersionRange>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.FinalizedVersionRange";
 

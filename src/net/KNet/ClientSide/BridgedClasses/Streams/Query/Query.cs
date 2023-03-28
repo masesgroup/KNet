@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Streams.Query
+namespace Org.Apache.Kafka.Streams.Query
 {
-    public class Query<R> : JCOBridge.C2JBridge.JVMBridgeBase<Query<R>>
+    public class Query<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Query<R>>
     {
         public override bool IsInterface => true;
 

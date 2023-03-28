@@ -18,9 +18,9 @@
 
 using Java.Time;
 
-namespace MASES.KNet.Streams.KStream
+namespace Org.Apache.Kafka.Streams.KStream
 {
-    public class SessionWindows : JCOBridge.C2JBridge.JVMBridgeBase<SessionWindows>
+    public class SessionWindows : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SessionWindows>
     {
         public override string ClassName => "org.apache.kafka.streams.kstream.SessionWindows";
 

@@ -20,7 +20,7 @@ using MASES.JCOBridge.C2JBridge;
 using Java.Util;
 using System.Collections.Generic;
 
-namespace MASES.KNet.Streams.State
+namespace Org.Apache.Kafka.Streams.State
 {
     public class KeyValueIterator<K, V> : JVMBridgeBaseEnumerable<KeyValueIterator<K, V>, KeyValue<K, V>>
     {

@@ -18,7 +18,7 @@
 
 using Java.Lang;
 
-namespace MASES.KNet.Common.Serialization
+namespace Org.Apache.Kafka.Common.Serialization
 {
     public class VoidDeserializer : Deserializer<Void>
     {

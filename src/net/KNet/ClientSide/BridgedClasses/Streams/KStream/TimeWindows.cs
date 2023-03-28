@@ -17,9 +17,9 @@
 */
 
 using Java.Time;
-using MASES.KNet.Streams.KStream.Internals;
+using Org.Apache.Kafka.Streams.KStream.Internals;
 
-namespace MASES.KNet.Streams.KStream
+namespace Org.Apache.Kafka.Streams.KStream
 {
     public class TimeWindows : Windows<TimeWindow>
     {

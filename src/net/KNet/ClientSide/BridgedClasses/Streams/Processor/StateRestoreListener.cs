@@ -17,10 +17,10 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using MASES.KNet.Common;
+using Org.Apache.Kafka.Common;
 using System;
 
-namespace MASES.KNet.Streams.Processor
+namespace Org.Apache.Kafka.Streams.Processor
 {
     /// <summary>
     /// Listener for Kafka StateRestoreListener. Extends <see cref="IJVMBridgeBase"/>

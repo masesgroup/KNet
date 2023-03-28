@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Admin
+namespace Kafka.Admin
 {
     /// <summary>
     /// Class managing ConsumerGroupCommand
     /// </summary>
-    public class ConsumerGroupCommand : JCOBridge.C2JBridge.JVMBridgeMain<ConsumerGroupCommand>
+    public class ConsumerGroupCommand : MASES.JCOBridge.C2JBridge.JVMBridgeMain<ConsumerGroupCommand>
     {
         /// <summary>
         /// Initialize a new <see cref="ConsumerGroupCommand"/>

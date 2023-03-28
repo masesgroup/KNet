@@ -19,7 +19,7 @@
 using Java.Lang;
 using MASES.JCOBridge.C2JBridge;
 
-namespace MASES.KNet.Connect
+namespace Org.Apache.Kafka.Connect
 {
     public interface IKNetConnectLogging
     {

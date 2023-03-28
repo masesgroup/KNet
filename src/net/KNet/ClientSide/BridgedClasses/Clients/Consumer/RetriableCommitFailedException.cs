@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common.Errors;
+using Org.Apache.Kafka.Common.Errors;
 
-namespace MASES.KNet.Clients.Consumer
+namespace Org.Apache.Kafka.Clients.Consumer
 {
     public class RetriableCommitFailedException : RetriableException
     {

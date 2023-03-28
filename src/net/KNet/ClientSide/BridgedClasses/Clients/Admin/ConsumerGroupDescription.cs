@@ -16,13 +16,13 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common;
-using MASES.KNet.Common.Acl;
+using Org.Apache.Kafka.Common;
+using Org.Apache.Kafka.Common.Acl;
 using Java.Util;
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class ConsumerGroupDescription : JCOBridge.C2JBridge.JVMBridgeBase<ConsumerGroupDescription>
+    public class ConsumerGroupDescription : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConsumerGroupDescription>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.ConsumerGroupDescription";
 

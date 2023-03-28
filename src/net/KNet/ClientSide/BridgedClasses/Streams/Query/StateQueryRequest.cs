@@ -18,9 +18,9 @@
 
 using Java.Util;
 
-namespace MASES.KNet.Streams.Query
+namespace Org.Apache.Kafka.Streams.Query
 {
-    public class StateQueryRequest<R> : JCOBridge.C2JBridge.JVMBridgeBase<StateQueryRequest<R>>
+    public class StateQueryRequest<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StateQueryRequest<R>>
     {
         public override string ClassName => "org.apache.kafka.streams.query.StateQueryRequest";
 
@@ -50,7 +50,7 @@ namespace MASES.KNet.Streams.Query
 
         public bool IsRequireActive => IExecute<bool>("isRequireActive");
 
-        public class InStore : JCOBridge.C2JBridge.JVMBridgeBase<StateQueryRequest<R>>
+        public class InStore : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StateQueryRequest<R>>
         {
             public override string ClassName => "org.apache.kafka.streams.query.StateQueryRequest$InStore";
 

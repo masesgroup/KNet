@@ -16,11 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-using static MASES.KNet.Clients.Admin.FeatureUpdate;
-
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class FeatureUpdate : JCOBridge.C2JBridge.JVMBridgeBase<FeatureUpdate>
+    public class FeatureUpdate : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FeatureUpdate>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.FeatureUpdate";
 

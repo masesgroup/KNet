@@ -16,11 +16,11 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common;
-using MASES.KNet.Common.Config;
-using MASES.KNet.Connect.Connector;
+using Org.Apache.Kafka.Common;
+using Org.Apache.Kafka.Common.Config;
+using Org.Apache.Kafka.Connect.Connector;
 
-namespace MASES.KNet.Connect.Transforms.Predicates
+namespace Org.Apache.Kafka.Connect.Transforms.Predicates
 {
     public class Predicate<R> : Configurable where R : ConnectRecord<R>
     {

@@ -19,7 +19,7 @@
 using Java.Util;
 using MASES.JCOBridge.C2JBridge;
 
-namespace MASES.KNet.Connect.Connector
+namespace Org.Apache.Kafka.Connect.Connector
 {
     public interface ITask
     {

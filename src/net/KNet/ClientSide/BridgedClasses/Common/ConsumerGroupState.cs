@@ -16,7 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Common
+namespace Org.Apache.Kafka.Common
 {
     public enum ConsumerGroupState
     {

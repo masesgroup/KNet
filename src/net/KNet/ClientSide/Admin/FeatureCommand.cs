@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Admin
+namespace Kafka.Admin
 {
     /// <summary>
     /// Class managing FeatureCommand
     /// </summary>
-    public class FeatureCommand : JCOBridge.C2JBridge.JVMBridgeMain<FeatureCommand>
+    public class FeatureCommand : MASES.JCOBridge.C2JBridge.JVMBridgeMain<FeatureCommand>
     {
         /// <summary>
         /// Initialize a new <see cref="FeatureCommand"/>

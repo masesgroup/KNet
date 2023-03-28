@@ -18,9 +18,9 @@
 
 using Java.Util;
 using MASES.JCOBridge.C2JBridge;
-using MASES.KNet.Common;
+using Org.Apache.Kafka.Common;
 
-namespace MASES.KNet.Connect.Sink
+namespace Org.Apache.Kafka.Connect.Sink
 {
     public class SinkTaskContext : JVMBridgeBase<SinkTaskContext>
     {

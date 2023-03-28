@@ -19,7 +19,7 @@
 
 using Java.Util;
 
-namespace MASES.KNet.Streams.State
+namespace Org.Apache.Kafka.Streams.State
 {
     public interface ITimestampedKeyValueStore<K, V> : IKeyValueStore<K, ValueAndTimestamp<V>>
     {

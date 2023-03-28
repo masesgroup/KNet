@@ -16,13 +16,13 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Common.Requests
+namespace Org.Apache.Kafka.Common.Requests
 {
-    public class DescribeLogDirsResponse : JCOBridge.C2JBridge.JVMBridgeBase<DescribeLogDirsResponse>
+    public class DescribeLogDirsResponse : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DescribeLogDirsResponse>
     {
         public override string ClassName => "org.apache.kafka.common.requests.DescribeLogDirsResponse";
 
-        public class LogDirInfo : JCOBridge.C2JBridge.JVMBridgeBase<LogDirInfo>
+        public class LogDirInfo : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LogDirInfo>
         {
             public override string ClassName => "org.apache.kafka.common.requests.DescribeLogDirsResponse$LogDirInfo";
         }

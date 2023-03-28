@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Common.Config
+namespace Org.Apache.Kafka.Common.Config
 {
-    public class ConfigResource : JCOBridge.C2JBridge.JVMBridgeBase<ConfigResource>
+    public class ConfigResource : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConfigResource>
     {
         public override string ClassName => "org.apache.kafka.common.config.ConfigResource";
     }

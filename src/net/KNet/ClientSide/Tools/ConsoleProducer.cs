@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Tools
+namespace Kafka.Tools
 {
     /// <summary>
     /// Class managing ConsoleProducer
     /// </summary>
-    public class ConsoleProducer : JCOBridge.C2JBridge.JVMBridgeMain<ConsoleProducer>
+    public class ConsoleProducer : MASES.JCOBridge.C2JBridge.JVMBridgeMain<ConsoleProducer>
     {
         /// <summary>
         /// Initialize a new <see cref="ConsoleProducer"/>

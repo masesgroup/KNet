@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Streams.Processor
+namespace Org.Apache.Kafka.Streams.Processor
 {
-    public class To : JCOBridge.C2JBridge.JVMBridgeBase<To>
+    public class To : MASES.JCOBridge.C2JBridge.JVMBridgeBase<To>
     {
         public override string ClassName => "org.apache.kafka.streams.processor.To";
 

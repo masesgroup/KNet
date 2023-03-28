@@ -16,17 +16,17 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common.Utils;
+using Org.Apache.Kafka.Common.Utils;
 using Java.Lang;
 using Java.Util;
 using Java.Util.Regex;
-using MASES.KNet.Streams.KStream;
-using MASES.KNet.Streams.Processor.Api;
-using MASES.KNet.Streams.State;
+using Org.Apache.Kafka.Streams.KStream;
+using Org.Apache.Kafka.Streams.Processor.Api;
+using Org.Apache.Kafka.Streams.State;
 
-namespace MASES.KNet.Streams
+namespace Org.Apache.Kafka.Streams
 {
-    public class StreamsBuilder : JCOBridge.C2JBridge.JVMBridgeBase<StreamsBuilder>
+    public class StreamsBuilder : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StreamsBuilder>
     {
         public override string ClassName => "org.apache.kafka.streams.StreamsBuilder";
 

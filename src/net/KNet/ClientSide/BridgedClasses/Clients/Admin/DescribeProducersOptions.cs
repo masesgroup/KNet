@@ -18,7 +18,7 @@
 
 using Java.Util;
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
     public class DescribeProducersOptions : AbstractOptions<DescribeProducersOptions>
     {

@@ -18,9 +18,9 @@
 
 using Java.Util;
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class ProducerState : JCOBridge.C2JBridge.JVMBridgeBase<ProducerState>
+    public class ProducerState : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ProducerState>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.ProducerState";
 

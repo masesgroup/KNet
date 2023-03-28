@@ -16,7 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Common.Serialization
+namespace Org.Apache.Kafka.Common.Serialization
 {
     public class FloatSerializer : Serializer<float>
     {

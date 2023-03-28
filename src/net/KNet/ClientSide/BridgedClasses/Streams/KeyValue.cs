@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Streams
+namespace Org.Apache.Kafka.Streams
 {
-    public class KeyValue<K, V> : JCOBridge.C2JBridge.JVMBridgeBase<KeyValue<K, V>>
+    public class KeyValue<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KeyValue<K, V>>
     {
         public override string ClassName => "org.apache.kafka.streams.KeyValue";
 

@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class SupportedVersionRange : JCOBridge.C2JBridge.JVMBridgeBase<SupportedVersionRange>
+    public class SupportedVersionRange : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SupportedVersionRange>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.SupportedVersionRange";
 

@@ -16,7 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Connect.Storage
+namespace Org.Apache.Kafka.Connect.Storage
 {
     public enum ConverterType
     {

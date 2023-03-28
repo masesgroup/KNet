@@ -16,11 +16,11 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common.Header;
+using Org.Apache.Kafka.Common.Header;
 
-namespace MASES.KNet.Clients.Producer
+namespace Org.Apache.Kafka.Clients.Producer
 {
-    public class ProducerRecord : JCOBridge.C2JBridge.JVMBridgeBase<ProducerRecord>
+    public class ProducerRecord : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ProducerRecord>
     {
         public override string ClassName => "org.apache.kafka.clients.producer.ProducerRecord";
 

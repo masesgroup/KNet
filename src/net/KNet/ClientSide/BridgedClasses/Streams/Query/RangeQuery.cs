@@ -18,7 +18,7 @@
 
 using Java.Util;
 
-namespace MASES.KNet.Streams.Query
+namespace Org.Apache.Kafka.Streams.Query
 {
     public class RangeQuery<K, V> : Query<RangeQuery<K, V>>
     {

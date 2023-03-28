@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Common.Acl
+namespace Org.Apache.Kafka.Common.Acl
 {
-    public class AclBindingFilter : JCOBridge.C2JBridge.JVMBridgeBase<AclBindingFilter>
+    public class AclBindingFilter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AclBindingFilter>
     {
         public override string ClassName => "org.apache.kafka.common.acl.AclBindingFilter";
     }

@@ -18,9 +18,9 @@
 
 using Java.Time;
 using Java.Util;
-using MASES.KNet.Streams.State;
+using Org.Apache.Kafka.Streams.State;
 
-namespace MASES.KNet.Streams.Query
+namespace Org.Apache.Kafka.Streams.Query
 {
     public class WindowKeyQuery<K, V> : Query<WindowStoreIterator<V>>
     {

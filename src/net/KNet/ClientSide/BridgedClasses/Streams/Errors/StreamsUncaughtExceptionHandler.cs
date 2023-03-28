@@ -20,7 +20,7 @@ using MASES.JCOBridge.C2JBridge;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
 using System;
 
-namespace MASES.KNet.Streams.Errors
+namespace Org.Apache.Kafka.Streams.Errors
 {
     public enum StreamThreadExceptionResponse
     {

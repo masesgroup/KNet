@@ -21,7 +21,7 @@ using MASES.JCOBridge.C2JBridge;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
 using System;
 
-namespace MASES.KNet.Common.Metrics
+namespace Org.Apache.Kafka.Common.Metrics
 {
     /// <summary>
     /// Listener for Kafka MetricsReporter. Extends <see cref="IJVMBridgeBase"/>

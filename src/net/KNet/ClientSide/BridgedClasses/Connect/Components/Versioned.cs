@@ -18,7 +18,7 @@
 
 using MASES.JCOBridge.C2JBridge;
 
-namespace MASES.KNet.Connect.Components
+namespace Org.Apache.Kafka.Connect.Components
 {
     public interface IVersion
     {

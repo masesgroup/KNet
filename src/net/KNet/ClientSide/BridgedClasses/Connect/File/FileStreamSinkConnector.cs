@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Connect.Sink;
+using Org.Apache.Kafka.Connect.Sink;
 
-namespace MASES.KNet.Connect.File
+namespace Org.Apache.Kafka.Connect.File
 {
     public class FileStreamSinkConnector : SinkConnector
     {

@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common;
+using Org.Apache.Kafka.Common;
 using Java.Util;
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class ListOffsetsResult : JCOBridge.C2JBridge.JVMBridgeBase<ListOffsetsResult>
+    public class ListOffsetsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ListOffsetsResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.ListOffsetsResult";
 
@@ -45,7 +45,7 @@ namespace MASES.KNet.Clients.Admin
 
         public KafkaFuture<Map<TopicPartition, ListOffsetsResultInfo>> All => IExecute<KafkaFuture<Map<TopicPartition, ListOffsetsResultInfo>>>("all");
 
-        public class ListOffsetsResultInfo : JCOBridge.C2JBridge.JVMBridgeBase<ListOffsetsResultInfo>
+        public class ListOffsetsResultInfo : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ListOffsetsResultInfo>
         {
             public override string ClassName => "org.apache.kafka.clients.admin.ListOffsetsResult$ListOffsetsResultInfo";
 

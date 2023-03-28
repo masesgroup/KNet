@@ -19,9 +19,9 @@
 using MASES.JCOBridge.C2JBridge;
 using Java.Util.Function;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
-using MASES.KNet.Streams.Processor;
+using Org.Apache.Kafka.Streams.Processor;
 
-namespace MASES.KNet.Streams.KStream
+namespace Org.Apache.Kafka.Streams.KStream
 {
     public interface IValueTransformerWithKeySupplier<K, V, VR> : IConnectedStoreProvider, ISupplier<ValueTransformerWithKey<K, V, VR>>
     {

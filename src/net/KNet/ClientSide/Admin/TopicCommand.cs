@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Admin
+namespace Kafka.Admin
 {
     /// <summary>
     /// Class managing TopicCommand
     /// </summary>
-    public class TopicCommand : JCOBridge.C2JBridge.JVMBridgeMain<TopicCommand>
+    public class TopicCommand : MASES.JCOBridge.C2JBridge.JVMBridgeMain<TopicCommand>
     {
         /// <summary>
         /// Initialize a new <see cref="TopicCommand"/>

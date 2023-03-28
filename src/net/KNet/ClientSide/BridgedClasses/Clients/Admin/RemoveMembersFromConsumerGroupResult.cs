@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common;
+using Org.Apache.Kafka.Common;
 using Java.Lang;
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class RemoveMembersFromConsumerGroupResult : JCOBridge.C2JBridge.JVMBridgeBase<RemoveMembersFromConsumerGroupResult>
+    public class RemoveMembersFromConsumerGroupResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RemoveMembersFromConsumerGroupResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.RemoveMembersFromConsumerGroupResult";
 

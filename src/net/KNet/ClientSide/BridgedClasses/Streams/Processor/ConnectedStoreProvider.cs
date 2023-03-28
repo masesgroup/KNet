@@ -18,9 +18,9 @@
 
 using MASES.JCOBridge.C2JBridge;
 using Java.Util;
-using MASES.KNet.Streams.State;
+using Org.Apache.Kafka.Streams.State;
 
-namespace MASES.KNet.Streams.Processor
+namespace Org.Apache.Kafka.Streams.Processor
 {
     public interface IConnectedStoreProvider : IJVMBridgeBase
     {

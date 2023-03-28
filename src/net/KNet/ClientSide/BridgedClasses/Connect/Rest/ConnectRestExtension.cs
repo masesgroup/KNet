@@ -18,7 +18,7 @@
 
 using MASES.JCOBridge.C2JBridge;
 
-namespace MASES.KNet.Connect.Rest
+namespace Org.Apache.Kafka.Connect.Rest
 {
     public class ConnectRestExtension : JVMBridgeBase<ConnectRestExtension>
     {

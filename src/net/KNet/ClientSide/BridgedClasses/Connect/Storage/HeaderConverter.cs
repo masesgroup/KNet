@@ -16,11 +16,11 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common;
-using MASES.KNet.Common.Config;
-using MASES.KNet.Connect.Data;
+using Org.Apache.Kafka.Common;
+using Org.Apache.Kafka.Common.Config;
+using Org.Apache.Kafka.Connect.Data;
 
-namespace MASES.KNet.Connect.Storage
+namespace Org.Apache.Kafka.Connect.Storage
 {
     public class HeaderConverter : Configurable
     {

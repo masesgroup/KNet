@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class TransactionListing : JCOBridge.C2JBridge.JVMBridgeBase<TransactionListing>
+    public class TransactionListing : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TransactionListing>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.TransactionListing";
 

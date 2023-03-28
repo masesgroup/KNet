@@ -19,7 +19,7 @@
 using Java.Util;
 using MASES.JCOBridge.C2JBridge;
 
-namespace MASES.KNet.Common.Config
+namespace Org.Apache.Kafka.Common.Config
 {
     public class ConfigValue : JVMBridgeBase<ConfigValue>
     {

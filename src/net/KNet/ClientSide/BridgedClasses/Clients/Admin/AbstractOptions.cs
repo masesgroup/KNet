@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class AbstractOptions<T> : JCOBridge.C2JBridge.JVMBridgeBase<AbstractOptions<T>>
+    public class AbstractOptions<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AbstractOptions<T>>
         where T : AbstractOptions<T>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.AbstractOptions";

@@ -17,11 +17,11 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using MASES.KNet.Common;
+using Org.Apache.Kafka.Common;
 using Java.Util;
-using MASES.KNet.Streams.Processor;
+using Org.Apache.Kafka.Streams.Processor;
 
-namespace MASES.KNet.Streams
+namespace Org.Apache.Kafka.Streams
 {
     public interface ITaskMetadata : IJVMBridgeBase
     {

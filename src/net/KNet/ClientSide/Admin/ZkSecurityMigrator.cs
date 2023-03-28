@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Admin
+namespace Kafka.Admin
 {
     /// <summary>
     /// Class managing ZkSecurityMigrator
     /// </summary>
-    public class ZkSecurityMigrator : JCOBridge.C2JBridge.JVMBridgeMain<ZkSecurityMigrator>
+    public class ZkSecurityMigrator : MASES.JCOBridge.C2JBridge.JVMBridgeMain<ZkSecurityMigrator>
     {
         /// <summary>
         /// Initialize a new <see cref="ZkSecurityMigrator"/>

@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common;
+using Org.Apache.Kafka.Common;
 
-namespace MASES.KNet.Clients.Consumer
+namespace Org.Apache.Kafka.Clients.Consumer
 {
     public class CommitFailedException : KafkaException
     {

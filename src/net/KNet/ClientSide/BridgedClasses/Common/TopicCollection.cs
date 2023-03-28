@@ -19,7 +19,7 @@
 using MASES.JCOBridge.C2JBridge;
 using Java.Util;
 
-namespace MASES.KNet.Common
+namespace Org.Apache.Kafka.Common
 {
     public class TopicCollection : JVMBridgeBase<TopicCollection>
     {

@@ -17,9 +17,9 @@
 */
 
 using Java.Util;
-using MASES.KNet.Streams.Processor;
+using Org.Apache.Kafka.Streams.Processor;
 
-namespace MASES.KNet.Streams.State
+namespace Org.Apache.Kafka.Streams.State
 {
     public interface IKeyValueStore<K, V> : IStateStore, IReadOnlyKeyValueStore<K, V>
     {

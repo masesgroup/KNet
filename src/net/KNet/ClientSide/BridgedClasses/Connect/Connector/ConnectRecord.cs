@@ -17,11 +17,11 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using MASES.KNet.Connect.Data;
-using MASES.KNet.Connect.Header;
+using Org.Apache.Kafka.Connect.Data;
+using Org.Apache.Kafka.Connect.Header;
 using System;
 
-namespace MASES.KNet.Connect.Connector
+namespace Org.Apache.Kafka.Connect.Connector
 {
     /// <summary>
     /// Base type for <see cref="MASES.KNet.Connect.Sink.SinkRecord"/> and <see cref="MASES.KNet.Connect.Source.SourceRecord"/>

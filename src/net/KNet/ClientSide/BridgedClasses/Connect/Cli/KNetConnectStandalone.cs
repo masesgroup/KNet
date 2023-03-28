@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Connect.Cli
+namespace Org.Apache.Kafka.Connect.Cli
 {
     /// <summary>
     /// Class managing KNetConnectStandalone
     /// </summary>
-    public class KNetConnectStandalone : JCOBridge.C2JBridge.JVMBridgeMain<KNetConnectStandalone>
+    public class KNetConnectStandalone : MASES.JCOBridge.C2JBridge.JVMBridgeMain<KNetConnectStandalone>
     {
         /// <summary>
         /// Initialize a new <see cref="KNetConnectStandalone"/>

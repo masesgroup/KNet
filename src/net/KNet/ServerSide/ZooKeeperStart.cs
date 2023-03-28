@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Tools
+namespace Org.Apache.Kafka.Tools
 {
     /// <summary>
     /// Class managing ZooKeeper start
     /// </summary>
-    public class ZooKeeperStart : JCOBridge.C2JBridge.JVMBridgeMain<ZooKeeperStart>
+    public class ZooKeeperStart : MASES.JCOBridge.C2JBridge.JVMBridgeMain<ZooKeeperStart>
     {
         /// <summary>
         /// Initialize a new <see cref="ZooKeeperStart"/>

@@ -16,7 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Connect.Json
+namespace Org.Apache.Kafka.Connect.Json
 {
     public enum DecimalFormat
     {

@@ -20,7 +20,7 @@ using Java.Lang;
 using Java.Util.Concurrent;
 using MASES.JCOBridge.C2JBridge;
 
-namespace MASES.KNet.Connect.Sink
+namespace Org.Apache.Kafka.Connect.Sink
 {
     public class ErrantRecordReporter : JVMBridgeBase<ErrantRecordReporter>
     {

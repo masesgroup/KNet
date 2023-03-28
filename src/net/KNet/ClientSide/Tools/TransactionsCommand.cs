@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Tools
+namespace Org.Apache.Kafka.Tools
 {
     /// <summary>
     /// Class managing TransactionsCommand
     /// </summary>
-    public class TransactionsCommand : JCOBridge.C2JBridge.JVMBridgeMain<TransactionsCommand>
+    public class TransactionsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeMain<TransactionsCommand>
     {
         /// <summary>
         /// Initialize a new <see cref="TransactionsCommand"/>

@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common;
+using Org.Apache.Kafka.Common;
 using Java.Util;
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class DescribeReplicaLogDirsResult : JCOBridge.C2JBridge.JVMBridgeBase<DescribeReplicaLogDirsResult>
+    public class DescribeReplicaLogDirsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DescribeReplicaLogDirsResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DescribeReplicaLogDirsResult";
 
@@ -29,7 +29,7 @@ namespace MASES.KNet.Clients.Admin
 
         public KafkaFuture<Map<TopicPartitionReplica, ReplicaLogDirInfo>> All => IExecute<KafkaFuture<Map<TopicPartitionReplica, ReplicaLogDirInfo>>>("all");
 
-        public class ReplicaLogDirInfo : JCOBridge.C2JBridge.JVMBridgeBase<DescribeReplicaLogDirsResult>
+        public class ReplicaLogDirInfo : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DescribeReplicaLogDirsResult>
         {
             public override string ClassName => "org.apache.kafka.clients.admin.DescribeReplicaLogDirsResult$ReplicaLogDirInfo";
 

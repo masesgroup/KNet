@@ -17,9 +17,9 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using MASES.KNet.Streams.State;
+using Org.Apache.Kafka.Streams.State;
 
-namespace MASES.KNet.Streams
+namespace Org.Apache.Kafka.Streams
 {
     public class StoreQueryParameters<T> : JVMBridgeBase<StoreQueryParameters<T>>
     {

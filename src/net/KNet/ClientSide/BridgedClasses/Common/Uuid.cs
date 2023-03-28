@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Common
+namespace Org.Apache.Kafka.Common
 {
-    public class Uuid : JCOBridge.C2JBridge.JVMBridgeBase<Uuid>
+    public class Uuid : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Uuid>
     {
         public override string ClassName => "org.apache.kafka.common.Uuid";
     }

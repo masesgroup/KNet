@@ -17,10 +17,10 @@
 */
 
 using Java.Util;
-using MASES.KNet.Common.Config;
-using MASES.KNet.Connect.Storage;
+using Org.Apache.Kafka.Common.Config;
+using Org.Apache.Kafka.Connect.Storage;
 
-namespace MASES.KNet.Connect.Converters
+namespace Org.Apache.Kafka.Connect.Converters
 {
     public class NumberConverterConfig : ConverterConfig
     {

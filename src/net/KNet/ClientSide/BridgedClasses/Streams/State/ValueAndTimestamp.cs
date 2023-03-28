@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Streams.State
+namespace Org.Apache.Kafka.Streams.State
 {
-    public class ValueAndTimestamp<V> : JCOBridge.C2JBridge.JVMBridgeBase<ValueAndTimestamp<V>>
+    public class ValueAndTimestamp<V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ValueAndTimestamp<V>>
     {
         public override string ClassName => "org.apache.kafka.streams.state.ValueAndTimestamp";
 

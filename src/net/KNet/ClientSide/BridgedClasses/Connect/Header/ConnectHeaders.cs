@@ -20,9 +20,9 @@ using Java.Lang;
 using Java.Math;
 using Java.Util;
 using MASES.JCOBridge.C2JBridge;
-using MASES.KNet.Connect.Data;
+using Org.Apache.Kafka.Connect.Data;
 
-namespace MASES.KNet.Connect.Header
+namespace Org.Apache.Kafka.Connect.Header
 {
     public class ConnectHeaders : Headers
     {

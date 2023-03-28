@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Tools
+namespace Org.Apache.Kafka.Tools
 {
     /// <summary>
     /// Class managing VerifiableConsumer
     /// </summary>
-    public class VerifiableConsumer : JCOBridge.C2JBridge.JVMBridgeMain<VerifiableConsumer>
+    public class VerifiableConsumer : MASES.JCOBridge.C2JBridge.JVMBridgeMain<VerifiableConsumer>
     {
         /// <summary>
         /// Initialize a new <see cref="VerifiableConsumer"/>

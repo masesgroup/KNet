@@ -17,7 +17,7 @@
 */
 
 using Java.Util.Concurrent;
-using MASES.KNet.Clients.Producer;
+using Org.Apache.Kafka.Clients.Producer;
 using MASES.KNetPS.Cmdlet;
 using System.Management.Automation;
 

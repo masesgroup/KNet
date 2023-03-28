@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common.Errors;
+using Org.Apache.Kafka.Common.Errors;
 
-namespace MASES.KNet.Common
+namespace Org.Apache.Kafka.Common
 {
     public class InvalidRecordException : ApiException
     {

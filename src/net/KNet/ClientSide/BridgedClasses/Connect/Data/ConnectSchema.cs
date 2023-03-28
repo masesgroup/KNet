@@ -18,7 +18,7 @@
 
 using Java.Util;
 
-namespace MASES.KNet.Connect.Data
+namespace Org.Apache.Kafka.Connect.Data
 {
     public class ConnectSchema : Schema
     {

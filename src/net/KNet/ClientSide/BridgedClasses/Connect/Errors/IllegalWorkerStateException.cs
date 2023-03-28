@@ -16,7 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Connect.Errors
+namespace Org.Apache.Kafka.Connect.Errors
 {
     public class IllegalWorkerStateException : ConnectException
     {

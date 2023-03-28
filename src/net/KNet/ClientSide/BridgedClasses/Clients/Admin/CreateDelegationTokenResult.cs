@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common;
-using MASES.KNet.Common.Security.Token.Delegation;
+using Org.Apache.Kafka.Common;
+using Org.Apache.Kafka.Common.Security.Token.Delegation;
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class CreateDelegationTokenResult : JCOBridge.C2JBridge.JVMBridgeBase<CreateDelegationTokenResult>
+    public class CreateDelegationTokenResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CreateDelegationTokenResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.CreateDelegationTokenResult";
 

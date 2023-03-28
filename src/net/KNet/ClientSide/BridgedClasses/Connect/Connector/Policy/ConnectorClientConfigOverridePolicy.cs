@@ -17,10 +17,10 @@
 */
 
 using Java.Util;
-using MASES.KNet.Common;
-using MASES.KNet.Common.Config;
+using Org.Apache.Kafka.Common;
+using Org.Apache.Kafka.Common.Config;
 
-namespace MASES.KNet.Connect.Connector.Policy
+namespace Org.Apache.Kafka.Connect.Connector.Policy
 {
     public class ConnectorClientConfigOverridePolicy : Configurable
     {

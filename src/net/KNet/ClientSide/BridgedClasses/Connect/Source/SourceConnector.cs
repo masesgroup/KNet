@@ -16,7 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Connect.Source
+namespace Org.Apache.Kafka.Connect.Source
 {
     public class SourceConnector : Connector.Connector
     {

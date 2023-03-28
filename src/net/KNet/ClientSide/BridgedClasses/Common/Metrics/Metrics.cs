@@ -17,11 +17,11 @@
 */
 
 using Java.Util;
-using MASES.KNet.Common.Utils;
+using Org.Apache.Kafka.Common.Utils;
 
-namespace MASES.KNet.Common.Metrics
+namespace Org.Apache.Kafka.Common.Metrics
 {
-    public class Metrics : JCOBridge.C2JBridge.JVMBridgeBase<Metrics>
+    public class Metrics : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Metrics>
     {
         public override bool IsCloseable => true;
         public override string ClassName => "org.apache.kafka.common.metrics.Metrics";

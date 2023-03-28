@@ -17,8 +17,8 @@
 */
 
 using Java.Util;
-using MASES.KNet.Clients.Admin;
-using MASES.KNet.Common.Errors;
+using Org.Apache.Kafka.Clients.Admin;
+using Org.Apache.Kafka.Common.Errors;
 using MASES.KNet.Extensions;
 using System;
 using System.Collections.Generic;

@@ -17,9 +17,9 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using MASES.KNet.Common.Header;
+using Org.Apache.Kafka.Common.Header;
 
-namespace MASES.KNet.Streams.Processor
+namespace Org.Apache.Kafka.Streams.Processor
 {
     public interface IRecordContext : IJVMBridgeBase
     {

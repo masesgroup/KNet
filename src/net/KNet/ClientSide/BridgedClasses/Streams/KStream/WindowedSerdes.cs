@@ -17,10 +17,10 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using MASES.KNet.Common.Serialization;
+using Org.Apache.Kafka.Common.Serialization;
 using Java.Lang;
 
-namespace MASES.KNet.Streams.KStream
+namespace Org.Apache.Kafka.Streams.KStream
 {
     public class WindowedSerdes : JVMBridgeBase<WindowedSerdes>
     {

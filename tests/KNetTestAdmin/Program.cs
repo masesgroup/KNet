@@ -18,8 +18,8 @@
 
 using Java.Util;
 using MASES.KNet;
-using MASES.KNet.Clients.Admin;
-using MASES.KNet.Common.Config;
+using Org.Apache.Kafka.Clients.Admin;
+using Org.Apache.Kafka.Common.Config;
 using MASES.KNet.TestCommon;
 using System;
 

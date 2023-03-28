@@ -16,15 +16,15 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common;
-using MASES.KNet.Common.Serialization;
+using Org.Apache.Kafka.Common;
+using Org.Apache.Kafka.Common.Serialization;
 using Java.Time;
 using Java.Util;
 using Java.Util.Regex;
 
-namespace MASES.KNet.Clients.Consumer
+namespace Org.Apache.Kafka.Clients.Consumer
 {
-    public class KafkaConsumer : JCOBridge.C2JBridge.JVMBridgeBase<KafkaConsumer>, IConsumer
+    public class KafkaConsumer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KafkaConsumer>, IConsumer
     {
         public override bool IsCloseable => true;
 

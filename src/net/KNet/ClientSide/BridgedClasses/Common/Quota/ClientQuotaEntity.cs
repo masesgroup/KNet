@@ -18,9 +18,9 @@
 
 using Java.Util;
 
-namespace MASES.KNet.Common.Quota
+namespace Org.Apache.Kafka.Common.Quota
 {
-    public class ClientQuotaEntity : JCOBridge.C2JBridge.JVMBridgeBase<ClientQuotaEntity>
+    public class ClientQuotaEntity : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ClientQuotaEntity>
     {
         public override string ClassName => "org.apache.kafka.common.quota.ClientQuotaEntity";
 

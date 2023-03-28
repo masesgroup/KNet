@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common;
+using Org.Apache.Kafka.Common;
 using Java.Util;
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class DescribeUserScramCredentialsResult : JCOBridge.C2JBridge.JVMBridgeBase<DescribeUserScramCredentialsResult>
+    public class DescribeUserScramCredentialsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DescribeUserScramCredentialsResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DescribeUserScramCredentialsResult";
 

@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Tools
+namespace Kafka.Tools
 {
     /// <summary>
     /// Class managing MirrorMaker
     /// </summary>
-    public class MirrorMaker : JCOBridge.C2JBridge.JVMBridgeMain<MirrorMaker>
+    public class MirrorMaker : MASES.JCOBridge.C2JBridge.JVMBridgeMain<MirrorMaker>
     {
         /// <summary>
         /// Initialize a new <see cref="MirrorMaker"/>

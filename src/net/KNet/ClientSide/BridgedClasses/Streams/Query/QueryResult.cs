@@ -17,11 +17,11 @@
 */
 
 using Java.Util;
-using MASES.KNet.Streams.Processor;
+using Org.Apache.Kafka.Streams.Processor;
 
-namespace MASES.KNet.Streams.Query
+namespace Org.Apache.Kafka.Streams.Query
 {
-    public class QueryResult<R> : JCOBridge.C2JBridge.JVMBridgeBase<QueryResult<R>>
+    public class QueryResult<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<QueryResult<R>>
     {
         public override bool IsInterface => true;
 

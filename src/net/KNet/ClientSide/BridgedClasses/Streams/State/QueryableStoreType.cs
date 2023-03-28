@@ -17,9 +17,9 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using MASES.KNet.Streams.Processor;
+using Org.Apache.Kafka.Streams.Processor;
 
-namespace MASES.KNet.Streams.State
+namespace Org.Apache.Kafka.Streams.State
 {
     public interface IQueryableStoreType<T> : IJVMBridgeBase
     {

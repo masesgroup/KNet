@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class OffsetSpec : JCOBridge.C2JBridge.JVMBridgeBase<OffsetSpec>
+    public class OffsetSpec : MASES.JCOBridge.C2JBridge.JVMBridgeBase<OffsetSpec>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.OffsetSpec";
     }

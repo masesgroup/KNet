@@ -20,7 +20,7 @@ using MASES.JCOBridge.C2JBridge;
 using Java.Time;
 using Java.Util;
 
-namespace MASES.KNet.Streams.KStream
+namespace Org.Apache.Kafka.Streams.KStream
 {
     public interface IStrictBufferConfig : IBufferConfig<StrictBufferConfig>
     {

@@ -19,7 +19,7 @@
 using MASES.JCOBridge.C2JBridge;
 using Java.Util.Function;
 
-namespace MASES.KNet.Streams.KStream
+namespace Org.Apache.Kafka.Streams.KStream
 {
     public class Branched<K, V> : JVMBridgeBase<Branched<K, V>>, INamedOperation<Branched<K, V>>
     {

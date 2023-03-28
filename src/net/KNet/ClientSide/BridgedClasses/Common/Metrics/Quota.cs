@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Common.Metrics
+namespace Org.Apache.Kafka.Common.Metrics
 {
-    public class Quota : JCOBridge.C2JBridge.JVMBridgeBase<Quota>
+    public class Quota : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Quota>
     {
         public override string ClassName => "org.apache.kafka.common.metrics.Quota";
 

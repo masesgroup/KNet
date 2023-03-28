@@ -17,12 +17,12 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using MASES.KNet.Common;
+using Org.Apache.Kafka.Common;
 using Java.Time;
 using Java.Util;
 using Java.Util.Regex;
 
-namespace MASES.KNet.Clients.Consumer
+namespace Org.Apache.Kafka.Clients.Consumer
 {
     public interface IConsumer: IJVMBridgeBase, System.IDisposable
     {

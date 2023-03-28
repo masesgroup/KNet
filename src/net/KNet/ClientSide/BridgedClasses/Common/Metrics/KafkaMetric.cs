@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Common.Metrics
+namespace Org.Apache.Kafka.Common.Metrics
 {
-    public class KafkaMetric : JCOBridge.C2JBridge.JVMBridgeBase<KafkaMetric>
+    public class KafkaMetric : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KafkaMetric>
     {
         public override string ClassName => "org.apache.kafka.common.metrics.KafkaMetric";
 

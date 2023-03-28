@@ -18,12 +18,12 @@
 
 using Java.Util;
 using MASES.JCOBridge.C2JBridge;
-using MASES.KNet.Common.Config;
-using MASES.KNet.Connect.Data;
-using MASES.KNet.Connect.Header;
-using MASES.KNet.Connect.Storage;
+using Org.Apache.Kafka.Common.Config;
+using Org.Apache.Kafka.Connect.Data;
+using Org.Apache.Kafka.Connect.Header;
+using Org.Apache.Kafka.Connect.Storage;
 
-namespace MASES.KNet.Connect.Json
+namespace Org.Apache.Kafka.Connect.Json
 {
     public class JsonConverter : JVMBridgeBase<JsonConverter>
     {

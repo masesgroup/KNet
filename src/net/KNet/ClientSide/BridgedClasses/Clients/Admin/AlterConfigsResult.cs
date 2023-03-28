@@ -16,14 +16,14 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common;
-using MASES.KNet.Common.Config;
+using Org.Apache.Kafka.Common;
+using Org.Apache.Kafka.Common.Config;
 using Java.Lang;
 using Java.Util;
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class AlterConfigsResult : JCOBridge.C2JBridge.JVMBridgeBase<AlterConfigsResult>
+    public class AlterConfigsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AlterConfigsResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.AlterConfigsResult";
 

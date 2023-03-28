@@ -18,7 +18,7 @@
 
 using Java.Time;
 
-namespace MASES.KNet.Streams.KStream
+namespace Org.Apache.Kafka.Streams.KStream
 {
     public class JoinWindows : Windows<Window>
     {

@@ -18,7 +18,7 @@
 
 using MASES.JCOBridge.C2JBridge;
 
-namespace MASES.KNet.Common
+namespace Org.Apache.Kafka.Common
 {
     public interface IMetric : IJVMBridgeBase
     {     

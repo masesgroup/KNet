@@ -16,7 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Streams.KStream.Internals
+namespace Org.Apache.Kafka.Streams.KStream.Internals
 {
     public class UnlimitedWindow : Window    
     {

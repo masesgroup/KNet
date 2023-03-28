@@ -16,7 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Common.Metrics
+namespace Org.Apache.Kafka.Common.Metrics
 {
     public interface IMeasurableStat : IStat, IMeasurable
     {

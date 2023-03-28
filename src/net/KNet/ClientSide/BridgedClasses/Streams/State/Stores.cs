@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common.Serialization;
+using Org.Apache.Kafka.Common.Serialization;
 using Java.Time;
 
-namespace MASES.KNet.Streams.State
+namespace Org.Apache.Kafka.Streams.State
 {
-    public class Stores : JCOBridge.C2JBridge.JVMBridgeBase<Stores>
+    public class Stores : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Stores>
     {
         public override string ClassName => "org.apache.kafka.streams.state.Stores";
 

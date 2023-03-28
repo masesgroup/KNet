@@ -17,12 +17,12 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using MASES.KNet.Clients.Consumer;
-using MASES.KNet.Clients.Producer;
+using Org.Apache.Kafka.Clients.Consumer;
+using Org.Apache.Kafka.Clients.Producer;
 using Java.Util;
 using System;
 
-namespace MASES.KNet.Streams.Processor
+namespace Org.Apache.Kafka.Streams.Processor
 {
     /// <summary>
     /// Listener for Kafka KafkaClientSupplier. Extends <see cref="IJVMBridgeBase"/>

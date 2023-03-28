@@ -18,9 +18,9 @@
 
 using Java.Util.Function;
 using Java.Util;
-using MASES.KNet.Streams.State;
+using Org.Apache.Kafka.Streams.State;
 
-namespace MASES.KNet.Streams.Processor.Api
+namespace Org.Apache.Kafka.Streams.Processor.Api
 {
     public interface IFixedKeyProcessorSupplier<KIn, VIn, VOut> : IConnectedStoreProvider, ISupplier<FixedKeyProcessorSupplier<KIn, VIn, VOut>>
     {

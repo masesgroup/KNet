@@ -16,14 +16,14 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common.Serialization;
+using Org.Apache.Kafka.Common.Serialization;
 using Java.Time;
 using Java.Util;
 using MASES.JCOBridge.C2JBridge;
 using System;
 using System.Collections.Concurrent;
 
-namespace MASES.KNet.Clients.Consumer
+namespace Org.Apache.Kafka.Clients.Consumer
 {
     public class Message<K, V>
     {

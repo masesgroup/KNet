@@ -19,7 +19,7 @@
 using MASES.JCOBridge.C2JBridge;
 using Java.Util;
 
-namespace MASES.KNet.Common.Metrics
+namespace Org.Apache.Kafka.Common.Metrics
 {
     public class NamedMeasurable : JVMBridgeBase<NamedMeasurable>
     {

@@ -20,10 +20,10 @@ using MASES.JCOBridge.C2JBridge;
 using Java.Util.Function;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
 using Java.Util;
-using MASES.KNet.Streams.Processor;
-using MASES.KNet.Streams.State;
+using Org.Apache.Kafka.Streams.Processor;
+using Org.Apache.Kafka.Streams.State;
 
-namespace MASES.KNet.Streams.KStream
+namespace Org.Apache.Kafka.Streams.KStream
 {
     public interface ITransformerSupplier<K, V, R> : IConnectedStoreProvider, ISupplier<Transformer<K, V, R>>
     {

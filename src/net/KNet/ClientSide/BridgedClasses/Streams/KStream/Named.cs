@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Streams.KStream
+namespace Org.Apache.Kafka.Streams.KStream
 {
-    public class Named : JCOBridge.C2JBridge.JVMBridgeBase<Named>
+    public class Named : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Named>
     {
         public override string ClassName => "org.apache.kafka.streams.kstream.Named";
 

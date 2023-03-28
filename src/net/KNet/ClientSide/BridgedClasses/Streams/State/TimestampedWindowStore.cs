@@ -19,9 +19,9 @@
 
 using Java.Time;
 using Java.Util;
-using MASES.KNet.Streams.KStream;
+using Org.Apache.Kafka.Streams.KStream;
 
-namespace MASES.KNet.Streams.State
+namespace Org.Apache.Kafka.Streams.State
 {
     public interface ITimestampedWindowStore<K, V> : IWindowStore<K, ValueAndTimestamp<V>>
     {

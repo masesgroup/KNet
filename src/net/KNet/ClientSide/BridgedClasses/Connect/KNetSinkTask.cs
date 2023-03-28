@@ -18,10 +18,10 @@
 
 using Java.Util;
 using MASES.JNet.Extensions;
-using MASES.KNet.Connect.Sink;
+using Org.Apache.Kafka.Connect.Sink;
 using System.Collections.Generic;
 
-namespace MASES.KNet.Connect
+namespace Org.Apache.Kafka.Connect
 {
     /// <summary>
     /// An implementation of <see cref="KNetTask{TTask}"/> for sink task

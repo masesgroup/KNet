@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Admin
+namespace Kafka.Admin
 {
     /// <summary>
     /// Class managing DeleteRecordsCommand
     /// </summary>
-    public class DeleteRecordsCommand : JCOBridge.C2JBridge.JVMBridgeMain<DeleteRecordsCommand>
+    public class DeleteRecordsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeMain<DeleteRecordsCommand>
     {
         /// <summary>
         /// Initialize a new <see cref="DeleteRecordsCommand"/>

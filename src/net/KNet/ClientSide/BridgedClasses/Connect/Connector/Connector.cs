@@ -18,10 +18,10 @@
 
 using Java.Lang;
 using Java.Util;
-using MASES.KNet.Common.Config;
-using MASES.KNet.Connect.Components;
+using Org.Apache.Kafka.Common.Config;
+using Org.Apache.Kafka.Connect.Components;
 
-namespace MASES.KNet.Connect.Connector
+namespace Org.Apache.Kafka.Connect.Connector
 {
     public interface IConnector : IVersion
     {

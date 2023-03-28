@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Common.Acl
+namespace Org.Apache.Kafka.Common.Acl
 {
-    public class AclBinding : JCOBridge.C2JBridge.JVMBridgeBase<AclBinding>
+    public class AclBinding : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AclBinding>
     {
         public override string ClassName => "org.apache.kafka.common.acl.AclBinding";
     }

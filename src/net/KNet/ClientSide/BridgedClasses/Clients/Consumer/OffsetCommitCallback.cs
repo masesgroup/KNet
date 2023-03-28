@@ -18,11 +18,11 @@
 
 using MASES.JCOBridge.C2JBridge;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
-using MASES.KNet.Common;
+using Org.Apache.Kafka.Common;
 using Java.Util;
 using System;
 
-namespace MASES.KNet.Clients.Consumer
+namespace Org.Apache.Kafka.Clients.Consumer
 {
     /// <summary>
     /// Listener for Kafka OffsetCommitCallback. Extends <see cref="IJVMBridgeBase"/>

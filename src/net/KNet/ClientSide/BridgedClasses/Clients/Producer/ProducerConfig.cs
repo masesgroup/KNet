@@ -16,10 +16,10 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common.Config;
+using Org.Apache.Kafka.Common.Config;
 using Java.Util;
 
-namespace MASES.KNet.Clients.Producer
+namespace Org.Apache.Kafka.Clients.Producer
 {
     public class ProducerConfig : AbstractConfig<ProducerConfig>
     {

@@ -20,11 +20,11 @@ using Java.Util;
 using MASES.JCOBridge.C2JBridge;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
 using MASES.JNet.Extensions;
-using MASES.KNet.Connect.Connector;
+using Org.Apache.Kafka.Connect.Connector;
 using System;
 using System.Collections.Generic;
 
-namespace MASES.KNet.Connect
+namespace Org.Apache.Kafka.Connect
 {
     /// <summary>
     /// Specific implementation of <see cref="ITask"/> to support KNet Connect SDK
@@ -107,7 +107,7 @@ namespace MASES.KNet.Connect
         {
             if (reflectedTask != null)
             {
-                JCOBridge.C2JBridge.IJVMBridgeBase jvmBBD = data as JCOBridge.C2JBridge.IJVMBridgeBase;
+                IJVMBridgeBase jvmBBD = data as IJVMBridgeBase;
                 reflectedTask.Invoke("setDataToExchange", jvmBBD != null ? jvmBBD.Instance : data);
             }
             else

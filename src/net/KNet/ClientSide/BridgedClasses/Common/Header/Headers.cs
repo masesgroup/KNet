@@ -18,7 +18,7 @@
 
 using Java.Lang;
 
-namespace MASES.KNet.Common.Header
+namespace Org.Apache.Kafka.Common.Header
 {
     public class Headers : Iterable<Header>
     {

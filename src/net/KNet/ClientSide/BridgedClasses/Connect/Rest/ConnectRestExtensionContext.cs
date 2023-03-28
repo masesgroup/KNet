@@ -17,9 +17,9 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using MASES.KNet.Connect.Health;
+using Org.Apache.Kafka.Connect.Health;
 
-namespace MASES.KNet.Connect.Rest
+namespace Org.Apache.Kafka.Connect.Rest
 {
     public class ConnectRestExtensionContext : JVMBridgeBase<ConnectRestExtensionContext>
     {

@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Tools
+namespace Kafka.Tools
 {
     /// <summary>
     /// Class managing GetOffsetShell
     /// </summary>
-    public class GetOffsetShell : JCOBridge.C2JBridge.JVMBridgeMain<GetOffsetShell>
+    public class GetOffsetShell : MASES.JCOBridge.C2JBridge.JVMBridgeMain<GetOffsetShell>
     {
         /// <summary>
         /// Initialize a new <see cref="GetOffsetShell"/>

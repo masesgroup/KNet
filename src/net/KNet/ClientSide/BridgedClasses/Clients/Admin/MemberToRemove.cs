@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class MemberToRemove : JCOBridge.C2JBridge.JVMBridgeBase<MemberToRemove>
+    public class MemberToRemove : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MemberToRemove>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.MemberToRemove";
 

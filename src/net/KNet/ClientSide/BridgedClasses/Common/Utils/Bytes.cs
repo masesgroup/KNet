@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Common.Utils
+namespace Org.Apache.Kafka.Common.Utils
 {
-    public class Bytes : JCOBridge.C2JBridge.JVMBridgeBase<Bytes>
+    public class Bytes : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Bytes>
     {
         public override string ClassName => "org.apache.kafka.common.utils.Bytes";
 

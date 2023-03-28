@@ -16,7 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Clients.Consumer;
+using Org.Apache.Kafka.Clients.Consumer;
 using System;
 using System.Threading;
 using System.Threading.Tasks;

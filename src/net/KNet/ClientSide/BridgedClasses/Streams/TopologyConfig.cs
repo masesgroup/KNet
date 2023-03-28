@@ -16,13 +16,13 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Clients;
-using MASES.KNet.Common.Config;
+using Org.Apache.Kafka.Clients;
+using Org.Apache.Kafka.Common.Config;
 using Java.Util;
-using MASES.KNet.Streams.KStream;
+using Org.Apache.Kafka.Streams.KStream;
 using MASES.JCOBridge.C2JBridge;
 
-namespace MASES.KNet.Streams
+namespace Org.Apache.Kafka.Streams
 {
     public class TopologyConfig : AbstractConfig<TopologyConfig>
     {

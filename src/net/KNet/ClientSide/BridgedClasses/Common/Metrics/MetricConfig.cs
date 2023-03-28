@@ -19,9 +19,9 @@
 using Java.Util;
 using Java.Util.Concurrent;
 
-namespace MASES.KNet.Common.Metrics
+namespace Org.Apache.Kafka.Common.Metrics
 {
-    public class MetricConfig : JCOBridge.C2JBridge.JVMBridgeBase<MetricConfig>
+    public class MetricConfig : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MetricConfig>
     {
         public override string ClassName => "org.apache.kafka.common.metrics.MetricConfig";
 

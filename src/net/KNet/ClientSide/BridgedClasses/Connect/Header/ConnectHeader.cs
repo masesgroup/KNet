@@ -16,7 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Connect.Header
+namespace Org.Apache.Kafka.Connect.Header
 {
     public class ConnectHeader : Header
     {

@@ -19,10 +19,11 @@
 using MASES.JCOBridge.C2JBridge;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
 using MASES.JNet;
+using MASES.KNet;
 using System;
 using System.Reflection;
 
-namespace MASES.KNet.Connect
+namespace Org.Apache.Kafka.Connect
 {
     /// <summary>
     /// Internal class used to proxy and pairs data exchange with Java side

@@ -17,10 +17,10 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using MASES.KNet.Clients.Consumer;
+using Org.Apache.Kafka.Clients.Consumer;
 using System;
 
-namespace MASES.KNet.Streams.Processor
+namespace Org.Apache.Kafka.Streams.Processor
 {
     /// <summary>
     /// Listener for Kafka TimestampExtractor. Extends <see cref="IJVMBridgeBase"/>

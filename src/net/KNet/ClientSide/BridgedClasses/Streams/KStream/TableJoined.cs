@@ -18,9 +18,9 @@
 
 using MASES.JCOBridge.C2JBridge;
 using Java.Lang;
-using MASES.KNet.Streams.Processor;
+using Org.Apache.Kafka.Streams.Processor;
 
-namespace MASES.KNet.Streams.KStream
+namespace Org.Apache.Kafka.Streams.KStream
 {
     public class TableJoined<K, KO> : JVMBridgeBase<TableJoined<K, KO>>, INamedOperation<TableJoined<K, KO>>
     {

@@ -18,9 +18,9 @@
 
 using Java.Util;
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class NewTopic : JCOBridge.C2JBridge.JVMBridgeBase<NewTopic>
+    public class NewTopic : MASES.JCOBridge.C2JBridge.JVMBridgeBase<NewTopic>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.NewTopic";
 

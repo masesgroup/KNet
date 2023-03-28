@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common.Utils;
+using Org.Apache.Kafka.Common.Utils;
 
-namespace MASES.KNet.Streams.State
+namespace Org.Apache.Kafka.Streams.State
 {
     public interface IWindowBytesStoreSupplier : IStoreSupplier<WindowStore<Bytes, byte[]>>
     {

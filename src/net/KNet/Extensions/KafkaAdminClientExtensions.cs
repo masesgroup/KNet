@@ -18,12 +18,12 @@
 
 using Java.Util;
 using Java.Util.Concurrent;
-using MASES.KNet.Clients.Admin;
-using MASES.KNet.Clients.Consumer;
-using MASES.KNet.Common;
-using MASES.KNet.Common.Acl;
-using MASES.KNet.Common.Config;
-using MASES.KNet.Common.Quota;
+using Org.Apache.Kafka.Clients.Admin;
+using Org.Apache.Kafka.Clients.Consumer;
+using Org.Apache.Kafka.Common;
+using Org.Apache.Kafka.Common.Acl;
+using Org.Apache.Kafka.Common.Config;
+using Org.Apache.Kafka.Common.Quota;
 using System;
 using System.Threading.Tasks;
 

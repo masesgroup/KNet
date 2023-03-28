@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Tools
+namespace Kafka.Tools
 {
     /// <summary>
     /// Class managing DumpLogSegments
     /// </summary>
-    public class DumpLogSegments : JCOBridge.C2JBridge.JVMBridgeMain<DumpLogSegments>
+    public class DumpLogSegments : MASES.JCOBridge.C2JBridge.JVMBridgeMain<DumpLogSegments>
     {
         /// <summary>
         /// Initialize a new <see cref="DumpLogSegments"/>

@@ -16,15 +16,15 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common.Serialization;
+using Org.Apache.Kafka.Common.Serialization;
 using Java.Lang;
 using Java.Util.Regex;
-using MASES.KNet.Streams.Processor;
-using MASES.KNet.Streams.State;
+using Org.Apache.Kafka.Streams.Processor;
+using Org.Apache.Kafka.Streams.State;
 
-namespace MASES.KNet.Streams
+namespace Org.Apache.Kafka.Streams
 {
-    public class Topology : JCOBridge.C2JBridge.JVMBridgeBase<Topology>
+    public class Topology : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Topology>
     {
         public enum AutoOffsetReset
         {

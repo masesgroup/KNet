@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Clients.Consumer
+namespace Org.Apache.Kafka.Clients.Consumer
 {
-    public class RoundRobinAssignor : JCOBridge.C2JBridge.JVMBridgeBase<RoundRobinAssignor>
+    public class RoundRobinAssignor : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RoundRobinAssignor>
     {
         public override string ClassName => "org.apache.kafka.clients.consumer.RoundRobinAssignor";
     }

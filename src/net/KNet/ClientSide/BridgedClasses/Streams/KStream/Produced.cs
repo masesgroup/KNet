@@ -17,10 +17,10 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using MASES.KNet.Common.Serialization;
-using MASES.KNet.Streams.Processor;
+using Org.Apache.Kafka.Common.Serialization;
+using Org.Apache.Kafka.Streams.Processor;
 
-namespace MASES.KNet.Streams.KStream
+namespace Org.Apache.Kafka.Streams.KStream
 {
     public class Produced<K, V> : JVMBridgeBase<Produced<K, V>>, INamedOperation<Produced<K, V>>
     {

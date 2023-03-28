@@ -16,12 +16,13 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common.Metrics;
+using Org.Apache.Kafka.Common.Metrics;
 using Java.Util;
+using MASES.KNet;
 
-namespace MASES.KNet.Clients
+namespace Org.Apache.Kafka.Clients
 {
-    public class CommonClientConfigs : JCOBridge.C2JBridge.JVMBridgeBase<CommonClientConfigs>
+    public class CommonClientConfigs : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CommonClientConfigs>
     {
         public override string ClassName => "org.apache.kafka.clients.CommonClientConfigs";
 

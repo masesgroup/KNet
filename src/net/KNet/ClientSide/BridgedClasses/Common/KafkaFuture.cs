@@ -19,13 +19,13 @@
 using Java.Lang;
 using Java.Util.Concurrent;
 
-namespace MASES.KNet.Common
+namespace Org.Apache.Kafka.Common
 {
     public class KafkaFuture<E> : Future<E>
     {
         public override string ClassName => "org.apache.kafka.common.KafkaFuture";
 
-        public static KafkaFuture<Void> AllOf<T>(params KafkaFuture<T>[] futures) where T : JCOBridge.C2JBridge.JVMBridgeBase, new()
+        public static KafkaFuture<Void> AllOf<T>(params KafkaFuture<T>[] futures) where T : MASES.JCOBridge.C2JBridge.JVMBridgeBase, new()
         {
             return futures.Length == 0 ? SExecute<KafkaFuture<Void>>("allOf") : SExecute<KafkaFuture<Void>>("allOf", futures);
         }

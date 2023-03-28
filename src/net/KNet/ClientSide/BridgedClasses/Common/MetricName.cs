@@ -18,9 +18,9 @@
 
 using Java.Util;
 
-namespace MASES.KNet.Common
+namespace Org.Apache.Kafka.Common
 {
-    public class MetricName : JCOBridge.C2JBridge.JVMBridgeBase<MetricName>
+    public class MetricName : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MetricName>
     {
         public override string ClassName => "org.apache.kafka.common.MetricName";
 

@@ -18,9 +18,9 @@
 
 using Java.Util;
 
-namespace MASES.KNet.Streams.Query
+namespace Org.Apache.Kafka.Streams.Query
 {
-    public class Position : JCOBridge.C2JBridge.JVMBridgeBase<Position>
+    public class Position : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Position>
     {
         public override string ClassName => "org.apache.kafka.streams.query.Position";
 

@@ -16,13 +16,13 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common.Utils;
+using Org.Apache.Kafka.Common.Utils;
 using Java.Lang;
 using Java.Util;
 
-namespace MASES.KNet.Common.Serialization
+namespace Org.Apache.Kafka.Common.Serialization
 {
-    public class Serdes : JCOBridge.C2JBridge.JVMBridgeBase<Serdes>
+    public class Serdes : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Serdes>
     {
         public override string ClassName => "org.apache.kafka.common.serialization.Serdes";
         /* disabled to be checked

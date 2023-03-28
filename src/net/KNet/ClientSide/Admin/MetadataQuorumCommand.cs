@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Admin
+namespace Kafka.Admin
 {
     /// <summary>
     /// Class managing MetadataQuorumCommand
     /// </summary>
-    public class MetadataQuorumCommand : JCOBridge.C2JBridge.JVMBridgeMain<MetadataQuorumCommand>
+    public class MetadataQuorumCommand : MASES.JCOBridge.C2JBridge.JVMBridgeMain<MetadataQuorumCommand>
     {
         /// <summary>
         /// Initialize a new <see cref="ZkSecurityMigrator"/>

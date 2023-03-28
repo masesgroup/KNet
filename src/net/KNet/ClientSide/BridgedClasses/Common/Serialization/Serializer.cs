@@ -18,10 +18,10 @@
 
 using MASES.JCOBridge.C2JBridge;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
-using MASES.KNet.Common.Header;
+using Org.Apache.Kafka.Common.Header;
 using System;
 
-namespace MASES.KNet.Common.Serialization
+namespace Org.Apache.Kafka.Common.Serialization
 {
     /// <summary>
     /// Listener for Kafka Serializer. Extends <see cref="IJVMBridgeBase"/>

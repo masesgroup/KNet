@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common.Security.Auth;
+using Org.Apache.Kafka.Common.Security.Auth;
 using Java.Util;
 
-namespace MASES.KNet.Common.Security.Token.Delegation
+namespace Org.Apache.Kafka.Common.Security.Token.Delegation
 {
-    public class TokenInformation : JCOBridge.C2JBridge.JVMBridgeBase<TokenInformation>
+    public class TokenInformation : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TokenInformation>
     {
         public override string ClassName => "org.apache.kafka.common.security.token.delegation.TokenInformation";
 

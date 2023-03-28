@@ -17,10 +17,10 @@
 */
 
 using Java.Util;
-using MASES.KNet.Clients.Producer;
-using MASES.KNet.Connect.Connector;
+using Org.Apache.Kafka.Clients.Producer;
+using Org.Apache.Kafka.Connect.Connector;
 
-namespace MASES.KNet.Connect.Source
+namespace Org.Apache.Kafka.Connect.Source
 {
     public class SourceTask : Task
     {

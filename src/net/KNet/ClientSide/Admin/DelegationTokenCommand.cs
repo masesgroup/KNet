@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Admin
+namespace Kafka.Admin
 {
     /// <summary>
     /// Class managing DelegationTokenCommand
     /// </summary>
-    public class DelegationTokenCommand : JCOBridge.C2JBridge.JVMBridgeMain<DelegationTokenCommand>
+    public class DelegationTokenCommand : MASES.JCOBridge.C2JBridge.JVMBridgeMain<DelegationTokenCommand>
     {
         /// <summary>
         /// Initialize a new <see cref="DelegationTokenCommand"/>

@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Streams.KStream
+namespace Org.Apache.Kafka.Streams.KStream
 {
-    public class Windowed : JCOBridge.C2JBridge.JVMBridgeBase<Windowed>
+    public class Windowed : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Windowed>
     {
         public override string ClassName => "org.apache.kafka.streams.kstream.Windowed";
 

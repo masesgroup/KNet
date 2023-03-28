@@ -19,7 +19,7 @@
 using MASES.JCOBridge.C2JBridge;
 using System;
 
-namespace MASES.KNet.Streams.KStream
+namespace Org.Apache.Kafka.Streams.KStream
 {
     /// <summary>
     /// Listener for Kafka ValueJoiner. Extends <see cref="IJVMBridgeBase"/>

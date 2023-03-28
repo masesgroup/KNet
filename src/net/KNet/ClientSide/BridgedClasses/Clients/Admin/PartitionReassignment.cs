@@ -18,9 +18,9 @@
 
 using Java.Util;
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class PartitionReassignment : JCOBridge.C2JBridge.JVMBridgeBase<PartitionReassignment>
+    public class PartitionReassignment : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PartitionReassignment>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.PartitionReassignment";
 

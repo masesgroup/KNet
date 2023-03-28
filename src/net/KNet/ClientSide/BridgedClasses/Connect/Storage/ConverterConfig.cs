@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common.Config;
+using Org.Apache.Kafka.Common.Config;
 
-namespace MASES.KNet.Connect.Storage
+namespace Org.Apache.Kafka.Connect.Storage
 {
     public class ConverterConfig : AbstractConfig<ConverterConfig>
     {

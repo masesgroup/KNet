@@ -16,7 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Common.Acl
+namespace Org.Apache.Kafka.Common.Acl
 {
     public enum AclOperation
     {

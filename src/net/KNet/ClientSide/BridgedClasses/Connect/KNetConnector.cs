@@ -21,13 +21,13 @@ using Java.Util;
 using MASES.JCOBridge.C2JBridge;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
 using MASES.JNet.Extensions;
-using MASES.KNet.Common.Config;
-using MASES.KNet.Connect.Connector;
+using Org.Apache.Kafka.Common.Config;
+using Org.Apache.Kafka.Connect.Connector;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 
-namespace MASES.KNet.Connect
+namespace Org.Apache.Kafka.Connect
 {
     /// <summary>
     /// Specific implementation of <see cref="IConnector"/> to support KNet Connect SDK
@@ -131,7 +131,7 @@ namespace MASES.KNet.Connect
             reflectedConnector ??= KNetConnectProxy.GetJVMGlobal(ReflectedConnectorClassName);
             if (reflectedConnector != null)
             {
-                JCOBridge.C2JBridge.IJVMBridgeBase jvmBBD = data as JCOBridge.C2JBridge.IJVMBridgeBase;
+                IJVMBridgeBase jvmBBD = data as IJVMBridgeBase;
                 reflectedConnector.Invoke("setDataToExchange", jvmBBD != null ? jvmBBD.Instance : data);
             }
             else

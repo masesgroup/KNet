@@ -18,9 +18,9 @@
 
 using Java.Util;
 
-namespace MASES.KNet.Clients.Consumer
+namespace Org.Apache.Kafka.Clients.Consumer
 {
-    public class ConsumerGroupMetadata : JCOBridge.C2JBridge.JVMBridgeBase<ConsumerGroupMetadata>
+    public class ConsumerGroupMetadata : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConsumerGroupMetadata>
     {
         public override string ClassName => "org.apache.kafka.clients.consumer.ConsumerGroupMetadata";
 

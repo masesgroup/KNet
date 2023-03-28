@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Streams.Query
+namespace Org.Apache.Kafka.Streams.Query
 {
-    public class PositionBound : JCOBridge.C2JBridge.JVMBridgeBase<PositionBound>
+    public class PositionBound : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PositionBound>
     {
         public override string ClassName => "org.apache.kafka.streams.query.PositionBound";
 

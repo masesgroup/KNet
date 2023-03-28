@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Streams.Query
+namespace Org.Apache.Kafka.Streams.Query
 {
-    public class QueryConfig : JCOBridge.C2JBridge.JVMBridgeBase<QueryConfig>
+    public class QueryConfig : MASES.JCOBridge.C2JBridge.JVMBridgeBase<QueryConfig>
     {
         public override string ClassName => "org.apache.kafka.streams.query.QueryConfig";
 

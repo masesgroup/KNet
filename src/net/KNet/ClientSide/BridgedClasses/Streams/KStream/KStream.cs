@@ -17,13 +17,13 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using MASES.KNet.Common.Utils;
+using Org.Apache.Kafka.Common.Utils;
 using Java.Lang;
-using MASES.KNet.Streams.Processor;
-using MASES.KNet.Streams.State;
-using MASES.KNet.Streams.Processor.Api;
+using Org.Apache.Kafka.Streams.Processor;
+using Org.Apache.Kafka.Streams.State;
+using Org.Apache.Kafka.Streams.Processor.Api;
 
-namespace MASES.KNet.Streams.KStream
+namespace Org.Apache.Kafka.Streams.KStream
 {
     public interface IKStream<K, V> : IJVMBridgeBase
     {

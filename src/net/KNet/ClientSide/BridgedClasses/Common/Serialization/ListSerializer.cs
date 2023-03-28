@@ -18,7 +18,7 @@
 
 using Java.Util;
 
-namespace MASES.KNet.Common.Serialization
+namespace Org.Apache.Kafka.Common.Serialization
 {
     public class ListSerializer<Inner> : Serializer<List<Inner>>
     {

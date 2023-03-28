@@ -18,9 +18,9 @@
 
 using Java.Lang;
 using Java.Util;
-using MASES.KNet.Common;
+using Org.Apache.Kafka.Common;
 
-namespace MASES.KNet.Clients.Consumer
+namespace Org.Apache.Kafka.Clients.Consumer
 {
     public class ConsumerRecords<K, V> : Iterable<ConsumerRecord<K, V>>
     {

@@ -16,7 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Connect.Sink
+namespace Org.Apache.Kafka.Connect.Sink
 {
     public class SinkConnector : Connector.Connector
     {

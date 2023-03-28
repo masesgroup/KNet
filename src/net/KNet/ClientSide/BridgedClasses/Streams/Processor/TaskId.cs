@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Streams.Processor
+namespace Org.Apache.Kafka.Streams.Processor
 {
-    public class TaskId : JCOBridge.C2JBridge.JVMBridgeBase<TaskId>
+    public class TaskId : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TaskId>
     {
         public override string ClassName => "org.apache.kafka.streams.processor.TaskId";
 

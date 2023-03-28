@@ -16,7 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Connect.Connector.Policy
+namespace Org.Apache.Kafka.Connect.Connector.Policy
 {
     public class NoneConnectorClientConfigOverridePolicy : AbstractConnectorClientConfigOverridePolicy
     {

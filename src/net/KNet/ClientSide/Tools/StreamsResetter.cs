@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Tools
+namespace Kafka.Tools
 {
     /// <summary>
     /// Class managing StreamsResetter
     /// </summary>
-    public class StreamsResetter : JCOBridge.C2JBridge.JVMBridgeMain<StreamsResetter>
+    public class StreamsResetter : MASES.JCOBridge.C2JBridge.JVMBridgeMain<StreamsResetter>
     {
         /// <summary>
         /// Initialize a new <see cref="StreamsResetter"/>

@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Tools
+namespace Kafka.Tools
 {
     /// <summary>
     /// Class managing ProducerPerformance
     /// </summary>
-    public class ProducerPerformance : JCOBridge.C2JBridge.JVMBridgeMain<ProducerPerformance>
+    public class ProducerPerformance : MASES.JCOBridge.C2JBridge.JVMBridgeMain<ProducerPerformance>
     {
         /// <summary>
         /// Initialize a new <see cref="ProducerPerformance"/>

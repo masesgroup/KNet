@@ -16,10 +16,10 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Connect.Connector;
-using MASES.KNet.Connect.Storage;
+using Org.Apache.Kafka.Connect.Connector;
+using Org.Apache.Kafka.Connect.Storage;
 
-namespace MASES.KNet.Connect.Source
+namespace Org.Apache.Kafka.Connect.Source
 {
     public class SourceConnectorContext : ConnectorContext
     {

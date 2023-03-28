@@ -18,7 +18,7 @@
 
 using MASES.JCOBridge.C2JBridge;
 
-namespace MASES.KNet.Connect.Data
+namespace Org.Apache.Kafka.Connect.Data
 {
     public class Time : JVMBridgeBase<Time>
     {

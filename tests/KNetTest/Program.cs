@@ -18,11 +18,11 @@
 
 using Java.Util;
 using MASES.KNet;
-using MASES.KNet.Clients.Admin;
-using MASES.KNet.Clients.Consumer;
-using MASES.KNet.Clients.Producer;
-using MASES.KNet.Common.Config;
-using MASES.KNet.Common.Serialization;
+using Org.Apache.Kafka.Clients.Admin;
+using Org.Apache.Kafka.Clients.Consumer;
+using Org.Apache.Kafka.Clients.Producer;
+using Org.Apache.Kafka.Common.Config;
+using Org.Apache.Kafka.Common.Serialization;
 using MASES.KNet.Extensions;
 using MASES.KNet.TestCommon;
 using System;

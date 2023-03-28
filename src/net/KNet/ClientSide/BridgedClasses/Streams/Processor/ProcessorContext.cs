@@ -17,13 +17,13 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using MASES.KNet.Common.Header;
-using MASES.KNet.Common.Serialization;
+using Org.Apache.Kafka.Common.Header;
+using Org.Apache.Kafka.Common.Serialization;
 using Java.Io;
 using Java.Time;
 using Java.Util;
 
-namespace MASES.KNet.Streams.Processor
+namespace Org.Apache.Kafka.Streams.Processor
 {
     public interface IProcessorContext : IJVMBridgeBase
     {

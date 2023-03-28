@@ -17,13 +17,13 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using MASES.KNet.Common.Record;
-using MASES.KNet.Connect.Connector;
-using MASES.KNet.Connect.Data;
-using MASES.KNet.Connect.Header;
+using Org.Apache.Kafka.Common.Record;
+using Org.Apache.Kafka.Connect.Connector;
+using Org.Apache.Kafka.Connect.Data;
+using Org.Apache.Kafka.Connect.Header;
 using System;
 
-namespace MASES.KNet.Connect.Sink
+namespace Org.Apache.Kafka.Connect.Sink
 {
     public class SinkRecord : ConnectRecord<SinkRecord>
     {

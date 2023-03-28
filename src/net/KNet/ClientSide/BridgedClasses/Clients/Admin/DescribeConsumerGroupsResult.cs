@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common;
+using Org.Apache.Kafka.Common;
 using Java.Util;
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class DescribeConsumerGroupsResult : JCOBridge.C2JBridge.JVMBridgeBase<DescribeConsumerGroupsResult>
+    public class DescribeConsumerGroupsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DescribeConsumerGroupsResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DescribeConsumerGroupsResult";
 

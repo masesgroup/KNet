@@ -18,7 +18,7 @@
 
 using MASES.JCOBridge.C2JBridge;
 
-namespace MASES.KNet.Streams.KStream
+namespace Org.Apache.Kafka.Streams.KStream
 {
     public class ForeachProcessor<K, V> : JVMBridgeBase<ForeachProcessor<K, V>>
     {

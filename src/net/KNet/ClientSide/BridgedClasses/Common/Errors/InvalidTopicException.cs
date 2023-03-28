@@ -20,7 +20,7 @@ using MASES.JCOBridge.C2JBridge;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
 using Java.Util;
 
-namespace MASES.KNet.Common.Errors
+namespace Org.Apache.Kafka.Common.Errors
 {
     public class InvalidTopicException : ApiException
     {

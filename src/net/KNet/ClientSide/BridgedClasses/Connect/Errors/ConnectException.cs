@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common;
+using Org.Apache.Kafka.Common;
 
-namespace MASES.KNet.Connect.Errors
+namespace Org.Apache.Kafka.Connect.Errors
 {
     public class ConnectException : KafkaException
     {

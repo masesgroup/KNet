@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Common
+namespace Org.Apache.Kafka.Common
 {
-    public class Node : JCOBridge.C2JBridge.JVMBridgeBase<Node>
+    public class Node : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Node>
     {
         public override string ClassName => "org.apache.kafka.common.Node";
 

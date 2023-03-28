@@ -20,7 +20,7 @@ using MASES.JCOBridge.C2JBridge;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
 using System;
 
-namespace MASES.KNet.Clients.Producer
+namespace Org.Apache.Kafka.Clients.Producer
 {
     /// <summary>
     /// Listener for Kafka Callback. Extends <see cref="IJVMBridgeBase"/>

@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Tools
+namespace Org.Apache.Kafka.Tools
 {
     /// <summary>
     /// Class managing Kafka start
     /// </summary>
-    public class KafkaStart : JCOBridge.C2JBridge.JVMBridgeMain<KafkaStart>
+    public class KafkaStart : MASES.JCOBridge.C2JBridge.JVMBridgeMain<KafkaStart>
     {
         /// <summary>
         /// Initialize a new <see cref="KafkaStart"/>

@@ -16,7 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Streams.Errors
+namespace Org.Apache.Kafka.Streams.Errors
 {
     public class LockException : StreamsException
     {

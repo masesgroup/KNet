@@ -20,7 +20,7 @@ using MASES.JCOBridge.C2JBridge;
 using Java.Math;
 using Java.Util;
 
-namespace MASES.KNet.Connect.Data
+namespace Org.Apache.Kafka.Connect.Data
 {
     public class Values : JVMBridgeBase<Values>
     {

@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Admin
+namespace Kafka.Admin
 {
     /// <summary>
     /// Class managing LogDirsCommand
     /// </summary>
-    public class LogDirsCommand : JCOBridge.C2JBridge.JVMBridgeMain<LogDirsCommand>
+    public class LogDirsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeMain<LogDirsCommand>
     {
         /// <summary>
         /// Initialize a new <see cref="LogDirsCommand"/>

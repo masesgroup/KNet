@@ -16,14 +16,14 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common;
-using MASES.KNet.Common.Quota;
+using Org.Apache.Kafka.Common;
+using Org.Apache.Kafka.Common.Quota;
 using Java.Lang;
 using Java.Util;
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class AlterClientQuotasResult : JCOBridge.C2JBridge.JVMBridgeBase<AlterClientQuotasResult>
+    public class AlterClientQuotasResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AlterClientQuotasResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.AlterClientQuotasResult";
 

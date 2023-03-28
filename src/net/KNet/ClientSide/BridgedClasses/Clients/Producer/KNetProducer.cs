@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common.Serialization;
+using Org.Apache.Kafka.Common.Serialization;
 using Java.Util;
 using Java.Lang;
-using MASES.KNet.Common.Header;
+using Org.Apache.Kafka.Common.Header;
 
-namespace MASES.KNet.Clients.Producer
+namespace Org.Apache.Kafka.Clients.Producer
 {
     /// <summary>
     /// Extends <see cref="IProducer{K, V}"/> adding less intrusive methods which performs better in high throughput applications

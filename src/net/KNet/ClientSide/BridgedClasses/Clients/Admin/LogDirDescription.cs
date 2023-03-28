@@ -17,13 +17,13 @@
 */
 
 using MASES.JCOBridge.C2JBridge.JVMInterop;
-using MASES.KNet.Common;
-using MASES.KNet.Common.Errors;
+using Org.Apache.Kafka.Common;
+using Org.Apache.Kafka.Common.Errors;
 using Java.Util;
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class LogDirDescription : JCOBridge.C2JBridge.JVMBridgeBase<LogDirDescription>
+    public class LogDirDescription : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LogDirDescription>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.LogDirDescription";
 
@@ -45,7 +45,7 @@ namespace MASES.KNet.Clients.Admin
 
         public ApiException Error
         {
-            get { return JCOBridge.C2JBridge.JVMBridgeException.New(IExecute<IJavaObject>("error")) as ApiException; }
+            get { return MASES.JCOBridge.C2JBridge.JVMBridgeException.New(IExecute<IJavaObject>("error")) as ApiException; }
         }
 
         public Map<TopicPartition, ReplicaInfo> ReplicaInfos => IExecute<Map<TopicPartition, ReplicaInfo>>("replicaInfos");

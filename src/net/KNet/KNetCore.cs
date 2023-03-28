@@ -17,17 +17,17 @@
 */
 
 using MASES.CLIParser;
-using MASES.KNet.Clients.Consumer;
-using MASES.KNet.Clients.Producer;
-using MASES.KNet.Common;
-using MASES.KNet.Common.Errors;
-using MASES.KNet.Connect.Errors;
-using MASES.KNet.Streams.Errors;
+using Org.Apache.Kafka.Clients.Consumer;
+using Org.Apache.Kafka.Clients.Producer;
+using Org.Apache.Kafka.Common;
+using Org.Apache.Kafka.Common.Errors;
+using Org.Apache.Kafka.Connect.Errors;
+using Org.Apache.Kafka.Streams.Errors;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using MASES.JNet;
-using MASES.KNet.Common.Config;
+using Org.Apache.Kafka.Common.Config;
 
 namespace MASES.KNet
 {
@@ -161,7 +161,7 @@ namespace MASES.KNet
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidFetchSizeException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidGroupIdException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidMetadataException));
-            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(Clients.Consumer.InvalidOffsetException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(Org.Apache.Kafka.Clients.Consumer.InvalidOffsetException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidPartitionsException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidPidMappingException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(InvalidPrincipalTypeException));
@@ -192,7 +192,7 @@ namespace MASES.KNet
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(NotLeaderOrFollowerException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(OffsetMetadataTooLarge));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(OffsetNotAvailableException));
-            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(Common.Errors.OffsetOutOfRangeException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(Org.Apache.Kafka.Common.Errors.OffsetOutOfRangeException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(OperationNotAttemptedException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(OutOfOrderSequenceException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(PolicyViolationException));
@@ -207,7 +207,7 @@ namespace MASES.KNet
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(RecordTooLargeException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(ReplicaNotAvailableException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(ResourceNotFoundException));
-            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(Common.Errors.RetriableException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(Org.Apache.Kafka.Common.Errors.RetriableException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(SaslAuthenticationException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(SecurityDisabledException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(SerializationException));
@@ -215,7 +215,7 @@ namespace MASES.KNet
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(SslAuthenticationException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(StaleBrokerEpochException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(ThrottlingQuotaExceededException));
-            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(Common.Errors.TimeoutException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(Org.Apache.Kafka.Common.Errors.TimeoutException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(TopicAuthorizationException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(TopicDeletionDisabledException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(TopicExistsException));
@@ -243,10 +243,10 @@ namespace MASES.KNet
             #region Consumer Exceptions
 
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(CommitFailedException));
-            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(Clients.Consumer.InvalidOffsetException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(Org.Apache.Kafka.Clients.Consumer.InvalidOffsetException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(LogTruncationException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(NoOffsetForPartitionException));
-            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(Clients.Consumer.OffsetOutOfRangeException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(Org.Apache.Kafka.Clients.Consumer.OffsetOutOfRangeException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(RetriableCommitFailedException));
 
             #endregion
@@ -285,7 +285,7 @@ namespace MASES.KNet
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(DataException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(IllegalWorkerStateException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(NotFoundException));
-            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(Connect.Errors.RetriableException));
+            JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(Org.Apache.Kafka.Connect.Errors.RetriableException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(SchemaBuilderException));
             JCOBridge.C2JBridge.JCOBridge.RegisterException(typeof(SchemaProjectorException));
             #endregion

@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Connect.Source;
+using Org.Apache.Kafka.Connect.Source;
 
-namespace MASES.KNet.Connect.File
+namespace Org.Apache.Kafka.Connect.File
 {
     public class FileStreamSourceTask : SourceTask
     {

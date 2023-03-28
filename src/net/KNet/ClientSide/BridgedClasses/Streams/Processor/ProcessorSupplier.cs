@@ -18,9 +18,9 @@
 
 using Java.Util.Function;
 using Java.Util;
-using MASES.KNet.Streams.State;
+using Org.Apache.Kafka.Streams.State;
 
-namespace MASES.KNet.Streams.Processor
+namespace Org.Apache.Kafka.Streams.Processor
 {
     public interface IProcessorSupplier<K, V> : IConnectedStoreProvider, ISupplier<Processor<K, V>>
     {

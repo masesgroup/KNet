@@ -16,11 +16,11 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common.Header;
+using Org.Apache.Kafka.Common.Header;
 
-namespace MASES.KNet.Streams.Processor.Api
+namespace Org.Apache.Kafka.Streams.Processor.Api
 {
-    public class FixedKeyRecord<K, V> : JCOBridge.C2JBridge.JVMBridgeBase<FixedKeyRecord<K, V>>
+    public class FixedKeyRecord<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FixedKeyRecord<K, V>>
     {
         public override string ClassName => "org.apache.kafka.streams.processor.api.FixedKeyRecord";
 

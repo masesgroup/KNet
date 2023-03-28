@@ -18,7 +18,7 @@
 
 using MASES.JCOBridge.C2JBridge;
 
-namespace MASES.KNet.Streams.KStream
+namespace Org.Apache.Kafka.Streams.KStream
 {
     /// <see href="https://kafka.apache.org/30/javadoc/org/apache/kafka/streams/kstream/NamedOperation.html">
     public interface INamedOperation<T> : IJVMBridgeBase

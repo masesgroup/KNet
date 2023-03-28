@@ -16,7 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
     public class ElectLeadersOptions : AbstractOptions<ElectLeadersOptions>
     {

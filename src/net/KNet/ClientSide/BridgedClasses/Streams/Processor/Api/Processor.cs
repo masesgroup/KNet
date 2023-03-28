@@ -19,7 +19,7 @@
 using MASES.JCOBridge.C2JBridge;
 using System;
 
-namespace MASES.KNet.Streams.Processor.Api
+namespace Org.Apache.Kafka.Streams.Processor.Api
 {
     public interface IProcessor<KIn, VIn, KOut, VOut> : IJVMBridgeBase
     {

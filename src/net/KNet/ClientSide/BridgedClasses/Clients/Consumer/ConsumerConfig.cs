@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common;
-using MASES.KNet.Common.Config;
-using MASES.KNet.Common.Metrics;
+using Org.Apache.Kafka.Common;
+using Org.Apache.Kafka.Common.Config;
+using Org.Apache.Kafka.Common.Metrics;
 using Java.Util;
 
-namespace MASES.KNet.Clients.Consumer
+namespace Org.Apache.Kafka.Clients.Consumer
 {
     public class ConsumerConfig : AbstractConfig<ConsumerConfig>
     {

@@ -17,12 +17,12 @@
 */
 
 using MASES.JCOBridge.C2JBridge.JVMInterop;
-using MASES.KNet.Common.Header;
-using MASES.KNet.Common.Record;
+using Org.Apache.Kafka.Common.Header;
+using Org.Apache.Kafka.Common.Record;
 
-namespace MASES.KNet.Clients.Consumer
+namespace Org.Apache.Kafka.Clients.Consumer
 {
-    public class ConsumerRecord : JCOBridge.C2JBridge.JVMBridgeBase<ConsumerRecord>
+    public class ConsumerRecord : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConsumerRecord>
     {
         public override string ClassName => "org.apache.kafka.clients.consumer.ConsumerRecord";
 

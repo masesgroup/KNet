@@ -16,16 +16,16 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common.Serialization;
-using MASES.KNet.Common.Utils;
+using Org.Apache.Kafka.Common.Serialization;
+using Org.Apache.Kafka.Common.Utils;
 using Java.Time;
 using Java.Util;
-using MASES.KNet.Streams.Processor;
-using MASES.KNet.Streams.State;
+using Org.Apache.Kafka.Streams.Processor;
+using Org.Apache.Kafka.Streams.State;
 
-namespace MASES.KNet.Streams.KStream
+namespace Org.Apache.Kafka.Streams.KStream
 {
-    public class Materialized : JCOBridge.C2JBridge.JVMBridgeBase<Materialized>
+    public class Materialized : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Materialized>
     {
         public override string ClassName => "org.apache.kafka.streams.kstream.Materialized";
 

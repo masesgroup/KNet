@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common.Utils;
+using Org.Apache.Kafka.Common.Utils;
 
-namespace MASES.KNet.Common.Serialization
+namespace Org.Apache.Kafka.Common.Serialization
 {
     public class BytesSerializer : Serializer<Bytes>
     {

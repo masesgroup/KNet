@@ -1,9 +1,9 @@
 ﻿using MASES.JCOBridge.C2JBridge;
 using MASES.KNet;
-using MASES.KNet.Clients.Consumer;
-using MASES.KNet.Common.Serialization;
+using Org.Apache.Kafka.Clients.Consumer;
+using Org.Apache.Kafka.Common.Serialization;
 using Java.Util;
-using MASES.KNet.Streams;
+using Org.Apache.Kafka.Streams;
 using System;
 using System.Threading;
 

@@ -16,11 +16,11 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common;
+using Org.Apache.Kafka.Common;
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class AbortTransactionSpec : JCOBridge.C2JBridge.JVMBridgeBase<AbortTransactionSpec>
+    public class AbortTransactionSpec : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AbortTransactionSpec>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.AbortTransactionSpec";
 

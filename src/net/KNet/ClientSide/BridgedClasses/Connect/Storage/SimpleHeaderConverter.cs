@@ -18,10 +18,10 @@
 
 using Java.Util;
 using MASES.JCOBridge.C2JBridge;
-using MASES.KNet.Connect.Data;
-using MASES.KNet.Connect.Header;
+using Org.Apache.Kafka.Connect.Data;
+using Org.Apache.Kafka.Connect.Header;
 
-namespace MASES.KNet.Connect.Storage
+namespace Org.Apache.Kafka.Connect.Storage
 {
     public class SimpleHeaderConverter : HeaderConverter
     {

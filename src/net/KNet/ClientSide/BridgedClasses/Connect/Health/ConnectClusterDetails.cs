@@ -18,7 +18,7 @@
 
 using MASES.JCOBridge.C2JBridge;
 
-namespace MASES.KNet.Connect.Health
+namespace Org.Apache.Kafka.Connect.Health
 {
     public class ConnectClusterDetails : JVMBridgeBase<ConnectClusterDetails>
     {

@@ -19,7 +19,7 @@
 using Java.Util;
 using MASES.JCOBridge.C2JBridge;
 
-namespace MASES.KNet.Connect.Rest.Basic.Auth.Extension
+namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
 {
     public class PropertyFileLoginModule : JVMBridgeBase<PropertyFileLoginModule>
     {

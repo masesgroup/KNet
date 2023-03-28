@@ -19,7 +19,7 @@
 using Java.Util;
 using MASES.JCOBridge.C2JBridge;
 
-namespace MASES.KNet.Connect.Util
+namespace Org.Apache.Kafka.Connect.Util
 {
     public class ConnectorUtils : JVMBridgeBase<ConnectorUtils>
     {

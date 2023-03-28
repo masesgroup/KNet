@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class DeletedRecords : JCOBridge.C2JBridge.JVMBridgeBase<DeletedRecords>
+    public class DeletedRecords : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DeletedRecords>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DeletedRecords";
 

@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Common.Quota
+namespace Org.Apache.Kafka.Common.Quota
 {
-    public class ClientQuotaFilter : JCOBridge.C2JBridge.JVMBridgeBase<ClientQuotaFilter>
+    public class ClientQuotaFilter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ClientQuotaFilter>
     {
         public override string ClassName => "org.apache.kafka.common.quota.ClientQuotaFilter";
     }

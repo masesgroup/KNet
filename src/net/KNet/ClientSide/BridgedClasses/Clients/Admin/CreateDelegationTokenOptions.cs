@@ -16,10 +16,10 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common.Security.Auth;
+using Org.Apache.Kafka.Common.Security.Auth;
 using Java.Util;
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
     public class CreateDelegationTokenOptions : AbstractOptions<CreateDelegationTokenOptions>
     {

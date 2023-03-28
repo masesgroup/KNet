@@ -19,9 +19,9 @@
 using MASES.JCOBridge.C2JBridge;
 using Java.Util;
 using Java.Util.Regex;
-using MASES.KNet.Streams.Processor;
+using Org.Apache.Kafka.Streams.Processor;
 
-namespace MASES.KNet.Streams
+namespace Org.Apache.Kafka.Streams
 {
     public class TopologyDescription : JVMBridgeBase<TopologyDescription>
     {

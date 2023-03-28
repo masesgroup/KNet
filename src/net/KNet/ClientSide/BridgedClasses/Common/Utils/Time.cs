@@ -19,7 +19,7 @@
 using Java.Util.Function;
 using MASES.JCOBridge.C2JBridge;
 
-namespace MASES.KNet.Common.Utils
+namespace Org.Apache.Kafka.Common.Utils
 {
     public interface ITime : IJVMBridgeBase
     {

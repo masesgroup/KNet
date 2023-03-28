@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Tools
+namespace Kafka.Tools
 {
     /// <summary>
     /// Class managing StorageTool
     /// </summary>
-    public class StorageTool : JCOBridge.C2JBridge.JVMBridgeMain<StorageTool>
+    public class StorageTool : MASES.JCOBridge.C2JBridge.JVMBridgeMain<StorageTool>
     {
         /// <summary>
         /// Initialize a new <see cref="StorageTool"/>

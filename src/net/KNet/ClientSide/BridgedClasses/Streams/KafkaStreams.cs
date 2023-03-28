@@ -18,18 +18,18 @@
 
 using MASES.JCOBridge.C2JBridge;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
-using MASES.KNet.Common;
-using MASES.KNet.Common.Serialization;
-using MASES.KNet.Common.Utils;
+using Org.Apache.Kafka.Common;
+using Org.Apache.Kafka.Common.Serialization;
+using Org.Apache.Kafka.Common.Utils;
 using Java.Time;
 using Java.Util;
-using MASES.KNet.Streams.Errors;
-using MASES.KNet.Streams.Processor;
-using MASES.KNet.Streams.Query;
+using Org.Apache.Kafka.Streams.Errors;
+using Org.Apache.Kafka.Streams.Processor;
+using Org.Apache.Kafka.Streams.Query;
 using Java.Lang;
 using System;
 
-namespace MASES.KNet.Streams
+namespace Org.Apache.Kafka.Streams
 {
     public enum StateType
     {

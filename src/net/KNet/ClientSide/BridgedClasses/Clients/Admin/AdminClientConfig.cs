@@ -16,10 +16,10 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common.Config;
+using Org.Apache.Kafka.Common.Config;
 using Java.Util;
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
     public class AdminClientConfig : AbstractConfig<AdminClientConfig>
     {

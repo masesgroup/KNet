@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Admin
+namespace Kafka.Admin
 {
     /// <summary>
     /// Class managing ReassignPartitionsCommand
     /// </summary>
-    public class ReassignPartitionsCommand : JCOBridge.C2JBridge.JVMBridgeMain<ReassignPartitionsCommand>
+    public class ReassignPartitionsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeMain<ReassignPartitionsCommand>
     {
         /// <summary>
         /// Initialize a new <see cref="ReassignPartitionsCommand"/>

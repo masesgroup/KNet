@@ -17,9 +17,9 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using MASES.KNet.Common.Utils;
+using Org.Apache.Kafka.Common.Utils;
 
-namespace MASES.KNet.Streams.State
+namespace Org.Apache.Kafka.Streams.State
 {
     public interface IKeyValueBytesStoreSupplier : IStoreSupplier<KeyValueStore<Bytes, byte[]>>
     {

@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Common.Security.Token.Delegation
+namespace Org.Apache.Kafka.Common.Security.Token.Delegation
 {
-    public class DelegationToken : JCOBridge.C2JBridge.JVMBridgeBase<DelegationToken>
+    public class DelegationToken : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DelegationToken>
     {
         public override string ClassName => "org.apache.kafka.common.security.token.delegation.DelegationToken";
 

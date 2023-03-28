@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common;
+using Org.Apache.Kafka.Common;
 using Java.Lang;
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class UnregisterBrokerResult : JCOBridge.C2JBridge.JVMBridgeBase<UnregisterBrokerResult>
+    public class UnregisterBrokerResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<UnregisterBrokerResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.UnregisterBrokerResult";
 

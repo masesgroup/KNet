@@ -16,10 +16,10 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Connect.Sink;
+using Org.Apache.Kafka.Connect.Sink;
 using System;
 
-namespace MASES.KNet.Connect
+namespace Org.Apache.Kafka.Connect
 {
     /// <summary>
     /// An implementation of <see cref="KNetConnector{TSinkConnector}"/> for sink connectors

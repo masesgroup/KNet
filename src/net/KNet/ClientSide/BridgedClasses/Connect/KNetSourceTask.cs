@@ -19,13 +19,13 @@
 using Java.Lang;
 using Java.Util;
 using MASES.JNet.Extensions;
-using MASES.KNet.Connect.Data;
-using MASES.KNet.Connect.Header;
-using MASES.KNet.Connect.Source;
+using Org.Apache.Kafka.Connect.Data;
+using Org.Apache.Kafka.Connect.Header;
+using Org.Apache.Kafka.Connect.Source;
 using System;
 using System.Collections.Generic;
 
-namespace MASES.KNet.Connect
+namespace Org.Apache.Kafka.Connect
 {
     /// <summary>
     /// An implementation of <see cref="KNetTask{TTask}"/> for source task
@@ -83,7 +83,7 @@ namespace MASES.KNet.Connect
         /// <param name="valueSchema">The schema for the value; may be null</param>
         /// <param name="value">The value; may be null</param>
         /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using MASES.KNet.Connect.Data.* objects (or primitive values). 
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
         /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
         public SourceRecord<TKey, TValue> CreateRecord<TKey, TValue>(string topic, int? partition, Schema valueSchema, TValue value)
 
@@ -99,7 +99,7 @@ namespace MASES.KNet.Connect
         /// <param name="valueSchema">The schema for the value; may be null</param>
         /// <param name="value">The value; may be null</param>
         /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using MASES.KNet.Connect.Data.* objects (or primitive values). 
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
         /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
         public SourceRecord<TKey, TValue> CreateRecord<TKey, TValue>(string topic, Schema valueSchema, TValue value)
 
@@ -117,7 +117,7 @@ namespace MASES.KNet.Connect
         /// <param name="valueSchema">The schema for the value; may be null</param>
         /// <param name="value">The value; may be null</param>
         /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using MASES.KNet.Connect.Data.* objects (or primitive values). 
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
         /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
         public SourceRecord<TKey, TValue> CreateRecord<TKey, TValue>(string topic, Schema keySchema, TKey key, Schema valueSchema, TValue value)
 
@@ -136,7 +136,7 @@ namespace MASES.KNet.Connect
         /// <param name="valueSchema">The schema for the value; may be null</param>
         /// <param name="value">The value; may be null</param>
         /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using MASES.KNet.Connect.Data.* objects (or primitive values). 
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
         /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
         public SourceRecord<TKey, TValue> CreateRecord<TKey, TValue>(string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value)
 
@@ -153,7 +153,7 @@ namespace MASES.KNet.Connect
         /// <param name="value">The value; may be null</param>
         /// <param name="timestamp">The timestamp; may be null</param>
         /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using MASES.KNet.Connect.Data.* objects (or primitive values). 
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
         /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
         public SourceRecord<object, TValue> CreateRecord<TValue>(string topic, Schema valueSchema, TValue value, DateTime timestamp)
 
@@ -171,7 +171,7 @@ namespace MASES.KNet.Connect
         /// <param name="value">The value; may be null</param>
         /// <param name="timestamp">The timestamp; may be null</param>
         /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using MASES.KNet.Connect.Data.* objects (or primitive values). 
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
         /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
         public SourceRecord<object, TValue> CreateRecord<TValue>(string topic, int? partition,
                                                                      Schema valueSchema, TValue value,
@@ -193,7 +193,7 @@ namespace MASES.KNet.Connect
         /// <param name="value">The value; may be null</param>
         /// <param name="timestamp">The timestamp; may be null</param>
         /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using MASES.KNet.Connect.Data.* objects (or primitive values). 
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
         /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
         public SourceRecord<TKey, TValue> CreateRecord<TKey, TValue>(string topic, int? partition,
                                                                      Schema keySchema, TKey key,
@@ -217,7 +217,7 @@ namespace MASES.KNet.Connect
         /// <param name="timestamp">The timestamp; may be null</param>
         /// <param name="headers">The <see cref="Headers"/>s; may be null or empty</param>
         /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using MASES.KNet.Connect.Data.* objects (or primitive values). 
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
         /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
         public SourceRecord<TKey, TValue> CreateRecord<TKey, TValue>(string topic, int? partition,
                                                                      Schema keySchema, TKey key,
@@ -240,7 +240,7 @@ namespace MASES.KNet.Connect
         /// <param name="valueSchema">The schema for the value; may be null</param>
         /// <param name="value">The value; may be null</param>
         /// <returns>A newvly allocated <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using MASES.KNet.Connect.Data.* objects (or primitive values). 
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
         /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
         public SourceRecord<TKeySource, TOffset, TKey, TValue> CreateRecord<TKeySource, TOffset, TKey, TValue>(Map<string, TKeySource> sourcePartition, Map<string, TOffset> sourceOffset,
                                                                                                                string topic, int? partition, Schema valueSchema, TValue value)
@@ -259,7 +259,7 @@ namespace MASES.KNet.Connect
         /// <param name="valueSchema">The schema for the value; may be null</param>
         /// <param name="value">The value; may be null</param>
         /// <returns>A newvly allocated <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using MASES.KNet.Connect.Data.* objects (or primitive values). 
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
         /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
         public SourceRecord<TKeySource, TOffset, TKey, TValue> CreateRecord<TKeySource, TOffset, TKey, TValue>(Map<string, TKeySource> sourcePartition, Map<string, TOffset> sourceOffset,
                                                                                                                string topic, Schema valueSchema, TValue value)
@@ -280,7 +280,7 @@ namespace MASES.KNet.Connect
         /// <param name="valueSchema">The schema for the value; may be null</param>
         /// <param name="value">The value; may be null</param>
         /// <returns>A newvly allocated <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using MASES.KNet.Connect.Data.* objects (or primitive values). 
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
         /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
         public SourceRecord<TKeySource, TOffset, TKey, TValue> CreateRecord<TKeySource, TOffset, TKey, TValue>(Map<string, TKeySource> sourcePartition, Map<string, TOffset> sourceOffset,
                                                                                                                string topic, Schema keySchema, TKey key, 
@@ -303,7 +303,7 @@ namespace MASES.KNet.Connect
         /// <param name="valueSchema">The schema for the value; may be null</param>
         /// <param name="value">The value; may be null</param>
         /// <returns>A newvly allocated <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using MASES.KNet.Connect.Data.* objects (or primitive values). 
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
         /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
         public SourceRecord<TKeySource, TOffset, TKey, TValue> CreateRecord<TKeySource, TOffset, TKey, TValue>(Map<string, TKeySource> sourcePartition, Map<string, TOffset> sourceOffset,
                                                                                                                string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value)
@@ -323,7 +323,7 @@ namespace MASES.KNet.Connect
         /// <param name="value">The value; may be null</param>
         /// <param name="timestamp">The timestamp; may be null</param>
         /// <returns>A newvly allocated <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using MASES.KNet.Connect.Data.* objects (or primitive values). 
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
         /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
         public SourceRecord<TKeySource, TOffset, object, TValue> CreateRecord<TKeySource, TOffset, TValue>(Map<string, TKeySource> sourcePartition, Map<string, TOffset> sourceOffset,
                                                                                                            string topic, Schema valueSchema, TValue value, DateTime timestamp)
@@ -344,7 +344,7 @@ namespace MASES.KNet.Connect
         /// <param name="value">The value; may be null</param>
         /// <param name="timestamp">The timestamp; may be null</param>
         /// <returns>A newvly allocated <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using MASES.KNet.Connect.Data.* objects (or primitive values). 
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
         /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
         public SourceRecord<TKeySource, TOffset, object, TValue> CreateRecord<TKeySource, TOffset, TValue>(Map<string, TKeySource> sourcePartition, Map<string, TOffset> sourceOffset,
                                                                                                            string topic, int? partition,
@@ -369,7 +369,7 @@ namespace MASES.KNet.Connect
         /// <param name="value">The value; may be null</param>
         /// <param name="timestamp">The timestamp; may be null</param>
         /// <returns>A newvly allocated <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using MASES.KNet.Connect.Data.* objects (or primitive values). 
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
         /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
         public SourceRecord<TKeySource, TOffset, TKey, TValue> CreateRecord<TKeySource, TOffset, TKey, TValue>(Map<string, TKeySource> sourcePartition, Map<string, TOffset> sourceOffset,
                                                                                                                string topic, int? partition,
@@ -396,7 +396,7 @@ namespace MASES.KNet.Connect
         /// <param name="timestamp">The timestamp; may be null</param>
         /// <param name="headers">The <see cref="Headers"/>s; may be null or empty</param>
         /// <returns>A newvly allocated <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using MASES.KNet.Connect.Data.* objects (or primitive values). 
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
         /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
         public SourceRecord<TKeySource, TOffset, TKey, TValue> CreateRecord<TKeySource, TOffset, TKey, TValue>(Map<string, TKeySource> sourcePartition, Map<string, TOffset> sourceOffset,
                                                                                                                string topic, int? partition,

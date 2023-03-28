@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Common.Header
+namespace Org.Apache.Kafka.Common.Header
 {
-    public class Header : JCOBridge.C2JBridge.JVMBridgeBase<Header>
+    public class Header : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Header>
     {
         public override string ClassName => "org.apache.kafka.common.header.Header";
 

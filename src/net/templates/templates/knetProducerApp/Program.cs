@@ -1,6 +1,6 @@
 ﻿using MASES.KNet;
-using MASES.KNet.Clients.Producer;
-using MASES.KNet.Common.Serialization;
+using Org.Apache.Kafka.Clients.Producer;
+using Org.Apache.Kafka.Common.Serialization;
 using Java.Util;
 using System;
 using System.Text;

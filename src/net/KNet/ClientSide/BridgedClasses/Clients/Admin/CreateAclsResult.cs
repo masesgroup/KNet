@@ -16,14 +16,14 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common;
-using MASES.KNet.Common.Acl;
+using Org.Apache.Kafka.Common;
+using Org.Apache.Kafka.Common.Acl;
 using Java.Lang;
 using Java.Util;
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class CreateAclsResult : JCOBridge.C2JBridge.JVMBridgeBase<CreateAclsResult>
+    public class CreateAclsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CreateAclsResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.CreateAclsResult";
 

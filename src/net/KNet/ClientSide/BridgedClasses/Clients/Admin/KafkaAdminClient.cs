@@ -17,15 +17,15 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using MASES.KNet.Clients.Consumer;
-using MASES.KNet.Common;
-using MASES.KNet.Common.Acl;
-using MASES.KNet.Common.Config;
-using MASES.KNet.Common.Quota;
+using Org.Apache.Kafka.Clients.Consumer;
+using Org.Apache.Kafka.Common;
+using Org.Apache.Kafka.Common.Acl;
+using Org.Apache.Kafka.Common.Config;
+using Org.Apache.Kafka.Common.Quota;
 using Java.Time;
 using Java.Util;
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
     public class KafkaAdminClient : JVMBridgeBase<KafkaAdminClient>, IAdmin
     {

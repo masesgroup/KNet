@@ -17,12 +17,12 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using MASES.KNet.Connect.Sink;
-using MASES.KNet.Connect.Source;
+using Org.Apache.Kafka.Connect.Sink;
+using Org.Apache.Kafka.Connect.Source;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace MASES.KNet.Connect
+namespace Org.Apache.Kafka.Connect
 {
     /// <summary>
     /// Some extension method helping to convert types

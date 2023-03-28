@@ -18,9 +18,9 @@
 
 using Java.Util;
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class QuorumInfo : JCOBridge.C2JBridge.JVMBridgeBase<QuorumInfo>
+    public class QuorumInfo : MASES.JCOBridge.C2JBridge.JVMBridgeBase<QuorumInfo>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.QuorumInfo";
 
@@ -34,7 +34,7 @@ namespace MASES.KNet.Clients.Admin
 
         public List<ReplicaState> Observers => IExecute<List<ReplicaState>>("observers");
 
-        public class ReplicaState : JCOBridge.C2JBridge.JVMBridgeBase<ReplicaState>
+        public class ReplicaState : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ReplicaState>
         {
             public override string ClassName => "org.apache.kafka.clients.admin.QuorumInfo$ReplicaState";
 

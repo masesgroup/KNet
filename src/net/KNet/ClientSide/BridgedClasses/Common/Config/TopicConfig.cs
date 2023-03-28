@@ -16,11 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Clients.Producer;
+using MASES.KNet;
+using Org.Apache.Kafka.Clients.Producer;
 
-namespace MASES.KNet.Common.Config
+namespace Org.Apache.Kafka.Common.Config
 {
-    public class TopicConfig : JCOBridge.C2JBridge.JVMBridgeBase<TopicConfig>
+    public class TopicConfig : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicConfig>
     {
         public override bool IsStatic => true;
         public override string ClassName => "org.apache.kafka.common.config.TopicConfig";

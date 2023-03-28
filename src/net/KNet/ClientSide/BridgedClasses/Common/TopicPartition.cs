@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Common
+namespace Org.Apache.Kafka.Common
 {
-    public class TopicPartition : JCOBridge.C2JBridge.JVMBridgeBase<TopicPartition>
+    public class TopicPartition : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicPartition>
     {
         public override string ClassName => "org.apache.kafka.common.TopicPartition";
 

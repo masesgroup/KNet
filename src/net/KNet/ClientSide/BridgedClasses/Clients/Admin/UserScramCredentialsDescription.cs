@@ -18,9 +18,9 @@
 
 using Java.Util;
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class UserScramCredentialsDescription : JCOBridge.C2JBridge.JVMBridgeBase<UserScramCredentialsDescription>
+    public class UserScramCredentialsDescription : MASES.JCOBridge.C2JBridge.JVMBridgeBase<UserScramCredentialsDescription>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.UserScramCredentialsDescription";
 

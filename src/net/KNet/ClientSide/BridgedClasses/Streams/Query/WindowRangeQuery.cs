@@ -18,10 +18,10 @@
 
 using Java.Time;
 using Java.Util;
-using MASES.KNet.Streams.KStream;
-using MASES.KNet.Streams.State;
+using Org.Apache.Kafka.Streams.KStream;
+using Org.Apache.Kafka.Streams.State;
 
-namespace MASES.KNet.Streams.Query
+namespace Org.Apache.Kafka.Streams.Query
 {
     public class WindowRangeQuery<K, V> : Query<KeyValueIterator<Windowed<K>, V>>
     {

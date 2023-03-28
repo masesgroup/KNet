@@ -16,7 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Common.Record
+namespace Org.Apache.Kafka.Common.Record
 {
     public enum TimestampType : int
     {

@@ -16,10 +16,10 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Connect.Source;
+using Org.Apache.Kafka.Connect.Source;
 using System;
 
-namespace MASES.KNet.Connect
+namespace Org.Apache.Kafka.Connect
 {
     /// <summary>
     /// An implementation of <see cref="KNetConnector{TSourceConnector}"/> for source connectors
@@ -45,7 +45,7 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// Implement the method to return the <see cref="KNet.Connect.Source.ExactlyOnceSupport"/> value
         /// </summary>
-        public virtual ExactlyOnceSupport ExactlyOnceSupport() => KNet.Connect.Source.ExactlyOnceSupport.UNSUPPORTED;
+        public virtual ExactlyOnceSupport ExactlyOnceSupport() => Source.ExactlyOnceSupport.UNSUPPORTED;
 
         /// <summary>
         /// Public method used from Java to trigger <see cref="CanDefineTransactionBoundaries"/>

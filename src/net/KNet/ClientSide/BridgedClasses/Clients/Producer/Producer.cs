@@ -17,12 +17,12 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using MASES.KNet.Clients.Consumer;
-using MASES.KNet.Common;
+using Org.Apache.Kafka.Clients.Consumer;
+using Org.Apache.Kafka.Common;
 using Java.Util;
 using Java.Util.Concurrent;
 
-namespace MASES.KNet.Clients.Producer
+namespace Org.Apache.Kafka.Clients.Producer
 {
     public interface IProducer : IJVMBridgeBase, System.IDisposable
     {

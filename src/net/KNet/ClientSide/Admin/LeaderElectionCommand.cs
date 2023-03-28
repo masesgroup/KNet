@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Admin
+namespace Kafka.Admin
 {
     /// <summary>
     /// Class managing LeaderElectionCommand
     /// </summary>
-    public class LeaderElectionCommand : JCOBridge.C2JBridge.JVMBridgeMain<LeaderElectionCommand>
+    public class LeaderElectionCommand : MASES.JCOBridge.C2JBridge.JVMBridgeMain<LeaderElectionCommand>
     {
         /// <summary>
         /// Initialize a new <see cref="LeaderElectionCommand"/>

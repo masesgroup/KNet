@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Clients.Producer
+namespace Org.Apache.Kafka.Clients.Producer
 {
-    public class RecordMetadata : JCOBridge.C2JBridge.JVMBridgeBase<RecordMetadata>
+    public class RecordMetadata : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RecordMetadata>
     {
         public override string ClassName => "org.apache.kafka.clients.producer.RecordMetadata";
 

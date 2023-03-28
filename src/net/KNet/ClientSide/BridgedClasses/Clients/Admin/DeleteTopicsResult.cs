@@ -16,13 +16,13 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common;
+using Org.Apache.Kafka.Common;
 using Java.Lang;
 using Java.Util;
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class DeleteTopicsResult : JCOBridge.C2JBridge.JVMBridgeBase<DeleteTopicsResult>
+    public class DeleteTopicsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DeleteTopicsResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DeleteTopicsResult";
 

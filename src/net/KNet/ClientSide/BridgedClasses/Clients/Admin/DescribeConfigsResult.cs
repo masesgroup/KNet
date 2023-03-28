@@ -16,13 +16,13 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common;
-using MASES.KNet.Common.Config;
+using Org.Apache.Kafka.Common;
+using Org.Apache.Kafka.Common.Config;
 using Java.Util;
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class DescribeConfigsResult : JCOBridge.C2JBridge.JVMBridgeBase<DescribeConfigsResult>
+    public class DescribeConfigsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DescribeConfigsResult>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.DescribeConfigsResult";
 

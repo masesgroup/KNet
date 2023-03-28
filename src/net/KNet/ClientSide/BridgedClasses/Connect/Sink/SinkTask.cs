@@ -17,11 +17,11 @@
 */
 
 using Java.Util;
-using MASES.KNet.Clients.Consumer;
-using MASES.KNet.Common;
-using MASES.KNet.Connect.Connector;
+using Org.Apache.Kafka.Clients.Consumer;
+using Org.Apache.Kafka.Common;
+using Org.Apache.Kafka.Connect.Connector;
 
-namespace MASES.KNet.Connect.Sink
+namespace Org.Apache.Kafka.Connect.Sink
 {
     public class SinkTask : Task
     {

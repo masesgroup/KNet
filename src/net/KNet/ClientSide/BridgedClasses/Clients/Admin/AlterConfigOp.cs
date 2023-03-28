@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Clients.Admin
+namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class AlterConfigOp : JCOBridge.C2JBridge.JVMBridgeBase<AlterConfigOp>
+    public class AlterConfigOp : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AlterConfigOp>
     {
         public override string ClassName => "org.apache.kafka.clients.admin.AlterConfigOp";
     }

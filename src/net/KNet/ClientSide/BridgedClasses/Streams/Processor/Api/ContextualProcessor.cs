@@ -18,7 +18,7 @@
 
 using System;
 
-namespace MASES.KNet.Streams.Processor.Api
+namespace Org.Apache.Kafka.Streams.Processor.Api
 {
     public class ContextualProcessor<KIn, VIn, KOut, VOut> : Processor<KIn, VIn, KOut, VOut>
     {

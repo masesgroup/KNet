@@ -19,9 +19,9 @@
 using Java.Lang;
 using Java.Util;
 using MASES.JCOBridge.C2JBridge;
-using MASES.KNet.Connect.Health;
+using Org.Apache.Kafka.Connect.Health;
 
-namespace MASES.KNet.Connect.Connector.Policy
+namespace Org.Apache.Kafka.Connect.Connector.Policy
 {
     public class ConnectorClientConfigRequest : JVMBridgeBase<ConnectorClientConfigRequest>
     {
