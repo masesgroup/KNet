@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Welcome to KNet | KNet website </title>
+    <title>KNet: the Apache Kafka .NET suite | KNet website </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Welcome to KNet | KNet website ">
+    <meta name="title" content="KNet: the Apache Kafka .NET suite | KNet website ">
     <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -67,9 +67,92 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="welcome-to-knet">Welcome to KNet</h1>
+<h1 id="knet-the-apache-kafka-net-suite">KNet: the Apache Kafka .NET suite</h1>
 
-<p>KNet is a .NET gateway for <a href="https://kafka.apache.org/">Apache Kafka</a> <a href="https://kafka.apache.org/documentation/#api">APIs</a> providing all features: Producer, Consumer, Admin, Streams, Connect, backends (ZooKeeper and Kafka).</p>
+<p>KNet is a comprehensive .NET suite for <a href="https://kafka.apache.org/">Apache Kafka</a> <a href="https://kafka.apache.org/documentation/#api">APIs</a> providing all features: Producer, Consumer, Admin, Streams, Connect, backends (ZooKeeper and Kafka).</p>
+<h3 id="libraries-and-tools">Libraries and Tools</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">KNet</th>
+<th style="text-align: center;">KNetCLI</th>
+<th style="text-align: center;">KNet.Templates</th>
+<th style="text-align: center;">KNetPS</th>
+<th style="text-align: center;">KNetConnect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><a href="https://www.nuget.org/packages/MASES.KNet"><img src="https://img.shields.io/nuget/v/MASES.KNet" alt="KNet nuget"></a> <a href="https://www.nuget.org/packages/MASES.KNet"><img src="https://img.shields.io/nuget/dt/MASES.KNet" alt="downloads"></a></td>
+<td style="text-align: center;"><a href="https://www.nuget.org/packages/MASES.KNetCLI"><img src="https://img.shields.io/nuget/v/MASES.KNetCLI" alt="KNetCLI nuget"></a> <a href="https://www.nuget.org/packages/MASES.KNetCLI"><img src="https://img.shields.io/nuget/dt/MASES.KNetCLI" alt="downloads"></a></td>
+<td style="text-align: center;"><a href="https://www.nuget.org/packages/MASES.KNet.Templates"><img src="https://img.shields.io/nuget/v/MASES.KNet.Templates" alt="KNet.Templates nuget"></a> <a href="https://www.nuget.org/packages/MASES.KNet.Templates"><img src="https://img.shields.io/nuget/dt/MASES.KNet.Templates" alt="downloads"></a></td>
+<td style="text-align: center;"><a href="https://www.powershellgallery.com/packages/MASES.KNetPS/"><img src="https://img.shields.io/powershellgallery/v/MASES.KNetPS.svg?style=flat-square&amp;label=MASES.KNetPS" alt="KNetPS"></a></td>
+<td style="text-align: center;"><a href="https://www.nuget.org/packages/MASES.KNetConnect"><img src="https://img.shields.io/nuget/v/MASES.KNetConnect" alt="KNetConnect nuget"></a> <a href="https://www.nuget.org/packages/MASES.KNetConnect"><img src="https://img.shields.io/nuget/dt/MASES.KNetConnect" alt="downloads"></a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="pipelines">Pipelines</h3>
+<p><a href="https://github.com/masesgroup/KNet/actions/workflows/build.yaml"><img src="https://github.com/masesgroup/KNet/actions/workflows/build.yaml/badge.svg" alt="CI_BUILD"></a>
+<a href="https://github.com/masesgroup/KNet/actions/workflows/codeql-analysis.yml"><img src="https://github.com/masesgroup/KNet/actions/workflows/codeql-analysis.yml/badge.svg" alt="CodeQL"></a>
+<a href="https://github.com/masesgroup/KNet/actions/workflows/release.yaml"><img src="https://github.com/masesgroup/KNet/actions/workflows/release.yaml/badge.svg" alt="CI_RELEASE"></a></p>
+<hr>
+<h2 id="scope-of-the-project">Scope of the project</h2>
+<p>This project aims to create a set of libraries and tools to direct access, from .NET, all the features available in the <a href="https://kafka.apache.org/downloads">Apache Kafka binary distribution</a>.</p>
+<p>There are many client libraries written to manage communication with Apache Kafka. Conversely, this project use directly the Java packages released from The Apache Foundation giving more than one benefit:</p>
+<ul>
+<li>all implemented features are availables at no extra implementation costs, see <a href="src/net/Documentation/articles/usage.md">KNet usage</a>;</li>
+<li>avoids any third party communication protocol implementation;</li>
+<li>access all features made available from Apache Kafka: the most important are Apache Kafka Streams and Apache Kafka Connect which does not have any C# implementation;</li>
+<li>measured high <a href="src/net/Documentation/articles/performance.md">performance</a> in many operating conditions.</li>
+</ul>
+<p>The Apache Kafka packages are downloaded from:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">kafka-clients</th>
+<th style="text-align: center;">kafka-streams</th>
+<th style="text-align: center;">kafka-tools</th>
+<th style="text-align: center;">kafka_2.13</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22kafka-clients%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/kafka-clients.svg?label=Maven%20Central" alt="Maven Central"></a></td>
+<td style="text-align: center;"><a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22kafka-streams%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/kafka-streams.svg?label=Maven%20Central" alt="Maven Central"></a></td>
+<td style="text-align: center;"><a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22kafka-tools%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/kafka-tools.svg?label=Maven%20Central" alt="Maven Central"></a></td>
+<td style="text-align: center;"><a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22kafka_2.13%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/kafka_2.13.svg?label=Maven%20Central" alt="Maven Central"></a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">connect-runtime</th>
+<th style="text-align: center;">connect-mirror</th>
+<th style="text-align: center;">connect-file</th>
+<th style="text-align: center;">connect-basic-auth-extension</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22connect-runtime%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/connect-runtime.svg?label=Maven%20Central" alt="Maven Central"></a></td>
+<td style="text-align: center;"><a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22connect-mirror%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/connect-mirror.svg?label=Maven%20Central" alt="Maven Central"></a></td>
+<td style="text-align: center;"><a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22connect-file%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/connect-file.svg?label=Maven%20Central" alt="Maven Central"></a></td>
+<td style="text-align: center;"><a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22connect-basic-auth-extension%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/connect-basic-auth-extension.svg?label=Maven%20Central" alt="Maven Central"></a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="community-and-contribution">Community and Contribution</h3>
+<p>Do you like the project?</p>
+<ul>
+<li>Request your free <a href="https://www.jcobridge.com/pricing-25/">community subscription</a>.</li>
+</ul>
+<p>Do you want to help us?</p>
+<ul>
+<li>put a ⭐ on this project</li>
+<li>open <a href="https://github.com/masesgroup/KNet/issues">issues</a> to request features or report bugs 🐛</li>
+<li>improves the project with Pull Requests</li>
+</ul>
 <p>This project adheres to the Contributor <a href="CODE_OF_CONDUCT.md">Covenant code of conduct</a>. By participating, you are expected to uphold this code. Please report unacceptable behavior to coc_reporting@masesgroup.com.</p>
 </article>
           </div>
