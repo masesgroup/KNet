@@ -71,18 +71,17 @@
 
 <h2 id="installation">Installation</h2>
 <p>To install the tool executes the following command within a PowerShell shell:</p>
-<blockquote>
-<p>Install-Module -Name MASES.KNetPS</p>
-</blockquote>
+<pre><code class="lang-powershell">Install-Module -Name MASES.KNetPS
+</code></pre>
+<p>If the above command fails, reporting errors related to <em>authenticode</em>, use the following command:</p>
+<pre><code class="lang-powershell">Install-Module -Name MASES.KNetPS -SkipPublisherCheck
+</code></pre>
 <h2 id="usage">Usage</h2>
 <p>To use the PowerShell interface (KNetPS) runs the following commands within a <strong>PowerShell</strong> shell:</p>
 <h3 id="initialization">Initialization</h3>
-<ul>
-<li>The following cmdlet must be called prior anything else to initialize the environment:</li>
-</ul>
-<blockquote>
-<p>Start-KNetPS [arguments]</p>
-</blockquote>
+<p>The following cmdlet must be called prior anything else to initialize the environment:</p>
+<pre><code class="lang-powershell">Start-KNetPS [arguments]
+</code></pre>
 <p>then the user can use objects created using <strong>New-KObject</strong> and other cmdlets, otherwise it is possible to invoke the desired Main-Class command which automatically executes <strong>Start-KNetPS</strong>.</p>
 <p>Here below two simple examples of producer/consumer from PowerShell.
 The examples are very minimal, but demonstrate how send to and receive from an Apache Kafka cluster.
@@ -113,7 +112,7 @@ $record = Get-ConsumerRecord -KeyClass &quot;System.String&quot; -ValueClass &qu
 
 </code></pre>
 <h2 id="cmdlets-available">Cmdlets available</h2>
-<p><em>knetps</em> accepts cmdlets divided by two main groups: Main-Class command cmdlets and Scriptable cmdlets.</p>
+<p>KNetPS accepts cmdlets divided by two main groups: Main-Class command cmdlets and Scriptable cmdlets.</p>
 <h3 id="scriptable-cmdlets">Scriptable cmdlets</h3>
 <p>Here a list of cmdlets usable within a script:</p>
 <ul>

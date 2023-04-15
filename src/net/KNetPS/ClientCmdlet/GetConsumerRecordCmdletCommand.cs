@@ -83,7 +83,7 @@ namespace MASES.KNetPS.ClientCmdlet
 
                 foreach (IJavaObject item in consumerRecords as IEnumerable)
                 {
-                    var res = JVMBridgeBase.Wraps(consumerRecordType, item);
+                    var res = JVMBridgeBase.Wraps(consumerRecordType, item, JVMBridgeBase.ClassNameOf<ConsumerRecord>());
                     WriteObject(res);
                 }
             }

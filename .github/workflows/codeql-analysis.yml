@@ -94,13 +94,21 @@ jobs:
       # make bootstrap
       # make release
 
+    - name: Set up Apache Maven Central
+      if: matrix.language == 'java' 
+      uses: actions/setup-java@v3
+      with: # running setup-java again overwrites the settings.xml
+        distribution: temurin
+        java-version: 11
+        cache: 'maven'
+
     - name: Maven preparation (step 1)
       if: matrix.language == 'java' 
       run: dotnet build --no-incremental --configuration Release --framework net6.0 /p:Platform="Any CPU" ./src/net/KNet.sln
 
     - name: Maven preparation (step 2)
       if: matrix.language == 'java' 
-      run: mvn install:install-file -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.2 -Dpackaging=jar -Dfile=../../../bin/net6.0/JCOBridge.jar -f ./src/java/knet/pom.xml
+      run: mvn install:install-file -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.5 -Dpackaging=jar -Dfile=../../../bin/net6.0/JCOBridge.jar -f ./src/java/knet/pom.xml
       shell: bash
 
     - if: matrix.language == 'java' 

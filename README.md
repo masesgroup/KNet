@@ -1,14 +1,10 @@
-# KNet: .NET gateway for Apache Kafka APIs
+# KNet: the Apache Kafka .NET suite
 
-KNet is a .NET gateway for [Apache Kafka](https://kafka.apache.org/) [APIs](https://kafka.apache.org/documentation/#api) providing all features: Producer, Consumer, Admin, Streams, Connect, backends (ZooKeeper and Kafka).
+KNet is a comprehensive .NET suite for [Apache Kafka](https://kafka.apache.org/) [APIs](https://kafka.apache.org/documentation/#api) providing all features: Producer, Consumer, Admin, Streams, Connect, backends (ZooKeeper and Kafka).
 
-This project adheres to the Contributor [Covenant code of conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to coc_reporting@masesgroup.com.
+### Libraries and Tools
 
-## Status
-
-Latest releases are:
-
-|KNet | KNetCLI | KNet.Templates | KNetPS<br/>(1.4.4+) | KNetConnect<br/>(1.4.7+) |
+|KNet | KNetCLI | KNet.Templates | KNetPS | KNetConnect |
 |:---:	|:---:	|:---:	|:---:	|:---:	|
 |[![KNet nuget](https://img.shields.io/nuget/v/MASES.KNet)](https://www.nuget.org/packages/MASES.KNet) [![downloads](https://img.shields.io/nuget/dt/MASES.KNet)](https://www.nuget.org/packages/MASES.KNet) | [![KNetCLI nuget](https://img.shields.io/nuget/v/MASES.KNetCLI)](https://www.nuget.org/packages/MASES.KNetCLI) [![downloads](https://img.shields.io/nuget/dt/MASES.KNetCLI)](https://www.nuget.org/packages/MASES.KNetCLI) | [![KNet.Templates nuget](https://img.shields.io/nuget/v/MASES.KNet.Templates)](https://www.nuget.org/packages/MASES.KNet.Templates) [![downloads](https://img.shields.io/nuget/dt/MASES.KNet.Templates)](https://www.nuget.org/packages/MASES.KNet.Templates)| [![KNetPS](https://img.shields.io/powershellgallery/v/MASES.KNetPS.svg?style=flat-square&label=MASES.KNetPS)](https://www.powershellgallery.com/packages/MASES.KNetPS/)| [![KNetConnect nuget](https://img.shields.io/nuget/v/MASES.KNetConnect)](https://www.nuget.org/packages/MASES.KNetConnect) [![downloads](https://img.shields.io/nuget/dt/MASES.KNetConnect)](https://www.nuget.org/packages/MASES.KNetConnect) |
 
@@ -18,9 +14,11 @@ Latest releases are:
 [![CodeQL](https://github.com/masesgroup/KNet/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/masesgroup/KNet/actions/workflows/codeql-analysis.yml)
 [![CI_RELEASE](https://github.com/masesgroup/KNet/actions/workflows/release.yaml/badge.svg)](https://github.com/masesgroup/KNet/actions/workflows/release.yaml) 
 
+---
+
 ## Scope of the project
 
-This project aims to create a library to direct access, from .NET, all the features available in the [Apache Kafka binary distribution](https://kafka.apache.org/downloads). 
+This project aims to create a set of libraries and tools to direct access, from .NET, all the features available in the [Apache Kafka binary distribution](https://kafka.apache.org/downloads). 
 
 There are many client libraries written to manage communication with Apache Kafka. Conversely, this project use directly the Java packages released from The Apache Foundation giving more than one benefit:
 * all implemented features are availables at no extra implementation costs, see [KNet usage](src/net/Documentation/articles/usage.md);
@@ -39,10 +37,38 @@ The Apache Kafka packages are downloaded from:
 |:---:	|:---:	|:---:	|:---:	|
 | [![Maven Central](https://img.shields.io/maven-central/v/org.apache.kafka/connect-runtime.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22connect-runtime%22) | [![Maven Central](https://img.shields.io/maven-central/v/org.apache.kafka/connect-mirror.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22connect-mirror%22) | [![Maven Central](https://img.shields.io/maven-central/v/org.apache.kafka/connect-file.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22connect-file%22) |  [![Maven Central](https://img.shields.io/maven-central/v/org.apache.kafka/connect-basic-auth-extension.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22connect-basic-auth-extension%22) |
 
+### Community and Contribution
+
+Do you like the project? 
+- Request your free [community subscription](https://www.jcobridge.com/pricing-25/).
+
+Do you want to help us?
+- put a :star: on this project
+- open [issues](https://github.com/masesgroup/KNet/issues) to request features or report bugs :bug:
+- improves the project with Pull Requests
+
+This project adheres to the Contributor [Covenant code of conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to coc_reporting@masesgroup.com.
+
+## Summary
+
+* [Roadmap](src/net/Documentation/articles/roadmap.md)
+* [Actual state](src/net/Documentation/articles/actualstate.md)
+* [Performance](src/net/Documentation/articles/performance.md)
+* [Connect SDK](src/net/Documentation/articles/connectSDK.md)
+* [KNet usage](src/net/Documentation/articles/usage.md)
+* [KNet APIs extensibility](src/net/Documentation/articles/API_extensibility.md)
+* [KNet CLI usage](src/net/Documentation/articles/usageCLI.md)
+* [KNet Connect usage](src/net/Documentation/articles/usageConnect.md)
+* [KNet PowerShell usage](src/net/Documentation/articles/usagePS.md)
+* [KNet Template usage](src/net/Documentation/articles/usageTemplates.md)
+* [How to build from scratch](src/net/Documentation/articles/howtobuild.md)
+
 ### News
 
 * V1.4.4+: From version 1.4.4 there is a new project, named KNetPS, which permits to write PowerShell client scripts for an Apache Kafka cluster and many other things, [here full usage](src/net/Documentation/articles/usagePS.md).
 * V1.4.7+: From version 1.4.7 there is a new project, named KNetConnect, to execute Apache Kafka Connect related jobs, [here full usage](src/net/Documentation/articles/usageConnect.md).
+
+---
 
 ## Runtime engine
 
@@ -68,22 +94,5 @@ Have a look at the following JCOBridge resources:
 - [Community Edition](https://www.jcobridge.com/pricing-25/)
 - [Commercial Edition](https://www.jcobridge.com/pricing-25/)
 - Latest release: [![JCOBridge nuget](https://img.shields.io/nuget/v/MASES.JCOBridge)](https://www.nuget.org/packages/MASES.JCOBridge)
-
----
-## Summary
-
-* [Roadmap](src/net/Documentation/articles/roadmap.md)
-* [Actual state](src/net/Documentation/articles/actualstate.md)
-* [Performance](src/net/Documentation/articles/performance.md)
-* [Connect SDK](src/net/Documentation/articles/connectSDK.md)
-* [KNet usage](src/net/Documentation/articles/usage.md)
-* [KNet APIs extensibility](src/net/Documentation/articles/API_extensibility.md)
-* [KNet CLI usage](src/net/Documentation/articles/usageCLI.md)
-* [KNet Connect usage](src/net/Documentation/articles/usageConnect.md)
-* [KNet PowerShell usage](src/net/Documentation/articles/usagePS.md)
-* [KNet Template usage](src/net/Documentation/articles/usageTemplates.md)
-* [How to build from scratch](src/net/Documentation/articles/howtobuild.md)
-
----
 
 KAFKA is a registered trademark of The Apache Software Foundation. KNet has no affiliation with and is not endorsed by The Apache Software Foundation.

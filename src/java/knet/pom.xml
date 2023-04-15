@@ -37,12 +37,12 @@
         </developer>
     </developers>
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <classpathfile>${basedir}/classpathfile.classpath</classpathfile>
         <kafkaVersion>3.4.0</kafkaVersion>
-		<knetVersion>1.5.0.0</knetVersion>
-        <jcobridgeVersion>2.5.2</jcobridgeVersion>
+		<knetVersion>1.5.2.0</knetVersion>
+        <jcobridgeVersion>2.5.5</jcobridgeVersion>
     </properties>
     <distributionManagement>
         <snapshotRepository>
