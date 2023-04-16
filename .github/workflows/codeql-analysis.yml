@@ -108,7 +108,7 @@ jobs:
 
     - name: Maven preparation (step 2)
       if: matrix.language == 'java' 
-      run: mvn install:install-file -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.5 -Dpackaging=jar -Dfile=../../../bin/net6.0/JCOBridge.jar -f ./src/java/knet/pom.xml
+      run: mvn install:install-file -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.6 -Dpackaging=jar -Dfile=../../../bin/net6.0/JCOBridge.jar -f ./src/java/knet/pom.xml
       shell: bash
 
     - if: matrix.language == 'java' 
