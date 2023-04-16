@@ -10,6 +10,7 @@
 	<ItemGroup>
 		<Compile Include="..\KNetBenchmark\ProgramConfluent.cs" Link="ProgramConfluent.cs" />
 		<Compile Include="..\KNetBenchmark\ProgramInit.cs" Link="ProgramInit.cs" />
+		<Compile Include="..\KNetBenchmark\ProgramKafka.cs" Link="ProgramKafka.cs" />
 		<Compile Include="..\KNetBenchmark\ProgramKNet.cs" Link="ProgramKNet.cs" />
 		<Compile Include="..\KNetBenchmark\ProgramSupport.cs" Link="ProgramSupport.cs" />
 	</ItemGroup>

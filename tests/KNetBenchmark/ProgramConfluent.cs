@@ -21,6 +21,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Threading;
 
 namespace MASES.KNet.Benchmark
 {
@@ -325,6 +326,145 @@ namespace MASES.KNet.Benchmark
                     consumer.Dispose();
                     producer.Dispose();
                 }
+            }
+        }
+
+        static (Stopwatch, IEnumerable<double>) RoundTripConfluent(int testNum, string topicName, int length, int numpacket, byte[] data = null)
+        {
+            try
+            {
+                List<double> roundTripTime = new System.Collections.Generic.List<double>();
+                ManualResetEvent startEvent = new ManualResetEvent(false);
+                var consumer = ConfluentConsumer();
+                var producer = ConfluentProducer();
+                PartitionsAssignedHandler_trampoline = (o1, o2) =>
+                {
+                    if (ShowLogs) Console.WriteLine("Assigned: {0}", string.Join(" ", o2.Select((o) => o.ToString()).ToArray()));
+                    startEvent.Set();
+                };
+
+                System.Threading.Thread thread = new System.Threading.Thread(() =>
+                {
+                    try
+                    {
+                        consumer.Subscribe(topicName);
+                        int counter = 0;
+                        while (true)
+                        {
+                            var record = consumer.Consume(TimeSpan.FromSeconds(1));
+                            if (record != null)
+                            {
+                                roundTripTime.Add((double)(DateTime.Now.Ticks - record.Message.Key) / (TimeSpan.TicksPerMillisecond / 1000));
+
+                                if (CheckOnConsume && !record.Message.Value.SequenceEqual(data))
+                                {
+                                    throw new InvalidOperationException($"ConsumeConfluent test {testNum}: Incorrect data counter {counter} item.Key {record.Message.Key}");
+                                }
+                                counter++;
+                            }
+
+                            if (AlwaysCommit) consumer.Commit(record);
+                            if (counter >= numpacket)
+                            {
+                                consumer.Commit(record);
+                                consumer.Unsubscribe();
+                                break;
+                            }
+                        }
+                    }
+                    finally
+                    {
+                        if (!SharedObjects)
+                        {
+                            consumer.Dispose();
+                        }
+                        startEvent.Set();
+                    }
+                });
+
+                thread.Start();
+                startEvent.WaitOne();
+                startEvent.Reset();
+
+                Stopwatch totalExecution = Stopwatch.StartNew();
+
+                Stopwatch swCreateRecord = null;
+                Stopwatch swSendRecord = null;
+                Stopwatch stopWatch = null;
+                try
+                {
+                    if (data == null)
+                    {
+                        var rand = new System.Random();
+                        data = new byte[length];
+                        for (int i = 0; i < length; i++)
+                        {
+                            data[i] = (byte)rand.Next(0, byte.MaxValue);
+                        }
+                    }
+                    var message = new Message<long, byte[]>
+                    {
+                        Key = 42,
+                        Value = data
+                    };
+                    swCreateRecord = new();
+                    swSendRecord = new();
+                    stopWatch = Stopwatch.StartNew();
+                    for (int i = 0; i < numpacket; i++)
+                    {
+                        if (!SinglePacket)
+                        {
+                            stopWatch.Stop();
+                            byte[] newData = new byte[data.Length];
+                            Array.Copy(data, 0, newData, 0, data.Length);
+                            stopWatch.Start();
+                            swCreateRecord.Start();
+                            message = new Message<long, byte[]>
+                            {
+                                Key = DateTime.Now.Ticks,
+                                Value = newData
+                            };
+                            swCreateRecord.Stop();
+                        }
+                        swSendRecord.Start();
+                        if (UseCallback)
+                        {
+                            producer.Produce(topicName, message, (o) =>
+                            {
+                                if (o.Error.IsError) Console.WriteLine(o.Error.ToString());
+                                else if (ShowLogs) Console.WriteLine($"Produced on topic {o.Topic} at offset {o.Offset}");
+                            });
+                        }
+                        else
+                        {
+                            producer.Produce(topicName, message);
+                        }
+                        swSendRecord.Stop();
+                        if (WithBurst)
+                        {
+                            if (i % BurstLength == 0)
+                            {
+                                stopWatch.Stop();
+                                System.Threading.Thread.Sleep(BurstInterval);
+                                stopWatch.Start();
+                            }
+                        }
+                        if (ContinuousFlushConfluent) producer.Flush();
+                    }
+                }
+                finally { producer.Flush(); stopWatch.Stop(); if (!SharedObjects) producer.Dispose(); }
+                startEvent.WaitOne();
+                totalExecution.Stop();
+                if (ShowResults)
+                {
+                    Console.WriteLine($"Confluent: Create {swCreateRecord.ElapsedMicroSeconds()} ({swCreateRecord.ElapsedMicroSeconds() / numpacket}) Send {swSendRecord.ElapsedMicroSeconds()} ({swSendRecord.ElapsedMicroSeconds() / numpacket}) -> {swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds()} -> BackTime {stopWatch.ElapsedMicroSeconds() - (swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds())}");
+                }
+
+                return (totalExecution, roundTripTime);
+            }
+            catch (Java.Util.Concurrent.ExecutionException ex)
+            {
+                throw ex.InnerException;
             }
         }
     }
