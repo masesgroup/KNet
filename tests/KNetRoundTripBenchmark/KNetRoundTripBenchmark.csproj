@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<Import Project="..\Common\Common.props" />
 	<PropertyGroup>
-		<AssemblyName>KNetTopicCopyBenchmark</AssemblyName>
+		<AssemblyName>KNetRoundTripBenchmark</AssemblyName>
 		<OutputType>Exe</OutputType>
 		<RootNamespace>MASES.KNet.Benchmark</RootNamespace>
 		<Title>KNetTest - a test tool for KNet</Title>

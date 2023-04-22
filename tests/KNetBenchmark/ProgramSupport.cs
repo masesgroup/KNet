@@ -105,6 +105,11 @@ namespace MASES.KNet.Benchmark
         {
             return values.StandardDeviation() / values.Average();
         }
+
+        public static double MeanMicroSeconds(this IEnumerable<double> values, int numPacket)
+        {
+            return (double)values.Sum() / numPacket;
+        }
     }
 
     partial class Program
