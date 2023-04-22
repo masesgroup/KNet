@@ -23,7 +23,7 @@ using System.Management.Automation;
 namespace MASES.KNetPS.ClientCmdlet
 {
     [Cmdlet(VerbsCommon.New, "ProducerConfigBuilder")]
-    [OutputType(typeof(KNetProducer<,>))]
+    [OutputType(typeof(ProducerConfigBuilder))]
     public class NewProducerConfigBuilderCmdletCommand : KNetPSCmdlet
     {
         // This method gets called once for each cmdlet in the pipeline when the pipeline starts executing

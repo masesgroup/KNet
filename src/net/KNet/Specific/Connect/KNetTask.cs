@@ -24,7 +24,7 @@ using Org.Apache.Kafka.Connect.Connector;
 using System;
 using System.Collections.Generic;
 
-namespace Org.Apache.Kafka.Connect
+namespace MASES.KNet.Connect
 {
     /// <summary>
     /// Specific implementation of <see cref="ITask"/> to support KNet Connect SDK

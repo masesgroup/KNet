@@ -21,6 +21,7 @@ using MASES.KNet.Extensions;
 using MASES.KNetPS.Cmdlet;
 using System;
 using System.Management.Automation;
+using MASES.KNet.Consumer;
 
 namespace MASES.KNetPS.ClientCmdlet
 {

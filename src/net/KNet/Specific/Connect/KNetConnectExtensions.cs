@@ -22,7 +22,7 @@ using Org.Apache.Kafka.Connect.Source;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Org.Apache.Kafka.Connect
+namespace MASES.KNet.Connect
 {
     /// <summary>
     /// Some extension method helping to convert types

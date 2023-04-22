@@ -18,6 +18,8 @@
 
 using Java.Util;
 using MASES.JCOBridge.C2JBridge;
+using MASES.KNet.Consumer;
+using MASES.KNet.Producer;
 using Org.Apache.Kafka.Clients.Consumer;
 using Org.Apache.Kafka.Clients.Producer;
 using Org.Apache.Kafka.Common.Serialization;

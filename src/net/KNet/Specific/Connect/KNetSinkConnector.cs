@@ -19,7 +19,7 @@
 using Org.Apache.Kafka.Connect.Sink;
 using System;
 
-namespace Org.Apache.Kafka.Connect
+namespace MASES.KNet.Connect
 {
     /// <summary>
     /// An implementation of <see cref="KNetConnector{TSinkConnector}"/> for sink connectors

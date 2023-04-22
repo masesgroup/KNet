@@ -21,7 +21,7 @@ using MASES.JNet.Extensions;
 using Org.Apache.Kafka.Connect.Sink;
 using System.Collections.Generic;
 
-namespace Org.Apache.Kafka.Connect
+namespace MASES.KNet.Connect
 {
     /// <summary>
     /// An implementation of <see cref="KNetTask{TTask}"/> for sink task

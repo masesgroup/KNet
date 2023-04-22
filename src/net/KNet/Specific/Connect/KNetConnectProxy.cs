@@ -23,7 +23,7 @@ using MASES.KNet;
 using System;
 using System.Reflection;
 
-namespace Org.Apache.Kafka.Connect
+namespace MASES.KNet.Connect
 {
     /// <summary>
     /// Internal class used to proxy and pairs data exchange with Java side

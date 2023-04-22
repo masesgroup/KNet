@@ -16,6 +16,8 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.KNet.Connect;
+
 namespace Org.Apache.Kafka.Connect.Cli
 {
     /// <summary>

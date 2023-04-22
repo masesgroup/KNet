@@ -25,7 +25,7 @@ using Org.Apache.Kafka.Connect.Source;
 using System;
 using System.Collections.Generic;
 
-namespace Org.Apache.Kafka.Connect
+namespace MASES.KNet.Connect
 {
     /// <summary>
     /// An implementation of <see cref="KNetTask{TTask}"/> for source task

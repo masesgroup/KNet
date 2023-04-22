@@ -1,4 +1,4 @@
-﻿using Org.Apache.Kafka.Connect;
+﻿using MASES.KNet.Connect;
 using Org.Apache.Kafka.Connect.Data;
 using Org.Apache.Kafka.Connect.Source;
 using System;

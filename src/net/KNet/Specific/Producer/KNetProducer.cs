@@ -20,8 +20,9 @@ using Org.Apache.Kafka.Common.Serialization;
 using Java.Util;
 using Java.Lang;
 using Org.Apache.Kafka.Common.Header;
+using Org.Apache.Kafka.Clients.Producer;
 
-namespace Org.Apache.Kafka.Clients.Producer
+namespace MASES.KNet.Producer
 {
     /// <summary>
     /// Extends <see cref="IProducer{K, V}"/> adding less intrusive methods which performs better in high throughput applications

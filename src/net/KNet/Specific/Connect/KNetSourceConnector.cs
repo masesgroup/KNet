@@ -19,7 +19,7 @@
 using Org.Apache.Kafka.Connect.Source;
 using System;
 
-namespace Org.Apache.Kafka.Connect
+namespace MASES.KNet.Connect
 {
     /// <summary>
     /// An implementation of <see cref="KNetConnector{TSourceConnector}"/> for source connectors
@@ -40,12 +40,12 @@ namespace Org.Apache.Kafka.Connect
         /// </summary>
         public ExactlyOnceSupport ExactlyOnceSupportInternal()
         {
-            return ExactlyOnceSupport();
+            return ExactlyOnceSupport;
         }
         /// <summary>
         /// Implement the method to return the <see cref="KNet.Connect.Source.ExactlyOnceSupport"/> value
         /// </summary>
-        public virtual ExactlyOnceSupport ExactlyOnceSupport() => Source.ExactlyOnceSupport.UNSUPPORTED;
+        public virtual ExactlyOnceSupport ExactlyOnceSupport => ExactlyOnceSupport.UNSUPPORTED;
 
         /// <summary>
         /// Public method used from Java to trigger <see cref="CanDefineTransactionBoundaries"/>

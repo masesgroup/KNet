@@ -22,8 +22,9 @@ using Java.Util;
 using MASES.JCOBridge.C2JBridge;
 using System;
 using System.Collections.Concurrent;
+using Org.Apache.Kafka.Clients.Consumer;
 
-namespace Org.Apache.Kafka.Clients.Consumer
+namespace MASES.KNet.Consumer
 {
     public class Message<K, V>
     {
