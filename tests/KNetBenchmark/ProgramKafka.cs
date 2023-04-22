@@ -18,9 +18,9 @@
 
 using Java.Util;
 using MASES.JCOBridge.C2JBridge;
-using MASES.KNet.Clients.Consumer;
-using MASES.KNet.Clients.Producer;
-using MASES.KNet.Common.Serialization;
+using Org.Apache.Kafka.Clients.Consumer;
+using Org.Apache.Kafka.Clients.Producer;
+using Org.Apache.Kafka.Common.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
