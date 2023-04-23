@@ -17,6 +17,8 @@
 */
 
 using Java.Util;
+using System.Globalization;
+using System;
 
 namespace MASES.KNet
 {
@@ -117,7 +119,7 @@ namespace MASES.KNet
             HashMap<string, string> props = new();
             foreach (var item in _options)
             {
-                props.Put(item.Key, item.Value.ToString());
+                props.Put(item.Key, Convert.ToString(item.Value, CultureInfo.InvariantCulture));
             }
 
             return props;

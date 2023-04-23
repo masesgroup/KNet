@@ -141,6 +141,29 @@ namespace MASES.KNet.Extensions
             }
         }
 
+        public static void CreateTopic(this IAdmin admin, NewTopic topic)
+        {
+            Set<NewTopic> coll = null;
+            try
+            {
+                coll = Collections.Singleton(topic);
+                var res = admin.CreateTopics(coll);
+                res.All.Get();
+            }
+            catch (ExecutionException ex)
+            {
+                throw ex.InnerException;
+            }
+            finally
+            { // this piece of code tryies to mitigate the effect of GC object recall
+                if (coll != null && coll.IsStatic)
+                {
+                    topic.ToString();
+                    coll.ToString();
+                }
+            }
+        }
+
         public static async Task<CreateTopicsResult> CreateTopicAsync(this IAdmin admin, string topicName, int numPartitions = 1, short replicationFactor = 1)
         {
             NewTopic topic = null;

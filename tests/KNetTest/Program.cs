@@ -92,7 +92,10 @@ namespace MASES.KNetTest
                 var map = Collections.SingletonMap(TopicConfig.CLEANUP_POLICY_CONFIG, TopicConfig.CLEANUP_POLICY_COMPACT);
                 topic.Configs(map);
                 *********/
-                topic.Configs(TopicConfigBuilder.Create().WithCleanupPolicy(TopicConfig.CleanupPolicy.Compact));
+                topic = topic.Configs(TopicConfigBuilder.Create().WithCleanupPolicy(TopicConfig.CleanupPolicy.Compact | TopicConfig.CleanupPolicy.Delete)
+                                                                 .WithDeleteRetentionMs(100)
+                                                                 .WithMinCleanableDirtyRatio(0.01)
+                                                                 .WithSegmentMs(100));
 
                 var coll = Collections.Singleton(topic);
 
