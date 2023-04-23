@@ -262,9 +262,9 @@ namespace MASES.KNet.Common.Config
             return clone;
         }
 
-        public int MinCleanableDirtyRatio { get { return GetProperty<int>(TopicConfig.MIN_CLEANABLE_DIRTY_RATIO_CONFIG); } set { SetProperty(TopicConfig.MIN_CLEANABLE_DIRTY_RATIO_CONFIG, value); } }
+        public double MinCleanableDirtyRatio { get { return GetProperty<double>(TopicConfig.MIN_CLEANABLE_DIRTY_RATIO_CONFIG); } set { SetProperty(TopicConfig.MIN_CLEANABLE_DIRTY_RATIO_CONFIG, value); } }
 
-        public TopicConfigBuilder WithMinCleanableDirtyRatio(int minCleanableDirtyRatio)
+        public TopicConfigBuilder WithMinCleanableDirtyRatio(double minCleanableDirtyRatio)
         {
             var clone = Clone();
             clone.MinCleanableDirtyRatio = minCleanableDirtyRatio;
@@ -284,9 +284,9 @@ namespace MASES.KNet.Common.Config
             set
             {
                 if (value == TopicConfig.CleanupPolicy.None) return;
-                var str = string.Empty;
-                if (value.HasFlag(TopicConfig.CleanupPolicy.Compact)) str += TopicConfig.CLEANUP_POLICY_COMPACT;
-                if (value.HasFlag(TopicConfig.CleanupPolicy.Delete)) str += TopicConfig.CLEANUP_POLICY_DELETE;
+                var str = value.ToString();
+                str = str.ToLowerInvariant();
+                str = str.Replace(", ", ",");
                 SetProperty(TopicConfig.CLEANUP_POLICY_CONFIG, str);
             }
         }
