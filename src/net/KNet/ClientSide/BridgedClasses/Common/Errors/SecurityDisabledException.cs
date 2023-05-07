@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class SecurityDisabledException : ApiException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.SecurityDisabledException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.SecurityDisabledException";
     }
 }

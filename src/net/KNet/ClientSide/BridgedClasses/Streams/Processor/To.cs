@@ -20,7 +20,7 @@ namespace MASES.KNet.Streams.Processor
 {
     public class To : JCOBridge.C2JBridge.JVMBridgeBase<To>
     {
-        public override string ClassName => "org.apache.kafka.streams.processor.To";
+        public override string BridgeClassName => "org.apache.kafka.streams.processor.To";
 
         public static To Child(string childName)
         {

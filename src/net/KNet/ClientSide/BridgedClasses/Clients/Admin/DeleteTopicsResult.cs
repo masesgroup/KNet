@@ -24,7 +24,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class DeleteTopicsResult : JCOBridge.C2JBridge.JVMBridgeBase<DeleteTopicsResult>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.DeleteTopicsResult";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.DeleteTopicsResult";
 
         public Map<Uuid, KafkaFuture<Void>> TopicIdValues => IExecute<Map<Uuid, KafkaFuture<Void>>>("topicIdValues");
 

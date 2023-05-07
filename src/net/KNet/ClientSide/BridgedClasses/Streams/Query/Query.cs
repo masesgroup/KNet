@@ -20,8 +20,8 @@ namespace MASES.KNet.Streams.Query
 {
     public class Query<R> : JCOBridge.C2JBridge.JVMBridgeBase<Query<R>>
     {
-        public override bool IsInterface => true;
+        public override bool IsBridgeInterface => true;
 
-        public override string ClassName => "org.apache.kafka.streams.query.Query";
+        public override string BridgeClassName => "org.apache.kafka.streams.query.Query";
     }
 }

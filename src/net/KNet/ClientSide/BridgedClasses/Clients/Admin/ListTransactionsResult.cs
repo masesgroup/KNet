@@ -23,7 +23,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class ListTransactionsResult : JCOBridge.C2JBridge.JVMBridgeBase<ListTransactionsResult>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.ListTransactionsResult";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.ListTransactionsResult";
 
         public KafkaFuture<Collection<TransactionListing>> All => IExecute<KafkaFuture<Collection<TransactionListing>>>("all");
 

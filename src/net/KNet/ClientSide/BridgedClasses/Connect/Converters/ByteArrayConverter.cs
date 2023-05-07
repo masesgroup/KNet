@@ -27,7 +27,7 @@ namespace MASES.KNet.Connect.Converters
 {
     public class ByteArrayConverter : JVMBridgeBase<ByteArrayConverter>
     {
-        public override string ClassName => "org.apache.kafka.connect.converters.ByteArrayConverter";
+        public override string BridgeClassName => "org.apache.kafka.connect.converters.ByteArrayConverter";
 
         public static implicit operator HeaderConverter(ByteArrayConverter converter) { return converter.Cast<HeaderConverter>(); }
 

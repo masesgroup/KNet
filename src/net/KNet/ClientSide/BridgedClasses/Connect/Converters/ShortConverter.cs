@@ -20,6 +20,6 @@ namespace MASES.KNet.Connect.Converters
 {
     public class ShortConverter : NumberConverter<short>
     {
-        public override string ClassName => "org.apache.kafka.connect.converters.ShortConverter";
+        public override string BridgeClassName => "org.apache.kafka.connect.converters.ShortConverter";
     }
 }

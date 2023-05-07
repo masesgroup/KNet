@@ -24,8 +24,8 @@ namespace MASES.KNet.Connect.Source
 {
     public class SourceTaskContext : JVMBridgeBase<SourceTaskContext>
     {
-        public override bool IsInterface => true;
-        public override string ClassName => "org.apache.kafka.connect.source.SourceTaskContext";
+        public override bool IsBridgeInterface => true;
+        public override string BridgeClassName => "org.apache.kafka.connect.source.SourceTaskContext";
 
         public Map<string, string> Configs => IExecute<Map<string, string>>("configs");
 

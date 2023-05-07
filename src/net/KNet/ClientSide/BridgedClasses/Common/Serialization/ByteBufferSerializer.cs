@@ -22,7 +22,7 @@ namespace MASES.KNet.Common.Serialization
 {
     public class ByteBufferSerializer : Serializer<ByteBuffer>
     {
-        public override string ClassName => "org.apache.kafka.common.serialization.ByteBufferSerializer";
+        public override string BridgeClassName => "org.apache.kafka.common.serialization.ByteBufferSerializer";
 
         public override bool AutoInit => false;
 

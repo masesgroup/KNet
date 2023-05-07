@@ -29,7 +29,7 @@ namespace MASES.KNet.Common
 
     public class Metric : JVMBridgeBase<Metric, IMetric>, IMetric
     {
-        public override string ClassName => "org.apache.kafka.common.Metric";
+        public override string BridgeClassName => "org.apache.kafka.common.Metric";
 
         public MetricName MetricName => IExecute<MetricName>("metricName");
 

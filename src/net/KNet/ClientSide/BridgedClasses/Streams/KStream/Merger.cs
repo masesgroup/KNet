@@ -46,7 +46,7 @@ namespace MASES.KNet.Streams.KStream
     public class Merger<K, V> : JVMBridgeListener, IMerger<K, V>
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.streams.kstream.MergerImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.streams.kstream.MergerImpl";
 
         readonly Func<K, V, V, V> executionFunction = null;
         /// <summary>

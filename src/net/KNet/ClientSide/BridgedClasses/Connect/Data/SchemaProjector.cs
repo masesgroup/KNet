@@ -22,7 +22,7 @@ namespace MASES.KNet.Connect.Data
 {
     public class SchemaProjector : JVMBridgeBase<SchemaProjector>
     {
-        public override string ClassName => "org.apache.kafka.connect.data.SchemaProjector";
+        public override string BridgeClassName => "org.apache.kafka.connect.data.SchemaProjector";
 
         public static Java.Lang.Object Project(Schema source, Java.Lang.Object record, Schema target)
         {

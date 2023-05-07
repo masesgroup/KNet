@@ -20,7 +20,7 @@ namespace MASES.KNet.Common.Serialization
 {
     public class LongSerializer : Serializer<long>
     {
-        public override string ClassName => "org.apache.kafka.common.serialization.LongSerializer";
+        public override string BridgeClassName => "org.apache.kafka.common.serialization.LongSerializer";
 
         public override bool AutoInit => false;
 

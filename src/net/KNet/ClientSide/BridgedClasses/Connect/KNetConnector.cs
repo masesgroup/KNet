@@ -132,7 +132,7 @@ namespace MASES.KNet.Connect
             if (reflectedConnector != null)
             {
                 JCOBridge.C2JBridge.IJVMBridgeBase jvmBBD = data as JCOBridge.C2JBridge.IJVMBridgeBase;
-                reflectedConnector.Invoke("setDataToExchange", jvmBBD != null ? jvmBBD.Instance : data);
+                reflectedConnector.Invoke("setDataToExchange", jvmBBD != null ? jvmBBD.BridgeInstance : data);
             }
             else
             {
@@ -244,23 +244,23 @@ namespace MASES.KNet.Connect
 
         public void LogTrace(string var1) => ExecuteOnConnector("trace", var1);
 
-        public void LogTrace(string var1, JVMBridgeException var2) => ExecuteOnConnector("trace", var1, var2.Instance);
+        public void LogTrace(string var1, JVMBridgeException var2) => ExecuteOnConnector("trace", var1, var2.BridgeInstance);
 
         public void LogDebug(string var1) => ExecuteOnConnector("debug", var1);
 
-        public void LogDebug(string var1, JVMBridgeException var2) => ExecuteOnConnector("debug", var1, var2.Instance);
+        public void LogDebug(string var1, JVMBridgeException var2) => ExecuteOnConnector("debug", var1, var2.BridgeInstance);
 
         public void LogInfo(string var1) => ExecuteOnConnector("info", var1);
 
-        public void LogInfo(string var1, JVMBridgeException var2) => ExecuteOnConnector("info", var1, var2.Instance);
+        public void LogInfo(string var1, JVMBridgeException var2) => ExecuteOnConnector("info", var1, var2.BridgeInstance);
 
         public void LogWarn(string var1) => ExecuteOnConnector("warn", var1);
 
-        public void LogWarn(string var1, JVMBridgeException var2) => ExecuteOnConnector("warn", var1, var2.Instance);
+        public void LogWarn(string var1, JVMBridgeException var2) => ExecuteOnConnector("warn", var1, var2.BridgeInstance);
 
         public void LogError(string var1) => ExecuteOnConnector("error", var1);
 
-        public void LogError(string var1, JVMBridgeException var2) => ExecuteOnConnector("error", var1, var2.Instance);
+        public void LogError(string var1, JVMBridgeException var2) => ExecuteOnConnector("error", var1, var2.BridgeInstance);
         #endregion
     }
     /// <summary>

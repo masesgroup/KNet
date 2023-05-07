@@ -75,7 +75,7 @@ namespace MASES.KNet.Streams.KStream
 
     public class KGroupedTable<K, V> : JVMBridgeBase<KGroupedTable<K, V>, IKGroupedTable<K, V>>, IKGroupedTable<K, V>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.KGroupedTable";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.KGroupedTable";
 
         public KTable<K, VR> Aggregate<TSuperK, TSuperV, VR>(Initializer<VR> initializer, Aggregator<TSuperK, TSuperV, VR> adder, Aggregator<TSuperK, TSuperV, VR> subtractor, Materialized<K, VR, KeyValueStore<Bytes, byte[]>> materialized)
             where TSuperK : K

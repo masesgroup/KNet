@@ -20,7 +20,7 @@ namespace MASES.KNet.Common.Serialization
 {
     public class ShortSerializer : Serializer<short>
     {
-        public override string ClassName => "org.apache.kafka.common.serialization.ShortSerializer";
+        public override string BridgeClassName => "org.apache.kafka.common.serialization.ShortSerializer";
 
         public override bool AutoInit => false;
 

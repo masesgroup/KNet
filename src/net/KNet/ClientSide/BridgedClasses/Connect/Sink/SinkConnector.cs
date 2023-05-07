@@ -20,9 +20,9 @@ namespace MASES.KNet.Connect.Sink
 {
     public class SinkConnector : Connector.Connector
     {
-        public override bool IsInterface => false;
-        public override bool IsAbstract => true;
+        public override bool IsBridgeInterface => false;
+        public override bool IsBridgeAbstract => true;
 
-        public override string ClassName => "org.apache.kafka.connect.sink.SinkConnector";
+        public override string BridgeClassName => "org.apache.kafka.connect.sink.SinkConnector";
     }
 }

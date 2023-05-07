@@ -49,7 +49,7 @@ namespace MASES.KNet.Streams.KStream
     public class Aggregator<K, V, VA> : JVMBridgeListener, IAggregator<K, V, VA>
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.streams.kstream.AggregatorImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.streams.kstream.AggregatorImpl";
 
         readonly Func<K, V, VA, VA> executionFunction = null;
         /// <summary>

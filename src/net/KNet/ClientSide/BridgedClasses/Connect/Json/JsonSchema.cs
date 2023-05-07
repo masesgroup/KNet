@@ -22,7 +22,7 @@ namespace MASES.KNet.Connect.Json
 {
     public class JsonSchema : JVMBridgeBase<JsonSchema>
     {
-        public override string ClassName => "org.apache.kafka.connect.json.JsonSchema";
+        public override string BridgeClassName => "org.apache.kafka.connect.json.JsonSchema";
 
         // MISSING SOME METHOD DUE TO MISSING com.fasterxml.jackson.databind.*
     }

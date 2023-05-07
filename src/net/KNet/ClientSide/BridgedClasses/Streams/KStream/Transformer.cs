@@ -32,7 +32,7 @@ namespace MASES.KNet.Streams.KStream
 
     public class Transformer<K, V, R> : JVMBridgeBase<Transformer<K, V, R>, ITransformer<K, V, R>>, ITransformer<K, V, R>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.Transformer";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.Transformer";
 
         public void Close()
         {

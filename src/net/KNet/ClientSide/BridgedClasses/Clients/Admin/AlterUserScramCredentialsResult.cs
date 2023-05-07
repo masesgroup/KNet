@@ -24,7 +24,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class AlterUserScramCredentialsResult : JCOBridge.C2JBridge.JVMBridgeBase<AlterUserScramCredentialsResult>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.AlterUserScramCredentialsResult";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.AlterUserScramCredentialsResult";
 
         public Map<string, KafkaFuture<Void>> Values => IExecute<Map<string, KafkaFuture<Void>>>("values");
 

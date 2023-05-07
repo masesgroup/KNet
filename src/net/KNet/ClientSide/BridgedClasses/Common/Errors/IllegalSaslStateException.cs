@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class IllegalSaslStateException : AuthenticationException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.IllegalSaslStateException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.IllegalSaslStateException";
     }
 }

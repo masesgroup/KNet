@@ -57,7 +57,7 @@ namespace MASES.KNet.Clients.Consumer
     public class ConsumerInterceptor<K, V> : JVMBridgeListener, IConsumerInterceptor<K, V>
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.clients.consumer.ConsumerInterceptorImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.clients.consumer.ConsumerInterceptorImpl";
 
         readonly Action<Map<string, Java.Lang.Object>> configureFunction = null;
         readonly Func<ConsumerRecords<K, V>, ConsumerRecords<K, V>> onConsumeFunction = null;

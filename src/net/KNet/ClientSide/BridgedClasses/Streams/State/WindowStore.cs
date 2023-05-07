@@ -29,7 +29,7 @@ namespace MASES.KNet.Streams.State
 
     public class WindowStore<K, V> : StateStore, IWindowStore<K, V>
     {
-        public override string ClassName => "org.apache.kafka.streams.state.WindowStore";
+        public override string BridgeClassName => "org.apache.kafka.streams.state.WindowStore";
 
         public KeyValueIterator<Windowed<K>, V> All => IExecute<KeyValueIterator<Windowed<K>, V>>("all");
 

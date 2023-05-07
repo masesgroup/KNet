@@ -22,7 +22,7 @@ namespace MASES.KNet.Common.Metrics
 {
     public class KafkaMetricsContext : MetricsContext
     {
-        public override string ClassName => "org.apache.kafka.common.metrics.KafkaMetricsContext";
+        public override string BridgeClassName => "org.apache.kafka.common.metrics.KafkaMetricsContext";
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public KafkaMetricsContext() { }
@@ -32,7 +32,7 @@ namespace MASES.KNet.Common.Metrics
 
     public class KafkaMetricsContext<T> : MetricsContext
     {
-        public override string ClassName => "org.apache.kafka.common.metrics.KafkaMetricsContext";
+        public override string BridgeClassName => "org.apache.kafka.common.metrics.KafkaMetricsContext";
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public KafkaMetricsContext() { }

@@ -21,6 +21,6 @@ namespace MASES.KNet.Common.Errors
     [System.Obsolete]
     public class NotLeaderOrFollowerException : NotLeaderForPartitionException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.NotLeaderOrFollowerException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.NotLeaderOrFollowerException";
     }
 }

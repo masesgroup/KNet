@@ -23,7 +23,7 @@ namespace MASES.KNet.Connect.Storage
 {
     public class StringConverterConfig : ConverterConfig
     {
-        public override string ClassName => "org.apache.kafka.connect.storage.StringConverterConfig";
+        public override string BridgeClassName => "org.apache.kafka.connect.storage.StringConverterConfig";
 
         public static string ENCODING_CONFIG = SExecute<string>("ENCODING_CONFIG");
         public static string ENCODING_DEFAULT = SExecute<string>("ENCODING_DEFAULT");

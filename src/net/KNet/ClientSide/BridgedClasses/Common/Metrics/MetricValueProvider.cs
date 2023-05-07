@@ -26,6 +26,6 @@ namespace MASES.KNet.Common.Metrics
 
     public class MetricValueProvider<T> : JVMBridgeBase<MetricValueProvider<T>, IMetricValueProvider<T>>, IMetricValueProvider<T>
     {
-        public override string ClassName => "org.apache.kafka.common.metrics.MetricValueProvider";
+        public override string BridgeClassName => "org.apache.kafka.common.metrics.MetricValueProvider";
     }
 }

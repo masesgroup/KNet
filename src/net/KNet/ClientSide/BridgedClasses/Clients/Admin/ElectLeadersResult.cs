@@ -24,7 +24,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class ElectLeadersResult : JCOBridge.C2JBridge.JVMBridgeBase<ElectLeadersResult>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.ElectLeadersResult";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.ElectLeadersResult";
 
         public KafkaFuture<Map<TopicPartition, Optional<Throwable>>> Partitions => IExecute<KafkaFuture<Map<TopicPartition, Optional<Throwable>>>>("partitions");
 

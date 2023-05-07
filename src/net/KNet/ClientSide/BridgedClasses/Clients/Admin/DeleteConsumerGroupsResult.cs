@@ -24,7 +24,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class DeleteConsumerGroupsResult : JCOBridge.C2JBridge.JVMBridgeBase<DeleteConsumerGroupsResult>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.DeleteConsumerGroupsResult";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.DeleteConsumerGroupsResult";
 
         public Map<string, KafkaFuture<Void>> DeletedGroups => IExecute<Map<string, KafkaFuture<Void>>>("deletedGroups");
 

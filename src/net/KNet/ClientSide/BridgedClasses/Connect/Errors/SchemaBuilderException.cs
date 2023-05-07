@@ -20,6 +20,6 @@ namespace MASES.KNet.Connect.Errors
 {
     public class SchemaBuilderException : DataException
     {
-        public override string ClassName => "org.apache.kafka.connect.errors.SchemaBuilderException";
+        public override string BridgeClassName => "org.apache.kafka.connect.errors.SchemaBuilderException";
     }
 }

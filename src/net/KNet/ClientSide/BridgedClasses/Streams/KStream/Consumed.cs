@@ -24,7 +24,7 @@ namespace MASES.KNet.Streams.KStream
 {
     public class Consumed<K, V> : JVMBridgeBase<Consumed<K, V>>, INamedOperation<Consumed<K, V>>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.Consumed";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.Consumed";
 
         public static Consumed<K, V> With(Serde<K> keySerde,
                                           Serde<V> valueSerde,

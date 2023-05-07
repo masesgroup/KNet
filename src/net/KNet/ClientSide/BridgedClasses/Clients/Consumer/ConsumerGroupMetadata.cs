@@ -22,7 +22,7 @@ namespace MASES.KNet.Clients.Consumer
 {
     public class ConsumerGroupMetadata : JCOBridge.C2JBridge.JVMBridgeBase<ConsumerGroupMetadata>
     {
-        public override string ClassName => "org.apache.kafka.clients.consumer.ConsumerGroupMetadata";
+        public override string BridgeClassName => "org.apache.kafka.clients.consumer.ConsumerGroupMetadata";
 
         public string GroupId => IExecute<string>("groupId");
 

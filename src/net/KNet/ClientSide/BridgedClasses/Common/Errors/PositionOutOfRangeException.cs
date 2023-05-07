@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class PositionOutOfRangeException : ApiException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.PositionOutOfRangeException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.PositionOutOfRangeException";
     }
 }

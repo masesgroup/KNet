@@ -20,6 +20,6 @@ namespace MASES.KNet.Clients.Admin
 {
     public class UserScramCredentialAlteration : JCOBridge.C2JBridge.JVMBridgeBase<UserScramCredentialAlteration>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.UserScramCredentialAlteration";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.UserScramCredentialAlteration";
     }
 }

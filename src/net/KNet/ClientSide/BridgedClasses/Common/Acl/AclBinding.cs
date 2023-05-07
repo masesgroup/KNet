@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Acl
 {
     public class AclBinding : JCOBridge.C2JBridge.JVMBridgeBase<AclBinding>
     {
-        public override string ClassName => "org.apache.kafka.common.acl.AclBinding";
+        public override string BridgeClassName => "org.apache.kafka.common.acl.AclBinding";
     }
 }

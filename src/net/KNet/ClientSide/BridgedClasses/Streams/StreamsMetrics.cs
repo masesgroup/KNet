@@ -51,7 +51,7 @@ namespace MASES.KNet.Streams
 
     public class StreamsMetrics : JVMBridgeBase<StreamsMetrics, IStreamsMetrics>, IStreamsMetrics
     {
-        public override string ClassName => "org.apache.kafka.streams.StreamsMetrics";
+        public override string BridgeClassName => "org.apache.kafka.streams.StreamsMetrics";
 
         public Map<MetricName, Metric> Metrics => IExecute<Map<MetricName, Metric>>("metrics");
 

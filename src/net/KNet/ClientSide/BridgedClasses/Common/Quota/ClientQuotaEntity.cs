@@ -22,7 +22,7 @@ namespace MASES.KNet.Common.Quota
 {
     public class ClientQuotaEntity : JCOBridge.C2JBridge.JVMBridgeBase<ClientQuotaEntity>
     {
-        public override string ClassName => "org.apache.kafka.common.quota.ClientQuotaEntity";
+        public override string BridgeClassName => "org.apache.kafka.common.quota.ClientQuotaEntity";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]

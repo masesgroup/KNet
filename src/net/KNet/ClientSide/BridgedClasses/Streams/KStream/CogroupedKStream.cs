@@ -49,7 +49,7 @@ namespace MASES.KNet.Streams.KStream
 
     public class CogroupedKStream<K, VOut> : JVMBridgeBase<CogroupedKStream<K, VOut>, ICogroupedKStream<K, VOut>>, ICogroupedKStream<K, VOut>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.CogroupedKStream";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.CogroupedKStream";
 
         public KTable<K, VOut> Aggregate(Initializer<VOut> initializer)
         {

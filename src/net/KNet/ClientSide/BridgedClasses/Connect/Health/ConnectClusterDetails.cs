@@ -22,8 +22,8 @@ namespace MASES.KNet.Connect.Health
 {
     public class ConnectClusterDetails : JVMBridgeBase<ConnectClusterDetails>
     {
-        public override bool IsInterface => true;
-        public override string ClassName => "org.apache.kafka.connect.health.ConnectClusterDetails";
+        public override bool IsBridgeInterface => true;
+        public override string BridgeClassName => "org.apache.kafka.connect.health.ConnectClusterDetails";
 
         public string KafkaClusterId => IExecute<string>("kafkaClusterId");
     }

@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class UnknownTopicOrPartitionException : InvalidMetadataException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.UnknownTopicOrPartitionException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.UnknownTopicOrPartitionException";
     }
 }

@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class ConcurrentTransactionsException : RetriableException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.ConcurrentTransactionsException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.ConcurrentTransactionsException";
     }
 }

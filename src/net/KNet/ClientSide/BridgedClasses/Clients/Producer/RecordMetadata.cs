@@ -20,7 +20,7 @@ namespace MASES.KNet.Clients.Producer
 {
     public class RecordMetadata : JCOBridge.C2JBridge.JVMBridgeBase<RecordMetadata>
     {
-        public override string ClassName => "org.apache.kafka.clients.producer.RecordMetadata";
+        public override string BridgeClassName => "org.apache.kafka.clients.producer.RecordMetadata";
 
         public bool HasOffset => IExecute<bool>("hasOffset");
 

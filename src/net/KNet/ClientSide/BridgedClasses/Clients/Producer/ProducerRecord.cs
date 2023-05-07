@@ -22,7 +22,7 @@ namespace MASES.KNet.Clients.Producer
 {
     public class ProducerRecord : JCOBridge.C2JBridge.JVMBridgeBase<ProducerRecord>
     {
-        public override string ClassName => "org.apache.kafka.clients.producer.ProducerRecord";
+        public override string BridgeClassName => "org.apache.kafka.clients.producer.ProducerRecord";
 
         public ProducerRecord()
         {

@@ -60,9 +60,9 @@ namespace MASES.KNet.Streams.Processor.Api
 
     public class ProcessingContext : JVMBridgeBase<ProcessingContext, IProcessingContext>, IProcessingContext
     {
-        public override bool IsInterface => true;
+        public override bool IsBridgeInterface => true;
 
-        public override string ClassName => "org.apache.kafka.streams.processor.api.ProcessingContext";
+        public override string BridgeClassName => "org.apache.kafka.streams.processor.api.ProcessingContext";
 
         public string ApplicationId => IExecute<string>("applicationId");
 

@@ -20,8 +20,8 @@ namespace MASES.KNet.Connect.Header
 {
     public class ConnectHeader : Header
     {
-        public override bool IsInterface => false;
-        public override string ClassName => "org.apache.kafka.connect.header.ConnectHeader";
+        public override bool IsBridgeInterface => false;
+        public override string BridgeClassName => "org.apache.kafka.connect.header.ConnectHeader";
 
     }
 }

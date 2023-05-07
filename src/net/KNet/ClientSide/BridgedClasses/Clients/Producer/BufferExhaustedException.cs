@@ -22,6 +22,6 @@ namespace MASES.KNet.Clients.Producer
 {
     public class BufferExhaustedException : TimeoutException
     {
-        public override string ClassName => "org.apache.kafka.clients.producer.BufferExhaustedException";
+        public override string BridgeClassName => "org.apache.kafka.clients.producer.BufferExhaustedException";
     }
 }

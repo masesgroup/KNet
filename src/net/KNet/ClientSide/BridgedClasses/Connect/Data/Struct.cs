@@ -23,7 +23,7 @@ namespace MASES.KNet.Connect.Data
 {
     public class Struct : JVMBridgeBase<Struct>
     {
-        public override string ClassName => "org.apache.kafka.connect.data.Struct";
+        public override string BridgeClassName => "org.apache.kafka.connect.data.Struct";
 
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public Struct() { }

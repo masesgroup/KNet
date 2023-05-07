@@ -20,6 +20,6 @@ namespace MASES.KNet.Common
 {
     public class Uuid : JCOBridge.C2JBridge.JVMBridgeBase<Uuid>
     {
-        public override string ClassName => "org.apache.kafka.common.Uuid";
+        public override string BridgeClassName => "org.apache.kafka.common.Uuid";
     }
 }

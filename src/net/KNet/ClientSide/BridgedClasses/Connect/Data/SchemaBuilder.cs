@@ -22,9 +22,9 @@ namespace MASES.KNet.Connect.Data
 {
     public class SchemaBuilder : Schema
     {
-        public override bool IsInterface => false;
+        public override bool IsBridgeInterface => false;
 
-        public override string ClassName => "org.apache.kafka.connect.data.SchemaBuilder";
+        public override string BridgeClassName => "org.apache.kafka.connect.data.SchemaBuilder";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]

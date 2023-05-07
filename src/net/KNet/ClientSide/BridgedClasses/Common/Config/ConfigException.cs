@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Config
 {
     public class ConfigException : KafkaException
     {
-        public override string ClassName => "org.apache.kafka.common.config.ConfigException";
+        public override string BridgeClassName => "org.apache.kafka.common.config.ConfigException";
     }
 }

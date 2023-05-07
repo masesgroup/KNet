@@ -20,7 +20,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class ExpireDelegationTokenOptions : AbstractOptions<ExpireDelegationTokenOptions>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.ExpireDelegationTokenOptions";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.ExpireDelegationTokenOptions";
 
         public ExpireDelegationTokenOptions expiryTimePeriodMs(long expiryTimePeriodMs)
         {

@@ -24,7 +24,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class ListConsumerGroupsResult : JCOBridge.C2JBridge.JVMBridgeBase<ListConsumerGroupsResult>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.ListConsumerGroupsResult";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.ListConsumerGroupsResult";
 
         public KafkaFuture<Collection<ConsumerGroupListing>> All => IExecute<KafkaFuture<Collection<ConsumerGroupListing>>>("all");
 

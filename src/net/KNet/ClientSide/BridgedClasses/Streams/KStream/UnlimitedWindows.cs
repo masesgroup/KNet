@@ -23,7 +23,7 @@ namespace MASES.KNet.Streams.KStream
 {
     public class UnlimitedWindows : Windows<UnlimitedWindow>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.UnlimitedWindows";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.UnlimitedWindows";
 
         public static UnlimitedWindows Of()
         {

@@ -42,7 +42,7 @@ namespace MASES.KNet.Streams.Processor
     public class StateRestoreCallback : JVMBridgeListener, IStateRestoreCallback
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.streams.processor.StateRestoreCallbackImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.streams.processor.StateRestoreCallbackImpl";
 
         readonly Action<byte[], byte[]> executionFunction = null;
         /// <summary>

@@ -20,7 +20,7 @@ namespace MASES.KNet.Streams.KStream
 {
     public class Named : JCOBridge.C2JBridge.JVMBridgeBase<Named>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.Named";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.Named";
 
         public static Named As(string name)
         {

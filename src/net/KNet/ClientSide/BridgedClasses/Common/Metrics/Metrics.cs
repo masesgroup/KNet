@@ -23,8 +23,8 @@ namespace MASES.KNet.Common.Metrics
 {
     public class Metrics : JCOBridge.C2JBridge.JVMBridgeBase<Metrics>
     {
-        public override bool IsCloseable => true;
-        public override string ClassName => "org.apache.kafka.common.metrics.Metrics";
+        public override bool IsBridgeCloseable => true;
+        public override string BridgeClassName => "org.apache.kafka.common.metrics.Metrics";
 
         public Metrics()
         {

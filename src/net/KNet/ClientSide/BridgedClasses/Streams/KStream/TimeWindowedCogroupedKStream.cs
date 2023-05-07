@@ -39,7 +39,7 @@ namespace MASES.KNet.Streams.KStream
 
     public class TimeWindowedCogroupedKStream<K, V> : JVMBridgeBase<TimeWindowedCogroupedKStream<K, V>, ITimeWindowedCogroupedKStream<K, V>>, ITimeWindowedCogroupedKStream<K, V>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.TimeWindowedCogroupedKStream";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.TimeWindowedCogroupedKStream";
 
         public KTable<Windowed<K>, V> Aggregate(Initializer<V> initializer)
         {

@@ -21,7 +21,7 @@ namespace MASES.KNet.Clients.Admin
     public class AbstractOptions<T> : JCOBridge.C2JBridge.JVMBridgeBase<AbstractOptions<T>>
         where T : AbstractOptions<T>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.AbstractOptions";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.AbstractOptions";
 
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public AbstractOptions()

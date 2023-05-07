@@ -33,7 +33,7 @@ namespace MASES.KNet.Streams.State
 
     public class WindowBytesStoreSupplier : StoreSupplier<WindowStore<Bytes, byte[]>>, IWindowBytesStoreSupplier
     {
-        public override string ClassName => "org.apache.kafka.streams.state.WindowBytesStoreSupplier";
+        public override string BridgeClassName => "org.apache.kafka.streams.state.WindowBytesStoreSupplier";
 
         public new WindowStore<Bytes, byte[]> Get => IExecute<WindowStore<Bytes, byte[]>>("get");
 

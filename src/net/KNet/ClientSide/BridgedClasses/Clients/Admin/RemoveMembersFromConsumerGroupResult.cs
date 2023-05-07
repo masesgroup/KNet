@@ -23,7 +23,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class RemoveMembersFromConsumerGroupResult : JCOBridge.C2JBridge.JVMBridgeBase<RemoveMembersFromConsumerGroupResult>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.RemoveMembersFromConsumerGroupResult";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.RemoveMembersFromConsumerGroupResult";
 
         public KafkaFuture<Void> All => IExecute<KafkaFuture<Void>>("all");
 

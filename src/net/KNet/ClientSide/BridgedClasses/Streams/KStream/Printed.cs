@@ -22,7 +22,7 @@ namespace MASES.KNet.Streams.KStream
 {
     public class Printed<K, V> : JVMBridgeBase<Printed<K, V>>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.Printed";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.Printed";
 
         public static Printed<K, V> ToFile(string filePath)
         {

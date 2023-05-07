@@ -22,7 +22,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class TopicListing : JCOBridge.C2JBridge.JVMBridgeBase<TopicListing>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.TopicListing";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.TopicListing";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]

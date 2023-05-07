@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class PrincipalDeserializationException : ApiException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.PrincipalDeserializationException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.PrincipalDeserializationException";
     }
 }

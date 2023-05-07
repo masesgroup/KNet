@@ -23,7 +23,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class ListTopicsResult : JCOBridge.C2JBridge.JVMBridgeBase<ListTopicsResult>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.ListTopicsResult";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.ListTopicsResult";
 
         public KafkaFuture<Map<string, TopicListing>> NamesToListings => IExecute<KafkaFuture<Map<string, TopicListing>>>("namesToListings");
 

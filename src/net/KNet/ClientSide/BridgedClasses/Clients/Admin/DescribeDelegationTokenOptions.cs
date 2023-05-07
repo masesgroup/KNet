@@ -23,7 +23,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class DescribeDelegationTokenOptions : AbstractOptions<DescribeDelegationTokenOptions>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.DescribeDelegationTokenOptions";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.DescribeDelegationTokenOptions";
 
         public DescribeDelegationTokenOptions Owners(List<KafkaPrincipal> owners)
         {

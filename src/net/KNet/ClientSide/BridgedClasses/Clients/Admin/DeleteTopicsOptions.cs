@@ -20,7 +20,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class DeleteTopicsOptions : AbstractOptions<DeleteTopicsOptions>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.DeleteTopicsOptions";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.DeleteTopicsOptions";
 
         public new DeleteTopicsOptions TimeoutMs(int timeoutMs)
         {

@@ -24,7 +24,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class DescribeClusterResult : JCOBridge.C2JBridge.JVMBridgeBase<DescribeClusterResult>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.DescribeClusterResult";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.DescribeClusterResult";
 
         public KafkaFuture<Collection<Common.Node>> Nodes => IExecute<KafkaFuture<Collection<Common.Node>>>("nodes");
 

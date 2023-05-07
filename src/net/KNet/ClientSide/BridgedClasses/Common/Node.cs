@@ -20,7 +20,7 @@ namespace MASES.KNet.Common
 {
     public class Node : JCOBridge.C2JBridge.JVMBridgeBase<Node>
     {
-        public override string ClassName => "org.apache.kafka.common.Node";
+        public override string BridgeClassName => "org.apache.kafka.common.Node";
 
         public static Node NoNode => SExecute<Node>("noNode");
 

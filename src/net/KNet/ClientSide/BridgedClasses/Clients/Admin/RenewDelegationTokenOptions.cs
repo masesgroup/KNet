@@ -20,7 +20,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class RenewDelegationTokenOptions : AbstractOptions<RenewDelegationTokenOptions>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.RenewDelegationTokenOptions";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.RenewDelegationTokenOptions";
 
         public RenewDelegationTokenOptions RenewTimePeriodMs(long renewTimePeriodMs)
         {

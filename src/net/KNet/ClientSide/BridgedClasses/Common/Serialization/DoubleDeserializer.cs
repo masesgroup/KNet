@@ -20,7 +20,7 @@ namespace MASES.KNet.Common.Serialization
 {
     public class DoubleDeserializer : Deserializer<double>
     {
-        public override string ClassName => "org.apache.kafka.common.serialization.DoubleDeserializer";
+        public override string BridgeClassName => "org.apache.kafka.common.serialization.DoubleDeserializer";
 
         public override bool AutoInit => false;
 

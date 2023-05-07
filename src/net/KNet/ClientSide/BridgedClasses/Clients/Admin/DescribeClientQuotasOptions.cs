@@ -20,6 +20,6 @@ namespace MASES.KNet.Clients.Admin
 {
     public class DescribeClientQuotasOptions : AbstractOptions<DescribeClientQuotasOptions>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.DescribeClientQuotasOptions";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.DescribeClientQuotasOptions";
     }
 }

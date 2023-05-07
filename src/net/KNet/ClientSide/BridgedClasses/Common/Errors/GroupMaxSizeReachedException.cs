@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class GroupMaxSizeReachedException : ApiException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.GroupMaxSizeReachedException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.GroupMaxSizeReachedException";
     }
 }

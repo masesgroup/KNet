@@ -22,7 +22,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class QuorumInfo : JCOBridge.C2JBridge.JVMBridgeBase<QuorumInfo>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.QuorumInfo";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.QuorumInfo";
 
         public int LeaderId => IExecute<int>("leaderId");
 
@@ -36,7 +36,7 @@ namespace MASES.KNet.Clients.Admin
 
         public class ReplicaState : JCOBridge.C2JBridge.JVMBridgeBase<ReplicaState>
         {
-            public override string ClassName => "org.apache.kafka.clients.admin.QuorumInfo$ReplicaState";
+            public override string BridgeClassName => "org.apache.kafka.clients.admin.QuorumInfo$ReplicaState";
 
             public int ReplicaId => IExecute<int>("replicaId");
 

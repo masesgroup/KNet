@@ -22,9 +22,9 @@ namespace MASES.KNet.Streams.Query
 {
     public class RangeQuery<K, V> : Query<RangeQuery<K, V>>
     {
-        public override bool IsInterface => false;
+        public override bool IsBridgeInterface => false;
 
-        public override string ClassName => "org.apache.kafka.streams.query.RangeQuery";
+        public override string BridgeClassName => "org.apache.kafka.streams.query.RangeQuery";
 
         public static RangeQuery<K, V> WithRange(K lower, K upper) => SExecute<RangeQuery<K, V>>("withRange", lower, upper);
 

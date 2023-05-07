@@ -36,7 +36,7 @@ namespace MASES.KNet.Streams.Processor
 
     public class RecordContext : JVMBridgeBase<RecordContext, IRecordContext>, IRecordContext
     {
-        public override string ClassName => "org.apache.kafka.streams.processor.RecordContext";
+        public override string BridgeClassName => "org.apache.kafka.streams.processor.RecordContext";
 
         public string Topic => IExecute<string>("topic");
 

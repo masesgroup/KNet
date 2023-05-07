@@ -23,7 +23,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class DescribeConsumerGroupsResult : JCOBridge.C2JBridge.JVMBridgeBase<DescribeConsumerGroupsResult>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.DescribeConsumerGroupsResult";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.DescribeConsumerGroupsResult";
 
         public Map<string, KafkaFuture<ConsumerGroupDescription>> DescribedGroups => IExecute<Map<string, KafkaFuture<ConsumerGroupDescription>>>("describedGroups");
 

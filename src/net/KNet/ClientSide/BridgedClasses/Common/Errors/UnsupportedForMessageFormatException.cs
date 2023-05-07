@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class UnsupportedForMessageFormatException : ApiException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.UnsupportedForMessageFormatException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.UnsupportedForMessageFormatException";
     }
 }

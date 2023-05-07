@@ -61,7 +61,7 @@ namespace MASES.KNet.Common.Serialization
     public class Deserializer<E> : JVMBridgeListener, IDeserializer<E>
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public override string ClassName => "org.mases.knet.clients.common.serialization.DeserializerImpl";
+        public override string BridgeClassName => "org.mases.knet.clients.common.serialization.DeserializerImpl";
 
         readonly Func<string, byte[], E> deserialize = null;
         readonly Func<string, Headers, byte[], E> deserializeWithHeaders = null;

@@ -22,9 +22,9 @@ namespace MASES.KNet.Connect.File
 {
     public class FileStreamSourceTask : SourceTask
     {
-        public override bool IsAbstract => false;
+        public override bool IsBridgeAbstract => false;
 
-        public override string ClassName => "org.apache.kafka.connect.file.FileStreamSourceTask";
+        public override string BridgeClassName => "org.apache.kafka.connect.file.FileStreamSourceTask";
 
         public static string FILENAME_FIELD = SExecute<string>("FILENAME_FIELD");
         public static string POSITION_FIELD = SExecute<string>("POSITION_FIELD");

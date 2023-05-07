@@ -23,7 +23,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class AlterConsumerGroupOffsetsResult : JCOBridge.C2JBridge.JVMBridgeBase<AlterConsumerGroupOffsetsResult>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.AlterConsumerGroupOffsetsResult";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.AlterConsumerGroupOffsetsResult";
 
         public KafkaFuture<Void> PartitionResult(TopicPartition partition)
         {

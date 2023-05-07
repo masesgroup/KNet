@@ -108,7 +108,7 @@ namespace MASES.KNet.Connect
             if (reflectedTask != null)
             {
                 JCOBridge.C2JBridge.IJVMBridgeBase jvmBBD = data as JCOBridge.C2JBridge.IJVMBridgeBase;
-                reflectedTask.Invoke("setDataToExchange", jvmBBD != null ? jvmBBD.Instance : data);
+                reflectedTask.Invoke("setDataToExchange", jvmBBD != null ? jvmBBD.BridgeInstance : data);
             }
             else
             {
@@ -187,23 +187,23 @@ namespace MASES.KNet.Connect
 
         public void LogTrace(string var1) => ExecuteOnTask("trace", var1);
 
-        public void LogTrace(string var1, JVMBridgeException var2) => ExecuteOnTask("trace", var1, var2.Instance);
+        public void LogTrace(string var1, JVMBridgeException var2) => ExecuteOnTask("trace", var1, var2.BridgeInstance);
 
         public void LogDebug(string var1) => ExecuteOnTask("debug", var1);
 
-        public void LogDebug(string var1, JVMBridgeException var2) => ExecuteOnTask("debug", var1, var2.Instance);
+        public void LogDebug(string var1, JVMBridgeException var2) => ExecuteOnTask("debug", var1, var2.BridgeInstance);
 
         public void LogInfo(string var1) => ExecuteOnTask("info", var1);
 
-        public void LogInfo(string var1, JVMBridgeException var2) => ExecuteOnTask("info", var1, var2.Instance);
+        public void LogInfo(string var1, JVMBridgeException var2) => ExecuteOnTask("info", var1, var2.BridgeInstance);
 
         public void LogWarn(string var1) => ExecuteOnTask("warn", var1);
 
-        public void LogWarn(string var1, JVMBridgeException var2) => ExecuteOnTask("warn", var1, var2.Instance);
+        public void LogWarn(string var1, JVMBridgeException var2) => ExecuteOnTask("warn", var1, var2.BridgeInstance);
 
         public void LogError(string var1) => ExecuteOnTask("error", var1);
 
-        public void LogError(string var1, JVMBridgeException var2) => ExecuteOnTask("error", var1, var2.Instance);
+        public void LogError(string var1, JVMBridgeException var2) => ExecuteOnTask("error", var1, var2.BridgeInstance);
         #endregion
     }
     /// <summary>

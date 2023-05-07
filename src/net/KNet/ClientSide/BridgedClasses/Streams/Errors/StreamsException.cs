@@ -22,6 +22,6 @@ namespace MASES.KNet.Streams.Errors
 {
     public class StreamsException : KafkaException
     {
-        public override string ClassName => "org.apache.kafka.streams.errors.StreamsException";
+        public override string BridgeClassName => "org.apache.kafka.streams.errors.StreamsException";
     }
 }

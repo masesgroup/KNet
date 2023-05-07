@@ -20,7 +20,7 @@ namespace MASES.KNet.Streams.Processor
 {
     public class TaskId : JCOBridge.C2JBridge.JVMBridgeBase<TaskId>
     {
-        public override string ClassName => "org.apache.kafka.streams.processor.TaskId";
+        public override string BridgeClassName => "org.apache.kafka.streams.processor.TaskId";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]

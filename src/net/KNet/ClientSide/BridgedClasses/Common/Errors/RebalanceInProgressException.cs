@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class RebalanceInProgressException : ApiException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.RebalanceInProgressException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.RebalanceInProgressException";
     }
 }

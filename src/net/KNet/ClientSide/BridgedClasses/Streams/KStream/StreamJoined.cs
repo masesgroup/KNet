@@ -24,7 +24,7 @@ namespace MASES.KNet.Streams.KStream
 {
     public class StreamJoined<K, V1, V2> : JVMBridgeBase<StreamJoined<K, V1, V2>>, INamedOperation<StreamJoined<K, V1, V2>>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.StreamJoined";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.StreamJoined";
 
 
         public static StreamJoined<K, V1, V2> With(WindowBytesStoreSupplier storeSupplier,

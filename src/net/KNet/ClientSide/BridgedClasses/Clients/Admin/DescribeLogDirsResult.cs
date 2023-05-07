@@ -24,7 +24,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class DescribeLogDirsResult : JCOBridge.C2JBridge.JVMBridgeBase<DescribeLogDirsResult>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.DescribeLogDirsResult";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.DescribeLogDirsResult";
 
         public Map<int, KafkaFuture<Map<string, DescribeLogDirsResponse.LogDirInfo>>> Values => IExecute<Map<int, KafkaFuture<Map<string, DescribeLogDirsResponse.LogDirInfo>>>>("descriptions");
 

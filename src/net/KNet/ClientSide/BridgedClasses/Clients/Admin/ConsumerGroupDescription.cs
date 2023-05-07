@@ -24,7 +24,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class ConsumerGroupDescription : JCOBridge.C2JBridge.JVMBridgeBase<ConsumerGroupDescription>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.ConsumerGroupDescription";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.ConsumerGroupDescription";
 
         public string GroupId => IExecute<string>("groupId");
 

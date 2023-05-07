@@ -23,7 +23,7 @@ namespace MASES.KNet.Streams.KStream
 {
     public class TimeWindows : Windows<TimeWindow>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.TimeWindows";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.TimeWindows";
 
         public static TimeWindows OfSizeWithNoGrace(Duration size)
         {

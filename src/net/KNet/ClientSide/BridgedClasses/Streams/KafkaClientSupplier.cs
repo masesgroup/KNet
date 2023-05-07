@@ -47,7 +47,7 @@ namespace MASES.KNet.Streams.Processor
     public class KafkaClientSupplier : JVMBridgeListener, IKafkaClientSupplier
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.streams.KafkaClientSupplierImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.streams.KafkaClientSupplierImpl";
 
         readonly Func<Map<string, object>, Clients.Admin.IAdmin> GetAdminFunction = null;
         readonly Func<Map<string, object>, IProducer<byte[], byte[]>> GetProducerFunction = null;

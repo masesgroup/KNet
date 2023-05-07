@@ -20,6 +20,6 @@ namespace MASES.KNet.Streams.Errors
 {
     public class TaskIdFormatException : StreamsException
     {
-        public override string ClassName => "org.apache.kafka.streams.errors.TaskIdFormatException";
+        public override string BridgeClassName => "org.apache.kafka.streams.errors.TaskIdFormatException";
     }
 }

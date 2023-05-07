@@ -42,7 +42,7 @@ namespace MASES.KNet.Clients.Producer
     public class Callback : JVMBridgeListener, ICallback
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.clients.producer.CallbackImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.clients.producer.CallbackImpl";
 
         readonly Action<RecordMetadata, JVMBridgeException> executionFunction = null;
         /// <summary>

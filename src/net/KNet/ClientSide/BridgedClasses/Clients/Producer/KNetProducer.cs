@@ -51,7 +51,7 @@ namespace MASES.KNet.Clients.Producer
     /// <typeparam name="V">Same meaning of <see cref="KafkaProducer{K, V}"/></typeparam>
     public class KNetProducer<K, V> : KafkaProducer<K, V>, IKNetProducer<K, V>
     {
-        public override string ClassName => "org.mases.knet.clients.producer.KNetProducer";
+        public override string BridgeClassName => "org.mases.knet.clients.producer.KNetProducer";
 
         public KNetProducer()
         {

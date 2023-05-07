@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class TransactionCoordinatorFencedException : ApiException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.TransactionCoordinatorFencedException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.TransactionCoordinatorFencedException";
     }
 }

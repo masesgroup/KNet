@@ -20,7 +20,7 @@ namespace MASES.KNet.Common.Header
 {
     public class Header : JCOBridge.C2JBridge.JVMBridgeBase<Header>
     {
-        public override string ClassName => "org.apache.kafka.common.header.Header";
+        public override string BridgeClassName => "org.apache.kafka.common.header.Header";
 
         public string Key => IExecute<string>("key");
 

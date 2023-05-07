@@ -20,7 +20,7 @@ namespace MASES.KNet.Streams
 {
     public class LagInfo : JCOBridge.C2JBridge.JVMBridgeBase<LagInfo>
     {
-        public override string ClassName => "org.apache.kafka.streams.LagInfo";
+        public override string BridgeClassName => "org.apache.kafka.streams.LagInfo";
 
         public long CurrentOffsetPosition => IExecute<long>("currentOffsetPosition");
 

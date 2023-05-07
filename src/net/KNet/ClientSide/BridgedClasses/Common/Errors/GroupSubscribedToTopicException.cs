@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class GroupSubscribedToTopicException : ApiException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.GroupSubscribedToTopicException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.GroupSubscribedToTopicException";
     }
 }

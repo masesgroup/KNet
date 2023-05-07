@@ -20,7 +20,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class CreateTopicsOptions : AbstractOptions<CreateTopicsOptions>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.CreateTopicsOptions";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.CreateTopicsOptions";
 
         public CreateTopicsOptions ValidateOnly(bool validateOnly)
         {

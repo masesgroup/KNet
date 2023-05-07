@@ -27,9 +27,9 @@ namespace MASES.KNet.Connect.Sink
 {
     public class SinkRecord : ConnectRecord<SinkRecord>
     {
-        public override bool IsAbstract => false;
+        public override bool IsBridgeAbstract => false;
 
-        public override string ClassName => "org.apache.kafka.connect.sink.SinkRecord";
+        public override string BridgeClassName => "org.apache.kafka.connect.sink.SinkRecord";
 
         /// <summary>
         /// Offset in Kafka
@@ -45,9 +45,9 @@ namespace MASES.KNet.Connect.Sink
 
     public class SinkRecord<TKey, TValue> : ConnectRecord<SinkRecord<TKey, TValue>, TKey, TValue>
     {
-        public override bool IsAbstract => false;
+        public override bool IsBridgeAbstract => false;
 
-        public override string ClassName => "org.apache.kafka.connect.sink.SinkRecord";
+        public override string BridgeClassName => "org.apache.kafka.connect.sink.SinkRecord";
 
         /// <summary>
         /// Converts an <see cref="SinkRecord{TKey, TValue}"/> in <see cref="SinkRecord"/>

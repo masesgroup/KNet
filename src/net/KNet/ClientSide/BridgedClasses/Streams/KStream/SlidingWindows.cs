@@ -22,7 +22,7 @@ namespace MASES.KNet.Streams.KStream
 {
     public class SlidingWindows : JCOBridge.C2JBridge.JVMBridgeBase<SlidingWindows>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.SlidingWindows";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.SlidingWindows";
 
         public static SlidingWindows OfTimeDifferenceWithNoGrace(Duration timeDifference)
         {

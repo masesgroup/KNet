@@ -20,6 +20,6 @@ namespace MASES.KNet.Clients.Admin
 {
     public class ListPartitionReassignmentsOptions : AbstractOptions<ListPartitionReassignmentsOptions>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.ListPartitionReassignmentsOptions";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.ListPartitionReassignmentsOptions";
     }
 }

@@ -22,9 +22,9 @@ namespace MASES.KNet.Streams.KStream
 {
     public class EmitStrategy : JVMBridgeBase<EmitStrategy>
     {
-        public override bool IsInterface => true;
+        public override bool IsBridgeInterface => true;
 
-        public override string ClassName => "org.apache.kafka.streams.kstream.EmitStrategy";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.EmitStrategy";
 
         public enum StrategyType
         {

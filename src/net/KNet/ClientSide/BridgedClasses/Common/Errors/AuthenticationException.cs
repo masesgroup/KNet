@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class AuthenticationException : ApiException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.AuthenticationException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.AuthenticationException";
     }
 }

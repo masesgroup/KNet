@@ -23,7 +23,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class ListConsumerGroupsOptions : AbstractOptions<ListConsumerGroupsOptions>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.ListConsumerGroupsOptions";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.ListConsumerGroupsOptions";
 
         public ListConsumerGroupsOptions InStates(Set<ConsumerGroupState> states)
         {

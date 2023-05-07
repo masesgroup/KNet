@@ -23,9 +23,9 @@ namespace MASES.KNet.Connect.Storage
 {
     public class OffsetStorageReader : JVMBridgeBase<OffsetStorageReader>
     {
-        public override bool IsInterface => true;
+        public override bool IsBridgeInterface => true;
 
-        public override string ClassName => "org.apache.kafka.connect.storage.OffsetStorageReader";
+        public override string BridgeClassName => "org.apache.kafka.connect.storage.OffsetStorageReader";
 
         public Map<string, object> Offset<T>(Map<string, T> partition) => IExecute<Map<string, object>>("offset", partition);
 

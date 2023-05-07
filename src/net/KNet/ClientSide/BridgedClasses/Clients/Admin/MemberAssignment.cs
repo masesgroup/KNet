@@ -23,7 +23,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class MemberAssignment : JCOBridge.C2JBridge.JVMBridgeBase<MemberAssignment>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.MemberAssignment";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.MemberAssignment";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]

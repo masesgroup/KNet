@@ -22,7 +22,7 @@ namespace MASES.KNet.Clients.Consumer
 {
     public class ConsumerPartitionAssignor : JVMBridgeListener
     {
-        public override string ClassName => "org.apache.kafka.clients.consumer.ConsumerPartitionAssignor";
+        public override string BridgeClassName => "org.apache.kafka.clients.consumer.ConsumerPartitionAssignor";
 
 #warning missing implementation
     }

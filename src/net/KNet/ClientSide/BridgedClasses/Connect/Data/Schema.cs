@@ -114,9 +114,9 @@ namespace MASES.KNet.Connect.Data
 
     public class Schema : JVMBridgeBase<Schema>, ISchema
     {
-        public override bool IsInterface => true;
+        public override bool IsBridgeInterface => true;
 
-        public override string ClassName => "org.apache.kafka.connect.data.Schema";
+        public override string BridgeClassName => "org.apache.kafka.connect.data.Schema";
 
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public Schema() { }
@@ -126,25 +126,25 @@ namespace MASES.KNet.Connect.Data
         {
         }
 
-        public static Schema INT8_SCHEMA => Clazz.GetField<Schema>("INT8_SCHEMA");
-        public static Schema INT16_SCHEMA => Clazz.GetField<Schema>("INT16_SCHEMA");
-        public static Schema INT32_SCHEMA => Clazz.GetField<Schema>("INT32_SCHEMA");
-        public static Schema INT64_SCHEMA => Clazz.GetField<Schema>("INT64_SCHEMA");
-        public static Schema FLOAT32_SCHEMA => Clazz.GetField<Schema>("FLOAT32_SCHEMA");
-        public static Schema FLOAT64_SCHEMA => Clazz.GetField<Schema>("FLOAT64_SCHEMA");
-        public static Schema BOOLEAN_SCHEMA => Clazz.GetField<Schema>("BOOLEAN_SCHEMA");
-        public static Schema STRING_SCHEMA => Clazz.GetField<Schema>("STRING_SCHEMA");
-        public static Schema BYTES_SCHEMA => Clazz.GetField<Schema>("BYTES_SCHEMA");
+        public static Schema INT8_SCHEMA => BridgeClazz.GetField<Schema>("INT8_SCHEMA");
+        public static Schema INT16_SCHEMA => BridgeClazz.GetField<Schema>("INT16_SCHEMA");
+        public static Schema INT32_SCHEMA => BridgeClazz.GetField<Schema>("INT32_SCHEMA");
+        public static Schema INT64_SCHEMA => BridgeClazz.GetField<Schema>("INT64_SCHEMA");
+        public static Schema FLOAT32_SCHEMA => BridgeClazz.GetField<Schema>("FLOAT32_SCHEMA");
+        public static Schema FLOAT64_SCHEMA => BridgeClazz.GetField<Schema>("FLOAT64_SCHEMA");
+        public static Schema BOOLEAN_SCHEMA => BridgeClazz.GetField<Schema>("BOOLEAN_SCHEMA");
+        public static Schema STRING_SCHEMA => BridgeClazz.GetField<Schema>("STRING_SCHEMA");
+        public static Schema BYTES_SCHEMA => BridgeClazz.GetField<Schema>("BYTES_SCHEMA");
 
-        public static Schema OPTIONAL_INT8_SCHEMA => Clazz.GetField<Schema>("OPTIONAL_INT8_SCHEMA");
-        public static Schema OPTIONAL_INT16_SCHEMA => Clazz.GetField<Schema>("OPTIONAL_INT16_SCHEMA");
-        public static Schema OPTIONAL_INT32_SCHEMA => Clazz.GetField<Schema>("OPTIONAL_INT32_SCHEMA");
-        public static Schema OPTIONAL_INT64_SCHEMA => Clazz.GetField<Schema>("OPTIONAL_INT64_SCHEMA");
-        public static Schema OPTIONAL_FLOAT32_SCHEMA => Clazz.GetField<Schema>("OPTIONAL_FLOAT32_SCHEMA");
-        public static Schema OPTIONAL_FLOAT64_SCHEMA => Clazz.GetField<Schema>("OPTIONAL_FLOAT64_SCHEMA");
-        public static Schema OPTIONAL_BOOLEAN_SCHEMA => Clazz.GetField<Schema>("OPTIONAL_BOOLEAN_SCHEMA");
-        public static Schema OPTIONAL_STRING_SCHEMA => Clazz.GetField<Schema>("OPTIONAL_STRING_SCHEMA");
-        public static Schema OPTIONAL_BYTES_SCHEMA => Clazz.GetField<Schema>("OPTIONAL_BYTES_SCHEMA");
+        public static Schema OPTIONAL_INT8_SCHEMA => BridgeClazz.GetField<Schema>("OPTIONAL_INT8_SCHEMA");
+        public static Schema OPTIONAL_INT16_SCHEMA => BridgeClazz.GetField<Schema>("OPTIONAL_INT16_SCHEMA");
+        public static Schema OPTIONAL_INT32_SCHEMA => BridgeClazz.GetField<Schema>("OPTIONAL_INT32_SCHEMA");
+        public static Schema OPTIONAL_INT64_SCHEMA => BridgeClazz.GetField<Schema>("OPTIONAL_INT64_SCHEMA");
+        public static Schema OPTIONAL_FLOAT32_SCHEMA => BridgeClazz.GetField<Schema>("OPTIONAL_FLOAT32_SCHEMA");
+        public static Schema OPTIONAL_FLOAT64_SCHEMA => BridgeClazz.GetField<Schema>("OPTIONAL_FLOAT64_SCHEMA");
+        public static Schema OPTIONAL_BOOLEAN_SCHEMA => BridgeClazz.GetField<Schema>("OPTIONAL_BOOLEAN_SCHEMA");
+        public static Schema OPTIONAL_STRING_SCHEMA => BridgeClazz.GetField<Schema>("OPTIONAL_STRING_SCHEMA");
+        public static Schema OPTIONAL_BYTES_SCHEMA => BridgeClazz.GetField<Schema>("OPTIONAL_BYTES_SCHEMA");
 
         public Type Type() => IExecute<Type>("type"); 
 

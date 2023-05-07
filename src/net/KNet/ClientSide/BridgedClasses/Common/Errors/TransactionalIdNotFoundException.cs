@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class TransactionalIdNotFoundException : ApiException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.TransactionalIdNotFoundException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.TransactionalIdNotFoundException";
     }
 }

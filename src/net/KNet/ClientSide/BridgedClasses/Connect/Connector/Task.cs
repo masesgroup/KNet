@@ -32,9 +32,9 @@ namespace MASES.KNet.Connect.Connector
 
     public class Task : JVMBridgeBase<Task, ITask>, ITask
     {
-        public override bool IsInterface => true;
+        public override bool IsBridgeInterface => true;
 
-        public override string ClassName => "org.apache.kafka.connect.connector.Task";
+        public override string BridgeClassName => "org.apache.kafka.connect.connector.Task";
 
         public string Version() => IExecute<string>("version");
 

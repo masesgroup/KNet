@@ -23,7 +23,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class DescribeProducersResult : JCOBridge.C2JBridge.JVMBridgeBase<DescribeProducersResult>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.DescribeProducersResult";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.DescribeProducersResult";
 
         public KafkaFuture<PartitionProducerState> PartitionResult(TopicPartition partition)
         {
@@ -35,7 +35,7 @@ namespace MASES.KNet.Clients.Admin
 
         public class PartitionProducerState : JCOBridge.C2JBridge.JVMBridgeBase<DescribeProducersResult>
         {
-            public override string ClassName => "org.apache.kafka.clients.admin.DescribeProducersResult$PartitionProducerState";
+            public override string BridgeClassName => "org.apache.kafka.clients.admin.DescribeProducersResult$PartitionProducerState";
 
             public PartitionProducerState(List<ProducerState> activeProducers)
                 :base(activeProducers)

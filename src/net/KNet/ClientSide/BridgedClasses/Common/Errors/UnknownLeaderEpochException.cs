@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class UnknownLeaderEpochException : RetriableException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.UnknownLeaderEpochException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.UnknownLeaderEpochException";
     }
 }

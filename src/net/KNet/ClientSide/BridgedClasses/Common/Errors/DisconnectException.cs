@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class DisconnectException : RetriableException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.DisconnectException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.DisconnectException";
     }
 }

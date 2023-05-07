@@ -20,7 +20,7 @@ namespace MASES.KNet.Common.Serialization
 {
     public class UUIDDeserializer : Deserializer<Uuid>
     {
-        public override string ClassName => "org.apache.kafka.common.serialization.UUIDDeserializer";
+        public override string BridgeClassName => "org.apache.kafka.common.serialization.UUIDDeserializer";
 
         public override bool AutoInit => false;
 

@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class FetchSessionIdNotFoundException : RetriableException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.FetchSessionIdNotFoundException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.FetchSessionIdNotFoundException";
     }
 }

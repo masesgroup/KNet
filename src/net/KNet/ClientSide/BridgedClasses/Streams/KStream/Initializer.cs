@@ -42,7 +42,7 @@ namespace MASES.KNet.Streams.KStream
     public class Initializer<VA> : JVMBridgeListener, IInitializer<VA>
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.streams.kstream.InitializerImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.streams.kstream.InitializerImpl";
 
         readonly Func<VA> executionFunction = null;
         /// <summary>

@@ -28,8 +28,8 @@ namespace MASES.KNet.Common
 
     public class Configurable : JVMBridgeBase<Configurable, IConfigurable>, IConfigurable
     {
-        public override bool IsInterface => true;
-        public override string ClassName => "org.apache.kafka.common.Configurable";
+        public override bool IsBridgeInterface => true;
+        public override string BridgeClassName => "org.apache.kafka.common.Configurable";
 
         public void Configure(Map<string, object> configs) => IExecute("configure", configs);
     }

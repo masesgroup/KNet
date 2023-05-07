@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class RecordBatchTooLargeException : ApiException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.RecordBatchTooLargeException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.RecordBatchTooLargeException";
     }
 }

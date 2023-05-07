@@ -38,7 +38,7 @@ namespace MASES.KNet.Streams.Processor.Api
 
     public class FixedKeyProcessorContext<KForward, VForward> : ProcessingContext, IFixedKeyProcessorContext<KForward, VForward>
     {
-        public override string ClassName => "org.apache.kafka.streams.processor.api.FixedKeyProcessorContext";
+        public override string BridgeClassName => "org.apache.kafka.streams.processor.api.FixedKeyProcessorContext";
 
         public void Forward<K, V>(FixedKeyRecord<K, V> record)
             where K : KForward

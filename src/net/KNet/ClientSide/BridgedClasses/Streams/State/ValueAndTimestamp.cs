@@ -20,7 +20,7 @@ namespace MASES.KNet.Streams.State
 {
     public class ValueAndTimestamp<V> : JCOBridge.C2JBridge.JVMBridgeBase<ValueAndTimestamp<V>>
     {
-        public override string ClassName => "org.apache.kafka.streams.state.ValueAndTimestamp";
+        public override string BridgeClassName => "org.apache.kafka.streams.state.ValueAndTimestamp";
 
         public static ValueAndTimestamp<V> Make(V value, long timestamp)
         {

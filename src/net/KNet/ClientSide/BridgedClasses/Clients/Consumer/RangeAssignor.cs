@@ -20,6 +20,6 @@ namespace MASES.KNet.Clients.Consumer
 {
     public class RangeAssignor : JCOBridge.C2JBridge.JVMBridgeBase<RangeAssignor>
     {
-        public override string ClassName => "org.apache.kafka.clients.consumer.RangeAssignor";
+        public override string BridgeClassName => "org.apache.kafka.clients.consumer.RangeAssignor";
     }
 }

@@ -20,6 +20,6 @@ namespace MASES.KNet.Connect.Converters
 {
     public class IntegerConverter : NumberConverter<int>
     {
-        public override string ClassName => "org.apache.kafka.connect.converters.IntegerConverter";
+        public override string BridgeClassName => "org.apache.kafka.connect.converters.IntegerConverter";
     }
 }

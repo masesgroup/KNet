@@ -20,7 +20,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class AlterConfigOp : JCOBridge.C2JBridge.JVMBridgeBase<AlterConfigOp>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.AlterConfigOp";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.AlterConfigOp";
     }
 }
 

@@ -38,9 +38,9 @@ namespace MASES.KNet.Streams.Processor.Api
 
     public class ProcessorContext<KForward, VForward> : ProcessingContext, IProcessorContext<KForward, VForward>
     {
-        public override bool IsInterface => true;
+        public override bool IsBridgeInterface => true;
 
-        public override string ClassName => "org.apache.kafka.streams.processor.api.ProcessorContext";
+        public override string BridgeClassName => "org.apache.kafka.streams.processor.api.ProcessorContext";
 
         public void Forward<K, V>(Record<K, V> record)
             where K : KForward

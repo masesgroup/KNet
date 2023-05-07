@@ -20,6 +20,6 @@ namespace MASES.KNet.Streams.Errors
 {
     public class TopologyException : StreamsException
     {
-        public override string ClassName => "org.apache.kafka.streams.errors.TopologyException";
+        public override string BridgeClassName => "org.apache.kafka.streams.errors.TopologyException";
     }
 }

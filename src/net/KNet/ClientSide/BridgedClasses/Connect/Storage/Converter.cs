@@ -26,9 +26,9 @@ namespace MASES.KNet.Connect.Storage
 {
     public class Converter : JVMBridgeBase<Converter>
     {
-        public override bool IsInterface => true;
+        public override bool IsBridgeInterface => true;
 
-        public override string ClassName => "org.apache.kafka.connect.storage.Converter";
+        public override string BridgeClassName => "org.apache.kafka.connect.storage.Converter";
 
         public void Configure(Map<string, object> configs, bool isKey) => IExecute("configure", configs, isKey);
 

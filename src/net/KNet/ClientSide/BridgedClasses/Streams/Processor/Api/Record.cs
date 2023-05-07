@@ -22,7 +22,7 @@ namespace MASES.KNet.Streams.Processor.Api
 {
     public class Record<K, V> : JCOBridge.C2JBridge.JVMBridgeBase<Record<K, V>>
     {
-        public override string ClassName => "org.apache.kafka.streams.processor.api.Record";
+        public override string BridgeClassName => "org.apache.kafka.streams.processor.api.Record";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]

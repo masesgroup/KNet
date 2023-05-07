@@ -22,8 +22,8 @@ namespace MASES.KNet.Connect.Connector
 {
     public class ConnectorContext : JVMBridgeBase<ConnectorContext>
     {
-        public override bool IsInterface => true;
-        public override string ClassName => "org.apache.kafka.connect.connector.ConnectorContext";
+        public override bool IsBridgeInterface => true;
+        public override string BridgeClassName => "org.apache.kafka.connect.connector.ConnectorContext";
 
         public void RequestTaskReconfiguration() => IExecute("requestTaskReconfiguration");
 

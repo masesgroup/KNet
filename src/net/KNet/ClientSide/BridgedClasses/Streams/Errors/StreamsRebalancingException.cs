@@ -20,6 +20,6 @@ namespace MASES.KNet.Streams.Errors
 {
     public class StreamsRebalancingException : InvalidStateStoreException
     {
-        public override string ClassName => "org.apache.kafka.streams.errors.StreamsRebalancingException";
+        public override string BridgeClassName => "org.apache.kafka.streams.errors.StreamsRebalancingException";
     }
 }
