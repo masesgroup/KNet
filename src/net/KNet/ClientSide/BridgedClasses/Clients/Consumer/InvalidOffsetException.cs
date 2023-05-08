@@ -25,8 +25,8 @@ namespace MASES.KNet.Clients.Consumer
 {
     public class InvalidOffsetException : KafkaException
     {
-        public override string ClassName => "org.apache.kafka.clients.consumer.InvalidOffsetException";
+        public override string BridgeClassName => "org.apache.kafka.clients.consumer.InvalidOffsetException";
 
-        public Set<TopicPartition> Partitions => JVMBridgeBase.Wraps<Set<TopicPartition>>(Instance.Invoke("partitions") as IJavaObject);
+        public Set<TopicPartition> Partitions => JVMBridgeBase.Wraps<Set<TopicPartition>>(BridgeInstance.Invoke("partitions") as IJavaObject);
     }
 }

@@ -46,8 +46,8 @@ namespace MASES.KNet.Connect.Connector
 
     public class Connector : Versioned, IConnector
     {
-        public override bool IsAbstract => true;
-        public override string ClassName => "org.apache.kafka.connect.connector.Connector";
+        public override bool IsBridgeAbstract => true;
+        public override string BridgeClassName => "org.apache.kafka.connect.connector.Connector";
 
         public void Initialize(ConnectorContext ctx) => IExecute("initialize", ctx);
 

@@ -22,7 +22,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class NewPartitions : JCOBridge.C2JBridge.JVMBridgeBase<NewPartitions>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.NewPartitions";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.NewPartitions";
 
         public static NewPartitions IncreaseTo(int totalCount)
         {

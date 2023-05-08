@@ -25,8 +25,8 @@ namespace MASES.KNet.Clients.Consumer
 {
     public class LogTruncationException : OffsetOutOfRangeException
     {
-        public override string ClassName => "org.apache.kafka.clients.consumer.LogTruncationException";
+        public override string BridgeClassName => "org.apache.kafka.clients.consumer.LogTruncationException";
 
-        public Map<TopicPartition, OffsetAndMetadata> DivergentOffsets => JVMBridgeBase.Wraps<Map<TopicPartition, OffsetAndMetadata>>(Instance.Invoke("divergentOffsets") as IJavaObject);
+        public Map<TopicPartition, OffsetAndMetadata> DivergentOffsets => JVMBridgeBase.Wraps<Map<TopicPartition, OffsetAndMetadata>>(BridgeInstance.Invoke("divergentOffsets") as IJavaObject);
     }
 }

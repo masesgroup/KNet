@@ -20,6 +20,6 @@ namespace MASES.KNet.Clients.Admin
 {
     public class DeleteConsumerGroupsOptions : AbstractOptions<DeleteConsumerGroupsOptions>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.DeleteConsumerGroupsOptions";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.DeleteConsumerGroupsOptions";
     }
 }

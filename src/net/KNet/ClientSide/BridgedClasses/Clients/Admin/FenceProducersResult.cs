@@ -24,7 +24,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class FenceProducersResult : JCOBridge.C2JBridge.JVMBridgeBase<FenceProducersResult>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.FenceProducersResult";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.FenceProducersResult";
 
         public Map<String, KafkaFuture<Void>> FencedProducers => IExecute<Map<String, KafkaFuture<Void>>>("fencedProducers");
 

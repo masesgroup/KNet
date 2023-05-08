@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class TransactionalIdAuthorizationException : AuthorizationException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.TransactionalIdAuthorizationException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.TransactionalIdAuthorizationException";
     }
 }

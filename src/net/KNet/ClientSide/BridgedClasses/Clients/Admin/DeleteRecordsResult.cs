@@ -24,7 +24,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class DeleteRecordsResult : JCOBridge.C2JBridge.JVMBridgeBase<DeleteRecordsResult>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.DeleteRecordsResult";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.DeleteRecordsResult";
 
         public Map<TopicPartition, KafkaFuture<DeletedRecords>> LowWatermarks => IExecute<Map<TopicPartition, KafkaFuture<DeletedRecords>>>("lowWatermarks");
 

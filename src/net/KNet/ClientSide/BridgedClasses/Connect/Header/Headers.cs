@@ -26,8 +26,8 @@ namespace MASES.KNet.Connect.Header
 {
     public class Headers : JVMBridgeBase<Headers>
     {
-        public override bool IsInterface => true;
-        public override string ClassName => "org.apache.kafka.connect.header.Headers";
+        public override bool IsBridgeInterface => true;
+        public override string BridgeClassName => "org.apache.kafka.connect.header.Headers";
 
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public Headers()
@@ -104,8 +104,8 @@ namespace MASES.KNet.Connect.Header
 
         public class HeaderTransform : JVMBridgeBase<HeaderTransform>
         {
-            public override bool IsInterface => true;
-            public override string ClassName => "org.apache.kafka.connect.header.Headers$HeaderTransform";
+            public override bool IsBridgeInterface => true;
+            public override string BridgeClassName => "org.apache.kafka.connect.header.Headers$HeaderTransform";
 
             public Header Apply(Header header) => IExecute<Header>("apply", header);
         }

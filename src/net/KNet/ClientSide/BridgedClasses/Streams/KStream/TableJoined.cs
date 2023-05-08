@@ -24,7 +24,7 @@ namespace MASES.KNet.Streams.KStream
 {
     public class TableJoined<K, KO> : JVMBridgeBase<TableJoined<K, KO>>, INamedOperation<TableJoined<K, KO>>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.TableJoined";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.TableJoined";
 
         public static TableJoined<K, KO> With(StreamPartitioner<K, Void> partitioner, StreamPartitioner<KO, Void> otherPartitioner)
         {

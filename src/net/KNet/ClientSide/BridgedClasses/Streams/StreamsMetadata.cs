@@ -42,7 +42,7 @@ namespace MASES.KNet.Streams
 
     public class StreamsMetadata : JVMBridgeBase<StreamsMetadata, IStreamsMetadata>, IStreamsMetadata
     {
-        public override string ClassName => "org.apache.kafka.streams.StreamsMetadata";
+        public override string BridgeClassName => "org.apache.kafka.streams.StreamsMetadata";
 
         public HostInfo HostInfo => IExecute<HostInfo>("hostInfo");
 

@@ -37,7 +37,7 @@ namespace MASES.KNet.Common.Utils
 
     public class Time : JVMBridgeBase<Time, ITime>, ITime
     {
-        public override string ClassName => "org.apache.kafka.common.utils.Time";
+        public override string BridgeClassName => "org.apache.kafka.common.utils.Time";
 
         public long Milliseconds => IExecute<long>("milliseconds");
 

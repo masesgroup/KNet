@@ -23,7 +23,7 @@ namespace MASES.KNet.Connect.Rest.Basic.Auth.Extension
 {
     public class JaasBasicAuthFilter : JVMBridgeBase<JaasBasicAuthFilter>
     {
-        public override string ClassName => "org.apache.kafka.connect.rest.basic.auth.extension.JaasBasicAuthFilter";
+        public override string BridgeClassName => "org.apache.kafka.connect.rest.basic.auth.extension.JaasBasicAuthFilter";
 
         // TO BE DONE AFTER EVOLUTION OF JNET: use dynamic until now
     }

@@ -23,7 +23,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class UnregisterBrokerResult : JCOBridge.C2JBridge.JVMBridgeBase<UnregisterBrokerResult>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.UnregisterBrokerResult";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.UnregisterBrokerResult";
 
         public KafkaFuture<Void> All => IExecute<KafkaFuture<Void>>("all");
     }

@@ -24,7 +24,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class UpdateFeaturesResult : JCOBridge.C2JBridge.JVMBridgeBase<UpdateFeaturesResult>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.UpdateFeaturesResult";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.UpdateFeaturesResult";
 
         public Map<string, KafkaFuture<Void>> Values => IExecute<Map<string, KafkaFuture<Void>>>("values");
  

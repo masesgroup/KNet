@@ -24,7 +24,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class DescribeAclsResult : JCOBridge.C2JBridge.JVMBridgeBase<DescribeAclsResult>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.DescribeAclsResult";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.DescribeAclsResult";
 
         public KafkaFuture<Collection<AclBinding>> Values => IExecute<KafkaFuture<Collection<AclBinding>>>("values");
     }

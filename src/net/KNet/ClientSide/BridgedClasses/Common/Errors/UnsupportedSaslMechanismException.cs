@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class UnsupportedSaslMechanismException : AuthenticationException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.UnsupportedSaslMechanismException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.UnsupportedSaslMechanismException";
     }
 }

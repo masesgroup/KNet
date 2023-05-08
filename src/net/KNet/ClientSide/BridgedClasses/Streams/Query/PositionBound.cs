@@ -20,7 +20,7 @@ namespace MASES.KNet.Streams.Query
 {
     public class PositionBound : JCOBridge.C2JBridge.JVMBridgeBase<PositionBound>
     {
-        public override string ClassName => "org.apache.kafka.streams.query.PositionBound";
+        public override string BridgeClassName => "org.apache.kafka.streams.query.PositionBound";
 
         public static PositionBound Unbounded => SExecute<PositionBound>("unbounded");
 

@@ -20,7 +20,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class DescribeConfigsOptions : AbstractOptions<DescribeConfigsOptions>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.DescribeConfigsOptions";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.DescribeConfigsOptions";
 
         public new DescribeConfigsOptions TimeoutMs(int timeoutMs)
         {

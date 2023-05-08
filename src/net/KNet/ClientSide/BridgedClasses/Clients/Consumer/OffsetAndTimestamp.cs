@@ -22,7 +22,7 @@ namespace MASES.KNet.Clients.Consumer
 {
     public class OffsetAndTimestamp : JCOBridge.C2JBridge.JVMBridgeBase<OffsetAndTimestamp>
     {
-        public override string ClassName => "org.apache.kafka.clients.consumer.OffsetAndTimestamp";
+        public override string BridgeClassName => "org.apache.kafka.clients.consumer.OffsetAndTimestamp";
 
         public long Timestamp => IExecute<long>("timestamp");
 

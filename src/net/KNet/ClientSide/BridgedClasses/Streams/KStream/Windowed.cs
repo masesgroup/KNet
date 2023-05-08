@@ -20,7 +20,7 @@ namespace MASES.KNet.Streams.KStream
 {
     public class Windowed : JCOBridge.C2JBridge.JVMBridgeBase<Windowed>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.Windowed";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.Windowed";
 
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public Windowed()

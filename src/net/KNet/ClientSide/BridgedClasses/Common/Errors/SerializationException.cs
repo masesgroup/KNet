@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class SerializationException : KafkaException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.SerializationException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.SerializationException";
     }
 }

@@ -24,9 +24,9 @@ namespace MASES.KNet.Connect.Sink
 {
     public class ErrantRecordReporter : JVMBridgeBase<ErrantRecordReporter>
     {
-        public override bool IsInterface => false;
+        public override bool IsBridgeInterface => false;
 
-        public override string ClassName => "org.apache.kafka.connect.sink.ErrantRecordReporter";
+        public override string BridgeClassName => "org.apache.kafka.connect.sink.ErrantRecordReporter";
 
         public Future<Void> Report(SinkRecord record, Throwable error) => IExecute<Future<Void>>("report", record, error);
     }

@@ -20,6 +20,6 @@ namespace MASES.KNet.Clients.Admin
 {
     public class DescribeMetadataQuorumOptions : AbstractOptions<DescribeMetadataQuorumOptions>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.DescribeMetadataQuorumOptions";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.DescribeMetadataQuorumOptions";
     }
 }

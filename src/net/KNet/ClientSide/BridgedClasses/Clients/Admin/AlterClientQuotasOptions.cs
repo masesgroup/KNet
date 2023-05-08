@@ -20,7 +20,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class AlterClientQuotasOptions : AbstractOptions<AlterClientQuotasOptions>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.AlterClientQuotasOptions";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.AlterClientQuotasOptions";
 
         public bool ValidateOnly() => IExecute<bool>("validateOnly");
 

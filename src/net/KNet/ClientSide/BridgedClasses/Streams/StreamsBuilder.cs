@@ -28,7 +28,7 @@ namespace MASES.KNet.Streams
 {
     public class StreamsBuilder : JCOBridge.C2JBridge.JVMBridgeBase<StreamsBuilder>
     {
-        public override string ClassName => "org.apache.kafka.streams.StreamsBuilder";
+        public override string BridgeClassName => "org.apache.kafka.streams.StreamsBuilder";
 
         public StreamsBuilder()
         {

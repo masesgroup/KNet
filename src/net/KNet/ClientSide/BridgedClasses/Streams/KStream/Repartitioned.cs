@@ -24,7 +24,7 @@ namespace MASES.KNet.Streams.KStream
 {
     public class Repartitioned<K, V> : JVMBridgeBase<Repartitioned<K, V>>, INamedOperation<Repartitioned<K, V>>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.Repartitioned";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.Repartitioned";
 
         public static Repartitioned<K, V> As(string name)
         {

@@ -23,7 +23,7 @@ namespace MASES.KNet.Connect.Health
 {
     public class ConnectorHealth : JVMBridgeBase<ConnectorHealth>
     {
-        public override string ClassName => "org.apache.kafka.connect.health.ConnectorHealth";
+        public override string BridgeClassName => "org.apache.kafka.connect.health.ConnectorHealth";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]

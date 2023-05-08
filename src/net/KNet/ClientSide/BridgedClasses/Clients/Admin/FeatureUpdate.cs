@@ -22,7 +22,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class FeatureUpdate : JCOBridge.C2JBridge.JVMBridgeBase<FeatureUpdate>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.FeatureUpdate";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.FeatureUpdate";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]

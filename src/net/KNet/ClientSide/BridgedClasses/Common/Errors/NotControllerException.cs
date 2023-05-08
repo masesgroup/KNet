@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class NotControllerException : RetriableException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.NotControllerException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.NotControllerException";
     }
 }

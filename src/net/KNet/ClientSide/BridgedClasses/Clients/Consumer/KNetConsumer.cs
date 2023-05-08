@@ -38,13 +38,13 @@ namespace MASES.KNet.Clients.Consumer
             this.record = record;
         }
 
-        public string Topic => record != null ? record.Topic : obj.Instance.Invoke<string>("getTopic");
+        public string Topic => record != null ? record.Topic : obj.BridgeInstance.Invoke<string>("getTopic");
 
-        public int Partition => record != null ? record.Partition : obj.Instance.Invoke<int>("getPartition");
+        public int Partition => record != null ? record.Partition : obj.BridgeInstance.Invoke<int>("getPartition");
 
-        public K Key => record != null ? record.Key : obj.Instance.Invoke<K>("getKey");
+        public K Key => record != null ? record.Key : obj.BridgeInstance.Invoke<K>("getKey");
 
-        public V Value => record != null ? record.Value : obj.Instance.Invoke<V>("getValue");
+        public V Value => record != null ? record.Value : obj.BridgeInstance.Invoke<V>("getValue");
     }
 
     public interface IKNetConsumerCallback<K, V> : IJVMBridgeBase
@@ -55,7 +55,7 @@ namespace MASES.KNet.Clients.Consumer
     public class KNetConsumerCallback<K, V> : JVMBridgeListener, IKNetConsumerCallback<K, V>
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.clients.consumer.KNetConsumerCallback";
+         public sealed override string BridgeClassName => "org.mases.knet.clients.consumer.KNetConsumerCallback";
 
         readonly Action<Message<K, V>> recordReadyFunction = null;
         public virtual Action<Message<K, V>> OnRecordReady { get { return recordReadyFunction; } }
@@ -99,7 +99,7 @@ namespace MASES.KNet.Clients.Consumer
         readonly ConcurrentQueue<ConsumerRecords<K, V>> consumedRecords = null;
         readonly KNetConsumerCallback<K, V> consumerCallback = null;
 
-        public override string ClassName => "org.mases.knet.clients.consumer.KNetConsumer";
+        public override string BridgeClassName => "org.mases.knet.clients.consumer.KNetConsumer";
 
         public KNetConsumer()
         {

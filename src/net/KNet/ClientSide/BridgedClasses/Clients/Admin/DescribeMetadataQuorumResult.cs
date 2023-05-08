@@ -22,7 +22,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class DescribeMetadataQuorumResult : JCOBridge.C2JBridge.JVMBridgeBase<DescribeMetadataQuorumResult>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.DescribeMetadataQuorumResult";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.DescribeMetadataQuorumResult";
 
         public KafkaFuture<QuorumInfo> QuorumInfo => IExecute<KafkaFuture<QuorumInfo>>("quorumInfo");
     }

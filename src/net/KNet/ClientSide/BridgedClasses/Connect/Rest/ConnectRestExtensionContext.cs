@@ -23,8 +23,8 @@ namespace MASES.KNet.Connect.Rest
 {
     public class ConnectRestExtensionContext : JVMBridgeBase<ConnectRestExtensionContext>
     {
-        public override bool IsInterface => true;
-        public override string ClassName => "org.apache.kafka.connect.rest.ConnectRestExtensionContext";
+        public override bool IsBridgeInterface => true;
+        public override string BridgeClassName => "org.apache.kafka.connect.rest.ConnectRestExtensionContext";
 
         // public Configurable Configurable => IExecute<Configurable>("configurable");  return javax.ws.rs.core.Configurable: it must be added into JNet
 

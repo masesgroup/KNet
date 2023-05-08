@@ -20,7 +20,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class DescribeConsumerGroupsOptions : AbstractOptions<DescribeConsumerGroupsOptions>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.DescribeConsumerGroupsOptions";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.DescribeConsumerGroupsOptions";
 
         public DescribeConsumerGroupsOptions IncludeAuthorizedOperations(bool includeAuthorizedOperations)
         {

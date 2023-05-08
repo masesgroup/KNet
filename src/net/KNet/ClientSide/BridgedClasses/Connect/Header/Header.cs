@@ -23,8 +23,8 @@ namespace MASES.KNet.Connect.Header
 {
     public class Header : JVMBridgeBase<Header>
     {
-        public override bool IsInterface => true;
-        public override string ClassName => "org.apache.kafka.connect.header.Header";
+        public override bool IsBridgeInterface => true;
+        public override string BridgeClassName => "org.apache.kafka.connect.header.Header";
 
         public string Key => IExecute<string>("key");
 

@@ -23,7 +23,7 @@ namespace MASES.KNet.Streams.KStream
 {
     public class Branched<K, V> : JVMBridgeBase<Branched<K, V>>, INamedOperation<Branched<K, V>>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.Branched";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.Branched";
 
         public static Branched<K, V> As(string name)
         {

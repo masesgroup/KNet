@@ -26,9 +26,9 @@ namespace MASES.KNet.Clients.Producer
 {
     public class KafkaProducer : JCOBridge.C2JBridge.JVMBridgeBase<KafkaProducer>, IProducer
     {
-        public override bool IsCloseable => true;
+        public override bool IsBridgeCloseable => true;
 
-        public override string ClassName => "org.apache.kafka.clients.producer.KafkaProducer";
+        public override string BridgeClassName => "org.apache.kafka.clients.producer.KafkaProducer";
 
         public KafkaProducer()
         {

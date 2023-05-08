@@ -23,7 +23,7 @@ namespace MASES.KNet.Connect.Rest.Basic.Auth.Extension
 {
     public class BasicAuthSecurityRestExtension : ConnectRestExtension
     {
-        public override string ClassName => "org.apache.kafka.connect.rest.basic.auth.extension.BasicAuthSecurityRestExtension";
+        public override string BridgeClassName => "org.apache.kafka.connect.rest.basic.auth.extension.BasicAuthSecurityRestExtension";
 
         // TO BE DONE AFTER EVOLUTION OF JNET: use dynamic until now
     }

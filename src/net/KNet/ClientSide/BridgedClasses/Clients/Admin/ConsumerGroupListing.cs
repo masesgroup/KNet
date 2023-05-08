@@ -23,7 +23,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class ConsumerGroupListing : JCOBridge.C2JBridge.JVMBridgeBase<ConsumerGroupListing>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.ConsumerGroupListing";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.ConsumerGroupListing";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]

@@ -46,7 +46,7 @@ namespace MASES.KNet.Streams.KStream
     public class Predicate<T, U> : JVMBridgeListener, IPredicate<T, U>
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.streams.kstream.PredicateImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.streams.kstream.PredicateImpl";
 
         readonly Func<T, U, bool> executionFunction = null;
         /// <summary>

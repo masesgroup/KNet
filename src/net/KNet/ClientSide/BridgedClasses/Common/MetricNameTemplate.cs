@@ -22,7 +22,7 @@ namespace MASES.KNet.Common
 {
     public class MetricNameTemplate : JCOBridge.C2JBridge.JVMBridgeBase<MetricNameTemplate>
     {
-        public override string ClassName => "org.apache.kafka.common.MetricNameTemplate";
+        public override string BridgeClassName => "org.apache.kafka.common.MetricNameTemplate";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]

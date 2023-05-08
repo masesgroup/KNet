@@ -23,7 +23,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class ListConsumerGroupOffsetsOptions : AbstractOptions<ListConsumerGroupOffsetsOptions>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.ListConsumerGroupOffsetsOptions";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.ListConsumerGroupOffsetsOptions";
 
         public ListConsumerGroupOffsetsOptions TopicPartitions(List<TopicPartition> topicPartitions)
         {

@@ -23,7 +23,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class DescribeTopicsResult : JCOBridge.C2JBridge.JVMBridgeBase<DescribeTopicsResult>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.DescribeTopicsResult";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.DescribeTopicsResult";
 
         public Map<Uuid, KafkaFuture<TopicDescription>> TopicIdValues => IExecute<Map<Uuid, KafkaFuture<TopicDescription>>>("topicIdValues");
 

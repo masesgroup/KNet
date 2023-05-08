@@ -23,7 +23,7 @@ namespace MASES.KNet.Streams
 {
     public class StoreQueryParameters<T> : JVMBridgeBase<StoreQueryParameters<T>>
     {
-        public override string ClassName => "org.apache.kafka.streams.StoreQueryParameters";
+        public override string BridgeClassName => "org.apache.kafka.streams.StoreQueryParameters";
 
         public StoreQueryParameters()
         {

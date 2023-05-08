@@ -47,7 +47,7 @@ namespace MASES.KNet.Clients.Consumer
     public class ConsumerRebalanceListener : JVMBridgeListener, IConsumerRebalanceListener
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.clients.consumer.ConsumerRebalanceListenerImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.clients.consumer.ConsumerRebalanceListenerImpl";
 
         readonly Action<Collection<TopicPartition>> revokedFunction = null;
         readonly Action<Collection<TopicPartition>> assignedFunction = null;

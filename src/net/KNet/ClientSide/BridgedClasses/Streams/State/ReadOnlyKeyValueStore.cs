@@ -33,7 +33,7 @@ namespace MASES.KNet.Streams.State
 
     public class ReadOnlyKeyValueStore<K, V> : JVMBridgeBase<ReadOnlyKeyValueStore<K, V>, IReadOnlyKeyValueStore<K, V>>, IReadOnlyKeyValueStore<K, V>
     {
-        public override string ClassName => "org.apache.kafka.streams.state.ReadOnlyKeyValueStore";
+        public override string BridgeClassName => "org.apache.kafka.streams.state.ReadOnlyKeyValueStore";
 
         public KeyValueIterator<K, V> All => IExecute<KeyValueIterator<K, V>>("all");
 

@@ -22,7 +22,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class PartitionReassignment : JCOBridge.C2JBridge.JVMBridgeBase<PartitionReassignment>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.PartitionReassignment";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.PartitionReassignment";
 
         public List<int> Replicas => IExecute<List<int>>("replicas");
 

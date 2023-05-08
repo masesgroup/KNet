@@ -24,7 +24,7 @@ namespace MASES.KNet.Connect.Connector.Policy
 {
     public class ConnectorClientConfigOverridePolicy : Configurable
     {
-        public override string ClassName => "org.apache.kafka.connect.connector.policy.ConnectorClientConfigOverridePolicy";
+        public override string BridgeClassName => "org.apache.kafka.connect.connector.policy.ConnectorClientConfigOverridePolicy";
 
         public List<ConfigValue> Validate(ConnectorClientConfigRequest connectorClientConfigRequest) => IExecute<List<ConfigValue>>("validate", connectorClientConfigRequest);
     }

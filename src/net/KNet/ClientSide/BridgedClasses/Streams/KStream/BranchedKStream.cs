@@ -40,7 +40,7 @@ namespace MASES.KNet.Streams.KStream
 
     public class BranchedKStream<K, V> : JVMBridgeBase<BranchedKStream<K, V>, IBranchedKStream<K, V>>, IBranchedKStream<K, V>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.BranchedKStream";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.BranchedKStream";
 
         public BranchedKStream<K, V> Branch<TKey, TValue>(Predicate<TKey, TValue> predicate)
             where TKey : K

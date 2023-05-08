@@ -61,7 +61,7 @@ namespace MASES.KNet.Streams.KStream
 
     public class TimeWindowedKStream<K, V> : JVMBridgeBase<TimeWindowedKStream<K, V>, ITimeWindowedKStream<K, V>>, ITimeWindowedKStream<K, V>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.TimeWindowedKStream";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.TimeWindowedKStream";
 
         public KTable<Windowed<K>, VR> Aggregate<TSuperK, TSuperV, VR>(Initializer<VR> initializer, Aggregator<TSuperK, TSuperV, VR> aggregator)
             where TSuperK : K

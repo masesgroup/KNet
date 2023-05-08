@@ -20,6 +20,6 @@ namespace MASES.KNet.Connect.Errors
 {
     public class DataException : ConnectException
     {
-        public override string ClassName => "org.apache.kafka.connect.errors.DataException";
+        public override string BridgeClassName => "org.apache.kafka.connect.errors.DataException";
     }
 }

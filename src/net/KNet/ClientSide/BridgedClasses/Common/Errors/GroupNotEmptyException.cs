@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class GroupNotEmptyException : ApiException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.GroupNotEmptyException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.GroupNotEmptyException";
     }
 }

@@ -25,7 +25,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class AlterClientQuotasResult : JCOBridge.C2JBridge.JVMBridgeBase<AlterClientQuotasResult>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.AlterClientQuotasResult";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.AlterClientQuotasResult";
 
         public Map<ClientQuotaEntity, KafkaFuture<Void>> Values => IExecute<Map<ClientQuotaEntity, KafkaFuture<Void>>>("values");
 

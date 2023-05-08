@@ -415,7 +415,7 @@ namespace MASES.KNet.Streams.KStream
 
     public class KStream<K, V> : JVMBridgeBase<KStream<K, V>, IKStream<K, V>>, IKStream<K, V>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.KStream";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.KStream";
 
         public KStream<K, V> Filter<TKey, TValue>(Predicate<TKey, TValue> predicate)
             where TKey : K

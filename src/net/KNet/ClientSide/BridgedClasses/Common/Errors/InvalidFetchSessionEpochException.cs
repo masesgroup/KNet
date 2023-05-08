@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class InvalidFetchSessionEpochException : RetriableException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.InvalidFetchSessionEpochException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.InvalidFetchSessionEpochException";
     }
 }

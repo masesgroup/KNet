@@ -24,7 +24,7 @@ namespace MASES.KNet.Streams
 {
     public class KeyQueryMetadata : JVMBridgeBase<KeyQueryMetadata>
     {
-        public override string ClassName => "org.apache.kafka.streams.KeyQueryMetadata";
+        public override string BridgeClassName => "org.apache.kafka.streams.KeyQueryMetadata";
 
         public KeyQueryMetadata()
         {

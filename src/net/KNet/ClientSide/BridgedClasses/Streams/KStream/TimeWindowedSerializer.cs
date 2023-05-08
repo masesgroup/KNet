@@ -23,9 +23,9 @@ namespace MASES.KNet.Streams.KStream
 {
     public class TimeWindowedSerializer<T> : JCOBridge.C2JBridge.JVMBridgeBase<TimeWindowedSerializer<T>>
     {
-        public override bool IsCloseable => true;
+        public override bool IsBridgeCloseable => true;
 
-        public override string ClassName => "org.apache.kafka.streams.kstream.TimeWindowedSerializer";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.TimeWindowedSerializer";
 
         public TimeWindowedSerializer() { }
 

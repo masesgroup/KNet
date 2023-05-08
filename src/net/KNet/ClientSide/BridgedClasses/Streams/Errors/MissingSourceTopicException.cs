@@ -20,6 +20,6 @@ namespace MASES.KNet.Streams.Errors
 {
     public class MissingSourceTopicException : StreamsException
     {
-        public override string ClassName => "org.apache.kafka.streams.errors.MissingSourceTopicException";
+        public override string BridgeClassName => "org.apache.kafka.streams.errors.MissingSourceTopicException";
     }
 }

@@ -24,9 +24,9 @@ namespace MASES.KNet.Streams.Query
 {
     public class WindowKeyQuery<K, V> : Query<WindowStoreIterator<V>>
     {
-        public override bool IsInterface => false;
+        public override bool IsBridgeInterface => false;
 
-        public override string ClassName => "org.apache.kafka.streams.query.WindowKeyQuery";
+        public override string BridgeClassName => "org.apache.kafka.streams.query.WindowKeyQuery";
 
         public static WindowKeyQuery<K, V> WithKeyAndWindowStartRange(K key, Instant timeFrom, Instant timeTo) => SExecute<WindowKeyQuery<K, V>>("withKeyAndWindowStartRange", key, timeFrom, timeTo);
 

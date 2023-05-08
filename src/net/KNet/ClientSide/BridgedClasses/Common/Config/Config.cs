@@ -23,7 +23,7 @@ namespace MASES.KNet.Common.Config
 {
     public class Config : JVMBridgeBase<Config>
     {
-        public override string ClassName => "org.apache.kafka.common.config.Config";
+        public override string BridgeClassName => "org.apache.kafka.common.config.Config";
 
         public Config()
         {

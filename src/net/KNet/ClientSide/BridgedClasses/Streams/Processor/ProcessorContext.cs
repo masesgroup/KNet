@@ -75,7 +75,7 @@ namespace MASES.KNet.Streams.Processor
 
     public class ProcessorContext : JVMBridgeBase<ProcessorContext, IProcessorContext>, IProcessorContext
     {
-        public override string ClassName => "org.apache.kafka.streams.processor.ProcessorContext";
+        public override string BridgeClassName => "org.apache.kafka.streams.processor.ProcessorContext";
 
         public string ApplicationId => IExecute<string>("applicationId");
 

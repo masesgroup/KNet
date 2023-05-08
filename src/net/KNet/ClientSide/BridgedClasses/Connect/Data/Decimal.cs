@@ -23,11 +23,11 @@ namespace MASES.KNet.Connect.Data
 {
     public class Decimal : JVMBridgeBase<Decimal>
     {
-        public override string ClassName => "org.apache.kafka.connect.data.Decimal";
+        public override string BridgeClassName => "org.apache.kafka.connect.data.Decimal";
 
-        public static string LOGICAL_NAME => Clazz.GetField<string>("LOGICAL_NAME");
+        public static string LOGICAL_NAME => BridgeClazz.GetField<string>("LOGICAL_NAME");
 
-        public static string SCALE_FIELD => Clazz.GetField<string>("SCALE_FIELD");
+        public static string SCALE_FIELD => BridgeClazz.GetField<string>("SCALE_FIELD");
 
         public static SchemaBuilder Builder(int scale) { return SExecute<SchemaBuilder>("builder", scale); }
 

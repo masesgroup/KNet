@@ -22,7 +22,7 @@ namespace MASES.KNet.Common
 {
     public class TopicPartitionInfo : JCOBridge.C2JBridge.JVMBridgeBase<TopicPartitionInfo>
     {
-        public override string ClassName => "org.apache.kafka.common.TopicPartitionInfo";
+        public override string BridgeClassName => "org.apache.kafka.common.TopicPartitionInfo";
 
         public TopicPartitionInfo()
         {

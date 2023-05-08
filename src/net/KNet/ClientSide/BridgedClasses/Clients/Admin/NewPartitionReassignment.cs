@@ -22,7 +22,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class NewPartitionReassignment : JCOBridge.C2JBridge.JVMBridgeBase<NewPartitionReassignment>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.NewPartitionReassignment";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.NewPartitionReassignment";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]

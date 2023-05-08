@@ -23,7 +23,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class AbortTransactionResult : JCOBridge.C2JBridge.JVMBridgeBase<AbortTransactionResult>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.AbortTransactionResult";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.AbortTransactionResult";
 
         public KafkaFuture<Void> All => IExecute<KafkaFuture<Void>>("all");
     }

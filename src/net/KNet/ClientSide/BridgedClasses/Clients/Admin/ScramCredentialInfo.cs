@@ -20,7 +20,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class ScramCredentialInfo : JCOBridge.C2JBridge.JVMBridgeBase<ScramCredentialInfo>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.ScramCredentialInfo";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.ScramCredentialInfo";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]

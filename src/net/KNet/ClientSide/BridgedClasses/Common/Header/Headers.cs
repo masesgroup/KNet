@@ -22,7 +22,7 @@ namespace MASES.KNet.Common.Header
 {
     public class Headers : Iterable<Header>
     {
-        public override string ClassName => "org.apache.kafka.common.header.Headers";
+        public override string BridgeClassName => "org.apache.kafka.common.header.Headers";
 
         public Headers Add(Header header)
         {

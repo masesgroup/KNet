@@ -24,7 +24,7 @@ namespace MASES.KNet.Streams.KStream
 {
     public class Produced<K, V> : JVMBridgeBase<Produced<K, V>>, INamedOperation<Produced<K, V>>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.Produced";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.Produced";
 
         public static Produced<KIn, VIn> With<KIn, VIn>(Serde<KIn> keySerde, Serde<VIn> valueSerde)
         {

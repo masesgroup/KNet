@@ -29,8 +29,8 @@ namespace MASES.KNet.Connect.Connector
     /// <typeparam name="R">The class extending <see cref="ConnectRecord{R}"/></typeparam>
     public class ConnectRecord<R> : JVMBridgeBase<ConnectRecord<R>> where R : ConnectRecord<R>
     {
-        public override bool IsAbstract => true;
-        public override string ClassName => "org.apache.kafka.connect.connector.ConnectRecord";
+        public override bool IsBridgeAbstract => true;
+        public override string BridgeClassName => "org.apache.kafka.connect.connector.ConnectRecord";
 
         /// <summary>
         /// Topic
@@ -74,8 +74,8 @@ namespace MASES.KNet.Connect.Connector
     /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
     public class ConnectRecord<R, TKey, TValue> : JVMBridgeBase<ConnectRecord<R, TKey, TValue>> where R : ConnectRecord<R, TKey, TValue>
     {
-        public override bool IsAbstract => true;
-        public override string ClassName => "org.apache.kafka.connect.connector.ConnectRecord";
+        public override bool IsBridgeAbstract => true;
+        public override string BridgeClassName => "org.apache.kafka.connect.connector.ConnectRecord";
 
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public ConnectRecord()
@@ -141,8 +141,8 @@ namespace MASES.KNet.Connect.Connector
 
     //public class ConnectRecord<R> : JVMBridgeBase<ConnectRecord<R>> where R : ConnectRecord<R>
     //{
-    //    public override bool IsAbstract => true;
-    //    public override string ClassName => "org.apache.kafka.connect.connector.ConnectRecord";
+    //    public override bool IsBridgeAbstract => true;
+    //    public override string BridgeClassName => "org.apache.kafka.connect.connector.ConnectRecord";
 
     //    [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
     //    public ConnectRecord()

@@ -20,6 +20,6 @@ namespace MASES.KNet.Streams.Errors
 {
     public class TaskAssignmentException : StreamsException
     {
-        public override string ClassName => "org.apache.kafka.streams.errors.TaskAssignmentException";
+        public override string BridgeClassName => "org.apache.kafka.streams.errors.TaskAssignmentException";
     }
 }

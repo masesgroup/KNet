@@ -22,7 +22,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class DescribeProducersOptions : AbstractOptions<DescribeProducersOptions>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.DescribeProducersOptions";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.DescribeProducersOptions";
 
         public DescribeProducersOptions BrokerId(int brokerId)
         {

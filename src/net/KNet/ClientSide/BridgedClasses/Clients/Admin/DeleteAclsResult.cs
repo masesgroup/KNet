@@ -25,7 +25,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class DeleteAclsResult : JCOBridge.C2JBridge.JVMBridgeBase<DeleteAclsResult>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.DeleteAclsResult";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.DeleteAclsResult";
 
         public Map<AclBindingFilter, KafkaFuture<FilterResults>> Values => IExecute<Map<AclBindingFilter, KafkaFuture<FilterResults>>>("values");
 
@@ -33,14 +33,14 @@ namespace MASES.KNet.Clients.Admin
 
         public class FilterResults : JCOBridge.C2JBridge.JVMBridgeBase<FilterResults>
         {
-            public override string ClassName => "org.apache.kafka.clients.admin.DeleteAclsResult$FilterResults";
+            public override string BridgeClassName => "org.apache.kafka.clients.admin.DeleteAclsResult$FilterResults";
 
             public List<FilterResult> Values => IExecute<List<FilterResult>>("values");
         }
 
         public class FilterResult : JCOBridge.C2JBridge.JVMBridgeBase<FilterResult>
         {
-            public override string ClassName => "org.apache.kafka.clients.admin.DeleteAclsResult$FilterResult";
+            public override string BridgeClassName => "org.apache.kafka.clients.admin.DeleteAclsResult$FilterResult";
 
             public AclBinding Binding => IExecute<AclBinding>("binding");
 

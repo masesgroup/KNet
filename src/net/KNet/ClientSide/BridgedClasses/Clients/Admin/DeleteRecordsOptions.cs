@@ -20,6 +20,6 @@ namespace MASES.KNet.Clients.Admin
 {
     public class DeleteRecordsOptions : AbstractOptions<DeleteRecordsOptions>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.DeleteRecordsOptions";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.DeleteRecordsOptions";
     }
 }

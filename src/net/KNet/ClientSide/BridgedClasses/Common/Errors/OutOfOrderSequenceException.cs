@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class OutOfOrderSequenceException : ApiException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.OutOfOrderSequenceException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.OutOfOrderSequenceException";
     }
 }

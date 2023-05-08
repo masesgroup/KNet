@@ -54,7 +54,7 @@ namespace MASES.KNet.Common.Metrics
     public abstract class MetricsReporter : JVMBridgeListener, IMetricsReporter
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.clients.producer.MetricsReporterImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.clients.producer.MetricsReporterImpl";
         /// <summary>
         /// Initialize a new instance of <see cref="MetricsReporter"/>
         /// </summary>
@@ -139,7 +139,7 @@ namespace MASES.KNet.Common.Metrics
 
         public virtual Set<string> ReconfigurableConfigs()
         {
-            return Wraps<Set<string>>(Collections.DynClazz.emptySet() as IJavaObject);
+            return Wraps<Set<string>>(Collections.DynBridgeClazz.emptySet() as IJavaObject);
         }
 
         public virtual void Configure(Map<string, object> configs)

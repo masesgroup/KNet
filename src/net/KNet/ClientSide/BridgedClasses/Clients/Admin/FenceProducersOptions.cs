@@ -20,6 +20,6 @@ namespace MASES.KNet.Clients.Admin
 {
     public class FenceProducersOptions : AbstractOptions<FenceProducersOptions>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.FenceProducersOptions";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.FenceProducersOptions";
     }
 }

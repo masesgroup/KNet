@@ -33,7 +33,7 @@ namespace MASES.KNet.Streams.State
 
     public class StoreBuilder : JVMBridgeBase<StoreBuilder, IStoreBuilder>, IStoreBuilder
     {
-        public override string ClassName => "org.apache.kafka.streams.state.StoreBuilder";
+        public override string BridgeClassName => "org.apache.kafka.streams.state.StoreBuilder";
 
         public Map<string, string> LogConfig => IExecute<Map<string, string>>("logConfig");
 
@@ -59,7 +59,7 @@ namespace MASES.KNet.Streams.State
     public class StoreBuilder<T> : StoreBuilder, IStoreBuilder<T>
         where T : StateStore
     {
-        public override string ClassName => "org.apache.kafka.streams.state.StoreBuilder";
+        public override string BridgeClassName => "org.apache.kafka.streams.state.StoreBuilder";
 
         public bool Persistent => IExecute<bool>("persistent");
 

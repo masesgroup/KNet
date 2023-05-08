@@ -23,7 +23,7 @@ namespace MASES.KNet.Streams.KStream
 {
     public class Grouped<K, V> : JVMBridgeBase<Grouped<K, V>>, INamedOperation<Grouped<K, V>>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.Grouped";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.Grouped";
 
         public static Grouped<K, V> As(string name)
         {

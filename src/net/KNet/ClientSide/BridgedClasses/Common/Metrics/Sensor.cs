@@ -22,7 +22,7 @@ namespace MASES.KNet.Common.Metrics
 {
     public class Sensor : JCOBridge.C2JBridge.JVMBridgeBase<Sensor>
     {
-        public override string ClassName => "org.apache.kafka.common.metrics.Sensor";
+        public override string BridgeClassName => "org.apache.kafka.common.metrics.Sensor";
 
         public enum RecordingLevel
         {

@@ -38,7 +38,7 @@ namespace MASES.KNet.Streams
 
     public class TaskMetadata : JVMBridgeBase<TaskMetadata, ITaskMetadata>, ITaskMetadata
     {
-        public override string ClassName => "org.apache.kafka.streams.TaskMetadata";
+        public override string BridgeClassName => "org.apache.kafka.streams.TaskMetadata";
 
         public TaskId TaskId => IExecute<TaskId>("taskId");
 

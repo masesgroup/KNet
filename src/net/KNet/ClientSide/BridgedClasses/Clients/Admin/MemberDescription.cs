@@ -22,7 +22,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class MemberDescription : JCOBridge.C2JBridge.JVMBridgeBase<MemberDescription>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.MemberDescription";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.MemberDescription";
 
         public string ConsumerId => IExecute<string>("consumerId");
 

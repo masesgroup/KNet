@@ -22,7 +22,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class ProducerState : JCOBridge.C2JBridge.JVMBridgeBase<ProducerState>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.ProducerState";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.ProducerState";
 
         public long ProducerId => IExecute<long>("producerId");
 

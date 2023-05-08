@@ -44,7 +44,7 @@ namespace MASES.KNet.Clients.Consumer
     public class OffsetCommitCallback : JVMBridgeListener, IOffsetCommitCallback
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.clients.consumer.OffsetCommitCallbackImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.clients.consumer.OffsetCommitCallbackImpl";
 
         readonly Action<Map<TopicPartition, OffsetAndMetadata>, JVMBridgeException> executionFunction = null;
         /// <summary>

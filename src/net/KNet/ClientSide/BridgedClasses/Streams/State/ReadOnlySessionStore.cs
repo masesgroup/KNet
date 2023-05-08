@@ -77,7 +77,7 @@ namespace MASES.KNet.Streams.State
 
     public class ReadOnlySessionStore<K, AGG> : JVMBridgeBase<ReadOnlySessionStore<K, AGG>, IReadOnlySessionStore<K, AGG>>, IReadOnlySessionStore<K, AGG>
     {
-        public override string ClassName => "org.apache.kafka.streams.state.ReadOnlySessionStore";
+        public override string BridgeClassName => "org.apache.kafka.streams.state.ReadOnlySessionStore";
 
         public KeyValueIterator<Windowed<K>, AGG> BackwardFetch(K key)
         {

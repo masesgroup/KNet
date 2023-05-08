@@ -23,9 +23,9 @@ namespace MASES.KNet.Streams.KStream
 {
     public class SessionWindowedDeserializer<T> : JCOBridge.C2JBridge.JVMBridgeBase<SessionWindowedDeserializer<T>>
     {
-        public override bool IsCloseable => true;
+        public override bool IsBridgeCloseable => true;
 
-        public override string ClassName => "org.apache.kafka.streams.kstream.SessionWindowedDeserializer";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.SessionWindowedDeserializer";
 
         public SessionWindowedDeserializer() { }
 

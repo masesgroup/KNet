@@ -208,7 +208,7 @@ namespace MASES.KNet.Streams.KStream
 
     public class KTable<K, V> : JVMBridgeBase<KTable<K, V>, IKTable<K, V>>, IKTable<K, V>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.KTable";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.KTable";
 
         public string QueryableStoreName => IExecute<string>("queryableStoreName");
 

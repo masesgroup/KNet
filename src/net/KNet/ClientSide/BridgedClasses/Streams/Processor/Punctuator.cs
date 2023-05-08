@@ -27,7 +27,7 @@ namespace MASES.KNet.Streams.Processor
 
     public class Punctuator : JVMBridgeBase<Punctuator, IPunctuator>, IPunctuator
     {
-        public override string ClassName => "org.apache.kafka.streams.processor.Punctuator";
+        public override string BridgeClassName => "org.apache.kafka.streams.processor.Punctuator";
 
         public void Punctuate(long timestamp)
         {

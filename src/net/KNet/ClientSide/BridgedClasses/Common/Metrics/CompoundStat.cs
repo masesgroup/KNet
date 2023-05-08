@@ -23,7 +23,7 @@ namespace MASES.KNet.Common.Metrics
 {
     public class NamedMeasurable : JVMBridgeBase<NamedMeasurable>
     {
-        public override string ClassName => "org.apache.kafka.common.metrics.CompoundStat.NamedMeasurable";
+        public override string BridgeClassName => "org.apache.kafka.common.metrics.CompoundStat.NamedMeasurable";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
@@ -49,7 +49,7 @@ namespace MASES.KNet.Common.Metrics
 
     public class CompoundStat : Stat, ICompoundStat
     {
-        public override string ClassName => "org.apache.kafka.common.metrics.CompoundStat";
+        public override string BridgeClassName => "org.apache.kafka.common.metrics.CompoundStat";
 
         public List<NamedMeasurable> Stats => IExecute<List<NamedMeasurable>>("stats");
     }

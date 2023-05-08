@@ -29,7 +29,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class KafkaAdminClient : JVMBridgeBase<KafkaAdminClient>, IAdmin
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.KafkaAdminClient";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.KafkaAdminClient";
 
         public Map<MetricName, Metric> Metrics => IExecute<Map<MetricName, Metric>>("metrics");
 

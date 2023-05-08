@@ -20,11 +20,11 @@ namespace MASES.KNet.Common.Requests
 {
     public class DescribeLogDirsResponse : JCOBridge.C2JBridge.JVMBridgeBase<DescribeLogDirsResponse>
     {
-        public override string ClassName => "org.apache.kafka.common.requests.DescribeLogDirsResponse";
+        public override string BridgeClassName => "org.apache.kafka.common.requests.DescribeLogDirsResponse";
 
         public class LogDirInfo : JCOBridge.C2JBridge.JVMBridgeBase<LogDirInfo>
         {
-            public override string ClassName => "org.apache.kafka.common.requests.DescribeLogDirsResponse$LogDirInfo";
+            public override string BridgeClassName => "org.apache.kafka.common.requests.DescribeLogDirsResponse$LogDirInfo";
         }
     }
 }

@@ -20,6 +20,6 @@ namespace MASES.KNet.Clients.Consumer
 {
     public class StickyAssignor : JCOBridge.C2JBridge.JVMBridgeBase<StickyAssignor>
     {
-        public override string ClassName => "org.apache.kafka.clients.consumer.StickyAssignor";
+        public override string BridgeClassName => "org.apache.kafka.clients.consumer.StickyAssignor";
     }
 }

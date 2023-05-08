@@ -20,6 +20,6 @@ namespace MASES.KNet.Connect.Errors
 {
     public class SchemaProjectorException : DataException
     {
-        public override string ClassName => "org.apache.kafka.connect.errors.SchemaProjectorException";
+        public override string BridgeClassName => "org.apache.kafka.connect.errors.SchemaProjectorException";
     }
 }

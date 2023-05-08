@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class NetworkException : InvalidMetadataException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.NetworkException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.NetworkException";
     }
 }

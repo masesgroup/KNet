@@ -22,7 +22,7 @@ namespace MASES.KNet.Connect.Data
 {
     public class SchemaAndValue : JVMBridgeBase<SchemaAndValue>
     {
-        public override string ClassName => "org.apache.kafka.connect.data.SchemaAndValue";
+        public override string BridgeClassName => "org.apache.kafka.connect.data.SchemaAndValue";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]

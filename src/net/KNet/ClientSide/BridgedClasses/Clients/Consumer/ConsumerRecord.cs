@@ -24,7 +24,7 @@ namespace MASES.KNet.Clients.Consumer
 {
     public class ConsumerRecord : JCOBridge.C2JBridge.JVMBridgeBase<ConsumerRecord>
     {
-        public override string ClassName => "org.apache.kafka.clients.consumer.ConsumerRecord";
+        public override string BridgeClassName => "org.apache.kafka.clients.consumer.ConsumerRecord";
 
         public string Topic => IExecute<string>("topic");
 

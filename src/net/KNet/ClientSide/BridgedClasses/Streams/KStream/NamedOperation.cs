@@ -30,7 +30,7 @@ namespace MASES.KNet.Streams.KStream
     public class NamedOperation<T> : JVMBridgeBase<NamedOperation<T>, INamedOperation<T>>, INamedOperation<T>
         where T : NamedOperation<T>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.NamedOperation";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.NamedOperation";
 
         public T WithName(string name)
         {

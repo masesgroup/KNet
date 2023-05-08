@@ -31,7 +31,7 @@ namespace MASES.KNet.Streams
             EARLIEST, LATEST
         }
 
-        public override string ClassName => "org.apache.kafka.streams.Topology";
+        public override string BridgeClassName => "org.apache.kafka.streams.Topology";
 
         public Topology()
         {

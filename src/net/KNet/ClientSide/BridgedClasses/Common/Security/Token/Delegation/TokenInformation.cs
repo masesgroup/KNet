@@ -23,7 +23,7 @@ namespace MASES.KNet.Common.Security.Token.Delegation
 {
     public class TokenInformation : JCOBridge.C2JBridge.JVMBridgeBase<TokenInformation>
     {
-        public override string ClassName => "org.apache.kafka.common.security.token.delegation.TokenInformation";
+        public override string BridgeClassName => "org.apache.kafka.common.security.token.delegation.TokenInformation";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]

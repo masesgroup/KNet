@@ -23,7 +23,7 @@ namespace MASES.KNet.Common.Metrics
 {
     public class MetricConfig : JCOBridge.C2JBridge.JVMBridgeBase<MetricConfig>
     {
-        public override string ClassName => "org.apache.kafka.common.metrics.MetricConfig";
+        public override string BridgeClassName => "org.apache.kafka.common.metrics.MetricConfig";
 
         public MetricConfig Quota()
         {

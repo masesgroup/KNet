@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class RecordDeserializationException : SerializationException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.RecordDeserializationException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.RecordDeserializationException";
     }
 }

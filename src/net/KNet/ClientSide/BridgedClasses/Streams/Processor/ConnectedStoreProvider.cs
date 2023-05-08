@@ -29,7 +29,7 @@ namespace MASES.KNet.Streams.Processor
 
     public class ConnectedStoreProvider : JVMBridgeBase<ConnectedStoreProvider, IConnectedStoreProvider>, IConnectedStoreProvider
     {
-        public override string ClassName => "org.apache.kafka.streams.processor.ConnectedStoreProvider";
+        public override string BridgeClassName => "org.apache.kafka.streams.processor.ConnectedStoreProvider";
 
         public Set<State.StoreBuilder> Stores => throw new System.NotImplementedException();
     }

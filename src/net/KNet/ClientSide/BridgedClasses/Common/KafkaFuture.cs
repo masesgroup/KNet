@@ -23,7 +23,7 @@ namespace MASES.KNet.Common
 {
     public class KafkaFuture<E> : Future<E>
     {
-        public override string ClassName => "org.apache.kafka.common.KafkaFuture";
+        public override string BridgeClassName => "org.apache.kafka.common.KafkaFuture";
 
         public static KafkaFuture<Void> AllOf<T>(params KafkaFuture<T>[] futures) where T : JCOBridge.C2JBridge.JVMBridgeBase, new()
         {

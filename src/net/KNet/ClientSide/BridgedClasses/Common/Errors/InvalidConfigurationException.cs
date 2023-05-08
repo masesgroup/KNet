@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class InvalidConfigurationException : ApiException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.InvalidConfigurationException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.InvalidConfigurationException";
     }
 }

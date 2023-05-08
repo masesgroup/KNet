@@ -20,6 +20,6 @@ namespace MASES.KNet.Streams.Errors
 {
     public class InvalidStateStorePartitionException : InvalidStateStoreException
     {
-        public override string ClassName => "org.apache.kafka.streams.errors.InvalidStateStorePartitionException";
+        public override string BridgeClassName => "org.apache.kafka.streams.errors.InvalidStateStorePartitionException";
     }
 }

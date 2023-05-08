@@ -24,9 +24,9 @@ namespace MASES.KNet.Connect.Storage
 {
     public class HeaderConverter : Configurable
     {
-        public override bool IsInterface => true;
+        public override bool IsBridgeInterface => true;
 
-        public override string ClassName => "org.apache.kafka.connect.storage.HeaderConverter";
+        public override string BridgeClassName => "org.apache.kafka.connect.storage.HeaderConverter";
 
         public SchemaAndValue ToConnectHeader(string topic, string headerKey, byte[] value) => IExecute<SchemaAndValue>("toConnectHeader", topic, headerKey, value);
 

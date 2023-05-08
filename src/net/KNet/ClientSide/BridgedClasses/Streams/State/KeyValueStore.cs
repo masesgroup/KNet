@@ -34,7 +34,7 @@ namespace MASES.KNet.Streams.State
 
     public class KeyValueStore<K, V> : StateStore, IKeyValueStore<K, V>
     {
-        public override string ClassName => "org.apache.kafka.streams.state.KeyValueStore";
+        public override string BridgeClassName => "org.apache.kafka.streams.state.KeyValueStore";
 
         public KeyValueIterator<K, V> All => IExecute<KeyValueIterator<K, V>>("all");
 

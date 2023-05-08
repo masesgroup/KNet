@@ -24,7 +24,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class AlterPartitionReassignmentsResult : JCOBridge.C2JBridge.JVMBridgeBase<AlterPartitionReassignmentsResult>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.AlterPartitionReassignmentsResult";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.AlterPartitionReassignmentsResult";
 
         public Map<TopicPartition, KafkaFuture<Void>> Values => IExecute<Map<TopicPartition, KafkaFuture<Void>>>("values");
 

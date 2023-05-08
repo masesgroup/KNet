@@ -22,6 +22,6 @@ namespace MASES.KNet.Common
 {
     public class InvalidRecordException : ApiException
     {
-        public override string ClassName => "org.apache.kafka.common.InvalidRecordException";
+        public override string BridgeClassName => "org.apache.kafka.common.InvalidRecordException";
     }
 }

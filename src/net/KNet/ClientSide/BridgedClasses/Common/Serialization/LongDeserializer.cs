@@ -20,7 +20,7 @@ namespace MASES.KNet.Common.Serialization
 {
     public class LongDeserializer : Deserializer<long>
     {
-        public override string ClassName => "org.apache.kafka.common.serialization.LongDeserializer";
+        public override string BridgeClassName => "org.apache.kafka.common.serialization.LongDeserializer";
 
         public override bool AutoInit => false;
 

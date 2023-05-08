@@ -22,7 +22,7 @@ namespace MASES.KNet.Streams.KStream
 {
     public class ForeachProcessor<K, V> : JVMBridgeBase<ForeachProcessor<K, V>>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.ForeachProcessor";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.ForeachProcessor";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]

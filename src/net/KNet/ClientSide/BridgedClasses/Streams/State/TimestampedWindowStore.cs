@@ -29,7 +29,7 @@ namespace MASES.KNet.Streams.State
 
     public class TimestampedWindowStore<K, V> : WindowStore<K, V>, ITimestampedWindowStore<K, V>
     {
-        public override string ClassName => "org.apache.kafka.streams.state.TimestampedWindowStore";
+        public override string BridgeClassName => "org.apache.kafka.streams.state.TimestampedWindowStore";
 
         public new KeyValueIterator<Windowed<K>, ValueAndTimestamp<V>> All => IExecute<KeyValueIterator<Windowed<K>, ValueAndTimestamp<V>>>("all");
 

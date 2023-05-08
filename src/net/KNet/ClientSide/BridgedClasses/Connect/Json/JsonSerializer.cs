@@ -22,7 +22,7 @@ namespace MASES.KNet.Connect.Json
 {
     public class JsonSerializer : JVMBridgeBase<JsonSerializer>
     {
-        public override string ClassName => "org.apache.kafka.connect.json.JsonSerializer";
+        public override string BridgeClassName => "org.apache.kafka.connect.json.JsonSerializer";
 
         // MISSING SOME METHOD DUE TO MISSING com.fasterxml.jackson.databind.*
     }

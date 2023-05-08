@@ -27,7 +27,7 @@ namespace MASES.KNet.Streams.Processor
 
     public class Cancellable : JVMBridgeBase<Cancellable, ICancellable>, ICancellable
     {
-        public override string ClassName => "org.apache.kafka.streams.processor.Cancellable";
+        public override string BridgeClassName => "org.apache.kafka.streams.processor.Cancellable";
 
         public void Cancel()
         {

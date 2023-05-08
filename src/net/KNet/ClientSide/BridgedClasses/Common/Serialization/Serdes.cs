@@ -24,29 +24,29 @@ namespace MASES.KNet.Common.Serialization
 {
     public class Serdes : JCOBridge.C2JBridge.JVMBridgeBase<Serdes>
     {
-        public override string ClassName => "org.apache.kafka.common.serialization.Serdes";
+        public override string BridgeClassName => "org.apache.kafka.common.serialization.Serdes";
         /* disabled to be checked
-        public static readonly dynamic VoidSerde = DynClazz.VoidSerde;
+        public static readonly dynamic VoidSerde = DynBridgeClazz.VoidSerde;
 
-        public static readonly dynamic LongSerde = DynClazz.LongSerde;
+        public static readonly dynamic LongSerde = DynBridgeClazz.LongSerde;
 
-        public static readonly dynamic IntegerSerde = DynClazz.IntegerSerde;
+        public static readonly dynamic IntegerSerde = DynBridgeClazz.IntegerSerde;
 
-        public static readonly dynamic ShortSerde = DynClazz.ShortSerde;
+        public static readonly dynamic ShortSerde = DynBridgeClazz.ShortSerde;
 
-        public static readonly dynamic FloatSerde = DynClazz.FloatSerde;
+        public static readonly dynamic FloatSerde = DynBridgeClazz.FloatSerde;
 
-        public static readonly dynamic DoubleSerde = DynClazz.DoubleSerde;
+        public static readonly dynamic DoubleSerde = DynBridgeClazz.DoubleSerde;
 
-        public static readonly dynamic StringSerde = DynClazz.StringSerde;
+        public static readonly dynamic StringSerde = DynBridgeClazz.StringSerde;
 
-        public static readonly dynamic ByteBufferSerde = DynClazz.ByteBufferSerde;
+        public static readonly dynamic ByteBufferSerde = DynBridgeClazz.ByteBufferSerde;
 
-        public static readonly dynamic BytesSerde = DynClazz.BytesSerde;
+        public static readonly dynamic BytesSerde = DynBridgeClazz.BytesSerde;
 
-        public static readonly dynamic ByteArraySerde = DynClazz.ByteArraySerde;
+        public static readonly dynamic ByteArraySerde = DynBridgeClazz.ByteArraySerde;
 
-        public static readonly dynamic UUIDSerde = DynClazz.UUIDSerde;
+        public static readonly dynamic UUIDSerde = DynBridgeClazz.UUIDSerde;
         */
 
         public static Serde<long> Long => SExecute<Serde<long>>("Long");
@@ -61,7 +61,7 @@ namespace MASES.KNet.Common.Serialization
 
         public static Serde<string> String => SExecute<Serde<string>>("String");
 
-        public static dynamic ByteBuffer => DynClazz.ByteBuffer();
+        public static dynamic ByteBuffer => DynBridgeClazz.ByteBuffer();
 
         public static Serde<Bytes> Bytes => SExecute<Serde<Bytes>>("Bytes");
 

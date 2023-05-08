@@ -23,7 +23,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class DescribeReplicaLogDirsResult : JCOBridge.C2JBridge.JVMBridgeBase<DescribeReplicaLogDirsResult>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.DescribeReplicaLogDirsResult";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.DescribeReplicaLogDirsResult";
 
         public Map<TopicPartitionReplica, KafkaFuture<ReplicaLogDirInfo>> Values => IExecute<Map<TopicPartitionReplica, KafkaFuture<ReplicaLogDirInfo>>>("values");
 
@@ -31,7 +31,7 @@ namespace MASES.KNet.Clients.Admin
 
         public class ReplicaLogDirInfo : JCOBridge.C2JBridge.JVMBridgeBase<DescribeReplicaLogDirsResult>
         {
-            public override string ClassName => "org.apache.kafka.clients.admin.DescribeReplicaLogDirsResult$ReplicaLogDirInfo";
+            public override string BridgeClassName => "org.apache.kafka.clients.admin.DescribeReplicaLogDirsResult$ReplicaLogDirInfo";
 
             public string GetCurrentReplicaLogDir => IExecute<string>("getCurrentReplicaLogDir");
 

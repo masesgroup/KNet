@@ -22,7 +22,7 @@ namespace MASES.KNet.Streams.KStream
 {
     public class SessionWindows : JCOBridge.C2JBridge.JVMBridgeBase<SessionWindows>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.SessionWindows";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.SessionWindows";
 
         public static SessionWindows OfInactivityGapWithNoGrace(Duration inactivityGap)
         {

@@ -23,7 +23,7 @@ namespace MASES.KNet.Common
 {
     public class PartitionInfo : JVMBridgeBase<PartitionInfo>
     {
-        public override string ClassName => "org.apache.kafka.common.PartitionInfo";
+        public override string BridgeClassName => "org.apache.kafka.common.PartitionInfo";
 
         public string Topic => IExecute<string>("topic");
 

@@ -24,7 +24,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class CreatePartitionsResult : JCOBridge.C2JBridge.JVMBridgeBase<CreatePartitionsResult>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.CreatePartitionsResult";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.CreatePartitionsResult";
 
         public Map<string, KafkaFuture<Void>> Values => IExecute<Map<string, KafkaFuture<Void>>>("values");
 

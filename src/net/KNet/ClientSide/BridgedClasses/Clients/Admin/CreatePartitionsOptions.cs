@@ -20,7 +20,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class CreatePartitionsOptions : AbstractOptions<CreatePartitionsOptions>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.CreatePartitionsOptions";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.CreatePartitionsOptions";
 
         public bool ValidateOnly() => IExecute<bool>("validateOnly");
 

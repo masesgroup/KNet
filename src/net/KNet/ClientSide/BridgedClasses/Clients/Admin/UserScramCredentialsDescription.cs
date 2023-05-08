@@ -22,7 +22,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class UserScramCredentialsDescription : JCOBridge.C2JBridge.JVMBridgeBase<UserScramCredentialsDescription>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.UserScramCredentialsDescription";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.UserScramCredentialsDescription";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]

@@ -24,7 +24,7 @@ namespace MASES.KNet.Connect.Converters
 {
     public class NumberConverterConfig : ConverterConfig
     {
-        public override string ClassName => "org.apache.kafka.connect.converters.NumberConverterConfig";
+        public override string BridgeClassName => "org.apache.kafka.connect.converters.NumberConverterConfig";
 
         public NumberConverterConfig(Map<string, object> props) : base(props)
         {

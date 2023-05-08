@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class InconsistentGroupProtocolException : ApiException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.InconsistentGroupProtocolException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.InconsistentGroupProtocolException";
     }
 }

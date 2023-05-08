@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class ThrottlingQuotaExceededException : RetriableException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.ThrottlingQuotaExceededException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.ThrottlingQuotaExceededException";
     }
 }

@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class InterruptException : KafkaException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.InterruptException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.InterruptException";
     }
 }

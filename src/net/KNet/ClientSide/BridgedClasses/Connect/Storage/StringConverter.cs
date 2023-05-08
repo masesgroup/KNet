@@ -26,7 +26,7 @@ namespace MASES.KNet.Connect.Storage
 {
     public class StringConverter : JVMBridgeBase<StringConverter>
     {
-        public override string ClassName => "org.apache.kafka.connect.storage.StringConverter";
+        public override string BridgeClassName => "org.apache.kafka.connect.storage.StringConverter";
 
         public static implicit operator HeaderConverter(StringConverter converter) { return converter.Cast<HeaderConverter>(); }
 

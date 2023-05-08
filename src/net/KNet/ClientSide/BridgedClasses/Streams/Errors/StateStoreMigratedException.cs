@@ -20,6 +20,6 @@ namespace MASES.KNet.Streams.Errors
 {
     public class StateStoreMigratedException : InvalidStateStoreException
     {
-        public override string ClassName => "org.apache.kafka.streams.errors.StateStoreMigratedException";
+        public override string BridgeClassName => "org.apache.kafka.streams.errors.StateStoreMigratedException";
     }
 }

@@ -24,7 +24,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class ListConsumerGroupOffsetsSpec : JVMBridgeBase<ListConsumerGroupOffsetsSpec>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.ListConsumerGroupOffsetsSpec";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.ListConsumerGroupOffsetsSpec";
 
         public ListConsumerGroupOffsetsSpec TopicPartitions(Collection<TopicPartition> topicPartitions) => IExecute<ListConsumerGroupOffsetsSpec>("topicPartitions", topicPartitions);
 

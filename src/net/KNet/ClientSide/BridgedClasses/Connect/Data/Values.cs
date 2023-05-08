@@ -24,7 +24,7 @@ namespace MASES.KNet.Connect.Data
 {
     public class Values : JVMBridgeBase<Values>
     {
-        public override string ClassName => "org.apache.kafka.connect.data.Values";
+        public override string BridgeClassName => "org.apache.kafka.connect.data.Values";
 
         public static bool ConvertToBoolean(Schema schema, Java.Lang.Object value)
         {

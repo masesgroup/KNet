@@ -30,7 +30,7 @@ namespace MASES.KNet.Streams.State
 
     public class SessionBytesStoreSupplier : JVMBridgeBase<SessionBytesStoreSupplier, ISessionBytesStoreSupplier>, ISessionBytesStoreSupplier
     {
-        public override string ClassName => "org.apache.kafka.streams.state.SessionBytesStoreSupplier";
+        public override string BridgeClassName => "org.apache.kafka.streams.state.SessionBytesStoreSupplier";
 
         public string Name => IExecute<string>("name");
 

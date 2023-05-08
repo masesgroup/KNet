@@ -20,6 +20,6 @@ namespace MASES.KNet.Connect.Errors
 {
     public class NotFoundException : ConnectException
     {
-        public override string ClassName => "org.apache.kafka.connect.errors.NotFoundException";
+        public override string BridgeClassName => "org.apache.kafka.connect.errors.NotFoundException";
     }
 }

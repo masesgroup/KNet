@@ -24,11 +24,11 @@ namespace MASES.KNet.Common.Errors
 {
     public class InvalidTopicException : ApiException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.InvalidTopicException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.InvalidTopicException";
 
         public Set<string> InvalidTopics()
         {
-            return JVMBridgeBase.Wraps<Set<string>>(Instance.Invoke("invalidTopics") as IJavaObject);
+            return JVMBridgeBase.Wraps<Set<string>>(BridgeInstance.Invoke("invalidTopics") as IJavaObject);
         }
     }
 }

@@ -27,7 +27,7 @@ namespace MASES.KNet.Streams.KStream
 {
     public class Materialized : JCOBridge.C2JBridge.JVMBridgeBase<Materialized>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.Materialized";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.Materialized";
 
         public enum StoreType
         {
