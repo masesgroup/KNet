@@ -24,7 +24,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class AlterReplicaLogDirsResult : JCOBridge.C2JBridge.JVMBridgeBase<AlterReplicaLogDirsResult>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.AlterReplicaLogDirsResult";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.AlterReplicaLogDirsResult";
 
         public Map<TopicPartitionReplica, KafkaFuture<Void>> Values => IExecute<Map<TopicPartitionReplica, KafkaFuture<Void>>>("values");
 

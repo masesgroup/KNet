@@ -20,7 +20,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class FinalizedVersionRange : JCOBridge.C2JBridge.JVMBridgeBase<FinalizedVersionRange>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.FinalizedVersionRange";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.FinalizedVersionRange";
 
         public short MinVersionLevel => IExecute<short>("minVersionLevel");
 

@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class StaleBrokerEpochException : ApiException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.StaleBrokerEpochException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.StaleBrokerEpochException";
     }
 }

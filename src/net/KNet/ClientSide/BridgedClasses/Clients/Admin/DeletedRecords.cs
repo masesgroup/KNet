@@ -20,7 +20,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class DeletedRecords : JCOBridge.C2JBridge.JVMBridgeBase<DeletedRecords>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.DeletedRecords";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.DeletedRecords";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]

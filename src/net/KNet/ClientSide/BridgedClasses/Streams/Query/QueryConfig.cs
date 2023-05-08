@@ -20,7 +20,7 @@ namespace MASES.KNet.Streams.Query
 {
     public class QueryConfig : JCOBridge.C2JBridge.JVMBridgeBase<QueryConfig>
     {
-        public override string ClassName => "org.apache.kafka.streams.query.QueryConfig";
+        public override string BridgeClassName => "org.apache.kafka.streams.query.QueryConfig";
 
         public QueryConfig()
         {

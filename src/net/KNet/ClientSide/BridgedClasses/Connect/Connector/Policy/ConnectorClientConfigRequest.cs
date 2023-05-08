@@ -30,7 +30,7 @@ namespace MASES.KNet.Connect.Connector.Policy
             PRODUCER, CONSUMER, ADMIN
         }
 
-        public override string ClassName => "org.apache.kafka.connect.connector.policy.ConnectorClientConfigRequest";
+        public override string BridgeClassName => "org.apache.kafka.connect.connector.policy.ConnectorClientConfigRequest";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]

@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class InvalidReplicationFactorException : ApiException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.InvalidReplicationFactorException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.InvalidReplicationFactorException";
     }
 }

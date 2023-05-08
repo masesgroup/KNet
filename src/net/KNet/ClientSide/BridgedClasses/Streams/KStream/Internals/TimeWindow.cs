@@ -20,7 +20,7 @@ namespace MASES.KNet.Streams.KStream.Internals
 {
     public class TimeWindow : Window    
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.internals.TimeWindow";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.internals.TimeWindow";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]

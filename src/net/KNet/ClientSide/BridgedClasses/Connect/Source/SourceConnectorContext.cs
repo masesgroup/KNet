@@ -23,9 +23,9 @@ namespace MASES.KNet.Connect.Source
 {
     public class SourceConnectorContext : ConnectorContext
     {
-        public override bool IsInterface => true;
+        public override bool IsBridgeInterface => true;
 
-        public override string ClassName => "org.apache.kafka.connect.source.SourceConnectorContext";
+        public override string BridgeClassName => "org.apache.kafka.connect.source.SourceConnectorContext";
 
         public OffsetStorageReader OffsetStorageReader => IExecute<OffsetStorageReader>("offsetStorageReader");
     }

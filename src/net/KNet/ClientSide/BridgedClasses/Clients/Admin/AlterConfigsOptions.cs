@@ -20,7 +20,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class AlterConfigsOptions : AbstractOptions<AlterConfigsOptions>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.AlterConfigsOptions";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.AlterConfigsOptions";
 
         public new AlterConfigsOptions TimeoutMs(int timeoutMs)
         {

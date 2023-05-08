@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class InvalidTxnStateException : ApiException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.InvalidTxnStateException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.InvalidTxnStateException";
     }
 }

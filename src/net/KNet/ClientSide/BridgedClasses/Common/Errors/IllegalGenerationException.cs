@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class IllegalGenerationException : ApiException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.IllegalGenerationException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.IllegalGenerationException";
     }
 }

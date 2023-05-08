@@ -27,7 +27,7 @@ namespace MASES.KNet.Connect.Json
 {
     public class JsonConverter : JVMBridgeBase<JsonConverter>
     {
-        public override string ClassName => "org.apache.kafka.connect.json.JsonConverter";
+        public override string BridgeClassName => "org.apache.kafka.connect.json.JsonConverter";
 
         public static implicit operator HeaderConverter(JsonConverter converter) { return converter.Cast<HeaderConverter>(); }
 

@@ -20,7 +20,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class OffsetSpec : JCOBridge.C2JBridge.JVMBridgeBase<OffsetSpec>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.OffsetSpec";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.OffsetSpec";
     }
 }
 

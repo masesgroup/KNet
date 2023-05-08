@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class RetriableException : ApiException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.RetriableException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.RetriableException";
     }
 }

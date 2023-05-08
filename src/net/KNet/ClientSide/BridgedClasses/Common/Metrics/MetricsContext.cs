@@ -28,7 +28,7 @@ namespace MASES.KNet.Common.Metrics
 
     public class MetricsContext : JVMBridgeBase<MetricsContext, IMetricsContext>, IMetricsContext
     {
-        public override string ClassName => "org.apache.kafka.common.metrics.MetricsContext";
+        public override string BridgeClassName => "org.apache.kafka.common.metrics.MetricsContext";
 
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public MetricsContext()

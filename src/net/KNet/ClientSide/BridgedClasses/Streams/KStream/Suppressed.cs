@@ -61,7 +61,7 @@ namespace MASES.KNet.Streams.KStream
     public class BufferConfig<BC> : JVMBridgeBase<BufferConfig<BC>>, IBufferConfig<BC>
         where BC : IBufferConfig<BC>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.Suppressed";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.Suppressed";
 
         public static EagerBufferConfig MaxRecords(long recordLimit)
         {
@@ -120,7 +120,7 @@ namespace MASES.KNet.Streams.KStream
 
     public class Suppressed<K> : JVMBridgeBase<Suppressed<K>>, ISuppressed<K>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.Suppressed";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.Suppressed";
 
         public static Suppressed<Windowed> UntilWindowCloses(StrictBufferConfig bufferConfig)
         {

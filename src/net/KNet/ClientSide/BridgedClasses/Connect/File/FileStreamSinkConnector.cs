@@ -22,9 +22,9 @@ namespace MASES.KNet.Connect.File
 {
     public class FileStreamSinkConnector : SinkConnector
     {
-        public override bool IsAbstract => false;
+        public override bool IsBridgeAbstract => false;
 
-        public override string ClassName => "org.apache.kafka.connect.file.FileStreamSinkConnector";
+        public override string BridgeClassName => "org.apache.kafka.connect.file.FileStreamSinkConnector";
 
         public static string FILE_CONFIG = SExecute<string>("FILE_CONFIG");
     }

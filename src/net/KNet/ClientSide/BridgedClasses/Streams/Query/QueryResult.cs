@@ -23,9 +23,9 @@ namespace MASES.KNet.Streams.Query
 {
     public class QueryResult<R> : JCOBridge.C2JBridge.JVMBridgeBase<QueryResult<R>>
     {
-        public override bool IsInterface => true;
+        public override bool IsBridgeInterface => true;
 
-        public override string ClassName => "org.apache.kafka.streams.query.QueryResult";
+        public override string BridgeClassName => "org.apache.kafka.streams.query.QueryResult";
 
         public static QueryResult<T> ForResult<T>(T result) => SExecute<QueryResult<T>>("forResult", result);
 

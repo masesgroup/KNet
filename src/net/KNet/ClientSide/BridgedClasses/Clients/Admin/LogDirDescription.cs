@@ -25,7 +25,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class LogDirDescription : JCOBridge.C2JBridge.JVMBridgeBase<LogDirDescription>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.LogDirDescription";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.LogDirDescription";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]

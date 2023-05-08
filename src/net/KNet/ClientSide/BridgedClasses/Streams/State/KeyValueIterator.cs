@@ -24,14 +24,14 @@ namespace MASES.KNet.Streams.State
 {
     public class KeyValueIterator<K, V> : JVMBridgeBaseEnumerable<KeyValueIterator<K, V>, KeyValue<K, V>>
     {
-        public override string ClassName => "org.apache.kafka.streams.state.KeyValueIterator";
+        public override string BridgeClassName => "org.apache.kafka.streams.state.KeyValueIterator";
 
         public override IEnumerator<KeyValue<K, V>> GetEnumerator()
         {
-            return new JVMBridgeBaseEnumerator<KeyValue<K, V>>(Instance);
+            return new JVMBridgeBaseEnumerator<KeyValue<K, V>>(BridgeInstance);
         }
 
-        public static implicit operator Iterator<KeyValue<K, V>>(KeyValueIterator<K, V> keyValueIterator) { return Wraps<Iterator<KeyValue<K, V>>>(keyValueIterator.Instance); }
+        public static implicit operator Iterator<KeyValue<K, V>>(KeyValueIterator<K, V> keyValueIterator) { return Wraps<Iterator<KeyValue<K, V>>>(keyValueIterator.BridgeInstance); }
 
         public virtual K PeekNextKey => IExecute<K>("peekNextKey");
     }

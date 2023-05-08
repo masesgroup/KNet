@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class CoordinatorNotAvailableException : RetriableException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.CoordinatorNotAvailableException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.CoordinatorNotAvailableException";
     }
 }

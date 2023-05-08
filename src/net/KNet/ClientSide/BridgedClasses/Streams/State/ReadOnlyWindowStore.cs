@@ -37,7 +37,7 @@ namespace MASES.KNet.Streams.State
 
     public class ReadOnlyWindowStore<K, V> : JVMBridgeBase<ReadOnlyWindowStore<K, V>, IReadOnlyWindowStore<K, V>>, IReadOnlyWindowStore<K, V>
     {
-        public override string ClassName => "org.apache.kafka.streams.state.ReadOnlyWindowStore";
+        public override string BridgeClassName => "org.apache.kafka.streams.state.ReadOnlyWindowStore";
 
         public KeyValueIterator<Windowed<K>, V> All => IExecute<KeyValueIterator<Windowed<K>, V>>("all");
 

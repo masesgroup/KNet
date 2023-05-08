@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class KafkaStorageException : InvalidMetadataException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.KafkaStorageException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.KafkaStorageException";
     }
 }

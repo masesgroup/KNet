@@ -49,7 +49,7 @@ namespace MASES.KNet.Streams.Errors
     public class StreamsUncaughtExceptionHandler : JVMBridgeListener, IStreamsUncaughtExceptionHandler
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.streams.errors.StreamsUncaughtExceptionHandlerImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.streams.errors.StreamsUncaughtExceptionHandlerImpl";
 
         readonly Func<JVMBridgeException, StreamThreadExceptionResponse> executionFunction = null;
         /// <summary>

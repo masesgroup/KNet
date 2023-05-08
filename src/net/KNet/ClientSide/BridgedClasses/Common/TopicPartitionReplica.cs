@@ -20,7 +20,7 @@ namespace MASES.KNet.Common
 {
     public class TopicPartitionReplica : JCOBridge.C2JBridge.JVMBridgeBase<TopicPartitionReplica>
     {
-        public override string ClassName => "org.apache.kafka.common.TopicPartitionReplica";
+        public override string BridgeClassName => "org.apache.kafka.common.TopicPartitionReplica";
 
         public TopicPartitionReplica()
         {

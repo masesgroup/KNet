@@ -32,7 +32,7 @@ namespace MASES.KNet.Streams.KStream
 
     public class ValueTransformerWithKey<K, V, VR> : JVMBridgeBase<ValueTransformerWithKey<K, V, VR>, IValueTransformerWithKey<K, V, VR>>, IValueTransformerWithKey<K, V, VR>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.ValueTransformerWithKey";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.ValueTransformerWithKey";
 
         public void Close()
         {

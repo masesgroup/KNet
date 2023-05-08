@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Config
 {
     public class ConfigResource : JCOBridge.C2JBridge.JVMBridgeBase<ConfigResource>
     {
-        public override string ClassName => "org.apache.kafka.common.config.ConfigResource";
+        public override string BridgeClassName => "org.apache.kafka.common.config.ConfigResource";
     }
 }

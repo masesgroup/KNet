@@ -24,7 +24,7 @@ namespace MASES.KNet.Streams.KStream
     public class Windows<W> : JVMBridgeBase<Windows<W>>
         where W: Window
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.Windows";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.Windows";
 
         public Map<long, W> WindowsFor(long timestamp)
         {

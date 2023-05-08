@@ -20,6 +20,6 @@ namespace MASES.KNet.Clients.Admin
 {
     public class ElectLeadersOptions : AbstractOptions<ElectLeadersOptions>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.ElectLeadersOptions";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.ElectLeadersOptions";
     }
 }

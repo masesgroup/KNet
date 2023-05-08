@@ -20,7 +20,7 @@ namespace MASES.KNet.Common.Serialization
 {
     public class IntegerDeserializer : Deserializer<int>
     {
-        public override string ClassName => "org.apache.kafka.common.serialization.IntegerDeserializer";
+        public override string BridgeClassName => "org.apache.kafka.common.serialization.IntegerDeserializer";
 
         public override bool AutoInit => false;
 

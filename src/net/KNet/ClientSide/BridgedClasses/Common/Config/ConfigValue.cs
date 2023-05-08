@@ -23,7 +23,7 @@ namespace MASES.KNet.Common.Config
 {
     public class ConfigValue : JVMBridgeBase<ConfigValue>
     {
-        public override string ClassName => "org.apache.kafka.common.config.ConfigValue";
+        public override string BridgeClassName => "org.apache.kafka.common.config.ConfigValue";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]

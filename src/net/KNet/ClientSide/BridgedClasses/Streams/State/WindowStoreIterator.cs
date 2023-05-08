@@ -20,6 +20,6 @@ namespace MASES.KNet.Streams.State
 {
     public class WindowStoreIterator<V>: KeyValueIterator<long, V>
     {
-        public override string ClassName => "org.apache.kafka.streams.state.WindowStoreIterator";
+        public override string BridgeClassName => "org.apache.kafka.streams.state.WindowStoreIterator";
     }
 }

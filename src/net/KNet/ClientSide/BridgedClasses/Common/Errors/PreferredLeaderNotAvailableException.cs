@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class PreferredLeaderNotAvailableException : InvalidMetadataException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.PreferredLeaderNotAvailableException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.PreferredLeaderNotAvailableException";
     }
 }

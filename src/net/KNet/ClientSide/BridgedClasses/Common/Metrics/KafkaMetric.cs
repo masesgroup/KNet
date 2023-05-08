@@ -20,7 +20,7 @@ namespace MASES.KNet.Common.Metrics
 {
     public class KafkaMetric : JCOBridge.C2JBridge.JVMBridgeBase<KafkaMetric>
     {
-        public override string ClassName => "org.apache.kafka.common.metrics.KafkaMetric";
+        public override string BridgeClassName => "org.apache.kafka.common.metrics.KafkaMetric";
 
         public MetricConfig Config
         {

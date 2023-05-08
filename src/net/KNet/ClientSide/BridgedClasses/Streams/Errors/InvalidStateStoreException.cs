@@ -20,6 +20,6 @@ namespace MASES.KNet.Streams.Errors
 {
     public class InvalidStateStoreException : StreamsException
     {
-        public override string ClassName => "org.apache.kafka.streams.errors.InvalidStateStoreException";
+        public override string BridgeClassName => "org.apache.kafka.streams.errors.InvalidStateStoreException";
     }
 }

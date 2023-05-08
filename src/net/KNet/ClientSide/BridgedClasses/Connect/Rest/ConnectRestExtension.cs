@@ -22,8 +22,8 @@ namespace MASES.KNet.Connect.Rest
 {
     public class ConnectRestExtension : JVMBridgeBase<ConnectRestExtension>
     {
-        public override bool IsInterface => true;
-        public override string ClassName => "org.apache.kafka.connect.rest.ConnectRestExtension";
+        public override bool IsBridgeInterface => true;
+        public override string BridgeClassName => "org.apache.kafka.connect.rest.ConnectRestExtension";
 
         public void Register(ConnectRestExtensionContext restPluginContext) => IExecute("register", restPluginContext);
     }

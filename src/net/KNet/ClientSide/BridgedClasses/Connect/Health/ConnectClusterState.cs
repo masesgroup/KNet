@@ -23,8 +23,8 @@ namespace MASES.KNet.Connect.Health
 {
     public class ConnectClusterState : JVMBridgeBase<ConnectClusterState>
     {
-        public override bool IsInterface => true;
-        public override string ClassName => "org.apache.kafka.connect.health.ConnectClusterState";
+        public override bool IsBridgeInterface => true;
+        public override string BridgeClassName => "org.apache.kafka.connect.health.ConnectClusterState";
 
         public Collection<string> Connectors => IExecute<Collection<string>>("connectors");
 

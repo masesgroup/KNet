@@ -24,9 +24,9 @@ namespace MASES.KNet.Connect.Sink
 {
     public class SinkTaskContext : JVMBridgeBase<SinkTaskContext>
     {
-        public override bool IsInterface => true;
+        public override bool IsBridgeInterface => true;
 
-        public override string ClassName => "org.apache.kafka.connect.sink.SinkTaskContext";
+        public override string BridgeClassName => "org.apache.kafka.connect.sink.SinkTaskContext";
 
         public Map<string, string> Configs => IExecute<Map<string, string>>("configs");
 

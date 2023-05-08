@@ -20,6 +20,6 @@ namespace MASES.KNet.Clients.Admin
 {
     public class UnregisterBrokerOptions : AbstractOptions<UnregisterBrokerOptions>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.UnregisterBrokerOptions";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.UnregisterBrokerOptions";
     }
 }

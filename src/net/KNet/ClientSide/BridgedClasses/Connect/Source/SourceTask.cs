@@ -24,12 +24,12 @@ namespace MASES.KNet.Connect.Source
 {
     public class SourceTask : Task
     {
-        public override bool IsInterface => false;
-        public override bool IsAbstract => true;
+        public override bool IsBridgeInterface => false;
+        public override bool IsBridgeAbstract => true;
 
-        public override string ClassName => "org.apache.kafka.connect.source.SourceTask";
+        public override string BridgeClassName => "org.apache.kafka.connect.source.SourceTask";
 
-        public static readonly string TRANSACTION_BOUNDARY_CONFIG = Clazz.GetField<string>("TRANSACTION_BOUNDARY_CONFIG");
+        public static readonly string TRANSACTION_BOUNDARY_CONFIG = BridgeClazz.GetField<string>("TRANSACTION_BOUNDARY_CONFIG");
 
         public static readonly TransactionBoundary DEFAULT = TransactionBoundary.POLL;
 

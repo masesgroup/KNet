@@ -27,7 +27,7 @@ namespace MASES.KNet.Common.Metrics
 
     public class Stat : JVMBridgeBase<Stat, IStat>, IStat
     {
-        public override string ClassName => "org.apache.kafka.common.metrics.Stat";
+        public override string BridgeClassName => "org.apache.kafka.common.metrics.Stat";
 
         public void Record(MetricConfig config, double value, long timeMs)
         {

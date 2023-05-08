@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class DelegationTokenOwnerMismatchException : ApiException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.DelegationTokenOwnerMismatchException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.DelegationTokenOwnerMismatchException";
     }
 }

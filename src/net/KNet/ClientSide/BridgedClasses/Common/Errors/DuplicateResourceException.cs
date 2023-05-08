@@ -20,8 +20,8 @@ namespace MASES.KNet.Common.Errors
 {
     public class DuplicateResourceException : ApiException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.DuplicateResourceException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.DuplicateResourceException";
 
-        public string Resource => DynInstance.resource();
+        public string Resource => DynBridgeInstance.resource();
     }
 }

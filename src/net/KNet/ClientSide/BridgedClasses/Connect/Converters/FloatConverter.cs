@@ -20,6 +20,6 @@ namespace MASES.KNet.Connect.Converters
 {
     public class FloatConverter : NumberConverter<float> 
     {
-        public override string ClassName => "org.apache.kafka.connect.converters.FloatConverter";
+        public override string BridgeClassName => "org.apache.kafka.connect.converters.FloatConverter";
     }
 }

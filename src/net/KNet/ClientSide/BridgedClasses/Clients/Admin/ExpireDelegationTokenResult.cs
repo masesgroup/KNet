@@ -22,7 +22,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class ExpireDelegationTokenResult : JCOBridge.C2JBridge.JVMBridgeBase<ExpireDelegationTokenResult>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.ExpireDelegationTokenResult";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.ExpireDelegationTokenResult";
 
         public KafkaFuture<long> ExpiryTimestamp => IExecute<KafkaFuture<long>>("expiryTimestamp");
     }

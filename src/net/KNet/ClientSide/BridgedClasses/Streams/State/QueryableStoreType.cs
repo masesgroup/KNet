@@ -30,7 +30,7 @@ namespace MASES.KNet.Streams.State
 
     public class QueryableStoreType<T> : JVMBridgeBase<QueryableStoreType<T>, IQueryableStoreType<T>>, IQueryableStoreType<T>
     {
-        public override string ClassName => "org.apache.kafka.streams.state.QueryableStoreType";
+        public override string BridgeClassName => "org.apache.kafka.streams.state.QueryableStoreType";
 
         public bool Accepts(StateStore stateStore)
         {

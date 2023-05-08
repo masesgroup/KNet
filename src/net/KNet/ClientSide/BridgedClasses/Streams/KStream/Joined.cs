@@ -23,7 +23,7 @@ namespace MASES.KNet.Streams.KStream
 {
     public class Joined<K, V, VO> : JVMBridgeBase<Joined<K, V, VO>>, INamedOperation<Joined<K, V, VO>>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.Joined";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.Joined";
 
         public static Joined<K, V, VO> With(Serde<K> keySerde,
                                             Serde<V> valueSerde,

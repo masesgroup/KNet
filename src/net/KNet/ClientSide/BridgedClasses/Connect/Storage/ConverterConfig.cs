@@ -22,7 +22,7 @@ namespace MASES.KNet.Connect.Storage
 {
     public class ConverterConfig : AbstractConfig<ConverterConfig>
     {
-        public override string ClassName => "org.apache.kafka.connect.storage.ConverterConfig";
+        public override string BridgeClassName => "org.apache.kafka.connect.storage.ConverterConfig";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]

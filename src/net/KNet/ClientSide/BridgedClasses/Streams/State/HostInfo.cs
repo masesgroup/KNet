@@ -22,7 +22,7 @@ namespace MASES.KNet.Streams.State
 {
     public class HostInfo : JVMBridgeBase<HostInfo>
     {
-        public override string ClassName => "org.apache.kafka.streams.state.HostInfo";
+        public override string BridgeClassName => "org.apache.kafka.streams.state.HostInfo";
 
         public HostInfo()
         {

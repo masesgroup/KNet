@@ -20,6 +20,6 @@ namespace MASES.KNet.Connect.Converters
 {
     public class DoubleConverter : NumberConverter<double>
     {
-        public override string ClassName => "org.apache.kafka.connect.converters.DoubleConverter";
+        public override string BridgeClassName => "org.apache.kafka.connect.converters.DoubleConverter";
     }
 }

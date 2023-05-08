@@ -22,6 +22,6 @@ namespace MASES.KNet.Clients.Consumer
 {
     public class RetriableCommitFailedException : RetriableException
     {
-        public override string ClassName => "org.apache.kafka.clients.consumer.RetriableCommitFailedException";
+        public override string BridgeClassName => "org.apache.kafka.clients.consumer.RetriableCommitFailedException";
     }
 }

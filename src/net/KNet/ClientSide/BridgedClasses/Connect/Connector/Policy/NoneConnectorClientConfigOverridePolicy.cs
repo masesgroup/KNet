@@ -20,6 +20,6 @@ namespace MASES.KNet.Connect.Connector.Policy
 {
     public class NoneConnectorClientConfigOverridePolicy : AbstractConnectorClientConfigOverridePolicy
     {
-        public override string ClassName => "org.apache.kafka.connect.connector.policy.NoneConnectorClientConfigOverridePolicy";
+        public override string BridgeClassName => "org.apache.kafka.connect.connector.policy.NoneConnectorClientConfigOverridePolicy";
     }
 }

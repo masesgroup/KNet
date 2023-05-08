@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Quota
 {
     public class ClientQuotaAlteration : JCOBridge.C2JBridge.JVMBridgeBase<ClientQuotaAlteration>
     {
-        public override string ClassName => "org.apache.kafka.common.quota.ClientQuotaAlteration";
+        public override string BridgeClassName => "org.apache.kafka.common.quota.ClientQuotaAlteration";
     }
 }

@@ -40,87 +40,87 @@ namespace MASES.KNet.Clients.Producer
             zstd
         }
 
-        public override string ClassName => "org.apache.kafka.clients.producer.ProducerConfig";
+        public override string BridgeClassName => "org.apache.kafka.clients.producer.ProducerConfig";
 
-        public static readonly string BOOTSTRAP_SERVERS_CONFIG = Clazz.GetField<string>("BOOTSTRAP_SERVERS_CONFIG");
+        public static readonly string BOOTSTRAP_SERVERS_CONFIG = BridgeClazz.GetField<string>("BOOTSTRAP_SERVERS_CONFIG");
 
-        public static readonly string CLIENT_DNS_LOOKUP_CONFIG = Clazz.GetField<string>("CLIENT_DNS_LOOKUP_CONFIG");
+        public static readonly string CLIENT_DNS_LOOKUP_CONFIG = BridgeClazz.GetField<string>("CLIENT_DNS_LOOKUP_CONFIG");
 
-        public static readonly string METADATA_MAX_AGE_CONFIG = Clazz.GetField<string>("METADATA_MAX_AGE_CONFIG");
+        public static readonly string METADATA_MAX_AGE_CONFIG = BridgeClazz.GetField<string>("METADATA_MAX_AGE_CONFIG");
 
-        public static readonly string METADATA_MAX_IDLE_CONFIG = Clazz.GetField<string>("METADATA_MAX_IDLE_CONFIG");
+        public static readonly string METADATA_MAX_IDLE_CONFIG = BridgeClazz.GetField<string>("METADATA_MAX_IDLE_CONFIG");
 
-        public static readonly string BATCH_SIZE_CONFIG = Clazz.GetField<string>("BATCH_SIZE_CONFIG");
+        public static readonly string BATCH_SIZE_CONFIG = BridgeClazz.GetField<string>("BATCH_SIZE_CONFIG");
 
-        public static readonly string PARTITIONER_ADAPTIVE_PARTITIONING_ENABLE_CONFIG = Clazz.GetField<string>("PARTITIONER_ADPATIVE_PARTITIONING_ENABLE_CONFIG");
+        public static readonly string PARTITIONER_ADAPTIVE_PARTITIONING_ENABLE_CONFIG = BridgeClazz.GetField<string>("PARTITIONER_ADPATIVE_PARTITIONING_ENABLE_CONFIG");
 
-        public static readonly string PARTITIONER_AVAILABILITY_TIMEOUT_MS_CONFIG = Clazz.GetField<string>("PARTITIONER_AVAILABILITY_TIMEOUT_MS_CONFIG");
+        public static readonly string PARTITIONER_AVAILABILITY_TIMEOUT_MS_CONFIG = BridgeClazz.GetField<string>("PARTITIONER_AVAILABILITY_TIMEOUT_MS_CONFIG");
 
-        public static readonly string PARTITIONER_IGNORE_KEYS_CONFIG = Clazz.GetField<string>("PARTITIONER_IGNORE_KEYS_CONFIG");
+        public static readonly string PARTITIONER_IGNORE_KEYS_CONFIG = BridgeClazz.GetField<string>("PARTITIONER_IGNORE_KEYS_CONFIG");
 
-        public static readonly string ACKS_CONFIG = Clazz.GetField<string>("ACKS_CONFIG");
+        public static readonly string ACKS_CONFIG = BridgeClazz.GetField<string>("ACKS_CONFIG");
 
-        public static readonly string LINGER_MS_CONFIG = Clazz.GetField<string>("LINGER_MS_CONFIG");
+        public static readonly string LINGER_MS_CONFIG = BridgeClazz.GetField<string>("LINGER_MS_CONFIG");
 
-        public static readonly string REQUEST_TIMEOUT_MS_CONFIG = Clazz.GetField<string>("REQUEST_TIMEOUT_MS_CONFIG");
+        public static readonly string REQUEST_TIMEOUT_MS_CONFIG = BridgeClazz.GetField<string>("REQUEST_TIMEOUT_MS_CONFIG");
 
-        public static readonly string DELIVERY_TIMEOUT_MS_CONFIG = Clazz.GetField<string>("DELIVERY_TIMEOUT_MS_CONFIG");
+        public static readonly string DELIVERY_TIMEOUT_MS_CONFIG = BridgeClazz.GetField<string>("DELIVERY_TIMEOUT_MS_CONFIG");
 
-        public static readonly string CLIENT_ID_CONFIG = Clazz.GetField<string>("CLIENT_ID_CONFIG");
+        public static readonly string CLIENT_ID_CONFIG = BridgeClazz.GetField<string>("CLIENT_ID_CONFIG");
 
-        public static readonly string SEND_BUFFER_CONFIG = Clazz.GetField<string>("SEND_BUFFER_CONFIG");
+        public static readonly string SEND_BUFFER_CONFIG = BridgeClazz.GetField<string>("SEND_BUFFER_CONFIG");
 
-        public static readonly string RECEIVE_BUFFER_CONFIG = Clazz.GetField<string>("RECEIVE_BUFFER_CONFIG");
+        public static readonly string RECEIVE_BUFFER_CONFIG = BridgeClazz.GetField<string>("RECEIVE_BUFFER_CONFIG");
 
-        public static readonly string MAX_REQUEST_SIZE_CONFIG = Clazz.GetField<string>("MAX_REQUEST_SIZE_CONFIG");
+        public static readonly string MAX_REQUEST_SIZE_CONFIG = BridgeClazz.GetField<string>("MAX_REQUEST_SIZE_CONFIG");
 
-        public static readonly string RECONNECT_BACKOFF_MS_CONFIG = Clazz.GetField<string>("RECONNECT_BACKOFF_MS_CONFIG");
+        public static readonly string RECONNECT_BACKOFF_MS_CONFIG = BridgeClazz.GetField<string>("RECONNECT_BACKOFF_MS_CONFIG");
 
-        public static readonly string RECONNECT_BACKOFF_MAX_MS_CONFIG = Clazz.GetField<string>("RECONNECT_BACKOFF_MAX_MS_CONFIG");
+        public static readonly string RECONNECT_BACKOFF_MAX_MS_CONFIG = BridgeClazz.GetField<string>("RECONNECT_BACKOFF_MAX_MS_CONFIG");
 
-        public static readonly string MAX_BLOCK_MS_CONFIG = Clazz.GetField<string>("MAX_BLOCK_MS_CONFIG");
+        public static readonly string MAX_BLOCK_MS_CONFIG = BridgeClazz.GetField<string>("MAX_BLOCK_MS_CONFIG");
 
-        public static readonly string BUFFER_MEMORY_CONFIG = Clazz.GetField<string>("BUFFER_MEMORY_CONFIG");
+        public static readonly string BUFFER_MEMORY_CONFIG = BridgeClazz.GetField<string>("BUFFER_MEMORY_CONFIG");
 
-        public static readonly string RETRY_BACKOFF_MS_CONFIG = Clazz.GetField<string>("RETRY_BACKOFF_MS_CONFIG");
+        public static readonly string RETRY_BACKOFF_MS_CONFIG = BridgeClazz.GetField<string>("RETRY_BACKOFF_MS_CONFIG");
 
-        public static readonly string COMPRESSION_TYPE_CONFIG = Clazz.GetField<string>("COMPRESSION_TYPE_CONFIG");
+        public static readonly string COMPRESSION_TYPE_CONFIG = BridgeClazz.GetField<string>("COMPRESSION_TYPE_CONFIG");
 
-        public static readonly string METRICS_SAMPLE_WINDOW_MS_CONFIG = Clazz.GetField<string>("METRICS_SAMPLE_WINDOW_MS_CONFIG");
+        public static readonly string METRICS_SAMPLE_WINDOW_MS_CONFIG = BridgeClazz.GetField<string>("METRICS_SAMPLE_WINDOW_MS_CONFIG");
 
-        public static readonly string METRICS_NUM_SAMPLES_CONFIG = Clazz.GetField<string>("METRICS_NUM_SAMPLES_CONFIG");
+        public static readonly string METRICS_NUM_SAMPLES_CONFIG = BridgeClazz.GetField<string>("METRICS_NUM_SAMPLES_CONFIG");
 
-        public static readonly string METRICS_RECORDING_LEVEL_CONFIG = Clazz.GetField<string>("METRICS_RECORDING_LEVEL_CONFIG");
+        public static readonly string METRICS_RECORDING_LEVEL_CONFIG = BridgeClazz.GetField<string>("METRICS_RECORDING_LEVEL_CONFIG");
 
-        public static readonly string METRIC_REPORTER_CLASSES_CONFIG = Clazz.GetField<string>("METRIC_REPORTER_CLASSES_CONFIG");
+        public static readonly string METRIC_REPORTER_CLASSES_CONFIG = BridgeClazz.GetField<string>("METRIC_REPORTER_CLASSES_CONFIG");
 
-        public static readonly string AUTO_INCLUDE_JMX_REPORTER_CONFIG = Clazz.GetField<string>("AUTO_INCLUDE_JMX_REPORTER_CONFIG");
+        public static readonly string AUTO_INCLUDE_JMX_REPORTER_CONFIG = BridgeClazz.GetField<string>("AUTO_INCLUDE_JMX_REPORTER_CONFIG");
 
-        public static readonly string MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION = Clazz.GetField<string>("MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION");
+        public static readonly string MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION = BridgeClazz.GetField<string>("MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION");
 
-        public static readonly string RETRIES_CONFIG = Clazz.GetField<string>("RETRIES_CONFIG");
+        public static readonly string RETRIES_CONFIG = BridgeClazz.GetField<string>("RETRIES_CONFIG");
 
-        public static readonly string KEY_SERIALIZER_CLASS_CONFIG = Clazz.GetField<string>("KEY_SERIALIZER_CLASS_CONFIG");
+        public static readonly string KEY_SERIALIZER_CLASS_CONFIG = BridgeClazz.GetField<string>("KEY_SERIALIZER_CLASS_CONFIG");
 
-        public static readonly string VALUE_SERIALIZER_CLASS_CONFIG = Clazz.GetField<string>("VALUE_SERIALIZER_CLASS_CONFIG");
+        public static readonly string VALUE_SERIALIZER_CLASS_CONFIG = BridgeClazz.GetField<string>("VALUE_SERIALIZER_CLASS_CONFIG");
 
-        public static readonly string SOCKET_CONNECTION_SETUP_TIMEOUT_MS_CONFIG = Clazz.GetField<string>("SOCKET_CONNECTION_SETUP_TIMEOUT_MS_CONFIG");
+        public static readonly string SOCKET_CONNECTION_SETUP_TIMEOUT_MS_CONFIG = BridgeClazz.GetField<string>("SOCKET_CONNECTION_SETUP_TIMEOUT_MS_CONFIG");
 
-        public static readonly string SOCKET_CONNECTION_SETUP_TIMEOUT_MAX_MS_CONFIG = Clazz.GetField<string>("SOCKET_CONNECTION_SETUP_TIMEOUT_MAX_MS_CONFIG");
+        public static readonly string SOCKET_CONNECTION_SETUP_TIMEOUT_MAX_MS_CONFIG = BridgeClazz.GetField<string>("SOCKET_CONNECTION_SETUP_TIMEOUT_MAX_MS_CONFIG");
 
-        public static readonly string CONNECTIONS_MAX_IDLE_MS_CONFIG = Clazz.GetField<string>("CONNECTIONS_MAX_IDLE_MS_CONFIG");
+        public static readonly string CONNECTIONS_MAX_IDLE_MS_CONFIG = BridgeClazz.GetField<string>("CONNECTIONS_MAX_IDLE_MS_CONFIG");
 
-        public static readonly string PARTITIONER_CLASS_CONFIG = Clazz.GetField<string>("PARTITIONER_CLASS_CONFIG");
+        public static readonly string PARTITIONER_CLASS_CONFIG = BridgeClazz.GetField<string>("PARTITIONER_CLASS_CONFIG");
 
-        public static readonly string INTERCEPTOR_CLASSES_CONFIG = Clazz.GetField<string>("INTERCEPTOR_CLASSES_CONFIG");
+        public static readonly string INTERCEPTOR_CLASSES_CONFIG = BridgeClazz.GetField<string>("INTERCEPTOR_CLASSES_CONFIG");
 
-        public static readonly string ENABLE_IDEMPOTENCE_CONFIG = Clazz.GetField<string>("ENABLE_IDEMPOTENCE_CONFIG");
+        public static readonly string ENABLE_IDEMPOTENCE_CONFIG = BridgeClazz.GetField<string>("ENABLE_IDEMPOTENCE_CONFIG");
 
-        public static readonly string TRANSACTION_TIMEOUT_CONFIG = Clazz.GetField<string>("TRANSACTION_TIMEOUT_CONFIG");
+        public static readonly string TRANSACTION_TIMEOUT_CONFIG = BridgeClazz.GetField<string>("TRANSACTION_TIMEOUT_CONFIG");
 
-        public static readonly string TRANSACTIONAL_ID_CONFIG = Clazz.GetField<string>("TRANSACTIONAL_ID_CONFIG");
+        public static readonly string TRANSACTIONAL_ID_CONFIG = BridgeClazz.GetField<string>("TRANSACTIONAL_ID_CONFIG");
 
-        public static readonly string SECURITY_PROVIDERS_CONFIG = Clazz.GetField<string>("SECURITY_PROVIDERS_CONFIG");
+        public static readonly string SECURITY_PROVIDERS_CONFIG = BridgeClazz.GetField<string>("SECURITY_PROVIDERS_CONFIG");
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]

@@ -22,8 +22,8 @@ namespace MASES.KNet.Connect.Source
 {
     public class TransactionContext : JVMBridgeBase<TransactionContext>
     {
-        public override bool IsInterface => true;
-        public override string ClassName => "org.apache.kafka.connect.source.TransactionContext";
+        public override bool IsBridgeInterface => true;
+        public override string BridgeClassName => "org.apache.kafka.connect.source.TransactionContext";
 
         public void CommitTransaction() => IExecute("commitTransaction");
 

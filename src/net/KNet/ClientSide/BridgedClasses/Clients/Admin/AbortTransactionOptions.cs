@@ -20,6 +20,6 @@ namespace MASES.KNet.Clients.Admin
 {
     public class AbortTransactionOptions : AbstractOptions<AbortTransactionOptions>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.AbortTransactionOptions";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.AbortTransactionOptions";
     }
 }

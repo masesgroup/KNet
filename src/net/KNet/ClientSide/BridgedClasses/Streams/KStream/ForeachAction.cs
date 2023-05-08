@@ -47,7 +47,7 @@ namespace MASES.KNet.Streams.KStream
     public class ForeachAction<K, V> : JVMBridgeListener, IForeachAction<K, V>
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.streams.kstream.ForeachActionImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.streams.kstream.ForeachActionImpl";
 
         readonly Action<K, V> executionFunction = null;
         /// <summary>

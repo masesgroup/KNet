@@ -20,7 +20,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class SupportedVersionRange : JCOBridge.C2JBridge.JVMBridgeBase<SupportedVersionRange>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.SupportedVersionRange";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.SupportedVersionRange";
 
         public short MinVersion => IExecute<short>("minVersion");
 

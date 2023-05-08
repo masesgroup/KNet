@@ -24,7 +24,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class ListConsumerGroupOffsetsResult : JCOBridge.C2JBridge.JVMBridgeBase<ListConsumerGroupOffsetsResult>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.ListConsumerGroupOffsetsResult";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.ListConsumerGroupOffsetsResult";
 
         public KafkaFuture<Map<TopicPartition, OffsetAndMetadata>> PartitionsToOffsetAndMetadata() => IExecute<KafkaFuture<Map<TopicPartition, OffsetAndMetadata>>>("partitionsToOffsetAndMetadata");
 

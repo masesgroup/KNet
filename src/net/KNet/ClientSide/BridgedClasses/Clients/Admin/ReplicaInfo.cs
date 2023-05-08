@@ -23,7 +23,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class ReplicaInfo : JCOBridge.C2JBridge.JVMBridgeBase<ReplicaInfo>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.ReplicaInfo";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.ReplicaInfo";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]

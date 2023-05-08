@@ -22,7 +22,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class ListTransactionsOptions : AbstractOptions<ListTransactionsOptions>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.ListTransactionsOptions";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.ListTransactionsOptions";
 
         public ListTransactionsOptions FilterStates(Collection<TransactionState> states)
         {

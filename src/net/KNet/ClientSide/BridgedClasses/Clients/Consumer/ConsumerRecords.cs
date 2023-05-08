@@ -24,7 +24,7 @@ namespace MASES.KNet.Clients.Consumer
 {
     public class ConsumerRecords<K, V> : Iterable<ConsumerRecord<K, V>>
     {
-        public override string ClassName => "org.apache.kafka.clients.consumer.ConsumerRecords";
+        public override string BridgeClassName => "org.apache.kafka.clients.consumer.ConsumerRecords";
 
         public List<ConsumerRecord<K, V>> Records(TopicPartition partition)
         {

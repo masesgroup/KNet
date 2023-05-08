@@ -22,7 +22,7 @@ namespace MASES.KNet.Common.Serialization
 {
     public class VoidDeserializer : Deserializer<Void>
     {
-        public override string ClassName => "org.apache.kafka.common.serialization.VoidDeserializer";
+        public override string BridgeClassName => "org.apache.kafka.common.serialization.VoidDeserializer";
 
         public override bool AutoInit => false;
 

@@ -22,7 +22,7 @@ namespace MASES.KNet.Streams.Query
 {
     public class StateQueryResult<R> : JCOBridge.C2JBridge.JVMBridgeBase<StateQueryResult<R>>
     {
-        public override string ClassName => "org.apache.kafka.streams.query.StateQueryResult";
+        public override string BridgeClassName => "org.apache.kafka.streams.query.StateQueryResult";
 
         public void SetGlobalResult(QueryResult<R> r) => IExecute("setGlobalResult", r);
 

@@ -54,7 +54,7 @@ namespace MASES.KNet.Streams
     public class StateListener : JVMBridgeListener, IStateListener
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.streams.StateListenerImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.streams.StateListenerImpl";
 
         readonly Action<StateType, StateType> executionFunction = null;
         /// <summary>
@@ -87,9 +87,9 @@ namespace MASES.KNet.Streams
 
     public class KafkaStreams : JVMBridgeBase<KafkaStreams>
     {
-        public override bool IsCloseable => true;
+        public override bool IsBridgeCloseable => true;
 
-        public override string ClassName => "org.apache.kafka.streams.KafkaStreams";
+        public override string BridgeClassName => "org.apache.kafka.streams.KafkaStreams";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
@@ -186,7 +186,7 @@ namespace MASES.KNet.Streams
 
         public class CloseOptions :JVMBridgeBase<CloseOptions>
         {
-            public override string ClassName => "org.apache.kafka.streams.KafkaStreams$CloseOptions";
+            public override string BridgeClassName => "org.apache.kafka.streams.KafkaStreams$CloseOptions";
 
             public CloseOptions Timeout(Duration timeout) => IExecute<CloseOptions>("timeout", timeout);
 

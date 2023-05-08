@@ -48,7 +48,7 @@ namespace MASES.KNet.Streams.KStream
     public class ValueMapperWithKey<K, V, VR> : JVMBridgeListener, IValueMapperWithKey<K, V, VR>
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.streams.kstream.ValueMapperWithKeyImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.streams.kstream.ValueMapperWithKeyImpl";
 
         readonly Func<K, V, VR> executionFunction = null;
         /// <summary>

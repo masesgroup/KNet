@@ -27,7 +27,7 @@ namespace MASES.KNet.Streams.State
 
     public class KeyValueBytesStoreSupplier : JVMBridgeBase<KeyValueBytesStoreSupplier, KeyValueBytesStoreSupplier>, IKeyValueBytesStoreSupplier
     {
-        public override string ClassName => "org.apache.kafka.streams.state.KeyValueBytesStoreSupplier";
+        public override string BridgeClassName => "org.apache.kafka.streams.state.KeyValueBytesStoreSupplier";
 
         public string Name => IExecute<string>("name");
 

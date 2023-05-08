@@ -28,7 +28,7 @@ namespace MASES.KNet.Common.Serialization
 
     public class Serde : JVMBridgeBase<Serde>, ISerde
     {
-        public override string ClassName => "org.apache.kafka.common.serialization.Serde";
+        public override string BridgeClassName => "org.apache.kafka.common.serialization.Serde";
 
         public void Configure(Map<string, object> configs, bool isKey)
         {
@@ -45,9 +45,9 @@ namespace MASES.KNet.Common.Serialization
 
     public class Serde<T> : JVMBridgeBase<Serde<T>>, ISerde<T>
     {
-        public override string ClassName => "org.apache.kafka.common.serialization.Serde";
+        public override string BridgeClassName => "org.apache.kafka.common.serialization.Serde";
 
-        public static implicit operator Serde(Serde<T> serde) { return Wraps<Serde>(serde.Instance); }
+        public static implicit operator Serde(Serde<T> serde) { return Wraps<Serde>(serde.BridgeInstance); }
 
         public Serializer<T> Serializer => IExecute<Serializer<T>>("serializer");
 

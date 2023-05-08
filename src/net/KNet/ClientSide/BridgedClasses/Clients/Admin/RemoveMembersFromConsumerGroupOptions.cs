@@ -22,7 +22,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class RemoveMembersFromConsumerGroupOptions : AbstractOptions<RemoveMembersFromConsumerGroupOptions>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.RemoveMembersFromConsumerGroupOptions";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.RemoveMembersFromConsumerGroupOptions";
 
         public RemoveMembersFromConsumerGroupOptions(Collection<MemberToRemove> members)
             : base(members)

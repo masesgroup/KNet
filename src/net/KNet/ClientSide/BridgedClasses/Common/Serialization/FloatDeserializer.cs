@@ -20,7 +20,7 @@ namespace MASES.KNet.Common.Serialization
 {
     public class FloatDeserializer : Deserializer<float>
     {
-        public override string ClassName => "org.apache.kafka.common.serialization.FloatDeserializer";
+        public override string BridgeClassName => "org.apache.kafka.common.serialization.FloatDeserializer";
 
         public override bool AutoInit => false;
 

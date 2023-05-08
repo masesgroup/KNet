@@ -59,7 +59,7 @@ namespace MASES.KNet.Streams.Processor
     public class StreamPartitioner<K, V> : JVMBridgeListener, IStreamPartitioner<K, V>
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.streams.kstream.StreamPartitionerImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.streams.kstream.StreamPartitionerImpl";
 
         readonly Func<string, K, V, int, int> executionFunctionPartition = null;
         readonly Func<string, K, V, int, Optional<Set<Java.Lang.Integer>>> executionFunctionPartitions = null;

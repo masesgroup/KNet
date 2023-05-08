@@ -20,7 +20,7 @@ namespace MASES.KNet.Common.Security.Auth
 {
     public class KafkaPrincipal : JCOBridge.C2JBridge.JVMBridgeBase<KafkaPrincipal>
     {
-        public override string ClassName => "org.apache.kafka.common.security.auth.KafkaPrincipal";
+        public override string BridgeClassName => "org.apache.kafka.common.security.auth.KafkaPrincipal";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]

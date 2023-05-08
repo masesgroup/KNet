@@ -22,7 +22,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class ListOffsetsOptions : AbstractOptions<ListOffsetsOptions>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.ListOffsetsOptions";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.ListOffsetsOptions";
 
         public ListOffsetsOptions(IsolationLevel isolationLevel)
             : base(isolationLevel)

@@ -22,7 +22,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class FeatureMetadata : JCOBridge.C2JBridge.JVMBridgeBase<FeatureMetadata>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.FeatureMetadata";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.FeatureMetadata";
 
         public Map<string, FinalizedVersionRange> FinalizedFeatures => IExecute<Map<string, FinalizedVersionRange>>("finalizedFeatures");
 

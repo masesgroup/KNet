@@ -22,7 +22,7 @@ namespace MASES.KNet.Streams.State
 {
     public class QueryableStoreTypes : JVMBridgeBase<QueryableStoreTypes>
     {
-        public override string ClassName => "org.apache.kafka.streams.state.QueryableStoreTypes";
+        public override string BridgeClassName => "org.apache.kafka.streams.state.QueryableStoreTypes";
 
         public static QueryableStoreType<ReadOnlyKeyValueStore<K, V>> KeyValueStore<K, V>() => SExecute<QueryableStoreType<ReadOnlyKeyValueStore<K, V>>>("keyValueStore");
 

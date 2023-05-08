@@ -33,7 +33,7 @@ namespace MASES.KNet.Streams.State
 
     public class SessionStore<K, AGG> : StateStore, ISessionStore<K, AGG>
     {
-        public override string ClassName => "org.apache.kafka.streams.state.SessionStore";
+        public override string BridgeClassName => "org.apache.kafka.streams.state.SessionStore";
 
         public KeyValueIterator<Windowed<K>, AGG> FindSessions(long earliestSessionEndTime, long latestSessionEndTime)
         {

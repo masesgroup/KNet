@@ -20,7 +20,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class CreateAclsOptions : AbstractOptions<CreateAclsOptions>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.CreateAclsOptions";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.CreateAclsOptions";
 
         public new CreateAclsOptions TimeoutMs(int timeoutMs)
         {

@@ -22,7 +22,7 @@ namespace MASES.KNet.Streams.KStream
 {
     public class JoinWindows : Windows<Window>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.JoinWindows";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.JoinWindows";
 
         public static JoinWindows Of(Duration timeDifference)
         {

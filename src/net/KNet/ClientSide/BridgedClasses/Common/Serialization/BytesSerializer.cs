@@ -22,7 +22,7 @@ namespace MASES.KNet.Common.Serialization
 {
     public class BytesSerializer : Serializer<Bytes>
     {
-        public override string ClassName => "org.apache.kafka.common.serialization.BytesSerializer";
+        public override string BridgeClassName => "org.apache.kafka.common.serialization.BytesSerializer";
 
         public override bool AutoInit => false;
 

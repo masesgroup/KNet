@@ -20,9 +20,9 @@ namespace MASES.KNet.Streams.Query
 {
     public class KeyQuery<K, V> : Query<V>
     {
-        public override bool IsInterface => false;
+        public override bool IsBridgeInterface => false;
 
-        public override string ClassName => "org.apache.kafka.streams.query.KeyQuery";
+        public override string BridgeClassName => "org.apache.kafka.streams.query.KeyQuery";
 
         public static KeyQuery<K, V> WithKey(K key) => SExecute<KeyQuery<K, V>>("withKey", key);
 

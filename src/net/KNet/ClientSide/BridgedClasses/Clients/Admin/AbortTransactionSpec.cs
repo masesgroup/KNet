@@ -22,7 +22,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class AbortTransactionSpec : JCOBridge.C2JBridge.JVMBridgeBase<AbortTransactionSpec>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.AbortTransactionSpec";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.AbortTransactionSpec";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]

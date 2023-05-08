@@ -27,7 +27,7 @@ namespace MASES.KNet.Streams.State
 
     public class TimestampedKeyValueStore<K, V> : KeyValueStore<K, V>, ITimestampedKeyValueStore<K, V>
     {
-        public override string ClassName => "org.apache.kafka.streams.state.TimestampedKeyValueStore";
+        public override string BridgeClassName => "org.apache.kafka.streams.state.TimestampedKeyValueStore";
 
         public new KeyValueIterator<K, ValueAndTimestamp<V>> All => IExecute<KeyValueIterator<K, ValueAndTimestamp<V>>>("all");
 

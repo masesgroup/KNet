@@ -22,13 +22,13 @@ namespace MASES.KNet.Connect.Data
 {
     public class Date : JVMBridgeBase<Date>
     {
-        public override string ClassName => "org.apache.kafka.connect.data.Date";
+        public override string BridgeClassName => "org.apache.kafka.connect.data.Date";
 
-        public static string LOGICAL_NAME => Clazz.GetField<string>("LOGICAL_NAME");
+        public static string LOGICAL_NAME => BridgeClazz.GetField<string>("LOGICAL_NAME");
 
-        public static SchemaBuilder Builder => Clazz.GetField<SchemaBuilder>("builder");
+        public static SchemaBuilder Builder => BridgeClazz.GetField<SchemaBuilder>("builder");
 
-        public static Schema SCHEMA => Clazz.GetField<Schema>("SCHEMA");
+        public static Schema SCHEMA => BridgeClazz.GetField<Schema>("SCHEMA");
 
         public static int FromLogical(Schema schema, Java.Util.Date value)
         {

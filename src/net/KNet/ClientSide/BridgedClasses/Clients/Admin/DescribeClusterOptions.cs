@@ -20,7 +20,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class DescribeClusterOptions : AbstractOptions<DescribeClusterOptions>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.DescribeClusterOptions";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.DescribeClusterOptions";
 
         public new DescribeClusterOptions TimeoutMs(int timeoutMs)
         {

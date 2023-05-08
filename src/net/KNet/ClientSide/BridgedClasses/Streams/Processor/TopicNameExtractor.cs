@@ -50,7 +50,7 @@ namespace MASES.KNet.Streams.Processor
     public class TopicNameExtractor<K, V> : JVMBridgeListener, ITopicNameExtractor<K, V>
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.streams.processor.TopicNameExtractorImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.streams.processor.TopicNameExtractorImpl";
 
         readonly Func<K, V, RecordContext, string> executionFunction = null;
         /// <summary>

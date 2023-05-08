@@ -23,7 +23,7 @@ namespace MASES.KNet.Common
 {
     public class TopicCollection : JVMBridgeBase<TopicCollection>
     {
-        public override string ClassName => "org.apache.kafka.common.TopicCollection";
+        public override string BridgeClassName => "org.apache.kafka.common.TopicCollection";
 
         public static TopicIdCollection OfTopicIds(Collection<Uuid> topics)
         {
@@ -37,14 +37,14 @@ namespace MASES.KNet.Common
 
         public class TopicIdCollection : TopicCollection
         {
-            public override string ClassName => "org.apache.kafka.common.TopicCollection$TopicIdCollection";
+            public override string BridgeClassName => "org.apache.kafka.common.TopicCollection$TopicIdCollection";
 
             public Collection<Uuid> TopicIds => IExecute<Collection<Uuid>>("topicIds");
         }
 
         public class TopicNameCollection : TopicCollection
         {
-            public override string ClassName => "org.apache.kafka.common.TopicCollection$TopicNameCollection";
+            public override string BridgeClassName => "org.apache.kafka.common.TopicCollection$TopicNameCollection";
 
             public Collection<string> TopicNames => IExecute<Collection<string>>("topicNames");
         }

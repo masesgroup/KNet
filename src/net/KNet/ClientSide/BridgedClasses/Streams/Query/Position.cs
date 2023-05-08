@@ -22,7 +22,7 @@ namespace MASES.KNet.Streams.Query
 {
     public class Position : JCOBridge.C2JBridge.JVMBridgeBase<Position>
     {
-        public override string ClassName => "org.apache.kafka.streams.query.Position";
+        public override string BridgeClassName => "org.apache.kafka.streams.query.Position";
 
         public static Position EmptyPosition => SExecute<Position>("emptyPosition");
 

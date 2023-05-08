@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class ResourceNotFoundException : ApiException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.ResourceNotFoundException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.ResourceNotFoundException";
     }
 }

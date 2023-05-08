@@ -25,8 +25,8 @@ namespace MASES.KNet.Connect.Storage
 {
     public class SimpleHeaderConverter : HeaderConverter
     {
-        public override bool IsInterface => false;
+        public override bool IsBridgeInterface => false;
 
-        public override string ClassName => "org.apache.kafka.connect.storage.SimpleHeaderConverter";
+        public override string BridgeClassName => "org.apache.kafka.connect.storage.SimpleHeaderConverter";
     }
 }

@@ -20,7 +20,7 @@ namespace MASES.KNet.Streams
 {
     public class KeyValue<K, V> : JCOBridge.C2JBridge.JVMBridgeBase<KeyValue<K, V>>
     {
-        public override string ClassName => "org.apache.kafka.streams.KeyValue";
+        public override string BridgeClassName => "org.apache.kafka.streams.KeyValue";
 
         public static KeyValue<K, V> Pair(K key, V value)
         {
@@ -35,8 +35,8 @@ namespace MASES.KNet.Streams
             : base(key, value)
         { }
 
-        public K Key => Instance.GetField<K>("key");
+        public K Key => BridgeInstance.GetField<K>("key");
 
-        public V Value => Instance.GetField<V>("value");
+        public V Value => BridgeInstance.GetField<V>("value");
     }
 }

@@ -22,9 +22,9 @@ namespace MASES.KNet.Connect.File
 {
     public class FileStreamSourceConnector : SourceConnector
     {
-        public override bool IsAbstract => false;
+        public override bool IsBridgeAbstract => false;
 
-        public override string ClassName => "org.apache.kafka.connect.file.FileStreamSourceConnector";
+        public override string BridgeClassName => "org.apache.kafka.connect.file.FileStreamSourceConnector";
 
         public static string TOPIC_CONFIG = SExecute<string>("TOPIC_CONFIG");
         public static string FILE_CONFIG = SExecute<string>("FILE_CONFIG");

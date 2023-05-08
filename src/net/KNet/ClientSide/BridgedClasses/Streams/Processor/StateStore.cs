@@ -40,7 +40,7 @@ namespace MASES.KNet.Streams.Processor
 
     public class StateStore : JVMBridgeBase<StateStore, IStateStore>, IStateStore
     {
-        public override string ClassName => "org.apache.kafka.streams.processor.StateStore";
+        public override string BridgeClassName => "org.apache.kafka.streams.processor.StateStore";
 
         public string Name => IExecute<string>("name");
 

@@ -22,6 +22,6 @@ namespace MASES.KNet.Clients.Consumer
 {
     public class CommitFailedException : KafkaException
     {
-        public override string ClassName => "org.apache.kafka.clients.consumer.CommitFailedException";
+        public override string BridgeClassName => "org.apache.kafka.clients.consumer.CommitFailedException";
     }
 }

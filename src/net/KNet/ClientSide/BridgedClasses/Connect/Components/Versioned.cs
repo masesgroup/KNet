@@ -27,8 +27,8 @@ namespace MASES.KNet.Connect.Components
 
     public class Versioned : JVMBridgeBase<Versioned, IVersion>, IVersion
     {
-        public override bool IsInterface => true;
-        public override string ClassName => "org.apache.kafka.connect.components.Versioned";
+        public override bool IsBridgeInterface => true;
+        public override string BridgeClassName => "org.apache.kafka.connect.components.Versioned";
 
         public string Version() => IExecute<string>("version");
     }

@@ -20,6 +20,6 @@ namespace MASES.KNet.Streams.Errors
 {
     public class LockException : StreamsException
     {
-        public override string ClassName => "org.apache.kafka.streams.errors.LockException";
+        public override string BridgeClassName => "org.apache.kafka.streams.errors.LockException";
     }
 }

@@ -22,8 +22,8 @@ namespace MASES.KNet.Connect.File
 {
     public class FileStreamSinkTask : SinkTask
     {
-        public override bool IsAbstract => false;
+        public override bool IsBridgeAbstract => false;
 
-        public override string ClassName => "org.apache.kafka.connect.file.FileStreamSinkTask";
+        public override string BridgeClassName => "org.apache.kafka.connect.file.FileStreamSinkTask";
     }
 }

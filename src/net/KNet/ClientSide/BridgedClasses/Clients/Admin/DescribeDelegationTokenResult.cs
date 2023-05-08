@@ -24,7 +24,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class DescribeDelegationTokenResult : JCOBridge.C2JBridge.JVMBridgeBase<DescribeDelegationTokenResult>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.DescribeDelegationTokenResult";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.DescribeDelegationTokenResult";
 
         public KafkaFuture<List<DelegationToken>> DelegationTokens => IExecute<KafkaFuture<List<DelegationToken>>>("delegationTokens");
     }

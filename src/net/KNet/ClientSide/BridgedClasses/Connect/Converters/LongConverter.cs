@@ -20,6 +20,6 @@ namespace MASES.KNet.Connect.Converters
 {
     public class LongConverter : NumberConverter<long> 
     {
-        public override string ClassName => "org.apache.kafka.connect.converters.LongConverter";
+        public override string BridgeClassName => "org.apache.kafka.connect.converters.LongConverter";
     }
 }

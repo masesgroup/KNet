@@ -27,7 +27,7 @@ namespace MASES.KNet.Connect.Converters
 {
     public class NumberConverter<T> : JVMBridgeBase<NumberConverter<T>>
     {
-        public override string ClassName => "org.apache.kafka.connect.converters.NumberConverter";
+        public override string BridgeClassName => "org.apache.kafka.connect.converters.NumberConverter";
 
         public static implicit operator HeaderConverter(NumberConverter<T> converter) { return converter.Cast<HeaderConverter>(); }
 

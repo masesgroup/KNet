@@ -23,7 +23,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class TransactionDescription : JCOBridge.C2JBridge.JVMBridgeBase<TransactionDescription>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.TransactionDescription";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.TransactionDescription";
 
         public int CoordinatorId => IExecute<int>("coordinatorId");
 

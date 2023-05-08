@@ -20,7 +20,7 @@ namespace MASES.KNet.Common.Metrics
 {
     public class Quota : JCOBridge.C2JBridge.JVMBridgeBase<Quota>
     {
-        public override string ClassName => "org.apache.kafka.common.metrics.Quota";
+        public override string BridgeClassName => "org.apache.kafka.common.metrics.Quota";
 
         public static Quota UpperBound(double upperBound)
         {

@@ -42,7 +42,7 @@ namespace MASES.KNet.Streams
 
     public class ThreadMetadata : JVMBridgeBase<ThreadMetadata, IThreadMetadata>, IThreadMetadata
     {
-        public override string ClassName => "org.apache.kafka.streams.ThreadMetadata";
+        public override string BridgeClassName => "org.apache.kafka.streams.ThreadMetadata";
 
         public string ThreadState => IExecute<string>("threadState");
 

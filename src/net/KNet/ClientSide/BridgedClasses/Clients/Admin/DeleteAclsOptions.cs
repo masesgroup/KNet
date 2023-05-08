@@ -20,7 +20,7 @@ namespace MASES.KNet.Clients.Admin
 {
     public class DeleteAclsOptions : AbstractOptions<DeleteAclsOptions>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.DeleteAclsOptions";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.DeleteAclsOptions";
 
         public new DeleteAclsOptions TimeoutMs(int timeoutMs)
         {

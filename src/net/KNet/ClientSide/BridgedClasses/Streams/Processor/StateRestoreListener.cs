@@ -50,7 +50,7 @@ namespace MASES.KNet.Streams.Processor
     public class StateRestoreListener : JVMBridgeListener, IStateRestoreListener
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.streams.processor.StateRestoreListenerImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.streams.processor.StateRestoreListenerImpl";
 
         readonly Action<TopicPartition, string, long, long> OnRestoreStartFunction = null;
         readonly Action<TopicPartition, string, long, long> OnBatchRestoredFunction = null;

@@ -51,7 +51,7 @@ namespace MASES.KNet.Streams.KStream
     public class ValueJoinerWithKey<K1, V1, V2, VR> : JVMBridgeListener, IValueJoinerWithKey<K1, V1, V2, VR>
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.streams.kstream.ValueJoinerWithKeyImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.streams.kstream.ValueJoinerWithKeyImpl";
 
         readonly Func<K1, V1, V2, VR> executionFunction = null;
         /// <summary>

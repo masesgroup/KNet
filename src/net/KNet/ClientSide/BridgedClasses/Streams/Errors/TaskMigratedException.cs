@@ -20,6 +20,6 @@ namespace MASES.KNet.Streams.Errors
 {
     public class TaskMigratedException : StreamsException
     {
-        public override string ClassName => "org.apache.kafka.streams.errors.TaskMigratedException";
+        public override string BridgeClassName => "org.apache.kafka.streams.errors.TaskMigratedException";
     }
 }

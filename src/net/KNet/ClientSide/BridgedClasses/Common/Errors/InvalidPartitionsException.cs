@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class InvalidPartitionsException : ApiException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.InvalidPartitionsException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.InvalidPartitionsException";
     }
 }

@@ -20,7 +20,7 @@ namespace MASES.KNet.Common.Utils
 {
     public class Bytes : JCOBridge.C2JBridge.JVMBridgeBase<Bytes>
     {
-        public override string ClassName => "org.apache.kafka.common.utils.Bytes";
+        public override string BridgeClassName => "org.apache.kafka.common.utils.Bytes";
 
         public static Bytes Wrap(byte[] bytes)
         {

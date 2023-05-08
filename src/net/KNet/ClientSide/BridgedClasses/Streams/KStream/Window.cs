@@ -22,7 +22,7 @@ namespace MASES.KNet.Streams.KStream
 {
     public class Window : JCOBridge.C2JBridge.JVMBridgeBase<Window>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.Window";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.Window";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]

@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class SaslAuthenticationException : AuthenticationException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.SaslAuthenticationException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.SaslAuthenticationException";
     }
 }

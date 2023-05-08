@@ -22,6 +22,6 @@ namespace MASES.KNet.Common
 {
     public class KafkaException : JVMBridgeException<KafkaException>
     {
-        public override string ClassName => "org.apache.kafka.common.KafkaException";
+        public override string BridgeClassName => "org.apache.kafka.common.KafkaException";
     }
 }

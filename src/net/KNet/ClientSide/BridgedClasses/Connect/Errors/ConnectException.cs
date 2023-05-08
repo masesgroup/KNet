@@ -22,6 +22,6 @@ namespace MASES.KNet.Connect.Errors
 {
     public class ConnectException : KafkaException
     {
-        public override string ClassName => "org.apache.kafka.connect.errors.ConnectException";
+        public override string BridgeClassName => "org.apache.kafka.connect.errors.ConnectException";
     }
 }

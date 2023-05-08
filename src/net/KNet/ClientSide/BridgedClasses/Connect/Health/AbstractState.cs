@@ -22,8 +22,8 @@ namespace MASES.KNet.Connect.Health
 {
     public class AbstractState : JVMBridgeBase<AbstractState>
     {
-        public override bool IsAbstract => true;
-        public override string ClassName => "org.apache.kafka.connect.health.AbstractState";
+        public override bool IsBridgeAbstract => true;
+        public override string BridgeClassName => "org.apache.kafka.connect.health.AbstractState";
 
         [System.Obsolete("This is not public in Apache Kafka API")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]

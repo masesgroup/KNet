@@ -20,6 +20,6 @@ namespace MASES.KNet.Clients.Consumer
 {
     public class RoundRobinAssignor : JCOBridge.C2JBridge.JVMBridgeBase<RoundRobinAssignor>
     {
-        public override string ClassName => "org.apache.kafka.clients.consumer.RoundRobinAssignor";
+        public override string BridgeClassName => "org.apache.kafka.clients.consumer.RoundRobinAssignor";
     }
 }

@@ -25,6 +25,6 @@ namespace MASES.KNet.Clients.Consumer
 {
     public class NoOffsetForPartitionException : InvalidOffsetException
     {
-        public override string ClassName => "org.apache.kafka.clients.consumer.NoOffsetForPartitionException";
+        public override string BridgeClassName => "org.apache.kafka.clients.consumer.NoOffsetForPartitionException";
     }
 }

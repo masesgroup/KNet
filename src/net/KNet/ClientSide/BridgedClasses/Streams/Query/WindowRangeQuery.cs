@@ -25,9 +25,9 @@ namespace MASES.KNet.Streams.Query
 {
     public class WindowRangeQuery<K, V> : Query<KeyValueIterator<Windowed<K>, V>>
     {
-        public override bool IsInterface => false;
+        public override bool IsBridgeInterface => false;
 
-        public override string ClassName => "org.apache.kafka.streams.query.WindowRangeQuery";
+        public override string BridgeClassName => "org.apache.kafka.streams.query.WindowRangeQuery";
 
         public static WindowRangeQuery<K, V> WithKey(K key) => SExecute<WindowRangeQuery<K, V>>("withKey", key);
 

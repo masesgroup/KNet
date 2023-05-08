@@ -26,9 +26,9 @@ namespace MASES.KNet.Clients.Consumer
 {
     public class KafkaConsumer : JCOBridge.C2JBridge.JVMBridgeBase<KafkaConsumer>, IConsumer
     {
-        public override bool IsCloseable => true;
+        public override bool IsBridgeCloseable => true;
 
-        public override string ClassName => "org.apache.kafka.clients.consumer.KafkaConsumer";
+        public override string BridgeClassName => "org.apache.kafka.clients.consumer.KafkaConsumer";
 
         public KafkaConsumer()
         {

@@ -20,6 +20,6 @@ namespace MASES.KNet.Streams.Errors
 {
     public class TaskCorruptedException : StreamsException
     {
-        public override string ClassName => "org.apache.kafka.streams.errors.TaskCorruptedException";
+        public override string BridgeClassName => "org.apache.kafka.streams.errors.TaskCorruptedException";
     }
 }

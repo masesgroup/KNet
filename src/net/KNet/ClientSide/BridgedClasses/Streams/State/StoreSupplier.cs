@@ -35,7 +35,7 @@ namespace MASES.KNet.Streams.State
     public class StoreSupplier<T> : JVMBridgeBase<StoreSupplier<T>, IStoreSupplier<T>>, IStoreSupplier<T>
         where T : StateStore
     {
-        public override string ClassName => "org.apache.kafka.streams.state.StoreSupplier";
+        public override string BridgeClassName => "org.apache.kafka.streams.state.StoreSupplier";
 
         public string Name => IExecute<string>("name");
 

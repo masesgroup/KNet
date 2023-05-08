@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class NewLeaderElectedException : ApiException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.NewLeaderElectedException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.NewLeaderElectedException";
     }
 }

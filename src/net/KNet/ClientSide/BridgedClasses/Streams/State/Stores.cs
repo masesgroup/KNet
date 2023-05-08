@@ -23,7 +23,7 @@ namespace MASES.KNet.Streams.State
 {
     public class Stores : JCOBridge.C2JBridge.JVMBridgeBase<Stores>
     {
-        public override string ClassName => "org.apache.kafka.streams.state.Stores";
+        public override string BridgeClassName => "org.apache.kafka.streams.state.Stores";
 
         public static KeyValueBytesStoreSupplier PersistentKeyValueStore(string name)
         {

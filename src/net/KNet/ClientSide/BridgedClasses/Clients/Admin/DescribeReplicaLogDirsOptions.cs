@@ -20,6 +20,6 @@ namespace MASES.KNet.Clients.Admin
 {
     public class DescribeReplicaLogDirsOptions : AbstractOptions<DescribeReplicaLogDirsOptions>
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.DescribeReplicaLogDirsOptions";
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.DescribeReplicaLogDirsOptions";
     }
 }

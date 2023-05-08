@@ -27,7 +27,7 @@ namespace MASES.KNet.Streams.KStream
 
     public class GlobalKTable<K, V> : JVMBridgeBase<GlobalKTable<K, V>, IGlobalKTable<K, V>>, IGlobalKTable<K, V>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.GlobalKTable";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.GlobalKTable";
 
         public string QueryableStoreName => IExecute<string>("queryableStoreName");
     }

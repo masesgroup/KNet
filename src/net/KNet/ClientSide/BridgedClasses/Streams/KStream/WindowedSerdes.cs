@@ -24,7 +24,7 @@ namespace MASES.KNet.Streams.KStream
 {
     public class WindowedSerdes : JVMBridgeBase<WindowedSerdes>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.WindowedSerdes";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.WindowedSerdes";
 
 
         public static Serde<Windowed<T>> TimeWindowedSerdeFrom<T>(Class<T> type, long windowSize) where T : IJVMBridgeBase, new()

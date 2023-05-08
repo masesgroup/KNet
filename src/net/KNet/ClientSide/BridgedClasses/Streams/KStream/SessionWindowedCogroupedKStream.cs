@@ -47,7 +47,7 @@ namespace MASES.KNet.Streams.KStream
 
     public class SessionWindowedCogroupedKStream<K, V> : JVMBridgeBase<SessionWindowedCogroupedKStream<K, V>, ISessionWindowedCogroupedKStream<K, V>>, ISessionWindowedCogroupedKStream<K, V>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.SessionWindowedCogroupedKStream";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.SessionWindowedCogroupedKStream";
 
         public KTable<Windowed<K>, V> Aggregate<TSuperK>(Initializer<V> initializer, Merger<TSuperK, V> sessionMerger) where TSuperK : K
         {

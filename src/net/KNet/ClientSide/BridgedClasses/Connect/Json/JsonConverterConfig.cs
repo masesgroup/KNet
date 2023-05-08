@@ -25,7 +25,7 @@ namespace MASES.KNet.Connect.Json
 {
     public class JsonConverterConfig : ConverterConfig
     {
-        public override string ClassName => "org.apache.kafka.connect.json.JsonConverterConfig";
+        public override string BridgeClassName => "org.apache.kafka.connect.json.JsonConverterConfig";
 
         public static string SCHEMAS_ENABLE_CONFIG => SExecute<string>("SCHEMAS_ENABLE_CONFIG");
 

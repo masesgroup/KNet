@@ -44,7 +44,7 @@ namespace MASES.KNet.Streams.KStream
     public class Reducer<V> : JVMBridgeListener, IReducer<V>
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.streams.kstream.ReducerImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.streams.kstream.ReducerImpl";
 
         readonly Func<V, V, V> executionFunction = null;
         /// <summary>

@@ -43,7 +43,7 @@ namespace MASES.KNet.Streams.Processor
     public class TimestampExtractor : JVMBridgeListener, ITimestampExtractor
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.streams.processor.TimestampExtractorImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.streams.processor.TimestampExtractorImpl";
 
         readonly Func<ConsumerRecord<object, object>, long, long> executionFunction = null;
         /// <summary>

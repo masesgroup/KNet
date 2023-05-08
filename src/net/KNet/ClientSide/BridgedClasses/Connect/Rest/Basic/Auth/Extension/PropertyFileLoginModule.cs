@@ -23,7 +23,7 @@ namespace MASES.KNet.Connect.Rest.Basic.Auth.Extension
 {
     public class PropertyFileLoginModule : JVMBridgeBase<PropertyFileLoginModule>
     {
-        public override string ClassName => "org.apache.kafka.connect.rest.basic.auth.extension.PropertyFileLoginModule";
+        public override string BridgeClassName => "org.apache.kafka.connect.rest.basic.auth.extension.PropertyFileLoginModule";
 
 #warning need classes into JNet: use dynamic until now
         //public void Initialize(Subject subject, CallbackHandler callbackHandler, Map<string, object> sharedState, Map<string, object> options)

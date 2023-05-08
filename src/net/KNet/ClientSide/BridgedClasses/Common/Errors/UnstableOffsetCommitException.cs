@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class UnstableOffsetCommitException : RetriableException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.UnstableOffsetCommitException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.UnstableOffsetCommitException";
     }
 }

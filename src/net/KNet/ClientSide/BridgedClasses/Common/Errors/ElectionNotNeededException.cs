@@ -20,6 +20,6 @@ namespace MASES.KNet.Common.Errors
 {
     public class ElectionNotNeededException : InvalidMetadataException
     {
-        public override string ClassName => "org.apache.kafka.common.errors.ElectionNotNeededException";
+        public override string BridgeClassName => "org.apache.kafka.common.errors.ElectionNotNeededException";
     }
 }

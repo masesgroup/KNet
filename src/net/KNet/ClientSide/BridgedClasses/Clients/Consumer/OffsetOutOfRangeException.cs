@@ -25,8 +25,8 @@ namespace MASES.KNet.Clients.Consumer
 {
     public class OffsetOutOfRangeException : InvalidOffsetException
     {
-        public override string ClassName => "org.apache.kafka.clients.consumer.OffsetOutOfRangeException";
+        public override string BridgeClassName => "org.apache.kafka.clients.consumer.OffsetOutOfRangeException";
 
-        public Map<TopicPartition, long> OffsetOutOfRangePartitions => JVMBridgeBase.Wraps<Map<TopicPartition, long>>(Instance.Invoke("offsetOutOfRangePartitions") as IJavaObject);
+        public Map<TopicPartition, long> OffsetOutOfRangePartitions => JVMBridgeBase.Wraps<Map<TopicPartition, long>>(BridgeInstance.Invoke("offsetOutOfRangePartitions") as IJavaObject);
     }
 }
