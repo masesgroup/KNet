@@ -25,6 +25,24 @@ namespace MASES.KNet.Extensions
 {
     public static class ProducerConfigBuilderExtensions
     {
+        static bool IsManaged<T>()
+        {
+            var type = typeof(T);
+
+            if (type == typeof(byte[]) || type == typeof(double) || type == typeof(float) || type == typeof(int)
+                || type == typeof(long) || type == typeof(short) || type == typeof(string) || type == typeof(Guid) || type == typeof(void))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        public static bool CanApplyBasicSerializer<T>(this ProducerConfigBuilder builder)
+        {
+            return IsManaged<T>();
+        }
+
         public static ProducerConfigBuilder WithKeySerializerClass<T>(this ProducerConfigBuilder builder)
         {
             return WithKeySerializerClass(builder, typeof(T));
@@ -80,9 +98,41 @@ namespace MASES.KNet.Extensions
 
         public static ProducerConfigBuilder WithValueSerializerClass(this ProducerConfigBuilder builder, System.Type type)
         {
-            if (type == typeof(string))
+            if (type == typeof(byte[]))
+            {
+                return builder.WithValueSerializerClass(JVMBridgeBase.ClassNameOf<ByteArraySerializer>());
+            }
+            else if (type == typeof(double))
+            {
+                return builder.WithValueSerializerClass(JVMBridgeBase.ClassNameOf<DoubleSerializer>());
+            }
+            else if (type == typeof(float))
+            {
+                return builder.WithValueSerializerClass(JVMBridgeBase.ClassNameOf<FloatSerializer>());
+            }
+            else if (type == typeof(int))
+            {
+                return builder.WithValueSerializerClass(JVMBridgeBase.ClassNameOf<IntegerSerializer>());
+            }
+            else if (type == typeof(long))
+            {
+                return builder.WithValueSerializerClass(JVMBridgeBase.ClassNameOf<LongSerializer>());
+            }
+            else if (type == typeof(short))
+            {
+                return builder.WithValueSerializerClass(JVMBridgeBase.ClassNameOf<ShortSerializer>());
+            }
+            else if (type == typeof(string))
             {
                 return builder.WithValueSerializerClass(JVMBridgeBase.ClassNameOf<StringSerializer>());
+            }
+            else if (type == typeof(Guid))
+            {
+                return builder.WithValueSerializerClass(JVMBridgeBase.ClassNameOf<UUIDSerializer>());
+            }
+            else if (type == typeof(void))
+            {
+                return builder.WithValueSerializerClass(JVMBridgeBase.ClassNameOf<VoidSerializer>());
             }
             // add other
 

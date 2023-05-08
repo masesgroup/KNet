@@ -25,6 +25,24 @@ namespace MASES.KNet.Extensions
 {
     public static class ConsumerConfigBuilderExtensions
     {
+        static bool IsManaged<T>()
+        {
+            var type = typeof(T);
+
+            if (type == typeof(byte[]) || type == typeof(double) || type == typeof(float) || type == typeof(int)
+                || type == typeof(long) || type == typeof(short) || type == typeof(string) || type == typeof(Guid) || type == typeof(void))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        public static bool CanApplyBasicDeserializer<T>(this ConsumerConfigBuilder builder)
+        {
+            return IsManaged<T>();
+        }
+
         public static ConsumerConfigBuilder WithKeyDeserializerClass<T>(this ConsumerConfigBuilder builder)
         {
             return WithKeyDeserializerClass(builder, typeof(T));
@@ -80,9 +98,41 @@ namespace MASES.KNet.Extensions
 
         public static ConsumerConfigBuilder WithValueDeserializerClass(this ConsumerConfigBuilder builder, System.Type type)
         {
-            if (type == typeof(string))
+            if (type == typeof(byte[]))
+            {
+                return builder.WithValueDeserializerClass(JVMBridgeBase.ClassNameOf<ByteArrayDeserializer>());
+            }
+            else if (type == typeof(double))
+            {
+                return builder.WithValueDeserializerClass(JVMBridgeBase.ClassNameOf<DoubleDeserializer>());
+            }
+            else if (type == typeof(float))
+            {
+                return builder.WithValueDeserializerClass(JVMBridgeBase.ClassNameOf<FloatDeserializer>());
+            }
+            else if (type == typeof(int))
+            {
+                return builder.WithValueDeserializerClass(JVMBridgeBase.ClassNameOf<IntegerDeserializer>());
+            }
+            else if (type == typeof(long))
+            {
+                return builder.WithValueDeserializerClass(JVMBridgeBase.ClassNameOf<LongDeserializer>());
+            }
+            else if (type == typeof(short))
+            {
+                return builder.WithValueDeserializerClass(JVMBridgeBase.ClassNameOf<ShortDeserializer>());
+            }
+            else if (type == typeof(string))
             {
                 return builder.WithValueDeserializerClass(JVMBridgeBase.ClassNameOf<StringDeserializer>());
+            }
+            else if (type == typeof(Guid))
+            {
+                return builder.WithValueDeserializerClass(JVMBridgeBase.ClassNameOf<UUIDDeserializer>());
+            }
+            else if (type == typeof(void))
+            {
+                return builder.WithValueDeserializerClass(JVMBridgeBase.ClassNameOf<VoidDeserializer>());
             }
             // add other
 
