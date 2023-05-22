@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<Import Project="..\Common\Common.props" />
+	<PropertyGroup>
+		<OutputPath>..\..\..\bin\</OutputPath>
+		<AssemblyName>MASES.KNet.Serialization.Avro</AssemblyName>
+		<RootNamespace>MASES.KNet.Serialization.Avro</RootNamespace>
+		<Title>KNet Avro Serialization - The Apache Kafka .NET suite.</Title>
+		<Description>Avro Serializer/Deserializer of the Apache Kafka .NET suite. KNet is a comprehensive .NET suite for Apache Kafka providing all features: Producer, Consumer, Admin, Streams, Connect, backends (ZooKeeper and Kafka).</Description>
+		<Product>KNet</Product>
+		<PackageTags>knet kafka apache-kafka dotnet clr netcore net6 kafka connect streams producer consumer providers streamprovider gateway</PackageTags>
+		<PackageId>MASES.KNet.Serialization.Avro</PackageId>
+		<PackageReadmeFile>usageSerDes.md</PackageReadmeFile>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Include="..\Documentation\articles\usageSerDes.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\KNet\KNet.csproj" />
+	</ItemGroup>
+</Project>

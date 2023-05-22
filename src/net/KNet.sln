@@ -16,6 +16,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNetPS", "KNetPS\KNetPS.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNetConnect", "KNetConnect\KNetConnect.csproj", "{22AB323C-1165-47DD-9428-CB577256B3C2}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNet.Serialization.Json", "KNet.Serialization.Json\KNet.Serialization.Json.csproj", "{B0887E02-C3A2-491D-8413-BAFBE5A0BF78}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNet.Serialization.Avro", "KNet.Serialization.Avro\KNet.Serialization.Avro.csproj", "{0BB77D0B-E3B6-4F4D-9CAA-6BCC6783AF4B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNet.Serialization.Protobuf", "KNet.Serialization.Protobuf\KNet.Serialization.Protobuf.csproj", "{52F0CA8A-999A-487E-85AF-7FF8E6CCD313}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +48,18 @@ Global
 		{22AB323C-1165-47DD-9428-CB577256B3C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22AB323C-1165-47DD-9428-CB577256B3C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22AB323C-1165-47DD-9428-CB577256B3C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0887E02-C3A2-491D-8413-BAFBE5A0BF78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0887E02-C3A2-491D-8413-BAFBE5A0BF78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0887E02-C3A2-491D-8413-BAFBE5A0BF78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0887E02-C3A2-491D-8413-BAFBE5A0BF78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BB77D0B-E3B6-4F4D-9CAA-6BCC6783AF4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BB77D0B-E3B6-4F4D-9CAA-6BCC6783AF4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BB77D0B-E3B6-4F4D-9CAA-6BCC6783AF4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BB77D0B-E3B6-4F4D-9CAA-6BCC6783AF4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52F0CA8A-999A-487E-85AF-7FF8E6CCD313}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52F0CA8A-999A-487E-85AF-7FF8E6CCD313}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52F0CA8A-999A-487E-85AF-7FF8E6CCD313}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52F0CA8A-999A-487E-85AF-7FF8E6CCD313}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
