@@ -17,6 +17,7 @@
 */
 
 using Java.Lang;
+using Java.Nio;
 
 namespace MASES.KNet.Common.Serialization
 {
@@ -31,5 +32,7 @@ namespace MASES.KNet.Common.Serialization
         {
 
         }
+
+        public override byte[] Serialize(string topic, Void data) => IExecute<byte[]>("serialize", topic, data);
     }
 }

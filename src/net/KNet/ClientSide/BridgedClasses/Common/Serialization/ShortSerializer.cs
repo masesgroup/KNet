@@ -16,6 +16,8 @@
 *  Refer to LICENSE for more information.
 */
 
+using Java.Nio;
+
 namespace MASES.KNet.Common.Serialization
 {
     public class ShortSerializer : Serializer<short>
@@ -29,5 +31,7 @@ namespace MASES.KNet.Common.Serialization
         {
 
         }
+
+        public override byte[] Serialize(string topic, short data) => IExecute<byte[]>("serialize", topic, data);
     }
 }

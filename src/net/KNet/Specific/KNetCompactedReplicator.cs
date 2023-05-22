@@ -17,23 +17,21 @@
 */
 
 using Java.Util;
-using Javax.Management.Openmbean;
-using Javax.Sql;
+using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Clients.Admin;
 using MASES.KNet.Clients.Consumer;
 using MASES.KNet.Clients.Producer;
+using MASES.KNet.Common;
 using MASES.KNet.Common.Config;
 using MASES.KNet.Common.Errors;
 using MASES.KNet.Common.Header;
-using MASES.KNet.Common.Serialization;
 using MASES.KNet.Extensions;
+using MASES.KNet.Serialization;
 using System;
 using System.Collections;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace MASES.KNet
 {
@@ -45,6 +43,7 @@ namespace MASES.KNet
     public class KNetCompactedReplicator<TKey, TValue> :
         IDictionary<TKey, TValue>,
         IDisposable
+        where TValue : class
     {
         #region AccessRights
         /// <summary>
@@ -74,8 +73,9 @@ namespace MASES.KNet
 
         private IAdmin _admin = null;
         private ConcurrentDictionary<TKey, TValue> _dictionary = new ConcurrentDictionary<TKey, TValue>();
-        private KafkaConsumer<TKey, TValue> _consumer = null;
-        private KafkaProducer<TKey, TValue> _producer = null;
+        private ConsumerRebalanceListener _consumerListener = null;
+        private KNetConsumer<TKey, TValue> _consumer = null;
+        private KNetProducer<TKey, TValue> _producer = null;
         private string _bootstrapServers = null;
         private string _stateName = string.Empty;
         private int _partitions = 1;
@@ -86,10 +86,8 @@ namespace MASES.KNet
         private AccessRights _accessrights = AccessRights.ReadWrite;
         private readonly ManualResetEvent _assignmentWaiter = new ManualResetEvent(false);
 
-        private Func<TKey, Headers, byte[]> _keySerializer = null;
-        private Func<TValue, Headers, byte[]> _valueSerializer = null;
-        private Func<byte[], Headers, TKey> _keyDeserializer = null;
-        private Func<byte[], Headers, TValue> _valueDeserializer = null;
+        private KNetSerDes<TKey> _keySerDes = null;
+        private KNetSerDes<TValue> _valueSerDes = null;
 
         private bool _started = false;
 
@@ -130,13 +128,9 @@ namespace MASES.KNet
 
         public ProducerConfigBuilder ProducerConfig { get { return _producerConfig; } set { CheckStarted(); _producerConfig = value; } }
 
-        public Func<TKey, Headers, byte[]> KeySerializer { get { return _keySerializer; } set { CheckStarted(); _keySerializer = value; } }
+        public KNetSerDes<TKey> KeySerDes { get { return _keySerDes; } set { CheckStarted(); _keySerDes = value; } }
 
-        public Func<TValue, Headers, byte[]> ValueSerializer { get { return _valueSerializer; } set { CheckStarted(); _valueSerializer = value; } }
-
-        public Func<byte[], Headers, TKey> KeyDeserializer { get { return _keyDeserializer; } set { CheckStarted(); _keyDeserializer = value; } }
-
-        public Func<byte[], Headers, TValue> ValueDeserializer { get { return _valueDeserializer; } set { CheckStarted(); _valueDeserializer = value; } }
+        public KNetSerDes<TValue> ValueSerDes { get { return _valueSerDes; } set { CheckStarted(); _valueSerDes = value; } }
 
         #endregion
 
@@ -147,156 +141,106 @@ namespace MASES.KNet
             if (_started) throw new InvalidOperationException("Cannot be changed after Start");
         }
 
-        private void TimeToLiveCheck()
+        //private void OnMessage(
+        //    object sender,
+        //    ConsumeResult<TKey, TValue> message)
+        //{
+        //    if (message?.Message == null)
+        //        return;
+
+        //    if (message.Message.Value == null)
+        //    {
+        //        _dictionary.TryRemove(message.Message.Key, out _);
+        //        OnRemoteRemove?.Invoke(this, message.Message.Key);
+        //    }
+        //    else
+        //    {
+        //        _dictionary[message.Message.Key] = message.Message.Value;
+        //        OnRemoteUpdate?.Invoke(this, new KeyValuePair<TKey, TValue>(message.Message.Key, message.Message.Value));
+        //    }
+        //}
+
+        private void OnPartitionsAssigned(Collection<TopicPartition> topicPartitions)
         {
-            while (!_ttlCancellationTokenSource.Token.IsCancellationRequested)
-            {
-                _ttlMREvent.Reset();
-                _ttlMREvent.WaitOne(60000);
-
-                if (_ttlCancellationTokenSource.Token.IsCancellationRequested)
-                    break;
-
-                List<TKey> keysToRemove = new List<TKey>(_ttlDictionary.Count);
-                foreach (var pair in _ttlDictionary)
-                {
-                    if (DateTime.UtcNow - pair.Value > _timeToLive)
-                    {
-                        _dictionary.TryRemove(pair.Key, out _);
-                        OnLocalRemove?.Invoke(this, pair.Key);
-
-                        keysToRemove.Add(pair.Key);
-                    }
-                }
-
-                foreach (TKey key in keysToRemove)
-                    _ttlDictionary.TryRemove(key, out _);
-            }
-        }
-
-        private void OnMessage(
-            object sender,
-            ConsumeResult<TKey, TValue> message)
-        {
-            if (message?.Message == null)
-                return;
-
-            _eofSignals.GetOrAdd(message.Partition, new ManualResetEvent(false)).Reset();
-
-            if (message.Message.Value == null)
-            {
-                _dictionary.TryRemove(message.Message.Key, out _);
-                OnRemoteRemove?.Invoke(this, message.Message.Key);
-
-                _ttlDictionary.TryRemove(message.Message.Key, out _);
-            }
-            else
-            {
-                if (_timeToLive != TimeSpan.MaxValue && (DateTime.UtcNow - message.Message.Timestamp.UtcDateTime) > _timeToLive)
-                {
-                    return;
-                }
-
-                _dictionary[message.Message.Key] = message.Message.Value;
-                OnRemoteUpdate?.Invoke(this, new KeyValuePair<TKey, TValue>(message.Message.Key, message.Message.Value));
-
-                _ttlDictionary[message.Message.Key] = message.Message.Timestamp.UtcDateTime;
-            }
-        }
-
-        private void OnPartitionEOF(
-            object sender,
-            int partition)
-        {
-            _eofSignals.GetOrAdd(partition, new ManualResetEvent(false)).Set();
-        }
-
-        private void OnPartitionsAssigned(
-            object sender,
-            List<TopicPartitionOffset> topicPartitionOffsets)
-        {
-            topicPartitionOffsets.ForEach(tp => _eofSignals.GetOrAdd(tp.Partition, new ManualResetEvent(false)).Reset());
-
             _assignmentWaiter?.Set();
         }
 
-        private void OnPartitionsRevoked(
-            object sender,
-            List<TopicPartitionOffset> topicPartitionOffsets)
+        private void OnPartitionsRevoked(Collection<TopicPartition> topicPartitionOffsets)
         {
-            topicPartitionOffsets.ForEach(tpo => _eofSignals.GetOrAdd(tpo.Partition, new ManualResetEvent(false)).Reset());
-
             _assignmentWaiter?.Set();
         }
 
-        private void AddOrUpdate(
-            TKey key,
-            TValue value)
+        private void RemoveRecord(TKey key)
         {
             ValidateAccessRights(AccessRights.Write);
 
             if (key == null)
                 throw new ArgumentNullException(nameof(key));
 
-            Message<TKey, TValue> message = new Message<TKey, TValue> { Key = key, Value = value, };
-            message.Headers = new Headers();
-            message.Headers.Add(new Header("metadata", new byte[] { 0 })); // for future use, and to respect the next header position in the array (serialization must be Headers[1])
-            message.Headers.Add(new Header("json_serialization", KSharpConfigManager.Settings.SerializationTypeHeader));
+            JVMBridgeException exception = null;
 
-            Error err = null;
             DateTime pTimestamp = DateTime.MaxValue;
             using (AutoResetEvent deliverySemaphore = new AutoResetEvent(false))
             {
-                try
+                _producer.Produce(new KNetProducerRecord<TKey, TValue>(_stateName, key, null), (record, error) =>
                 {
-                    _producer.Produce(_stateTopic,
-                        message,
-                        (d) =>
-                        {
-                            Func<string> msg = () => GetLogStream(nameof(KNetCompactedReplicator<TKey, TValue>), " '", Name, "' delivery report for state production [", key, ", ", value, "]", d.Error.IsError ? $", Error = {d.Error}" : ", Success", ", TopicPartitionOffset = ", d.TopicPartitionOffset, ", TopicPartitionOffsetError = ", d.TopicPartitionOffsetError, ", PersistenceStatus = ", d.Status);
-                            KSharpLogManager.Log((ushort)_logCode, msg, LogLevel.Information, LogCategory.StateProduce);
+                    try
+                    {
+                        if (deliverySemaphore.SafeWaitHandle.IsClosed)
+                            return;
 
-                            pTimestamp = d.Message.Timestamp.UtcDateTime;
+                        exception = error;
 
-                            try
-                            {
-                                if (deliverySemaphore.SafeWaitHandle.IsClosed)
-                                    return;
+                        deliverySemaphore.Set();
+                    }
+                    catch { }
+                });
 
-                                if (d.Error.IsError)
-                                    err = d.Error;
-
-                                deliverySemaphore.Set();
-                            }
-                            catch { }
-                        });
-
-                    if (_updateMode != KSharpDictionaryUpdateModes.OnAddOrUpdate)
-                        deliverySemaphore.WaitOne();
-                }
-                catch (Exception e)
-                {
-                    throw;
-                }
+                deliverySemaphore.WaitOne();
             }
 
-            if (err != null && err.IsError)
-                throw new UpdateDeliveryException(
-                    $"Failed to deliver state [{key}, {value}]. Reason: {err.Reason}",
-                    err);
+            if (exception != null) throw exception;
+            _dictionary.TryRemove(key, out _);
+        }
 
-            if (_updateMode == KSharpDictionaryUpdateModes.OnAddOrUpdate || _updateMode == KSharpDictionaryUpdateModes.OnDelivery)
+        private void AddOrUpdate(TKey key, TValue value)
+        {
+            ValidateAccessRights(AccessRights.Write);
+
+            if (key == null)
+                throw new ArgumentNullException(nameof(key));
+
+            JVMBridgeException exception = null;
+
+            DateTime pTimestamp = DateTime.MaxValue;
+            using (AutoResetEvent deliverySemaphore = new AutoResetEvent(false))
             {
-                if (value == null)
+                _producer.Produce(_stateName, key, value, (record, error) =>
                 {
-                    _dictionary.TryRemove(key, out _);
-                    _ttlDictionary.TryRemove(key, out _);
-                }
-                else
-                {
-                    _dictionary[key] = value;
-                    _ttlDictionary[key] = pTimestamp;
-                }
+                    try
+                    {
+                        if (deliverySemaphore.SafeWaitHandle.IsClosed)
+                            return;
+
+                        exception = error;
+
+                        deliverySemaphore.Set();
+                    }
+                    catch { }
+                });
+
+                deliverySemaphore.WaitOne();
+            }
+
+            if (exception != null) throw exception;
+
+            if (value == null)
+            {
+                _dictionary.TryRemove(key, out _);
+            }
+            else
+            {
+                _dictionary[key] = value;
             }
         }
 
@@ -332,7 +276,6 @@ namespace MASES.KNet
                                                             .WithSegmentMs(100);
 
                 _topicConfig.CleanupPolicy = MASES.KNet.Common.Config.TopicConfig.CleanupPolicy.Compact | MASES.KNet.Common.Config.TopicConfig.CleanupPolicy.Delete;
-
                 topic = topic.Configs(_topicConfig);
                 try
                 {
@@ -341,190 +284,123 @@ namespace MASES.KNet
                 catch (TopicExistsException)
                 {
                 }
-
-                if (_accessrights.HasFlag(AccessRights.Read))
-                {
-                    _consumerConfig ??= ConsumerConfigBuilder.Create().WithEnableAutoCommit(true)
-                                                                      .WithAutoOffsetReset(Clients.Consumer.ConsumerConfig.AutoOffsetReset.EARLIEST)
-                                                                      .WithAllowAutoCreateTopics(false);
-
-                    _consumerConfig.BootstrapServers = _bootstrapServers;
-                    _consumerConfig.GroupId = Guid.NewGuid().ToString();
-                    if (_consumerConfig.CanApplyBasicDeserializer<TKey>())
-                    {
-                        _consumerConfig.WithKeyDeserializerClass<TKey>();
-                    }
-                    else
-                    {
-                        if (_keyDeserializer == null) throw new InvalidOperationException($"{typeof(TKey)} needs an external deserializer, set KeyDeserializer.");
-                        _consumerConfig.WithKeyDeserializerClass("org.apache.kafka.common.serialization.ByteArrayDeserializer");
-                    }
-
-                    if (_consumerConfig.CanApplyBasicDeserializer<TValue>())
-                    {
-                        _consumerConfig.WithValueDeserializerClass<TValue>();
-                    }
-                    else
-                    {
-                        if (_valueDeserializer == null) throw new InvalidOperationException($"{typeof(TValue)} needs an external deserializer, set ValueDeserializer.");
-                        _consumerConfig.WithValueDeserializerClass("org.apache.kafka.common.serialization.ByteArrayDeserializer");
-                    }
-
-                    _consumer = new KafkaConsumer<TKey, TValue>(_consumerConfig);
-                }
-
-                if (_accessrights.HasFlag(AccessRights.Write))
-                {
-                    _producerConfig ??= ProducerConfigBuilder.Create().WithAcks(Clients.Producer.ProducerConfig.Acks.All)
-                                                                      .WithRetries(0)
-                                                                      .WithLingerMs(1);
-
-                    _producerConfig.BootstrapServers = _bootstrapServers;
-                    if (_producerConfig.CanApplyBasicSerializer<TKey>())
-                    {
-                        _producerConfig.WithKeySerializerClass<TKey>();
-                    }
-                    else
-                    {
-                        if (_keySerializer == null) throw new InvalidOperationException($"{typeof(TKey)} needs an external serializer, set KeySerializer.");
-                        _producerConfig.WithKeySerializerClass("org.apache.kafka.common.serialization.ByteArraySerializer");
-                    }
-
-                    if (_producerConfig.CanApplyBasicSerializer<TValue>())
-                    {
-                        _producerConfig.WithValueSerializerClass<TValue>();
-                    }
-                    else
-                    {
-                        if (_valueSerializer == null) throw new InvalidOperationException($"{typeof(TValue)} needs an external serializer, set ValueSerializer.");
-                        _producerConfig.WithValueSerializerClass("org.apache.kafka.common.serialization.ByteArraySerializer");
-                    }
-
-
-
-
-
-                    _producer = new KafkaProducer<TKey, TValue>(_producerConfig);
-                    {
-                        int i = 0;
-                        Callback callback = null;
-                        if (useCallback)
-                        {
-                            callback = new Callback((o1, o2) =>
-                            {
-                                if (o2 != null) Console.WriteLine(o2.ToString());
-                                else Console.WriteLine($"Produced on topic {o1.Topic} at offset {o1.Offset}");
-                            });
-                        }
-                        try
-                        {
-                            while (!resetEvent.WaitOne(0))
-                            {
-                                var record = new ProducerRecord<string, string>(topicToUse, i.ToString(), i.ToString());
-                                var result = useCallback ? producer.Send(record, callback) : producer.Send(record);
-                                Console.WriteLine($"Producing: {record} with result: {result.Get()}");
-                                producer.Flush();
-                                i++;
-                            }
-                        }
-                        finally { if (useCallback) callback.Dispose(); }
-                    }
-
-
-
-                    _producerBuilder = new ProducerBuilder<TKey, TValue>(
-                    KSharpConfigManager.GetProducerConfig(
-                        (_updateMode == KSharpDictionaryUpdateModes.OnAddOrUpdate) ? DeliveryPreferences.LowLatency : DeliveryPreferences.Reliability,
-                        bootstrapServers,
-                        maxMessageBytes,
-                        compressionType,
-                        updateTimeoutMs));
-                    _producerBuilder.SetKeySerializer(new KSharpSerializer<TKey>());
-                    _producerBuilder.SetValueSerializer(new KSharpSerializer<TValue>());
-                    _producerBuilder.SetErrorHandler((p, e) =>
-                    {
-                        Func<string> msg = () => GetLogStream(nameof(KNetCompactedReplicator<TKey, TValue>), " '", Name, "' state producer error ", e.Code, ", Reason = ", e.Reason, ", IsFatal = ", e.IsFatal);
-                        KSharpLogManager.Log((ushort)_logCode, msg, LogLevel.Error, LogCategory.StateProduce);
-                    });
-                    _producerBuilder.SetLogHandler((p, e) =>
-                    {
-                        Func<string> msg = () => GetLogStream(nameof(KNetCompactedReplicator<TKey, TValue>), " '", Name, "' state producer log ", e.Facility, ", Level = ", e.Level, ", Message = ", e.Message);
-                        KSharpLogManager.Log((ushort)_logCode, msg, LogLevel.Information, LogCategory.StateProduce);
-                    });
-
-                    _producer = _producerBuilder.Build();
-                }
-
-                _started = true;
             }
 
-            /// <summary>
-            /// Waits for the very first parition assignment of the COMPACTED topic which stores dictionary data
-            /// </summary>
-            /// <param name="timeout">The number of milliseconds to wait, or System.Threading.Timeout.Infinite (-1) to wait indefinitely</param>
-            /// <returns>true if the current instance receives a signal within the given <paramref name="timeout"/>; otherwise, false</returns>
-            /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRights.Read"/> flag</exception>
-            public bool WaitForStateAssignment(int timeout = Timeout.Infinite)
+            if (_accessrights.HasFlag(AccessRights.Read))
             {
-                ValidateAccessRights(AccessRights.Read);
+                _consumerConfig ??= ConsumerConfigBuilder.Create().WithEnableAutoCommit(true)
+                                                                  .WithAutoOffsetReset(Clients.Consumer.ConsumerConfig.AutoOffsetReset.EARLIEST)
+                                                                  .WithAllowAutoCreateTopics(false);
 
-                return _assignmentWaiter.WaitOne(timeout);
-            }
-
-            /// <summary>
-            /// Ensures the sync between the LOCAL and the REMOTE dictionary 
-            /// </summary>
-            /// <param name="timeout">The number of milliseconds to wait for the sync, or System.Threading.Timeout.Infinite (-1) to wait indefinitely</param>
-            /// <param name="partitions">The list of partitions for which ensuring the sync, or null for all available partitions</param>
-            /// <returns>true if the current instance gets the sync within the given <paramref name="timeout"/>; otherwise, false</returns>
-            /// <remarks>If this method returns false, it does not mean that the sync between the LOCAL and the REMOTE dictionary will never be reached. 
-            /// In background the fetch of data keeps going on</remarks>
-            /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRights.Read"/> flag</exception>
-            /// <exception cref="ArgumentException"><paramref name="partitions"/> is not null, but empty</exception>
-            public bool EnsureSync(
-                int timeout = Timeout.Infinite,
-                List<int> partitions = null)
-            {
-                ValidateAccessRights(AccessRights.Read);
-
-                if (partitions != null && partitions.Count == 0)
-                    throw new ArgumentException($"{nameof(partitions)} must be null or NOT empty");
-
-                if (!WaitForStateAssignment(timeout))
-                    return false;
-
-                bool entered = true;
-                foreach (var signal in _eofSignals.Where(kvp => partitions == null || partitions.Contains(kvp.Key)).Select(kvp => kvp.Value).ToArray())
+                _consumerConfig.BootstrapServers = _bootstrapServers;
+                _consumerConfig.GroupId = Guid.NewGuid().ToString();
+                if (_consumerConfig.CanApplyBasicDeserializer<TKey>() && KeySerDes == null)
                 {
-                    entered &= signal.WaitOne(timeout);
-                    if (!entered)
-                        break;
+                    KeySerDes = new KNetSerDes<TKey>();
                 }
-                return entered;
+                
+                if (KeySerDes == null) throw new InvalidOperationException($"{typeof(TKey)} needs an external deserializer, set KeySerDes.");
+
+                if (_consumerConfig.CanApplyBasicDeserializer<TValue>() && ValueSerDes == null)
+                {
+                    ValueSerDes = new KNetSerDes<TValue>();
+                }
+                
+                if (ValueSerDes == null) throw new InvalidOperationException($"{typeof(TValue)} needs an external deserializer, set ValueSerDes.");
+
+                _consumer = new KNetConsumer<TKey, TValue>(_consumerConfig, KeySerDes, ValueSerDes);
+                _consumerListener = new ConsumerRebalanceListener(OnPartitionsRevoked, OnPartitionsAssigned);
             }
 
-            /// <summary>
-            /// Waits until all outstanding produce requests and delivery report callbacks are completed
-            /// </summary>
-            public void Flush()
+            if (_accessrights.HasFlag(AccessRights.Write))
             {
-                _producer?.Flush();
+                _producerConfig ??= ProducerConfigBuilder.Create().WithAcks(Clients.Producer.ProducerConfig.Acks.All)
+                                                                  .WithRetries(0)
+                                                                  .WithLingerMs(1);
+
+                _producerConfig.BootstrapServers = _bootstrapServers;
+                if (_producerConfig.CanApplyBasicSerializer<TKey>() && KeySerDes == null)
+                {
+                    KeySerDes = new KNetSerDes<TKey>();
+                }
+                
+                if (KeySerDes == null) throw new InvalidOperationException($"{typeof(TKey)} needs an external serializer, set KeySerDes.");
+
+                if (_producerConfig.CanApplyBasicSerializer<TValue>() && ValueSerDes == null)
+                {
+                    ValueSerDes = new KNetSerDes<TValue>();
+                }
+                
+                if (ValueSerDes == null) throw new InvalidOperationException($"{typeof(TValue)} needs an external serializer, set ValueSerDes.");
+
+                _producer = new KNetProducer<TKey, TValue>(_producerConfig, KeySerDes, ValueSerDes);
             }
+
+            _consumer?.Subscribe(Collections.Singleton(_stateName), _consumerListener);
+
+            _started = true;
+        }
+
+        /// <summary>
+        /// Waits for the very first parition assignment of the COMPACTED topic which stores dictionary data
+        /// </summary>
+        /// <param name="timeout">The number of milliseconds to wait, or System.Threading.Timeout.Infinite (-1) to wait indefinitely</param>
+        /// <returns>true if the current instance receives a signal within the given <paramref name="timeout"/>; otherwise, false</returns>
+        /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRights.Read"/> flag</exception>
+        public bool WaitForStateAssignment(int timeout = Timeout.Infinite)
+        {
+            ValidateAccessRights(AccessRights.Read);
+
+            return _assignmentWaiter.WaitOne(timeout);
+        }
+
+        /// <summary>
+        /// Ensures the sync between the LOCAL and the REMOTE dictionary 
+        /// </summary>
+        /// <param name="timeout">The number of milliseconds to wait for the sync, or System.Threading.Timeout.Infinite (-1) to wait indefinitely</param>
+        /// <param name="partitions">The list of partitions for which ensuring the sync, or null for all available partitions</param>
+        /// <returns>true if the current instance gets the sync within the given <paramref name="timeout"/>; otherwise, false</returns>
+        /// <remarks>If this method returns false, it does not mean that the sync between the LOCAL and the REMOTE dictionary will never be reached. 
+        /// In background the fetch of data keeps going on</remarks>
+        /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRights.Read"/> flag</exception>
+        /// <exception cref="ArgumentException"><paramref name="partitions"/> is not null, but empty</exception>
+        public bool EnsureSync(
+            int timeout = Timeout.Infinite,
+            System.Collections.Generic.List<int> partitions = null)
+        {
+            ValidateAccessRights(AccessRights.Read);
+
+            if (partitions != null && partitions.Count == 0)
+                throw new ArgumentException($"{nameof(partitions)} must be null or NOT empty");
+
+            if (!WaitForStateAssignment(timeout))
+                return false;
+
+            return true;
+        }
+
+        /// <summary>
+        /// Waits until all outstanding produce requests and delivery report callbacks are completed
+        /// </summary>
+        public void Flush()
+        {
+            _producer?.Flush();
+        }
 
         #endregion
 
-            #region IDictionary<TKey, TValue>
+        #region IDictionary<TKey, TValue>
 
-            /// <summary>
-            /// Gets or sets the element with the specified keyy. Null value removes the specified key
-            /// </summary>
-            /// <param name="key">The key of the element to get or set</param>
-            /// <returns>The element with the specified key</returns>
-            /// <exception cref="InvalidOperationException">The call is get, and the provided <see cref="AccessRights"/> do not include the <see cref="AccessRights.Read"/> flag</exception>
-            /// <exception cref="InvalidOperationException">The call is set, and the provided <see cref="AccessRights"/> do not include the <see cref="AccessRights.Write"/> flag</exception>
-            /// <exception cref="ArgumentNullException"><paramref name="key"/> is null</exception>
-            /// <exception cref="KeyNotFoundException">The call is get and <paramref name="key"/> is not found</exception>
-            /// <exception cref="UpdateDeliveryException">The call is set and the delivery of the update to the REMOTE dictionary fails</exception>
+        /// <summary>
+        /// Gets or sets the element with the specified keyy. Null value removes the specified key
+        /// </summary>
+        /// <param name="key">The key of the element to get or set</param>
+        /// <returns>The element with the specified key</returns>
+        /// <exception cref="InvalidOperationException">The call is get, and the provided <see cref="AccessRights"/> do not include the <see cref="AccessRights.Read"/> flag</exception>
+        /// <exception cref="InvalidOperationException">The call is set, and the provided <see cref="AccessRights"/> do not include the <see cref="AccessRights.Write"/> flag</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="key"/> is null</exception>
+        /// <exception cref="KeyNotFoundException">The call is get and <paramref name="key"/> is not found</exception>
+        /// <exception cref="UpdateDeliveryException">The call is set and the delivery of the update to the REMOTE dictionary fails</exception>
         public TValue this[TKey key]
         {
             get { return ValidateAndGetLocalDictionary()[key]; }
@@ -607,7 +483,6 @@ namespace MASES.KNet
         public void Clear()
         {
             ValidateAndGetLocalDictionary().Clear();
-            _eofSignals.Values.ToList().ForEach(signal => signal.Reset());
         }
 
         /// <summary>
@@ -726,29 +601,10 @@ namespace MASES.KNet
         /// </summary>
         public void Dispose()
         {
-            if (_consumer != null)
-            {
-                _consumer.OnMessage -= OnMessage;
-                _consumer.OnPartitionEOF -= OnPartitionEOF;
-                _consumer.OnPartitionsAssigned -= OnPartitionsAssigned;
-                _consumer.OnPartitionsRevoked -= OnPartitionsRevoked;
-                _consumer.OnConsumeError -= OnConsumeError;
-                _consumer.Dispose();
-            }
+            _consumer?.Dispose();
 
-            _ttlCancellationTokenSource?.Cancel();
-            _ttlMREvent?.Set();
-            _timeToLiveTask?.Wait();
-
-            _ttlCancellationTokenSource?.Dispose();
-            _timeToLiveTask?.Dispose();
-            _ttlMREvent?.Dispose();
-
-            _producer?.Flush(TimeSpan.FromSeconds(10));
+            _producer?.Flush();
             _producer?.Dispose();
-
-            _eofSignals?.Values.ToList().ForEach(signal => signal?.Close());
-            _eofSignals?.Clear();
 
             _assignmentWaiter?.Close();
         }

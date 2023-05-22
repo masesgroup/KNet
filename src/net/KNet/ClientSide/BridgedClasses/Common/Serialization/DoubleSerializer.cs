@@ -16,6 +16,8 @@
 *  Refer to LICENSE for more information.
 */
 
+using Java.Nio;
+
 namespace MASES.KNet.Common.Serialization
 {
     public class DoubleSerializer : Serializer<double>
@@ -29,5 +31,7 @@ namespace MASES.KNet.Common.Serialization
         {
 
         }
+
+        public override byte[] Serialize(string topic, double data) => IExecute<byte[]>("serialize", topic, data);
     }
 }

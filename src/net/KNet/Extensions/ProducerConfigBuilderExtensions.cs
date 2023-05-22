@@ -19,28 +19,16 @@
 using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Clients.Producer;
 using MASES.KNet.Common.Serialization;
+using MASES.KNet.Serialization;
 using System;
 
 namespace MASES.KNet.Extensions
 {
     public static class ProducerConfigBuilderExtensions
     {
-        static bool IsManaged<T>()
-        {
-            var type = typeof(T);
-
-            if (type == typeof(byte[]) || type == typeof(double) || type == typeof(float) || type == typeof(int)
-                || type == typeof(long) || type == typeof(short) || type == typeof(string) || type == typeof(Guid) || type == typeof(void))
-            {
-                return true;
-            }
-
-            return false;
-        }
-
         public static bool CanApplyBasicSerializer<T>(this ProducerConfigBuilder builder)
         {
-            return IsManaged<T>();
+            return KNetSerialization.IsInternalManaged<T>();
         }
 
         public static ProducerConfigBuilder WithKeySerializerClass<T>(this ProducerConfigBuilder builder)
@@ -50,6 +38,8 @@ namespace MASES.KNet.Extensions
 
         public static ProducerConfigBuilder WithKeySerializerClass(this ProducerConfigBuilder builder, System.Type type)
         {
+            if (!KNetSerialization.IsInternalManaged(type)) throw new InvalidOperationException($"Cannot manage serialization with type {type}");
+
             if (type == typeof(byte[]))
             {
                 return builder.WithKeySerializerClass(JVMBridgeBase.ClassNameOf<ByteArraySerializer>());
@@ -98,6 +88,8 @@ namespace MASES.KNet.Extensions
 
         public static ProducerConfigBuilder WithValueSerializerClass(this ProducerConfigBuilder builder, System.Type type)
         {
+            if (!KNetSerialization.IsInternalManaged(type)) throw new InvalidOperationException($"Cannot manage serialization with type {type}");
+
             if (type == typeof(byte[]))
             {
                 return builder.WithValueSerializerClass(JVMBridgeBase.ClassNameOf<ByteArraySerializer>());

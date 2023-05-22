@@ -16,20 +16,18 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNet.Common.Serialization
+using MASES.KNet.Common.Header;
+using MASES.KNet.Common.Serialization;
+using System;
+
+namespace MASES.KNet.Serialization
 {
-    public class IntegerDeserializer : Deserializer<int>
+    public interface IKNetSerializer<T>
     {
-        public override string BridgeClassName => "org.apache.kafka.common.serialization.IntegerDeserializer";
+        public Serializer<byte[]> KafkaSerializer { get; }
 
-        public override bool AutoInit => false;
+        byte[] Serialize(string topic, T data);
 
-        public IntegerDeserializer()
-            : base(null, null, false)
-        {
-
-        }
-
-        public override int Deserialize(string topic, byte[] data) => IExecute<int>("deserialize", topic, data);
+        byte[] SerializeWithHeaders(string topic, Headers headers, T data);
     }
 }

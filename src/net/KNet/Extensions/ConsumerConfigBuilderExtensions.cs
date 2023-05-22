@@ -19,28 +19,16 @@
 using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Clients.Consumer;
 using MASES.KNet.Common.Serialization;
+using MASES.KNet.Serialization;
 using System;
 
 namespace MASES.KNet.Extensions
 {
     public static class ConsumerConfigBuilderExtensions
     {
-        static bool IsManaged<T>()
-        {
-            var type = typeof(T);
-
-            if (type == typeof(byte[]) || type == typeof(double) || type == typeof(float) || type == typeof(int)
-                || type == typeof(long) || type == typeof(short) || type == typeof(string) || type == typeof(Guid) || type == typeof(void))
-            {
-                return true;
-            }
-
-            return false;
-        }
-
         public static bool CanApplyBasicDeserializer<T>(this ConsumerConfigBuilder builder)
         {
-            return IsManaged<T>();
+            return KNetSerialization.IsInternalManaged<T>();
         }
 
         public static ConsumerConfigBuilder WithKeyDeserializerClass<T>(this ConsumerConfigBuilder builder)
@@ -50,6 +38,8 @@ namespace MASES.KNet.Extensions
 
         public static ConsumerConfigBuilder WithKeyDeserializerClass(this ConsumerConfigBuilder builder, System.Type type)
         {
+            if (!KNetSerialization.IsInternalManaged(type)) throw new InvalidOperationException($"Cannot manage serialization with type {type}");
+
             if (type == typeof(byte[]))
             {
                 return builder.WithKeyDeserializerClass(JVMBridgeBase.ClassNameOf<ByteArrayDeserializer>());
@@ -98,6 +88,8 @@ namespace MASES.KNet.Extensions
 
         public static ConsumerConfigBuilder WithValueDeserializerClass(this ConsumerConfigBuilder builder, System.Type type)
         {
+            if (!KNetSerialization.IsInternalManaged(type)) throw new InvalidOperationException($"Cannot manage serialization with type {type}");
+
             if (type == typeof(byte[]))
             {
                 return builder.WithValueDeserializerClass(JVMBridgeBase.ClassNameOf<ByteArrayDeserializer>());

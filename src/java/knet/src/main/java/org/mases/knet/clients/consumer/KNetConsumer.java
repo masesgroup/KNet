@@ -29,7 +29,7 @@ import java.util.Map;
 import java.util.Properties;
 
 @InterfaceStability.Evolving
-public class KNetConsumer<K, V> extends KafkaConsumer<K, V> {
+public class KNetConsumer extends KafkaConsumer<byte[], byte[]> {
     KNetConsumerCallback _callback = null;
 
     public KNetConsumer(Map<String, Object> configs) {
@@ -40,24 +40,24 @@ public class KNetConsumer<K, V> extends KafkaConsumer<K, V> {
         super(properties);
     }
 
-    public KNetConsumer(Properties properties, Deserializer<K> keyDeserializer, Deserializer<V> valueDeserializer) {
+    public KNetConsumer(Properties properties, Deserializer<byte[]> keyDeserializer, Deserializer<byte[]> valueDeserializer) {
         super(properties, keyDeserializer, valueDeserializer);
     }
 
-    public KNetConsumer(Map<String, Object> configs, Deserializer<K> keyDeserializer, Deserializer<V> valueDeserializer) {
+    public KNetConsumer(Map<String, Object> configs, Deserializer<byte[]> keyDeserializer, Deserializer<byte[]> valueDeserializer) {
         super(configs, keyDeserializer, valueDeserializer);
     }
 
     public void consume(long timeoutMs) {
-        ConsumerRecords<K, V> records = super.poll(timeoutMs);
-        for (ConsumerRecord<K, V> record : records) {
+        ConsumerRecords<byte[], byte[]> records = super.poll(timeoutMs);
+        for (ConsumerRecord<byte[], byte[]> record : records) {
             if (_callback != null) _callback.recordReady(record);
         }
     }
 
     public void consume(Duration timeout) {
-        ConsumerRecords<K, V> records = super.poll(timeout);
-        for (ConsumerRecord<K, V> record : records) {
+        ConsumerRecords<byte[], byte[]> records = super.poll(timeout);
+        for (ConsumerRecord<byte[], byte[]> record : records) {
             if (_callback != null) _callback.recordReady(record);
         }
     }
