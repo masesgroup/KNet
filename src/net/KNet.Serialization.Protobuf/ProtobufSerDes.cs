@@ -20,7 +20,7 @@ using Google.Protobuf;
 using MASES.KNet.Common.Header;
 using System.IO;
 
-namespace MASES.KNet.Serialization.Json
+namespace MASES.KNet.Serialization.Protobuf
 {
     public class ProtobufSerDes<T> : KNetSerDes<T>
         where T : IMessage<T>, new()

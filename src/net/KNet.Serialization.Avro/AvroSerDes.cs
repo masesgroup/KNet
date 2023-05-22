@@ -17,31 +17,19 @@
 */
 
 using MASES.KNet.Common.Header;
-using System.Text;
 
-namespace MASES.KNet.Serialization.Json
+namespace MASES.KNet.Serialization.Avro
 {
-    public class JSonSerDes<T> : KNetSerDes<T>
+    public class AvroSerDes<T> : KNetSerDes<T>
     {
         public override byte[] SerializeWithHeaders(string topic, Headers headers, T data)
         {
-#if NET462_OR_GREATER
-            var jsonStr = Newtonsoft.Json.JsonConvert.SerializeObject(data, Newtonsoft.Json.Formatting.None);
-            return Encoding.UTF8.GetBytes(jsonStr);
-#else
-            var jsonStr = System.Text.Json.JsonSerializer.Serialize<T>(data);
-            return Encoding.UTF8.GetBytes(jsonStr);
-#endif
+            throw new System.NotImplementedException();
         }
 
         public override T DeserializeWithHeaders(string topic, Headers headers, byte[] data)
         {
-#if NET462_OR_GREATER
-            var jsonStr = Encoding.UTF8.GetString(data);
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(jsonStr);
-#else
-            return System.Text.Json.JsonSerializer.Deserialize<T>(data)!;
-#endif
+            throw new System.NotImplementedException();
         }
     }
 }
