@@ -22,9 +22,7 @@ import org.apache.kafka.clients.producer.Callback;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.header.Header;
-import org.apache.kafka.common.serialization.BytesSerializer;
-import org.apache.kafka.common.serialization.VoidDeserializer;
-import org.apache.kafka.common.serialization.VoidSerializer;
+import org.apache.kafka.common.serialization.Serializer;
 
 import java.util.Map;
 import java.util.Properties;
@@ -55,7 +53,6 @@ public class KNetProducer<K, V> extends KafkaProducer<byte[], byte[]> {
     public void send(String topic, Integer partition, Long timestamp, byte[] key, byte[] value, Iterable<Header> headers) {
         ProducerRecord record = new ProducerRecord(topic, partition, timestamp, key, value, headers);
         send(record, _callback);
-        VoidDeserializer
     }
 
     public void send(String topic, Integer partition, Long timestamp, byte[] key, byte[] value) {
