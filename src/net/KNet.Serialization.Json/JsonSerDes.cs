@@ -21,8 +21,13 @@ using System.Text;
 
 namespace MASES.KNet.Serialization.Json
 {
-    public class JSonSerDes<T> : KNetSerDes<T>
+    public class JsonSerDes<T> : KNetSerDes<T>
     {
+        protected override bool IsGenericTypeManaged()
+        {
+            return true;
+        }
+
         public override byte[] SerializeWithHeaders(string topic, Headers headers, T data)
         {
 #if NET462_OR_GREATER

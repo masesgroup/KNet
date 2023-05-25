@@ -25,10 +25,10 @@ namespace MASES.KNet.Serialization
 {
     public class KNetSerDes<T> : IKNetSerializer<T>, IKNetDeserializer<T>
     {
-        readonly bool _IsKafkaManaged = KNetSerialization.IsInternalManaged<T>();
+        readonly bool _IsGenericTypeManaged = KNetSerialization.IsInternalManaged<T>();
         readonly KNetSerialization.SerializationType _SerializationType = KNetSerialization.InternalSerDesType<T>();
-        readonly Serializer<byte[]> _KafkaSerializer = new ByteArraySerializer();
-        readonly Deserializer<byte[]> _KafkaDeserializer = new ByteArrayDeserializer();
+        Serializer<byte[]> _KafkaSerializer = new ByteArraySerializer();
+        Deserializer<byte[]> _KafkaDeserializer = new ByteArrayDeserializer();
         readonly Func<string, byte[], T> _deserializeFun = null;
         readonly Func<string, Headers, byte[], T> _deserializeWithHeadersFun = null;
         readonly Func<string, T, byte[]> _serializeFun = null;
@@ -36,7 +36,7 @@ namespace MASES.KNet.Serialization
 
         public KNetSerDes()
         {
-            if (!_IsKafkaManaged) throw new InvalidOperationException($"{typeof(T)} needs an external serializer, use a different constructor.");
+            if (!IsGenericTypeManaged()) throw new InvalidOperationException($"{typeof(T)} needs an external serializer, use a different constructor.");
         }
 
         public KNetSerDes(Func<string, T, byte[]> serializeFun)
@@ -61,8 +61,21 @@ namespace MASES.KNet.Serialization
 
         ~KNetSerDes()
         {
+            Dispose();
+        }
+
+        public void Dispose()
+        {
+            GC.SuppressFinalize(this);
             _KafkaSerializer?.Dispose();
+            _KafkaSerializer = null;
             _KafkaDeserializer?.Dispose();
+            _KafkaDeserializer = null;
+        }
+
+        protected virtual bool IsGenericTypeManaged()
+        {
+            return _IsGenericTypeManaged;
         }
 
         public Serializer<byte[]> KafkaSerializer => _KafkaSerializer;

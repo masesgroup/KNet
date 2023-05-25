@@ -112,6 +112,11 @@ namespace MASES.KNet.Clients.Producer
         public System.DateTime DateTime => System.DateTimeOffset.FromUnixTimeMilliseconds(Timestamp).DateTime;
 
         public Headers Headers { get; private set; }
+
+        public override string ToString()
+        {
+            return $"Topic: {Topic} - Partition {Partition} - Key {Key} - Value {Value}";
+        }
     }
 
     /// <summary>
@@ -179,14 +184,47 @@ namespace MASES.KNet.Clients.Producer
     {
         public override string BridgeClassName => "org.mases.knet.clients.producer.KNetProducer";
 
+        readonly bool autoCreateSerDes = false;
         readonly IKNetSerializer<K> _keySerializer;
         readonly IKNetSerializer<V> _valueSerializer;
 
+        public KNetProducer(Properties props)
+            : this(props, new KNetSerDes<K>(), new KNetSerDes<V>())
+        {
+            autoCreateSerDes = true;
+        }
+
         public KNetProducer(Properties props, IKNetSerializer<K> keySerializer, IKNetSerializer<V> valueSerializer)
-            : base(props, keySerializer.KafkaSerializer, valueSerializer.KafkaSerializer)
+            : base(CheckProperties(props), keySerializer.KafkaSerializer, valueSerializer.KafkaSerializer)
         {
             _keySerializer = keySerializer;
             _valueSerializer = valueSerializer;
+        }
+
+        static Properties CheckProperties(Properties props)
+        {
+            if (!props.ContainsKey(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG))
+            {
+                props.Put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.ByteArraySerializer");
+            }
+            else throw new InvalidOperationException($"KNetProducer auto manages configuration property {ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG}, remove from configuration.");
+
+            if (!props.ContainsKey(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG))
+            {
+                props.Put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.ByteArraySerializer");
+            }
+            else throw new InvalidOperationException($"KNetProducer auto manages configuration property {ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG}, remove from configuration.");
+
+            return props;
+        }
+
+        ~KNetProducer()
+        {
+            if (autoCreateSerDes)
+            {
+                _keySerializer?.Dispose();
+                _valueSerializer?.Dispose();
+            }
         }
 
         static ProducerRecord<byte[], byte[]> ToProducerRecord(KNetProducerRecord<K, V> record, IKNetSerializer<K> keySerializer, IKNetSerializer<V> valueSerializer)

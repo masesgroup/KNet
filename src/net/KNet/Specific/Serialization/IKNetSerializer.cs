@@ -22,7 +22,7 @@ using System;
 
 namespace MASES.KNet.Serialization
 {
-    public interface IKNetSerializer<T>
+    public interface IKNetSerializer<T> : IDisposable
     {
         public Serializer<byte[]> KafkaSerializer { get; }
 

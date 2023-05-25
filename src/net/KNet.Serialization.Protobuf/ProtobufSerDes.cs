@@ -27,6 +27,11 @@ namespace MASES.KNet.Serialization.Protobuf
     {
         readonly MessageParser<T> _parser = new MessageParser<T>(() => new T());
 
+        protected override bool IsGenericTypeManaged()
+        {
+            return true;
+        }
+
         public override byte[] SerializeWithHeaders(string topic, Headers headers, T data)
         {
             using (MemoryStream stream = new MemoryStream())

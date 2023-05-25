@@ -22,6 +22,11 @@ namespace MASES.KNet.Serialization.Avro
 {
     public class AvroSerDes<T> : KNetSerDes<T>
     {
+        protected override bool IsGenericTypeManaged()
+        {
+            return true;
+        }
+
         public override byte[] SerializeWithHeaders(string topic, Headers headers, T data)
         {
             throw new System.NotImplementedException();

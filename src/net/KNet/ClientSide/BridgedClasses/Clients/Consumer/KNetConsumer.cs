@@ -81,6 +81,11 @@ namespace MASES.KNet.Clients.Consumer
                 return _valueDeserializer.DeserializeWithHeaders(Topic, Headers, _record.Value);
             }
         }
+
+        public override string ToString()
+        {
+            return $"Topic: {Topic} - Partition {Partition} - Offset {Offset} - Key {Key} - Value {Value}";
+        }
     }
 
     class KNetConsumerRecordsEnumerator<K, V> : IEnumerator<KNetConsumerRecord<K, V>>
@@ -219,6 +224,7 @@ namespace MASES.KNet.Clients.Consumer
 
     public class KNetConsumer<K, V> : KafkaConsumer<byte[], byte[]>, IKNetConsumer<K, V>
     {
+        readonly bool autoCreateSerDes = false;
         bool threadRunning = false;
         long dequeing = 0;
         readonly System.Threading.Thread consumeThread = null;
@@ -230,13 +236,11 @@ namespace MASES.KNet.Clients.Consumer
 
         public override string BridgeClassName => "org.mases.knet.clients.consumer.KNetConsumer";
 
-        public KNetConsumer()
-        {
-        }
-
         public KNetConsumer(Properties props, bool useJVMCallback = false)
-            : base(props)
+            : this(props, new KNetSerDes<K>(), new KNetSerDes<V>(), useJVMCallback)
         {
+            autoCreateSerDes = true;
+
             if (useJVMCallback)
             {
                 consumerCallback = new KNetConsumerCallback<K, V>(CallbackMessage, _keyDeserializer, _valueDeserializer);
@@ -253,7 +257,7 @@ namespace MASES.KNet.Clients.Consumer
         }
 
         public KNetConsumer(Properties props, IKNetDeserializer<K> keyDeserializer, IKNetDeserializer<V> valueDeserializer, bool useJVMCallback = false)
-            : base(props, keyDeserializer.KafkaDeserializer, valueDeserializer.KafkaDeserializer)
+            : base(CheckProperties(props), keyDeserializer.KafkaDeserializer, valueDeserializer.KafkaDeserializer)
         {
             _keyDeserializer = keyDeserializer;
             _valueDeserializer = valueDeserializer;
@@ -270,6 +274,32 @@ namespace MASES.KNet.Clients.Consumer
                 threadExited = new(false);
                 consumeThread = new(ConsumeHandler);
                 consumeThread.Start();
+            }
+        }
+
+        static Properties CheckProperties(Properties props)
+        {
+            if (!props.ContainsKey(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG))
+            {
+                props.Put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.ByteArrayDeserializer");
+            }
+            else throw new InvalidOperationException($"KNetConsumer auto manages configuration property {ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG}, remove from configuration.");
+
+            if (!props.ContainsKey(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG))
+            {
+                props.Put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.ByteArrayDeserializer");
+            }
+            else throw new InvalidOperationException($"KNetConsumer auto manages configuration property {ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG}, remove from configuration.");
+
+            return props;
+        }
+
+        ~KNetConsumer()
+        {
+            if (autoCreateSerDes)
+            {
+                _keyDeserializer?.Dispose();
+                _valueDeserializer?.Dispose();
             }
         }
 

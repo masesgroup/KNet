@@ -10,4 +10,7 @@
 	<ItemGroup>
 	  <Compile Include="..\Common\SharedKNetCore.cs" Link="SharedKNetCore.cs" />
 	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\..\src\net\KNet.Serialization.Json\KNet.Serialization.Json.csproj" />
+	</ItemGroup>
 </Project>

@@ -18,10 +18,11 @@
 
 using MASES.KNet.Common.Header;
 using MASES.KNet.Common.Serialization;
+using System;
 
 namespace MASES.KNet.Serialization
 {
-    public interface IKNetDeserializer<T>
+    public interface IKNetDeserializer<T> : IDisposable
     {
         Deserializer<byte[]> KafkaDeserializer { get; }
 
