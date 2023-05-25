@@ -26,6 +26,8 @@ namespace MASES.KNet.Serialization
     {
         public Serializer<byte[]> KafkaSerializer { get; }
 
+        bool UseHeaders { get; }
+
         byte[] Serialize(string topic, T data);
 
         byte[] SerializeWithHeaders(string topic, Headers headers, T data);

@@ -36,7 +36,7 @@ namespace MASES.KNet.Serialization
 
         public KNetSerDes()
         {
-            if (!IsGenericTypeManaged()) throw new InvalidOperationException($"{typeof(T)} needs an external serializer, use a different constructor.");
+            if (!IsGenericTypeManaged) throw new InvalidOperationException($"{typeof(T)} needs an external serializer, use a different constructor.");
         }
 
         public KNetSerDes(Func<string, T, byte[]> serializeFun)
@@ -73,14 +73,13 @@ namespace MASES.KNet.Serialization
             _KafkaDeserializer = null;
         }
 
-        protected virtual bool IsGenericTypeManaged()
-        {
-            return _IsGenericTypeManaged;
-        }
+        protected virtual bool IsGenericTypeManaged => _IsGenericTypeManaged;
 
         public Serializer<byte[]> KafkaSerializer => _KafkaSerializer;
 
         public Deserializer<byte[]> KafkaDeserializer => _KafkaDeserializer;
+
+        public virtual bool UseHeaders => false;
 
         public virtual byte[] Serialize(string topic, T data)
         {

@@ -16,18 +16,18 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common.Serialization;
 using Java.Time;
 using Java.Util;
 using MASES.JCOBridge.C2JBridge;
 using System;
 using System.Collections.Concurrent;
 using MASES.KNet.Serialization;
-using MASES.JCOBridge.C2JBridge.JVMInterop;
 using MASES.KNet.Common.Header;
 using MASES.KNet.Common.Record;
 using System.Collections.Generic;
 using System.Collections;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace MASES.KNet.Clients.Consumer
 {
@@ -70,7 +70,7 @@ namespace MASES.KNet.Clients.Consumer
         {
             get
             {
-                return _keyDeserializer.DeserializeWithHeaders(Topic, Headers, _record.Key);
+                return _keyDeserializer.UseHeaders ? _keyDeserializer.DeserializeWithHeaders(Topic, Headers, _record.Key) : _keyDeserializer.Deserialize(Topic, _record.Key);
             }
         }
 
@@ -78,7 +78,7 @@ namespace MASES.KNet.Clients.Consumer
         {
             get
             {
-                return _valueDeserializer.DeserializeWithHeaders(Topic, Headers, _record.Value);
+                return _valueDeserializer.UseHeaders ? _valueDeserializer.DeserializeWithHeaders(Topic, Headers, _record.Value) : _valueDeserializer.Deserialize(Topic, _record.Value);
             }
         }
 
@@ -88,12 +88,14 @@ namespace MASES.KNet.Clients.Consumer
         }
     }
 
-    class KNetConsumerRecordsEnumerator<K, V> : IEnumerator<KNetConsumerRecord<K, V>>
+    class KNetConsumerRecordsEnumerator<K, V> : IEnumerator<KNetConsumerRecord<K, V>>, IAsyncEnumerator<KNetConsumerRecord<K, V>>
     {
         readonly IKNetDeserializer<K> _keyDeserializer;
         readonly IKNetDeserializer<V> _valueDeserializer;
+        readonly CancellationToken _cancellationToken;
         readonly ConsumerRecords<byte[], byte[]> _records;
         IEnumerator<ConsumerRecord<byte[], byte[]>> _recordEnumerator;
+        IAsyncEnumerator<ConsumerRecord<byte[], byte[]>> _recordAsyncEnumerator;
 
         public KNetConsumerRecordsEnumerator(ConsumerRecords<byte[], byte[]> records, IKNetDeserializer<K> keyDeserializer, IKNetDeserializer<V> valueDeserializer)
         {
@@ -103,7 +105,18 @@ namespace MASES.KNet.Clients.Consumer
             _valueDeserializer = valueDeserializer;
         }
 
-        public KNetConsumerRecord<K, V> Current => new KNetConsumerRecord<K, V>(_recordEnumerator.Current, _keyDeserializer, _valueDeserializer);
+        public KNetConsumerRecordsEnumerator(ConsumerRecords<byte[], byte[]> records, IKNetDeserializer<K> keyDeserializer, IKNetDeserializer<V> valueDeserializer, CancellationToken cancellationToken)
+        {
+            _records = records;
+            _recordAsyncEnumerator = _records.GetAsyncEnumerator(cancellationToken);
+            _keyDeserializer = keyDeserializer;
+            _valueDeserializer = valueDeserializer;
+            _cancellationToken = cancellationToken;
+        }
+
+        KNetConsumerRecord<K, V> IAsyncEnumerator<KNetConsumerRecord<K, V>>.Current => new KNetConsumerRecord<K, V>(_recordAsyncEnumerator.Current, _keyDeserializer, _valueDeserializer);
+
+        KNetConsumerRecord<K, V> IEnumerator<KNetConsumerRecord<K, V>>.Current => new KNetConsumerRecord<K, V>(_recordEnumerator.Current, _keyDeserializer, _valueDeserializer);
 
         object IEnumerator.Current => (_recordEnumerator as IEnumerator)?.Current;
 
@@ -112,9 +125,19 @@ namespace MASES.KNet.Clients.Consumer
 
         }
 
+        public ValueTask DisposeAsync()
+        {
+            return _recordAsyncEnumerator.DisposeAsync();
+        }
+
         public bool MoveNext()
         {
             return _recordEnumerator.MoveNext();
+        }
+
+        public ValueTask<bool> MoveNextAsync()
+        {
+            return _recordAsyncEnumerator.MoveNextAsync();
         }
 
         public void Reset()
@@ -123,7 +146,7 @@ namespace MASES.KNet.Clients.Consumer
         }
     }
 
-    public class KNetConsumerRecords<K, V> : IEnumerable<KNetConsumerRecord<K, V>>
+    public class KNetConsumerRecords<K, V> : IEnumerable<KNetConsumerRecord<K, V>>, IAsyncEnumerable<KNetConsumerRecord<K, V>>
     {
         readonly IKNetDeserializer<K> _keyDeserializer;
         readonly IKNetDeserializer<V> _valueDeserializer;
@@ -145,29 +168,12 @@ namespace MASES.KNet.Clients.Consumer
         {
             return new KNetConsumerRecordsEnumerator<K, V>(_records, _keyDeserializer, _valueDeserializer);
         }
+
+        public IAsyncEnumerator<KNetConsumerRecord<K, V>> GetAsyncEnumerator(CancellationToken cancellationToken = default)
+        {
+            return new KNetConsumerRecordsEnumerator<K, V>(_records, _keyDeserializer, _valueDeserializer);
+        }
     }
-
-    //public class Message<K, V>
-    //{
-    //    readonly ConsumerRecord<K, V> record;
-    //    readonly KNetConsumerCallback<K, V> obj;
-    //    internal Message(KNetConsumerCallback<K, V> obj)
-    //    {
-    //        this.obj = obj;
-    //    }
-    //    internal Message(ConsumerRecord<K, V> record)
-    //    {
-    //        this.record = record;
-    //    }
-
-    //    public string Topic => record != null ? record.Topic : obj.BridgeInstance.Invoke<string>("getTopic");
-
-    //    public int Partition => record != null ? record.Partition : obj.BridgeInstance.Invoke<int>("getPartition");
-
-    //    public K Key => record != null ? record.Key : obj.BridgeInstance.Invoke<K>("getKey");
-
-    //    public V Value => record != null ? record.Value : obj.BridgeInstance.Invoke<V>("getValue");
-    //}
 
     interface IKNetConsumerCallback<K, V> : IJVMBridgeBase
     {

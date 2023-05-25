@@ -50,7 +50,7 @@ namespace MASES.KNet
         /// Access rights to data
         /// </summary>
         [Flags]
-        public enum AccessRights
+        public enum AccessRightsType
         {
             /// <summary>
             /// Data are readable, i.e. aligned with the REMOTE dictionary and accessible from the LOCAL dictionary
@@ -71,6 +71,8 @@ namespace MASES.KNet
 
         #region Private members
 
+        private bool _consumerPollRun = false;
+        private Thread _consumerPollThread = null;
         private IAdmin _admin = null;
         private ConcurrentDictionary<TKey, TValue> _dictionary = new ConcurrentDictionary<TKey, TValue>();
         private ConsumerRebalanceListener _consumerListener = null;
@@ -83,7 +85,7 @@ namespace MASES.KNet
         private TopicConfigBuilder _topicConfig = null;
         private ConsumerConfigBuilder _consumerConfig = null;
         private ProducerConfigBuilder _producerConfig = null;
-        private AccessRights _accessrights = AccessRights.ReadWrite;
+        private AccessRightsType _accessrights = AccessRightsType.ReadWrite;
         private readonly ManualResetEvent _assignmentWaiter = new ManualResetEvent(false);
 
         private KNetSerDes<TKey> _keySerDes = null;
@@ -98,21 +100,28 @@ namespace MASES.KNet
         /// <summary>
         /// Called when a [<typeparamref name="TKey"/>, <typeparamref name="TValue"/>] is updated by consuming data from the REMOTE dictionary
         /// </summary>
-        public Action<object, KeyValuePair<TKey, TValue>> OnRemoteUpdate;
+        public Action<KNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnRemoteUpdate;
 
         /// <summary>
         /// Called when a <typeparamref name="TKey"/> is removed by consuming data from the REMOTE dictionary
         /// </summary>
-        public Action<object, TKey> OnRemoteRemove;
+        public Action<KNetCompactedReplicator<TKey, TValue>, TKey> OnRemoteRemove;
 
         /// <summary>
         /// Called when a <typeparamref name="TKey"/> is removed from the LOCAL dictionary due to time to live expiration
         /// </summary>
-        public event Action<object, TKey> OnLocalRemove;
+        public event Action<KNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnLocalUpdate;
+
+        /// <summary>
+        /// Called when a <typeparamref name="TKey"/> is removed from the LOCAL dictionary due to time to live expiration
+        /// </summary>
+        public event Action<KNetCompactedReplicator<TKey, TValue>, TKey> OnLocalRemove;
 
         #endregion
 
         #region Public Properties
+
+        public AccessRightsType AccessRights { get { return _accessrights; } set { CheckStarted(); _accessrights = value; } }
 
         public string BootstrapServers { get { return _bootstrapServers; } set { CheckStarted(); _bootstrapServers = value; } }
 
@@ -141,38 +150,33 @@ namespace MASES.KNet
             if (_started) throw new InvalidOperationException("Cannot be changed after Start");
         }
 
-        //private void OnMessage(
-        //    object sender,
-        //    ConsumeResult<TKey, TValue> message)
-        //{
-        //    if (message?.Message == null)
-        //        return;
+        private void OnMessage(KNetConsumerRecord<TKey, TValue> record)
+        {
+            if (record.Value == null)
+            {
+                _dictionary.TryRemove(record.Key, out _);
+                OnRemoteRemove?.Invoke(this, record.Key);
+            }
+            else
+            {
+                _dictionary[record.Key] = record.Value;
+                OnRemoteUpdate?.Invoke(this, new KeyValuePair<TKey, TValue>(record.Key, record.Value));
+            }
+        }
 
-        //    if (message.Message.Value == null)
-        //    {
-        //        _dictionary.TryRemove(message.Message.Key, out _);
-        //        OnRemoteRemove?.Invoke(this, message.Message.Key);
-        //    }
-        //    else
-        //    {
-        //        _dictionary[message.Message.Key] = message.Message.Value;
-        //        OnRemoteUpdate?.Invoke(this, new KeyValuePair<TKey, TValue>(message.Message.Key, message.Message.Value));
-        //    }
-        //}
-
-        private void OnPartitionsAssigned(Collection<TopicPartition> topicPartitions)
+        private void OnTopicPartitionsAssigned(Collection<TopicPartition> topicPartitions)
         {
             _assignmentWaiter?.Set();
         }
 
-        private void OnPartitionsRevoked(Collection<TopicPartition> topicPartitionOffsets)
+        private void OnTopicPartitionsRevoked(Collection<TopicPartition> topicPartitionOffsets)
         {
             _assignmentWaiter?.Set();
         }
 
         private void RemoveRecord(TKey key)
         {
-            ValidateAccessRights(AccessRights.Write);
+            ValidateAccessRights(AccessRightsType.Write);
 
             if (key == null)
                 throw new ArgumentNullException(nameof(key));
@@ -205,7 +209,7 @@ namespace MASES.KNet
 
         private void AddOrUpdate(TKey key, TValue value)
         {
-            ValidateAccessRights(AccessRights.Write);
+            ValidateAccessRights(AccessRightsType.Write);
 
             if (key == null)
                 throw new ArgumentNullException(nameof(key));
@@ -237,14 +241,16 @@ namespace MASES.KNet
             if (value == null)
             {
                 _dictionary.TryRemove(key, out _);
+                OnLocalRemove?.Invoke(this, key);
             }
             else
             {
                 _dictionary[key] = value;
+                OnLocalUpdate?.Invoke(this, new KeyValuePair<TKey, TValue>(key, value));
             }
         }
 
-        private void ValidateAccessRights(AccessRights rights)
+        private void ValidateAccessRights(AccessRightsType rights)
         {
             if (!_accessrights.HasFlag(rights))
                 throw new InvalidOperationException($"{rights} access flag not set");
@@ -252,7 +258,7 @@ namespace MASES.KNet
 
         private ConcurrentDictionary<TKey, TValue> ValidateAndGetLocalDictionary()
         {
-            ValidateAccessRights(AccessRights.Read);
+            ValidateAccessRights(AccessRightsType.Read);
             return _dictionary;
         }
 
@@ -262,21 +268,21 @@ namespace MASES.KNet
 
         public void Start()
         {
-            if (string.IsNullOrWhiteSpace(_bootstrapServers)) throw new InvalidOperationException("BootstrapServers must be set before start.");
-            if (string.IsNullOrWhiteSpace(_stateName)) throw new InvalidOperationException("StateName must be set before start.");
+            if (string.IsNullOrWhiteSpace(BootstrapServers)) throw new InvalidOperationException("BootstrapServers must be set before start.");
+            if (string.IsNullOrWhiteSpace(StateName)) throw new InvalidOperationException("StateName must be set before start.");
 
-            Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(_bootstrapServers).ToProperties();
+            Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(BootstrapServers).ToProperties();
             _admin = KafkaAdminClient.Create(props);
 
-            if (_accessrights.HasFlag(AccessRights.Write))
+            if (AccessRights.HasFlag(AccessRightsType.Write))
             {
-                var topic = new NewTopic(_stateName, _partitions, _replicationFactor);
+                var topic = new NewTopic(StateName, Partitions, ReplicationFactor);
                 _topicConfig ??= TopicConfigBuilder.Create().WithDeleteRetentionMs(100)
                                                             .WithMinCleanableDirtyRatio(0.01)
                                                             .WithSegmentMs(100);
 
-                _topicConfig.CleanupPolicy = MASES.KNet.Common.Config.TopicConfig.CleanupPolicy.Compact | MASES.KNet.Common.Config.TopicConfig.CleanupPolicy.Delete;
-                topic = topic.Configs(_topicConfig);
+                TopicConfig.CleanupPolicy = MASES.KNet.Common.Config.TopicConfig.CleanupPolicy.Compact | MASES.KNet.Common.Config.TopicConfig.CleanupPolicy.Delete;
+                topic = topic.Configs(TopicConfig);
                 try
                 {
                     _admin.CreateTopic(topic);
@@ -286,59 +292,78 @@ namespace MASES.KNet
                 }
             }
 
-            if (_accessrights.HasFlag(AccessRights.Read))
+            if (AccessRights.HasFlag(AccessRightsType.Read))
             {
                 _consumerConfig ??= ConsumerConfigBuilder.Create().WithEnableAutoCommit(true)
                                                                   .WithAutoOffsetReset(Clients.Consumer.ConsumerConfig.AutoOffsetReset.EARLIEST)
                                                                   .WithAllowAutoCreateTopics(false);
 
-                _consumerConfig.BootstrapServers = _bootstrapServers;
-                _consumerConfig.GroupId = Guid.NewGuid().ToString();
-                if (_consumerConfig.CanApplyBasicDeserializer<TKey>() && KeySerDes == null)
+                ConsumerConfig.BootstrapServers = BootstrapServers;
+                ConsumerConfig.GroupId = Guid.NewGuid().ToString();
+                if (ConsumerConfig.CanApplyBasicDeserializer<TKey>() && KeySerDes == null)
                 {
                     KeySerDes = new KNetSerDes<TKey>();
                 }
-                
+
                 if (KeySerDes == null) throw new InvalidOperationException($"{typeof(TKey)} needs an external deserializer, set KeySerDes.");
 
-                if (_consumerConfig.CanApplyBasicDeserializer<TValue>() && ValueSerDes == null)
+                if (ConsumerConfig.CanApplyBasicDeserializer<TValue>() && ValueSerDes == null)
                 {
                     ValueSerDes = new KNetSerDes<TValue>();
                 }
-                
+
                 if (ValueSerDes == null) throw new InvalidOperationException($"{typeof(TValue)} needs an external deserializer, set ValueSerDes.");
 
-                _consumer = new KNetConsumer<TKey, TValue>(_consumerConfig, KeySerDes, ValueSerDes);
-                _consumerListener = new ConsumerRebalanceListener(OnPartitionsRevoked, OnPartitionsAssigned);
+                _consumer = new KNetConsumer<TKey, TValue>(ConsumerConfig, KeySerDes, ValueSerDes);
+                _consumer.SetCallback(OnMessage);
+                _consumerListener = new ConsumerRebalanceListener(OnTopicPartitionsRevoked, OnTopicPartitionsAssigned);
             }
 
-            if (_accessrights.HasFlag(AccessRights.Write))
+            if (AccessRights.HasFlag(AccessRightsType.Write))
             {
                 _producerConfig ??= ProducerConfigBuilder.Create().WithAcks(Clients.Producer.ProducerConfig.Acks.All)
                                                                   .WithRetries(0)
                                                                   .WithLingerMs(1);
 
-                _producerConfig.BootstrapServers = _bootstrapServers;
-                if (_producerConfig.CanApplyBasicSerializer<TKey>() && KeySerDes == null)
+                ProducerConfig.BootstrapServers = BootstrapServers;
+                if (ProducerConfig.CanApplyBasicSerializer<TKey>() && KeySerDes == null)
                 {
                     KeySerDes = new KNetSerDes<TKey>();
                 }
-                
+
                 if (KeySerDes == null) throw new InvalidOperationException($"{typeof(TKey)} needs an external serializer, set KeySerDes.");
 
-                if (_producerConfig.CanApplyBasicSerializer<TValue>() && ValueSerDes == null)
+                if (ProducerConfig.CanApplyBasicSerializer<TValue>() && ValueSerDes == null)
                 {
                     ValueSerDes = new KNetSerDes<TValue>();
                 }
-                
+
                 if (ValueSerDes == null) throw new InvalidOperationException($"{typeof(TValue)} needs an external serializer, set ValueSerDes.");
 
-                _producer = new KNetProducer<TKey, TValue>(_producerConfig, KeySerDes, ValueSerDes);
+                _producer = new KNetProducer<TKey, TValue>(ProducerConfig, KeySerDes, ValueSerDes);
             }
 
-            _consumer?.Subscribe(Collections.Singleton(_stateName), _consumerListener);
+            if (_consumer != null)
+            {
+                _consumerPollRun = true;
+                _consumerPollThread = new Thread(ConsumerPollHandler);
+                _consumerPollThread.Start();
+            }
 
             _started = true;
+        }
+
+        void ConsumerPollHandler(object o)
+        {
+            _consumer.Subscribe(Collections.Singleton(StateName), _consumerListener);
+            while (_consumerPollRun)
+            {
+                try
+                {
+                    _consumer.ConsumeAsync(100);
+                }
+                catch { }
+            }
         }
 
         /// <summary>
@@ -349,7 +374,7 @@ namespace MASES.KNet
         /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRights.Read"/> flag</exception>
         public bool WaitForStateAssignment(int timeout = Timeout.Infinite)
         {
-            ValidateAccessRights(AccessRights.Read);
+            ValidateAccessRights(AccessRightsType.Read);
 
             return _assignmentWaiter.WaitOne(timeout);
         }
@@ -368,7 +393,7 @@ namespace MASES.KNet
             int timeout = Timeout.Infinite,
             System.Collections.Generic.List<int> partitions = null)
         {
-            ValidateAccessRights(AccessRights.Read);
+            ValidateAccessRights(AccessRightsType.Read);
 
             if (partitions != null && partitions.Count == 0)
                 throw new ArgumentException($"{nameof(partitions)} must be null or NOT empty");
@@ -442,7 +467,7 @@ namespace MASES.KNet
         /// </summary>
         public bool IsReadOnly
         {
-            get { return !_accessrights.HasFlag(AccessRights.Write); }
+            get { return !_accessrights.HasFlag(AccessRightsType.Write); }
         }
 
         /// <summary>
@@ -454,9 +479,7 @@ namespace MASES.KNet
         /// <exception cref="ArgumentNullException"><paramref name="key"/> is null</exception>
         /// <exception cref="UpdateDeliveryException">The delivery of the update to the REMOTE dictionary fails</exception>
         /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRights.Write"/> flag</exception>
-        public void Add(
-            TKey key,
-            TValue value)
+        public void Add(TKey key, TValue value)
         {
             AddOrUpdate(key, value);
         }
@@ -521,9 +544,7 @@ namespace MASES.KNet
         /// -or- The number of elements in the source LOCAL dictionary is greater than the available space from <paramref name="arrayIndex"/> to the end of the destination <paramref name="array"/>. 
         /// -or- The type of the source LOCAL dictionary cannot be cast automatically to the type of the destination <paramref name="array"/></exception>
         /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRights.Read"/> flag</exception>
-        public void CopyTo(
-            KeyValuePair<TKey, TValue>[] array,
-            int arrayIndex)
+        public void CopyTo(KeyValuePair<TKey, TValue>[] array, int arrayIndex)
         {
             (ValidateAndGetLocalDictionary() as ICollection).CopyTo(array, arrayIndex);
         }

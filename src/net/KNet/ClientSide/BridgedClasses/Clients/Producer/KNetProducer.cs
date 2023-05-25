@@ -76,6 +76,7 @@ namespace MASES.KNet.Clients.Producer
             Partition = partition;
             Key = key;
             Value = value;
+            Headers = headers;
         }
 
         public KNetProducerRecord(string topic, int partition, K key, V value)
@@ -229,10 +230,26 @@ namespace MASES.KNet.Clients.Producer
 
         static ProducerRecord<byte[], byte[]> ToProducerRecord(KNetProducerRecord<K, V> record, IKNetSerializer<K> keySerializer, IKNetSerializer<V> valueSerializer)
         {
+            var headers = record.Headers;
+            if ((keySerializer.UseHeaders || valueSerializer.UseHeaders) && headers == null)
+            {
+                headers = Headers.Create();
+            }
+
             return new ProducerRecord<byte[], byte[]>(record.Topic, record.Partition, record.Timestamp,
-                                                      record.Key == null ? null : keySerializer?.SerializeWithHeaders(record.Topic, record.Headers, record.Key),
-                                                      record.Value == null ? null : valueSerializer?.SerializeWithHeaders(record.Topic, record.Headers, record.Value),
-                                                      record.Headers);
+                                                      record.Key == null ? null : DataSerialize(keySerializer, record.Topic, record.Key, headers),
+                                                      record.Value == null ? null : DataSerialize(valueSerializer, record.Topic, record.Value, headers),
+                                                      headers);
+        }
+
+        static byte[] DataSerialize<T>(IKNetSerializer<T> serializer, string topic, T data, Headers headers)
+        {
+            if (serializer == null) return null;
+            if (serializer.UseHeaders)
+            {
+                return serializer.SerializeWithHeaders(topic, headers, data);
+            }
+            return serializer.Serialize(topic, data);
         }
 
         public void SetCallback(Callback callback) => IExecute("setCallback", callback);

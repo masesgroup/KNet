@@ -15,6 +15,9 @@
 		<None Include="..\Documentation\articles\usageSerDes.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
 	<ItemGroup>
+	  <PackageReference Include="Apache.Avro" Version="1.11.1" />
+	</ItemGroup>
+	<ItemGroup>
 	  <ProjectReference Include="..\KNet\KNet.csproj" />
 	</ItemGroup>
 </Project>
