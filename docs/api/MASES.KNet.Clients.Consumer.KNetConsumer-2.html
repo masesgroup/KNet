@@ -82,7 +82,7 @@
     <div class="level2"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span></div>
     <div class="level3"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span>&lt;<a class="xref" href="MASES.KNet.Clients.Consumer.KafkaConsumer.html">KafkaConsumer</a>&gt;</div>
     <div class="level4"><a class="xref" href="MASES.KNet.Clients.Consumer.KafkaConsumer.html">KafkaConsumer</a></div>
-    <div class="level5"><a class="xref" href="MASES.KNet.Clients.Consumer.KafkaConsumer-2.html">KafkaConsumer</a>&lt;K, V&gt;</div>
+    <div class="level5"><a class="xref" href="MASES.KNet.Clients.Consumer.KafkaConsumer-2.html">KafkaConsumer</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>[]&gt;</div>
     <div class="level6"><span class="xref">KNetConsumer&lt;K, V&gt;</span></div>
   </div>
   <div class="implements">
@@ -91,7 +91,7 @@
     <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span></div>
     <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span></div>
     <div><a class="xref" href="MASES.KNet.Clients.Consumer.IKNetConsumer-2.html">IKNetConsumer</a>&lt;K, V&gt;</div>
-    <div><a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html">IConsumer</a>&lt;K, V&gt;</div>
+    <div><a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer-2.html">IConsumer</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>[]&gt;</div>
     <div><a class="xref" href="MASES.KNet.Clients.Consumer.IConsumer.html">IConsumer</a></div>
     <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span></div>
     <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span></div>
@@ -100,10 +100,10 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="MASES.KNet.Clients.Consumer.KafkaConsumer-2.html#MASES_KNet_Clients_Consumer_KafkaConsumer_2_Poll_System_Int64_">KafkaConsumer&lt;K, V&gt;.Poll(Int64)</a>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.KafkaConsumer-2.html#MASES_KNet_Clients_Consumer_KafkaConsumer_2_Poll_System_Int64_">KafkaConsumer&lt;Byte[], Byte[]&gt;.Poll(Int64)</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Clients.Consumer.KafkaConsumer-2.html#MASES_KNet_Clients_Consumer_KafkaConsumer_2_Poll_Java_Time_Duration_">KafkaConsumer&lt;K, V&gt;.Poll(Duration)</a>
+      <a class="xref" href="MASES.KNet.Clients.Consumer.KafkaConsumer-2.html#MASES_KNet_Clients_Consumer_KafkaConsumer_2_Poll_Java_Time_Duration_">KafkaConsumer&lt;Byte[], Byte[]&gt;.Poll(Duration)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Clients.Consumer.KafkaConsumer.html#MASES_KNet_Clients_Consumer_KafkaConsumer_IsBridgeCloseable">KafkaConsumer.IsBridgeCloseable</a>
@@ -524,7 +524,7 @@
   <h6><strong>Assembly</strong>: MASES.KNet.dll</h6>
   <h5 id="MASES_KNet_Clients_Consumer_KNetConsumer_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class KNetConsumer&lt;K, V&gt; : KafkaConsumer&lt;K, V&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IJVMBridgeBaseStatic, IKNetConsumer&lt;K, V&gt;, IConsumer&lt;K, V&gt;, IConsumer, IJVMBridgeBase, IJVMBridgeDefinition, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public class KNetConsumer&lt;K, V&gt; : KafkaConsumer&lt;byte[], byte[]&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IJVMBridgeBaseStatic, IKNetConsumer&lt;K, V&gt;, IConsumer&lt;byte[], byte[]&gt;, IConsumer, IJVMBridgeBase, IJVMBridgeDefinition, IDisposable</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -549,33 +549,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Consumer_KNetConsumer_2__ctor.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Consumer.KNetConsumer%602.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Consumer_KNetConsumer_2__ctor_Java_Util_Properties_MASES_KNet_Serialization_IKNetDeserializer__0__MASES_KNet_Serialization_IKNetDeserializer__1__System_Boolean_.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Consumer.KNetConsumer%602.%23ctor(Java.Util.Properties%2CMASES.KNet.Serialization.IKNetDeserializer%7B%600%7D%2CMASES.KNet.Serialization.IKNetDeserializer%7B%601%7D%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Consumer/KNetConsumer.cs/#L104">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Consumer/KNetConsumer.cs/#L279">View Source</a>
   </span>
   <a id="MASES_KNet_Clients_Consumer_KNetConsumer_2__ctor_" data-uid="MASES.KNet.Clients.Consumer.KNetConsumer`2.#ctor*"></a>
-  <h4 id="MASES_KNet_Clients_Consumer_KNetConsumer_2__ctor" data-uid="MASES.KNet.Clients.Consumer.KNetConsumer`2.#ctor">KNetConsumer()</h4>
+  <h4 id="MASES_KNet_Clients_Consumer_KNetConsumer_2__ctor_Java_Util_Properties_MASES_KNet_Serialization_IKNetDeserializer__0__MASES_KNet_Serialization_IKNetDeserializer__1__System_Boolean_" data-uid="MASES.KNet.Clients.Consumer.KNetConsumer`2.#ctor(Java.Util.Properties,MASES.KNet.Serialization.IKNetDeserializer{`0},MASES.KNet.Serialization.IKNetDeserializer{`1},System.Boolean)">KNetConsumer(Properties, IKNetDeserializer&lt;K&gt;, IKNetDeserializer&lt;V&gt;, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KNetConsumer()</code></pre>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Consumer_KNetConsumer_2__ctor_Java_Util_Properties_MASES_KNet_Common_Serialization_Deserializer__0__MASES_KNet_Common_Serialization_Deserializer__1__System_Boolean_.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Consumer.KNetConsumer%602.%23ctor(Java.Util.Properties%2CMASES.KNet.Common.Serialization.Deserializer%7B%600%7D%2CMASES.KNet.Common.Serialization.Deserializer%7B%601%7D%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Consumer/KNetConsumer.cs/#L126">View Source</a>
-  </span>
-  <a id="MASES_KNet_Clients_Consumer_KNetConsumer_2__ctor_" data-uid="MASES.KNet.Clients.Consumer.KNetConsumer`2.#ctor*"></a>
-  <h4 id="MASES_KNet_Clients_Consumer_KNetConsumer_2__ctor_Java_Util_Properties_MASES_KNet_Common_Serialization_Deserializer__0__MASES_KNet_Common_Serialization_Deserializer__1__System_Boolean_" data-uid="MASES.KNet.Clients.Consumer.KNetConsumer`2.#ctor(Java.Util.Properties,MASES.KNet.Common.Serialization.Deserializer{`0},MASES.KNet.Common.Serialization.Deserializer{`1},System.Boolean)">KNetConsumer(Properties, Deserializer&lt;K&gt;, Deserializer&lt;V&gt;, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KNetConsumer(Properties props, Deserializer&lt;K&gt; keyDeserializer, Deserializer&lt;V&gt; valueDeserializer, bool useJVMCallback = false)</code></pre>
+    <pre><code class="lang-csharp hljs">public KNetConsumer(Properties props, IKNetDeserializer&lt;K&gt; keyDeserializer, IKNetDeserializer&lt;V&gt; valueDeserializer, bool useJVMCallback = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -593,12 +578,12 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="MASES.KNet.Common.Serialization.Deserializer-1.html">Deserializer</a>&lt;K&gt;</td>
+        <td><a class="xref" href="MASES.KNet.Serialization.IKNetDeserializer-1.html">IKNetDeserializer</a>&lt;K&gt;</td>
         <td><span class="parametername">keyDeserializer</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="MASES.KNet.Common.Serialization.Deserializer-1.html">Deserializer</a>&lt;V&gt;</td>
+        <td><a class="xref" href="MASES.KNet.Serialization.IKNetDeserializer-1.html">IKNetDeserializer</a>&lt;V&gt;</td>
         <td><span class="parametername">valueDeserializer</span></td>
         <td></td>
       </tr>
@@ -614,7 +599,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Consumer_KNetConsumer_2__ctor_Java_Util_Properties_System_Boolean_.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Consumer.KNetConsumer%602.%23ctor(Java.Util.Properties%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Consumer/KNetConsumer.cs/#L108">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Consumer/KNetConsumer.cs/#L259">View Source</a>
   </span>
   <a id="MASES_KNet_Clients_Consumer_KNetConsumer_2__ctor_" data-uid="MASES.KNet.Clients.Consumer.KNetConsumer`2.#ctor*"></a>
   <h4 id="MASES_KNet_Clients_Consumer_KNetConsumer_2__ctor_Java_Util_Properties_System_Boolean_" data-uid="MASES.KNet.Clients.Consumer.KNetConsumer`2.#ctor(Java.Util.Properties,System.Boolean)">KNetConsumer(Properties, Boolean)</h4>
@@ -653,7 +638,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Consumer_KNetConsumer_2_BridgeClassName.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Consumer.KNetConsumer%602.BridgeClassName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Consumer/KNetConsumer.cs/#L102">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Consumer/KNetConsumer.cs/#L257">View Source</a>
   </span>
   <a id="MASES_KNet_Clients_Consumer_KNetConsumer_2_BridgeClassName_" data-uid="MASES.KNet.Clients.Consumer.KNetConsumer`2.BridgeClassName*"></a>
   <h4 id="MASES_KNet_Clients_Consumer_KNetConsumer_2_BridgeClassName" data-uid="MASES.KNet.Clients.Consumer.KNetConsumer`2.BridgeClassName">BridgeClassName</h4>
@@ -685,7 +670,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Consumer_KNetConsumer_2_IsCompleting.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Consumer.KNetConsumer%602.IsCompleting%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Consumer/KNetConsumer.cs/#L208">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Consumer/KNetConsumer.cs/#L402">View Source</a>
   </span>
   <a id="MASES_KNet_Clients_Consumer_KNetConsumer_2_IsCompleting_" data-uid="MASES.KNet.Clients.Consumer.KNetConsumer`2.IsCompleting*"></a>
   <h4 id="MASES_KNet_Clients_Consumer_KNetConsumer_2_IsCompleting" data-uid="MASES.KNet.Clients.Consumer.KNetConsumer`2.IsCompleting">IsCompleting</h4>
@@ -715,7 +700,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Consumer_KNetConsumer_2_IsEmpty.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Consumer.KNetConsumer%602.IsEmpty%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Consumer/KNetConsumer.cs/#L210">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Consumer/KNetConsumer.cs/#L404">View Source</a>
   </span>
   <a id="MASES_KNet_Clients_Consumer_KNetConsumer_2_IsEmpty_" data-uid="MASES.KNet.Clients.Consumer.KNetConsumer`2.IsEmpty*"></a>
   <h4 id="MASES_KNet_Clients_Consumer_KNetConsumer_2_IsEmpty" data-uid="MASES.KNet.Clients.Consumer.KNetConsumer`2.IsEmpty">IsEmpty</h4>
@@ -745,7 +730,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Consumer_KNetConsumer_2_WaitingMessages.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Consumer.KNetConsumer%602.WaitingMessages%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Consumer/KNetConsumer.cs/#L212">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Consumer/KNetConsumer.cs/#L406">View Source</a>
   </span>
   <a id="MASES_KNet_Clients_Consumer_KNetConsumer_2_WaitingMessages_" data-uid="MASES.KNet.Clients.Consumer.KNetConsumer`2.WaitingMessages*"></a>
   <h4 id="MASES_KNet_Clients_Consumer_KNetConsumer_2_WaitingMessages" data-uid="MASES.KNet.Clients.Consumer.KNetConsumer`2.WaitingMessages">WaitingMessages</h4>
@@ -774,18 +759,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Consumer_KNetConsumer_2_Consume_System_Int64_System_Action_MASES_KNet_Clients_Consumer_Message__0__1___.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Consumer.KNetConsumer%602.Consume(System.Int64%2CSystem.Action%7BMASES.KNet.Clients.Consumer.Message%7B%600%2C%601%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Consumer_KNetConsumer_2_Consume_System_Int64_System_Action_MASES_KNet_Clients_Consumer_KNetConsumerRecord__0__1___.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Consumer.KNetConsumer%602.Consume(System.Int64%2CSystem.Action%7BMASES.KNet.Clients.Consumer.KNetConsumerRecord%7B%600%2C%601%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Consumer/KNetConsumer.cs/#L227">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Consumer/KNetConsumer.cs/#L421">View Source</a>
   </span>
   <a id="MASES_KNet_Clients_Consumer_KNetConsumer_2_Consume_" data-uid="MASES.KNet.Clients.Consumer.KNetConsumer`2.Consume*"></a>
-  <h4 id="MASES_KNet_Clients_Consumer_KNetConsumer_2_Consume_System_Int64_System_Action_MASES_KNet_Clients_Consumer_Message__0__1___" data-uid="MASES.KNet.Clients.Consumer.KNetConsumer`2.Consume(System.Int64,System.Action{MASES.KNet.Clients.Consumer.Message{`0,`1}})">Consume(Int64, Action&lt;Message&lt;K, V&gt;&gt;)</h4>
+  <h4 id="MASES_KNet_Clients_Consumer_KNetConsumer_2_Consume_System_Int64_System_Action_MASES_KNet_Clients_Consumer_KNetConsumerRecord__0__1___" data-uid="MASES.KNet.Clients.Consumer.KNetConsumer`2.Consume(System.Int64,System.Action{MASES.KNet.Clients.Consumer.KNetConsumerRecord{`0,`1}})">Consume(Int64, Action&lt;KNetConsumerRecord&lt;K, V&gt;&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Consume(long timeoutMs, Action&lt;Message&lt;K, V&gt;&gt; callback)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Consume(long timeoutMs, Action&lt;KNetConsumerRecord&lt;K, V&gt;&gt; callback)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -803,7 +788,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="MASES.KNet.Clients.Consumer.Message-2.html">Message</a>&lt;K, V&gt;&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="MASES.KNet.Clients.Consumer.KNetConsumerRecord-2.html">KNetConsumerRecord</a>&lt;K, V&gt;&gt;</td>
         <td><span class="parametername">callback</span></td>
         <td></td>
       </tr>
@@ -814,7 +799,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Consumer_KNetConsumer_2_ConsumeAsync_System_Int64_.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Consumer.KNetConsumer%602.ConsumeAsync(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Consumer/KNetConsumer.cs/#L214">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Consumer/KNetConsumer.cs/#L408">View Source</a>
   </span>
   <a id="MASES_KNet_Clients_Consumer_KNetConsumer_2_ConsumeAsync_" data-uid="MASES.KNet.Clients.Consumer.KNetConsumer`2.ConsumeAsync*"></a>
   <h4 id="MASES_KNet_Clients_Consumer_KNetConsumer_2_ConsumeAsync_System_Int64_" data-uid="MASES.KNet.Clients.Consumer.KNetConsumer`2.ConsumeAsync(System.Int64)">ConsumeAsync(Int64)</h4>
@@ -846,7 +831,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Consumer_KNetConsumer_2_Dispose.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Consumer.KNetConsumer%602.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Consumer/KNetConsumer.cs/#L151">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Consumer/KNetConsumer.cs/#L345">View Source</a>
   </span>
   <a id="MASES_KNet_Clients_Consumer_KNetConsumer_2_Dispose_" data-uid="MASES.KNet.Clients.Consumer.KNetConsumer`2.Dispose*"></a>
   <h4 id="MASES_KNet_Clients_Consumer_KNetConsumer_2_Dispose" data-uid="MASES.KNet.Clients.Consumer.KNetConsumer`2.Dispose">Dispose()</h4>
@@ -860,18 +845,33 @@
   <div><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Dispose()</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Consumer_KNetConsumer_2_SetCallback_System_Action_MASES_KNet_Clients_Consumer_Message__0__1___.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Consumer.KNetConsumer%602.SetCallback(System.Action%7BMASES.KNet.Clients.Consumer.Message%7B%600%2C%601%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Consumer_KNetConsumer_2_Finalize.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Consumer.KNetConsumer%602.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Consumer/KNetConsumer.cs/#L168">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Consumer/KNetConsumer.cs/#L317">View Source</a>
   </span>
-  <a id="MASES_KNet_Clients_Consumer_KNetConsumer_2_SetCallback_" data-uid="MASES.KNet.Clients.Consumer.KNetConsumer`2.SetCallback*"></a>
-  <h4 id="MASES_KNet_Clients_Consumer_KNetConsumer_2_SetCallback_System_Action_MASES_KNet_Clients_Consumer_Message__0__1___" data-uid="MASES.KNet.Clients.Consumer.KNetConsumer`2.SetCallback(System.Action{MASES.KNet.Clients.Consumer.Message{`0,`1}})">SetCallback(Action&lt;Message&lt;K, V&gt;&gt;)</h4>
+  <a id="MASES_KNet_Clients_Consumer_KNetConsumer_2_Finalize_" data-uid="MASES.KNet.Clients.Consumer.KNetConsumer`2.Finalize*"></a>
+  <h4 id="MASES_KNet_Clients_Consumer_KNetConsumer_2_Finalize" data-uid="MASES.KNet.Clients.Consumer.KNetConsumer`2.Finalize">Finalize()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetCallback(Action&lt;Message&lt;K, V&gt;&gt; cb)</code></pre>
+    <pre><code class="lang-csharp hljs">protected void Finalize()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Consumer_KNetConsumer_2_Poll_Java_Time_Duration_.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Consumer.KNetConsumer%602.Poll(Java.Time.Duration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Consumer/KNetConsumer.cs/#L332">View Source</a>
+  </span>
+  <a id="MASES_KNet_Clients_Consumer_KNetConsumer_2_Poll_" data-uid="MASES.KNet.Clients.Consumer.KNetConsumer`2.Poll*"></a>
+  <h4 id="MASES_KNet_Clients_Consumer_KNetConsumer_2_Poll_Java_Time_Duration_" data-uid="MASES.KNet.Clients.Consumer.KNetConsumer`2.Poll(Java.Time.Duration)">Poll(Duration)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KNetConsumerRecords&lt;K, V&gt; Poll(Duration timeout)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -884,7 +884,101 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="MASES.KNet.Clients.Consumer.Message-2.html">Message</a>&lt;K, V&gt;&gt;</td>
+        <td><span class="xref">Java.Time.Duration</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KNet.Clients.Consumer.KNetConsumerRecords-2.html">KNetConsumerRecords</a>&lt;K, V&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Consumer_KNetConsumer_2_Poll_System_Int64_.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Consumer.KNetConsumer%602.Poll(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Consumer/KNetConsumer.cs/#L326">View Source</a>
+  </span>
+  <a id="MASES_KNet_Clients_Consumer_KNetConsumer_2_Poll_" data-uid="MASES.KNet.Clients.Consumer.KNetConsumer`2.Poll*"></a>
+  <h4 id="MASES_KNet_Clients_Consumer_KNetConsumer_2_Poll_System_Int64_" data-uid="MASES.KNet.Clients.Consumer.KNetConsumer`2.Poll(System.Int64)">Poll(Int64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KNetConsumerRecords&lt;K, V&gt; Poll(long timeoutMs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">timeoutMs</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KNet.Clients.Consumer.KNetConsumerRecords-2.html">KNetConsumerRecords</a>&lt;K, V&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Consumer_KNetConsumer_2_SetCallback_System_Action_MASES_KNet_Clients_Consumer_KNetConsumerRecord__0__1___.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Consumer.KNetConsumer%602.SetCallback(System.Action%7BMASES.KNet.Clients.Consumer.KNetConsumerRecord%7B%600%2C%601%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Consumer/KNetConsumer.cs/#L362">View Source</a>
+  </span>
+  <a id="MASES_KNet_Clients_Consumer_KNetConsumer_2_SetCallback_" data-uid="MASES.KNet.Clients.Consumer.KNetConsumer`2.SetCallback*"></a>
+  <h4 id="MASES_KNet_Clients_Consumer_KNetConsumer_2_SetCallback_System_Action_MASES_KNet_Clients_Consumer_KNetConsumerRecord__0__1___" data-uid="MASES.KNet.Clients.Consumer.KNetConsumer`2.SetCallback(System.Action{MASES.KNet.Clients.Consumer.KNetConsumerRecord{`0,`1}})">SetCallback(Action&lt;KNetConsumerRecord&lt;K, V&gt;&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCallback(Action&lt;KNetConsumerRecord&lt;K, V&gt;&gt; cb)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="MASES.KNet.Clients.Consumer.KNetConsumerRecord-2.html">KNetConsumerRecord</a>&lt;K, V&gt;&gt;</td>
         <td><span class="parametername">cb</span></td>
         <td></td>
       </tr>
@@ -936,7 +1030,7 @@
                     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Consumer_KNetConsumer_2.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Consumer.KNetConsumer%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Consumer/KNetConsumer.cs/#L93" class="contribution-link">View Source</a>
+                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Consumer/KNetConsumer.cs/#L245" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
