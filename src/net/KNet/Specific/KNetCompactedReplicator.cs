@@ -24,7 +24,6 @@ using MASES.KNet.Clients.Producer;
 using MASES.KNet.Common;
 using MASES.KNet.Common.Config;
 using MASES.KNet.Common.Errors;
-using MASES.KNet.Common.Header;
 using MASES.KNet.Extensions;
 using MASES.KNet.Serialization;
 using System;
@@ -45,29 +44,51 @@ namespace MASES.KNet
         IDisposable
         where TValue : class
     {
-        #region AccessRights
+        #region AccessRightsType
         /// <summary>
-        /// Access rights to data
+        /// <see cref="KNetCompactedReplicator{TKey, TValue}"/> access rights to data
         /// </summary>
         [Flags]
         public enum AccessRightsType
         {
             /// <summary>
-            /// Data are readable, i.e. aligned with the REMOTE dictionary and accessible from the LOCAL dictionary
+            /// Data are readable, i.e. aligned with the others <see cref="KNetCompactedReplicator{TKey, TValue}"/> and accessible from this <see cref="KNetCompactedReplicator{TKey, TValue}"/>
             /// </summary>
             Read = 1,
             /// <summary>
-            /// Data are writable, i.e. updates can be produced, but the LOCAL dictionary is not accessible and not aligned with the REMOTE
+            /// Data are writable, i.e. updates can be produced, but this <see cref="KNetCompactedReplicator{TKey, TValue}"/> is not accessible and not aligned with the others <see cref="KNetCompactedReplicator{TKey, TValue}"/>
             /// </summary>
             Write = 2,
             /// <summary>
-            /// Data are readable and writable, i.e. updates can be produced, and data are aligned with the REMOTE dictionary and accessible from the LOCAL dictionary
+            /// Data are readable and writable, i.e. updates can be produced, and data are aligned with the others <see cref="KNetCompactedReplicator{TKey, TValue}"/> and accessible from this <see cref="KNetCompactedReplicator{TKey, TValue}"/>
             /// </summary>
             ReadWrite = Read | Write,
         }
 
         #endregion
 
+        #region UpdateModeTypes
+
+        /// <summary>
+        /// <see cref="KNetCompactedReplicator{TKey, TValue}"/> update modes
+        /// </summary>
+        public enum UpdateModeTypes
+        {
+            /// <summary>
+            /// The <see cref="KNetCompactedReplicator{TKey, TValue}"/> is updated as soon as an update is delivered to Kafka by the current application
+            /// </summary>
+            OnDelivery = 1,
+            /// <summary>
+            /// The <see cref="KNetCompactedReplicator{TKey, TValue}"/> is updated only after an update is consumed from Kafka, even if the add or update is made locally by the current instance
+            /// </summary>
+            OnConsume = 2,
+            /// <summary>
+            /// The <see cref="KNetCompactedReplicator{TKey, TValue}"/> is updated only after an update is consumed from Kafka, even if the add or update is made locally by the current instance. Plus the update waits the consume of the data before unlock
+            /// </summary>
+            OnConsumeSync = 3
+        }
+
+        #endregion
 
         #region Private members
 
@@ -86,6 +107,8 @@ namespace MASES.KNet
         private ConsumerConfigBuilder _consumerConfig = null;
         private ProducerConfigBuilder _producerConfig = null;
         private AccessRightsType _accessrights = AccessRightsType.ReadWrite;
+        private UpdateModeTypes _updateMode = UpdateModeTypes.OnDelivery;
+        private Tuple<TKey, ManualResetEvent> _OnConsumeSyncWaiter = null;
         private readonly ManualResetEvent _assignmentWaiter = new ManualResetEvent(false);
 
         private KNetSerDes<TKey> _keySerDes = null;
@@ -98,47 +121,71 @@ namespace MASES.KNet
         #region Events
 
         /// <summary>
-        /// Called when a [<typeparamref name="TKey"/>, <typeparamref name="TValue"/>] is updated by consuming data from the REMOTE dictionary
+        /// Called when a [<typeparamref name="TKey"/>, <typeparamref name="TValue"/>] is updated by consuming data from the others <see cref="KNetCompactedReplicator{TKey, TValue}"/>
         /// </summary>
         public Action<KNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnRemoteUpdate;
 
         /// <summary>
-        /// Called when a <typeparamref name="TKey"/> is removed by consuming data from the REMOTE dictionary
+        /// Called when a <typeparamref name="TKey"/> is removed by consuming data from the others <see cref="KNetCompactedReplicator{TKey, TValue}"/>
         /// </summary>
         public Action<KNetCompactedReplicator<TKey, TValue>, TKey> OnRemoteRemove;
 
         /// <summary>
-        /// Called when a <typeparamref name="TKey"/> is removed from the LOCAL dictionary due to time to live expiration
+        /// Called when a <typeparamref name="TKey"/> is removed from this <see cref="KNetCompactedReplicator{TKey, TValue}"/>
         /// </summary>
         public event Action<KNetCompactedReplicator<TKey, TValue>, KeyValuePair<TKey, TValue>> OnLocalUpdate;
 
         /// <summary>
-        /// Called when a <typeparamref name="TKey"/> is removed from the LOCAL dictionary due to time to live expiration
+        /// Called when a <typeparamref name="TKey"/> is removed from this <see cref="KNetCompactedReplicator{TKey, TValue}"/>
         /// </summary>
         public event Action<KNetCompactedReplicator<TKey, TValue>, TKey> OnLocalRemove;
 
         #endregion
 
         #region Public Properties
-
+        /// <summary>
+        /// Get or set <see cref="AccessRightsType"/>
+        /// </summary>
         public AccessRightsType AccessRights { get { return _accessrights; } set { CheckStarted(); _accessrights = value; } }
-
+        /// <summary>
+        /// Get or set <see cref="UpdateModeTypes"/>
+        /// </summary>
+        public UpdateModeTypes UpdateMode { get { return _updateMode; } set { CheckStarted(); _updateMode = value; } }
+        /// <summary>
+        /// Get or set bootstrap servers
+        /// </summary>
         public string BootstrapServers { get { return _bootstrapServers; } set { CheckStarted(); _bootstrapServers = value; } }
-
+        /// <summary>
+        /// Get or set topic name
+        /// </summary>
         public string StateName { get { return _stateName; } set { CheckStarted(); _stateName = value; } }
-
+        /// <summary>
+        /// Get or set partitions to use when topic is created for the first time
+        /// </summary>
         public int Partitions { get { return _partitions; } set { CheckStarted(); _partitions = value; } }
-
+        /// <summary>
+        /// Get or set replication factor to use when topic is created for the first time
+        /// </summary>
         public short ReplicationFactor { get { return _replicationFactor; } set { CheckStarted(); _replicationFactor = value; } }
-
+        /// <summary>
+        /// Get or set <see cref="TopicConfigBuilder"/> to use when topic is created for the first time
+        /// </summary>
         public TopicConfigBuilder TopicConfig { get { return _topicConfig; } set { CheckStarted(); _topicConfig = value; } }
-
+        /// <summary>
+        /// Get or set <see cref="ConsumerConfigBuilder"/> to use in <see cref="KNetCompactedReplicator{TKey, TValue}"/>
+        /// </summary>
         public ConsumerConfigBuilder ConsumerConfig { get { return _consumerConfig; } set { CheckStarted(); _consumerConfig = value; } }
-
+        /// <summary>
+        /// Get or set <see cref="ProducerConfigBuilder"/> to use in <see cref="KNetCompactedReplicator{TKey, TValue}"/>
+        /// </summary>
         public ProducerConfigBuilder ProducerConfig { get { return _producerConfig; } set { CheckStarted(); _producerConfig = value; } }
-
+        /// <summary>
+        /// Get or set <see cref="KNetSerDes{TKey}"/> to use in <see cref="KNetCompactedReplicator{TKey, TValue}"/>, by default it creates a default one based on <typeparamref name="TKey"/>
+        /// </summary>
         public KNetSerDes<TKey> KeySerDes { get { return _keySerDes; } set { CheckStarted(); _keySerDes = value; } }
-
+        /// <summary>
+        /// Get or set <see cref="KNetSerDes{TValue}"/> to use in <see cref="KNetCompactedReplicator{TKey, TValue}"/>, by default it creates a default one based on <typeparamref name="TValue"/>
+        /// </summary>
         public KNetSerDes<TValue> ValueSerDes { get { return _valueSerDes; } set { CheckStarted(); _valueSerDes = value; } }
 
         #endregion
@@ -161,6 +208,14 @@ namespace MASES.KNet
             {
                 _dictionary[record.Key] = record.Value;
                 OnRemoteUpdate?.Invoke(this, new KeyValuePair<TKey, TValue>(record.Key, record.Value));
+            }
+
+            if (_OnConsumeSyncWaiter != null)
+            {
+                if (_OnConsumeSyncWaiter.Item1.Equals(record.Key))
+                {
+                    _OnConsumeSyncWaiter.Item2.Set();
+                }
             }
         }
 
@@ -214,39 +269,50 @@ namespace MASES.KNet
             if (key == null)
                 throw new ArgumentNullException(nameof(key));
 
-            JVMBridgeException exception = null;
-
-            DateTime pTimestamp = DateTime.MaxValue;
-            using (AutoResetEvent deliverySemaphore = new AutoResetEvent(false))
+            if (UpdateMode == UpdateModeTypes.OnDelivery)
             {
-                _producer.Produce(_stateName, key, value, (record, error) =>
+                JVMBridgeException exception = null;
+                DateTime pTimestamp = DateTime.MaxValue;
+                using (AutoResetEvent deliverySemaphore = new AutoResetEvent(false))
                 {
-                    try
+                    _producer.Produce(StateName, key, value, (record, error) =>
                     {
-                        if (deliverySemaphore.SafeWaitHandle.IsClosed)
-                            return;
+                        try
+                        {
+                            if (deliverySemaphore.SafeWaitHandle.IsClosed)
+                                return;
 
-                        exception = error;
+                            exception = error;
+                            deliverySemaphore.Set();
+                        }
+                        catch { }
+                    });
 
-                        deliverySemaphore.Set();
-                    }
-                    catch { }
-                });
+                    deliverySemaphore.WaitOne();
+                }
 
-                deliverySemaphore.WaitOne();
+                if (exception != null) throw exception;
+
+                if (value == null)
+                {
+                    _dictionary.TryRemove(key, out _);
+                    OnLocalRemove?.Invoke(this, key);
+                }
+                else
+                {
+                    _dictionary[key] = value;
+                    OnLocalUpdate?.Invoke(this, new KeyValuePair<TKey, TValue>(key, value));
+                }
             }
-
-            if (exception != null) throw exception;
-
-            if (value == null)
+            else if (UpdateMode == UpdateModeTypes.OnConsume || UpdateMode == UpdateModeTypes.OnConsumeSync)
             {
-                _dictionary.TryRemove(key, out _);
-                OnLocalRemove?.Invoke(this, key);
-            }
-            else
-            {
-                _dictionary[key] = value;
-                OnLocalUpdate?.Invoke(this, new KeyValuePair<TKey, TValue>(key, value));
+                _producer.Produce(StateName, key, value, (Callback)null);
+                if (UpdateMode == UpdateModeTypes.OnConsumeSync)
+                {
+                    _OnConsumeSyncWaiter = new Tuple<TKey, ManualResetEvent>(key, new ManualResetEvent(false));
+                    _OnConsumeSyncWaiter.Item2.WaitOne();
+                    _OnConsumeSyncWaiter.Item2.Dispose();
+                }
             }
         }
 
@@ -265,7 +331,10 @@ namespace MASES.KNet
         #endregion
 
         #region Public methods
-
+        /// <summary>
+        /// Start this <see cref="KNetCompactedReplicator{TKey, TValue}"/>: create the <see cref="StateName"/> topic if not available, allocates Producer and Consumer, sets serializer/deserializer
+        /// </summary>
+        /// <exception cref="InvalidOperationException">Some errors occurred</exception>
         public void Start()
         {
             if (string.IsNullOrWhiteSpace(BootstrapServers)) throw new InvalidOperationException("BootstrapServers must be set before start.");
@@ -367,41 +436,16 @@ namespace MASES.KNet
         }
 
         /// <summary>
-        /// Waits for the very first parition assignment of the COMPACTED topic which stores dictionary data
+        /// Waits for the very first parition assignment of the <see cref="StateName"/> topic which stores dictionary data
         /// </summary>
-        /// <param name="timeout">The number of milliseconds to wait, or System.Threading.Timeout.Infinite (-1) to wait indefinitely</param>
-        /// <returns>true if the current instance receives a signal within the given <paramref name="timeout"/>; otherwise, false</returns>
-        /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRights.Read"/> flag</exception>
+        /// <param name="timeout">The number of milliseconds to wait, or <see cref="Timeout.Infinite"/> to wait indefinitely</param>
+        /// <returns><see langword="true"/> if the current instance receives a signal within the given <paramref name="timeout"/>; otherwise, <see langword="false"/></returns>
+        /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Read"/> flag</exception>
         public bool WaitForStateAssignment(int timeout = Timeout.Infinite)
         {
             ValidateAccessRights(AccessRightsType.Read);
 
             return _assignmentWaiter.WaitOne(timeout);
-        }
-
-        /// <summary>
-        /// Ensures the sync between the LOCAL and the REMOTE dictionary 
-        /// </summary>
-        /// <param name="timeout">The number of milliseconds to wait for the sync, or System.Threading.Timeout.Infinite (-1) to wait indefinitely</param>
-        /// <param name="partitions">The list of partitions for which ensuring the sync, or null for all available partitions</param>
-        /// <returns>true if the current instance gets the sync within the given <paramref name="timeout"/>; otherwise, false</returns>
-        /// <remarks>If this method returns false, it does not mean that the sync between the LOCAL and the REMOTE dictionary will never be reached. 
-        /// In background the fetch of data keeps going on</remarks>
-        /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRights.Read"/> flag</exception>
-        /// <exception cref="ArgumentException"><paramref name="partitions"/> is not null, but empty</exception>
-        public bool EnsureSync(
-            int timeout = Timeout.Infinite,
-            System.Collections.Generic.List<int> partitions = null)
-        {
-            ValidateAccessRights(AccessRightsType.Read);
-
-            if (partitions != null && partitions.Count == 0)
-                throw new ArgumentException($"{nameof(partitions)} must be null or NOT empty");
-
-            if (!WaitForStateAssignment(timeout))
-                return false;
-
-            return true;
         }
 
         /// <summary>
@@ -417,15 +461,14 @@ namespace MASES.KNet
         #region IDictionary<TKey, TValue>
 
         /// <summary>
-        /// Gets or sets the element with the specified keyy. Null value removes the specified key
+        /// Gets or sets the element with the specified keyy. <see langword="null"/> value removes the specified key
         /// </summary>
         /// <param name="key">The key of the element to get or set</param>
         /// <returns>The element with the specified key</returns>
-        /// <exception cref="InvalidOperationException">The call is get, and the provided <see cref="AccessRights"/> do not include the <see cref="AccessRights.Read"/> flag</exception>
-        /// <exception cref="InvalidOperationException">The call is set, and the provided <see cref="AccessRights"/> do not include the <see cref="AccessRights.Write"/> flag</exception>
+        /// <exception cref="InvalidOperationException">The call is get, and the provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Read"/> flag</exception>
+        /// <exception cref="InvalidOperationException">The call is set, and the provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Write"/> flag</exception>
         /// <exception cref="ArgumentNullException"><paramref name="key"/> is null</exception>
         /// <exception cref="KeyNotFoundException">The call is get and <paramref name="key"/> is not found</exception>
-        /// <exception cref="UpdateDeliveryException">The call is set and the delivery of the update to the REMOTE dictionary fails</exception>
         public TValue this[TKey key]
         {
             get { return ValidateAndGetLocalDictionary()[key]; }
@@ -433,37 +476,37 @@ namespace MASES.KNet
         }
 
         /// <summary>
-        /// Gets an <see cref="ICollection{TKey}"/> containing the keys of the LOCAL dictionary
+        /// Gets an <see cref="ICollection{TKey}"/> containing the keys of this <see cref="KNetCompactedReplicator{TKey, TValue}"/>
         /// </summary>
-        /// <returns><see cref="ICollection{TKey}"/> containing the keys of the LOCAL dictionary</returns>
-        /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRights.Read"/> flag</exception>
+        /// <returns><see cref="ICollection{TKey}"/> containing the keys of this <see cref="KNetCompactedReplicator{TKey, TValue}"/></returns>
+        /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Read"/> flag</exception>
         public ICollection<TKey> Keys
         {
             get { return ValidateAndGetLocalDictionary().Keys; }
         }
 
         /// <summary>
-        /// Gets an <see cref="ICollection{TValue}"/> containing the values of the LOCAL dictionary
+        /// Gets an <see cref="ICollection{TValue}"/> containing the values of this <see cref="KNetCompactedReplicator{TKey, TValue}"/>
         /// </summary>
-        /// <returns><see cref="ICollection{TValue}"/> containing the values of the LOCAL dictionary</returns>
-        /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRights.Read"/> flag</exception>
+        /// <returns><see cref="ICollection{TValue}"/> containing the values of this <see cref="KNetCompactedReplicator{TKey, TValue}"/></returns>
+        /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Read"/> flag</exception>
         public ICollection<TValue> Values
         {
             get { return ValidateAndGetLocalDictionary().Values; }
         }
 
         /// <summary>
-        /// Gets the number of elements contained in the LOCAL dictionary
+        /// Gets the number of elements contained in this <see cref="KNetCompactedReplicator{TKey, TValue}"/>
         /// </summary>
-        /// <returns>The number of elements contained in the LOCAL dictionary</returns>
-        /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRights.Read"/> flag</exception>
+        /// <returns>The number of elements contained in this <see cref="KNetCompactedReplicator{TKey, TValue}"/></returns>
+        /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Read"/> flag</exception>
         public int Count
         {
             get { return ValidateAndGetLocalDictionary().Count; }
         }
 
         /// <summary>
-        /// false
+        /// <see langword="true"/> if <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Write"/> flag
         /// </summary>
         public bool IsReadOnly
         {
@@ -471,103 +514,95 @@ namespace MASES.KNet
         }
 
         /// <summary>
-        /// Adds or updates the <paramref name="key"/> in the REMOTE dictionary; 
-        /// consequently updates, in the way defined by the <see cref="KSharpDictionaryUpdateModes"/> provided at constructor time, the LOCAL dictionary
+        /// Adds or updates the <paramref name="item"/> in this and others <see cref="KNetCompactedReplicator{TKey, TValue}"/> in the way defined by the <see cref="UpdateModes"/> provided
         /// </summary>
         /// <param name="key">The object to use as the key of the element to add</param>
         /// <param name="value">The object to use as the value of the element to add. null means remove <paramref name="key"/></param>
         /// <exception cref="ArgumentNullException"><paramref name="key"/> is null</exception>
-        /// <exception cref="UpdateDeliveryException">The delivery of the update to the REMOTE dictionary fails</exception>
-        /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRights.Write"/> flag</exception>
+        /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Write"/> flag</exception>
         public void Add(TKey key, TValue value)
         {
             AddOrUpdate(key, value);
         }
 
         /// <summary>
-        /// Adds or updates the <paramref name="item"/> in the REMOTE dictionary; 
-        /// consequently updates, in the way defined by the <see cref="KSharpDictionaryUpdateModes"/> provided at constructor time, the LOCAL dictionary
+        /// Adds or updates the <paramref name="item"/> in this and others <see cref="KNetCompactedReplicator{TKey, TValue}"/> in the way defined by the <see cref="UpdateModes"/> provided
         /// </summary>
         /// <param name="item">The item to add or updates. Value == null means remove key</param>
         /// <exception cref="ArgumentNullException"><paramref name="item"/>.Key is null</exception>
-        /// <exception cref="UpdateDeliveryException">The delivery of the update to the REMOTE dictionary fails</exception>
-        /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRights.Write"/> flag</exception>
+        /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Write"/> flag</exception>
         public void Add(KeyValuePair<TKey, TValue> item)
         {
             AddOrUpdate(item.Key, item.Value);
         }
 
         /// <summary>
-        /// Clears the LOCAL dictionary, resetting all paritions' sync
+        /// Clears this <see cref="KNetCompactedReplicator{TKey, TValue}"/>, resetting all paritions' sync
         /// </summary>
-        /// <remarks>After this call, a call to <see cref="EnsureSync(int, List{int})"/> 
-        /// is recommended to get back in sync with the REMOTE dictionary</remarks>
-        /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRights.Read"/> flag</exception>
+        /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Read"/> flag</exception>
         public void Clear()
         {
             ValidateAndGetLocalDictionary().Clear();
         }
 
         /// <summary>
-        /// Determines whether the LOCAL dictionary contains the specified item
+        /// Determines whether this <see cref="KNetCompactedReplicator{TKey, TValue}"/> contains the specified item
         /// </summary>
-        /// <param name="item">The item to locate in the LOCAL dictionary</param>
-        /// <returns>true if the LOCAL dictionary contains an element <paramref name="item"/>; otherwise, false</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="item"/>.Key is null</exception>
-        /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRights.Read"/> flag</exception>
+        /// <param name="item">The item to locate in this <see cref="KNetCompactedReplicator{TKey, TValue}"/></param>
+        /// <returns><see langword="true"/> if this <see cref="KNetCompactedReplicator{TKey, TValue}"/> contains an element <paramref name="item"/>; otherwise, <see langword="false"/></returns>
+        /// <exception cref="ArgumentNullException"><paramref name="item"/>.Key is <see langword="null"/></exception>
+        /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Read"/> flag</exception>
         public bool Contains(KeyValuePair<TKey, TValue> item)
         {
             return (ValidateAndGetLocalDictionary() as IDictionary).Contains(item);
         }
 
         /// <summary>
-        /// Determines whether the LOCAL dictionary contains an element with the specified key
+        /// Determines whether this <see cref="KNetCompactedReplicator{TKey, TValue}"/> contains an element with the specified key
         /// </summary>
-        /// <param name="key">The key to locate in the LOCAL dictionary</param>
-        /// <returns>true if the LOCAL dictionary contains an element with <paramref name="key"/>; otherwise, false</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="key"/> is null</exception>
-        /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRights.Read"/> flag</exception>
+        /// <param name="key">The key to locate in this <see cref="KNetCompactedReplicator{TKey, TValue}"/></param>
+        /// <returns><see langword="true"/> if this <see cref="KNetCompactedReplicator{TKey, TValue}"/> contains an element with <paramref name="key"/>; otherwise, <see langword="false"/></returns>
+        /// <exception cref="ArgumentNullException"><paramref name="key"/> is <see langword="null"/></exception>
+        /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Read"/> flag</exception>
         public bool ContainsKey(TKey key)
         {
             return ValidateAndGetLocalDictionary().ContainsKey(key);
         }
 
         /// <summary>
-        /// Copies the elements of the LOCAL dictionary to an System.Array, starting at a particular System.Array index
+        /// Copies the elements of this <see cref="KNetCompactedReplicator{TKey, TValue}"/> to an <see cref="Array"/>, starting at a particular <see cref="Array"/> index
         /// </summary>
-        /// <param name="array">The one-dimensional System.Array that is the destination of the elements copied 
-        /// from the LOCAL dictionary. The System.Array must have zero-based indexing</param>
+        /// <param name="array">The one-dimensional <see cref="Array"/> that is the destination of the elements copied 
+        /// from this <see cref="KNetCompactedReplicator{TKey, TValue}"/>. The <see cref="Array"/> must have zero-based indexing</param>
         /// <param name="arrayIndex">The zero-based index in array at which copying begins</param>ù
         /// <exception cref="ArgumentNullException"><paramref name="array"/> is null</exception>
         /// <exception cref="ArgumentOutOfRangeException"><paramref name="arrayIndex"/> is less than zero</exception>
         /// <exception cref="ArgumentException"><paramref name="array"/> is multidimensional. 
-        /// -or- The number of elements in the source LOCAL dictionary is greater than the available space from <paramref name="arrayIndex"/> to the end of the destination <paramref name="array"/>. 
-        /// -or- The type of the source LOCAL dictionary cannot be cast automatically to the type of the destination <paramref name="array"/></exception>
-        /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRights.Read"/> flag</exception>
+        /// -or- The number of elements in the source <see cref="KNetCompactedReplicator{TKey, TValue}"/> is greater than the available space from <paramref name="arrayIndex"/> to the end of the destination <paramref name="array"/>. 
+        /// -or- The type of the source <see cref="KNetCompactedReplicator{TKey, TValue}"/> cannot be cast automatically to the type of the destination <paramref name="array"/></exception>
+        /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Read"/> flag</exception>
         public void CopyTo(KeyValuePair<TKey, TValue>[] array, int arrayIndex)
         {
             (ValidateAndGetLocalDictionary() as ICollection).CopyTo(array, arrayIndex);
         }
 
         /// <summary>
-        /// Returns an enumerator that iterates through the LOCAL dictionary
+        /// Returns an enumerator that iterates through this <see cref="KNetCompactedReplicator{TKey, TValue}"/>
         /// </summary>
-        /// <returns>An enumerator for the LOCAL dictionary</returns>
-        /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRights.Read"/> flag</exception>
+        /// <returns>An enumerator for this <see cref="KNetCompactedReplicator{TKey, TValue}"/></returns>
+        /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Read"/> flag</exception>
         public IEnumerator<KeyValuePair<TKey, TValue>> GetEnumerator()
         {
             return ValidateAndGetLocalDictionary().GetEnumerator();
         }
 
         /// <summary>
-        /// Removes the item with the specified <paramref name="key"/> from the REMOTE dictionary; 
-        /// consequently updates, in the way defined by the <see cref="KSharpDictionaryUpdateModes"/> provided at constructor time, the LOCAL dictionary
+        /// Removes the <paramref name="key"/> from this and others <see cref="KNetCompactedReplicator{TKey, TValue}"/> in the way defined by the <see cref="UpdateModes"/> provided
         /// </summary>
         /// <param name="key">The key of the element to remove</param>
-        /// <returns>true if the removal request is delivered to the REMOTE dictionary</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="key"/> is null</exception>
-        /// <exception cref="UpdateDeliveryException">The delivery of the update to the REMOTE dictionary fails</exception>
-        /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRights.Write"/> flag</exception>
+        /// <returns><see langword="true"/> if the removal request is delivered to the others <see cref="KNetCompactedReplicator{TKey, TValue}"/></returns>
+        /// <exception cref="ArgumentNullException"><paramref name="key"/> is <see langword="null"/></exception>
+        /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Write"/> flag</exception>
         public bool Remove(TKey key)
         {
             AddOrUpdate(key, null);
@@ -576,14 +611,12 @@ namespace MASES.KNet
         }
 
         /// <summary>
-        /// Removes the <paramref name="item"/> from the REMOTE dictionary; 
-        /// consequently updates, in the way defined by the <see cref="KSharpDictionaryUpdateModes"/> provided at constructor time, the LOCAL dictionary
+        /// Removes the <paramref name="item"/> from this and others <see cref="KNetCompactedReplicator{TKey, TValue}"/> in the way defined by the <see cref="UpdateModes"/> provided
         /// </summary>
         /// <param name="item">Item to be removed</param>
-        /// <returns>true if the removal request is delivered to the REMOTE dictionary</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="item"/>.Key is null</exception>
-        /// <exception cref="UpdateDeliveryException">The delivery of the update to the REMOTE dictionary fails</exception>
-        /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRights.Write"/> flag</exception>
+        /// <returns><see langword="true"/> if the removal request is delivered to the others <see cref="KNetCompactedReplicator{TKey, TValue}"/></returns>
+        /// <exception cref="ArgumentNullException"><paramref name="item"/>.Key is <see langword="null"/></exception>
+        /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Write"/> flag</exception>
         public bool Remove(KeyValuePair<TKey, TValue> item)
         {
             AddOrUpdate(item.Key, null);
@@ -592,14 +625,14 @@ namespace MASES.KNet
         }
 
         /// <summary>
-        /// Attempts to get the value associated with the specified <paramref name="key"/> from the LOCAL dictionary
+        /// Attempts to get the value associated with the specified <paramref name="key"/> from this <see cref="KNetCompactedReplicator{TKey, TValue}"/>
         /// </summary>
         /// <param name="key">The key of the value to get</param>
-        /// <param name="value">When this method returns, contains the object from the LOCAL dictionary 
+        /// <param name="value">When this method returns, contains the object from this <see cref="KNetCompactedReplicator{TKey, TValue}"/>
         /// that has the specified <paramref name="key"/>, or the default value of the type if the operation failed</param>
-        /// <returns>true if the <paramref name="key"/> was found in the LOCAL dictionary; otherwise, fals</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="key"/> is null</exception>
-        /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRights.Read"/> flag</exception>
+        /// <returns><see langword="true"/> if the <paramref name="key"/> was found in this <see cref="KNetCompactedReplicator{TKey, TValue}"/>; otherwise, <see langword="false"/></returns>
+        /// <exception cref="ArgumentNullException"><paramref name="key"/> is <see langword="null"/></exception>
+        /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Read"/> flag</exception>
         public bool TryGetValue(
             TKey key,
             out TValue value)
@@ -607,7 +640,7 @@ namespace MASES.KNet
             return ValidateAndGetLocalDictionary().TryGetValue(key, out value);
         }
 
-        /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRights.Read"/> flag</exception>
+        /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Read"/> flag</exception>
         IEnumerator IEnumerable.GetEnumerator()
         {
             return (ValidateAndGetLocalDictionary() as IEnumerable).GetEnumerator();

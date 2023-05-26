@@ -66,19 +66,33 @@ namespace MASES.KNet.Clients.Consumer
 
         public int SerializedValueSize => _record.SerializedValueSize;
 
+        bool _localKeyDes = false;
+        K _localKey = default;
         public K Key
         {
             get
             {
-                return _keyDeserializer.UseHeaders ? _keyDeserializer.DeserializeWithHeaders(Topic, Headers, _record.Key) : _keyDeserializer.Deserialize(Topic, _record.Key);
+                if (!_localKeyDes)
+                {
+                    _localKey = _keyDeserializer.UseHeaders ? _keyDeserializer.DeserializeWithHeaders(Topic, Headers, _record.Key) : _keyDeserializer.Deserialize(Topic, _record.Key);
+                    _localKeyDes = true;
+                }
+                return _localKey;
             }
         }
 
+        bool _localValueDes = false;
+        V _localValue = default;
         public V Value
         {
             get
             {
-                return _valueDeserializer.UseHeaders ? _valueDeserializer.DeserializeWithHeaders(Topic, Headers, _record.Value) : _valueDeserializer.Deserialize(Topic, _record.Value);
+                if (!_localValueDes)
+                {
+                    _localValue = _valueDeserializer.UseHeaders ? _valueDeserializer.DeserializeWithHeaders(Topic, Headers, _record.Value) : _valueDeserializer.Deserialize(Topic, _record.Value);
+                    _localValueDes = true;
+                }
+                return _localValue;
             }
         }
 

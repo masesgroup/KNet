@@ -73,6 +73,7 @@ namespace MASES.KNetTest
 
             _replicator = new KNetCompactedReplicator<string, TestType>()
             {
+                UpdateMode = KNetCompactedReplicator<string, TestType>.UpdateModeTypes.OnConsumeSync,
                 BootstrapServers = serverToUse,
                 StateName = "TestState",
                 ValueSerDes = new JsonSerDes<TestType>(),
@@ -81,17 +82,7 @@ namespace MASES.KNetTest
             _replicator.Start();
             _replicator.WaitForStateAssignment();
 
-            Thread threadProduce = new(ProduceSomething)
-            {
-                Name = "produce"
-            };
-            threadProduce.Start();
-
-            Thread threadConsume = new(ConsumeSomething)
-            {
-                Name = "consume"
-            };
-            threadConsume.Start();
+            _replicator["Test"] = new TestType(100);
 
             Console.CancelKeyPress += Console_CancelKeyPress;
             Console.WriteLine("Press Ctrl-C to exit");
