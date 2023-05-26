@@ -48,10 +48,10 @@ KNetSerDes<TestType> serializer = new KNetSerDes<TestType>((topic, type) => { re
 KNetSerDes<TestType> deserializer = new KNetSerDes<TestType>((topic, data) => { return new TestType(0); });
 ```
 
-Otherwise can use ready made classes like the following:
+Otherwise the user can use a ready made class like in the following snippet:
 
 ```c#
 KNetSerDes<TestType> serdes = new JsonSerDes<TestType>();
 ```
-which can be used in serialization and deserialization, and produce Json serialized data.
+A single `JsonSerDes` can be used in serialization and deserialization, and produce Json serialized data.
 
