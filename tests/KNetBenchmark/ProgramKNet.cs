@@ -21,6 +21,7 @@ using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Clients.Consumer;
 using MASES.KNet.Clients.Producer;
 using MASES.KNet.Common.Serialization;
+using MASES.KNet.Serialization;
 using Org.W3c.Dom.Css;
 using System;
 using System.Collections.Generic;
@@ -33,8 +34,8 @@ namespace MASES.KNet.Benchmark
     partial class Program
     {
         static IKNetProducer<long, byte[]> knetProducer = null;
-        static Serializer<long> knetKeySerializer = null;
-        static Serializer<byte[]> knetValueSerializer = null;
+        static KNetSerDes<long> knetKeySerializer = null;
+        static KNetSerDes<byte[]> knetValueSerializer = null;
 
         static IKNetProducer<long, byte[]> KNetProducer()
         {
@@ -54,21 +55,18 @@ namespace MASES.KNet.Benchmark
                                                         .WithKeySerializerClass("org.apache.kafka.common.serialization.LongSerializer")
                                                         .WithValueSerializerClass("org.apache.kafka.common.serialization.ByteArraySerializer")
                                                         .ToProperties();
-                if (UseSerdes)
-                {
-                    knetKeySerializer = new Serializer<long>(serializeWithHeadersFun: (topic, headers, data) =>
-                    {
-                        var key = BitConverter.GetBytes(data);
-                        return key;
-                    });
-                    knetValueSerializer = new Serializer<byte[]>(serializeWithHeadersFun: (topic, headers, data) =>
-                    {
-                        // var value = Encoding.Unicode.GetBytes(data);
-                        return data;
-                    });
-                }
 
-                knetProducer = UseSerdes ? new KNetProducer<long, byte[]>(props, knetKeySerializer, knetValueSerializer) : new KNetProducer<long, byte[]>(props);
+                knetKeySerializer = new KNetSerDes<long>(serializeWithHeadersFun: (topic, headers, data) =>
+                {
+                    var key = BitConverter.GetBytes(data);
+                    return key;
+                });
+                knetValueSerializer = new KNetSerDes<byte[]>(serializeWithHeadersFun: (topic, headers, data) =>
+                {
+                    // var value = Encoding.Unicode.GetBytes(data);
+                    return data;
+                });
+                knetProducer = new KNetProducer<long, byte[]>(props, knetKeySerializer, knetValueSerializer);
             }
             return knetProducer;
         }
@@ -126,7 +124,7 @@ namespace MASES.KNet.Benchmark
                                 byte[] newData = new byte[data.Length];
                                 Array.Copy(data, 0, newData, 0, data.Length);
                                 stopWatch.Start();
-                                swSendRecord.Start();   
+                                swSendRecord.Start();
                                 knetproducer.Send(topicName, i, newData);
                                 swSendRecord.Stop();
                             }
@@ -162,8 +160,8 @@ namespace MASES.KNet.Benchmark
             }
         }
 
-        static Deserializer<long> knetKeyDeserializer = null;
-        static Deserializer<byte[]> knetValueDeserializer = null;
+        static KNetSerDes<long> knetKeyDeserializer = null;
+        static KNetSerDes<byte[]> knetValueDeserializer = null;
         static IKNetConsumer<long, byte[]> knetConsumer = null;
 
         static IKNetConsumer<long, byte[]> KNetConsumer()
@@ -184,12 +182,12 @@ namespace MASES.KNet.Benchmark
                                                         .ToProperties();
                 if (UseSerdes)
                 {
-                    knetKeyDeserializer = new Deserializer<long>(deserializeFun: (topic, data) =>
+                    knetKeyDeserializer = new KNetSerDes<long>(deserializeFun: (topic, data) =>
                     {
                         var key = BitConverter.ToInt32(data, 0);
                         return key;
                     });
-                    knetValueDeserializer = new Deserializer<byte[]>(deserializeFun: (topic, data) =>
+                    knetValueDeserializer = new KNetSerDes<byte[]>(deserializeFun: (topic, data) =>
                     {
                         // var value = Encoding.Unicode.GetString(data);
                         return data;
@@ -350,32 +348,17 @@ namespace MASES.KNet.Benchmark
                         while (true)
                         {
                             var records = consumer.Poll(duration);
-                            if (UsePrefetch)
+                            foreach (var item in records)
                             {
-                                foreach (var item in records.WithPrefetch().WithConvert((o) => { return (o.Key, o.Value); }))
-                                {
-                                    roundTripTime.Add((double)(DateTime.Now.Ticks - item.Key) / (TimeSpan.TicksPerMillisecond / 1000));
+                                roundTripTime.Add((double)(DateTime.Now.Ticks - item.Key) / (TimeSpan.TicksPerMillisecond / 1000));
 
-                                    if (CheckOnConsume && !item.Value.SequenceEqual(data))
-                                    {
-                                        throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {item.Key}");
-                                    }
-                                    counter++;
-                                }
-                            }
-                            else
-                            {
-                                foreach (var item in records)
+                                if (CheckOnConsume && !item.Value.SequenceEqual(data))
                                 {
-                                    roundTripTime.Add((double)(DateTime.Now.Ticks - item.Key) / (TimeSpan.TicksPerMillisecond / 1000));
-
-                                    if (CheckOnConsume && !item.Value.SequenceEqual(data))
-                                    {
-                                        throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {item.Key}");
-                                    }
-                                    counter++;
+                                    throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {item.Key}");
                                 }
+                                counter++;
                             }
+
                             if (AlwaysCommit) consumer.CommitSync();
                             if (counter >= numpacket)
                             {
@@ -458,7 +441,7 @@ namespace MASES.KNet.Benchmark
                     Console.WriteLine($"KNET: Create {swCreateRecord.ElapsedMicroSeconds()} ({swCreateRecord.ElapsedMicroSeconds() / numpacket}) Send {swSendRecord.ElapsedMicroSeconds()} ({swSendRecord.ElapsedMicroSeconds() / numpacket}) -> {swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds()} -> BackTime {stopWatch.ElapsedMicroSeconds() - (swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds())}");
                 }
 
-                return  (totalExecution, roundTripTime);
+                return (totalExecution, roundTripTime);
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
             {

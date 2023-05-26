@@ -169,7 +169,7 @@
                 <version>2.9.1</version>
                 <configuration>
                     <links>
-                        <link>https://www.jcobridge.com/api-java_${jcobridgeVersion}</link>
+                        <link>https://www.jcobridge.com/api-java</link>
                     </links>
                     <quiet>true</quiet>
                     <source>8</source>

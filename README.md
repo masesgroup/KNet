@@ -57,6 +57,7 @@ This project adheres to the Contributor [Covenant code of conduct](CODE_OF_CONDU
 * [Connect SDK](src/net/Documentation/articles/connectSDK.md)
 * [KNet usage](src/net/Documentation/articles/usage.md)
 * [KNet APIs extensibility](src/net/Documentation/articles/API_extensibility.md)
+* [KNet Serializer/Deserializer](src/net/Documentation/articles/usageSerDes.md)
 * [KNet CLI usage](src/net/Documentation/articles/usageCLI.md)
 * [KNet Connect usage](src/net/Documentation/articles/usageConnect.md)
 * [KNet PowerShell usage](src/net/Documentation/articles/usagePS.md)
@@ -67,6 +68,7 @@ This project adheres to the Contributor [Covenant code of conduct](CODE_OF_CONDU
 
 * V1.4.4+: From version 1.4.4 there is a new project, named KNetPS, which permits to write PowerShell client scripts for an Apache Kafka cluster and many other things, [here full usage](src/net/Documentation/articles/usagePS.md).
 * V1.4.7+: From version 1.4.7 there is a new project, named KNetConnect, to execute Apache Kafka Connect related jobs, [here full usage](src/net/Documentation/articles/usageConnect.md).
+* V1.5.4+: From version 1.5.4 there are new packages dedicated to [KNet Serializer/Deserializer](src/net/Documentation/articles/usageSerDes.md)
 
 ---
 

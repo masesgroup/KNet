@@ -16,66 +16,214 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common.Serialization;
 using Java.Time;
 using Java.Util;
 using MASES.JCOBridge.C2JBridge;
 using System;
 using System.Collections.Concurrent;
+using MASES.KNet.Serialization;
+using MASES.KNet.Common.Header;
+using MASES.KNet.Common.Record;
+using System.Collections.Generic;
+using System.Collections;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace MASES.KNet.Clients.Consumer
 {
-    public class Message<K, V>
+    public class KNetConsumerRecord<K, V>
     {
-        readonly ConsumerRecord<K, V> record;
-        readonly KNetConsumerCallback<K, V> obj;
-        internal Message(KNetConsumerCallback<K, V> obj)
+        readonly IKNetDeserializer<K> _keyDeserializer;
+        readonly IKNetDeserializer<V> _valueDeserializer;
+        readonly ConsumerRecord<byte[], byte[]> _record;
+
+        public KNetConsumerRecord(ConsumerRecord<byte[], byte[]> record, IKNetDeserializer<K> keyDeserializer, IKNetDeserializer<V> valueDeserializer)
         {
-            this.obj = obj;
+            _record = record;
+            _keyDeserializer = keyDeserializer;
+            _valueDeserializer = valueDeserializer;
         }
-        internal Message(ConsumerRecord<K, V> record)
+
+        public string Topic => _record.Topic;
+
+        public int Partition => _record.Partition;
+
+        public Headers Headers => _record.Headers;
+
+        public object RawKey => _record.RawKey;
+
+        public object RawValue => _record.RawValue;
+
+        public long Offset => _record.Offset;
+
+        public System.DateTime DateTime => _record.DateTime;
+
+        public long Timestamp => _record.Timestamp;
+
+        public TimestampType TimestampType => _record.TimestampType;
+
+        public int SerializedKeySize => _record.SerializedKeySize;
+
+        public int SerializedValueSize => _record.SerializedValueSize;
+
+        bool _localKeyDes = false;
+        K _localKey = default;
+        public K Key
         {
-            this.record = record;
+            get
+            {
+                if (!_localKeyDes)
+                {
+                    _localKey = _keyDeserializer.UseHeaders ? _keyDeserializer.DeserializeWithHeaders(Topic, Headers, _record.Key) : _keyDeserializer.Deserialize(Topic, _record.Key);
+                    _localKeyDes = true;
+                }
+                return _localKey;
+            }
         }
 
-        public string Topic => record != null ? record.Topic : obj.BridgeInstance.Invoke<string>("getTopic");
+        bool _localValueDes = false;
+        V _localValue = default;
+        public V Value
+        {
+            get
+            {
+                if (!_localValueDes)
+                {
+                    _localValue = _valueDeserializer.UseHeaders ? _valueDeserializer.DeserializeWithHeaders(Topic, Headers, _record.Value) : _valueDeserializer.Deserialize(Topic, _record.Value);
+                    _localValueDes = true;
+                }
+                return _localValue;
+            }
+        }
 
-        public int Partition => record != null ? record.Partition : obj.BridgeInstance.Invoke<int>("getPartition");
-
-        public K Key => record != null ? record.Key : obj.BridgeInstance.Invoke<K>("getKey");
-
-        public V Value => record != null ? record.Value : obj.BridgeInstance.Invoke<V>("getValue");
+        public override string ToString()
+        {
+            return $"Topic: {Topic} - Partition {Partition} - Offset {Offset} - Key {Key} - Value {Value}";
+        }
     }
 
-    public interface IKNetConsumerCallback<K, V> : IJVMBridgeBase
+    class KNetConsumerRecordsEnumerator<K, V> : IEnumerator<KNetConsumerRecord<K, V>>, IAsyncEnumerator<KNetConsumerRecord<K, V>>
     {
-        void RecordReady(Message<K, V> message);
+        readonly IKNetDeserializer<K> _keyDeserializer;
+        readonly IKNetDeserializer<V> _valueDeserializer;
+        readonly CancellationToken _cancellationToken;
+        readonly ConsumerRecords<byte[], byte[]> _records;
+        IEnumerator<ConsumerRecord<byte[], byte[]>> _recordEnumerator;
+        IAsyncEnumerator<ConsumerRecord<byte[], byte[]>> _recordAsyncEnumerator;
+
+        public KNetConsumerRecordsEnumerator(ConsumerRecords<byte[], byte[]> records, IKNetDeserializer<K> keyDeserializer, IKNetDeserializer<V> valueDeserializer)
+        {
+            _records = records;
+            _recordEnumerator = _records.GetEnumerator();
+            _keyDeserializer = keyDeserializer;
+            _valueDeserializer = valueDeserializer;
+        }
+
+        public KNetConsumerRecordsEnumerator(ConsumerRecords<byte[], byte[]> records, IKNetDeserializer<K> keyDeserializer, IKNetDeserializer<V> valueDeserializer, CancellationToken cancellationToken)
+        {
+            _records = records;
+            _recordAsyncEnumerator = _records.GetAsyncEnumerator(cancellationToken);
+            _keyDeserializer = keyDeserializer;
+            _valueDeserializer = valueDeserializer;
+            _cancellationToken = cancellationToken;
+        }
+
+        KNetConsumerRecord<K, V> IAsyncEnumerator<KNetConsumerRecord<K, V>>.Current => new KNetConsumerRecord<K, V>(_recordAsyncEnumerator.Current, _keyDeserializer, _valueDeserializer);
+
+        KNetConsumerRecord<K, V> IEnumerator<KNetConsumerRecord<K, V>>.Current => new KNetConsumerRecord<K, V>(_recordEnumerator.Current, _keyDeserializer, _valueDeserializer);
+
+        object IEnumerator.Current => (_recordEnumerator as IEnumerator)?.Current;
+
+        public void Dispose()
+        {
+
+        }
+
+        public ValueTask DisposeAsync()
+        {
+            return _recordAsyncEnumerator.DisposeAsync();
+        }
+
+        public bool MoveNext()
+        {
+            return _recordEnumerator.MoveNext();
+        }
+
+        public ValueTask<bool> MoveNextAsync()
+        {
+            return _recordAsyncEnumerator.MoveNextAsync();
+        }
+
+        public void Reset()
+        {
+            _recordEnumerator = _records.GetEnumerator();
+        }
     }
 
-    public class KNetConsumerCallback<K, V> : JVMBridgeListener, IKNetConsumerCallback<K, V>
+    public class KNetConsumerRecords<K, V> : IEnumerable<KNetConsumerRecord<K, V>>, IAsyncEnumerable<KNetConsumerRecord<K, V>>
     {
+        readonly IKNetDeserializer<K> _keyDeserializer;
+        readonly IKNetDeserializer<V> _valueDeserializer;
+        readonly ConsumerRecords<byte[], byte[]> _records;
+
+        public KNetConsumerRecords(ConsumerRecords<byte[], byte[]> records, IKNetDeserializer<K> keyDeserializer, IKNetDeserializer<V> valueDeserializer)
+        {
+            _records = records;
+            _keyDeserializer = keyDeserializer;
+            _valueDeserializer = valueDeserializer;
+        }
+
+        public IEnumerator<KNetConsumerRecord<K, V>> GetEnumerator()
+        {
+            return new KNetConsumerRecordsEnumerator<K, V>(_records, _keyDeserializer, _valueDeserializer);
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return new KNetConsumerRecordsEnumerator<K, V>(_records, _keyDeserializer, _valueDeserializer);
+        }
+
+        public IAsyncEnumerator<KNetConsumerRecord<K, V>> GetAsyncEnumerator(CancellationToken cancellationToken = default)
+        {
+            return new KNetConsumerRecordsEnumerator<K, V>(_records, _keyDeserializer, _valueDeserializer);
+        }
+    }
+
+    interface IKNetConsumerCallback<K, V> : IJVMBridgeBase
+    {
+        void RecordReady(KNetConsumerRecord<K, V> message);
+    }
+
+    class KNetConsumerCallback<K, V> : JVMBridgeListener, IKNetConsumerCallback<K, V>
+    {
+        readonly IKNetDeserializer<K> _keyDeserializer;
+        readonly IKNetDeserializer<V> _valueDeserializer;
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-         public sealed override string BridgeClassName => "org.mases.knet.clients.consumer.KNetConsumerCallback";
+        public sealed override string BridgeClassName => "org.mases.knet.clients.consumer.KNetConsumerCallback";
 
-        readonly Action<Message<K, V>> recordReadyFunction = null;
-        public virtual Action<Message<K, V>> OnRecordReady { get { return recordReadyFunction; } }
-        public KNetConsumerCallback(Action<Message<K, V>> recordReady = null)
+        readonly Action<KNetConsumerRecord<K, V>> recordReadyFunction = null;
+        public virtual Action<KNetConsumerRecord<K, V>> OnRecordReady { get { return recordReadyFunction; } }
+        public KNetConsumerCallback(Action<KNetConsumerRecord<K, V>> recordReady, IKNetDeserializer<K> keyDeserializer, IKNetDeserializer<V> valueDeserializer)
         {
             if (recordReady != null) recordReadyFunction = recordReady;
             else recordReadyFunction = RecordReady;
+
+            _keyDeserializer = keyDeserializer;
+            _valueDeserializer = valueDeserializer;
 
             AddEventHandler("recordReady", new EventHandler<CLRListenerEventArgs<CLREventData>>(OnRecordReadyEventHandler));
         }
 
         void OnRecordReadyEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
         {
-            OnRecordReady(new Message<K, V>(this));
+            var record = this.BridgeInstance.Invoke<ConsumerRecord<byte[], byte[]>>("getRecord");
+            OnRecordReady(new KNetConsumerRecord<K, V>(record, _keyDeserializer, _valueDeserializer));
         }
 
-        public virtual void RecordReady(Message<K, V> message) { }
+        public virtual void RecordReady(KNetConsumerRecord<K, V> message) { }
     }
 
-    public interface IKNetConsumer<K, V> : IConsumer<K, V>
+    public interface IKNetConsumer<K, V> : IConsumer<byte[], byte[]>
     {
         bool IsCompleting { get; }
 
@@ -83,34 +231,39 @@ namespace MASES.KNet.Clients.Consumer
 
         int WaitingMessages { get; }
 
-        void SetCallback(Action<Message<K, V>> cb);
+        void SetCallback(Action<KNetConsumerRecord<K, V>> cb);
+
+        new KNetConsumerRecords<K, V> Poll(long timeoutMs);
+
+        new KNetConsumerRecords<K, V> Poll(Duration timeout);
 
         void ConsumeAsync(long timeoutMs);
 
-        void Consume(long timeoutMs, Action<Message<K, V>> callback);
+        void Consume(long timeoutMs, Action<KNetConsumerRecord<K, V>> callback);
     }
 
-    public class KNetConsumer<K, V> : KafkaConsumer<K, V>, IKNetConsumer<K, V>
+    public class KNetConsumer<K, V> : KafkaConsumer<byte[], byte[]>, IKNetConsumer<K, V>
     {
+        readonly bool autoCreateSerDes = false;
         bool threadRunning = false;
         long dequeing = 0;
         readonly System.Threading.Thread consumeThread = null;
         readonly System.Threading.ManualResetEvent threadExited = null;
-        readonly ConcurrentQueue<ConsumerRecords<K, V>> consumedRecords = null;
+        readonly ConcurrentQueue<KNetConsumerRecords<K, V>> consumedRecords = null;
         readonly KNetConsumerCallback<K, V> consumerCallback = null;
+        readonly IKNetDeserializer<K> _keyDeserializer;
+        readonly IKNetDeserializer<V> _valueDeserializer;
 
         public override string BridgeClassName => "org.mases.knet.clients.consumer.KNetConsumer";
 
-        public KNetConsumer()
-        {
-        }
-
         public KNetConsumer(Properties props, bool useJVMCallback = false)
-            : base(props)
+            : this(props, new KNetSerDes<K>(), new KNetSerDes<V>(), useJVMCallback)
         {
+            autoCreateSerDes = true;
+
             if (useJVMCallback)
             {
-                consumerCallback = new KNetConsumerCallback<K, V>(CallbackMessage);
+                consumerCallback = new KNetConsumerCallback<K, V>(CallbackMessage, _keyDeserializer, _valueDeserializer);
                 IExecute("setCallback", consumerCallback);
             }
             else
@@ -123,12 +276,15 @@ namespace MASES.KNet.Clients.Consumer
             }
         }
 
-        public KNetConsumer(Properties props, Deserializer<K> keyDeserializer, Deserializer<V> valueDeserializer, bool useJVMCallback = false)
-            : base(props, keyDeserializer, valueDeserializer)
+        public KNetConsumer(Properties props, IKNetDeserializer<K> keyDeserializer, IKNetDeserializer<V> valueDeserializer, bool useJVMCallback = false)
+            : base(CheckProperties(props), keyDeserializer.KafkaDeserializer, valueDeserializer.KafkaDeserializer)
         {
+            _keyDeserializer = keyDeserializer;
+            _valueDeserializer = valueDeserializer;
+
             if (useJVMCallback)
             {
-                consumerCallback = new KNetConsumerCallback<K, V>(CallbackMessage);
+                consumerCallback = new KNetConsumerCallback<K, V>(CallbackMessage, _keyDeserializer, _valueDeserializer);
                 IExecute("setCallback", consumerCallback);
             }
             else
@@ -141,9 +297,47 @@ namespace MASES.KNet.Clients.Consumer
             }
         }
 
-        Action<Message<K, V>> actionCallback = null;
+        static Properties CheckProperties(Properties props)
+        {
+            if (!props.ContainsKey(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG))
+            {
+                props.Put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.ByteArrayDeserializer");
+            }
+            else throw new InvalidOperationException($"KNetConsumer auto manages configuration property {ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG}, remove from configuration.");
 
-        void CallbackMessage(Message<K, V> message)
+            if (!props.ContainsKey(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG))
+            {
+                props.Put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.ByteArrayDeserializer");
+            }
+            else throw new InvalidOperationException($"KNetConsumer auto manages configuration property {ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG}, remove from configuration.");
+
+            return props;
+        }
+
+        ~KNetConsumer()
+        {
+            if (autoCreateSerDes)
+            {
+                _keyDeserializer?.Dispose();
+                _valueDeserializer?.Dispose();
+            }
+        }
+
+        public new KNetConsumerRecords<K, V> Poll(long timeoutMs)
+        {
+            var records = IExecute<ConsumerRecords<byte[], byte[]>>("poll", timeoutMs);
+            return new KNetConsumerRecords<K, V>(records, _keyDeserializer, _valueDeserializer);
+        }
+
+        public new KNetConsumerRecords<K, V> Poll(Duration timeout)
+        {
+            var records = IExecute<ConsumerRecords<byte[], byte[]>>("poll", timeout);
+            return new KNetConsumerRecords<K, V>(records, _keyDeserializer, _valueDeserializer);
+        }
+
+        Action<KNetConsumerRecord<K, V>> actionCallback = null;
+
+        void CallbackMessage(KNetConsumerRecord<K, V> message)
         {
             actionCallback?.Invoke(message);
         }
@@ -165,7 +359,7 @@ namespace MASES.KNet.Clients.Consumer
             }
         }
 
-        public void SetCallback(Action<Message<K, V>> cb)
+        public void SetCallback(Action<KNetConsumerRecord<K, V>> cb)
         {
             actionCallback = cb;
         }
@@ -176,14 +370,14 @@ namespace MASES.KNet.Clients.Consumer
             {
                 while (threadRunning)
                 {
-                    if (consumedRecords.TryDequeue(out ConsumerRecords<K, V> records))
+                    if (consumedRecords.TryDequeue(out KNetConsumerRecords<K, V> records))
                     {
                         System.Threading.Interlocked.Increment(ref dequeing);
                         try
                         {
                             foreach (var item in records)
                             {
-                                actionCallback?.Invoke(new Message<K, V>(item));
+                                actionCallback?.Invoke(item);
                             }
                         }
                         catch { }
@@ -224,7 +418,7 @@ namespace MASES.KNet.Clients.Consumer
             }
         }
 
-        public void Consume(long timeoutMs, Action<Message<K, V>> callback)
+        public void Consume(long timeoutMs, Action<KNetConsumerRecord<K, V>> callback)
         {
             Duration duration = TimeSpan.FromMilliseconds(timeoutMs);
             if (consumerCallback == null) throw new ArgumentException("Cannot be used since constructor was called with useJVMCallback set to false.");

@@ -16,6 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
+using Java.Nio;
 using Java.Util;
 
 namespace MASES.KNet.Common.Serialization
@@ -31,5 +32,7 @@ namespace MASES.KNet.Common.Serialization
         {
 
         }
+
+        public override byte[] Serialize(string topic, List<Inner> data) => IExecute<byte[]>("serialize", topic, data);
     }
 }

@@ -19,12 +19,18 @@
 using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Clients.Producer;
 using MASES.KNet.Common.Serialization;
+using MASES.KNet.Serialization;
 using System;
 
 namespace MASES.KNet.Extensions
 {
     public static class ProducerConfigBuilderExtensions
     {
+        public static bool CanApplyBasicSerializer<T>(this ProducerConfigBuilder builder)
+        {
+            return KNetSerialization.IsInternalManaged<T>();
+        }
+
         public static ProducerConfigBuilder WithKeySerializerClass<T>(this ProducerConfigBuilder builder)
         {
             return WithKeySerializerClass(builder, typeof(T));
@@ -32,6 +38,8 @@ namespace MASES.KNet.Extensions
 
         public static ProducerConfigBuilder WithKeySerializerClass(this ProducerConfigBuilder builder, System.Type type)
         {
+            if (!KNetSerialization.IsInternalManaged(type)) throw new InvalidOperationException($"Cannot manage serialization with type {type}");
+
             if (type == typeof(byte[]))
             {
                 return builder.WithKeySerializerClass(JVMBridgeBase.ClassNameOf<ByteArraySerializer>());
@@ -80,9 +88,43 @@ namespace MASES.KNet.Extensions
 
         public static ProducerConfigBuilder WithValueSerializerClass(this ProducerConfigBuilder builder, System.Type type)
         {
-            if (type == typeof(string))
+            if (!KNetSerialization.IsInternalManaged(type)) throw new InvalidOperationException($"Cannot manage serialization with type {type}");
+
+            if (type == typeof(byte[]))
+            {
+                return builder.WithValueSerializerClass(JVMBridgeBase.ClassNameOf<ByteArraySerializer>());
+            }
+            else if (type == typeof(double))
+            {
+                return builder.WithValueSerializerClass(JVMBridgeBase.ClassNameOf<DoubleSerializer>());
+            }
+            else if (type == typeof(float))
+            {
+                return builder.WithValueSerializerClass(JVMBridgeBase.ClassNameOf<FloatSerializer>());
+            }
+            else if (type == typeof(int))
+            {
+                return builder.WithValueSerializerClass(JVMBridgeBase.ClassNameOf<IntegerSerializer>());
+            }
+            else if (type == typeof(long))
+            {
+                return builder.WithValueSerializerClass(JVMBridgeBase.ClassNameOf<LongSerializer>());
+            }
+            else if (type == typeof(short))
+            {
+                return builder.WithValueSerializerClass(JVMBridgeBase.ClassNameOf<ShortSerializer>());
+            }
+            else if (type == typeof(string))
             {
                 return builder.WithValueSerializerClass(JVMBridgeBase.ClassNameOf<StringSerializer>());
+            }
+            else if (type == typeof(Guid))
+            {
+                return builder.WithValueSerializerClass(JVMBridgeBase.ClassNameOf<UUIDSerializer>());
+            }
+            else if (type == typeof(void))
+            {
+                return builder.WithValueSerializerClass(JVMBridgeBase.ClassNameOf<VoidSerializer>());
             }
             // add other
 

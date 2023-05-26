@@ -16,11 +16,26 @@
 *  Refer to LICENSE for more information.
 */
 
+using Java.Nio;
+using MASES.JCOBridge.C2JBridge.JVMInterop;
+
 namespace MASES.KNet.Common.Header
 {
     public class Header : JCOBridge.C2JBridge.JVMBridgeBase<Header>
     {
         public override string BridgeClassName => "org.apache.kafka.common.header.Header";
+
+        public static Header Create(string key, byte[] value)
+        {
+            var obj = JCOBridge.C2JBridge.JCOBridge.Global.JVM.New("org.apache.kafka.common.header.internals.RecordHeader", key, value) as IJavaObject;
+            return Wraps<Header>(obj);
+        }
+
+        public static Header Create(ByteBuffer keyBuffer, ByteBuffer valueBuffer)
+        {
+            var obj = JCOBridge.C2JBridge.JCOBridge.Global.JVM.New("org.apache.kafka.common.header.internals.RecordHeader", keyBuffer, valueBuffer) as IJavaObject;
+            return Wraps<Header>(obj);
+        }
 
         public string Key => IExecute<string>("key");
 

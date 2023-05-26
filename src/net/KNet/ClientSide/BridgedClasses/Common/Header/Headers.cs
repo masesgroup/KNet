@@ -17,12 +17,31 @@
 */
 
 using Java.Lang;
+using MASES.JCOBridge.C2JBridge.JVMInterop;
 
 namespace MASES.KNet.Common.Header
 {
     public class Headers : Iterable<Header>
     {
         public override string BridgeClassName => "org.apache.kafka.common.header.Headers";
+
+        public static Headers Create()
+        {
+            var obj = JCOBridge.C2JBridge.JCOBridge.Global.JVM.New("org.apache.kafka.common.header.internals.RecordHeaders") as IJavaObject;
+            return Wraps<Headers>(obj);
+        }
+
+        public static Headers Create(Header[] headers)
+        {
+            var obj = JCOBridge.C2JBridge.JCOBridge.Global.JVM.New("org.apache.kafka.common.header.internals.RecordHeaders", headers) as IJavaObject;
+            return Wraps<Headers>(obj);
+        }
+
+        public static Headers Create(Iterable<Header> headers)
+        {
+            var obj = JCOBridge.C2JBridge.JCOBridge.Global.JVM.New("org.apache.kafka.common.header.internals.RecordHeaders", headers) as IJavaObject;
+            return Wraps<Headers>(obj);
+        }
 
         public Headers Add(Header header)
         {
@@ -51,7 +70,7 @@ namespace MASES.KNet.Common.Header
 
         public Header[] ToArray()
         {
-            return IExecute<Headers>("toArray").ToArray();
+            return IExecuteArray<Header>("toArray");
         }
     }
 }

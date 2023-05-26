@@ -117,7 +117,7 @@ namespace MASES.KNet.Common.Serialization
         /// <param name="topic">topic associated with the data</param>
         /// <param name="data">serialized bytes; may be null; implementations are recommended to handle null by returning a value or null rather than throwing an exception</param>
         /// <returns>The deserialized <typeparamref name="E"/></returns>
-        public virtual E Deserialize(string topic, byte[] data) { return default(E); }
+        public virtual E Deserialize(string topic, byte[] data) { return default; }
         /// <summary>
         /// Executes the Deserializer action in the CLR
         /// </summary>
@@ -125,6 +125,6 @@ namespace MASES.KNet.Common.Serialization
         /// <param name="headers"><see cref="Headers"/> associated with the record; may be empty.</param>
         /// <param name="data">serialized bytes; may be null; implementations are recommended to handle null by returning a value or null rather than throwing an exception</param>
         /// <returns>The deserialized <typeparamref name="E"/></returns>
-        public virtual E DeserializeWithHeaders(string topic, Headers headers, byte[] data) { return OnDeserialize(topic, data); }
+        public virtual E DeserializeWithHeaders(string topic, Headers headers, byte[] data) { return default; }
     }
 }

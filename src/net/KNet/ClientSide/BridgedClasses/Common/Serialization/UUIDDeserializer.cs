@@ -29,5 +29,7 @@ namespace MASES.KNet.Common.Serialization
         {
 
         }
+
+        public override Uuid Deserialize(string topic, byte[] data) => IExecute<Uuid>("deserialize", topic, data);
     }
 }

@@ -59,10 +59,49 @@ namespace MASES.KNet.Extensions
 
             try
             {
-                Future<RecordMetadata> result;
                 if (action != null)
                 {
                     cb = new Callback(action);
+                }
+                Produce(producer, record, cb);
+            }
+            catch (ExecutionException e)
+            {
+                throw e.InnerException;
+            }
+            finally
+            {
+                cb?.Dispose();
+            }
+        }
+
+        public static void Produce<K, V>(this IProducer<K, V> producer, string topic, K key, V value, Callback cb = null)
+        {
+            Produce(producer, new ProducerRecord<K, V>(topic, key, value), cb);
+        }
+
+        public static void Produce<K, V>(this IProducer<K, V> producer, string topic, int partition, K key, V value, Callback cb = null)
+        {
+            Produce(producer, new ProducerRecord<K, V>(topic, partition, key, value), cb);
+        }
+
+        public static void Produce<K, V>(this IProducer<K, V> producer, string topic, int partition, long timestamp, K key, V value, Callback cb = null)
+        {
+            Produce(producer, new ProducerRecord<K, V>(topic, partition, timestamp, key, value), cb);
+        }
+
+        public static void Produce<K, V>(this IProducer<K, V> producer, string topic, int partition, DateTime timestamp, K key, V value, Callback cb = null)
+        {
+            Produce(producer, new ProducerRecord<K, V>(topic, partition, timestamp, key, value), cb);
+        }
+
+        public static void Produce<K, V>(this IProducer<K, V> producer, ProducerRecord<K, V> record, Callback cb = null)
+        {
+            try
+            {
+                Future<RecordMetadata> result;
+                if (cb != null)
+                {
                     result = producer.Send(record, cb);
                 }
                 else

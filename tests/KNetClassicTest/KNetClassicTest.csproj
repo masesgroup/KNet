@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<Import Project="..\Common\Common.props" />
+	<PropertyGroup>
+		<AssemblyName>KNetClassicTest</AssemblyName>
+		<OutputType>Exe</OutputType>
+		<RootNamespace>MASES.KNetClassicTest</RootNamespace>
+		<Title>KNetClassicTest - a test tool for KNet Classic</Title>
+		<Description>KNetClassicTest - a test tool for KNet Classic</Description>
+	</PropertyGroup>
+	<ItemGroup>
+	  <Compile Include="..\Common\SharedKNetCore.cs" Link="SharedKNetCore.cs" />
+	</ItemGroup>
+</Project>

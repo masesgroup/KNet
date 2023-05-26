@@ -16,6 +16,8 @@
 *  Refer to LICENSE for more information.
 */
 
+using Java.Nio;
+
 namespace MASES.KNet.Common.Serialization
 {
     public class LongSerializer : Serializer<long>
@@ -29,5 +31,7 @@ namespace MASES.KNet.Common.Serialization
         {
 
         }
+
+        public override byte[] Serialize(string topic, long data) => IExecute<byte[]>("serialize", topic, data);
     }
 }

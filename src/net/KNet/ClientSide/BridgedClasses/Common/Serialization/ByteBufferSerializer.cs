@@ -31,5 +31,7 @@ namespace MASES.KNet.Common.Serialization
         {
 
         }
+
+        public override byte[] Serialize(string topic, ByteBuffer data) => IExecute<byte[]>("serialize", topic, data);
     }
 }
