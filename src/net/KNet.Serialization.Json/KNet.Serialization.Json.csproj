@@ -18,6 +18,12 @@
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 	</ItemGroup>
 	<ItemGroup>
+	  <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
+	    <PrivateAssets>all</PrivateAssets>
+	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+	</ItemGroup>
+	<ItemGroup>
 	  <ProjectReference Include="..\KNet\KNet.csproj" />
 	</ItemGroup>
 </Project>
