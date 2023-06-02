@@ -16,13 +16,22 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace Kafka.Admin
+using MASES.KNet.Connect;
+
+namespace MASES.KNet.Connect
 {
     /// <summary>
-    /// Class managing LogDirsCommand
+    /// Class managing KNetConnectStandalone
     /// </summary>
-    public partial class LogDirsCommand
+    public class KNetConnectStandalone : MASES.JCOBridge.C2JBridge.JVMBridgeMain<KNetConnectStandalone>
     {
-
+        /// <summary>
+        /// Initialize a new <see cref="KNetConnectStandalone"/>
+        /// </summary>
+        public KNetConnectStandalone()
+            : base("org.mases.knet.connect.ConnectStandalone")
+        {
+            KNetConnectProxy.Register();
+        }
     }
 }

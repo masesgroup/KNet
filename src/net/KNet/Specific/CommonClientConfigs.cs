@@ -20,7 +20,7 @@ using Org.Apache.Kafka.Common.Metrics;
 using Java.Util;
 using MASES.KNet;
 
-namespace Org.Apache.Kafka.Clients
+namespace MASES.KNet
 {
     public abstract class CommonClientConfigsBuilder<T> : GenericConfigBuilder<T>
         where T : CommonClientConfigsBuilder<T>, new()

@@ -16,13 +16,22 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace Kafka.Admin
+using MASES.KNet.Connect;
+
+namespace MASES.KNet.Connect
 {
     /// <summary>
-    /// Class managing AclCommand
+    /// Class managing KNetConnectDistributed
     /// </summary>
-    public partial class AclCommand
+    public class KNetConnectDistributed : MASES.JCOBridge.C2JBridge.JVMBridgeMain<KNetConnectDistributed>
     {
-
+        /// <summary>
+        /// Initialize a new <see cref="KNetConnectDistributed"/>
+        /// </summary>
+        public KNetConnectDistributed()
+            : base("org.mases.knet.connect.ConnectDistributed")
+        {
+            KNetConnectProxy.Register();
+        }
     }
 }

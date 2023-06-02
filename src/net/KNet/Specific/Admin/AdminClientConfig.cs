@@ -16,22 +16,20 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Connect;
+using Org.Apache.Kafka.Common.Config;
+using Java.Util;
 
-namespace Org.Apache.Kafka.Connect.Cli
+namespace MASES.KNet.Admin
 {
-    /// <summary>
-    /// Class managing KNetConnectDistributed
-    /// </summary>
-    public class KNetConnectDistributed : MASES.JCOBridge.C2JBridge.JVMBridgeMain<KNetConnectDistributed>
+    public class AdminClientConfigBuilder : CommonClientConfigsBuilder<AdminClientConfigBuilder>
     {
-        /// <summary>
-        /// Initialize a new <see cref="KNetConnectDistributed"/>
-        /// </summary>
-        public KNetConnectDistributed()
-            : base("org.mases.knet.connect.ConnectDistributed")
+        public string SecurityProviders { get { return GetProperty<string>(AdminClientConfig.SECURITY_PROVIDERS_CONFIG); } set { SetProperty(AdminClientConfig.SECURITY_PROVIDERS_CONFIG, value); } }
+
+        public AdminClientConfigBuilder WithSecurityProviders(string securityProviders)
         {
-            KNetConnectProxy.Register();
+            var clone = Clone();
+            clone.SecurityProviders = securityProviders;
+            return clone;
         }
     }
 }
