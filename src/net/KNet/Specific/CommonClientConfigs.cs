@@ -18,7 +18,7 @@
 
 using Org.Apache.Kafka.Common.Metrics;
 using Java.Util;
-using MASES.KNet;
+using Org.Apache.Kafka.Clients;
 
 namespace MASES.KNet
 {

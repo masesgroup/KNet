@@ -20,10 +20,11 @@ using Org.Apache.Kafka.Common;
 using Org.Apache.Kafka.Common.Config;
 using Org.Apache.Kafka.Common.Metrics;
 using Java.Util;
+using Org.Apache.Kafka.Clients.Consumer;
 
-namespace Org.Apache.Kafka.Clients.Consumer
+namespace MASES.KNet.Consumer
 {
-    public partial class ConsumerConfig
+    public class ConsumerConfigBuilder : CommonClientConfigsBuilder<ConsumerConfigBuilder>
     {
         public enum AutoOffsetReset
         {
@@ -31,10 +32,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             EARLIEST,
             LATEST
         }
-   }
 
-    public class ConsumerConfigBuilder : CommonClientConfigsBuilder<ConsumerConfigBuilder>
-    {
         public int MaxPollRecords { get { return GetProperty<int>(ConsumerConfig.MAX_POLL_RECORDS_CONFIG); } set { SetProperty(ConsumerConfig.MAX_POLL_RECORDS_CONFIG, value); } }
 
         public ConsumerConfigBuilder WithMaxPollRecords(int maxPollRecords)

@@ -18,10 +18,11 @@
 
 using Org.Apache.Kafka.Common.Config;
 using Java.Util;
+using Org.Apache.Kafka.Clients.Producer;
 
-namespace Org.Apache.Kafka.Clients.Producer
+namespace MASES.KNet.Producer
 {
-    public partial class ProducerConfig
+    public class ProducerConfigBuilder : CommonClientConfigsBuilder<ProducerConfigBuilder>
     {
         public enum Acks
         {
@@ -39,10 +40,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             lz4,
             zstd
         }
-    }
 
-    public class ProducerConfigBuilder : CommonClientConfigsBuilder<ProducerConfigBuilder>
-    {
         public long MetadataMaxIdle { get { return GetProperty<long>(ProducerConfig.METADATA_MAX_IDLE_CONFIG); } set { SetProperty(ProducerConfig.METADATA_MAX_IDLE_CONFIG, value); } }
 
         public ProducerConfigBuilder WithMetadataMaxIdle(long metadataMaxIdle)
