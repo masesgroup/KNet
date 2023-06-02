@@ -75,18 +75,22 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ApiVersionsRequest.html#hasUnsupportedRequestVersion()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ApiVersionsRequest.html#hasUnsupportedRequestVersion()"/>
         /// </summary>
-        public bool HasUnsupportedRequestVersion
+
+        /// <returns><see cref="bool"/></returns>
+        public bool HasUnsupportedRequestVersion()
         {
-            get { return IExecute<bool>("hasUnsupportedRequestVersion"); }
+            return IExecute<bool>("hasUnsupportedRequestVersion");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ApiVersionsRequest.html#isValid()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ApiVersionsRequest.html#isValid()"/>
         /// </summary>
-        public bool IsValid
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsValid()
         {
-            get { return IExecute<bool>("isValid"); }
+            return IExecute<bool>("isValid");
         }
 
         #endregion

@@ -65,18 +65,22 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindows.html#gracePeriodMs()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindows.html#gracePeriodMs()"/>
         /// </summary>
-        public long GracePeriodMs
+
+        /// <returns><see cref="long"/></returns>
+        public long GracePeriodMs()
         {
-            get { return IExecute<long>("gracePeriodMs"); }
+            return IExecute<long>("gracePeriodMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindows.html#inactivityGap()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindows.html#inactivityGap()"/>
         /// </summary>
-        public long InactivityGap
+
+        /// <returns><see cref="long"/></returns>
+        public long InactivityGap()
         {
-            get { return IExecute<long>("inactivityGap"); }
+            return IExecute<long>("inactivityGap");
         }
 
         #endregion

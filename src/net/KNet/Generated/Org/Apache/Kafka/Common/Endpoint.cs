@@ -57,32 +57,40 @@ namespace Org.Apache.Kafka.Common
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Endpoint.html#host()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Endpoint.html#port()"/>
         /// </summary>
-        public string Host
+
+        /// <returns><see cref="int"/></returns>
+        public int Port()
         {
-            get { return IExecute<string>("host"); }
+            return IExecute<int>("port");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Endpoint.html#listenerName()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Endpoint.html#host()"/>
         /// </summary>
-        public Java.Util.Optional<string> ListenerName
+
+        /// <returns><see cref="string"/></returns>
+        public string Host()
         {
-            get { return IExecute<Java.Util.Optional<string>>("listenerName"); }
+            return IExecute<string>("host");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Endpoint.html#port()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Endpoint.html#listenerName()"/>
         /// </summary>
-        public int Port
+
+        /// <returns><see cref="Java.Util.Optional"/></returns>
+        public Java.Util.Optional<string> ListenerName()
         {
-            get { return IExecute<int>("port"); }
+            return IExecute<Java.Util.Optional<string>>("listenerName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Endpoint.html#securityProtocol()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Endpoint.html#securityProtocol()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol SecurityProtocol
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol"/></returns>
+        public Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol SecurityProtocol()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol>("securityProtocol"); }
+            return IExecute<Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol>("securityProtocol");
         }
 
         #endregion

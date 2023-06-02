@@ -78,20 +78,6 @@ namespace Org.Apache.Kafka.Connect.Runtime
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Worker.html#configTransformer()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Connect.Runtime.WorkerConfigTransformer ConfigTransformer
-        {
-            get { return IExecute<Org.Apache.Kafka.Connect.Runtime.WorkerConfigTransformer>("configTransformer"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Worker.html#connectorNames()"/> 
-        /// </summary>
-        public Java.Util.Set<string> ConnectorNames
-        {
-            get { return IExecute<Java.Util.Set<string>>("connectorNames"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Worker.html#getInternalKeyConverter()"/> 
         /// </summary>
         public Org.Apache.Kafka.Connect.Storage.Converter InternalKeyConverter
@@ -106,39 +92,11 @@ namespace Org.Apache.Kafka.Connect.Runtime
             get { return IExecute<Org.Apache.Kafka.Connect.Storage.Converter>("getInternalValueConverter"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Worker.html#isTopicCreationEnabled()"/> 
-        /// </summary>
-        public bool IsTopicCreationEnabled
-        {
-            get { return IExecute<bool>("isTopicCreationEnabled"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Worker.html#metrics()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Connect.Runtime.ConnectMetrics Metrics
-        {
-            get { return IExecute<Org.Apache.Kafka.Connect.Runtime.ConnectMetrics>("metrics"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Worker.html#getPlugins()"/> 
         /// </summary>
         public Org.Apache.Kafka.Connect.Runtime.Isolation.Plugins Plugins
         {
             get { return IExecute<Org.Apache.Kafka.Connect.Runtime.Isolation.Plugins>("getPlugins"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Worker.html#taskIds()"/> 
-        /// </summary>
-        public Java.Util.Set<Org.Apache.Kafka.Connect.Util.ConnectorTaskId> TaskIds
-        {
-            get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Connect.Util.ConnectorTaskId>>("taskIds"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Worker.html#workerId()"/> 
-        /// </summary>
-        public string WorkerId
-        {
-            get { return IExecute<string>("workerId"); }
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Worker.html#isRunning(java.lang.String)"/>
@@ -157,6 +115,15 @@ namespace Org.Apache.Kafka.Connect.Runtime
         public bool IsSinkConnector(string arg0)
         {
             return IExecute<bool>("isSinkConnector", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Worker.html#isTopicCreationEnabled()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsTopicCreationEnabled()
+        {
+            return IExecute<bool>("isTopicCreationEnabled");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Worker.html#startExactlyOnceSourceTask(org.apache.kafka.connect.util.ConnectorTaskId,org.apache.kafka.connect.storage.ClusterConfigState,java.util.Map,java.util.Map,org.apache.kafka.connect.runtime.TaskStatus.Listener,org.apache.kafka.connect.runtime.TargetState,java.lang.Runnable,java.lang.Runnable)"/>
@@ -203,6 +170,15 @@ namespace Org.Apache.Kafka.Connect.Runtime
             return IExecute<bool>("startSourceTask", arg0, arg1, arg2, arg3, arg4, arg5);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Worker.html#workerId()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string WorkerId()
+        {
+            return IExecute<string>("workerId");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Worker.html#connectorTaskConfigs(java.lang.String,org.apache.kafka.connect.runtime.ConnectorConfig)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -211,6 +187,24 @@ namespace Org.Apache.Kafka.Connect.Runtime
         public Java.Util.List<Java.Util.Map<string, string>> ConnectorTaskConfigs(string arg0, Org.Apache.Kafka.Connect.Runtime.ConnectorConfig arg1)
         {
             return IExecute<Java.Util.List<Java.Util.Map<string, string>>>("connectorTaskConfigs", arg0, arg1);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Worker.html#connectorNames()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<string> ConnectorNames()
+        {
+            return IExecute<Java.Util.Set<string>>("connectorNames");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Worker.html#taskIds()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Connect.Util.ConnectorTaskId> TaskIds()
+        {
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Connect.Util.ConnectorTaskId>>("taskIds");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Worker.html#fenceZombies(java.lang.String,int,java.util.Map)"/>
@@ -222,6 +216,24 @@ namespace Org.Apache.Kafka.Connect.Runtime
         public Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void> FenceZombies(string arg0, int arg1, Java.Util.Map<string, string> arg2)
         {
             return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>>("fenceZombies", arg0, arg1, arg2);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Worker.html#metrics()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.ConnectMetrics"/></returns>
+        public Org.Apache.Kafka.Connect.Runtime.ConnectMetrics Metrics()
+        {
+            return IExecute<Org.Apache.Kafka.Connect.Runtime.ConnectMetrics>("metrics");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Worker.html#configTransformer()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.WorkerConfigTransformer"/></returns>
+        public Org.Apache.Kafka.Connect.Runtime.WorkerConfigTransformer ConfigTransformer()
+        {
+            return IExecute<Org.Apache.Kafka.Connect.Runtime.WorkerConfigTransformer>("configTransformer");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Worker.html#setTargetState(java.lang.String,org.apache.kafka.connect.runtime.TargetState,org.apache.kafka.connect.util.Callback)"/>

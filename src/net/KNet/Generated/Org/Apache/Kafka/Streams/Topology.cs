@@ -54,13 +54,6 @@ namespace Org.Apache.Kafka.Streams
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#describe()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Streams.TopologyDescription Describe
-        {
-            get { return IExecute<Org.Apache.Kafka.Streams.TopologyDescription>("describe"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,java.lang.String,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer,java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -430,6 +423,15 @@ namespace Org.Apache.Kafka.Streams
         {
             if (arg1.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Topology>("connectProcessorAndStateStores", arg0); else return IExecute<Org.Apache.Kafka.Streams.Topology>("connectProcessorAndStateStores", arg0, arg1);
         }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#describe()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.TopologyDescription"/></returns>
+        public Org.Apache.Kafka.Streams.TopologyDescription Describe()
+        {
+            return IExecute<Org.Apache.Kafka.Streams.TopologyDescription>("describe");
+        }
 
         #endregion
 
@@ -459,13 +461,6 @@ namespace Org.Apache.Kafka.Streams
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.AutoOffsetReset.html#values()"/> 
-            /// </summary>
-            public static Org.Apache.Kafka.Streams.Topology.AutoOffsetReset[] Values
-            {
-                get { return SExecuteArray<Org.Apache.Kafka.Streams.Topology.AutoOffsetReset>(LocalBridgeClazz, "values"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.AutoOffsetReset.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
@@ -473,6 +468,15 @@ namespace Org.Apache.Kafka.Streams
             public static Org.Apache.Kafka.Streams.Topology.AutoOffsetReset ValueOf(string arg0)
             {
                 return SExecute<Org.Apache.Kafka.Streams.Topology.AutoOffsetReset>(LocalBridgeClazz, "valueOf", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.AutoOffsetReset.html#values()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></returns>
+            public static Org.Apache.Kafka.Streams.Topology.AutoOffsetReset[] Values()
+            {
+                return SExecuteArray<Org.Apache.Kafka.Streams.Topology.AutoOffsetReset>(LocalBridgeClazz, "values");
             }
 
             #endregion

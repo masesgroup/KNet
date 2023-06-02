@@ -87,53 +87,22 @@ namespace Org.Apache.Kafka.Common.Message
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.html#apiKey()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.html#userData()"/>
         /// </summary>
-        public short ApiKey
+
+        /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
+        public Java.Nio.ByteBuffer UserData()
         {
-            get { return IExecute<short>("apiKey"); }
+            return IExecute<Java.Nio.ByteBuffer>("userData");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.html#assignedPartitions()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.html#unknownTaggedFields()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Message.ConsumerProtocolAssignment.TopicPartitionCollection AssignedPartitions
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Message.ConsumerProtocolAssignment.TopicPartitionCollection>("assignedPartitions"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.html#duplicate()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.Message Duplicate
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.html#highestSupportedVersion()"/> 
-        /// </summary>
-        public short HighestSupportedVersion
-        {
-            get { return IExecute<short>("highestSupportedVersion"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.html#lowestSupportedVersion()"/> 
-        /// </summary>
-        public short LowestSupportedVersion
-        {
-            get { return IExecute<short>("lowestSupportedVersion"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.html#unknownTaggedFields()"/> 
-        /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields
-        {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.html#userData()"/> 
-        /// </summary>
-        public Java.Nio.ByteBuffer UserData
-        {
-            get { return IExecute<Java.Nio.ByteBuffer>("userData"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.html#setAssignedPartitions(org.apache.kafka.common.message.ConsumerProtocolAssignment.TopicPartitionCollection)"/>
@@ -152,6 +121,51 @@ namespace Org.Apache.Kafka.Common.Message
         public Org.Apache.Kafka.Common.Message.ConsumerProtocolAssignment SetUserData(Java.Nio.ByteBuffer arg0)
         {
             return IExecute<Org.Apache.Kafka.Common.Message.ConsumerProtocolAssignment>("setUserData", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.html#assignedPartitions()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Message.ConsumerProtocolAssignment.TopicPartitionCollection"/></returns>
+        public Org.Apache.Kafka.Common.Message.ConsumerProtocolAssignment.TopicPartitionCollection AssignedPartitions()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Message.ConsumerProtocolAssignment.TopicPartitionCollection>("assignedPartitions");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.html#duplicate()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.Message Duplicate()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.html#apiKey()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short ApiKey()
+        {
+            return IExecute<short>("apiKey");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.html#highestSupportedVersion()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short HighestSupportedVersion()
+        {
+            return IExecute<short>("highestSupportedVersion");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.html#lowestSupportedVersion()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short LowestSupportedVersion()
+        {
+            return IExecute<short>("lowestSupportedVersion");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>
@@ -248,62 +262,6 @@ namespace Org.Apache.Kafka.Common.Message
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.TopicPartition.html#duplicate()"/> 
-            /// </summary>
-            public Org.Apache.Kafka.Common.Protocol.Message Duplicate
-            {
-                get { return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.TopicPartition.html#highestSupportedVersion()"/> 
-            /// </summary>
-            public short HighestSupportedVersion
-            {
-                get { return IExecute<short>("highestSupportedVersion"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.TopicPartition.html#lowestSupportedVersion()"/> 
-            /// </summary>
-            public short LowestSupportedVersion
-            {
-                get { return IExecute<short>("lowestSupportedVersion"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.TopicPartition.html#next()"/> 
-            /// </summary>
-            public int Next
-            {
-                get { return IExecute<int>("next"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.TopicPartition.html#partitions()"/> 
-            /// </summary>
-            public Java.Util.List<int?> Partitions
-            {
-                get { return IExecute<Java.Util.List<int?>>("partitions"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.TopicPartition.html#prev()"/> 
-            /// </summary>
-            public int Prev
-            {
-                get { return IExecute<int>("prev"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.TopicPartition.html#topic()"/> 
-            /// </summary>
-            public string Topic
-            {
-                get { return IExecute<string>("topic"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.TopicPartition.html#unknownTaggedFields()"/> 
-            /// </summary>
-            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields
-            {
-                get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.TopicPartition.html#elementKeysAreEqual(java.lang.Object)"/>
             /// </summary>
             /// <param name="arg0"><see cref="object"/></param>
@@ -311,6 +269,51 @@ namespace Org.Apache.Kafka.Common.Message
             public bool ElementKeysAreEqual(object arg0)
             {
                 return IExecute<bool>("elementKeysAreEqual", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.TopicPartition.html#next()"/>
+            /// </summary>
+
+            /// <returns><see cref="int"/></returns>
+            public int Next()
+            {
+                return IExecute<int>("next");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.TopicPartition.html#prev()"/>
+            /// </summary>
+
+            /// <returns><see cref="int"/></returns>
+            public int Prev()
+            {
+                return IExecute<int>("prev");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.TopicPartition.html#topic()"/>
+            /// </summary>
+
+            /// <returns><see cref="string"/></returns>
+            public string Topic()
+            {
+                return IExecute<string>("topic");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.TopicPartition.html#partitions()"/>
+            /// </summary>
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<int?> Partitions()
+            {
+                return IExecute<Java.Util.List<int?>>("partitions");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.TopicPartition.html#unknownTaggedFields()"/>
+            /// </summary>
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields()
+            {
+                return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.TopicPartition.html#setPartitions(java.util.List)"/>
@@ -329,6 +332,33 @@ namespace Org.Apache.Kafka.Common.Message
             public Org.Apache.Kafka.Common.Message.ConsumerProtocolAssignment.TopicPartition SetTopic(string arg0)
             {
                 return IExecute<Org.Apache.Kafka.Common.Message.ConsumerProtocolAssignment.TopicPartition>("setTopic", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.TopicPartition.html#duplicate()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
+            public Org.Apache.Kafka.Common.Protocol.Message Duplicate()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.TopicPartition.html#highestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short HighestSupportedVersion()
+            {
+                return IExecute<short>("highestSupportedVersion");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.TopicPartition.html#lowestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short LowestSupportedVersion()
+            {
+                return IExecute<short>("lowestSupportedVersion");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.TopicPartition.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>
@@ -402,7 +432,7 @@ namespace Org.Apache.Kafka.Common.Message
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.TopicPartitionCollection.html#%3Cinit%3E(java.util.Iterator)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Iterator"/></param>
-            public TopicPartitionCollection(Java.Util.Iterator arg0)
+            public TopicPartitionCollection(Java.Util.Iterator<Org.Apache.Kafka.Common.Message.ConsumerProtocolAssignment.TopicPartition> arg0)
                 : base(arg0)
             {
             }
@@ -423,13 +453,6 @@ namespace Org.Apache.Kafka.Common.Message
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.TopicPartitionCollection.html#duplicate()"/> 
-            /// </summary>
-            public Org.Apache.Kafka.Common.Message.ConsumerProtocolAssignment.TopicPartitionCollection Duplicate
-            {
-                get { return IExecute<Org.Apache.Kafka.Common.Message.ConsumerProtocolAssignment.TopicPartitionCollection>("duplicate"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.TopicPartitionCollection.html#findAll(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
@@ -446,6 +469,15 @@ namespace Org.Apache.Kafka.Common.Message
             public Org.Apache.Kafka.Common.Message.ConsumerProtocolAssignment.TopicPartition Find(string arg0)
             {
                 return IExecute<Org.Apache.Kafka.Common.Message.ConsumerProtocolAssignment.TopicPartition>("find", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.TopicPartitionCollection.html#duplicate()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Message.ConsumerProtocolAssignment.TopicPartitionCollection"/></returns>
+            public Org.Apache.Kafka.Common.Message.ConsumerProtocolAssignment.TopicPartitionCollection Duplicate()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Message.ConsumerProtocolAssignment.TopicPartitionCollection>("duplicate");
             }
 
             #endregion

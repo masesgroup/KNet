@@ -67,34 +67,6 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/Record.html#headers()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Header.Headers Headers
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Header.Headers>("headers"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/Record.html#key()"/> 
-        /// </summary>
-        public object Key
-        {
-            get { return IExecute("key"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/Record.html#timestamp()"/> 
-        /// </summary>
-        public long Timestamp
-        {
-            get { return IExecute<long>("timestamp"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/Record.html#value()"/> 
-        /// </summary>
-        public object Value
-        {
-            get { return IExecute("value"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/Record.html#withKey(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
@@ -113,6 +85,33 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
             return IExecute<Org.Apache.Kafka.Streams.Processor.Api.Record>("withValue", arg0);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/Record.html#key()"/>
+        /// </summary>
+
+        /// <returns><see cref="object"/></returns>
+        public object Key()
+        {
+            return IExecute("key");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/Record.html#timestamp()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long Timestamp()
+        {
+            return IExecute<long>("timestamp");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/Record.html#headers()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Header.Headers"/></returns>
+        public Org.Apache.Kafka.Common.Header.Headers Headers()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Header.Headers>("headers");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/Record.html#withHeaders(org.apache.kafka.common.header.Headers)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Header.Headers"/></param>
@@ -129,6 +128,15 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         public Org.Apache.Kafka.Streams.Processor.Api.Record WithTimestamp(long arg0)
         {
             return IExecute<Org.Apache.Kafka.Streams.Processor.Api.Record>("withTimestamp", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/Record.html#value()"/>
+        /// </summary>
+
+        /// <returns><see cref="object"/></returns>
+        public object Value()
+        {
+            return IExecute("value");
         }
 
         #endregion
@@ -187,34 +195,6 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/Record.html#headers()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Header.Headers Headers
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Header.Headers>("headers"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/Record.html#key()"/> 
-        /// </summary>
-        public K Key
-        {
-            get { return IExecute<K>("key"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/Record.html#timestamp()"/> 
-        /// </summary>
-        public long Timestamp
-        {
-            get { return IExecute<long>("timestamp"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/Record.html#value()"/> 
-        /// </summary>
-        public V Value
-        {
-            get { return IExecute<V>("value"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/Record.html#withKey(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="NewK"/></param>
@@ -235,6 +215,33 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
             return IExecute<Org.Apache.Kafka.Streams.Processor.Api.Record<K, NewV>>("withValue", arg0);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/Record.html#key()"/>
+        /// </summary>
+
+        /// <returns><typeparamref name="K"/></returns>
+        public K Key()
+        {
+            return IExecute<K>("key");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/Record.html#timestamp()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long Timestamp()
+        {
+            return IExecute<long>("timestamp");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/Record.html#headers()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Header.Headers"/></returns>
+        public Org.Apache.Kafka.Common.Header.Headers Headers()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Header.Headers>("headers");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/Record.html#withHeaders(org.apache.kafka.common.header.Headers)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Header.Headers"/></param>
@@ -251,6 +258,15 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         public Org.Apache.Kafka.Streams.Processor.Api.Record<K, V> WithTimestamp(long arg0)
         {
             return IExecute<Org.Apache.Kafka.Streams.Processor.Api.Record<K, V>>("withTimestamp", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/Record.html#value()"/>
+        /// </summary>
+
+        /// <returns><typeparamref name="V"/></returns>
+        public V Value()
+        {
+            return IExecute<V>("value");
         }
 
         #endregion

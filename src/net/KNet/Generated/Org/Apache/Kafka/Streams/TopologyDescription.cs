@@ -46,18 +46,22 @@ namespace Org.Apache.Kafka.Streams
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.html#globalStores()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.html#globalStores()"/>
         /// </summary>
-        public Java.Util.Set<Org.Apache.Kafka.Streams.TopologyDescription.GlobalStore> GlobalStores
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Streams.TopologyDescription.GlobalStore> GlobalStores()
         {
-            get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Streams.TopologyDescription.GlobalStore>>("globalStores"); }
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Streams.TopologyDescription.GlobalStore>>("globalStores");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.html#subtopologies()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.html#subtopologies()"/>
         /// </summary>
-        public Java.Util.Set<Org.Apache.Kafka.Streams.TopologyDescription.Subtopology> Subtopologies
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Streams.TopologyDescription.Subtopology> Subtopologies()
         {
-            get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Streams.TopologyDescription.Subtopology>>("subtopologies"); }
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Streams.TopologyDescription.Subtopology>>("subtopologies");
         }
 
         #endregion
@@ -84,11 +88,13 @@ namespace Org.Apache.Kafka.Streams
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.GlobalStore.html#id()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.GlobalStore.html#id()"/>
             /// </summary>
-            public int Id
+
+            /// <returns><see cref="int"/></returns>
+            public int Id()
             {
-                get { return IExecute<int>("id"); }
+                return IExecute<int>("id");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.GlobalStore.html#processor()"/>
@@ -140,25 +146,31 @@ namespace Org.Apache.Kafka.Streams
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.Node.html#name()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.Node.html#name()"/>
             /// </summary>
-            public string Name
+
+            /// <returns><see cref="string"/></returns>
+            public string Name()
             {
-                get { return IExecute<string>("name"); }
+                return IExecute<string>("name");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.Node.html#predecessors()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.Node.html#predecessors()"/>
             /// </summary>
-            public Java.Util.Set<Org.Apache.Kafka.Streams.TopologyDescription.Node> Predecessors
+
+            /// <returns><see cref="Java.Util.Set"/></returns>
+            public Java.Util.Set<Org.Apache.Kafka.Streams.TopologyDescription.Node> Predecessors()
             {
-                get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Streams.TopologyDescription.Node>>("predecessors"); }
+                return IExecute<Java.Util.Set<Org.Apache.Kafka.Streams.TopologyDescription.Node>>("predecessors");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.Node.html#successors()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.Node.html#successors()"/>
             /// </summary>
-            public Java.Util.Set<Org.Apache.Kafka.Streams.TopologyDescription.Node> Successors
+
+            /// <returns><see cref="Java.Util.Set"/></returns>
+            public Java.Util.Set<Org.Apache.Kafka.Streams.TopologyDescription.Node> Successors()
             {
-                get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Streams.TopologyDescription.Node>>("successors"); }
+                return IExecute<Java.Util.Set<Org.Apache.Kafka.Streams.TopologyDescription.Node>>("successors");
             }
 
             #endregion
@@ -192,11 +204,13 @@ namespace Org.Apache.Kafka.Streams
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.Processor.html#stores()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.Processor.html#stores()"/>
             /// </summary>
-            public Java.Util.Set<string> Stores
+
+            /// <returns><see cref="Java.Util.Set"/></returns>
+            public Java.Util.Set<string> Stores()
             {
-                get { return IExecute<Java.Util.Set<string>>("stores"); }
+                return IExecute<Java.Util.Set<string>>("stores");
             }
 
             #endregion
@@ -230,18 +244,22 @@ namespace Org.Apache.Kafka.Streams
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.Sink.html#topic()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.Sink.html#topic()"/>
             /// </summary>
-            public string Topic
+
+            /// <returns><see cref="string"/></returns>
+            public string Topic()
             {
-                get { return IExecute<string>("topic"); }
+                return IExecute<string>("topic");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.Sink.html#topicNameExtractor()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.Sink.html#topicNameExtractor()"/>
             /// </summary>
-            public Org.Apache.Kafka.Streams.Processor.TopicNameExtractor TopicNameExtractor
+
+            /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.TopicNameExtractor"/></returns>
+            public Org.Apache.Kafka.Streams.Processor.TopicNameExtractor TopicNameExtractor()
             {
-                get { return IExecute<Org.Apache.Kafka.Streams.Processor.TopicNameExtractor>("topicNameExtractor"); }
+                return IExecute<Org.Apache.Kafka.Streams.Processor.TopicNameExtractor>("topicNameExtractor");
             }
 
             #endregion
@@ -275,18 +293,22 @@ namespace Org.Apache.Kafka.Streams
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.Source.html#topicPattern()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.Source.html#topicPattern()"/>
             /// </summary>
-            public Java.Util.Regex.Pattern TopicPattern
+
+            /// <returns><see cref="Java.Util.Regex.Pattern"/></returns>
+            public Java.Util.Regex.Pattern TopicPattern()
             {
-                get { return IExecute<Java.Util.Regex.Pattern>("topicPattern"); }
+                return IExecute<Java.Util.Regex.Pattern>("topicPattern");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.Source.html#topicSet()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.Source.html#topicSet()"/>
             /// </summary>
-            public Java.Util.Set<string> TopicSet
+
+            /// <returns><see cref="Java.Util.Set"/></returns>
+            public Java.Util.Set<string> TopicSet()
             {
-                get { return IExecute<Java.Util.Set<string>>("topicSet"); }
+                return IExecute<Java.Util.Set<string>>("topicSet");
             }
 
             #endregion
@@ -320,18 +342,22 @@ namespace Org.Apache.Kafka.Streams
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.Subtopology.html#id()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.Subtopology.html#id()"/>
             /// </summary>
-            public int Id
+
+            /// <returns><see cref="int"/></returns>
+            public int Id()
             {
-                get { return IExecute<int>("id"); }
+                return IExecute<int>("id");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.Subtopology.html#nodes()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.Subtopology.html#nodes()"/>
             /// </summary>
-            public Java.Util.Set<Org.Apache.Kafka.Streams.TopologyDescription.Node> Nodes
+
+            /// <returns><see cref="Java.Util.Set"/></returns>
+            public Java.Util.Set<Org.Apache.Kafka.Streams.TopologyDescription.Node> Nodes()
             {
-                get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Streams.TopologyDescription.Node>>("nodes"); }
+                return IExecute<Java.Util.Set<Org.Apache.Kafka.Streams.TopologyDescription.Node>>("nodes");
             }
 
             #endregion

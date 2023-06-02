@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Connect.Sink
         /// <param name="arg7"><see cref="long"/></param>
         /// <param name="arg8"><see cref="Org.Apache.Kafka.Common.Record.TimestampType"/></param>
         /// <param name="arg9"><see cref="Java.Lang.Iterable"/></param>
-        public SinkRecord(string arg0, int arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, long arg6, long? arg7, Org.Apache.Kafka.Common.Record.TimestampType arg8, Java.Lang.Iterable arg9)
+        public SinkRecord(string arg0, int arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, long arg6, long? arg7, Org.Apache.Kafka.Common.Record.TimestampType arg8, Java.Lang.Iterable<Org.Apache.Kafka.Connect.Header.Header> arg9)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)
         {
         }
@@ -93,18 +93,22 @@ namespace Org.Apache.Kafka.Connect.Sink
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/sink/SinkRecord.html#kafkaOffset()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/sink/SinkRecord.html#kafkaOffset()"/>
         /// </summary>
-        public long KafkaOffset
+
+        /// <returns><see cref="long"/></returns>
+        public long KafkaOffset()
         {
-            get { return IExecute<long>("kafkaOffset"); }
+            return IExecute<long>("kafkaOffset");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/sink/SinkRecord.html#timestampType()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/sink/SinkRecord.html#timestampType()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Record.TimestampType TimestampType
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Record.TimestampType"/></returns>
+        public Org.Apache.Kafka.Common.Record.TimestampType TimestampType()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Record.TimestampType>("timestampType"); }
+            return IExecute<Org.Apache.Kafka.Common.Record.TimestampType>("timestampType");
         }
 
         #endregion

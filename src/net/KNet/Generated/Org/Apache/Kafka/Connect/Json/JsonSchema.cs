@@ -41,16 +41,6 @@ namespace Org.Apache.Kafka.Connect.Json
         #endregion
 
         #region Static methods
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonSchema.html#envelope(com.fasterxml.jackson.databind.JsonNode,com.fasterxml.jackson.databind.JsonNode)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></param>
-        /// <param name="arg1"><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></param>
-        /// <returns><see cref="Com.Fasterxml.Jackson.Databind.Node.ObjectNode"/></returns>
-        public static Com.Fasterxml.Jackson.Databind.Node.ObjectNode EnvelopeMethod(Com.Fasterxml.Jackson.Databind.JsonNode arg0, Com.Fasterxml.Jackson.Databind.JsonNode arg1)
-        {
-            return SExecute<Com.Fasterxml.Jackson.Databind.Node.ObjectNode>(LocalBridgeClazz, "envelope", arg0, arg1);
-        }
 
         #endregion
 

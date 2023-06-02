@@ -35,7 +35,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="long"/></param>
         /// <param name="arg2"><see cref="Java.Util.Optional"/></param>
-        public OffsetAndTimestamp(long arg0, long arg1, Java.Util.Optional arg2)
+        public OffsetAndTimestamp(long arg0, long arg1, Java.Util.Optional<int?> arg2)
             : base(arg0, arg1, arg2)
         {
         }
@@ -65,25 +65,31 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetAndTimestamp.html#leaderEpoch()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetAndTimestamp.html#leaderEpoch()"/>
         /// </summary>
-        public Java.Util.Optional<int?> LeaderEpoch
+
+        /// <returns><see cref="Java.Util.Optional"/></returns>
+        public Java.Util.Optional<int?> LeaderEpoch()
         {
-            get { return IExecute<Java.Util.Optional<int?>>("leaderEpoch"); }
+            return IExecute<Java.Util.Optional<int?>>("leaderEpoch");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetAndTimestamp.html#offset()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetAndTimestamp.html#offset()"/>
         /// </summary>
-        public long Offset
+
+        /// <returns><see cref="long"/></returns>
+        public long Offset()
         {
-            get { return IExecute<long>("offset"); }
+            return IExecute<long>("offset");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetAndTimestamp.html#timestamp()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetAndTimestamp.html#timestamp()"/>
         /// </summary>
-        public long Timestamp
+
+        /// <returns><see cref="long"/></returns>
+        public long Timestamp()
         {
-            get { return IExecute<long>("timestamp"); }
+            return IExecute<long>("timestamp");
         }
 
         #endregion

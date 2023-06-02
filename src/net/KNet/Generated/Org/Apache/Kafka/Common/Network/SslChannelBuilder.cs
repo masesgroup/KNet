@@ -65,18 +65,13 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslChannelBuilder.html#listenerName()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslChannelBuilder.html#reconfigurableConfigs()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Network.ListenerName ListenerName
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<string> ReconfigurableConfigs()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Network.ListenerName>("listenerName"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslChannelBuilder.html#reconfigurableConfigs()"/> 
-        /// </summary>
-        public Java.Util.Set<string> ReconfigurableConfigs
-        {
-            get { return IExecute<Java.Util.Set<string>>("reconfigurableConfigs"); }
+            return IExecute<Java.Util.Set<string>>("reconfigurableConfigs");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslChannelBuilder.html#buildChannel(java.lang.String,java.nio.channels.SelectionKey,int,org.apache.kafka.common.memory.MemoryPool,org.apache.kafka.common.network.ChannelMetadataRegistry)"/>
@@ -91,6 +86,15 @@ namespace Org.Apache.Kafka.Common.Network
         public Org.Apache.Kafka.Common.Network.KafkaChannel BuildChannel(string arg0, Java.Nio.Channels.SelectionKey arg1, int arg2, Org.Apache.Kafka.Common.Memory.MemoryPool arg3, Org.Apache.Kafka.Common.Network.ChannelMetadataRegistry arg4)
         {
             return IExecute<Org.Apache.Kafka.Common.Network.KafkaChannel>("buildChannel", arg0, arg1, arg2, arg3, arg4);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslChannelBuilder.html#listenerName()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Network.ListenerName"/></returns>
+        public Org.Apache.Kafka.Common.Network.ListenerName ListenerName()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Network.ListenerName>("listenerName");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslChannelBuilder.html#close()"/>

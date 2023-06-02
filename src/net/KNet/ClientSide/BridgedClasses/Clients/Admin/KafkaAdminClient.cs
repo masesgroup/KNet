@@ -27,10 +27,8 @@ using Java.Util;
 
 namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class KafkaAdminClient : JVMBridgeBase<KafkaAdminClient>, IAdmin
+    public partial class KafkaAdminClient : IAdmin
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.KafkaAdminClient";
-
         public Map<MetricName, Metric> Metrics => IExecute<Map<MetricName, Metric>>("metrics");
 
         public static KafkaAdminClient Create(Properties props)

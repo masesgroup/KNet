@@ -41,37 +41,6 @@ namespace Org.Apache.Kafka.Common.Message
         #endregion
 
         #region Static methods
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeProducersResponseDataJsonConverter.html#write(org.apache.kafka.common.message.DescribeProducersResponseData,short,boolean)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.DescribeProducersResponseData"/></param>
-        /// <param name="arg1"><see cref="short"/></param>
-        /// <param name="arg2"><see cref="bool"/></param>
-        /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-        public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.DescribeProducersResponseData arg0, short arg1, bool arg2)
-        {
-            return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1, arg2);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeProducersResponseDataJsonConverter.html#write(org.apache.kafka.common.message.DescribeProducersResponseData,short)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.DescribeProducersResponseData"/></param>
-        /// <param name="arg1"><see cref="short"/></param>
-        /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-        public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.DescribeProducersResponseData arg0, short arg1)
-        {
-            return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeProducersResponseDataJsonConverter.html#read(com.fasterxml.jackson.databind.JsonNode,short)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></param>
-        /// <param name="arg1"><see cref="short"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Common.Message.DescribeProducersResponseData"/></returns>
-        public static Org.Apache.Kafka.Common.Message.DescribeProducersResponseData Read(Com.Fasterxml.Jackson.Databind.JsonNode arg0, short arg1)
-        {
-            return SExecute<Org.Apache.Kafka.Common.Message.DescribeProducersResponseData>(LocalBridgeClazz, "read", arg0, arg1);
-        }
 
         #endregion
 
@@ -96,37 +65,6 @@ namespace Org.Apache.Kafka.Common.Message
             #endregion
 
             #region Static methods
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeProducersResponseDataJsonConverter.PartitionResponseJsonConverter.html#write(org.apache.kafka.common.message.DescribeProducersResponseData.PartitionResponse,short,boolean)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.DescribeProducersResponseData.PartitionResponse"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <param name="arg2"><see cref="bool"/></param>
-            /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-            public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.DescribeProducersResponseData.PartitionResponse arg0, short arg1, bool arg2)
-            {
-                return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1, arg2);
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeProducersResponseDataJsonConverter.PartitionResponseJsonConverter.html#write(org.apache.kafka.common.message.DescribeProducersResponseData.PartitionResponse,short)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.DescribeProducersResponseData.PartitionResponse"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-            public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.DescribeProducersResponseData.PartitionResponse arg0, short arg1)
-            {
-                return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1);
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeProducersResponseDataJsonConverter.PartitionResponseJsonConverter.html#read(com.fasterxml.jackson.databind.JsonNode,short)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <returns><see cref="Org.Apache.Kafka.Common.Message.DescribeProducersResponseData.PartitionResponse"/></returns>
-            public static Org.Apache.Kafka.Common.Message.DescribeProducersResponseData.PartitionResponse Read(Com.Fasterxml.Jackson.Databind.JsonNode arg0, short arg1)
-            {
-                return SExecute<Org.Apache.Kafka.Common.Message.DescribeProducersResponseData.PartitionResponse>(LocalBridgeClazz, "read", arg0, arg1);
-            }
 
             #endregion
 
@@ -158,37 +96,6 @@ namespace Org.Apache.Kafka.Common.Message
             #endregion
 
             #region Static methods
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeProducersResponseDataJsonConverter.ProducerStateJsonConverter.html#write(org.apache.kafka.common.message.DescribeProducersResponseData.ProducerState,short,boolean)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.DescribeProducersResponseData.ProducerState"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <param name="arg2"><see cref="bool"/></param>
-            /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-            public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.DescribeProducersResponseData.ProducerState arg0, short arg1, bool arg2)
-            {
-                return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1, arg2);
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeProducersResponseDataJsonConverter.ProducerStateJsonConverter.html#write(org.apache.kafka.common.message.DescribeProducersResponseData.ProducerState,short)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.DescribeProducersResponseData.ProducerState"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-            public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.DescribeProducersResponseData.ProducerState arg0, short arg1)
-            {
-                return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1);
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeProducersResponseDataJsonConverter.ProducerStateJsonConverter.html#read(com.fasterxml.jackson.databind.JsonNode,short)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <returns><see cref="Org.Apache.Kafka.Common.Message.DescribeProducersResponseData.ProducerState"/></returns>
-            public static Org.Apache.Kafka.Common.Message.DescribeProducersResponseData.ProducerState Read(Com.Fasterxml.Jackson.Databind.JsonNode arg0, short arg1)
-            {
-                return SExecute<Org.Apache.Kafka.Common.Message.DescribeProducersResponseData.ProducerState>(LocalBridgeClazz, "read", arg0, arg1);
-            }
 
             #endregion
 
@@ -220,37 +127,6 @@ namespace Org.Apache.Kafka.Common.Message
             #endregion
 
             #region Static methods
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeProducersResponseDataJsonConverter.TopicResponseJsonConverter.html#write(org.apache.kafka.common.message.DescribeProducersResponseData.TopicResponse,short,boolean)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.DescribeProducersResponseData.TopicResponse"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <param name="arg2"><see cref="bool"/></param>
-            /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-            public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.DescribeProducersResponseData.TopicResponse arg0, short arg1, bool arg2)
-            {
-                return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1, arg2);
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeProducersResponseDataJsonConverter.TopicResponseJsonConverter.html#write(org.apache.kafka.common.message.DescribeProducersResponseData.TopicResponse,short)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.DescribeProducersResponseData.TopicResponse"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-            public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.DescribeProducersResponseData.TopicResponse arg0, short arg1)
-            {
-                return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1);
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeProducersResponseDataJsonConverter.TopicResponseJsonConverter.html#read(com.fasterxml.jackson.databind.JsonNode,short)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <returns><see cref="Org.Apache.Kafka.Common.Message.DescribeProducersResponseData.TopicResponse"/></returns>
-            public static Org.Apache.Kafka.Common.Message.DescribeProducersResponseData.TopicResponse Read(Com.Fasterxml.Jackson.Databind.JsonNode arg0, short arg1)
-            {
-                return SExecute<Org.Apache.Kafka.Common.Message.DescribeProducersResponseData.TopicResponse>(LocalBridgeClazz, "read", arg0, arg1);
-            }
 
             #endregion
 

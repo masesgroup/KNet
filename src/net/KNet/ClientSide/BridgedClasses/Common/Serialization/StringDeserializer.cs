@@ -16,18 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
+
 namespace Org.Apache.Kafka.Common.Serialization
 {
-    public class StringDeserializer : Deserializer<string>
+    public partial class StringDeserializer
     {
-        public override string ClassName => "org.apache.kafka.common.serialization.StringDeserializer";
-
-        public override bool AutoInit => false;
-
-        public StringDeserializer()
-            : base(null, null, false)
-        {
-
-        }
+        public static implicit operator Deserializer<string>(StringDeserializer t) => t.Cast<Deserializer<string>>();
     }
 }

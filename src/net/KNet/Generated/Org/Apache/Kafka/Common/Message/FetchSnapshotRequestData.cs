@@ -75,67 +75,49 @@ namespace Org.Apache.Kafka.Common.Message
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.html#apiKey()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.html#maxBytes()"/>
         /// </summary>
-        public short ApiKey
+
+        /// <returns><see cref="int"/></returns>
+        public int MaxBytes()
         {
-            get { return IExecute<short>("apiKey"); }
+            return IExecute<int>("maxBytes");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.html#clusterId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.html#replicaId()"/>
         /// </summary>
-        public string ClusterId
+
+        /// <returns><see cref="int"/></returns>
+        public int ReplicaId()
         {
-            get { return IExecute<string>("clusterId"); }
+            return IExecute<int>("replicaId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.html#duplicate()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.html#clusterId()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.Message Duplicate
+
+        /// <returns><see cref="string"/></returns>
+        public string ClusterId()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate"); }
+            return IExecute<string>("clusterId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.html#highestSupportedVersion()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.html#topics()"/>
         /// </summary>
-        public short HighestSupportedVersion
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Message.FetchSnapshotRequestData.TopicSnapshot> Topics()
         {
-            get { return IExecute<short>("highestSupportedVersion"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.FetchSnapshotRequestData.TopicSnapshot>>("topics");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.html#lowestSupportedVersion()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.html#unknownTaggedFields()"/>
         /// </summary>
-        public short LowestSupportedVersion
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields()
         {
-            get { return IExecute<short>("lowestSupportedVersion"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.html#maxBytes()"/> 
-        /// </summary>
-        public int MaxBytes
-        {
-            get { return IExecute<int>("maxBytes"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.html#replicaId()"/> 
-        /// </summary>
-        public int ReplicaId
-        {
-            get { return IExecute<int>("replicaId"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.html#topics()"/> 
-        /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Message.FetchSnapshotRequestData.TopicSnapshot> Topics
-        {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.FetchSnapshotRequestData.TopicSnapshot>>("topics"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.html#unknownTaggedFields()"/> 
-        /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields
-        {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.html#setClusterId(java.lang.String)"/>
@@ -172,6 +154,42 @@ namespace Org.Apache.Kafka.Common.Message
         public Org.Apache.Kafka.Common.Message.FetchSnapshotRequestData SetTopics(Java.Util.List<Org.Apache.Kafka.Common.Message.FetchSnapshotRequestData.TopicSnapshot> arg0)
         {
             return IExecute<Org.Apache.Kafka.Common.Message.FetchSnapshotRequestData>("setTopics", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.html#duplicate()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.Message Duplicate()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.html#apiKey()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short ApiKey()
+        {
+            return IExecute<short>("apiKey");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.html#highestSupportedVersion()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short HighestSupportedVersion()
+        {
+            return IExecute<short>("highestSupportedVersion");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.html#lowestSupportedVersion()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short LowestSupportedVersion()
+        {
+            return IExecute<short>("lowestSupportedVersion");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>
@@ -256,53 +274,40 @@ namespace Org.Apache.Kafka.Common.Message
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.PartitionSnapshot.html#currentLeaderEpoch()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.PartitionSnapshot.html#currentLeaderEpoch()"/>
             /// </summary>
-            public int CurrentLeaderEpoch
+
+            /// <returns><see cref="int"/></returns>
+            public int CurrentLeaderEpoch()
             {
-                get { return IExecute<int>("currentLeaderEpoch"); }
+                return IExecute<int>("currentLeaderEpoch");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.PartitionSnapshot.html#duplicate()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.PartitionSnapshot.html#partition()"/>
             /// </summary>
-            public Org.Apache.Kafka.Common.Protocol.Message Duplicate
+
+            /// <returns><see cref="int"/></returns>
+            public int Partition()
             {
-                get { return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate"); }
+                return IExecute<int>("partition");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.PartitionSnapshot.html#highestSupportedVersion()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.PartitionSnapshot.html#unknownTaggedFields()"/>
             /// </summary>
-            public short HighestSupportedVersion
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields()
             {
-                get { return IExecute<short>("highestSupportedVersion"); }
+                return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.PartitionSnapshot.html#lowestSupportedVersion()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.PartitionSnapshot.html#position()"/>
             /// </summary>
-            public short LowestSupportedVersion
+
+            /// <returns><see cref="long"/></returns>
+            public long Position()
             {
-                get { return IExecute<short>("lowestSupportedVersion"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.PartitionSnapshot.html#partition()"/> 
-            /// </summary>
-            public int Partition
-            {
-                get { return IExecute<int>("partition"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.PartitionSnapshot.html#position()"/> 
-            /// </summary>
-            public long Position
-            {
-                get { return IExecute<long>("position"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.PartitionSnapshot.html#unknownTaggedFields()"/> 
-            /// </summary>
-            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields
-            {
-                get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields"); }
+                return IExecute<long>("position");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.PartitionSnapshot.html#setCurrentLeaderEpoch(int)"/>
@@ -348,6 +353,33 @@ namespace Org.Apache.Kafka.Common.Message
             public Org.Apache.Kafka.Common.Message.FetchSnapshotRequestData.SnapshotId SnapshotIdMethod()
             {
                 return IExecute<Org.Apache.Kafka.Common.Message.FetchSnapshotRequestData.SnapshotId>("snapshotId");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.PartitionSnapshot.html#duplicate()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
+            public Org.Apache.Kafka.Common.Protocol.Message Duplicate()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.PartitionSnapshot.html#highestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short HighestSupportedVersion()
+            {
+                return IExecute<short>("highestSupportedVersion");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.PartitionSnapshot.html#lowestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short LowestSupportedVersion()
+            {
+                return IExecute<short>("lowestSupportedVersion");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.PartitionSnapshot.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>
@@ -439,46 +471,31 @@ namespace Org.Apache.Kafka.Common.Message
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.SnapshotId.html#duplicate()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.SnapshotId.html#epoch()"/>
             /// </summary>
-            public Org.Apache.Kafka.Common.Protocol.Message Duplicate
+
+            /// <returns><see cref="int"/></returns>
+            public int Epoch()
             {
-                get { return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate"); }
+                return IExecute<int>("epoch");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.SnapshotId.html#endOffset()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.SnapshotId.html#unknownTaggedFields()"/>
             /// </summary>
-            public long EndOffset
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields()
             {
-                get { return IExecute<long>("endOffset"); }
+                return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.SnapshotId.html#epoch()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.SnapshotId.html#endOffset()"/>
             /// </summary>
-            public int Epoch
+
+            /// <returns><see cref="long"/></returns>
+            public long EndOffset()
             {
-                get { return IExecute<int>("epoch"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.SnapshotId.html#highestSupportedVersion()"/> 
-            /// </summary>
-            public short HighestSupportedVersion
-            {
-                get { return IExecute<short>("highestSupportedVersion"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.SnapshotId.html#lowestSupportedVersion()"/> 
-            /// </summary>
-            public short LowestSupportedVersion
-            {
-                get { return IExecute<short>("lowestSupportedVersion"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.SnapshotId.html#unknownTaggedFields()"/> 
-            /// </summary>
-            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields
-            {
-                get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields"); }
+                return IExecute<long>("endOffset");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.SnapshotId.html#setEndOffset(long)"/>
@@ -497,6 +514,33 @@ namespace Org.Apache.Kafka.Common.Message
             public Org.Apache.Kafka.Common.Message.FetchSnapshotRequestData.SnapshotId SetEpoch(int arg0)
             {
                 return IExecute<Org.Apache.Kafka.Common.Message.FetchSnapshotRequestData.SnapshotId>("setEpoch", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.SnapshotId.html#duplicate()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
+            public Org.Apache.Kafka.Common.Protocol.Message Duplicate()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.SnapshotId.html#highestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short HighestSupportedVersion()
+            {
+                return IExecute<short>("highestSupportedVersion");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.SnapshotId.html#lowestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short LowestSupportedVersion()
+            {
+                return IExecute<short>("lowestSupportedVersion");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.SnapshotId.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>
@@ -588,46 +632,31 @@ namespace Org.Apache.Kafka.Common.Message
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.TopicSnapshot.html#duplicate()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.TopicSnapshot.html#name()"/>
             /// </summary>
-            public Org.Apache.Kafka.Common.Protocol.Message Duplicate
+
+            /// <returns><see cref="string"/></returns>
+            public string Name()
             {
-                get { return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate"); }
+                return IExecute<string>("name");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.TopicSnapshot.html#highestSupportedVersion()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.TopicSnapshot.html#partitions()"/>
             /// </summary>
-            public short HighestSupportedVersion
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<Org.Apache.Kafka.Common.Message.FetchSnapshotRequestData.PartitionSnapshot> Partitions()
             {
-                get { return IExecute<short>("highestSupportedVersion"); }
+                return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.FetchSnapshotRequestData.PartitionSnapshot>>("partitions");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.TopicSnapshot.html#lowestSupportedVersion()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.TopicSnapshot.html#unknownTaggedFields()"/>
             /// </summary>
-            public short LowestSupportedVersion
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields()
             {
-                get { return IExecute<short>("lowestSupportedVersion"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.TopicSnapshot.html#name()"/> 
-            /// </summary>
-            public string Name
-            {
-                get { return IExecute<string>("name"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.TopicSnapshot.html#partitions()"/> 
-            /// </summary>
-            public Java.Util.List<Org.Apache.Kafka.Common.Message.FetchSnapshotRequestData.PartitionSnapshot> Partitions
-            {
-                get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.FetchSnapshotRequestData.PartitionSnapshot>>("partitions"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.TopicSnapshot.html#unknownTaggedFields()"/> 
-            /// </summary>
-            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields
-            {
-                get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields"); }
+                return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.TopicSnapshot.html#setName(java.lang.String)"/>
@@ -646,6 +675,33 @@ namespace Org.Apache.Kafka.Common.Message
             public Org.Apache.Kafka.Common.Message.FetchSnapshotRequestData.TopicSnapshot SetPartitions(Java.Util.List<Org.Apache.Kafka.Common.Message.FetchSnapshotRequestData.PartitionSnapshot> arg0)
             {
                 return IExecute<Org.Apache.Kafka.Common.Message.FetchSnapshotRequestData.TopicSnapshot>("setPartitions", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.TopicSnapshot.html#duplicate()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
+            public Org.Apache.Kafka.Common.Protocol.Message Duplicate()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.TopicSnapshot.html#highestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short HighestSupportedVersion()
+            {
+                return IExecute<short>("highestSupportedVersion");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.TopicSnapshot.html#lowestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short LowestSupportedVersion()
+            {
+                return IExecute<short>("lowestSupportedVersion");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotRequestData.TopicSnapshot.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>

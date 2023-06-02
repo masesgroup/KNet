@@ -39,7 +39,7 @@ namespace Org.Apache.Kafka.Clients
         /// <param name="arg4"><see cref="Java.Util.Optional"/></param>
         /// <param name="arg5"><see cref="long"/></param>
         /// <param name="arg6"><see cref="bool"/></param>
-        public GroupRebalanceConfig(int arg0, int arg1, int arg2, string arg3, Java.Util.Optional arg4, long arg5, bool arg6)
+        public GroupRebalanceConfig(int arg0, int arg1, int arg2, string arg3, Java.Util.Optional<string> arg4, long arg5, bool arg6)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
         {
         }
@@ -125,13 +125,6 @@ namespace Org.Apache.Kafka.Clients
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/GroupRebalanceConfig.ProtocolType.html#values()"/> 
-            /// </summary>
-            public static Org.Apache.Kafka.Clients.GroupRebalanceConfig.ProtocolType[] Values
-            {
-                get { return SExecuteArray<Org.Apache.Kafka.Clients.GroupRebalanceConfig.ProtocolType>(LocalBridgeClazz, "values"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/GroupRebalanceConfig.ProtocolType.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
@@ -139,6 +132,15 @@ namespace Org.Apache.Kafka.Clients
             public static Org.Apache.Kafka.Clients.GroupRebalanceConfig.ProtocolType ValueOf(string arg0)
             {
                 return SExecute<Org.Apache.Kafka.Clients.GroupRebalanceConfig.ProtocolType>(LocalBridgeClazz, "valueOf", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/GroupRebalanceConfig.ProtocolType.html#values()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Clients.GroupRebalanceConfig.ProtocolType"/></returns>
+            public static Org.Apache.Kafka.Clients.GroupRebalanceConfig.ProtocolType[] Values()
+            {
+                return SExecuteArray<Org.Apache.Kafka.Clients.GroupRebalanceConfig.ProtocolType>(LocalBridgeClazz, "values");
             }
 
             #endregion

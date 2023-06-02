@@ -29,6 +29,32 @@ using System.Collections.Generic;
 
 namespace MASES.KNet.Connect
 {
+    public interface IVersion
+    {
+        string Version();
+    }
+
+    public interface IConnector : IVersion
+    {
+        void Initialize(ConnectorContext ctx);
+
+        void Initialize(ConnectorContext ctx, Java.Util.List<Map<string, string>> taskConfigs);
+
+        void Start(Map<string, string> props);
+
+        void Reconfigure(Map<string, string> props);
+
+        Class TaskClass();
+
+        Java.Util.List<Map<string, string>> TaskConfigs(int maxTasks);
+
+        void Stop();
+
+        Config Validate(Map<string, string> connectorConfigs);
+
+        ConfigDef Config();
+    }
+
     /// <summary>
     /// Specific implementation of <see cref="IConnector"/> to support KNet Connect SDK
     /// </summary>
@@ -132,7 +158,7 @@ namespace MASES.KNet.Connect
             if (reflectedConnector != null)
             {
                 IJVMBridgeBase jvmBBD = data as IJVMBridgeBase;
-                reflectedConnector.Invoke("setDataToExchange", jvmBBD != null ? jvmBBD.Instance : data);
+                reflectedConnector.Invoke("setDataToExchange", jvmBBD != null ? jvmBBD.BridgeInstance : data);
             }
             else
             {
@@ -244,23 +270,23 @@ namespace MASES.KNet.Connect
 
         public void LogTrace(string var1) => ExecuteOnConnector("trace", var1);
 
-        public void LogTrace(string var1, JVMBridgeException var2) => ExecuteOnConnector("trace", var1, var2.Instance);
+        public void LogTrace(string var1, JVMBridgeException var2) => ExecuteOnConnector("trace", var1, var2.BridgeInstance);
 
         public void LogDebug(string var1) => ExecuteOnConnector("debug", var1);
 
-        public void LogDebug(string var1, JVMBridgeException var2) => ExecuteOnConnector("debug", var1, var2.Instance);
+        public void LogDebug(string var1, JVMBridgeException var2) => ExecuteOnConnector("debug", var1, var2.BridgeInstance);
 
         public void LogInfo(string var1) => ExecuteOnConnector("info", var1);
 
-        public void LogInfo(string var1, JVMBridgeException var2) => ExecuteOnConnector("info", var1, var2.Instance);
+        public void LogInfo(string var1, JVMBridgeException var2) => ExecuteOnConnector("info", var1, var2.BridgeInstance);
 
         public void LogWarn(string var1) => ExecuteOnConnector("warn", var1);
 
-        public void LogWarn(string var1, JVMBridgeException var2) => ExecuteOnConnector("warn", var1, var2.Instance);
+        public void LogWarn(string var1, JVMBridgeException var2) => ExecuteOnConnector("warn", var1, var2.BridgeInstance);
 
         public void LogError(string var1) => ExecuteOnConnector("error", var1);
 
-        public void LogError(string var1, JVMBridgeException var2) => ExecuteOnConnector("error", var1, var2.Instance);
+        public void LogError(string var1, JVMBridgeException var2) => ExecuteOnConnector("error", var1, var2.BridgeInstance);
         #endregion
     }
     /// <summary>

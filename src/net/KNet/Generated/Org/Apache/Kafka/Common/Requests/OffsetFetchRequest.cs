@@ -56,53 +56,13 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/OffsetFetchRequest.html#groupId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/OffsetFetchRequest.html#isAllPartitions()"/>
         /// </summary>
-        public string GroupId
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsAllPartitions()
         {
-            get { return IExecute<string>("groupId"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/OffsetFetchRequest.html#groupIds()"/> 
-        /// </summary>
-        public Java.Util.List<string> GroupIds
-        {
-            get { return IExecute<Java.Util.List<string>>("groupIds"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/OffsetFetchRequest.html#groupIdsToPartitions()"/> 
-        /// </summary>
-        public Java.Util.Map<string, Java.Util.List<Org.Apache.Kafka.Common.TopicPartition>> GroupIdsToPartitions
-        {
-            get { return IExecute<Java.Util.Map<string, Java.Util.List<Org.Apache.Kafka.Common.TopicPartition>>>("groupIdsToPartitions"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/OffsetFetchRequest.html#groupIdsToTopics()"/> 
-        /// </summary>
-        public Java.Util.Map<string, Java.Util.List<Org.Apache.Kafka.Common.Message.OffsetFetchRequestData.OffsetFetchRequestTopics>> GroupIdsToTopics
-        {
-            get { return IExecute<Java.Util.Map<string, Java.Util.List<Org.Apache.Kafka.Common.Message.OffsetFetchRequestData.OffsetFetchRequestTopics>>>("groupIdsToTopics"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/OffsetFetchRequest.html#isAllPartitions()"/> 
-        /// </summary>
-        public bool IsAllPartitions
-        {
-            get { return IExecute<bool>("isAllPartitions"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/OffsetFetchRequest.html#partitions()"/> 
-        /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.TopicPartition> Partitions
-        {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.TopicPartition>>("partitions"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/OffsetFetchRequest.html#requireStable()"/> 
-        /// </summary>
-        public bool RequireStable
-        {
-            get { return IExecute<bool>("requireStable"); }
+            return IExecute<bool>("isAllPartitions");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/OffsetFetchRequest.html#isAllPartitionsForGroup(java.lang.String)"/>
@@ -112,6 +72,60 @@ namespace Org.Apache.Kafka.Common.Requests
         public bool IsAllPartitionsForGroup(string arg0)
         {
             return IExecute<bool>("isAllPartitionsForGroup", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/OffsetFetchRequest.html#requireStable()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool RequireStable()
+        {
+            return IExecute<bool>("requireStable");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/OffsetFetchRequest.html#groupId()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string GroupId()
+        {
+            return IExecute<string>("groupId");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/OffsetFetchRequest.html#groupIds()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<string> GroupIds()
+        {
+            return IExecute<Java.Util.List<string>>("groupIds");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/OffsetFetchRequest.html#partitions()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.TopicPartition> Partitions()
+        {
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.TopicPartition>>("partitions");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/OffsetFetchRequest.html#groupIdsToTopics()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, Java.Util.List<Org.Apache.Kafka.Common.Message.OffsetFetchRequestData.OffsetFetchRequestTopics>> GroupIdsToTopics()
+        {
+            return IExecute<Java.Util.Map<string, Java.Util.List<Org.Apache.Kafka.Common.Message.OffsetFetchRequestData.OffsetFetchRequestTopics>>>("groupIdsToTopics");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/OffsetFetchRequest.html#groupIdsToPartitions()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, Java.Util.List<Org.Apache.Kafka.Common.TopicPartition>> GroupIdsToPartitions()
+        {
+            return IExecute<Java.Util.Map<string, Java.Util.List<Org.Apache.Kafka.Common.TopicPartition>>>("groupIdsToPartitions");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/OffsetFetchRequest.html#getErrorResponse(int,org.apache.kafka.common.protocol.Errors)"/>
@@ -147,7 +161,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// <param name="arg1"><see cref="bool"/></param>
             /// <param name="arg2"><see cref="Java.Util.List"/></param>
             /// <param name="arg3"><see cref="bool"/></param>
-            public Builder(string arg0, bool arg1, Java.Util.List arg2, bool arg3)
+            public Builder(string arg0, bool arg1, Java.Util.List<Org.Apache.Kafka.Common.TopicPartition> arg2, bool arg3)
                 : base(arg0, arg1, arg2, arg3)
             {
             }
@@ -157,7 +171,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// <param name="arg0"><see cref="Java.Util.Map"/></param>
             /// <param name="arg1"><see cref="bool"/></param>
             /// <param name="arg2"><see cref="bool"/></param>
-            public Builder(Java.Util.Map arg0, bool arg1, bool arg2)
+            public Builder(Java.Util.Map<string, Java.Util.List<Org.Apache.Kafka.Common.TopicPartition>> arg0, bool arg1, bool arg2)
                 : base(arg0, arg1, arg2)
             {
             }

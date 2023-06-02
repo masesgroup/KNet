@@ -91,53 +91,22 @@ namespace Org.Apache.Kafka.Common.Message
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.html#apiKey()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.html#replicaId()"/>
         /// </summary>
-        public short ApiKey
+
+        /// <returns><see cref="int"/></returns>
+        public int ReplicaId()
         {
-            get { return IExecute<short>("apiKey"); }
+            return IExecute<int>("replicaId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.html#duplicate()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.html#unknownTaggedFields()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.Message Duplicate
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.html#highestSupportedVersion()"/> 
-        /// </summary>
-        public short HighestSupportedVersion
-        {
-            get { return IExecute<short>("highestSupportedVersion"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.html#lowestSupportedVersion()"/> 
-        /// </summary>
-        public short LowestSupportedVersion
-        {
-            get { return IExecute<short>("lowestSupportedVersion"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.html#replicaId()"/> 
-        /// </summary>
-        public int ReplicaId
-        {
-            get { return IExecute<int>("replicaId"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.html#topics()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Message.OffsetForLeaderEpochRequestData.OffsetForLeaderTopicCollection Topics
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Message.OffsetForLeaderEpochRequestData.OffsetForLeaderTopicCollection>("topics"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.html#unknownTaggedFields()"/> 
-        /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields
-        {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.html#setReplicaId(int)"/>
@@ -156,6 +125,51 @@ namespace Org.Apache.Kafka.Common.Message
         public Org.Apache.Kafka.Common.Message.OffsetForLeaderEpochRequestData SetTopics(Org.Apache.Kafka.Common.Message.OffsetForLeaderEpochRequestData.OffsetForLeaderTopicCollection arg0)
         {
             return IExecute<Org.Apache.Kafka.Common.Message.OffsetForLeaderEpochRequestData>("setTopics", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.html#topics()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Message.OffsetForLeaderEpochRequestData.OffsetForLeaderTopicCollection"/></returns>
+        public Org.Apache.Kafka.Common.Message.OffsetForLeaderEpochRequestData.OffsetForLeaderTopicCollection Topics()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Message.OffsetForLeaderEpochRequestData.OffsetForLeaderTopicCollection>("topics");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.html#duplicate()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.Message Duplicate()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.html#apiKey()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short ApiKey()
+        {
+            return IExecute<short>("apiKey");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.html#highestSupportedVersion()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short HighestSupportedVersion()
+        {
+            return IExecute<short>("highestSupportedVersion");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.html#lowestSupportedVersion()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short LowestSupportedVersion()
+        {
+            return IExecute<short>("lowestSupportedVersion");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>
@@ -256,53 +270,40 @@ namespace Org.Apache.Kafka.Common.Message
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderPartition.html#currentLeaderEpoch()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderPartition.html#currentLeaderEpoch()"/>
             /// </summary>
-            public int CurrentLeaderEpoch
+
+            /// <returns><see cref="int"/></returns>
+            public int CurrentLeaderEpoch()
             {
-                get { return IExecute<int>("currentLeaderEpoch"); }
+                return IExecute<int>("currentLeaderEpoch");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderPartition.html#duplicate()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderPartition.html#leaderEpoch()"/>
             /// </summary>
-            public Org.Apache.Kafka.Common.Protocol.Message Duplicate
+
+            /// <returns><see cref="int"/></returns>
+            public int LeaderEpoch()
             {
-                get { return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate"); }
+                return IExecute<int>("leaderEpoch");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderPartition.html#highestSupportedVersion()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderPartition.html#partition()"/>
             /// </summary>
-            public short HighestSupportedVersion
+
+            /// <returns><see cref="int"/></returns>
+            public int Partition()
             {
-                get { return IExecute<short>("highestSupportedVersion"); }
+                return IExecute<int>("partition");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderPartition.html#leaderEpoch()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderPartition.html#unknownTaggedFields()"/>
             /// </summary>
-            public int LeaderEpoch
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields()
             {
-                get { return IExecute<int>("leaderEpoch"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderPartition.html#lowestSupportedVersion()"/> 
-            /// </summary>
-            public short LowestSupportedVersion
-            {
-                get { return IExecute<short>("lowestSupportedVersion"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderPartition.html#partition()"/> 
-            /// </summary>
-            public int Partition
-            {
-                get { return IExecute<int>("partition"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderPartition.html#unknownTaggedFields()"/> 
-            /// </summary>
-            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields
-            {
-                get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields"); }
+                return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderPartition.html#setCurrentLeaderEpoch(int)"/>
@@ -330,6 +331,33 @@ namespace Org.Apache.Kafka.Common.Message
             public Org.Apache.Kafka.Common.Message.OffsetForLeaderEpochRequestData.OffsetForLeaderPartition SetPartition(int arg0)
             {
                 return IExecute<Org.Apache.Kafka.Common.Message.OffsetForLeaderEpochRequestData.OffsetForLeaderPartition>("setPartition", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderPartition.html#duplicate()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
+            public Org.Apache.Kafka.Common.Protocol.Message Duplicate()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderPartition.html#highestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short HighestSupportedVersion()
+            {
+                return IExecute<short>("highestSupportedVersion");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderPartition.html#lowestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short LowestSupportedVersion()
+            {
+                return IExecute<short>("lowestSupportedVersion");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderPartition.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>
@@ -437,62 +465,6 @@ namespace Org.Apache.Kafka.Common.Message
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderTopic.html#duplicate()"/> 
-            /// </summary>
-            public Org.Apache.Kafka.Common.Protocol.Message Duplicate
-            {
-                get { return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderTopic.html#highestSupportedVersion()"/> 
-            /// </summary>
-            public short HighestSupportedVersion
-            {
-                get { return IExecute<short>("highestSupportedVersion"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderTopic.html#lowestSupportedVersion()"/> 
-            /// </summary>
-            public short LowestSupportedVersion
-            {
-                get { return IExecute<short>("lowestSupportedVersion"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderTopic.html#next()"/> 
-            /// </summary>
-            public int Next
-            {
-                get { return IExecute<int>("next"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderTopic.html#partitions()"/> 
-            /// </summary>
-            public Java.Util.List<Org.Apache.Kafka.Common.Message.OffsetForLeaderEpochRequestData.OffsetForLeaderPartition> Partitions
-            {
-                get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.OffsetForLeaderEpochRequestData.OffsetForLeaderPartition>>("partitions"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderTopic.html#prev()"/> 
-            /// </summary>
-            public int Prev
-            {
-                get { return IExecute<int>("prev"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderTopic.html#topic()"/> 
-            /// </summary>
-            public string Topic
-            {
-                get { return IExecute<string>("topic"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderTopic.html#unknownTaggedFields()"/> 
-            /// </summary>
-            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields
-            {
-                get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderTopic.html#elementKeysAreEqual(java.lang.Object)"/>
             /// </summary>
             /// <param name="arg0"><see cref="object"/></param>
@@ -500,6 +472,51 @@ namespace Org.Apache.Kafka.Common.Message
             public bool ElementKeysAreEqual(object arg0)
             {
                 return IExecute<bool>("elementKeysAreEqual", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderTopic.html#next()"/>
+            /// </summary>
+
+            /// <returns><see cref="int"/></returns>
+            public int Next()
+            {
+                return IExecute<int>("next");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderTopic.html#prev()"/>
+            /// </summary>
+
+            /// <returns><see cref="int"/></returns>
+            public int Prev()
+            {
+                return IExecute<int>("prev");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderTopic.html#topic()"/>
+            /// </summary>
+
+            /// <returns><see cref="string"/></returns>
+            public string Topic()
+            {
+                return IExecute<string>("topic");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderTopic.html#partitions()"/>
+            /// </summary>
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<Org.Apache.Kafka.Common.Message.OffsetForLeaderEpochRequestData.OffsetForLeaderPartition> Partitions()
+            {
+                return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.OffsetForLeaderEpochRequestData.OffsetForLeaderPartition>>("partitions");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderTopic.html#unknownTaggedFields()"/>
+            /// </summary>
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields()
+            {
+                return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderTopic.html#setPartitions(java.util.List)"/>
@@ -518,6 +535,33 @@ namespace Org.Apache.Kafka.Common.Message
             public Org.Apache.Kafka.Common.Message.OffsetForLeaderEpochRequestData.OffsetForLeaderTopic SetTopic(string arg0)
             {
                 return IExecute<Org.Apache.Kafka.Common.Message.OffsetForLeaderEpochRequestData.OffsetForLeaderTopic>("setTopic", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderTopic.html#duplicate()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
+            public Org.Apache.Kafka.Common.Protocol.Message Duplicate()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderTopic.html#highestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short HighestSupportedVersion()
+            {
+                return IExecute<short>("highestSupportedVersion");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderTopic.html#lowestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short LowestSupportedVersion()
+            {
+                return IExecute<short>("lowestSupportedVersion");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderTopic.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>
@@ -591,7 +635,7 @@ namespace Org.Apache.Kafka.Common.Message
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderTopicCollection.html#%3Cinit%3E(java.util.Iterator)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Iterator"/></param>
-            public OffsetForLeaderTopicCollection(Java.Util.Iterator arg0)
+            public OffsetForLeaderTopicCollection(Java.Util.Iterator<Org.Apache.Kafka.Common.Message.OffsetForLeaderEpochRequestData.OffsetForLeaderTopic> arg0)
                 : base(arg0)
             {
             }
@@ -612,13 +656,6 @@ namespace Org.Apache.Kafka.Common.Message
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderTopicCollection.html#duplicate()"/> 
-            /// </summary>
-            public Org.Apache.Kafka.Common.Message.OffsetForLeaderEpochRequestData.OffsetForLeaderTopicCollection Duplicate
-            {
-                get { return IExecute<Org.Apache.Kafka.Common.Message.OffsetForLeaderEpochRequestData.OffsetForLeaderTopicCollection>("duplicate"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderTopicCollection.html#findAll(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
@@ -635,6 +672,15 @@ namespace Org.Apache.Kafka.Common.Message
             public Org.Apache.Kafka.Common.Message.OffsetForLeaderEpochRequestData.OffsetForLeaderTopic Find(string arg0)
             {
                 return IExecute<Org.Apache.Kafka.Common.Message.OffsetForLeaderEpochRequestData.OffsetForLeaderTopic>("find", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderTopicCollection.html#duplicate()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Message.OffsetForLeaderEpochRequestData.OffsetForLeaderTopicCollection"/></returns>
+            public Org.Apache.Kafka.Common.Message.OffsetForLeaderEpochRequestData.OffsetForLeaderTopicCollection Duplicate()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Message.OffsetForLeaderEpochRequestData.OffsetForLeaderTopicCollection>("duplicate");
             }
 
             #endregion

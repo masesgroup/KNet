@@ -130,11 +130,13 @@ namespace Org.Apache.Kafka.Common.Compress
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/compress/KafkaLZ4BlockOutputStream.html#useBrokenFlagDescriptorChecksum()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/compress/KafkaLZ4BlockOutputStream.html#useBrokenFlagDescriptorChecksum()"/>
         /// </summary>
-        public bool UseBrokenFlagDescriptorChecksum
+
+        /// <returns><see cref="bool"/></returns>
+        public bool UseBrokenFlagDescriptorChecksum()
         {
-            get { return IExecute<bool>("useBrokenFlagDescriptorChecksum"); }
+            return IExecute<bool>("useBrokenFlagDescriptorChecksum");
         }
 
         #endregion
@@ -185,11 +187,13 @@ namespace Org.Apache.Kafka.Common.Compress
                 get { return IExecute<int>("getBlockMaximumSize"); }
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/compress/KafkaLZ4BlockOutputStream.BD.html#toByte()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/compress/KafkaLZ4BlockOutputStream.BD.html#toByte()"/>
             /// </summary>
-            public byte ToByte
+
+            /// <returns><see cref="byte"/></returns>
+            public byte ToByte()
             {
-                get { return IExecute<byte>("toByte"); }
+                return IExecute<byte>("toByte");
             }
 
             #endregion
@@ -240,46 +244,56 @@ namespace Org.Apache.Kafka.Common.Compress
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/compress/KafkaLZ4BlockOutputStream.FLG.html#isBlockChecksumSet()"/> 
-            /// </summary>
-            public bool IsBlockChecksumSet
-            {
-                get { return IExecute<bool>("isBlockChecksumSet"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/compress/KafkaLZ4BlockOutputStream.FLG.html#isBlockIndependenceSet()"/> 
-            /// </summary>
-            public bool IsBlockIndependenceSet
-            {
-                get { return IExecute<bool>("isBlockIndependenceSet"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/compress/KafkaLZ4BlockOutputStream.FLG.html#isContentChecksumSet()"/> 
-            /// </summary>
-            public bool IsContentChecksumSet
-            {
-                get { return IExecute<bool>("isContentChecksumSet"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/compress/KafkaLZ4BlockOutputStream.FLG.html#isContentSizeSet()"/> 
-            /// </summary>
-            public bool IsContentSizeSet
-            {
-                get { return IExecute<bool>("isContentSizeSet"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/compress/KafkaLZ4BlockOutputStream.FLG.html#toByte()"/> 
-            /// </summary>
-            public byte ToByte
-            {
-                get { return IExecute<byte>("toByte"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/compress/KafkaLZ4BlockOutputStream.FLG.html#getVersion()"/> 
             /// </summary>
             public int Version
             {
                 get { return IExecute<int>("getVersion"); }
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/compress/KafkaLZ4BlockOutputStream.FLG.html#isBlockChecksumSet()"/>
+            /// </summary>
+
+            /// <returns><see cref="bool"/></returns>
+            public bool IsBlockChecksumSet()
+            {
+                return IExecute<bool>("isBlockChecksumSet");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/compress/KafkaLZ4BlockOutputStream.FLG.html#isBlockIndependenceSet()"/>
+            /// </summary>
+
+            /// <returns><see cref="bool"/></returns>
+            public bool IsBlockIndependenceSet()
+            {
+                return IExecute<bool>("isBlockIndependenceSet");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/compress/KafkaLZ4BlockOutputStream.FLG.html#isContentChecksumSet()"/>
+            /// </summary>
+
+            /// <returns><see cref="bool"/></returns>
+            public bool IsContentChecksumSet()
+            {
+                return IExecute<bool>("isContentChecksumSet");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/compress/KafkaLZ4BlockOutputStream.FLG.html#isContentSizeSet()"/>
+            /// </summary>
+
+            /// <returns><see cref="bool"/></returns>
+            public bool IsContentSizeSet()
+            {
+                return IExecute<bool>("isContentSizeSet");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/compress/KafkaLZ4BlockOutputStream.FLG.html#toByte()"/>
+            /// </summary>
+
+            /// <returns><see cref="byte"/></returns>
+            public byte ToByte()
+            {
+                return IExecute<byte>("toByte");
             }
 
             #endregion

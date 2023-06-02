@@ -55,18 +55,22 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Frequency.html#centerValue()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Frequency.html#centerValue()"/>
         /// </summary>
-        public double CenterValue
+
+        /// <returns><see cref="double"/></returns>
+        public double CenterValue()
         {
-            get { return IExecute<double>("centerValue"); }
+            return IExecute<double>("centerValue");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Frequency.html#name()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Frequency.html#name()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.MetricName Name
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.MetricName"/></returns>
+        public Org.Apache.Kafka.Common.MetricName Name()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.MetricName>("name"); }
+            return IExecute<Org.Apache.Kafka.Common.MetricName>("name");
         }
 
         #endregion

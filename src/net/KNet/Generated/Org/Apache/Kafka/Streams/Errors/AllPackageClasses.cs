@@ -127,7 +127,7 @@ namespace Org.Apache.Kafka.Streams.Errors
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/errors/DeserializationExceptionHandler.DeserializationHandlerResponse.html"/>
         /// </summary>
-        public partial class DeserializationHandlerResponse : Java.Lang.Enum
+        public partial class DeserializationHandlerResponse : Java.Lang.Enum<Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -379,7 +379,7 @@ namespace Org.Apache.Kafka.Streams.Errors
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/errors/ProductionExceptionHandler.ProductionExceptionHandlerResponse.html"/>
         /// </summary>
-        public partial class ProductionExceptionHandlerResponse : Java.Lang.Enum
+        public partial class ProductionExceptionHandlerResponse : Java.Lang.Enum<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -522,46 +522,16 @@ namespace Org.Apache.Kafka.Streams.Errors
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.html"/>
     /// </summary>
-    public partial class StreamsUncaughtExceptionHandler : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StreamsUncaughtExceptionHandler>
+    public partial class StreamsUncaughtExceptionHandler : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
-        /// <summary>
-        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
-        /// </summary>
-        public StreamsUncaughtExceptionHandler() { }
-        /// <summary>
-        /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
-        /// </summary>
-        public StreamsUncaughtExceptionHandler(params object[] args) : base(args) { }
-
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.errors.StreamsUncaughtExceptionHandler");
-
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
-        /// </summary>
-        public override string BridgeClassName => "org.apache.kafka.streams.errors.StreamsUncaughtExceptionHandler";
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
-        /// </summary>
-        public override bool IsBridgeAbstract => true;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm"/>
-        /// </summary>
-        public override bool IsBridgeCloseable => false;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm"/>
-        /// </summary>
-        public override bool IsBridgeInterface => true;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm"/>
-        /// </summary>
-        public override bool IsBridgeStatic => false;
+    #warning Remember to build the body class for event listener
 
         // TODO: complete the class
         #region StreamThreadExceptionResponse
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse.html"/>
         /// </summary>
-        public partial class StreamThreadExceptionResponse : Java.Lang.Enum
+        public partial class StreamThreadExceptionResponse : Java.Lang.Enum<Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

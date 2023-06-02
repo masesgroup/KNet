@@ -63,64 +63,80 @@ namespace Org.Apache.Kafka.Common
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#noNode()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#noNode()"/>
         /// </summary>
-        public static Org.Apache.Kafka.Common.Node NoNode
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Node"/></returns>
+        public static Org.Apache.Kafka.Common.Node NoNode()
         {
-            get { return SExecute<Org.Apache.Kafka.Common.Node>(LocalBridgeClazz, "noNode"); }
+            return SExecute<Org.Apache.Kafka.Common.Node>(LocalBridgeClazz, "noNode");
         }
 
         #endregion
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#hasRack()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#hasRack()"/>
         /// </summary>
-        public bool HasRack
+
+        /// <returns><see cref="bool"/></returns>
+        public bool HasRack()
         {
-            get { return IExecute<bool>("hasRack"); }
+            return IExecute<bool>("hasRack");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#host()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#isEmpty()"/>
         /// </summary>
-        public string Host
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsEmpty()
         {
-            get { return IExecute<string>("host"); }
+            return IExecute<bool>("isEmpty");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#id()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#id()"/>
         /// </summary>
-        public int Id
+
+        /// <returns><see cref="int"/></returns>
+        public int Id()
         {
-            get { return IExecute<int>("id"); }
+            return IExecute<int>("id");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#idString()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#port()"/>
         /// </summary>
-        public string IdString
+
+        /// <returns><see cref="int"/></returns>
+        public int Port()
         {
-            get { return IExecute<string>("idString"); }
+            return IExecute<int>("port");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#isEmpty()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#host()"/>
         /// </summary>
-        public bool IsEmpty
+
+        /// <returns><see cref="string"/></returns>
+        public string Host()
         {
-            get { return IExecute<bool>("isEmpty"); }
+            return IExecute<string>("host");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#port()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#idString()"/>
         /// </summary>
-        public int Port
+
+        /// <returns><see cref="string"/></returns>
+        public string IdString()
         {
-            get { return IExecute<int>("port"); }
+            return IExecute<string>("idString");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#rack()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#rack()"/>
         /// </summary>
-        public string Rack
+
+        /// <returns><see cref="string"/></returns>
+        public string Rack()
         {
-            get { return IExecute<string>("rack"); }
+            return IExecute<string>("rack");
         }
 
         #endregion

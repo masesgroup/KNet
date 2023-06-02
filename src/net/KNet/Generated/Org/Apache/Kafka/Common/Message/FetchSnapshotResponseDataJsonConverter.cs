@@ -41,37 +41,6 @@ namespace Org.Apache.Kafka.Common.Message
         #endregion
 
         #region Static methods
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotResponseDataJsonConverter.html#write(org.apache.kafka.common.message.FetchSnapshotResponseData,short,boolean)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.FetchSnapshotResponseData"/></param>
-        /// <param name="arg1"><see cref="short"/></param>
-        /// <param name="arg2"><see cref="bool"/></param>
-        /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-        public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.FetchSnapshotResponseData arg0, short arg1, bool arg2)
-        {
-            return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1, arg2);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotResponseDataJsonConverter.html#write(org.apache.kafka.common.message.FetchSnapshotResponseData,short)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.FetchSnapshotResponseData"/></param>
-        /// <param name="arg1"><see cref="short"/></param>
-        /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-        public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.FetchSnapshotResponseData arg0, short arg1)
-        {
-            return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotResponseDataJsonConverter.html#read(com.fasterxml.jackson.databind.JsonNode,short)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></param>
-        /// <param name="arg1"><see cref="short"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Common.Message.FetchSnapshotResponseData"/></returns>
-        public static Org.Apache.Kafka.Common.Message.FetchSnapshotResponseData Read(Com.Fasterxml.Jackson.Databind.JsonNode arg0, short arg1)
-        {
-            return SExecute<Org.Apache.Kafka.Common.Message.FetchSnapshotResponseData>(LocalBridgeClazz, "read", arg0, arg1);
-        }
 
         #endregion
 
@@ -96,37 +65,6 @@ namespace Org.Apache.Kafka.Common.Message
             #endregion
 
             #region Static methods
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotResponseDataJsonConverter.LeaderIdAndEpochJsonConverter.html#write(org.apache.kafka.common.message.FetchSnapshotResponseData.LeaderIdAndEpoch,short,boolean)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.FetchSnapshotResponseData.LeaderIdAndEpoch"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <param name="arg2"><see cref="bool"/></param>
-            /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-            public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.FetchSnapshotResponseData.LeaderIdAndEpoch arg0, short arg1, bool arg2)
-            {
-                return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1, arg2);
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotResponseDataJsonConverter.LeaderIdAndEpochJsonConverter.html#write(org.apache.kafka.common.message.FetchSnapshotResponseData.LeaderIdAndEpoch,short)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.FetchSnapshotResponseData.LeaderIdAndEpoch"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-            public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.FetchSnapshotResponseData.LeaderIdAndEpoch arg0, short arg1)
-            {
-                return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1);
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotResponseDataJsonConverter.LeaderIdAndEpochJsonConverter.html#read(com.fasterxml.jackson.databind.JsonNode,short)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <returns><see cref="Org.Apache.Kafka.Common.Message.FetchSnapshotResponseData.LeaderIdAndEpoch"/></returns>
-            public static Org.Apache.Kafka.Common.Message.FetchSnapshotResponseData.LeaderIdAndEpoch Read(Com.Fasterxml.Jackson.Databind.JsonNode arg0, short arg1)
-            {
-                return SExecute<Org.Apache.Kafka.Common.Message.FetchSnapshotResponseData.LeaderIdAndEpoch>(LocalBridgeClazz, "read", arg0, arg1);
-            }
 
             #endregion
 
@@ -158,37 +96,6 @@ namespace Org.Apache.Kafka.Common.Message
             #endregion
 
             #region Static methods
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotResponseDataJsonConverter.PartitionSnapshotJsonConverter.html#write(org.apache.kafka.common.message.FetchSnapshotResponseData.PartitionSnapshot,short,boolean)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.FetchSnapshotResponseData.PartitionSnapshot"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <param name="arg2"><see cref="bool"/></param>
-            /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-            public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.FetchSnapshotResponseData.PartitionSnapshot arg0, short arg1, bool arg2)
-            {
-                return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1, arg2);
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotResponseDataJsonConverter.PartitionSnapshotJsonConverter.html#write(org.apache.kafka.common.message.FetchSnapshotResponseData.PartitionSnapshot,short)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.FetchSnapshotResponseData.PartitionSnapshot"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-            public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.FetchSnapshotResponseData.PartitionSnapshot arg0, short arg1)
-            {
-                return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1);
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotResponseDataJsonConverter.PartitionSnapshotJsonConverter.html#read(com.fasterxml.jackson.databind.JsonNode,short)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <returns><see cref="Org.Apache.Kafka.Common.Message.FetchSnapshotResponseData.PartitionSnapshot"/></returns>
-            public static Org.Apache.Kafka.Common.Message.FetchSnapshotResponseData.PartitionSnapshot Read(Com.Fasterxml.Jackson.Databind.JsonNode arg0, short arg1)
-            {
-                return SExecute<Org.Apache.Kafka.Common.Message.FetchSnapshotResponseData.PartitionSnapshot>(LocalBridgeClazz, "read", arg0, arg1);
-            }
 
             #endregion
 
@@ -220,37 +127,6 @@ namespace Org.Apache.Kafka.Common.Message
             #endregion
 
             #region Static methods
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotResponseDataJsonConverter.SnapshotIdJsonConverter.html#write(org.apache.kafka.common.message.FetchSnapshotResponseData.SnapshotId,short,boolean)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.FetchSnapshotResponseData.SnapshotId"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <param name="arg2"><see cref="bool"/></param>
-            /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-            public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.FetchSnapshotResponseData.SnapshotId arg0, short arg1, bool arg2)
-            {
-                return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1, arg2);
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotResponseDataJsonConverter.SnapshotIdJsonConverter.html#write(org.apache.kafka.common.message.FetchSnapshotResponseData.SnapshotId,short)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.FetchSnapshotResponseData.SnapshotId"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-            public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.FetchSnapshotResponseData.SnapshotId arg0, short arg1)
-            {
-                return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1);
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotResponseDataJsonConverter.SnapshotIdJsonConverter.html#read(com.fasterxml.jackson.databind.JsonNode,short)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <returns><see cref="Org.Apache.Kafka.Common.Message.FetchSnapshotResponseData.SnapshotId"/></returns>
-            public static Org.Apache.Kafka.Common.Message.FetchSnapshotResponseData.SnapshotId Read(Com.Fasterxml.Jackson.Databind.JsonNode arg0, short arg1)
-            {
-                return SExecute<Org.Apache.Kafka.Common.Message.FetchSnapshotResponseData.SnapshotId>(LocalBridgeClazz, "read", arg0, arg1);
-            }
 
             #endregion
 
@@ -282,37 +158,6 @@ namespace Org.Apache.Kafka.Common.Message
             #endregion
 
             #region Static methods
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotResponseDataJsonConverter.TopicSnapshotJsonConverter.html#write(org.apache.kafka.common.message.FetchSnapshotResponseData.TopicSnapshot,short,boolean)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.FetchSnapshotResponseData.TopicSnapshot"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <param name="arg2"><see cref="bool"/></param>
-            /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-            public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.FetchSnapshotResponseData.TopicSnapshot arg0, short arg1, bool arg2)
-            {
-                return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1, arg2);
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotResponseDataJsonConverter.TopicSnapshotJsonConverter.html#write(org.apache.kafka.common.message.FetchSnapshotResponseData.TopicSnapshot,short)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.FetchSnapshotResponseData.TopicSnapshot"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-            public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.FetchSnapshotResponseData.TopicSnapshot arg0, short arg1)
-            {
-                return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1);
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/FetchSnapshotResponseDataJsonConverter.TopicSnapshotJsonConverter.html#read(com.fasterxml.jackson.databind.JsonNode,short)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <returns><see cref="Org.Apache.Kafka.Common.Message.FetchSnapshotResponseData.TopicSnapshot"/></returns>
-            public static Org.Apache.Kafka.Common.Message.FetchSnapshotResponseData.TopicSnapshot Read(Com.Fasterxml.Jackson.Databind.JsonNode arg0, short arg1)
-            {
-                return SExecute<Org.Apache.Kafka.Common.Message.FetchSnapshotResponseData.TopicSnapshot>(LocalBridgeClazz, "read", arg0, arg1);
-            }
 
             #endregion
 

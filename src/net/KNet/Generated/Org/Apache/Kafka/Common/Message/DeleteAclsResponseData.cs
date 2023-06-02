@@ -87,53 +87,31 @@ namespace Org.Apache.Kafka.Common.Message
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.html#apiKey()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.html#throttleTimeMs()"/>
         /// </summary>
-        public short ApiKey
+
+        /// <returns><see cref="int"/></returns>
+        public int ThrottleTimeMs()
         {
-            get { return IExecute<short>("apiKey"); }
+            return IExecute<int>("throttleTimeMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.html#duplicate()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.html#filterResults()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.Message Duplicate
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Message.DeleteAclsResponseData.DeleteAclsFilterResult> FilterResults()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.DeleteAclsResponseData.DeleteAclsFilterResult>>("filterResults");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.html#filterResults()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.html#unknownTaggedFields()"/>
         /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Message.DeleteAclsResponseData.DeleteAclsFilterResult> FilterResults
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields()
         {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.DeleteAclsResponseData.DeleteAclsFilterResult>>("filterResults"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.html#highestSupportedVersion()"/> 
-        /// </summary>
-        public short HighestSupportedVersion
-        {
-            get { return IExecute<short>("highestSupportedVersion"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.html#lowestSupportedVersion()"/> 
-        /// </summary>
-        public short LowestSupportedVersion
-        {
-            get { return IExecute<short>("lowestSupportedVersion"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.html#throttleTimeMs()"/> 
-        /// </summary>
-        public int ThrottleTimeMs
-        {
-            get { return IExecute<int>("throttleTimeMs"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.html#unknownTaggedFields()"/> 
-        /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields
-        {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.html#setFilterResults(java.util.List)"/>
@@ -152,6 +130,42 @@ namespace Org.Apache.Kafka.Common.Message
         public Org.Apache.Kafka.Common.Message.DeleteAclsResponseData SetThrottleTimeMs(int arg0)
         {
             return IExecute<Org.Apache.Kafka.Common.Message.DeleteAclsResponseData>("setThrottleTimeMs", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.html#duplicate()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.Message Duplicate()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.html#apiKey()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short ApiKey()
+        {
+            return IExecute<short>("apiKey");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.html#highestSupportedVersion()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short HighestSupportedVersion()
+        {
+            return IExecute<short>("highestSupportedVersion");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.html#lowestSupportedVersion()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short LowestSupportedVersion()
+        {
+            return IExecute<short>("lowestSupportedVersion");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>
@@ -248,53 +262,31 @@ namespace Org.Apache.Kafka.Common.Message
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsFilterResult.html#duplicate()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsFilterResult.html#errorMessage()"/>
             /// </summary>
-            public Org.Apache.Kafka.Common.Protocol.Message Duplicate
+
+            /// <returns><see cref="string"/></returns>
+            public string ErrorMessage()
             {
-                get { return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate"); }
+                return IExecute<string>("errorMessage");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsFilterResult.html#errorCode()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsFilterResult.html#matchingAcls()"/>
             /// </summary>
-            public short ErrorCode
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<Org.Apache.Kafka.Common.Message.DeleteAclsResponseData.DeleteAclsMatchingAcl> MatchingAcls()
             {
-                get { return IExecute<short>("errorCode"); }
+                return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.DeleteAclsResponseData.DeleteAclsMatchingAcl>>("matchingAcls");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsFilterResult.html#errorMessage()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsFilterResult.html#unknownTaggedFields()"/>
             /// </summary>
-            public string ErrorMessage
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields()
             {
-                get { return IExecute<string>("errorMessage"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsFilterResult.html#highestSupportedVersion()"/> 
-            /// </summary>
-            public short HighestSupportedVersion
-            {
-                get { return IExecute<short>("highestSupportedVersion"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsFilterResult.html#lowestSupportedVersion()"/> 
-            /// </summary>
-            public short LowestSupportedVersion
-            {
-                get { return IExecute<short>("lowestSupportedVersion"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsFilterResult.html#matchingAcls()"/> 
-            /// </summary>
-            public Java.Util.List<Org.Apache.Kafka.Common.Message.DeleteAclsResponseData.DeleteAclsMatchingAcl> MatchingAcls
-            {
-                get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.DeleteAclsResponseData.DeleteAclsMatchingAcl>>("matchingAcls"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsFilterResult.html#unknownTaggedFields()"/> 
-            /// </summary>
-            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields
-            {
-                get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields"); }
+                return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsFilterResult.html#setErrorCode(short)"/>
@@ -322,6 +314,42 @@ namespace Org.Apache.Kafka.Common.Message
             public Org.Apache.Kafka.Common.Message.DeleteAclsResponseData.DeleteAclsFilterResult SetMatchingAcls(Java.Util.List<Org.Apache.Kafka.Common.Message.DeleteAclsResponseData.DeleteAclsMatchingAcl> arg0)
             {
                 return IExecute<Org.Apache.Kafka.Common.Message.DeleteAclsResponseData.DeleteAclsFilterResult>("setMatchingAcls", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsFilterResult.html#duplicate()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
+            public Org.Apache.Kafka.Common.Protocol.Message Duplicate()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsFilterResult.html#errorCode()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short ErrorCode()
+            {
+                return IExecute<short>("errorCode");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsFilterResult.html#highestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short HighestSupportedVersion()
+            {
+                return IExecute<short>("highestSupportedVersion");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsFilterResult.html#lowestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short LowestSupportedVersion()
+            {
+                return IExecute<short>("lowestSupportedVersion");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsFilterResult.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>
@@ -425,95 +453,85 @@ namespace Org.Apache.Kafka.Common.Message
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsMatchingAcl.html#duplicate()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsMatchingAcl.html#operation()"/>
             /// </summary>
-            public Org.Apache.Kafka.Common.Protocol.Message Duplicate
+
+            /// <returns><see cref="byte"/></returns>
+            public byte Operation()
             {
-                get { return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate"); }
+                return IExecute<byte>("operation");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsMatchingAcl.html#errorCode()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsMatchingAcl.html#patternType()"/>
             /// </summary>
-            public short ErrorCode
+
+            /// <returns><see cref="byte"/></returns>
+            public byte PatternType()
             {
-                get { return IExecute<short>("errorCode"); }
+                return IExecute<byte>("patternType");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsMatchingAcl.html#errorMessage()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsMatchingAcl.html#permissionType()"/>
             /// </summary>
-            public string ErrorMessage
+
+            /// <returns><see cref="byte"/></returns>
+            public byte PermissionType()
             {
-                get { return IExecute<string>("errorMessage"); }
+                return IExecute<byte>("permissionType");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsMatchingAcl.html#highestSupportedVersion()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsMatchingAcl.html#resourceType()"/>
             /// </summary>
-            public short HighestSupportedVersion
+
+            /// <returns><see cref="byte"/></returns>
+            public byte ResourceType()
             {
-                get { return IExecute<short>("highestSupportedVersion"); }
+                return IExecute<byte>("resourceType");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsMatchingAcl.html#host()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsMatchingAcl.html#errorMessage()"/>
             /// </summary>
-            public string Host
+
+            /// <returns><see cref="string"/></returns>
+            public string ErrorMessage()
             {
-                get { return IExecute<string>("host"); }
+                return IExecute<string>("errorMessage");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsMatchingAcl.html#lowestSupportedVersion()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsMatchingAcl.html#host()"/>
             /// </summary>
-            public short LowestSupportedVersion
+
+            /// <returns><see cref="string"/></returns>
+            public string Host()
             {
-                get { return IExecute<short>("lowestSupportedVersion"); }
+                return IExecute<string>("host");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsMatchingAcl.html#operation()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsMatchingAcl.html#principal()"/>
             /// </summary>
-            public byte Operation
+
+            /// <returns><see cref="string"/></returns>
+            public string Principal()
             {
-                get { return IExecute<byte>("operation"); }
+                return IExecute<string>("principal");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsMatchingAcl.html#patternType()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsMatchingAcl.html#resourceName()"/>
             /// </summary>
-            public byte PatternType
+
+            /// <returns><see cref="string"/></returns>
+            public string ResourceName()
             {
-                get { return IExecute<byte>("patternType"); }
+                return IExecute<string>("resourceName");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsMatchingAcl.html#permissionType()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsMatchingAcl.html#unknownTaggedFields()"/>
             /// </summary>
-            public byte PermissionType
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields()
             {
-                get { return IExecute<byte>("permissionType"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsMatchingAcl.html#principal()"/> 
-            /// </summary>
-            public string Principal
-            {
-                get { return IExecute<string>("principal"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsMatchingAcl.html#resourceName()"/> 
-            /// </summary>
-            public string ResourceName
-            {
-                get { return IExecute<string>("resourceName"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsMatchingAcl.html#resourceType()"/> 
-            /// </summary>
-            public byte ResourceType
-            {
-                get { return IExecute<byte>("resourceType"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsMatchingAcl.html#unknownTaggedFields()"/> 
-            /// </summary>
-            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields
-            {
-                get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields"); }
+                return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsMatchingAcl.html#setErrorCode(short)"/>
@@ -595,6 +613,42 @@ namespace Org.Apache.Kafka.Common.Message
             public Org.Apache.Kafka.Common.Message.DeleteAclsResponseData.DeleteAclsMatchingAcl SetResourceType(byte arg0)
             {
                 return IExecute<Org.Apache.Kafka.Common.Message.DeleteAclsResponseData.DeleteAclsMatchingAcl>("setResourceType", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsMatchingAcl.html#duplicate()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
+            public Org.Apache.Kafka.Common.Protocol.Message Duplicate()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsMatchingAcl.html#errorCode()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short ErrorCode()
+            {
+                return IExecute<short>("errorCode");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsMatchingAcl.html#highestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short HighestSupportedVersion()
+            {
+                return IExecute<short>("highestSupportedVersion");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsMatchingAcl.html#lowestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short LowestSupportedVersion()
+            {
+                return IExecute<short>("lowestSupportedVersion");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseData.DeleteAclsMatchingAcl.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>

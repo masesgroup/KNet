@@ -95,32 +95,40 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FindCoordinatorResponse.html#coordinators()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FindCoordinatorResponse.html#hasError()"/>
         /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Message.FindCoordinatorResponseData.Coordinator> Coordinators
+
+        /// <returns><see cref="bool"/></returns>
+        public bool HasError()
         {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.FindCoordinatorResponseData.Coordinator>>("coordinators"); }
+            return IExecute<bool>("hasError");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FindCoordinatorResponse.html#error()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FindCoordinatorResponse.html#coordinators()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.Errors Error
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Message.FindCoordinatorResponseData.Coordinator> Coordinators()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.Errors>("error"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.FindCoordinatorResponseData.Coordinator>>("coordinators");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FindCoordinatorResponse.html#hasError()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FindCoordinatorResponse.html#node()"/>
         /// </summary>
-        public bool HasError
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Node"/></returns>
+        public Org.Apache.Kafka.Common.Node Node()
         {
-            get { return IExecute<bool>("hasError"); }
+            return IExecute<Org.Apache.Kafka.Common.Node>("node");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FindCoordinatorResponse.html#node()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FindCoordinatorResponse.html#error()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Node Node
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Errors"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.Errors Error()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Node>("node"); }
+            return IExecute<Org.Apache.Kafka.Common.Protocol.Errors>("error");
         }
 
         #endregion

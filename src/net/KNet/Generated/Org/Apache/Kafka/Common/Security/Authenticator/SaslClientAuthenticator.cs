@@ -94,46 +94,58 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslClientAuthenticator.html#clientSessionReauthenticationTimeNanos()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslClientAuthenticator.html#complete()"/>
         /// </summary>
-        public long? ClientSessionReauthenticationTimeNanos
+
+        /// <returns><see cref="bool"/></returns>
+        public bool Complete()
         {
-            get { return IExecute<long?>("clientSessionReauthenticationTimeNanos"); }
+            return IExecute<bool>("complete");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslClientAuthenticator.html#complete()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslClientAuthenticator.html#clientSessionReauthenticationTimeNanos()"/>
         /// </summary>
-        public bool Complete
+
+        /// <returns><see cref="long"/></returns>
+        public long? ClientSessionReauthenticationTimeNanos()
         {
-            get { return IExecute<bool>("complete"); }
+            return IExecute<long?>("clientSessionReauthenticationTimeNanos");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslClientAuthenticator.html#pollResponseReceivedDuringReauthentication()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslClientAuthenticator.html#reauthenticationLatencyMs()"/>
         /// </summary>
-        public Java.Util.Optional<Org.Apache.Kafka.Common.Network.NetworkReceive> PollResponseReceivedDuringReauthentication
+
+        /// <returns><see cref="long"/></returns>
+        public long? ReauthenticationLatencyMs()
         {
-            get { return IExecute<Java.Util.Optional<Org.Apache.Kafka.Common.Network.NetworkReceive>>("pollResponseReceivedDuringReauthentication"); }
+            return IExecute<long?>("reauthenticationLatencyMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslClientAuthenticator.html#principal()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslClientAuthenticator.html#pollResponseReceivedDuringReauthentication()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal Principal
+
+        /// <returns><see cref="Java.Util.Optional"/></returns>
+        public Java.Util.Optional<Org.Apache.Kafka.Common.Network.NetworkReceive> PollResponseReceivedDuringReauthentication()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal>("principal"); }
+            return IExecute<Java.Util.Optional<Org.Apache.Kafka.Common.Network.NetworkReceive>>("pollResponseReceivedDuringReauthentication");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslClientAuthenticator.html#principalSerde()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslClientAuthenticator.html#principalSerde()"/>
         /// </summary>
-        public Java.Util.Optional<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipalSerde> PrincipalSerde
+
+        /// <returns><see cref="Java.Util.Optional"/></returns>
+        public Java.Util.Optional<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipalSerde> PrincipalSerde()
         {
-            get { return IExecute<Java.Util.Optional<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipalSerde>>("principalSerde"); }
+            return IExecute<Java.Util.Optional<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipalSerde>>("principalSerde");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslClientAuthenticator.html#reauthenticationLatencyMs()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslClientAuthenticator.html#principal()"/>
         /// </summary>
-        public long? ReauthenticationLatencyMs
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal"/></returns>
+        public Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal Principal()
         {
-            get { return IExecute<long?>("reauthenticationLatencyMs"); }
+            return IExecute<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal>("principal");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslClientAuthenticator.html#authenticate()"/>
@@ -235,13 +247,6 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslClientAuthenticator.SaslState.html#values()"/> 
-            /// </summary>
-            public static Org.Apache.Kafka.Common.Security.Authenticator.SaslClientAuthenticator.SaslState[] Values
-            {
-                get { return SExecuteArray<Org.Apache.Kafka.Common.Security.Authenticator.SaslClientAuthenticator.SaslState>(LocalBridgeClazz, "values"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslClientAuthenticator.SaslState.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
@@ -249,6 +254,15 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
             public static Org.Apache.Kafka.Common.Security.Authenticator.SaslClientAuthenticator.SaslState ValueOf(string arg0)
             {
                 return SExecute<Org.Apache.Kafka.Common.Security.Authenticator.SaslClientAuthenticator.SaslState>(LocalBridgeClazz, "valueOf", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslClientAuthenticator.SaslState.html#values()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Security.Authenticator.SaslClientAuthenticator.SaslState"/></returns>
+            public static Org.Apache.Kafka.Common.Security.Authenticator.SaslClientAuthenticator.SaslState[] Values()
+            {
+                return SExecuteArray<Org.Apache.Kafka.Common.Security.Authenticator.SaslClientAuthenticator.SaslState>(LocalBridgeClazz, "values");
             }
 
             #endregion

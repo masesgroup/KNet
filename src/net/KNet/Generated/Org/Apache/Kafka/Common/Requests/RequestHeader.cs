@@ -79,60 +79,76 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RequestHeader.html#apiKey()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RequestHeader.html#correlationId()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.ApiKeys ApiKey
+
+        /// <returns><see cref="int"/></returns>
+        public int CorrelationId()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.ApiKeys>("apiKey"); }
+            return IExecute<int>("correlationId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RequestHeader.html#apiVersion()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RequestHeader.html#size()"/>
         /// </summary>
-        public short ApiVersion
+
+        /// <returns><see cref="int"/></returns>
+        public int Size()
         {
-            get { return IExecute<short>("apiVersion"); }
+            return IExecute<int>("size");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RequestHeader.html#clientId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RequestHeader.html#clientId()"/>
         /// </summary>
-        public string ClientId
+
+        /// <returns><see cref="string"/></returns>
+        public string ClientId()
         {
-            get { return IExecute<string>("clientId"); }
+            return IExecute<string>("clientId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RequestHeader.html#correlationId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RequestHeader.html#apiKey()"/>
         /// </summary>
-        public int CorrelationId
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.ApiKeys"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.ApiKeys ApiKey()
         {
-            get { return IExecute<int>("correlationId"); }
+            return IExecute<Org.Apache.Kafka.Common.Protocol.ApiKeys>("apiKey");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RequestHeader.html#data()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RequestHeader.html#data()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.ApiMessage Data
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.ApiMessage"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.ApiMessage Data()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.ApiMessage>("data"); }
+            return IExecute<Org.Apache.Kafka.Common.Protocol.ApiMessage>("data");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RequestHeader.html#headerVersion()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RequestHeader.html#toResponseHeader()"/>
         /// </summary>
-        public short HeaderVersion
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Requests.ResponseHeader"/></returns>
+        public Org.Apache.Kafka.Common.Requests.ResponseHeader ToResponseHeader()
         {
-            get { return IExecute<short>("headerVersion"); }
+            return IExecute<Org.Apache.Kafka.Common.Requests.ResponseHeader>("toResponseHeader");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RequestHeader.html#size()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RequestHeader.html#apiVersion()"/>
         /// </summary>
-        public int Size
+
+        /// <returns><see cref="short"/></returns>
+        public short ApiVersion()
         {
-            get { return IExecute<int>("size"); }
+            return IExecute<short>("apiVersion");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RequestHeader.html#toResponseHeader()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RequestHeader.html#headerVersion()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Requests.ResponseHeader ToResponseHeader
+
+        /// <returns><see cref="short"/></returns>
+        public short HeaderVersion()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Requests.ResponseHeader>("toResponseHeader"); }
+            return IExecute<short>("headerVersion");
         }
 
         #endregion

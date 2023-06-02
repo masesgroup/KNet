@@ -54,11 +54,13 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TransformerSupplier.html#get()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TransformerSupplier.html#get()"/>
         /// </summary>
-        public object Get
+
+        /// <returns><see cref="object"/></returns>
+        public object Get()
         {
-            get { return IExecute("get"); }
+            return IExecute("get");
         }
 
         #endregion
@@ -104,11 +106,13 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TransformerSupplier.html#get()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TransformerSupplier.html#get()"/>
         /// </summary>
-        public object Get
+
+        /// <returns><see cref="object"/></returns>
+        public object Get()
         {
-            get { return IExecute("get"); }
+            return IExecute("get");
         }
 
         #endregion

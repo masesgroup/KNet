@@ -46,11 +46,13 @@ namespace Org.Apache.Kafka.Common
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Reconfigurable.html#reconfigurableConfigs()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Reconfigurable.html#reconfigurableConfigs()"/>
         /// </summary>
-        public Java.Util.Set<string> ReconfigurableConfigs
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<string> ReconfigurableConfigs()
         {
-            get { return IExecute<Java.Util.Set<string>>("reconfigurableConfigs"); }
+            return IExecute<Java.Util.Set<string>>("reconfigurableConfigs");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Reconfigurable.html#reconfigure(java.util.Map)"/>

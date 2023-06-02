@@ -98,7 +98,7 @@ namespace Org.Apache.Kafka.Connect.Runtime.Errors
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/errors/WorkerErrantRecordReporter.ErrantRecordFuture.html#%3Cinit%3E(java.util.List)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.List"/></param>
-            public ErrantRecordFuture(Java.Util.List arg0)
+            public ErrantRecordFuture(Java.Util.List<Java.Util.Concurrent.Future<Org.Apache.Kafka.Clients.Producer.RecordMetadata>> arg0)
                 : base(arg0)
             {
             }
@@ -123,20 +123,6 @@ namespace Org.Apache.Kafka.Connect.Runtime.Errors
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/errors/WorkerErrantRecordReporter.ErrantRecordFuture.html#isCancelled()"/> 
-            /// </summary>
-            public bool IsCancelled
-            {
-                get { return IExecute<bool>("isCancelled"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/errors/WorkerErrantRecordReporter.ErrantRecordFuture.html#isDone()"/> 
-            /// </summary>
-            public bool IsDone
-            {
-                get { return IExecute<bool>("isDone"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/errors/WorkerErrantRecordReporter.ErrantRecordFuture.html#cancel(boolean)"/>
             /// </summary>
             /// <param name="arg0"><see cref="bool"/></param>
@@ -144,6 +130,24 @@ namespace Org.Apache.Kafka.Connect.Runtime.Errors
             public bool Cancel(bool arg0)
             {
                 return IExecute<bool>("cancel", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/errors/WorkerErrantRecordReporter.ErrantRecordFuture.html#isCancelled()"/>
+            /// </summary>
+
+            /// <returns><see cref="bool"/></returns>
+            public bool IsCancelled()
+            {
+                return IExecute<bool>("isCancelled");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/errors/WorkerErrantRecordReporter.ErrantRecordFuture.html#isDone()"/>
+            /// </summary>
+
+            /// <returns><see cref="bool"/></returns>
+            public bool IsDone()
+            {
+                return IExecute<bool>("isDone");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/errors/WorkerErrantRecordReporter.ErrantRecordFuture.html#get()"/>

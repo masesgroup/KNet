@@ -33,10 +33,6 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest.Errors
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Connect.Runtime.Rest.Errors.ConnectExceptionMapper"/> to <see cref="Javax.Ws.Rs.Ext.ExceptionMapper"/>
-        /// </summary>
-        public static implicit operator Javax.Ws.Rs.Ext.ExceptionMapper(Org.Apache.Kafka.Connect.Runtime.Rest.Errors.ConnectExceptionMapper t) => t.Cast<Javax.Ws.Rs.Ext.ExceptionMapper>();
 
         #endregion
 
@@ -49,24 +45,6 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest.Errors
         #endregion
 
         #region Instance methods
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/errors/ConnectExceptionMapper.html#toResponse(java.lang.Exception)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Java.Lang.Exception"/></param>
-        /// <returns><see cref="Javax.Ws.Rs.Core.Response"/></returns>
-        public Javax.Ws.Rs.Core.Response ToResponse(Java.Lang.Exception arg0)
-        {
-            return IExecute<Javax.Ws.Rs.Core.Response>("toResponse", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/errors/ConnectExceptionMapper.html#toResponse(java.lang.Throwable)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Java.Lang.Throwable"/></param>
-        /// <returns><see cref="Javax.Ws.Rs.Core.Response"/></returns>
-        public Javax.Ws.Rs.Core.Response ToResponse(Java.Lang.Throwable arg0)
-        {
-            return IExecute<Javax.Ws.Rs.Core.Response>("toResponse", arg0);
-        }
 
         #endregion
 

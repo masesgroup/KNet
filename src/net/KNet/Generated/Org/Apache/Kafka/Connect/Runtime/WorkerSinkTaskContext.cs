@@ -50,46 +50,49 @@ namespace Org.Apache.Kafka.Connect.Runtime
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerSinkTaskContext.html#assignment()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerSinkTaskContext.html#isCommitRequested()"/>
         /// </summary>
-        public Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> Assignment
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsCommitRequested()
         {
-            get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition>>("assignment"); }
+            return IExecute<bool>("isCommitRequested");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerSinkTaskContext.html#configs()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerSinkTaskContext.html#configs()"/>
         /// </summary>
-        public Java.Util.Map<string, string> Configs
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, string> Configs()
         {
-            get { return IExecute<Java.Util.Map<string, string>>("configs"); }
+            return IExecute<Java.Util.Map<string, string>>("configs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerSinkTaskContext.html#errantRecordReporter()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerSinkTaskContext.html#offsets()"/>
         /// </summary>
-        public Org.Apache.Kafka.Connect.Sink.ErrantRecordReporter ErrantRecordReporter
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?> Offsets()
         {
-            get { return IExecute<Org.Apache.Kafka.Connect.Sink.ErrantRecordReporter>("errantRecordReporter"); }
+            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?>>("offsets");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerSinkTaskContext.html#isCommitRequested()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerSinkTaskContext.html#assignment()"/>
         /// </summary>
-        public bool IsCommitRequested
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> Assignment()
         {
-            get { return IExecute<bool>("isCommitRequested"); }
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition>>("assignment");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerSinkTaskContext.html#offsets()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerSinkTaskContext.html#pausedPartitions()"/>
         /// </summary>
-        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?> Offsets
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> PausedPartitions()
         {
-            get { return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?>>("offsets"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerSinkTaskContext.html#pausedPartitions()"/> 
-        /// </summary>
-        public Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> PausedPartitions
-        {
-            get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition>>("pausedPartitions"); }
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition>>("pausedPartitions");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerSinkTaskContext.html#timeout()"/>
@@ -99,6 +102,15 @@ namespace Org.Apache.Kafka.Connect.Runtime
         public long Timeout()
         {
             return IExecute<long>("timeout");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerSinkTaskContext.html#errantRecordReporter()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Sink.ErrantRecordReporter"/></returns>
+        public Org.Apache.Kafka.Connect.Sink.ErrantRecordReporter ErrantRecordReporter()
+        {
+            return IExecute<Org.Apache.Kafka.Connect.Sink.ErrantRecordReporter>("errantRecordReporter");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerSinkTaskContext.html#clearCommitRequest()"/>

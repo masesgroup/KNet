@@ -65,11 +65,13 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeDelegationTokenRequest.html#ownersListEmpty()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeDelegationTokenRequest.html#ownersListEmpty()"/>
         /// </summary>
-        public bool OwnersListEmpty
+
+        /// <returns><see cref="bool"/></returns>
+        public bool OwnersListEmpty()
         {
-            get { return IExecute<bool>("ownersListEmpty"); }
+            return IExecute<bool>("ownersListEmpty");
         }
 
         #endregion
@@ -83,7 +85,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeDelegationTokenRequest.Builder.html#%3Cinit%3E(java.util.List)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.List"/></param>
-            public Builder(Java.Util.List arg0)
+            public Builder(Java.Util.List<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal> arg0)
                 : base(arg0)
             {
             }

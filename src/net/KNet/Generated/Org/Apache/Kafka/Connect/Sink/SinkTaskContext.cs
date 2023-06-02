@@ -46,25 +46,22 @@ namespace Org.Apache.Kafka.Connect.Sink
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/sink/SinkTaskContext.html#assignment()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/sink/SinkTaskContext.html#configs()"/>
         /// </summary>
-        public Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> Assignment
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, string> Configs()
         {
-            get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition>>("assignment"); }
+            return IExecute<Java.Util.Map<string, string>>("configs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/sink/SinkTaskContext.html#configs()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/sink/SinkTaskContext.html#assignment()"/>
         /// </summary>
-        public Java.Util.Map<string, string> Configs
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> Assignment()
         {
-            get { return IExecute<Java.Util.Map<string, string>>("configs"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/sink/SinkTaskContext.html#errantRecordReporter()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Connect.Sink.ErrantRecordReporter ErrantRecordReporter
-        {
-            get { return IExecute<Org.Apache.Kafka.Connect.Sink.ErrantRecordReporter>("errantRecordReporter"); }
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition>>("assignment");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/sink/SinkTaskContext.html#offset(java.util.Map)"/>
@@ -113,6 +110,15 @@ namespace Org.Apache.Kafka.Connect.Sink
         public void Timeout(long arg0)
         {
             IExecute("timeout", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/sink/SinkTaskContext.html#errantRecordReporter()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Sink.ErrantRecordReporter"/></returns>
+        public Org.Apache.Kafka.Connect.Sink.ErrantRecordReporter ErrantRecordReporter()
+        {
+            return IExecute<Org.Apache.Kafka.Connect.Sink.ErrantRecordReporter>("errantRecordReporter");
         }
 
         #endregion

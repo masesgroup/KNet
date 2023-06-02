@@ -57,46 +57,58 @@ namespace Org.Apache.Kafka.Common.Acl
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AccessControlEntry.html#host()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AccessControlEntry.html#isUnknown()"/>
         /// </summary>
-        public string Host
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsUnknown()
         {
-            get { return IExecute<string>("host"); }
+            return IExecute<bool>("isUnknown");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AccessControlEntry.html#isUnknown()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AccessControlEntry.html#host()"/>
         /// </summary>
-        public bool IsUnknown
+
+        /// <returns><see cref="string"/></returns>
+        public string Host()
         {
-            get { return IExecute<bool>("isUnknown"); }
+            return IExecute<string>("host");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AccessControlEntry.html#operation()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AccessControlEntry.html#principal()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Acl.AclOperation Operation
+
+        /// <returns><see cref="string"/></returns>
+        public string Principal()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Acl.AclOperation>("operation"); }
+            return IExecute<string>("principal");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AccessControlEntry.html#permissionType()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AccessControlEntry.html#toFilter()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Acl.AclPermissionType PermissionType
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Acl.AccessControlEntryFilter"/></returns>
+        public Org.Apache.Kafka.Common.Acl.AccessControlEntryFilter ToFilter()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Acl.AclPermissionType>("permissionType"); }
+            return IExecute<Org.Apache.Kafka.Common.Acl.AccessControlEntryFilter>("toFilter");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AccessControlEntry.html#principal()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AccessControlEntry.html#operation()"/>
         /// </summary>
-        public string Principal
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Acl.AclOperation"/></returns>
+        public Org.Apache.Kafka.Common.Acl.AclOperation Operation()
         {
-            get { return IExecute<string>("principal"); }
+            return IExecute<Org.Apache.Kafka.Common.Acl.AclOperation>("operation");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AccessControlEntry.html#toFilter()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AccessControlEntry.html#permissionType()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Acl.AccessControlEntryFilter ToFilter
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Acl.AclPermissionType"/></returns>
+        public Org.Apache.Kafka.Common.Acl.AclPermissionType PermissionType()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Acl.AccessControlEntryFilter>("toFilter"); }
+            return IExecute<Org.Apache.Kafka.Common.Acl.AclPermissionType>("permissionType");
         }
 
         #endregion

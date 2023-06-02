@@ -41,37 +41,6 @@ namespace Org.Apache.Kafka.Common.Message
         #endregion
 
         #region Static methods
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/AlterConfigsRequestDataJsonConverter.html#write(org.apache.kafka.common.message.AlterConfigsRequestData,short,boolean)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.AlterConfigsRequestData"/></param>
-        /// <param name="arg1"><see cref="short"/></param>
-        /// <param name="arg2"><see cref="bool"/></param>
-        /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-        public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.AlterConfigsRequestData arg0, short arg1, bool arg2)
-        {
-            return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1, arg2);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/AlterConfigsRequestDataJsonConverter.html#write(org.apache.kafka.common.message.AlterConfigsRequestData,short)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.AlterConfigsRequestData"/></param>
-        /// <param name="arg1"><see cref="short"/></param>
-        /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-        public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.AlterConfigsRequestData arg0, short arg1)
-        {
-            return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/AlterConfigsRequestDataJsonConverter.html#read(com.fasterxml.jackson.databind.JsonNode,short)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></param>
-        /// <param name="arg1"><see cref="short"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Common.Message.AlterConfigsRequestData"/></returns>
-        public static Org.Apache.Kafka.Common.Message.AlterConfigsRequestData Read(Com.Fasterxml.Jackson.Databind.JsonNode arg0, short arg1)
-        {
-            return SExecute<Org.Apache.Kafka.Common.Message.AlterConfigsRequestData>(LocalBridgeClazz, "read", arg0, arg1);
-        }
 
         #endregion
 
@@ -96,37 +65,6 @@ namespace Org.Apache.Kafka.Common.Message
             #endregion
 
             #region Static methods
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/AlterConfigsRequestDataJsonConverter.AlterableConfigJsonConverter.html#write(org.apache.kafka.common.message.AlterConfigsRequestData.AlterableConfig,short,boolean)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.AlterConfigsRequestData.AlterableConfig"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <param name="arg2"><see cref="bool"/></param>
-            /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-            public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.AlterConfigsRequestData.AlterableConfig arg0, short arg1, bool arg2)
-            {
-                return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1, arg2);
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/AlterConfigsRequestDataJsonConverter.AlterableConfigJsonConverter.html#write(org.apache.kafka.common.message.AlterConfigsRequestData.AlterableConfig,short)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.AlterConfigsRequestData.AlterableConfig"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-            public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.AlterConfigsRequestData.AlterableConfig arg0, short arg1)
-            {
-                return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1);
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/AlterConfigsRequestDataJsonConverter.AlterableConfigJsonConverter.html#read(com.fasterxml.jackson.databind.JsonNode,short)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <returns><see cref="Org.Apache.Kafka.Common.Message.AlterConfigsRequestData.AlterableConfig"/></returns>
-            public static Org.Apache.Kafka.Common.Message.AlterConfigsRequestData.AlterableConfig Read(Com.Fasterxml.Jackson.Databind.JsonNode arg0, short arg1)
-            {
-                return SExecute<Org.Apache.Kafka.Common.Message.AlterConfigsRequestData.AlterableConfig>(LocalBridgeClazz, "read", arg0, arg1);
-            }
 
             #endregion
 
@@ -158,37 +96,6 @@ namespace Org.Apache.Kafka.Common.Message
             #endregion
 
             #region Static methods
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/AlterConfigsRequestDataJsonConverter.AlterConfigsResourceJsonConverter.html#write(org.apache.kafka.common.message.AlterConfigsRequestData.AlterConfigsResource,short,boolean)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.AlterConfigsRequestData.AlterConfigsResource"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <param name="arg2"><see cref="bool"/></param>
-            /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-            public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.AlterConfigsRequestData.AlterConfigsResource arg0, short arg1, bool arg2)
-            {
-                return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1, arg2);
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/AlterConfigsRequestDataJsonConverter.AlterConfigsResourceJsonConverter.html#write(org.apache.kafka.common.message.AlterConfigsRequestData.AlterConfigsResource,short)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.AlterConfigsRequestData.AlterConfigsResource"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-            public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.AlterConfigsRequestData.AlterConfigsResource arg0, short arg1)
-            {
-                return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1);
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/AlterConfigsRequestDataJsonConverter.AlterConfigsResourceJsonConverter.html#read(com.fasterxml.jackson.databind.JsonNode,short)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <returns><see cref="Org.Apache.Kafka.Common.Message.AlterConfigsRequestData.AlterConfigsResource"/></returns>
-            public static Org.Apache.Kafka.Common.Message.AlterConfigsRequestData.AlterConfigsResource Read(Com.Fasterxml.Jackson.Databind.JsonNode arg0, short arg1)
-            {
-                return SExecute<Org.Apache.Kafka.Common.Message.AlterConfigsRequestData.AlterConfigsResource>(LocalBridgeClazz, "read", arg0, arg1);
-            }
 
             #endregion
 

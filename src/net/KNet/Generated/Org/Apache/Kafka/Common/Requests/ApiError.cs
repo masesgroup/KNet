@@ -85,48 +85,6 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ApiError.html#error()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.Errors Error
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.Errors>("error"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ApiError.html#exception()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Errors.ApiException Exception
-        {
-            get { var obj = IExecute<MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject>("exception"); return MASES.JCOBridge.C2JBridge.JVMBridgeException.New<Org.Apache.Kafka.Common.Errors.ApiException>(obj); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ApiError.html#isFailure()"/> 
-        /// </summary>
-        public bool IsFailure
-        {
-            get { return IExecute<bool>("isFailure"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ApiError.html#isSuccess()"/> 
-        /// </summary>
-        public bool IsSuccess
-        {
-            get { return IExecute<bool>("isSuccess"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ApiError.html#message()"/> 
-        /// </summary>
-        public string Message
-        {
-            get { return IExecute<string>("message"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ApiError.html#messageWithFallback()"/> 
-        /// </summary>
-        public string MessageWithFallback
-        {
-            get { return IExecute<string>("messageWithFallback"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ApiError.html#is(org.apache.kafka.common.protocol.Errors)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Errors"/></param>
@@ -134,6 +92,60 @@ namespace Org.Apache.Kafka.Common.Requests
         public bool Is(Org.Apache.Kafka.Common.Protocol.Errors arg0)
         {
             return IExecute<bool>("is", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ApiError.html#isFailure()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsFailure()
+        {
+            return IExecute<bool>("isFailure");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ApiError.html#isSuccess()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsSuccess()
+        {
+            return IExecute<bool>("isSuccess");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ApiError.html#message()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string Message()
+        {
+            return IExecute<string>("message");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ApiError.html#messageWithFallback()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string MessageWithFallback()
+        {
+            return IExecute<string>("messageWithFallback");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ApiError.html#exception()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Errors.ApiException"/></returns>
+        public Org.Apache.Kafka.Common.Errors.ApiException Exception()
+        {
+            var obj = IExecute<MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject>("exception"); return MASES.JCOBridge.C2JBridge.JVMBridgeException.New<Org.Apache.Kafka.Common.Errors.ApiException>(obj);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ApiError.html#error()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Errors"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.Errors Error()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Protocol.Errors>("error");
         }
 
         #endregion

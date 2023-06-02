@@ -41,37 +41,6 @@ namespace Org.Apache.Kafka.Common.Message
         #endregion
 
         #region Static methods
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeQuorumRequestDataJsonConverter.html#write(org.apache.kafka.common.message.DescribeQuorumRequestData,short,boolean)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.DescribeQuorumRequestData"/></param>
-        /// <param name="arg1"><see cref="short"/></param>
-        /// <param name="arg2"><see cref="bool"/></param>
-        /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-        public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.DescribeQuorumRequestData arg0, short arg1, bool arg2)
-        {
-            return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1, arg2);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeQuorumRequestDataJsonConverter.html#write(org.apache.kafka.common.message.DescribeQuorumRequestData,short)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.DescribeQuorumRequestData"/></param>
-        /// <param name="arg1"><see cref="short"/></param>
-        /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-        public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.DescribeQuorumRequestData arg0, short arg1)
-        {
-            return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeQuorumRequestDataJsonConverter.html#read(com.fasterxml.jackson.databind.JsonNode,short)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></param>
-        /// <param name="arg1"><see cref="short"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Common.Message.DescribeQuorumRequestData"/></returns>
-        public static Org.Apache.Kafka.Common.Message.DescribeQuorumRequestData Read(Com.Fasterxml.Jackson.Databind.JsonNode arg0, short arg1)
-        {
-            return SExecute<Org.Apache.Kafka.Common.Message.DescribeQuorumRequestData>(LocalBridgeClazz, "read", arg0, arg1);
-        }
 
         #endregion
 
@@ -96,37 +65,6 @@ namespace Org.Apache.Kafka.Common.Message
             #endregion
 
             #region Static methods
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeQuorumRequestDataJsonConverter.PartitionDataJsonConverter.html#write(org.apache.kafka.common.message.DescribeQuorumRequestData.PartitionData,short,boolean)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.DescribeQuorumRequestData.PartitionData"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <param name="arg2"><see cref="bool"/></param>
-            /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-            public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.DescribeQuorumRequestData.PartitionData arg0, short arg1, bool arg2)
-            {
-                return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1, arg2);
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeQuorumRequestDataJsonConverter.PartitionDataJsonConverter.html#write(org.apache.kafka.common.message.DescribeQuorumRequestData.PartitionData,short)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.DescribeQuorumRequestData.PartitionData"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-            public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.DescribeQuorumRequestData.PartitionData arg0, short arg1)
-            {
-                return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1);
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeQuorumRequestDataJsonConverter.PartitionDataJsonConverter.html#read(com.fasterxml.jackson.databind.JsonNode,short)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <returns><see cref="Org.Apache.Kafka.Common.Message.DescribeQuorumRequestData.PartitionData"/></returns>
-            public static Org.Apache.Kafka.Common.Message.DescribeQuorumRequestData.PartitionData Read(Com.Fasterxml.Jackson.Databind.JsonNode arg0, short arg1)
-            {
-                return SExecute<Org.Apache.Kafka.Common.Message.DescribeQuorumRequestData.PartitionData>(LocalBridgeClazz, "read", arg0, arg1);
-            }
 
             #endregion
 
@@ -158,37 +96,6 @@ namespace Org.Apache.Kafka.Common.Message
             #endregion
 
             #region Static methods
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeQuorumRequestDataJsonConverter.TopicDataJsonConverter.html#write(org.apache.kafka.common.message.DescribeQuorumRequestData.TopicData,short,boolean)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.DescribeQuorumRequestData.TopicData"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <param name="arg2"><see cref="bool"/></param>
-            /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-            public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.DescribeQuorumRequestData.TopicData arg0, short arg1, bool arg2)
-            {
-                return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1, arg2);
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeQuorumRequestDataJsonConverter.TopicDataJsonConverter.html#write(org.apache.kafka.common.message.DescribeQuorumRequestData.TopicData,short)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.DescribeQuorumRequestData.TopicData"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-            public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.DescribeQuorumRequestData.TopicData arg0, short arg1)
-            {
-                return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1);
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeQuorumRequestDataJsonConverter.TopicDataJsonConverter.html#read(com.fasterxml.jackson.databind.JsonNode,short)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <returns><see cref="Org.Apache.Kafka.Common.Message.DescribeQuorumRequestData.TopicData"/></returns>
-            public static Org.Apache.Kafka.Common.Message.DescribeQuorumRequestData.TopicData Read(Com.Fasterxml.Jackson.Databind.JsonNode arg0, short arg1)
-            {
-                return SExecute<Org.Apache.Kafka.Common.Message.DescribeQuorumRequestData.TopicData>(LocalBridgeClazz, "read", arg0, arg1);
-            }
 
             #endregion
 

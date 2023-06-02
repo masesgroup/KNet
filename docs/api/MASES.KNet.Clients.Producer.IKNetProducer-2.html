@@ -79,10 +79,10 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="MASES.KNet.Clients.Producer.IProducer-2.html#MASES_KNet_Clients_Producer_IProducer_2_Send_MASES_KNet_Clients_Producer_ProducerRecord__0__1__">IProducer&lt;K, V&gt;.Send(ProducerRecord&lt;K, V&gt;)</a>
+      <a class="xref" href="MASES.KNet.Clients.Producer.IProducer-2.html#MASES_KNet_Clients_Producer_IProducer_2_Send_MASES_KNet_Clients_Producer_ProducerRecord__0__1__">IProducer&lt;Byte[], Byte[]&gt;.Send(ProducerRecord&lt;Byte[], Byte[]&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Clients.Producer.IProducer-2.html#MASES_KNet_Clients_Producer_IProducer_2_Send_MASES_KNet_Clients_Producer_ProducerRecord__0__1__MASES_KNet_Clients_Producer_Callback_">IProducer&lt;K, V&gt;.Send(ProducerRecord&lt;K, V&gt;, Callback)</a>
+      <a class="xref" href="MASES.KNet.Clients.Producer.IProducer-2.html#MASES_KNet_Clients_Producer_IProducer_2_Send_MASES_KNet_Clients_Producer_ProducerRecord__0__1__MASES_KNet_Clients_Producer_Callback_">IProducer&lt;Byte[], Byte[]&gt;.Send(ProducerRecord&lt;Byte[], Byte[]&gt;, Callback)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Clients.Producer.IProducer.html#MASES_KNet_Clients_Producer_IProducer_InitTransactions">IProducer.InitTransactions()</a>
@@ -133,28 +133,28 @@
       <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase.CastTo&lt;TNewClass&gt;(System.Boolean)</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase.DynInstance</span>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase.DynBridgeInstance</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase.Instance</span>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase.BridgeInstance</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.ClassName</span>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.BridgeClassName</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.IsInterface</span>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.IsBridgeInterface</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.IsAbstract</span>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.IsBridgeAbstract</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.IsStatic</span>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.IsBridgeStatic</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.IsCloseable</span>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.IsBridgeCloseable</span>
     </div>
     <div>
-      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.IsListener</span>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.IsBridgeListener</span>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose#system-idisposable-dispose">IDisposable.Dispose()</a>
@@ -164,7 +164,7 @@
   <h6><strong>Assembly</strong>: MASES.KNet.dll</h6>
   <h5 id="MASES_KNet_Clients_Producer_IKNetProducer_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IKNetProducer&lt;K, V&gt; : IProducer&lt;K, V&gt;, IProducer, IJVMBridgeBase, IJVMBridgeDefinition, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IKNetProducer&lt;K, V&gt; : IProducer&lt;byte[], byte[]&gt;, IProducer, IJVMBridgeBase, IJVMBridgeDefinition, IDisposable</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -191,10 +191,934 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IKNetProducer_2_Produce_MASES_KNet_Clients_Producer_KNetProducerRecord__0__1__MASES_KNet_Clients_Producer_Callback_.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IKNetProducer%602.Produce(MASES.KNet.Clients.Producer.KNetProducerRecord%7B%600%2C%601%7D%2CMASES.KNet.Clients.Producer.Callback)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KNetProducer.cs/#L166">View Source</a>
+  </span>
+  <a id="MASES_KNet_Clients_Producer_IKNetProducer_2_Produce_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Produce*"></a>
+  <h4 id="MASES_KNet_Clients_Producer_IKNetProducer_2_Produce_MASES_KNet_Clients_Producer_KNetProducerRecord__0__1__MASES_KNet_Clients_Producer_Callback_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Produce(MASES.KNet.Clients.Producer.KNetProducerRecord{`0,`1},MASES.KNet.Clients.Producer.Callback)">Produce(KNetProducerRecord&lt;K, V&gt;, Callback)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Produce(KNetProducerRecord&lt;K, V&gt; record, Callback cb = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KNet.Clients.Producer.KNetProducerRecord-2.html">KNetProducerRecord</a>&lt;K, V&gt;</td>
+        <td><span class="parametername">record</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MASES.KNet.Clients.Producer.Callback.html">Callback</a></td>
+        <td><span class="parametername">cb</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IKNetProducer_2_Produce_MASES_KNet_Clients_Producer_KNetProducerRecord__0__1__System_Action_MASES_KNet_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IKNetProducer%602.Produce(MASES.KNet.Clients.Producer.KNetProducerRecord%7B%600%2C%601%7D%2CSystem.Action%7BMASES.KNet.Clients.Producer.RecordMetadata%2CMASES.JCOBridge.C2JBridge.JVMBridgeException%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KNetProducer.cs/#L156">View Source</a>
+  </span>
+  <a id="MASES_KNet_Clients_Producer_IKNetProducer_2_Produce_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Produce*"></a>
+  <h4 id="MASES_KNet_Clients_Producer_IKNetProducer_2_Produce_MASES_KNet_Clients_Producer_KNetProducerRecord__0__1__System_Action_MASES_KNet_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Produce(MASES.KNet.Clients.Producer.KNetProducerRecord{`0,`1},System.Action{MASES.KNet.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">Produce(KNetProducerRecord&lt;K, V&gt;, Action&lt;RecordMetadata, JVMBridgeException&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Produce(KNetProducerRecord&lt;K, V&gt; record, Action&lt;RecordMetadata, JVMBridgeException&gt; action = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KNet.Clients.Producer.KNetProducerRecord-2.html">KNetProducerRecord</a>&lt;K, V&gt;</td>
+        <td><span class="parametername">record</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="MASES.KNet.Clients.Producer.RecordMetadata.html">RecordMetadata</a>, <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeException</span>&gt;</td>
+        <td><span class="parametername">action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IKNetProducer_2_Produce_System_String__0__1_MASES_KNet_Clients_Producer_Callback_.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IKNetProducer%602.Produce(System.String%2C%600%2C%601%2CMASES.KNet.Clients.Producer.Callback)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KNetProducer.cs/#L158">View Source</a>
+  </span>
+  <a id="MASES_KNet_Clients_Producer_IKNetProducer_2_Produce_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Produce*"></a>
+  <h4 id="MASES_KNet_Clients_Producer_IKNetProducer_2_Produce_System_String__0__1_MASES_KNet_Clients_Producer_Callback_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Produce(System.String,`0,`1,MASES.KNet.Clients.Producer.Callback)">Produce(String, K, V, Callback)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Produce(string topic, K key, V value, Callback cb = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">topic</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">K</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">V</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MASES.KNet.Clients.Producer.Callback.html">Callback</a></td>
+        <td><span class="parametername">cb</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IKNetProducer_2_Produce_System_String__0__1_System_Action_MASES_KNet_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IKNetProducer%602.Produce(System.String%2C%600%2C%601%2CSystem.Action%7BMASES.KNet.Clients.Producer.RecordMetadata%2CMASES.JCOBridge.C2JBridge.JVMBridgeException%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KNetProducer.cs/#L148">View Source</a>
+  </span>
+  <a id="MASES_KNet_Clients_Producer_IKNetProducer_2_Produce_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Produce*"></a>
+  <h4 id="MASES_KNet_Clients_Producer_IKNetProducer_2_Produce_System_String__0__1_System_Action_MASES_KNet_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Produce(System.String,`0,`1,System.Action{MASES.KNet.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">Produce(String, K, V, Action&lt;RecordMetadata, JVMBridgeException&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Produce(string topic, K key, V value, Action&lt;RecordMetadata, JVMBridgeException&gt; action = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">topic</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">K</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">V</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="MASES.KNet.Clients.Producer.RecordMetadata.html">RecordMetadata</a>, <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeException</span>&gt;</td>
+        <td><span class="parametername">action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IKNetProducer_2_Produce_System_String_System_Int32__0__1_MASES_KNet_Clients_Producer_Callback_.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IKNetProducer%602.Produce(System.String%2CSystem.Int32%2C%600%2C%601%2CMASES.KNet.Clients.Producer.Callback)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KNetProducer.cs/#L160">View Source</a>
+  </span>
+  <a id="MASES_KNet_Clients_Producer_IKNetProducer_2_Produce_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Produce*"></a>
+  <h4 id="MASES_KNet_Clients_Producer_IKNetProducer_2_Produce_System_String_System_Int32__0__1_MASES_KNet_Clients_Producer_Callback_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Produce(System.String,System.Int32,`0,`1,MASES.KNet.Clients.Producer.Callback)">Produce(String, Int32, K, V, Callback)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Produce(string topic, int partition, K key, V value, Callback cb = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">topic</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">partition</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">K</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">V</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MASES.KNet.Clients.Producer.Callback.html">Callback</a></td>
+        <td><span class="parametername">cb</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IKNetProducer_2_Produce_System_String_System_Int32__0__1_System_Action_MASES_KNet_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IKNetProducer%602.Produce(System.String%2CSystem.Int32%2C%600%2C%601%2CSystem.Action%7BMASES.KNet.Clients.Producer.RecordMetadata%2CMASES.JCOBridge.C2JBridge.JVMBridgeException%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KNetProducer.cs/#L150">View Source</a>
+  </span>
+  <a id="MASES_KNet_Clients_Producer_IKNetProducer_2_Produce_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Produce*"></a>
+  <h4 id="MASES_KNet_Clients_Producer_IKNetProducer_2_Produce_System_String_System_Int32__0__1_System_Action_MASES_KNet_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Produce(System.String,System.Int32,`0,`1,System.Action{MASES.KNet.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">Produce(String, Int32, K, V, Action&lt;RecordMetadata, JVMBridgeException&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Produce(string topic, int partition, K key, V value, Action&lt;RecordMetadata, JVMBridgeException&gt; action = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">topic</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">partition</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">K</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">V</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="MASES.KNet.Clients.Producer.RecordMetadata.html">RecordMetadata</a>, <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeException</span>&gt;</td>
+        <td><span class="parametername">action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IKNetProducer_2_Produce_System_String_System_Int32_System_DateTime__0__1_MASES_KNet_Clients_Producer_Callback_.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IKNetProducer%602.Produce(System.String%2CSystem.Int32%2CSystem.DateTime%2C%600%2C%601%2CMASES.KNet.Clients.Producer.Callback)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KNetProducer.cs/#L164">View Source</a>
+  </span>
+  <a id="MASES_KNet_Clients_Producer_IKNetProducer_2_Produce_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Produce*"></a>
+  <h4 id="MASES_KNet_Clients_Producer_IKNetProducer_2_Produce_System_String_System_Int32_System_DateTime__0__1_MASES_KNet_Clients_Producer_Callback_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Produce(System.String,System.Int32,System.DateTime,`0,`1,MASES.KNet.Clients.Producer.Callback)">Produce(String, Int32, DateTime, K, V, Callback)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Produce(string topic, int partition, DateTime timestamp, K key, V value, Callback cb = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">topic</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">partition</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
+        <td><span class="parametername">timestamp</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">K</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">V</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MASES.KNet.Clients.Producer.Callback.html">Callback</a></td>
+        <td><span class="parametername">cb</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IKNetProducer_2_Produce_System_String_System_Int32_System_DateTime__0__1_System_Action_MASES_KNet_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IKNetProducer%602.Produce(System.String%2CSystem.Int32%2CSystem.DateTime%2C%600%2C%601%2CSystem.Action%7BMASES.KNet.Clients.Producer.RecordMetadata%2CMASES.JCOBridge.C2JBridge.JVMBridgeException%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KNetProducer.cs/#L154">View Source</a>
+  </span>
+  <a id="MASES_KNet_Clients_Producer_IKNetProducer_2_Produce_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Produce*"></a>
+  <h4 id="MASES_KNet_Clients_Producer_IKNetProducer_2_Produce_System_String_System_Int32_System_DateTime__0__1_System_Action_MASES_KNet_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Produce(System.String,System.Int32,System.DateTime,`0,`1,System.Action{MASES.KNet.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">Produce(String, Int32, DateTime, K, V, Action&lt;RecordMetadata, JVMBridgeException&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Produce(string topic, int partition, DateTime timestamp, K key, V value, Action&lt;RecordMetadata, JVMBridgeException&gt; action = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">topic</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">partition</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
+        <td><span class="parametername">timestamp</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">K</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">V</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="MASES.KNet.Clients.Producer.RecordMetadata.html">RecordMetadata</a>, <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeException</span>&gt;</td>
+        <td><span class="parametername">action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IKNetProducer_2_Produce_System_String_System_Int32_System_Int64__0__1_MASES_KNet_Clients_Producer_Callback_.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IKNetProducer%602.Produce(System.String%2CSystem.Int32%2CSystem.Int64%2C%600%2C%601%2CMASES.KNet.Clients.Producer.Callback)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KNetProducer.cs/#L162">View Source</a>
+  </span>
+  <a id="MASES_KNet_Clients_Producer_IKNetProducer_2_Produce_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Produce*"></a>
+  <h4 id="MASES_KNet_Clients_Producer_IKNetProducer_2_Produce_System_String_System_Int32_System_Int64__0__1_MASES_KNet_Clients_Producer_Callback_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Produce(System.String,System.Int32,System.Int64,`0,`1,MASES.KNet.Clients.Producer.Callback)">Produce(String, Int32, Int64, K, V, Callback)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Produce(string topic, int partition, long timestamp, K key, V value, Callback cb = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">topic</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">partition</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">timestamp</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">K</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">V</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MASES.KNet.Clients.Producer.Callback.html">Callback</a></td>
+        <td><span class="parametername">cb</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IKNetProducer_2_Produce_System_String_System_Int32_System_Int64__0__1_System_Action_MASES_KNet_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IKNetProducer%602.Produce(System.String%2CSystem.Int32%2CSystem.Int64%2C%600%2C%601%2CSystem.Action%7BMASES.KNet.Clients.Producer.RecordMetadata%2CMASES.JCOBridge.C2JBridge.JVMBridgeException%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KNetProducer.cs/#L152">View Source</a>
+  </span>
+  <a id="MASES_KNet_Clients_Producer_IKNetProducer_2_Produce_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Produce*"></a>
+  <h4 id="MASES_KNet_Clients_Producer_IKNetProducer_2_Produce_System_String_System_Int32_System_Int64__0__1_System_Action_MASES_KNet_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Produce(System.String,System.Int32,System.Int64,`0,`1,System.Action{MASES.KNet.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">Produce(String, Int32, Int64, K, V, Action&lt;RecordMetadata, JVMBridgeException&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Produce(string topic, int partition, long timestamp, K key, V value, Action&lt;RecordMetadata, JVMBridgeException&gt; action = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">topic</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">partition</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">timestamp</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">K</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">V</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="MASES.KNet.Clients.Producer.RecordMetadata.html">RecordMetadata</a>, <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeException</span>&gt;</td>
+        <td><span class="parametername">action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IKNetProducer_2_ProduceAsync_MASES_KNet_Clients_Producer_KNetProducerRecord__0__1__System_Action_MASES_KNet_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IKNetProducer%602.ProduceAsync(MASES.KNet.Clients.Producer.KNetProducerRecord%7B%600%2C%601%7D%2CSystem.Action%7BMASES.KNet.Clients.Producer.RecordMetadata%2CMASES.JCOBridge.C2JBridge.JVMBridgeException%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KNetProducer.cs/#L176">View Source</a>
+  </span>
+  <a id="MASES_KNet_Clients_Producer_IKNetProducer_2_ProduceAsync_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.ProduceAsync*"></a>
+  <h4 id="MASES_KNet_Clients_Producer_IKNetProducer_2_ProduceAsync_MASES_KNet_Clients_Producer_KNetProducerRecord__0__1__System_Action_MASES_KNet_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.ProduceAsync(MASES.KNet.Clients.Producer.KNetProducerRecord{`0,`1},System.Action{MASES.KNet.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">ProduceAsync(KNetProducerRecord&lt;K, V&gt;, Action&lt;RecordMetadata, JVMBridgeException&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task ProduceAsync(KNetProducerRecord&lt;K, V&gt; record, Action&lt;RecordMetadata, JVMBridgeException&gt; action = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KNet.Clients.Producer.KNetProducerRecord-2.html">KNetProducerRecord</a>&lt;K, V&gt;</td>
+        <td><span class="parametername">record</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="MASES.KNet.Clients.Producer.RecordMetadata.html">RecordMetadata</a>, <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeException</span>&gt;</td>
+        <td><span class="parametername">action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IKNetProducer_2_ProduceAsync_System_String__0__1_System_Action_MASES_KNet_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IKNetProducer%602.ProduceAsync(System.String%2C%600%2C%601%2CSystem.Action%7BMASES.KNet.Clients.Producer.RecordMetadata%2CMASES.JCOBridge.C2JBridge.JVMBridgeException%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KNetProducer.cs/#L168">View Source</a>
+  </span>
+  <a id="MASES_KNet_Clients_Producer_IKNetProducer_2_ProduceAsync_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.ProduceAsync*"></a>
+  <h4 id="MASES_KNet_Clients_Producer_IKNetProducer_2_ProduceAsync_System_String__0__1_System_Action_MASES_KNet_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.ProduceAsync(System.String,`0,`1,System.Action{MASES.KNet.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">ProduceAsync(String, K, V, Action&lt;RecordMetadata, JVMBridgeException&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task ProduceAsync(string topic, K key, V value, Action&lt;RecordMetadata, JVMBridgeException&gt; action = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">topic</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">K</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">V</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="MASES.KNet.Clients.Producer.RecordMetadata.html">RecordMetadata</a>, <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeException</span>&gt;</td>
+        <td><span class="parametername">action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IKNetProducer_2_ProduceAsync_System_String_System_Int32__0__1_System_Action_MASES_KNet_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IKNetProducer%602.ProduceAsync(System.String%2CSystem.Int32%2C%600%2C%601%2CSystem.Action%7BMASES.KNet.Clients.Producer.RecordMetadata%2CMASES.JCOBridge.C2JBridge.JVMBridgeException%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KNetProducer.cs/#L170">View Source</a>
+  </span>
+  <a id="MASES_KNet_Clients_Producer_IKNetProducer_2_ProduceAsync_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.ProduceAsync*"></a>
+  <h4 id="MASES_KNet_Clients_Producer_IKNetProducer_2_ProduceAsync_System_String_System_Int32__0__1_System_Action_MASES_KNet_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.ProduceAsync(System.String,System.Int32,`0,`1,System.Action{MASES.KNet.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">ProduceAsync(String, Int32, K, V, Action&lt;RecordMetadata, JVMBridgeException&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task ProduceAsync(string topic, int partition, K key, V value, Action&lt;RecordMetadata, JVMBridgeException&gt; action = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">topic</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">partition</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">K</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">V</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="MASES.KNet.Clients.Producer.RecordMetadata.html">RecordMetadata</a>, <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeException</span>&gt;</td>
+        <td><span class="parametername">action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IKNetProducer_2_ProduceAsync_System_String_System_Int32_System_DateTime__0__1_System_Action_MASES_KNet_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IKNetProducer%602.ProduceAsync(System.String%2CSystem.Int32%2CSystem.DateTime%2C%600%2C%601%2CSystem.Action%7BMASES.KNet.Clients.Producer.RecordMetadata%2CMASES.JCOBridge.C2JBridge.JVMBridgeException%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KNetProducer.cs/#L174">View Source</a>
+  </span>
+  <a id="MASES_KNet_Clients_Producer_IKNetProducer_2_ProduceAsync_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.ProduceAsync*"></a>
+  <h4 id="MASES_KNet_Clients_Producer_IKNetProducer_2_ProduceAsync_System_String_System_Int32_System_DateTime__0__1_System_Action_MASES_KNet_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.ProduceAsync(System.String,System.Int32,System.DateTime,`0,`1,System.Action{MASES.KNet.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">ProduceAsync(String, Int32, DateTime, K, V, Action&lt;RecordMetadata, JVMBridgeException&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task ProduceAsync(string topic, int partition, DateTime timestamp, K key, V value, Action&lt;RecordMetadata, JVMBridgeException&gt; action = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">topic</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">partition</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
+        <td><span class="parametername">timestamp</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">K</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">V</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="MASES.KNet.Clients.Producer.RecordMetadata.html">RecordMetadata</a>, <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeException</span>&gt;</td>
+        <td><span class="parametername">action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IKNetProducer_2_ProduceAsync_System_String_System_Int32_System_Int64__0__1_System_Action_MASES_KNet_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IKNetProducer%602.ProduceAsync(System.String%2CSystem.Int32%2CSystem.Int64%2C%600%2C%601%2CSystem.Action%7BMASES.KNet.Clients.Producer.RecordMetadata%2CMASES.JCOBridge.C2JBridge.JVMBridgeException%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KNetProducer.cs/#L172">View Source</a>
+  </span>
+  <a id="MASES_KNet_Clients_Producer_IKNetProducer_2_ProduceAsync_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.ProduceAsync*"></a>
+  <h4 id="MASES_KNet_Clients_Producer_IKNetProducer_2_ProduceAsync_System_String_System_Int32_System_Int64__0__1_System_Action_MASES_KNet_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.ProduceAsync(System.String,System.Int32,System.Int64,`0,`1,System.Action{MASES.KNet.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">ProduceAsync(String, Int32, Int64, K, V, Action&lt;RecordMetadata, JVMBridgeException&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task ProduceAsync(string topic, int partition, long timestamp, K key, V value, Action&lt;RecordMetadata, JVMBridgeException&gt; action = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">topic</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">partition</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">timestamp</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">K</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">V</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="MASES.KNet.Clients.Producer.RecordMetadata.html">RecordMetadata</a>, <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeException</span>&gt;</td>
+        <td><span class="parametername">action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IKNetProducer_2_Send_MASES_KNet_Clients_Producer_KNetProducerRecord__0__1__.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IKNetProducer%602.Send(MASES.KNet.Clients.Producer.KNetProducerRecord%7B%600%2C%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KNetProducer.cs/#L132">View Source</a>
+  </span>
+  <a id="MASES_KNet_Clients_Producer_IKNetProducer_2_Send_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Send*"></a>
+  <h4 id="MASES_KNet_Clients_Producer_IKNetProducer_2_Send_MASES_KNet_Clients_Producer_KNetProducerRecord__0__1__" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Send(MASES.KNet.Clients.Producer.KNetProducerRecord{`0,`1})">Send(KNetProducerRecord&lt;K, V&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Future&lt;RecordMetadata&gt; Send(KNetProducerRecord&lt;K, V&gt; record)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KNet.Clients.Producer.KNetProducerRecord-2.html">KNetProducerRecord</a>&lt;K, V&gt;</td>
+        <td><span class="parametername">record</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Java.Util.Concurrent.Future</span>&lt;<a class="xref" href="MASES.KNet.Clients.Producer.RecordMetadata.html">RecordMetadata</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IKNetProducer_2_Send_MASES_KNet_Clients_Producer_KNetProducerRecord__0__1__MASES_KNet_Clients_Producer_Callback_.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IKNetProducer%602.Send(MASES.KNet.Clients.Producer.KNetProducerRecord%7B%600%2C%601%7D%2CMASES.KNet.Clients.Producer.Callback)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KNetProducer.cs/#L134">View Source</a>
+  </span>
+  <a id="MASES_KNet_Clients_Producer_IKNetProducer_2_Send_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Send*"></a>
+  <h4 id="MASES_KNet_Clients_Producer_IKNetProducer_2_Send_MASES_KNet_Clients_Producer_KNetProducerRecord__0__1__MASES_KNet_Clients_Producer_Callback_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Send(MASES.KNet.Clients.Producer.KNetProducerRecord{`0,`1},MASES.KNet.Clients.Producer.Callback)">Send(KNetProducerRecord&lt;K, V&gt;, Callback)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Future&lt;RecordMetadata&gt; Send(KNetProducerRecord&lt;K, V&gt; record, Callback callback)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MASES.KNet.Clients.Producer.KNetProducerRecord-2.html">KNetProducerRecord</a>&lt;K, V&gt;</td>
+        <td><span class="parametername">record</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MASES.KNet.Clients.Producer.Callback.html">Callback</a></td>
+        <td><span class="parametername">callback</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Java.Util.Concurrent.Future</span>&lt;<a class="xref" href="MASES.KNet.Clients.Producer.RecordMetadata.html">RecordMetadata</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IKNetProducer_2_Send_System_String__0__1_.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IKNetProducer%602.Send(System.String%2C%600%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KNetProducer.cs/#L43">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KNetProducer.cs/#L144">View Source</a>
   </span>
   <a id="MASES_KNet_Clients_Producer_IKNetProducer_2_Send_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Send*"></a>
   <h4 id="MASES_KNet_Clients_Producer_IKNetProducer_2_Send_System_String__0__1_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Send(System.String,`0,`1)">Send(String, K, V)</h4>
@@ -236,7 +1160,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IKNetProducer_2_Send_System_String__1_.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IKNetProducer%602.Send(System.String%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KNetProducer.cs/#L45">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KNetProducer.cs/#L146">View Source</a>
   </span>
   <a id="MASES_KNet_Clients_Producer_IKNetProducer_2_Send_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Send*"></a>
   <h4 id="MASES_KNet_Clients_Producer_IKNetProducer_2_Send_System_String__1_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Send(System.String,`1)">Send(String, V)</h4>
@@ -273,7 +1197,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IKNetProducer_2_Send_System_String_System_Int32__0__1_.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IKNetProducer%602.Send(System.String%2CSystem.Int32%2C%600%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KNetProducer.cs/#L41">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KNetProducer.cs/#L142">View Source</a>
   </span>
   <a id="MASES_KNet_Clients_Producer_IKNetProducer_2_Send_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Send*"></a>
   <h4 id="MASES_KNet_Clients_Producer_IKNetProducer_2_Send_System_String_System_Int32__0__1_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Send(System.String,System.Int32,`0,`1)">Send(String, Int32, K, V)</h4>
@@ -317,18 +1241,18 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IKNetProducer_2_Send_System_String_System_Int32__0__1_Java_Lang_Iterable_MASES_KNet_Common_Header_Header__.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IKNetProducer%602.Send(System.String%2CSystem.Int32%2C%600%2C%601%2CJava.Lang.Iterable%7BMASES.KNet.Common.Header.Header%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IKNetProducer_2_Send_System_String_System_Int32__0__1_MASES_KNet_Common_Header_Headers_.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IKNetProducer%602.Send(System.String%2CSystem.Int32%2C%600%2C%601%2CMASES.KNet.Common.Header.Headers)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KNetProducer.cs/#L39">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KNetProducer.cs/#L140">View Source</a>
   </span>
   <a id="MASES_KNet_Clients_Producer_IKNetProducer_2_Send_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Send*"></a>
-  <h4 id="MASES_KNet_Clients_Producer_IKNetProducer_2_Send_System_String_System_Int32__0__1_Java_Lang_Iterable_MASES_KNet_Common_Header_Header__" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Send(System.String,System.Int32,`0,`1,Java.Lang.Iterable{MASES.KNet.Common.Header.Header})">Send(String, Int32, K, V, Iterable&lt;Header&gt;)</h4>
+  <h4 id="MASES_KNet_Clients_Producer_IKNetProducer_2_Send_System_String_System_Int32__0__1_MASES_KNet_Common_Header_Headers_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Send(System.String,System.Int32,`0,`1,MASES.KNet.Common.Header.Headers)">Send(String, Int32, K, V, Headers)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Send(string topic, int partition, K key, V value, Iterable&lt;Header&gt; headers)</code></pre>
+    <pre><code class="lang-csharp hljs">void Send(string topic, int partition, K key, V value, Headers headers)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -361,7 +1285,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Java.Lang.Iterable</span>&lt;<a class="xref" href="MASES.KNet.Common.Header.Header.html">Header</a>&gt;</td>
+        <td><a class="xref" href="MASES.KNet.Common.Header.Headers.html">Headers</a></td>
         <td><span class="parametername">headers</span></td>
         <td></td>
       </tr>
@@ -372,7 +1296,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IKNetProducer_2_Send_System_String_System_Int32_System_Int64__0__1_.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IKNetProducer%602.Send(System.String%2CSystem.Int32%2CSystem.Int64%2C%600%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KNetProducer.cs/#L37">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KNetProducer.cs/#L138">View Source</a>
   </span>
   <a id="MASES_KNet_Clients_Producer_IKNetProducer_2_Send_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Send*"></a>
   <h4 id="MASES_KNet_Clients_Producer_IKNetProducer_2_Send_System_String_System_Int32_System_Int64__0__1_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Send(System.String,System.Int32,System.Int64,`0,`1)">Send(String, Int32, Int64, K, V)</h4>
@@ -421,18 +1345,18 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IKNetProducer_2_Send_System_String_System_Int32_System_Int64__0__1_Java_Lang_Iterable_MASES_KNet_Common_Header_Header__.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IKNetProducer%602.Send(System.String%2CSystem.Int32%2CSystem.Int64%2C%600%2C%601%2CJava.Lang.Iterable%7BMASES.KNet.Common.Header.Header%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IKNetProducer_2_Send_System_String_System_Int32_System_Int64__0__1_MASES_KNet_Common_Header_Headers_.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IKNetProducer%602.Send(System.String%2CSystem.Int32%2CSystem.Int64%2C%600%2C%601%2CMASES.KNet.Common.Header.Headers)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KNetProducer.cs/#L35">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KNetProducer.cs/#L136">View Source</a>
   </span>
   <a id="MASES_KNet_Clients_Producer_IKNetProducer_2_Send_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Send*"></a>
-  <h4 id="MASES_KNet_Clients_Producer_IKNetProducer_2_Send_System_String_System_Int32_System_Int64__0__1_Java_Lang_Iterable_MASES_KNet_Common_Header_Header__" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Send(System.String,System.Int32,System.Int64,`0,`1,Java.Lang.Iterable{MASES.KNet.Common.Header.Header})">Send(String, Int32, Int64, K, V, Iterable&lt;Header&gt;)</h4>
+  <h4 id="MASES_KNet_Clients_Producer_IKNetProducer_2_Send_System_String_System_Int32_System_Int64__0__1_MASES_KNet_Common_Header_Headers_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.Send(System.String,System.Int32,System.Int64,`0,`1,MASES.KNet.Common.Header.Headers)">Send(String, Int32, Int64, K, V, Headers)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Send(string topic, int partition, long timestamp, K key, V value, Iterable&lt;Header&gt; headers)</code></pre>
+    <pre><code class="lang-csharp hljs">void Send(string topic, int partition, long timestamp, K key, V value, Headers headers)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -470,7 +1394,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Java.Lang.Iterable</span>&lt;<a class="xref" href="MASES.KNet.Common.Header.Header.html">Header</a>&gt;</td>
+        <td><a class="xref" href="MASES.KNet.Common.Header.Headers.html">Headers</a></td>
         <td><span class="parametername">headers</span></td>
         <td></td>
       </tr>
@@ -481,7 +1405,7 @@
     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IKNetProducer_2_SetCallback_MASES_KNet_Clients_Producer_Callback_.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IKNetProducer%602.SetCallback(MASES.KNet.Clients.Producer.Callback)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KNetProducer.cs/#L33">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KNetProducer.cs/#L130">View Source</a>
   </span>
   <a id="MASES_KNet_Clients_Producer_IKNetProducer_2_SetCallback_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.SetCallback*"></a>
   <h4 id="MASES_KNet_Clients_Producer_IKNetProducer_2_SetCallback_MASES_KNet_Clients_Producer_Callback_" data-uid="MASES.KNet.Clients.Producer.IKNetProducer`2.SetCallback(MASES.KNet.Clients.Producer.Callback)">SetCallback(Callback)</h4>
@@ -525,6 +1449,21 @@
       <a class="xref" href="MASES.KNet.Extensions.KafkaProducerExtensions.html#MASES_KNet_Extensions_KafkaProducerExtensions_Produce__2_MASES_KNet_Clients_Producer_IProducer___0___1__MASES_KNet_Clients_Producer_ProducerRecord___0___1__System_Action_MASES_KNet_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__">KafkaProducerExtensions.Produce&lt;K, V&gt;(IProducer&lt;K, V&gt;, ProducerRecord&lt;K, V&gt;, Action&lt;RecordMetadata, JVMBridgeException&gt;)</a>
   </div>
   <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaProducerExtensions.html#MASES_KNet_Extensions_KafkaProducerExtensions_Produce__2_MASES_KNet_Clients_Producer_IProducer___0___1__System_String___0___1_MASES_KNet_Clients_Producer_Callback_">KafkaProducerExtensions.Produce&lt;K, V&gt;(IProducer&lt;K, V&gt;, String, K, V, Callback)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaProducerExtensions.html#MASES_KNet_Extensions_KafkaProducerExtensions_Produce__2_MASES_KNet_Clients_Producer_IProducer___0___1__System_String_System_Int32___0___1_MASES_KNet_Clients_Producer_Callback_">KafkaProducerExtensions.Produce&lt;K, V&gt;(IProducer&lt;K, V&gt;, String, Int32, K, V, Callback)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaProducerExtensions.html#MASES_KNet_Extensions_KafkaProducerExtensions_Produce__2_MASES_KNet_Clients_Producer_IProducer___0___1__System_String_System_Int32_System_Int64___0___1_MASES_KNet_Clients_Producer_Callback_">KafkaProducerExtensions.Produce&lt;K, V&gt;(IProducer&lt;K, V&gt;, String, Int32, Int64, K, V, Callback)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaProducerExtensions.html#MASES_KNet_Extensions_KafkaProducerExtensions_Produce__2_MASES_KNet_Clients_Producer_IProducer___0___1__System_String_System_Int32_System_DateTime___0___1_MASES_KNet_Clients_Producer_Callback_">KafkaProducerExtensions.Produce&lt;K, V&gt;(IProducer&lt;K, V&gt;, String, Int32, DateTime, K, V, Callback)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaProducerExtensions.html#MASES_KNet_Extensions_KafkaProducerExtensions_Produce__2_MASES_KNet_Clients_Producer_IProducer___0___1__MASES_KNet_Clients_Producer_ProducerRecord___0___1__MASES_KNet_Clients_Producer_Callback_">KafkaProducerExtensions.Produce&lt;K, V&gt;(IProducer&lt;K, V&gt;, ProducerRecord&lt;K, V&gt;, Callback)</a>
+  </div>
+  <div>
       <a class="xref" href="MASES.KNet.Extensions.KafkaProducerExtensions.html#MASES_KNet_Extensions_KafkaProducerExtensions_ProduceAsync__2_MASES_KNet_Clients_Producer_IProducer___0___1__System_String___0___1_System_Action_MASES_KNet_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__">KafkaProducerExtensions.ProduceAsync&lt;K, V&gt;(IProducer&lt;K, V&gt;, String, K, V, Action&lt;RecordMetadata, JVMBridgeException&gt;)</a>
   </div>
   <div>
@@ -550,7 +1489,7 @@
                     <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Clients_Producer_IKNetProducer_2.md&amp;value=---%0Auid%3A%20MASES.KNet.Clients.Producer.IKNetProducer%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KNetProducer.cs/#L31" class="contribution-link">View Source</a>
+                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Clients/Producer/KNetProducer.cs/#L128" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

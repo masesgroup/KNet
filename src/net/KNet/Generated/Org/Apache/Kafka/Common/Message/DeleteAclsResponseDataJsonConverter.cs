@@ -41,37 +41,6 @@ namespace Org.Apache.Kafka.Common.Message
         #endregion
 
         #region Static methods
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseDataJsonConverter.html#write(org.apache.kafka.common.message.DeleteAclsResponseData,short,boolean)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.DeleteAclsResponseData"/></param>
-        /// <param name="arg1"><see cref="short"/></param>
-        /// <param name="arg2"><see cref="bool"/></param>
-        /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-        public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.DeleteAclsResponseData arg0, short arg1, bool arg2)
-        {
-            return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1, arg2);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseDataJsonConverter.html#write(org.apache.kafka.common.message.DeleteAclsResponseData,short)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.DeleteAclsResponseData"/></param>
-        /// <param name="arg1"><see cref="short"/></param>
-        /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-        public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.DeleteAclsResponseData arg0, short arg1)
-        {
-            return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseDataJsonConverter.html#read(com.fasterxml.jackson.databind.JsonNode,short)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></param>
-        /// <param name="arg1"><see cref="short"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Common.Message.DeleteAclsResponseData"/></returns>
-        public static Org.Apache.Kafka.Common.Message.DeleteAclsResponseData Read(Com.Fasterxml.Jackson.Databind.JsonNode arg0, short arg1)
-        {
-            return SExecute<Org.Apache.Kafka.Common.Message.DeleteAclsResponseData>(LocalBridgeClazz, "read", arg0, arg1);
-        }
 
         #endregion
 
@@ -96,37 +65,6 @@ namespace Org.Apache.Kafka.Common.Message
             #endregion
 
             #region Static methods
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseDataJsonConverter.DeleteAclsFilterResultJsonConverter.html#write(org.apache.kafka.common.message.DeleteAclsResponseData.DeleteAclsFilterResult,short,boolean)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.DeleteAclsResponseData.DeleteAclsFilterResult"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <param name="arg2"><see cref="bool"/></param>
-            /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-            public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.DeleteAclsResponseData.DeleteAclsFilterResult arg0, short arg1, bool arg2)
-            {
-                return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1, arg2);
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseDataJsonConverter.DeleteAclsFilterResultJsonConverter.html#write(org.apache.kafka.common.message.DeleteAclsResponseData.DeleteAclsFilterResult,short)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.DeleteAclsResponseData.DeleteAclsFilterResult"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-            public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.DeleteAclsResponseData.DeleteAclsFilterResult arg0, short arg1)
-            {
-                return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1);
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseDataJsonConverter.DeleteAclsFilterResultJsonConverter.html#read(com.fasterxml.jackson.databind.JsonNode,short)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <returns><see cref="Org.Apache.Kafka.Common.Message.DeleteAclsResponseData.DeleteAclsFilterResult"/></returns>
-            public static Org.Apache.Kafka.Common.Message.DeleteAclsResponseData.DeleteAclsFilterResult Read(Com.Fasterxml.Jackson.Databind.JsonNode arg0, short arg1)
-            {
-                return SExecute<Org.Apache.Kafka.Common.Message.DeleteAclsResponseData.DeleteAclsFilterResult>(LocalBridgeClazz, "read", arg0, arg1);
-            }
 
             #endregion
 
@@ -158,37 +96,6 @@ namespace Org.Apache.Kafka.Common.Message
             #endregion
 
             #region Static methods
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseDataJsonConverter.DeleteAclsMatchingAclJsonConverter.html#write(org.apache.kafka.common.message.DeleteAclsResponseData.DeleteAclsMatchingAcl,short,boolean)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.DeleteAclsResponseData.DeleteAclsMatchingAcl"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <param name="arg2"><see cref="bool"/></param>
-            /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-            public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.DeleteAclsResponseData.DeleteAclsMatchingAcl arg0, short arg1, bool arg2)
-            {
-                return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1, arg2);
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseDataJsonConverter.DeleteAclsMatchingAclJsonConverter.html#write(org.apache.kafka.common.message.DeleteAclsResponseData.DeleteAclsMatchingAcl,short)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.DeleteAclsResponseData.DeleteAclsMatchingAcl"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <returns><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></returns>
-            public static Com.Fasterxml.Jackson.Databind.JsonNode Write(Org.Apache.Kafka.Common.Message.DeleteAclsResponseData.DeleteAclsMatchingAcl arg0, short arg1)
-            {
-                return SExecute<Com.Fasterxml.Jackson.Databind.JsonNode>(LocalBridgeClazz, "write", arg0, arg1);
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteAclsResponseDataJsonConverter.DeleteAclsMatchingAclJsonConverter.html#read(com.fasterxml.jackson.databind.JsonNode,short)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></param>
-            /// <param name="arg1"><see cref="short"/></param>
-            /// <returns><see cref="Org.Apache.Kafka.Common.Message.DeleteAclsResponseData.DeleteAclsMatchingAcl"/></returns>
-            public static Org.Apache.Kafka.Common.Message.DeleteAclsResponseData.DeleteAclsMatchingAcl Read(Com.Fasterxml.Jackson.Databind.JsonNode arg0, short arg1)
-            {
-                return SExecute<Org.Apache.Kafka.Common.Message.DeleteAclsResponseData.DeleteAclsMatchingAcl>(LocalBridgeClazz, "read", arg0, arg1);
-            }
 
             #endregion
 

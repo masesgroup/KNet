@@ -80,34 +80,6 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/AbstractConfig.html#nonInternalValues()"/> 
-        /// </summary>
-        public Java.Util.Map NonInternalValues
-        {
-            get { return IExecute<Java.Util.Map>("nonInternalValues"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/AbstractConfig.html#originalsStrings()"/> 
-        /// </summary>
-        public Java.Util.Map<string, string> OriginalsStrings
-        {
-            get { return IExecute<Java.Util.Map<string, string>>("originalsStrings"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/AbstractConfig.html#unused()"/> 
-        /// </summary>
-        public Java.Util.Set<string> Unused
-        {
-            get { return IExecute<Java.Util.Set<string>>("unused"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/AbstractConfig.html#values()"/> 
-        /// </summary>
-        public Java.Util.Map Values
-        {
-            get { return IExecute<Java.Util.Map>("values"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/AbstractConfig.html#getConfiguredInstances(java.lang.String,java.lang.Class,java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -248,6 +220,26 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecute<Java.Util.List<string>>("getList", arg0);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/AbstractConfig.html#nonInternalValues()"/>
+        /// </summary>
+
+        /// <typeparam name="ReturnExtendsobject"></typeparam>
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, ReturnExtendsobject> NonInternalValues<ReturnExtendsobject>()
+        {
+            return IExecute<Java.Util.Map<string, ReturnExtendsobject>>("nonInternalValues");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/AbstractConfig.html#values()"/>
+        /// </summary>
+
+        /// <typeparam name="ReturnExtendsobject"></typeparam>
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, ReturnExtendsobject> Values<ReturnExtendsobject>()
+        {
+            return IExecute<Java.Util.Map<string, ReturnExtendsobject>>("values");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/AbstractConfig.html#originals()"/>
         /// </summary>
 
@@ -301,6 +293,24 @@ namespace Org.Apache.Kafka.Common.Config
         public Java.Util.Map<string, object> ValuesWithPrefixOverride(string arg0)
         {
             return IExecute<Java.Util.Map<string, object>>("valuesWithPrefixOverride", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/AbstractConfig.html#originalsStrings()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, string> OriginalsStrings()
+        {
+            return IExecute<Java.Util.Map<string, string>>("originalsStrings");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/AbstractConfig.html#unused()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<string> Unused()
+        {
+            return IExecute<Java.Util.Set<string>>("unused");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/AbstractConfig.html#typeOf(java.lang.String)"/>

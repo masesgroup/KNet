@@ -64,18 +64,22 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/StopReplicaResponse.html#error()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/StopReplicaResponse.html#partitionErrors()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.Errors Error
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Message.StopReplicaResponseData.StopReplicaPartitionError> PartitionErrors()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.Errors>("error"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.StopReplicaResponseData.StopReplicaPartitionError>>("partitionErrors");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/StopReplicaResponse.html#partitionErrors()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/StopReplicaResponse.html#error()"/>
         /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Message.StopReplicaResponseData.StopReplicaPartitionError> PartitionErrors
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Errors"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.Errors Error()
         {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.StopReplicaResponseData.StopReplicaPartitionError>>("partitionErrors"); }
+            return IExecute<Org.Apache.Kafka.Common.Protocol.Errors>("error");
         }
 
         #endregion

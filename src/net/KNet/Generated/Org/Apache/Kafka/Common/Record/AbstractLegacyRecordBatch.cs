@@ -50,74 +50,22 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractLegacyRecordBatch.html#hasKey()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractLegacyRecordBatch.html#outerRecord()"/>
         /// </summary>
-        public bool HasKey
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Record.LegacyRecord"/></returns>
+        public Org.Apache.Kafka.Common.Record.LegacyRecord OuterRecord()
         {
-            get { return IExecute<bool>("hasKey"); }
+            return IExecute<Org.Apache.Kafka.Common.Record.LegacyRecord>("outerRecord");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractLegacyRecordBatch.html#hasValue()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractLegacyRecordBatch.html#hasKey()"/>
         /// </summary>
-        public bool HasValue
+
+        /// <returns><see cref="bool"/></returns>
+        public bool HasKey()
         {
-            get { return IExecute<bool>("hasValue"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractLegacyRecordBatch.html#headers()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Header.Header[] Headers
-        {
-            get { return IExecuteArray<Org.Apache.Kafka.Common.Header.Header>("headers"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractLegacyRecordBatch.html#key()"/> 
-        /// </summary>
-        public Java.Nio.ByteBuffer Key
-        {
-            get { return IExecute<Java.Nio.ByteBuffer>("key"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractLegacyRecordBatch.html#keySize()"/> 
-        /// </summary>
-        public int KeySize
-        {
-            get { return IExecute<int>("keySize"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractLegacyRecordBatch.html#outerRecord()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Record.LegacyRecord OuterRecord
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Record.LegacyRecord>("outerRecord"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractLegacyRecordBatch.html#sequence()"/> 
-        /// </summary>
-        public int Sequence
-        {
-            get { return IExecute<int>("sequence"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractLegacyRecordBatch.html#timestamp()"/> 
-        /// </summary>
-        public long Timestamp
-        {
-            get { return IExecute<long>("timestamp"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractLegacyRecordBatch.html#value()"/> 
-        /// </summary>
-        public Java.Nio.ByteBuffer Value
-        {
-            get { return IExecute<Java.Nio.ByteBuffer>("value"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractLegacyRecordBatch.html#valueSize()"/> 
-        /// </summary>
-        public int ValueSize
-        {
-            get { return IExecute<int>("valueSize"); }
+            return IExecute<bool>("hasKey");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractLegacyRecordBatch.html#hasMagic(byte)"/>
@@ -136,6 +84,78 @@ namespace Org.Apache.Kafka.Common.Record
         public bool HasTimestampType(Org.Apache.Kafka.Common.Record.TimestampType arg0)
         {
             return IExecute<bool>("hasTimestampType", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractLegacyRecordBatch.html#hasValue()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool HasValue()
+        {
+            return IExecute<bool>("hasValue");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractLegacyRecordBatch.html#keySize()"/>
+        /// </summary>
+
+        /// <returns><see cref="int"/></returns>
+        public int KeySize()
+        {
+            return IExecute<int>("keySize");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractLegacyRecordBatch.html#sequence()"/>
+        /// </summary>
+
+        /// <returns><see cref="int"/></returns>
+        public int Sequence()
+        {
+            return IExecute<int>("sequence");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractLegacyRecordBatch.html#valueSize()"/>
+        /// </summary>
+
+        /// <returns><see cref="int"/></returns>
+        public int ValueSize()
+        {
+            return IExecute<int>("valueSize");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractLegacyRecordBatch.html#key()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
+        public Java.Nio.ByteBuffer Key()
+        {
+            return IExecute<Java.Nio.ByteBuffer>("key");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractLegacyRecordBatch.html#value()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
+        public Java.Nio.ByteBuffer Value()
+        {
+            return IExecute<Java.Nio.ByteBuffer>("value");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractLegacyRecordBatch.html#timestamp()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long Timestamp()
+        {
+            return IExecute<long>("timestamp");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractLegacyRecordBatch.html#headers()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Header.Header"/></returns>
+        public Org.Apache.Kafka.Common.Header.Header[] Headers()
+        {
+            return IExecuteArray<Org.Apache.Kafka.Common.Header.Header>("headers");
         }
 
         #endregion

@@ -65,11 +65,13 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/TxnOffsetCommitRequest.html#offsets()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/TxnOffsetCommitRequest.html#offsets()"/>
         /// </summary>
-        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Requests.TxnOffsetCommitRequest.CommittedOffset> Offsets
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Requests.TxnOffsetCommitRequest.CommittedOffset> Offsets()
         {
-            get { return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Requests.TxnOffsetCommitRequest.CommittedOffset>>("offsets"); }
+            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Requests.TxnOffsetCommitRequest.CommittedOffset>>("offsets");
         }
 
         #endregion
@@ -90,7 +92,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// <param name="arg5"><see cref="string"/></param>
             /// <param name="arg6"><see cref="int"/></param>
             /// <param name="arg7"><see cref="Java.Util.Optional"/></param>
-            public Builder(string arg0, string arg1, long arg2, short arg3, Java.Util.Map arg4, string arg5, int arg6, Java.Util.Optional arg7)
+            public Builder(string arg0, string arg1, long arg2, short arg3, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Requests.TxnOffsetCommitRequest.CommittedOffset> arg4, string arg5, int arg6, Java.Util.Optional<string> arg7)
                 : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
             {
             }
@@ -102,7 +104,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// <param name="arg2"><see cref="long"/></param>
             /// <param name="arg3"><see cref="short"/></param>
             /// <param name="arg4"><see cref="Java.Util.Map"/></param>
-            public Builder(string arg0, string arg1, long arg2, short arg3, Java.Util.Map arg4)
+            public Builder(string arg0, string arg1, long arg2, short arg3, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Requests.TxnOffsetCommitRequest.CommittedOffset> arg4)
                 : base(arg0, arg1, arg2, arg3, arg4)
             {
             }
@@ -147,7 +149,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// <param name="arg0"><see cref="long"/></param>
             /// <param name="arg1"><see cref="string"/></param>
             /// <param name="arg2"><see cref="Java.Util.Optional"/></param>
-            public CommittedOffset(long arg0, string arg1, Java.Util.Optional arg2)
+            public CommittedOffset(long arg0, string arg1, Java.Util.Optional<int?> arg2)
                 : base(arg0, arg1, arg2)
             {
             }

@@ -111,67 +111,31 @@ namespace Org.Apache.Kafka.Common.Message
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.html#acks()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.html#timeoutMs()"/>
         /// </summary>
-        public short Acks
+
+        /// <returns><see cref="int"/></returns>
+        public int TimeoutMs()
         {
-            get { return IExecute<short>("acks"); }
+            return IExecute<int>("timeoutMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.html#apiKey()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.html#transactionalId()"/>
         /// </summary>
-        public short ApiKey
+
+        /// <returns><see cref="string"/></returns>
+        public string TransactionalId()
         {
-            get { return IExecute<short>("apiKey"); }
+            return IExecute<string>("transactionalId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.html#duplicate()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.html#unknownTaggedFields()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.Message Duplicate
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.html#highestSupportedVersion()"/> 
-        /// </summary>
-        public short HighestSupportedVersion
-        {
-            get { return IExecute<short>("highestSupportedVersion"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.html#lowestSupportedVersion()"/> 
-        /// </summary>
-        public short LowestSupportedVersion
-        {
-            get { return IExecute<short>("lowestSupportedVersion"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.html#timeoutMs()"/> 
-        /// </summary>
-        public int TimeoutMs
-        {
-            get { return IExecute<int>("timeoutMs"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.html#topicData()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Message.ProduceRequestData.TopicProduceDataCollection TopicData
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Message.ProduceRequestData.TopicProduceDataCollection>("topicData"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.html#transactionalId()"/> 
-        /// </summary>
-        public string TransactionalId
-        {
-            get { return IExecute<string>("transactionalId"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.html#unknownTaggedFields()"/> 
-        /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields
-        {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.html#setAcks(short)"/>
@@ -208,6 +172,60 @@ namespace Org.Apache.Kafka.Common.Message
         public Org.Apache.Kafka.Common.Message.ProduceRequestData SetTransactionalId(string arg0)
         {
             return IExecute<Org.Apache.Kafka.Common.Message.ProduceRequestData>("setTransactionalId", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.html#topicData()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Message.ProduceRequestData.TopicProduceDataCollection"/></returns>
+        public Org.Apache.Kafka.Common.Message.ProduceRequestData.TopicProduceDataCollection TopicData()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Message.ProduceRequestData.TopicProduceDataCollection>("topicData");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.html#duplicate()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.Message Duplicate()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.html#acks()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short Acks()
+        {
+            return IExecute<short>("acks");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.html#apiKey()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short ApiKey()
+        {
+            return IExecute<short>("apiKey");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.html#highestSupportedVersion()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short HighestSupportedVersion()
+        {
+            return IExecute<short>("highestSupportedVersion");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.html#lowestSupportedVersion()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short LowestSupportedVersion()
+        {
+            return IExecute<short>("lowestSupportedVersion");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>
@@ -328,46 +346,22 @@ namespace Org.Apache.Kafka.Common.Message
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.PartitionProduceData.html#duplicate()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.PartitionProduceData.html#index()"/>
             /// </summary>
-            public Org.Apache.Kafka.Common.Protocol.Message Duplicate
+
+            /// <returns><see cref="int"/></returns>
+            public int Index()
             {
-                get { return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate"); }
+                return IExecute<int>("index");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.PartitionProduceData.html#highestSupportedVersion()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.PartitionProduceData.html#unknownTaggedFields()"/>
             /// </summary>
-            public short HighestSupportedVersion
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields()
             {
-                get { return IExecute<short>("highestSupportedVersion"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.PartitionProduceData.html#index()"/> 
-            /// </summary>
-            public int Index
-            {
-                get { return IExecute<int>("index"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.PartitionProduceData.html#lowestSupportedVersion()"/> 
-            /// </summary>
-            public short LowestSupportedVersion
-            {
-                get { return IExecute<short>("lowestSupportedVersion"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.PartitionProduceData.html#records()"/> 
-            /// </summary>
-            public Org.Apache.Kafka.Common.Record.BaseRecords Records
-            {
-                get { return IExecute<Org.Apache.Kafka.Common.Record.BaseRecords>("records"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.PartitionProduceData.html#unknownTaggedFields()"/> 
-            /// </summary>
-            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields
-            {
-                get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields"); }
+                return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.PartitionProduceData.html#setIndex(int)"/>
@@ -386,6 +380,42 @@ namespace Org.Apache.Kafka.Common.Message
             public Org.Apache.Kafka.Common.Message.ProduceRequestData.PartitionProduceData SetRecords(Org.Apache.Kafka.Common.Record.BaseRecords arg0)
             {
                 return IExecute<Org.Apache.Kafka.Common.Message.ProduceRequestData.PartitionProduceData>("setRecords", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.PartitionProduceData.html#duplicate()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
+            public Org.Apache.Kafka.Common.Protocol.Message Duplicate()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.PartitionProduceData.html#records()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Record.BaseRecords"/></returns>
+            public Org.Apache.Kafka.Common.Record.BaseRecords Records()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Record.BaseRecords>("records");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.PartitionProduceData.html#highestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short HighestSupportedVersion()
+            {
+                return IExecute<short>("highestSupportedVersion");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.PartitionProduceData.html#lowestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short LowestSupportedVersion()
+            {
+                return IExecute<short>("lowestSupportedVersion");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.PartitionProduceData.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>
@@ -513,62 +543,6 @@ namespace Org.Apache.Kafka.Common.Message
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.TopicProduceData.html#duplicate()"/> 
-            /// </summary>
-            public Org.Apache.Kafka.Common.Protocol.Message Duplicate
-            {
-                get { return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.TopicProduceData.html#highestSupportedVersion()"/> 
-            /// </summary>
-            public short HighestSupportedVersion
-            {
-                get { return IExecute<short>("highestSupportedVersion"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.TopicProduceData.html#lowestSupportedVersion()"/> 
-            /// </summary>
-            public short LowestSupportedVersion
-            {
-                get { return IExecute<short>("lowestSupportedVersion"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.TopicProduceData.html#name()"/> 
-            /// </summary>
-            public string Name
-            {
-                get { return IExecute<string>("name"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.TopicProduceData.html#next()"/> 
-            /// </summary>
-            public int Next
-            {
-                get { return IExecute<int>("next"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.TopicProduceData.html#partitionData()"/> 
-            /// </summary>
-            public Java.Util.List<Org.Apache.Kafka.Common.Message.ProduceRequestData.PartitionProduceData> PartitionData
-            {
-                get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.ProduceRequestData.PartitionProduceData>>("partitionData"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.TopicProduceData.html#prev()"/> 
-            /// </summary>
-            public int Prev
-            {
-                get { return IExecute<int>("prev"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.TopicProduceData.html#unknownTaggedFields()"/> 
-            /// </summary>
-            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields
-            {
-                get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.TopicProduceData.html#elementKeysAreEqual(java.lang.Object)"/>
             /// </summary>
             /// <param name="arg0"><see cref="object"/></param>
@@ -576,6 +550,51 @@ namespace Org.Apache.Kafka.Common.Message
             public bool ElementKeysAreEqual(object arg0)
             {
                 return IExecute<bool>("elementKeysAreEqual", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.TopicProduceData.html#next()"/>
+            /// </summary>
+
+            /// <returns><see cref="int"/></returns>
+            public int Next()
+            {
+                return IExecute<int>("next");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.TopicProduceData.html#prev()"/>
+            /// </summary>
+
+            /// <returns><see cref="int"/></returns>
+            public int Prev()
+            {
+                return IExecute<int>("prev");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.TopicProduceData.html#name()"/>
+            /// </summary>
+
+            /// <returns><see cref="string"/></returns>
+            public string Name()
+            {
+                return IExecute<string>("name");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.TopicProduceData.html#partitionData()"/>
+            /// </summary>
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<Org.Apache.Kafka.Common.Message.ProduceRequestData.PartitionProduceData> PartitionData()
+            {
+                return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.ProduceRequestData.PartitionProduceData>>("partitionData");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.TopicProduceData.html#unknownTaggedFields()"/>
+            /// </summary>
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields()
+            {
+                return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.TopicProduceData.html#setName(java.lang.String)"/>
@@ -594,6 +613,33 @@ namespace Org.Apache.Kafka.Common.Message
             public Org.Apache.Kafka.Common.Message.ProduceRequestData.TopicProduceData SetPartitionData(Java.Util.List<Org.Apache.Kafka.Common.Message.ProduceRequestData.PartitionProduceData> arg0)
             {
                 return IExecute<Org.Apache.Kafka.Common.Message.ProduceRequestData.TopicProduceData>("setPartitionData", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.TopicProduceData.html#duplicate()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
+            public Org.Apache.Kafka.Common.Protocol.Message Duplicate()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.TopicProduceData.html#highestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short HighestSupportedVersion()
+            {
+                return IExecute<short>("highestSupportedVersion");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.TopicProduceData.html#lowestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short LowestSupportedVersion()
+            {
+                return IExecute<short>("lowestSupportedVersion");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.TopicProduceData.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>
@@ -667,7 +713,7 @@ namespace Org.Apache.Kafka.Common.Message
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.TopicProduceDataCollection.html#%3Cinit%3E(java.util.Iterator)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Iterator"/></param>
-            public TopicProduceDataCollection(Java.Util.Iterator arg0)
+            public TopicProduceDataCollection(Java.Util.Iterator<Org.Apache.Kafka.Common.Message.ProduceRequestData.TopicProduceData> arg0)
                 : base(arg0)
             {
             }
@@ -688,13 +734,6 @@ namespace Org.Apache.Kafka.Common.Message
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.TopicProduceDataCollection.html#duplicate()"/> 
-            /// </summary>
-            public Org.Apache.Kafka.Common.Message.ProduceRequestData.TopicProduceDataCollection Duplicate
-            {
-                get { return IExecute<Org.Apache.Kafka.Common.Message.ProduceRequestData.TopicProduceDataCollection>("duplicate"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.TopicProduceDataCollection.html#findAll(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
@@ -711,6 +750,15 @@ namespace Org.Apache.Kafka.Common.Message
             public Org.Apache.Kafka.Common.Message.ProduceRequestData.TopicProduceData Find(string arg0)
             {
                 return IExecute<Org.Apache.Kafka.Common.Message.ProduceRequestData.TopicProduceData>("find", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.TopicProduceDataCollection.html#duplicate()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Message.ProduceRequestData.TopicProduceDataCollection"/></returns>
+            public Org.Apache.Kafka.Common.Message.ProduceRequestData.TopicProduceDataCollection Duplicate()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Message.ProduceRequestData.TopicProduceDataCollection>("duplicate");
             }
 
             #endregion

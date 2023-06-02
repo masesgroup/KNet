@@ -46,13 +46,6 @@ namespace Org.Apache.Kafka.Clients
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/MetadataUpdater.html#fetchNodes()"/> 
-        /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Node> FetchNodes
-        {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Node>>("fetchNodes"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/MetadataUpdater.html#isUpdateDue(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
@@ -60,6 +53,15 @@ namespace Org.Apache.Kafka.Clients
         public bool IsUpdateDue(long arg0)
         {
             return IExecute<bool>("isUpdateDue", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/MetadataUpdater.html#fetchNodes()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Node> FetchNodes()
+        {
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Node>>("fetchNodes");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/MetadataUpdater.html#maybeUpdate(long)"/>

@@ -83,53 +83,22 @@ namespace Org.Apache.Kafka.Common.Message
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.html#apiKey()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.html#throttleTimeMs()"/>
         /// </summary>
-        public short ApiKey
+
+        /// <returns><see cref="int"/></returns>
+        public int ThrottleTimeMs()
         {
-            get { return IExecute<short>("apiKey"); }
+            return IExecute<int>("throttleTimeMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.html#duplicate()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.html#unknownTaggedFields()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.Message Duplicate
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.html#highestSupportedVersion()"/> 
-        /// </summary>
-        public short HighestSupportedVersion
-        {
-            get { return IExecute<short>("highestSupportedVersion"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.html#lowestSupportedVersion()"/> 
-        /// </summary>
-        public short LowestSupportedVersion
-        {
-            get { return IExecute<short>("lowestSupportedVersion"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.html#results()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Message.DeleteGroupsResponseData.DeletableGroupResultCollection Results
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Message.DeleteGroupsResponseData.DeletableGroupResultCollection>("results"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.html#throttleTimeMs()"/> 
-        /// </summary>
-        public int ThrottleTimeMs
-        {
-            get { return IExecute<int>("throttleTimeMs"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.html#unknownTaggedFields()"/> 
-        /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields
-        {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.html#setResults(org.apache.kafka.common.message.DeleteGroupsResponseData.DeletableGroupResultCollection)"/>
@@ -148,6 +117,51 @@ namespace Org.Apache.Kafka.Common.Message
         public Org.Apache.Kafka.Common.Message.DeleteGroupsResponseData SetThrottleTimeMs(int arg0)
         {
             return IExecute<Org.Apache.Kafka.Common.Message.DeleteGroupsResponseData>("setThrottleTimeMs", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.html#results()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Message.DeleteGroupsResponseData.DeletableGroupResultCollection"/></returns>
+        public Org.Apache.Kafka.Common.Message.DeleteGroupsResponseData.DeletableGroupResultCollection Results()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Message.DeleteGroupsResponseData.DeletableGroupResultCollection>("results");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.html#duplicate()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.Message Duplicate()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.html#apiKey()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short ApiKey()
+        {
+            return IExecute<short>("apiKey");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.html#highestSupportedVersion()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short HighestSupportedVersion()
+        {
+            return IExecute<short>("highestSupportedVersion");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.html#lowestSupportedVersion()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short LowestSupportedVersion()
+        {
+            return IExecute<short>("lowestSupportedVersion");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>
@@ -240,62 +254,6 @@ namespace Org.Apache.Kafka.Common.Message
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.DeletableGroupResult.html#duplicate()"/> 
-            /// </summary>
-            public Org.Apache.Kafka.Common.Protocol.Message Duplicate
-            {
-                get { return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.DeletableGroupResult.html#errorCode()"/> 
-            /// </summary>
-            public short ErrorCode
-            {
-                get { return IExecute<short>("errorCode"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.DeletableGroupResult.html#groupId()"/> 
-            /// </summary>
-            public string GroupId
-            {
-                get { return IExecute<string>("groupId"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.DeletableGroupResult.html#highestSupportedVersion()"/> 
-            /// </summary>
-            public short HighestSupportedVersion
-            {
-                get { return IExecute<short>("highestSupportedVersion"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.DeletableGroupResult.html#lowestSupportedVersion()"/> 
-            /// </summary>
-            public short LowestSupportedVersion
-            {
-                get { return IExecute<short>("lowestSupportedVersion"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.DeletableGroupResult.html#next()"/> 
-            /// </summary>
-            public int Next
-            {
-                get { return IExecute<int>("next"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.DeletableGroupResult.html#prev()"/> 
-            /// </summary>
-            public int Prev
-            {
-                get { return IExecute<int>("prev"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.DeletableGroupResult.html#unknownTaggedFields()"/> 
-            /// </summary>
-            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields
-            {
-                get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.DeletableGroupResult.html#elementKeysAreEqual(java.lang.Object)"/>
             /// </summary>
             /// <param name="arg0"><see cref="object"/></param>
@@ -303,6 +261,42 @@ namespace Org.Apache.Kafka.Common.Message
             public bool ElementKeysAreEqual(object arg0)
             {
                 return IExecute<bool>("elementKeysAreEqual", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.DeletableGroupResult.html#next()"/>
+            /// </summary>
+
+            /// <returns><see cref="int"/></returns>
+            public int Next()
+            {
+                return IExecute<int>("next");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.DeletableGroupResult.html#prev()"/>
+            /// </summary>
+
+            /// <returns><see cref="int"/></returns>
+            public int Prev()
+            {
+                return IExecute<int>("prev");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.DeletableGroupResult.html#groupId()"/>
+            /// </summary>
+
+            /// <returns><see cref="string"/></returns>
+            public string GroupId()
+            {
+                return IExecute<string>("groupId");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.DeletableGroupResult.html#unknownTaggedFields()"/>
+            /// </summary>
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields()
+            {
+                return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.DeletableGroupResult.html#setErrorCode(short)"/>
@@ -321,6 +315,42 @@ namespace Org.Apache.Kafka.Common.Message
             public Org.Apache.Kafka.Common.Message.DeleteGroupsResponseData.DeletableGroupResult SetGroupId(string arg0)
             {
                 return IExecute<Org.Apache.Kafka.Common.Message.DeleteGroupsResponseData.DeletableGroupResult>("setGroupId", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.DeletableGroupResult.html#duplicate()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
+            public Org.Apache.Kafka.Common.Protocol.Message Duplicate()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.DeletableGroupResult.html#errorCode()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short ErrorCode()
+            {
+                return IExecute<short>("errorCode");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.DeletableGroupResult.html#highestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short HighestSupportedVersion()
+            {
+                return IExecute<short>("highestSupportedVersion");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.DeletableGroupResult.html#lowestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short LowestSupportedVersion()
+            {
+                return IExecute<short>("lowestSupportedVersion");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.DeletableGroupResult.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>
@@ -394,7 +424,7 @@ namespace Org.Apache.Kafka.Common.Message
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.DeletableGroupResultCollection.html#%3Cinit%3E(java.util.Iterator)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Iterator"/></param>
-            public DeletableGroupResultCollection(Java.Util.Iterator arg0)
+            public DeletableGroupResultCollection(Java.Util.Iterator<Org.Apache.Kafka.Common.Message.DeleteGroupsResponseData.DeletableGroupResult> arg0)
                 : base(arg0)
             {
             }
@@ -415,13 +445,6 @@ namespace Org.Apache.Kafka.Common.Message
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.DeletableGroupResultCollection.html#duplicate()"/> 
-            /// </summary>
-            public Org.Apache.Kafka.Common.Message.DeleteGroupsResponseData.DeletableGroupResultCollection Duplicate
-            {
-                get { return IExecute<Org.Apache.Kafka.Common.Message.DeleteGroupsResponseData.DeletableGroupResultCollection>("duplicate"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.DeletableGroupResultCollection.html#findAll(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
@@ -438,6 +461,15 @@ namespace Org.Apache.Kafka.Common.Message
             public Org.Apache.Kafka.Common.Message.DeleteGroupsResponseData.DeletableGroupResult Find(string arg0)
             {
                 return IExecute<Org.Apache.Kafka.Common.Message.DeleteGroupsResponseData.DeletableGroupResult>("find", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.DeletableGroupResultCollection.html#duplicate()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Message.DeleteGroupsResponseData.DeletableGroupResultCollection"/></returns>
+            public Org.Apache.Kafka.Common.Message.DeleteGroupsResponseData.DeletableGroupResultCollection Duplicate()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Message.DeleteGroupsResponseData.DeletableGroupResultCollection>("duplicate");
             }
 
             #endregion

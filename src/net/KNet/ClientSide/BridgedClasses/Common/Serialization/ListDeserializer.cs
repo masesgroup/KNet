@@ -17,19 +17,12 @@
 */
 
 using Java.Util;
+using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Serialization
 {
-    public class ListDeserializer<Inner> : Deserializer<List<Inner>>
+    public partial class ListDeserializer<Inner>
     {
-        public override string ClassName => "org.apache.kafka.common.serialization.ListDeserializer";
-
-        public override bool AutoInit => false;
-
-        public ListDeserializer()
-            : base(null, null, false)
-        {
-
-        }
+        public static implicit operator Deserializer<List<Inner>>(ListDeserializer<Inner> t) => t.Cast<Deserializer<List<Inner>>>();
     }
 }

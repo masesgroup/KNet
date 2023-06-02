@@ -65,18 +65,22 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/NewPartitions.html#assignments()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/NewPartitions.html#totalCount()"/>
         /// </summary>
-        public Java.Util.List<Java.Util.List<int?>> Assignments
+
+        /// <returns><see cref="int"/></returns>
+        public int TotalCount()
         {
-            get { return IExecute<Java.Util.List<Java.Util.List<int?>>>("assignments"); }
+            return IExecute<int>("totalCount");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/NewPartitions.html#totalCount()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/NewPartitions.html#assignments()"/>
         /// </summary>
-        public int TotalCount
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Java.Util.List<int?>> Assignments()
         {
-            get { return IExecute<int>("totalCount"); }
+            return IExecute<Java.Util.List<Java.Util.List<int?>>>("assignments");
         }
 
         #endregion

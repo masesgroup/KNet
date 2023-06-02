@@ -33,7 +33,7 @@ namespace Org.Apache.Kafka.Connect.Runtime.Standalone
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/standalone/StandaloneConfig.html#%3Cinit%3E(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public StandaloneConfig(Java.Util.Map arg0)
+        public StandaloneConfig(Java.Util.Map<string, string> arg0)
             : base(arg0)
         {
         }

@@ -36,7 +36,7 @@ namespace Org.Apache.Kafka.Connect.Storage
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Connect.Storage.Converter"/></param>
         /// <param name="arg2"><see cref="Java.Util.Function.Supplier"/></param>
         /// <param name="arg3"><see cref="string"/></param>
-        public KafkaStatusBackingStore(Org.Apache.Kafka.Common.Utils.Time arg0, Org.Apache.Kafka.Connect.Storage.Converter arg1, Java.Util.Function.Supplier arg2, string arg3)
+        public KafkaStatusBackingStore(Org.Apache.Kafka.Common.Utils.Time arg0, Org.Apache.Kafka.Connect.Storage.Converter arg1, Java.Util.Function.Supplier<Org.Apache.Kafka.Connect.Util.TopicAdmin> arg2, string arg3)
             : base(arg0, arg1, arg2, arg3)
         {
         }
@@ -113,13 +113,6 @@ namespace Org.Apache.Kafka.Connect.Storage
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaStatusBackingStore.html#connectors()"/> 
-        /// </summary>
-        public Java.Util.Set<string> Connectors
-        {
-            get { return IExecute<Java.Util.Set<string>>("connectors"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaStatusBackingStore.html#getAllTopics(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -146,6 +139,15 @@ namespace Org.Apache.Kafka.Connect.Storage
         public Java.Util.Collection<Org.Apache.Kafka.Connect.Runtime.TaskStatus> GetAll(string arg0)
         {
             return IExecute<Java.Util.Collection<Org.Apache.Kafka.Connect.Runtime.TaskStatus>>("getAll", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaStatusBackingStore.html#connectors()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<string> Connectors()
+        {
+            return IExecute<Java.Util.Set<string>>("connectors");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaStatusBackingStore.html#get(java.lang.String)"/>

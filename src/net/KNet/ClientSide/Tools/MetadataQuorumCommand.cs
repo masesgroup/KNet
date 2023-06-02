@@ -16,19 +16,13 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace Kafka.Tools
+namespace Org.Apache.Kafka.Tools
 {
     /// <summary>
     /// Class managing MetadataQuorumCommand
     /// </summary>
-    public class MetadataQuorumCommand : MASES.JCOBridge.C2JBridge.JVMBridgeMain<MetadataQuorumCommand>
+    public partial class MetadataQuorumCommand
     {
-        /// <summary>
-        /// Initialize a new <see cref="MetadataQuorumCommand"/>
-        /// </summary>
-        public MetadataQuorumCommand()
-            : base("org.apache.kafka.tools.MetadataQuorumCommand")
-        {
-        }
+
     }
 }

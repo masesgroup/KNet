@@ -46,18 +46,22 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeReplicaLogDirsResult.html#all()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeReplicaLogDirsResult.html#values()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartitionReplica, Org.Apache.Kafka.Clients.Admin.DescribeReplicaLogDirsResult.ReplicaLogDirInfo>> All
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartitionReplica, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.DescribeReplicaLogDirsResult.ReplicaLogDirInfo>> Values()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartitionReplica, Org.Apache.Kafka.Clients.Admin.DescribeReplicaLogDirsResult.ReplicaLogDirInfo>>>("all"); }
+            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartitionReplica, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.DescribeReplicaLogDirsResult.ReplicaLogDirInfo>>>("values");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeReplicaLogDirsResult.html#values()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeReplicaLogDirsResult.html#all()"/>
         /// </summary>
-        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartitionReplica, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.DescribeReplicaLogDirsResult.ReplicaLogDirInfo>> Values
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
+        public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartitionReplica, Org.Apache.Kafka.Clients.Admin.DescribeReplicaLogDirsResult.ReplicaLogDirInfo>> All()
         {
-            get { return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartitionReplica, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.DescribeReplicaLogDirsResult.ReplicaLogDirInfo>>>("values"); }
+            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartitionReplica, Org.Apache.Kafka.Clients.Admin.DescribeReplicaLogDirsResult.ReplicaLogDirInfo>>>("all");
         }
 
         #endregion

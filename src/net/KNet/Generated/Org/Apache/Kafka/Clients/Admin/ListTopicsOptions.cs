@@ -46,11 +46,13 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListTopicsOptions.html#shouldListInternal()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListTopicsOptions.html#shouldListInternal()"/>
         /// </summary>
-        public bool ShouldListInternal
+
+        /// <returns><see cref="bool"/></returns>
+        public bool ShouldListInternal()
         {
-            get { return IExecute<bool>("shouldListInternal"); }
+            return IExecute<bool>("shouldListInternal");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListTopicsOptions.html#listInternal(boolean)"/>

@@ -34,7 +34,7 @@ namespace Org.Apache.Kafka.Connect.Storage
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Function.Supplier"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Supplier"/></param>
-        public KafkaOffsetBackingStore(Java.Util.Function.Supplier arg0, Java.Util.Function.Supplier arg1)
+        public KafkaOffsetBackingStore(Java.Util.Function.Supplier<Org.Apache.Kafka.Connect.Util.TopicAdmin> arg0, Java.Util.Function.Supplier<string> arg1)
             : base(arg0, arg1)
         {
         }

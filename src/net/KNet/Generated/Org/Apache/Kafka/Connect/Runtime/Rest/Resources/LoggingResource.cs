@@ -50,32 +50,6 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest.Resources
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/resources/LoggingResource.html#listLoggers()"/> 
-        /// </summary>
-        public Javax.Ws.Rs.Core.Response ListLoggers
-        {
-            get { return IExecute<Javax.Ws.Rs.Core.Response>("listLoggers"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/resources/LoggingResource.html#getLogger(java.lang.String)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="Javax.Ws.Rs.Core.Response"/></returns>
-        public Javax.Ws.Rs.Core.Response GetLogger(string arg0)
-        {
-            return IExecute<Javax.Ws.Rs.Core.Response>("getLogger", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/resources/LoggingResource.html#setLevel(java.lang.String,java.util.Map)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="Java.Util.Map"/></param>
-        /// <returns><see cref="Javax.Ws.Rs.Core.Response"/></returns>
-        public Javax.Ws.Rs.Core.Response SetLevel(string arg0, Java.Util.Map<string, string> arg1)
-        {
-            return IExecute<Javax.Ws.Rs.Core.Response>("setLevel", arg0, arg1);
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/resources/LoggingResource.html#requestTimeout(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>

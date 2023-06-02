@@ -46,20 +46,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Windows.html#gracePeriodMs()"/> 
-        /// </summary>
-        public long GracePeriodMs
-        {
-            get { return IExecute<long>("gracePeriodMs"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Windows.html#size()"/> 
-        /// </summary>
-        public long Size
-        {
-            get { return IExecute<long>("size"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Windows.html#windowsFor(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
@@ -67,6 +53,24 @@ namespace Org.Apache.Kafka.Streams.Kstream
         public Java.Util.Map WindowsFor(long arg0)
         {
             return IExecute<Java.Util.Map>("windowsFor", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Windows.html#gracePeriodMs()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long GracePeriodMs()
+        {
+            return IExecute<long>("gracePeriodMs");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Windows.html#size()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long Size()
+        {
+            return IExecute<long>("size");
         }
 
         #endregion
@@ -104,20 +108,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Windows.html#gracePeriodMs()"/> 
-        /// </summary>
-        public long GracePeriodMs
-        {
-            get { return IExecute<long>("gracePeriodMs"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Windows.html#size()"/> 
-        /// </summary>
-        public long Size
-        {
-            get { return IExecute<long>("size"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Windows.html#windowsFor(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
@@ -125,6 +115,24 @@ namespace Org.Apache.Kafka.Streams.Kstream
         public Java.Util.Map<long?, W> WindowsFor(long arg0)
         {
             return IExecute<Java.Util.Map<long?, W>>("windowsFor", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Windows.html#gracePeriodMs()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long GracePeriodMs()
+        {
+            return IExecute<long>("gracePeriodMs");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Windows.html#size()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long Size()
+        {
+            return IExecute<long>("size");
         }
 
         #endregion

@@ -58,11 +58,13 @@ namespace Org.Apache.Kafka.Common.Config.Types
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/types/Password.html#value()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/types/Password.html#value()"/>
         /// </summary>
-        public string Value
+
+        /// <returns><see cref="string"/></returns>
+        public string Value()
         {
-            get { return IExecute<string>("value"); }
+            return IExecute<string>("value");
         }
 
         #endregion

@@ -459,7 +459,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SecurityProtocol.html"/>
     /// </summary>
-    public partial class SecurityProtocol : Java.Lang.Enum
+    public partial class SecurityProtocol : Java.Lang.Enum<Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

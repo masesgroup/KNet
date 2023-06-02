@@ -65,11 +65,13 @@ namespace Org.Apache.Kafka.Connect.Runtime.Isolation
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/PluginClassLoader.html#location()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/PluginClassLoader.html#location()"/>
         /// </summary>
-        public string Location
+
+        /// <returns><see cref="string"/></returns>
+        public string Location()
         {
-            get { return IExecute<string>("location"); }
+            return IExecute<string>("location");
         }
 
         #endregion

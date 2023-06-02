@@ -54,11 +54,13 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/MemberToRemove.html#groupInstanceId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/MemberToRemove.html#groupInstanceId()"/>
         /// </summary>
-        public string GroupInstanceId
+
+        /// <returns><see cref="string"/></returns>
+        public string GroupInstanceId()
         {
-            get { return IExecute<string>("groupInstanceId"); }
+            return IExecute<string>("groupInstanceId");
         }
 
         #endregion

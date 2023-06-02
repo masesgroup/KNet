@@ -69,18 +69,20 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
             get { return IExecute<string>("getAuthorizationID"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#isComplete()"/> 
-        /// </summary>
-        public bool IsComplete
-        {
-            get { return IExecute<bool>("isComplete"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#getMechanismName()"/> 
         /// </summary>
         public string MechanismName
         {
             get { return IExecute<string>("getMechanismName"); }
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#isComplete()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsComplete()
+        {
+            return IExecute<bool>("isComplete");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#evaluateResponse(byte[])"/>

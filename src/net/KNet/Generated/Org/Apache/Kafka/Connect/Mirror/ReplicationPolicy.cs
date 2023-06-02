@@ -46,13 +46,6 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/ReplicationPolicy.html#heartbeatsTopic()"/> 
-        /// </summary>
-        public string HeartbeatsTopic
-        {
-            get { return IExecute<string>("heartbeatsTopic"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/ReplicationPolicy.html#formatRemoteTopic(java.lang.String,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -124,6 +117,15 @@ namespace Org.Apache.Kafka.Connect.Mirror
         public string CheckpointsTopic(string arg0)
         {
             return IExecute<string>("checkpointsTopic", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/ReplicationPolicy.html#heartbeatsTopic()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string HeartbeatsTopic()
+        {
+            return IExecute<string>("heartbeatsTopic");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/ReplicationPolicy.html#offsetSyncsTopic(java.lang.String)"/>

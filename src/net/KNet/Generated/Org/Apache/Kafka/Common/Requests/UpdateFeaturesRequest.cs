@@ -65,11 +65,13 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/UpdateFeaturesRequest.html#featureUpdates()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/UpdateFeaturesRequest.html#featureUpdates()"/>
         /// </summary>
-        public Java.Util.Collection<Org.Apache.Kafka.Common.Requests.UpdateFeaturesRequest.FeatureUpdateItem> FeatureUpdates
+
+        /// <returns><see cref="Java.Util.Collection"/></returns>
+        public Java.Util.Collection<Org.Apache.Kafka.Common.Requests.UpdateFeaturesRequest.FeatureUpdateItem> FeatureUpdates()
         {
-            get { return IExecute<Java.Util.Collection<Org.Apache.Kafka.Common.Requests.UpdateFeaturesRequest.FeatureUpdateItem>>("featureUpdates"); }
+            return IExecute<Java.Util.Collection<Org.Apache.Kafka.Common.Requests.UpdateFeaturesRequest.FeatureUpdateItem>>("featureUpdates");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/UpdateFeaturesRequest.html#getFeature(java.lang.String)"/>
@@ -154,32 +156,40 @@ namespace Org.Apache.Kafka.Common.Requests
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/UpdateFeaturesRequest.FeatureUpdateItem.html#feature()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/UpdateFeaturesRequest.FeatureUpdateItem.html#isDeleteRequest()"/>
             /// </summary>
-            public string Feature
+
+            /// <returns><see cref="bool"/></returns>
+            public bool IsDeleteRequest()
             {
-                get { return IExecute<string>("feature"); }
+                return IExecute<bool>("isDeleteRequest");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/UpdateFeaturesRequest.FeatureUpdateItem.html#isDeleteRequest()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/UpdateFeaturesRequest.FeatureUpdateItem.html#feature()"/>
             /// </summary>
-            public bool IsDeleteRequest
+
+            /// <returns><see cref="string"/></returns>
+            public string Feature()
             {
-                get { return IExecute<bool>("isDeleteRequest"); }
+                return IExecute<string>("feature");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/UpdateFeaturesRequest.FeatureUpdateItem.html#upgradeType()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/UpdateFeaturesRequest.FeatureUpdateItem.html#upgradeType()"/>
             /// </summary>
-            public Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType UpgradeType
+
+            /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType"/></returns>
+            public Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType UpgradeType()
             {
-                get { return IExecute<Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType>("upgradeType"); }
+                return IExecute<Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType>("upgradeType");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/UpdateFeaturesRequest.FeatureUpdateItem.html#versionLevel()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/UpdateFeaturesRequest.FeatureUpdateItem.html#versionLevel()"/>
             /// </summary>
-            public short VersionLevel
+
+            /// <returns><see cref="short"/></returns>
+            public short VersionLevel()
             {
-                get { return IExecute<short>("versionLevel"); }
+                return IExecute<short>("versionLevel");
             }
 
             #endregion

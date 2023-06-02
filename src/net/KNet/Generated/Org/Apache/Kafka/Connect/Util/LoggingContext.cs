@@ -144,13 +144,6 @@ namespace Org.Apache.Kafka.Connect.Util
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/LoggingContext.Scope.html#values()"/> 
-            /// </summary>
-            public static Org.Apache.Kafka.Connect.Util.LoggingContext.Scope[] Values
-            {
-                get { return SExecuteArray<Org.Apache.Kafka.Connect.Util.LoggingContext.Scope>(LocalBridgeClazz, "values"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/LoggingContext.Scope.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
@@ -158,6 +151,15 @@ namespace Org.Apache.Kafka.Connect.Util
             public static Org.Apache.Kafka.Connect.Util.LoggingContext.Scope ValueOf(string arg0)
             {
                 return SExecute<Org.Apache.Kafka.Connect.Util.LoggingContext.Scope>(LocalBridgeClazz, "valueOf", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/LoggingContext.Scope.html#values()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Connect.Util.LoggingContext.Scope"/></returns>
+            public static Org.Apache.Kafka.Connect.Util.LoggingContext.Scope[] Values()
+            {
+                return SExecuteArray<Org.Apache.Kafka.Connect.Util.LoggingContext.Scope>(LocalBridgeClazz, "values");
             }
 
             #endregion

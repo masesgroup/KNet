@@ -33,7 +33,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/TaggedFields.html#%3Cinit%3E(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public TaggedFields(Java.Util.Map arg0)
+        public TaggedFields(Java.Util.Map<int?, Org.Apache.Kafka.Common.Protocol.Types.Field> arg0)
             : base(arg0)
         {
         }
@@ -63,11 +63,13 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/TaggedFields.html#numFields()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/TaggedFields.html#numFields()"/>
         /// </summary>
-        public int NumFields
+
+        /// <returns><see cref="int"/></returns>
+        public int NumFields()
         {
-            get { return IExecute<int>("numFields"); }
+            return IExecute<int>("numFields");
         }
 
         #endregion

@@ -42,25 +42,13 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/OffsetSpec.html#earliest()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/OffsetSpec.html#earliest()"/>
         /// </summary>
-        public static Org.Apache.Kafka.Clients.Admin.OffsetSpec Earliest
+
+        /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.OffsetSpec"/></returns>
+        public static Org.Apache.Kafka.Clients.Admin.OffsetSpec Earliest()
         {
-            get { return SExecute<Org.Apache.Kafka.Clients.Admin.OffsetSpec>(LocalBridgeClazz, "earliest"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/OffsetSpec.html#latest()"/> 
-        /// </summary>
-        public static Org.Apache.Kafka.Clients.Admin.OffsetSpec Latest
-        {
-            get { return SExecute<Org.Apache.Kafka.Clients.Admin.OffsetSpec>(LocalBridgeClazz, "latest"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/OffsetSpec.html#maxTimestamp()"/> 
-        /// </summary>
-        public static Org.Apache.Kafka.Clients.Admin.OffsetSpec MaxTimestamp
-        {
-            get { return SExecute<Org.Apache.Kafka.Clients.Admin.OffsetSpec>(LocalBridgeClazz, "maxTimestamp"); }
+            return SExecute<Org.Apache.Kafka.Clients.Admin.OffsetSpec>(LocalBridgeClazz, "earliest");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/OffsetSpec.html#forTimestamp(long)"/>
@@ -70,6 +58,24 @@ namespace Org.Apache.Kafka.Clients.Admin
         public static Org.Apache.Kafka.Clients.Admin.OffsetSpec ForTimestamp(long arg0)
         {
             return SExecute<Org.Apache.Kafka.Clients.Admin.OffsetSpec>(LocalBridgeClazz, "forTimestamp", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/OffsetSpec.html#latest()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.OffsetSpec"/></returns>
+        public static Org.Apache.Kafka.Clients.Admin.OffsetSpec Latest()
+        {
+            return SExecute<Org.Apache.Kafka.Clients.Admin.OffsetSpec>(LocalBridgeClazz, "latest");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/OffsetSpec.html#maxTimestamp()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.OffsetSpec"/></returns>
+        public static Org.Apache.Kafka.Clients.Admin.OffsetSpec MaxTimestamp()
+        {
+            return SExecute<Org.Apache.Kafka.Clients.Admin.OffsetSpec>(LocalBridgeClazz, "maxTimestamp");
         }
 
         #endregion

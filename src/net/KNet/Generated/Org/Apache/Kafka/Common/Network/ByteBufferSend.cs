@@ -76,25 +76,31 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ByteBufferSend.html#completed()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ByteBufferSend.html#completed()"/>
         /// </summary>
-        public bool Completed
+
+        /// <returns><see cref="bool"/></returns>
+        public bool Completed()
         {
-            get { return IExecute<bool>("completed"); }
+            return IExecute<bool>("completed");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ByteBufferSend.html#remaining()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ByteBufferSend.html#remaining()"/>
         /// </summary>
-        public long Remaining
+
+        /// <returns><see cref="long"/></returns>
+        public long Remaining()
         {
-            get { return IExecute<long>("remaining"); }
+            return IExecute<long>("remaining");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ByteBufferSend.html#size()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ByteBufferSend.html#size()"/>
         /// </summary>
-        public long Size
+
+        /// <returns><see cref="long"/></returns>
+        public long Size()
         {
-            get { return IExecute<long>("size"); }
+            return IExecute<long>("size");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ByteBufferSend.html#writeTo(org.apache.kafka.common.network.TransferableChannel)"/>

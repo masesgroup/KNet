@@ -34,7 +34,7 @@ namespace Org.Apache.Kafka.Connect.Runtime
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
-        public WorkerConfig(Org.Apache.Kafka.Common.Config.ConfigDef arg0, Java.Util.Map arg1)
+        public WorkerConfig(Org.Apache.Kafka.Common.Config.ConfigDef arg0, Java.Util.Map<string, string> arg1)
             : base(arg0, arg1)
         {
         }
@@ -228,55 +228,6 @@ namespace Org.Apache.Kafka.Connect.Runtime
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerConfig.html#bootstrapServers()"/> 
-        /// </summary>
-        public string BootstrapServers
-        {
-            get { return IExecute<string>("bootstrapServers"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerConfig.html#connectorOffsetsTopicsPermitted()"/> 
-        /// </summary>
-        public bool ConnectorOffsetsTopicsPermitted
-        {
-            get { return IExecute<bool>("connectorOffsetsTopicsPermitted"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerConfig.html#exactlyOnceSourceEnabled()"/> 
-        /// </summary>
-        public bool ExactlyOnceSourceEnabled
-        {
-            get { return IExecute<bool>("exactlyOnceSourceEnabled"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerConfig.html#groupId()"/> 
-        /// </summary>
-        public string GroupId
-        {
-            get { return IExecute<string>("groupId"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerConfig.html#kafkaClusterId()"/> 
-        /// </summary>
-        public string KafkaClusterId
-        {
-            get { return IExecute<string>("kafkaClusterId"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerConfig.html#offsetCommitInterval()"/> 
-        /// </summary>
-        public long OffsetCommitInterval
-        {
-            get { return IExecute<long>("offsetCommitInterval"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerConfig.html#offsetsTopic()"/> 
-        /// </summary>
-        public string OffsetsTopic
-        {
-            get { return IExecute<string>("offsetsTopic"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerConfig.html#getRebalanceTimeout()"/> 
         /// </summary>
         public int? RebalanceTimeout
@@ -284,11 +235,76 @@ namespace Org.Apache.Kafka.Connect.Runtime
             get { return IExecute<int?>("getRebalanceTimeout"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerConfig.html#topicCreationEnable()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerConfig.html#connectorOffsetsTopicsPermitted()"/>
         /// </summary>
-        public bool TopicCreationEnable
+
+        /// <returns><see cref="bool"/></returns>
+        public bool ConnectorOffsetsTopicsPermitted()
         {
-            get { return IExecute<bool>("topicCreationEnable"); }
+            return IExecute<bool>("connectorOffsetsTopicsPermitted");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerConfig.html#exactlyOnceSourceEnabled()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool ExactlyOnceSourceEnabled()
+        {
+            return IExecute<bool>("exactlyOnceSourceEnabled");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerConfig.html#topicCreationEnable()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool TopicCreationEnable()
+        {
+            return IExecute<bool>("topicCreationEnable");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerConfig.html#bootstrapServers()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string BootstrapServers()
+        {
+            return IExecute<string>("bootstrapServers");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerConfig.html#groupId()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string GroupId()
+        {
+            return IExecute<string>("groupId");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerConfig.html#kafkaClusterId()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string KafkaClusterId()
+        {
+            return IExecute<string>("kafkaClusterId");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerConfig.html#offsetsTopic()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string OffsetsTopic()
+        {
+            return IExecute<string>("offsetsTopic");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerConfig.html#offsetCommitInterval()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long OffsetCommitInterval()
+        {
+            return IExecute<long>("offsetCommitInterval");
         }
 
         #endregion

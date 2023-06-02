@@ -46,53 +46,58 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreBuilder.html#build()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreBuilder.html#loggingEnabled()"/>
         /// </summary>
-        public Org.Apache.Kafka.Streams.Processor.StateStore Build
+
+        /// <returns><see cref="bool"/></returns>
+        public bool LoggingEnabled()
         {
-            get { return IExecute<Org.Apache.Kafka.Streams.Processor.StateStore>("build"); }
+            return IExecute<bool>("loggingEnabled");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreBuilder.html#logConfig()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreBuilder.html#name()"/>
         /// </summary>
-        public Java.Util.Map LogConfig
+
+        /// <returns><see cref="string"/></returns>
+        public string Name()
         {
-            get { return IExecute<Java.Util.Map>("logConfig"); }
+            return IExecute<string>("name");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreBuilder.html#loggingEnabled()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreBuilder.html#logConfig()"/>
         /// </summary>
-        public bool LoggingEnabled
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map LogConfig()
         {
-            get { return IExecute<bool>("loggingEnabled"); }
+            return IExecute<Java.Util.Map>("logConfig");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreBuilder.html#name()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreBuilder.html#withCachingDisabled()"/>
         /// </summary>
-        public string Name
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.State.StoreBuilder"/></returns>
+        public Org.Apache.Kafka.Streams.State.StoreBuilder WithCachingDisabled()
         {
-            get { return IExecute<string>("name"); }
+            return IExecute<Org.Apache.Kafka.Streams.State.StoreBuilder>("withCachingDisabled");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreBuilder.html#withCachingDisabled()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreBuilder.html#withCachingEnabled()"/>
         /// </summary>
-        public Org.Apache.Kafka.Streams.State.StoreBuilder WithCachingDisabled
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.State.StoreBuilder"/></returns>
+        public Org.Apache.Kafka.Streams.State.StoreBuilder WithCachingEnabled()
         {
-            get { return IExecute<Org.Apache.Kafka.Streams.State.StoreBuilder>("withCachingDisabled"); }
+            return IExecute<Org.Apache.Kafka.Streams.State.StoreBuilder>("withCachingEnabled");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreBuilder.html#withCachingEnabled()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreBuilder.html#withLoggingDisabled()"/>
         /// </summary>
-        public Org.Apache.Kafka.Streams.State.StoreBuilder WithCachingEnabled
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.State.StoreBuilder"/></returns>
+        public Org.Apache.Kafka.Streams.State.StoreBuilder WithLoggingDisabled()
         {
-            get { return IExecute<Org.Apache.Kafka.Streams.State.StoreBuilder>("withCachingEnabled"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreBuilder.html#withLoggingDisabled()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Streams.State.StoreBuilder WithLoggingDisabled
-        {
-            get { return IExecute<Org.Apache.Kafka.Streams.State.StoreBuilder>("withLoggingDisabled"); }
+            return IExecute<Org.Apache.Kafka.Streams.State.StoreBuilder>("withLoggingDisabled");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreBuilder.html#withLoggingEnabled(java.util.Map)"/>
@@ -102,6 +107,15 @@ namespace Org.Apache.Kafka.Streams.State
         public Org.Apache.Kafka.Streams.State.StoreBuilder WithLoggingEnabled(Java.Util.Map arg0)
         {
             return IExecute<Org.Apache.Kafka.Streams.State.StoreBuilder>("withLoggingEnabled", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreBuilder.html#build()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.StateStore"/></returns>
+        public Org.Apache.Kafka.Streams.Processor.StateStore Build()
+        {
+            return IExecute<Org.Apache.Kafka.Streams.Processor.StateStore>("build");
         }
 
         #endregion
@@ -139,53 +153,58 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreBuilder.html#build()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreBuilder.html#loggingEnabled()"/>
         /// </summary>
-        public T Build
+
+        /// <returns><see cref="bool"/></returns>
+        public bool LoggingEnabled()
         {
-            get { return IExecute<T>("build"); }
+            return IExecute<bool>("loggingEnabled");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreBuilder.html#logConfig()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreBuilder.html#name()"/>
         /// </summary>
-        public Java.Util.Map<string, string> LogConfig
+
+        /// <returns><see cref="string"/></returns>
+        public string Name()
         {
-            get { return IExecute<Java.Util.Map<string, string>>("logConfig"); }
+            return IExecute<string>("name");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreBuilder.html#loggingEnabled()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreBuilder.html#logConfig()"/>
         /// </summary>
-        public bool LoggingEnabled
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, string> LogConfig()
         {
-            get { return IExecute<bool>("loggingEnabled"); }
+            return IExecute<Java.Util.Map<string, string>>("logConfig");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreBuilder.html#name()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreBuilder.html#withCachingDisabled()"/>
         /// </summary>
-        public string Name
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.State.StoreBuilder"/></returns>
+        public Org.Apache.Kafka.Streams.State.StoreBuilder<T> WithCachingDisabled()
         {
-            get { return IExecute<string>("name"); }
+            return IExecute<Org.Apache.Kafka.Streams.State.StoreBuilder<T>>("withCachingDisabled");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreBuilder.html#withCachingDisabled()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreBuilder.html#withCachingEnabled()"/>
         /// </summary>
-        public Org.Apache.Kafka.Streams.State.StoreBuilder<T> WithCachingDisabled
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.State.StoreBuilder"/></returns>
+        public Org.Apache.Kafka.Streams.State.StoreBuilder<T> WithCachingEnabled()
         {
-            get { return IExecute<Org.Apache.Kafka.Streams.State.StoreBuilder<T>>("withCachingDisabled"); }
+            return IExecute<Org.Apache.Kafka.Streams.State.StoreBuilder<T>>("withCachingEnabled");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreBuilder.html#withCachingEnabled()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreBuilder.html#withLoggingDisabled()"/>
         /// </summary>
-        public Org.Apache.Kafka.Streams.State.StoreBuilder<T> WithCachingEnabled
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.State.StoreBuilder"/></returns>
+        public Org.Apache.Kafka.Streams.State.StoreBuilder<T> WithLoggingDisabled()
         {
-            get { return IExecute<Org.Apache.Kafka.Streams.State.StoreBuilder<T>>("withCachingEnabled"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreBuilder.html#withLoggingDisabled()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Streams.State.StoreBuilder<T> WithLoggingDisabled
-        {
-            get { return IExecute<Org.Apache.Kafka.Streams.State.StoreBuilder<T>>("withLoggingDisabled"); }
+            return IExecute<Org.Apache.Kafka.Streams.State.StoreBuilder<T>>("withLoggingDisabled");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreBuilder.html#withLoggingEnabled(java.util.Map)"/>
@@ -195,6 +214,15 @@ namespace Org.Apache.Kafka.Streams.State
         public Org.Apache.Kafka.Streams.State.StoreBuilder<T> WithLoggingEnabled(Java.Util.Map<string, string> arg0)
         {
             return IExecute<Org.Apache.Kafka.Streams.State.StoreBuilder<T>>("withLoggingEnabled", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreBuilder.html#build()"/>
+        /// </summary>
+
+        /// <returns><typeparamref name="T"/></returns>
+        public T Build()
+        {
+            return IExecute<T>("build");
         }
 
         #endregion

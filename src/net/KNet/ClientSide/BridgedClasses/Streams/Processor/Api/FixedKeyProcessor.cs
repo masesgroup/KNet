@@ -30,10 +30,10 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         void Close();
     }
 
-    public class FixedKeyProcessor<KIn, VIn, VOut> : JVMBridgeListener, IFixedKeyProcessor<KIn, VIn, VOut>
+    public partial class FixedKeyProcessor<KIn, VIn, VOut> : IFixedKeyProcessor<KIn, VIn, VOut>
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public override string ClassName => "org.apache.kafka.streams.processor.api.FixedKeyProcessorImpl";
+        public override string BridgeClassName => "org.apache.kafka.streams.processor.api.FixedKeyProcessorImpl";
 
         readonly Action<FixedKeyProcessorContext<KIn, VOut>> executionFunctionInit = null;
         readonly Action<FixedKeyRecord<KIn, VIn>> executionFunctionProcess = null;

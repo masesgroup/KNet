@@ -73,14 +73,6 @@ namespace Org.Apache.Kafka.Common.Requests
         #endregion
 
         #region Instance methods
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeClientQuotasResponse.html#complete(org.apache.kafka.common.internals.KafkaFutureImpl)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Internals.KafkaFutureImpl"/></param>
-        public void Complete(Org.Apache.Kafka.Common.Internals.KafkaFutureImpl<Java.Util.Map<Org.Apache.Kafka.Common.Quota.ClientQuotaEntity, Java.Util.Map<string, double?>>> arg0)
-        {
-            IExecute("complete", arg0);
-        }
 
         #endregion
 

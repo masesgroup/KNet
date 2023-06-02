@@ -33,7 +33,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/AlterUserScramCredentialsResult.html#%3Cinit%3E(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public AlterUserScramCredentialsResult(Java.Util.Map arg0)
+        public AlterUserScramCredentialsResult(Java.Util.Map<string, Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>> arg0)
             : base(arg0)
         {
         }
@@ -54,18 +54,22 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/AlterUserScramCredentialsResult.html#all()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/AlterUserScramCredentialsResult.html#values()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void> All
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>> Values()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>>("all"); }
+            return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>>>("values");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/AlterUserScramCredentialsResult.html#values()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/AlterUserScramCredentialsResult.html#all()"/>
         /// </summary>
-        public Java.Util.Map<string, Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>> Values
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
+        public Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void> All()
         {
-            get { return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>>>("values"); }
+            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>>("all");
         }
 
         #endregion

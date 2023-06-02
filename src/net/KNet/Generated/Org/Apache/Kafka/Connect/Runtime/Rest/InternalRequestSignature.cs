@@ -59,40 +59,10 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest
         #endregion
 
         #region Static methods
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/InternalRequestSignature.html#fromHeaders(org.apache.kafka.connect.runtime.distributed.Crypto,byte[],javax.ws.rs.core.HttpHeaders)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Runtime.Distributed.Crypto"/></param>
-        /// <param name="arg1"><see cref="byte"/></param>
-        /// <param name="arg2"><see cref="Javax.Ws.Rs.Core.HttpHeaders"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.Rest.InternalRequestSignature"/></returns>
-        public static Org.Apache.Kafka.Connect.Runtime.Rest.InternalRequestSignature FromHeaders(Org.Apache.Kafka.Connect.Runtime.Distributed.Crypto arg0, byte[] arg1, Javax.Ws.Rs.Core.HttpHeaders arg2)
-        {
-            return SExecute<Org.Apache.Kafka.Connect.Runtime.Rest.InternalRequestSignature>(LocalBridgeClazz, "fromHeaders", arg0, arg1, arg2);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/InternalRequestSignature.html#addToRequest(org.apache.kafka.connect.runtime.distributed.Crypto,javax.crypto.SecretKey,byte[],java.lang.String,org.eclipse.jetty.client.api.Request)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Runtime.Distributed.Crypto"/></param>
-        /// <param name="arg1"><see cref="Javax.Crypto.SecretKey"/></param>
-        /// <param name="arg2"><see cref="byte"/></param>
-        /// <param name="arg3"><see cref="string"/></param>
-        /// <param name="arg4"><see cref="Org.Eclipse.Jetty.Client.Api.Request"/></param>
-        public static void AddToRequest(Org.Apache.Kafka.Connect.Runtime.Distributed.Crypto arg0, Javax.Crypto.SecretKey arg1, byte[] arg2, string arg3, Org.Eclipse.Jetty.Client.Api.Request arg4)
-        {
-            SExecute(LocalBridgeClazz, "addToRequest", arg0, arg1, arg2, arg3, arg4);
-        }
 
         #endregion
 
         #region Instance methods
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/InternalRequestSignature.html#keyAlgorithm()"/> 
-        /// </summary>
-        public string KeyAlgorithm
-        {
-            get { return IExecute<string>("keyAlgorithm"); }
-        }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/InternalRequestSignature.html#isValid(javax.crypto.SecretKey)"/>
         /// </summary>
@@ -101,6 +71,15 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest
         public bool IsValid(Javax.Crypto.SecretKey arg0)
         {
             return IExecute<bool>("isValid", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/InternalRequestSignature.html#keyAlgorithm()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string KeyAlgorithm()
+        {
+            return IExecute<string>("keyAlgorithm");
         }
 
         #endregion

@@ -82,13 +82,6 @@ namespace Org.Apache.Kafka.Connect.Runtime.Isolation
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/PluginType.html#values()"/> 
-        /// </summary>
-        public static Org.Apache.Kafka.Connect.Runtime.Isolation.PluginType[] Values
-        {
-            get { return SExecuteArray<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginType>(LocalBridgeClazz, "values"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/PluginType.html#from(java.lang.Class)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Class"/></param>
@@ -106,16 +99,27 @@ namespace Org.Apache.Kafka.Connect.Runtime.Isolation
         {
             return SExecute<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginType>(LocalBridgeClazz, "valueOf", arg0);
         }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/PluginType.html#values()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.Isolation.PluginType"/></returns>
+        public static Org.Apache.Kafka.Connect.Runtime.Isolation.PluginType[] Values()
+        {
+            return SExecuteArray<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginType>(LocalBridgeClazz, "values");
+        }
 
         #endregion
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/PluginType.html#simpleName()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/PluginType.html#simpleName()"/>
         /// </summary>
-        public string SimpleName
+
+        /// <returns><see cref="string"/></returns>
+        public string SimpleName()
         {
-            get { return IExecute<string>("simpleName"); }
+            return IExecute<string>("simpleName");
         }
 
         #endregion

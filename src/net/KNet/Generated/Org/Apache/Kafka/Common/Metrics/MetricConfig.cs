@@ -46,13 +46,6 @@ namespace Org.Apache.Kafka.Common.Metrics
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricConfig.html#timeWindowMs()"/> 
-        /// </summary>
-        public long TimeWindowMs
-        {
-            get { return IExecute<long>("timeWindowMs"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricConfig.html#samples()"/>
         /// </summary>
 
@@ -78,6 +71,15 @@ namespace Org.Apache.Kafka.Common.Metrics
         public long EventWindow()
         {
             return IExecute<long>("eventWindow");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricConfig.html#timeWindowMs()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long TimeWindowMs()
+        {
+            return IExecute<long>("timeWindowMs");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricConfig.html#eventWindow(long)"/>

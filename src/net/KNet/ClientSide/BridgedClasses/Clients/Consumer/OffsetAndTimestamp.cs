@@ -20,14 +20,8 @@ using Java.Util;
 
 namespace Org.Apache.Kafka.Clients.Consumer
 {
-    public class OffsetAndTimestamp : MASES.JCOBridge.C2JBridge.JVMBridgeBase<OffsetAndTimestamp>
+    public partial class OffsetAndTimestamp 
     {
-        public override string ClassName => "org.apache.kafka.clients.consumer.OffsetAndTimestamp";
-
-        public long Timestamp => IExecute<long>("timestamp");
-
-        public long Offset => IExecute<long>("offset");
-
-        public Optional<int> LeaderEpoch => IExecute<Optional<int>>("leaderEpoch");
+        public System.DateTime DateTime => System.DateTimeOffset.FromUnixTimeMilliseconds(Timestamp()).DateTime;
     }
 }

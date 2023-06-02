@@ -33,7 +33,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DeleteRecordsResult.html#%3Cinit%3E(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public DeleteRecordsResult(Java.Util.Map arg0)
+        public DeleteRecordsResult(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.DeletedRecords>> arg0)
             : base(arg0)
         {
         }
@@ -54,18 +54,22 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DeleteRecordsResult.html#all()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DeleteRecordsResult.html#lowWatermarks()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void> All
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.DeletedRecords>> LowWatermarks()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>>("all"); }
+            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.DeletedRecords>>>("lowWatermarks");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DeleteRecordsResult.html#lowWatermarks()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DeleteRecordsResult.html#all()"/>
         /// </summary>
-        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.DeletedRecords>> LowWatermarks
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
+        public Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void> All()
         {
-            get { return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.DeletedRecords>>>("lowWatermarks"); }
+            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>>("all");
         }
 
         #endregion

@@ -29,17 +29,6 @@ namespace Org.Apache.Kafka.Clients
     public partial class Metadata
     {
         #region Constructors
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/Metadata.html#%3Cinit%3E(long,long,org.apache.kafka.common.utils.LogContext,org.apache.kafka.common.internals.ClusterResourceListeners)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="long"/></param>
-        /// <param name="arg1"><see cref="long"/></param>
-        /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Utils.LogContext"/></param>
-        /// <param name="arg3"><see cref="Org.Apache.Kafka.Common.Internals.ClusterResourceListeners"/></param>
-        public Metadata(long arg0, long arg1, Org.Apache.Kafka.Common.Utils.LogContext arg2, Org.Apache.Kafka.Common.Internals.ClusterResourceListeners arg3)
-            : base(arg0, arg1, arg2, arg3)
-        {
-        }
 
         #endregion
 
@@ -61,69 +50,6 @@ namespace Org.Apache.Kafka.Clients
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/Metadata.html#fetch()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Cluster Fetch
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Cluster>("fetch"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/Metadata.html#isClosed()"/> 
-        /// </summary>
-        public bool IsClosed
-        {
-            get { return IExecute<bool>("isClosed"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/Metadata.html#lastSuccessfulUpdate()"/> 
-        /// </summary>
-        public long LastSuccessfulUpdate
-        {
-            get { return IExecute<long>("lastSuccessfulUpdate"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/Metadata.html#metadataExpireMs()"/> 
-        /// </summary>
-        public long MetadataExpireMs
-        {
-            get { return IExecute<long>("metadataExpireMs"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/Metadata.html#requestUpdate()"/> 
-        /// </summary>
-        public int RequestUpdate
-        {
-            get { return IExecute<int>("requestUpdate"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/Metadata.html#requestUpdateForNewTopics()"/> 
-        /// </summary>
-        public int RequestUpdateForNewTopics
-        {
-            get { return IExecute<int>("requestUpdateForNewTopics"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/Metadata.html#topicIds()"/> 
-        /// </summary>
-        public Java.Util.Map<string, Org.Apache.Kafka.Common.Uuid> TopicIds
-        {
-            get { return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Common.Uuid>>("topicIds"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/Metadata.html#updateRequested()"/> 
-        /// </summary>
-        public bool UpdateRequested
-        {
-            get { return IExecute<bool>("updateRequested"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/Metadata.html#updateVersion()"/> 
-        /// </summary>
-        public int UpdateVersion
-        {
-            get { return IExecute<int>("updateVersion"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/Metadata.html#lastSeenLeaderEpoch(org.apache.kafka.common.TopicPartition)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
@@ -131,6 +57,24 @@ namespace Org.Apache.Kafka.Clients
         public Java.Util.Optional<int?> LastSeenLeaderEpoch(Org.Apache.Kafka.Common.TopicPartition arg0)
         {
             return IExecute<Java.Util.Optional<int?>>("lastSeenLeaderEpoch", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/Metadata.html#metadataExpireMs()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long MetadataExpireMs()
+        {
+            return IExecute<long>("metadataExpireMs");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/Metadata.html#isClosed()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsClosed()
+        {
+            return IExecute<bool>("isClosed");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/Metadata.html#updateLastSeenEpochIfNewer(org.apache.kafka.common.TopicPartition,int)"/>
@@ -141,6 +85,60 @@ namespace Org.Apache.Kafka.Clients
         public bool UpdateLastSeenEpochIfNewer(Org.Apache.Kafka.Common.TopicPartition arg0, int arg1)
         {
             return IExecute<bool>("updateLastSeenEpochIfNewer", arg0, arg1);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/Metadata.html#updateRequested()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool UpdateRequested()
+        {
+            return IExecute<bool>("updateRequested");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/Metadata.html#requestUpdate()"/>
+        /// </summary>
+
+        /// <returns><see cref="int"/></returns>
+        public int RequestUpdate()
+        {
+            return IExecute<int>("requestUpdate");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/Metadata.html#requestUpdateForNewTopics()"/>
+        /// </summary>
+
+        /// <returns><see cref="int"/></returns>
+        public int RequestUpdateForNewTopics()
+        {
+            return IExecute<int>("requestUpdateForNewTopics");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/Metadata.html#updateVersion()"/>
+        /// </summary>
+
+        /// <returns><see cref="int"/></returns>
+        public int UpdateVersion()
+        {
+            return IExecute<int>("updateVersion");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/Metadata.html#topicIds()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, Org.Apache.Kafka.Common.Uuid> TopicIds()
+        {
+            return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Common.Uuid>>("topicIds");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/Metadata.html#lastSuccessfulUpdate()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long LastSuccessfulUpdate()
+        {
+            return IExecute<long>("lastSuccessfulUpdate");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/Metadata.html#timeToAllowUpdate(long)"/>
@@ -177,6 +175,15 @@ namespace Org.Apache.Kafka.Clients
         public Org.Apache.Kafka.Clients.Metadata.MetadataRequestAndVersion NewMetadataRequestAndVersion(long arg0)
         {
             return IExecute<Org.Apache.Kafka.Clients.Metadata.MetadataRequestAndVersion>("newMetadataRequestAndVersion", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/Metadata.html#fetch()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Cluster"/></returns>
+        public Org.Apache.Kafka.Common.Cluster Fetch()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Cluster>("fetch");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/Metadata.html#bootstrap(java.util.List)"/>
@@ -258,7 +265,7 @@ namespace Org.Apache.Kafka.Clients
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Optional"/></param>
             /// <param name="arg1"><see cref="Java.Util.Optional"/></param>
-            public LeaderAndEpoch(Java.Util.Optional arg0, Java.Util.Optional arg1)
+            public LeaderAndEpoch(Java.Util.Optional<Org.Apache.Kafka.Common.Node> arg0, Java.Util.Optional<int?> arg1)
                 : base(arg0, arg1)
             {
             }
@@ -283,11 +290,13 @@ namespace Org.Apache.Kafka.Clients
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/Metadata.LeaderAndEpoch.html#noLeaderOrEpoch()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/Metadata.LeaderAndEpoch.html#noLeaderOrEpoch()"/>
             /// </summary>
-            public static Org.Apache.Kafka.Clients.Metadata.LeaderAndEpoch NoLeaderOrEpoch
+
+            /// <returns><see cref="Org.Apache.Kafka.Clients.Metadata.LeaderAndEpoch"/></returns>
+            public static Org.Apache.Kafka.Clients.Metadata.LeaderAndEpoch NoLeaderOrEpoch()
             {
-                get { return SExecute<Org.Apache.Kafka.Clients.Metadata.LeaderAndEpoch>(LocalBridgeClazz, "noLeaderOrEpoch"); }
+                return SExecute<Org.Apache.Kafka.Clients.Metadata.LeaderAndEpoch>(LocalBridgeClazz, "noLeaderOrEpoch");
             }
 
             #endregion

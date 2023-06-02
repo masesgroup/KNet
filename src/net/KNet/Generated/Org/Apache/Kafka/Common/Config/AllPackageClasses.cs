@@ -369,7 +369,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.Importance.html"/>
         /// </summary>
-        public partial class Importance : Java.Lang.Enum
+        public partial class Importance : Java.Lang.Enum<Org.Apache.Kafka.Common.Config.ConfigDef.Importance>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -713,7 +713,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.Type.html"/>
         /// </summary>
-        public partial class Type : Java.Lang.Enum
+        public partial class Type : Java.Lang.Enum<Org.Apache.Kafka.Common.Config.ConfigDef.Type>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -885,7 +885,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.Width.html"/>
         /// </summary>
-        public partial class Width : Java.Lang.Enum
+        public partial class Width : Java.Lang.Enum<Org.Apache.Kafka.Common.Config.ConfigDef.Width>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -987,7 +987,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigResource.Type.html"/>
         /// </summary>
-        public partial class Type : Java.Lang.Enum
+        public partial class Type : Java.Lang.Enum<Org.Apache.Kafka.Common.Config.ConfigResource.Type>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1292,7 +1292,7 @@ namespace Org.Apache.Kafka.Common.Config
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/SslClientAuth.html"/>
     /// </summary>
-    public partial class SslClientAuth : Java.Lang.Enum
+    public partial class SslClientAuth : Java.Lang.Enum<Org.Apache.Kafka.Common.Config.SslClientAuth>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

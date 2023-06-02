@@ -42,11 +42,13 @@ namespace Org.Apache.Kafka.Common.Quota
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/quota/ClientQuotaFilter.html#all()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/quota/ClientQuotaFilter.html#all()"/>
         /// </summary>
-        public static Org.Apache.Kafka.Common.Quota.ClientQuotaFilter All
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Quota.ClientQuotaFilter"/></returns>
+        public static Org.Apache.Kafka.Common.Quota.ClientQuotaFilter All()
         {
-            get { return SExecute<Org.Apache.Kafka.Common.Quota.ClientQuotaFilter>(LocalBridgeClazz, "all"); }
+            return SExecute<Org.Apache.Kafka.Common.Quota.ClientQuotaFilter>(LocalBridgeClazz, "all");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/quota/ClientQuotaFilter.html#contains(java.util.Collection)"/>
@@ -71,18 +73,22 @@ namespace Org.Apache.Kafka.Common.Quota
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/quota/ClientQuotaFilter.html#components()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/quota/ClientQuotaFilter.html#strict()"/>
         /// </summary>
-        public Java.Util.Collection<Org.Apache.Kafka.Common.Quota.ClientQuotaFilterComponent> Components
+
+        /// <returns><see cref="bool"/></returns>
+        public bool Strict()
         {
-            get { return IExecute<Java.Util.Collection<Org.Apache.Kafka.Common.Quota.ClientQuotaFilterComponent>>("components"); }
+            return IExecute<bool>("strict");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/quota/ClientQuotaFilter.html#strict()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/quota/ClientQuotaFilter.html#components()"/>
         /// </summary>
-        public bool Strict
+
+        /// <returns><see cref="Java.Util.Collection"/></returns>
+        public Java.Util.Collection<Org.Apache.Kafka.Common.Quota.ClientQuotaFilterComponent> Components()
         {
-            get { return IExecute<bool>("strict"); }
+            return IExecute<Java.Util.Collection<Org.Apache.Kafka.Common.Quota.ClientQuotaFilterComponent>>("components");
         }
 
         #endregion

@@ -42,36 +42,44 @@ namespace Org.Apache.Kafka.Common.Replica
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ReplicaView.html#comparator()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ReplicaView.html#comparator()"/>
         /// </summary>
-        public static Java.Util.Comparator<Org.Apache.Kafka.Common.Replica.ReplicaView> Comparator
+
+        /// <returns><see cref="Java.Util.Comparator"/></returns>
+        public static Java.Util.Comparator<Org.Apache.Kafka.Common.Replica.ReplicaView> Comparator()
         {
-            get { return SExecute<Java.Util.Comparator<Org.Apache.Kafka.Common.Replica.ReplicaView>>(LocalBridgeClazz, "comparator"); }
+            return SExecute<Java.Util.Comparator<Org.Apache.Kafka.Common.Replica.ReplicaView>>(LocalBridgeClazz, "comparator");
         }
 
         #endregion
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ReplicaView.html#endpoint()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ReplicaView.html#logEndOffset()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Node Endpoint
+
+        /// <returns><see cref="long"/></returns>
+        public long LogEndOffset()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Node>("endpoint"); }
+            return IExecute<long>("logEndOffset");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ReplicaView.html#logEndOffset()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ReplicaView.html#timeSinceLastCaughtUpMs()"/>
         /// </summary>
-        public long LogEndOffset
+
+        /// <returns><see cref="long"/></returns>
+        public long TimeSinceLastCaughtUpMs()
         {
-            get { return IExecute<long>("logEndOffset"); }
+            return IExecute<long>("timeSinceLastCaughtUpMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ReplicaView.html#timeSinceLastCaughtUpMs()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ReplicaView.html#endpoint()"/>
         /// </summary>
-        public long TimeSinceLastCaughtUpMs
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Node"/></returns>
+        public Org.Apache.Kafka.Common.Node Endpoint()
         {
-            get { return IExecute<long>("timeSinceLastCaughtUpMs"); }
+            return IExecute<Org.Apache.Kafka.Common.Node>("endpoint");
         }
 
         #endregion
@@ -112,25 +120,31 @@ namespace Org.Apache.Kafka.Common.Replica
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ReplicaView.DefaultReplicaView.html#endpoint()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ReplicaView.DefaultReplicaView.html#logEndOffset()"/>
             /// </summary>
-            public Org.Apache.Kafka.Common.Node Endpoint
+
+            /// <returns><see cref="long"/></returns>
+            public long LogEndOffset()
             {
-                get { return IExecute<Org.Apache.Kafka.Common.Node>("endpoint"); }
+                return IExecute<long>("logEndOffset");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ReplicaView.DefaultReplicaView.html#logEndOffset()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ReplicaView.DefaultReplicaView.html#timeSinceLastCaughtUpMs()"/>
             /// </summary>
-            public long LogEndOffset
+
+            /// <returns><see cref="long"/></returns>
+            public long TimeSinceLastCaughtUpMs()
             {
-                get { return IExecute<long>("logEndOffset"); }
+                return IExecute<long>("timeSinceLastCaughtUpMs");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ReplicaView.DefaultReplicaView.html#timeSinceLastCaughtUpMs()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ReplicaView.DefaultReplicaView.html#endpoint()"/>
             /// </summary>
-            public long TimeSinceLastCaughtUpMs
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Node"/></returns>
+            public Org.Apache.Kafka.Common.Node Endpoint()
             {
-                get { return IExecute<long>("timeSinceLastCaughtUpMs"); }
+                return IExecute<Org.Apache.Kafka.Common.Node>("endpoint");
             }
 
             #endregion

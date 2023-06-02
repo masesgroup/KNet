@@ -62,74 +62,13 @@ namespace Org.Apache.Kafka.Common.Protocol
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#buffer()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readByte()"/>
         /// </summary>
-        public Java.Nio.ByteBuffer Buffer
+
+        /// <returns><see cref="byte"/></returns>
+        public byte ReadByte()
         {
-            get { return IExecute<Java.Nio.ByteBuffer>("buffer"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readByte()"/> 
-        /// </summary>
-        public byte ReadByte
-        {
-            get { return IExecute<byte>("readByte"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readDouble()"/> 
-        /// </summary>
-        public double ReadDouble
-        {
-            get { return IExecute<double>("readDouble"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readInt()"/> 
-        /// </summary>
-        public int ReadInt
-        {
-            get { return IExecute<int>("readInt"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readLong()"/> 
-        /// </summary>
-        public long ReadLong
-        {
-            get { return IExecute<long>("readLong"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readShort()"/> 
-        /// </summary>
-        public short ReadShort
-        {
-            get { return IExecute<short>("readShort"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readUnsignedVarint()"/> 
-        /// </summary>
-        public int ReadUnsignedVarint
-        {
-            get { return IExecute<int>("readUnsignedVarint"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readVarint()"/> 
-        /// </summary>
-        public int ReadVarint
-        {
-            get { return IExecute<int>("readVarint"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readVarlong()"/> 
-        /// </summary>
-        public long ReadVarlong
-        {
-            get { return IExecute<long>("readVarlong"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#remaining()"/> 
-        /// </summary>
-        public int Remaining
-        {
-            get { return IExecute<int>("remaining"); }
+            return IExecute<byte>("readByte");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readArray(int)"/>
@@ -141,6 +80,60 @@ namespace Org.Apache.Kafka.Common.Protocol
             return IExecuteArray<byte>("readArray", arg0);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readDouble()"/>
+        /// </summary>
+
+        /// <returns><see cref="double"/></returns>
+        public double ReadDouble()
+        {
+            return IExecute<double>("readDouble");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readInt()"/>
+        /// </summary>
+
+        /// <returns><see cref="int"/></returns>
+        public int ReadInt()
+        {
+            return IExecute<int>("readInt");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readUnsignedVarint()"/>
+        /// </summary>
+
+        /// <returns><see cref="int"/></returns>
+        public int ReadUnsignedVarint()
+        {
+            return IExecute<int>("readUnsignedVarint");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readVarint()"/>
+        /// </summary>
+
+        /// <returns><see cref="int"/></returns>
+        public int ReadVarint()
+        {
+            return IExecute<int>("readVarint");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#remaining()"/>
+        /// </summary>
+
+        /// <returns><see cref="int"/></returns>
+        public int Remaining()
+        {
+            return IExecute<int>("remaining");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#buffer()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
+        public Java.Nio.ByteBuffer Buffer()
+        {
+            return IExecute<Java.Nio.ByteBuffer>("buffer");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readByteBuffer(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
@@ -148,6 +141,33 @@ namespace Org.Apache.Kafka.Common.Protocol
         public Java.Nio.ByteBuffer ReadByteBuffer(int arg0)
         {
             return IExecute<Java.Nio.ByteBuffer>("readByteBuffer", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readLong()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long ReadLong()
+        {
+            return IExecute<long>("readLong");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readVarlong()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long ReadVarlong()
+        {
+            return IExecute<long>("readVarlong");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readShort()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short ReadShort()
+        {
+            return IExecute<short>("readShort");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#flip()"/>

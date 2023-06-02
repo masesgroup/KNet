@@ -57,32 +57,40 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/AbortTransactionSpec.html#coordinatorEpoch()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/AbortTransactionSpec.html#coordinatorEpoch()"/>
         /// </summary>
-        public int CoordinatorEpoch
+
+        /// <returns><see cref="int"/></returns>
+        public int CoordinatorEpoch()
         {
-            get { return IExecute<int>("coordinatorEpoch"); }
+            return IExecute<int>("coordinatorEpoch");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/AbortTransactionSpec.html#producerEpoch()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/AbortTransactionSpec.html#producerId()"/>
         /// </summary>
-        public short ProducerEpoch
+
+        /// <returns><see cref="long"/></returns>
+        public long ProducerId()
         {
-            get { return IExecute<short>("producerEpoch"); }
+            return IExecute<long>("producerId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/AbortTransactionSpec.html#producerId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/AbortTransactionSpec.html#topicPartition()"/>
         /// </summary>
-        public long ProducerId
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.TopicPartition"/></returns>
+        public Org.Apache.Kafka.Common.TopicPartition TopicPartition()
         {
-            get { return IExecute<long>("producerId"); }
+            return IExecute<Org.Apache.Kafka.Common.TopicPartition>("topicPartition");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/AbortTransactionSpec.html#topicPartition()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/AbortTransactionSpec.html#producerEpoch()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.TopicPartition TopicPartition
+
+        /// <returns><see cref="short"/></returns>
+        public short ProducerEpoch()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.TopicPartition>("topicPartition"); }
+            return IExecute<short>("producerEpoch");
         }
 
         #endregion

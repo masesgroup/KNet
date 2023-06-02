@@ -148,13 +148,6 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/DefaultRecordBatch.html#baseTimestamp()"/> 
-        /// </summary>
-        public long BaseTimestamp
-        {
-            get { return IExecute<long>("baseTimestamp"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/DefaultRecordBatch.html#recordInputStream(org.apache.kafka.common.utils.BufferSupplier)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Utils.BufferSupplier"/></param>
@@ -162,6 +155,15 @@ namespace Org.Apache.Kafka.Common.Record
         public Java.Io.DataInputStream RecordInputStream(Org.Apache.Kafka.Common.Utils.BufferSupplier arg0)
         {
             return IExecute<Java.Io.DataInputStream>("recordInputStream", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/DefaultRecordBatch.html#baseTimestamp()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long BaseTimestamp()
+        {
+            return IExecute<long>("baseTimestamp");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/DefaultRecordBatch.html#skipKeyValueIterator(org.apache.kafka.common.utils.BufferSupplier)"/>

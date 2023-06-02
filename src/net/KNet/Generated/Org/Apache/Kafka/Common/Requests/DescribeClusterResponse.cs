@@ -64,11 +64,13 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeClusterResponse.html#nodes()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeClusterResponse.html#nodes()"/>
         /// </summary>
-        public Java.Util.Map<int?, Org.Apache.Kafka.Common.Node> Nodes
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<int?, Org.Apache.Kafka.Common.Node> Nodes()
         {
-            get { return IExecute<Java.Util.Map<int?, Org.Apache.Kafka.Common.Node>>("nodes"); }
+            return IExecute<Java.Util.Map<int?, Org.Apache.Kafka.Common.Node>>("nodes");
         }
 
         #endregion

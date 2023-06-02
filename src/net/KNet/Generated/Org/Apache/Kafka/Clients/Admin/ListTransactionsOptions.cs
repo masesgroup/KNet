@@ -46,18 +46,22 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListTransactionsOptions.html#filteredProducerIds()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListTransactionsOptions.html#filteredProducerIds()"/>
         /// </summary>
-        public Java.Util.Set<long?> FilteredProducerIds
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<long?> FilteredProducerIds()
         {
-            get { return IExecute<Java.Util.Set<long?>>("filteredProducerIds"); }
+            return IExecute<Java.Util.Set<long?>>("filteredProducerIds");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListTransactionsOptions.html#filteredStates()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListTransactionsOptions.html#filteredStates()"/>
         /// </summary>
-        public Java.Util.Set<Org.Apache.Kafka.Clients.Admin.TransactionState> FilteredStates
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Clients.Admin.TransactionState> FilteredStates()
         {
-            get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Clients.Admin.TransactionState>>("filteredStates"); }
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Clients.Admin.TransactionState>>("filteredStates");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListTransactionsOptions.html#filterProducerIds(java.util.Collection)"/>

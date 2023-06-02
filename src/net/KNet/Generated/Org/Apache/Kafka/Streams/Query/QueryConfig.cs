@@ -54,11 +54,13 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/QueryConfig.html#isCollectExecutionInfo()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/QueryConfig.html#isCollectExecutionInfo()"/>
         /// </summary>
-        public bool IsCollectExecutionInfo
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsCollectExecutionInfo()
         {
-            get { return IExecute<bool>("isCollectExecutionInfo"); }
+            return IExecute<bool>("isCollectExecutionInfo");
         }
 
         #endregion

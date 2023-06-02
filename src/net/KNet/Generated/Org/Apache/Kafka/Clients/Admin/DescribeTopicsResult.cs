@@ -46,32 +46,40 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeTopicsResult.html#allTopicIds()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeTopicsResult.html#topicNameValues()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<Org.Apache.Kafka.Common.Uuid, Org.Apache.Kafka.Clients.Admin.TopicDescription>> AllTopicIds
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.TopicDescription>> TopicNameValues()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<Org.Apache.Kafka.Common.Uuid, Org.Apache.Kafka.Clients.Admin.TopicDescription>>>("allTopicIds"); }
+            return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.TopicDescription>>>("topicNameValues");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeTopicsResult.html#allTopicNames()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeTopicsResult.html#topicIdValues()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<string, Org.Apache.Kafka.Clients.Admin.TopicDescription>> AllTopicNames
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<Org.Apache.Kafka.Common.Uuid, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.TopicDescription>> TopicIdValues()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<string, Org.Apache.Kafka.Clients.Admin.TopicDescription>>>("allTopicNames"); }
+            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.Uuid, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.TopicDescription>>>("topicIdValues");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeTopicsResult.html#topicIdValues()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeTopicsResult.html#allTopicNames()"/>
         /// </summary>
-        public Java.Util.Map<Org.Apache.Kafka.Common.Uuid, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.TopicDescription>> TopicIdValues
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
+        public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<string, Org.Apache.Kafka.Clients.Admin.TopicDescription>> AllTopicNames()
         {
-            get { return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.Uuid, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.TopicDescription>>>("topicIdValues"); }
+            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<string, Org.Apache.Kafka.Clients.Admin.TopicDescription>>>("allTopicNames");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeTopicsResult.html#topicNameValues()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeTopicsResult.html#allTopicIds()"/>
         /// </summary>
-        public Java.Util.Map<string, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.TopicDescription>> TopicNameValues
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
+        public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<Org.Apache.Kafka.Common.Uuid, Org.Apache.Kafka.Clients.Admin.TopicDescription>> AllTopicIds()
         {
-            get { return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.TopicDescription>>>("topicNameValues"); }
+            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<Org.Apache.Kafka.Common.Uuid, Org.Apache.Kafka.Clients.Admin.TopicDescription>>>("allTopicIds");
         }
 
         #endregion

@@ -71,11 +71,13 @@ namespace Org.Apache.Kafka.Common.Protocol
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/SendBuilder.html#build()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/SendBuilder.html#build()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Network.Send Build
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Network.Send"/></returns>
+        public Org.Apache.Kafka.Common.Network.Send Build()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Network.Send>("build"); }
+            return IExecute<Org.Apache.Kafka.Common.Network.Send>("build");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/SendBuilder.html#writeByte(byte)"/>

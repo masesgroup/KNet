@@ -60,16 +60,6 @@ namespace Org.Apache.Kafka.Common.Protocol
             return SExecute<bool>(LocalBridgeClazz, "compareRawTaggedFields", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageUtil.html#jsonNodeToByte(com.fasterxml.jackson.databind.JsonNode,java.lang.String)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <returns><see cref="byte"/></returns>
-        public static byte JsonNodeToByte(Com.Fasterxml.Jackson.Databind.JsonNode arg0, string arg1)
-        {
-            return SExecute<byte>(LocalBridgeClazz, "jsonNodeToByte", arg0, arg1);
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageUtil.html#byteBufferToArray(java.nio.ByteBuffer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
@@ -88,16 +78,6 @@ namespace Org.Apache.Kafka.Common.Protocol
             return SExecuteArray<byte>(LocalBridgeClazz, "duplicate", new object[] { arg0 });
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageUtil.html#jsonNodeToBinary(com.fasterxml.jackson.databind.JsonNode,java.lang.String)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <returns><see cref="byte"/></returns>
-        public static byte[] JsonNodeToBinary(Com.Fasterxml.Jackson.Databind.JsonNode arg0, string arg1)
-        {
-            return SExecuteArray<byte>(LocalBridgeClazz, "jsonNodeToBinary", arg0, arg1);
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageUtil.html#toVersionPrefixedBytes(short,org.apache.kafka.common.protocol.Message)"/>
         /// </summary>
         /// <param name="arg0"><see cref="short"/></param>
@@ -106,36 +86,6 @@ namespace Org.Apache.Kafka.Common.Protocol
         public static byte[] ToVersionPrefixedBytes(short arg0, Org.Apache.Kafka.Common.Protocol.Message arg1)
         {
             return SExecuteArray<byte>(LocalBridgeClazz, "toVersionPrefixedBytes", arg0, arg1);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageUtil.html#jsonNodeToDouble(com.fasterxml.jackson.databind.JsonNode,java.lang.String)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <returns><see cref="double"/></returns>
-        public static double JsonNodeToDouble(Com.Fasterxml.Jackson.Databind.JsonNode arg0, string arg1)
-        {
-            return SExecute<double>(LocalBridgeClazz, "jsonNodeToDouble", arg0, arg1);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageUtil.html#jsonNodeToInt(com.fasterxml.jackson.databind.JsonNode,java.lang.String)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <returns><see cref="int"/></returns>
-        public static int JsonNodeToInt(Com.Fasterxml.Jackson.Databind.JsonNode arg0, string arg1)
-        {
-            return SExecute<int>(LocalBridgeClazz, "jsonNodeToInt", arg0, arg1);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageUtil.html#jsonNodeToUnsignedShort(com.fasterxml.jackson.databind.JsonNode,java.lang.String)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <returns><see cref="int"/></returns>
-        public static int JsonNodeToUnsignedShort(Com.Fasterxml.Jackson.Databind.JsonNode arg0, string arg1)
-        {
-            return SExecute<int>(LocalBridgeClazz, "jsonNodeToUnsignedShort", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageUtil.html#deepToString(java.util.Iterator)"/>
@@ -166,36 +116,6 @@ namespace Org.Apache.Kafka.Common.Protocol
         public static Java.Nio.ByteBuffer ToVersionPrefixedByteBuffer(short arg0, Org.Apache.Kafka.Common.Protocol.Message arg1)
         {
             return SExecute<Java.Nio.ByteBuffer>(LocalBridgeClazz, "toVersionPrefixedByteBuffer", arg0, arg1);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageUtil.html#jsonNodeToLong(com.fasterxml.jackson.databind.JsonNode,java.lang.String)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <returns><see cref="long"/></returns>
-        public static long JsonNodeToLong(Com.Fasterxml.Jackson.Databind.JsonNode arg0, string arg1)
-        {
-            return SExecute<long>(LocalBridgeClazz, "jsonNodeToLong", arg0, arg1);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageUtil.html#jsonNodeToUnsignedInt(com.fasterxml.jackson.databind.JsonNode,java.lang.String)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <returns><see cref="long"/></returns>
-        public static long JsonNodeToUnsignedInt(Com.Fasterxml.Jackson.Databind.JsonNode arg0, string arg1)
-        {
-            return SExecute<long>(LocalBridgeClazz, "jsonNodeToUnsignedInt", arg0, arg1);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageUtil.html#jsonNodeToShort(com.fasterxml.jackson.databind.JsonNode,java.lang.String)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <returns><see cref="short"/></returns>
-        public static short JsonNodeToShort(Com.Fasterxml.Jackson.Databind.JsonNode arg0, string arg1)
-        {
-            return SExecute<short>(LocalBridgeClazz, "jsonNodeToShort", arg0, arg1);
         }
 
         #endregion

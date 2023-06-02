@@ -459,7 +459,7 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest.Entities
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConnectorType.html"/>
     /// </summary>
-    public partial class ConnectorType : Java.Lang.Enum
+    public partial class ConnectorType : Java.Lang.Enum<Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorType>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

@@ -77,11 +77,13 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeClientQuotasRequest.html#filter()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeClientQuotasRequest.html#filter()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Quota.ClientQuotaFilter Filter
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Quota.ClientQuotaFilter"/></returns>
+        public Org.Apache.Kafka.Common.Quota.ClientQuotaFilter Filter()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Quota.ClientQuotaFilter>("filter"); }
+            return IExecute<Org.Apache.Kafka.Common.Quota.ClientQuotaFilter>("filter");
         }
 
         #endregion

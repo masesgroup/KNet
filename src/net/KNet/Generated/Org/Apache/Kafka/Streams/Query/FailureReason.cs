@@ -66,13 +66,6 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/FailureReason.html#values()"/> 
-        /// </summary>
-        public static Org.Apache.Kafka.Streams.Query.FailureReason[] Values
-        {
-            get { return SExecuteArray<Org.Apache.Kafka.Streams.Query.FailureReason>(LocalBridgeClazz, "values"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/FailureReason.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -80,6 +73,15 @@ namespace Org.Apache.Kafka.Streams.Query
         public static Org.Apache.Kafka.Streams.Query.FailureReason ValueOf(string arg0)
         {
             return SExecute<Org.Apache.Kafka.Streams.Query.FailureReason>(LocalBridgeClazz, "valueOf", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/FailureReason.html#values()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Query.FailureReason"/></returns>
+        public static Org.Apache.Kafka.Streams.Query.FailureReason[] Values()
+        {
+            return SExecuteArray<Org.Apache.Kafka.Streams.Query.FailureReason>(LocalBridgeClazz, "values");
         }
 
         #endregion

@@ -64,25 +64,31 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ExpireDelegationTokenResponse.html#error()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ExpireDelegationTokenResponse.html#hasError()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.Errors Error
+
+        /// <returns><see cref="bool"/></returns>
+        public bool HasError()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.Errors>("error"); }
+            return IExecute<bool>("hasError");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ExpireDelegationTokenResponse.html#expiryTimestamp()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ExpireDelegationTokenResponse.html#expiryTimestamp()"/>
         /// </summary>
-        public long ExpiryTimestamp
+
+        /// <returns><see cref="long"/></returns>
+        public long ExpiryTimestamp()
         {
-            get { return IExecute<long>("expiryTimestamp"); }
+            return IExecute<long>("expiryTimestamp");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ExpireDelegationTokenResponse.html#hasError()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ExpireDelegationTokenResponse.html#error()"/>
         /// </summary>
-        public bool HasError
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Errors"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.Errors Error()
         {
-            get { return IExecute<bool>("hasError"); }
+            return IExecute<Org.Apache.Kafka.Common.Protocol.Errors>("error");
         }
 
         #endregion

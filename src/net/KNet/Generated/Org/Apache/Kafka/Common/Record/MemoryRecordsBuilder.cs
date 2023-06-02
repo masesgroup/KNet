@@ -111,130 +111,13 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#baseSequence()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#hasDeleteHorizonMs()"/>
         /// </summary>
-        public int BaseSequence
+
+        /// <returns><see cref="bool"/></returns>
+        public bool HasDeleteHorizonMs()
         {
-            get { return IExecute<int>("baseSequence"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#buffer()"/> 
-        /// </summary>
-        public Java.Nio.ByteBuffer Buffer
-        {
-            get { return IExecute<Java.Nio.ByteBuffer>("buffer"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#build()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Record.MemoryRecords Build
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>("build"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#compressionRatio()"/> 
-        /// </summary>
-        public double CompressionRatio
-        {
-            get { return IExecute<double>("compressionRatio"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#compressionType()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Record.CompressionType CompressionType
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Record.CompressionType>("compressionType"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#estimatedSizeInBytes()"/> 
-        /// </summary>
-        public int EstimatedSizeInBytes
-        {
-            get { return IExecute<int>("estimatedSizeInBytes"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#hasDeleteHorizonMs()"/> 
-        /// </summary>
-        public bool HasDeleteHorizonMs
-        {
-            get { return IExecute<bool>("hasDeleteHorizonMs"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#info()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Record.MemoryRecordsBuilder.RecordsInfo Info
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Record.MemoryRecordsBuilder.RecordsInfo>("info"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#initialCapacity()"/> 
-        /// </summary>
-        public int InitialCapacity
-        {
-            get { return IExecute<int>("initialCapacity"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#isClosed()"/> 
-        /// </summary>
-        public bool IsClosed
-        {
-            get { return IExecute<bool>("isClosed"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#isControlBatch()"/> 
-        /// </summary>
-        public bool IsControlBatch
-        {
-            get { return IExecute<bool>("isControlBatch"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#isFull()"/> 
-        /// </summary>
-        public bool IsFull
-        {
-            get { return IExecute<bool>("isFull"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#isTransactional()"/> 
-        /// </summary>
-        public bool IsTransactional
-        {
-            get { return IExecute<bool>("isTransactional"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#magic()"/> 
-        /// </summary>
-        public byte Magic
-        {
-            get { return IExecute<byte>("magic"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#numRecords()"/> 
-        /// </summary>
-        public int NumRecords
-        {
-            get { return IExecute<int>("numRecords"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#producerEpoch()"/> 
-        /// </summary>
-        public short ProducerEpoch
-        {
-            get { return IExecute<short>("producerEpoch"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#producerId()"/> 
-        /// </summary>
-        public long ProducerId
-        {
-            get { return IExecute<long>("producerId"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#uncompressedBytesWritten()"/> 
-        /// </summary>
-        public int UncompressedBytesWritten
-        {
-            get { return IExecute<int>("uncompressedBytesWritten"); }
+            return IExecute<bool>("hasDeleteHorizonMs");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#hasRoomFor(long,byte[],byte[],org.apache.kafka.common.header.Header[])"/>
@@ -259,6 +142,159 @@ namespace Org.Apache.Kafka.Common.Record
         public bool HasRoomFor(long arg0, Java.Nio.ByteBuffer arg1, Java.Nio.ByteBuffer arg2, Org.Apache.Kafka.Common.Header.Header[] arg3)
         {
             return IExecute<bool>("hasRoomFor", arg0, arg1, arg2, arg3);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#isClosed()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsClosed()
+        {
+            return IExecute<bool>("isClosed");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#isControlBatch()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsControlBatch()
+        {
+            return IExecute<bool>("isControlBatch");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#isFull()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsFull()
+        {
+            return IExecute<bool>("isFull");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#isTransactional()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsTransactional()
+        {
+            return IExecute<bool>("isTransactional");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#magic()"/>
+        /// </summary>
+
+        /// <returns><see cref="byte"/></returns>
+        public byte Magic()
+        {
+            return IExecute<byte>("magic");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#compressionRatio()"/>
+        /// </summary>
+
+        /// <returns><see cref="double"/></returns>
+        public double CompressionRatio()
+        {
+            return IExecute<double>("compressionRatio");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#baseSequence()"/>
+        /// </summary>
+
+        /// <returns><see cref="int"/></returns>
+        public int BaseSequence()
+        {
+            return IExecute<int>("baseSequence");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#estimatedSizeInBytes()"/>
+        /// </summary>
+
+        /// <returns><see cref="int"/></returns>
+        public int EstimatedSizeInBytes()
+        {
+            return IExecute<int>("estimatedSizeInBytes");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#initialCapacity()"/>
+        /// </summary>
+
+        /// <returns><see cref="int"/></returns>
+        public int InitialCapacity()
+        {
+            return IExecute<int>("initialCapacity");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#numRecords()"/>
+        /// </summary>
+
+        /// <returns><see cref="int"/></returns>
+        public int NumRecords()
+        {
+            return IExecute<int>("numRecords");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#uncompressedBytesWritten()"/>
+        /// </summary>
+
+        /// <returns><see cref="int"/></returns>
+        public int UncompressedBytesWritten()
+        {
+            return IExecute<int>("uncompressedBytesWritten");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#buffer()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
+        public Java.Nio.ByteBuffer Buffer()
+        {
+            return IExecute<Java.Nio.ByteBuffer>("buffer");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#producerId()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long ProducerId()
+        {
+            return IExecute<long>("producerId");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#compressionType()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Record.CompressionType"/></returns>
+        public Org.Apache.Kafka.Common.Record.CompressionType CompressionType()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Record.CompressionType>("compressionType");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#build()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Record.MemoryRecords"/></returns>
+        public Org.Apache.Kafka.Common.Record.MemoryRecords Build()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>("build");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#info()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Record.MemoryRecordsBuilder.RecordsInfo"/></returns>
+        public Org.Apache.Kafka.Common.Record.MemoryRecordsBuilder.RecordsInfo Info()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Record.MemoryRecordsBuilder.RecordsInfo>("info");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#producerEpoch()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short ProducerEpoch()
+        {
+            return IExecute<short>("producerEpoch");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html#abort()"/>

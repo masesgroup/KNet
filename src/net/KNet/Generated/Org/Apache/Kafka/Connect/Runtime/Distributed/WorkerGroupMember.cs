@@ -60,18 +60,13 @@ namespace Org.Apache.Kafka.Connect.Runtime.Distributed
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerGroupMember.html#currentProtocolVersion()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerGroupMember.html#memberId()"/>
         /// </summary>
-        public short CurrentProtocolVersion
+
+        /// <returns><see cref="string"/></returns>
+        public string MemberId()
         {
-            get { return IExecute<short>("currentProtocolVersion"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerGroupMember.html#memberId()"/> 
-        /// </summary>
-        public string MemberId
-        {
-            get { return IExecute<string>("memberId"); }
+            return IExecute<string>("memberId");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerGroupMember.html#ownerUrl(java.lang.String)"/>
@@ -90,6 +85,15 @@ namespace Org.Apache.Kafka.Connect.Runtime.Distributed
         public string OwnerUrl(Org.Apache.Kafka.Connect.Util.ConnectorTaskId arg0)
         {
             return IExecute<string>("ownerUrl", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerGroupMember.html#currentProtocolVersion()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short CurrentProtocolVersion()
+        {
+            return IExecute<short>("currentProtocolVersion");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerGroupMember.html#ensureActive()"/>

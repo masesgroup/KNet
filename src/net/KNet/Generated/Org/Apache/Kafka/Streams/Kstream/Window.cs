@@ -56,34 +56,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Window.html#end()"/> 
-        /// </summary>
-        public long End
-        {
-            get { return IExecute<long>("end"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Window.html#endTime()"/> 
-        /// </summary>
-        public Java.Time.Instant EndTime
-        {
-            get { return IExecute<Java.Time.Instant>("endTime"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Window.html#start()"/> 
-        /// </summary>
-        public long Start
-        {
-            get { return IExecute<long>("start"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Window.html#startTime()"/> 
-        /// </summary>
-        public Java.Time.Instant StartTime
-        {
-            get { return IExecute<Java.Time.Instant>("startTime"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Window.html#overlap(org.apache.kafka.streams.kstream.Window)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Window"/></param>
@@ -91,6 +63,42 @@ namespace Org.Apache.Kafka.Streams.Kstream
         public bool Overlap(Org.Apache.Kafka.Streams.Kstream.Window arg0)
         {
             return IExecute<bool>("overlap", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Window.html#endTime()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Time.Instant"/></returns>
+        public Java.Time.Instant EndTime()
+        {
+            return IExecute<Java.Time.Instant>("endTime");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Window.html#startTime()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Time.Instant"/></returns>
+        public Java.Time.Instant StartTime()
+        {
+            return IExecute<Java.Time.Instant>("startTime");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Window.html#end()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long End()
+        {
+            return IExecute<long>("end");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Window.html#start()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long Start()
+        {
+            return IExecute<long>("start");
         }
 
         #endregion

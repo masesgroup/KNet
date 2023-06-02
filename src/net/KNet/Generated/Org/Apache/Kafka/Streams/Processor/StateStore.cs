@@ -46,32 +46,38 @@ namespace Org.Apache.Kafka.Streams.Processor
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateStore.html#isOpen()"/> 
-        /// </summary>
-        public bool IsOpen
-        {
-            get { return IExecute<bool>("isOpen"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateStore.html#name()"/> 
-        /// </summary>
-        public string Name
-        {
-            get { return IExecute<string>("name"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateStore.html#persistent()"/> 
-        /// </summary>
-        public bool Persistent
-        {
-            get { return IExecute<bool>("persistent"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateStore.html#getPosition()"/> 
         /// </summary>
         public Org.Apache.Kafka.Streams.Query.Position Position
         {
             get { return IExecute<Org.Apache.Kafka.Streams.Query.Position>("getPosition"); }
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateStore.html#isOpen()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsOpen()
+        {
+            return IExecute<bool>("isOpen");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateStore.html#persistent()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool Persistent()
+        {
+            return IExecute<bool>("persistent");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateStore.html#name()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string Name()
+        {
+            return IExecute<string>("name");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateStore.html#close()"/>

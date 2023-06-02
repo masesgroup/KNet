@@ -46,13 +46,6 @@ namespace Org.Apache.Kafka.Connect.Storage
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/Converter.html#config()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Config.ConfigDef Config
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("config"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/Converter.html#fromConnectData(java.lang.String,org.apache.kafka.connect.data.Schema,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -94,6 +87,15 @@ namespace Org.Apache.Kafka.Connect.Storage
         public byte[] FromConnectData(string arg0, Org.Apache.Kafka.Common.Header.Headers arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3)
         {
             return IExecuteArray<byte>("fromConnectData", arg0, arg1, arg2, arg3);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/Converter.html#config()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
+        public Org.Apache.Kafka.Common.Config.ConfigDef Config()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("config");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/Converter.html#toConnectData(java.lang.String,org.apache.kafka.common.header.Headers,byte[])"/>

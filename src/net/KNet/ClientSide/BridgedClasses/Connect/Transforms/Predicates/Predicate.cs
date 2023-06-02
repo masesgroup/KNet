@@ -24,9 +24,9 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
 {
     public class Predicate<R> : Configurable where R : ConnectRecord<R>
     {
-        public override bool IsInterface => true;
+        public override bool IsBridgeInterface => true;
 
-        public override string ClassName => "org.apache.kafka.connect.transforms.predicates.Predicate";
+        public override string BridgeClassName => "org.apache.kafka.connect.transforms.predicates.Predicate";
 
         public ConfigDef Config => IExecute<ConfigDef>("config");
 

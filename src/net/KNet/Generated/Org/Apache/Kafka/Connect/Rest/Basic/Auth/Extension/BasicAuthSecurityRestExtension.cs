@@ -50,11 +50,13 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-basic-auth-extension/3.4.0/org/apache/kafka/connect/rest/basic/auth/extension/BasicAuthSecurityRestExtension.html#version()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-basic-auth-extension/3.4.0/org/apache/kafka/connect/rest/basic/auth/extension/BasicAuthSecurityRestExtension.html#version()"/>
         /// </summary>
-        public string Version
+
+        /// <returns><see cref="string"/></returns>
+        public string Version()
         {
-            get { return IExecute<string>("version"); }
+            return IExecute<string>("version");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-basic-auth-extension/3.4.0/org/apache/kafka/connect/rest/basic/auth/extension/BasicAuthSecurityRestExtension.html#close()"/>
@@ -73,14 +75,6 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
         public void Configure<Arg0Extendsobject>(Java.Util.Map<string, Arg0Extendsobject> arg0)
         {
             IExecute("configure", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-basic-auth-extension/3.4.0/org/apache/kafka/connect/rest/basic/auth/extension/BasicAuthSecurityRestExtension.html#register(org.apache.kafka.connect.rest.ConnectRestExtensionContext)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Rest.ConnectRestExtensionContext"/></param>
-        public void Register(Org.Apache.Kafka.Connect.Rest.ConnectRestExtensionContext arg0)
-        {
-            IExecute("register", arg0);
         }
 
         #endregion

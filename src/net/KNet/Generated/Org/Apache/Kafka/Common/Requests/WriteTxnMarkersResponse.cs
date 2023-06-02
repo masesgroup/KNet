@@ -33,7 +33,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/WriteTxnMarkersResponse.html#%3Cinit%3E(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public WriteTxnMarkersResponse(Java.Util.Map arg0)
+        public WriteTxnMarkersResponse(Java.Util.Map<long?, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Protocol.Errors>> arg0)
             : base(arg0)
         {
         }
@@ -72,11 +72,13 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/WriteTxnMarkersResponse.html#errorsByProducerId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/WriteTxnMarkersResponse.html#errorsByProducerId()"/>
         /// </summary>
-        public Java.Util.Map<long?, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Protocol.Errors>> ErrorsByProducerId
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<long?, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Protocol.Errors>> ErrorsByProducerId()
         {
-            get { return IExecute<Java.Util.Map<long?, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Protocol.Errors>>>("errorsByProducerId"); }
+            return IExecute<Java.Util.Map<long?, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Protocol.Errors>>>("errorsByProducerId");
         }
 
         #endregion

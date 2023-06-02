@@ -54,13 +54,6 @@ namespace Org.Apache.Kafka.Connect.Data
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Struct.html#schema()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Connect.Data.Schema Schema
-        {
-            get { return IExecute<Org.Apache.Kafka.Connect.Data.Schema>("schema"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Struct.html#getMap(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -188,6 +181,15 @@ namespace Org.Apache.Kafka.Connect.Data
         public string GetString(string arg0)
         {
             return IExecute<string>("getString", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Struct.html#schema()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></returns>
+        public Org.Apache.Kafka.Connect.Data.Schema Schema()
+        {
+            return IExecute<Org.Apache.Kafka.Connect.Data.Schema>("schema");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Struct.html#getStruct(java.lang.String)"/>

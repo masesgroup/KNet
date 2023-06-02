@@ -37,38 +37,40 @@ namespace Org.Apache.Kafka.Streams.Kstream
         #endregion
 
         #region Fields
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/EmitStrategy.html#log"/>
-        /// </summary>
-        public static Org.Slf4j.Logger log { get { return SGetField<Org.Slf4j.Logger>(LocalBridgeClazz, "log"); } }
 
         #endregion
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/EmitStrategy.html#onWindowClose()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/EmitStrategy.html#onWindowClose()"/>
         /// </summary>
-        public static Org.Apache.Kafka.Streams.Kstream.EmitStrategy OnWindowClose
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.EmitStrategy"/></returns>
+        public static Org.Apache.Kafka.Streams.Kstream.EmitStrategy OnWindowClose()
         {
-            get { return SExecute<Org.Apache.Kafka.Streams.Kstream.EmitStrategy>(LocalBridgeClazz, "onWindowClose"); }
+            return SExecute<Org.Apache.Kafka.Streams.Kstream.EmitStrategy>(LocalBridgeClazz, "onWindowClose");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/EmitStrategy.html#onWindowUpdate()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/EmitStrategy.html#onWindowUpdate()"/>
         /// </summary>
-        public static Org.Apache.Kafka.Streams.Kstream.EmitStrategy OnWindowUpdate
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.EmitStrategy"/></returns>
+        public static Org.Apache.Kafka.Streams.Kstream.EmitStrategy OnWindowUpdate()
         {
-            get { return SExecute<Org.Apache.Kafka.Streams.Kstream.EmitStrategy>(LocalBridgeClazz, "onWindowUpdate"); }
+            return SExecute<Org.Apache.Kafka.Streams.Kstream.EmitStrategy>(LocalBridgeClazz, "onWindowUpdate");
         }
 
         #endregion
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/EmitStrategy.html#type()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/EmitStrategy.html#type()"/>
         /// </summary>
-        public Org.Apache.Kafka.Streams.Kstream.EmitStrategy.StrategyType Type
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.EmitStrategy.StrategyType"/></returns>
+        public Org.Apache.Kafka.Streams.Kstream.EmitStrategy.StrategyType Type()
         {
-            get { return IExecute<Org.Apache.Kafka.Streams.Kstream.EmitStrategy.StrategyType>("type"); }
+            return IExecute<Org.Apache.Kafka.Streams.Kstream.EmitStrategy.StrategyType>("type");
         }
 
         #endregion
@@ -99,13 +101,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/EmitStrategy.StrategyType.html#values()"/> 
-            /// </summary>
-            public static Org.Apache.Kafka.Streams.Kstream.EmitStrategy.StrategyType[] Values
-            {
-                get { return SExecuteArray<Org.Apache.Kafka.Streams.Kstream.EmitStrategy.StrategyType>(LocalBridgeClazz, "values"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/EmitStrategy.StrategyType.html#forType(org.apache.kafka.streams.kstream.EmitStrategy.StrategyType)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.EmitStrategy.StrategyType"/></param>
@@ -122,6 +117,15 @@ namespace Org.Apache.Kafka.Streams.Kstream
             public static Org.Apache.Kafka.Streams.Kstream.EmitStrategy.StrategyType ValueOf(string arg0)
             {
                 return SExecute<Org.Apache.Kafka.Streams.Kstream.EmitStrategy.StrategyType>(LocalBridgeClazz, "valueOf", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/EmitStrategy.StrategyType.html#values()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.EmitStrategy.StrategyType"/></returns>
+            public static Org.Apache.Kafka.Streams.Kstream.EmitStrategy.StrategyType[] Values()
+            {
+                return SExecuteArray<Org.Apache.Kafka.Streams.Kstream.EmitStrategy.StrategyType>(LocalBridgeClazz, "values");
             }
 
             #endregion

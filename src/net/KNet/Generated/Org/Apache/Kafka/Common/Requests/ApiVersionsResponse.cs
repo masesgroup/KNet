@@ -185,11 +185,13 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ApiVersionsResponse.html#zkMigrationReady()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ApiVersionsResponse.html#zkMigrationReady()"/>
         /// </summary>
-        public bool ZkMigrationReady
+
+        /// <returns><see cref="bool"/></returns>
+        public bool ZkMigrationReady()
         {
-            get { return IExecute<bool>("zkMigrationReady"); }
+            return IExecute<bool>("zkMigrationReady");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ApiVersionsResponse.html#apiVersion(short)"/>

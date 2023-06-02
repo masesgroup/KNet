@@ -46,18 +46,22 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/FinalizedVersionRange.html#maxVersionLevel()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/FinalizedVersionRange.html#maxVersionLevel()"/>
         /// </summary>
-        public short MaxVersionLevel
+
+        /// <returns><see cref="short"/></returns>
+        public short MaxVersionLevel()
         {
-            get { return IExecute<short>("maxVersionLevel"); }
+            return IExecute<short>("maxVersionLevel");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/FinalizedVersionRange.html#minVersionLevel()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/FinalizedVersionRange.html#minVersionLevel()"/>
         /// </summary>
-        public short MinVersionLevel
+
+        /// <returns><see cref="short"/></returns>
+        public short MinVersionLevel()
         {
-            get { return IExecute<short>("minVersionLevel"); }
+            return IExecute<short>("minVersionLevel");
         }
 
         #endregion

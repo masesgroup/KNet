@@ -64,11 +64,13 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AllocateProducerIdsResponse.html#error()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AllocateProducerIdsResponse.html#error()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.Errors Error
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Errors"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.Errors Error()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.Errors>("error"); }
+            return IExecute<Org.Apache.Kafka.Common.Protocol.Errors>("error");
         }
 
         #endregion

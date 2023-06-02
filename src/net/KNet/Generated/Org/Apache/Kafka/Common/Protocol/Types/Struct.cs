@@ -54,20 +54,6 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#schema()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.Types.Schema Schema
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Schema>("schema"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#sizeOf()"/> 
-        /// </summary>
-        public int SizeOf
-        {
-            get { return IExecute<int>("sizeOf"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getOrElse(org.apache.kafka.common.protocol.types.Field.Bool,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.Bool"/></param>
@@ -121,6 +107,15 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
         public byte[] GetByteArray(string arg0)
         {
             return IExecuteArray<byte>("getByteArray", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#sizeOf()"/>
+        /// </summary>
+
+        /// <returns><see cref="int"/></returns>
+        public int SizeOf()
+        {
+            return IExecute<int>("sizeOf");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#get(org.apache.kafka.common.protocol.types.Field.Bool)"/>
@@ -524,6 +519,15 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
         public Java.Nio.ByteBuffer GetBytes(Org.Apache.Kafka.Common.Protocol.Types.BoundField arg0)
         {
             return IExecute<Java.Nio.ByteBuffer>("getBytes", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#schema()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Types.Schema"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.Types.Schema Schema()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Schema>("schema");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getStruct(java.lang.String)"/>

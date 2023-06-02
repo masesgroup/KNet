@@ -72,7 +72,7 @@ namespace Org.Apache.Kafka.Clients
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientDnsLookup.html"/>
     /// </summary>
-    public partial class ClientDnsLookup : Java.Lang.Enum
+    public partial class ClientDnsLookup : Java.Lang.Enum<Org.Apache.Kafka.Clients.ClientDnsLookup>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -287,7 +287,7 @@ namespace Org.Apache.Kafka.Clients
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ConnectionState.html"/>
     /// </summary>
-    public partial class ConnectionState : Java.Lang.Enum
+    public partial class ConnectionState : Java.Lang.Enum<Org.Apache.Kafka.Clients.ConnectionState>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -541,7 +541,7 @@ namespace Org.Apache.Kafka.Clients
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/GroupRebalanceConfig.ProtocolType.html"/>
         /// </summary>
-        public partial class ProtocolType : Java.Lang.Enum
+        public partial class ProtocolType : Java.Lang.Enum<Org.Apache.Kafka.Clients.GroupRebalanceConfig.ProtocolType>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

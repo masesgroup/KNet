@@ -54,32 +54,41 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginModule.html#abort()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginModule.html#abort()"/>
         /// </summary>
-        public bool Abort
+
+        /// <returns><see cref="bool"/></returns>
+        public bool Abort()
         {
-            get { return IExecute<bool>("abort"); }
+            return IExecute<bool>("abort");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginModule.html#commit()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginModule.html#commit()"/>
         /// </summary>
-        public bool Commit
+
+        /// <returns><see cref="bool"/></returns>
+        public bool Commit()
         {
-            get { return IExecute<bool>("commit"); }
+            return IExecute<bool>("commit");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginModule.html#login()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginModule.html#login()"/>
         /// </summary>
-        public bool Login
+
+        /// <returns><see cref="bool"/></returns>
+        /// <exception cref="Javax.Security.Auth.Login.LoginException"/>
+        public bool Login()
         {
-            get { return IExecute<bool>("login"); }
+            return IExecute<bool>("login");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginModule.html#logout()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginModule.html#logout()"/>
         /// </summary>
-        public bool Logout
+
+        /// <returns><see cref="bool"/></returns>
+        public bool Logout()
         {
-            get { return IExecute<bool>("logout"); }
+            return IExecute<bool>("logout");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginModule.html#initialize(javax.security.auth.Subject,javax.security.auth.callback.CallbackHandler,java.util.Map,java.util.Map)"/>

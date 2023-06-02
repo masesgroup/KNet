@@ -51,10 +51,10 @@ namespace Org.Apache.Kafka.Common.Metrics
     /// Listener for Kafka MetricsReporter. Extends <see cref="JVMBridgeListener"/>, implements <see cref="IMetricsReporter"/>
     /// </summary>
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
-    public abstract class MetricsReporter : JVMBridgeListener, IMetricsReporter
+    public partial class MetricsReporter : IMetricsReporter
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.clients.producer.MetricsReporterImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.clients.producer.MetricsReporterImpl";
         /// <summary>
         /// Initialize a new instance of <see cref="MetricsReporter"/>
         /// </summary>
@@ -139,7 +139,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
         public virtual Set<string> ReconfigurableConfigs()
         {
-            return Wraps<Set<string>>(Collections.DynClazz.emptySet() as IJavaObject);
+            return Wraps<Set<string>>(Collections.DynBridgeClazz.emptySet() as IJavaObject);
         }
 
         public virtual void Configure(Map<string, object> configs)

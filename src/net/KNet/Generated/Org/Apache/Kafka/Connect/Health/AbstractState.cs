@@ -56,25 +56,31 @@ namespace Org.Apache.Kafka.Connect.Health
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/AbstractState.html#state()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/AbstractState.html#state()"/>
         /// </summary>
-        public string State
+
+        /// <returns><see cref="string"/></returns>
+        public string State()
         {
-            get { return IExecute<string>("state"); }
+            return IExecute<string>("state");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/AbstractState.html#traceMessage()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/AbstractState.html#traceMessage()"/>
         /// </summary>
-        public string TraceMessage
+
+        /// <returns><see cref="string"/></returns>
+        public string TraceMessage()
         {
-            get { return IExecute<string>("traceMessage"); }
+            return IExecute<string>("traceMessage");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/AbstractState.html#workerId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/AbstractState.html#workerId()"/>
         /// </summary>
-        public string WorkerId
+
+        /// <returns><see cref="string"/></returns>
+        public string WorkerId()
         {
-            get { return IExecute<string>("workerId"); }
+            return IExecute<string>("workerId");
         }
 
         #endregion

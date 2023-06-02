@@ -50,32 +50,40 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractControlRequest.html#brokerEpoch()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractControlRequest.html#isKRaftController()"/>
         /// </summary>
-        public long BrokerEpoch
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsKRaftController()
         {
-            get { return IExecute<long>("brokerEpoch"); }
+            return IExecute<bool>("isKRaftController");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractControlRequest.html#controllerEpoch()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractControlRequest.html#controllerEpoch()"/>
         /// </summary>
-        public int ControllerEpoch
+
+        /// <returns><see cref="int"/></returns>
+        public int ControllerEpoch()
         {
-            get { return IExecute<int>("controllerEpoch"); }
+            return IExecute<int>("controllerEpoch");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractControlRequest.html#controllerId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractControlRequest.html#controllerId()"/>
         /// </summary>
-        public int ControllerId
+
+        /// <returns><see cref="int"/></returns>
+        public int ControllerId()
         {
-            get { return IExecute<int>("controllerId"); }
+            return IExecute<int>("controllerId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractControlRequest.html#isKRaftController()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractControlRequest.html#brokerEpoch()"/>
         /// </summary>
-        public bool IsKRaftController
+
+        /// <returns><see cref="long"/></returns>
+        public long BrokerEpoch()
         {
-            get { return IExecute<bool>("isKRaftController"); }
+            return IExecute<long>("brokerEpoch");
         }
 
         #endregion

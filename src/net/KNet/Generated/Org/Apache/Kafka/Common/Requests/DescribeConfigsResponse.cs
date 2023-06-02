@@ -64,11 +64,13 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.html#resultMap()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.html#resultMap()"/>
         /// </summary>
-        public Java.Util.Map<Org.Apache.Kafka.Common.Config.ConfigResource, Org.Apache.Kafka.Common.Message.DescribeConfigsResponseData.DescribeConfigsResult> ResultMap
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<Org.Apache.Kafka.Common.Config.ConfigResource, Org.Apache.Kafka.Common.Message.DescribeConfigsResponseData.DescribeConfigsResult> ResultMap()
         {
-            get { return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.Config.ConfigResource, Org.Apache.Kafka.Common.Message.DescribeConfigsResponseData.DescribeConfigsResult>>("resultMap"); }
+            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.Config.ConfigResource, Org.Apache.Kafka.Common.Message.DescribeConfigsResponseData.DescribeConfigsResult>>("resultMap");
         }
 
         #endregion
@@ -83,7 +85,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Requests.ApiError"/></param>
             /// <param name="arg1"><see cref="Java.Util.Collection"/></param>
-            public Config(Org.Apache.Kafka.Common.Requests.ApiError arg0, Java.Util.Collection arg1)
+            public Config(Org.Apache.Kafka.Common.Requests.ApiError arg0, Java.Util.Collection<Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigEntry> arg1)
                 : base(arg0, arg1)
             {
             }
@@ -104,18 +106,22 @@ namespace Org.Apache.Kafka.Common.Requests
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.Config.html#entries()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.Config.html#entries()"/>
             /// </summary>
-            public Java.Util.Collection<Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigEntry> Entries
+
+            /// <returns><see cref="Java.Util.Collection"/></returns>
+            public Java.Util.Collection<Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigEntry> Entries()
             {
-                get { return IExecute<Java.Util.Collection<Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigEntry>>("entries"); }
+                return IExecute<Java.Util.Collection<Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigEntry>>("entries");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.Config.html#error()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.Config.html#error()"/>
             /// </summary>
-            public Org.Apache.Kafka.Common.Requests.ApiError Error
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Requests.ApiError"/></returns>
+            public Org.Apache.Kafka.Common.Requests.ApiError Error()
             {
-                get { return IExecute<Org.Apache.Kafka.Common.Requests.ApiError>("error"); }
+                return IExecute<Org.Apache.Kafka.Common.Requests.ApiError>("error");
             }
 
             #endregion
@@ -143,7 +149,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// <param name="arg5"><see cref="Java.Util.Collection"/></param>
             /// <param name="arg6"><see cref="Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigType"/></param>
             /// <param name="arg7"><see cref="string"/></param>
-            public ConfigEntry(string arg0, string arg1, Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigSource arg2, bool arg3, bool arg4, Java.Util.Collection arg5, Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigType arg6, string arg7)
+            public ConfigEntry(string arg0, string arg1, Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigSource arg2, bool arg3, bool arg4, Java.Util.Collection<Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigSynonym> arg5, Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigType arg6, string arg7)
                 : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
             {
             }
@@ -156,7 +162,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// <param name="arg3"><see cref="bool"/></param>
             /// <param name="arg4"><see cref="bool"/></param>
             /// <param name="arg5"><see cref="Java.Util.Collection"/></param>
-            public ConfigEntry(string arg0, string arg1, Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigSource arg2, bool arg3, bool arg4, Java.Util.Collection arg5)
+            public ConfigEntry(string arg0, string arg1, Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigSource arg2, bool arg3, bool arg4, Java.Util.Collection<Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigSynonym> arg5)
                 : base(arg0, arg1, arg2, arg3, arg4, arg5)
             {
             }
@@ -177,60 +183,76 @@ namespace Org.Apache.Kafka.Common.Requests
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigEntry.html#documentation()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigEntry.html#isReadOnly()"/>
             /// </summary>
-            public string Documentation
+
+            /// <returns><see cref="bool"/></returns>
+            public bool IsReadOnly()
             {
-                get { return IExecute<string>("documentation"); }
+                return IExecute<bool>("isReadOnly");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigEntry.html#isReadOnly()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigEntry.html#isSensitive()"/>
             /// </summary>
-            public bool IsReadOnly
+
+            /// <returns><see cref="bool"/></returns>
+            public bool IsSensitive()
             {
-                get { return IExecute<bool>("isReadOnly"); }
+                return IExecute<bool>("isSensitive");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigEntry.html#isSensitive()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigEntry.html#documentation()"/>
             /// </summary>
-            public bool IsSensitive
+
+            /// <returns><see cref="string"/></returns>
+            public string Documentation()
             {
-                get { return IExecute<bool>("isSensitive"); }
+                return IExecute<string>("documentation");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigEntry.html#name()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigEntry.html#name()"/>
             /// </summary>
-            public string Name
+
+            /// <returns><see cref="string"/></returns>
+            public string Name()
             {
-                get { return IExecute<string>("name"); }
+                return IExecute<string>("name");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigEntry.html#source()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigEntry.html#value()"/>
             /// </summary>
-            public Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigSource Source
+
+            /// <returns><see cref="string"/></returns>
+            public string Value()
             {
-                get { return IExecute<Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigSource>("source"); }
+                return IExecute<string>("value");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigEntry.html#synonyms()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigEntry.html#synonyms()"/>
             /// </summary>
-            public Java.Util.Collection<Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigSynonym> Synonyms
+
+            /// <returns><see cref="Java.Util.Collection"/></returns>
+            public Java.Util.Collection<Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigSynonym> Synonyms()
             {
-                get { return IExecute<Java.Util.Collection<Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigSynonym>>("synonyms"); }
+                return IExecute<Java.Util.Collection<Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigSynonym>>("synonyms");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigEntry.html#type()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigEntry.html#source()"/>
             /// </summary>
-            public Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigType Type
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigSource"/></returns>
+            public Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigSource Source()
             {
-                get { return IExecute<Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigType>("type"); }
+                return IExecute<Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigSource>("source");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigEntry.html#value()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigEntry.html#type()"/>
             /// </summary>
-            public string Value
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigType"/></returns>
+            public Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigType Type()
             {
-                get { return IExecute<string>("value"); }
+                return IExecute<Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigType>("type");
             }
 
             #endregion
@@ -288,13 +310,6 @@ namespace Org.Apache.Kafka.Common.Requests
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigSource.html#values()"/> 
-            /// </summary>
-            public static Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigSource[] Values
-            {
-                get { return SExecuteArray<Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigSource>(LocalBridgeClazz, "values"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigSource.html#forId(byte)"/>
             /// </summary>
             /// <param name="arg0"><see cref="byte"/></param>
@@ -312,23 +327,36 @@ namespace Org.Apache.Kafka.Common.Requests
             {
                 return SExecute<Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigSource>(LocalBridgeClazz, "valueOf", arg0);
             }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigSource.html#values()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigSource"/></returns>
+            public static Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigSource[] Values()
+            {
+                return SExecuteArray<Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigSource>(LocalBridgeClazz, "values");
+            }
 
             #endregion
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigSource.html#id()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigSource.html#id()"/>
             /// </summary>
-            public byte Id
+
+            /// <returns><see cref="byte"/></returns>
+            public byte Id()
             {
-                get { return IExecute<byte>("id"); }
+                return IExecute<byte>("id");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigSource.html#source()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigSource.html#source()"/>
             /// </summary>
-            public Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource Source
+
+            /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource"/></returns>
+            public Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource Source()
             {
-                get { return IExecute<Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource>("source"); }
+                return IExecute<Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource>("source");
             }
 
             #endregion
@@ -372,25 +400,31 @@ namespace Org.Apache.Kafka.Common.Requests
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigSynonym.html#name()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigSynonym.html#name()"/>
             /// </summary>
-            public string Name
+
+            /// <returns><see cref="string"/></returns>
+            public string Name()
             {
-                get { return IExecute<string>("name"); }
+                return IExecute<string>("name");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigSynonym.html#source()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigSynonym.html#value()"/>
             /// </summary>
-            public Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigSource Source
+
+            /// <returns><see cref="string"/></returns>
+            public string Value()
             {
-                get { return IExecute<Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigSource>("source"); }
+                return IExecute<string>("value");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigSynonym.html#value()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigSynonym.html#source()"/>
             /// </summary>
-            public string Value
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigSource"/></returns>
+            public Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigSource Source()
             {
-                get { return IExecute<string>("value"); }
+                return IExecute<Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigSource>("source");
             }
 
             #endregion
@@ -460,13 +494,6 @@ namespace Org.Apache.Kafka.Common.Requests
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigType.html#values()"/> 
-            /// </summary>
-            public static Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigType[] Values
-            {
-                get { return SExecuteArray<Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigType>(LocalBridgeClazz, "values"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigType.html#forId(byte)"/>
             /// </summary>
             /// <param name="arg0"><see cref="byte"/></param>
@@ -484,23 +511,36 @@ namespace Org.Apache.Kafka.Common.Requests
             {
                 return SExecute<Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigType>(LocalBridgeClazz, "valueOf", arg0);
             }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigType.html#values()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigType"/></returns>
+            public static Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigType[] Values()
+            {
+                return SExecuteArray<Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigType>(LocalBridgeClazz, "values");
+            }
 
             #endregion
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigType.html#id()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigType.html#id()"/>
             /// </summary>
-            public byte Id
+
+            /// <returns><see cref="byte"/></returns>
+            public byte Id()
             {
-                get { return IExecute<byte>("id"); }
+                return IExecute<byte>("id");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigType.html#type()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigType.html#type()"/>
             /// </summary>
-            public Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigType Type
+
+            /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigType"/></returns>
+            public Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigType Type()
             {
-                get { return IExecute<Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigType>("type"); }
+                return IExecute<Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigType>("type");
             }
 
             #endregion

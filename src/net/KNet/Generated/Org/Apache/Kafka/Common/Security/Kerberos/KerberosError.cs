@@ -58,13 +58,6 @@ namespace Org.Apache.Kafka.Common.Security.Kerberos
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosError.html#values()"/> 
-        /// </summary>
-        public static Org.Apache.Kafka.Common.Security.Kerberos.KerberosError[] Values
-        {
-            get { return SExecuteArray<Org.Apache.Kafka.Common.Security.Kerberos.KerberosError>(LocalBridgeClazz, "values"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosError.html#isRetriableClientGssException(java.lang.Exception)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Exception"/></param>
@@ -91,16 +84,27 @@ namespace Org.Apache.Kafka.Common.Security.Kerberos
         {
             return SExecute<Org.Apache.Kafka.Common.Security.Kerberos.KerberosError>(LocalBridgeClazz, "valueOf", arg0);
         }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosError.html#values()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Security.Kerberos.KerberosError"/></returns>
+        public static Org.Apache.Kafka.Common.Security.Kerberos.KerberosError[] Values()
+        {
+            return SExecuteArray<Org.Apache.Kafka.Common.Security.Kerberos.KerberosError>(LocalBridgeClazz, "values");
+        }
 
         #endregion
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosError.html#retriable()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosError.html#retriable()"/>
         /// </summary>
-        public bool Retriable
+
+        /// <returns><see cref="bool"/></returns>
+        public bool Retriable()
         {
-            get { return IExecute<bool>("retriable"); }
+            return IExecute<bool>("retriable");
         }
 
         #endregion

@@ -20,31 +20,13 @@ using Java.Util;
 
 namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class QuorumInfo : MASES.JCOBridge.C2JBridge.JVMBridgeBase<QuorumInfo>
+    public partial class QuorumInfo
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.QuorumInfo";
-
-        public int LeaderId => IExecute<int>("leaderId");
-
-        public long LeaderEpoch => IExecute<long>("leaderEpoch");
-
-        public long HighWatermark => IExecute<long>("highWatermark");
-
-        public List<ReplicaState> Voters => IExecute<List<ReplicaState>>("voters");
-
-        public List<ReplicaState> Observers => IExecute<List<ReplicaState>>("observers");
-
-        public class ReplicaState : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ReplicaState>
+        public partial class ReplicaState
         {
-            public override string ClassName => "org.apache.kafka.clients.admin.QuorumInfo$ReplicaState";
+            public System.DateTime LastFetchDateTime => System.DateTimeOffset.FromUnixTimeMilliseconds(LastFetchTimestamp()).DateTime;
 
-            public int ReplicaId => IExecute<int>("replicaId");
-
-            public long LogEndOffset => IExecute<long>("logEndOffset");
-
-            public OptionalLong LastFetchTimestamp => IExecute<OptionalLong>("lastFetchTimestamp");
-
-            public OptionalLong LastCaughtUpTimestamp => IExecute<OptionalLong>("lastCaughtUpTimestamp");
+            public System.DateTime LastCaughtUpDateTime => System.DateTimeOffset.FromUnixTimeMilliseconds(LastCaughtUpTimestamp()).DateTime;
         }
     }
 }

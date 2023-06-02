@@ -87,60 +87,31 @@ namespace Org.Apache.Kafka.Common.Message
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.html#apiKey()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.html#throttleTimeMs()"/>
         /// </summary>
-        public short ApiKey
+
+        /// <returns><see cref="int"/></returns>
+        public int ThrottleTimeMs()
         {
-            get { return IExecute<short>("apiKey"); }
+            return IExecute<int>("throttleTimeMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.html#duplicate()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.html#tokens()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.Message Duplicate
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Message.DescribeDelegationTokenResponseData.DescribedDelegationToken> Tokens()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.DescribeDelegationTokenResponseData.DescribedDelegationToken>>("tokens");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.html#errorCode()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.html#unknownTaggedFields()"/>
         /// </summary>
-        public short ErrorCode
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields()
         {
-            get { return IExecute<short>("errorCode"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.html#highestSupportedVersion()"/> 
-        /// </summary>
-        public short HighestSupportedVersion
-        {
-            get { return IExecute<short>("highestSupportedVersion"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.html#lowestSupportedVersion()"/> 
-        /// </summary>
-        public short LowestSupportedVersion
-        {
-            get { return IExecute<short>("lowestSupportedVersion"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.html#throttleTimeMs()"/> 
-        /// </summary>
-        public int ThrottleTimeMs
-        {
-            get { return IExecute<int>("throttleTimeMs"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.html#tokens()"/> 
-        /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Message.DescribeDelegationTokenResponseData.DescribedDelegationToken> Tokens
-        {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.DescribeDelegationTokenResponseData.DescribedDelegationToken>>("tokens"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.html#unknownTaggedFields()"/> 
-        /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields
-        {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.html#setErrorCode(short)"/>
@@ -168,6 +139,51 @@ namespace Org.Apache.Kafka.Common.Message
         public Org.Apache.Kafka.Common.Message.DescribeDelegationTokenResponseData SetTokens(Java.Util.List<Org.Apache.Kafka.Common.Message.DescribeDelegationTokenResponseData.DescribedDelegationToken> arg0)
         {
             return IExecute<Org.Apache.Kafka.Common.Message.DescribeDelegationTokenResponseData>("setTokens", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.html#duplicate()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.Message Duplicate()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.html#apiKey()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short ApiKey()
+        {
+            return IExecute<short>("apiKey");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.html#errorCode()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short ErrorCode()
+        {
+            return IExecute<short>("errorCode");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.html#highestSupportedVersion()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short HighestSupportedVersion()
+        {
+            return IExecute<short>("highestSupportedVersion");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.html#lowestSupportedVersion()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short LowestSupportedVersion()
+        {
+            return IExecute<short>("lowestSupportedVersion");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>
@@ -264,102 +280,103 @@ namespace Org.Apache.Kafka.Common.Message
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationToken.html#duplicate()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationToken.html#hmac()"/>
             /// </summary>
-            public Org.Apache.Kafka.Common.Protocol.Message Duplicate
+
+            /// <returns><see cref="byte"/></returns>
+            public byte[] Hmac()
             {
-                get { return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate"); }
+                return IExecuteArray<byte>("hmac");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationToken.html#expiryTimestamp()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationToken.html#principalName()"/>
             /// </summary>
-            public long ExpiryTimestamp
+
+            /// <returns><see cref="string"/></returns>
+            public string PrincipalName()
             {
-                get { return IExecute<long>("expiryTimestamp"); }
+                return IExecute<string>("principalName");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationToken.html#highestSupportedVersion()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationToken.html#principalType()"/>
             /// </summary>
-            public short HighestSupportedVersion
+
+            /// <returns><see cref="string"/></returns>
+            public string PrincipalType()
             {
-                get { return IExecute<short>("highestSupportedVersion"); }
+                return IExecute<string>("principalType");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationToken.html#hmac()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationToken.html#tokenId()"/>
             /// </summary>
-            public byte[] Hmac
+
+            /// <returns><see cref="string"/></returns>
+            public string TokenId()
             {
-                get { return IExecuteArray<byte>("hmac"); }
+                return IExecute<string>("tokenId");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationToken.html#issueTimestamp()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationToken.html#tokenRequesterPrincipalName()"/>
             /// </summary>
-            public long IssueTimestamp
+
+            /// <returns><see cref="string"/></returns>
+            public string TokenRequesterPrincipalName()
             {
-                get { return IExecute<long>("issueTimestamp"); }
+                return IExecute<string>("tokenRequesterPrincipalName");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationToken.html#lowestSupportedVersion()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationToken.html#tokenRequesterPrincipalType()"/>
             /// </summary>
-            public short LowestSupportedVersion
+
+            /// <returns><see cref="string"/></returns>
+            public string TokenRequesterPrincipalType()
             {
-                get { return IExecute<short>("lowestSupportedVersion"); }
+                return IExecute<string>("tokenRequesterPrincipalType");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationToken.html#maxTimestamp()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationToken.html#renewers()"/>
             /// </summary>
-            public long MaxTimestamp
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<Org.Apache.Kafka.Common.Message.DescribeDelegationTokenResponseData.DescribedDelegationTokenRenewer> Renewers()
             {
-                get { return IExecute<long>("maxTimestamp"); }
+                return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.DescribeDelegationTokenResponseData.DescribedDelegationTokenRenewer>>("renewers");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationToken.html#principalName()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationToken.html#unknownTaggedFields()"/>
             /// </summary>
-            public string PrincipalName
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields()
             {
-                get { return IExecute<string>("principalName"); }
+                return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationToken.html#principalType()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationToken.html#expiryTimestamp()"/>
             /// </summary>
-            public string PrincipalType
+
+            /// <returns><see cref="long"/></returns>
+            public long ExpiryTimestamp()
             {
-                get { return IExecute<string>("principalType"); }
+                return IExecute<long>("expiryTimestamp");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationToken.html#renewers()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationToken.html#issueTimestamp()"/>
             /// </summary>
-            public Java.Util.List<Org.Apache.Kafka.Common.Message.DescribeDelegationTokenResponseData.DescribedDelegationTokenRenewer> Renewers
+
+            /// <returns><see cref="long"/></returns>
+            public long IssueTimestamp()
             {
-                get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.DescribeDelegationTokenResponseData.DescribedDelegationTokenRenewer>>("renewers"); }
+                return IExecute<long>("issueTimestamp");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationToken.html#tokenId()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationToken.html#maxTimestamp()"/>
             /// </summary>
-            public string TokenId
+
+            /// <returns><see cref="long"/></returns>
+            public long MaxTimestamp()
             {
-                get { return IExecute<string>("tokenId"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationToken.html#tokenRequesterPrincipalName()"/> 
-            /// </summary>
-            public string TokenRequesterPrincipalName
-            {
-                get { return IExecute<string>("tokenRequesterPrincipalName"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationToken.html#tokenRequesterPrincipalType()"/> 
-            /// </summary>
-            public string TokenRequesterPrincipalType
-            {
-                get { return IExecute<string>("tokenRequesterPrincipalType"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationToken.html#unknownTaggedFields()"/> 
-            /// </summary>
-            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields
-            {
-                get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields"); }
+                return IExecute<long>("maxTimestamp");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationToken.html#setExpiryTimestamp(long)"/>
@@ -450,6 +467,33 @@ namespace Org.Apache.Kafka.Common.Message
             public Org.Apache.Kafka.Common.Message.DescribeDelegationTokenResponseData.DescribedDelegationToken SetTokenRequesterPrincipalType(string arg0)
             {
                 return IExecute<Org.Apache.Kafka.Common.Message.DescribeDelegationTokenResponseData.DescribedDelegationToken>("setTokenRequesterPrincipalType", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationToken.html#duplicate()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
+            public Org.Apache.Kafka.Common.Protocol.Message Duplicate()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationToken.html#highestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short HighestSupportedVersion()
+            {
+                return IExecute<short>("highestSupportedVersion");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationToken.html#lowestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short LowestSupportedVersion()
+            {
+                return IExecute<short>("lowestSupportedVersion");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationToken.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>
@@ -553,46 +597,31 @@ namespace Org.Apache.Kafka.Common.Message
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationTokenRenewer.html#duplicate()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationTokenRenewer.html#principalName()"/>
             /// </summary>
-            public Org.Apache.Kafka.Common.Protocol.Message Duplicate
+
+            /// <returns><see cref="string"/></returns>
+            public string PrincipalName()
             {
-                get { return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate"); }
+                return IExecute<string>("principalName");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationTokenRenewer.html#highestSupportedVersion()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationTokenRenewer.html#principalType()"/>
             /// </summary>
-            public short HighestSupportedVersion
+
+            /// <returns><see cref="string"/></returns>
+            public string PrincipalType()
             {
-                get { return IExecute<short>("highestSupportedVersion"); }
+                return IExecute<string>("principalType");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationTokenRenewer.html#lowestSupportedVersion()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationTokenRenewer.html#unknownTaggedFields()"/>
             /// </summary>
-            public short LowestSupportedVersion
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields()
             {
-                get { return IExecute<short>("lowestSupportedVersion"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationTokenRenewer.html#principalName()"/> 
-            /// </summary>
-            public string PrincipalName
-            {
-                get { return IExecute<string>("principalName"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationTokenRenewer.html#principalType()"/> 
-            /// </summary>
-            public string PrincipalType
-            {
-                get { return IExecute<string>("principalType"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationTokenRenewer.html#unknownTaggedFields()"/> 
-            /// </summary>
-            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields
-            {
-                get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields"); }
+                return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationTokenRenewer.html#setPrincipalName(java.lang.String)"/>
@@ -611,6 +640,33 @@ namespace Org.Apache.Kafka.Common.Message
             public Org.Apache.Kafka.Common.Message.DescribeDelegationTokenResponseData.DescribedDelegationTokenRenewer SetPrincipalType(string arg0)
             {
                 return IExecute<Org.Apache.Kafka.Common.Message.DescribeDelegationTokenResponseData.DescribedDelegationTokenRenewer>("setPrincipalType", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationTokenRenewer.html#duplicate()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
+            public Org.Apache.Kafka.Common.Protocol.Message Duplicate()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationTokenRenewer.html#highestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short HighestSupportedVersion()
+            {
+                return IExecute<short>("highestSupportedVersion");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationTokenRenewer.html#lowestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short LowestSupportedVersion()
+            {
+                return IExecute<short>("lowestSupportedVersion");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeDelegationTokenResponseData.DescribedDelegationTokenRenewer.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>

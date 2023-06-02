@@ -54,13 +54,6 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Histogram.html#counts()"/> 
-        /// </summary>
-        public float[] Counts
-        {
-            get { return IExecuteArray<float>("counts"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Histogram.html#value(double)"/>
         /// </summary>
         /// <param name="arg0"><see cref="double"/></param>
@@ -68,6 +61,15 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         public double Value(double arg0)
         {
             return IExecute<double>("value", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Histogram.html#counts()"/>
+        /// </summary>
+
+        /// <returns><see cref="float"/></returns>
+        public float[] Counts()
+        {
+            return IExecuteArray<float>("counts");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Histogram.html#clear()"/>
@@ -109,13 +111,6 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Histogram.BinScheme.html#bins()"/> 
-            /// </summary>
-            public int Bins
-            {
-                get { return IExecute<int>("bins"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Histogram.BinScheme.html#fromBin(int)"/>
             /// </summary>
             /// <param name="arg0"><see cref="int"/></param>
@@ -123,6 +118,15 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
             public double FromBin(int arg0)
             {
                 return IExecute<double>("fromBin", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Histogram.BinScheme.html#bins()"/>
+            /// </summary>
+
+            /// <returns><see cref="int"/></returns>
+            public int Bins()
+            {
+                return IExecute<int>("bins");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Histogram.BinScheme.html#toBin(double)"/>
@@ -175,13 +179,6 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Histogram.ConstantBinScheme.html#bins()"/> 
-            /// </summary>
-            public int Bins
-            {
-                get { return IExecute<int>("bins"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Histogram.ConstantBinScheme.html#fromBin(int)"/>
             /// </summary>
             /// <param name="arg0"><see cref="int"/></param>
@@ -189,6 +186,15 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
             public double FromBin(int arg0)
             {
                 return IExecute<double>("fromBin", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Histogram.ConstantBinScheme.html#bins()"/>
+            /// </summary>
+
+            /// <returns><see cref="int"/></returns>
+            public int Bins()
+            {
+                return IExecute<int>("bins");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Histogram.ConstantBinScheme.html#toBin(double)"/>
@@ -240,13 +246,6 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Histogram.LinearBinScheme.html#bins()"/> 
-            /// </summary>
-            public int Bins
-            {
-                get { return IExecute<int>("bins"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Histogram.LinearBinScheme.html#fromBin(int)"/>
             /// </summary>
             /// <param name="arg0"><see cref="int"/></param>
@@ -254,6 +253,15 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
             public double FromBin(int arg0)
             {
                 return IExecute<double>("fromBin", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Histogram.LinearBinScheme.html#bins()"/>
+            /// </summary>
+
+            /// <returns><see cref="int"/></returns>
+            public int Bins()
+            {
+                return IExecute<int>("bins");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Histogram.LinearBinScheme.html#toBin(double)"/>

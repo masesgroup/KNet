@@ -56,10 +56,10 @@ namespace Org.Apache.Kafka.Streams.Processor
     /// <typeparam name="K">The data associated to the event</typeparam>
     /// <typeparam name="V">The data associated to the event</typeparam>
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
-    public class StreamPartitioner<K, V> : JVMBridgeListener, IStreamPartitioner<K, V>
+    public partial class StreamPartitioner<K, V> : IStreamPartitioner<K, V>
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.streams.kstream.StreamPartitionerImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.streams.kstream.StreamPartitionerImpl";
 
         readonly Func<string, K, V, int, int> executionFunctionPartition = null;
         readonly Func<string, K, V, int, Optional<Set<Java.Lang.Integer>>> executionFunctionPartitions = null;

@@ -23,31 +23,8 @@ using Org.Apache.Kafka.Streams.Processor;
 
 namespace Org.Apache.Kafka.Streams
 {
-    public interface ITaskMetadata : IJVMBridgeBase
+    public partial class TaskMetadata
     {
-        TaskId TaskId { get; }
-
-        Set<TopicPartition> TopicPartitions { get; }
-
-        Map<TopicPartition, long> CommittedOffsets { get; }
-
-        Map<TopicPartition, long> EndOffsets { get; }
-
-        Optional<long> TimeCurrentIdlingStarted { get; }
-    }
-
-    public class TaskMetadata : JVMBridgeBase<TaskMetadata, ITaskMetadata>, ITaskMetadata
-    {
-        public override string ClassName => "org.apache.kafka.streams.TaskMetadata";
-
-        public TaskId TaskId => IExecute<TaskId>("taskId");
-
-        public Set<TopicPartition> TopicPartitions => IExecute<Set<TopicPartition>>("topicPartitions");
-
-        public Map<TopicPartition, long> CommittedOffsets => IExecute<Map<TopicPartition, long>>("committedOffsets");
-
-        public Map<TopicPartition, long> EndOffsets => IExecute<Map<TopicPartition, long>>("endOffsets");
-
-        public Optional<long> TimeCurrentIdlingStarted => IExecute<Optional<long>>("timeCurrentIdlingStarted");
+        public System.DateTime TimeCurrentIdlingStartedDateTime => System.DateTimeOffset.FromUnixTimeMilliseconds(TimeCurrentIdlingStarted().Get??0).DateTime;
     }
 }

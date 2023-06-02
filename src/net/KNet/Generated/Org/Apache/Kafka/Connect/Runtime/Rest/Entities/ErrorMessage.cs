@@ -55,18 +55,22 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest.Entities
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ErrorMessage.html#errorCode()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ErrorMessage.html#errorCode()"/>
         /// </summary>
-        public int ErrorCode
+
+        /// <returns><see cref="int"/></returns>
+        public int ErrorCode()
         {
-            get { return IExecute<int>("errorCode"); }
+            return IExecute<int>("errorCode");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ErrorMessage.html#message()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ErrorMessage.html#message()"/>
         /// </summary>
-        public string Message
+
+        /// <returns><see cref="string"/></returns>
+        public string Message()
         {
-            get { return IExecute<string>("message"); }
+            return IExecute<string>("message");
         }
 
         #endregion

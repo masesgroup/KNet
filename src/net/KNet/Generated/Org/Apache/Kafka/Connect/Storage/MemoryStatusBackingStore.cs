@@ -50,13 +50,6 @@ namespace Org.Apache.Kafka.Connect.Storage
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryStatusBackingStore.html#connectors()"/> 
-        /// </summary>
-        public Java.Util.Set<string> Connectors
-        {
-            get { return IExecute<Java.Util.Set<string>>("connectors"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryStatusBackingStore.html#getAllTopics(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -83,6 +76,15 @@ namespace Org.Apache.Kafka.Connect.Storage
         public Java.Util.Collection<Org.Apache.Kafka.Connect.Runtime.TaskStatus> GetAll(string arg0)
         {
             return IExecute<Java.Util.Collection<Org.Apache.Kafka.Connect.Runtime.TaskStatus>>("getAll", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryStatusBackingStore.html#connectors()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<string> Connectors()
+        {
+            return IExecute<Java.Util.Set<string>>("connectors");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryStatusBackingStore.html#get(java.lang.String)"/>

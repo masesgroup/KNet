@@ -50,13 +50,6 @@ namespace Org.Apache.Kafka.Connect.Data
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Timestamp.html#builder()"/> 
-        /// </summary>
-        public static Org.Apache.Kafka.Connect.Data.SchemaBuilder Builder
-        {
-            get { return SExecute<Org.Apache.Kafka.Connect.Data.SchemaBuilder>(LocalBridgeClazz, "builder"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Timestamp.html#toLogical(org.apache.kafka.connect.data.Schema,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
@@ -75,6 +68,15 @@ namespace Org.Apache.Kafka.Connect.Data
         public static long FromLogical(Org.Apache.Kafka.Connect.Data.Schema arg0, Java.Util.Date arg1)
         {
             return SExecute<long>(LocalBridgeClazz, "fromLogical", arg0, arg1);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Timestamp.html#builder()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Data.SchemaBuilder"/></returns>
+        public static Org.Apache.Kafka.Connect.Data.SchemaBuilder Builder()
+        {
+            return SExecute<Org.Apache.Kafka.Connect.Data.SchemaBuilder>(LocalBridgeClazz, "builder");
         }
 
         #endregion

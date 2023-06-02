@@ -46,60 +46,76 @@ namespace Org.Apache.Kafka.Streams
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html#activeTasks()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html#adminClientId()"/>
         /// </summary>
-        public Java.Util.Set<Org.Apache.Kafka.Streams.TaskMetadata> ActiveTasks
+
+        /// <returns><see cref="string"/></returns>
+        public string AdminClientId()
         {
-            get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Streams.TaskMetadata>>("activeTasks"); }
+            return IExecute<string>("adminClientId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html#adminClientId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html#consumerClientId()"/>
         /// </summary>
-        public string AdminClientId
+
+        /// <returns><see cref="string"/></returns>
+        public string ConsumerClientId()
         {
-            get { return IExecute<string>("adminClientId"); }
+            return IExecute<string>("consumerClientId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html#consumerClientId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html#restoreConsumerClientId()"/>
         /// </summary>
-        public string ConsumerClientId
+
+        /// <returns><see cref="string"/></returns>
+        public string RestoreConsumerClientId()
         {
-            get { return IExecute<string>("consumerClientId"); }
+            return IExecute<string>("restoreConsumerClientId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html#producerClientIds()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html#threadName()"/>
         /// </summary>
-        public Java.Util.Set<string> ProducerClientIds
+
+        /// <returns><see cref="string"/></returns>
+        public string ThreadName()
         {
-            get { return IExecute<Java.Util.Set<string>>("producerClientIds"); }
+            return IExecute<string>("threadName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html#restoreConsumerClientId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html#threadState()"/>
         /// </summary>
-        public string RestoreConsumerClientId
+
+        /// <returns><see cref="string"/></returns>
+        public string ThreadState()
         {
-            get { return IExecute<string>("restoreConsumerClientId"); }
+            return IExecute<string>("threadState");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html#standbyTasks()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html#producerClientIds()"/>
         /// </summary>
-        public Java.Util.Set<Org.Apache.Kafka.Streams.TaskMetadata> StandbyTasks
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<string> ProducerClientIds()
         {
-            get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Streams.TaskMetadata>>("standbyTasks"); }
+            return IExecute<Java.Util.Set<string>>("producerClientIds");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html#threadName()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html#activeTasks()"/>
         /// </summary>
-        public string ThreadName
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Streams.TaskMetadata> ActiveTasks()
         {
-            get { return IExecute<string>("threadName"); }
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Streams.TaskMetadata>>("activeTasks");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html#threadState()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html#standbyTasks()"/>
         /// </summary>
-        public string ThreadState
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Streams.TaskMetadata> StandbyTasks()
         {
-            get { return IExecute<string>("threadState"); }
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Streams.TaskMetadata>>("standbyTasks");
         }
 
         #endregion

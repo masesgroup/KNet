@@ -66,18 +66,22 @@ namespace Org.Apache.Kafka.Common.Security
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/JaasUtils.html#isZkSaslEnabled()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/JaasUtils.html#isZkSaslEnabled()"/>
         /// </summary>
-        public static bool IsZkSaslEnabled
+
+        /// <returns><see cref="bool"/></returns>
+        public static bool IsZkSaslEnabled()
         {
-            get { return SExecute<bool>(LocalBridgeClazz, "isZkSaslEnabled"); }
+            return SExecute<bool>(LocalBridgeClazz, "isZkSaslEnabled");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/JaasUtils.html#zkSecuritySysConfigString()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/JaasUtils.html#zkSecuritySysConfigString()"/>
         /// </summary>
-        public static string ZkSecuritySysConfigString
+
+        /// <returns><see cref="string"/></returns>
+        public static string ZkSecuritySysConfigString()
         {
-            get { return SExecute<string>(LocalBridgeClazz, "zkSecuritySysConfigString"); }
+            return SExecute<string>(LocalBridgeClazz, "zkSecuritySysConfigString");
         }
 
         #endregion

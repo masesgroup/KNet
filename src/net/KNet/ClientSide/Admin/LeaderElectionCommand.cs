@@ -21,14 +21,8 @@ namespace Kafka.Admin
     /// <summary>
     /// Class managing LeaderElectionCommand
     /// </summary>
-    public class LeaderElectionCommand : MASES.JCOBridge.C2JBridge.JVMBridgeMain<LeaderElectionCommand>
+    public partial class LeaderElectionCommand
     {
-        /// <summary>
-        /// Initialize a new <see cref="LeaderElectionCommand"/>
-        /// </summary>
-        public LeaderElectionCommand()
-            : base("kafka.admin.LeaderElectionCommand")
-        {
-        }
+
     }
 }

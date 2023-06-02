@@ -57,14 +57,6 @@ namespace Org.Apache.Kafka.Connect.Rest
         #endregion
 
         #region Instance methods
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/rest/ConnectRestExtension.html#register(org.apache.kafka.connect.rest.ConnectRestExtensionContext)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Rest.ConnectRestExtensionContext"/></param>
-        public void Register(Org.Apache.Kafka.Connect.Rest.ConnectRestExtensionContext arg0)
-        {
-            IExecute("register", arg0);
-        }
 
         #endregion
 

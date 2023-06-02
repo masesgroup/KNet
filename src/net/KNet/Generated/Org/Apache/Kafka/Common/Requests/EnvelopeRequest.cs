@@ -65,25 +65,31 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/EnvelopeRequest.html#clientAddress()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/EnvelopeRequest.html#clientAddress()"/>
         /// </summary>
-        public byte[] ClientAddress
+
+        /// <returns><see cref="byte"/></returns>
+        public byte[] ClientAddress()
         {
-            get { return IExecuteArray<byte>("clientAddress"); }
+            return IExecuteArray<byte>("clientAddress");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/EnvelopeRequest.html#requestData()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/EnvelopeRequest.html#requestPrincipal()"/>
         /// </summary>
-        public Java.Nio.ByteBuffer RequestData
+
+        /// <returns><see cref="byte"/></returns>
+        public byte[] RequestPrincipal()
         {
-            get { return IExecute<Java.Nio.ByteBuffer>("requestData"); }
+            return IExecuteArray<byte>("requestPrincipal");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/EnvelopeRequest.html#requestPrincipal()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/EnvelopeRequest.html#requestData()"/>
         /// </summary>
-        public byte[] RequestPrincipal
+
+        /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
+        public Java.Nio.ByteBuffer RequestData()
         {
-            get { return IExecuteArray<byte>("requestPrincipal"); }
+            return IExecute<Java.Nio.ByteBuffer>("requestData");
         }
 
         #endregion

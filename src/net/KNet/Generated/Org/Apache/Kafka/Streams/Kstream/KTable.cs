@@ -46,13 +46,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KTable.html#queryableStoreName()"/> 
-        /// </summary>
-        public string QueryableStoreName
-        {
-            get { return IExecute<string>("queryableStoreName"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KTable.html#groupBy(org.apache.kafka.streams.kstream.KeyValueMapper,org.apache.kafka.streams.kstream.Grouped)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.KeyValueMapper"/></param>
@@ -443,6 +436,15 @@ namespace Org.Apache.Kafka.Streams.Kstream
             if (arg2.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("transformValues", arg0, arg1); else return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("transformValues", arg0, arg1, arg2);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KTable.html#queryableStoreName()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string QueryableStoreName()
+        {
+            return IExecute<string>("queryableStoreName");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KTable.html#toStream()"/>
         /// </summary>
 
@@ -584,13 +586,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
         #endregion
 
         #region Instance methods
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KTable.html#queryableStoreName()"/> 
-        /// </summary>
-        public string QueryableStoreName
-        {
-            get { return IExecute<string>("queryableStoreName"); }
-        }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KTable.html#groupBy(org.apache.kafka.streams.kstream.KeyValueMapper,org.apache.kafka.streams.kstream.Grouped)"/>
         /// </summary>
@@ -1124,6 +1119,15 @@ namespace Org.Apache.Kafka.Streams.Kstream
         public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> TransformValues<VR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKeySupplier<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1, params string[] arg2) where Arg0objectSuperK: K
         {
             if (arg2.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("transformValues", arg0, arg1); else return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("transformValues", arg0, arg1, arg2);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KTable.html#queryableStoreName()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string QueryableStoreName()
+        {
+            return IExecute<string>("queryableStoreName");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KTable.html#toStream()"/>

@@ -66,10 +66,6 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchMetadata.html#LEGACY"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Requests.FetchMetadata LEGACY { get { return SGetField<Org.Apache.Kafka.Common.Requests.FetchMetadata>(LocalBridgeClazz, "LEGACY"); } }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchMetadata.html#log"/>
-        /// </summary>
-        public static Org.Slf4j.Logger log { get { return SGetField<Org.Slf4j.Logger>(LocalBridgeClazz, "log"); } }
 
         #endregion
 
@@ -97,39 +93,49 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchMetadata.html#epoch()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchMetadata.html#isFull()"/>
         /// </summary>
-        public int Epoch
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsFull()
         {
-            get { return IExecute<int>("epoch"); }
+            return IExecute<bool>("isFull");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchMetadata.html#isFull()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchMetadata.html#epoch()"/>
         /// </summary>
-        public bool IsFull
+
+        /// <returns><see cref="int"/></returns>
+        public int Epoch()
         {
-            get { return IExecute<bool>("isFull"); }
+            return IExecute<int>("epoch");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchMetadata.html#nextCloseExisting()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchMetadata.html#sessionId()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Requests.FetchMetadata NextCloseExisting
+
+        /// <returns><see cref="int"/></returns>
+        public int SessionId()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Requests.FetchMetadata>("nextCloseExisting"); }
+            return IExecute<int>("sessionId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchMetadata.html#nextIncremental()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchMetadata.html#nextCloseExisting()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Requests.FetchMetadata NextIncremental
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Requests.FetchMetadata"/></returns>
+        public Org.Apache.Kafka.Common.Requests.FetchMetadata NextCloseExisting()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Requests.FetchMetadata>("nextIncremental"); }
+            return IExecute<Org.Apache.Kafka.Common.Requests.FetchMetadata>("nextCloseExisting");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchMetadata.html#sessionId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchMetadata.html#nextIncremental()"/>
         /// </summary>
-        public int SessionId
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Requests.FetchMetadata"/></returns>
+        public Org.Apache.Kafka.Common.Requests.FetchMetadata NextIncremental()
         {
-            get { return IExecute<int>("sessionId"); }
+            return IExecute<Org.Apache.Kafka.Common.Requests.FetchMetadata>("nextIncremental");
         }
 
         #endregion

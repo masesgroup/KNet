@@ -46,13 +46,6 @@ namespace Org.Apache.Kafka.Connect.Runtime
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/StateTracker.html#currentState()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Connect.Runtime.AbstractStatus.State CurrentState
-        {
-            get { return IExecute<Org.Apache.Kafka.Connect.Runtime.AbstractStatus.State>("currentState"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/StateTracker.html#durationRatio(org.apache.kafka.connect.runtime.AbstractStatus.State,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Runtime.AbstractStatus.State"/></param>
@@ -61,6 +54,15 @@ namespace Org.Apache.Kafka.Connect.Runtime
         public double DurationRatio(Org.Apache.Kafka.Connect.Runtime.AbstractStatus.State arg0, long arg1)
         {
             return IExecute<double>("durationRatio", arg0, arg1);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/StateTracker.html#currentState()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.AbstractStatus.State"/></returns>
+        public Org.Apache.Kafka.Connect.Runtime.AbstractStatus.State CurrentState()
+        {
+            return IExecute<Org.Apache.Kafka.Connect.Runtime.AbstractStatus.State>("currentState");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/StateTracker.html#changeState(org.apache.kafka.connect.runtime.AbstractStatus.State,long)"/>

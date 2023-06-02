@@ -50,18 +50,22 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SystemTime.html#milliseconds()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SystemTime.html#milliseconds()"/>
         /// </summary>
-        public long Milliseconds
+
+        /// <returns><see cref="long"/></returns>
+        public long Milliseconds()
         {
-            get { return IExecute<long>("milliseconds"); }
+            return IExecute<long>("milliseconds");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SystemTime.html#nanoseconds()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SystemTime.html#nanoseconds()"/>
         /// </summary>
-        public long Nanoseconds
+
+        /// <returns><see cref="long"/></returns>
+        public long Nanoseconds()
         {
-            get { return IExecute<long>("nanoseconds"); }
+            return IExecute<long>("nanoseconds");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SystemTime.html#sleep(long)"/>

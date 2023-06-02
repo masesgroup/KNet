@@ -37,10 +37,6 @@ namespace Org.Apache.Kafka.Streams.State
         #endregion
 
         #region Fields
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/RocksDBConfigSetter.html#LOG"/>
-        /// </summary>
-        public static Org.Slf4j.Logger LOG { get { return SGetField<Org.Slf4j.Logger>(LocalBridgeClazz, "LOG"); } }
 
         #endregion
 

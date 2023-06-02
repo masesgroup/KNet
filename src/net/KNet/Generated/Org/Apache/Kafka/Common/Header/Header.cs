@@ -46,18 +46,22 @@ namespace Org.Apache.Kafka.Common.Header
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/header/Header.html#key()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/header/Header.html#value()"/>
         /// </summary>
-        public string Key
+
+        /// <returns><see cref="byte"/></returns>
+        public byte[] Value()
         {
-            get { return IExecute<string>("key"); }
+            return IExecuteArray<byte>("value");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/header/Header.html#value()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/header/Header.html#key()"/>
         /// </summary>
-        public byte[] Value
+
+        /// <returns><see cref="string"/></returns>
+        public string Key()
         {
-            get { return IExecuteArray<byte>("value"); }
+            return IExecute<string>("key");
         }
 
         #endregion

@@ -83,32 +83,40 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataRequest.html#allowAutoTopicCreation()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataRequest.html#allowAutoTopicCreation()"/>
         /// </summary>
-        public bool AllowAutoTopicCreation
+
+        /// <returns><see cref="bool"/></returns>
+        public bool AllowAutoTopicCreation()
         {
-            get { return IExecute<bool>("allowAutoTopicCreation"); }
+            return IExecute<bool>("allowAutoTopicCreation");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataRequest.html#isAllTopics()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataRequest.html#isAllTopics()"/>
         /// </summary>
-        public bool IsAllTopics
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsAllTopics()
         {
-            get { return IExecute<bool>("isAllTopics"); }
+            return IExecute<bool>("isAllTopics");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataRequest.html#topicIds()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataRequest.html#topics()"/>
         /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Uuid> TopicIds
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<string> Topics()
         {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Uuid>>("topicIds"); }
+            return IExecute<Java.Util.List<string>>("topics");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataRequest.html#topics()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataRequest.html#topicIds()"/>
         /// </summary>
-        public Java.Util.List<string> Topics
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Uuid> TopicIds()
         {
-            get { return IExecute<Java.Util.List<string>>("topics"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Uuid>>("topicIds");
         }
 
         #endregion
@@ -125,7 +133,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// <param name="arg1"><see cref="bool"/></param>
             /// <param name="arg2"><see cref="short"/></param>
             /// <param name="arg3"><see cref="short"/></param>
-            public Builder(Java.Util.List arg0, bool arg1, short arg2, short arg3)
+            public Builder(Java.Util.List<string> arg0, bool arg1, short arg2, short arg3)
                 : base(arg0, arg1, arg2, arg3)
             {
             }
@@ -135,7 +143,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// <param name="arg0"><see cref="Java.Util.List"/></param>
             /// <param name="arg1"><see cref="bool"/></param>
             /// <param name="arg2"><see cref="short"/></param>
-            public Builder(Java.Util.List arg0, bool arg1, short arg2)
+            public Builder(Java.Util.List<string> arg0, bool arg1, short arg2)
                 : base(arg0, arg1, arg2)
             {
             }
@@ -144,7 +152,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.List"/></param>
             /// <param name="arg1"><see cref="bool"/></param>
-            public Builder(Java.Util.List arg0, bool arg1)
+            public Builder(Java.Util.List<string> arg0, bool arg1)
                 : base(arg0, arg1)
             {
             }
@@ -152,7 +160,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataRequest.Builder.html#%3Cinit%3E(java.util.List)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.List"/></param>
-            public Builder(Java.Util.List arg0)
+            public Builder(Java.Util.List<Org.Apache.Kafka.Common.Uuid> arg0)
                 : base(arg0)
             {
             }
@@ -177,36 +185,44 @@ namespace Org.Apache.Kafka.Common.Requests
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataRequest.Builder.html#allTopics()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataRequest.Builder.html#allTopics()"/>
             /// </summary>
-            public static Org.Apache.Kafka.Common.Requests.MetadataRequest.Builder AllTopics
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Requests.MetadataRequest.Builder"/></returns>
+            public static Org.Apache.Kafka.Common.Requests.MetadataRequest.Builder AllTopics()
             {
-                get { return SExecute<Org.Apache.Kafka.Common.Requests.MetadataRequest.Builder>(LocalBridgeClazz, "allTopics"); }
+                return SExecute<Org.Apache.Kafka.Common.Requests.MetadataRequest.Builder>(LocalBridgeClazz, "allTopics");
             }
 
             #endregion
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataRequest.Builder.html#emptyTopicList()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataRequest.Builder.html#emptyTopicList()"/>
             /// </summary>
-            public bool EmptyTopicList
+
+            /// <returns><see cref="bool"/></returns>
+            public bool EmptyTopicList()
             {
-                get { return IExecute<bool>("emptyTopicList"); }
+                return IExecute<bool>("emptyTopicList");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataRequest.Builder.html#isAllTopics()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataRequest.Builder.html#isAllTopics()"/>
             /// </summary>
-            public bool IsAllTopics
+
+            /// <returns><see cref="bool"/></returns>
+            public bool IsAllTopics()
             {
-                get { return IExecute<bool>("isAllTopics"); }
+                return IExecute<bool>("isAllTopics");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataRequest.Builder.html#topics()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataRequest.Builder.html#topics()"/>
             /// </summary>
-            public Java.Util.List<string> Topics
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<string> Topics()
             {
-                get { return IExecute<Java.Util.List<string>>("topics"); }
+                return IExecute<Java.Util.List<string>>("topics");
             }
 
             #endregion

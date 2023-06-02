@@ -77,15 +77,6 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
         {
             IExecute("handle", new object[] { arg0 });
         }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallbackHandler.html#init(org.apache.kafka.common.security.oauthbearer.internals.secured.CloseableVerificationKeyResolver,org.apache.kafka.common.security.oauthbearer.internals.secured.AccessTokenValidator)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Security.Oauthbearer.Internals.Secured.CloseableVerificationKeyResolver"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Security.Oauthbearer.Internals.Secured.AccessTokenValidator"/></param>
-        public void Init(Org.Apache.Kafka.Common.Security.Oauthbearer.Internals.Secured.CloseableVerificationKeyResolver arg0, Org.Apache.Kafka.Common.Security.Oauthbearer.Internals.Secured.AccessTokenValidator arg1)
-        {
-            IExecute("init", arg0, arg1);
-        }
 
         #endregion
 

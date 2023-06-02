@@ -54,13 +54,6 @@ namespace Org.Apache.Kafka.Connect.Storage
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/ConverterType.html#values()"/> 
-        /// </summary>
-        public static Org.Apache.Kafka.Connect.Storage.ConverterType[] Values
-        {
-            get { return SExecuteArray<Org.Apache.Kafka.Connect.Storage.ConverterType>(LocalBridgeClazz, "values"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/ConverterType.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -77,6 +70,15 @@ namespace Org.Apache.Kafka.Connect.Storage
         public static Org.Apache.Kafka.Connect.Storage.ConverterType WithName(string arg0)
         {
             return SExecute<Org.Apache.Kafka.Connect.Storage.ConverterType>(LocalBridgeClazz, "withName", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/ConverterType.html#values()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Storage.ConverterType"/></returns>
+        public static Org.Apache.Kafka.Connect.Storage.ConverterType[] Values()
+        {
+            return SExecuteArray<Org.Apache.Kafka.Connect.Storage.ConverterType>(LocalBridgeClazz, "values");
         }
 
         #endregion

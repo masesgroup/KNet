@@ -59,11 +59,13 @@ namespace Org.Apache.Kafka.Connect.Runtime.Errors
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/errors/ErrorHandlingMetrics.html#metricGroup()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/errors/ErrorHandlingMetrics.html#metricGroup()"/>
         /// </summary>
-        public Org.Apache.Kafka.Connect.Runtime.ConnectMetrics.MetricGroup MetricGroup
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.ConnectMetrics.MetricGroup"/></returns>
+        public Org.Apache.Kafka.Connect.Runtime.ConnectMetrics.MetricGroup MetricGroup()
         {
-            get { return IExecute<Org.Apache.Kafka.Connect.Runtime.ConnectMetrics.MetricGroup>("metricGroup"); }
+            return IExecute<Org.Apache.Kafka.Connect.Runtime.ConnectMetrics.MetricGroup>("metricGroup");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/errors/ErrorHandlingMetrics.html#close()"/>

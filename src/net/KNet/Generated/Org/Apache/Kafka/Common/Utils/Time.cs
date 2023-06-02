@@ -50,25 +50,22 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Time.html#hiResClockMs()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Time.html#milliseconds()"/>
         /// </summary>
-        public long HiResClockMs
+
+        /// <returns><see cref="long"/></returns>
+        public long Milliseconds()
         {
-            get { return IExecute<long>("hiResClockMs"); }
+            return IExecute<long>("milliseconds");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Time.html#milliseconds()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Time.html#nanoseconds()"/>
         /// </summary>
-        public long Milliseconds
+
+        /// <returns><see cref="long"/></returns>
+        public long Nanoseconds()
         {
-            get { return IExecute<long>("milliseconds"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Time.html#nanoseconds()"/> 
-        /// </summary>
-        public long Nanoseconds
-        {
-            get { return IExecute<long>("nanoseconds"); }
+            return IExecute<long>("nanoseconds");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Time.html#sleep(long)"/>
@@ -88,6 +85,15 @@ namespace Org.Apache.Kafka.Common.Utils
         public void WaitObject(object arg0, Java.Util.Function.Supplier<bool?> arg1, long arg2)
         {
             IExecute("waitObject", arg0, arg1, arg2);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Time.html#hiResClockMs()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long HiResClockMs()
+        {
+            return IExecute<long>("hiResClockMs");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Time.html#timer(java.time.Duration)"/>

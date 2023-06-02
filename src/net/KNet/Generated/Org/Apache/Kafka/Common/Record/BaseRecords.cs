@@ -46,18 +46,23 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/BaseRecords.html#sizeInBytes()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/BaseRecords.html#sizeInBytes()"/>
         /// </summary>
-        public int SizeInBytes
+
+        /// <returns><see cref="int"/></returns>
+        public int SizeInBytes()
         {
-            get { return IExecute<int>("sizeInBytes"); }
+            return IExecute<int>("sizeInBytes");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/BaseRecords.html#toSend()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/BaseRecords.html#toSend()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Record.RecordsSend ToSend
+
+        /// <typeparam name="ReturnExtendsOrg_Apache_Kafka_Common_Record_BaseRecords"><see cref="Org.Apache.Kafka.Common.Record.BaseRecords"/></typeparam>
+        /// <returns><see cref="Org.Apache.Kafka.Common.Record.RecordsSend"/></returns>
+        public Org.Apache.Kafka.Common.Record.RecordsSend<ReturnExtendsOrg_Apache_Kafka_Common_Record_BaseRecords> ToSend<ReturnExtendsOrg_Apache_Kafka_Common_Record_BaseRecords>() where ReturnExtendsOrg_Apache_Kafka_Common_Record_BaseRecords: Org.Apache.Kafka.Common.Record.BaseRecords
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Record.RecordsSend>("toSend"); }
+            return IExecute<Org.Apache.Kafka.Common.Record.RecordsSend<ReturnExtendsOrg_Apache_Kafka_Common_Record_BaseRecords>>("toSend");
         }
 
         #endregion

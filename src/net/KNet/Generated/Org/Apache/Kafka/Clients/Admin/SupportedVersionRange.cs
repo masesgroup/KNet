@@ -46,18 +46,22 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/SupportedVersionRange.html#maxVersion()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/SupportedVersionRange.html#maxVersion()"/>
         /// </summary>
-        public short MaxVersion
+
+        /// <returns><see cref="short"/></returns>
+        public short MaxVersion()
         {
-            get { return IExecute<short>("maxVersion"); }
+            return IExecute<short>("maxVersion");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/SupportedVersionRange.html#minVersion()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/SupportedVersionRange.html#minVersion()"/>
         /// </summary>
-        public short MinVersion
+
+        /// <returns><see cref="short"/></returns>
+        public short MinVersion()
         {
-            get { return IExecute<short>("minVersion"); }
+            return IExecute<short>("minVersion");
         }
 
         #endregion

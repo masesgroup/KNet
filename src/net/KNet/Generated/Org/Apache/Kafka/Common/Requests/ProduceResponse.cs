@@ -93,7 +93,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// <param name="arg3"><see cref="long"/></param>
             /// <param name="arg4"><see cref="Java.Util.List"/></param>
             /// <param name="arg5"><see cref="string"/></param>
-            public PartitionResponse(Org.Apache.Kafka.Common.Protocol.Errors arg0, long arg1, long arg2, long arg3, Java.Util.List arg4, string arg5)
+            public PartitionResponse(Org.Apache.Kafka.Common.Protocol.Errors arg0, long arg1, long arg2, long arg3, Java.Util.List<Org.Apache.Kafka.Common.Requests.ProduceResponse.RecordError> arg4, string arg5)
                 : base(arg0, arg1, arg2, arg3, arg4, arg5)
             {
             }
@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// <param name="arg2"><see cref="long"/></param>
             /// <param name="arg3"><see cref="long"/></param>
             /// <param name="arg4"><see cref="Java.Util.List"/></param>
-            public PartitionResponse(Org.Apache.Kafka.Common.Protocol.Errors arg0, long arg1, long arg2, long arg3, Java.Util.List arg4)
+            public PartitionResponse(Org.Apache.Kafka.Common.Protocol.Errors arg0, long arg1, long arg2, long arg3, Java.Util.List<Org.Apache.Kafka.Common.Requests.ProduceResponse.RecordError> arg4)
                 : base(arg0, arg1, arg2, arg3, arg4)
             {
             }

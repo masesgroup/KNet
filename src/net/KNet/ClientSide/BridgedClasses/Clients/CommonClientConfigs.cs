@@ -22,75 +22,6 @@ using MASES.KNet;
 
 namespace Org.Apache.Kafka.Clients
 {
-    public class CommonClientConfigs : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CommonClientConfigs>
-    {
-        public override string ClassName => "org.apache.kafka.clients.CommonClientConfigs";
-
-        public static readonly string BOOTSTRAP_SERVERS_CONFIG = Clazz.GetField<string>("BOOTSTRAP_SERVERS_CONFIG");
-
-        public static readonly string CLIENT_DNS_LOOKUP_CONFIG = Clazz.GetField<string>("CLIENT_DNS_LOOKUP_CONFIG");
-
-        public static readonly string METADATA_MAX_AGE_CONFIG = Clazz.GetField<string>("METADATA_MAX_AGE_CONFIG");
-
-        public static readonly string SEND_BUFFER_CONFIG = Clazz.GetField<string>("SEND_BUFFER_CONFIG");
-
-        public static readonly string RECEIVE_BUFFER_CONFIG = Clazz.GetField<string>("RECEIVE_BUFFER_CONFIG");
-
-        public static readonly string CLIENT_ID_CONFIG = Clazz.GetField<string>("CLIENT_ID_CONFIG");
-
-        public static readonly string CLIENT_RACK_CONFIG = Clazz.GetField<string>("CLIENT_RACK_CONFIG");
-
-        public static readonly string RECONNECT_BACKOFF_MS_CONFIG = Clazz.GetField<string>("RECONNECT_BACKOFF_MS_CONFIG");
-
-        public static readonly string RECONNECT_BACKOFF_MAX_MS_CONFIG = Clazz.GetField<string>("RECONNECT_BACKOFF_MAX_MS_CONFIG");
-
-        public static readonly string RETRIES_CONFIG = Clazz.GetField<string>("RETRIES_CONFIG");
-
-        public static readonly string RETRY_BACKOFF_MS_CONFIG = Clazz.GetField<string>("RETRY_BACKOFF_MS_CONFIG");
-
-        public static readonly string METRICS_SAMPLE_WINDOW_MS_CONFIG = Clazz.GetField<string>("METRICS_SAMPLE_WINDOW_MS_CONFIG");
-
-        public static readonly string METRICS_NUM_SAMPLES_CONFIG = Clazz.GetField<string>("METRICS_NUM_SAMPLES_CONFIG");
-
-        public static readonly string METRICS_RECORDING_LEVEL_CONFIG = Clazz.GetField<string>("METRICS_RECORDING_LEVEL_CONFIG");
-
-        public static readonly string METRIC_REPORTER_CLASSES_CONFIG = Clazz.GetField<string>("METRIC_REPORTER_CLASSES_CONFIG");
-
-        public static readonly string AUTO_INCLUDE_JMX_REPORTER_CONFIG = Clazz.GetField<string>("AUTO_INCLUDE_JMX_REPORTER_CONFIG");
-
-        public static readonly string SECURITY_PROTOCOL_CONFIG = Clazz.GetField<string>("SECURITY_PROTOCOL_CONFIG");
-
-        public static readonly string SOCKET_CONNECTION_SETUP_TIMEOUT_MS_CONFIG = Clazz.GetField<string>("SOCKET_CONNECTION_SETUP_TIMEOUT_MS_CONFIG");
-
-        public static readonly string SOCKET_CONNECTION_SETUP_TIMEOUT_MAX_MS_CONFIG = Clazz.GetField<string>("SOCKET_CONNECTION_SETUP_TIMEOUT_MAX_MS_CONFIG");
-
-        public static readonly string CONNECTIONS_MAX_IDLE_MS_CONFIG = Clazz.GetField<string>("CONNECTIONS_MAX_IDLE_MS_CONFIG");
-
-        public static readonly string REQUEST_TIMEOUT_MS_CONFIG = Clazz.GetField<string>("REQUEST_TIMEOUT_MS_CONFIG");
-
-        public static readonly string DEFAULT_LIST_KEY_SERDE_INNER_CLASS = Clazz.GetField<string>("DEFAULT_LIST_KEY_SERDE_INNER_CLASS");
-
-        public static readonly string DEFAULT_LIST_VALUE_SERDE_INNER_CLASS = Clazz.GetField<string>("DEFAULT_LIST_VALUE_SERDE_INNER_CLASS");
-
-        public static readonly string DEFAULT_LIST_KEY_SERDE_TYPE_CLASS = Clazz.GetField<string>("DEFAULT_LIST_KEY_SERDE_TYPE_CLASS");
-
-        public static readonly string DEFAULT_LIST_VALUE_SERDE_TYPE_CLASS = Clazz.GetField<string>("DEFAULT_LIST_VALUE_SERDE_TYPE_CLASS");
-
-        public static readonly string GROUP_ID_CONFIG = Clazz.GetField<string>("GROUP_ID_CONFIG");
-
-        public static readonly string GROUP_INSTANCE_ID_CONFIG = Clazz.GetField<string>("GROUP_INSTANCE_ID_CONFIG");
-
-        public static readonly string MAX_POLL_INTERVAL_MS_CONFIG = Clazz.GetField<string>("MAX_POLL_INTERVAL_MS_CONFIG");
-
-        public static readonly string REBALANCE_TIMEOUT_MS_CONFIG = Clazz.GetField<string>("REBALANCE_TIMEOUT_MS_CONFIG");
-
-        public static readonly string SESSION_TIMEOUT_MS_CONFIG = Clazz.GetField<string>("SESSION_TIMEOUT_MS_CONFIG");
-
-        public static readonly string HEARTBEAT_INTERVAL_MS_CONFIG = Clazz.GetField<string>("HEARTBEAT_INTERVAL_MS_CONFIG");
-
-        public static readonly string DEFAULT_API_TIMEOUT_MS_CONFIG = Clazz.GetField<string>("DEFAULT_API_TIMEOUT_MS_CONFIG");
-    }
-
     public abstract class CommonClientConfigsBuilder<T> : GenericConfigBuilder<T>
         where T : CommonClientConfigsBuilder<T>, new()
     {
@@ -240,15 +171,6 @@ namespace Org.Apache.Kafka.Clients
 
         [System.Obsolete("To be checked")]
         public List MetricReporterClasses { get { return GetProperty<List>(CommonClientConfigs.METRIC_REPORTER_CLASSES_CONFIG); } set { SetProperty(CommonClientConfigs.METRIC_REPORTER_CLASSES_CONFIG, value); } }
-
-        public bool AutoIncludeJMXReporter { get { return GetProperty<bool>(CommonClientConfigs.AUTO_INCLUDE_JMX_REPORTER_CONFIG); } set { SetProperty(CommonClientConfigs.AUTO_INCLUDE_JMX_REPORTER_CONFIG, value); } }
-
-        public T WithAutoIncludeJMXReporter(bool autoIncludeJMXReporter)
-        {
-            var clone = Clone();
-            clone.AutoIncludeJMXReporter = autoIncludeJMXReporter;
-            return clone;
-        }
 
         [System.Obsolete("To be checked")]
         public T WithMetricReporterClasses(List metricReporterClasses)

@@ -71,32 +71,22 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ByteBufferOutputStream.html#buffer()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ByteBufferOutputStream.html#initialCapacity()"/>
         /// </summary>
-        public Java.Nio.ByteBuffer Buffer
+
+        /// <returns><see cref="int"/></returns>
+        public int InitialCapacity()
         {
-            get { return IExecute<Java.Nio.ByteBuffer>("buffer"); }
+            return IExecute<int>("initialCapacity");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ByteBufferOutputStream.html#initialCapacity()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ByteBufferOutputStream.html#limit()"/>
         /// </summary>
-        public int InitialCapacity
+
+        /// <returns><see cref="int"/></returns>
+        public int Limit()
         {
-            get { return IExecute<int>("initialCapacity"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ByteBufferOutputStream.html#limit()"/> 
-        /// </summary>
-        public int Limit
-        {
-            get { return IExecute<int>("limit"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ByteBufferOutputStream.html#remaining()"/> 
-        /// </summary>
-        public int Remaining
-        {
-            get { return IExecute<int>("remaining"); }
+            return IExecute<int>("limit");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ByteBufferOutputStream.html#position()"/>
@@ -106,6 +96,24 @@ namespace Org.Apache.Kafka.Common.Utils
         public int Position()
         {
             return IExecute<int>("position");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ByteBufferOutputStream.html#remaining()"/>
+        /// </summary>
+
+        /// <returns><see cref="int"/></returns>
+        public int Remaining()
+        {
+            return IExecute<int>("remaining");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ByteBufferOutputStream.html#buffer()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
+        public Java.Nio.ByteBuffer Buffer()
+        {
+            return IExecute<Java.Nio.ByteBuffer>("buffer");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ByteBufferOutputStream.html#ensureRemaining(int)"/>

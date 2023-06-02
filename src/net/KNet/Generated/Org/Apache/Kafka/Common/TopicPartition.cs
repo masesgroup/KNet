@@ -59,18 +59,22 @@ namespace Org.Apache.Kafka.Common
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicPartition.html#partition()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicPartition.html#partition()"/>
         /// </summary>
-        public int Partition
+
+        /// <returns><see cref="int"/></returns>
+        public int Partition()
         {
-            get { return IExecute<int>("partition"); }
+            return IExecute<int>("partition");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicPartition.html#topic()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicPartition.html#topic()"/>
         /// </summary>
-        public string Topic
+
+        /// <returns><see cref="string"/></returns>
+        public string Topic()
         {
-            get { return IExecute<string>("topic"); }
+            return IExecute<string>("topic");
         }
 
         #endregion

@@ -21,14 +21,8 @@ namespace Kafka.Admin
     /// <summary>
     /// Class managing AclCommand
     /// </summary>
-    public class AclCommand : MASES.JCOBridge.C2JBridge.JVMBridgeMain<AclCommand>
+    public partial class AclCommand
     {
-        /// <summary>
-        /// Initialize a new <see cref="AclCommand"/>
-        /// </summary>
-        public AclCommand()
-            : base("kafka.admin.AclCommand")
-        {
-        }
+
     }
 }

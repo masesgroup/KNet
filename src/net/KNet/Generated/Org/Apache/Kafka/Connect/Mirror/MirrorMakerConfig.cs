@@ -62,18 +62,13 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorMakerConfig.html#clusterPairs()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorMakerConfig.html#clusterPairs()"/>
         /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Connect.Mirror.SourceAndTarget> ClusterPairs
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Connect.Mirror.SourceAndTarget> ClusterPairs()
         {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Connect.Mirror.SourceAndTarget>>("clusterPairs"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorMakerConfig.html#clusters()"/> 
-        /// </summary>
-        public Java.Util.Set<string> Clusters
-        {
-            get { return IExecute<Java.Util.Set<string>>("clusters"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Connect.Mirror.SourceAndTarget>>("clusterPairs");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorMakerConfig.html#connectorBaseConfig(org.apache.kafka.connect.mirror.SourceAndTarget,java.lang.Class)"/>
@@ -93,6 +88,15 @@ namespace Org.Apache.Kafka.Connect.Mirror
         public Java.Util.Map<string, string> WorkerConfig(Org.Apache.Kafka.Connect.Mirror.SourceAndTarget arg0)
         {
             return IExecute<Java.Util.Map<string, string>>("workerConfig", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorMakerConfig.html#clusters()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<string> Clusters()
+        {
+            return IExecute<Java.Util.Set<string>>("clusters");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorMakerConfig.html#clientConfig(java.lang.String)"/>

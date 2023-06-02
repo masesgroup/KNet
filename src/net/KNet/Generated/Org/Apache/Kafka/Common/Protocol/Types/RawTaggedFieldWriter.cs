@@ -55,11 +55,13 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/RawTaggedFieldWriter.html#numFields()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/RawTaggedFieldWriter.html#numFields()"/>
         /// </summary>
-        public int NumFields
+
+        /// <returns><see cref="int"/></returns>
+        public int NumFields()
         {
-            get { return IExecute<int>("numFields"); }
+            return IExecute<int>("numFields");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/RawTaggedFieldWriter.html#writeRawTags(org.apache.kafka.common.protocol.Writable,int)"/>

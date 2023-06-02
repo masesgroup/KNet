@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Connect.Source
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/ConnectorTransactionBoundaries.html"/>
     /// </summary>
-    public partial class ConnectorTransactionBoundaries : Java.Lang.Enum
+    public partial class ConnectorTransactionBoundaries : Java.Lang.Enum<Org.Apache.Kafka.Connect.Source.ConnectorTransactionBoundaries>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -72,7 +72,7 @@ namespace Org.Apache.Kafka.Connect.Source
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/ExactlyOnceSupport.html"/>
     /// </summary>
-    public partial class ExactlyOnceSupport : Java.Lang.Enum
+    public partial class ExactlyOnceSupport : Java.Lang.Enum<Org.Apache.Kafka.Connect.Source.ExactlyOnceSupport>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -201,7 +201,7 @@ namespace Org.Apache.Kafka.Connect.Source
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceRecord.html"/>
     /// </summary>
-    public partial class SourceRecord : Org.Apache.Kafka.Connect.Connector.ConnectRecord
+    public partial class SourceRecord : Org.Apache.Kafka.Connect.Connector.ConnectRecord<Org.Apache.Kafka.Connect.Source.SourceRecord>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -283,7 +283,7 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTask.TransactionBoundary.html"/>
         /// </summary>
-        public partial class TransactionBoundary : Java.Lang.Enum
+        public partial class TransactionBoundary : Java.Lang.Enum<Org.Apache.Kafka.Connect.Source.SourceTask.TransactionBoundary>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

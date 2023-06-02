@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Streams.Query
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/FailureReason.html"/>
     /// </summary>
-    public partial class FailureReason : Java.Lang.Enum
+    public partial class FailureReason : Java.Lang.Enum<Org.Apache.Kafka.Streams.Query.FailureReason>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

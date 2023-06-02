@@ -54,13 +54,6 @@ namespace Org.Apache.Kafka.Connect.Json
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverter.html#config()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Config.ConfigDef Config
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("config"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverter.html#fromConnectData(java.lang.String,org.apache.kafka.connect.data.Schema,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -84,22 +77,13 @@ namespace Org.Apache.Kafka.Connect.Json
             return IExecuteArray<byte>("fromConnectHeader", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverter.html#asJsonSchema(org.apache.kafka.connect.data.Schema)"/>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverter.html#config()"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
-        /// <returns><see cref="Com.Fasterxml.Jackson.Databind.Node.ObjectNode"/></returns>
-        public Com.Fasterxml.Jackson.Databind.Node.ObjectNode AsJsonSchema(Org.Apache.Kafka.Connect.Data.Schema arg0)
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
+        public Org.Apache.Kafka.Common.Config.ConfigDef Config()
         {
-            return IExecute<Com.Fasterxml.Jackson.Databind.Node.ObjectNode>("asJsonSchema", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverter.html#asConnectSchema(com.fasterxml.jackson.databind.JsonNode)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></returns>
-        public Org.Apache.Kafka.Connect.Data.Schema AsConnectSchema(Com.Fasterxml.Jackson.Databind.JsonNode arg0)
-        {
-            return IExecute<Org.Apache.Kafka.Connect.Data.Schema>("asConnectSchema", arg0);
+            return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("config");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverter.html#toConnectData(java.lang.String,byte[])"/>

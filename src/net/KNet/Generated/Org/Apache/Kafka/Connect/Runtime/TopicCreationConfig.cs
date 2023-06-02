@@ -78,13 +78,6 @@ namespace Org.Apache.Kafka.Connect.Runtime
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/TopicCreationConfig.html#defaultGroupConfigDef()"/> 
-        /// </summary>
-        public static Org.Apache.Kafka.Common.Config.ConfigDef DefaultGroupConfigDef
-        {
-            get { return SExecute<Org.Apache.Kafka.Common.Config.ConfigDef>(LocalBridgeClazz, "defaultGroupConfigDef"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/TopicCreationConfig.html#configDef(java.lang.String,short,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -94,6 +87,15 @@ namespace Org.Apache.Kafka.Connect.Runtime
         public static Org.Apache.Kafka.Common.Config.ConfigDef ConfigDef(string arg0, short arg1, int arg2)
         {
             return SExecute<Org.Apache.Kafka.Common.Config.ConfigDef>(LocalBridgeClazz, "configDef", arg0, arg1, arg2);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/TopicCreationConfig.html#defaultGroupConfigDef()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
+        public static Org.Apache.Kafka.Common.Config.ConfigDef DefaultGroupConfigDef()
+        {
+            return SExecute<Org.Apache.Kafka.Common.Config.ConfigDef>(LocalBridgeClazz, "defaultGroupConfigDef");
         }
 
         #endregion

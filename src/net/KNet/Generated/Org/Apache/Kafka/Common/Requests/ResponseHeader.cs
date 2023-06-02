@@ -78,32 +78,40 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ResponseHeader.html#correlationId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ResponseHeader.html#correlationId()"/>
         /// </summary>
-        public int CorrelationId
+
+        /// <returns><see cref="int"/></returns>
+        public int CorrelationId()
         {
-            get { return IExecute<int>("correlationId"); }
+            return IExecute<int>("correlationId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ResponseHeader.html#data()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ResponseHeader.html#size()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.ApiMessage Data
+
+        /// <returns><see cref="int"/></returns>
+        public int Size()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.ApiMessage>("data"); }
+            return IExecute<int>("size");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ResponseHeader.html#headerVersion()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ResponseHeader.html#data()"/>
         /// </summary>
-        public short HeaderVersion
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.ApiMessage"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.ApiMessage Data()
         {
-            get { return IExecute<short>("headerVersion"); }
+            return IExecute<Org.Apache.Kafka.Common.Protocol.ApiMessage>("data");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ResponseHeader.html#size()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ResponseHeader.html#headerVersion()"/>
         /// </summary>
-        public int Size
+
+        /// <returns><see cref="short"/></returns>
+        public short HeaderVersion()
         {
-            get { return IExecute<int>("size"); }
+            return IExecute<short>("headerVersion");
         }
 
         #endregion

@@ -115,18 +115,22 @@ namespace Org.Apache.Kafka.Streams
             get { return IExecute<Org.Apache.Kafka.Streams.TopologyConfig.TaskConfig>("getTaskConfig"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyConfig.html#isNamedTopology()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyConfig.html#isNamedTopology()"/>
         /// </summary>
-        public bool IsNamedTopology
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsNamedTopology()
         {
-            get { return IExecute<bool>("isNamedTopology"); }
+            return IExecute<bool>("isNamedTopology");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyConfig.html#parseStoreType()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyConfig.html#parseStoreType()"/>
         /// </summary>
-        public Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType ParseStoreType
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType"/></returns>
+        public Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType ParseStoreType()
         {
-            get { return IExecute<Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType>("parseStoreType"); }
+            return IExecute<Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType>("parseStoreType");
         }
 
         #endregion

@@ -66,32 +66,11 @@ namespace Org.Apache.Kafka.Connect.Runtime.Errors
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/errors/RetryWithToleranceOperator.html#error()"/> 
-        /// </summary>
-        public Java.Lang.Throwable Error
-        {
-            get { var obj = IExecute<MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject>("error"); return MASES.JCOBridge.C2JBridge.JVMBridgeException.New<Java.Lang.Throwable>(obj); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/errors/RetryWithToleranceOperator.html#getErrorToleranceType()"/> 
         /// </summary>
         public Org.Apache.Kafka.Connect.Runtime.Errors.ToleranceType ErrorToleranceType
         {
             get { return IExecute<Org.Apache.Kafka.Connect.Runtime.Errors.ToleranceType>("getErrorToleranceType"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/errors/RetryWithToleranceOperator.html#failed()"/> 
-        /// </summary>
-        public bool Failed
-        {
-            get { return IExecute<bool>("failed"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/errors/RetryWithToleranceOperator.html#withinToleranceLimits()"/> 
-        /// </summary>
-        public bool WithinToleranceLimits
-        {
-            get { return IExecute<bool>("withinToleranceLimits"); }
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/errors/RetryWithToleranceOperator.html#execute(org.apache.kafka.connect.runtime.errors.Operation,org.apache.kafka.connect.runtime.errors.Stage,java.lang.Class)"/>
@@ -104,6 +83,33 @@ namespace Org.Apache.Kafka.Connect.Runtime.Errors
         public V Execute<V>(Org.Apache.Kafka.Connect.Runtime.Errors.Operation<V> arg0, Org.Apache.Kafka.Connect.Runtime.Errors.Stage arg1, Java.Lang.Class arg2)
         {
             return IExecute<V>("execute", arg0, arg1, arg2);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/errors/RetryWithToleranceOperator.html#failed()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool Failed()
+        {
+            return IExecute<bool>("failed");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/errors/RetryWithToleranceOperator.html#withinToleranceLimits()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool WithinToleranceLimits()
+        {
+            return IExecute<bool>("withinToleranceLimits");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/errors/RetryWithToleranceOperator.html#error()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Lang.Throwable"/></returns>
+        public Java.Lang.Throwable Error()
+        {
+            var obj = IExecute<MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject>("error"); return MASES.JCOBridge.C2JBridge.JVMBridgeException.New<Java.Lang.Throwable>(obj);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/errors/RetryWithToleranceOperator.html#executeFailed(org.apache.kafka.connect.runtime.errors.Stage,java.lang.Class,org.apache.kafka.clients.consumer.ConsumerRecord,java.lang.Throwable)"/>

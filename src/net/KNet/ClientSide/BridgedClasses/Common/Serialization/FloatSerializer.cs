@@ -16,18 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
+
 namespace Org.Apache.Kafka.Common.Serialization
 {
-    public class FloatSerializer : Serializer<float>
+    public partial class FloatSerializer
     {
-        public override string ClassName => "org.apache.kafka.common.serialization.FloatSerializer";
-
-        public override bool AutoInit => false;
-
-        public FloatSerializer()
-            : base(null, null, false)
-        {
-
-        }
+        public static implicit operator Serializer<float>(FloatSerializer t) => t.Cast<Serializer<float>>();
     }
 }

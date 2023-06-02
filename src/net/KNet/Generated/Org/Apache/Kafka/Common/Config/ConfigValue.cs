@@ -36,7 +36,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <param name="arg1"><see cref="object"/></param>
         /// <param name="arg2"><see cref="Java.Util.List"/></param>
         /// <param name="arg3"><see cref="Java.Util.List"/></param>
-        public ConfigValue(string arg0, object arg1, Java.Util.List arg2, Java.Util.List arg3)
+        public ConfigValue(string arg0, object arg1, Java.Util.List<object> arg2, Java.Util.List<string> arg3)
             : base(arg0, arg1, arg2, arg3)
         {
         }
@@ -65,20 +65,6 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigValue.html#errorMessages()"/> 
-        /// </summary>
-        public Java.Util.List<string> ErrorMessages
-        {
-            get { return IExecute<Java.Util.List<string>>("errorMessages"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigValue.html#name()"/> 
-        /// </summary>
-        public string Name
-        {
-            get { return IExecute<string>("name"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigValue.html#visible()"/>
         /// </summary>
 
@@ -97,6 +83,15 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecute("value");
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigValue.html#name()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string Name()
+        {
+            return IExecute<string>("name");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigValue.html#recommendedValues()"/>
         /// </summary>
 
@@ -104,6 +99,15 @@ namespace Org.Apache.Kafka.Common.Config
         public Java.Util.List<object> RecommendedValues()
         {
             return IExecute<Java.Util.List<object>>("recommendedValues");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigValue.html#errorMessages()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<string> ErrorMessages()
+        {
+            return IExecute<Java.Util.List<string>>("errorMessages");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigValue.html#addErrorMessage(java.lang.String)"/>

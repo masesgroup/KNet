@@ -79,60 +79,31 @@ namespace Org.Apache.Kafka.Common.Message
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.html#apiKey()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.html#validateOnly()"/>
         /// </summary>
-        public short ApiKey
+
+        /// <returns><see cref="bool"/></returns>
+        public bool ValidateOnly()
         {
-            get { return IExecute<short>("apiKey"); }
+            return IExecute<bool>("validateOnly");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.html#duplicate()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.html#timeoutMs()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.Message Duplicate
+
+        /// <returns><see cref="int"/></returns>
+        public int TimeoutMs()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate"); }
+            return IExecute<int>("timeoutMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.html#featureUpdates()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.html#unknownTaggedFields()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Message.UpdateFeaturesRequestData.FeatureUpdateKeyCollection FeatureUpdates
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Message.UpdateFeaturesRequestData.FeatureUpdateKeyCollection>("featureUpdates"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.html#highestSupportedVersion()"/> 
-        /// </summary>
-        public short HighestSupportedVersion
-        {
-            get { return IExecute<short>("highestSupportedVersion"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.html#lowestSupportedVersion()"/> 
-        /// </summary>
-        public short LowestSupportedVersion
-        {
-            get { return IExecute<short>("lowestSupportedVersion"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.html#timeoutMs()"/> 
-        /// </summary>
-        public int TimeoutMs
-        {
-            get { return IExecute<int>("timeoutMs"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.html#unknownTaggedFields()"/> 
-        /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields
-        {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.html#validateOnly()"/> 
-        /// </summary>
-        public bool ValidateOnly
-        {
-            get { return IExecute<bool>("validateOnly"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.html#setFeatureUpdates(org.apache.kafka.common.message.UpdateFeaturesRequestData.FeatureUpdateKeyCollection)"/>
@@ -160,6 +131,51 @@ namespace Org.Apache.Kafka.Common.Message
         public Org.Apache.Kafka.Common.Message.UpdateFeaturesRequestData SetValidateOnly(bool arg0)
         {
             return IExecute<Org.Apache.Kafka.Common.Message.UpdateFeaturesRequestData>("setValidateOnly", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.html#featureUpdates()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Message.UpdateFeaturesRequestData.FeatureUpdateKeyCollection"/></returns>
+        public Org.Apache.Kafka.Common.Message.UpdateFeaturesRequestData.FeatureUpdateKeyCollection FeatureUpdates()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Message.UpdateFeaturesRequestData.FeatureUpdateKeyCollection>("featureUpdates");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.html#duplicate()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.Message Duplicate()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.html#apiKey()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short ApiKey()
+        {
+            return IExecute<short>("apiKey");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.html#highestSupportedVersion()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short HighestSupportedVersion()
+        {
+            return IExecute<short>("highestSupportedVersion");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.html#lowestSupportedVersion()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short LowestSupportedVersion()
+        {
+            return IExecute<short>("lowestSupportedVersion");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>
@@ -248,74 +264,13 @@ namespace Org.Apache.Kafka.Common.Message
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.FeatureUpdateKey.html#allowDowngrade()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.FeatureUpdateKey.html#allowDowngrade()"/>
             /// </summary>
-            public bool AllowDowngrade
+
+            /// <returns><see cref="bool"/></returns>
+            public bool AllowDowngrade()
             {
-                get { return IExecute<bool>("allowDowngrade"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.FeatureUpdateKey.html#duplicate()"/> 
-            /// </summary>
-            public Org.Apache.Kafka.Common.Protocol.Message Duplicate
-            {
-                get { return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.FeatureUpdateKey.html#feature()"/> 
-            /// </summary>
-            public string Feature
-            {
-                get { return IExecute<string>("feature"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.FeatureUpdateKey.html#highestSupportedVersion()"/> 
-            /// </summary>
-            public short HighestSupportedVersion
-            {
-                get { return IExecute<short>("highestSupportedVersion"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.FeatureUpdateKey.html#lowestSupportedVersion()"/> 
-            /// </summary>
-            public short LowestSupportedVersion
-            {
-                get { return IExecute<short>("lowestSupportedVersion"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.FeatureUpdateKey.html#maxVersionLevel()"/> 
-            /// </summary>
-            public short MaxVersionLevel
-            {
-                get { return IExecute<short>("maxVersionLevel"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.FeatureUpdateKey.html#next()"/> 
-            /// </summary>
-            public int Next
-            {
-                get { return IExecute<int>("next"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.FeatureUpdateKey.html#prev()"/> 
-            /// </summary>
-            public int Prev
-            {
-                get { return IExecute<int>("prev"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.FeatureUpdateKey.html#unknownTaggedFields()"/> 
-            /// </summary>
-            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields
-            {
-                get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.FeatureUpdateKey.html#upgradeType()"/> 
-            /// </summary>
-            public byte UpgradeType
-            {
-                get { return IExecute<byte>("upgradeType"); }
+                return IExecute<bool>("allowDowngrade");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.FeatureUpdateKey.html#elementKeysAreEqual(java.lang.Object)"/>
@@ -325,6 +280,51 @@ namespace Org.Apache.Kafka.Common.Message
             public bool ElementKeysAreEqual(object arg0)
             {
                 return IExecute<bool>("elementKeysAreEqual", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.FeatureUpdateKey.html#upgradeType()"/>
+            /// </summary>
+
+            /// <returns><see cref="byte"/></returns>
+            public byte UpgradeType()
+            {
+                return IExecute<byte>("upgradeType");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.FeatureUpdateKey.html#next()"/>
+            /// </summary>
+
+            /// <returns><see cref="int"/></returns>
+            public int Next()
+            {
+                return IExecute<int>("next");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.FeatureUpdateKey.html#prev()"/>
+            /// </summary>
+
+            /// <returns><see cref="int"/></returns>
+            public int Prev()
+            {
+                return IExecute<int>("prev");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.FeatureUpdateKey.html#feature()"/>
+            /// </summary>
+
+            /// <returns><see cref="string"/></returns>
+            public string Feature()
+            {
+                return IExecute<string>("feature");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.FeatureUpdateKey.html#unknownTaggedFields()"/>
+            /// </summary>
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields()
+            {
+                return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.FeatureUpdateKey.html#setAllowDowngrade(boolean)"/>
@@ -361,6 +361,42 @@ namespace Org.Apache.Kafka.Common.Message
             public Org.Apache.Kafka.Common.Message.UpdateFeaturesRequestData.FeatureUpdateKey SetUpgradeType(byte arg0)
             {
                 return IExecute<Org.Apache.Kafka.Common.Message.UpdateFeaturesRequestData.FeatureUpdateKey>("setUpgradeType", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.FeatureUpdateKey.html#duplicate()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
+            public Org.Apache.Kafka.Common.Protocol.Message Duplicate()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.FeatureUpdateKey.html#highestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short HighestSupportedVersion()
+            {
+                return IExecute<short>("highestSupportedVersion");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.FeatureUpdateKey.html#lowestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short LowestSupportedVersion()
+            {
+                return IExecute<short>("lowestSupportedVersion");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.FeatureUpdateKey.html#maxVersionLevel()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short MaxVersionLevel()
+            {
+                return IExecute<short>("maxVersionLevel");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.FeatureUpdateKey.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>
@@ -434,7 +470,7 @@ namespace Org.Apache.Kafka.Common.Message
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.FeatureUpdateKeyCollection.html#%3Cinit%3E(java.util.Iterator)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Iterator"/></param>
-            public FeatureUpdateKeyCollection(Java.Util.Iterator arg0)
+            public FeatureUpdateKeyCollection(Java.Util.Iterator<Org.Apache.Kafka.Common.Message.UpdateFeaturesRequestData.FeatureUpdateKey> arg0)
                 : base(arg0)
             {
             }
@@ -455,13 +491,6 @@ namespace Org.Apache.Kafka.Common.Message
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.FeatureUpdateKeyCollection.html#duplicate()"/> 
-            /// </summary>
-            public Org.Apache.Kafka.Common.Message.UpdateFeaturesRequestData.FeatureUpdateKeyCollection Duplicate
-            {
-                get { return IExecute<Org.Apache.Kafka.Common.Message.UpdateFeaturesRequestData.FeatureUpdateKeyCollection>("duplicate"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.FeatureUpdateKeyCollection.html#findAll(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
@@ -478,6 +507,15 @@ namespace Org.Apache.Kafka.Common.Message
             public Org.Apache.Kafka.Common.Message.UpdateFeaturesRequestData.FeatureUpdateKey Find(string arg0)
             {
                 return IExecute<Org.Apache.Kafka.Common.Message.UpdateFeaturesRequestData.FeatureUpdateKey>("find", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.FeatureUpdateKeyCollection.html#duplicate()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Message.UpdateFeaturesRequestData.FeatureUpdateKeyCollection"/></returns>
+            public Org.Apache.Kafka.Common.Message.UpdateFeaturesRequestData.FeatureUpdateKeyCollection Duplicate()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Message.UpdateFeaturesRequestData.FeatureUpdateKeyCollection>("duplicate");
             }
 
             #endregion

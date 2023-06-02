@@ -70,27 +70,6 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractRequest.html#apiKey()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.ApiKeys ApiKey
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.ApiKeys>("apiKey"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractRequest.html#serialize()"/> 
-        /// </summary>
-        public Java.Nio.ByteBuffer Serialize
-        {
-            get { return IExecute<Java.Nio.ByteBuffer>("serialize"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractRequest.html#version()"/> 
-        /// </summary>
-        public short Version
-        {
-            get { return IExecute<short>("version"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractRequest.html#getErrorResponse(int,java.lang.Throwable)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
@@ -99,6 +78,15 @@ namespace Org.Apache.Kafka.Common.Requests
         public Org.Apache.Kafka.Common.Requests.AbstractResponse GetErrorResponse(int arg0, Java.Lang.Throwable arg1)
         {
             return IExecute<Org.Apache.Kafka.Common.Requests.AbstractResponse>("getErrorResponse", arg0, arg1);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractRequest.html#serialize()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
+        public Java.Nio.ByteBuffer Serialize()
+        {
+            return IExecute<Java.Nio.ByteBuffer>("serialize");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractRequest.html#serializeWithHeader(org.apache.kafka.common.requests.RequestHeader)"/>
@@ -137,6 +125,15 @@ namespace Org.Apache.Kafka.Common.Requests
             return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.Protocol.Errors, int?>>("errorCounts", arg0);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractRequest.html#apiKey()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.ApiKeys"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.ApiKeys ApiKey()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Protocol.ApiKeys>("apiKey");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractRequest.html#getErrorResponse(java.lang.Throwable)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Throwable"/></param>
@@ -144,6 +141,15 @@ namespace Org.Apache.Kafka.Common.Requests
         public Org.Apache.Kafka.Common.Requests.AbstractResponse GetErrorResponse(Java.Lang.Throwable arg0)
         {
             return IExecute<Org.Apache.Kafka.Common.Requests.AbstractResponse>("getErrorResponse", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractRequest.html#version()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short Version()
+        {
+            return IExecute<short>("version");
         }
 
         #endregion
@@ -197,27 +203,6 @@ namespace Org.Apache.Kafka.Common.Requests
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractRequest.Builder.html#apiKey()"/> 
-            /// </summary>
-            public Org.Apache.Kafka.Common.Protocol.ApiKeys ApiKey
-            {
-                get { return IExecute<Org.Apache.Kafka.Common.Protocol.ApiKeys>("apiKey"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractRequest.Builder.html#latestAllowedVersion()"/> 
-            /// </summary>
-            public short LatestAllowedVersion
-            {
-                get { return IExecute<short>("latestAllowedVersion"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractRequest.Builder.html#oldestAllowedVersion()"/> 
-            /// </summary>
-            public short OldestAllowedVersion
-            {
-                get { return IExecute<short>("oldestAllowedVersion"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractRequest.Builder.html#build(short)"/>
             /// </summary>
             /// <param name="arg0"><see cref="short"/></param>
@@ -225,6 +210,33 @@ namespace Org.Apache.Kafka.Common.Requests
             public Org.Apache.Kafka.Common.Requests.AbstractRequest Build(short arg0)
             {
                 return IExecute<Org.Apache.Kafka.Common.Requests.AbstractRequest>("build", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractRequest.Builder.html#apiKey()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.ApiKeys"/></returns>
+            public Org.Apache.Kafka.Common.Protocol.ApiKeys ApiKey()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Protocol.ApiKeys>("apiKey");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractRequest.Builder.html#latestAllowedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short LatestAllowedVersion()
+            {
+                return IExecute<short>("latestAllowedVersion");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractRequest.Builder.html#oldestAllowedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short OldestAllowedVersion()
+            {
+                return IExecute<short>("oldestAllowedVersion");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractRequest.Builder.html#build()"/>
@@ -298,27 +310,6 @@ namespace Org.Apache.Kafka.Common.Requests
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractRequest.Builder.html#apiKey()"/> 
-            /// </summary>
-            public Org.Apache.Kafka.Common.Protocol.ApiKeys ApiKey
-            {
-                get { return IExecute<Org.Apache.Kafka.Common.Protocol.ApiKeys>("apiKey"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractRequest.Builder.html#latestAllowedVersion()"/> 
-            /// </summary>
-            public short LatestAllowedVersion
-            {
-                get { return IExecute<short>("latestAllowedVersion"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractRequest.Builder.html#oldestAllowedVersion()"/> 
-            /// </summary>
-            public short OldestAllowedVersion
-            {
-                get { return IExecute<short>("oldestAllowedVersion"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractRequest.Builder.html#build(short)"/>
             /// </summary>
             /// <param name="arg0"><see cref="short"/></param>
@@ -326,6 +317,33 @@ namespace Org.Apache.Kafka.Common.Requests
             public T Build(short arg0)
             {
                 return IExecute<T>("build", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractRequest.Builder.html#apiKey()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.ApiKeys"/></returns>
+            public Org.Apache.Kafka.Common.Protocol.ApiKeys ApiKey()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Protocol.ApiKeys>("apiKey");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractRequest.Builder.html#latestAllowedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short LatestAllowedVersion()
+            {
+                return IExecute<short>("latestAllowedVersion");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractRequest.Builder.html#oldestAllowedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short OldestAllowedVersion()
+            {
+                return IExecute<short>("oldestAllowedVersion");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractRequest.Builder.html#build()"/>

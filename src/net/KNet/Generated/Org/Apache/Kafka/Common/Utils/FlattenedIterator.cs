@@ -55,11 +55,13 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/FlattenedIterator.html#makeNext()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/FlattenedIterator.html#makeNext()"/>
         /// </summary>
-        public object MakeNext
+
+        /// <returns><see cref="object"/></returns>
+        public object MakeNext()
         {
-            get { return IExecute("makeNext"); }
+            return IExecute("makeNext");
         }
 
         #endregion
@@ -106,11 +108,13 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/FlattenedIterator.html#makeNext()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/FlattenedIterator.html#makeNext()"/>
         /// </summary>
-        public I MakeNext
+
+        /// <returns><typeparamref name="I"/></returns>
+        public I MakeNext()
         {
-            get { return IExecute<I>("makeNext"); }
+            return IExecute<I>("makeNext");
         }
 
         #endregion

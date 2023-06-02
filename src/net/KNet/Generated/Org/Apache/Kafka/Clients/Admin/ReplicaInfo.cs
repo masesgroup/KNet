@@ -56,25 +56,31 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ReplicaInfo.html#isFuture()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ReplicaInfo.html#isFuture()"/>
         /// </summary>
-        public bool IsFuture
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsFuture()
         {
-            get { return IExecute<bool>("isFuture"); }
+            return IExecute<bool>("isFuture");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ReplicaInfo.html#offsetLag()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ReplicaInfo.html#offsetLag()"/>
         /// </summary>
-        public long OffsetLag
+
+        /// <returns><see cref="long"/></returns>
+        public long OffsetLag()
         {
-            get { return IExecute<long>("offsetLag"); }
+            return IExecute<long>("offsetLag");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ReplicaInfo.html#size()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ReplicaInfo.html#size()"/>
         /// </summary>
-        public long Size
+
+        /// <returns><see cref="long"/></returns>
+        public long Size()
         {
-            get { return IExecute<long>("size"); }
+            return IExecute<long>("size");
         }
 
         #endregion

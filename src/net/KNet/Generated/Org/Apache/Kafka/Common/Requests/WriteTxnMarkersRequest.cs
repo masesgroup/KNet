@@ -56,11 +56,13 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/WriteTxnMarkersRequest.html#markers()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/WriteTxnMarkersRequest.html#markers()"/>
         /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Requests.WriteTxnMarkersRequest.TxnMarkerEntry> Markers
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Requests.WriteTxnMarkersRequest.TxnMarkerEntry> Markers()
         {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Requests.WriteTxnMarkersRequest.TxnMarkerEntry>>("markers"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Requests.WriteTxnMarkersRequest.TxnMarkerEntry>>("markers");
         }
 
         #endregion
@@ -83,7 +85,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// </summary>
             /// <param name="arg0"><see cref="short"/></param>
             /// <param name="arg1"><see cref="Java.Util.List"/></param>
-            public Builder(short arg0, Java.Util.List arg1)
+            public Builder(short arg0, Java.Util.List<Org.Apache.Kafka.Common.Requests.WriteTxnMarkersRequest.TxnMarkerEntry> arg1)
                 : base(arg0, arg1)
             {
             }
@@ -130,7 +132,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// <param name="arg2"><see cref="int"/></param>
             /// <param name="arg3"><see cref="Org.Apache.Kafka.Common.Requests.TransactionResult"/></param>
             /// <param name="arg4"><see cref="Java.Util.List"/></param>
-            public TxnMarkerEntry(long arg0, short arg1, int arg2, Org.Apache.Kafka.Common.Requests.TransactionResult arg3, Java.Util.List arg4)
+            public TxnMarkerEntry(long arg0, short arg1, int arg2, Org.Apache.Kafka.Common.Requests.TransactionResult arg3, Java.Util.List<Org.Apache.Kafka.Common.TopicPartition> arg4)
                 : base(arg0, arg1, arg2, arg3, arg4)
             {
             }
@@ -151,39 +153,49 @@ namespace Org.Apache.Kafka.Common.Requests
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/WriteTxnMarkersRequest.TxnMarkerEntry.html#coordinatorEpoch()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/WriteTxnMarkersRequest.TxnMarkerEntry.html#coordinatorEpoch()"/>
             /// </summary>
-            public int CoordinatorEpoch
+
+            /// <returns><see cref="int"/></returns>
+            public int CoordinatorEpoch()
             {
-                get { return IExecute<int>("coordinatorEpoch"); }
+                return IExecute<int>("coordinatorEpoch");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/WriteTxnMarkersRequest.TxnMarkerEntry.html#partitions()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/WriteTxnMarkersRequest.TxnMarkerEntry.html#partitions()"/>
             /// </summary>
-            public Java.Util.List<Org.Apache.Kafka.Common.TopicPartition> Partitions
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<Org.Apache.Kafka.Common.TopicPartition> Partitions()
             {
-                get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.TopicPartition>>("partitions"); }
+                return IExecute<Java.Util.List<Org.Apache.Kafka.Common.TopicPartition>>("partitions");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/WriteTxnMarkersRequest.TxnMarkerEntry.html#producerEpoch()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/WriteTxnMarkersRequest.TxnMarkerEntry.html#producerId()"/>
             /// </summary>
-            public short ProducerEpoch
+
+            /// <returns><see cref="long"/></returns>
+            public long ProducerId()
             {
-                get { return IExecute<short>("producerEpoch"); }
+                return IExecute<long>("producerId");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/WriteTxnMarkersRequest.TxnMarkerEntry.html#producerId()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/WriteTxnMarkersRequest.TxnMarkerEntry.html#transactionResult()"/>
             /// </summary>
-            public long ProducerId
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Requests.TransactionResult"/></returns>
+            public Org.Apache.Kafka.Common.Requests.TransactionResult TransactionResult()
             {
-                get { return IExecute<long>("producerId"); }
+                return IExecute<Org.Apache.Kafka.Common.Requests.TransactionResult>("transactionResult");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/WriteTxnMarkersRequest.TxnMarkerEntry.html#transactionResult()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/WriteTxnMarkersRequest.TxnMarkerEntry.html#producerEpoch()"/>
             /// </summary>
-            public Org.Apache.Kafka.Common.Requests.TransactionResult TransactionResult
+
+            /// <returns><see cref="short"/></returns>
+            public short ProducerEpoch()
             {
-                get { return IExecute<Org.Apache.Kafka.Common.Requests.TransactionResult>("transactionResult"); }
+                return IExecute<short>("producerEpoch");
             }
 
             #endregion

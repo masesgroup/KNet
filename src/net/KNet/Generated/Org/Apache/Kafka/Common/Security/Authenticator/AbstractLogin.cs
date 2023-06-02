@@ -50,18 +50,23 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/AbstractLogin.html#login()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/AbstractLogin.html#login()"/>
         /// </summary>
-        public Javax.Security.Auth.Login.LoginContext Login
+
+        /// <returns><see cref="Javax.Security.Auth.Login.LoginContext"/></returns>
+        /// <exception cref="Javax.Security.Auth.Login.LoginException"/>
+        public Javax.Security.Auth.Login.LoginContext Login()
         {
-            get { return IExecute<Javax.Security.Auth.Login.LoginContext>("login"); }
+            return IExecute<Javax.Security.Auth.Login.LoginContext>("login");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/AbstractLogin.html#subject()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/AbstractLogin.html#subject()"/>
         /// </summary>
-        public Javax.Security.Auth.Subject Subject
+
+        /// <returns><see cref="Javax.Security.Auth.Subject"/></returns>
+        public Javax.Security.Auth.Subject Subject()
         {
-            get { return IExecute<Javax.Security.Auth.Subject>("subject"); }
+            return IExecute<Javax.Security.Auth.Subject>("subject");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/AbstractLogin.html#configure(java.util.Map,java.lang.String,javax.security.auth.login.Configuration,org.apache.kafka.common.security.auth.AuthenticateCallbackHandler)"/>

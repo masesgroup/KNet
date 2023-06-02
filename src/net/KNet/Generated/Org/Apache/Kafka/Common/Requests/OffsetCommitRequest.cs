@@ -91,11 +91,13 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/OffsetCommitRequest.html#offsets()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/OffsetCommitRequest.html#offsets()"/>
         /// </summary>
-        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?> Offsets
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?> Offsets()
         {
-            get { return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?>>("offsets"); }
+            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?>>("offsets");
         }
 
         #endregion

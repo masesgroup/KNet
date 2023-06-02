@@ -42,32 +42,40 @@ namespace Kafka.Admin
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/AdminUtils.html#AdminClientId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/AdminUtils.html#isDebugEnabled()"/>
         /// </summary>
-        public static string AdminClientId
+
+        /// <returns><see cref="bool"/></returns>
+        public static bool IsDebugEnabled()
         {
-            get { return SExecute<string>(LocalBridgeClazz, "AdminClientId"); }
+            return SExecute<bool>(LocalBridgeClazz, "isDebugEnabled");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/AdminUtils.html#isDebugEnabled()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/AdminUtils.html#isTraceEnabled()"/>
         /// </summary>
-        public static bool IsDebugEnabled
+
+        /// <returns><see cref="bool"/></returns>
+        public static bool IsTraceEnabled()
         {
-            get { return SExecute<bool>(LocalBridgeClazz, "isDebugEnabled"); }
+            return SExecute<bool>(LocalBridgeClazz, "isTraceEnabled");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/AdminUtils.html#isTraceEnabled()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/AdminUtils.html#AdminClientId()"/>
         /// </summary>
-        public static bool IsTraceEnabled
+
+        /// <returns><see cref="string"/></returns>
+        public static string AdminClientId()
         {
-            get { return SExecute<bool>(LocalBridgeClazz, "isTraceEnabled"); }
+            return SExecute<string>(LocalBridgeClazz, "AdminClientId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/AdminUtils.html#rand()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/AdminUtils.html#rand()"/>
         /// </summary>
-        public static Java.Util.Random Rand
+
+        /// <returns><see cref="Java.Util.Random"/></returns>
+        public static Java.Util.Random Rand()
         {
-            get { return SExecute<Java.Util.Random>(LocalBridgeClazz, "rand"); }
+            return SExecute<Java.Util.Random>(LocalBridgeClazz, "rand");
         }
 
         #endregion

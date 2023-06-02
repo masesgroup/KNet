@@ -50,16 +50,6 @@ namespace Org.Apache.Kafka.Connect.Json
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonSerializer.html#serialize(java.lang.String,com.fasterxml.jackson.databind.JsonNode)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="Com.Fasterxml.Jackson.Databind.JsonNode"/></param>
-        /// <returns><see cref="byte"/></returns>
-        public byte[] Serialize(string arg0, Com.Fasterxml.Jackson.Databind.JsonNode arg1)
-        {
-            return IExecuteArray<byte>("serialize", arg0, arg1);
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonSerializer.html#serialize(java.lang.String,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>

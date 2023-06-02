@@ -46,18 +46,13 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/FenceProducersResult.html#all()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/FenceProducersResult.html#fencedProducers()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void> All
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>> FencedProducers()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>>("all"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/FenceProducersResult.html#fencedProducers()"/> 
-        /// </summary>
-        public Java.Util.Map<string, Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>> FencedProducers
-        {
-            get { return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>>>("fencedProducers"); }
+            return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>>>("fencedProducers");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/FenceProducersResult.html#producerId(java.lang.String)"/>
@@ -76,6 +71,15 @@ namespace Org.Apache.Kafka.Clients.Admin
         public Org.Apache.Kafka.Common.KafkaFuture<short?> EpochId(string arg0)
         {
             return IExecute<Org.Apache.Kafka.Common.KafkaFuture<short?>>("epochId", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/FenceProducersResult.html#all()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
+        public Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void> All()
+        {
+            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>>("all");
         }
 
         #endregion

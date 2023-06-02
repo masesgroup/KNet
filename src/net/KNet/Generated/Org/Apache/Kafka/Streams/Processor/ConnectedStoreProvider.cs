@@ -46,11 +46,14 @@ namespace Org.Apache.Kafka.Streams.Processor
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/ConnectedStoreProvider.html#stores()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/ConnectedStoreProvider.html#stores()"/>
         /// </summary>
-        public Java.Util.Set Stores
+
+        /// <typeparam name="ReturnExtendsobject"></typeparam>
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Streams.State.StoreBuilder<ReturnExtendsobject>> Stores<ReturnExtendsobject>()
         {
-            get { return IExecute<Java.Util.Set>("stores"); }
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Streams.State.StoreBuilder<ReturnExtendsobject>>>("stores");
         }
 
         #endregion

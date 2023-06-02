@@ -102,25 +102,31 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ProduceRequest.html#acks()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ProduceRequest.html#timeout()"/>
         /// </summary>
-        public short Acks
+
+        /// <returns><see cref="int"/></returns>
+        public int Timeout()
         {
-            get { return IExecute<short>("acks"); }
+            return IExecute<int>("timeout");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ProduceRequest.html#timeout()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ProduceRequest.html#transactionalId()"/>
         /// </summary>
-        public int Timeout
+
+        /// <returns><see cref="string"/></returns>
+        public string TransactionalId()
         {
-            get { return IExecute<int>("timeout"); }
+            return IExecute<string>("transactionalId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ProduceRequest.html#transactionalId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ProduceRequest.html#acks()"/>
         /// </summary>
-        public string TransactionalId
+
+        /// <returns><see cref="short"/></returns>
+        public short Acks()
         {
-            get { return IExecute<string>("transactionalId"); }
+            return IExecute<short>("acks");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ProduceRequest.html#clearPartitionRecords()"/>

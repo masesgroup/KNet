@@ -46,18 +46,13 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#all()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#all()"/>
         /// </summary>
-        public Org.Apache.Kafka.Streams.State.KeyValueIterator All
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.State.KeyValueIterator"/></returns>
+        public Org.Apache.Kafka.Streams.State.KeyValueIterator All()
         {
-            get { return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator>("all"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardAll()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Streams.State.KeyValueIterator BackwardAll
-        {
-            get { return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator>("backwardAll"); }
+            return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator>("all");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch(java.lang.Object,java.lang.Object,java.time.Instant,java.time.Instant)"/>
@@ -104,6 +99,15 @@ namespace Org.Apache.Kafka.Streams.State
         public object Fetch(object arg0, long arg1)
         {
             return IExecute("fetch", arg0, arg1);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardAll()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.State.KeyValueIterator"/></returns>
+        public Org.Apache.Kafka.Streams.State.KeyValueIterator BackwardAll()
+        {
+            return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator>("backwardAll");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetch(java.lang.Object,java.lang.Object,java.time.Instant,java.time.Instant)"/>
@@ -177,18 +181,13 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#all()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#all()"/>
         /// </summary>
-        public Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, V> All
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.State.KeyValueIterator"/></returns>
+        public Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, V> All()
         {
-            get { return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, V>>("all"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardAll()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, V> BackwardAll
-        {
-            get { return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, V>>("backwardAll"); }
+            return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, V>>("all");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch(java.lang.Object,java.lang.Object,java.time.Instant,java.time.Instant)"/>
@@ -235,6 +234,15 @@ namespace Org.Apache.Kafka.Streams.State
         public V Fetch(K arg0, long arg1)
         {
             return IExecute<V>("fetch", arg0, arg1);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardAll()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.State.KeyValueIterator"/></returns>
+        public Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, V> BackwardAll()
+        {
+            return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, V>>("backwardAll");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetch(java.lang.Object,java.lang.Object,java.time.Instant,java.time.Instant)"/>

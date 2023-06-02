@@ -17,19 +17,12 @@
 */
 
 using Java.Nio;
+using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Serialization
 {
-    public class ByteBufferDeserializer : Deserializer<ByteBuffer>
+    public partial class ByteBufferDeserializer
     {
-        public override string ClassName => "org.apache.kafka.common.serialization.ByteBufferDeserializer";
-
-        public override bool AutoInit => false;
-
-        public ByteBufferDeserializer()
-            : base(null, null, false)
-        {
-
-        }
+        public static implicit operator Deserializer<ByteBuffer>(ByteBufferDeserializer t) => t.Cast<Deserializer<ByteBuffer>>();
     }
 }

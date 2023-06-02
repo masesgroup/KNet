@@ -50,13 +50,6 @@ namespace Org.Apache.Kafka.Connect.Runtime.Errors
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/errors/ToleranceType.html#values()"/> 
-        /// </summary>
-        public static Org.Apache.Kafka.Connect.Runtime.Errors.ToleranceType[] Values
-        {
-            get { return SExecuteArray<Org.Apache.Kafka.Connect.Runtime.Errors.ToleranceType>(LocalBridgeClazz, "values"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/errors/ToleranceType.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -65,16 +58,27 @@ namespace Org.Apache.Kafka.Connect.Runtime.Errors
         {
             return SExecute<Org.Apache.Kafka.Connect.Runtime.Errors.ToleranceType>(LocalBridgeClazz, "valueOf", arg0);
         }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/errors/ToleranceType.html#values()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.Errors.ToleranceType"/></returns>
+        public static Org.Apache.Kafka.Connect.Runtime.Errors.ToleranceType[] Values()
+        {
+            return SExecuteArray<Org.Apache.Kafka.Connect.Runtime.Errors.ToleranceType>(LocalBridgeClazz, "values");
+        }
 
         #endregion
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/errors/ToleranceType.html#value()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/errors/ToleranceType.html#value()"/>
         /// </summary>
-        public string Value
+
+        /// <returns><see cref="string"/></returns>
+        public string Value()
         {
-            get { return IExecute<string>("value"); }
+            return IExecute<string>("value");
         }
 
         #endregion

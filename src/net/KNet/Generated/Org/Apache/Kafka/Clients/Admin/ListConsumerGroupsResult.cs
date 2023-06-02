@@ -46,25 +46,31 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListConsumerGroupsResult.html#all()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListConsumerGroupsResult.html#errors()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing>> All
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
+        public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Collection<Java.Lang.Throwable>> Errors()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing>>>("all"); }
+            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Collection<Java.Lang.Throwable>>>("errors");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListConsumerGroupsResult.html#errors()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListConsumerGroupsResult.html#all()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Collection<Java.Lang.Throwable>> Errors
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
+        public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing>> All()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Collection<Java.Lang.Throwable>>>("errors"); }
+            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing>>>("all");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListConsumerGroupsResult.html#valid()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListConsumerGroupsResult.html#valid()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing>> Valid
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
+        public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing>> Valid()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing>>>("valid"); }
+            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing>>>("valid");
         }
 
         #endregion

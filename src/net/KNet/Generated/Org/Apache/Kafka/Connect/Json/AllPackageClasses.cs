@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Connect.Json
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/DecimalFormat.html"/>
     /// </summary>
-    public partial class DecimalFormat : Java.Lang.Enum
+    public partial class DecimalFormat : Java.Lang.Enum<Org.Apache.Kafka.Connect.Json.DecimalFormat>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

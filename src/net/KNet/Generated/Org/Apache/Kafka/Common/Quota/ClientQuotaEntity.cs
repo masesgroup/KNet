@@ -33,7 +33,7 @@ namespace Org.Apache.Kafka.Common.Quota
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/quota/ClientQuotaEntity.html#%3Cinit%3E(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public ClientQuotaEntity(Java.Util.Map arg0)
+        public ClientQuotaEntity(Java.Util.Map<string, string> arg0)
             : base(arg0)
         {
         }
@@ -75,11 +75,13 @@ namespace Org.Apache.Kafka.Common.Quota
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/quota/ClientQuotaEntity.html#entries()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/quota/ClientQuotaEntity.html#entries()"/>
         /// </summary>
-        public Java.Util.Map<string, string> Entries
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, string> Entries()
         {
-            get { return IExecute<Java.Util.Map<string, string>>("entries"); }
+            return IExecute<Java.Util.Map<string, string>>("entries");
         }
 
         #endregion

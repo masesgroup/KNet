@@ -66,13 +66,6 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordType.html#values()"/> 
-        /// </summary>
-        public static Org.Apache.Kafka.Common.Record.ControlRecordType[] Values
-        {
-            get { return SExecuteArray<Org.Apache.Kafka.Common.Record.ControlRecordType>(LocalBridgeClazz, "values"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordType.html#fromTypeId(short)"/>
         /// </summary>
         /// <param name="arg0"><see cref="short"/></param>
@@ -100,6 +93,15 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecute<Org.Apache.Kafka.Common.Record.ControlRecordType>(LocalBridgeClazz, "valueOf", arg0);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordType.html#values()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Record.ControlRecordType"/></returns>
+        public static Org.Apache.Kafka.Common.Record.ControlRecordType[] Values()
+        {
+            return SExecuteArray<Org.Apache.Kafka.Common.Record.ControlRecordType>(LocalBridgeClazz, "values");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordType.html#parseTypeId(java.nio.ByteBuffer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
@@ -113,11 +115,13 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordType.html#recordKey()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordType.html#recordKey()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.Types.Struct RecordKey
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Types.Struct"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.Types.Struct RecordKey()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Struct>("recordKey"); }
+            return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Struct>("recordKey");
         }
 
         #endregion

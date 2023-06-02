@@ -72,18 +72,13 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/ssl/SslFactory.html#reconfigurableConfigs()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/ssl/SslFactory.html#reconfigurableConfigs()"/>
         /// </summary>
-        public Java.Util.Set<string> ReconfigurableConfigs
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<string> ReconfigurableConfigs()
         {
-            get { return IExecute<Java.Util.Set<string>>("reconfigurableConfigs"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/ssl/SslFactory.html#sslEngineFactory()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Security.Auth.SslEngineFactory SslEngineFactory
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Security.Auth.SslEngineFactory>("sslEngineFactory"); }
+            return IExecute<Java.Util.Set<string>>("reconfigurableConfigs");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/ssl/SslFactory.html#createSslEngine(java.lang.String,int)"/>
@@ -103,6 +98,15 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
         public Javax.Net.Ssl.SSLEngine CreateSslEngine(Java.Net.Socket arg0)
         {
             return IExecute<Javax.Net.Ssl.SSLEngine>("createSslEngine", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/ssl/SslFactory.html#sslEngineFactory()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.SslEngineFactory"/></returns>
+        public Org.Apache.Kafka.Common.Security.Auth.SslEngineFactory SslEngineFactory()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Security.Auth.SslEngineFactory>("sslEngineFactory");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/ssl/SslFactory.html#close()"/>

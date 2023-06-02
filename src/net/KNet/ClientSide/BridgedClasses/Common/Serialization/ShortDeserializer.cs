@@ -16,18 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
+
 namespace Org.Apache.Kafka.Common.Serialization
 {
-    public class ShortDeserializer : Deserializer<short>
+    public partial class ShortDeserializer
     {
-        public override string ClassName => "org.apache.kafka.common.serialization.ShortDeserializer";
-
-        public override bool AutoInit => false;
-
-        public ShortDeserializer()
-            : base(null, null, false)
-        {
-
-        }
+        public static implicit operator Deserializer<short>(ShortDeserializer t) => t.Cast<Deserializer<short>>();
     }
 }

@@ -21,14 +21,8 @@ namespace Kafka.Admin
     /// <summary>
     /// Class managing BrokerApiVersionsCommand
     /// </summary>
-    public class BrokerApiVersionsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeMain<BrokerApiVersionsCommand>
+    public partial class BrokerApiVersionsCommand
     {
-        /// <summary>
-        /// Initialize a new <see cref="BrokerApiVersionsCommand"/>
-        /// </summary>
-        public BrokerApiVersionsCommand()
-            : base("kafka.admin.BrokerApiVersionsCommand")
-        {
-        }
+
     }
 }

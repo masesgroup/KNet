@@ -65,20 +65,6 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/LeaderAndIsrResponse.html#error()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.Errors Error
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.Errors>("error"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/LeaderAndIsrResponse.html#topics()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Message.LeaderAndIsrResponseData.LeaderAndIsrTopicErrorCollection Topics
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Message.LeaderAndIsrResponseData.LeaderAndIsrTopicErrorCollection>("topics"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/LeaderAndIsrResponse.html#partitionErrors(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
@@ -86,6 +72,24 @@ namespace Org.Apache.Kafka.Common.Requests
         public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Protocol.Errors> PartitionErrors(Java.Util.Map<Org.Apache.Kafka.Common.Uuid, string> arg0)
         {
             return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Protocol.Errors>>("partitionErrors", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/LeaderAndIsrResponse.html#topics()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Message.LeaderAndIsrResponseData.LeaderAndIsrTopicErrorCollection"/></returns>
+        public Org.Apache.Kafka.Common.Message.LeaderAndIsrResponseData.LeaderAndIsrTopicErrorCollection Topics()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Message.LeaderAndIsrResponseData.LeaderAndIsrTopicErrorCollection>("topics");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/LeaderAndIsrResponse.html#error()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Errors"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.Errors Error()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Protocol.Errors>("error");
         }
 
         #endregion

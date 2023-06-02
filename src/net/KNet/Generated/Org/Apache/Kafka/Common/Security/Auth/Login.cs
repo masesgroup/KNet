@@ -46,25 +46,32 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/Login.html#login()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/Login.html#serviceName()"/>
         /// </summary>
-        public Javax.Security.Auth.Login.LoginContext LoginMethod
+
+        /// <returns><see cref="string"/></returns>
+        public string ServiceName()
         {
-            get { return IExecute<Javax.Security.Auth.Login.LoginContext>("login"); }
+            return IExecute<string>("serviceName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/Login.html#serviceName()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/Login.html#login()"/>
         /// </summary>
-        public string ServiceName
+
+        /// <returns><see cref="Javax.Security.Auth.Login.LoginContext"/></returns>
+        /// <exception cref="Javax.Security.Auth.Login.LoginException"/>
+        public Javax.Security.Auth.Login.LoginContext LoginMethod()
         {
-            get { return IExecute<string>("serviceName"); }
+            return IExecute<Javax.Security.Auth.Login.LoginContext>("login");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/Login.html#subject()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/Login.html#subject()"/>
         /// </summary>
-        public Javax.Security.Auth.Subject Subject
+
+        /// <returns><see cref="Javax.Security.Auth.Subject"/></returns>
+        public Javax.Security.Auth.Subject Subject()
         {
-            get { return IExecute<Javax.Security.Auth.Subject>("subject"); }
+            return IExecute<Javax.Security.Auth.Subject>("subject");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/Login.html#close()"/>

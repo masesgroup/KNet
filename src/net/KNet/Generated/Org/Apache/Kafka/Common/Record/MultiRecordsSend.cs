@@ -34,7 +34,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Queue"/></param>
         /// <param name="arg1"><see cref="long"/></param>
-        public MultiRecordsSend(Java.Util.Queue arg0, long arg1)
+        public MultiRecordsSend(Java.Util.Queue<Org.Apache.Kafka.Common.Network.Send> arg0, long arg1)
             : base(arg0, arg1)
         {
         }
@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MultiRecordsSend.html#%3Cinit%3E(java.util.Queue)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Queue"/></param>
-        public MultiRecordsSend(Java.Util.Queue arg0)
+        public MultiRecordsSend(Java.Util.Queue<Org.Apache.Kafka.Common.Network.Send> arg0)
             : base(arg0)
         {
         }
@@ -67,25 +67,31 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MultiRecordsSend.html#completed()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MultiRecordsSend.html#completed()"/>
         /// </summary>
-        public bool Completed
+
+        /// <returns><see cref="bool"/></returns>
+        public bool Completed()
         {
-            get { return IExecute<bool>("completed"); }
+            return IExecute<bool>("completed");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MultiRecordsSend.html#recordConversionStats()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MultiRecordsSend.html#recordConversionStats()"/>
         /// </summary>
-        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Record.RecordConversionStats> RecordConversionStats
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Record.RecordConversionStats> RecordConversionStats()
         {
-            get { return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Record.RecordConversionStats>>("recordConversionStats"); }
+            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Record.RecordConversionStats>>("recordConversionStats");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MultiRecordsSend.html#size()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MultiRecordsSend.html#size()"/>
         /// </summary>
-        public long Size
+
+        /// <returns><see cref="long"/></returns>
+        public long Size()
         {
-            get { return IExecute<long>("size"); }
+            return IExecute<long>("size");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MultiRecordsSend.html#writeTo(org.apache.kafka.common.network.TransferableChannel)"/>

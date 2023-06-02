@@ -41,10 +41,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Streams.Kstream.SessionWindowedSerializer"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Internals.WindowedSerializer"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Internals.WindowedSerializer(Org.Apache.Kafka.Streams.Kstream.SessionWindowedSerializer t) => t.Cast<Org.Apache.Kafka.Streams.Kstream.Internals.WindowedSerializer>();
 
         #endregion
 
@@ -130,10 +126,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Streams.Kstream.SessionWindowedSerializer{T}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Internals.WindowedSerializer{T}"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Internals.WindowedSerializer<T>(Org.Apache.Kafka.Streams.Kstream.SessionWindowedSerializer<T> t) => t.Cast<Org.Apache.Kafka.Streams.Kstream.Internals.WindowedSerializer<T>>();
         /// <summary>
         /// Converter from <see cref="Org.Apache.Kafka.Streams.Kstream.SessionWindowedSerializer{T}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.SessionWindowedSerializer"/>
         /// </summary>

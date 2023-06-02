@@ -59,46 +59,58 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ProducerState.html#coordinatorEpoch()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ProducerState.html#lastSequence()"/>
         /// </summary>
-        public Java.Util.OptionalInt CoordinatorEpoch
+
+        /// <returns><see cref="int"/></returns>
+        public int LastSequence()
         {
-            get { return IExecute<Java.Util.OptionalInt>("coordinatorEpoch"); }
+            return IExecute<int>("lastSequence");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ProducerState.html#currentTransactionStartOffset()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ProducerState.html#producerEpoch()"/>
         /// </summary>
-        public Java.Util.OptionalLong CurrentTransactionStartOffset
+
+        /// <returns><see cref="int"/></returns>
+        public int ProducerEpoch()
         {
-            get { return IExecute<Java.Util.OptionalLong>("currentTransactionStartOffset"); }
+            return IExecute<int>("producerEpoch");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ProducerState.html#lastSequence()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ProducerState.html#coordinatorEpoch()"/>
         /// </summary>
-        public int LastSequence
+
+        /// <returns><see cref="Java.Util.OptionalInt"/></returns>
+        public Java.Util.OptionalInt CoordinatorEpoch()
         {
-            get { return IExecute<int>("lastSequence"); }
+            return IExecute<Java.Util.OptionalInt>("coordinatorEpoch");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ProducerState.html#lastTimestamp()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ProducerState.html#currentTransactionStartOffset()"/>
         /// </summary>
-        public long LastTimestamp
+
+        /// <returns><see cref="Java.Util.OptionalLong"/></returns>
+        public Java.Util.OptionalLong CurrentTransactionStartOffset()
         {
-            get { return IExecute<long>("lastTimestamp"); }
+            return IExecute<Java.Util.OptionalLong>("currentTransactionStartOffset");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ProducerState.html#producerEpoch()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ProducerState.html#lastTimestamp()"/>
         /// </summary>
-        public int ProducerEpoch
+
+        /// <returns><see cref="long"/></returns>
+        public long LastTimestamp()
         {
-            get { return IExecute<int>("producerEpoch"); }
+            return IExecute<long>("lastTimestamp");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ProducerState.html#producerId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ProducerState.html#producerId()"/>
         /// </summary>
-        public long ProducerId
+
+        /// <returns><see cref="long"/></returns>
+        public long ProducerId()
         {
-            get { return IExecute<long>("producerId"); }
+            return IExecute<long>("producerId");
         }
 
         #endregion

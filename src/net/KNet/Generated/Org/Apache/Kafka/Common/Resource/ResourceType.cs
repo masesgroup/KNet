@@ -74,13 +74,6 @@ namespace Org.Apache.Kafka.Common.Resource
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourceType.html#values()"/> 
-        /// </summary>
-        public static Org.Apache.Kafka.Common.Resource.ResourceType[] Values
-        {
-            get { return SExecuteArray<Org.Apache.Kafka.Common.Resource.ResourceType>(LocalBridgeClazz, "values"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourceType.html#fromCode(byte)"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
@@ -108,23 +101,36 @@ namespace Org.Apache.Kafka.Common.Resource
         {
             return SExecute<Org.Apache.Kafka.Common.Resource.ResourceType>(LocalBridgeClazz, "valueOf", arg0);
         }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourceType.html#values()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Resource.ResourceType"/></returns>
+        public static Org.Apache.Kafka.Common.Resource.ResourceType[] Values()
+        {
+            return SExecuteArray<Org.Apache.Kafka.Common.Resource.ResourceType>(LocalBridgeClazz, "values");
+        }
 
         #endregion
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourceType.html#code()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourceType.html#isUnknown()"/>
         /// </summary>
-        public byte Code
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsUnknown()
         {
-            get { return IExecute<byte>("code"); }
+            return IExecute<bool>("isUnknown");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourceType.html#isUnknown()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourceType.html#code()"/>
         /// </summary>
-        public bool IsUnknown
+
+        /// <returns><see cref="byte"/></returns>
+        public byte Code()
         {
-            get { return IExecute<bool>("isUnknown"); }
+            return IExecute<byte>("code");
         }
 
         #endregion

@@ -58,22 +58,26 @@ namespace Org.Apache.Kafka.Connect.Storage
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/StringConverterConfig.html#configDef()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/StringConverterConfig.html#configDef()"/>
         /// </summary>
-        public static Org.Apache.Kafka.Common.Config.ConfigDef ConfigDef
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
+        public static Org.Apache.Kafka.Common.Config.ConfigDef ConfigDef()
         {
-            get { return SExecute<Org.Apache.Kafka.Common.Config.ConfigDef>(LocalBridgeClazz, "configDef"); }
+            return SExecute<Org.Apache.Kafka.Common.Config.ConfigDef>(LocalBridgeClazz, "configDef");
         }
 
         #endregion
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/StringConverterConfig.html#encoding()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/StringConverterConfig.html#encoding()"/>
         /// </summary>
-        public string Encoding
+
+        /// <returns><see cref="string"/></returns>
+        public string Encoding()
         {
-            get { return IExecute<string>("encoding"); }
+            return IExecute<string>("encoding");
         }
 
         #endregion

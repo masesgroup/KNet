@@ -55,20 +55,6 @@ namespace Org.Apache.Kafka.Clients
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/FetchSessionHandler.html#sessionTopicNames()"/> 
-        /// </summary>
-        public Java.Util.Map<Org.Apache.Kafka.Common.Uuid, string> SessionTopicNames
-        {
-            get { return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.Uuid, string>>("sessionTopicNames"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/FetchSessionHandler.html#sessionTopicPartitions()"/> 
-        /// </summary>
-        public Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> SessionTopicPartitions
-        {
-            get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition>>("sessionTopicPartitions"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/FetchSessionHandler.html#handleResponse(org.apache.kafka.common.requests.FetchResponse,short)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Requests.FetchResponse"/></param>
@@ -77,6 +63,24 @@ namespace Org.Apache.Kafka.Clients
         public bool HandleResponse(Org.Apache.Kafka.Common.Requests.FetchResponse arg0, short arg1)
         {
             return IExecute<bool>("handleResponse", arg0, arg1);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/FetchSessionHandler.html#sessionTopicNames()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<Org.Apache.Kafka.Common.Uuid, string> SessionTopicNames()
+        {
+            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.Uuid, string>>("sessionTopicNames");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/FetchSessionHandler.html#sessionTopicPartitions()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> SessionTopicPartitions()
+        {
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition>>("sessionTopicPartitions");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/FetchSessionHandler.html#newBuilder()"/>
@@ -130,11 +134,13 @@ namespace Org.Apache.Kafka.Clients
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/FetchSessionHandler.Builder.html#build()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/FetchSessionHandler.Builder.html#build()"/>
             /// </summary>
-            public Org.Apache.Kafka.Clients.FetchSessionHandler.FetchRequestData Build
+
+            /// <returns><see cref="Org.Apache.Kafka.Clients.FetchSessionHandler.FetchRequestData"/></returns>
+            public Org.Apache.Kafka.Clients.FetchSessionHandler.FetchRequestData Build()
             {
-                get { return IExecute<Org.Apache.Kafka.Clients.FetchSessionHandler.FetchRequestData>("build"); }
+                return IExecute<Org.Apache.Kafka.Clients.FetchSessionHandler.FetchRequestData>("build");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/FetchSessionHandler.Builder.html#add(org.apache.kafka.common.TopicPartition,org.apache.kafka.common.requests.FetchRequest.PartitionData)"/>
@@ -177,46 +183,58 @@ namespace Org.Apache.Kafka.Clients
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/FetchSessionHandler.FetchRequestData.html#canUseTopicIds()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/FetchSessionHandler.FetchRequestData.html#canUseTopicIds()"/>
             /// </summary>
-            public bool CanUseTopicIds
+
+            /// <returns><see cref="bool"/></returns>
+            public bool CanUseTopicIds()
             {
-                get { return IExecute<bool>("canUseTopicIds"); }
+                return IExecute<bool>("canUseTopicIds");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/FetchSessionHandler.FetchRequestData.html#metadata()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/FetchSessionHandler.FetchRequestData.html#toForget()"/>
             /// </summary>
-            public Org.Apache.Kafka.Common.Requests.FetchMetadata Metadata
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<Org.Apache.Kafka.Common.TopicIdPartition> ToForget()
             {
-                get { return IExecute<Org.Apache.Kafka.Common.Requests.FetchMetadata>("metadata"); }
+                return IExecute<Java.Util.List<Org.Apache.Kafka.Common.TopicIdPartition>>("toForget");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/FetchSessionHandler.FetchRequestData.html#sessionPartitions()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/FetchSessionHandler.FetchRequestData.html#toReplace()"/>
             /// </summary>
-            public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Requests.FetchRequest.PartitionData> SessionPartitions
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<Org.Apache.Kafka.Common.TopicIdPartition> ToReplace()
             {
-                get { return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Requests.FetchRequest.PartitionData>>("sessionPartitions"); }
+                return IExecute<Java.Util.List<Org.Apache.Kafka.Common.TopicIdPartition>>("toReplace");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/FetchSessionHandler.FetchRequestData.html#toForget()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/FetchSessionHandler.FetchRequestData.html#sessionPartitions()"/>
             /// </summary>
-            public Java.Util.List<Org.Apache.Kafka.Common.TopicIdPartition> ToForget
+
+            /// <returns><see cref="Java.Util.Map"/></returns>
+            public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Requests.FetchRequest.PartitionData> SessionPartitions()
             {
-                get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.TopicIdPartition>>("toForget"); }
+                return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Requests.FetchRequest.PartitionData>>("sessionPartitions");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/FetchSessionHandler.FetchRequestData.html#toReplace()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/FetchSessionHandler.FetchRequestData.html#toSend()"/>
             /// </summary>
-            public Java.Util.List<Org.Apache.Kafka.Common.TopicIdPartition> ToReplace
+
+            /// <returns><see cref="Java.Util.Map"/></returns>
+            public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Requests.FetchRequest.PartitionData> ToSend()
             {
-                get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.TopicIdPartition>>("toReplace"); }
+                return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Requests.FetchRequest.PartitionData>>("toSend");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/FetchSessionHandler.FetchRequestData.html#toSend()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/FetchSessionHandler.FetchRequestData.html#metadata()"/>
             /// </summary>
-            public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Requests.FetchRequest.PartitionData> ToSend
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Requests.FetchMetadata"/></returns>
+            public Org.Apache.Kafka.Common.Requests.FetchMetadata Metadata()
             {
-                get { return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Requests.FetchRequest.PartitionData>>("toSend"); }
+                return IExecute<Org.Apache.Kafka.Common.Requests.FetchMetadata>("metadata");
             }
 
             #endregion

@@ -18,68 +18,406 @@
 
 using Org.Apache.Kafka.Common.Serialization;
 using Java.Util;
-using Java.Lang;
 using Org.Apache.Kafka.Common.Header;
 using Org.Apache.Kafka.Clients.Producer;
+using MASES.KNet.Serialization;
+using Java.Util.Concurrent;
+using MASES.JCOBridge.C2JBridge;
+using System.Threading.Tasks;
+using System;
 
 namespace MASES.KNet.Producer
 {
+    public class KNetProducerRecord<K, V>
+    {
+        public KNetProducerRecord()
+        {
+        }
+
+        public KNetProducerRecord(string topic, int partition, long timestamp, K key, V value, Headers headers)
+        {
+            Topic = topic;
+            Partition = partition;
+            Timestamp = timestamp;
+            Key = key;
+            Value = value;
+            Headers = headers;
+        }
+
+        public KNetProducerRecord(string topic, int partition, System.DateTime timestamp, K key, V value, Headers headers)
+        {
+            Topic = topic;
+            Partition = partition;
+            Timestamp = new System.DateTimeOffset(timestamp).ToUnixTimeMilliseconds();
+            Key = key;
+            Value = value;
+            Headers = headers;
+        }
+
+        public KNetProducerRecord(string topic, int partition, long timestamp, K key, V value)
+        {
+            Topic = topic;
+            Partition = partition;
+            Timestamp = timestamp;
+            Key = key;
+            Value = value;
+        }
+
+        public KNetProducerRecord(string topic, int partition, System.DateTime timestamp, K key, V value)
+        {
+            Topic = topic;
+            Partition = partition;
+            Timestamp = new System.DateTimeOffset(timestamp).ToUnixTimeMilliseconds();
+            Key = key;
+            Value = value;
+        }
+
+        public KNetProducerRecord(string topic, int partition, K key, V value, Headers headers)
+        {
+            Topic = topic;
+            Partition = partition;
+            Key = key;
+            Value = value;
+            Headers = headers;
+        }
+
+        public KNetProducerRecord(string topic, int partition, K key, V value)
+        {
+            Topic = topic;
+            Partition = partition;
+            Key = key;
+            Value = value;
+        }
+
+        public KNetProducerRecord(string topic, K key, V value)
+        {
+            Topic = topic;
+            Key = key;
+            Value = value;
+        }
+
+        public KNetProducerRecord(string topic, V value)
+        {
+            Topic = topic;
+            Value = value;
+        }
+
+        public string Topic { get; private set; }
+
+        public int Partition { get; private set; }
+
+        public K Key { get; private set; }
+
+        public V Value { get; private set; }
+
+        public long Timestamp { get; private set; }
+
+        public System.DateTime DateTime => System.DateTimeOffset.FromUnixTimeMilliseconds(Timestamp).DateTime;
+
+        public Headers Headers { get; private set; }
+
+        public override string ToString()
+        {
+            return $"Topic: {Topic} - Partition {Partition} - Key {Key} - Value {Value}";
+        }
+    }
+
     /// <summary>
     /// Extends <see cref="IProducer{K, V}"/> adding less intrusive methods which performs better in high throughput applications
     /// </summary>
     /// <typeparam name="K">Same meaning of <see cref="IProducer{K, V}"/></typeparam>
     /// <typeparam name="V">Same meaning of <see cref="IProducer{K, V}"/></typeparam>
-    public interface IKNetProducer<K, V> : IProducer<K, V>
+    public interface IKNetProducer<K, V> : IProducer<byte[], byte[]>
     {
         void SetCallback(Callback callback);
 
-        void Send(string topic, int partition, long timestamp, K key, V value, Iterable<Header> headers);
+        public Future<RecordMetadata> Send(KNetProducerRecord<K, V> record);
+
+        public Future<RecordMetadata> Send(KNetProducerRecord<K, V> record, Callback callback);
+
+        void Send(string topic, int partition, long timestamp, K key, V value, Headers headers);
 
         void Send(string topic, int partition, long timestamp, K key, V value);
 
-        void Send(string topic, int partition, K key, V value, Iterable<Header> headers);
+        void Send(string topic, int partition, K key, V value, Headers headers);
 
         void Send(string topic, int partition, K key, V value);
 
         void Send(string topic, K key, V value);
 
         void Send(string topic, V value);
-    }
-    /// <summary>
-    /// Extends <see cref="KafkaProducer{K, V}"/> adding less intrusive methods which performs better in high throughput applications
-    /// </summary>
-    /// <typeparam name="K">Same meaning of <see cref="KafkaProducer{K, V}"/></typeparam>
-    /// <typeparam name="V">Same meaning of <see cref="KafkaProducer{K, V}"/></typeparam>
-    public class KNetProducer<K, V> : KafkaProducer<K, V>, IKNetProducer<K, V>
-    {
-        public override string ClassName => "org.mases.knet.clients.producer.KNetProducer";
 
-        public KNetProducer()
-        {
-        }
+        void Produce(string topic, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null);
+
+        void Produce(string topic, int partition, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null);
+
+        void Produce(string topic, int partition, long timestamp, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null);
+
+        void Produce(string topic, int partition, DateTime timestamp, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null);
+
+        void Produce(KNetProducerRecord<K, V> record, Action<RecordMetadata, JVMBridgeException> action = null);
+
+        void Produce(string topic, K key, V value, Callback cb = null);
+
+        void Produce(string topic, int partition, K key, V value, Callback cb = null);
+
+        void Produce(string topic, int partition, long timestamp, K key, V value, Callback cb = null);
+
+        void Produce(string topic, int partition, DateTime timestamp, K key, V value, Callback cb = null);
+
+        void Produce(KNetProducerRecord<K, V> record, Callback cb = null);
+
+        Task ProduceAsync(string topic, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null);
+
+        Task ProduceAsync(string topic, int partition, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null);
+
+        Task ProduceAsync(string topic, int partition, long timestamp, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null);
+
+        Task ProduceAsync(string topic, int partition, DateTime timestamp, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null);
+
+        Task ProduceAsync(KNetProducerRecord<K, V> record, Action<RecordMetadata, JVMBridgeException> action = null);
+    }
+
+    /// <summary>
+    /// Extends <see cref="KafkaProducer"/> adding less intrusive methods which performs better in high throughput applications
+    /// </summary>
+    /// <typeparam name="K">Same meaning of <see cref="KafkaProducer"/></typeparam>
+    /// <typeparam name="V">Same meaning of <see cref="KafkaProducer"/></typeparam>
+    public class KNetProducer<K, V> : KafkaProducer<byte[], byte[]>, IKNetProducer<K, V>
+    {
+        public override string BridgeClassName => "org.mases.knet.clients.producer.KNetProducer";
+
+        readonly bool autoCreateSerDes = false;
+        readonly IKNetSerializer<K> _keySerializer;
+        readonly IKNetSerializer<V> _valueSerializer;
 
         public KNetProducer(Properties props)
-            : base(props)
+            : this(props, new KNetSerDes<K>(), new KNetSerDes<V>())
         {
+            autoCreateSerDes = true;
         }
 
-        public KNetProducer(Properties props, Serializer<K> keySerializer, Serializer<V> valueSerializer)
-            : base(props, keySerializer, valueSerializer)
+        public KNetProducer(Properties props, IKNetSerializer<K> keySerializer, IKNetSerializer<V> valueSerializer)
+            : base(CheckProperties(props), keySerializer.KafkaSerializer, valueSerializer.KafkaSerializer)
         {
+            _keySerializer = keySerializer;
+            _valueSerializer = valueSerializer;
+        }
+
+        static Properties CheckProperties(Properties props)
+        {
+            if (!props.ContainsKey(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG))
+            {
+                props.Put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.ByteArraySerializer");
+            }
+            else throw new InvalidOperationException($"KNetProducer auto manages configuration property {ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG}, remove from configuration.");
+
+            if (!props.ContainsKey(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG))
+            {
+                props.Put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.ByteArraySerializer");
+            }
+            else throw new InvalidOperationException($"KNetProducer auto manages configuration property {ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG}, remove from configuration.");
+
+            return props;
+        }
+
+        ~KNetProducer()
+        {
+            if (autoCreateSerDes)
+            {
+                _keySerializer?.Dispose();
+                _valueSerializer?.Dispose();
+            }
+        }
+
+        static ProducerRecord<byte[], byte[]> ToProducerRecord(KNetProducerRecord<K, V> record, IKNetSerializer<K> keySerializer, IKNetSerializer<V> valueSerializer)
+        {
+            var headers = record.Headers;
+            if ((keySerializer.UseHeaders || valueSerializer.UseHeaders) && headers == null)
+            {
+                headers = Headers.Create();
+            }
+
+            return new ProducerRecord<byte[], byte[]>(record.Topic, record.Partition, record.Timestamp,
+                                                      record.Key == null ? null : DataSerialize(keySerializer, record.Topic, record.Key, headers),
+                                                      record.Value == null ? null : DataSerialize(valueSerializer, record.Topic, record.Value, headers),
+                                                      headers);
+        }
+
+        static byte[] DataSerialize<T>(IKNetSerializer<T> serializer, string topic, T data, Headers headers)
+        {
+            if (serializer == null) return null;
+            if (serializer.UseHeaders)
+            {
+                return serializer.SerializeWithHeaders(topic, headers, data);
+            }
+            return serializer.Serialize(topic, data);
         }
 
         public void SetCallback(Callback callback) => IExecute("setCallback", callback);
 
-        public void Send(string topic, int partition, long timestamp, K key, V value, Iterable<Header> headers) => IExecute("send", topic, partition, timestamp, key, value, headers);
+        public Future<RecordMetadata> Send(KNetProducerRecord<K, V> record)
+        {
+            ProducerRecord<byte[], byte[]> kRecord = ToProducerRecord(record, _keySerializer, _valueSerializer);
+            return Send(kRecord);
+        }
 
-        public void Send(string topic, int partition, long timestamp, K key, V value) => IExecute("send", topic, partition, timestamp, key, value);
+        public Future<RecordMetadata> Send(KNetProducerRecord<K, V> record, Callback callback)
+        {
+            ProducerRecord<byte[], byte[]> kRecord = ToProducerRecord(record, _keySerializer, _valueSerializer);
+            return Send(kRecord, callback);
+        }
 
-        public void Send(string topic, int partition, K key, V value, Iterable<Header> headers) => IExecute("send", topic, partition, key, value, headers);
+        public void Send(string topic, int partition, long timestamp, K key, V value, Headers headers)
+        {
+            IExecute("send", topic, partition, timestamp, _keySerializer.SerializeWithHeaders(topic, headers, key), _valueSerializer.SerializeWithHeaders(topic, headers, value), headers);
+        }
 
-        public void Send(string topic, int partition, K key, V value) => IExecute("send", topic, partition, key, value);
+        public void Send(string topic, int partition, long timestamp, K key, V value)
+        {
+            IExecute("send", topic, partition, timestamp, _keySerializer.Serialize(topic, key), _valueSerializer.Serialize(topic, value));
+        }
 
-        public void Send(string topic, K key, V value) => IExecute("send", topic, key, value);
+        public void Send(string topic, int partition, K key, V value, Headers headers)
+        {
+            IExecute("send", topic, partition, _keySerializer.SerializeWithHeaders(topic, headers, key), _valueSerializer.SerializeWithHeaders(topic, headers, value), headers);
+        }
 
-        public void Send(string topic, V value) => IExecute("send", topic, value);
+        public void Send(string topic, int partition, K key, V value)
+        {
+            IExecute("send", topic, partition, _keySerializer.Serialize(topic, key), _valueSerializer.Serialize(topic, value));
+        }
+
+        public void Send(string topic, K key, V value)
+        {
+            IExecute("send", topic, _keySerializer.Serialize(topic, key), _valueSerializer.Serialize(topic, value));
+        }
+
+        public void Send(string topic, V value)
+        {
+            IExecute("send", topic, _valueSerializer.Serialize(topic, value));
+        }
+
+        public void Produce(string topic, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null)
+        {
+            Produce(new KNetProducerRecord<K, V>(topic, key, value), action);
+        }
+
+        public void Produce(string topic, int partition, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null)
+        {
+            Produce(new KNetProducerRecord<K, V>(topic, partition, key, value), action);
+        }
+
+        public void Produce(string topic, int partition, long timestamp, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null)
+        {
+            Produce(new KNetProducerRecord<K, V>(topic, partition, timestamp, key, value), action);
+        }
+
+        public void Produce(string topic, int partition, DateTime timestamp, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null)
+        {
+            Produce(new KNetProducerRecord<K, V>(topic, partition, timestamp, key, value), action);
+        }
+
+        public void Produce(KNetProducerRecord<K, V> record, Action<RecordMetadata, JVMBridgeException> action = null)
+        {
+            Callback cb = null;
+
+            try
+            {
+                if (action != null)
+                {
+                    cb = new Callback(action);
+                }
+                Produce(record, cb);
+            }
+            catch (ExecutionException e)
+            {
+                throw e.InnerException;
+            }
+            finally
+            {
+                cb?.Dispose();
+            }
+        }
+
+        public void Produce(string topic, K key, V value, Callback cb = null)
+        {
+            Produce(new KNetProducerRecord<K, V>(topic, key, value), cb);
+        }
+
+        public void Produce(string topic, int partition, K key, V value, Callback cb = null)
+        {
+            Produce(new KNetProducerRecord<K, V>(topic, partition, key, value), cb);
+        }
+
+        public void Produce(string topic, int partition, long timestamp, K key, V value, Callback cb = null)
+        {
+            Produce(new KNetProducerRecord<K, V>(topic, partition, timestamp, key, value), cb);
+        }
+
+        public void Produce(string topic, int partition, DateTime timestamp, K key, V value, Callback cb = null)
+        {
+            Produce(new KNetProducerRecord<K, V>(topic, partition, timestamp, key, value), cb);
+        }
+
+        public void Produce(KNetProducerRecord<K, V> record, Callback cb = null)
+        {
+            try
+            {
+                Future<RecordMetadata> result;
+                if (cb != null)
+                {
+                    result = this.Send(record, cb);
+                }
+                else
+                {
+                    result = this.Send(record);
+                }
+                result.Get();
+            }
+            catch (ExecutionException e)
+            {
+                throw e.InnerException;
+            }
+            finally
+            {
+                cb?.Dispose();
+            }
+        }
+
+        public async Task ProduceAsync(string topic, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null)
+        {
+            await ProduceAsync(new KNetProducerRecord<K, V>(topic, key, value), action);
+        }
+
+        public async Task ProduceAsync(string topic, int partition, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null)
+        {
+            await ProduceAsync(new KNetProducerRecord<K, V>(topic, partition, key, value), action);
+        }
+
+        public async Task ProduceAsync(string topic, int partition, long timestamp, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null)
+        {
+            await ProduceAsync(new KNetProducerRecord<K, V>(topic, partition, timestamp, key, value), action);
+        }
+
+        public async Task ProduceAsync(string topic, int partition, DateTime timestamp, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null)
+        {
+            await ProduceAsync(new KNetProducerRecord<K, V>(topic, partition, timestamp, key, value), action);
+        }
+
+        public async Task ProduceAsync(KNetProducerRecord<K, V> record, Action<RecordMetadata, JVMBridgeException> action = null)
+        {
+            Task<Task> task = Task.Factory.StartNew(() =>
+            {
+                Produce(record, action);
+                return Task.CompletedTask;
+            });
+
+            await task;
+            if (task.Result.Status == TaskStatus.Faulted && task.Result.Exception != null)
+            {
+                throw task.Result.Exception.Flatten().InnerException;
+            }
+        }
     }
 }

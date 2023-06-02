@@ -39,10 +39,10 @@ namespace Org.Apache.Kafka.Clients.Producer
     /// Listener for Kafka Callback. Extends <see cref="JVMBridgeListener"/>, implements <see cref="ICallback"/>
     /// </summary>
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
-    public class Callback : JVMBridgeListener, ICallback
+    public partial class Callback : ICallback
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.clients.producer.CallbackImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.clients.producer.CallbackImpl";
 
         readonly Action<RecordMetadata, JVMBridgeException> executionFunction = null;
         /// <summary>

@@ -19,7 +19,7 @@
 using MASES.JCOBridge.C2JBridge;
 using System;
 
-namespace Org.Apache.Kafka.Streams.KStream
+namespace Org.Apache.Kafka.Streams.Kstream
 {
     /// <summary>
     /// Listener for Kafka Reducer. Extends <see cref="IJVMBridgeBase"/>
@@ -41,10 +41,10 @@ namespace Org.Apache.Kafka.Streams.KStream
     /// </summary>
     /// <typeparam name="V">The data associated to the event</typeparam>
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
-    public class Reducer<V> : JVMBridgeListener, IReducer<V>
+    public partial class Reducer<V> : IReducer<V>
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.streams.kstream.ReducerImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.streams.kstream.ReducerImpl";
 
         readonly Func<V, V, V> executionFunction = null;
         /// <summary>

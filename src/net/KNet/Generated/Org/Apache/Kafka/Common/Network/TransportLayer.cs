@@ -54,60 +54,78 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#finishConnect()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#finishConnect()"/>
         /// </summary>
-        public bool FinishConnect
+
+        /// <returns><see cref="bool"/></returns>
+        /// <exception cref="Java.Io.IOException"/>
+        public bool FinishConnect()
         {
-            get { return IExecute<bool>("finishConnect"); }
+            return IExecute<bool>("finishConnect");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#hasBytesBuffered()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#hasBytesBuffered()"/>
         /// </summary>
-        public bool HasBytesBuffered
+
+        /// <returns><see cref="bool"/></returns>
+        public bool HasBytesBuffered()
         {
-            get { return IExecute<bool>("hasBytesBuffered"); }
+            return IExecute<bool>("hasBytesBuffered");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#isConnected()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#isConnected()"/>
         /// </summary>
-        public bool IsConnected
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsConnected()
         {
-            get { return IExecute<bool>("isConnected"); }
+            return IExecute<bool>("isConnected");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#isMute()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#isMute()"/>
         /// </summary>
-        public bool IsMute
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsMute()
         {
-            get { return IExecute<bool>("isMute"); }
+            return IExecute<bool>("isMute");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#peerPrincipal()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#ready()"/>
         /// </summary>
-        public Java.Security.Principal PeerPrincipal
+
+        /// <returns><see cref="bool"/></returns>
+        public bool Ready()
         {
-            get { return IExecute<Java.Security.Principal>("peerPrincipal"); }
+            return IExecute<bool>("ready");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#ready()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#selectionKey()"/>
         /// </summary>
-        public bool Ready
+
+        /// <returns><see cref="Java.Nio.Channels.SelectionKey"/></returns>
+        public Java.Nio.Channels.SelectionKey SelectionKey()
         {
-            get { return IExecute<bool>("ready"); }
+            return IExecute<Java.Nio.Channels.SelectionKey>("selectionKey");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#selectionKey()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#socketChannel()"/>
         /// </summary>
-        public Java.Nio.Channels.SelectionKey SelectionKey
+
+        /// <returns><see cref="Java.Nio.Channels.SocketChannel"/></returns>
+        public Java.Nio.Channels.SocketChannel SocketChannel()
         {
-            get { return IExecute<Java.Nio.Channels.SelectionKey>("selectionKey"); }
+            return IExecute<Java.Nio.Channels.SocketChannel>("socketChannel");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#socketChannel()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#peerPrincipal()"/>
         /// </summary>
-        public Java.Nio.Channels.SocketChannel SocketChannel
+
+        /// <returns><see cref="Java.Security.Principal"/></returns>
+        /// <exception cref="Java.Io.IOException"/>
+        public Java.Security.Principal PeerPrincipal()
         {
-            get { return IExecute<Java.Nio.Channels.SocketChannel>("socketChannel"); }
+            return IExecute<Java.Security.Principal>("peerPrincipal");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#addInterestOps(int)"/>

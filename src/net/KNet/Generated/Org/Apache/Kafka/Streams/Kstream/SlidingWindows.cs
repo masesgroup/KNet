@@ -67,18 +67,22 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SlidingWindows.html#gracePeriodMs()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SlidingWindows.html#gracePeriodMs()"/>
         /// </summary>
-        public long GracePeriodMs
+
+        /// <returns><see cref="long"/></returns>
+        public long GracePeriodMs()
         {
-            get { return IExecute<long>("gracePeriodMs"); }
+            return IExecute<long>("gracePeriodMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SlidingWindows.html#timeDifferenceMs()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SlidingWindows.html#timeDifferenceMs()"/>
         /// </summary>
-        public long TimeDifferenceMs
+
+        /// <returns><see cref="long"/></returns>
+        public long TimeDifferenceMs()
         {
-            get { return IExecute<long>("timeDifferenceMs"); }
+            return IExecute<long>("timeDifferenceMs");
         }
 
         #endregion

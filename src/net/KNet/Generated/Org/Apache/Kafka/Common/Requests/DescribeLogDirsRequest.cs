@@ -65,11 +65,13 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeLogDirsRequest.html#isAllTopicPartitions()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeLogDirsRequest.html#isAllTopicPartitions()"/>
         /// </summary>
-        public bool IsAllTopicPartitions
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsAllTopicPartitions()
         {
-            get { return IExecute<bool>("isAllTopicPartitions"); }
+            return IExecute<bool>("isAllTopicPartitions");
         }
 
         #endregion

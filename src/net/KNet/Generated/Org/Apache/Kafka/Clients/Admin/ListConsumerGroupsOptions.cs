@@ -46,11 +46,13 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListConsumerGroupsOptions.html#states()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListConsumerGroupsOptions.html#states()"/>
         /// </summary>
-        public Java.Util.Set<Org.Apache.Kafka.Common.ConsumerGroupState> States
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Common.ConsumerGroupState> States()
         {
-            get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.ConsumerGroupState>>("states"); }
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.ConsumerGroupState>>("states");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListConsumerGroupsOptions.html#inStates(java.util.Set)"/>

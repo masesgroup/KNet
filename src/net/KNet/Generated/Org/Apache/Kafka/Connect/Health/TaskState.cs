@@ -57,11 +57,13 @@ namespace Org.Apache.Kafka.Connect.Health
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/TaskState.html#taskId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/TaskState.html#taskId()"/>
         /// </summary>
-        public int TaskId
+
+        /// <returns><see cref="int"/></returns>
+        public int TaskId()
         {
-            get { return IExecute<int>("taskId"); }
+            return IExecute<int>("taskId");
         }
 
         #endregion

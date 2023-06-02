@@ -33,7 +33,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/RemoveMembersFromConsumerGroupOptions.html#%3Cinit%3E(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
-        public RemoveMembersFromConsumerGroupOptions(Java.Util.Collection arg0)
+        public RemoveMembersFromConsumerGroupOptions(Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.MemberToRemove> arg0)
             : base(arg0)
         {
         }
@@ -54,18 +54,13 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/RemoveMembersFromConsumerGroupOptions.html#members()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/RemoveMembersFromConsumerGroupOptions.html#removeAll()"/>
         /// </summary>
-        public Java.Util.Set<Org.Apache.Kafka.Clients.Admin.MemberToRemove> Members
+
+        /// <returns><see cref="bool"/></returns>
+        public bool RemoveAll()
         {
-            get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Clients.Admin.MemberToRemove>>("members"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/RemoveMembersFromConsumerGroupOptions.html#removeAll()"/> 
-        /// </summary>
-        public bool RemoveAll
-        {
-            get { return IExecute<bool>("removeAll"); }
+            return IExecute<bool>("removeAll");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/RemoveMembersFromConsumerGroupOptions.html#reason()"/>
@@ -75,6 +70,15 @@ namespace Org.Apache.Kafka.Clients.Admin
         public string Reason()
         {
             return IExecute<string>("reason");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/RemoveMembersFromConsumerGroupOptions.html#members()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Clients.Admin.MemberToRemove> Members()
+        {
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Clients.Admin.MemberToRemove>>("members");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/RemoveMembersFromConsumerGroupOptions.html#reason(java.lang.String)"/>

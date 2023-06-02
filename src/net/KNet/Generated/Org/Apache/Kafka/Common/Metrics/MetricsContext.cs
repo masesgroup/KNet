@@ -50,11 +50,13 @@ namespace Org.Apache.Kafka.Common.Metrics
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricsContext.html#contextLabels()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricsContext.html#contextLabels()"/>
         /// </summary>
-        public Java.Util.Map<string, string> ContextLabels
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, string> ContextLabels()
         {
-            get { return IExecute<Java.Util.Map<string, string>>("contextLabels"); }
+            return IExecute<Java.Util.Map<string, string>>("contextLabels");
         }
 
         #endregion

@@ -46,60 +46,31 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Authenticator.html#clientSessionReauthenticationTimeNanos()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Authenticator.html#complete()"/>
         /// </summary>
-        public long? ClientSessionReauthenticationTimeNanos
+
+        /// <returns><see cref="bool"/></returns>
+        public bool Complete()
         {
-            get { return IExecute<long?>("clientSessionReauthenticationTimeNanos"); }
+            return IExecute<bool>("complete");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Authenticator.html#complete()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Authenticator.html#principalSerde()"/>
         /// </summary>
-        public bool Complete
+
+        /// <returns><see cref="Java.Util.Optional"/></returns>
+        public Java.Util.Optional<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipalSerde> PrincipalSerde()
         {
-            get { return IExecute<bool>("complete"); }
+            return IExecute<Java.Util.Optional<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipalSerde>>("principalSerde");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Authenticator.html#connectedClientSupportsReauthentication()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Authenticator.html#principal()"/>
         /// </summary>
-        public bool ConnectedClientSupportsReauthentication
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal"/></returns>
+        public Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal Principal()
         {
-            get { return IExecute<bool>("connectedClientSupportsReauthentication"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Authenticator.html#pollResponseReceivedDuringReauthentication()"/> 
-        /// </summary>
-        public Java.Util.Optional<Org.Apache.Kafka.Common.Network.NetworkReceive> PollResponseReceivedDuringReauthentication
-        {
-            get { return IExecute<Java.Util.Optional<Org.Apache.Kafka.Common.Network.NetworkReceive>>("pollResponseReceivedDuringReauthentication"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Authenticator.html#principal()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal Principal
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal>("principal"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Authenticator.html#principalSerde()"/> 
-        /// </summary>
-        public Java.Util.Optional<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipalSerde> PrincipalSerde
-        {
-            get { return IExecute<Java.Util.Optional<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipalSerde>>("principalSerde"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Authenticator.html#reauthenticationLatencyMs()"/> 
-        /// </summary>
-        public long? ReauthenticationLatencyMs
-        {
-            get { return IExecute<long?>("reauthenticationLatencyMs"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Authenticator.html#serverSessionExpirationTimeNanos()"/> 
-        /// </summary>
-        public long? ServerSessionExpirationTimeNanos
-        {
-            get { return IExecute<long?>("serverSessionExpirationTimeNanos"); }
+            return IExecute<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal>("principal");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Authenticator.html#authenticate()"/>
@@ -110,6 +81,51 @@ namespace Org.Apache.Kafka.Common.Network
         public void Authenticate()
         {
             IExecute("authenticate");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Authenticator.html#connectedClientSupportsReauthentication()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool ConnectedClientSupportsReauthentication()
+        {
+            return IExecute<bool>("connectedClientSupportsReauthentication");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Authenticator.html#clientSessionReauthenticationTimeNanos()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long? ClientSessionReauthenticationTimeNanos()
+        {
+            return IExecute<long?>("clientSessionReauthenticationTimeNanos");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Authenticator.html#reauthenticationLatencyMs()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long? ReauthenticationLatencyMs()
+        {
+            return IExecute<long?>("reauthenticationLatencyMs");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Authenticator.html#serverSessionExpirationTimeNanos()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long? ServerSessionExpirationTimeNanos()
+        {
+            return IExecute<long?>("serverSessionExpirationTimeNanos");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Authenticator.html#pollResponseReceivedDuringReauthentication()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Optional"/></returns>
+        public Java.Util.Optional<Org.Apache.Kafka.Common.Network.NetworkReceive> PollResponseReceivedDuringReauthentication()
+        {
+            return IExecute<Java.Util.Optional<Org.Apache.Kafka.Common.Network.NetworkReceive>>("pollResponseReceivedDuringReauthentication");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Authenticator.html#handleAuthenticationFailure()"/>

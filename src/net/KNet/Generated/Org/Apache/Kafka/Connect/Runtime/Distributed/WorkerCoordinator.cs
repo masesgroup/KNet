@@ -29,28 +29,14 @@ namespace Org.Apache.Kafka.Connect.Runtime.Distributed
     public partial class WorkerCoordinator
     {
         #region Constructors
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.html#%3Cinit%3E(org.apache.kafka.clients.GroupRebalanceConfig,org.apache.kafka.common.utils.LogContext,org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient,org.apache.kafka.common.metrics.Metrics,java.lang.String,org.apache.kafka.common.utils.Time,java.lang.String,org.apache.kafka.connect.storage.ConfigBackingStore,org.apache.kafka.connect.runtime.distributed.WorkerRebalanceListener,org.apache.kafka.connect.runtime.distributed.ConnectProtocolCompatibility,int)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.GroupRebalanceConfig"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Utils.LogContext"/></param>
-        /// <param name="arg2"><see cref="Org.Apache.Kafka.Clients.Consumer.Internals.ConsumerNetworkClient"/></param>
-        /// <param name="arg3"><see cref="Org.Apache.Kafka.Common.Metrics.Metrics"/></param>
-        /// <param name="arg4"><see cref="string"/></param>
-        /// <param name="arg5"><see cref="Org.Apache.Kafka.Common.Utils.Time"/></param>
-        /// <param name="arg6"><see cref="string"/></param>
-        /// <param name="arg7"><see cref="Org.Apache.Kafka.Connect.Storage.ConfigBackingStore"/></param>
-        /// <param name="arg8"><see cref="Org.Apache.Kafka.Connect.Runtime.Distributed.WorkerRebalanceListener"/></param>
-        /// <param name="arg9"><see cref="Org.Apache.Kafka.Connect.Runtime.Distributed.ConnectProtocolCompatibility"/></param>
-        /// <param name="arg10"><see cref="int"/></param>
-        public WorkerCoordinator(Org.Apache.Kafka.Clients.GroupRebalanceConfig arg0, Org.Apache.Kafka.Common.Utils.LogContext arg1, Org.Apache.Kafka.Clients.Consumer.Internals.ConsumerNetworkClient arg2, Org.Apache.Kafka.Common.Metrics.Metrics arg3, string arg4, Org.Apache.Kafka.Common.Utils.Time arg5, string arg6, Org.Apache.Kafka.Connect.Storage.ConfigBackingStore arg7, Org.Apache.Kafka.Connect.Runtime.Distributed.WorkerRebalanceListener arg8, Org.Apache.Kafka.Connect.Runtime.Distributed.ConnectProtocolCompatibility arg9, int arg10)
-            : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10)
-        {
-        }
 
         #endregion
 
         #region Class/Interface conversion operators
+        /// <summary>
+        /// Converter from <see cref="Org.Apache.Kafka.Connect.Runtime.Distributed.WorkerCoordinator"/> to <see cref="Java.Io.Closeable"/>
+        /// </summary>
+        public static implicit operator Java.Io.Closeable(Org.Apache.Kafka.Connect.Runtime.Distributed.WorkerCoordinator t) => t.Cast<Java.Io.Closeable>();
 
         #endregion
 
@@ -75,53 +61,31 @@ namespace Org.Apache.Kafka.Connect.Runtime.Distributed
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.html#configFreshSnapshot()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.html#generationId()"/>
         /// </summary>
-        public Org.Apache.Kafka.Connect.Storage.ClusterConfigState ConfigFreshSnapshot
+
+        /// <returns><see cref="int"/></returns>
+        public int GenerationId()
         {
-            get { return IExecute<Org.Apache.Kafka.Connect.Storage.ClusterConfigState>("configFreshSnapshot"); }
+            return IExecute<int>("generationId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.html#currentProtocolVersion()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.html#lastCompletedGenerationId()"/>
         /// </summary>
-        public short CurrentProtocolVersion
+
+        /// <returns><see cref="int"/></returns>
+        public int LastCompletedGenerationId()
         {
-            get { return IExecute<short>("currentProtocolVersion"); }
+            return IExecute<int>("lastCompletedGenerationId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.html#generationId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.html#memberId()"/>
         /// </summary>
-        public int GenerationId
+
+        /// <returns><see cref="string"/></returns>
+        public string MemberId()
         {
-            get { return IExecute<int>("generationId"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.html#lastCompletedGenerationId()"/> 
-        /// </summary>
-        public int LastCompletedGenerationId
-        {
-            get { return IExecute<int>("lastCompletedGenerationId"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.html#memberId()"/> 
-        /// </summary>
-        public string MemberId
-        {
-            get { return IExecute<string>("memberId"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.html#metadata()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Message.JoinGroupRequestData.JoinGroupRequestProtocolCollection Metadata
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Message.JoinGroupRequestData.JoinGroupRequestProtocolCollection>("metadata"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.html#protocolType()"/> 
-        /// </summary>
-        public string ProtocolType
-        {
-            get { return IExecute<string>("protocolType"); }
+            return IExecute<string>("memberId");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.html#ownerUrl(java.lang.String)"/>
@@ -142,6 +106,33 @@ namespace Org.Apache.Kafka.Connect.Runtime.Distributed
             return IExecute<string>("ownerUrl", arg0);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.html#protocolType()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string ProtocolType()
+        {
+            return IExecute<string>("protocolType");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.html#metadata()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Message.JoinGroupRequestData.JoinGroupRequestProtocolCollection"/></returns>
+        public Org.Apache.Kafka.Common.Message.JoinGroupRequestData.JoinGroupRequestProtocolCollection Metadata()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Message.JoinGroupRequestData.JoinGroupRequestProtocolCollection>("metadata");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.html#configFreshSnapshot()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Storage.ClusterConfigState"/></returns>
+        public Org.Apache.Kafka.Connect.Storage.ClusterConfigState ConfigFreshSnapshot()
+        {
+            return IExecute<Org.Apache.Kafka.Connect.Storage.ClusterConfigState>("configFreshSnapshot");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.html#configSnapshot()"/>
         /// </summary>
 
@@ -149,6 +140,15 @@ namespace Org.Apache.Kafka.Connect.Runtime.Distributed
         public Org.Apache.Kafka.Connect.Storage.ClusterConfigState ConfigSnapshot()
         {
             return IExecute<Org.Apache.Kafka.Connect.Storage.ClusterConfigState>("configSnapshot");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.html#currentProtocolVersion()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short CurrentProtocolVersion()
+        {
+            return IExecute<short>("currentProtocolVersion");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.html#configSnapshot(org.apache.kafka.connect.storage.ClusterConfigState)"/>
@@ -211,32 +211,40 @@ namespace Org.Apache.Kafka.Connect.Runtime.Distributed
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.ConnectorsAndTasks.html#connectors()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.ConnectorsAndTasks.html#isEmpty()"/>
             /// </summary>
-            public Java.Util.Collection<string> Connectors
+
+            /// <returns><see cref="bool"/></returns>
+            public bool IsEmpty()
             {
-                get { return IExecute<Java.Util.Collection<string>>("connectors"); }
+                return IExecute<bool>("isEmpty");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.ConnectorsAndTasks.html#isEmpty()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.ConnectorsAndTasks.html#size()"/>
             /// </summary>
-            public bool IsEmpty
+
+            /// <returns><see cref="int"/></returns>
+            public int Size()
             {
-                get { return IExecute<bool>("isEmpty"); }
+                return IExecute<int>("size");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.ConnectorsAndTasks.html#size()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.ConnectorsAndTasks.html#connectors()"/>
             /// </summary>
-            public int Size
+
+            /// <returns><see cref="Java.Util.Collection"/></returns>
+            public Java.Util.Collection<string> Connectors()
             {
-                get { return IExecute<int>("size"); }
+                return IExecute<Java.Util.Collection<string>>("connectors");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.ConnectorsAndTasks.html#tasks()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.ConnectorsAndTasks.html#tasks()"/>
             /// </summary>
-            public Java.Util.Collection<Org.Apache.Kafka.Connect.Util.ConnectorTaskId> Tasks
+
+            /// <returns><see cref="Java.Util.Collection"/></returns>
+            public Java.Util.Collection<Org.Apache.Kafka.Connect.Util.ConnectorTaskId> Tasks()
             {
-                get { return IExecute<Java.Util.Collection<Org.Apache.Kafka.Connect.Util.ConnectorTaskId>>("tasks"); }
+                return IExecute<Java.Util.Collection<Org.Apache.Kafka.Connect.Util.ConnectorTaskId>>("tasks");
             }
 
             #endregion
@@ -263,11 +271,13 @@ namespace Org.Apache.Kafka.Connect.Runtime.Distributed
 
                 #region Instance methods
                 /// <summary>
-                /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.ConnectorsAndTasks.Builder.html#build()"/> 
+                /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.ConnectorsAndTasks.Builder.html#build()"/>
                 /// </summary>
-                public Org.Apache.Kafka.Connect.Runtime.Distributed.WorkerCoordinator.ConnectorsAndTasks Build
+
+                /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.Distributed.WorkerCoordinator.ConnectorsAndTasks"/></returns>
+                public Org.Apache.Kafka.Connect.Runtime.Distributed.WorkerCoordinator.ConnectorsAndTasks Build()
                 {
-                    get { return IExecute<Org.Apache.Kafka.Connect.Runtime.Distributed.WorkerCoordinator.ConnectorsAndTasks>("build"); }
+                    return IExecute<Org.Apache.Kafka.Connect.Runtime.Distributed.WorkerCoordinator.ConnectorsAndTasks>("build");
                 }
                 /// <summary>
                 /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.ConnectorsAndTasks.Builder.html#addConnectors(java.util.Collection)"/>
@@ -325,7 +335,7 @@ namespace Org.Apache.Kafka.Connect.Runtime.Distributed
             /// <param name="arg0"><see cref="Java.Util.Map"/></param>
             /// <param name="arg1"><see cref="Java.Util.Map"/></param>
             /// <param name="arg2"><see cref="Java.Util.Map"/></param>
-            public LeaderState(Java.Util.Map arg0, Java.Util.Map arg1, Java.Util.Map arg2)
+            public LeaderState(Java.Util.Map<string, Org.Apache.Kafka.Connect.Runtime.Distributed.ExtendedWorkerState> arg0, Java.Util.Map<string, Java.Util.Collection<string>> arg1, Java.Util.Map<string, Java.Util.Collection<Org.Apache.Kafka.Connect.Util.ConnectorTaskId>> arg2)
                 : base(arg0, arg1, arg2)
             {
             }
@@ -373,71 +383,89 @@ namespace Org.Apache.Kafka.Connect.Runtime.Distributed
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.WorkerLoad.html#connectorComparator()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.WorkerLoad.html#connectorComparator()"/>
             /// </summary>
-            public static Java.Util.Comparator<Org.Apache.Kafka.Connect.Runtime.Distributed.WorkerCoordinator.WorkerLoad> ConnectorComparator
+
+            /// <returns><see cref="Java.Util.Comparator"/></returns>
+            public static Java.Util.Comparator<Org.Apache.Kafka.Connect.Runtime.Distributed.WorkerCoordinator.WorkerLoad> ConnectorComparator()
             {
-                get { return SExecute<Java.Util.Comparator<Org.Apache.Kafka.Connect.Runtime.Distributed.WorkerCoordinator.WorkerLoad>>(LocalBridgeClazz, "connectorComparator"); }
+                return SExecute<Java.Util.Comparator<Org.Apache.Kafka.Connect.Runtime.Distributed.WorkerCoordinator.WorkerLoad>>(LocalBridgeClazz, "connectorComparator");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.WorkerLoad.html#taskComparator()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.WorkerLoad.html#taskComparator()"/>
             /// </summary>
-            public static Java.Util.Comparator<Org.Apache.Kafka.Connect.Runtime.Distributed.WorkerCoordinator.WorkerLoad> TaskComparator
+
+            /// <returns><see cref="Java.Util.Comparator"/></returns>
+            public static Java.Util.Comparator<Org.Apache.Kafka.Connect.Runtime.Distributed.WorkerCoordinator.WorkerLoad> TaskComparator()
             {
-                get { return SExecute<Java.Util.Comparator<Org.Apache.Kafka.Connect.Runtime.Distributed.WorkerCoordinator.WorkerLoad>>(LocalBridgeClazz, "taskComparator"); }
+                return SExecute<Java.Util.Comparator<Org.Apache.Kafka.Connect.Runtime.Distributed.WorkerCoordinator.WorkerLoad>>(LocalBridgeClazz, "taskComparator");
             }
 
             #endregion
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.WorkerLoad.html#connectors()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.WorkerLoad.html#isEmpty()"/>
             /// </summary>
-            public Java.Util.Collection<string> Connectors
+
+            /// <returns><see cref="bool"/></returns>
+            public bool IsEmpty()
             {
-                get { return IExecute<Java.Util.Collection<string>>("connectors"); }
+                return IExecute<bool>("isEmpty");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.WorkerLoad.html#connectorsSize()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.WorkerLoad.html#connectorsSize()"/>
             /// </summary>
-            public int ConnectorsSize
+
+            /// <returns><see cref="int"/></returns>
+            public int ConnectorsSize()
             {
-                get { return IExecute<int>("connectorsSize"); }
+                return IExecute<int>("connectorsSize");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.WorkerLoad.html#isEmpty()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.WorkerLoad.html#size()"/>
             /// </summary>
-            public bool IsEmpty
+
+            /// <returns><see cref="int"/></returns>
+            public int Size()
             {
-                get { return IExecute<bool>("isEmpty"); }
+                return IExecute<int>("size");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.WorkerLoad.html#size()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.WorkerLoad.html#tasksSize()"/>
             /// </summary>
-            public int Size
+
+            /// <returns><see cref="int"/></returns>
+            public int TasksSize()
             {
-                get { return IExecute<int>("size"); }
+                return IExecute<int>("tasksSize");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.WorkerLoad.html#tasks()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.WorkerLoad.html#worker()"/>
             /// </summary>
-            public Java.Util.Collection<Org.Apache.Kafka.Connect.Util.ConnectorTaskId> Tasks
+
+            /// <returns><see cref="string"/></returns>
+            public string Worker()
             {
-                get { return IExecute<Java.Util.Collection<Org.Apache.Kafka.Connect.Util.ConnectorTaskId>>("tasks"); }
+                return IExecute<string>("worker");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.WorkerLoad.html#tasksSize()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.WorkerLoad.html#connectors()"/>
             /// </summary>
-            public int TasksSize
+
+            /// <returns><see cref="Java.Util.Collection"/></returns>
+            public Java.Util.Collection<string> Connectors()
             {
-                get { return IExecute<int>("tasksSize"); }
+                return IExecute<Java.Util.Collection<string>>("connectors");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.WorkerLoad.html#worker()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.WorkerLoad.html#tasks()"/>
             /// </summary>
-            public string Worker
+
+            /// <returns><see cref="Java.Util.Collection"/></returns>
+            public Java.Util.Collection<Org.Apache.Kafka.Connect.Util.ConnectorTaskId> Tasks()
             {
-                get { return IExecute<string>("worker"); }
+                return IExecute<Java.Util.Collection<Org.Apache.Kafka.Connect.Util.ConnectorTaskId>>("tasks");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.WorkerLoad.html#assign(java.lang.String)"/>
@@ -488,11 +516,13 @@ namespace Org.Apache.Kafka.Connect.Runtime.Distributed
 
                 #region Instance methods
                 /// <summary>
-                /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.WorkerLoad.Builder.html#build()"/> 
+                /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.WorkerLoad.Builder.html#build()"/>
                 /// </summary>
-                public Org.Apache.Kafka.Connect.Runtime.Distributed.WorkerCoordinator.WorkerLoad Build
+
+                /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.Distributed.WorkerCoordinator.WorkerLoad"/></returns>
+                public Org.Apache.Kafka.Connect.Runtime.Distributed.WorkerCoordinator.WorkerLoad Build()
                 {
-                    get { return IExecute<Org.Apache.Kafka.Connect.Runtime.Distributed.WorkerCoordinator.WorkerLoad>("build"); }
+                    return IExecute<Org.Apache.Kafka.Connect.Runtime.Distributed.WorkerCoordinator.WorkerLoad>("build");
                 }
                 /// <summary>
                 /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/WorkerCoordinator.WorkerLoad.Builder.html#with(java.util.Collection,java.util.Collection)"/>

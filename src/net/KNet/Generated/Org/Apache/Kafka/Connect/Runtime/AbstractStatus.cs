@@ -58,32 +58,31 @@ namespace Org.Apache.Kafka.Connect.Runtime
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/AbstractStatus.html#generation()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/AbstractStatus.html#generation()"/>
         /// </summary>
-        public int Generation
+
+        /// <returns><see cref="int"/></returns>
+        public int Generation()
         {
-            get { return IExecute<int>("generation"); }
+            return IExecute<int>("generation");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/AbstractStatus.html#id()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/AbstractStatus.html#trace()"/>
         /// </summary>
-        public object Id
+
+        /// <returns><see cref="string"/></returns>
+        public string Trace()
         {
-            get { return IExecute("id"); }
+            return IExecute<string>("trace");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/AbstractStatus.html#trace()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/AbstractStatus.html#workerId()"/>
         /// </summary>
-        public string Trace
+
+        /// <returns><see cref="string"/></returns>
+        public string WorkerId()
         {
-            get { return IExecute<string>("trace"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/AbstractStatus.html#workerId()"/> 
-        /// </summary>
-        public string WorkerId
-        {
-            get { return IExecute<string>("workerId"); }
+            return IExecute<string>("workerId");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/AbstractStatus.html#state()"/>
@@ -93,6 +92,15 @@ namespace Org.Apache.Kafka.Connect.Runtime
         public Org.Apache.Kafka.Connect.Runtime.AbstractStatus.State StateMethod()
         {
             return IExecute<Org.Apache.Kafka.Connect.Runtime.AbstractStatus.State>("state");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/AbstractStatus.html#id()"/>
+        /// </summary>
+
+        /// <returns><see cref="object"/></returns>
+        public object Id()
+        {
+            return IExecute("id");
         }
 
         #endregion
@@ -139,13 +147,6 @@ namespace Org.Apache.Kafka.Connect.Runtime
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/AbstractStatus.State.html#values()"/> 
-            /// </summary>
-            public static Org.Apache.Kafka.Connect.Runtime.AbstractStatus.State[] Values
-            {
-                get { return SExecuteArray<Org.Apache.Kafka.Connect.Runtime.AbstractStatus.State>(LocalBridgeClazz, "values"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/AbstractStatus.State.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
@@ -153,6 +154,15 @@ namespace Org.Apache.Kafka.Connect.Runtime
             public static Org.Apache.Kafka.Connect.Runtime.AbstractStatus.State ValueOf(string arg0)
             {
                 return SExecute<Org.Apache.Kafka.Connect.Runtime.AbstractStatus.State>(LocalBridgeClazz, "valueOf", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/AbstractStatus.State.html#values()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.AbstractStatus.State"/></returns>
+            public static Org.Apache.Kafka.Connect.Runtime.AbstractStatus.State[] Values()
+            {
+                return SExecuteArray<Org.Apache.Kafka.Connect.Runtime.AbstractStatus.State>(LocalBridgeClazz, "values");
             }
 
             #endregion
@@ -213,32 +223,31 @@ namespace Org.Apache.Kafka.Connect.Runtime
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/AbstractStatus.html#generation()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/AbstractStatus.html#generation()"/>
         /// </summary>
-        public int Generation
+
+        /// <returns><see cref="int"/></returns>
+        public int Generation()
         {
-            get { return IExecute<int>("generation"); }
+            return IExecute<int>("generation");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/AbstractStatus.html#id()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/AbstractStatus.html#trace()"/>
         /// </summary>
-        public T Id
+
+        /// <returns><see cref="string"/></returns>
+        public string Trace()
         {
-            get { return IExecute<T>("id"); }
+            return IExecute<string>("trace");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/AbstractStatus.html#trace()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/AbstractStatus.html#workerId()"/>
         /// </summary>
-        public string Trace
+
+        /// <returns><see cref="string"/></returns>
+        public string WorkerId()
         {
-            get { return IExecute<string>("trace"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/AbstractStatus.html#workerId()"/> 
-        /// </summary>
-        public string WorkerId
-        {
-            get { return IExecute<string>("workerId"); }
+            return IExecute<string>("workerId");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/AbstractStatus.html#state()"/>
@@ -248,6 +257,15 @@ namespace Org.Apache.Kafka.Connect.Runtime
         public Org.Apache.Kafka.Connect.Runtime.AbstractStatus.State StateMethod()
         {
             return IExecute<Org.Apache.Kafka.Connect.Runtime.AbstractStatus.State>("state");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/AbstractStatus.html#id()"/>
+        /// </summary>
+
+        /// <returns><typeparamref name="T"/></returns>
+        public T Id()
+        {
+            return IExecute<T>("id");
         }
 
         #endregion

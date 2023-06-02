@@ -17,19 +17,12 @@
 */
 
 using Java.Nio;
+using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Serialization
 {
-    public class ByteBufferSerializer : Serializer<ByteBuffer>
+    public partial class ByteBufferSerializer
     {
-        public override string ClassName => "org.apache.kafka.common.serialization.ByteBufferSerializer";
-
-        public override bool AutoInit => false;
-
-        public ByteBufferSerializer()
-            : base(null, null, false)
-        {
-
-        }
+        public static implicit operator Serializer<ByteBuffer>(ByteBufferSerializer t) => t.Cast<Serializer<ByteBuffer>>();
     }
 }

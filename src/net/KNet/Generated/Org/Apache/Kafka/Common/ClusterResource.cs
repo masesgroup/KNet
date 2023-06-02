@@ -54,11 +54,13 @@ namespace Org.Apache.Kafka.Common
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/ClusterResource.html#clusterId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/ClusterResource.html#clusterId()"/>
         /// </summary>
-        public string ClusterId
+
+        /// <returns><see cref="string"/></returns>
+        public string ClusterId()
         {
-            get { return IExecute<string>("clusterId"); }
+            return IExecute<string>("clusterId");
         }
 
         #endregion

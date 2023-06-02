@@ -66,41 +66,6 @@ namespace Org.Apache.Kafka.Connect.Runtime
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerConnector.html#connector()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Connect.Connector.Connector Connector
-        {
-            get { return IExecute<Org.Apache.Kafka.Connect.Connector.Connector>("connector"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerConnector.html#isRunning()"/> 
-        /// </summary>
-        public bool IsRunning
-        {
-            get { return IExecute<bool>("isRunning"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerConnector.html#isSinkConnector()"/> 
-        /// </summary>
-        public bool IsSinkConnector
-        {
-            get { return IExecute<bool>("isSinkConnector"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerConnector.html#isSourceConnector()"/> 
-        /// </summary>
-        public bool IsSourceConnector
-        {
-            get { return IExecute<bool>("isSourceConnector"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerConnector.html#loader()"/> 
-        /// </summary>
-        public Java.Lang.ClassLoader Loader
-        {
-            get { return IExecute<Java.Lang.ClassLoader>("loader"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerConnector.html#awaitShutdown(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
@@ -108,6 +73,51 @@ namespace Org.Apache.Kafka.Connect.Runtime
         public bool AwaitShutdown(long arg0)
         {
             return IExecute<bool>("awaitShutdown", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerConnector.html#isRunning()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsRunning()
+        {
+            return IExecute<bool>("isRunning");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerConnector.html#isSinkConnector()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsSinkConnector()
+        {
+            return IExecute<bool>("isSinkConnector");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerConnector.html#isSourceConnector()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsSourceConnector()
+        {
+            return IExecute<bool>("isSourceConnector");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerConnector.html#loader()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Lang.ClassLoader"/></returns>
+        public Java.Lang.ClassLoader Loader()
+        {
+            return IExecute<Java.Lang.ClassLoader>("loader");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerConnector.html#connector()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Connector.Connector"/></returns>
+        public Org.Apache.Kafka.Connect.Connector.Connector Connector()
+        {
+            return IExecute<Org.Apache.Kafka.Connect.Connector.Connector>("connector");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerConnector.html#cancel()"/>

@@ -46,32 +46,40 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeClusterResult.html#authorizedOperations()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeClusterResult.html#clusterId()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation>> AuthorizedOperations
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
+        public Org.Apache.Kafka.Common.KafkaFuture<string> ClusterId()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation>>>("authorizedOperations"); }
+            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<string>>("clusterId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeClusterResult.html#clusterId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeClusterResult.html#nodes()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.KafkaFuture<string> ClusterId
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
+        public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Collection<Org.Apache.Kafka.Common.Node>> Nodes()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.KafkaFuture<string>>("clusterId"); }
+            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Collection<Org.Apache.Kafka.Common.Node>>>("nodes");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeClusterResult.html#controller()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeClusterResult.html#authorizedOperations()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Common.Node> Controller
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
+        public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation>> AuthorizedOperations()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Common.Node>>("controller"); }
+            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation>>>("authorizedOperations");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeClusterResult.html#nodes()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeClusterResult.html#controller()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Collection<Org.Apache.Kafka.Common.Node>> Nodes
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
+        public Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Common.Node> Controller()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Collection<Org.Apache.Kafka.Common.Node>>>("nodes"); }
+            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Common.Node>>("controller");
         }
 
         #endregion

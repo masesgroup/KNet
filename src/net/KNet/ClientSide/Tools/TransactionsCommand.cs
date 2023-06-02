@@ -21,14 +21,8 @@ namespace Org.Apache.Kafka.Tools
     /// <summary>
     /// Class managing TransactionsCommand
     /// </summary>
-    public class TransactionsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeMain<TransactionsCommand>
+    public partial class TransactionsCommand
     {
-        /// <summary>
-        /// Initialize a new <see cref="TransactionsCommand"/>
-        /// </summary>
-        public TransactionsCommand()
-            : base("org.apache.kafka.tools.TransactionsCommand")
-        {
-        }
+
     }
 }

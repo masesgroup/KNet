@@ -42,13 +42,6 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/PositionBound.html#unbounded()"/> 
-        /// </summary>
-        public static Org.Apache.Kafka.Streams.Query.PositionBound Unbounded
-        {
-            get { return SExecute<Org.Apache.Kafka.Streams.Query.PositionBound>(LocalBridgeClazz, "unbounded"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/PositionBound.html#at(org.apache.kafka.streams.query.Position)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Query.Position"/></param>
@@ -57,23 +50,36 @@ namespace Org.Apache.Kafka.Streams.Query
         {
             return SExecute<Org.Apache.Kafka.Streams.Query.PositionBound>(LocalBridgeClazz, "at", arg0);
         }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/PositionBound.html#unbounded()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Query.PositionBound"/></returns>
+        public static Org.Apache.Kafka.Streams.Query.PositionBound Unbounded()
+        {
+            return SExecute<Org.Apache.Kafka.Streams.Query.PositionBound>(LocalBridgeClazz, "unbounded");
+        }
 
         #endregion
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/PositionBound.html#isUnbounded()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/PositionBound.html#isUnbounded()"/>
         /// </summary>
-        public bool IsUnbounded
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsUnbounded()
         {
-            get { return IExecute<bool>("isUnbounded"); }
+            return IExecute<bool>("isUnbounded");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/PositionBound.html#position()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/PositionBound.html#position()"/>
         /// </summary>
-        public Org.Apache.Kafka.Streams.Query.Position Position
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Query.Position"/></returns>
+        public Org.Apache.Kafka.Streams.Query.Position Position()
         {
-            get { return IExecute<Org.Apache.Kafka.Streams.Query.Position>("position"); }
+            return IExecute<Org.Apache.Kafka.Streams.Query.Position>("position");
         }
 
         #endregion

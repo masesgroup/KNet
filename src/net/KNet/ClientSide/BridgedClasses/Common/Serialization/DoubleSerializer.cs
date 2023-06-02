@@ -16,18 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
+
 namespace Org.Apache.Kafka.Common.Serialization
 {
-    public class DoubleSerializer : Serializer<double>
+    public partial class DoubleSerializer
     {
-        public override string ClassName => "org.apache.kafka.common.serialization.DoubleSerializer";
-
-        public override bool AutoInit => false;
-
-        public DoubleSerializer()
-            : base(null, null, false)
-        {
-
-        }
+        public static implicit operator Serializer<double>(DoubleSerializer t) => t.Cast<Serializer<double>>();
     }
 }

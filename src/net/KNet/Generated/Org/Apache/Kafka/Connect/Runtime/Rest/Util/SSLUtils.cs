@@ -41,34 +41,6 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest.Util
         #endregion
 
         #region Static methods
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/util/SSLUtils.html#createClientSideSslContextFactory(org.apache.kafka.connect.runtime.WorkerConfig)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Runtime.WorkerConfig"/></param>
-        /// <returns><see cref="Org.Eclipse.Jetty.Util.Ssl.SslContextFactory"/></returns>
-        public static Org.Eclipse.Jetty.Util.Ssl.SslContextFactory CreateClientSideSslContextFactory(Org.Apache.Kafka.Connect.Runtime.WorkerConfig arg0)
-        {
-            return SExecute<Org.Eclipse.Jetty.Util.Ssl.SslContextFactory>(LocalBridgeClazz, "createClientSideSslContextFactory", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/util/SSLUtils.html#createServerSideSslContextFactory(org.apache.kafka.connect.runtime.WorkerConfig,java.lang.String)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Runtime.WorkerConfig"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <returns><see cref="Org.Eclipse.Jetty.Util.Ssl.SslContextFactory"/></returns>
-        public static Org.Eclipse.Jetty.Util.Ssl.SslContextFactory CreateServerSideSslContextFactory(Org.Apache.Kafka.Connect.Runtime.WorkerConfig arg0, string arg1)
-        {
-            return SExecute<Org.Eclipse.Jetty.Util.Ssl.SslContextFactory>(LocalBridgeClazz, "createServerSideSslContextFactory", arg0, arg1);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/util/SSLUtils.html#createServerSideSslContextFactory(org.apache.kafka.connect.runtime.WorkerConfig)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Runtime.WorkerConfig"/></param>
-        /// <returns><see cref="Org.Eclipse.Jetty.Util.Ssl.SslContextFactory"/></returns>
-        public static Org.Eclipse.Jetty.Util.Ssl.SslContextFactory CreateServerSideSslContextFactory(Org.Apache.Kafka.Connect.Runtime.WorkerConfig arg0)
-        {
-            return SExecute<Org.Eclipse.Jetty.Util.Ssl.SslContextFactory>(LocalBridgeClazz, "createServerSideSslContextFactory", arg0);
-        }
 
         #endregion
 

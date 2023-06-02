@@ -35,7 +35,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
         /// <param name="arg2"><see cref="Java.Util.Optional"/></param>
-        public ConsumerGroupListing(string arg0, bool arg1, Java.Util.Optional arg2)
+        public ConsumerGroupListing(string arg0, bool arg1, Java.Util.Optional<Org.Apache.Kafka.Common.ConsumerGroupState> arg2)
             : base(arg0, arg1, arg2)
         {
         }
@@ -65,25 +65,31 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConsumerGroupListing.html#groupId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConsumerGroupListing.html#isSimpleConsumerGroup()"/>
         /// </summary>
-        public string GroupId
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsSimpleConsumerGroup()
         {
-            get { return IExecute<string>("groupId"); }
+            return IExecute<bool>("isSimpleConsumerGroup");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConsumerGroupListing.html#isSimpleConsumerGroup()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConsumerGroupListing.html#groupId()"/>
         /// </summary>
-        public bool IsSimpleConsumerGroup
+
+        /// <returns><see cref="string"/></returns>
+        public string GroupId()
         {
-            get { return IExecute<bool>("isSimpleConsumerGroup"); }
+            return IExecute<string>("groupId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConsumerGroupListing.html#state()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConsumerGroupListing.html#state()"/>
         /// </summary>
-        public Java.Util.Optional<Org.Apache.Kafka.Common.ConsumerGroupState> State
+
+        /// <returns><see cref="Java.Util.Optional"/></returns>
+        public Java.Util.Optional<Org.Apache.Kafka.Common.ConsumerGroupState> State()
         {
-            get { return IExecute<Java.Util.Optional<Org.Apache.Kafka.Common.ConsumerGroupState>>("state"); }
+            return IExecute<Java.Util.Optional<Org.Apache.Kafka.Common.ConsumerGroupState>>("state");
         }
 
         #endregion

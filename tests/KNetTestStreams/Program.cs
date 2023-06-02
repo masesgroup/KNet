@@ -23,7 +23,7 @@ using Org.Apache.Kafka.Clients.Consumer;
 using Org.Apache.Kafka.Common.Serialization;
 using Org.Apache.Kafka.Streams;
 using Org.Apache.Kafka.Streams.Errors;
-using Org.Apache.Kafka.Streams.KStream;
+using Org.Apache.Kafka.Streams.Kstream;
 using MASES.KNet.TestCommon;
 using System;
 using System.Text.RegularExpressions;
@@ -82,8 +82,8 @@ namespace MASES.KNetTest
 
                 props.Put(StreamsConfig.APPLICATION_ID_CONFIG, "streams-pipe");
                 props.Put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
-                props.Put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String.Dyn().getClass());
-                props.Put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String.Dyn().getClass());
+                props.Put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().Dyn().getClass());
+                props.Put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().Dyn().getClass());
 
                 // setting offset reset to earliest so that we can re-run the demo code with the same pre-loaded data
                 props.Put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
@@ -97,7 +97,7 @@ namespace MASES.KNetTest
                     streams.Start();
                     while (!resetEvent.WaitOne(1000))
                     {
-                        var state = streams.State;
+                        var state = streams.StateMethod();
                         Console.WriteLine($"KafkaStreams state: {state}");
                     }
                 }
@@ -120,9 +120,8 @@ namespace MASES.KNetTest
 
                 props.Put(StreamsConfig.APPLICATION_ID_CONFIG, "WordCountDemo");
                 props.Put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
-                props.Put(StreamsConfig.CACHE_MAX_BYTES_BUFFERING_CONFIG, 0);
-                props.Put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String.Dyn().getClass());
-                props.Put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String.Dyn().getClass());
+                props.Put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().Dyn().getClass());
+                props.Put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().Dyn().getClass());
 
                 // setting offset reset to earliest so that we can re-run the demo code with the same pre-loaded data
                 props.Put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
@@ -169,20 +168,20 @@ namespace MASES.KNetTest
                     ******************************************/
 
                     // need to override value serde to Long type
-                    counts.ToStream().To(OUTPUT_TOPIC, Produced<string, long>.With(Serdes.String, Serdes.Long));
+                    counts.ToStream().To(OUTPUT_TOPIC, Produced<string, long>.With(Serdes.String(), Serdes.Long()));
 
                     using (var streams = new KafkaStreams(builder.Build(), props))
                     {
                         errorHandler = new StreamsUncaughtExceptionHandler((exception) =>
                         {
                             Console.WriteLine(exception.ToString());
-                            return StreamThreadExceptionResponse.SHUTDOWN_APPLICATION;
+                            return StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse.SHUTDOWN_APPLICATION;
                         });
                         streams.SetUncaughtExceptionHandler(errorHandler);
                         streams.Start();
                         while (!resetEvent.WaitOne(1000))
                         {
-                            var state = streams.State;
+                            var state = streams.StateMethod();
                             Console.WriteLine($"KafkaStreams state: {state}");
                         }
                     }

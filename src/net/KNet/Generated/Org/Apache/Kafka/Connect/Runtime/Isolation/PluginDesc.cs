@@ -60,48 +60,6 @@ namespace Org.Apache.Kafka.Connect.Runtime.Isolation
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/PluginDesc.html#className()"/> 
-        /// </summary>
-        public string ClassName
-        {
-            get { return IExecute<string>("className"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/PluginDesc.html#location()"/> 
-        /// </summary>
-        public string Location
-        {
-            get { return IExecute<string>("location"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/PluginDesc.html#pluginClass()"/> 
-        /// </summary>
-        public Java.Lang.Class PluginClass
-        {
-            get { return IExecute<Java.Lang.Class>("pluginClass"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/PluginDesc.html#type()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Connect.Runtime.Isolation.PluginType Type
-        {
-            get { return IExecute<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginType>("type"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/PluginDesc.html#typeName()"/> 
-        /// </summary>
-        public string TypeName
-        {
-            get { return IExecute<string>("typeName"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/PluginDesc.html#version()"/> 
-        /// </summary>
-        public string Version
-        {
-            get { return IExecute<string>("version"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/PluginDesc.html#compareTo(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
@@ -118,6 +76,60 @@ namespace Org.Apache.Kafka.Connect.Runtime.Isolation
         public int CompareTo(Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc arg0)
         {
             return IExecute<int>("compareTo", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/PluginDesc.html#pluginClass()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Lang.Class"/></returns>
+        public Java.Lang.Class PluginClass()
+        {
+            return IExecute<Java.Lang.Class>("pluginClass");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/PluginDesc.html#className()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string ClassName()
+        {
+            return IExecute<string>("className");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/PluginDesc.html#location()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string Location()
+        {
+            return IExecute<string>("location");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/PluginDesc.html#typeName()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string TypeName()
+        {
+            return IExecute<string>("typeName");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/PluginDesc.html#version()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string Version()
+        {
+            return IExecute<string>("version");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/PluginDesc.html#type()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.Isolation.PluginType"/></returns>
+        public Org.Apache.Kafka.Connect.Runtime.Isolation.PluginType Type()
+        {
+            return IExecute<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginType>("type");
         }
 
         #endregion
@@ -169,48 +181,6 @@ namespace Org.Apache.Kafka.Connect.Runtime.Isolation
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/PluginDesc.html#className()"/> 
-        /// </summary>
-        public string ClassName
-        {
-            get { return IExecute<string>("className"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/PluginDesc.html#location()"/> 
-        /// </summary>
-        public string Location
-        {
-            get { return IExecute<string>("location"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/PluginDesc.html#pluginClass()"/> 
-        /// </summary>
-        public Java.Lang.Class PluginClass
-        {
-            get { return IExecute<Java.Lang.Class>("pluginClass"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/PluginDesc.html#type()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Connect.Runtime.Isolation.PluginType Type
-        {
-            get { return IExecute<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginType>("type"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/PluginDesc.html#typeName()"/> 
-        /// </summary>
-        public string TypeName
-        {
-            get { return IExecute<string>("typeName"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/PluginDesc.html#version()"/> 
-        /// </summary>
-        public string Version
-        {
-            get { return IExecute<string>("version"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/PluginDesc.html#compareTo(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
@@ -227,6 +197,61 @@ namespace Org.Apache.Kafka.Connect.Runtime.Isolation
         public int CompareTo(Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<T> arg0)
         {
             return IExecute<int>("compareTo", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/PluginDesc.html#pluginClass()"/>
+        /// </summary>
+
+        /// <typeparam name="ReturnExtendsT"><typeparamref name="T"/></typeparam>
+        /// <returns><see cref="Java.Lang.Class"/></returns>
+        public Java.Lang.Class PluginClass<ReturnExtendsT>() where ReturnExtendsT: T
+        {
+            return IExecute<Java.Lang.Class>("pluginClass");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/PluginDesc.html#className()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string ClassName()
+        {
+            return IExecute<string>("className");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/PluginDesc.html#location()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string Location()
+        {
+            return IExecute<string>("location");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/PluginDesc.html#typeName()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string TypeName()
+        {
+            return IExecute<string>("typeName");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/PluginDesc.html#version()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string Version()
+        {
+            return IExecute<string>("version");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/PluginDesc.html#type()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.Isolation.PluginType"/></returns>
+        public Org.Apache.Kafka.Connect.Runtime.Isolation.PluginType Type()
+        {
+            return IExecute<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginType>("type");
         }
 
         #endregion

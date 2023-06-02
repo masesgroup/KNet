@@ -46,10 +46,6 @@ namespace Org.Apache.Kafka.Common.Requests
         #endregion
 
         #region Fields
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DeleteAclsResponse.html#log"/>
-        /// </summary>
-        public static Org.Slf4j.Logger log { get { return SGetField<Org.Slf4j.Logger>(LocalBridgeClazz, "log"); } }
 
         #endregion
 
@@ -62,15 +58,6 @@ namespace Org.Apache.Kafka.Common.Requests
         public static Org.Apache.Kafka.Common.Acl.AclBinding AclBinding(Org.Apache.Kafka.Common.Message.DeleteAclsResponseData.DeleteAclsMatchingAcl arg0)
         {
             return SExecute<Org.Apache.Kafka.Common.Acl.AclBinding>(LocalBridgeClazz, "aclBinding", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DeleteAclsResponse.html#filterResult(org.apache.kafka.server.authorizer.AclDeleteResult)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Server.Authorizer.AclDeleteResult"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Common.Message.DeleteAclsResponseData.DeleteAclsFilterResult"/></returns>
-        public static Org.Apache.Kafka.Common.Message.DeleteAclsResponseData.DeleteAclsFilterResult FilterResult(Org.Apache.Kafka.Server.Authorizer.AclDeleteResult arg0)
-        {
-            return SExecute<Org.Apache.Kafka.Common.Message.DeleteAclsResponseData.DeleteAclsFilterResult>(LocalBridgeClazz, "filterResult", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DeleteAclsResponse.html#matchingAcl(org.apache.kafka.common.acl.AclBinding,org.apache.kafka.common.requests.ApiError)"/>
@@ -97,11 +84,13 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DeleteAclsResponse.html#filterResults()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DeleteAclsResponse.html#filterResults()"/>
         /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Message.DeleteAclsResponseData.DeleteAclsFilterResult> FilterResults
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Message.DeleteAclsResponseData.DeleteAclsFilterResult> FilterResults()
         {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.DeleteAclsResponseData.DeleteAclsFilterResult>>("filterResults"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.DeleteAclsResponseData.DeleteAclsFilterResult>>("filterResults");
         }
 
         #endregion

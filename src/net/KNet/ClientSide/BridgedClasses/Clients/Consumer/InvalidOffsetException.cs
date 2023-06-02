@@ -23,10 +23,8 @@ using Java.Util;
 
 namespace Org.Apache.Kafka.Clients.Consumer
 {
-    public class InvalidOffsetException : KafkaException
+    public partial class InvalidOffsetException
     {
-        public override string ClassName => "org.apache.kafka.clients.consumer.InvalidOffsetException";
-
-        public Set<TopicPartition> Partitions => JVMBridgeBase.Wraps<Set<TopicPartition>>(Instance.Invoke("partitions") as IJavaObject);
+        public Set<TopicPartition> Partitions => JVMBridgeBase.Wraps<Set<TopicPartition>>(BridgeInstance.Invoke("partitions") as IJavaObject);
     }
 }

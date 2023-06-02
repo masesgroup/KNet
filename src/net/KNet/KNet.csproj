@@ -4,8 +4,8 @@
 		<OutputPath>..\..\..\bin\</OutputPath>
 		<AssemblyName>MASES.KNet</AssemblyName>
 		<RootNamespace>MASES.KNet</RootNamespace>
-		<Title>KNet - .NET gateway for Apache Kafka APIs</Title>
-		<Description>KNet - .NET gateway for Apache Kafka APIs</Description>
+		<Title>KNet Core - The Apache Kafka .NET suite.</Title>
+		<Description>Core of the Apache Kafka .NET suite. KNet is a comprehensive .NET suite for Apache Kafka providing all features: Producer, Consumer, Admin, Streams, Connect, backends (ZooKeeper and Kafka).</Description>
 		<Product>KNet</Product>
 		<PackageTags>knet kafka apache-kafka dotnet clr netcore net6 kafka connect streams producer consumer providers streamprovider gateway</PackageTags>
 		<PackageId>MASES.KNet</PackageId>
@@ -18,7 +18,7 @@
 		<None Include="..\Documentation\articles\usage.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="MASES.JNet" Version="1.5.4">
+		<PackageReference Include="MASES.JNet" Version="1.5.5">
 			<IncludeAssets>All</IncludeAssets>
 			<PrivateAssets>None</PrivateAssets>
 		</PackageReference>

@@ -58,32 +58,40 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallback.html#errorOpenIDConfiguration()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallback.html#errorOpenIDConfiguration()"/>
         /// </summary>
-        public string ErrorOpenIDConfiguration
+
+        /// <returns><see cref="string"/></returns>
+        public string ErrorOpenIDConfiguration()
         {
-            get { return IExecute<string>("errorOpenIDConfiguration"); }
+            return IExecute<string>("errorOpenIDConfiguration");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallback.html#errorScope()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallback.html#errorScope()"/>
         /// </summary>
-        public string ErrorScope
+
+        /// <returns><see cref="string"/></returns>
+        public string ErrorScope()
         {
-            get { return IExecute<string>("errorScope"); }
+            return IExecute<string>("errorScope");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallback.html#errorStatus()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallback.html#errorStatus()"/>
         /// </summary>
-        public string ErrorStatus
+
+        /// <returns><see cref="string"/></returns>
+        public string ErrorStatus()
         {
-            get { return IExecute<string>("errorStatus"); }
+            return IExecute<string>("errorStatus");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallback.html#tokenValue()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallback.html#tokenValue()"/>
         /// </summary>
-        public string TokenValue
+
+        /// <returns><see cref="string"/></returns>
+        public string TokenValue()
         {
-            get { return IExecute<string>("tokenValue"); }
+            return IExecute<string>("tokenValue");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallback.html#token()"/>

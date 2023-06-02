@@ -67,32 +67,40 @@ namespace Org.Apache.Kafka.Connect.Runtime
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/TopicStatus.html#connector()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/TopicStatus.html#task()"/>
         /// </summary>
-        public string Connector
+
+        /// <returns><see cref="int"/></returns>
+        public int Task()
         {
-            get { return IExecute<string>("connector"); }
+            return IExecute<int>("task");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/TopicStatus.html#discoverTimestamp()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/TopicStatus.html#connector()"/>
         /// </summary>
-        public long DiscoverTimestamp
+
+        /// <returns><see cref="string"/></returns>
+        public string Connector()
         {
-            get { return IExecute<long>("discoverTimestamp"); }
+            return IExecute<string>("connector");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/TopicStatus.html#task()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/TopicStatus.html#topic()"/>
         /// </summary>
-        public int Task
+
+        /// <returns><see cref="string"/></returns>
+        public string Topic()
         {
-            get { return IExecute<int>("task"); }
+            return IExecute<string>("topic");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/TopicStatus.html#topic()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/TopicStatus.html#discoverTimestamp()"/>
         /// </summary>
-        public string Topic
+
+        /// <returns><see cref="long"/></returns>
+        public long DiscoverTimestamp()
         {
-            get { return IExecute<string>("topic"); }
+            return IExecute<long>("discoverTimestamp");
         }
 
         #endregion

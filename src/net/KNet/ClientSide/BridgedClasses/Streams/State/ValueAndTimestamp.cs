@@ -18,22 +18,8 @@
 
 namespace Org.Apache.Kafka.Streams.State
 {
-    public class ValueAndTimestamp<V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ValueAndTimestamp<V>>
+    public partial class ValueAndTimestamp<V>
     {
-        public override string ClassName => "org.apache.kafka.streams.state.ValueAndTimestamp";
-
-        public static ValueAndTimestamp<V> Make(V value, long timestamp)
-        {
-            return SExecute<ValueAndTimestamp<V>>("make", value, timestamp);
-        }
-
-        public static V GetValueOrNull(ValueAndTimestamp<V> valueAndTimestamp)
-        {
-            return (V)SExecute("getValueOrNull", valueAndTimestamp);
-        }
-
-        public V Value => IExecute<V>("value");
-
-        public long Timestamp => IExecute<long>("timestamp");
+        public System.DateTime DateTime => System.DateTimeOffset.FromUnixTimeMilliseconds(Timestamp()).DateTime;
     }
 }

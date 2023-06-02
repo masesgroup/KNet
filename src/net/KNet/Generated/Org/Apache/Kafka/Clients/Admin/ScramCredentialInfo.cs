@@ -55,18 +55,22 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ScramCredentialInfo.html#iterations()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ScramCredentialInfo.html#iterations()"/>
         /// </summary>
-        public int Iterations
+
+        /// <returns><see cref="int"/></returns>
+        public int Iterations()
         {
-            get { return IExecute<int>("iterations"); }
+            return IExecute<int>("iterations");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ScramCredentialInfo.html#mechanism()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ScramCredentialInfo.html#mechanism()"/>
         /// </summary>
-        public Org.Apache.Kafka.Clients.Admin.ScramMechanism Mechanism
+
+        /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ScramMechanism"/></returns>
+        public Org.Apache.Kafka.Clients.Admin.ScramMechanism Mechanism()
         {
-            get { return IExecute<Org.Apache.Kafka.Clients.Admin.ScramMechanism>("mechanism"); }
+            return IExecute<Org.Apache.Kafka.Clients.Admin.ScramMechanism>("mechanism");
         }
 
         #endregion

@@ -55,18 +55,22 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/CipherInformation.html#cipher()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/CipherInformation.html#cipher()"/>
         /// </summary>
-        public string Cipher
+
+        /// <returns><see cref="string"/></returns>
+        public string Cipher()
         {
-            get { return IExecute<string>("cipher"); }
+            return IExecute<string>("cipher");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/CipherInformation.html#protocol()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/CipherInformation.html#protocol()"/>
         /// </summary>
-        public string Protocol
+
+        /// <returns><see cref="string"/></returns>
+        public string Protocol()
         {
-            get { return IExecute<string>("protocol"); }
+            return IExecute<string>("protocol");
         }
 
         #endregion

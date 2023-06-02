@@ -46,22 +46,26 @@ namespace Org.Apache.Kafka.Connect.Storage
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/ConverterConfig.html#newConfigDef()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/ConverterConfig.html#newConfigDef()"/>
         /// </summary>
-        public static Org.Apache.Kafka.Common.Config.ConfigDef NewConfigDef
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
+        public static Org.Apache.Kafka.Common.Config.ConfigDef NewConfigDef()
         {
-            get { return SExecute<Org.Apache.Kafka.Common.Config.ConfigDef>(LocalBridgeClazz, "newConfigDef"); }
+            return SExecute<Org.Apache.Kafka.Common.Config.ConfigDef>(LocalBridgeClazz, "newConfigDef");
         }
 
         #endregion
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/ConverterConfig.html#type()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/ConverterConfig.html#type()"/>
         /// </summary>
-        public Org.Apache.Kafka.Connect.Storage.ConverterType Type
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Storage.ConverterType"/></returns>
+        public Org.Apache.Kafka.Connect.Storage.ConverterType Type()
         {
-            get { return IExecute<Org.Apache.Kafka.Connect.Storage.ConverterType>("type"); }
+            return IExecute<Org.Apache.Kafka.Connect.Storage.ConverterType>("type");
         }
 
         #endregion

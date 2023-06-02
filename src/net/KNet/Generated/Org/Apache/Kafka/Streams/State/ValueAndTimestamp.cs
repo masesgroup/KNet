@@ -65,18 +65,22 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ValueAndTimestamp.html#timestamp()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ValueAndTimestamp.html#timestamp()"/>
         /// </summary>
-        public long Timestamp
+
+        /// <returns><see cref="long"/></returns>
+        public long Timestamp()
         {
-            get { return IExecute<long>("timestamp"); }
+            return IExecute<long>("timestamp");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ValueAndTimestamp.html#value()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ValueAndTimestamp.html#value()"/>
         /// </summary>
-        public object Value
+
+        /// <returns><see cref="object"/></returns>
+        public object Value()
         {
-            get { return IExecute("value"); }
+            return IExecute("value");
         }
 
         #endregion
@@ -133,18 +137,22 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ValueAndTimestamp.html#timestamp()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ValueAndTimestamp.html#timestamp()"/>
         /// </summary>
-        public long Timestamp
+
+        /// <returns><see cref="long"/></returns>
+        public long Timestamp()
         {
-            get { return IExecute<long>("timestamp"); }
+            return IExecute<long>("timestamp");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ValueAndTimestamp.html#value()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ValueAndTimestamp.html#value()"/>
         /// </summary>
-        public V Value
+
+        /// <returns><typeparamref name="V"/></returns>
+        public V Value()
         {
-            get { return IExecute<V>("value"); }
+            return IExecute<V>("value");
         }
 
         #endregion

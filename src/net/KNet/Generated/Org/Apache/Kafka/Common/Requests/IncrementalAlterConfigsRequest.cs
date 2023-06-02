@@ -78,7 +78,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
             /// <param name="arg1"><see cref="Java.Util.Map"/></param>
             /// <param name="arg2"><see cref="bool"/></param>
-            public Builder(Java.Util.Collection arg0, Java.Util.Map arg1, bool arg2)
+            public Builder(Java.Util.Collection<Org.Apache.Kafka.Common.Config.ConfigResource> arg0, Java.Util.Map<Org.Apache.Kafka.Common.Config.ConfigResource, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.AlterConfigOp>> arg1, bool arg2)
                 : base(arg0, arg1, arg2)
             {
             }
@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Map"/></param>
             /// <param name="arg1"><see cref="bool"/></param>
-            public Builder(Java.Util.Map arg0, bool arg1)
+            public Builder(Java.Util.Map<Org.Apache.Kafka.Common.Config.ConfigResource, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.AlterConfigOp>> arg0, bool arg1)
                 : base(arg0, arg1)
             {
             }

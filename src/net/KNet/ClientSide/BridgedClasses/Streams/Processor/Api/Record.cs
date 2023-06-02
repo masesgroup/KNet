@@ -20,50 +20,8 @@ using Org.Apache.Kafka.Common.Header;
 
 namespace Org.Apache.Kafka.Streams.Processor.Api
 {
-    public class Record<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Record<K, V>>
+    public partial class Record<K, V>
     {
-        public override string ClassName => "org.apache.kafka.streams.processor.api.Record";
-
-        [System.Obsolete("This is not public in Apache Kafka API")]
-        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
-        public Record() { }
-
-        public Record(K key, V value, long timestamp, Headers headers)
-            : base(key, value, timestamp, headers)
-        {
-        }
-
-        public Record(K key, V value, long timestamp)
-            : base(key, value, timestamp)
-        {
-        }
-
-        public K Key => IExecute<K>("key");
-
-        public V Value => IExecute<V>("value");
-
-        public long Timestamp => IExecute<long>("timestamp");
-
-        public Headers Headers => IExecute<Headers>("headers");
-
-        public Record<NewK, V> WithKey<NewK>(NewK key)
-        {
-            return IExecute<Record<NewK, V>>("withKey", key);
-        }
-
-        public Record<K, NewV> WithValue<NewV>(NewV value)
-        {
-            return IExecute<Record<K, NewV>>("withValue", value);
-        }
-
-        public Record<K, V> WithTimestamp(long timestamp)
-        {
-            return IExecute<Record<K, V>>("withTimestamp", timestamp);
-        }
-
-        public Record<K, V> WithHeaders(Headers headers)
-        {
-            return IExecute<Record<K, V>>("withHeaders", headers);
-        }
+        public System.DateTime DateTime => System.DateTimeOffset.FromUnixTimeMilliseconds(Timestamp()).DateTime;
     }
 }

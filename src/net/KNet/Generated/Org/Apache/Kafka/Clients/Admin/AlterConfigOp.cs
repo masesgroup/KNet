@@ -55,13 +55,6 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/AlterConfigOp.html#configEntry()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Clients.Admin.ConfigEntry ConfigEntry
-        {
-            get { return IExecute<Org.Apache.Kafka.Clients.Admin.ConfigEntry>("configEntry"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/AlterConfigOp.html#opType()"/>
         /// </summary>
 
@@ -69,6 +62,15 @@ namespace Org.Apache.Kafka.Clients.Admin
         public Org.Apache.Kafka.Clients.Admin.AlterConfigOp.OpType OpTypeMethod()
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.AlterConfigOp.OpType>("opType");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/AlterConfigOp.html#configEntry()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ConfigEntry"/></returns>
+        public Org.Apache.Kafka.Clients.Admin.ConfigEntry ConfigEntry()
+        {
+            return IExecute<Org.Apache.Kafka.Clients.Admin.ConfigEntry>("configEntry");
         }
 
         #endregion
@@ -107,13 +109,6 @@ namespace Org.Apache.Kafka.Clients.Admin
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/AlterConfigOp.OpType.html#values()"/> 
-            /// </summary>
-            public static Org.Apache.Kafka.Clients.Admin.AlterConfigOp.OpType[] Values
-            {
-                get { return SExecuteArray<Org.Apache.Kafka.Clients.Admin.AlterConfigOp.OpType>(LocalBridgeClazz, "values"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/AlterConfigOp.OpType.html#forId(byte)"/>
             /// </summary>
             /// <param name="arg0"><see cref="byte"/></param>
@@ -131,16 +126,27 @@ namespace Org.Apache.Kafka.Clients.Admin
             {
                 return SExecute<Org.Apache.Kafka.Clients.Admin.AlterConfigOp.OpType>(LocalBridgeClazz, "valueOf", arg0);
             }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/AlterConfigOp.OpType.html#values()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.AlterConfigOp.OpType"/></returns>
+            public static Org.Apache.Kafka.Clients.Admin.AlterConfigOp.OpType[] Values()
+            {
+                return SExecuteArray<Org.Apache.Kafka.Clients.Admin.AlterConfigOp.OpType>(LocalBridgeClazz, "values");
+            }
 
             #endregion
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/AlterConfigOp.OpType.html#id()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/AlterConfigOp.OpType.html#id()"/>
             /// </summary>
-            public byte Id
+
+            /// <returns><see cref="byte"/></returns>
+            public byte Id()
             {
-                get { return IExecute<byte>("id"); }
+                return IExecute<byte>("id");
             }
 
             #endregion

@@ -50,18 +50,13 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordsSend.html#completed()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordsSend.html#completed()"/>
         /// </summary>
-        public bool Completed
+
+        /// <returns><see cref="bool"/></returns>
+        public bool Completed()
         {
-            get { return IExecute<bool>("completed"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordsSend.html#size()"/> 
-        /// </summary>
-        public long Size
-        {
-            get { return IExecute<long>("size"); }
+            return IExecute<bool>("completed");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordsSend.html#writeTo(org.apache.kafka.common.network.TransferableChannel)"/>
@@ -72,6 +67,15 @@ namespace Org.Apache.Kafka.Common.Record
         public long WriteTo(Org.Apache.Kafka.Common.Network.TransferableChannel arg0)
         {
             return IExecute<long>("writeTo", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordsSend.html#size()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long Size()
+        {
+            return IExecute<long>("size");
         }
 
         #endregion
@@ -113,18 +117,13 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordsSend.html#completed()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordsSend.html#completed()"/>
         /// </summary>
-        public bool Completed
+
+        /// <returns><see cref="bool"/></returns>
+        public bool Completed()
         {
-            get { return IExecute<bool>("completed"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordsSend.html#size()"/> 
-        /// </summary>
-        public long Size
-        {
-            get { return IExecute<long>("size"); }
+            return IExecute<bool>("completed");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordsSend.html#writeTo(org.apache.kafka.common.network.TransferableChannel)"/>
@@ -135,6 +134,15 @@ namespace Org.Apache.Kafka.Common.Record
         public long WriteTo(Org.Apache.Kafka.Common.Network.TransferableChannel arg0)
         {
             return IExecute<long>("writeTo", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordsSend.html#size()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long Size()
+        {
+            return IExecute<long>("size");
         }
 
         #endregion

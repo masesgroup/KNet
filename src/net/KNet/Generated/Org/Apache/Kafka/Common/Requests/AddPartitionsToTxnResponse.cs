@@ -34,7 +34,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
-        public AddPartitionsToTxnResponse(int arg0, Java.Util.Map arg1)
+        public AddPartitionsToTxnResponse(int arg0, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Protocol.Errors> arg1)
             : base(arg0, arg1)
         {
         }
@@ -73,11 +73,13 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AddPartitionsToTxnResponse.html#errors()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AddPartitionsToTxnResponse.html#errors()"/>
         /// </summary>
-        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Protocol.Errors> Errors
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Protocol.Errors> Errors()
         {
-            get { return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Protocol.Errors>>("errors"); }
+            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Protocol.Errors>>("errors");
         }
 
         #endregion

@@ -46,32 +46,22 @@ namespace Org.Apache.Kafka.Connect.Header
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/header/Headers.html#clear()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/header/Headers.html#isEmpty()"/>
         /// </summary>
-        public Org.Apache.Kafka.Connect.Header.Headers Clear
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsEmpty()
         {
-            get { return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("clear"); }
+            return IExecute<bool>("isEmpty");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/header/Headers.html#duplicate()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/header/Headers.html#size()"/>
         /// </summary>
-        public Org.Apache.Kafka.Connect.Header.Headers Duplicate
+
+        /// <returns><see cref="int"/></returns>
+        public int Size()
         {
-            get { return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("duplicate"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/header/Headers.html#isEmpty()"/> 
-        /// </summary>
-        public bool IsEmpty
-        {
-            get { return IExecute<bool>("isEmpty"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/header/Headers.html#size()"/> 
-        /// </summary>
-        public int Size
-        {
-            get { return IExecute<int>("size"); }
+            return IExecute<int>("size");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/header/Headers.html#allWithName(java.lang.String)"/>
@@ -303,6 +293,24 @@ namespace Org.Apache.Kafka.Connect.Header
         public Org.Apache.Kafka.Connect.Header.Headers Apply(Org.Apache.Kafka.Connect.Header.Headers.HeaderTransform arg0)
         {
             return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("apply", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/header/Headers.html#clear()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
+        public Org.Apache.Kafka.Connect.Header.Headers Clear()
+        {
+            return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("clear");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/header/Headers.html#duplicate()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
+        public Org.Apache.Kafka.Connect.Header.Headers Duplicate()
+        {
+            return IExecute<Org.Apache.Kafka.Connect.Header.Headers>("duplicate");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/header/Headers.html#remove(java.lang.String)"/>

@@ -65,11 +65,13 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DeleteAclsRequest.html#filters()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DeleteAclsRequest.html#filters()"/>
         /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Acl.AclBindingFilter> Filters
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Acl.AclBindingFilter> Filters()
         {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Acl.AclBindingFilter>>("filters"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Acl.AclBindingFilter>>("filters");
         }
 
         #endregion

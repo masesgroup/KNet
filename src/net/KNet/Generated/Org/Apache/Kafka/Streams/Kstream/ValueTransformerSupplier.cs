@@ -46,11 +46,13 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerSupplier.html#get()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerSupplier.html#get()"/>
         /// </summary>
-        public Org.Apache.Kafka.Streams.Kstream.ValueTransformer Get
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.ValueTransformer"/></returns>
+        public Org.Apache.Kafka.Streams.Kstream.ValueTransformer Get()
         {
-            get { return IExecute<Org.Apache.Kafka.Streams.Kstream.ValueTransformer>("get"); }
+            return IExecute<Org.Apache.Kafka.Streams.Kstream.ValueTransformer>("get");
         }
 
         #endregion
@@ -88,11 +90,13 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerSupplier.html#get()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerSupplier.html#get()"/>
         /// </summary>
-        public Org.Apache.Kafka.Streams.Kstream.ValueTransformer<V, VR> Get
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.ValueTransformer"/></returns>
+        public Org.Apache.Kafka.Streams.Kstream.ValueTransformer<V, VR> Get()
         {
-            get { return IExecute<Org.Apache.Kafka.Streams.Kstream.ValueTransformer<V, VR>>("get"); }
+            return IExecute<Org.Apache.Kafka.Streams.Kstream.ValueTransformer<V, VR>>("get");
         }
 
         #endregion

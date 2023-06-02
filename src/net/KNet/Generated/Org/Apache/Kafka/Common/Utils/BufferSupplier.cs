@@ -50,11 +50,13 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/BufferSupplier.html#create()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/BufferSupplier.html#create()"/>
         /// </summary>
-        public static Org.Apache.Kafka.Common.Utils.BufferSupplier Create
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Utils.BufferSupplier"/></returns>
+        public static Org.Apache.Kafka.Common.Utils.BufferSupplier Create()
         {
-            get { return SExecute<Org.Apache.Kafka.Common.Utils.BufferSupplier>(LocalBridgeClazz, "create"); }
+            return SExecute<Org.Apache.Kafka.Common.Utils.BufferSupplier>(LocalBridgeClazz, "create");
         }
 
         #endregion

@@ -64,25 +64,31 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest.Entities
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/PluginInfo.html#className()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/PluginInfo.html#className()"/>
         /// </summary>
-        public string ClassName
+
+        /// <returns><see cref="string"/></returns>
+        public string ClassName()
         {
-            get { return IExecute<string>("className"); }
+            return IExecute<string>("className");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/PluginInfo.html#type()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/PluginInfo.html#type()"/>
         /// </summary>
-        public string Type
+
+        /// <returns><see cref="string"/></returns>
+        public string Type()
         {
-            get { return IExecute<string>("type"); }
+            return IExecute<string>("type");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/PluginInfo.html#version()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/PluginInfo.html#version()"/>
         /// </summary>
-        public string Version
+
+        /// <returns><see cref="string"/></returns>
+        public string Version()
         {
-            get { return IExecute<string>("version"); }
+            return IExecute<string>("version");
         }
 
         #endregion

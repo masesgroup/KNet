@@ -50,13 +50,6 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Mode.html#values()"/> 
-        /// </summary>
-        public static Org.Apache.Kafka.Common.Network.Mode[] Values
-        {
-            get { return SExecuteArray<Org.Apache.Kafka.Common.Network.Mode>(LocalBridgeClazz, "values"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Mode.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -64,6 +57,15 @@ namespace Org.Apache.Kafka.Common.Network
         public static Org.Apache.Kafka.Common.Network.Mode ValueOf(string arg0)
         {
             return SExecute<Org.Apache.Kafka.Common.Network.Mode>(LocalBridgeClazz, "valueOf", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Mode.html#values()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Network.Mode"/></returns>
+        public static Org.Apache.Kafka.Common.Network.Mode[] Values()
+        {
+            return SExecuteArray<Org.Apache.Kafka.Common.Network.Mode>(LocalBridgeClazz, "values");
         }
 
         #endregion

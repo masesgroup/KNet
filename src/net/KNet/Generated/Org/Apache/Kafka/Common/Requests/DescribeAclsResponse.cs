@@ -83,18 +83,22 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeAclsResponse.html#acls()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeAclsResponse.html#acls()"/>
         /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Message.DescribeAclsResponseData.DescribeAclsResource> Acls
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Message.DescribeAclsResponseData.DescribeAclsResource> Acls()
         {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.DescribeAclsResponseData.DescribeAclsResource>>("acls"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.DescribeAclsResponseData.DescribeAclsResource>>("acls");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeAclsResponse.html#error()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeAclsResponse.html#error()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Requests.ApiError Error
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Requests.ApiError"/></returns>
+        public Org.Apache.Kafka.Common.Requests.ApiError Error()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Requests.ApiError>("error"); }
+            return IExecute<Org.Apache.Kafka.Common.Requests.ApiError>("error");
         }
 
         #endregion

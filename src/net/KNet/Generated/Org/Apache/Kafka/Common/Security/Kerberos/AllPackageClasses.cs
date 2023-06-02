@@ -88,7 +88,7 @@ namespace Org.Apache.Kafka.Common.Security.Kerberos
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosError.html"/>
     /// </summary>
-    public partial class KerberosError : Java.Lang.Enum
+    public partial class KerberosError : Java.Lang.Enum<Org.Apache.Kafka.Common.Security.Kerberos.KerberosError>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

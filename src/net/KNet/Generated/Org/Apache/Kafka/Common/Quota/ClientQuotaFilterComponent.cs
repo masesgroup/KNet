@@ -74,18 +74,22 @@ namespace Org.Apache.Kafka.Common.Quota
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/quota/ClientQuotaFilterComponent.html#entityType()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/quota/ClientQuotaFilterComponent.html#entityType()"/>
         /// </summary>
-        public string EntityType
+
+        /// <returns><see cref="string"/></returns>
+        public string EntityType()
         {
-            get { return IExecute<string>("entityType"); }
+            return IExecute<string>("entityType");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/quota/ClientQuotaFilterComponent.html#match()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/quota/ClientQuotaFilterComponent.html#match()"/>
         /// </summary>
-        public Java.Util.Optional<string> Match
+
+        /// <returns><see cref="Java.Util.Optional"/></returns>
+        public Java.Util.Optional<string> Match()
         {
-            get { return IExecute<Java.Util.Optional<string>>("match"); }
+            return IExecute<Java.Util.Optional<string>>("match");
         }
 
         #endregion

@@ -21,14 +21,8 @@ namespace Kafka.Admin
     /// <summary>
     /// Class managing MetadataQuorumCommand
     /// </summary>
-    public class MetadataQuorumCommand : MASES.JCOBridge.C2JBridge.JVMBridgeMain<MetadataQuorumCommand>
+    public partial class MetadataQuorumCommand
     {
-        /// <summary>
-        /// Initialize a new <see cref="ZkSecurityMigrator"/>
-        /// </summary>
-        public MetadataQuorumCommand()
-            : base("kafka.admin.MetadataQuorumCommand")
-        {
-        }
+
     }
 }

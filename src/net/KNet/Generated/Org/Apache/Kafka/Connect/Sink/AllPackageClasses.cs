@@ -158,7 +158,7 @@ namespace Org.Apache.Kafka.Connect.Sink
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/sink/SinkRecord.html"/>
     /// </summary>
-    public partial class SinkRecord : Org.Apache.Kafka.Connect.Connector.ConnectRecord
+    public partial class SinkRecord : Org.Apache.Kafka.Connect.Connector.ConnectRecord<Org.Apache.Kafka.Connect.Sink.SinkRecord>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

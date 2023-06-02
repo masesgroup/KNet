@@ -75,11 +75,13 @@ namespace Org.Apache.Kafka.Connect.Util
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/KafkaBasedLog.html#partitionCount()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/KafkaBasedLog.html#partitionCount()"/>
         /// </summary>
-        public int PartitionCount
+
+        /// <returns><see cref="int"/></returns>
+        public int PartitionCount()
         {
-            get { return IExecute<int>("partitionCount"); }
+            return IExecute<int>("partitionCount");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/KafkaBasedLog.html#readToEnd()"/>
@@ -203,11 +205,13 @@ namespace Org.Apache.Kafka.Connect.Util
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/KafkaBasedLog.html#partitionCount()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/KafkaBasedLog.html#partitionCount()"/>
         /// </summary>
-        public int PartitionCount
+
+        /// <returns><see cref="int"/></returns>
+        public int PartitionCount()
         {
-            get { return IExecute<int>("partitionCount"); }
+            return IExecute<int>("partitionCount");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/KafkaBasedLog.html#readToEnd()"/>

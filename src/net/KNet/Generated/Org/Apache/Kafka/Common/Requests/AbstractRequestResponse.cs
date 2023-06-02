@@ -46,11 +46,13 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractRequestResponse.html#data()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractRequestResponse.html#data()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.ApiMessage Data
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.ApiMessage"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.ApiMessage Data()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.ApiMessage>("data"); }
+            return IExecute<Org.Apache.Kafka.Common.Protocol.ApiMessage>("data");
         }
 
         #endregion

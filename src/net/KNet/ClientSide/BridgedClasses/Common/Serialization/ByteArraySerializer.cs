@@ -16,18 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
+
 namespace Org.Apache.Kafka.Common.Serialization
 {
-    public class ByteArraySerializer : Serializer<byte[]>
+    public partial class ByteArraySerializer
     {
-        public override string ClassName => "org.apache.kafka.common.serialization.ByteArraySerializer";
-
-        public override bool AutoInit => false;
-
-        public ByteArraySerializer()
-            : base(null, null, false)
-        {
-
-        }
+        public static implicit operator Serializer<byte[]>(ByteArraySerializer t) => t.Cast<Serializer<byte[]>>();
     }
 }

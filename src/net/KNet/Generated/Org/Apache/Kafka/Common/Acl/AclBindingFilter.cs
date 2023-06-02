@@ -59,39 +59,13 @@ namespace Org.Apache.Kafka.Common.Acl
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AclBindingFilter.html#entryFilter()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AclBindingFilter.html#isUnknown()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Acl.AccessControlEntryFilter EntryFilter
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsUnknown()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Acl.AccessControlEntryFilter>("entryFilter"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AclBindingFilter.html#findIndefiniteField()"/> 
-        /// </summary>
-        public string FindIndefiniteField
-        {
-            get { return IExecute<string>("findIndefiniteField"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AclBindingFilter.html#isUnknown()"/> 
-        /// </summary>
-        public bool IsUnknown
-        {
-            get { return IExecute<bool>("isUnknown"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AclBindingFilter.html#matchesAtMostOne()"/> 
-        /// </summary>
-        public bool MatchesAtMostOne
-        {
-            get { return IExecute<bool>("matchesAtMostOne"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AclBindingFilter.html#patternFilter()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Resource.ResourcePatternFilter PatternFilter
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Resource.ResourcePatternFilter>("patternFilter"); }
+            return IExecute<bool>("isUnknown");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AclBindingFilter.html#matches(org.apache.kafka.common.acl.AclBinding)"/>
@@ -101,6 +75,42 @@ namespace Org.Apache.Kafka.Common.Acl
         public bool Matches(Org.Apache.Kafka.Common.Acl.AclBinding arg0)
         {
             return IExecute<bool>("matches", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AclBindingFilter.html#matchesAtMostOne()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool MatchesAtMostOne()
+        {
+            return IExecute<bool>("matchesAtMostOne");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AclBindingFilter.html#entryFilter()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Acl.AccessControlEntryFilter"/></returns>
+        public Org.Apache.Kafka.Common.Acl.AccessControlEntryFilter EntryFilter()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Acl.AccessControlEntryFilter>("entryFilter");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AclBindingFilter.html#findIndefiniteField()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string FindIndefiniteField()
+        {
+            return IExecute<string>("findIndefiniteField");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AclBindingFilter.html#patternFilter()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Resource.ResourcePatternFilter"/></returns>
+        public Org.Apache.Kafka.Common.Resource.ResourcePatternFilter PatternFilter()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Resource.ResourcePatternFilter>("patternFilter");
         }
 
         #endregion

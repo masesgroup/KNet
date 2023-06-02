@@ -240,7 +240,7 @@ namespace Org.Apache.Kafka.Connect.Data
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.Type.html"/>
         /// </summary>
-        public partial class Type : Java.Lang.Enum
+        public partial class Type : Java.Lang.Enum<Org.Apache.Kafka.Connect.Data.Schema.Type>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

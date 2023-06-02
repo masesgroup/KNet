@@ -54,13 +54,6 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ScramMechanism.html#values()"/> 
-        /// </summary>
-        public static Org.Apache.Kafka.Clients.Admin.ScramMechanism[] Values
-        {
-            get { return SExecuteArray<Org.Apache.Kafka.Clients.Admin.ScramMechanism>(LocalBridgeClazz, "values"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ScramMechanism.html#fromMechanismName(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -87,23 +80,36 @@ namespace Org.Apache.Kafka.Clients.Admin
         {
             return SExecute<Org.Apache.Kafka.Clients.Admin.ScramMechanism>(LocalBridgeClazz, "valueOf", arg0);
         }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ScramMechanism.html#values()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ScramMechanism"/></returns>
+        public static Org.Apache.Kafka.Clients.Admin.ScramMechanism[] Values()
+        {
+            return SExecuteArray<Org.Apache.Kafka.Clients.Admin.ScramMechanism>(LocalBridgeClazz, "values");
+        }
 
         #endregion
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ScramMechanism.html#mechanismName()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ScramMechanism.html#type()"/>
         /// </summary>
-        public string MechanismName
+
+        /// <returns><see cref="byte"/></returns>
+        public byte Type()
         {
-            get { return IExecute<string>("mechanismName"); }
+            return IExecute<byte>("type");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ScramMechanism.html#type()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ScramMechanism.html#mechanismName()"/>
         /// </summary>
-        public byte Type
+
+        /// <returns><see cref="string"/></returns>
+        public string MechanismName()
         {
-            get { return IExecute<byte>("type"); }
+            return IExecute<string>("mechanismName");
         }
 
         #endregion

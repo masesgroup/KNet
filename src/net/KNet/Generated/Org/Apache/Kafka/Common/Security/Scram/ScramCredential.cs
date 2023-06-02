@@ -57,32 +57,40 @@ namespace Org.Apache.Kafka.Common.Security.Scram
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramCredential.html#iterations()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramCredential.html#salt()"/>
         /// </summary>
-        public int Iterations
+
+        /// <returns><see cref="byte"/></returns>
+        public byte[] Salt()
         {
-            get { return IExecute<int>("iterations"); }
+            return IExecuteArray<byte>("salt");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramCredential.html#salt()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramCredential.html#serverKey()"/>
         /// </summary>
-        public byte[] Salt
+
+        /// <returns><see cref="byte"/></returns>
+        public byte[] ServerKey()
         {
-            get { return IExecuteArray<byte>("salt"); }
+            return IExecuteArray<byte>("serverKey");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramCredential.html#serverKey()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramCredential.html#storedKey()"/>
         /// </summary>
-        public byte[] ServerKey
+
+        /// <returns><see cref="byte"/></returns>
+        public byte[] StoredKey()
         {
-            get { return IExecuteArray<byte>("serverKey"); }
+            return IExecuteArray<byte>("storedKey");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramCredential.html#storedKey()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramCredential.html#iterations()"/>
         /// </summary>
-        public byte[] StoredKey
+
+        /// <returns><see cref="int"/></returns>
+        public int Iterations()
         {
-            get { return IExecuteArray<byte>("storedKey"); }
+            return IExecute<int>("iterations");
         }
 
         #endregion

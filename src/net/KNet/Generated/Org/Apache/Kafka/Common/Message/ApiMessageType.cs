@@ -318,13 +318,6 @@ namespace Org.Apache.Kafka.Common.Message
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ApiMessageType.html#values()"/> 
-        /// </summary>
-        public static Org.Apache.Kafka.Common.Message.ApiMessageType[] Values
-        {
-            get { return SExecuteArray<Org.Apache.Kafka.Common.Message.ApiMessageType>(LocalBridgeClazz, "values"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ApiMessageType.html#fromApiKey(short)"/>
         /// </summary>
         /// <param name="arg0"><see cref="short"/></param>
@@ -342,65 +335,90 @@ namespace Org.Apache.Kafka.Common.Message
         {
             return SExecute<Org.Apache.Kafka.Common.Message.ApiMessageType>(LocalBridgeClazz, "valueOf", arg0);
         }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ApiMessageType.html#values()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Message.ApiMessageType"/></returns>
+        public static Org.Apache.Kafka.Common.Message.ApiMessageType[] Values()
+        {
+            return SExecuteArray<Org.Apache.Kafka.Common.Message.ApiMessageType>(LocalBridgeClazz, "values");
+        }
 
         #endregion
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ApiMessageType.html#apiKey()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ApiMessageType.html#listeners()"/>
         /// </summary>
-        public short ApiKey
+
+        /// <returns><see cref="Java.Util.EnumSet"/></returns>
+        public Java.Util.EnumSet Listeners()
         {
-            get { return IExecute<short>("apiKey"); }
+            return IExecute<Java.Util.EnumSet>("listeners");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ApiMessageType.html#highestSupportedVersion()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ApiMessageType.html#newRequest()"/>
         /// </summary>
-        public short HighestSupportedVersion
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.ApiMessage"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.ApiMessage NewRequest()
         {
-            get { return IExecute<short>("highestSupportedVersion"); }
+            return IExecute<Org.Apache.Kafka.Common.Protocol.ApiMessage>("newRequest");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ApiMessageType.html#listeners()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ApiMessageType.html#newResponse()"/>
         /// </summary>
-        public Java.Util.EnumSet<Org.Apache.Kafka.Common.Message.ApiMessageType.ListenerType> Listeners
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.ApiMessage"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.ApiMessage NewResponse()
         {
-            get { return IExecute<Java.Util.EnumSet<Org.Apache.Kafka.Common.Message.ApiMessageType.ListenerType>>("listeners"); }
+            return IExecute<Org.Apache.Kafka.Common.Protocol.ApiMessage>("newResponse");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ApiMessageType.html#lowestSupportedVersion()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ApiMessageType.html#requestSchemas()"/>
         /// </summary>
-        public short LowestSupportedVersion
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Types.Schema"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.Types.Schema[] RequestSchemas()
         {
-            get { return IExecute<short>("lowestSupportedVersion"); }
+            return IExecuteArray<Org.Apache.Kafka.Common.Protocol.Types.Schema>("requestSchemas");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ApiMessageType.html#newRequest()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ApiMessageType.html#responseSchemas()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.ApiMessage NewRequest
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Types.Schema"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.Types.Schema[] ResponseSchemas()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.ApiMessage>("newRequest"); }
+            return IExecuteArray<Org.Apache.Kafka.Common.Protocol.Types.Schema>("responseSchemas");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ApiMessageType.html#newResponse()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ApiMessageType.html#apiKey()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.ApiMessage NewResponse
+
+        /// <returns><see cref="short"/></returns>
+        public short ApiKey()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.ApiMessage>("newResponse"); }
+            return IExecute<short>("apiKey");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ApiMessageType.html#requestSchemas()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ApiMessageType.html#highestSupportedVersion()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.Types.Schema[] RequestSchemas
+
+        /// <returns><see cref="short"/></returns>
+        public short HighestSupportedVersion()
         {
-            get { return IExecuteArray<Org.Apache.Kafka.Common.Protocol.Types.Schema>("requestSchemas"); }
+            return IExecute<short>("highestSupportedVersion");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ApiMessageType.html#responseSchemas()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ApiMessageType.html#lowestSupportedVersion()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.Types.Schema[] ResponseSchemas
+
+        /// <returns><see cref="short"/></returns>
+        public short LowestSupportedVersion()
         {
-            get { return IExecuteArray<Org.Apache.Kafka.Common.Protocol.Types.Schema>("responseSchemas"); }
+            return IExecute<short>("lowestSupportedVersion");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ApiMessageType.html#requestHeaderVersion(short)"/>
@@ -453,13 +471,6 @@ namespace Org.Apache.Kafka.Common.Message
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ApiMessageType.ListenerType.html#values()"/> 
-            /// </summary>
-            public static Org.Apache.Kafka.Common.Message.ApiMessageType.ListenerType[] Values
-            {
-                get { return SExecuteArray<Org.Apache.Kafka.Common.Message.ApiMessageType.ListenerType>(LocalBridgeClazz, "values"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ApiMessageType.ListenerType.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
@@ -467,6 +478,15 @@ namespace Org.Apache.Kafka.Common.Message
             public static Org.Apache.Kafka.Common.Message.ApiMessageType.ListenerType ValueOf(string arg0)
             {
                 return SExecute<Org.Apache.Kafka.Common.Message.ApiMessageType.ListenerType>(LocalBridgeClazz, "valueOf", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ApiMessageType.ListenerType.html#values()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Message.ApiMessageType.ListenerType"/></returns>
+            public static Org.Apache.Kafka.Common.Message.ApiMessageType.ListenerType[] Values()
+            {
+                return SExecuteArray<Org.Apache.Kafka.Common.Message.ApiMessageType.ListenerType>(LocalBridgeClazz, "values");
             }
 
             #endregion

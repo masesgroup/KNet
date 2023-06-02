@@ -50,13 +50,6 @@ namespace Org.Apache.Kafka.Connect.Json
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/DecimalFormat.html#values()"/> 
-        /// </summary>
-        public static Org.Apache.Kafka.Connect.Json.DecimalFormat[] Values
-        {
-            get { return SExecuteArray<Org.Apache.Kafka.Connect.Json.DecimalFormat>(LocalBridgeClazz, "values"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/DecimalFormat.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -64,6 +57,15 @@ namespace Org.Apache.Kafka.Connect.Json
         public static Org.Apache.Kafka.Connect.Json.DecimalFormat ValueOf(string arg0)
         {
             return SExecute<Org.Apache.Kafka.Connect.Json.DecimalFormat>(LocalBridgeClazz, "valueOf", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/DecimalFormat.html#values()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Json.DecimalFormat"/></returns>
+        public static Org.Apache.Kafka.Connect.Json.DecimalFormat[] Values()
+        {
+            return SExecuteArray<Org.Apache.Kafka.Connect.Json.DecimalFormat>(LocalBridgeClazz, "values");
         }
 
         #endregion

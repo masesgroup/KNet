@@ -89,60 +89,13 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.html#configKeys()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.html#toEnrichedRst()"/>
         /// </summary>
-        public Java.Util.Map<string, Org.Apache.Kafka.Common.Config.ConfigDef.ConfigKey> ConfigKeys
+
+        /// <returns><see cref="string"/></returns>
+        public string ToEnrichedRst()
         {
-            get { return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Common.Config.ConfigDef.ConfigKey>>("configKeys"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.html#defaultValues()"/> 
-        /// </summary>
-        public Java.Util.Map<string, object> DefaultValues
-        {
-            get { return IExecute<Java.Util.Map<string, object>>("defaultValues"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.html#groups()"/> 
-        /// </summary>
-        public Java.Util.List<string> Groups
-        {
-            get { return IExecute<Java.Util.List<string>>("groups"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.html#names()"/> 
-        /// </summary>
-        public Java.Util.Set<string> Names
-        {
-            get { return IExecute<Java.Util.Set<string>>("names"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.html#toEnrichedRst()"/> 
-        /// </summary>
-        public string ToEnrichedRst
-        {
-            get { return IExecute<string>("toEnrichedRst"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.html#toRst()"/> 
-        /// </summary>
-        public string ToRst
-        {
-            get { return IExecute<string>("toRst"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.html#withClientSaslSupport()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Config.ConfigDef WithClientSaslSupport
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("withClientSaslSupport"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.html#withClientSslSupport()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Config.ConfigDef WithClientSslSupport
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("withClientSslSupport"); }
+            return IExecute<string>("toEnrichedRst");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.html#toHtml()"/>
@@ -202,6 +155,24 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecute<string>("toHtmlTable", arg0);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.html#toRst()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string ToRst()
+        {
+            return IExecute<string>("toRst");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.html#groups()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<string> Groups()
+        {
+            return IExecute<Java.Util.List<string>>("groups");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.html#validate(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
@@ -209,6 +180,15 @@ namespace Org.Apache.Kafka.Common.Config
         public Java.Util.List<Org.Apache.Kafka.Common.Config.ConfigValue> Validate(Java.Util.Map<string, string> arg0)
         {
             return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Config.ConfigValue>>("validate", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.html#defaultValues()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, object> DefaultValues()
+        {
+            return IExecute<Java.Util.Map<string, object>>("defaultValues");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.html#parse(java.util.Map)"/>
@@ -221,6 +201,15 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecute<Java.Util.Map<string, object>>("parse", arg0);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.html#configKeys()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, Org.Apache.Kafka.Common.Config.ConfigDef.ConfigKey> ConfigKeys()
+        {
+            return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Common.Config.ConfigDef.ConfigKey>>("configKeys");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.html#validateAll(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
@@ -228,6 +217,15 @@ namespace Org.Apache.Kafka.Common.Config
         public Java.Util.Map<string, Org.Apache.Kafka.Common.Config.ConfigValue> ValidateAll(Java.Util.Map<string, string> arg0)
         {
             return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Common.Config.ConfigValue>>("validateAll", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.html#names()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<string> Names()
+        {
+            return IExecute<Java.Util.Set<string>>("names");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.html#define(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,java.lang.Object,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String,java.lang.String,int,org.apache.kafka.common.config.ConfigDef.Width,java.lang.String,java.util.List,org.apache.kafka.common.config.ConfigDef.Recommender)"/>
@@ -520,6 +518,24 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("defineInternal", arg0, arg1, arg2, arg3, arg4, arg5);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.html#withClientSaslSupport()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
+        public Org.Apache.Kafka.Common.Config.ConfigDef WithClientSaslSupport()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("withClientSaslSupport");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.html#withClientSslSupport()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
+        public Org.Apache.Kafka.Common.Config.ConfigDef WithClientSslSupport()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("withClientSslSupport");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.html#embed(java.lang.String,java.lang.String,int,org.apache.kafka.common.config.ConfigDef)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -652,7 +668,7 @@ namespace Org.Apache.Kafka.Common.Config
             /// <param name="arg10"><see cref="Java.Util.List"/></param>
             /// <param name="arg11"><see cref="Org.Apache.Kafka.Common.Config.ConfigDef.Recommender"/></param>
             /// <param name="arg12"><see cref="bool"/></param>
-            public ConfigKey(string arg0, Org.Apache.Kafka.Common.Config.ConfigDef.Type arg1, object arg2, Org.Apache.Kafka.Common.Config.ConfigDef.Validator arg3, Org.Apache.Kafka.Common.Config.ConfigDef.Importance arg4, string arg5, string arg6, int arg7, Org.Apache.Kafka.Common.Config.ConfigDef.Width arg8, string arg9, Java.Util.List arg10, Org.Apache.Kafka.Common.Config.ConfigDef.Recommender arg11, bool arg12)
+            public ConfigKey(string arg0, Org.Apache.Kafka.Common.Config.ConfigDef.Type arg1, object arg2, Org.Apache.Kafka.Common.Config.ConfigDef.Validator arg3, Org.Apache.Kafka.Common.Config.ConfigDef.Importance arg4, string arg5, string arg6, int arg7, Org.Apache.Kafka.Common.Config.ConfigDef.Width arg8, string arg9, Java.Util.List<string> arg10, Org.Apache.Kafka.Common.Config.ConfigDef.Recommender arg11, bool arg12)
                 : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12)
             {
             }
@@ -725,11 +741,13 @@ namespace Org.Apache.Kafka.Common.Config
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.ConfigKey.html#hasDefault()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.ConfigKey.html#hasDefault()"/>
             /// </summary>
-            public bool HasDefault
+
+            /// <returns><see cref="bool"/></returns>
+            public bool HasDefault()
             {
-                get { return IExecute<bool>("hasDefault"); }
+                return IExecute<bool>("hasDefault");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.ConfigKey.html#type()"/>
@@ -780,13 +798,6 @@ namespace Org.Apache.Kafka.Common.Config
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.Importance.html#values()"/> 
-            /// </summary>
-            public static Org.Apache.Kafka.Common.Config.ConfigDef.Importance[] Values
-            {
-                get { return SExecuteArray<Org.Apache.Kafka.Common.Config.ConfigDef.Importance>(LocalBridgeClazz, "values"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.Importance.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
@@ -794,6 +805,15 @@ namespace Org.Apache.Kafka.Common.Config
             public static Org.Apache.Kafka.Common.Config.ConfigDef.Importance ValueOf(string arg0)
             {
                 return SExecute<Org.Apache.Kafka.Common.Config.ConfigDef.Importance>(LocalBridgeClazz, "valueOf", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.Importance.html#values()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef.Importance"/></returns>
+            public static Org.Apache.Kafka.Common.Config.ConfigDef.Importance[] Values()
+            {
+                return SExecuteArray<Org.Apache.Kafka.Common.Config.ConfigDef.Importance>(LocalBridgeClazz, "values");
             }
 
             #endregion
@@ -1201,13 +1221,6 @@ namespace Org.Apache.Kafka.Common.Config
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.Type.html#values()"/> 
-            /// </summary>
-            public static Org.Apache.Kafka.Common.Config.ConfigDef.Type[] Values
-            {
-                get { return SExecuteArray<Org.Apache.Kafka.Common.Config.ConfigDef.Type>(LocalBridgeClazz, "values"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.Type.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
@@ -1216,16 +1229,27 @@ namespace Org.Apache.Kafka.Common.Config
             {
                 return SExecute<Org.Apache.Kafka.Common.Config.ConfigDef.Type>(LocalBridgeClazz, "valueOf", arg0);
             }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.Type.html#values()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef.Type"/></returns>
+            public static Org.Apache.Kafka.Common.Config.ConfigDef.Type[] Values()
+            {
+                return SExecuteArray<Org.Apache.Kafka.Common.Config.ConfigDef.Type>(LocalBridgeClazz, "values");
+            }
 
             #endregion
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.Type.html#isSensitive()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.Type.html#isSensitive()"/>
             /// </summary>
-            public bool IsSensitive
+
+            /// <returns><see cref="bool"/></returns>
+            public bool IsSensitive()
             {
-                get { return IExecute<bool>("isSensitive"); }
+                return IExecute<bool>("isSensitive");
             }
 
             #endregion
@@ -1409,13 +1433,6 @@ namespace Org.Apache.Kafka.Common.Config
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.Width.html#values()"/> 
-            /// </summary>
-            public static Org.Apache.Kafka.Common.Config.ConfigDef.Width[] Values
-            {
-                get { return SExecuteArray<Org.Apache.Kafka.Common.Config.ConfigDef.Width>(LocalBridgeClazz, "values"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.Width.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
@@ -1423,6 +1440,15 @@ namespace Org.Apache.Kafka.Common.Config
             public static Org.Apache.Kafka.Common.Config.ConfigDef.Width ValueOf(string arg0)
             {
                 return SExecute<Org.Apache.Kafka.Common.Config.ConfigDef.Width>(LocalBridgeClazz, "valueOf", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigDef.Width.html#values()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef.Width"/></returns>
+            public static Org.Apache.Kafka.Common.Config.ConfigDef.Width[] Values()
+            {
+                return SExecuteArray<Org.Apache.Kafka.Common.Config.ConfigDef.Width>(LocalBridgeClazz, "values");
             }
 
             #endregion

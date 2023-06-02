@@ -42,11 +42,13 @@ namespace Org.Apache.Kafka.Streams.Processor
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/To.html#all()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/To.html#all()"/>
         /// </summary>
-        public static Org.Apache.Kafka.Streams.Processor.To All
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.To"/></returns>
+        public static Org.Apache.Kafka.Streams.Processor.To All()
         {
-            get { return SExecute<Org.Apache.Kafka.Streams.Processor.To>(LocalBridgeClazz, "all"); }
+            return SExecute<Org.Apache.Kafka.Streams.Processor.To>(LocalBridgeClazz, "all");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/To.html#child(java.lang.String)"/>

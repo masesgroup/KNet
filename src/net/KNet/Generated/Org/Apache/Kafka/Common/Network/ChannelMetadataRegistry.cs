@@ -46,18 +46,22 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelMetadataRegistry.html#cipherInformation()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelMetadataRegistry.html#cipherInformation()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Network.CipherInformation CipherInformation
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Network.CipherInformation"/></returns>
+        public Org.Apache.Kafka.Common.Network.CipherInformation CipherInformation()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Network.CipherInformation>("cipherInformation"); }
+            return IExecute<Org.Apache.Kafka.Common.Network.CipherInformation>("cipherInformation");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelMetadataRegistry.html#clientInformation()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelMetadataRegistry.html#clientInformation()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Network.ClientInformation ClientInformation
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Network.ClientInformation"/></returns>
+        public Org.Apache.Kafka.Common.Network.ClientInformation ClientInformation()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Network.ClientInformation>("clientInformation"); }
+            return IExecute<Org.Apache.Kafka.Common.Network.ClientInformation>("clientInformation");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelMetadataRegistry.html#close()"/>

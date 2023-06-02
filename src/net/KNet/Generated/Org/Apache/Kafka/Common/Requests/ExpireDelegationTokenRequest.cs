@@ -56,18 +56,22 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ExpireDelegationTokenRequest.html#expiryTimePeriod()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ExpireDelegationTokenRequest.html#hmac()"/>
         /// </summary>
-        public long ExpiryTimePeriod
+
+        /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
+        public Java.Nio.ByteBuffer Hmac()
         {
-            get { return IExecute<long>("expiryTimePeriod"); }
+            return IExecute<Java.Nio.ByteBuffer>("hmac");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ExpireDelegationTokenRequest.html#hmac()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ExpireDelegationTokenRequest.html#expiryTimePeriod()"/>
         /// </summary>
-        public Java.Nio.ByteBuffer Hmac
+
+        /// <returns><see cref="long"/></returns>
+        public long ExpiryTimePeriod()
         {
-            get { return IExecute<Java.Nio.ByteBuffer>("hmac"); }
+            return IExecute<long>("expiryTimePeriod");
         }
 
         #endregion

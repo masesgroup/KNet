@@ -56,11 +56,13 @@ namespace Org.Apache.Kafka.Connect.Runtime.Distributed
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ExtendedWorkerState.html#assignment()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ExtendedWorkerState.html#assignment()"/>
         /// </summary>
-        public Org.Apache.Kafka.Connect.Runtime.Distributed.ExtendedAssignment Assignment
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.Distributed.ExtendedAssignment"/></returns>
+        public Org.Apache.Kafka.Connect.Runtime.Distributed.ExtendedAssignment Assignment()
         {
-            get { return IExecute<Org.Apache.Kafka.Connect.Runtime.Distributed.ExtendedAssignment>("assignment"); }
+            return IExecute<Org.Apache.Kafka.Connect.Runtime.Distributed.ExtendedAssignment>("assignment");
         }
 
         #endregion

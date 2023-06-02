@@ -46,11 +46,13 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/UnlimitedWindows.html#of()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/UnlimitedWindows.html#of()"/>
         /// </summary>
-        public static Org.Apache.Kafka.Streams.Kstream.UnlimitedWindows Of
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.UnlimitedWindows"/></returns>
+        public static Org.Apache.Kafka.Streams.Kstream.UnlimitedWindows Of()
         {
-            get { return SExecute<Org.Apache.Kafka.Streams.Kstream.UnlimitedWindows>(LocalBridgeClazz, "of"); }
+            return SExecute<Org.Apache.Kafka.Streams.Kstream.UnlimitedWindows>(LocalBridgeClazz, "of");
         }
 
         #endregion

@@ -55,18 +55,22 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ConvertedRecords.html#recordConversionStats()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ConvertedRecords.html#recordConversionStats()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Record.RecordConversionStats RecordConversionStats
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Record.RecordConversionStats"/></returns>
+        public Org.Apache.Kafka.Common.Record.RecordConversionStats RecordConversionStats()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Record.RecordConversionStats>("recordConversionStats"); }
+            return IExecute<Org.Apache.Kafka.Common.Record.RecordConversionStats>("recordConversionStats");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ConvertedRecords.html#records()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ConvertedRecords.html#records()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Record.Records Records
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Record.Records"/></returns>
+        public Org.Apache.Kafka.Common.Record.Records Records()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Record.Records>("records"); }
+            return IExecute<Org.Apache.Kafka.Common.Record.Records>("records");
         }
 
         #endregion
@@ -113,18 +117,22 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ConvertedRecords.html#recordConversionStats()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ConvertedRecords.html#recordConversionStats()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Record.RecordConversionStats RecordConversionStats
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Record.RecordConversionStats"/></returns>
+        public Org.Apache.Kafka.Common.Record.RecordConversionStats RecordConversionStats()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Record.RecordConversionStats>("recordConversionStats"); }
+            return IExecute<Org.Apache.Kafka.Common.Record.RecordConversionStats>("recordConversionStats");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ConvertedRecords.html#records()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ConvertedRecords.html#records()"/>
         /// </summary>
-        public T Records
+
+        /// <returns><typeparamref name="T"/></returns>
+        public T Records()
         {
-            get { return IExecute<T>("records"); }
+            return IExecute<T>("records");
         }
 
         #endregion

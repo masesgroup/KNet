@@ -46,18 +46,13 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/CreateTopicsResult.html#all()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/CreateTopicsResult.html#values()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void> All
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>> Values()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>>("all"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/CreateTopicsResult.html#values()"/> 
-        /// </summary>
-        public Java.Util.Map<string, Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>> Values
-        {
-            get { return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>>>("values"); }
+            return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>>>("values");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/CreateTopicsResult.html#numPartitions(java.lang.String)"/>
@@ -76,6 +71,15 @@ namespace Org.Apache.Kafka.Clients.Admin
         public Org.Apache.Kafka.Common.KafkaFuture<int?> ReplicationFactor(string arg0)
         {
             return IExecute<Org.Apache.Kafka.Common.KafkaFuture<int?>>("replicationFactor", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/CreateTopicsResult.html#all()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
+        public Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void> All()
+        {
+            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>>("all");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/CreateTopicsResult.html#config(java.lang.String)"/>
@@ -139,32 +143,40 @@ namespace Org.Apache.Kafka.Clients.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/CreateTopicsResult.TopicMetadataAndConfig.html#config()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/CreateTopicsResult.TopicMetadataAndConfig.html#numPartitions()"/>
             /// </summary>
-            public Org.Apache.Kafka.Clients.Admin.Config Config
+
+            /// <returns><see cref="int"/></returns>
+            public int NumPartitions()
             {
-                get { return IExecute<Org.Apache.Kafka.Clients.Admin.Config>("config"); }
+                return IExecute<int>("numPartitions");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/CreateTopicsResult.TopicMetadataAndConfig.html#numPartitions()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/CreateTopicsResult.TopicMetadataAndConfig.html#replicationFactor()"/>
             /// </summary>
-            public int NumPartitions
+
+            /// <returns><see cref="int"/></returns>
+            public int ReplicationFactor()
             {
-                get { return IExecute<int>("numPartitions"); }
+                return IExecute<int>("replicationFactor");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/CreateTopicsResult.TopicMetadataAndConfig.html#replicationFactor()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/CreateTopicsResult.TopicMetadataAndConfig.html#config()"/>
             /// </summary>
-            public int ReplicationFactor
+
+            /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.Config"/></returns>
+            public Org.Apache.Kafka.Clients.Admin.Config Config()
             {
-                get { return IExecute<int>("replicationFactor"); }
+                return IExecute<Org.Apache.Kafka.Clients.Admin.Config>("config");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/CreateTopicsResult.TopicMetadataAndConfig.html#topicId()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/CreateTopicsResult.TopicMetadataAndConfig.html#topicId()"/>
             /// </summary>
-            public Org.Apache.Kafka.Common.Uuid TopicId
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Uuid"/></returns>
+            public Org.Apache.Kafka.Common.Uuid TopicId()
             {
-                get { return IExecute<Org.Apache.Kafka.Common.Uuid>("topicId"); }
+                return IExecute<Org.Apache.Kafka.Common.Uuid>("topicId");
             }
 
             #endregion

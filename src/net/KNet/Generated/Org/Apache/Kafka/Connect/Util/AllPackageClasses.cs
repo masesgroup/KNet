@@ -504,7 +504,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/LoggingContext.Scope.html"/>
         /// </summary>
-        public partial class Scope : Java.Lang.Enum
+        public partial class Scope : Java.Lang.Enum<Org.Apache.Kafka.Connect.Util.LoggingContext.Scope>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

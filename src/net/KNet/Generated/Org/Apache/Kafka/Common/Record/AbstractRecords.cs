@@ -109,27 +109,6 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractRecords.html#firstBatch()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Record.RecordBatch FirstBatch
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Record.RecordBatch>("firstBatch"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractRecords.html#records()"/> 
-        /// </summary>
-        public Java.Lang.Iterable<Org.Apache.Kafka.Common.Record.Record> Records
-        {
-            get { return IExecute<Java.Lang.Iterable<Org.Apache.Kafka.Common.Record.Record>>("records"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractRecords.html#toSend()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Record.RecordsSend ToSend
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Record.RecordsSend>("toSend"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractRecords.html#hasMatchingMagic(byte)"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
@@ -137,6 +116,33 @@ namespace Org.Apache.Kafka.Common.Record
         public bool HasMatchingMagic(byte arg0)
         {
             return IExecute<bool>("hasMatchingMagic", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractRecords.html#records()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Lang.Iterable"/></returns>
+        public Java.Lang.Iterable<Org.Apache.Kafka.Common.Record.Record> Records()
+        {
+            return IExecute<Java.Lang.Iterable<Org.Apache.Kafka.Common.Record.Record>>("records");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractRecords.html#firstBatch()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Record.RecordBatch"/></returns>
+        public Org.Apache.Kafka.Common.Record.RecordBatch FirstBatch()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Record.RecordBatch>("firstBatch");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractRecords.html#toSend()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Record.RecordsSend"/></returns>
+        public Org.Apache.Kafka.Common.Record.RecordsSend ToSend()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Record.RecordsSend>("toSend");
         }
 
         #endregion

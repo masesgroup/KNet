@@ -16,19 +16,13 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace Kafka.Tools
+namespace Org.Apache.Kafka.Tools
 {
     /// <summary>
     /// Class managing ProducerPerformance
     /// </summary>
-    public class ProducerPerformance : MASES.JCOBridge.C2JBridge.JVMBridgeMain<ProducerPerformance>
+    public partial class ProducerPerformance
     {
-        /// <summary>
-        /// Initialize a new <see cref="ProducerPerformance"/>
-        /// </summary>
-        public ProducerPerformance()
-            : base("org.apache.kafka.tools.ProducerPerformance")
-        {
-        }
+
     }
 }

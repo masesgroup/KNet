@@ -46,34 +46,6 @@ namespace Org.Apache.Kafka.Common.Metrics
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Sensor.html#hasExpired()"/> 
-        /// </summary>
-        public bool HasExpired
-        {
-            get { return IExecute<bool>("hasExpired"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Sensor.html#hasMetrics()"/> 
-        /// </summary>
-        public bool HasMetrics
-        {
-            get { return IExecute<bool>("hasMetrics"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Sensor.html#name()"/> 
-        /// </summary>
-        public string Name
-        {
-            get { return IExecute<string>("name"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Sensor.html#shouldRecord()"/> 
-        /// </summary>
-        public bool ShouldRecord
-        {
-            get { return IExecute<bool>("shouldRecord"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Sensor.html#add(org.apache.kafka.common.MetricName,org.apache.kafka.common.metrics.MeasurableStat)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.MetricName"/></param>
@@ -91,6 +63,33 @@ namespace Org.Apache.Kafka.Common.Metrics
         public bool Add(Org.Apache.Kafka.Common.Metrics.CompoundStat arg0)
         {
             return IExecute<bool>("add", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Sensor.html#hasExpired()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool HasExpired()
+        {
+            return IExecute<bool>("hasExpired");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Sensor.html#shouldRecord()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool ShouldRecord()
+        {
+            return IExecute<bool>("shouldRecord");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Sensor.html#name()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string Name()
+        {
+            return IExecute<string>("name");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Sensor.html#add(org.apache.kafka.common.MetricName,org.apache.kafka.common.metrics.MeasurableStat,org.apache.kafka.common.metrics.MetricConfig)"/>
@@ -112,6 +111,15 @@ namespace Org.Apache.Kafka.Common.Metrics
         public bool Add(Org.Apache.Kafka.Common.Metrics.CompoundStat arg0, Org.Apache.Kafka.Common.Metrics.MetricConfig arg1)
         {
             return IExecute<bool>("add", arg0, arg1);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Sensor.html#hasMetrics()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool HasMetrics()
+        {
+            return IExecute<bool>("hasMetrics");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Sensor.html#checkQuotas()"/>
@@ -207,13 +215,6 @@ namespace Org.Apache.Kafka.Common.Metrics
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Sensor.RecordingLevel.html#values()"/> 
-            /// </summary>
-            public static Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel[] Values
-            {
-                get { return SExecuteArray<Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel>(LocalBridgeClazz, "values"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Sensor.RecordingLevel.html#forId(int)"/>
             /// </summary>
             /// <param name="arg0"><see cref="int"/></param>
@@ -239,6 +240,15 @@ namespace Org.Apache.Kafka.Common.Metrics
             public static Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel ValueOf(string arg0)
             {
                 return SExecute<Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel>(LocalBridgeClazz, "valueOf", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Sensor.RecordingLevel.html#values()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel"/></returns>
+            public static Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel[] Values()
+            {
+                return SExecuteArray<Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel>(LocalBridgeClazz, "values");
             }
 
             #endregion

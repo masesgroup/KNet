@@ -34,7 +34,7 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest.Entities
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
-        public CreateConnectorRequest(string arg0, Java.Util.Map arg1)
+        public CreateConnectorRequest(string arg0, Java.Util.Map<string, string> arg1)
             : base(arg0, arg1)
         {
         }
@@ -55,18 +55,22 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest.Entities
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/CreateConnectorRequest.html#config()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/CreateConnectorRequest.html#name()"/>
         /// </summary>
-        public Java.Util.Map<string, string> Config
+
+        /// <returns><see cref="string"/></returns>
+        public string Name()
         {
-            get { return IExecute<Java.Util.Map<string, string>>("config"); }
+            return IExecute<string>("name");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/CreateConnectorRequest.html#name()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/CreateConnectorRequest.html#config()"/>
         /// </summary>
-        public string Name
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, string> Config()
         {
-            get { return IExecute<string>("name"); }
+            return IExecute<Java.Util.Map<string, string>>("config");
         }
 
         #endregion

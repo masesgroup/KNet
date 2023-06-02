@@ -46,11 +46,13 @@ namespace Org.Apache.Kafka.Common.Metrics
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/CompoundStat.html#stats()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/CompoundStat.html#stats()"/>
         /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Metrics.CompoundStat.NamedMeasurable> Stats
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Metrics.CompoundStat.NamedMeasurable> Stats()
         {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Metrics.CompoundStat.NamedMeasurable>>("stats"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Metrics.CompoundStat.NamedMeasurable>>("stats");
         }
 
         #endregion
@@ -86,18 +88,22 @@ namespace Org.Apache.Kafka.Common.Metrics
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/CompoundStat.NamedMeasurable.html#name()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/CompoundStat.NamedMeasurable.html#name()"/>
             /// </summary>
-            public Org.Apache.Kafka.Common.MetricName Name
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.MetricName"/></returns>
+            public Org.Apache.Kafka.Common.MetricName Name()
             {
-                get { return IExecute<Org.Apache.Kafka.Common.MetricName>("name"); }
+                return IExecute<Org.Apache.Kafka.Common.MetricName>("name");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/CompoundStat.NamedMeasurable.html#stat()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/CompoundStat.NamedMeasurable.html#stat()"/>
             /// </summary>
-            public Org.Apache.Kafka.Common.Metrics.Measurable Stat
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Metrics.Measurable"/></returns>
+            public Org.Apache.Kafka.Common.Metrics.Measurable Stat()
             {
-                get { return IExecute<Org.Apache.Kafka.Common.Metrics.Measurable>("stat"); }
+                return IExecute<Org.Apache.Kafka.Common.Metrics.Measurable>("stat");
             }
 
             #endregion

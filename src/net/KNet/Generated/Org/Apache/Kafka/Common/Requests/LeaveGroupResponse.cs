@@ -36,7 +36,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Protocol.Errors"/></param>
         /// <param name="arg2"><see cref="int"/></param>
         /// <param name="arg3"><see cref="short"/></param>
-        public LeaveGroupResponse(Java.Util.List arg0, Org.Apache.Kafka.Common.Protocol.Errors arg1, int arg2, short arg3)
+        public LeaveGroupResponse(Java.Util.List<Org.Apache.Kafka.Common.Message.LeaveGroupResponseData.MemberResponse> arg0, Org.Apache.Kafka.Common.Protocol.Errors arg1, int arg2, short arg3)
             : base(arg0, arg1, arg2, arg3)
         {
         }
@@ -84,25 +84,31 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/LeaveGroupResponse.html#error()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/LeaveGroupResponse.html#memberResponses()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.Errors Error
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Message.LeaveGroupResponseData.MemberResponse> MemberResponses()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.Errors>("error"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.LeaveGroupResponseData.MemberResponse>>("memberResponses");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/LeaveGroupResponse.html#memberResponses()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/LeaveGroupResponse.html#error()"/>
         /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Message.LeaveGroupResponseData.MemberResponse> MemberResponses
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Errors"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.Errors Error()
         {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.LeaveGroupResponseData.MemberResponse>>("memberResponses"); }
+            return IExecute<Org.Apache.Kafka.Common.Protocol.Errors>("error");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/LeaveGroupResponse.html#topLevelError()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/LeaveGroupResponse.html#topLevelError()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.Errors TopLevelError
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Errors"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.Errors TopLevelError()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.Errors>("topLevelError"); }
+            return IExecute<Org.Apache.Kafka.Common.Protocol.Errors>("topLevelError");
         }
 
         #endregion

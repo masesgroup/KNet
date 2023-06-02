@@ -33,12 +33,8 @@ namespace Org.Apache.Kafka.Connect.Source
     /// </summary>
     /// <typeparam name="TKey?">The type of the key to be inserted in Kafka</typeparam>
     /// <typeparam name="TValue?">The type of value to be inserted in Kafka</typeparam>
-    public class SourceRecord : ConnectRecord<SourceRecord>
+    public partial class SourceRecord
     {
-        public override bool IsAbstract => false;
-
-        public override string ClassName => "org.apache.kafka.connect.source.SourceRecord";
-
         /// <summary>
         /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey?, TValue?}"/>
         /// </summary>
@@ -200,9 +196,9 @@ namespace Org.Apache.Kafka.Connect.Source
     /// <typeparam name="TValue?">The type of value to be inserted in Kafka</typeparam>
     public class SourceRecord<TKey, TValue> : SourceRecord<object, object, TKey, TValue>
     {
-        public override bool IsAbstract => false;
+        public override bool IsBridgeAbstract => false;
 
-        public override string ClassName => "org.apache.kafka.connect.source.SourceRecord";
+        public override string BridgeClassName => "org.apache.kafka.connect.source.SourceRecord";
 
         /// <summary>
         /// Converts an <see cref="SourceRecord{TKey?, TValue?}"/> in <see cref="SourceRecord"/>
@@ -322,9 +318,9 @@ namespace Org.Apache.Kafka.Connect.Source
     /// <typeparam name="TValue?">The type of value to be inserted in Kafka</typeparam>
     public class SourceRecord<TKeySource, TOffset, TKey, TValue> : ConnectRecord<SourceRecord<TKey?, TValue?>, TKey?, TValue?>
     {
-        public override bool IsAbstract => false;
+        public override bool IsBridgeAbstract => false;
 
-        public override string ClassName => "org.apache.kafka.connect.source.SourceRecord";
+        public override string BridgeClassName => "org.apache.kafka.connect.source.SourceRecord";
 
         /// <summary>
         /// Converts an <see cref="SourceRecord{TKeySource, TOffset, TKey?, TValue?}"/> in <see cref="SourceRecord"/>

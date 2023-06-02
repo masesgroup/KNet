@@ -50,11 +50,13 @@ namespace Org.Apache.Kafka.Connect.Runtime
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/PredicatedTransformation.html#config()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/PredicatedTransformation.html#config()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Config.ConfigDef Config
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
+        public Org.Apache.Kafka.Common.Config.ConfigDef Config()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("config"); }
+            return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("config");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/PredicatedTransformation.html#apply(org.apache.kafka.connect.connector.ConnectRecord)"/>
@@ -120,11 +122,13 @@ namespace Org.Apache.Kafka.Connect.Runtime
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/PredicatedTransformation.html#config()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/PredicatedTransformation.html#config()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Config.ConfigDef Config
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
+        public Org.Apache.Kafka.Common.Config.ConfigDef Config()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("config"); }
+            return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("config");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/PredicatedTransformation.html#apply(org.apache.kafka.connect.connector.ConnectRecord)"/>

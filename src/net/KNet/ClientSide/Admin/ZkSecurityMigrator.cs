@@ -21,14 +21,8 @@ namespace Kafka.Admin
     /// <summary>
     /// Class managing ZkSecurityMigrator
     /// </summary>
-    public class ZkSecurityMigrator : MASES.JCOBridge.C2JBridge.JVMBridgeMain<ZkSecurityMigrator>
+    public partial class ZkSecurityMigrator
     {
-        /// <summary>
-        /// Initialize a new <see cref="ZkSecurityMigrator"/>
-        /// </summary>
-        public ZkSecurityMigrator()
-            : base("kafka.admin.ZkSecurityMigrator")
-        {
-        }
+
     }
 }

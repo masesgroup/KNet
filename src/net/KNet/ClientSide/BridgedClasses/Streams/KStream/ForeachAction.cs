@@ -19,7 +19,7 @@
 using MASES.JCOBridge.C2JBridge;
 using System;
 
-namespace Org.Apache.Kafka.Streams.KStream
+namespace Org.Apache.Kafka.Streams.Kstream
 {
     /// <summary>
     /// Listener for Kafka ForeachAction. Extends <see cref="IJVMBridgeBase"/>
@@ -44,10 +44,10 @@ namespace Org.Apache.Kafka.Streams.KStream
     /// <typeparam name="K">The data associated to the event</typeparam>
     /// <typeparam name="V">The data associated to the event</typeparam>
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
-    public class ForeachAction<K, V> : JVMBridgeListener, IForeachAction<K, V>
+    public partial class ForeachAction<K, V> : IForeachAction<K, V>
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.streams.kstream.ForeachActionImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.streams.kstream.ForeachActionImpl";
 
         readonly Action<K, V> executionFunction = null;
         /// <summary>

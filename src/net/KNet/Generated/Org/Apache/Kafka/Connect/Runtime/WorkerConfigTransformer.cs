@@ -34,7 +34,7 @@ namespace Org.Apache.Kafka.Connect.Runtime
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Runtime.Worker"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
-        public WorkerConfigTransformer(Org.Apache.Kafka.Connect.Runtime.Worker arg0, Java.Util.Map arg1)
+        public WorkerConfigTransformer(Org.Apache.Kafka.Connect.Runtime.Worker arg0, Java.Util.Map<string, Org.Apache.Kafka.Common.Config.Provider.ConfigProvider> arg1)
             : base(arg0, arg1)
         {
         }

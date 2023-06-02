@@ -60,11 +60,13 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/UnalignedFileRecords.html#sizeInBytes()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/UnalignedFileRecords.html#sizeInBytes()"/>
         /// </summary>
-        public int SizeInBytes
+
+        /// <returns><see cref="int"/></returns>
+        public int SizeInBytes()
         {
-            get { return IExecute<int>("sizeInBytes"); }
+            return IExecute<int>("sizeInBytes");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/UnalignedFileRecords.html#writeTo(org.apache.kafka.common.network.TransferableChannel,long,int)"/>

@@ -75,11 +75,13 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/UpdateFeaturesResponse.html#topLevelError()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/UpdateFeaturesResponse.html#topLevelError()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Requests.ApiError TopLevelError
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Requests.ApiError"/></returns>
+        public Org.Apache.Kafka.Common.Requests.ApiError TopLevelError()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Requests.ApiError>("topLevelError"); }
+            return IExecute<Org.Apache.Kafka.Common.Requests.ApiError>("topLevelError");
         }
 
         #endregion

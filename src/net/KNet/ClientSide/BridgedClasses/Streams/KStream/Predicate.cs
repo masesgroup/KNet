@@ -19,14 +19,14 @@
 using MASES.JCOBridge.C2JBridge;
 using System;
 
-namespace Org.Apache.Kafka.Streams.KStream
+namespace Org.Apache.Kafka.Streams.Kstream
 {
     /// <summary>
     /// Listener for Kafka Predicate. Extends <see cref="IJVMBridgeBase"/>
     /// </summary>
     /// <typeparam name="T">The data associated to the event</typeparam>
-    /// <typeparam name="U">The data associated to the event</typeparam>
-    public interface IPredicate<T, U> : IJVMBridgeBase
+    /// <typeparam name="V">The data associated to the event</typeparam>
+    public interface IPredicate<K, V> : IJVMBridgeBase
     {
         /// <summary>
         /// Executes the Predicate action in the CLR
@@ -34,44 +34,44 @@ namespace Org.Apache.Kafka.Streams.KStream
         /// <param name="o1">The Predicate object</param>
         /// <param name="o2">The Predicate object</param>
         /// <returns>The test evaluation</returns>
-        bool Test(T o1, U o2);
+        bool Test(K o1, V o2);
     }
 
     /// <summary>
-    /// Listener for Kafka Predicate. Extends <see cref="JVMBridgeListener"/>, implements <see cref="IPredicate{T, U}"/>
+    /// Listener for Kafka Predicate. Extends <see cref="JVMBridgeListener"/>, implements <see cref="IPredicate{K, V}"/>
     /// </summary>
-    /// <typeparam name="T">The data associated to the event</typeparam>
-    /// <typeparam name="U">The data associated to the event</typeparam>
+    /// <typeparam name="K">The data associated to the event</typeparam>
+    /// <typeparam name="V">The data associated to the event</typeparam>
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
-    public class Predicate<T, U> : JVMBridgeListener, IPredicate<T, U>
+    public partial class Predicate<K, V> : IPredicate<K, V>
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.streams.kstream.PredicateImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.streams.kstream.PredicateImpl";
 
-        readonly Func<T, U, bool> executionFunction = null;
+        readonly Func<K, V, bool> executionFunction = null;
         /// <summary>
-        /// The <see cref="Func{T, U, Boolean}"/> to be executed
+        /// The <see cref="Func{K, V, Boolean}"/> to be executed
         /// </summary>
-        public virtual Func<T, U, bool> OnTest { get { return executionFunction; } }
+        public virtual Func<K, V, bool> OnTest { get { return executionFunction; } }
         /// <summary>
-        /// Initialize a new instance of <see cref="Predicate{T, U}"/>
+        /// Initialize a new instance of <see cref="Predicate{T, V}"/>
         /// </summary>
-        /// <param name="func">The <see cref="Func{T, U, Boolean}"/> to be executed</param>
+        /// <param name="func">The <see cref="Func{K, V, Boolean}"/> to be executed</param>
         /// <param name="attachEventHandler">Set to false to disable attach of <see cref="EventHandler"/> and set an own one</param>
-        public Predicate(Func<T, U, bool> func = null, bool attachEventHandler = true)
+        public Predicate(Func<K, V, bool> func = null, bool attachEventHandler = true)
         {
             if (func != null) executionFunction = func;
             else executionFunction = Test;
 
             if (attachEventHandler)
             {
-                AddEventHandler("test", new EventHandler<CLRListenerEventArgs<CLREventData<T>>>(EventHandler));
+                AddEventHandler("test", new EventHandler<CLRListenerEventArgs<CLREventData<K>>>(EventHandler));
             }
         }
 
-        void EventHandler(object sender, CLRListenerEventArgs<CLREventData<T>> data)
+        void EventHandler(object sender, CLRListenerEventArgs<CLREventData<K>> data)
         {
-            var retVal = OnTest(data.EventData.TypedEventData, data.EventData.To<U>(0));
+            var retVal = OnTest(data.EventData.TypedEventData, data.EventData.To<V>(0));
             data.SetReturnValue(retVal);
         }
         /// <summary>
@@ -80,33 +80,6 @@ namespace Org.Apache.Kafka.Streams.KStream
         /// <param name="o1">The Predicate object</param>
         /// <param name="o2">The Predicate object</param>
         /// <returns>The test evaluation</returns>
-        public virtual bool Test(T o1, U o2) { return false; }
+        public virtual bool Test(K o1, V o2) { return false; }
     }
-    /*
-    /// <summary>
-    /// Listener for Kafka Predicate. Extends <see cref="PredicateImpl{T, U}"/>
-    /// </summary>
-    /// <typeparam name="T">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
-    /// <typeparam name="U">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
-    /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
-    public class JVMBridgePredicate<T, U> : PredicateImpl<T, U>
-        where T : JVMBridgeBase, new()
-        where U : JVMBridgeBase, new()
-    {
-        /// <summary>
-        /// Initialize a new instance of <see cref="JVMBridgePredicate{T, U}"/>
-        /// </summary>
-        /// <param name="func">The <see cref="Func{T, U, Boolean}"/> to be executed</param>
-        public JVMBridgePredicate(Func<T, U, bool> func = null) : base(func, false)
-        {
-            AddEventHandler("test", new EventHandler<CLRListenerEventArgs<JVMBridgeEventData<T>>>(EventHandler));
-        }
-
-        void EventHandler(object sender, CLRListenerEventArgs<JVMBridgeEventData<T>> data)
-        {
-            var retVal = OnTest(data.EventData.TypedEventData, data.EventData.To<U>(0));
-            data.CLRReturnValue = retVal;
-        }
-    }
-    */
 }

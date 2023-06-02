@@ -33,7 +33,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListOffsetsResult.html#%3Cinit%3E(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public ListOffsetsResult(Java.Util.Map arg0)
+        public ListOffsetsResult(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.ListOffsetsResult.ListOffsetsResultInfo>> arg0)
             : base(arg0)
         {
         }
@@ -54,11 +54,13 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListOffsetsResult.html#all()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListOffsetsResult.html#all()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Admin.ListOffsetsResult.ListOffsetsResultInfo>> All
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
+        public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Admin.ListOffsetsResult.ListOffsetsResultInfo>> All()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Admin.ListOffsetsResult.ListOffsetsResultInfo>>>("all"); }
+            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Admin.ListOffsetsResult.ListOffsetsResultInfo>>>("all");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListOffsetsResult.html#partitionResult(org.apache.kafka.common.TopicPartition)"/>
@@ -83,7 +85,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// <param name="arg0"><see cref="long"/></param>
             /// <param name="arg1"><see cref="long"/></param>
             /// <param name="arg2"><see cref="Java.Util.Optional"/></param>
-            public ListOffsetsResultInfo(long arg0, long arg1, Java.Util.Optional arg2)
+            public ListOffsetsResultInfo(long arg0, long arg1, Java.Util.Optional<int?> arg2)
                 : base(arg0, arg1, arg2)
             {
             }
@@ -104,25 +106,31 @@ namespace Org.Apache.Kafka.Clients.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListOffsetsResult.ListOffsetsResultInfo.html#leaderEpoch()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListOffsetsResult.ListOffsetsResultInfo.html#leaderEpoch()"/>
             /// </summary>
-            public Java.Util.Optional<int?> LeaderEpoch
+
+            /// <returns><see cref="Java.Util.Optional"/></returns>
+            public Java.Util.Optional<int?> LeaderEpoch()
             {
-                get { return IExecute<Java.Util.Optional<int?>>("leaderEpoch"); }
+                return IExecute<Java.Util.Optional<int?>>("leaderEpoch");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListOffsetsResult.ListOffsetsResultInfo.html#offset()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListOffsetsResult.ListOffsetsResultInfo.html#offset()"/>
             /// </summary>
-            public long Offset
+
+            /// <returns><see cref="long"/></returns>
+            public long Offset()
             {
-                get { return IExecute<long>("offset"); }
+                return IExecute<long>("offset");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListOffsetsResult.ListOffsetsResultInfo.html#timestamp()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListOffsetsResult.ListOffsetsResultInfo.html#timestamp()"/>
             /// </summary>
-            public long Timestamp
+
+            /// <returns><see cref="long"/></returns>
+            public long Timestamp()
             {
-                get { return IExecute<long>("timestamp"); }
+                return IExecute<long>("timestamp");
             }
 
             #endregion

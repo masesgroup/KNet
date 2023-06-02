@@ -111,46 +111,58 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#consumerGroupId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#consumerGroupId()"/>
         /// </summary>
-        public string ConsumerGroupId
+
+        /// <returns><see cref="string"/></returns>
+        public string ConsumerGroupId()
         {
-            get { return IExecute<string>("consumerGroupId"); }
+            return IExecute<string>("consumerGroupId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#downstreamOffset()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#metadata()"/>
         /// </summary>
-        public long DownstreamOffset
+
+        /// <returns><see cref="string"/></returns>
+        public string Metadata()
         {
-            get { return IExecute<long>("downstreamOffset"); }
+            return IExecute<string>("metadata");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#metadata()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#downstreamOffset()"/>
         /// </summary>
-        public string Metadata
+
+        /// <returns><see cref="long"/></returns>
+        public long DownstreamOffset()
         {
-            get { return IExecute<string>("metadata"); }
+            return IExecute<long>("downstreamOffset");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#offsetAndMetadata()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#upstreamOffset()"/>
         /// </summary>
-        public Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata OffsetAndMetadata
+
+        /// <returns><see cref="long"/></returns>
+        public long UpstreamOffset()
         {
-            get { return IExecute<Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>("offsetAndMetadata"); }
+            return IExecute<long>("upstreamOffset");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#topicPartition()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#offsetAndMetadata()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.TopicPartition TopicPartition
+
+        /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata"/></returns>
+        public Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata OffsetAndMetadata()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.TopicPartition>("topicPartition"); }
+            return IExecute<Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>("offsetAndMetadata");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#upstreamOffset()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#topicPartition()"/>
         /// </summary>
-        public long UpstreamOffset
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.TopicPartition"/></returns>
+        public Org.Apache.Kafka.Common.TopicPartition TopicPartition()
         {
-            get { return IExecute<long>("upstreamOffset"); }
+            return IExecute<Org.Apache.Kafka.Common.TopicPartition>("topicPartition");
         }
 
         #endregion

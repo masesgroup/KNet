@@ -46,11 +46,13 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/GlobalKTable.html#queryableStoreName()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/GlobalKTable.html#queryableStoreName()"/>
         /// </summary>
-        public string QueryableStoreName
+
+        /// <returns><see cref="string"/></returns>
+        public string QueryableStoreName()
         {
-            get { return IExecute<string>("queryableStoreName"); }
+            return IExecute<string>("queryableStoreName");
         }
 
         #endregion
@@ -88,11 +90,13 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/GlobalKTable.html#queryableStoreName()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/GlobalKTable.html#queryableStoreName()"/>
         /// </summary>
-        public string QueryableStoreName
+
+        /// <returns><see cref="string"/></returns>
+        public string QueryableStoreName()
         {
-            get { return IExecute<string>("queryableStoreName"); }
+            return IExecute<string>("queryableStoreName");
         }
 
         #endregion

@@ -284,7 +284,7 @@ namespace Org.Apache.Kafka.Connect.Runtime.Isolation
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/Plugins.ClassLoaderUsage.html"/>
         /// </summary>
-        public partial class ClassLoaderUsage : Java.Lang.Enum
+        public partial class ClassLoaderUsage : Java.Lang.Enum<Org.Apache.Kafka.Connect.Runtime.Isolation.Plugins.ClassLoaderUsage>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -374,7 +374,7 @@ namespace Org.Apache.Kafka.Connect.Runtime.Isolation
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/PluginType.html"/>
     /// </summary>
-    public partial class PluginType : Java.Lang.Enum
+    public partial class PluginType : Java.Lang.Enum<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginType>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

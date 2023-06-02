@@ -20,21 +20,9 @@ using Java.Util;
 
 namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class ProducerState : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ProducerState>
+    public partial class ProducerState
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.ProducerState";
-
-        public long ProducerId => IExecute<long>("producerId");
-
-        public int ProducerEpoch => IExecute<int>("producerEpoch");
-
-        public int LastSequence => IExecute<int>("lastSequence");
-
-        public long LastTimestamp => IExecute<long>("lastTimestamp");
-
-        public OptionalLong CurrentTransactionStartOffset => IExecute<OptionalLong>("producerId");
-
-        public OptionalInt CoordinatorEpoch => IExecute<OptionalInt>("producerId");
+        public System.DateTime LastDateTime => System.DateTimeOffset.FromUnixTimeMilliseconds(LastTimestamp()).DateTime;
     }
 }
 

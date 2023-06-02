@@ -74,13 +74,6 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TransactionState.html#values()"/> 
-        /// </summary>
-        public static Org.Apache.Kafka.Clients.Admin.TransactionState[] Values
-        {
-            get { return SExecuteArray<Org.Apache.Kafka.Clients.Admin.TransactionState>(LocalBridgeClazz, "values"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TransactionState.html#parse(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -97,6 +90,15 @@ namespace Org.Apache.Kafka.Clients.Admin
         public static Org.Apache.Kafka.Clients.Admin.TransactionState ValueOf(string arg0)
         {
             return SExecute<Org.Apache.Kafka.Clients.Admin.TransactionState>(LocalBridgeClazz, "valueOf", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TransactionState.html#values()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.TransactionState"/></returns>
+        public static Org.Apache.Kafka.Clients.Admin.TransactionState[] Values()
+        {
+            return SExecuteArray<Org.Apache.Kafka.Clients.Admin.TransactionState>(LocalBridgeClazz, "values");
         }
 
         #endregion

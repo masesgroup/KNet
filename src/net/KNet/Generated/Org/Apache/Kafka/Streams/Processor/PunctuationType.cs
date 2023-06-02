@@ -50,13 +50,6 @@ namespace Org.Apache.Kafka.Streams.Processor
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/PunctuationType.html#values()"/> 
-        /// </summary>
-        public static Org.Apache.Kafka.Streams.Processor.PunctuationType[] Values
-        {
-            get { return SExecuteArray<Org.Apache.Kafka.Streams.Processor.PunctuationType>(LocalBridgeClazz, "values"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/PunctuationType.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -64,6 +57,15 @@ namespace Org.Apache.Kafka.Streams.Processor
         public static Org.Apache.Kafka.Streams.Processor.PunctuationType ValueOf(string arg0)
         {
             return SExecute<Org.Apache.Kafka.Streams.Processor.PunctuationType>(LocalBridgeClazz, "valueOf", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/PunctuationType.html#values()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.PunctuationType"/></returns>
+        public static Org.Apache.Kafka.Streams.Processor.PunctuationType[] Values()
+        {
+            return SExecuteArray<Org.Apache.Kafka.Streams.Processor.PunctuationType>(LocalBridgeClazz, "values");
         }
 
         #endregion

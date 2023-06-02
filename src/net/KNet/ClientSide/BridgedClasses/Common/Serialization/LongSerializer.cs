@@ -16,18 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
+
 namespace Org.Apache.Kafka.Common.Serialization
 {
-    public class LongSerializer : Serializer<long>
+    public partial class LongSerializer
     {
-        public override string ClassName => "org.apache.kafka.common.serialization.LongSerializer";
-
-        public override bool AutoInit => false;
-
-        public LongSerializer()
-            : base(null, null, false)
-        {
-
-        }
+        public static implicit operator Serializer<long>(LongSerializer t) => t.Cast<Serializer<long>>();
     }
 }

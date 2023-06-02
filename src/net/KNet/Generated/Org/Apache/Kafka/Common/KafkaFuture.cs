@@ -68,34 +68,6 @@ namespace Org.Apache.Kafka.Common
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#isCancelled()"/> 
-        /// </summary>
-        public bool IsCancelled
-        {
-            get { return IExecute<bool>("isCancelled"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#isCompletedExceptionally()"/> 
-        /// </summary>
-        public bool IsCompletedExceptionally
-        {
-            get { return IExecute<bool>("isCompletedExceptionally"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#isDone()"/> 
-        /// </summary>
-        public bool IsDone
-        {
-            get { return IExecute<bool>("isDone"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#toCompletionStage()"/> 
-        /// </summary>
-        public Java.Util.Concurrent.CompletionStage ToCompletionStage
-        {
-            get { return IExecute<Java.Util.Concurrent.CompletionStage>("toCompletionStage"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#thenApply(org.apache.kafka.common.KafkaFuture.BaseFunction)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.KafkaFuture.BaseFunction"/></param>
@@ -112,6 +84,42 @@ namespace Org.Apache.Kafka.Common
         public bool Cancel(bool arg0)
         {
             return IExecute<bool>("cancel", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#isCancelled()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsCancelled()
+        {
+            return IExecute<bool>("isCancelled");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#isCompletedExceptionally()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsCompletedExceptionally()
+        {
+            return IExecute<bool>("isCompletedExceptionally");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#isDone()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsDone()
+        {
+            return IExecute<bool>("isDone");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#toCompletionStage()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Concurrent.CompletionStage"/></returns>
+        public Java.Util.Concurrent.CompletionStage ToCompletionStage()
+        {
+            return IExecute<Java.Util.Concurrent.CompletionStage>("toCompletionStage");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#whenComplete(org.apache.kafka.common.KafkaFuture.BiConsumer)"/>
@@ -385,34 +393,6 @@ namespace Org.Apache.Kafka.Common
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#isCancelled()"/> 
-        /// </summary>
-        public bool IsCancelled
-        {
-            get { return IExecute<bool>("isCancelled"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#isCompletedExceptionally()"/> 
-        /// </summary>
-        public bool IsCompletedExceptionally
-        {
-            get { return IExecute<bool>("isCompletedExceptionally"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#isDone()"/> 
-        /// </summary>
-        public bool IsDone
-        {
-            get { return IExecute<bool>("isDone"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#toCompletionStage()"/> 
-        /// </summary>
-        public Java.Util.Concurrent.CompletionStage<T> ToCompletionStage
-        {
-            get { return IExecute<Java.Util.Concurrent.CompletionStage<T>>("toCompletionStage"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#thenApply(org.apache.kafka.common.KafkaFuture.BaseFunction)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.KafkaFuture.BaseFunction"/></param>
@@ -430,6 +410,42 @@ namespace Org.Apache.Kafka.Common
         public bool Cancel(bool arg0)
         {
             return IExecute<bool>("cancel", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#isCancelled()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsCancelled()
+        {
+            return IExecute<bool>("isCancelled");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#isCompletedExceptionally()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsCompletedExceptionally()
+        {
+            return IExecute<bool>("isCompletedExceptionally");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#isDone()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsDone()
+        {
+            return IExecute<bool>("isDone");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#toCompletionStage()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Concurrent.CompletionStage"/></returns>
+        public Java.Util.Concurrent.CompletionStage<T> ToCompletionStage()
+        {
+            return IExecute<Java.Util.Concurrent.CompletionStage<T>>("toCompletionStage");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#whenComplete(org.apache.kafka.common.KafkaFuture.BiConsumer)"/>

@@ -64,11 +64,13 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DeleteGroupsResponse.html#errors()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DeleteGroupsResponse.html#errors()"/>
         /// </summary>
-        public Java.Util.Map<string, Org.Apache.Kafka.Common.Protocol.Errors> Errors
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, Org.Apache.Kafka.Common.Protocol.Errors> Errors()
         {
-            get { return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Common.Protocol.Errors>>("errors"); }
+            return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Common.Protocol.Errors>>("errors");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DeleteGroupsResponse.html#get(java.lang.String)"/>

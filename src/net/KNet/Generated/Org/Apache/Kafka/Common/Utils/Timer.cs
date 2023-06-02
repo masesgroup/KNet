@@ -46,46 +46,58 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#currentTimeMs()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#isExpired()"/>
         /// </summary>
-        public long CurrentTimeMs
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsExpired()
         {
-            get { return IExecute<long>("currentTimeMs"); }
+            return IExecute<bool>("isExpired");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#elapsedMs()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#notExpired()"/>
         /// </summary>
-        public long ElapsedMs
+
+        /// <returns><see cref="bool"/></returns>
+        public bool NotExpired()
         {
-            get { return IExecute<long>("elapsedMs"); }
+            return IExecute<bool>("notExpired");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#isExpired()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#currentTimeMs()"/>
         /// </summary>
-        public bool IsExpired
+
+        /// <returns><see cref="long"/></returns>
+        public long CurrentTimeMs()
         {
-            get { return IExecute<bool>("isExpired"); }
+            return IExecute<long>("currentTimeMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#notExpired()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#elapsedMs()"/>
         /// </summary>
-        public bool NotExpired
+
+        /// <returns><see cref="long"/></returns>
+        public long ElapsedMs()
         {
-            get { return IExecute<bool>("notExpired"); }
+            return IExecute<long>("elapsedMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#remainingMs()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#remainingMs()"/>
         /// </summary>
-        public long RemainingMs
+
+        /// <returns><see cref="long"/></returns>
+        public long RemainingMs()
         {
-            get { return IExecute<long>("remainingMs"); }
+            return IExecute<long>("remainingMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#timeoutMs()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#timeoutMs()"/>
         /// </summary>
-        public long TimeoutMs
+
+        /// <returns><see cref="long"/></returns>
+        public long TimeoutMs()
         {
-            get { return IExecute<long>("timeoutMs"); }
+            return IExecute<long>("timeoutMs");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#reset(long)"/>

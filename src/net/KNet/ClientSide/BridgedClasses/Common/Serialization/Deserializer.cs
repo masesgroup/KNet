@@ -33,24 +33,24 @@ namespace Org.Apache.Kafka.Common.Serialization
     /// <summary>
     /// Listener for Kafka Deserializer. Extends <see cref="Deserializer"/>
     /// </summary>
-    /// <typeparam name="E">The data associated to the event</typeparam>
-    public interface IDeserializer<E> : IDeserializer
+    /// <typeparam name="T">The data associated to the event</typeparam>
+    public interface IDeserializer<T> : IDeserializer
     {
         /// <summary>
         /// Executes the Deserializer action in the CLR
         /// </summary>
         /// <param name="topic">topic associated with the data</param>
         /// <param name="data">serialized bytes; may be null; implementations are recommended to handle null by returning a value or null rather than throwing an exception</param>
-        /// <returns>The deserialized <typeparamref name="E"/></returns>
-        E Deserialize(string topic, byte[] data);
+        /// <returns>The deserialized <typeparamref name="T"/></returns>
+        T Deserialize(string topic, byte[] data);
         /// <summary>
         /// Executes the Deserializer action in the CLR
         /// </summary>
         /// <param name="topic">topic associated with the data</param>
         /// <param name="headers"><see cref="Headers"/> associated with the record; may be empty.</param>
         /// <param name="data">serialized bytes; may be null; implementations are recommended to handle null by returning a value or null rather than throwing an exception</param>
-        /// <returns>The deserialized <typeparamref name="E"/></returns>
-        E DeserializeWithHeaders(string topic, Headers headers, byte[] data);
+        /// <returns>The deserialized <typeparamref name="T"/></returns>
+        T DeserializeWithHeaders(string topic, Headers headers, byte[] data);
     }
 
     /// <summary>
@@ -58,28 +58,28 @@ namespace Org.Apache.Kafka.Common.Serialization
     /// </summary>
     /// <typeparam name="E">The data associated to the event</typeparam>
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
-    public class Deserializer<E> : JVMBridgeListener, IDeserializer<E>
+    public partial class Deserializer<T> : IDeserializer<T>
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public override string ClassName => "org.mases.knet.clients.common.serialization.DeserializerImpl";
+        public override string BridgeClassName => "org.mases.knet.clients.common.serialization.DeserializerImpl";
 
-        readonly Func<string, byte[], E> deserialize = null;
-        readonly Func<string, Headers, byte[], E> deserializeWithHeaders = null;
+        readonly Func<string, byte[], T> deserialize = null;
+        readonly Func<string, Headers, byte[], T> deserializeWithHeaders = null;
         /// <summary>
-        /// The <see cref="Func{String, Byte[], E}"/> to be executed on deserialize
+        /// The <see cref="Func{String, Byte[], T}"/> to be executed on deserialize
         /// </summary>
-        public virtual Func<string, byte[], E> OnDeserialize { get { return deserialize; } }
+        public virtual Func<string, byte[], T> OnDeserialize { get { return deserialize; } }
         /// <summary>
-        /// The <see cref="Func{String, Headers, Byte[], E}"/> to be executed on deserialize
+        /// The <see cref="Func{String, Headers, Byte[], T}"/> to be executed on deserialize
         /// </summary>
-        public virtual Func<string, Headers, byte[], E> OnDeserializeWithHeaders { get { return deserializeWithHeaders; } }
+        public virtual Func<string, Headers, byte[], T> OnDeserializeWithHeaders { get { return deserializeWithHeaders; } }
         /// <summary>
-        /// Initialize a new instance of <see cref="Deserializer{E}"/>
+        /// Initialize a new instance of <see cref="Deserializer{T}"/>
         /// </summary>
-        /// <param name="deserializeFun">The <see cref="Func{String, Byte[], E}"/> to be executed on deserialize</param>
-        /// <param name="deserializeWithHeadersFun">The <see cref="Func{String, Headers, Byte[], E}"/> to be executed on deserialize</param>
+        /// <param name="deserializeFun">The <see cref="Func{String, Byte[], T}"/> to be executed on deserialize</param>
+        /// <param name="deserializeWithHeadersFun">The <see cref="Func{String, Headers, Byte[], T}"/> to be executed on deserialize</param>
         /// <param name="attachEventHandler">Set to false to disable attach of <see cref="EventHandler"/> and set an own one</param>
-        public Deserializer(Func<string, byte[], E> deserializeFun = null, Func<string, Headers, byte[], E> deserializeWithHeadersFun = null, bool attachEventHandler = true)
+        public Deserializer(Func<string, byte[], T> deserializeFun = null, Func<string, Headers, byte[], T> deserializeWithHeadersFun = null, bool attachEventHandler = true)
         {
             if (deserializeFun != null) deserialize = deserializeFun;
             else deserialize = Deserialize;
@@ -116,15 +116,15 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// </summary>
         /// <param name="topic">topic associated with the data</param>
         /// <param name="data">serialized bytes; may be null; implementations are recommended to handle null by returning a value or null rather than throwing an exception</param>
-        /// <returns>The deserialized <typeparamref name="E"/></returns>
-        public virtual E Deserialize(string topic, byte[] data) { return default(E); }
+        /// <returns>The deserialized <typeparamref name="T"/></returns>
+        public virtual T Deserialize(string topic, byte[] data) { return default; }
         /// <summary>
         /// Executes the Deserializer action in the CLR
         /// </summary>
         /// <param name="topic">topic associated with the data</param>
         /// <param name="headers"><see cref="Headers"/> associated with the record; may be empty.</param>
         /// <param name="data">serialized bytes; may be null; implementations are recommended to handle null by returning a value or null rather than throwing an exception</param>
-        /// <returns>The deserialized <typeparamref name="E"/></returns>
-        public virtual E DeserializeWithHeaders(string topic, Headers headers, byte[] data) { return OnDeserialize(topic, data); }
+        /// <returns>The deserialized <typeparamref name="T"/></returns>
+        public virtual T DeserializeWithHeaders(string topic, Headers headers, byte[] data) { return default; }
     }
 }

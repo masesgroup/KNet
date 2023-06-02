@@ -25,29 +25,11 @@ using System;
 
 namespace Org.Apache.Kafka.Connect.Sink
 {
-    public class SinkRecord : ConnectRecord<SinkRecord>
-    {
-        public override bool IsAbstract => false;
-
-        public override string ClassName => "org.apache.kafka.connect.sink.SinkRecord";
-
-        /// <summary>
-        /// Offset in Kafka
-        /// </summary>
-        public long KafkaOffset => IExecute<long>("kafkaOffset");
-        /// <summary>
-        /// The <see cref="MASES.KNet.Common.Record.TimestampType"/>
-        /// </summary>
-        public TimestampType TimestampType => IExecute<TimestampType>("timestampType");
-
-        public SinkRecord<TKey, TValue> CastTo<TKey, TValue>() => this.Cast<SinkRecord<TKey, TValue>>();
-    }
-
     public class SinkRecord<TKey, TValue> : ConnectRecord<SinkRecord<TKey, TValue>, TKey, TValue>
     {
-        public override bool IsAbstract => false;
+        public override bool IsBridgeAbstract => false;
 
-        public override string ClassName => "org.apache.kafka.connect.sink.SinkRecord";
+        public override string BridgeClassName => "org.apache.kafka.connect.sink.SinkRecord";
 
         /// <summary>
         /// Converts an <see cref="SinkRecord{TKey, TValue}"/> in <see cref="SinkRecord"/>

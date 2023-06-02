@@ -50,11 +50,13 @@ namespace Org.Apache.Kafka.Connect.Converters
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/converters/NumberConverterConfig.html#configDef()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/converters/NumberConverterConfig.html#configDef()"/>
         /// </summary>
-        public static Org.Apache.Kafka.Common.Config.ConfigDef ConfigDef
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
+        public static Org.Apache.Kafka.Common.Config.ConfigDef ConfigDef()
         {
-            get { return SExecute<Org.Apache.Kafka.Common.Config.ConfigDef>(LocalBridgeClazz, "configDef"); }
+            return SExecute<Org.Apache.Kafka.Common.Config.ConfigDef>(LocalBridgeClazz, "configDef");
         }
 
         #endregion

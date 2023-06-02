@@ -21,14 +21,8 @@ namespace Kafka.Admin
     /// <summary>
     /// Class managing DelegationTokenCommand
     /// </summary>
-    public class DelegationTokenCommand : MASES.JCOBridge.C2JBridge.JVMBridgeMain<DelegationTokenCommand>
+    public partial class DelegationTokenCommand
     {
-        /// <summary>
-        /// Initialize a new <see cref="DelegationTokenCommand"/>
-        /// </summary>
-        public DelegationTokenCommand()
-            : base("kafka.admin.DelegationTokenCommand")
-        {
-        }
+
     }
 }

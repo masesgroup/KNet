@@ -107,88 +107,76 @@ namespace Org.Apache.Kafka.Common.Message
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.html#apiKey()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.html#isKRaftController()"/>
         /// </summary>
-        public short ApiKey
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsKRaftController()
         {
-            get { return IExecute<short>("apiKey"); }
+            return IExecute<bool>("isKRaftController");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.html#brokerEpoch()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.html#controllerEpoch()"/>
         /// </summary>
-        public long BrokerEpoch
+
+        /// <returns><see cref="int"/></returns>
+        public int ControllerEpoch()
         {
-            get { return IExecute<long>("brokerEpoch"); }
+            return IExecute<int>("controllerEpoch");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.html#controllerEpoch()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.html#controllerId()"/>
         /// </summary>
-        public int ControllerEpoch
+
+        /// <returns><see cref="int"/></returns>
+        public int ControllerId()
         {
-            get { return IExecute<int>("controllerEpoch"); }
+            return IExecute<int>("controllerId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.html#controllerId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.html#liveBrokers()"/>
         /// </summary>
-        public int ControllerId
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataBroker> LiveBrokers()
         {
-            get { return IExecute<int>("controllerId"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataBroker>>("liveBrokers");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.html#duplicate()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.html#ungroupedPartitionStates()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.Message Duplicate
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataPartitionState> UngroupedPartitionStates()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataPartitionState>>("ungroupedPartitionStates");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.html#highestSupportedVersion()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.html#topicStates()"/>
         /// </summary>
-        public short HighestSupportedVersion
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataTopicState> TopicStates()
         {
-            get { return IExecute<short>("highestSupportedVersion"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataTopicState>>("topicStates");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.html#isKRaftController()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.html#unknownTaggedFields()"/>
         /// </summary>
-        public bool IsKRaftController
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields()
         {
-            get { return IExecute<bool>("isKRaftController"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.html#liveBrokers()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.html#brokerEpoch()"/>
         /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataBroker> LiveBrokers
+
+        /// <returns><see cref="long"/></returns>
+        public long BrokerEpoch()
         {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataBroker>>("liveBrokers"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.html#lowestSupportedVersion()"/> 
-        /// </summary>
-        public short LowestSupportedVersion
-        {
-            get { return IExecute<short>("lowestSupportedVersion"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.html#topicStates()"/> 
-        /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataTopicState> TopicStates
-        {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataTopicState>>("topicStates"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.html#ungroupedPartitionStates()"/> 
-        /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataPartitionState> UngroupedPartitionStates
-        {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataPartitionState>>("ungroupedPartitionStates"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.html#unknownTaggedFields()"/> 
-        /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields
-        {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields"); }
+            return IExecute<long>("brokerEpoch");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.html#setBrokerEpoch(long)"/>
@@ -252,6 +240,42 @@ namespace Org.Apache.Kafka.Common.Message
         public Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData SetUngroupedPartitionStates(Java.Util.List<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataPartitionState> arg0)
         {
             return IExecute<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData>("setUngroupedPartitionStates", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.html#duplicate()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.Message Duplicate()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.html#apiKey()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short ApiKey()
+        {
+            return IExecute<short>("apiKey");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.html#highestSupportedVersion()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short HighestSupportedVersion()
+        {
+            return IExecute<short>("highestSupportedVersion");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.html#lowestSupportedVersion()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short LowestSupportedVersion()
+        {
+            return IExecute<short>("lowestSupportedVersion");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>
@@ -368,67 +392,58 @@ namespace Org.Apache.Kafka.Common.Message
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataBroker.html#duplicate()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataBroker.html#id()"/>
             /// </summary>
-            public Org.Apache.Kafka.Common.Protocol.Message Duplicate
+
+            /// <returns><see cref="int"/></returns>
+            public int Id()
             {
-                get { return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate"); }
+                return IExecute<int>("id");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataBroker.html#endpoints()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataBroker.html#v0Port()"/>
             /// </summary>
-            public Java.Util.List<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataEndpoint> Endpoints
+
+            /// <returns><see cref="int"/></returns>
+            public int V0Port()
             {
-                get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataEndpoint>>("endpoints"); }
+                return IExecute<int>("v0Port");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataBroker.html#highestSupportedVersion()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataBroker.html#rack()"/>
             /// </summary>
-            public short HighestSupportedVersion
+
+            /// <returns><see cref="string"/></returns>
+            public string Rack()
             {
-                get { return IExecute<short>("highestSupportedVersion"); }
+                return IExecute<string>("rack");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataBroker.html#id()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataBroker.html#v0Host()"/>
             /// </summary>
-            public int Id
+
+            /// <returns><see cref="string"/></returns>
+            public string V0Host()
             {
-                get { return IExecute<int>("id"); }
+                return IExecute<string>("v0Host");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataBroker.html#lowestSupportedVersion()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataBroker.html#endpoints()"/>
             /// </summary>
-            public short LowestSupportedVersion
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataEndpoint> Endpoints()
             {
-                get { return IExecute<short>("lowestSupportedVersion"); }
+                return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataEndpoint>>("endpoints");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataBroker.html#rack()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataBroker.html#unknownTaggedFields()"/>
             /// </summary>
-            public string Rack
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields()
             {
-                get { return IExecute<string>("rack"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataBroker.html#unknownTaggedFields()"/> 
-            /// </summary>
-            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields
-            {
-                get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataBroker.html#v0Host()"/> 
-            /// </summary>
-            public string V0Host
-            {
-                get { return IExecute<string>("v0Host"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataBroker.html#v0Port()"/> 
-            /// </summary>
-            public int V0Port
-            {
-                get { return IExecute<int>("v0Port"); }
+                return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataBroker.html#setEndpoints(java.util.List)"/>
@@ -474,6 +489,33 @@ namespace Org.Apache.Kafka.Common.Message
             public Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataBroker SetV0Port(int arg0)
             {
                 return IExecute<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataBroker>("setV0Port", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataBroker.html#duplicate()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
+            public Org.Apache.Kafka.Common.Protocol.Message Duplicate()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataBroker.html#highestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short HighestSupportedVersion()
+            {
+                return IExecute<short>("highestSupportedVersion");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataBroker.html#lowestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short LowestSupportedVersion()
+            {
+                return IExecute<short>("lowestSupportedVersion");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataBroker.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>
@@ -593,60 +635,40 @@ namespace Org.Apache.Kafka.Common.Message
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataEndpoint.html#duplicate()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataEndpoint.html#port()"/>
             /// </summary>
-            public Org.Apache.Kafka.Common.Protocol.Message Duplicate
+
+            /// <returns><see cref="int"/></returns>
+            public int Port()
             {
-                get { return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate"); }
+                return IExecute<int>("port");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataEndpoint.html#highestSupportedVersion()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataEndpoint.html#host()"/>
             /// </summary>
-            public short HighestSupportedVersion
+
+            /// <returns><see cref="string"/></returns>
+            public string Host()
             {
-                get { return IExecute<short>("highestSupportedVersion"); }
+                return IExecute<string>("host");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataEndpoint.html#host()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataEndpoint.html#listener()"/>
             /// </summary>
-            public string Host
+
+            /// <returns><see cref="string"/></returns>
+            public string Listener()
             {
-                get { return IExecute<string>("host"); }
+                return IExecute<string>("listener");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataEndpoint.html#listener()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataEndpoint.html#unknownTaggedFields()"/>
             /// </summary>
-            public string Listener
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields()
             {
-                get { return IExecute<string>("listener"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataEndpoint.html#lowestSupportedVersion()"/> 
-            /// </summary>
-            public short LowestSupportedVersion
-            {
-                get { return IExecute<short>("lowestSupportedVersion"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataEndpoint.html#port()"/> 
-            /// </summary>
-            public int Port
-            {
-                get { return IExecute<int>("port"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataEndpoint.html#securityProtocol()"/> 
-            /// </summary>
-            public short SecurityProtocol
-            {
-                get { return IExecute<short>("securityProtocol"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataEndpoint.html#unknownTaggedFields()"/> 
-            /// </summary>
-            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields
-            {
-                get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields"); }
+                return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataEndpoint.html#setHost(java.lang.String)"/>
@@ -683,6 +705,42 @@ namespace Org.Apache.Kafka.Common.Message
             public Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataEndpoint SetSecurityProtocol(short arg0)
             {
                 return IExecute<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataEndpoint>("setSecurityProtocol", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataEndpoint.html#duplicate()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
+            public Org.Apache.Kafka.Common.Protocol.Message Duplicate()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataEndpoint.html#highestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short HighestSupportedVersion()
+            {
+                return IExecute<short>("highestSupportedVersion");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataEndpoint.html#lowestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short LowestSupportedVersion()
+            {
+                return IExecute<short>("lowestSupportedVersion");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataEndpoint.html#securityProtocol()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short SecurityProtocol()
+            {
+                return IExecute<short>("securityProtocol");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataEndpoint.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>
@@ -806,95 +864,94 @@ namespace Org.Apache.Kafka.Common.Message
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataPartitionState.html#controllerEpoch()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataPartitionState.html#controllerEpoch()"/>
             /// </summary>
-            public int ControllerEpoch
+
+            /// <returns><see cref="int"/></returns>
+            public int ControllerEpoch()
             {
-                get { return IExecute<int>("controllerEpoch"); }
+                return IExecute<int>("controllerEpoch");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataPartitionState.html#duplicate()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataPartitionState.html#leader()"/>
             /// </summary>
-            public Org.Apache.Kafka.Common.Protocol.Message Duplicate
+
+            /// <returns><see cref="int"/></returns>
+            public int Leader()
             {
-                get { return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate"); }
+                return IExecute<int>("leader");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataPartitionState.html#highestSupportedVersion()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataPartitionState.html#leaderEpoch()"/>
             /// </summary>
-            public short HighestSupportedVersion
+
+            /// <returns><see cref="int"/></returns>
+            public int LeaderEpoch()
             {
-                get { return IExecute<short>("highestSupportedVersion"); }
+                return IExecute<int>("leaderEpoch");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataPartitionState.html#isr()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataPartitionState.html#partitionIndex()"/>
             /// </summary>
-            public Java.Util.List<int?> Isr
+
+            /// <returns><see cref="int"/></returns>
+            public int PartitionIndex()
             {
-                get { return IExecute<Java.Util.List<int?>>("isr"); }
+                return IExecute<int>("partitionIndex");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataPartitionState.html#leader()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataPartitionState.html#zkVersion()"/>
             /// </summary>
-            public int Leader
+
+            /// <returns><see cref="int"/></returns>
+            public int ZkVersion()
             {
-                get { return IExecute<int>("leader"); }
+                return IExecute<int>("zkVersion");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataPartitionState.html#leaderEpoch()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataPartitionState.html#topicName()"/>
             /// </summary>
-            public int LeaderEpoch
+
+            /// <returns><see cref="string"/></returns>
+            public string TopicName()
             {
-                get { return IExecute<int>("leaderEpoch"); }
+                return IExecute<string>("topicName");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataPartitionState.html#lowestSupportedVersion()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataPartitionState.html#isr()"/>
             /// </summary>
-            public short LowestSupportedVersion
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<int?> Isr()
             {
-                get { return IExecute<short>("lowestSupportedVersion"); }
+                return IExecute<Java.Util.List<int?>>("isr");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataPartitionState.html#offlineReplicas()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataPartitionState.html#offlineReplicas()"/>
             /// </summary>
-            public Java.Util.List<int?> OfflineReplicas
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<int?> OfflineReplicas()
             {
-                get { return IExecute<Java.Util.List<int?>>("offlineReplicas"); }
+                return IExecute<Java.Util.List<int?>>("offlineReplicas");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataPartitionState.html#partitionIndex()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataPartitionState.html#replicas()"/>
             /// </summary>
-            public int PartitionIndex
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<int?> Replicas()
             {
-                get { return IExecute<int>("partitionIndex"); }
+                return IExecute<Java.Util.List<int?>>("replicas");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataPartitionState.html#replicas()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataPartitionState.html#unknownTaggedFields()"/>
             /// </summary>
-            public Java.Util.List<int?> Replicas
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields()
             {
-                get { return IExecute<Java.Util.List<int?>>("replicas"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataPartitionState.html#topicName()"/> 
-            /// </summary>
-            public string TopicName
-            {
-                get { return IExecute<string>("topicName"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataPartitionState.html#unknownTaggedFields()"/> 
-            /// </summary>
-            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields
-            {
-                get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataPartitionState.html#zkVersion()"/> 
-            /// </summary>
-            public int ZkVersion
-            {
-                get { return IExecute<int>("zkVersion"); }
+                return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataPartitionState.html#setControllerEpoch(int)"/>
@@ -976,6 +1033,33 @@ namespace Org.Apache.Kafka.Common.Message
             public Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataPartitionState SetZkVersion(int arg0)
             {
                 return IExecute<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataPartitionState>("setZkVersion", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataPartitionState.html#duplicate()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
+            public Org.Apache.Kafka.Common.Protocol.Message Duplicate()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataPartitionState.html#highestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short HighestSupportedVersion()
+            {
+                return IExecute<short>("highestSupportedVersion");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataPartitionState.html#lowestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short LowestSupportedVersion()
+            {
+                return IExecute<short>("lowestSupportedVersion");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataPartitionState.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>
@@ -1079,53 +1163,31 @@ namespace Org.Apache.Kafka.Common.Message
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataTopicState.html#duplicate()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataTopicState.html#topicName()"/>
             /// </summary>
-            public Org.Apache.Kafka.Common.Protocol.Message Duplicate
+
+            /// <returns><see cref="string"/></returns>
+            public string TopicName()
             {
-                get { return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate"); }
+                return IExecute<string>("topicName");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataTopicState.html#highestSupportedVersion()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataTopicState.html#partitionStates()"/>
             /// </summary>
-            public short HighestSupportedVersion
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataPartitionState> PartitionStates()
             {
-                get { return IExecute<short>("highestSupportedVersion"); }
+                return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataPartitionState>>("partitionStates");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataTopicState.html#lowestSupportedVersion()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataTopicState.html#unknownTaggedFields()"/>
             /// </summary>
-            public short LowestSupportedVersion
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields()
             {
-                get { return IExecute<short>("lowestSupportedVersion"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataTopicState.html#partitionStates()"/> 
-            /// </summary>
-            public Java.Util.List<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataPartitionState> PartitionStates
-            {
-                get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataPartitionState>>("partitionStates"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataTopicState.html#topicId()"/> 
-            /// </summary>
-            public Org.Apache.Kafka.Common.Uuid TopicId
-            {
-                get { return IExecute<Org.Apache.Kafka.Common.Uuid>("topicId"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataTopicState.html#topicName()"/> 
-            /// </summary>
-            public string TopicName
-            {
-                get { return IExecute<string>("topicName"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataTopicState.html#unknownTaggedFields()"/> 
-            /// </summary>
-            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields
-            {
-                get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields"); }
+                return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataTopicState.html#setPartitionStates(java.util.List)"/>
@@ -1153,6 +1215,42 @@ namespace Org.Apache.Kafka.Common.Message
             public Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataTopicState SetTopicName(string arg0)
             {
                 return IExecute<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataTopicState>("setTopicName", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataTopicState.html#duplicate()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
+            public Org.Apache.Kafka.Common.Protocol.Message Duplicate()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataTopicState.html#topicId()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Uuid"/></returns>
+            public Org.Apache.Kafka.Common.Uuid TopicId()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Uuid>("topicId");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataTopicState.html#highestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short HighestSupportedVersion()
+            {
+                return IExecute<short>("highestSupportedVersion");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataTopicState.html#lowestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short LowestSupportedVersion()
+            {
+                return IExecute<short>("lowestSupportedVersion");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateMetadataRequestData.UpdateMetadataTopicState.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>

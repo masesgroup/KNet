@@ -16,18 +16,13 @@
 *  Refer to LICENSE for more information.
 */
 
+using Java.Util;
+using MASES.JCOBridge.C2JBridge;
+
 namespace Org.Apache.Kafka.Common.Serialization
 {
-    public class UUIDSerializer : Serializer<Uuid>
+    public partial class UUIDSerializer
     {
-        public override string ClassName => "org.apache.kafka.common.serialization.UUIDSerializer";
-
-        public override bool AutoInit => false;
-
-        public UUIDSerializer()
-            : base(null, null, false)
-        {
-
-        }
+        public static implicit operator Serializer<UUID>(UUIDSerializer t) => t.Cast<Serializer<UUID>>();
     }
 }

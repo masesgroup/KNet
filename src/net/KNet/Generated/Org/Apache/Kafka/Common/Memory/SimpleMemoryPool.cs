@@ -61,25 +61,13 @@ namespace Org.Apache.Kafka.Common.Memory
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/SimpleMemoryPool.html#availableMemory()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/SimpleMemoryPool.html#isOutOfMemory()"/>
         /// </summary>
-        public long AvailableMemory
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsOutOfMemory()
         {
-            get { return IExecute<long>("availableMemory"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/SimpleMemoryPool.html#isOutOfMemory()"/> 
-        /// </summary>
-        public bool IsOutOfMemory
-        {
-            get { return IExecute<bool>("isOutOfMemory"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/SimpleMemoryPool.html#size()"/> 
-        /// </summary>
-        public long Size
-        {
-            get { return IExecute<long>("size"); }
+            return IExecute<bool>("isOutOfMemory");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/SimpleMemoryPool.html#tryAllocate(int)"/>
@@ -89,6 +77,24 @@ namespace Org.Apache.Kafka.Common.Memory
         public Java.Nio.ByteBuffer TryAllocate(int arg0)
         {
             return IExecute<Java.Nio.ByteBuffer>("tryAllocate", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/SimpleMemoryPool.html#availableMemory()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long AvailableMemory()
+        {
+            return IExecute<long>("availableMemory");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/SimpleMemoryPool.html#size()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long Size()
+        {
+            return IExecute<long>("size");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/SimpleMemoryPool.html#release(java.nio.ByteBuffer)"/>

@@ -37,7 +37,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg2"><see cref="Java.Util.List"/></param>
         /// <param name="arg3"><see cref="Java.Util.Set"/></param>
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Common.Uuid"/></param>
-        public TopicDescription(string arg0, bool arg1, Java.Util.List arg2, Java.Util.Set arg3, Org.Apache.Kafka.Common.Uuid arg4)
+        public TopicDescription(string arg0, bool arg1, Java.Util.List<Org.Apache.Kafka.Common.TopicPartitionInfo> arg2, Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation> arg3, Org.Apache.Kafka.Common.Uuid arg4)
             : base(arg0, arg1, arg2, arg3, arg4)
         {
         }
@@ -48,7 +48,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg1"><see cref="bool"/></param>
         /// <param name="arg2"><see cref="Java.Util.List"/></param>
         /// <param name="arg3"><see cref="Java.Util.Set"/></param>
-        public TopicDescription(string arg0, bool arg1, Java.Util.List arg2, Java.Util.Set arg3)
+        public TopicDescription(string arg0, bool arg1, Java.Util.List<Org.Apache.Kafka.Common.TopicPartitionInfo> arg2, Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation> arg3)
             : base(arg0, arg1, arg2, arg3)
         {
         }
@@ -58,7 +58,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
         /// <param name="arg2"><see cref="Java.Util.List"/></param>
-        public TopicDescription(string arg0, bool arg1, Java.Util.List arg2)
+        public TopicDescription(string arg0, bool arg1, Java.Util.List<Org.Apache.Kafka.Common.TopicPartitionInfo> arg2)
             : base(arg0, arg1, arg2)
         {
         }
@@ -79,39 +79,49 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TopicDescription.html#authorizedOperations()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TopicDescription.html#isInternal()"/>
         /// </summary>
-        public Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation> AuthorizedOperations
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsInternal()
         {
-            get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation>>("authorizedOperations"); }
+            return IExecute<bool>("isInternal");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TopicDescription.html#isInternal()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TopicDescription.html#name()"/>
         /// </summary>
-        public bool IsInternal
+
+        /// <returns><see cref="string"/></returns>
+        public string Name()
         {
-            get { return IExecute<bool>("isInternal"); }
+            return IExecute<string>("name");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TopicDescription.html#name()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TopicDescription.html#partitions()"/>
         /// </summary>
-        public string Name
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.TopicPartitionInfo> Partitions()
         {
-            get { return IExecute<string>("name"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.TopicPartitionInfo>>("partitions");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TopicDescription.html#partitions()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TopicDescription.html#authorizedOperations()"/>
         /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.TopicPartitionInfo> Partitions
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation> AuthorizedOperations()
         {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.TopicPartitionInfo>>("partitions"); }
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation>>("authorizedOperations");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TopicDescription.html#topicId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TopicDescription.html#topicId()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Uuid TopicId
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Uuid"/></returns>
+        public Org.Apache.Kafka.Common.Uuid TopicId()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Uuid>("topicId"); }
+            return IExecute<Org.Apache.Kafka.Common.Uuid>("topicId");
         }
 
         #endregion

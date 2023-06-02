@@ -58,23 +58,6 @@ namespace Org.Apache.Kafka.Common.Network
             return SExecute<Org.Apache.Kafka.Common.Network.ChannelBuilder>(LocalBridgeClazz, "clientChannelBuilder", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelBuilders.html#serverChannelBuilder(org.apache.kafka.common.network.ListenerName,boolean,org.apache.kafka.common.security.auth.SecurityProtocol,org.apache.kafka.common.config.AbstractConfig,org.apache.kafka.common.security.authenticator.CredentialCache,org.apache.kafka.common.security.token.delegation.internals.DelegationTokenCache,org.apache.kafka.common.utils.Time,org.apache.kafka.common.utils.LogContext,java.util.function.Supplier)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Network.ListenerName"/></param>
-        /// <param name="arg1"><see cref="bool"/></param>
-        /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol"/></param>
-        /// <param name="arg3"><see cref="Org.Apache.Kafka.Common.Config.AbstractConfig"/></param>
-        /// <param name="arg4"><see cref="Org.Apache.Kafka.Common.Security.Authenticator.CredentialCache"/></param>
-        /// <param name="arg5"><see cref="Org.Apache.Kafka.Common.Security.Token.Delegation.Internals.DelegationTokenCache"/></param>
-        /// <param name="arg6"><see cref="Org.Apache.Kafka.Common.Utils.Time"/></param>
-        /// <param name="arg7"><see cref="Org.Apache.Kafka.Common.Utils.LogContext"/></param>
-        /// <param name="arg8"><see cref="Java.Util.Function.Supplier"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Common.Network.ChannelBuilder"/></returns>
-        public static Org.Apache.Kafka.Common.Network.ChannelBuilder ServerChannelBuilder(Org.Apache.Kafka.Common.Network.ListenerName arg0, bool arg1, Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol arg2, Org.Apache.Kafka.Common.Config.AbstractConfig arg3, Org.Apache.Kafka.Common.Security.Authenticator.CredentialCache arg4, Org.Apache.Kafka.Common.Security.Token.Delegation.Internals.DelegationTokenCache arg5, Org.Apache.Kafka.Common.Utils.Time arg6, Org.Apache.Kafka.Common.Utils.LogContext arg7, Java.Util.Function.Supplier<Org.Apache.Kafka.Common.Requests.ApiVersionsResponse> arg8)
-        {
-            return SExecute<Org.Apache.Kafka.Common.Network.ChannelBuilder>(LocalBridgeClazz, "serverChannelBuilder", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelBuilders.html#createPrincipalBuilder(java.util.Map,org.apache.kafka.common.security.kerberos.KerberosShortNamer,org.apache.kafka.common.security.ssl.SslPrincipalMapper)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>

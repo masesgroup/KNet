@@ -46,32 +46,22 @@ namespace Org.Apache.Kafka.Connect.Runtime
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Herder.html#isRunning()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Herder.html#isRunning()"/>
         /// </summary>
-        public bool IsRunning
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsRunning()
         {
-            get { return IExecute<bool>("isRunning"); }
+            return IExecute<bool>("isRunning");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Herder.html#kafkaClusterId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Herder.html#kafkaClusterId()"/>
         /// </summary>
-        public string KafkaClusterId
+
+        /// <returns><see cref="string"/></returns>
+        public string KafkaClusterId()
         {
-            get { return IExecute<string>("kafkaClusterId"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Herder.html#plugins()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Connect.Runtime.Isolation.Plugins Plugins
-        {
-            get { return IExecute<Org.Apache.Kafka.Connect.Runtime.Isolation.Plugins>("plugins"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Herder.html#statusBackingStore()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Connect.Storage.StatusBackingStore StatusBackingStore
-        {
-            get { return IExecute<Org.Apache.Kafka.Connect.Storage.StatusBackingStore>("statusBackingStore"); }
+            return IExecute<string>("kafkaClusterId");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Herder.html#connectors()"/>
@@ -101,6 +91,15 @@ namespace Org.Apache.Kafka.Connect.Runtime
         public Org.Apache.Kafka.Connect.Runtime.HerderRequest RestartConnector(long arg0, string arg1, Org.Apache.Kafka.Connect.Util.Callback<Java.Lang.Void> arg2)
         {
             return IExecute<Org.Apache.Kafka.Connect.Runtime.HerderRequest>("restartConnector", arg0, arg1, arg2);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Herder.html#plugins()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.Isolation.Plugins"/></returns>
+        public Org.Apache.Kafka.Connect.Runtime.Isolation.Plugins Plugins()
+        {
+            return IExecute<Org.Apache.Kafka.Connect.Runtime.Isolation.Plugins>("plugins");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Herder.html#connectorActiveTopics(java.lang.String)"/>
@@ -137,6 +136,15 @@ namespace Org.Apache.Kafka.Connect.Runtime
         public Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorStateInfo.TaskState TaskStatus(Org.Apache.Kafka.Connect.Util.ConnectorTaskId arg0)
         {
             return IExecute<Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorStateInfo.TaskState>("taskStatus", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Herder.html#statusBackingStore()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Storage.StatusBackingStore"/></returns>
+        public Org.Apache.Kafka.Connect.Storage.StatusBackingStore StatusBackingStore()
+        {
+            return IExecute<Org.Apache.Kafka.Connect.Storage.StatusBackingStore>("statusBackingStore");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Herder.html#connectorConfig(java.lang.String,org.apache.kafka.connect.util.Callback)"/>
@@ -344,13 +352,6 @@ namespace Org.Apache.Kafka.Connect.Runtime
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Herder.ConfigReloadAction.html#values()"/> 
-            /// </summary>
-            public static Org.Apache.Kafka.Connect.Runtime.Herder.ConfigReloadAction[] Values
-            {
-                get { return SExecuteArray<Org.Apache.Kafka.Connect.Runtime.Herder.ConfigReloadAction>(LocalBridgeClazz, "values"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Herder.ConfigReloadAction.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
@@ -358,6 +359,15 @@ namespace Org.Apache.Kafka.Connect.Runtime
             public static Org.Apache.Kafka.Connect.Runtime.Herder.ConfigReloadAction ValueOf(string arg0)
             {
                 return SExecute<Org.Apache.Kafka.Connect.Runtime.Herder.ConfigReloadAction>(LocalBridgeClazz, "valueOf", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Herder.ConfigReloadAction.html#values()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.Herder.ConfigReloadAction"/></returns>
+            public static Org.Apache.Kafka.Connect.Runtime.Herder.ConfigReloadAction[] Values()
+            {
+                return SExecuteArray<Org.Apache.Kafka.Connect.Runtime.Herder.ConfigReloadAction>(LocalBridgeClazz, "values");
             }
 
             #endregion
@@ -404,13 +414,6 @@ namespace Org.Apache.Kafka.Connect.Runtime
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Herder.Created.html#result()"/> 
-            /// </summary>
-            public object Result
-            {
-                get { return IExecute("result"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Herder.Created.html#created()"/>
             /// </summary>
 
@@ -418,6 +421,15 @@ namespace Org.Apache.Kafka.Connect.Runtime
             public bool CreatedMethod()
             {
                 return IExecute<bool>("created");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Herder.Created.html#result()"/>
+            /// </summary>
+
+            /// <returns><see cref="object"/></returns>
+            public object Result()
+            {
+                return IExecute("result");
             }
 
             #endregion
@@ -464,13 +476,6 @@ namespace Org.Apache.Kafka.Connect.Runtime
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Herder.Created.html#result()"/> 
-            /// </summary>
-            public T Result
-            {
-                get { return IExecute<T>("result"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Herder.Created.html#created()"/>
             /// </summary>
 
@@ -478,6 +483,15 @@ namespace Org.Apache.Kafka.Connect.Runtime
             public bool CreatedMethod()
             {
                 return IExecute<bool>("created");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Herder.Created.html#result()"/>
+            /// </summary>
+
+            /// <returns><typeparamref name="T"/></returns>
+            public T Result()
+            {
+                return IExecute<T>("result");
             }
 
             #endregion

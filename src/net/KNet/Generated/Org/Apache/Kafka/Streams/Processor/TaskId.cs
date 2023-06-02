@@ -82,27 +82,6 @@ namespace Org.Apache.Kafka.Streams.Processor
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TaskId.html#partition()"/> 
-        /// </summary>
-        public int Partition
-        {
-            get { return IExecute<int>("partition"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TaskId.html#subtopology()"/> 
-        /// </summary>
-        public int Subtopology
-        {
-            get { return IExecute<int>("subtopology"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TaskId.html#topologyName()"/> 
-        /// </summary>
-        public string TopologyName
-        {
-            get { return IExecute<string>("topologyName"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TaskId.html#compareTo(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
@@ -119,6 +98,33 @@ namespace Org.Apache.Kafka.Streams.Processor
         public int CompareTo(Org.Apache.Kafka.Streams.Processor.TaskId arg0)
         {
             return IExecute<int>("compareTo", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TaskId.html#partition()"/>
+        /// </summary>
+
+        /// <returns><see cref="int"/></returns>
+        public int Partition()
+        {
+            return IExecute<int>("partition");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TaskId.html#subtopology()"/>
+        /// </summary>
+
+        /// <returns><see cref="int"/></returns>
+        public int Subtopology()
+        {
+            return IExecute<int>("subtopology");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TaskId.html#topologyName()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string TopologyName()
+        {
+            return IExecute<string>("topologyName");
         }
 
         #endregion

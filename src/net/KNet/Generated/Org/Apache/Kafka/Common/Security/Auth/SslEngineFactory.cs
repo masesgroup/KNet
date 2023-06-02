@@ -54,27 +54,6 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslEngineFactory.html#keystore()"/> 
-        /// </summary>
-        public Java.Security.KeyStore Keystore
-        {
-            get { return IExecute<Java.Security.KeyStore>("keystore"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslEngineFactory.html#reconfigurableConfigs()"/> 
-        /// </summary>
-        public Java.Util.Set<string> ReconfigurableConfigs
-        {
-            get { return IExecute<Java.Util.Set<string>>("reconfigurableConfigs"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslEngineFactory.html#truststore()"/> 
-        /// </summary>
-        public Java.Security.KeyStore Truststore
-        {
-            get { return IExecute<Java.Security.KeyStore>("truststore"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslEngineFactory.html#shouldBeRebuilt(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
@@ -82,6 +61,33 @@ namespace Org.Apache.Kafka.Common.Security.Auth
         public bool ShouldBeRebuilt(Java.Util.Map<string, object> arg0)
         {
             return IExecute<bool>("shouldBeRebuilt", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslEngineFactory.html#keystore()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Security.KeyStore"/></returns>
+        public Java.Security.KeyStore Keystore()
+        {
+            return IExecute<Java.Security.KeyStore>("keystore");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslEngineFactory.html#truststore()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Security.KeyStore"/></returns>
+        public Java.Security.KeyStore Truststore()
+        {
+            return IExecute<Java.Security.KeyStore>("truststore");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslEngineFactory.html#reconfigurableConfigs()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<string> ReconfigurableConfigs()
+        {
+            return IExecute<Java.Util.Set<string>>("reconfigurableConfigs");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslEngineFactory.html#createClientSslEngine(java.lang.String,int,java.lang.String)"/>

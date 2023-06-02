@@ -34,7 +34,7 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest.Entities
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Util.ConnectorTaskId"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
-        public TaskInfo(Org.Apache.Kafka.Connect.Util.ConnectorTaskId arg0, Java.Util.Map arg1)
+        public TaskInfo(Org.Apache.Kafka.Connect.Util.ConnectorTaskId arg0, Java.Util.Map<string, string> arg1)
             : base(arg0, arg1)
         {
         }
@@ -55,18 +55,22 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest.Entities
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/TaskInfo.html#config()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/TaskInfo.html#config()"/>
         /// </summary>
-        public Java.Util.Map<string, string> Config
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, string> Config()
         {
-            get { return IExecute<Java.Util.Map<string, string>>("config"); }
+            return IExecute<Java.Util.Map<string, string>>("config");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/TaskInfo.html#id()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/TaskInfo.html#id()"/>
         /// </summary>
-        public Org.Apache.Kafka.Connect.Util.ConnectorTaskId Id
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Util.ConnectorTaskId"/></returns>
+        public Org.Apache.Kafka.Connect.Util.ConnectorTaskId Id()
         {
-            get { return IExecute<Org.Apache.Kafka.Connect.Util.ConnectorTaskId>("id"); }
+            return IExecute<Org.Apache.Kafka.Connect.Util.ConnectorTaskId>("id");
         }
 
         #endregion

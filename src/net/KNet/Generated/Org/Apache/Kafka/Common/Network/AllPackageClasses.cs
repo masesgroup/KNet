@@ -283,7 +283,7 @@ namespace Org.Apache.Kafka.Common.Network
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.State.html"/>
         /// </summary>
-        public partial class State : Java.Lang.Enum
+        public partial class State : Java.Lang.Enum<Org.Apache.Kafka.Common.Network.ChannelState.State>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -530,7 +530,7 @@ namespace Org.Apache.Kafka.Common.Network
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteEvent.html"/>
         /// </summary>
-        public partial class ChannelMuteEvent : Java.Lang.Enum
+        public partial class ChannelMuteEvent : Java.Lang.Enum<Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteEvent>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -573,7 +573,7 @@ namespace Org.Apache.Kafka.Common.Network
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteState.html"/>
         /// </summary>
-        public partial class ChannelMuteState : Java.Lang.Enum
+        public partial class ChannelMuteState : Java.Lang.Enum<Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteState>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -706,7 +706,7 @@ namespace Org.Apache.Kafka.Common.Network
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Mode.html"/>
     /// </summary>
-    public partial class Mode : Java.Lang.Enum
+    public partial class Mode : Java.Lang.Enum<Org.Apache.Kafka.Common.Network.Mode>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

@@ -46,39 +46,49 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#lifetimeMs()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#startTimeMs()"/>
         /// </summary>
-        public long LifetimeMs
+
+        /// <returns><see cref="long"/></returns>
+        public long? StartTimeMs()
         {
-            get { return IExecute<long>("lifetimeMs"); }
+            return IExecute<long?>("startTimeMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#principalName()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#principalName()"/>
         /// </summary>
-        public string PrincipalName
+
+        /// <returns><see cref="string"/></returns>
+        public string PrincipalName()
         {
-            get { return IExecute<string>("principalName"); }
+            return IExecute<string>("principalName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#scope()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#value()"/>
         /// </summary>
-        public Java.Util.Set<string> Scope
+
+        /// <returns><see cref="string"/></returns>
+        public string Value()
         {
-            get { return IExecute<Java.Util.Set<string>>("scope"); }
+            return IExecute<string>("value");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#startTimeMs()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#scope()"/>
         /// </summary>
-        public long? StartTimeMs
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<string> Scope()
         {
-            get { return IExecute<long?>("startTimeMs"); }
+            return IExecute<Java.Util.Set<string>>("scope");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#value()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#lifetimeMs()"/>
         /// </summary>
-        public string Value
+
+        /// <returns><see cref="long"/></returns>
+        public long LifetimeMs()
         {
-            get { return IExecute<string>("value"); }
+            return IExecute<long>("lifetimeMs");
         }
 
         #endregion

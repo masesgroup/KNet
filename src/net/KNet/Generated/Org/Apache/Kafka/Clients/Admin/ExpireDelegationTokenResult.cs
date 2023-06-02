@@ -46,11 +46,13 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ExpireDelegationTokenResult.html#expiryTimestamp()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ExpireDelegationTokenResult.html#expiryTimestamp()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.KafkaFuture<long?> ExpiryTimestamp
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
+        public Org.Apache.Kafka.Common.KafkaFuture<long?> ExpiryTimestamp()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.KafkaFuture<long?>>("expiryTimestamp"); }
+            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<long?>>("expiryTimestamp");
         }
 
         #endregion

@@ -54,11 +54,13 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/KeyValueIterator.html#peekNextKey()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/KeyValueIterator.html#peekNextKey()"/>
         /// </summary>
-        public object PeekNextKey
+
+        /// <returns><see cref="object"/></returns>
+        public object PeekNextKey()
         {
-            get { return IExecute("peekNextKey"); }
+            return IExecute("peekNextKey");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/KeyValueIterator.html#close()"/>
@@ -111,11 +113,13 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/KeyValueIterator.html#peekNextKey()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/KeyValueIterator.html#peekNextKey()"/>
         /// </summary>
-        public K PeekNextKey
+
+        /// <returns><typeparamref name="K"/></returns>
+        public K PeekNextKey()
         {
-            get { return IExecute<K>("peekNextKey"); }
+            return IExecute<K>("peekNextKey");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/KeyValueIterator.html#close()"/>

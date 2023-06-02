@@ -34,7 +34,7 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest.Entities
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Java.Util.Collection"/></param>
-        public ActiveTopicsInfo(string arg0, Java.Util.Collection arg1)
+        public ActiveTopicsInfo(string arg0, Java.Util.Collection<string> arg1)
             : base(arg0, arg1)
         {
         }
@@ -55,18 +55,22 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest.Entities
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ActiveTopicsInfo.html#connector()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ActiveTopicsInfo.html#connector()"/>
         /// </summary>
-        public string Connector
+
+        /// <returns><see cref="string"/></returns>
+        public string Connector()
         {
-            get { return IExecute<string>("connector"); }
+            return IExecute<string>("connector");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ActiveTopicsInfo.html#topics()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ActiveTopicsInfo.html#topics()"/>
         /// </summary>
-        public Java.Util.Collection<string> Topics
+
+        /// <returns><see cref="Java.Util.Collection"/></returns>
+        public Java.Util.Collection<string> Topics()
         {
-            get { return IExecute<Java.Util.Collection<string>>("topics"); }
+            return IExecute<Java.Util.Collection<string>>("topics");
         }
 
         #endregion

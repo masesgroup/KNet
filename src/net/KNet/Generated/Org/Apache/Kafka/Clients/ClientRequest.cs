@@ -61,60 +61,76 @@ namespace Org.Apache.Kafka.Clients
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html#apiKey()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html#expectResponse()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.ApiKeys ApiKey
+
+        /// <returns><see cref="bool"/></returns>
+        public bool ExpectResponse()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.ApiKeys>("apiKey"); }
+            return IExecute<bool>("expectResponse");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html#callback()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html#correlationId()"/>
         /// </summary>
-        public Org.Apache.Kafka.Clients.RequestCompletionHandler Callback
+
+        /// <returns><see cref="int"/></returns>
+        public int CorrelationId()
         {
-            get { return IExecute<Org.Apache.Kafka.Clients.RequestCompletionHandler>("callback"); }
+            return IExecute<int>("correlationId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html#correlationId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html#requestTimeoutMs()"/>
         /// </summary>
-        public int CorrelationId
+
+        /// <returns><see cref="int"/></returns>
+        public int RequestTimeoutMs()
         {
-            get { return IExecute<int>("correlationId"); }
+            return IExecute<int>("requestTimeoutMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html#createdTimeMs()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html#destination()"/>
         /// </summary>
-        public long CreatedTimeMs
+
+        /// <returns><see cref="string"/></returns>
+        public string Destination()
         {
-            get { return IExecute<long>("createdTimeMs"); }
+            return IExecute<string>("destination");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html#destination()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html#createdTimeMs()"/>
         /// </summary>
-        public string Destination
+
+        /// <returns><see cref="long"/></returns>
+        public long CreatedTimeMs()
         {
-            get { return IExecute<string>("destination"); }
+            return IExecute<long>("createdTimeMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html#expectResponse()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html#callback()"/>
         /// </summary>
-        public bool ExpectResponse
+
+        /// <returns><see cref="Org.Apache.Kafka.Clients.RequestCompletionHandler"/></returns>
+        public Org.Apache.Kafka.Clients.RequestCompletionHandler Callback()
         {
-            get { return IExecute<bool>("expectResponse"); }
+            return IExecute<Org.Apache.Kafka.Clients.RequestCompletionHandler>("callback");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html#requestBuilder()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html#apiKey()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder RequestBuilder
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.ApiKeys"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.ApiKeys ApiKey()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder>("requestBuilder"); }
+            return IExecute<Org.Apache.Kafka.Common.Protocol.ApiKeys>("apiKey");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html#requestTimeoutMs()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html#requestBuilder()"/>
         /// </summary>
-        public int RequestTimeoutMs
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder"/></returns>
+        public Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder RequestBuilder()
         {
-            get { return IExecute<int>("requestTimeoutMs"); }
+            return IExecute<Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder>("requestBuilder");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html#makeHeader(short)"/>

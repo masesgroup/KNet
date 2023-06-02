@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg5"><see cref="Java.Util.List"/></param>
         /// <param name="arg6"><see cref="Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigType"/></param>
         /// <param name="arg7"><see cref="string"/></param>
-        public ConfigEntry(string arg0, string arg1, Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource arg2, bool arg3, bool arg4, Java.Util.List arg5, Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigType arg6, string arg7)
+        public ConfigEntry(string arg0, string arg1, Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource arg2, bool arg3, bool arg4, Java.Util.List<Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSynonym> arg5, Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigType arg6, string arg7)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
         {
         }
@@ -70,67 +70,85 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConfigEntry.html#documentation()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConfigEntry.html#isDefault()"/>
         /// </summary>
-        public string Documentation
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsDefault()
         {
-            get { return IExecute<string>("documentation"); }
+            return IExecute<bool>("isDefault");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConfigEntry.html#isDefault()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConfigEntry.html#isReadOnly()"/>
         /// </summary>
-        public bool IsDefault
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsReadOnly()
         {
-            get { return IExecute<bool>("isDefault"); }
+            return IExecute<bool>("isReadOnly");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConfigEntry.html#isReadOnly()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConfigEntry.html#isSensitive()"/>
         /// </summary>
-        public bool IsReadOnly
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsSensitive()
         {
-            get { return IExecute<bool>("isReadOnly"); }
+            return IExecute<bool>("isSensitive");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConfigEntry.html#isSensitive()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConfigEntry.html#documentation()"/>
         /// </summary>
-        public bool IsSensitive
+
+        /// <returns><see cref="string"/></returns>
+        public string Documentation()
         {
-            get { return IExecute<bool>("isSensitive"); }
+            return IExecute<string>("documentation");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConfigEntry.html#name()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConfigEntry.html#name()"/>
         /// </summary>
-        public string Name
+
+        /// <returns><see cref="string"/></returns>
+        public string Name()
         {
-            get { return IExecute<string>("name"); }
+            return IExecute<string>("name");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConfigEntry.html#source()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConfigEntry.html#value()"/>
         /// </summary>
-        public Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource Source
+
+        /// <returns><see cref="string"/></returns>
+        public string Value()
         {
-            get { return IExecute<Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource>("source"); }
+            return IExecute<string>("value");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConfigEntry.html#synonyms()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConfigEntry.html#synonyms()"/>
         /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSynonym> Synonyms
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSynonym> Synonyms()
         {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSynonym>>("synonyms"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSynonym>>("synonyms");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConfigEntry.html#type()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConfigEntry.html#source()"/>
         /// </summary>
-        public Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigType Type
+
+        /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource"/></returns>
+        public Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource Source()
         {
-            get { return IExecute<Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigType>("type"); }
+            return IExecute<Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource>("source");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConfigEntry.html#value()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConfigEntry.html#type()"/>
         /// </summary>
-        public string Value
+
+        /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigType"/></returns>
+        public Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigType Type()
         {
-            get { return IExecute<string>("value"); }
+            return IExecute<Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigType>("type");
         }
 
         #endregion
@@ -181,13 +199,6 @@ namespace Org.Apache.Kafka.Clients.Admin
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConfigEntry.ConfigSource.html#values()"/> 
-            /// </summary>
-            public static Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource[] Values
-            {
-                get { return SExecuteArray<Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource>(LocalBridgeClazz, "values"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConfigEntry.ConfigSource.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
@@ -195,6 +206,15 @@ namespace Org.Apache.Kafka.Clients.Admin
             public static Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource ValueOf(string arg0)
             {
                 return SExecute<Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource>(LocalBridgeClazz, "valueOf", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConfigEntry.ConfigSource.html#values()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource"/></returns>
+            public static Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource[] Values()
+            {
+                return SExecuteArray<Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource>(LocalBridgeClazz, "values");
             }
 
             #endregion
@@ -232,25 +252,31 @@ namespace Org.Apache.Kafka.Clients.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConfigEntry.ConfigSynonym.html#name()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConfigEntry.ConfigSynonym.html#name()"/>
             /// </summary>
-            public string Name
+
+            /// <returns><see cref="string"/></returns>
+            public string Name()
             {
-                get { return IExecute<string>("name"); }
+                return IExecute<string>("name");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConfigEntry.ConfigSynonym.html#source()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConfigEntry.ConfigSynonym.html#value()"/>
             /// </summary>
-            public Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource Source
+
+            /// <returns><see cref="string"/></returns>
+            public string Value()
             {
-                get { return IExecute<Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource>("source"); }
+                return IExecute<string>("value");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConfigEntry.ConfigSynonym.html#value()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConfigEntry.ConfigSynonym.html#source()"/>
             /// </summary>
-            public string Value
+
+            /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource"/></returns>
+            public Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource Source()
             {
-                get { return IExecute<string>("value"); }
+                return IExecute<Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource>("source");
             }
 
             #endregion
@@ -320,13 +346,6 @@ namespace Org.Apache.Kafka.Clients.Admin
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConfigEntry.ConfigType.html#values()"/> 
-            /// </summary>
-            public static Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigType[] Values
-            {
-                get { return SExecuteArray<Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigType>(LocalBridgeClazz, "values"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConfigEntry.ConfigType.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
@@ -334,6 +353,15 @@ namespace Org.Apache.Kafka.Clients.Admin
             public static Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigType ValueOf(string arg0)
             {
                 return SExecute<Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigType>(LocalBridgeClazz, "valueOf", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConfigEntry.ConfigType.html#values()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigType"/></returns>
+            public static Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigType[] Values()
+            {
+                return SExecuteArray<Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigType>(LocalBridgeClazz, "values");
             }
 
             #endregion

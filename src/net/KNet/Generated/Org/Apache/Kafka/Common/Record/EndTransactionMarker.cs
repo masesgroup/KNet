@@ -64,25 +64,31 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/EndTransactionMarker.html#controlType()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/EndTransactionMarker.html#coordinatorEpoch()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Record.ControlRecordType ControlType
+
+        /// <returns><see cref="int"/></returns>
+        public int CoordinatorEpoch()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Record.ControlRecordType>("controlType"); }
+            return IExecute<int>("coordinatorEpoch");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/EndTransactionMarker.html#coordinatorEpoch()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/EndTransactionMarker.html#serializeValue()"/>
         /// </summary>
-        public int CoordinatorEpoch
+
+        /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
+        public Java.Nio.ByteBuffer SerializeValue()
         {
-            get { return IExecute<int>("coordinatorEpoch"); }
+            return IExecute<Java.Nio.ByteBuffer>("serializeValue");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/EndTransactionMarker.html#serializeValue()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/EndTransactionMarker.html#controlType()"/>
         /// </summary>
-        public Java.Nio.ByteBuffer SerializeValue
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Record.ControlRecordType"/></returns>
+        public Org.Apache.Kafka.Common.Record.ControlRecordType ControlType()
         {
-            get { return IExecute<Java.Nio.ByteBuffer>("serializeValue"); }
+            return IExecute<Org.Apache.Kafka.Common.Record.ControlRecordType>("controlType");
         }
 
         #endregion

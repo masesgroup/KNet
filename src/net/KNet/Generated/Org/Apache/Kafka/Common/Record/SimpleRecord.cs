@@ -130,32 +130,40 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/SimpleRecord.html#headers()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/SimpleRecord.html#key()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Header.Header[] Headers
+
+        /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
+        public Java.Nio.ByteBuffer Key()
         {
-            get { return IExecuteArray<Org.Apache.Kafka.Common.Header.Header>("headers"); }
+            return IExecute<Java.Nio.ByteBuffer>("key");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/SimpleRecord.html#key()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/SimpleRecord.html#value()"/>
         /// </summary>
-        public Java.Nio.ByteBuffer Key
+
+        /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
+        public Java.Nio.ByteBuffer Value()
         {
-            get { return IExecute<Java.Nio.ByteBuffer>("key"); }
+            return IExecute<Java.Nio.ByteBuffer>("value");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/SimpleRecord.html#timestamp()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/SimpleRecord.html#timestamp()"/>
         /// </summary>
-        public long Timestamp
+
+        /// <returns><see cref="long"/></returns>
+        public long Timestamp()
         {
-            get { return IExecute<long>("timestamp"); }
+            return IExecute<long>("timestamp");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/SimpleRecord.html#value()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/SimpleRecord.html#headers()"/>
         /// </summary>
-        public Java.Nio.ByteBuffer Value
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Header.Header"/></returns>
+        public Org.Apache.Kafka.Common.Header.Header[] Headers()
         {
-            get { return IExecute<Java.Nio.ByteBuffer>("value"); }
+            return IExecuteArray<Org.Apache.Kafka.Common.Header.Header>("headers");
         }
 
         #endregion

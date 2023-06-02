@@ -27,43 +27,12 @@ namespace Org.Apache.Kafka.Connect.Connector
     /// Base type for <see cref="MASES.KNet.Connect.Sink.SinkRecord"/> and <see cref="MASES.KNet.Connect.Source.SourceRecord"/>
     /// </summary>
     /// <typeparam name="R">The class extending <see cref="ConnectRecord{R}"/></typeparam>
-    public class ConnectRecord<R> : JVMBridgeBase<ConnectRecord<R>> where R : ConnectRecord<R>
+    public partial class ConnectRecord<R>
     {
-        public override bool IsAbstract => true;
-        public override string ClassName => "org.apache.kafka.connect.connector.ConnectRecord";
-
-        /// <summary>
-        /// Topic
-        /// </summary>
-        public string Topic => IExecute<string>("topic");
-        /// <summary>
-        /// Partition
-        /// </summary>
-        public int KafkaPartition => IExecute<int>("kafkaPartition");
-        /// <summary>
-        /// Key
-        /// </summary>
-        public object Key => IExecute("key");
-        /// <summary>
-        /// KeySchema
-        /// </summary>
-        public Schema KeySchema => IExecute<Schema>("keySchema");
-        /// <summary>
-        /// Value
-        /// </summary>
-        public object Value => IExecute("value");
-        /// <summary>
-        /// ValueSchema
-        /// </summary>
-        public Schema ValueSchema => IExecute<Schema>("valueSchema");
         /// <summary>
         /// Timestamp
         /// </summary>
-        public DateTime Timestamp => DateTimeOffset.FromUnixTimeMilliseconds(IExecute<long>("timestamp")).DateTime;
-        /// <summary>
-        /// The <see cref="Headers"/>
-        /// </summary>
-        public Headers Headers => IExecute<Headers>("headers");
+        public DateTime DateTime => DateTimeOffset.FromUnixTimeMilliseconds(Timestamp).DateTime;
     }
 
     /// <summary>
@@ -74,8 +43,8 @@ namespace Org.Apache.Kafka.Connect.Connector
     /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
     public class ConnectRecord<R, TKey, TValue> : JVMBridgeBase<ConnectRecord<R, TKey, TValue>> where R : ConnectRecord<R, TKey, TValue>
     {
-        public override bool IsAbstract => true;
-        public override string ClassName => "org.apache.kafka.connect.connector.ConnectRecord";
+        public override bool IsBridgeAbstract => true;
+        public override string BridgeClassName => "org.apache.kafka.connect.connector.ConnectRecord";
 
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public ConnectRecord()
@@ -138,72 +107,4 @@ namespace Org.Apache.Kafka.Connect.Connector
 
         public R NewRecord(string topic, int kafkaPartition, Schema keySchema, TKey key, Schema valueSchema, TValue value, DateTime timestamp, Headers headers) => IExecute<R>("newRecord", topic, kafkaPartition, keySchema, key, valueSchema, value, new DateTimeOffset(timestamp).ToUnixTimeMilliseconds(), headers);
     }
-
-    //public class ConnectRecord<R> : JVMBridgeBase<ConnectRecord<R>> where R : ConnectRecord<R>
-    //{
-    //    public override bool IsAbstract => true;
-    //    public override string ClassName => "org.apache.kafka.connect.connector.ConnectRecord";
-
-    //    [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
-    //    public ConnectRecord()
-    //    {
-
-    //    }
-
-    //    public ConnectRecord(string topic, int kafkaPartition,
-    //                          Schema keySchema, object key,
-    //                          Schema valueSchema, object value,
-    //                          long timestamp)
-    //        : base(topic, kafkaPartition, keySchema, key, valueSchema, value, timestamp)
-    //    {
-    //    }
-
-    //    public ConnectRecord(string topic, int kafkaPartition,
-    //                         Schema keySchema, object key,
-    //                         Schema valueSchema, object value,
-    //                         long timestamp, Iterable<Header.Header> headers)
-    //         : base(topic, kafkaPartition, keySchema, key, valueSchema, value, timestamp, headers)
-    //    {
-    //    }
-
-    //    protected ConnectRecord(params object[] args) : base(args)
-    //    {
-    //    }
-    //    /// <summary>
-    //    /// Topic
-    //    /// </summary>
-    //    public string Topic => IExecute<string>("topic");
-    //    /// <summary>
-    //    /// Partition
-    //    /// </summary>
-    //    public int KafkaPartition => IExecute<int>("kafkaPartition");
-    //    /// <summary>
-    //    /// Key
-    //    /// </summary>
-    //    public object Key => IExecute("key");
-    //    /// <summary>
-    //    /// KeySchema
-    //    /// </summary>
-    //    public Schema KeySchema => IExecute<Schema>("keySchema");
-    //    /// <summary>
-    //    /// Value
-    //    /// </summary>
-    //    public object Value => IExecute("value");
-    //    /// <summary>
-    //    /// ValueSchema
-    //    /// </summary>
-    //    public Schema ValueSchema => IExecute<Schema>("valueSchema");
-    //    /// <summary>
-    //    /// Timestamp
-    //    /// </summary>
-    //    public DateTime Timestamp => DateTimeOffset.FromUnixTimeMilliseconds(IExecute<long>("timestamp")).DateTime;
-    //    /// <summary>
-    //    /// The <see cref="Headers"/>
-    //    /// </summary>
-    //    public Headers Headers => IExecute<Headers>("headers");
-
-    //    public R NewRecord(string topic, int kafkaPartition, Schema keySchema, object key, Schema valueSchema, object value, long timestamp) => IExecute<R>("newRecord", topic, kafkaPartition, keySchema, key, valueSchema, value, timestamp);
-
-    //    public R NewRecord(string topic, int kafkaPartition, Schema keySchema, object key, Schema valueSchema, object value, long timestamp, Iterable<Header.Header> headers) => IExecute<R>("newRecord", topic, kafkaPartition, keySchema, key, valueSchema, value, timestamp, headers);
-    //}
 }

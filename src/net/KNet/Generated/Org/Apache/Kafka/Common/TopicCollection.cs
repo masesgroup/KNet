@@ -88,11 +88,13 @@ namespace Org.Apache.Kafka.Common
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicCollection.TopicIdCollection.html#topicIds()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicCollection.TopicIdCollection.html#topicIds()"/>
             /// </summary>
-            public Java.Util.Collection<Org.Apache.Kafka.Common.Uuid> TopicIds
+
+            /// <returns><see cref="Java.Util.Collection"/></returns>
+            public Java.Util.Collection<Org.Apache.Kafka.Common.Uuid> TopicIds()
             {
-                get { return IExecute<Java.Util.Collection<Org.Apache.Kafka.Common.Uuid>>("topicIds"); }
+                return IExecute<Java.Util.Collection<Org.Apache.Kafka.Common.Uuid>>("topicIds");
             }
 
             #endregion
@@ -126,11 +128,13 @@ namespace Org.Apache.Kafka.Common
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicCollection.TopicNameCollection.html#topicNames()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicCollection.TopicNameCollection.html#topicNames()"/>
             /// </summary>
-            public Java.Util.Collection<string> TopicNames
+
+            /// <returns><see cref="Java.Util.Collection"/></returns>
+            public Java.Util.Collection<string> TopicNames()
             {
-                get { return IExecute<Java.Util.Collection<string>>("topicNames"); }
+                return IExecute<Java.Util.Collection<string>>("topicNames");
             }
 
             #endregion

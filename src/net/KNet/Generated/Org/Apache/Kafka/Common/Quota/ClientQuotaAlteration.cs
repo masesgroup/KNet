@@ -34,7 +34,7 @@ namespace Org.Apache.Kafka.Common.Quota
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Quota.ClientQuotaEntity"/></param>
         /// <param name="arg1"><see cref="Java.Util.Collection"/></param>
-        public ClientQuotaAlteration(Org.Apache.Kafka.Common.Quota.ClientQuotaEntity arg0, Java.Util.Collection arg1)
+        public ClientQuotaAlteration(Org.Apache.Kafka.Common.Quota.ClientQuotaEntity arg0, Java.Util.Collection<Org.Apache.Kafka.Common.Quota.ClientQuotaAlteration.Op> arg1)
             : base(arg0, arg1)
         {
         }
@@ -55,18 +55,22 @@ namespace Org.Apache.Kafka.Common.Quota
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/quota/ClientQuotaAlteration.html#entity()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/quota/ClientQuotaAlteration.html#ops()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Quota.ClientQuotaEntity Entity
+
+        /// <returns><see cref="Java.Util.Collection"/></returns>
+        public Java.Util.Collection<Org.Apache.Kafka.Common.Quota.ClientQuotaAlteration.Op> Ops()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Quota.ClientQuotaEntity>("entity"); }
+            return IExecute<Java.Util.Collection<Org.Apache.Kafka.Common.Quota.ClientQuotaAlteration.Op>>("ops");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/quota/ClientQuotaAlteration.html#ops()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/quota/ClientQuotaAlteration.html#entity()"/>
         /// </summary>
-        public Java.Util.Collection<Org.Apache.Kafka.Common.Quota.ClientQuotaAlteration.Op> Ops
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Quota.ClientQuotaEntity"/></returns>
+        public Org.Apache.Kafka.Common.Quota.ClientQuotaEntity Entity()
         {
-            get { return IExecute<Java.Util.Collection<Org.Apache.Kafka.Common.Quota.ClientQuotaAlteration.Op>>("ops"); }
+            return IExecute<Org.Apache.Kafka.Common.Quota.ClientQuotaEntity>("entity");
         }
 
         #endregion
@@ -102,18 +106,22 @@ namespace Org.Apache.Kafka.Common.Quota
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/quota/ClientQuotaAlteration.Op.html#key()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/quota/ClientQuotaAlteration.Op.html#value()"/>
             /// </summary>
-            public string Key
+
+            /// <returns><see cref="double"/></returns>
+            public double? Value()
             {
-                get { return IExecute<string>("key"); }
+                return IExecute<double?>("value");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/quota/ClientQuotaAlteration.Op.html#value()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/quota/ClientQuotaAlteration.Op.html#key()"/>
             /// </summary>
-            public double? Value
+
+            /// <returns><see cref="string"/></returns>
+            public string Key()
             {
-                get { return IExecute<double?>("value"); }
+                return IExecute<string>("key");
             }
 
             #endregion

@@ -76,13 +76,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/StreamJoined.html#withLoggingDisabled()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Streams.Kstream.StreamJoined WithLoggingDisabled
-        {
-            get { return IExecute<Org.Apache.Kafka.Streams.Kstream.StreamJoined>("withLoggingDisabled"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/StreamJoined.html#withKeySerde(org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
@@ -90,6 +83,15 @@ namespace Org.Apache.Kafka.Streams.Kstream
         public Org.Apache.Kafka.Streams.Kstream.StreamJoined WithKeySerde(Org.Apache.Kafka.Common.Serialization.Serde arg0)
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.StreamJoined>("withKeySerde", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/StreamJoined.html#withLoggingDisabled()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.StreamJoined"/></returns>
+        public Org.Apache.Kafka.Streams.Kstream.StreamJoined WithLoggingDisabled()
+        {
+            return IExecute<Org.Apache.Kafka.Streams.Kstream.StreamJoined>("withLoggingDisabled");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/StreamJoined.html#withLoggingEnabled(java.util.Map)"/>
@@ -211,13 +213,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/StreamJoined.html#withLoggingDisabled()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V1, V2> WithLoggingDisabled
-        {
-            get { return IExecute<Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V1, V2>>("withLoggingDisabled"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/StreamJoined.html#withKeySerde(org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
@@ -225,6 +220,15 @@ namespace Org.Apache.Kafka.Streams.Kstream
         public Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V1, V2> WithKeySerde(Org.Apache.Kafka.Common.Serialization.Serde<K> arg0)
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V1, V2>>("withKeySerde", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/StreamJoined.html#withLoggingDisabled()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.StreamJoined"/></returns>
+        public Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V1, V2> WithLoggingDisabled()
+        {
+            return IExecute<Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V1, V2>>("withLoggingDisabled");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/StreamJoined.html#withLoggingEnabled(java.util.Map)"/>

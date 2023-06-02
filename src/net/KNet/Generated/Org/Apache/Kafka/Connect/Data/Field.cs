@@ -56,25 +56,31 @@ namespace Org.Apache.Kafka.Connect.Data
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Field.html#index()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Field.html#index()"/>
         /// </summary>
-        public int Index
+
+        /// <returns><see cref="int"/></returns>
+        public int Index()
         {
-            get { return IExecute<int>("index"); }
+            return IExecute<int>("index");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Field.html#name()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Field.html#name()"/>
         /// </summary>
-        public string Name
+
+        /// <returns><see cref="string"/></returns>
+        public string Name()
         {
-            get { return IExecute<string>("name"); }
+            return IExecute<string>("name");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Field.html#schema()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Field.html#schema()"/>
         /// </summary>
-        public Org.Apache.Kafka.Connect.Data.Schema Schema
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></returns>
+        public Org.Apache.Kafka.Connect.Data.Schema Schema()
         {
-            get { return IExecute<Org.Apache.Kafka.Connect.Data.Schema>("schema"); }
+            return IExecute<Org.Apache.Kafka.Connect.Data.Schema>("schema");
         }
 
         #endregion

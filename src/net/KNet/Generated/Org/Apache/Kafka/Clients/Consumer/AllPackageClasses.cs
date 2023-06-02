@@ -133,15 +133,42 @@ namespace Org.Apache.Kafka.Clients.Consumer
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerConfig.html"/>
     /// </summary>
-    public partial class ConsumerConfig : MASES.JCOBridge.C2JBridge.JVMBridgeMain<ConsumerConfig>
+    public partial class ConsumerConfig : Org.Apache.Kafka.Common.Config.AbstractConfig, IJNetBridgeMain
     {
         /// <summary>
-        /// Initialize a new <see cref="ConsumerConfig"/>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public ConsumerConfig()
-            : base("org.apache.kafka.clients.consumer.ConsumerConfig")
-        {
-        }
+        public ConsumerConfig() { }
+        /// <summary>
+        /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
+        /// </summary>
+        public ConsumerConfig(params object[] args) : base(args) { }
+
+        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.consumer.ConsumerConfig");
+
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.apache.kafka.clients.consumer.ConsumerConfig";
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
+        /// </summary>
+        public override bool IsBridgeAbstract => false;
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm"/>
+        /// </summary>
+        public override bool IsBridgeCloseable => false;
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm"/>
+        /// </summary>
+        public override bool IsBridgeInterface => false;
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm"/>
+        /// </summary>
+        public override bool IsBridgeStatic => false;
+
+        // TODO: complete the class
+
     }
     #endregion
 
@@ -192,39 +219,9 @@ namespace Org.Apache.Kafka.Clients.Consumer
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerInterceptor.html"/>
     /// </summary>
-    public partial class ConsumerInterceptor : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConsumerInterceptor>
+    public partial class ConsumerInterceptor : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
-        /// <summary>
-        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
-        /// </summary>
-        public ConsumerInterceptor() { }
-        /// <summary>
-        /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
-        /// </summary>
-        public ConsumerInterceptor(params object[] args) : base(args) { }
-
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.consumer.ConsumerInterceptor");
-
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
-        /// </summary>
-        public override string BridgeClassName => "org.apache.kafka.clients.consumer.ConsumerInterceptor";
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
-        /// </summary>
-        public override bool IsBridgeAbstract => true;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm"/>
-        /// </summary>
-        public override bool IsBridgeCloseable => false;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm"/>
-        /// </summary>
-        public override bool IsBridgeInterface => true;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm"/>
-        /// </summary>
-        public override bool IsBridgeStatic => false;
+    #warning Remember to build the body class for event listener
 
         // TODO: complete the class
 
@@ -237,39 +234,9 @@ namespace Org.Apache.Kafka.Clients.Consumer
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
-    public partial class ConsumerInterceptor<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConsumerInterceptor<K, V>>
+    public partial class ConsumerInterceptor<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
-        /// <summary>
-        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
-        /// </summary>
-        public ConsumerInterceptor() { }
-        /// <summary>
-        /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
-        /// </summary>
-        public ConsumerInterceptor(params object[] args) : base(args) { }
-
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.consumer.ConsumerInterceptor");
-
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
-        /// </summary>
-        public override string BridgeClassName => "org.apache.kafka.clients.consumer.ConsumerInterceptor";
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
-        /// </summary>
-        public override bool IsBridgeAbstract => true;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm"/>
-        /// </summary>
-        public override bool IsBridgeCloseable => false;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm"/>
-        /// </summary>
-        public override bool IsBridgeInterface => true;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm"/>
-        /// </summary>
-        public override bool IsBridgeStatic => false;
+    #warning Remember to build the body class for event listener
 
         // TODO: complete the class
     
@@ -280,39 +247,9 @@ namespace Org.Apache.Kafka.Clients.Consumer
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html"/>
     /// </summary>
-    public partial class ConsumerPartitionAssignor : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConsumerPartitionAssignor>
+    public partial class ConsumerPartitionAssignor : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
-        /// <summary>
-        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
-        /// </summary>
-        public ConsumerPartitionAssignor() { }
-        /// <summary>
-        /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
-        /// </summary>
-        public ConsumerPartitionAssignor(params object[] args) : base(args) { }
-
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.consumer.ConsumerPartitionAssignor");
-
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
-        /// </summary>
-        public override string BridgeClassName => "org.apache.kafka.clients.consumer.ConsumerPartitionAssignor";
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
-        /// </summary>
-        public override bool IsBridgeAbstract => true;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm"/>
-        /// </summary>
-        public override bool IsBridgeCloseable => false;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm"/>
-        /// </summary>
-        public override bool IsBridgeInterface => true;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm"/>
-        /// </summary>
-        public override bool IsBridgeStatic => false;
+    #warning Remember to build the body class for event listener
 
         // TODO: complete the class
         #region Assignment
@@ -448,7 +385,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.RebalanceProtocol.html"/>
         /// </summary>
-        public partial class RebalanceProtocol : Java.Lang.Enum
+        public partial class RebalanceProtocol : Java.Lang.Enum<Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.RebalanceProtocol>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -727,7 +664,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/CooperativeStickyAssignor.html"/>
     /// </summary>
-    public partial class CooperativeStickyAssignor : Org.Apache.Kafka.Clients.Consumer.Internals.AbstractStickyAssignor
+    public partial class CooperativeStickyAssignor : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CooperativeStickyAssignor>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1080,39 +1017,9 @@ namespace Org.Apache.Kafka.Clients.Consumer
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetCommitCallback.html"/>
     /// </summary>
-    public partial class OffsetCommitCallback : MASES.JCOBridge.C2JBridge.JVMBridgeBase<OffsetCommitCallback>
+    public partial class OffsetCommitCallback : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
-        /// <summary>
-        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
-        /// </summary>
-        public OffsetCommitCallback() { }
-        /// <summary>
-        /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
-        /// </summary>
-        public OffsetCommitCallback(params object[] args) : base(args) { }
-
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.consumer.OffsetCommitCallback");
-
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
-        /// </summary>
-        public override string BridgeClassName => "org.apache.kafka.clients.consumer.OffsetCommitCallback";
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
-        /// </summary>
-        public override bool IsBridgeAbstract => true;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm"/>
-        /// </summary>
-        public override bool IsBridgeCloseable => false;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm"/>
-        /// </summary>
-        public override bool IsBridgeInterface => true;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm"/>
-        /// </summary>
-        public override bool IsBridgeStatic => false;
+    #warning Remember to build the body class for event listener
 
         // TODO: complete the class
 
@@ -1139,7 +1046,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetResetStrategy.html"/>
     /// </summary>
-    public partial class OffsetResetStrategy : Java.Lang.Enum
+    public partial class OffsetResetStrategy : Java.Lang.Enum<Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1182,7 +1089,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/RangeAssignor.html"/>
     /// </summary>
-    public partial class RangeAssignor : Org.Apache.Kafka.Clients.Consumer.Internals.AbstractPartitionAssignor
+    public partial class RangeAssignor : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RangeAssignor>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1241,7 +1148,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/RoundRobinAssignor.html"/>
     /// </summary>
-    public partial class RoundRobinAssignor : Org.Apache.Kafka.Clients.Consumer.Internals.AbstractPartitionAssignor
+    public partial class RoundRobinAssignor : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RoundRobinAssignor>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1284,7 +1191,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/StickyAssignor.html"/>
     /// </summary>
-    public partial class StickyAssignor : Org.Apache.Kafka.Clients.Consumer.Internals.AbstractStickyAssignor
+    public partial class StickyAssignor : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StickyAssignor>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

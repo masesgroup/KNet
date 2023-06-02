@@ -23,10 +23,8 @@ using Java.Util;
 
 namespace Org.Apache.Kafka.Clients.Consumer
 {
-    public class OffsetOutOfRangeException : InvalidOffsetException
+    public partial class OffsetOutOfRangeException
     {
-        public override string ClassName => "org.apache.kafka.clients.consumer.OffsetOutOfRangeException";
-
-        public Map<TopicPartition, long> OffsetOutOfRangePartitions => JVMBridgeBase.Wraps<Map<TopicPartition, long>>(Instance.Invoke("offsetOutOfRangePartitions") as IJavaObject);
+        public Map<TopicPartition, long> OffsetOutOfRangePartitions => JVMBridgeBase.Wraps<Map<TopicPartition, long>>(BridgeInstance.Invoke("offsetOutOfRangePartitions") as IJavaObject);
     }
 }

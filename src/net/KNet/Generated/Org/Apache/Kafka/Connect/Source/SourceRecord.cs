@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <param name="arg7"><see cref="object"/></param>
         /// <param name="arg8"><see cref="long"/></param>
         /// <param name="arg9"><see cref="Java.Lang.Iterable"/></param>
-        public SourceRecord(Java.Util.Map arg0, Java.Util.Map arg1, string arg2, int? arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Org.Apache.Kafka.Connect.Data.Schema arg6, object arg7, long? arg8, Java.Lang.Iterable arg9)
+        public SourceRecord(Java.Util.Map arg0, Java.Util.Map arg1, string arg2, int? arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Org.Apache.Kafka.Connect.Data.Schema arg6, object arg7, long? arg8, Java.Lang.Iterable<Org.Apache.Kafka.Connect.Header.Header> arg9)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)
         {
         }
@@ -133,18 +133,24 @@ namespace Org.Apache.Kafka.Connect.Source
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceRecord.html#sourceOffset()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceRecord.html#sourceOffset()"/>
         /// </summary>
-        public Java.Util.Map SourceOffset
+
+        /// <typeparam name="ReturnExtendsobject"></typeparam>
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, ReturnExtendsobject> SourceOffset<ReturnExtendsobject>()
         {
-            get { return IExecute<Java.Util.Map>("sourceOffset"); }
+            return IExecute<Java.Util.Map<string, ReturnExtendsobject>>("sourceOffset");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceRecord.html#sourcePartition()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceRecord.html#sourcePartition()"/>
         /// </summary>
-        public Java.Util.Map SourcePartition
+
+        /// <typeparam name="ReturnExtendsobject"></typeparam>
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, ReturnExtendsobject> SourcePartition<ReturnExtendsobject>()
         {
-            get { return IExecute<Java.Util.Map>("sourcePartition"); }
+            return IExecute<Java.Util.Map<string, ReturnExtendsobject>>("sourcePartition");
         }
 
         #endregion

@@ -81,18 +81,13 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ListenerName.html#configPrefix()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ListenerName.html#configPrefix()"/>
         /// </summary>
-        public string ConfigPrefix
+
+        /// <returns><see cref="string"/></returns>
+        public string ConfigPrefix()
         {
-            get { return IExecute<string>("configPrefix"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ListenerName.html#value()"/> 
-        /// </summary>
-        public string Value
-        {
-            get { return IExecute<string>("value"); }
+            return IExecute<string>("configPrefix");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ListenerName.html#saslMechanismConfigPrefix(java.lang.String)"/>
@@ -102,6 +97,15 @@ namespace Org.Apache.Kafka.Common.Network
         public string SaslMechanismConfigPrefix(string arg0)
         {
             return IExecute<string>("saslMechanismConfigPrefix", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ListenerName.html#value()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string Value()
+        {
+            return IExecute<string>("value");
         }
 
         #endregion

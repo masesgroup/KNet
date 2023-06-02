@@ -34,7 +34,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
-        public IncrementalAlterConfigsResponse(int arg0, Java.Util.Map arg1)
+        public IncrementalAlterConfigsResponse(int arg0, Java.Util.Map<Org.Apache.Kafka.Common.Config.ConfigResource, Org.Apache.Kafka.Common.Requests.ApiError> arg1)
             : base(arg0, arg1)
         {
         }

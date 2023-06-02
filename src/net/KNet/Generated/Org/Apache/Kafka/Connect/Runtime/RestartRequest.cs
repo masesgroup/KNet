@@ -60,32 +60,31 @@ namespace Org.Apache.Kafka.Connect.Runtime
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/RestartRequest.html#connectorName()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/RestartRequest.html#forceRestartConnectorOnly()"/>
         /// </summary>
-        public string ConnectorName
+
+        /// <returns><see cref="bool"/></returns>
+        public bool ForceRestartConnectorOnly()
         {
-            get { return IExecute<string>("connectorName"); }
+            return IExecute<bool>("forceRestartConnectorOnly");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/RestartRequest.html#forceRestartConnectorOnly()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/RestartRequest.html#includeTasks()"/>
         /// </summary>
-        public bool ForceRestartConnectorOnly
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IncludeTasks()
         {
-            get { return IExecute<bool>("forceRestartConnectorOnly"); }
+            return IExecute<bool>("includeTasks");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/RestartRequest.html#includeTasks()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/RestartRequest.html#onlyFailed()"/>
         /// </summary>
-        public bool IncludeTasks
+
+        /// <returns><see cref="bool"/></returns>
+        public bool OnlyFailed()
         {
-            get { return IExecute<bool>("includeTasks"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/RestartRequest.html#onlyFailed()"/> 
-        /// </summary>
-        public bool OnlyFailed
-        {
-            get { return IExecute<bool>("onlyFailed"); }
+            return IExecute<bool>("onlyFailed");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/RestartRequest.html#shouldRestartConnector(org.apache.kafka.connect.runtime.ConnectorStatus)"/>
@@ -122,6 +121,15 @@ namespace Org.Apache.Kafka.Connect.Runtime
         public int CompareTo(Org.Apache.Kafka.Connect.Runtime.RestartRequest arg0)
         {
             return IExecute<int>("compareTo", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/RestartRequest.html#connectorName()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string ConnectorName()
+        {
+            return IExecute<string>("connectorName");
         }
 
         #endregion

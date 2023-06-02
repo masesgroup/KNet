@@ -65,18 +65,22 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AlterConfigsRequest.html#configs()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AlterConfigsRequest.html#validateOnly()"/>
         /// </summary>
-        public Java.Util.Map<Org.Apache.Kafka.Common.Config.ConfigResource, Org.Apache.Kafka.Common.Requests.AlterConfigsRequest.Config> Configs
+
+        /// <returns><see cref="bool"/></returns>
+        public bool ValidateOnly()
         {
-            get { return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.Config.ConfigResource, Org.Apache.Kafka.Common.Requests.AlterConfigsRequest.Config>>("configs"); }
+            return IExecute<bool>("validateOnly");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AlterConfigsRequest.html#validateOnly()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AlterConfigsRequest.html#configs()"/>
         /// </summary>
-        public bool ValidateOnly
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<Org.Apache.Kafka.Common.Config.ConfigResource, Org.Apache.Kafka.Common.Requests.AlterConfigsRequest.Config> Configs()
         {
-            get { return IExecute<bool>("validateOnly"); }
+            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.Config.ConfigResource, Org.Apache.Kafka.Common.Requests.AlterConfigsRequest.Config>>("configs");
         }
 
         #endregion
@@ -91,7 +95,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Map"/></param>
             /// <param name="arg1"><see cref="bool"/></param>
-            public Builder(Java.Util.Map arg0, bool arg1)
+            public Builder(Java.Util.Map<Org.Apache.Kafka.Common.Config.ConfigResource, Org.Apache.Kafka.Common.Requests.AlterConfigsRequest.Config> arg0, bool arg1)
                 : base(arg0, arg1)
             {
             }
@@ -130,7 +134,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AlterConfigsRequest.Config.html#%3Cinit%3E(java.util.Collection)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
-            public Config(Java.Util.Collection arg0)
+            public Config(Java.Util.Collection<Org.Apache.Kafka.Common.Requests.AlterConfigsRequest.ConfigEntry> arg0)
                 : base(arg0)
             {
             }
@@ -151,11 +155,13 @@ namespace Org.Apache.Kafka.Common.Requests
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AlterConfigsRequest.Config.html#entries()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AlterConfigsRequest.Config.html#entries()"/>
             /// </summary>
-            public Java.Util.Collection<Org.Apache.Kafka.Common.Requests.AlterConfigsRequest.ConfigEntry> Entries
+
+            /// <returns><see cref="Java.Util.Collection"/></returns>
+            public Java.Util.Collection<Org.Apache.Kafka.Common.Requests.AlterConfigsRequest.ConfigEntry> Entries()
             {
-                get { return IExecute<Java.Util.Collection<Org.Apache.Kafka.Common.Requests.AlterConfigsRequest.ConfigEntry>>("entries"); }
+                return IExecute<Java.Util.Collection<Org.Apache.Kafka.Common.Requests.AlterConfigsRequest.ConfigEntry>>("entries");
             }
 
             #endregion
@@ -198,18 +204,22 @@ namespace Org.Apache.Kafka.Common.Requests
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AlterConfigsRequest.ConfigEntry.html#name()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AlterConfigsRequest.ConfigEntry.html#name()"/>
             /// </summary>
-            public string Name
+
+            /// <returns><see cref="string"/></returns>
+            public string Name()
             {
-                get { return IExecute<string>("name"); }
+                return IExecute<string>("name");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AlterConfigsRequest.ConfigEntry.html#value()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AlterConfigsRequest.ConfigEntry.html#value()"/>
             /// </summary>
-            public string Value
+
+            /// <returns><see cref="string"/></returns>
+            public string Value()
             {
-                get { return IExecute<string>("value"); }
+                return IExecute<string>("value");
             }
 
             #endregion

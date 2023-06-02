@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Connect.Data
         /// <param name="arg7"><see cref="Java.Util.List"/></param>
         /// <param name="arg8"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg9"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
-        public ConnectSchema(Org.Apache.Kafka.Connect.Data.Schema.Type arg0, bool arg1, object arg2, string arg3, int? arg4, string arg5, Java.Util.Map arg6, Java.Util.List arg7, Org.Apache.Kafka.Connect.Data.Schema arg8, Org.Apache.Kafka.Connect.Data.Schema arg9)
+        public ConnectSchema(Org.Apache.Kafka.Connect.Data.Schema.Type arg0, bool arg1, object arg2, string arg3, int? arg4, string arg5, Java.Util.Map<string, string> arg6, Java.Util.List<Org.Apache.Kafka.Connect.Data.Field> arg7, Org.Apache.Kafka.Connect.Data.Schema arg8, Org.Apache.Kafka.Connect.Data.Schema arg9)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)
         {
         }
@@ -116,81 +116,67 @@ namespace Org.Apache.Kafka.Connect.Data
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/ConnectSchema.html#defaultValue()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/ConnectSchema.html#isOptional()"/>
         /// </summary>
-        public object DefaultValue
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsOptional()
         {
-            get { return IExecute("defaultValue"); }
+            return IExecute<bool>("isOptional");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/ConnectSchema.html#doc()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/ConnectSchema.html#version()"/>
         /// </summary>
-        public string Doc
+
+        /// <returns><see cref="int"/></returns>
+        public int? Version()
         {
-            get { return IExecute<string>("doc"); }
+            return IExecute<int?>("version");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/ConnectSchema.html#fields()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/ConnectSchema.html#defaultValue()"/>
         /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Connect.Data.Field> Fields
+
+        /// <returns><see cref="object"/></returns>
+        public object DefaultValue()
         {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Connect.Data.Field>>("fields"); }
+            return IExecute("defaultValue");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/ConnectSchema.html#isOptional()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/ConnectSchema.html#doc()"/>
         /// </summary>
-        public bool IsOptional
+
+        /// <returns><see cref="string"/></returns>
+        public string Doc()
         {
-            get { return IExecute<bool>("isOptional"); }
+            return IExecute<string>("doc");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/ConnectSchema.html#keySchema()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/ConnectSchema.html#name()"/>
         /// </summary>
-        public Org.Apache.Kafka.Connect.Data.Schema KeySchema
+
+        /// <returns><see cref="string"/></returns>
+        public string Name()
         {
-            get { return IExecute<Org.Apache.Kafka.Connect.Data.Schema>("keySchema"); }
+            return IExecute<string>("name");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/ConnectSchema.html#name()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/ConnectSchema.html#fields()"/>
         /// </summary>
-        public string Name
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Connect.Data.Field> Fields()
         {
-            get { return IExecute<string>("name"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Connect.Data.Field>>("fields");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/ConnectSchema.html#parameters()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/ConnectSchema.html#parameters()"/>
         /// </summary>
-        public Java.Util.Map<string, string> Parameters
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, string> Parameters()
         {
-            get { return IExecute<Java.Util.Map<string, string>>("parameters"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/ConnectSchema.html#schema()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Connect.Data.Schema Schema
-        {
-            get { return IExecute<Org.Apache.Kafka.Connect.Data.Schema>("schema"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/ConnectSchema.html#type()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Connect.Data.Schema.Type Type
-        {
-            get { return IExecute<Org.Apache.Kafka.Connect.Data.Schema.Type>("type"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/ConnectSchema.html#valueSchema()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Connect.Data.Schema ValueSchema
-        {
-            get { return IExecute<Org.Apache.Kafka.Connect.Data.Schema>("valueSchema"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/ConnectSchema.html#version()"/> 
-        /// </summary>
-        public int? Version
-        {
-            get { return IExecute<int?>("version"); }
+            return IExecute<Java.Util.Map<string, string>>("parameters");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/ConnectSchema.html#field(java.lang.String)"/>
@@ -200,6 +186,42 @@ namespace Org.Apache.Kafka.Connect.Data
         public Org.Apache.Kafka.Connect.Data.Field Field(string arg0)
         {
             return IExecute<Org.Apache.Kafka.Connect.Data.Field>("field", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/ConnectSchema.html#keySchema()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></returns>
+        public Org.Apache.Kafka.Connect.Data.Schema KeySchema()
+        {
+            return IExecute<Org.Apache.Kafka.Connect.Data.Schema>("keySchema");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/ConnectSchema.html#schema()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></returns>
+        public Org.Apache.Kafka.Connect.Data.Schema Schema()
+        {
+            return IExecute<Org.Apache.Kafka.Connect.Data.Schema>("schema");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/ConnectSchema.html#valueSchema()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></returns>
+        public Org.Apache.Kafka.Connect.Data.Schema ValueSchema()
+        {
+            return IExecute<Org.Apache.Kafka.Connect.Data.Schema>("valueSchema");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/ConnectSchema.html#type()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Schema.Type"/></returns>
+        public Org.Apache.Kafka.Connect.Data.Schema.Type Type()
+        {
+            return IExecute<Org.Apache.Kafka.Connect.Data.Schema.Type>("type");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/ConnectSchema.html#validateValue(java.lang.Object)"/>

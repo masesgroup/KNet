@@ -19,12 +19,18 @@
 using MASES.JCOBridge.C2JBridge;
 using Org.Apache.Kafka.Clients.Consumer;
 using Org.Apache.Kafka.Common.Serialization;
+using MASES.KNet.Serialization;
 using System;
 
 namespace MASES.KNet.Extensions
 {
     public static class ConsumerConfigBuilderExtensions
     {
+        public static bool CanApplyBasicDeserializer<T>(this ConsumerConfigBuilder builder)
+        {
+            return KNetSerialization.IsInternalManaged<T>();
+        }
+
         public static ConsumerConfigBuilder WithKeyDeserializerClass<T>(this ConsumerConfigBuilder builder)
         {
             return WithKeyDeserializerClass(builder, typeof(T));
@@ -32,6 +38,8 @@ namespace MASES.KNet.Extensions
 
         public static ConsumerConfigBuilder WithKeyDeserializerClass(this ConsumerConfigBuilder builder, System.Type type)
         {
+            if (!KNetSerialization.IsInternalManaged(type)) throw new InvalidOperationException($"Cannot manage serialization with type {type}");
+
             if (type == typeof(byte[]))
             {
                 return builder.WithKeyDeserializerClass(JVMBridgeBase.ClassNameOf<ByteArrayDeserializer>());
@@ -80,9 +88,43 @@ namespace MASES.KNet.Extensions
 
         public static ConsumerConfigBuilder WithValueDeserializerClass(this ConsumerConfigBuilder builder, System.Type type)
         {
-            if (type == typeof(string))
+            if (!KNetSerialization.IsInternalManaged(type)) throw new InvalidOperationException($"Cannot manage serialization with type {type}");
+
+            if (type == typeof(byte[]))
+            {
+                return builder.WithValueDeserializerClass(JVMBridgeBase.ClassNameOf<ByteArrayDeserializer>());
+            }
+            else if (type == typeof(double))
+            {
+                return builder.WithValueDeserializerClass(JVMBridgeBase.ClassNameOf<DoubleDeserializer>());
+            }
+            else if (type == typeof(float))
+            {
+                return builder.WithValueDeserializerClass(JVMBridgeBase.ClassNameOf<FloatDeserializer>());
+            }
+            else if (type == typeof(int))
+            {
+                return builder.WithValueDeserializerClass(JVMBridgeBase.ClassNameOf<IntegerDeserializer>());
+            }
+            else if (type == typeof(long))
+            {
+                return builder.WithValueDeserializerClass(JVMBridgeBase.ClassNameOf<LongDeserializer>());
+            }
+            else if (type == typeof(short))
+            {
+                return builder.WithValueDeserializerClass(JVMBridgeBase.ClassNameOf<ShortDeserializer>());
+            }
+            else if (type == typeof(string))
             {
                 return builder.WithValueDeserializerClass(JVMBridgeBase.ClassNameOf<StringDeserializer>());
+            }
+            else if (type == typeof(Guid))
+            {
+                return builder.WithValueDeserializerClass(JVMBridgeBase.ClassNameOf<UUIDDeserializer>());
+            }
+            else if (type == typeof(void))
+            {
+                return builder.WithValueDeserializerClass(JVMBridgeBase.ClassNameOf<VoidDeserializer>());
             }
             // add other
 

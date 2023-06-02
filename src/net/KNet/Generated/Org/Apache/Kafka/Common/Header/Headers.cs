@@ -46,13 +46,6 @@ namespace Org.Apache.Kafka.Common.Header
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/header/Headers.html#toArray()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Header.Header[] ToArray
-        {
-            get { return IExecuteArray<Org.Apache.Kafka.Common.Header.Header>("toArray"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/header/Headers.html#headers(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -69,6 +62,15 @@ namespace Org.Apache.Kafka.Common.Header
         public Org.Apache.Kafka.Common.Header.Header LastHeader(string arg0)
         {
             return IExecute<Org.Apache.Kafka.Common.Header.Header>("lastHeader", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/header/Headers.html#toArray()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Header.Header"/></returns>
+        public Org.Apache.Kafka.Common.Header.Header[] ToArray()
+        {
+            return IExecuteArray<Org.Apache.Kafka.Common.Header.Header>("toArray");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/header/Headers.html#add(java.lang.String,byte[])"/>

@@ -94,53 +94,67 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#bytesRead()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#complete()"/>
         /// </summary>
-        public int BytesRead
+
+        /// <returns><see cref="bool"/></returns>
+        public bool Complete()
         {
-            get { return IExecute<int>("bytesRead"); }
+            return IExecute<bool>("complete");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#complete()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#memoryAllocated()"/>
         /// </summary>
-        public bool Complete
+
+        /// <returns><see cref="bool"/></returns>
+        public bool MemoryAllocated()
         {
-            get { return IExecute<bool>("complete"); }
+            return IExecute<bool>("memoryAllocated");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#memoryAllocated()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#requiredMemoryAmountKnown()"/>
         /// </summary>
-        public bool MemoryAllocated
+
+        /// <returns><see cref="bool"/></returns>
+        public bool RequiredMemoryAmountKnown()
         {
-            get { return IExecute<bool>("memoryAllocated"); }
+            return IExecute<bool>("requiredMemoryAmountKnown");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#payload()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#bytesRead()"/>
         /// </summary>
-        public Java.Nio.ByteBuffer Payload
+
+        /// <returns><see cref="int"/></returns>
+        public int BytesRead()
         {
-            get { return IExecute<Java.Nio.ByteBuffer>("payload"); }
+            return IExecute<int>("bytesRead");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#requiredMemoryAmountKnown()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#size()"/>
         /// </summary>
-        public bool RequiredMemoryAmountKnown
+
+        /// <returns><see cref="int"/></returns>
+        public int Size()
         {
-            get { return IExecute<bool>("requiredMemoryAmountKnown"); }
+            return IExecute<int>("size");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#size()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#source()"/>
         /// </summary>
-        public int Size
+
+        /// <returns><see cref="string"/></returns>
+        public string Source()
         {
-            get { return IExecute<int>("size"); }
+            return IExecute<string>("source");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#source()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#payload()"/>
         /// </summary>
-        public string Source
+
+        /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
+        public Java.Nio.ByteBuffer Payload()
         {
-            get { return IExecute<string>("source"); }
+            return IExecute<Java.Nio.ByteBuffer>("payload");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#readFrom(java.nio.channels.ScatteringByteChannel)"/>

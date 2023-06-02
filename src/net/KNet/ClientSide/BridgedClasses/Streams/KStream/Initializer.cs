@@ -19,7 +19,7 @@
 using MASES.JCOBridge.C2JBridge;
 using System;
 
-namespace Org.Apache.Kafka.Streams.KStream
+namespace Org.Apache.Kafka.Streams.Kstream
 {
     /// <summary>
     /// Listener for Kafka Initializer. Extends <see cref="IJVMBridgeBase"/>
@@ -39,10 +39,10 @@ namespace Org.Apache.Kafka.Streams.KStream
     /// </summary>
     /// <typeparam name="VA">The Initialized data associated to the event</typeparam>
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
-    public class Initializer<VA> : JVMBridgeListener, IInitializer<VA>
+    public partial class Initializer<VA> : IInitializer<VA>
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.streams.kstream.InitializerImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.streams.kstream.InitializerImpl";
 
         readonly Func<VA> executionFunction = null;
         /// <summary>

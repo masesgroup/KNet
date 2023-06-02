@@ -74,13 +74,6 @@ namespace Org.Apache.Kafka.Connect.Runtime.Errors
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/errors/Stage.html#values()"/> 
-        /// </summary>
-        public static Org.Apache.Kafka.Connect.Runtime.Errors.Stage[] Values
-        {
-            get { return SExecuteArray<Org.Apache.Kafka.Connect.Runtime.Errors.Stage>(LocalBridgeClazz, "values"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/errors/Stage.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -88,6 +81,15 @@ namespace Org.Apache.Kafka.Connect.Runtime.Errors
         public static Org.Apache.Kafka.Connect.Runtime.Errors.Stage ValueOf(string arg0)
         {
             return SExecute<Org.Apache.Kafka.Connect.Runtime.Errors.Stage>(LocalBridgeClazz, "valueOf", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/errors/Stage.html#values()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.Errors.Stage"/></returns>
+        public static Org.Apache.Kafka.Connect.Runtime.Errors.Stage[] Values()
+        {
+            return SExecuteArray<Org.Apache.Kafka.Connect.Runtime.Errors.Stage>(LocalBridgeClazz, "values");
         }
 
         #endregion

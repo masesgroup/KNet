@@ -54,20 +54,6 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LazyDownConversionRecordsSend.html#recordConversionStats()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Record.RecordConversionStats RecordConversionStats
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Record.RecordConversionStats>("recordConversionStats"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LazyDownConversionRecordsSend.html#topicPartition()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.TopicPartition TopicPartition
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.TopicPartition>("topicPartition"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LazyDownConversionRecordsSend.html#writeTo(org.apache.kafka.common.network.TransferableChannel,long,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Network.TransferableChannel"/></param>
@@ -78,6 +64,24 @@ namespace Org.Apache.Kafka.Common.Record
         public long WriteTo(Org.Apache.Kafka.Common.Network.TransferableChannel arg0, long arg1, int arg2)
         {
             return IExecute<long>("writeTo", arg0, arg1, arg2);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LazyDownConversionRecordsSend.html#recordConversionStats()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Record.RecordConversionStats"/></returns>
+        public Org.Apache.Kafka.Common.Record.RecordConversionStats RecordConversionStats()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Record.RecordConversionStats>("recordConversionStats");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LazyDownConversionRecordsSend.html#topicPartition()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.TopicPartition"/></returns>
+        public Org.Apache.Kafka.Common.TopicPartition TopicPartition()
+        {
+            return IExecute<Org.Apache.Kafka.Common.TopicPartition>("topicPartition");
         }
 
         #endregion

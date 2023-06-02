@@ -17,42 +17,19 @@
 */
 
 using MASES.JCOBridge.C2JBridge.JVMInterop;
-using Org.Apache.Kafka.Common.Header;
 using Org.Apache.Kafka.Common.Record;
 
 namespace Org.Apache.Kafka.Clients.Consumer
 {
-    public class ConsumerRecord : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConsumerRecord>
+    public partial class ConsumerRecord
     {
-        public override string ClassName => "org.apache.kafka.clients.consumer.ConsumerRecord";
+        public System.DateTime DateTime => System.DateTimeOffset.FromUnixTimeMilliseconds(Timestamp()).DateTime;
 
-        public string Topic => IExecute<string>("topic");
-
-        public int Partition => IExecute<int>("partition");
-
-        public Headers Headers => IExecute<Headers>("headers");
-
-        public object RawKey => IExecute("key");
-
-        public object RawValue => IExecute("value");
-
-        public long Offset => IExecute<long>("offset");
-
-        public System.DateTime DateTime => System.DateTimeOffset.FromUnixTimeMilliseconds(Timestamp).DateTime;
-
-        public long Timestamp => IExecute<long>("timestamp");
-
-        public TimestampType TimestampType => (TimestampType)System.Enum.Parse(typeof(TimestampType), IExecute<IJavaObject>("timestampType").Invoke<string>("name")); // (TimestampType)(int)IExecute<IJavaObject>("timestampType").GetField("id");
-
-        public int SerializedKeySize => IExecute<int>("serializedKeySize");
-
-        public int SerializedValueSize => IExecute<int>("serializedValueSize");
+        // public TimestampType TimestampType => (TimestampType)System.Enum.Parse(typeof(TimestampType), IExecute<IJavaObject>("timestampType").Invoke<string>("name")); // (TimestampType)(int)IExecute<IJavaObject>("timestampType").GetField("id");
     }
 
-    public class ConsumerRecord<K, V> : ConsumerRecord
+    public partial class ConsumerRecord<K, V>
     {
-        public K Key => IExecute<K>("key");
-
-        public V Value => IExecute<V>("value");
+        public System.DateTime DateTime => System.DateTimeOffset.FromUnixTimeMilliseconds(Timestamp()).DateTime;
     }
 }

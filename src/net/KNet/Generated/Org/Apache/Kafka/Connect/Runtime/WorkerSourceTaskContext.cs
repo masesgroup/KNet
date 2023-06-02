@@ -61,25 +61,31 @@ namespace Org.Apache.Kafka.Connect.Runtime
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerSourceTaskContext.html#configs()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerSourceTaskContext.html#configs()"/>
         /// </summary>
-        public Java.Util.Map<string, string> Configs
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, string> Configs()
         {
-            get { return IExecute<Java.Util.Map<string, string>>("configs"); }
+            return IExecute<Java.Util.Map<string, string>>("configs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerSourceTaskContext.html#offsetStorageReader()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerSourceTaskContext.html#transactionContext()"/>
         /// </summary>
-        public Org.Apache.Kafka.Connect.Storage.OffsetStorageReader OffsetStorageReader
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Source.TransactionContext"/></returns>
+        public Org.Apache.Kafka.Connect.Source.TransactionContext TransactionContext()
         {
-            get { return IExecute<Org.Apache.Kafka.Connect.Storage.OffsetStorageReader>("offsetStorageReader"); }
+            return IExecute<Org.Apache.Kafka.Connect.Source.TransactionContext>("transactionContext");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerSourceTaskContext.html#transactionContext()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerSourceTaskContext.html#offsetStorageReader()"/>
         /// </summary>
-        public Org.Apache.Kafka.Connect.Source.TransactionContext TransactionContext
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Storage.OffsetStorageReader"/></returns>
+        public Org.Apache.Kafka.Connect.Storage.OffsetStorageReader OffsetStorageReader()
         {
-            get { return IExecute<Org.Apache.Kafka.Connect.Source.TransactionContext>("transactionContext"); }
+            return IExecute<Org.Apache.Kafka.Connect.Storage.OffsetStorageReader>("offsetStorageReader");
         }
 
         #endregion

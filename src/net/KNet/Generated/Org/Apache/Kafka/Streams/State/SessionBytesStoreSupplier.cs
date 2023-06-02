@@ -46,18 +46,22 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/SessionBytesStoreSupplier.html#retentionPeriod()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/SessionBytesStoreSupplier.html#retentionPeriod()"/>
         /// </summary>
-        public long RetentionPeriod
+
+        /// <returns><see cref="long"/></returns>
+        public long RetentionPeriod()
         {
-            get { return IExecute<long>("retentionPeriod"); }
+            return IExecute<long>("retentionPeriod");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/SessionBytesStoreSupplier.html#segmentIntervalMs()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/SessionBytesStoreSupplier.html#segmentIntervalMs()"/>
         /// </summary>
-        public long SegmentIntervalMs
+
+        /// <returns><see cref="long"/></returns>
+        public long SegmentIntervalMs()
         {
-            get { return IExecute<long>("segmentIntervalMs"); }
+            return IExecute<long>("segmentIntervalMs");
         }
 
         #endregion

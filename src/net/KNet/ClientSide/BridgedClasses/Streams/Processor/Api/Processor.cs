@@ -30,10 +30,10 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         void Close();
     }
 
-    public class Processor<KIn, VIn, KOut, VOut> : JVMBridgeListener, IProcessor<KIn, VIn, KOut, VOut>
+    public partial class Processor<KIn, VIn, KOut, VOut> : IProcessor<KIn, VIn, KOut, VOut>
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.apache.kafka.streams.processor.api.ProcessorImpl";
+         public sealed override string BridgeClassName => "org.apache.kafka.streams.processor.api.ProcessorImpl";
 
         readonly Action<ProcessorContext<KOut, VOut>> executionFunctionInit = null;
         readonly Action<Record<KIn, VIn>> executionFunctionProcess = null;

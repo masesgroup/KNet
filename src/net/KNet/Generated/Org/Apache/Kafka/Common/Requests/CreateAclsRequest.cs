@@ -74,11 +74,13 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/CreateAclsRequest.html#aclCreations()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/CreateAclsRequest.html#aclCreations()"/>
         /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Message.CreateAclsRequestData.AclCreation> AclCreations
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Message.CreateAclsRequestData.AclCreation> AclCreations()
         {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.CreateAclsRequestData.AclCreation>>("aclCreations"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.CreateAclsRequestData.AclCreation>>("aclCreations");
         }
 
         #endregion

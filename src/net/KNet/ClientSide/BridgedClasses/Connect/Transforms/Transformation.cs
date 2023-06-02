@@ -24,9 +24,9 @@ namespace Org.Apache.Kafka.Connect.Transforms
 {
     public class Transformation<R> : Configurable where R : ConnectRecord<R>
     {
-        public override bool IsInterface => true;
+        public override bool IsBridgeInterface => true;
 
-        public override string ClassName => "org.apache.kafka.connect.transforms.Transformation";
+        public override string BridgeClassName => "org.apache.kafka.connect.transforms.Transformation";
 
         public R Apply(R record) => IExecute<R>("apply", record);
 

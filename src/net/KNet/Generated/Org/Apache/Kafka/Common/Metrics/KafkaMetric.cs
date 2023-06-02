@@ -62,25 +62,31 @@ namespace Org.Apache.Kafka.Common.Metrics
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/KafkaMetric.html#measurable()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/KafkaMetric.html#metricValue()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Metrics.Measurable Measurable
+
+        /// <returns><see cref="object"/></returns>
+        public object MetricValue()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Metrics.Measurable>("measurable"); }
+            return IExecute("metricValue");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/KafkaMetric.html#metricName()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/KafkaMetric.html#metricName()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.MetricName MetricName
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.MetricName"/></returns>
+        public Org.Apache.Kafka.Common.MetricName MetricName()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.MetricName>("metricName"); }
+            return IExecute<Org.Apache.Kafka.Common.MetricName>("metricName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/KafkaMetric.html#metricValue()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/KafkaMetric.html#measurable()"/>
         /// </summary>
-        public object MetricValue
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Metrics.Measurable"/></returns>
+        public Org.Apache.Kafka.Common.Metrics.Measurable Measurable()
         {
-            get { return IExecute("metricValue"); }
+            return IExecute<Org.Apache.Kafka.Common.Metrics.Measurable>("measurable");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/KafkaMetric.html#config()"/>

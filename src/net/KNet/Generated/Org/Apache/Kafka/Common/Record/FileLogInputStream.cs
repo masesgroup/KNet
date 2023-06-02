@@ -46,11 +46,14 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileLogInputStream.html#nextBatch()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileLogInputStream.html#nextBatch()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Record.RecordBatch NextBatch
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Record.RecordBatch"/></returns>
+        /// <exception cref="Java.Io.IOException"/>
+        public Org.Apache.Kafka.Common.Record.RecordBatch NextBatch()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Record.RecordBatch>("nextBatch"); }
+            return IExecute<Org.Apache.Kafka.Common.Record.RecordBatch>("nextBatch");
         }
 
         #endregion
@@ -77,11 +80,13 @@ namespace Org.Apache.Kafka.Common.Record
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileLogInputStream.FileChannelRecordBatch.html#position()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileLogInputStream.FileChannelRecordBatch.html#position()"/>
             /// </summary>
-            public int Position
+
+            /// <returns><see cref="int"/></returns>
+            public int Position()
             {
-                get { return IExecute<int>("position"); }
+                return IExecute<int>("position");
             }
 
             #endregion

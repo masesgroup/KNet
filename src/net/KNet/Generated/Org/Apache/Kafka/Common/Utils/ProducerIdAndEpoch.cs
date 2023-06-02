@@ -67,11 +67,13 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ProducerIdAndEpoch.html#isValid()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ProducerIdAndEpoch.html#isValid()"/>
         /// </summary>
-        public bool IsValid
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsValid()
         {
-            get { return IExecute<bool>("isValid"); }
+            return IExecute<bool>("isValid");
         }
 
         #endregion

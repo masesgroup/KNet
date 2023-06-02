@@ -63,25 +63,31 @@ namespace Org.Apache.Kafka.Common.Resource
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/Resource.html#isUnknown()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/Resource.html#isUnknown()"/>
         /// </summary>
-        public bool IsUnknown
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsUnknown()
         {
-            get { return IExecute<bool>("isUnknown"); }
+            return IExecute<bool>("isUnknown");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/Resource.html#name()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/Resource.html#name()"/>
         /// </summary>
-        public string Name
+
+        /// <returns><see cref="string"/></returns>
+        public string Name()
         {
-            get { return IExecute<string>("name"); }
+            return IExecute<string>("name");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/Resource.html#resourceType()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/Resource.html#resourceType()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Resource.ResourceType ResourceType
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Resource.ResourceType"/></returns>
+        public Org.Apache.Kafka.Common.Resource.ResourceType ResourceType()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Resource.ResourceType>("resourceType"); }
+            return IExecute<Org.Apache.Kafka.Common.Resource.ResourceType>("resourceType");
         }
 
         #endregion

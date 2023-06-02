@@ -58,18 +58,13 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordVersion.html#current()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordVersion.html#current()"/>
         /// </summary>
-        public static Org.Apache.Kafka.Common.Record.RecordVersion Current
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Record.RecordVersion"/></returns>
+        public static Org.Apache.Kafka.Common.Record.RecordVersion Current()
         {
-            get { return SExecute<Org.Apache.Kafka.Common.Record.RecordVersion>(LocalBridgeClazz, "current"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordVersion.html#values()"/> 
-        /// </summary>
-        public static Org.Apache.Kafka.Common.Record.RecordVersion[] Values
-        {
-            get { return SExecuteArray<Org.Apache.Kafka.Common.Record.RecordVersion>(LocalBridgeClazz, "values"); }
+            return SExecute<Org.Apache.Kafka.Common.Record.RecordVersion>(LocalBridgeClazz, "current");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordVersion.html#lookup(byte)"/>
@@ -88,6 +83,15 @@ namespace Org.Apache.Kafka.Common.Record
         public static Org.Apache.Kafka.Common.Record.RecordVersion ValueOf(string arg0)
         {
             return SExecute<Org.Apache.Kafka.Common.Record.RecordVersion>(LocalBridgeClazz, "valueOf", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordVersion.html#values()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Record.RecordVersion"/></returns>
+        public static Org.Apache.Kafka.Common.Record.RecordVersion[] Values()
+        {
+            return SExecuteArray<Org.Apache.Kafka.Common.Record.RecordVersion>(LocalBridgeClazz, "values");
         }
 
         #endregion

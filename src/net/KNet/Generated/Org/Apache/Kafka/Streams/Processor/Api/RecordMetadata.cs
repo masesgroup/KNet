@@ -46,25 +46,31 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/RecordMetadata.html#offset()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/RecordMetadata.html#partition()"/>
         /// </summary>
-        public long Offset
+
+        /// <returns><see cref="int"/></returns>
+        public int Partition()
         {
-            get { return IExecute<long>("offset"); }
+            return IExecute<int>("partition");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/RecordMetadata.html#partition()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/RecordMetadata.html#topic()"/>
         /// </summary>
-        public int Partition
+
+        /// <returns><see cref="string"/></returns>
+        public string Topic()
         {
-            get { return IExecute<int>("partition"); }
+            return IExecute<string>("topic");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/RecordMetadata.html#topic()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/RecordMetadata.html#offset()"/>
         /// </summary>
-        public string Topic
+
+        /// <returns><see cref="long"/></returns>
+        public long Offset()
         {
-            get { return IExecute<string>("topic"); }
+            return IExecute<long>("offset");
         }
 
         #endregion

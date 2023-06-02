@@ -37,7 +37,7 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest.Entities
         /// <param name="arg2"><see cref="Java.Util.List"/></param>
         /// <param name="arg3"><see cref="Java.Util.List"/></param>
         /// <param name="arg4"><see cref="bool"/></param>
-        public ConfigValueInfo(string arg0, string arg1, Java.Util.List arg2, Java.Util.List arg3, bool arg4)
+        public ConfigValueInfo(string arg0, string arg1, Java.Util.List<string> arg2, Java.Util.List<string> arg3, bool arg4)
             : base(arg0, arg1, arg2, arg3, arg4)
         {
         }
@@ -58,39 +58,49 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest.Entities
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigValueInfo.html#errors()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigValueInfo.html#visible()"/>
         /// </summary>
-        public Java.Util.List<string> Errors
+
+        /// <returns><see cref="bool"/></returns>
+        public bool Visible()
         {
-            get { return IExecute<Java.Util.List<string>>("errors"); }
+            return IExecute<bool>("visible");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigValueInfo.html#name()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigValueInfo.html#name()"/>
         /// </summary>
-        public string Name
+
+        /// <returns><see cref="string"/></returns>
+        public string Name()
         {
-            get { return IExecute<string>("name"); }
+            return IExecute<string>("name");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigValueInfo.html#recommendedValues()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigValueInfo.html#value()"/>
         /// </summary>
-        public Java.Util.List<string> RecommendedValues
+
+        /// <returns><see cref="string"/></returns>
+        public string Value()
         {
-            get { return IExecute<Java.Util.List<string>>("recommendedValues"); }
+            return IExecute<string>("value");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigValueInfo.html#value()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigValueInfo.html#errors()"/>
         /// </summary>
-        public string Value
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<string> Errors()
         {
-            get { return IExecute<string>("value"); }
+            return IExecute<Java.Util.List<string>>("errors");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigValueInfo.html#visible()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigValueInfo.html#recommendedValues()"/>
         /// </summary>
-        public bool Visible
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<string> RecommendedValues()
         {
-            get { return IExecute<bool>("visible"); }
+            return IExecute<Java.Util.List<string>>("recommendedValues");
         }
 
         #endregion

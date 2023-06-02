@@ -86,25 +86,31 @@ namespace Org.Apache.Kafka.Connect.Storage
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ConnectorOffsetBackingStore.html#hasConnectorSpecificStore()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ConnectorOffsetBackingStore.html#hasConnectorSpecificStore()"/>
         /// </summary>
-        public bool HasConnectorSpecificStore
+
+        /// <returns><see cref="bool"/></returns>
+        public bool HasConnectorSpecificStore()
         {
-            get { return IExecute<bool>("hasConnectorSpecificStore"); }
+            return IExecute<bool>("hasConnectorSpecificStore");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ConnectorOffsetBackingStore.html#hasWorkerGlobalStore()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ConnectorOffsetBackingStore.html#hasWorkerGlobalStore()"/>
         /// </summary>
-        public bool HasWorkerGlobalStore
+
+        /// <returns><see cref="bool"/></returns>
+        public bool HasWorkerGlobalStore()
         {
-            get { return IExecute<bool>("hasWorkerGlobalStore"); }
+            return IExecute<bool>("hasWorkerGlobalStore");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ConnectorOffsetBackingStore.html#primaryOffsetsTopic()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ConnectorOffsetBackingStore.html#primaryOffsetsTopic()"/>
         /// </summary>
-        public string PrimaryOffsetsTopic
+
+        /// <returns><see cref="string"/></returns>
+        public string PrimaryOffsetsTopic()
         {
-            get { return IExecute<string>("primaryOffsetsTopic"); }
+            return IExecute<string>("primaryOffsetsTopic");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ConnectorOffsetBackingStore.html#set(java.util.Map,org.apache.kafka.connect.util.Callback)"/>

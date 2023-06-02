@@ -36,7 +36,7 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest.Entities
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
         /// <param name="arg2"><see cref="Java.Util.List"/></param>
         /// <param name="arg3"><see cref="Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorType"/></param>
-        public ConnectorInfo(string arg0, Java.Util.Map arg1, Java.Util.List arg2, Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorType arg3)
+        public ConnectorInfo(string arg0, Java.Util.Map<string, string> arg1, Java.Util.List<Org.Apache.Kafka.Connect.Util.ConnectorTaskId> arg2, Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorType arg3)
             : base(arg0, arg1, arg2, arg3)
         {
         }
@@ -57,32 +57,40 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest.Entities
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConnectorInfo.html#config()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConnectorInfo.html#name()"/>
         /// </summary>
-        public Java.Util.Map<string, string> Config
+
+        /// <returns><see cref="string"/></returns>
+        public string Name()
         {
-            get { return IExecute<Java.Util.Map<string, string>>("config"); }
+            return IExecute<string>("name");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConnectorInfo.html#name()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConnectorInfo.html#tasks()"/>
         /// </summary>
-        public string Name
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Connect.Util.ConnectorTaskId> Tasks()
         {
-            get { return IExecute<string>("name"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Connect.Util.ConnectorTaskId>>("tasks");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConnectorInfo.html#tasks()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConnectorInfo.html#config()"/>
         /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Connect.Util.ConnectorTaskId> Tasks
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, string> Config()
         {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Connect.Util.ConnectorTaskId>>("tasks"); }
+            return IExecute<Java.Util.Map<string, string>>("config");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConnectorInfo.html#type()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConnectorInfo.html#type()"/>
         /// </summary>
-        public Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorType Type
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorType"/></returns>
+        public Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorType Type()
         {
-            get { return IExecute<Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorType>("type"); }
+            return IExecute<Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorType>("type");
         }
 
         #endregion

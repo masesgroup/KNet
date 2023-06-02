@@ -54,10 +54,10 @@ namespace Org.Apache.Kafka.Clients.Consumer
     /// Listener for Kafka ConsumerRebalanceListener. Extends <see cref="JVMBridgeListener"/>, implements <see cref="IConsumerInterceptor{K, V}"/>
     /// </summary>
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
-    public class ConsumerInterceptor<K, V> : JVMBridgeListener, IConsumerInterceptor<K, V>
+    public partial class ConsumerInterceptor<K, V> : IConsumerInterceptor<K, V>
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.clients.consumer.ConsumerInterceptorImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.clients.consumer.ConsumerInterceptorImpl";
 
         readonly Action<Map<string, Java.Lang.Object>> configureFunction = null;
         readonly Func<ConsumerRecords<K, V>, ConsumerRecords<K, V>> onConsumeFunction = null;

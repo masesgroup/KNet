@@ -19,7 +19,7 @@
 using MASES.JCOBridge.C2JBridge;
 using System;
 
-namespace Org.Apache.Kafka.Streams.KStream
+namespace Org.Apache.Kafka.Streams.Kstream
 {
     /// <summary>
     /// Listener for Kafka Merger. Extends <see cref="IJVMBridgeBase"/>
@@ -43,10 +43,10 @@ namespace Org.Apache.Kafka.Streams.KStream
     /// <typeparam name="K">The data associated to the event</typeparam>
     /// <typeparam name="V">The data associated to the event</typeparam>
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
-    public class Merger<K, V> : JVMBridgeListener, IMerger<K, V>
+    public partial class Merger<K, V> : IMerger<K, V>
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.streams.kstream.MergerImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.streams.kstream.MergerImpl";
 
         readonly Func<K, V, V, V> executionFunction = null;
         /// <summary>
@@ -82,31 +82,4 @@ namespace Org.Apache.Kafka.Streams.KStream
         /// <returns>The <typeparamref name="V"/> apply evaluation</returns>
         public virtual V Apply(K aggKey, V aggOne, V aggTwo) { return default(V); }
     }
-    /*
-    /// <summary>
-    /// Listener for Kafka Merger. Extends <see cref="MergerImpl{K, V, VA}"/>
-    /// </summary>
-    /// <typeparam name="K">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
-    /// <typeparam name="V">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
-    /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
-    public class JVMBridgeMerger<K, V> : MergerImpl<K, V>
-        where K : JVMBridgeBase, new()
-        where V : JVMBridgeBase, new()
-    {
-        /// <summary>
-        /// Initialize a new instance of <see cref="JVMBridgeMerger{K, V}"/>
-        /// </summary>
-        /// <param name="func">The <see cref="Func{K, V, V, V}"/> to be executed</param>
-        public JVMBridgeMerger(Func<K, V, V, V> func = null) : base(func, false)
-        {
-            AddEventHandler("apply", new EventHandler<CLRListenerEventArgs<JVMBridgeEventData<K>>>(EventHandler));
-        }
-
-        void EventHandler(object sender, CLRListenerEventArgs<JVMBridgeEventData<K>> data)
-        {
-            var retVal = OnApply(data.EventData.TypedEventData, data.EventData.To<V>(0), data.EventData.To<V>(1));
-            data.CLRReturnValue = retVal?;
-        }
-    }
-    */
 }

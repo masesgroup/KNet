@@ -75,55 +75,6 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StateSerdes.html#keyDeserializer()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Serialization.Deserializer KeyDeserializer
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Serialization.Deserializer>("keyDeserializer"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StateSerdes.html#keySerde()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Serialization.Serde KeySerde
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Serialization.Serde>("keySerde"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StateSerdes.html#keySerializer()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Serialization.Serializer KeySerializer
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Serialization.Serializer>("keySerializer"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StateSerdes.html#topic()"/> 
-        /// </summary>
-        public string Topic
-        {
-            get { return IExecute<string>("topic"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StateSerdes.html#valueDeserializer()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Serialization.Deserializer ValueDeserializer
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Serialization.Deserializer>("valueDeserializer"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StateSerdes.html#valueSerde()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Serialization.Serde ValueSerde
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Serialization.Serde>("valueSerde"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StateSerdes.html#valueSerializer()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Serialization.Serializer ValueSerializer
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Serialization.Serializer>("valueSerializer"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StateSerdes.html#rawKey(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
@@ -142,6 +93,15 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteArray<byte>("rawValue", arg0);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StateSerdes.html#topic()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string Topic()
+        {
+            return IExecute<string>("topic");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StateSerdes.html#keyFrom(byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
@@ -149,6 +109,60 @@ namespace Org.Apache.Kafka.Streams.State
         public object KeyFrom(byte[] arg0)
         {
             return IExecute("keyFrom", new object[] { arg0 });
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StateSerdes.html#keyDeserializer()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></returns>
+        public Org.Apache.Kafka.Common.Serialization.Deserializer KeyDeserializer()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Serialization.Deserializer>("keyDeserializer");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StateSerdes.html#valueDeserializer()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></returns>
+        public Org.Apache.Kafka.Common.Serialization.Deserializer ValueDeserializer()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Serialization.Deserializer>("valueDeserializer");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StateSerdes.html#keySerde()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
+        public Org.Apache.Kafka.Common.Serialization.Serde KeySerde()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Serialization.Serde>("keySerde");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StateSerdes.html#valueSerde()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
+        public Org.Apache.Kafka.Common.Serialization.Serde ValueSerde()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Serialization.Serde>("valueSerde");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StateSerdes.html#keySerializer()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serializer"/></returns>
+        public Org.Apache.Kafka.Common.Serialization.Serializer KeySerializer()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Serialization.Serializer>("keySerializer");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StateSerdes.html#valueSerializer()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serializer"/></returns>
+        public Org.Apache.Kafka.Common.Serialization.Serializer ValueSerializer()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Serialization.Serializer>("valueSerializer");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StateSerdes.html#valueFrom(byte[])"/>
@@ -224,55 +238,6 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StateSerdes.html#keyDeserializer()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Serialization.Deserializer<K> KeyDeserializer
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Serialization.Deserializer<K>>("keyDeserializer"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StateSerdes.html#keySerde()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Serialization.Serde<K> KeySerde
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Serialization.Serde<K>>("keySerde"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StateSerdes.html#keySerializer()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Serialization.Serializer<K> KeySerializer
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Serialization.Serializer<K>>("keySerializer"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StateSerdes.html#topic()"/> 
-        /// </summary>
-        public string Topic
-        {
-            get { return IExecute<string>("topic"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StateSerdes.html#valueDeserializer()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Serialization.Deserializer<V> ValueDeserializer
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Serialization.Deserializer<V>>("valueDeserializer"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StateSerdes.html#valueSerde()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Serialization.Serde<V> ValueSerde
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Serialization.Serde<V>>("valueSerde"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StateSerdes.html#valueSerializer()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Serialization.Serializer<V> ValueSerializer
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Serialization.Serializer<V>>("valueSerializer"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StateSerdes.html#rawKey(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
@@ -291,6 +256,15 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteArray<byte>("rawValue", arg0);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StateSerdes.html#topic()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string Topic()
+        {
+            return IExecute<string>("topic");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StateSerdes.html#keyFrom(byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
@@ -298,6 +272,60 @@ namespace Org.Apache.Kafka.Streams.State
         public K KeyFrom(byte[] arg0)
         {
             return IExecute<K>("keyFrom", new object[] { arg0 });
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StateSerdes.html#keyDeserializer()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></returns>
+        public Org.Apache.Kafka.Common.Serialization.Deserializer<K> KeyDeserializer()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Serialization.Deserializer<K>>("keyDeserializer");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StateSerdes.html#valueDeserializer()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></returns>
+        public Org.Apache.Kafka.Common.Serialization.Deserializer<V> ValueDeserializer()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Serialization.Deserializer<V>>("valueDeserializer");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StateSerdes.html#keySerde()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
+        public Org.Apache.Kafka.Common.Serialization.Serde<K> KeySerde()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Serialization.Serde<K>>("keySerde");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StateSerdes.html#valueSerde()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
+        public Org.Apache.Kafka.Common.Serialization.Serde<V> ValueSerde()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Serialization.Serde<V>>("valueSerde");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StateSerdes.html#keySerializer()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serializer"/></returns>
+        public Org.Apache.Kafka.Common.Serialization.Serializer<K> KeySerializer()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Serialization.Serializer<K>>("keySerializer");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StateSerdes.html#valueSerializer()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serializer"/></returns>
+        public Org.Apache.Kafka.Common.Serialization.Serializer<V> ValueSerializer()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Serialization.Serializer<V>>("valueSerializer");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StateSerdes.html#valueFrom(byte[])"/>

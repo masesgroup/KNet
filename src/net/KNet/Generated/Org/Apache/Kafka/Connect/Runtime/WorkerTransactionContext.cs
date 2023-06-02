@@ -50,18 +50,13 @@ namespace Org.Apache.Kafka.Connect.Runtime
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerTransactionContext.html#shouldAbortBatch()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerTransactionContext.html#shouldAbortBatch()"/>
         /// </summary>
-        public bool ShouldAbortBatch
+
+        /// <returns><see cref="bool"/></returns>
+        public bool ShouldAbortBatch()
         {
-            get { return IExecute<bool>("shouldAbortBatch"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerTransactionContext.html#shouldCommitBatch()"/> 
-        /// </summary>
-        public bool ShouldCommitBatch
-        {
-            get { return IExecute<bool>("shouldCommitBatch"); }
+            return IExecute<bool>("shouldAbortBatch");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerTransactionContext.html#shouldAbortOn(org.apache.kafka.connect.source.SourceRecord)"/>
@@ -71,6 +66,15 @@ namespace Org.Apache.Kafka.Connect.Runtime
         public bool ShouldAbortOn(Org.Apache.Kafka.Connect.Source.SourceRecord arg0)
         {
             return IExecute<bool>("shouldAbortOn", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerTransactionContext.html#shouldCommitBatch()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool ShouldCommitBatch()
+        {
+            return IExecute<bool>("shouldCommitBatch");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/WorkerTransactionContext.html#shouldCommitOn(org.apache.kafka.connect.source.SourceRecord)"/>

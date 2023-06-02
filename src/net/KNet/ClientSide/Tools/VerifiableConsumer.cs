@@ -21,14 +21,8 @@ namespace Org.Apache.Kafka.Tools
     /// <summary>
     /// Class managing VerifiableConsumer
     /// </summary>
-    public class VerifiableConsumer : MASES.JCOBridge.C2JBridge.JVMBridgeMain<VerifiableConsumer>
+    public partial class VerifiableConsumer
     {
-        /// <summary>
-        /// Initialize a new <see cref="VerifiableConsumer"/>
-        /// </summary>
-        public VerifiableConsumer()
-            : base("org.apache.kafka.tools.VerifiableConsumer")
-        {
-        }
+
     }
 }

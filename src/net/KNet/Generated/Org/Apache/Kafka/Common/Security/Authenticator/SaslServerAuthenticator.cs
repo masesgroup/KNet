@@ -44,7 +44,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
         /// <param name="arg9"><see cref="Org.Apache.Kafka.Common.Network.ChannelMetadataRegistry"/></param>
         /// <param name="arg10"><see cref="Org.Apache.Kafka.Common.Utils.Time"/></param>
         /// <param name="arg11"><see cref="Java.Util.Function.Supplier"/></param>
-        public SaslServerAuthenticator(Java.Util.Map arg0, Java.Util.Map arg1, string arg2, Java.Util.Map arg3, Org.Apache.Kafka.Common.Security.Kerberos.KerberosShortNamer arg4, Org.Apache.Kafka.Common.Network.ListenerName arg5, Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol arg6, Org.Apache.Kafka.Common.Network.TransportLayer arg7, Java.Util.Map arg8, Org.Apache.Kafka.Common.Network.ChannelMetadataRegistry arg9, Org.Apache.Kafka.Common.Utils.Time arg10, Java.Util.Function.Supplier arg11)
+        public SaslServerAuthenticator(Java.Util.Map arg0, Java.Util.Map<string, Org.Apache.Kafka.Common.Security.Auth.AuthenticateCallbackHandler> arg1, string arg2, Java.Util.Map<string, Javax.Security.Auth.Subject> arg3, Org.Apache.Kafka.Common.Security.Kerberos.KerberosShortNamer arg4, Org.Apache.Kafka.Common.Network.ListenerName arg5, Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol arg6, Org.Apache.Kafka.Common.Network.TransportLayer arg7, Java.Util.Map<string, long?> arg8, Org.Apache.Kafka.Common.Network.ChannelMetadataRegistry arg9, Org.Apache.Kafka.Common.Utils.Time arg10, Java.Util.Function.Supplier<Org.Apache.Kafka.Common.Requests.ApiVersionsResponse> arg11)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11)
         {
         }
@@ -69,46 +69,58 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslServerAuthenticator.html#complete()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslServerAuthenticator.html#complete()"/>
         /// </summary>
-        public bool Complete
+
+        /// <returns><see cref="bool"/></returns>
+        public bool Complete()
         {
-            get { return IExecute<bool>("complete"); }
+            return IExecute<bool>("complete");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslServerAuthenticator.html#connectedClientSupportsReauthentication()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslServerAuthenticator.html#connectedClientSupportsReauthentication()"/>
         /// </summary>
-        public bool ConnectedClientSupportsReauthentication
+
+        /// <returns><see cref="bool"/></returns>
+        public bool ConnectedClientSupportsReauthentication()
         {
-            get { return IExecute<bool>("connectedClientSupportsReauthentication"); }
+            return IExecute<bool>("connectedClientSupportsReauthentication");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslServerAuthenticator.html#principal()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslServerAuthenticator.html#reauthenticationLatencyMs()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal Principal
+
+        /// <returns><see cref="long"/></returns>
+        public long? ReauthenticationLatencyMs()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal>("principal"); }
+            return IExecute<long?>("reauthenticationLatencyMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslServerAuthenticator.html#principalSerde()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslServerAuthenticator.html#serverSessionExpirationTimeNanos()"/>
         /// </summary>
-        public Java.Util.Optional<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipalSerde> PrincipalSerde
+
+        /// <returns><see cref="long"/></returns>
+        public long? ServerSessionExpirationTimeNanos()
         {
-            get { return IExecute<Java.Util.Optional<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipalSerde>>("principalSerde"); }
+            return IExecute<long?>("serverSessionExpirationTimeNanos");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslServerAuthenticator.html#reauthenticationLatencyMs()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslServerAuthenticator.html#principalSerde()"/>
         /// </summary>
-        public long? ReauthenticationLatencyMs
+
+        /// <returns><see cref="Java.Util.Optional"/></returns>
+        public Java.Util.Optional<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipalSerde> PrincipalSerde()
         {
-            get { return IExecute<long?>("reauthenticationLatencyMs"); }
+            return IExecute<Java.Util.Optional<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipalSerde>>("principalSerde");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslServerAuthenticator.html#serverSessionExpirationTimeNanos()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslServerAuthenticator.html#principal()"/>
         /// </summary>
-        public long? ServerSessionExpirationTimeNanos
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal"/></returns>
+        public Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal Principal()
         {
-            get { return IExecute<long?>("serverSessionExpirationTimeNanos"); }
+            return IExecute<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal>("principal");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslServerAuthenticator.html#authenticate()"/>

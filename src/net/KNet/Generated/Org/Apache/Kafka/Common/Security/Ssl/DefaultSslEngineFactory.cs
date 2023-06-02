@@ -54,34 +54,6 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html#keystore()"/> 
-        /// </summary>
-        public Java.Security.KeyStore Keystore
-        {
-            get { return IExecute<Java.Security.KeyStore>("keystore"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html#reconfigurableConfigs()"/> 
-        /// </summary>
-        public Java.Util.Set<string> ReconfigurableConfigs
-        {
-            get { return IExecute<Java.Util.Set<string>>("reconfigurableConfigs"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html#sslContext()"/> 
-        /// </summary>
-        public Javax.Net.Ssl.SSLContext SslContext
-        {
-            get { return IExecute<Javax.Net.Ssl.SSLContext>("sslContext"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html#truststore()"/> 
-        /// </summary>
-        public Java.Security.KeyStore Truststore
-        {
-            get { return IExecute<Java.Security.KeyStore>("truststore"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html#shouldBeRebuilt(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
@@ -89,6 +61,42 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
         public bool ShouldBeRebuilt(Java.Util.Map<string, object> arg0)
         {
             return IExecute<bool>("shouldBeRebuilt", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html#keystore()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Security.KeyStore"/></returns>
+        public Java.Security.KeyStore Keystore()
+        {
+            return IExecute<Java.Security.KeyStore>("keystore");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html#truststore()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Security.KeyStore"/></returns>
+        public Java.Security.KeyStore Truststore()
+        {
+            return IExecute<Java.Security.KeyStore>("truststore");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html#reconfigurableConfigs()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<string> ReconfigurableConfigs()
+        {
+            return IExecute<Java.Util.Set<string>>("reconfigurableConfigs");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html#sslContext()"/>
+        /// </summary>
+
+        /// <returns><see cref="Javax.Net.Ssl.SSLContext"/></returns>
+        public Javax.Net.Ssl.SSLContext SslContext()
+        {
+            return IExecute<Javax.Net.Ssl.SSLContext>("sslContext");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html#createClientSslEngine(java.lang.String,int,java.lang.String)"/>

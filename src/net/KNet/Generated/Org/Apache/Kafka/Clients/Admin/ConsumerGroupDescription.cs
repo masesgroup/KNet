@@ -39,7 +39,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Common.ConsumerGroupState"/></param>
         /// <param name="arg5"><see cref="Org.Apache.Kafka.Common.Node"/></param>
         /// <param name="arg6"><see cref="Java.Util.Set"/></param>
-        public ConsumerGroupDescription(string arg0, bool arg1, Java.Util.Collection arg2, string arg3, Org.Apache.Kafka.Common.ConsumerGroupState arg4, Org.Apache.Kafka.Common.Node arg5, Java.Util.Set arg6)
+        public ConsumerGroupDescription(string arg0, bool arg1, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.MemberDescription> arg2, string arg3, Org.Apache.Kafka.Common.ConsumerGroupState arg4, Org.Apache.Kafka.Common.Node arg5, Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation> arg6)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
         {
         }
@@ -52,7 +52,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg3"><see cref="string"/></param>
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Common.ConsumerGroupState"/></param>
         /// <param name="arg5"><see cref="Org.Apache.Kafka.Common.Node"/></param>
-        public ConsumerGroupDescription(string arg0, bool arg1, Java.Util.Collection arg2, string arg3, Org.Apache.Kafka.Common.ConsumerGroupState arg4, Org.Apache.Kafka.Common.Node arg5)
+        public ConsumerGroupDescription(string arg0, bool arg1, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.MemberDescription> arg2, string arg3, Org.Apache.Kafka.Common.ConsumerGroupState arg4, Org.Apache.Kafka.Common.Node arg5)
             : base(arg0, arg1, arg2, arg3, arg4, arg5)
         {
         }
@@ -73,53 +73,67 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#authorizedOperations()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#isSimpleConsumerGroup()"/>
         /// </summary>
-        public Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation> AuthorizedOperations
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsSimpleConsumerGroup()
         {
-            get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation>>("authorizedOperations"); }
+            return IExecute<bool>("isSimpleConsumerGroup");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#coordinator()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#groupId()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Node Coordinator
+
+        /// <returns><see cref="string"/></returns>
+        public string GroupId()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Node>("coordinator"); }
+            return IExecute<string>("groupId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#groupId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#partitionAssignor()"/>
         /// </summary>
-        public string GroupId
+
+        /// <returns><see cref="string"/></returns>
+        public string PartitionAssignor()
         {
-            get { return IExecute<string>("groupId"); }
+            return IExecute<string>("partitionAssignor");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#isSimpleConsumerGroup()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#members()"/>
         /// </summary>
-        public bool IsSimpleConsumerGroup
+
+        /// <returns><see cref="Java.Util.Collection"/></returns>
+        public Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.MemberDescription> Members()
         {
-            get { return IExecute<bool>("isSimpleConsumerGroup"); }
+            return IExecute<Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.MemberDescription>>("members");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#members()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#authorizedOperations()"/>
         /// </summary>
-        public Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.MemberDescription> Members
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation> AuthorizedOperations()
         {
-            get { return IExecute<Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.MemberDescription>>("members"); }
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation>>("authorizedOperations");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#partitionAssignor()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#state()"/>
         /// </summary>
-        public string PartitionAssignor
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.ConsumerGroupState"/></returns>
+        public Org.Apache.Kafka.Common.ConsumerGroupState State()
         {
-            get { return IExecute<string>("partitionAssignor"); }
+            return IExecute<Org.Apache.Kafka.Common.ConsumerGroupState>("state");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#state()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#coordinator()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.ConsumerGroupState State
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Node"/></returns>
+        public Org.Apache.Kafka.Common.Node Coordinator()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.ConsumerGroupState>("state"); }
+            return IExecute<Org.Apache.Kafka.Common.Node>("coordinator");
         }
 
         #endregion

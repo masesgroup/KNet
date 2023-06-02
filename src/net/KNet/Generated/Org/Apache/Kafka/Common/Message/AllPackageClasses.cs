@@ -283,7 +283,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/AddPartitionsToTxnRequestData.AddPartitionsToTxnTopicCollection.html"/>
         /// </summary>
-        public partial class AddPartitionsToTxnTopicCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class AddPartitionsToTxnTopicCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.AddPartitionsToTxnRequestData.AddPartitionsToTxnTopic>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -498,7 +498,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/AddPartitionsToTxnResponseData.AddPartitionsToTxnPartitionResultCollection.html"/>
         /// </summary>
-        public partial class AddPartitionsToTxnPartitionResultCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class AddPartitionsToTxnPartitionResultCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.AddPartitionsToTxnResponseData.AddPartitionsToTxnPartitionResult>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -584,7 +584,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/AddPartitionsToTxnResponseData.AddPartitionsToTxnTopicResultCollection.html"/>
         /// </summary>
-        public partial class AddPartitionsToTxnTopicResultCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class AddPartitionsToTxnTopicResultCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.AddPartitionsToTxnResponseData.AddPartitionsToTxnTopicResult>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1616,7 +1616,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/AlterConfigsRequestData.AlterableConfigCollection.html"/>
         /// </summary>
-        public partial class AlterableConfigCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class AlterableConfigCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.AlterConfigsRequestData.AlterableConfig>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1702,7 +1702,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/AlterConfigsRequestData.AlterConfigsResourceCollection.html"/>
         /// </summary>
-        public partial class AlterConfigsResourceCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class AlterConfigsResourceCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.AlterConfigsRequestData.AlterConfigsResource>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -3164,7 +3164,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/AlterReplicaLogDirsRequestData.AlterReplicaLogDirCollection.html"/>
         /// </summary>
-        public partial class AlterReplicaLogDirCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class AlterReplicaLogDirCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.AlterReplicaLogDirsRequestData.AlterReplicaLogDir>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -3250,7 +3250,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/AlterReplicaLogDirsRequestData.AlterReplicaLogDirTopicCollection.html"/>
         /// </summary>
-        public partial class AlterReplicaLogDirTopicCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class AlterReplicaLogDirTopicCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.AlterReplicaLogDirsRequestData.AlterReplicaLogDirTopic>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -4114,7 +4114,7 @@ namespace Org.Apache.Kafka.Common.Message
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ApiMessageType.html"/>
     /// </summary>
-    public partial class ApiMessageType : Java.Lang.Enum
+    public partial class ApiMessageType : Java.Lang.Enum<Org.Apache.Kafka.Common.Message.ApiMessageType>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -4153,7 +4153,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ApiMessageType.ListenerType.html"/>
         /// </summary>
-        public partial class ListenerType : Java.Lang.Enum
+        public partial class ListenerType : Java.Lang.Enum<Org.Apache.Kafka.Common.Message.ApiMessageType.ListenerType>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -4368,7 +4368,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ApiVersionsResponseData.ApiVersionCollection.html"/>
         /// </summary>
-        public partial class ApiVersionCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class ApiVersionCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.ApiVersionsResponseData.ApiVersion>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -4454,7 +4454,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ApiVersionsResponseData.FinalizedFeatureKeyCollection.html"/>
         /// </summary>
-        public partial class FinalizedFeatureKeyCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class FinalizedFeatureKeyCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.ApiVersionsResponseData.FinalizedFeatureKey>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -4540,7 +4540,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ApiVersionsResponseData.SupportedFeatureKeyCollection.html"/>
         /// </summary>
-        public partial class SupportedFeatureKeyCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class SupportedFeatureKeyCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.ApiVersionsResponseData.SupportedFeatureKey>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -5529,7 +5529,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/BrokerRegistrationRequestData.FeatureCollection.html"/>
         /// </summary>
-        public partial class FeatureCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class FeatureCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.BrokerRegistrationRequestData.Feature>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -5585,7 +5585,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/BrokerRegistrationRequestData.ListenerCollection.html"/>
         /// </summary>
-        public partial class ListenerCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class ListenerCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.BrokerRegistrationRequestData.Listener>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -5929,7 +5929,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolAssignment.TopicPartitionCollection.html"/>
         /// </summary>
-        public partial class TopicPartitionCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class TopicPartitionCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.ConsumerProtocolAssignment.TopicPartition>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -6144,7 +6144,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ConsumerProtocolSubscription.TopicPartitionCollection.html"/>
         /// </summary>
-        public partial class TopicPartitionCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class TopicPartitionCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.ConsumerProtocolSubscription.TopicPartition>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -6445,7 +6445,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ControlledShutdownResponseData.RemainingPartitionCollection.html"/>
         /// </summary>
-        public partial class RemainingPartitionCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class RemainingPartitionCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.ControlledShutdownResponseData.RemainingPartition>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -7305,7 +7305,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreatePartitionsRequestData.CreatePartitionsTopicCollection.html"/>
         /// </summary>
-        public partial class CreatePartitionsTopicCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class CreatePartitionsTopicCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.CreatePartitionsRequestData.CreatePartitionsTopic>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -7735,7 +7735,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateTopicsRequestData.CreatableReplicaAssignmentCollection.html"/>
         /// </summary>
-        public partial class CreatableReplicaAssignmentCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class CreatableReplicaAssignmentCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.CreateTopicsRequestData.CreatableReplicaAssignment>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -7821,7 +7821,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateTopicsRequestData.CreatableTopicCollection.html"/>
         /// </summary>
-        public partial class CreatableTopicCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class CreatableTopicCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.CreateTopicsRequestData.CreatableTopic>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -7907,7 +7907,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateTopicsRequestData.CreateableTopicConfigCollection.html"/>
         /// </summary>
-        public partial class CreateableTopicConfigCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class CreateableTopicConfigCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.CreateTopicsRequestData.CreateableTopicConfig>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -8251,7 +8251,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateTopicsResponseData.CreatableTopicResultCollection.html"/>
         /// </summary>
-        public partial class CreatableTopicResultCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class CreatableTopicResultCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.CreateTopicsResponseData.CreatableTopicResult>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -9111,7 +9111,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteGroupsResponseData.DeletableGroupResultCollection.html"/>
         /// </summary>
-        public partial class DeletableGroupResultCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class DeletableGroupResultCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.DeleteGroupsResponseData.DeletableGroupResult>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -9584,7 +9584,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteRecordsResponseData.DeleteRecordsPartitionResultCollection.html"/>
         /// </summary>
-        public partial class DeleteRecordsPartitionResultCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class DeleteRecordsPartitionResultCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.DeleteRecordsResponseData.DeleteRecordsPartitionResult>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -9670,7 +9670,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteRecordsResponseData.DeleteRecordsTopicResultCollection.html"/>
         /// </summary>
-        public partial class DeleteRecordsTopicResultCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class DeleteRecordsTopicResultCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.DeleteRecordsResponseData.DeleteRecordsTopicResult>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -10100,7 +10100,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DeleteTopicsResponseData.DeletableTopicResultCollection.html"/>
         /// </summary>
-        public partial class DeletableTopicResultCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class DeletableTopicResultCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.DeleteTopicsResponseData.DeletableTopicResult>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -11261,7 +11261,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeClusterResponseData.DescribeClusterBrokerCollection.html"/>
         /// </summary>
-        public partial class DescribeClusterBrokerCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class DescribeClusterBrokerCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.DescribeClusterResponseData.DescribeClusterBroker>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -12766,7 +12766,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeLogDirsRequestData.DescribableLogDirTopicCollection.html"/>
         /// </summary>
-        public partial class DescribableLogDirTopicCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class DescribableLogDirTopicCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.DescribeLogDirsRequestData.DescribableLogDirTopic>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -14529,7 +14529,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/DescribeTransactionsResponseData.TopicDataCollection.html"/>
         /// </summary>
-        public partial class TopicDataCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class TopicDataCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.DescribeTransactionsResponseData.TopicData>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -15260,7 +15260,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ElectLeadersRequestData.TopicPartitionsCollection.html"/>
         /// </summary>
-        public partial class TopicPartitionsCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class TopicPartitionsCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.ElectLeadersRequestData.TopicPartitions>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -18915,7 +18915,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterableConfigCollection.html"/>
         /// </summary>
-        public partial class AlterableConfigCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class AlterableConfigCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.IncrementalAlterConfigsRequestData.AlterableConfig>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -19001,7 +19001,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterConfigsResourceCollection.html"/>
         /// </summary>
-        public partial class AlterConfigsResourceCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class AlterConfigsResourceCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.IncrementalAlterConfigsRequestData.AlterConfigsResource>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -19603,7 +19603,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/JoinGroupRequestData.JoinGroupRequestProtocolCollection.html"/>
         /// </summary>
-        public partial class JoinGroupRequestProtocolCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class JoinGroupRequestProtocolCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.JoinGroupRequestData.JoinGroupRequestProtocol>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -20377,7 +20377,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrResponseData.LeaderAndIsrTopicErrorCollection.html"/>
         /// </summary>
-        public partial class LeaderAndIsrTopicErrorCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class LeaderAndIsrTopicErrorCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.LeaderAndIsrResponseData.LeaderAndIsrTopicError>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -22785,7 +22785,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/MetadataResponseData.MetadataResponseBrokerCollection.html"/>
         /// </summary>
-        public partial class MetadataResponseBrokerCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class MetadataResponseBrokerCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.MetadataResponseData.MetadataResponseBroker>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -22914,7 +22914,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/MetadataResponseData.MetadataResponseTopicCollection.html"/>
         /// </summary>
-        public partial class MetadataResponseTopicCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class MetadataResponseTopicCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.MetadataResponseData.MetadataResponseTopic>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -23774,7 +23774,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetDeleteRequestData.OffsetDeleteRequestTopicCollection.html"/>
         /// </summary>
-        public partial class OffsetDeleteRequestTopicCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class OffsetDeleteRequestTopicCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.OffsetDeleteRequestData.OffsetDeleteRequestTopic>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -24032,7 +24032,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetDeleteResponseData.OffsetDeleteResponsePartitionCollection.html"/>
         /// </summary>
-        public partial class OffsetDeleteResponsePartitionCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class OffsetDeleteResponsePartitionCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.OffsetDeleteResponseData.OffsetDeleteResponsePartition>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -24118,7 +24118,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetDeleteResponseData.OffsetDeleteResponseTopicCollection.html"/>
         /// </summary>
-        public partial class OffsetDeleteResponseTopicCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class OffsetDeleteResponseTopicCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.OffsetDeleteResponseData.OffsetDeleteResponseTopic>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -25279,7 +25279,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochRequestData.OffsetForLeaderTopicCollection.html"/>
         /// </summary>
-        public partial class OffsetForLeaderTopicCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class OffsetForLeaderTopicCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.OffsetForLeaderEpochRequestData.OffsetForLeaderTopic>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -25580,7 +25580,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/OffsetForLeaderEpochResponseData.OffsetForLeaderTopicResultCollection.html"/>
         /// </summary>
-        public partial class OffsetForLeaderTopicResultCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class OffsetForLeaderTopicResultCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.OffsetForLeaderEpochResponseData.OffsetForLeaderTopicResult>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -25881,7 +25881,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceRequestData.TopicProduceDataCollection.html"/>
         /// </summary>
-        public partial class TopicProduceDataCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class TopicProduceDataCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.ProduceRequestData.TopicProduceData>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -26225,7 +26225,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/ProduceResponseData.TopicProduceResponseCollection.html"/>
         /// </summary>
-        public partial class TopicProduceResponseCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class TopicProduceResponseCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.ProduceResponseData.TopicProduceResponse>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -28934,7 +28934,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesRequestData.FeatureUpdateKeyCollection.html"/>
         /// </summary>
-        public partial class FeatureUpdateKeyCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class FeatureUpdateKeyCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.UpdateFeaturesRequestData.FeatureUpdateKey>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -29149,7 +29149,7 @@ namespace Org.Apache.Kafka.Common.Message
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/UpdateFeaturesResponseData.UpdatableFeatureResultCollection.html"/>
         /// </summary>
-        public partial class UpdatableFeatureResultCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection
+        public partial class UpdatableFeatureResultCollection : Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashMultiCollection<Org.Apache.Kafka.Common.Message.UpdateFeaturesResponseData.UpdatableFeatureResult>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

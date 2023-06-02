@@ -29,22 +29,10 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest
     public partial class ConnectRestConfigurable
     {
         #region Constructors
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/ConnectRestConfigurable.html#%3Cinit%3E(org.glassfish.jersey.server.ResourceConfig)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Glassfish.Jersey.Server.ResourceConfig"/></param>
-        public ConnectRestConfigurable(Org.Glassfish.Jersey.Server.ResourceConfig arg0)
-            : base(arg0)
-        {
-        }
 
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Connect.Runtime.Rest.ConnectRestConfigurable"/> to <see cref="Javax.Ws.Rs.Core.Configurable"/>
-        /// </summary>
-        public static implicit operator Javax.Ws.Rs.Core.Configurable(Org.Apache.Kafka.Connect.Runtime.Rest.ConnectRestConfigurable t) => t.Cast<Javax.Ws.Rs.Core.Configurable>();
 
         #endregion
 
@@ -57,101 +45,6 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest
         #endregion
 
         #region Instance methods
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/ConnectRestConfigurable.html#getConfiguration()"/> 
-        /// </summary>
-        public Javax.Ws.Rs.Core.Configuration Configuration
-        {
-            get { return IExecute<Javax.Ws.Rs.Core.Configuration>("getConfiguration"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/ConnectRestConfigurable.html#property(java.lang.String,java.lang.Object)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="object"/></param>
-        /// <returns><see cref="Javax.Ws.Rs.Core.Configurable"/></returns>
-        public Javax.Ws.Rs.Core.Configurable Property(string arg0, object arg1)
-        {
-            return IExecute<Javax.Ws.Rs.Core.Configurable>("property", arg0, arg1);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/ConnectRestConfigurable.html#register(java.lang.Class,int)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Java.Lang.Class"/></param>
-        /// <param name="arg1"><see cref="int"/></param>
-        /// <returns><see cref="Javax.Ws.Rs.Core.Configurable"/></returns>
-        public Javax.Ws.Rs.Core.Configurable Register(Java.Lang.Class arg0, int arg1)
-        {
-            return IExecute<Javax.Ws.Rs.Core.Configurable>("register", arg0, arg1);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/ConnectRestConfigurable.html#register(java.lang.Class,java.lang.Class[])"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Java.Lang.Class"/></param>
-        /// <param name="arg1"><see cref="Java.Lang.Class"/></param>
-        /// <returns><see cref="Javax.Ws.Rs.Core.Configurable"/></returns>
-        public Javax.Ws.Rs.Core.Configurable Register(Java.Lang.Class arg0, Java.Lang.Class[] arg1)
-        {
-            return IExecute<Javax.Ws.Rs.Core.Configurable>("register", arg0, arg1);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/ConnectRestConfigurable.html#register(java.lang.Class,java.util.Map)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Java.Lang.Class"/></param>
-        /// <param name="arg1"><see cref="Java.Util.Map"/></param>
-        /// <returns><see cref="Javax.Ws.Rs.Core.Configurable"/></returns>
-        public Javax.Ws.Rs.Core.Configurable Register(Java.Lang.Class arg0, Java.Util.Map arg1)
-        {
-            return IExecute<Javax.Ws.Rs.Core.Configurable>("register", arg0, arg1);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/ConnectRestConfigurable.html#register(java.lang.Class)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Java.Lang.Class"/></param>
-        /// <returns><see cref="Javax.Ws.Rs.Core.Configurable"/></returns>
-        public Javax.Ws.Rs.Core.Configurable Register(Java.Lang.Class arg0)
-        {
-            return IExecute<Javax.Ws.Rs.Core.Configurable>("register", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/ConnectRestConfigurable.html#register(java.lang.Object,int)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="object"/></param>
-        /// <param name="arg1"><see cref="int"/></param>
-        /// <returns><see cref="Javax.Ws.Rs.Core.Configurable"/></returns>
-        public Javax.Ws.Rs.Core.Configurable Register(object arg0, int arg1)
-        {
-            return IExecute<Javax.Ws.Rs.Core.Configurable>("register", arg0, arg1);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/ConnectRestConfigurable.html#register(java.lang.Object,java.lang.Class[])"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="object"/></param>
-        /// <param name="arg1"><see cref="Java.Lang.Class"/></param>
-        /// <returns><see cref="Javax.Ws.Rs.Core.Configurable"/></returns>
-        public Javax.Ws.Rs.Core.Configurable Register(object arg0, Java.Lang.Class[] arg1)
-        {
-            return IExecute<Javax.Ws.Rs.Core.Configurable>("register", arg0, arg1);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/ConnectRestConfigurable.html#register(java.lang.Object,java.util.Map)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="object"/></param>
-        /// <param name="arg1"><see cref="Java.Util.Map"/></param>
-        /// <returns><see cref="Javax.Ws.Rs.Core.Configurable"/></returns>
-        public Javax.Ws.Rs.Core.Configurable Register(object arg0, Java.Util.Map arg1)
-        {
-            return IExecute<Javax.Ws.Rs.Core.Configurable>("register", arg0, arg1);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/ConnectRestConfigurable.html#register(java.lang.Object)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="object"/></param>
-        /// <returns><see cref="Javax.Ws.Rs.Core.Configurable"/></returns>
-        public Javax.Ws.Rs.Core.Configurable Register(object arg0)
-        {
-            return IExecute<Javax.Ws.Rs.Core.Configurable>("register", arg0);
-        }
 
         #endregion
 

@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Connect.Runtime.Distributed
         /// <param name="arg7"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg8"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg9"><see cref="int"/></param>
-        public ExtendedAssignment(short arg0, short arg1, string arg2, string arg3, long arg4, Java.Util.Collection arg5, Java.Util.Collection arg6, Java.Util.Collection arg7, Java.Util.Collection arg8, int arg9)
+        public ExtendedAssignment(short arg0, short arg1, string arg2, string arg3, long arg4, Java.Util.Collection<string> arg5, Java.Util.Collection<Org.Apache.Kafka.Connect.Util.ConnectorTaskId> arg6, Java.Util.Collection<string> arg7, Java.Util.Collection<Org.Apache.Kafka.Connect.Util.ConnectorTaskId> arg8, int arg9)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)
         {
         }
@@ -59,13 +59,6 @@ namespace Org.Apache.Kafka.Connect.Runtime.Distributed
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ExtendedAssignment.html#empty()"/> 
-        /// </summary>
-        public static Org.Apache.Kafka.Connect.Runtime.Distributed.ExtendedAssignment Empty
-        {
-            get { return SExecute<Org.Apache.Kafka.Connect.Runtime.Distributed.ExtendedAssignment>(LocalBridgeClazz, "empty"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ExtendedAssignment.html#duplicate(org.apache.kafka.connect.runtime.distributed.ExtendedAssignment)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Runtime.Distributed.ExtendedAssignment"/></param>
@@ -73,6 +66,15 @@ namespace Org.Apache.Kafka.Connect.Runtime.Distributed
         public static Org.Apache.Kafka.Connect.Runtime.Distributed.ExtendedAssignment Duplicate(Org.Apache.Kafka.Connect.Runtime.Distributed.ExtendedAssignment arg0)
         {
             return SExecute<Org.Apache.Kafka.Connect.Runtime.Distributed.ExtendedAssignment>(LocalBridgeClazz, "duplicate", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ExtendedAssignment.html#empty()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.Distributed.ExtendedAssignment"/></returns>
+        public static Org.Apache.Kafka.Connect.Runtime.Distributed.ExtendedAssignment Empty()
+        {
+            return SExecute<Org.Apache.Kafka.Connect.Runtime.Distributed.ExtendedAssignment>(LocalBridgeClazz, "empty");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ExtendedAssignment.html#fromStruct(short,org.apache.kafka.common.protocol.types.Struct)"/>
@@ -89,39 +91,49 @@ namespace Org.Apache.Kafka.Connect.Runtime.Distributed
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ExtendedAssignment.html#delay()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ExtendedAssignment.html#delay()"/>
         /// </summary>
-        public int Delay
+
+        /// <returns><see cref="int"/></returns>
+        public int Delay()
         {
-            get { return IExecute<int>("delay"); }
+            return IExecute<int>("delay");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ExtendedAssignment.html#revokedConnectors()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ExtendedAssignment.html#revokedConnectors()"/>
         /// </summary>
-        public Java.Util.Collection<string> RevokedConnectors
+
+        /// <returns><see cref="Java.Util.Collection"/></returns>
+        public Java.Util.Collection<string> RevokedConnectors()
         {
-            get { return IExecute<Java.Util.Collection<string>>("revokedConnectors"); }
+            return IExecute<Java.Util.Collection<string>>("revokedConnectors");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ExtendedAssignment.html#revokedTasks()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ExtendedAssignment.html#revokedTasks()"/>
         /// </summary>
-        public Java.Util.Collection<Org.Apache.Kafka.Connect.Util.ConnectorTaskId> RevokedTasks
+
+        /// <returns><see cref="Java.Util.Collection"/></returns>
+        public Java.Util.Collection<Org.Apache.Kafka.Connect.Util.ConnectorTaskId> RevokedTasks()
         {
-            get { return IExecute<Java.Util.Collection<Org.Apache.Kafka.Connect.Util.ConnectorTaskId>>("revokedTasks"); }
+            return IExecute<Java.Util.Collection<Org.Apache.Kafka.Connect.Util.ConnectorTaskId>>("revokedTasks");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ExtendedAssignment.html#toStruct()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ExtendedAssignment.html#toStruct()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.Types.Struct ToStruct
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Types.Struct"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.Types.Struct ToStruct()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Struct>("toStruct"); }
+            return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Struct>("toStruct");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ExtendedAssignment.html#version()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ExtendedAssignment.html#version()"/>
         /// </summary>
-        public short Version
+
+        /// <returns><see cref="short"/></returns>
+        public short Version()
         {
-            get { return IExecute<short>("version"); }
+            return IExecute<short>("version");
         }
 
         #endregion

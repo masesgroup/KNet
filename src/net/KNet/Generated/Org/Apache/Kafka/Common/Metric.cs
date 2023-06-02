@@ -46,18 +46,22 @@ namespace Org.Apache.Kafka.Common
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Metric.html#metricName()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Metric.html#metricValue()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.MetricName MetricName
+
+        /// <returns><see cref="object"/></returns>
+        public object MetricValue()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.MetricName>("metricName"); }
+            return IExecute("metricValue");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Metric.html#metricValue()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Metric.html#metricName()"/>
         /// </summary>
-        public object MetricValue
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.MetricName"/></returns>
+        public Org.Apache.Kafka.Common.MetricName MetricName()
         {
-            get { return IExecute("metricValue"); }
+            return IExecute<Org.Apache.Kafka.Common.MetricName>("metricName");
         }
 
         #endregion

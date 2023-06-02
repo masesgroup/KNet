@@ -23,7 +23,7 @@ namespace Org.Apache.Kafka.Common.Config
     public class AbstractConfig<TClass> : JVMBridgeBase<TClass>
         where TClass : IJVMBridgeBase, new()
     {
-        public override string ClassName => "org.apache.kafka.common.config.AbstractConfig";
+        public override string BridgeClassName => "org.apache.kafka.common.config.AbstractConfig";
 
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public AbstractConfig()

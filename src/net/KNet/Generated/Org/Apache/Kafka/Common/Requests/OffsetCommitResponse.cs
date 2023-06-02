@@ -34,7 +34,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
-        public OffsetCommitResponse(int arg0, Java.Util.Map arg1)
+        public OffsetCommitResponse(int arg0, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Protocol.Errors> arg1)
             : base(arg0, arg1)
         {
         }
@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/OffsetCommitResponse.html#%3Cinit%3E(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public OffsetCommitResponse(Java.Util.Map arg0)
+        public OffsetCommitResponse(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Protocol.Errors> arg0)
             : base(arg0)
         {
         }

@@ -50,27 +50,6 @@ namespace Kafka.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/BrokerMetadata.html#id()"/> 
-        /// </summary>
-        public int Id
-        {
-            get { return IExecute<int>("id"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/BrokerMetadata.html#productArity()"/> 
-        /// </summary>
-        public int ProductArity
-        {
-            get { return IExecute<int>("productArity"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/BrokerMetadata.html#productPrefix()"/> 
-        /// </summary>
-        public string ProductPrefix
-        {
-            get { return IExecute<string>("productPrefix"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/BrokerMetadata.html#canEqual(java.lang.Object)"/>
         /// </summary>
         /// <param name="x$1"><see cref="object"/></param>
@@ -78,6 +57,24 @@ namespace Kafka.Admin
         public bool CanEqual(object x_1)
         {
             return IExecute<bool>("canEqual", x_1);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/BrokerMetadata.html#id()"/>
+        /// </summary>
+
+        /// <returns><see cref="int"/></returns>
+        public int Id()
+        {
+            return IExecute<int>("id");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/BrokerMetadata.html#productArity()"/>
+        /// </summary>
+
+        /// <returns><see cref="int"/></returns>
+        public int ProductArity()
+        {
+            return IExecute<int>("productArity");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/BrokerMetadata.html#productElement(int)"/>
@@ -96,6 +93,15 @@ namespace Kafka.Admin
         public string ProductElementName(int x_1)
         {
             return IExecute<string>("productElementName", x_1);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/BrokerMetadata.html#productPrefix()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string ProductPrefix()
+        {
+            return IExecute<string>("productPrefix");
         }
 
         #endregion

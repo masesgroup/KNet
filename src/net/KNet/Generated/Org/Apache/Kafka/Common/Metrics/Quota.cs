@@ -73,20 +73,6 @@ namespace Org.Apache.Kafka.Common.Metrics
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Quota.html#bound()"/> 
-        /// </summary>
-        public double Bound
-        {
-            get { return IExecute<double>("bound"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Quota.html#isUpperBound()"/> 
-        /// </summary>
-        public bool IsUpperBound
-        {
-            get { return IExecute<bool>("isUpperBound"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Quota.html#acceptable(double)"/>
         /// </summary>
         /// <param name="arg0"><see cref="double"/></param>
@@ -94,6 +80,24 @@ namespace Org.Apache.Kafka.Common.Metrics
         public bool Acceptable(double arg0)
         {
             return IExecute<bool>("acceptable", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Quota.html#isUpperBound()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsUpperBound()
+        {
+            return IExecute<bool>("isUpperBound");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Quota.html#bound()"/>
+        /// </summary>
+
+        /// <returns><see cref="double"/></returns>
+        public double Bound()
+        {
+            return IExecute<double>("bound");
         }
 
         #endregion

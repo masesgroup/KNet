@@ -19,7 +19,7 @@
 using MASES.JCOBridge.C2JBridge;
 using System;
 
-namespace Org.Apache.Kafka.Streams.KStream
+namespace Org.Apache.Kafka.Streams.Kstream
 {
     /// <summary>
     /// Listener for Kafka ValueJoinerWithKey. Extends <see cref="IJVMBridgeBase"/>
@@ -48,10 +48,10 @@ namespace Org.Apache.Kafka.Streams.KStream
     /// <typeparam name="V2">The data associated to the event</typeparam>
     /// <typeparam name="VR">Joined value</typeparam>
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
-    public class ValueJoinerWithKey<K1, V1, V2, VR> : JVMBridgeListener, IValueJoinerWithKey<K1, V1, V2, VR>
+    public partial class ValueJoinerWithKey<K1, V1, V2, VR> : IValueJoinerWithKey<K1, V1, V2, VR>
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.streams.kstream.ValueJoinerWithKeyImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.streams.kstream.ValueJoinerWithKeyImpl";
 
         readonly Func<K1, V1, V2, VR> executionFunction = null;
         /// <summary>

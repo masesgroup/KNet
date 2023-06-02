@@ -34,7 +34,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="long"/></param>
-        public ConfigData(Java.Util.Map arg0, long? arg1)
+        public ConfigData(Java.Util.Map<string, string> arg0, long? arg1)
             : base(arg0, arg1)
         {
         }
@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigData.html#%3Cinit%3E(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public ConfigData(Java.Util.Map arg0)
+        public ConfigData(Java.Util.Map<string, string> arg0)
             : base(arg0)
         {
         }
@@ -63,18 +63,22 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigData.html#data()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigData.html#ttl()"/>
         /// </summary>
-        public Java.Util.Map<string, string> Data
+
+        /// <returns><see cref="long"/></returns>
+        public long? Ttl()
         {
-            get { return IExecute<Java.Util.Map<string, string>>("data"); }
+            return IExecute<long?>("ttl");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigData.html#ttl()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigData.html#data()"/>
         /// </summary>
-        public long? Ttl
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, string> Data()
         {
-            get { return IExecute<long?>("ttl"); }
+            return IExecute<Java.Util.Map<string, string>>("data");
         }
 
         #endregion

@@ -55,18 +55,22 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/SourceAndTarget.html#source()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/SourceAndTarget.html#source()"/>
         /// </summary>
-        public string Source
+
+        /// <returns><see cref="string"/></returns>
+        public string Source()
         {
-            get { return IExecute<string>("source"); }
+            return IExecute<string>("source");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/SourceAndTarget.html#target()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/SourceAndTarget.html#target()"/>
         /// </summary>
-        public string Target
+
+        /// <returns><see cref="string"/></returns>
+        public string Target()
         {
-            get { return IExecute<string>("target"); }
+            return IExecute<string>("target");
         }
 
         #endregion

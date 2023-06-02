@@ -92,11 +92,13 @@ namespace Org.Apache.Kafka.Common.Requests
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FindCoordinatorRequest.Builder.html#data()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FindCoordinatorRequest.Builder.html#data()"/>
             /// </summary>
-            public Org.Apache.Kafka.Common.Message.FindCoordinatorRequestData Data
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Message.FindCoordinatorRequestData"/></returns>
+            public Org.Apache.Kafka.Common.Message.FindCoordinatorRequestData Data()
             {
-                get { return IExecute<Org.Apache.Kafka.Common.Message.FindCoordinatorRequestData>("data"); }
+                return IExecute<Org.Apache.Kafka.Common.Message.FindCoordinatorRequestData>("data");
             }
 
             #endregion
@@ -134,13 +136,6 @@ namespace Org.Apache.Kafka.Common.Requests
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FindCoordinatorRequest.CoordinatorType.html#values()"/> 
-            /// </summary>
-            public static Org.Apache.Kafka.Common.Requests.FindCoordinatorRequest.CoordinatorType[] Values
-            {
-                get { return SExecuteArray<Org.Apache.Kafka.Common.Requests.FindCoordinatorRequest.CoordinatorType>(LocalBridgeClazz, "values"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FindCoordinatorRequest.CoordinatorType.html#forId(byte)"/>
             /// </summary>
             /// <param name="arg0"><see cref="byte"/></param>
@@ -158,16 +153,27 @@ namespace Org.Apache.Kafka.Common.Requests
             {
                 return SExecute<Org.Apache.Kafka.Common.Requests.FindCoordinatorRequest.CoordinatorType>(LocalBridgeClazz, "valueOf", arg0);
             }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FindCoordinatorRequest.CoordinatorType.html#values()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Requests.FindCoordinatorRequest.CoordinatorType"/></returns>
+            public static Org.Apache.Kafka.Common.Requests.FindCoordinatorRequest.CoordinatorType[] Values()
+            {
+                return SExecuteArray<Org.Apache.Kafka.Common.Requests.FindCoordinatorRequest.CoordinatorType>(LocalBridgeClazz, "values");
+            }
 
             #endregion
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FindCoordinatorRequest.CoordinatorType.html#id()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FindCoordinatorRequest.CoordinatorType.html#id()"/>
             /// </summary>
-            public byte Id
+
+            /// <returns><see cref="byte"/></returns>
+            public byte Id()
             {
-                get { return IExecute<byte>("id"); }
+                return IExecute<byte>("id");
             }
 
             #endregion

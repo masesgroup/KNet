@@ -46,39 +46,49 @@ namespace Org.Apache.Kafka.Streams.Processor
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/RecordContext.html#headers()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/RecordContext.html#partition()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Header.Headers Headers
+
+        /// <returns><see cref="int"/></returns>
+        public int Partition()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Header.Headers>("headers"); }
+            return IExecute<int>("partition");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/RecordContext.html#offset()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/RecordContext.html#topic()"/>
         /// </summary>
-        public long Offset
+
+        /// <returns><see cref="string"/></returns>
+        public string Topic()
         {
-            get { return IExecute<long>("offset"); }
+            return IExecute<string>("topic");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/RecordContext.html#partition()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/RecordContext.html#offset()"/>
         /// </summary>
-        public int Partition
+
+        /// <returns><see cref="long"/></returns>
+        public long Offset()
         {
-            get { return IExecute<int>("partition"); }
+            return IExecute<long>("offset");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/RecordContext.html#timestamp()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/RecordContext.html#timestamp()"/>
         /// </summary>
-        public long Timestamp
+
+        /// <returns><see cref="long"/></returns>
+        public long Timestamp()
         {
-            get { return IExecute<long>("timestamp"); }
+            return IExecute<long>("timestamp");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/RecordContext.html#topic()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/RecordContext.html#headers()"/>
         /// </summary>
-        public string Topic
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Header.Headers"/></returns>
+        public Org.Apache.Kafka.Common.Header.Headers Headers()
         {
-            get { return IExecute<string>("topic"); }
+            return IExecute<Org.Apache.Kafka.Common.Header.Headers>("headers");
         }
 
         #endregion

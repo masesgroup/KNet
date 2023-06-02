@@ -102,13 +102,6 @@ namespace Org.Apache.Kafka.Common.Acl
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AclOperation.html#values()"/> 
-        /// </summary>
-        public static Org.Apache.Kafka.Common.Acl.AclOperation[] Values
-        {
-            get { return SExecuteArray<Org.Apache.Kafka.Common.Acl.AclOperation>(LocalBridgeClazz, "values"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AclOperation.html#fromCode(byte)"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
@@ -136,23 +129,36 @@ namespace Org.Apache.Kafka.Common.Acl
         {
             return SExecute<Org.Apache.Kafka.Common.Acl.AclOperation>(LocalBridgeClazz, "valueOf", arg0);
         }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AclOperation.html#values()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Acl.AclOperation"/></returns>
+        public static Org.Apache.Kafka.Common.Acl.AclOperation[] Values()
+        {
+            return SExecuteArray<Org.Apache.Kafka.Common.Acl.AclOperation>(LocalBridgeClazz, "values");
+        }
 
         #endregion
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AclOperation.html#code()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AclOperation.html#isUnknown()"/>
         /// </summary>
-        public byte Code
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsUnknown()
         {
-            get { return IExecute<byte>("code"); }
+            return IExecute<bool>("isUnknown");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AclOperation.html#isUnknown()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AclOperation.html#code()"/>
         /// </summary>
-        public bool IsUnknown
+
+        /// <returns><see cref="byte"/></returns>
+        public byte Code()
         {
-            get { return IExecute<bool>("isUnknown"); }
+            return IExecute<byte>("code");
         }
 
         #endregion

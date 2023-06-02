@@ -34,7 +34,7 @@ namespace Org.Apache.Kafka.Connect.Runtime.Isolation
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <param name="arg1"><see cref="Java.Lang.ClassLoader"/></param>
-        public DelegatingClassLoader(Java.Util.List arg0, Java.Lang.ClassLoader arg1)
+        public DelegatingClassLoader(Java.Util.List<string> arg0, Java.Lang.ClassLoader arg1)
             : base(arg0, arg1)
         {
         }
@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Connect.Runtime.Isolation
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/DelegatingClassLoader.html#%3Cinit%3E(java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
-        public DelegatingClassLoader(Java.Util.List arg0)
+        public DelegatingClassLoader(Java.Util.List<string> arg0)
             : base(arg0)
         {
         }
@@ -77,74 +77,96 @@ namespace Org.Apache.Kafka.Connect.Runtime.Isolation
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/DelegatingClassLoader.html#configProviders()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/DelegatingClassLoader.html#configProviders()"/>
         /// </summary>
-        public Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Common.Config.Provider.ConfigProvider>> ConfigProviders
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Common.Config.Provider.ConfigProvider>> ConfigProviders()
         {
-            get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Common.Config.Provider.ConfigProvider>>>("configProviders"); }
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Common.Config.Provider.ConfigProvider>>>("configProviders");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/DelegatingClassLoader.html#connectorClientConfigPolicies()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/DelegatingClassLoader.html#connectors()"/>
         /// </summary>
-        public Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Connect.Connector.Policy.ConnectorClientConfigOverridePolicy>> ConnectorClientConfigPolicies
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Connect.Connector.Connector>> Connectors()
         {
-            get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Connect.Connector.Policy.ConnectorClientConfigOverridePolicy>>>("connectorClientConfigPolicies"); }
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Connect.Connector.Connector>>>("connectors");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/DelegatingClassLoader.html#connectors()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/DelegatingClassLoader.html#connectorClientConfigPolicies()"/>
         /// </summary>
-        public Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Connect.Connector.Connector>> Connectors
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Connect.Connector.Policy.ConnectorClientConfigOverridePolicy>> ConnectorClientConfigPolicies()
         {
-            get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Connect.Connector.Connector>>>("connectors"); }
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Connect.Connector.Policy.ConnectorClientConfigOverridePolicy>>>("connectorClientConfigPolicies");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/DelegatingClassLoader.html#converters()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/DelegatingClassLoader.html#restExtensions()"/>
         /// </summary>
-        public Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Connect.Storage.Converter>> Converters
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Connect.Rest.ConnectRestExtension>> RestExtensions()
         {
-            get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Connect.Storage.Converter>>>("converters"); }
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Connect.Rest.ConnectRestExtension>>>("restExtensions");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/DelegatingClassLoader.html#headerConverters()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/DelegatingClassLoader.html#sinkConnectors()"/>
         /// </summary>
-        public Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Connect.Storage.HeaderConverter>> HeaderConverters
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Connect.Sink.SinkConnector>> SinkConnectors()
         {
-            get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Connect.Storage.HeaderConverter>>>("headerConverters"); }
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Connect.Sink.SinkConnector>>>("sinkConnectors");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/DelegatingClassLoader.html#predicates()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/DelegatingClassLoader.html#sourceConnectors()"/>
         /// </summary>
-        public Java.Util.Set Predicates
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Connect.Source.SourceConnector>> SourceConnectors()
         {
-            get { return IExecute<Java.Util.Set>("predicates"); }
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Connect.Source.SourceConnector>>>("sourceConnectors");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/DelegatingClassLoader.html#restExtensions()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/DelegatingClassLoader.html#converters()"/>
         /// </summary>
-        public Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Connect.Rest.ConnectRestExtension>> RestExtensions
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Connect.Storage.Converter>> Converters()
         {
-            get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Connect.Rest.ConnectRestExtension>>>("restExtensions"); }
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Connect.Storage.Converter>>>("converters");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/DelegatingClassLoader.html#sinkConnectors()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/DelegatingClassLoader.html#headerConverters()"/>
         /// </summary>
-        public Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Connect.Sink.SinkConnector>> SinkConnectors
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Connect.Storage.HeaderConverter>> HeaderConverters()
         {
-            get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Connect.Sink.SinkConnector>>>("sinkConnectors"); }
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Connect.Storage.HeaderConverter>>>("headerConverters");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/DelegatingClassLoader.html#sourceConnectors()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/DelegatingClassLoader.html#predicates()"/>
         /// </summary>
-        public Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Connect.Source.SourceConnector>> SourceConnectors
+
+        /// <typeparam name="ReturnExtendsobject"></typeparam>
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate<ReturnExtendsobject>>> Predicates<ReturnExtendsobject>()
         {
-            get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Connect.Source.SourceConnector>>>("sourceConnectors"); }
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate<ReturnExtendsobject>>>>("predicates");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/DelegatingClassLoader.html#transformations()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/isolation/DelegatingClassLoader.html#transformations()"/>
         /// </summary>
-        public Java.Util.Set Transformations
+
+        /// <typeparam name="ReturnExtendsobject"></typeparam>
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Connect.Transforms.Transformation<ReturnExtendsobject>>> Transformations<ReturnExtendsobject>()
         {
-            get { return IExecute<Java.Util.Set>("transformations"); }
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Connect.Runtime.Isolation.PluginDesc<Org.Apache.Kafka.Connect.Transforms.Transformation<ReturnExtendsobject>>>>("transformations");
         }
 
         #endregion

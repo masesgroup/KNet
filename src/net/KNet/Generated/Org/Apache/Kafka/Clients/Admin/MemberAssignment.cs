@@ -33,7 +33,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/MemberAssignment.html#%3Cinit%3E(java.util.Set)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Set"/></param>
-        public MemberAssignment(Java.Util.Set arg0)
+        public MemberAssignment(Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> arg0)
             : base(arg0)
         {
         }
@@ -54,11 +54,13 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/MemberAssignment.html#topicPartitions()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/MemberAssignment.html#topicPartitions()"/>
         /// </summary>
-        public Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> TopicPartitions
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> TopicPartitions()
         {
-            get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition>>("topicPartitions"); }
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition>>("topicPartitions");
         }
 
         #endregion

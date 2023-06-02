@@ -18,7 +18,7 @@
 
 using MASES.JCOBridge.C2JBridge;
 
-namespace Org.Apache.Kafka.Streams.KStream
+namespace Org.Apache.Kafka.Streams.Kstream
 {
     /// <see href="https://kafka.apache.org/30/javadoc/org/apache/kafka/streams/kstream/NamedOperation.html">
     public interface INamedOperation<T> : IJVMBridgeBase
@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Streams.KStream
     public class NamedOperation<T> : JVMBridgeBase<NamedOperation<T>, INamedOperation<T>>, INamedOperation<T>
         where T : NamedOperation<T>
     {
-        public override string ClassName => "org.apache.kafka.streams.kstream.NamedOperation";
+        public override string BridgeClassName => "org.apache.kafka.streams.kstream.NamedOperation";
 
         public T WithName(string name)
         {

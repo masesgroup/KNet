@@ -50,18 +50,14 @@ namespace Org.Apache.Kafka.Connect.Connector
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/Connector.html#config()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/Connector.html#taskClass()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Config.ConfigDef Config
+
+        /// <typeparam name="ReturnExtendsOrg_Apache_Kafka_Connect_Connector_Task"><see cref="Org.Apache.Kafka.Connect.Connector.Task"/></typeparam>
+        /// <returns><see cref="Java.Lang.Class"/></returns>
+        public Java.Lang.Class TaskClass<ReturnExtendsOrg_Apache_Kafka_Connect_Connector_Task>() where ReturnExtendsOrg_Apache_Kafka_Connect_Connector_Task: Org.Apache.Kafka.Connect.Connector.Task
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("config"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/Connector.html#taskClass()"/> 
-        /// </summary>
-        public Java.Lang.Class TaskClass
-        {
-            get { return IExecute<Java.Lang.Class>("taskClass"); }
+            return IExecute<Java.Lang.Class>("taskClass");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/Connector.html#taskConfigs(int)"/>
@@ -71,6 +67,15 @@ namespace Org.Apache.Kafka.Connect.Connector
         public Java.Util.List<Java.Util.Map<string, string>> TaskConfigs(int arg0)
         {
             return IExecute<Java.Util.List<Java.Util.Map<string, string>>>("taskConfigs", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/Connector.html#config()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
+        public Org.Apache.Kafka.Common.Config.ConfigDef Config()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("config");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/Connector.html#start(java.util.Map)"/>

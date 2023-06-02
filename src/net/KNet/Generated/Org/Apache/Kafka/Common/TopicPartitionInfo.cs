@@ -36,7 +36,7 @@ namespace Org.Apache.Kafka.Common
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Node"/></param>
         /// <param name="arg2"><see cref="Java.Util.List"/></param>
         /// <param name="arg3"><see cref="Java.Util.List"/></param>
-        public TopicPartitionInfo(int arg0, Org.Apache.Kafka.Common.Node arg1, Java.Util.List arg2, Java.Util.List arg3)
+        public TopicPartitionInfo(int arg0, Org.Apache.Kafka.Common.Node arg1, Java.Util.List<Org.Apache.Kafka.Common.Node> arg2, Java.Util.List<Org.Apache.Kafka.Common.Node> arg3)
             : base(arg0, arg1, arg2, arg3)
         {
         }
@@ -57,32 +57,40 @@ namespace Org.Apache.Kafka.Common
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicPartitionInfo.html#isr()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicPartitionInfo.html#partition()"/>
         /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Node> Isr
+
+        /// <returns><see cref="int"/></returns>
+        public int Partition()
         {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Node>>("isr"); }
+            return IExecute<int>("partition");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicPartitionInfo.html#leader()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicPartitionInfo.html#isr()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Node Leader
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Node> Isr()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Node>("leader"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Node>>("isr");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicPartitionInfo.html#partition()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicPartitionInfo.html#replicas()"/>
         /// </summary>
-        public int Partition
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Node> Replicas()
         {
-            get { return IExecute<int>("partition"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Node>>("replicas");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicPartitionInfo.html#replicas()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicPartitionInfo.html#leader()"/>
         /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Node> Replicas
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Node"/></returns>
+        public Org.Apache.Kafka.Common.Node Leader()
         {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Node>>("replicas"); }
+            return IExecute<Org.Apache.Kafka.Common.Node>("leader");
         }
 
         #endregion

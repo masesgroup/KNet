@@ -56,39 +56,49 @@ namespace Org.Apache.Kafka.Streams
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StoreQueryParameters.html#enableStaleStores()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StoreQueryParameters.html#staleStoresEnabled()"/>
         /// </summary>
-        public Org.Apache.Kafka.Streams.StoreQueryParameters EnableStaleStores
+
+        /// <returns><see cref="bool"/></returns>
+        public bool StaleStoresEnabled()
         {
-            get { return IExecute<Org.Apache.Kafka.Streams.StoreQueryParameters>("enableStaleStores"); }
+            return IExecute<bool>("staleStoresEnabled");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StoreQueryParameters.html#partition()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StoreQueryParameters.html#partition()"/>
         /// </summary>
-        public int? Partition
+
+        /// <returns><see cref="int"/></returns>
+        public int? Partition()
         {
-            get { return IExecute<int?>("partition"); }
+            return IExecute<int?>("partition");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StoreQueryParameters.html#queryableStoreType()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StoreQueryParameters.html#storeName()"/>
         /// </summary>
-        public Org.Apache.Kafka.Streams.State.QueryableStoreType QueryableStoreType
+
+        /// <returns><see cref="string"/></returns>
+        public string StoreName()
         {
-            get { return IExecute<Org.Apache.Kafka.Streams.State.QueryableStoreType>("queryableStoreType"); }
+            return IExecute<string>("storeName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StoreQueryParameters.html#staleStoresEnabled()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StoreQueryParameters.html#queryableStoreType()"/>
         /// </summary>
-        public bool StaleStoresEnabled
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.State.QueryableStoreType"/></returns>
+        public Org.Apache.Kafka.Streams.State.QueryableStoreType QueryableStoreType()
         {
-            get { return IExecute<bool>("staleStoresEnabled"); }
+            return IExecute<Org.Apache.Kafka.Streams.State.QueryableStoreType>("queryableStoreType");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StoreQueryParameters.html#storeName()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StoreQueryParameters.html#enableStaleStores()"/>
         /// </summary>
-        public string StoreName
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.StoreQueryParameters"/></returns>
+        public Org.Apache.Kafka.Streams.StoreQueryParameters EnableStaleStores()
         {
-            get { return IExecute<string>("storeName"); }
+            return IExecute<Org.Apache.Kafka.Streams.StoreQueryParameters>("enableStaleStores");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StoreQueryParameters.html#withPartition(java.lang.Integer)"/>
@@ -145,39 +155,49 @@ namespace Org.Apache.Kafka.Streams
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StoreQueryParameters.html#enableStaleStores()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StoreQueryParameters.html#staleStoresEnabled()"/>
         /// </summary>
-        public Org.Apache.Kafka.Streams.StoreQueryParameters<T> EnableStaleStores
+
+        /// <returns><see cref="bool"/></returns>
+        public bool StaleStoresEnabled()
         {
-            get { return IExecute<Org.Apache.Kafka.Streams.StoreQueryParameters<T>>("enableStaleStores"); }
+            return IExecute<bool>("staleStoresEnabled");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StoreQueryParameters.html#partition()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StoreQueryParameters.html#partition()"/>
         /// </summary>
-        public int? Partition
+
+        /// <returns><see cref="int"/></returns>
+        public int? Partition()
         {
-            get { return IExecute<int?>("partition"); }
+            return IExecute<int?>("partition");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StoreQueryParameters.html#queryableStoreType()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StoreQueryParameters.html#storeName()"/>
         /// </summary>
-        public Org.Apache.Kafka.Streams.State.QueryableStoreType<T> QueryableStoreType
+
+        /// <returns><see cref="string"/></returns>
+        public string StoreName()
         {
-            get { return IExecute<Org.Apache.Kafka.Streams.State.QueryableStoreType<T>>("queryableStoreType"); }
+            return IExecute<string>("storeName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StoreQueryParameters.html#staleStoresEnabled()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StoreQueryParameters.html#queryableStoreType()"/>
         /// </summary>
-        public bool StaleStoresEnabled
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.State.QueryableStoreType"/></returns>
+        public Org.Apache.Kafka.Streams.State.QueryableStoreType<T> QueryableStoreType()
         {
-            get { return IExecute<bool>("staleStoresEnabled"); }
+            return IExecute<Org.Apache.Kafka.Streams.State.QueryableStoreType<T>>("queryableStoreType");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StoreQueryParameters.html#storeName()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StoreQueryParameters.html#enableStaleStores()"/>
         /// </summary>
-        public string StoreName
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.StoreQueryParameters"/></returns>
+        public Org.Apache.Kafka.Streams.StoreQueryParameters<T> EnableStaleStores()
         {
-            get { return IExecute<string>("storeName"); }
+            return IExecute<Org.Apache.Kafka.Streams.StoreQueryParameters<T>>("enableStaleStores");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StoreQueryParameters.html#withPartition(java.lang.Integer)"/>

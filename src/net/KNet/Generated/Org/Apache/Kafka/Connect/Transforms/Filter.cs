@@ -58,11 +58,13 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/Filter.html#config()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/Filter.html#config()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Config.ConfigDef Config
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
+        public Org.Apache.Kafka.Common.Config.ConfigDef Config()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("config"); }
+            return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("config");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/Filter.html#apply(org.apache.kafka.connect.connector.ConnectRecord)"/>
@@ -136,11 +138,13 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/Filter.html#config()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/Filter.html#config()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Config.ConfigDef Config
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
+        public Org.Apache.Kafka.Common.Config.ConfigDef Config()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("config"); }
+            return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("config");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/Filter.html#apply(org.apache.kafka.connect.connector.ConnectRecord)"/>

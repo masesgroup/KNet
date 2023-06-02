@@ -55,44 +55,31 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/RestServer.html#adminUrl()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/RestServer.html#adminUrl()"/>
         /// </summary>
-        public Java.Net.URI AdminUrl
+
+        /// <returns><see cref="Java.Net.URI"/></returns>
+        public Java.Net.URI AdminUrl()
         {
-            get { return IExecute<Java.Net.URI>("adminUrl"); }
+            return IExecute<Java.Net.URI>("adminUrl");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/RestServer.html#advertisedUrl()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/RestServer.html#advertisedUrl()"/>
         /// </summary>
-        public Java.Net.URI AdvertisedUrl
+
+        /// <returns><see cref="Java.Net.URI"/></returns>
+        public Java.Net.URI AdvertisedUrl()
         {
-            get { return IExecute<Java.Net.URI>("advertisedUrl"); }
+            return IExecute<Java.Net.URI>("advertisedUrl");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/RestServer.html#serverUrl()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/RestServer.html#serverUrl()"/>
         /// </summary>
-        public Java.Net.URI ServerUrl
+
+        /// <returns><see cref="Java.Net.URI"/></returns>
+        public Java.Net.URI ServerUrl()
         {
-            get { return IExecute<Java.Net.URI>("serverUrl"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/RestServer.html#createConnector(java.lang.String,boolean)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="bool"/></param>
-        /// <returns><see cref="Org.Eclipse.Jetty.Server.Connector"/></returns>
-        public Org.Eclipse.Jetty.Server.Connector CreateConnector(string arg0, bool arg1)
-        {
-            return IExecute<Org.Eclipse.Jetty.Server.Connector>("createConnector", arg0, arg1);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/RestServer.html#createConnector(java.lang.String)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="Org.Eclipse.Jetty.Server.Connector"/></returns>
-        public Org.Eclipse.Jetty.Server.Connector CreateConnector(string arg0)
-        {
-            return IExecute<Org.Eclipse.Jetty.Server.Connector>("createConnector", arg0);
+            return IExecute<Java.Net.URI>("serverUrl");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/RestServer.html#createConnectors(java.util.List,java.util.List)"/>

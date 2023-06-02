@@ -55,18 +55,22 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Windowed.html#key()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Windowed.html#key()"/>
         /// </summary>
-        public object Key
+
+        /// <returns><see cref="object"/></returns>
+        public object Key()
         {
-            get { return IExecute("key"); }
+            return IExecute("key");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Windowed.html#window()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Windowed.html#window()"/>
         /// </summary>
-        public Org.Apache.Kafka.Streams.Kstream.Window Window
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Window"/></returns>
+        public Org.Apache.Kafka.Streams.Kstream.Window Window()
         {
-            get { return IExecute<Org.Apache.Kafka.Streams.Kstream.Window>("window"); }
+            return IExecute<Org.Apache.Kafka.Streams.Kstream.Window>("window");
         }
 
         #endregion
@@ -113,18 +117,22 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Windowed.html#key()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Windowed.html#key()"/>
         /// </summary>
-        public K Key
+
+        /// <returns><typeparamref name="K"/></returns>
+        public K Key()
         {
-            get { return IExecute<K>("key"); }
+            return IExecute<K>("key");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Windowed.html#window()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Windowed.html#window()"/>
         /// </summary>
-        public Org.Apache.Kafka.Streams.Kstream.Window Window
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Window"/></returns>
+        public Org.Apache.Kafka.Streams.Kstream.Window Window()
         {
-            get { return IExecute<Org.Apache.Kafka.Streams.Kstream.Window>("window"); }
+            return IExecute<Org.Apache.Kafka.Streams.Kstream.Window>("window");
         }
 
         #endregion

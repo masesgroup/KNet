@@ -56,25 +56,31 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/UpdateMetadataRequest.html#liveBrokers()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/UpdateMetadataRequest.html#partitionStates()"/>
         /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataBroker> LiveBrokers
+
+        /// <returns><see cref="Java.Lang.Iterable"/></returns>
+        public Java.Lang.Iterable<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataPartitionState> PartitionStates()
         {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataBroker>>("liveBrokers"); }
+            return IExecute<Java.Lang.Iterable<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataPartitionState>>("partitionStates");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/UpdateMetadataRequest.html#partitionStates()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/UpdateMetadataRequest.html#liveBrokers()"/>
         /// </summary>
-        public Java.Lang.Iterable<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataPartitionState> PartitionStates
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataBroker> LiveBrokers()
         {
-            get { return IExecute<Java.Lang.Iterable<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataPartitionState>>("partitionStates"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataBroker>>("liveBrokers");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/UpdateMetadataRequest.html#topicStates()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/UpdateMetadataRequest.html#topicStates()"/>
         /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataTopicState> TopicStates
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataTopicState> TopicStates()
         {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataTopicState>>("topicStates"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataTopicState>>("topicStates");
         }
 
         #endregion
@@ -95,7 +101,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// <param name="arg5"><see cref="Java.Util.List"/></param>
             /// <param name="arg6"><see cref="Java.Util.Map"/></param>
             /// <param name="arg7"><see cref="bool"/></param>
-            public Builder(short arg0, int arg1, int arg2, long arg3, Java.Util.List arg4, Java.Util.List arg5, Java.Util.Map arg6, bool arg7)
+            public Builder(short arg0, int arg1, int arg2, long arg3, Java.Util.List<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataPartitionState> arg4, Java.Util.List<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataBroker> arg5, Java.Util.Map<string, Org.Apache.Kafka.Common.Uuid> arg6, bool arg7)
                 : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
             {
             }
@@ -109,7 +115,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// <param name="arg4"><see cref="Java.Util.List"/></param>
             /// <param name="arg5"><see cref="Java.Util.List"/></param>
             /// <param name="arg6"><see cref="Java.Util.Map"/></param>
-            public Builder(short arg0, int arg1, int arg2, long arg3, Java.Util.List arg4, Java.Util.List arg5, Java.Util.Map arg6)
+            public Builder(short arg0, int arg1, int arg2, long arg3, Java.Util.List<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataPartitionState> arg4, Java.Util.List<Org.Apache.Kafka.Common.Message.UpdateMetadataRequestData.UpdateMetadataBroker> arg5, Java.Util.Map<string, Org.Apache.Kafka.Common.Uuid> arg6)
                 : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
             {
             }

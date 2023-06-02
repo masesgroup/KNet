@@ -77,60 +77,58 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchRequest.html#isFromFollower()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchRequest.html#isFromFollower()"/>
         /// </summary>
-        public bool IsFromFollower
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsFromFollower()
         {
-            get { return IExecute<bool>("isFromFollower"); }
+            return IExecute<bool>("isFromFollower");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchRequest.html#isolationLevel()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchRequest.html#maxBytes()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.IsolationLevel IsolationLevel
+
+        /// <returns><see cref="int"/></returns>
+        public int MaxBytes()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.IsolationLevel>("isolationLevel"); }
+            return IExecute<int>("maxBytes");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchRequest.html#maxBytes()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchRequest.html#maxWait()"/>
         /// </summary>
-        public int MaxBytes
+
+        /// <returns><see cref="int"/></returns>
+        public int MaxWait()
         {
-            get { return IExecute<int>("maxBytes"); }
+            return IExecute<int>("maxWait");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchRequest.html#maxWait()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchRequest.html#minBytes()"/>
         /// </summary>
-        public int MaxWait
+
+        /// <returns><see cref="int"/></returns>
+        public int MinBytes()
         {
-            get { return IExecute<int>("maxWait"); }
+            return IExecute<int>("minBytes");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchRequest.html#metadata()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchRequest.html#replicaId()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Requests.FetchMetadata Metadata
+
+        /// <returns><see cref="int"/></returns>
+        public int ReplicaId()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Requests.FetchMetadata>("metadata"); }
+            return IExecute<int>("replicaId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchRequest.html#minBytes()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchRequest.html#rackId()"/>
         /// </summary>
-        public int MinBytes
+
+        /// <returns><see cref="string"/></returns>
+        public string RackId()
         {
-            get { return IExecute<int>("minBytes"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchRequest.html#rackId()"/> 
-        /// </summary>
-        public string RackId
-        {
-            get { return IExecute<string>("rackId"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchRequest.html#replicaId()"/> 
-        /// </summary>
-        public int ReplicaId
-        {
-            get { return IExecute<int>("replicaId"); }
+            return IExecute<string>("rackId");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchRequest.html#forgottenTopics(java.util.Map)"/>
@@ -150,6 +148,24 @@ namespace Org.Apache.Kafka.Common.Requests
         {
             return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicIdPartition, Org.Apache.Kafka.Common.Requests.FetchRequest.PartitionData>>("fetchData", arg0);
         }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchRequest.html#isolationLevel()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.IsolationLevel"/></returns>
+        public Org.Apache.Kafka.Common.IsolationLevel IsolationLevel()
+        {
+            return IExecute<Org.Apache.Kafka.Common.IsolationLevel>("isolationLevel");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchRequest.html#metadata()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Requests.FetchMetadata"/></returns>
+        public Org.Apache.Kafka.Common.Requests.FetchMetadata Metadata()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Requests.FetchMetadata>("metadata");
+        }
 
         #endregion
 
@@ -167,7 +183,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// <param name="arg3"><see cref="int"/></param>
             /// <param name="arg4"><see cref="int"/></param>
             /// <param name="arg5"><see cref="Java.Util.Map"/></param>
-            public Builder(short arg0, short arg1, int arg2, int arg3, int arg4, Java.Util.Map arg5)
+            public Builder(short arg0, short arg1, int arg2, int arg3, int arg4, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Requests.FetchRequest.PartitionData> arg5)
                 : base(arg0, arg1, arg2, arg3, arg4, arg5)
             {
             }
@@ -213,13 +229,6 @@ namespace Org.Apache.Kafka.Common.Requests
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchRequest.Builder.html#fetchData()"/> 
-            /// </summary>
-            public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Requests.FetchRequest.PartitionData> FetchData
-            {
-                get { return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Requests.FetchRequest.PartitionData>>("fetchData"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchRequest.Builder.html#removed()"/>
             /// </summary>
 
@@ -236,6 +245,15 @@ namespace Org.Apache.Kafka.Common.Requests
             public Java.Util.List<Org.Apache.Kafka.Common.TopicIdPartition> Replaced()
             {
                 return IExecute<Java.Util.List<Org.Apache.Kafka.Common.TopicIdPartition>>("replaced");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchRequest.Builder.html#fetchData()"/>
+            /// </summary>
+
+            /// <returns><see cref="Java.Util.Map"/></returns>
+            public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Requests.FetchRequest.PartitionData> FetchData()
+            {
+                return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Requests.FetchRequest.PartitionData>>("fetchData");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchRequest.Builder.html#isolationLevel(org.apache.kafka.common.IsolationLevel)"/>
@@ -315,7 +333,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// <param name="arg3"><see cref="int"/></param>
             /// <param name="arg4"><see cref="Java.Util.Optional"/></param>
             /// <param name="arg5"><see cref="Java.Util.Optional"/></param>
-            public PartitionData(Org.Apache.Kafka.Common.Uuid arg0, long arg1, long arg2, int arg3, Java.Util.Optional arg4, Java.Util.Optional arg5)
+            public PartitionData(Org.Apache.Kafka.Common.Uuid arg0, long arg1, long arg2, int arg3, Java.Util.Optional<int?> arg4, Java.Util.Optional<int?> arg5)
                 : base(arg0, arg1, arg2, arg3, arg4, arg5)
             {
             }
@@ -327,7 +345,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// <param name="arg2"><see cref="long"/></param>
             /// <param name="arg3"><see cref="int"/></param>
             /// <param name="arg4"><see cref="Java.Util.Optional"/></param>
-            public PartitionData(Org.Apache.Kafka.Common.Uuid arg0, long arg1, long arg2, int arg3, Java.Util.Optional arg4)
+            public PartitionData(Org.Apache.Kafka.Common.Uuid arg0, long arg1, long arg2, int arg3, Java.Util.Optional<int?> arg4)
                 : base(arg0, arg1, arg2, arg3, arg4)
             {
             }

@@ -46,18 +46,13 @@ namespace Org.Apache.Kafka.Connect.Health
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/ConnectClusterState.html#clusterDetails()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/ConnectClusterState.html#connectors()"/>
         /// </summary>
-        public Org.Apache.Kafka.Connect.Health.ConnectClusterDetails ClusterDetails
+
+        /// <returns><see cref="Java.Util.Collection"/></returns>
+        public Java.Util.Collection<string> Connectors()
         {
-            get { return IExecute<Org.Apache.Kafka.Connect.Health.ConnectClusterDetails>("clusterDetails"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/ConnectClusterState.html#connectors()"/> 
-        /// </summary>
-        public Java.Util.Collection<string> Connectors
-        {
-            get { return IExecute<Java.Util.Collection<string>>("connectors"); }
+            return IExecute<Java.Util.Collection<string>>("connectors");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/ConnectClusterState.html#connectorHealth(java.lang.String)"/>
@@ -76,6 +71,15 @@ namespace Org.Apache.Kafka.Connect.Health
         public Java.Util.Map<string, string> ConnectorConfig(string arg0)
         {
             return IExecute<Java.Util.Map<string, string>>("connectorConfig", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/ConnectClusterState.html#clusterDetails()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Health.ConnectClusterDetails"/></returns>
+        public Org.Apache.Kafka.Connect.Health.ConnectClusterDetails ClusterDetails()
+        {
+            return IExecute<Org.Apache.Kafka.Connect.Health.ConnectClusterDetails>("clusterDetails");
         }
 
         #endregion

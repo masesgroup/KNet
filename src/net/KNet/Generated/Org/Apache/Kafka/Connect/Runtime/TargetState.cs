@@ -50,13 +50,6 @@ namespace Org.Apache.Kafka.Connect.Runtime
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/TargetState.html#values()"/> 
-        /// </summary>
-        public static Org.Apache.Kafka.Connect.Runtime.TargetState[] Values
-        {
-            get { return SExecuteArray<Org.Apache.Kafka.Connect.Runtime.TargetState>(LocalBridgeClazz, "values"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/TargetState.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -64,6 +57,15 @@ namespace Org.Apache.Kafka.Connect.Runtime
         public static Org.Apache.Kafka.Connect.Runtime.TargetState ValueOf(string arg0)
         {
             return SExecute<Org.Apache.Kafka.Connect.Runtime.TargetState>(LocalBridgeClazz, "valueOf", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/TargetState.html#values()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.TargetState"/></returns>
+        public static Org.Apache.Kafka.Connect.Runtime.TargetState[] Values()
+        {
+            return SExecuteArray<Org.Apache.Kafka.Connect.Runtime.TargetState>(LocalBridgeClazz, "values");
         }
 
         #endregion

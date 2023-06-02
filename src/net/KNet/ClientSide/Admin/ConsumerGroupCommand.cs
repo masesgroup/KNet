@@ -21,14 +21,8 @@ namespace Kafka.Admin
     /// <summary>
     /// Class managing ConsumerGroupCommand
     /// </summary>
-    public class ConsumerGroupCommand : MASES.JCOBridge.C2JBridge.JVMBridgeMain<ConsumerGroupCommand>
+    public partial class ConsumerGroupCommand
     {
-        /// <summary>
-        /// Initialize a new <see cref="ConsumerGroupCommand"/>
-        /// </summary>
-        public ConsumerGroupCommand()
-            : base("kafka.admin.ConsumerGroupCommand")
-        {
-        }
+
     }
 }

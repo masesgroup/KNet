@@ -64,32 +64,40 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/SaslAuthenticateResponse.html#error()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/SaslAuthenticateResponse.html#saslAuthBytes()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.Errors Error
+
+        /// <returns><see cref="byte"/></returns>
+        public byte[] SaslAuthBytes()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.Errors>("error"); }
+            return IExecuteArray<byte>("saslAuthBytes");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/SaslAuthenticateResponse.html#errorMessage()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/SaslAuthenticateResponse.html#errorMessage()"/>
         /// </summary>
-        public string ErrorMessage
+
+        /// <returns><see cref="string"/></returns>
+        public string ErrorMessage()
         {
-            get { return IExecute<string>("errorMessage"); }
+            return IExecute<string>("errorMessage");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/SaslAuthenticateResponse.html#saslAuthBytes()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/SaslAuthenticateResponse.html#sessionLifetimeMs()"/>
         /// </summary>
-        public byte[] SaslAuthBytes
+
+        /// <returns><see cref="long"/></returns>
+        public long SessionLifetimeMs()
         {
-            get { return IExecuteArray<byte>("saslAuthBytes"); }
+            return IExecute<long>("sessionLifetimeMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/SaslAuthenticateResponse.html#sessionLifetimeMs()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/SaslAuthenticateResponse.html#error()"/>
         /// </summary>
-        public long SessionLifetimeMs
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Errors"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.Errors Error()
         {
-            get { return IExecute<long>("sessionLifetimeMs"); }
+            return IExecute<Org.Apache.Kafka.Common.Protocol.Errors>("error");
         }
 
         #endregion

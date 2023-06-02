@@ -53,55 +53,6 @@ namespace Kafka.Admin
         #endregion
 
         #region Instance methods
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/LeaderElectionCommandOptions.html#adminClientConfig()"/> 
-        /// </summary>
-        public Joptsimple.ArgumentAcceptingOptionSpec<string> AdminClientConfig
-        {
-            get { return IExecute<Joptsimple.ArgumentAcceptingOptionSpec<string>>("adminClientConfig"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/LeaderElectionCommandOptions.html#allTopicPartitions()"/> 
-        /// </summary>
-        public Joptsimple.OptionSpecBuilder AllTopicPartitions
-        {
-            get { return IExecute<Joptsimple.OptionSpecBuilder>("allTopicPartitions"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/LeaderElectionCommandOptions.html#bootstrapServer()"/> 
-        /// </summary>
-        public Joptsimple.ArgumentAcceptingOptionSpec<string> BootstrapServer
-        {
-            get { return IExecute<Joptsimple.ArgumentAcceptingOptionSpec<string>>("bootstrapServer"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/LeaderElectionCommandOptions.html#electionType()"/> 
-        /// </summary>
-        public Joptsimple.ArgumentAcceptingOptionSpec<Org.Apache.Kafka.Common.ElectionType> ElectionType
-        {
-            get { return IExecute<Joptsimple.ArgumentAcceptingOptionSpec<Org.Apache.Kafka.Common.ElectionType>>("electionType"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/LeaderElectionCommandOptions.html#partition()"/> 
-        /// </summary>
-        public Joptsimple.ArgumentAcceptingOptionSpec<int?> Partition
-        {
-            get { return IExecute<Joptsimple.ArgumentAcceptingOptionSpec<int?>>("partition"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/LeaderElectionCommandOptions.html#pathToJsonFile()"/> 
-        /// </summary>
-        public Joptsimple.ArgumentAcceptingOptionSpec<string> PathToJsonFile
-        {
-            get { return IExecute<Joptsimple.ArgumentAcceptingOptionSpec<string>>("pathToJsonFile"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/LeaderElectionCommandOptions.html#topic()"/> 
-        /// </summary>
-        public Joptsimple.ArgumentAcceptingOptionSpec<string> Topic
-        {
-            get { return IExecute<Joptsimple.ArgumentAcceptingOptionSpec<string>>("topic"); }
-        }
 
         #endregion
 

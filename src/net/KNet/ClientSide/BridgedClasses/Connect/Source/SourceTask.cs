@@ -22,39 +22,9 @@ using Org.Apache.Kafka.Connect.Connector;
 
 namespace Org.Apache.Kafka.Connect.Source
 {
-    public class SourceTask : Task
+    public partial class SourceTask
     {
-        public override bool IsInterface => false;
-        public override bool IsAbstract => true;
-
-        public override string ClassName => "org.apache.kafka.connect.source.SourceTask";
-
-        public static readonly string TRANSACTION_BOUNDARY_CONFIG = Clazz.GetField<string>("TRANSACTION_BOUNDARY_CONFIG");
-
         public static readonly TransactionBoundary DEFAULT = TransactionBoundary.POLL;
 
-        public enum TransactionBoundary
-        {
-            /**
-             * A new transaction will be started and committed for every batch of records returned by {@link #poll()}.
-             */
-            POLL,
-            /**
-             * Transactions will be started and committed on a user-defined time interval.
-             */
-            INTERVAL,
-            /**
-             * Transactions will be defined by the connector itself, via a {@link TransactionContext}.
-             */
-            CONNECTOR,
-        }
-
-        public void Initialize(SourceTaskContext context) => IExecute("initialize", context);
-
-        public List<SourceRecord> Poll() => IExecute<List<SourceRecord>>("poll");
-
-        public void Commit() => IExecute("commit");
-
-        public void CommitRecord(SourceRecord record, RecordMetadata metadata) => IExecute("commit", record, metadata);
     }
 }

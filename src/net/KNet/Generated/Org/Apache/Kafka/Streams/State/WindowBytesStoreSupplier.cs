@@ -46,32 +46,40 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/WindowBytesStoreSupplier.html#retainDuplicates()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/WindowBytesStoreSupplier.html#retainDuplicates()"/>
         /// </summary>
-        public bool RetainDuplicates
+
+        /// <returns><see cref="bool"/></returns>
+        public bool RetainDuplicates()
         {
-            get { return IExecute<bool>("retainDuplicates"); }
+            return IExecute<bool>("retainDuplicates");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/WindowBytesStoreSupplier.html#retentionPeriod()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/WindowBytesStoreSupplier.html#retentionPeriod()"/>
         /// </summary>
-        public long RetentionPeriod
+
+        /// <returns><see cref="long"/></returns>
+        public long RetentionPeriod()
         {
-            get { return IExecute<long>("retentionPeriod"); }
+            return IExecute<long>("retentionPeriod");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/WindowBytesStoreSupplier.html#segmentIntervalMs()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/WindowBytesStoreSupplier.html#segmentIntervalMs()"/>
         /// </summary>
-        public long SegmentIntervalMs
+
+        /// <returns><see cref="long"/></returns>
+        public long SegmentIntervalMs()
         {
-            get { return IExecute<long>("segmentIntervalMs"); }
+            return IExecute<long>("segmentIntervalMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/WindowBytesStoreSupplier.html#windowSize()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/WindowBytesStoreSupplier.html#windowSize()"/>
         /// </summary>
-        public long WindowSize
+
+        /// <returns><see cref="long"/></returns>
+        public long WindowSize()
         {
-            get { return IExecute<long>("windowSize"); }
+            return IExecute<long>("windowSize");
         }
 
         #endregion

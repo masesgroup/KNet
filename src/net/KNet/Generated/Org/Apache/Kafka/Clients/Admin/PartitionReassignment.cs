@@ -35,7 +35,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <param name="arg1"><see cref="Java.Util.List"/></param>
         /// <param name="arg2"><see cref="Java.Util.List"/></param>
-        public PartitionReassignment(Java.Util.List arg0, Java.Util.List arg1, Java.Util.List arg2)
+        public PartitionReassignment(Java.Util.List<int?> arg0, Java.Util.List<int?> arg1, Java.Util.List<int?> arg2)
             : base(arg0, arg1, arg2)
         {
         }
@@ -56,25 +56,31 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/PartitionReassignment.html#addingReplicas()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/PartitionReassignment.html#addingReplicas()"/>
         /// </summary>
-        public Java.Util.List<int?> AddingReplicas
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<int?> AddingReplicas()
         {
-            get { return IExecute<Java.Util.List<int?>>("addingReplicas"); }
+            return IExecute<Java.Util.List<int?>>("addingReplicas");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/PartitionReassignment.html#removingReplicas()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/PartitionReassignment.html#removingReplicas()"/>
         /// </summary>
-        public Java.Util.List<int?> RemovingReplicas
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<int?> RemovingReplicas()
         {
-            get { return IExecute<Java.Util.List<int?>>("removingReplicas"); }
+            return IExecute<Java.Util.List<int?>>("removingReplicas");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/PartitionReassignment.html#replicas()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/PartitionReassignment.html#replicas()"/>
         /// </summary>
-        public Java.Util.List<int?> Replicas
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<int?> Replicas()
         {
-            get { return IExecute<Java.Util.List<int?>>("replicas"); }
+            return IExecute<Java.Util.List<int?>>("replicas");
         }
 
         #endregion

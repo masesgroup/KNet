@@ -50,13 +50,6 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Scheduler.html#time()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Utils.Time Time
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Utils.Time>("time"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Scheduler.html#schedule(java.util.concurrent.ScheduledExecutorService,java.util.concurrent.Callable,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Concurrent.ScheduledExecutorService"/></param>
@@ -67,6 +60,15 @@ namespace Org.Apache.Kafka.Common.Utils
         public Java.Util.Concurrent.Future<T> Schedule<T>(Java.Util.Concurrent.ScheduledExecutorService arg0, Java.Util.Concurrent.Callable<T> arg1, long arg2)
         {
             return IExecute<Java.Util.Concurrent.Future<T>>("schedule", arg0, arg1, arg2);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Scheduler.html#time()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Utils.Time"/></returns>
+        public Org.Apache.Kafka.Common.Utils.Time Time()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Utils.Time>("time");
         }
 
         #endregion

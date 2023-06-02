@@ -46,39 +46,49 @@ namespace Org.Apache.Kafka.Common.Replica
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ClientMetadata.html#clientAddress()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ClientMetadata.html#clientId()"/>
         /// </summary>
-        public Java.Net.InetAddress ClientAddress
+
+        /// <returns><see cref="string"/></returns>
+        public string ClientId()
         {
-            get { return IExecute<Java.Net.InetAddress>("clientAddress"); }
+            return IExecute<string>("clientId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ClientMetadata.html#clientId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ClientMetadata.html#listenerName()"/>
         /// </summary>
-        public string ClientId
+
+        /// <returns><see cref="string"/></returns>
+        public string ListenerName()
         {
-            get { return IExecute<string>("clientId"); }
+            return IExecute<string>("listenerName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ClientMetadata.html#listenerName()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ClientMetadata.html#rackId()"/>
         /// </summary>
-        public string ListenerName
+
+        /// <returns><see cref="string"/></returns>
+        public string RackId()
         {
-            get { return IExecute<string>("listenerName"); }
+            return IExecute<string>("rackId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ClientMetadata.html#principal()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ClientMetadata.html#clientAddress()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal Principal
+
+        /// <returns><see cref="Java.Net.InetAddress"/></returns>
+        public Java.Net.InetAddress ClientAddress()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal>("principal"); }
+            return IExecute<Java.Net.InetAddress>("clientAddress");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ClientMetadata.html#rackId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ClientMetadata.html#principal()"/>
         /// </summary>
-        public string RackId
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal"/></returns>
+        public Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal Principal()
         {
-            get { return IExecute<string>("rackId"); }
+            return IExecute<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal>("principal");
         }
 
         #endregion
@@ -121,39 +131,49 @@ namespace Org.Apache.Kafka.Common.Replica
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html#clientAddress()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html#clientId()"/>
             /// </summary>
-            public Java.Net.InetAddress ClientAddress
+
+            /// <returns><see cref="string"/></returns>
+            public string ClientId()
             {
-                get { return IExecute<Java.Net.InetAddress>("clientAddress"); }
+                return IExecute<string>("clientId");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html#clientId()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html#listenerName()"/>
             /// </summary>
-            public string ClientId
+
+            /// <returns><see cref="string"/></returns>
+            public string ListenerName()
             {
-                get { return IExecute<string>("clientId"); }
+                return IExecute<string>("listenerName");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html#listenerName()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html#rackId()"/>
             /// </summary>
-            public string ListenerName
+
+            /// <returns><see cref="string"/></returns>
+            public string RackId()
             {
-                get { return IExecute<string>("listenerName"); }
+                return IExecute<string>("rackId");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html#principal()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html#clientAddress()"/>
             /// </summary>
-            public Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal Principal
+
+            /// <returns><see cref="Java.Net.InetAddress"/></returns>
+            public Java.Net.InetAddress ClientAddress()
             {
-                get { return IExecute<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal>("principal"); }
+                return IExecute<Java.Net.InetAddress>("clientAddress");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html#rackId()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html#principal()"/>
             /// </summary>
-            public string RackId
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal"/></returns>
+            public Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal Principal()
             {
-                get { return IExecute<string>("rackId"); }
+                return IExecute<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal>("principal");
             }
 
             #endregion

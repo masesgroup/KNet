@@ -17,23 +17,22 @@
 */
 
 using Java.Util;
-using MASES.KNet;
 using Org.Apache.Kafka.Clients.Admin;
 using Org.Apache.Kafka.Clients.Consumer;
 using Org.Apache.Kafka.Clients.Producer;
 using Org.Apache.Kafka.Common.Config;
 using Org.Apache.Kafka.Common.Serialization;
 using MASES.KNet.Extensions;
+using MASES.KNet.Serialization;
+using MASES.KNet.Serialization.Json;
 using MASES.KNet.TestCommon;
 using System;
-using System.Text;
 using System.Threading;
 
 namespace MASES.KNetTest
 {
     class Program
     {
-        static bool useSerdes = false;
         static bool useCallback = true;
 
         const string theServer = "localhost:9092";
@@ -42,6 +41,23 @@ namespace MASES.KNetTest
         static string serverToUse = theServer;
         static string topicToUse = theTopic;
         static readonly ManualResetEvent resetEvent = new(false);
+
+        public class TestType
+        {
+            public TestType(int i)
+            {
+                name = description = value = i.ToString();
+            }
+
+            public string name;
+            public string description;
+            public string value;
+
+            public override string ToString()
+            {
+                return $"name {name} - description {description} - value {value}";
+            }
+        }
 
         static void Main(string[] args)
         {
@@ -52,6 +68,9 @@ namespace MASES.KNetTest
             {
                 serverToUse = args[0];
             }
+
+            KNetSerDes<TestType> serializer = new KNetSerDes<TestType>((topic, type) => { return new byte[0]; });
+            KNetSerDes<TestType> deserializer = new KNetSerDes<TestType>((topic, data) => { return new TestType(0); });
 
             CreateTopic();
 
@@ -142,8 +161,6 @@ namespace MASES.KNetTest
                 props.Put(ProducerConfig.ACKS_CONFIG, "all");
                 props.Put(ProducerConfig.RETRIES_CONFIG, 0);
                 props.Put(ProducerConfig.LINGER_MS_CONFIG, 1);
-                props.Put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
-                props.Put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
                 ******/
 
                 Properties props = ProducerConfigBuilder.Create()
@@ -151,28 +168,13 @@ namespace MASES.KNetTest
                                                         .WithAcks(ProducerConfig.Acks.All)
                                                         .WithRetries(0)
                                                         .WithLingerMs(1)
-                                                        .WithKeySerializerClass("org.apache.kafka.common.serialization.StringSerializer")
-                                                        .WithValueSerializerClass("org.apache.kafka.common.serialization.StringSerializer")
                                                         .ToProperties();
 
-                Serializer<string> keySerializer = null;
-                Serializer<string> valueSerializer = null;
-                if (useSerdes)
-                {
-                    keySerializer = new Serializer<string>(serializeWithHeadersFun: (topic, headers, data) =>
-                    {
-                        var key = Encoding.Unicode.GetBytes(data);
-                        return key;
-                    });
-                    valueSerializer = new Serializer<string>(serializeWithHeadersFun: (topic, headers, data) =>
-                    {
-                        var value = Encoding.Unicode.GetBytes(data);
-                        return value;
-                    });
-                }
+                KNetSerDes<string> keySerializer = new KNetSerDes<string>();
+                JsonSerDes<TestType> valueSerializer = new JsonSerDes<TestType>();
                 try
                 {
-                    using (var producer = useSerdes ? new KafkaProducer<string, string>(props, keySerializer, valueSerializer) : new KafkaProducer<string, string>(props))
+                    using (var producer = new KNetProducer<string, TestType>(props, keySerializer, valueSerializer))
                     {
                         int i = 0;
                         Callback callback = null;
@@ -188,7 +190,7 @@ namespace MASES.KNetTest
                         {
                             while (!resetEvent.WaitOne(0))
                             {
-                                var record = new ProducerRecord<string, string>(topicToUse, i.ToString(), i.ToString());
+                                var record = new KNetProducerRecord<string, TestType>(topicToUse, i.ToString(), new TestType(i));
                                 var result = useCallback ? producer.Send(record, callback) : producer.Send(record);
                                 Console.WriteLine($"Producing: {record} with result: {result.Get()}");
                                 producer.Flush();
@@ -200,11 +202,8 @@ namespace MASES.KNetTest
                 }
                 finally
                 {
-                    if (useSerdes)
-                    {
-                        keySerializer.Dispose();
-                        valueSerializer.Dispose();
-                    }
+                    keySerializer?.Dispose();
+                    valueSerializer?.Dispose();
                 }
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
@@ -227,8 +226,6 @@ namespace MASES.KNetTest
                 props.Put(ConsumerConfig.GROUP_ID_CONFIG, "test");
                 props.Put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "true");
                 props.Put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG, "1000");
-                props.Put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
-                props.Put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
                 *******/
 
                 Properties props = ConsumerConfigBuilder.Create()
@@ -236,29 +233,13 @@ namespace MASES.KNetTest
                                                         .WithGroupId("test")
                                                         .WithEnableAutoCommit(true)
                                                         .WithAutoCommitIntervalMs(1000)
-                                                        .WithKeyDeserializerClass("org.apache.kafka.common.serialization.StringDeserializer")
-                                                        .WithValueDeserializerClass("org.apache.kafka.common.serialization.StringDeserializer")
                                                         .ToProperties();
 
-                Deserializer<string> keyDeserializer = null;
-                Deserializer<string> valueDeserializer = null;
+                KNetSerDes<string> keyDeserializer = new KNetSerDes<string>();
+                KNetSerDes<TestType> valueDeserializer = new JsonSerDes<TestType>();
                 ConsumerRebalanceListener rebalanceListener = null;
-                KafkaConsumer<string, string> consumer = null;
-                if (useSerdes)
-                {
-                    keyDeserializer = new Deserializer<string>(deserializeFun: (topic, data) =>
-                    {
-                        var key = Encoding.Unicode.GetString(data);
-                        Console.WriteLine("Received key {0} from topic {1}", key, topic);
-                        return key;
-                    });
-                    valueDeserializer = new Deserializer<string>(deserializeFun: (topic, data) =>
-                    {
-                        var value = Encoding.Unicode.GetString(data);
-                        Console.WriteLine("Received value {0} from topic {1}", value, topic);
-                        return value;
-                    });
-                }
+                KNetConsumer<string, TestType> consumer = null;
+
                 if (useCallback)
                 {
                     rebalanceListener = new ConsumerRebalanceListener(
@@ -273,7 +254,7 @@ namespace MASES.KNetTest
                 }
                 try
                 {
-                    using (consumer = useSerdes ? new KafkaConsumer<string, string>(props, keyDeserializer, valueDeserializer) : new KafkaConsumer<string, string>(props))
+                    using (consumer = new KNetConsumer<string, TestType>(props, keyDeserializer, valueDeserializer))
                     {
                         if (useCallback) consumer.Subscribe(Collections.Singleton(topicToUse), rebalanceListener);
                         else consumer.Subscribe(Collections.Singleton(topicToUse));
@@ -290,11 +271,8 @@ namespace MASES.KNetTest
                 }
                 finally
                 {
-                    if (useSerdes)
-                    {
-                        keyDeserializer.Dispose();
-                        valueDeserializer.Dispose();
-                    }
+                    keyDeserializer?.Dispose();
+                    valueDeserializer?.Dispose();
                 }
             }
             catch (Java.Util.Concurrent.ExecutionException ex)

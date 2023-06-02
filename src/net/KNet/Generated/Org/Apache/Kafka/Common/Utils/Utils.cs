@@ -944,16 +944,6 @@ namespace Org.Apache.Kafka.Common.Utils
             SExecute(LocalBridgeClazz, "sleep", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Utils.html#swallow(org.slf4j.Logger,java.lang.String,java.lang.Runnable)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Slf4j.Logger"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <param name="arg2"><see cref="Java.Lang.Runnable"/></param>
-        public static void Swallow(Org.Slf4j.Logger arg0, string arg1, Java.Lang.Runnable arg2)
-        {
-            SExecute(LocalBridgeClazz, "swallow", arg0, arg1, arg2);
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Utils.html#writeFully(java.nio.channels.FileChannel,java.nio.ByteBuffer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.Channels.FileChannel"/></param>

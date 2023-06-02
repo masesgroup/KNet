@@ -71,46 +71,58 @@ namespace Org.Apache.Kafka.Common
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/PartitionInfo.html#inSyncReplicas()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/PartitionInfo.html#partition()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Node[] InSyncReplicas
+
+        /// <returns><see cref="int"/></returns>
+        public int Partition()
         {
-            get { return IExecuteArray<Org.Apache.Kafka.Common.Node>("inSyncReplicas"); }
+            return IExecute<int>("partition");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/PartitionInfo.html#leader()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/PartitionInfo.html#topic()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Node Leader
+
+        /// <returns><see cref="string"/></returns>
+        public string Topic()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Node>("leader"); }
+            return IExecute<string>("topic");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/PartitionInfo.html#offlineReplicas()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/PartitionInfo.html#leader()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Node[] OfflineReplicas
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Node"/></returns>
+        public Org.Apache.Kafka.Common.Node Leader()
         {
-            get { return IExecuteArray<Org.Apache.Kafka.Common.Node>("offlineReplicas"); }
+            return IExecute<Org.Apache.Kafka.Common.Node>("leader");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/PartitionInfo.html#partition()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/PartitionInfo.html#inSyncReplicas()"/>
         /// </summary>
-        public int Partition
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Node"/></returns>
+        public Org.Apache.Kafka.Common.Node[] InSyncReplicas()
         {
-            get { return IExecute<int>("partition"); }
+            return IExecuteArray<Org.Apache.Kafka.Common.Node>("inSyncReplicas");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/PartitionInfo.html#replicas()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/PartitionInfo.html#offlineReplicas()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Node[] Replicas
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Node"/></returns>
+        public Org.Apache.Kafka.Common.Node[] OfflineReplicas()
         {
-            get { return IExecuteArray<Org.Apache.Kafka.Common.Node>("replicas"); }
+            return IExecuteArray<Org.Apache.Kafka.Common.Node>("offlineReplicas");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/PartitionInfo.html#topic()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/PartitionInfo.html#replicas()"/>
         /// </summary>
-        public string Topic
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Node"/></returns>
+        public Org.Apache.Kafka.Common.Node[] Replicas()
         {
-            get { return IExecute<string>("topic"); }
+            return IExecuteArray<Org.Apache.Kafka.Common.Node>("replicas");
         }
 
         #endregion

@@ -75,25 +75,22 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractResponse.html#apiKey()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractResponse.html#throttleTimeMs()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.ApiKeys ApiKey
+
+        /// <returns><see cref="int"/></returns>
+        public int ThrottleTimeMs()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.ApiKeys>("apiKey"); }
+            return IExecute<int>("throttleTimeMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractResponse.html#errorCounts()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractResponse.html#errorCounts()"/>
         /// </summary>
-        public Java.Util.Map<Org.Apache.Kafka.Common.Protocol.Errors, int?> ErrorCounts
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<Org.Apache.Kafka.Common.Protocol.Errors, int?> ErrorCounts()
         {
-            get { return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.Protocol.Errors, int?>>("errorCounts"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractResponse.html#throttleTimeMs()"/> 
-        /// </summary>
-        public int ThrottleTimeMs
-        {
-            get { return IExecute<int>("throttleTimeMs"); }
+            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.Protocol.Errors, int?>>("errorCounts");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractResponse.html#maybeSetThrottleTimeMs(int)"/>
@@ -121,6 +118,15 @@ namespace Org.Apache.Kafka.Common.Requests
         public Org.Apache.Kafka.Common.Network.Send ToSend(Org.Apache.Kafka.Common.Requests.ResponseHeader arg0, short arg1)
         {
             return IExecute<Org.Apache.Kafka.Common.Network.Send>("toSend", arg0, arg1);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AbstractResponse.html#apiKey()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.ApiKeys"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.ApiKeys ApiKey()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Protocol.ApiKeys>("apiKey");
         }
 
         #endregion

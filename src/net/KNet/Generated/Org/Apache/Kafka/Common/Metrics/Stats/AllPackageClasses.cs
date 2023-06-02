@@ -627,7 +627,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Percentiles.BucketSizing.html"/>
         /// </summary>
-        public partial class BucketSizing : Java.Lang.Enum
+        public partial class BucketSizing : Java.Lang.Enum<Org.Apache.Kafka.Common.Metrics.Stats.Percentiles.BucketSizing>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

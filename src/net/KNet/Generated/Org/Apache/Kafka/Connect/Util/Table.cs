@@ -46,11 +46,13 @@ namespace Org.Apache.Kafka.Connect.Util
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/Table.html#isEmpty()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/Table.html#isEmpty()"/>
         /// </summary>
-        public bool IsEmpty
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsEmpty()
         {
-            get { return IExecute<bool>("isEmpty"); }
+            return IExecute<bool>("isEmpty");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/Table.html#remove(java.lang.Object)"/>
@@ -137,11 +139,13 @@ namespace Org.Apache.Kafka.Connect.Util
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/Table.html#isEmpty()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/Table.html#isEmpty()"/>
         /// </summary>
-        public bool IsEmpty
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsEmpty()
         {
-            get { return IExecute<bool>("isEmpty"); }
+            return IExecute<bool>("isEmpty");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/Table.html#remove(java.lang.Object)"/>

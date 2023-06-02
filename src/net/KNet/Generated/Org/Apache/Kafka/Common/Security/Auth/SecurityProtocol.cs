@@ -66,18 +66,13 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SecurityProtocol.html#names()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SecurityProtocol.html#names()"/>
         /// </summary>
-        public static Java.Util.List<string> Names
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public static Java.Util.List<string> Names()
         {
-            get { return SExecute<Java.Util.List<string>>(LocalBridgeClazz, "names"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SecurityProtocol.html#values()"/> 
-        /// </summary>
-        public static Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol[] Values
-        {
-            get { return SExecuteArray<Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol>(LocalBridgeClazz, "values"); }
+            return SExecute<Java.Util.List<string>>(LocalBridgeClazz, "names");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SecurityProtocol.html#forId(short)"/>
@@ -105,6 +100,15 @@ namespace Org.Apache.Kafka.Common.Security.Auth
         public static Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol ValueOf(string arg0)
         {
             return SExecute<Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol>(LocalBridgeClazz, "valueOf", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SecurityProtocol.html#values()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol"/></returns>
+        public static Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol[] Values()
+        {
+            return SExecuteArray<Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol>(LocalBridgeClazz, "values");
         }
 
         #endregion

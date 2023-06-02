@@ -73,11 +73,13 @@ namespace Org.Apache.Kafka.Common.Compress
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/compress/KafkaLZ4BlockInputStream.html#ignoreFlagDescriptorChecksum()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/compress/KafkaLZ4BlockInputStream.html#ignoreFlagDescriptorChecksum()"/>
         /// </summary>
-        public bool IgnoreFlagDescriptorChecksum
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IgnoreFlagDescriptorChecksum()
         {
-            get { return IExecute<bool>("ignoreFlagDescriptorChecksum"); }
+            return IExecute<bool>("ignoreFlagDescriptorChecksum");
         }
 
         #endregion

@@ -46,11 +46,13 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransferableChannel.html#hasPendingWrites()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransferableChannel.html#hasPendingWrites()"/>
         /// </summary>
-        public bool HasPendingWrites
+
+        /// <returns><see cref="bool"/></returns>
+        public bool HasPendingWrites()
         {
-            get { return IExecute<bool>("hasPendingWrites"); }
+            return IExecute<bool>("hasPendingWrites");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransferableChannel.html#transferFrom(java.nio.channels.FileChannel,long,long)"/>

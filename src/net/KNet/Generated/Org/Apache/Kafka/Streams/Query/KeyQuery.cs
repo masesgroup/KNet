@@ -59,13 +59,6 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/KeyQuery.html#isSkipCache()"/> 
-        /// </summary>
-        public bool IsSkipCache
-        {
-            get { return IExecute<bool>("isSkipCache"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/KeyQuery.html#getKey()"/> 
         /// </summary>
         public object Key
@@ -73,11 +66,22 @@ namespace Org.Apache.Kafka.Streams.Query
             get { return IExecute("getKey"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/KeyQuery.html#skipCache()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/KeyQuery.html#isSkipCache()"/>
         /// </summary>
-        public Org.Apache.Kafka.Streams.Query.KeyQuery SkipCache
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsSkipCache()
         {
-            get { return IExecute<Org.Apache.Kafka.Streams.Query.KeyQuery>("skipCache"); }
+            return IExecute<bool>("isSkipCache");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/KeyQuery.html#skipCache()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Query.KeyQuery"/></returns>
+        public Org.Apache.Kafka.Streams.Query.KeyQuery SkipCache()
+        {
+            return IExecute<Org.Apache.Kafka.Streams.Query.KeyQuery>("skipCache");
         }
 
         #endregion
@@ -128,13 +132,6 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/KeyQuery.html#isSkipCache()"/> 
-        /// </summary>
-        public bool IsSkipCache
-        {
-            get { return IExecute<bool>("isSkipCache"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/KeyQuery.html#getKey()"/> 
         /// </summary>
         public K Key
@@ -142,11 +139,22 @@ namespace Org.Apache.Kafka.Streams.Query
             get { return IExecute<K>("getKey"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/KeyQuery.html#skipCache()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/KeyQuery.html#isSkipCache()"/>
         /// </summary>
-        public Org.Apache.Kafka.Streams.Query.KeyQuery<K, V> SkipCache
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsSkipCache()
         {
-            get { return IExecute<Org.Apache.Kafka.Streams.Query.KeyQuery<K, V>>("skipCache"); }
+            return IExecute<bool>("isSkipCache");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/KeyQuery.html#skipCache()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Query.KeyQuery"/></returns>
+        public Org.Apache.Kafka.Streams.Query.KeyQuery<K, V> SkipCache()
+        {
+            return IExecute<Org.Apache.Kafka.Streams.Query.KeyQuery<K, V>>("skipCache");
         }
 
         #endregion

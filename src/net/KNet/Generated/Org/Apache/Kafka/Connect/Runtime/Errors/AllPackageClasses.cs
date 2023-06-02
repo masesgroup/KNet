@@ -331,7 +331,7 @@ namespace Org.Apache.Kafka.Connect.Runtime.Errors
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/errors/Stage.html"/>
     /// </summary>
-    public partial class Stage : Java.Lang.Enum
+    public partial class Stage : Java.Lang.Enum<Org.Apache.Kafka.Connect.Runtime.Errors.Stage>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -374,7 +374,7 @@ namespace Org.Apache.Kafka.Connect.Runtime.Errors
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/errors/ToleranceType.html"/>
     /// </summary>
-    public partial class ToleranceType : Java.Lang.Enum
+    public partial class ToleranceType : Java.Lang.Enum<Org.Apache.Kafka.Connect.Runtime.Errors.ToleranceType>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

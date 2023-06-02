@@ -50,13 +50,6 @@ namespace Org.Apache.Kafka.Connect.Source
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/ExactlyOnceSupport.html#values()"/> 
-        /// </summary>
-        public static Org.Apache.Kafka.Connect.Source.ExactlyOnceSupport[] Values
-        {
-            get { return SExecuteArray<Org.Apache.Kafka.Connect.Source.ExactlyOnceSupport>(LocalBridgeClazz, "values"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/ExactlyOnceSupport.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -64,6 +57,15 @@ namespace Org.Apache.Kafka.Connect.Source
         public static Org.Apache.Kafka.Connect.Source.ExactlyOnceSupport ValueOf(string arg0)
         {
             return SExecute<Org.Apache.Kafka.Connect.Source.ExactlyOnceSupport>(LocalBridgeClazz, "valueOf", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/ExactlyOnceSupport.html#values()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Source.ExactlyOnceSupport"/></returns>
+        public static Org.Apache.Kafka.Connect.Source.ExactlyOnceSupport[] Values()
+        {
+            return SExecuteArray<Org.Apache.Kafka.Connect.Source.ExactlyOnceSupport>(LocalBridgeClazz, "values");
         }
 
         #endregion

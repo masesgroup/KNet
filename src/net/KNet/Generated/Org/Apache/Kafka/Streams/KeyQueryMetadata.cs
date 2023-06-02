@@ -35,7 +35,7 @@ namespace Org.Apache.Kafka.Streams
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.HostInfo"/></param>
         /// <param name="arg1"><see cref="Java.Util.Set"/></param>
         /// <param name="arg2"><see cref="int"/></param>
-        public KeyQueryMetadata(Org.Apache.Kafka.Streams.State.HostInfo arg0, Java.Util.Set arg1, int arg2)
+        public KeyQueryMetadata(Org.Apache.Kafka.Streams.State.HostInfo arg0, Java.Util.Set<Org.Apache.Kafka.Streams.State.HostInfo> arg1, int arg2)
             : base(arg0, arg1, arg2)
         {
         }
@@ -60,25 +60,31 @@ namespace Org.Apache.Kafka.Streams
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KeyQueryMetadata.html#activeHost()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KeyQueryMetadata.html#partition()"/>
         /// </summary>
-        public Org.Apache.Kafka.Streams.State.HostInfo ActiveHost
+
+        /// <returns><see cref="int"/></returns>
+        public int Partition()
         {
-            get { return IExecute<Org.Apache.Kafka.Streams.State.HostInfo>("activeHost"); }
+            return IExecute<int>("partition");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KeyQueryMetadata.html#partition()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KeyQueryMetadata.html#standbyHosts()"/>
         /// </summary>
-        public int Partition
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Streams.State.HostInfo> StandbyHosts()
         {
-            get { return IExecute<int>("partition"); }
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Streams.State.HostInfo>>("standbyHosts");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KeyQueryMetadata.html#standbyHosts()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KeyQueryMetadata.html#activeHost()"/>
         /// </summary>
-        public Java.Util.Set<Org.Apache.Kafka.Streams.State.HostInfo> StandbyHosts
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.State.HostInfo"/></returns>
+        public Org.Apache.Kafka.Streams.State.HostInfo ActiveHost()
         {
-            get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Streams.State.HostInfo>>("standbyHosts"); }
+            return IExecute<Org.Apache.Kafka.Streams.State.HostInfo>("activeHost");
         }
 
         #endregion

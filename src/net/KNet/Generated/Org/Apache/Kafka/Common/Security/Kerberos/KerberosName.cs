@@ -65,25 +65,31 @@ namespace Org.Apache.Kafka.Common.Security.Kerberos
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosName.html#hostName()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosName.html#hostName()"/>
         /// </summary>
-        public string HostName
+
+        /// <returns><see cref="string"/></returns>
+        public string HostName()
         {
-            get { return IExecute<string>("hostName"); }
+            return IExecute<string>("hostName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosName.html#realm()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosName.html#realm()"/>
         /// </summary>
-        public string Realm
+
+        /// <returns><see cref="string"/></returns>
+        public string Realm()
         {
-            get { return IExecute<string>("realm"); }
+            return IExecute<string>("realm");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosName.html#serviceName()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosName.html#serviceName()"/>
         /// </summary>
-        public string ServiceName
+
+        /// <returns><see cref="string"/></returns>
+        public string ServiceName()
         {
-            get { return IExecute<string>("serviceName"); }
+            return IExecute<string>("serviceName");
         }
 
         #endregion

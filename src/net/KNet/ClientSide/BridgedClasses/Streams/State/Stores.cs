@@ -21,67 +21,8 @@ using Java.Time;
 
 namespace Org.Apache.Kafka.Streams.State
 {
-    public class Stores : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Stores>
+    public partial class Stores
     {
-        public override string ClassName => "org.apache.kafka.streams.state.Stores";
-
-        public static KeyValueBytesStoreSupplier PersistentKeyValueStore(string name)
-        {
-            return SExecute<KeyValueBytesStoreSupplier>("persistentKeyValueStore", name);
-        }
-
-        public static KeyValueBytesStoreSupplier PersistentTimestampedKeyValueStore(string name)
-        {
-            return SExecute<KeyValueBytesStoreSupplier>("persistentTimestampedKeyValueStore", name);
-        }
-
-        public static KeyValueBytesStoreSupplier InMemoryKeyValueStore(string name)
-        {
-            return SExecute<KeyValueBytesStoreSupplier>("inMemoryKeyValueStore", name);
-        }
-
-        public static KeyValueBytesStoreSupplier LruMap(string name, int maxCacheSize)
-        {
-            return SExecute<KeyValueBytesStoreSupplier>("lruMap", name, maxCacheSize);
-        }
-
-
-        public static WindowBytesStoreSupplier PersistentWindowStore(string name,
-                                                                      Duration retentionPeriod,
-                                                                      Duration windowSize,
-                                                                      bool retainDuplicates)
-        {
-            return SExecute<WindowBytesStoreSupplier>("persistentWindowStore", name, retentionPeriod, windowSize, retainDuplicates);
-        }
-
-        public static WindowBytesStoreSupplier PersistentTimestampedWindowStore(string name,
-                                                                                Duration retentionPeriod,
-                                                                                Duration windowSize,
-                                                                                bool retainDuplicates)
-        {
-            return SExecute<WindowBytesStoreSupplier>("persistentTimestampedWindowStore", name, retentionPeriod, windowSize, retainDuplicates);
-        }
-
-        public static WindowBytesStoreSupplier InMemoryWindowStore(string name,
-                                                                    Duration retentionPeriod,
-                                                                    Duration windowSize,
-                                                                    bool retainDuplicates)
-        {
-            return SExecute<WindowBytesStoreSupplier>("inMemoryWindowStore", name, retentionPeriod, windowSize, retainDuplicates);
-        }
-
-        public static SessionBytesStoreSupplier PersistentSessionStore(string name,
-                                                                        Duration retentionPeriod)
-        {
-            return SExecute<SessionBytesStoreSupplier>("persistentSessionStore", name, retentionPeriod);
-        }
-
-        public static SessionBytesStoreSupplier InMemorySessionStore(string name, Duration retentionPeriod)
-        {
-            return SExecute<SessionBytesStoreSupplier>("inMemorySessionStore", name, retentionPeriod);
-        }
-
-
         public static StoreBuilder<KeyValueStore<K, V>> KeyValueStoreBuilder<K, V>(KeyValueBytesStoreSupplier supplier,
                                                                                    Serde<K> keySerde,
                                                                                    Serde<V> valueSerde)

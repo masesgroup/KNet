@@ -21,56 +21,8 @@ using MASES.JCOBridge.C2JBridge.JVMInterop;
 
 namespace Org.Apache.Kafka.Common
 {
-    public class PartitionInfo : JVMBridgeBase<PartitionInfo>
+    public partial class PartitionInfo
     {
-        public override string ClassName => "org.apache.kafka.common.PartitionInfo";
 
-        public string Topic => IExecute<string>("topic");
-
-        public int Partition => IExecute<int>("partition");
-
-        public Node Leader => IExecute<Node>("leader");
-
-        public Node[] Replicas
-        {
-            get
-            {
-                var array = IExecute("replicas") as IJavaArray;
-                System.Collections.Generic.List<Node> nodes = new System.Collections.Generic.List<Node>();
-                foreach (var item in array)
-                {
-                    nodes.Add(Wraps<Node>(item as IJavaObject));
-                }
-                return nodes.ToArray();
-            }
-        }
-
-        public Node[] InSyncReplicas
-        {
-            get
-            {
-                var array = IExecute("inSyncReplicas") as IJavaArray;
-                System.Collections.Generic.List<Node> nodes = new System.Collections.Generic.List<Node>();
-                foreach (var item in array)
-                {
-                    nodes.Add(Wraps<Node>(item as IJavaObject));
-                }
-                return nodes.ToArray();
-            }
-        }
-
-        public Node[] OfflineReplicas
-        {
-            get
-            {
-                var array = IExecute("offlineReplicas") as IJavaArray;
-                System.Collections.Generic.List<Node> nodes = new System.Collections.Generic.List<Node>();
-                foreach (var item in array)
-                {
-                    nodes.Add(Wraps<Node>(item as IJavaObject));
-                }
-                return nodes.ToArray();
-            }
-        }
     }
 }

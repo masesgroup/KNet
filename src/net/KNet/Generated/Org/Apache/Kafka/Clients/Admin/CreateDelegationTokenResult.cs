@@ -46,11 +46,13 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/CreateDelegationTokenResult.html#delegationToken()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/CreateDelegationTokenResult.html#delegationToken()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Common.Security.Token.Delegation.DelegationToken> DelegationToken
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
+        public Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Common.Security.Token.Delegation.DelegationToken> DelegationToken()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Common.Security.Token.Delegation.DelegationToken>>("delegationToken"); }
+            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Common.Security.Token.Delegation.DelegationToken>>("delegationToken");
         }
 
         #endregion

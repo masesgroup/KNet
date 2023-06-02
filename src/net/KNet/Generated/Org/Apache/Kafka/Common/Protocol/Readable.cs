@@ -46,88 +46,13 @@ namespace Org.Apache.Kafka.Common.Protocol
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Readable.html#readByte()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Readable.html#readByte()"/>
         /// </summary>
-        public byte ReadByte
+
+        /// <returns><see cref="byte"/></returns>
+        public byte ReadByte()
         {
-            get { return IExecute<byte>("readByte"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Readable.html#readDouble()"/> 
-        /// </summary>
-        public double ReadDouble
-        {
-            get { return IExecute<double>("readDouble"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Readable.html#readInt()"/> 
-        /// </summary>
-        public int ReadInt
-        {
-            get { return IExecute<int>("readInt"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Readable.html#readLong()"/> 
-        /// </summary>
-        public long ReadLong
-        {
-            get { return IExecute<long>("readLong"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Readable.html#readShort()"/> 
-        /// </summary>
-        public short ReadShort
-        {
-            get { return IExecute<short>("readShort"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Readable.html#readUnsignedInt()"/> 
-        /// </summary>
-        public long ReadUnsignedInt
-        {
-            get { return IExecute<long>("readUnsignedInt"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Readable.html#readUnsignedShort()"/> 
-        /// </summary>
-        public int ReadUnsignedShort
-        {
-            get { return IExecute<int>("readUnsignedShort"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Readable.html#readUnsignedVarint()"/> 
-        /// </summary>
-        public int ReadUnsignedVarint
-        {
-            get { return IExecute<int>("readUnsignedVarint"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Readable.html#readUuid()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Uuid ReadUuid
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Uuid>("readUuid"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Readable.html#readVarint()"/> 
-        /// </summary>
-        public int ReadVarint
-        {
-            get { return IExecute<int>("readVarint"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Readable.html#readVarlong()"/> 
-        /// </summary>
-        public long ReadVarlong
-        {
-            get { return IExecute<long>("readVarlong"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Readable.html#remaining()"/> 
-        /// </summary>
-        public int Remaining
-        {
-            get { return IExecute<int>("remaining"); }
+            return IExecute<byte>("readByte");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Readable.html#readArray(int)"/>
@@ -139,6 +64,51 @@ namespace Org.Apache.Kafka.Common.Protocol
             return IExecuteArray<byte>("readArray", arg0);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Readable.html#readDouble()"/>
+        /// </summary>
+
+        /// <returns><see cref="double"/></returns>
+        public double ReadDouble()
+        {
+            return IExecute<double>("readDouble");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Readable.html#readInt()"/>
+        /// </summary>
+
+        /// <returns><see cref="int"/></returns>
+        public int ReadInt()
+        {
+            return IExecute<int>("readInt");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Readable.html#readUnsignedVarint()"/>
+        /// </summary>
+
+        /// <returns><see cref="int"/></returns>
+        public int ReadUnsignedVarint()
+        {
+            return IExecute<int>("readUnsignedVarint");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Readable.html#readVarint()"/>
+        /// </summary>
+
+        /// <returns><see cref="int"/></returns>
+        public int ReadVarint()
+        {
+            return IExecute<int>("readVarint");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Readable.html#remaining()"/>
+        /// </summary>
+
+        /// <returns><see cref="int"/></returns>
+        public int Remaining()
+        {
+            return IExecute<int>("remaining");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Readable.html#readByteBuffer(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
@@ -146,6 +116,42 @@ namespace Org.Apache.Kafka.Common.Protocol
         public Java.Nio.ByteBuffer ReadByteBuffer(int arg0)
         {
             return IExecute<Java.Nio.ByteBuffer>("readByteBuffer", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Readable.html#readLong()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long ReadLong()
+        {
+            return IExecute<long>("readLong");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Readable.html#readVarlong()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long ReadVarlong()
+        {
+            return IExecute<long>("readVarlong");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Readable.html#readShort()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short ReadShort()
+        {
+            return IExecute<short>("readShort");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Readable.html#readUnsignedShort()"/>
+        /// </summary>
+
+        /// <returns><see cref="int"/></returns>
+        public int ReadUnsignedShort()
+        {
+            return IExecute<int>("readUnsignedShort");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Readable.html#readString(int)"/>
@@ -168,6 +174,15 @@ namespace Org.Apache.Kafka.Common.Protocol
             return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("readUnknownTaggedField", arg0, arg1, arg2);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Readable.html#readUnsignedInt()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long ReadUnsignedInt()
+        {
+            return IExecute<long>("readUnsignedInt");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Readable.html#readRecords(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
@@ -175,6 +190,15 @@ namespace Org.Apache.Kafka.Common.Protocol
         public Org.Apache.Kafka.Common.Record.MemoryRecords ReadRecords(int arg0)
         {
             return IExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>("readRecords", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Readable.html#readUuid()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Uuid"/></returns>
+        public Org.Apache.Kafka.Common.Uuid ReadUuid()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Uuid>("readUuid");
         }
 
         #endregion

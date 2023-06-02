@@ -33,7 +33,7 @@ namespace Org.Apache.Kafka.Common.Security.Kerberos
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosShortNamer.html#%3Cinit%3E(java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
-        public KerberosShortNamer(Java.Util.List arg0)
+        public KerberosShortNamer(Java.Util.List<Org.Apache.Kafka.Common.Security.Kerberos.KerberosRule> arg0)
             : base(arg0)
         {
         }

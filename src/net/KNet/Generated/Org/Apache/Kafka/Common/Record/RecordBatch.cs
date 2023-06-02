@@ -82,151 +82,184 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#baseOffset()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#hasProducerId()"/>
         /// </summary>
-        public long BaseOffset
+
+        /// <returns><see cref="bool"/></returns>
+        public bool HasProducerId()
         {
-            get { return IExecute<long>("baseOffset"); }
+            return IExecute<bool>("hasProducerId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#baseSequence()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#isCompressed()"/>
         /// </summary>
-        public int BaseSequence
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsCompressed()
         {
-            get { return IExecute<int>("baseSequence"); }
+            return IExecute<bool>("isCompressed");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#checksum()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#isControlBatch()"/>
         /// </summary>
-        public long Checksum
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsControlBatch()
         {
-            get { return IExecute<long>("checksum"); }
+            return IExecute<bool>("isControlBatch");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#compressionType()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#isTransactional()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Record.CompressionType CompressionType
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsTransactional()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Record.CompressionType>("compressionType"); }
+            return IExecute<bool>("isTransactional");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#countOrNull()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#isValid()"/>
         /// </summary>
-        public int? CountOrNull
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsValid()
         {
-            get { return IExecute<int?>("countOrNull"); }
+            return IExecute<bool>("isValid");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#deleteHorizonMs()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#magic()"/>
         /// </summary>
-        public Java.Util.OptionalLong DeleteHorizonMs
+
+        /// <returns><see cref="byte"/></returns>
+        public byte Magic()
         {
-            get { return IExecute<Java.Util.OptionalLong>("deleteHorizonMs"); }
+            return IExecute<byte>("magic");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#hasProducerId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#baseSequence()"/>
         /// </summary>
-        public bool HasProducerId
+
+        /// <returns><see cref="int"/></returns>
+        public int BaseSequence()
         {
-            get { return IExecute<bool>("hasProducerId"); }
+            return IExecute<int>("baseSequence");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#isCompressed()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#lastSequence()"/>
         /// </summary>
-        public bool IsCompressed
+
+        /// <returns><see cref="int"/></returns>
+        public int LastSequence()
         {
-            get { return IExecute<bool>("isCompressed"); }
+            return IExecute<int>("lastSequence");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#isControlBatch()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#partitionLeaderEpoch()"/>
         /// </summary>
-        public bool IsControlBatch
+
+        /// <returns><see cref="int"/></returns>
+        public int PartitionLeaderEpoch()
         {
-            get { return IExecute<bool>("isControlBatch"); }
+            return IExecute<int>("partitionLeaderEpoch");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#isTransactional()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#sizeInBytes()"/>
         /// </summary>
-        public bool IsTransactional
+
+        /// <returns><see cref="int"/></returns>
+        public int SizeInBytes()
         {
-            get { return IExecute<bool>("isTransactional"); }
+            return IExecute<int>("sizeInBytes");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#isValid()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#countOrNull()"/>
         /// </summary>
-        public bool IsValid
+
+        /// <returns><see cref="int"/></returns>
+        public int? CountOrNull()
         {
-            get { return IExecute<bool>("isValid"); }
+            return IExecute<int?>("countOrNull");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#lastOffset()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#deleteHorizonMs()"/>
         /// </summary>
-        public long LastOffset
+
+        /// <returns><see cref="Java.Util.OptionalLong"/></returns>
+        public Java.Util.OptionalLong DeleteHorizonMs()
         {
-            get { return IExecute<long>("lastOffset"); }
+            return IExecute<Java.Util.OptionalLong>("deleteHorizonMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#lastSequence()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#baseOffset()"/>
         /// </summary>
-        public int LastSequence
+
+        /// <returns><see cref="long"/></returns>
+        public long BaseOffset()
         {
-            get { return IExecute<int>("lastSequence"); }
+            return IExecute<long>("baseOffset");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#magic()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#checksum()"/>
         /// </summary>
-        public byte Magic
+
+        /// <returns><see cref="long"/></returns>
+        public long Checksum()
         {
-            get { return IExecute<byte>("magic"); }
+            return IExecute<long>("checksum");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#maxTimestamp()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#lastOffset()"/>
         /// </summary>
-        public long MaxTimestamp
+
+        /// <returns><see cref="long"/></returns>
+        public long LastOffset()
         {
-            get { return IExecute<long>("maxTimestamp"); }
+            return IExecute<long>("lastOffset");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#nextOffset()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#maxTimestamp()"/>
         /// </summary>
-        public long NextOffset
+
+        /// <returns><see cref="long"/></returns>
+        public long MaxTimestamp()
         {
-            get { return IExecute<long>("nextOffset"); }
+            return IExecute<long>("maxTimestamp");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#partitionLeaderEpoch()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#nextOffset()"/>
         /// </summary>
-        public int PartitionLeaderEpoch
+
+        /// <returns><see cref="long"/></returns>
+        public long NextOffset()
         {
-            get { return IExecute<int>("partitionLeaderEpoch"); }
+            return IExecute<long>("nextOffset");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#producerEpoch()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#producerId()"/>
         /// </summary>
-        public short ProducerEpoch
+
+        /// <returns><see cref="long"/></returns>
+        public long ProducerId()
         {
-            get { return IExecute<short>("producerEpoch"); }
+            return IExecute<long>("producerId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#producerId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#compressionType()"/>
         /// </summary>
-        public long ProducerId
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Record.CompressionType"/></returns>
+        public Org.Apache.Kafka.Common.Record.CompressionType CompressionType()
         {
-            get { return IExecute<long>("producerId"); }
+            return IExecute<Org.Apache.Kafka.Common.Record.CompressionType>("compressionType");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#sizeInBytes()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#timestampType()"/>
         /// </summary>
-        public int SizeInBytes
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Record.TimestampType"/></returns>
+        public Org.Apache.Kafka.Common.Record.TimestampType TimestampType()
         {
-            get { return IExecute<int>("sizeInBytes"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#timestampType()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Record.TimestampType TimestampType
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Record.TimestampType>("timestampType"); }
+            return IExecute<Org.Apache.Kafka.Common.Record.TimestampType>("timestampType");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#streamingIterator(org.apache.kafka.common.utils.BufferSupplier)"/>
@@ -236,6 +269,15 @@ namespace Org.Apache.Kafka.Common.Record
         public Org.Apache.Kafka.Common.Utils.CloseableIterator<Org.Apache.Kafka.Common.Record.Record> StreamingIterator(Org.Apache.Kafka.Common.Utils.BufferSupplier arg0)
         {
             return IExecute<Org.Apache.Kafka.Common.Utils.CloseableIterator<Org.Apache.Kafka.Common.Record.Record>>("streamingIterator", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#producerEpoch()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short ProducerEpoch()
+        {
+            return IExecute<short>("producerEpoch");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html#ensureValid()"/>

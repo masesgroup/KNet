@@ -17,19 +17,13 @@
 */
 
 using Java.Lang;
+using Java.Nio;
+using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Serialization
 {
-    public class VoidSerializer : Serializer<Void>
+    public partial class VoidSerializer
     {
-        public override string ClassName => "org.apache.kafka.common.serialization.VoidSerializer";
-
-        public override bool AutoInit => false;
-
-        public VoidSerializer()
-            : base(null, null, false)
-        {
-
-        }
+        public static implicit operator Serializer<Void>(VoidSerializer t) => t.Cast<Serializer<Void>>();
     }
 }

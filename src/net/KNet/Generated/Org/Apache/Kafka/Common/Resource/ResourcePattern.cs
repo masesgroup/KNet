@@ -60,39 +60,49 @@ namespace Org.Apache.Kafka.Common.Resource
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePattern.html#isUnknown()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePattern.html#isUnknown()"/>
         /// </summary>
-        public bool IsUnknown
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsUnknown()
         {
-            get { return IExecute<bool>("isUnknown"); }
+            return IExecute<bool>("isUnknown");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePattern.html#name()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePattern.html#name()"/>
         /// </summary>
-        public string Name
+
+        /// <returns><see cref="string"/></returns>
+        public string Name()
         {
-            get { return IExecute<string>("name"); }
+            return IExecute<string>("name");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePattern.html#patternType()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePattern.html#patternType()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Resource.PatternType PatternType
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Resource.PatternType"/></returns>
+        public Org.Apache.Kafka.Common.Resource.PatternType PatternType()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Resource.PatternType>("patternType"); }
+            return IExecute<Org.Apache.Kafka.Common.Resource.PatternType>("patternType");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePattern.html#resourceType()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePattern.html#toFilter()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Resource.ResourceType ResourceType
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Resource.ResourcePatternFilter"/></returns>
+        public Org.Apache.Kafka.Common.Resource.ResourcePatternFilter ToFilter()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Resource.ResourceType>("resourceType"); }
+            return IExecute<Org.Apache.Kafka.Common.Resource.ResourcePatternFilter>("toFilter");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePattern.html#toFilter()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePattern.html#resourceType()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Resource.ResourcePatternFilter ToFilter
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Resource.ResourceType"/></returns>
+        public Org.Apache.Kafka.Common.Resource.ResourceType ResourceType()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Resource.ResourcePatternFilter>("toFilter"); }
+            return IExecute<Org.Apache.Kafka.Common.Resource.ResourceType>("resourceType");
         }
 
         #endregion

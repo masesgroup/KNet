@@ -51,13 +51,6 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/HostInfo.html#unavailable()"/> 
-        /// </summary>
-        public static Org.Apache.Kafka.Streams.State.HostInfo Unavailable
-        {
-            get { return SExecute<Org.Apache.Kafka.Streams.State.HostInfo>(LocalBridgeClazz, "unavailable"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/HostInfo.html#buildFromEndpoint(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -66,23 +59,36 @@ namespace Org.Apache.Kafka.Streams.State
         {
             return SExecute<Org.Apache.Kafka.Streams.State.HostInfo>(LocalBridgeClazz, "buildFromEndpoint", arg0);
         }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/HostInfo.html#unavailable()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.State.HostInfo"/></returns>
+        public static Org.Apache.Kafka.Streams.State.HostInfo Unavailable()
+        {
+            return SExecute<Org.Apache.Kafka.Streams.State.HostInfo>(LocalBridgeClazz, "unavailable");
+        }
 
         #endregion
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/HostInfo.html#host()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/HostInfo.html#port()"/>
         /// </summary>
-        public string Host
+
+        /// <returns><see cref="int"/></returns>
+        public int Port()
         {
-            get { return IExecute<string>("host"); }
+            return IExecute<int>("port");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/HostInfo.html#port()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/HostInfo.html#host()"/>
         /// </summary>
-        public int Port
+
+        /// <returns><see cref="string"/></returns>
+        public string Host()
         {
-            get { return IExecute<int>("port"); }
+            return IExecute<string>("host");
         }
 
         #endregion

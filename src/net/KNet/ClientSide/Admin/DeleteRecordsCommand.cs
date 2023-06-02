@@ -21,14 +21,8 @@ namespace Kafka.Admin
     /// <summary>
     /// Class managing DeleteRecordsCommand
     /// </summary>
-    public class DeleteRecordsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeMain<DeleteRecordsCommand>
+    public partial class DeleteRecordsCommand
     {
-        /// <summary>
-        /// Initialize a new <see cref="DeleteRecordsCommand"/>
-        /// </summary>
-        public DeleteRecordsCommand()
-            : base("kafka.admin.DeleteRecordsCommand")
-        {
-        }
+
     }
 }

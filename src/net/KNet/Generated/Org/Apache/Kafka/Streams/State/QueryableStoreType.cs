@@ -54,16 +54,6 @@ namespace Org.Apache.Kafka.Streams.State
         {
             return IExecute<bool>("accepts", arg0);
         }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/QueryableStoreType.html#create(org.apache.kafka.streams.state.internals.StateStoreProvider,java.lang.String)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.Internals.StateStoreProvider"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <returns><see cref="object"/></returns>
-        public object Create(Org.Apache.Kafka.Streams.State.Internals.StateStoreProvider arg0, string arg1)
-        {
-            return IExecute("create", arg0, arg1);
-        }
 
         #endregion
 
@@ -107,16 +97,6 @@ namespace Org.Apache.Kafka.Streams.State
         public bool Accepts(Org.Apache.Kafka.Streams.Processor.StateStore arg0)
         {
             return IExecute<bool>("accepts", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/QueryableStoreType.html#create(org.apache.kafka.streams.state.internals.StateStoreProvider,java.lang.String)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.Internals.StateStoreProvider"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <returns><typeparamref name="T"/></returns>
-        public T Create(Org.Apache.Kafka.Streams.State.Internals.StateStoreProvider arg0, string arg1)
-        {
-            return IExecute<T>("create", arg0, arg1);
         }
 
         #endregion

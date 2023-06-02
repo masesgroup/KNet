@@ -17,41 +17,28 @@
 */
 
 using Java.Lang;
+using MASES.JCOBridge.C2JBridge.JVMInterop;
 
 namespace Org.Apache.Kafka.Common.Header
 {
-    public class Headers : Iterable<Header>
+    public partial class Headers
     {
-        public override string ClassName => "org.apache.kafka.common.header.Headers";
-
-        public Headers Add(Header header)
+        public static Headers Create()
         {
-            return IExecute<Headers>("add", header);
+            var obj = MASES.JCOBridge.C2JBridge.JCOBridge.Global.JVM.New("org.apache.kafka.common.header.internals.RecordHeaders") as IJavaObject;
+            return Wraps<Headers>(obj);
         }
 
-        public Headers Add(string key, byte[] value)
+        public static Headers Create(Header[] headers)
         {
-            return IExecute<Headers>("add", key, value);
+            var obj = MASES.JCOBridge.C2JBridge.JCOBridge.Global.JVM.New("org.apache.kafka.common.header.internals.RecordHeaders", headers) as IJavaObject;
+            return Wraps<Headers>(obj);
         }
 
-        public Headers Remove(string key)
+        public static Headers Create(Iterable<Header> headers)
         {
-            return IExecute<Headers>("remove", key);
-        }
-
-        public Header LastHeader(string key)
-        {
-            return IExecute<Header>("lastHeader", key);
-        }
-
-        public System.Collections.Generic.IEnumerable<Header> headers(string key)
-        {
-            return IExecute<Headers>("headers", key);
-        }
-
-        public Header[] ToArray()
-        {
-            return IExecute<Headers>("toArray").ToArray();
+            var obj = MASES.JCOBridge.C2JBridge.JCOBridge.Global.JVM.New("org.apache.kafka.common.header.internals.RecordHeaders", headers) as IJavaObject;
+            return Wraps<Headers>(obj);
         }
     }
 }

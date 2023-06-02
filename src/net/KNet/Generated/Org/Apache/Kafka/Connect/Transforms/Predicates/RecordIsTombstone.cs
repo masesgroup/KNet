@@ -58,13 +58,6 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/predicates/RecordIsTombstone.html#config()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Config.ConfigDef Config
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("config"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/predicates/RecordIsTombstone.html#test(org.apache.kafka.connect.connector.ConnectRecord)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord"/></param>
@@ -72,6 +65,15 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
         public bool Test(Org.Apache.Kafka.Connect.Connector.ConnectRecord arg0)
         {
             return IExecute<bool>("test", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/predicates/RecordIsTombstone.html#config()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
+        public Org.Apache.Kafka.Common.Config.ConfigDef Config()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("config");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/predicates/RecordIsTombstone.html#close()"/>
@@ -136,13 +138,6 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/predicates/RecordIsTombstone.html#config()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Config.ConfigDef Config
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("config"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/predicates/RecordIsTombstone.html#test(org.apache.kafka.connect.connector.ConnectRecord)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="R"/></param>
@@ -150,6 +145,15 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
         public bool Test(R arg0)
         {
             return IExecute<bool>("test", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/predicates/RecordIsTombstone.html#config()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
+        public Org.Apache.Kafka.Common.Config.ConfigDef Config()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("config");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/predicates/RecordIsTombstone.html#close()"/>

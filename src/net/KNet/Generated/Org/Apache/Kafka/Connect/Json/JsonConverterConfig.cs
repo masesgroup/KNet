@@ -74,36 +74,44 @@ namespace Org.Apache.Kafka.Connect.Json
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverterConfig.html#configDef()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverterConfig.html#configDef()"/>
         /// </summary>
-        public static Org.Apache.Kafka.Common.Config.ConfigDef ConfigDef
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
+        public static Org.Apache.Kafka.Common.Config.ConfigDef ConfigDef()
         {
-            get { return SExecute<Org.Apache.Kafka.Common.Config.ConfigDef>(LocalBridgeClazz, "configDef"); }
+            return SExecute<Org.Apache.Kafka.Common.Config.ConfigDef>(LocalBridgeClazz, "configDef");
         }
 
         #endregion
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverterConfig.html#decimalFormat()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverterConfig.html#schemasEnabled()"/>
         /// </summary>
-        public Org.Apache.Kafka.Connect.Json.DecimalFormat DecimalFormat
+
+        /// <returns><see cref="bool"/></returns>
+        public bool SchemasEnabled()
         {
-            get { return IExecute<Org.Apache.Kafka.Connect.Json.DecimalFormat>("decimalFormat"); }
+            return IExecute<bool>("schemasEnabled");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverterConfig.html#schemaCacheSize()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverterConfig.html#schemaCacheSize()"/>
         /// </summary>
-        public int SchemaCacheSize
+
+        /// <returns><see cref="int"/></returns>
+        public int SchemaCacheSize()
         {
-            get { return IExecute<int>("schemaCacheSize"); }
+            return IExecute<int>("schemaCacheSize");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverterConfig.html#schemasEnabled()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverterConfig.html#decimalFormat()"/>
         /// </summary>
-        public bool SchemasEnabled
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Json.DecimalFormat"/></returns>
+        public Org.Apache.Kafka.Connect.Json.DecimalFormat DecimalFormat()
         {
-            get { return IExecute<bool>("schemasEnabled"); }
+            return IExecute<Org.Apache.Kafka.Connect.Json.DecimalFormat>("decimalFormat");
         }
 
         #endregion

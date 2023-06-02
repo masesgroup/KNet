@@ -33,7 +33,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/NewPartitionReassignment.html#%3Cinit%3E(java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
-        public NewPartitionReassignment(Java.Util.List arg0)
+        public NewPartitionReassignment(Java.Util.List<int?> arg0)
             : base(arg0)
         {
         }
@@ -54,11 +54,13 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/NewPartitionReassignment.html#targetReplicas()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/NewPartitionReassignment.html#targetReplicas()"/>
         /// </summary>
-        public Java.Util.List<int?> TargetReplicas
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<int?> TargetReplicas()
         {
-            get { return IExecute<Java.Util.List<int?>>("targetReplicas"); }
+            return IExecute<Java.Util.List<int?>>("targetReplicas");
         }
 
         #endregion

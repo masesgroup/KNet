@@ -89,25 +89,31 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/OffsetSync.html#downstreamOffset()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/OffsetSync.html#downstreamOffset()"/>
         /// </summary>
-        public long DownstreamOffset
+
+        /// <returns><see cref="long"/></returns>
+        public long DownstreamOffset()
         {
-            get { return IExecute<long>("downstreamOffset"); }
+            return IExecute<long>("downstreamOffset");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/OffsetSync.html#topicPartition()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/OffsetSync.html#upstreamOffset()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.TopicPartition TopicPartition
+
+        /// <returns><see cref="long"/></returns>
+        public long UpstreamOffset()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.TopicPartition>("topicPartition"); }
+            return IExecute<long>("upstreamOffset");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/OffsetSync.html#upstreamOffset()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/OffsetSync.html#topicPartition()"/>
         /// </summary>
-        public long UpstreamOffset
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.TopicPartition"/></returns>
+        public Org.Apache.Kafka.Common.TopicPartition TopicPartition()
         {
-            get { return IExecute<long>("upstreamOffset"); }
+            return IExecute<Org.Apache.Kafka.Common.TopicPartition>("topicPartition");
         }
 
         #endregion

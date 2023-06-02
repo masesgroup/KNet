@@ -55,18 +55,22 @@ namespace Org.Apache.Kafka.Connect.Runtime
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Connect.html#isRunning()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Connect.html#isRunning()"/>
         /// </summary>
-        public bool IsRunning
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsRunning()
         {
-            get { return IExecute<bool>("isRunning"); }
+            return IExecute<bool>("isRunning");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Connect.html#rest()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Connect.html#rest()"/>
         /// </summary>
-        public Org.Apache.Kafka.Connect.Runtime.Rest.RestServer Rest
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.Rest.RestServer"/></returns>
+        public Org.Apache.Kafka.Connect.Runtime.Rest.RestServer Rest()
         {
-            get { return IExecute<Org.Apache.Kafka.Connect.Runtime.Rest.RestServer>("rest"); }
+            return IExecute<Org.Apache.Kafka.Connect.Runtime.Rest.RestServer>("rest");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Connect.html#awaitStop()"/>

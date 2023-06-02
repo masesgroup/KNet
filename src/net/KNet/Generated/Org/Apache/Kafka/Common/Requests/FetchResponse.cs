@@ -176,25 +176,13 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchResponse.html#error()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchResponse.html#sessionId()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.Errors Error
+
+        /// <returns><see cref="int"/></returns>
+        public int SessionId()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.Errors>("error"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchResponse.html#sessionId()"/> 
-        /// </summary>
-        public int SessionId
-        {
-            get { return IExecute<int>("sessionId"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchResponse.html#topicIds()"/> 
-        /// </summary>
-        public Java.Util.Set<Org.Apache.Kafka.Common.Uuid> TopicIds
-        {
-            get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.Uuid>>("topicIds"); }
+            return IExecute<int>("sessionId");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchResponse.html#responseData(java.util.Map,short)"/>
@@ -205,6 +193,24 @@ namespace Org.Apache.Kafka.Common.Requests
         public Java.Util.LinkedHashMap<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Message.FetchResponseData.PartitionData> ResponseData(Java.Util.Map<Org.Apache.Kafka.Common.Uuid, string> arg0, short arg1)
         {
             return IExecute<Java.Util.LinkedHashMap<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Message.FetchResponseData.PartitionData>>("responseData", arg0, arg1);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchResponse.html#topicIds()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Common.Uuid> TopicIds()
+        {
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.Uuid>>("topicIds");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchResponse.html#error()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Errors"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.Errors Error()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Protocol.Errors>("error");
         }
 
         #endregion

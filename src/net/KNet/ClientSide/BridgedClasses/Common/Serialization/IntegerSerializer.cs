@@ -16,18 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
+
 namespace Org.Apache.Kafka.Common.Serialization
 {
-    public class IntegerSerializer : Serializer<int>
+    public partial class IntegerSerializer
     {
-        public override string ClassName => "org.apache.kafka.common.serialization.IntegerSerializer";
-
-        public override bool AutoInit => false;
-
-        public IntegerSerializer()
-            : base(null, null, false)
-        {
-
-        }
+        public static implicit operator Serializer<int>(IntegerSerializer t) => t.Cast<Serializer<int>>();
     }
 }

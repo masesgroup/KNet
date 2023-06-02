@@ -43,7 +43,7 @@ namespace Org.Apache.Kafka.Connect.Storage
         /// <param name="arg8"><see cref="Java.Util.Set"/></param>
         /// <param name="arg9"><see cref="Java.Util.Set"/></param>
         /// <param name="arg10"><see cref="Org.Apache.Kafka.Connect.Runtime.WorkerConfigTransformer"/></param>
-        public ClusterConfigState(long arg0, Org.Apache.Kafka.Connect.Runtime.SessionKey arg1, Java.Util.Map arg2, Java.Util.Map arg3, Java.Util.Map arg4, Java.Util.Map arg5, Java.Util.Map arg6, Java.Util.Map arg7, Java.Util.Set arg8, Java.Util.Set arg9, Org.Apache.Kafka.Connect.Runtime.WorkerConfigTransformer arg10)
+        public ClusterConfigState(long arg0, Org.Apache.Kafka.Connect.Runtime.SessionKey arg1, Java.Util.Map<string, int?> arg2, Java.Util.Map<string, Java.Util.Map<string, string>> arg3, Java.Util.Map<string, Org.Apache.Kafka.Connect.Runtime.TargetState> arg4, Java.Util.Map<Org.Apache.Kafka.Connect.Util.ConnectorTaskId, Java.Util.Map<string, string>> arg5, Java.Util.Map<string, int?> arg6, Java.Util.Map<string, int?> arg7, Java.Util.Set<string> arg8, Java.Util.Set<string> arg9, Org.Apache.Kafka.Connect.Runtime.WorkerConfigTransformer arg10)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10)
         {
         }
@@ -60,7 +60,7 @@ namespace Org.Apache.Kafka.Connect.Storage
         /// <param name="arg7"><see cref="Java.Util.Map"/></param>
         /// <param name="arg8"><see cref="Java.Util.Set"/></param>
         /// <param name="arg9"><see cref="Java.Util.Set"/></param>
-        public ClusterConfigState(long arg0, Org.Apache.Kafka.Connect.Runtime.SessionKey arg1, Java.Util.Map arg2, Java.Util.Map arg3, Java.Util.Map arg4, Java.Util.Map arg5, Java.Util.Map arg6, Java.Util.Map arg7, Java.Util.Set arg8, Java.Util.Set arg9)
+        public ClusterConfigState(long arg0, Org.Apache.Kafka.Connect.Runtime.SessionKey arg1, Java.Util.Map<string, int?> arg2, Java.Util.Map<string, Java.Util.Map<string, string>> arg3, Java.Util.Map<string, Org.Apache.Kafka.Connect.Runtime.TargetState> arg4, Java.Util.Map<Org.Apache.Kafka.Connect.Util.ConnectorTaskId, Java.Util.Map<string, string>> arg5, Java.Util.Map<string, int?> arg6, Java.Util.Map<string, int?> arg7, Java.Util.Set<string> arg8, Java.Util.Set<string> arg9)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)
         {
         }
@@ -88,34 +88,6 @@ namespace Org.Apache.Kafka.Connect.Storage
         #endregion
 
         #region Instance methods
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#connectors()"/> 
-        /// </summary>
-        public Java.Util.Set<string> Connectors
-        {
-            get { return IExecute<Java.Util.Set<string>>("connectors"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#inconsistentConnectors()"/> 
-        /// </summary>
-        public Java.Util.Set<string> InconsistentConnectors
-        {
-            get { return IExecute<Java.Util.Set<string>>("inconsistentConnectors"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#offset()"/> 
-        /// </summary>
-        public long Offset
-        {
-            get { return IExecute<long>("offset"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#sessionKey()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Connect.Runtime.SessionKey SessionKey
-        {
-            get { return IExecute<Org.Apache.Kafka.Connect.Runtime.SessionKey>("sessionKey"); }
-        }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#contains(java.lang.String)"/>
         /// </summary>
@@ -214,6 +186,42 @@ namespace Org.Apache.Kafka.Connect.Storage
         public Java.Util.Map<string, string> TaskConfig(Org.Apache.Kafka.Connect.Util.ConnectorTaskId arg0)
         {
             return IExecute<Java.Util.Map<string, string>>("taskConfig", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#connectors()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<string> Connectors()
+        {
+            return IExecute<Java.Util.Set<string>>("connectors");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#inconsistentConnectors()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<string> InconsistentConnectors()
+        {
+            return IExecute<Java.Util.Set<string>>("inconsistentConnectors");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#offset()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long Offset()
+        {
+            return IExecute<long>("offset");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#sessionKey()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.SessionKey"/></returns>
+        public Org.Apache.Kafka.Connect.Runtime.SessionKey SessionKey()
+        {
+            return IExecute<Org.Apache.Kafka.Connect.Runtime.SessionKey>("sessionKey");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#targetState(java.lang.String)"/>

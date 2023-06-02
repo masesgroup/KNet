@@ -86,32 +86,40 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#adminConfig()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#adminConfig()"/>
         /// </summary>
-        public Java.Util.Map<string, object> AdminConfig
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, object> AdminConfig()
         {
-            get { return IExecute<Java.Util.Map<string, object>>("adminConfig"); }
+            return IExecute<Java.Util.Map<string, object>>("adminConfig");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#consumerConfig()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#consumerConfig()"/>
         /// </summary>
-        public Java.Util.Map<string, object> ConsumerConfig
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, object> ConsumerConfig()
         {
-            get { return IExecute<Java.Util.Map<string, object>>("consumerConfig"); }
+            return IExecute<Java.Util.Map<string, object>>("consumerConfig");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#producerConfig()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#producerConfig()"/>
         /// </summary>
-        public Java.Util.Map<string, object> ProducerConfig
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, object> ProducerConfig()
         {
-            get { return IExecute<Java.Util.Map<string, object>>("producerConfig"); }
+            return IExecute<Java.Util.Map<string, object>>("producerConfig");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#replicationPolicy()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#replicationPolicy()"/>
         /// </summary>
-        public Org.Apache.Kafka.Connect.Mirror.ReplicationPolicy ReplicationPolicy
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Mirror.ReplicationPolicy"/></returns>
+        public Org.Apache.Kafka.Connect.Mirror.ReplicationPolicy ReplicationPolicy()
         {
-            get { return IExecute<Org.Apache.Kafka.Connect.Mirror.ReplicationPolicy>("replicationPolicy"); }
+            return IExecute<Org.Apache.Kafka.Connect.Mirror.ReplicationPolicy>("replicationPolicy");
         }
 
         #endregion

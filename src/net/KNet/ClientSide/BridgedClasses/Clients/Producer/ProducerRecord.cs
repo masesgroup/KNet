@@ -20,79 +20,19 @@ using Org.Apache.Kafka.Common.Header;
 
 namespace Org.Apache.Kafka.Clients.Producer
 {
-    public class ProducerRecord : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ProducerRecord>
+    public partial class ProducerRecord<K, V>
     {
-        public override string ClassName => "org.apache.kafka.clients.producer.ProducerRecord";
-
-        public ProducerRecord()
-        {
-        }
-
-        protected ProducerRecord(params object[] args)
-            : base(args)
-        {
-        }
-    }
-
-    public class ProducerRecord<K, V> : ProducerRecord
-    {
-        public ProducerRecord()
-        {
-        }
-
-        public ProducerRecord(string topic, int partition, long timestamp, K key, V value, Headers headers)
-            : base(topic, partition, timestamp, key, value, headers)
-        {
-        }
-
         public ProducerRecord(string topic, int partition, System.DateTime timestamp, K key, V value, Headers headers)
-            : base(topic, partition, new System.DateTimeOffset(timestamp).ToUnixTimeMilliseconds(), timestamp, key, value, headers)
-        {
-        }
-
-        public ProducerRecord(string topic, int partition, long timestamp, K key, V value)
-            : base(topic, partition, timestamp, key, value)
+            : this(topic, partition, new System.DateTimeOffset(timestamp).ToUnixTimeMilliseconds(), timestamp, key, value, headers)
         {
         }
 
         public ProducerRecord(string topic, int partition, System.DateTime timestamp, K key, V value)
-            : base(topic, partition, new System.DateTimeOffset(timestamp).ToUnixTimeMilliseconds(), key, value)
+            : this(topic, partition, new System.DateTimeOffset(timestamp).ToUnixTimeMilliseconds(), key, value)
         {
         }
-
-        public ProducerRecord(string topic, int partition, K key, V value, Headers headers)
-            : base(topic, partition, key, value, headers)
-        {
-        }
-
-        public ProducerRecord(string topic, int partition, K key, V value)
-            : base(topic, partition, key, value)
-        {
-        }
-
-        public ProducerRecord(string topic, K key, V value)
-            : base(topic, key, value)
-        {
-        }
-
-        public ProducerRecord(string topic, V value)
-            : base(topic, value)
-        {
-        }
-
-        public string Topic => IExecute<string>("topic");
-
-        public int Partition => IExecute<int>("partition");
-
-        public K Key => IExecute<K>("key");
-
-        public V Value => IExecute<V>("value");
-
-        public long Timestamp => IExecute<long>("timestamp");
 
         public System.DateTime DateTime => System.DateTimeOffset.FromUnixTimeMilliseconds(Timestamp).DateTime;
-
-        public Headers Headers => IExecute<Headers>("headers");
     }
 }
 

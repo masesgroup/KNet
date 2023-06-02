@@ -46,18 +46,22 @@ namespace Org.Apache.Kafka.Common.Serialization
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serde.html#deserializer()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serde.html#deserializer()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Serialization.Deserializer Deserializer
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></returns>
+        public Org.Apache.Kafka.Common.Serialization.Deserializer Deserializer()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Serialization.Deserializer>("deserializer"); }
+            return IExecute<Org.Apache.Kafka.Common.Serialization.Deserializer>("deserializer");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serde.html#serializer()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serde.html#serializer()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Serialization.Serializer Serializer
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serializer"/></returns>
+        public Org.Apache.Kafka.Common.Serialization.Serializer Serializer()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Serialization.Serializer>("serializer"); }
+            return IExecute<Org.Apache.Kafka.Common.Serialization.Serializer>("serializer");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serde.html#close()"/>
@@ -111,18 +115,22 @@ namespace Org.Apache.Kafka.Common.Serialization
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serde.html#deserializer()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serde.html#deserializer()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Serialization.Deserializer<T> Deserializer
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></returns>
+        public Org.Apache.Kafka.Common.Serialization.Deserializer<T> Deserializer()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Serialization.Deserializer<T>>("deserializer"); }
+            return IExecute<Org.Apache.Kafka.Common.Serialization.Deserializer<T>>("deserializer");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serde.html#serializer()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serde.html#serializer()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Serialization.Serializer<T> Serializer
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serializer"/></returns>
+        public Org.Apache.Kafka.Common.Serialization.Serializer<T> Serializer()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Serialization.Serializer<T>>("serializer"); }
+            return IExecute<Org.Apache.Kafka.Common.Serialization.Serializer<T>>("serializer");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serde.html#close()"/>

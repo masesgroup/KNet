@@ -87,116 +87,103 @@ namespace Org.Apache.Kafka.Common.Message
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateDelegationTokenResponseData.html#apiKey()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateDelegationTokenResponseData.html#hmac()"/>
         /// </summary>
-        public short ApiKey
+
+        /// <returns><see cref="byte"/></returns>
+        public byte[] Hmac()
         {
-            get { return IExecute<short>("apiKey"); }
+            return IExecuteArray<byte>("hmac");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateDelegationTokenResponseData.html#duplicate()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateDelegationTokenResponseData.html#throttleTimeMs()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.Message Duplicate
+
+        /// <returns><see cref="int"/></returns>
+        public int ThrottleTimeMs()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate"); }
+            return IExecute<int>("throttleTimeMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateDelegationTokenResponseData.html#errorCode()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateDelegationTokenResponseData.html#principalName()"/>
         /// </summary>
-        public short ErrorCode
+
+        /// <returns><see cref="string"/></returns>
+        public string PrincipalName()
         {
-            get { return IExecute<short>("errorCode"); }
+            return IExecute<string>("principalName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateDelegationTokenResponseData.html#expiryTimestampMs()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateDelegationTokenResponseData.html#principalType()"/>
         /// </summary>
-        public long ExpiryTimestampMs
+
+        /// <returns><see cref="string"/></returns>
+        public string PrincipalType()
         {
-            get { return IExecute<long>("expiryTimestampMs"); }
+            return IExecute<string>("principalType");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateDelegationTokenResponseData.html#highestSupportedVersion()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateDelegationTokenResponseData.html#tokenId()"/>
         /// </summary>
-        public short HighestSupportedVersion
+
+        /// <returns><see cref="string"/></returns>
+        public string TokenId()
         {
-            get { return IExecute<short>("highestSupportedVersion"); }
+            return IExecute<string>("tokenId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateDelegationTokenResponseData.html#hmac()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateDelegationTokenResponseData.html#tokenRequesterPrincipalName()"/>
         /// </summary>
-        public byte[] Hmac
+
+        /// <returns><see cref="string"/></returns>
+        public string TokenRequesterPrincipalName()
         {
-            get { return IExecuteArray<byte>("hmac"); }
+            return IExecute<string>("tokenRequesterPrincipalName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateDelegationTokenResponseData.html#issueTimestampMs()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateDelegationTokenResponseData.html#tokenRequesterPrincipalType()"/>
         /// </summary>
-        public long IssueTimestampMs
+
+        /// <returns><see cref="string"/></returns>
+        public string TokenRequesterPrincipalType()
         {
-            get { return IExecute<long>("issueTimestampMs"); }
+            return IExecute<string>("tokenRequesterPrincipalType");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateDelegationTokenResponseData.html#lowestSupportedVersion()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateDelegationTokenResponseData.html#unknownTaggedFields()"/>
         /// </summary>
-        public short LowestSupportedVersion
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields()
         {
-            get { return IExecute<short>("lowestSupportedVersion"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateDelegationTokenResponseData.html#maxTimestampMs()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateDelegationTokenResponseData.html#expiryTimestampMs()"/>
         /// </summary>
-        public long MaxTimestampMs
+
+        /// <returns><see cref="long"/></returns>
+        public long ExpiryTimestampMs()
         {
-            get { return IExecute<long>("maxTimestampMs"); }
+            return IExecute<long>("expiryTimestampMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateDelegationTokenResponseData.html#principalName()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateDelegationTokenResponseData.html#issueTimestampMs()"/>
         /// </summary>
-        public string PrincipalName
+
+        /// <returns><see cref="long"/></returns>
+        public long IssueTimestampMs()
         {
-            get { return IExecute<string>("principalName"); }
+            return IExecute<long>("issueTimestampMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateDelegationTokenResponseData.html#principalType()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateDelegationTokenResponseData.html#maxTimestampMs()"/>
         /// </summary>
-        public string PrincipalType
+
+        /// <returns><see cref="long"/></returns>
+        public long MaxTimestampMs()
         {
-            get { return IExecute<string>("principalType"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateDelegationTokenResponseData.html#throttleTimeMs()"/> 
-        /// </summary>
-        public int ThrottleTimeMs
-        {
-            get { return IExecute<int>("throttleTimeMs"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateDelegationTokenResponseData.html#tokenId()"/> 
-        /// </summary>
-        public string TokenId
-        {
-            get { return IExecute<string>("tokenId"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateDelegationTokenResponseData.html#tokenRequesterPrincipalName()"/> 
-        /// </summary>
-        public string TokenRequesterPrincipalName
-        {
-            get { return IExecute<string>("tokenRequesterPrincipalName"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateDelegationTokenResponseData.html#tokenRequesterPrincipalType()"/> 
-        /// </summary>
-        public string TokenRequesterPrincipalType
-        {
-            get { return IExecute<string>("tokenRequesterPrincipalType"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateDelegationTokenResponseData.html#unknownTaggedFields()"/> 
-        /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields
-        {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields"); }
+            return IExecute<long>("maxTimestampMs");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateDelegationTokenResponseData.html#setErrorCode(short)"/>
@@ -296,6 +283,51 @@ namespace Org.Apache.Kafka.Common.Message
         public Org.Apache.Kafka.Common.Message.CreateDelegationTokenResponseData SetTokenRequesterPrincipalType(string arg0)
         {
             return IExecute<Org.Apache.Kafka.Common.Message.CreateDelegationTokenResponseData>("setTokenRequesterPrincipalType", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateDelegationTokenResponseData.html#duplicate()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.Message Duplicate()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateDelegationTokenResponseData.html#apiKey()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short ApiKey()
+        {
+            return IExecute<short>("apiKey");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateDelegationTokenResponseData.html#errorCode()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short ErrorCode()
+        {
+            return IExecute<short>("errorCode");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateDelegationTokenResponseData.html#highestSupportedVersion()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short HighestSupportedVersion()
+        {
+            return IExecute<short>("highestSupportedVersion");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateDelegationTokenResponseData.html#lowestSupportedVersion()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short LowestSupportedVersion()
+        {
+            return IExecute<short>("lowestSupportedVersion");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/CreateDelegationTokenResponseData.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>

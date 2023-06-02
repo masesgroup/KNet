@@ -19,36 +19,13 @@
 using Org.Apache.Kafka.Common.Serialization;
 using Java.Util;
 
-namespace Org.Apache.Kafka.Streams.KStream
+namespace Org.Apache.Kafka.Streams.Kstream
 {
-    public class TimeWindowedDeserializer<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TimeWindowedDeserializer<T>>
+    public partial class TimeWindowedDeserializer<T>
     {
-        public override bool IsCloseable => true;
-
-        public override string ClassName => "org.apache.kafka.streams.kstream.TimeWindowedDeserializer";
-
-        public TimeWindowedDeserializer() { }
-
-        public TimeWindowedDeserializer(Deserializer<T> inner, long windowSize)
-            : base(inner, windowSize)
-        {
-        }
-
-        public long WindowSize => IExecute<long>("getWindowSize");
-
-        public void Configure(Map<string, object> configs, bool isKey)
-        {
-            IExecute("configure", configs, isKey);
-        }
-
         public Windowed<T> Deserialize(string topic, byte[] data)
         {
             return IExecute<Windowed<T>>("deserialize", topic, data);
-        }
-
-        public void SetIsChangelogTopic(bool isChangelogTopic)
-        {
-            IExecute("setIsChangelogTopic", isChangelogTopic);
         }
     }
 }

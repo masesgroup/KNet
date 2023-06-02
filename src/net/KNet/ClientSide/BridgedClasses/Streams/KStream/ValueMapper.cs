@@ -19,7 +19,7 @@
 using MASES.JCOBridge.C2JBridge;
 using System;
 
-namespace Org.Apache.Kafka.Streams.KStream
+namespace Org.Apache.Kafka.Streams.Kstream
 {
     /// <summary>
     /// Listener for Kafka ValueMapper. Extends <see cref="IJVMBridgeBase"/>
@@ -41,10 +41,10 @@ namespace Org.Apache.Kafka.Streams.KStream
     /// <typeparam name="V">The data associated to the event</typeparam>
     /// <typeparam name="VR">The result data associated to the event</typeparam>
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
-    public class ValueMapper<V, VR> : JVMBridgeListener, IValueMapper<V, VR>
+    public partial class ValueMapper<V, VR> : IValueMapper<V, VR>
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.streams.kstream.ValueMapperImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.streams.kstream.ValueMapperImpl";
 
         readonly Func<V, VR> executionFunction = null;
         /// <summary>

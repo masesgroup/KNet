@@ -58,13 +58,6 @@ namespace Org.Apache.Kafka.Common.Security.Plain
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/PlainAuthenticateCallback.html#password()"/> 
-        /// </summary>
-        public char[] Password
-        {
-            get { return IExecuteArray<char>("password"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/PlainAuthenticateCallback.html#authenticated()"/>
         /// </summary>
 
@@ -72,6 +65,15 @@ namespace Org.Apache.Kafka.Common.Security.Plain
         public bool Authenticated()
         {
             return IExecute<bool>("authenticated");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/PlainAuthenticateCallback.html#password()"/>
+        /// </summary>
+
+        /// <returns><see cref="char"/></returns>
+        public char[] Password()
+        {
+            return IExecuteArray<char>("password");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/PlainAuthenticateCallback.html#authenticated(boolean)"/>

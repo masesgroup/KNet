@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Connect.Runtime
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/AbstractStatus.State.html"/>
         /// </summary>
-        public partial class State : Java.Lang.Enum
+        public partial class State : Java.Lang.Enum<Org.Apache.Kafka.Connect.Runtime.AbstractStatus.State>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -331,15 +331,215 @@ namespace Org.Apache.Kafka.Connect.Runtime
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectMetrics.html"/>
     /// </summary>
-    public partial class ConnectMetrics : MASES.JCOBridge.C2JBridge.JVMBridgeMain<ConnectMetrics>
+    public partial class ConnectMetrics : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConnectMetrics>, IJNetBridgeMain
     {
         /// <summary>
-        /// Initialize a new <see cref="ConnectMetrics"/>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public ConnectMetrics()
-            : base("org.apache.kafka.connect.runtime.ConnectMetrics")
+        public ConnectMetrics() { }
+        /// <summary>
+        /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
+        /// </summary>
+        public ConnectMetrics(params object[] args) : base(args) { }
+
+        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.runtime.ConnectMetrics");
+
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.apache.kafka.connect.runtime.ConnectMetrics";
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
+        /// </summary>
+        public override bool IsBridgeAbstract => false;
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm"/>
+        /// </summary>
+        public override bool IsBridgeCloseable => false;
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm"/>
+        /// </summary>
+        public override bool IsBridgeInterface => false;
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm"/>
+        /// </summary>
+        public override bool IsBridgeStatic => false;
+
+        // TODO: complete the class
+        #region LiteralSupplier
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectMetrics.LiteralSupplier.html"/>
+        /// </summary>
+        public partial class LiteralSupplier : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LiteralSupplier>
         {
+            /// <summary>
+            /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+            /// </summary>
+            public LiteralSupplier() { }
+            /// <summary>
+            /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
+            /// </summary>
+            public LiteralSupplier(params object[] args) : base(args) { }
+
+            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.runtime.ConnectMetrics$LiteralSupplier");
+
+            /// <summary>
+            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
+            /// </summary>
+            public override string BridgeClassName => "org.apache.kafka.connect.runtime.ConnectMetrics$LiteralSupplier";
+            /// <summary>
+            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
+            /// </summary>
+            public override bool IsBridgeAbstract => true;
+            /// <summary>
+            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm"/>
+            /// </summary>
+            public override bool IsBridgeCloseable => false;
+            /// <summary>
+            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm"/>
+            /// </summary>
+            public override bool IsBridgeInterface => true;
+            /// <summary>
+            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm"/>
+            /// </summary>
+            public override bool IsBridgeStatic => true;
+
+            // TODO: complete the class
+
         }
+        #endregion
+
+        #region LiteralSupplier<T>
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectMetrics.LiteralSupplier.html"/>
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        public partial class LiteralSupplier<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LiteralSupplier<T>>
+        {
+            /// <summary>
+            /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+            /// </summary>
+            public LiteralSupplier() { }
+            /// <summary>
+            /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
+            /// </summary>
+            public LiteralSupplier(params object[] args) : base(args) { }
+
+            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.runtime.ConnectMetrics$LiteralSupplier");
+
+            /// <summary>
+            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
+            /// </summary>
+            public override string BridgeClassName => "org.apache.kafka.connect.runtime.ConnectMetrics$LiteralSupplier";
+            /// <summary>
+            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
+            /// </summary>
+            public override bool IsBridgeAbstract => true;
+            /// <summary>
+            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm"/>
+            /// </summary>
+            public override bool IsBridgeCloseable => false;
+            /// <summary>
+            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm"/>
+            /// </summary>
+            public override bool IsBridgeInterface => true;
+            /// <summary>
+            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm"/>
+            /// </summary>
+            public override bool IsBridgeStatic => true;
+
+            // TODO: complete the class
+
+        }
+        #endregion
+
+        #region MetricGroup
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectMetrics.MetricGroup.html"/>
+        /// </summary>
+        public partial class MetricGroup : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MetricGroup>
+        {
+            /// <summary>
+            /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+            /// </summary>
+            public MetricGroup() { }
+            /// <summary>
+            /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
+            /// </summary>
+            public MetricGroup(params object[] args) : base(args) { }
+
+            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.runtime.ConnectMetrics$MetricGroup");
+
+            /// <summary>
+            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
+            /// </summary>
+            public override string BridgeClassName => "org.apache.kafka.connect.runtime.ConnectMetrics$MetricGroup";
+            /// <summary>
+            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
+            /// </summary>
+            public override bool IsBridgeAbstract => false;
+            /// <summary>
+            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm"/>
+            /// </summary>
+            public override bool IsBridgeCloseable => false;
+            /// <summary>
+            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm"/>
+            /// </summary>
+            public override bool IsBridgeInterface => false;
+            /// <summary>
+            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm"/>
+            /// </summary>
+            public override bool IsBridgeStatic => false;
+
+            // TODO: complete the class
+
+        }
+        #endregion
+
+        #region MetricGroupId
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectMetrics.MetricGroupId.html"/>
+        /// </summary>
+        public partial class MetricGroupId : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MetricGroupId>
+        {
+            /// <summary>
+            /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+            /// </summary>
+            public MetricGroupId() { }
+            /// <summary>
+            /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
+            /// </summary>
+            public MetricGroupId(params object[] args) : base(args) { }
+
+            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.runtime.ConnectMetrics$MetricGroupId");
+
+            /// <summary>
+            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
+            /// </summary>
+            public override string BridgeClassName => "org.apache.kafka.connect.runtime.ConnectMetrics$MetricGroupId";
+            /// <summary>
+            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
+            /// </summary>
+            public override bool IsBridgeAbstract => false;
+            /// <summary>
+            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm"/>
+            /// </summary>
+            public override bool IsBridgeCloseable => false;
+            /// <summary>
+            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm"/>
+            /// </summary>
+            public override bool IsBridgeInterface => false;
+            /// <summary>
+            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm"/>
+            /// </summary>
+            public override bool IsBridgeStatic => true;
+
+            // TODO: complete the class
+
+        }
+        #endregion
+
+    
     }
     #endregion
 
@@ -433,7 +633,7 @@ namespace Org.Apache.Kafka.Connect.Runtime
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectorStatus.html"/>
     /// </summary>
-    public partial class ConnectorStatus : Org.Apache.Kafka.Connect.Runtime.AbstractStatus
+    public partial class ConnectorStatus : Org.Apache.Kafka.Connect.Runtime.AbstractStatus<string>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -528,7 +728,7 @@ namespace Org.Apache.Kafka.Connect.Runtime
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/Herder.ConfigReloadAction.html"/>
         /// </summary>
-        public partial class ConfigReloadAction : Java.Lang.Enum
+        public partial class ConfigReloadAction : Java.Lang.Enum<Org.Apache.Kafka.Connect.Runtime.Herder.ConfigReloadAction>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1007,15 +1207,42 @@ namespace Org.Apache.Kafka.Connect.Runtime
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/SinkConnectorConfig.html"/>
     /// </summary>
-    public partial class SinkConnectorConfig : MASES.JCOBridge.C2JBridge.JVMBridgeMain<SinkConnectorConfig>
+    public partial class SinkConnectorConfig : Org.Apache.Kafka.Connect.Runtime.ConnectorConfig, IJNetBridgeMain
     {
         /// <summary>
-        /// Initialize a new <see cref="SinkConnectorConfig"/>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public SinkConnectorConfig()
-            : base("org.apache.kafka.connect.runtime.SinkConnectorConfig")
-        {
-        }
+        public SinkConnectorConfig() { }
+        /// <summary>
+        /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
+        /// </summary>
+        public SinkConnectorConfig(params object[] args) : base(args) { }
+
+        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.runtime.SinkConnectorConfig");
+
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.apache.kafka.connect.runtime.SinkConnectorConfig";
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
+        /// </summary>
+        public override bool IsBridgeAbstract => false;
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm"/>
+        /// </summary>
+        public override bool IsBridgeCloseable => false;
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm"/>
+        /// </summary>
+        public override bool IsBridgeInterface => false;
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm"/>
+        /// </summary>
+        public override bool IsBridgeStatic => false;
+
+        // TODO: complete the class
+
     }
     #endregion
 
@@ -1023,15 +1250,85 @@ namespace Org.Apache.Kafka.Connect.Runtime
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/SourceConnectorConfig.html"/>
     /// </summary>
-    public partial class SourceConnectorConfig : MASES.JCOBridge.C2JBridge.JVMBridgeMain<SourceConnectorConfig>
+    public partial class SourceConnectorConfig : Org.Apache.Kafka.Connect.Runtime.ConnectorConfig, IJNetBridgeMain
     {
         /// <summary>
-        /// Initialize a new <see cref="SourceConnectorConfig"/>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public SourceConnectorConfig()
-            : base("org.apache.kafka.connect.runtime.SourceConnectorConfig")
+        public SourceConnectorConfig() { }
+        /// <summary>
+        /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
+        /// </summary>
+        public SourceConnectorConfig(params object[] args) : base(args) { }
+
+        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.runtime.SourceConnectorConfig");
+
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.apache.kafka.connect.runtime.SourceConnectorConfig";
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
+        /// </summary>
+        public override bool IsBridgeAbstract => false;
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm"/>
+        /// </summary>
+        public override bool IsBridgeCloseable => false;
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm"/>
+        /// </summary>
+        public override bool IsBridgeInterface => false;
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm"/>
+        /// </summary>
+        public override bool IsBridgeStatic => false;
+
+        // TODO: complete the class
+        #region ExactlyOnceSupportLevel
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/SourceConnectorConfig.ExactlyOnceSupportLevel.html"/>
+        /// </summary>
+        public partial class ExactlyOnceSupportLevel : Java.Lang.Enum<Org.Apache.Kafka.Connect.Runtime.SourceConnectorConfig.ExactlyOnceSupportLevel>
         {
+            /// <summary>
+            /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+            /// </summary>
+            public ExactlyOnceSupportLevel() { }
+            /// <summary>
+            /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
+            /// </summary>
+            public ExactlyOnceSupportLevel(params object[] args) : base(args) { }
+
+            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.runtime.SourceConnectorConfig$ExactlyOnceSupportLevel");
+
+            /// <summary>
+            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
+            /// </summary>
+            public override string BridgeClassName => "org.apache.kafka.connect.runtime.SourceConnectorConfig$ExactlyOnceSupportLevel";
+            /// <summary>
+            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
+            /// </summary>
+            public override bool IsBridgeAbstract => false;
+            /// <summary>
+            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm"/>
+            /// </summary>
+            public override bool IsBridgeCloseable => false;
+            /// <summary>
+            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm"/>
+            /// </summary>
+            public override bool IsBridgeInterface => false;
+            /// <summary>
+            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm"/>
+            /// </summary>
+            public override bool IsBridgeStatic => true;
+
+            // TODO: complete the class
+
         }
+        #endregion
+
+    
     }
     #endregion
 
@@ -1082,7 +1379,7 @@ namespace Org.Apache.Kafka.Connect.Runtime
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/TargetState.html"/>
     /// </summary>
-    public partial class TargetState : Java.Lang.Enum
+    public partial class TargetState : Java.Lang.Enum<Org.Apache.Kafka.Connect.Runtime.TargetState>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1168,7 +1465,7 @@ namespace Org.Apache.Kafka.Connect.Runtime
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/TaskStatus.html"/>
     /// </summary>
-    public partial class TaskStatus : Org.Apache.Kafka.Connect.Runtime.AbstractStatus
+    public partial class TaskStatus : Org.Apache.Kafka.Connect.Runtime.AbstractStatus<Org.Apache.Kafka.Connect.Util.ConnectorTaskId>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

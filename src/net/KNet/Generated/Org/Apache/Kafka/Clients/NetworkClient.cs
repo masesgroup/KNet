@@ -152,18 +152,13 @@ namespace Org.Apache.Kafka.Clients
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#active()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#active()"/>
         /// </summary>
-        public bool Active
+
+        /// <returns><see cref="bool"/></returns>
+        public bool Active()
         {
-            get { return IExecute<bool>("active"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#discoverBrokerVersions()"/> 
-        /// </summary>
-        public bool DiscoverBrokerVersions
-        {
-            get { return IExecute<bool>("discoverBrokerVersions"); }
+            return IExecute<bool>("active");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#connectionFailed(org.apache.kafka.common.Node)"/>
@@ -173,6 +168,15 @@ namespace Org.Apache.Kafka.Clients
         public bool ConnectionFailed(Org.Apache.Kafka.Common.Node arg0)
         {
             return IExecute<bool>("connectionFailed", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#discoverBrokerVersions()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool DiscoverBrokerVersions()
+        {
+            return IExecute<bool>("discoverBrokerVersions");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#hasInFlightRequests()"/>

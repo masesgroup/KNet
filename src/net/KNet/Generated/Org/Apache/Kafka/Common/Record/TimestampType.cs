@@ -62,13 +62,6 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/TimestampType.html#values()"/> 
-        /// </summary>
-        public static Org.Apache.Kafka.Common.Record.TimestampType[] Values
-        {
-            get { return SExecuteArray<Org.Apache.Kafka.Common.Record.TimestampType>(LocalBridgeClazz, "values"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/TimestampType.html#forName(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -85,6 +78,15 @@ namespace Org.Apache.Kafka.Common.Record
         public static Org.Apache.Kafka.Common.Record.TimestampType ValueOf(string arg0)
         {
             return SExecute<Org.Apache.Kafka.Common.Record.TimestampType>(LocalBridgeClazz, "valueOf", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/TimestampType.html#values()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Record.TimestampType"/></returns>
+        public static Org.Apache.Kafka.Common.Record.TimestampType[] Values()
+        {
+            return SExecuteArray<Org.Apache.Kafka.Common.Record.TimestampType>(LocalBridgeClazz, "values");
         }
 
         #endregion

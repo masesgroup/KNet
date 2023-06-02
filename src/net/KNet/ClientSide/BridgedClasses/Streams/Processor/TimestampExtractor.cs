@@ -40,10 +40,10 @@ namespace Org.Apache.Kafka.Streams.Processor
     /// Listener for Kafka TimestampExtractor. Extends <see cref="JVMBridgeListener"/>, implements <see cref="ITimestampExtractor"/>
     /// </summary>
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
-    public class TimestampExtractor : JVMBridgeListener, ITimestampExtractor
+    public partial class TimestampExtractor : ITimestampExtractor
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.streams.processor.TimestampExtractorImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.streams.processor.TimestampExtractorImpl";
 
         readonly Func<ConsumerRecord<object, object>, long, long> executionFunction = null;
         /// <summary>

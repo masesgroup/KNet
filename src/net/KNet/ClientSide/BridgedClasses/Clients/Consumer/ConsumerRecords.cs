@@ -22,10 +22,8 @@ using Org.Apache.Kafka.Common;
 
 namespace Org.Apache.Kafka.Clients.Consumer
 {
-    public class ConsumerRecords<K, V> : Iterable<ConsumerRecord<K, V>>
+    public partial class ConsumerRecords<K, V> : Iterable<ConsumerRecord<K, V>>
     {
-        public override string ClassName => "org.apache.kafka.clients.consumer.ConsumerRecords";
-
         public List<ConsumerRecord<K, V>> Records(TopicPartition partition)
         {
             return IExecute<List<ConsumerRecord<K, V>>>("records", partition);

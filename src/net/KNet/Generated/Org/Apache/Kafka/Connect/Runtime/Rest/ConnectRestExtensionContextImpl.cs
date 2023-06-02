@@ -29,23 +29,10 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest
     public partial class ConnectRestExtensionContextImpl
     {
         #region Constructors
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/ConnectRestExtensionContextImpl.html#%3Cinit%3E(javax.ws.rs.core.Configurable,org.apache.kafka.connect.health.ConnectClusterState)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Javax.Ws.Rs.Core.Configurable"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Connect.Health.ConnectClusterState"/></param>
-        public ConnectRestExtensionContextImpl(Javax.Ws.Rs.Core.Configurable arg0, Org.Apache.Kafka.Connect.Health.ConnectClusterState arg1)
-            : base(arg0, arg1)
-        {
-        }
 
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Connect.Runtime.Rest.ConnectRestExtensionContextImpl"/> to <see cref="Org.Apache.Kafka.Connect.Rest.ConnectRestExtensionContext"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Connect.Rest.ConnectRestExtensionContext(Org.Apache.Kafka.Connect.Runtime.Rest.ConnectRestExtensionContextImpl t) => t.Cast<Org.Apache.Kafka.Connect.Rest.ConnectRestExtensionContext>();
 
         #endregion
 
@@ -59,18 +46,13 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/ConnectRestExtensionContextImpl.html#clusterState()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/ConnectRestExtensionContextImpl.html#clusterState()"/>
         /// </summary>
-        public Org.Apache.Kafka.Connect.Health.ConnectClusterState ClusterState
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Health.ConnectClusterState"/></returns>
+        public Org.Apache.Kafka.Connect.Health.ConnectClusterState ClusterState()
         {
-            get { return IExecute<Org.Apache.Kafka.Connect.Health.ConnectClusterState>("clusterState"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/ConnectRestExtensionContextImpl.html#configurable()"/> 
-        /// </summary>
-        public Javax.Ws.Rs.Core.Configurable Configurable
-        {
-            get { return IExecute<Javax.Ws.Rs.Core.Configurable>("configurable"); }
+            return IExecute<Org.Apache.Kafka.Connect.Health.ConnectClusterState>("clusterState");
         }
 
         #endregion

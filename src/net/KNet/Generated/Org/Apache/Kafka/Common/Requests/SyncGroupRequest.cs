@@ -65,18 +65,22 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/SyncGroupRequest.html#areMandatoryProtocolTypeAndNamePresent()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/SyncGroupRequest.html#areMandatoryProtocolTypeAndNamePresent()"/>
         /// </summary>
-        public bool AreMandatoryProtocolTypeAndNamePresent
+
+        /// <returns><see cref="bool"/></returns>
+        public bool AreMandatoryProtocolTypeAndNamePresent()
         {
-            get { return IExecute<bool>("areMandatoryProtocolTypeAndNamePresent"); }
+            return IExecute<bool>("areMandatoryProtocolTypeAndNamePresent");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/SyncGroupRequest.html#groupAssignments()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/SyncGroupRequest.html#groupAssignments()"/>
         /// </summary>
-        public Java.Util.Map<string, Java.Nio.ByteBuffer> GroupAssignments
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, Java.Nio.ByteBuffer> GroupAssignments()
         {
-            get { return IExecute<Java.Util.Map<string, Java.Nio.ByteBuffer>>("groupAssignments"); }
+            return IExecute<Java.Util.Map<string, Java.Nio.ByteBuffer>>("groupAssignments");
         }
 
         #endregion

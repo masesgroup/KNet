@@ -64,18 +64,22 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/SaslHandshakeResponse.html#enabledMechanisms()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/SaslHandshakeResponse.html#enabledMechanisms()"/>
         /// </summary>
-        public Java.Util.List<string> EnabledMechanisms
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<string> EnabledMechanisms()
         {
-            get { return IExecute<Java.Util.List<string>>("enabledMechanisms"); }
+            return IExecute<Java.Util.List<string>>("enabledMechanisms");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/SaslHandshakeResponse.html#error()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/SaslHandshakeResponse.html#error()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.Errors Error
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Errors"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.Errors Error()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.Errors>("error"); }
+            return IExecute<Org.Apache.Kafka.Common.Protocol.Errors>("error");
         }
 
         #endregion

@@ -95,39 +95,31 @@ namespace Org.Apache.Kafka.Connect.Runtime
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/AbstractHerder.html#connectors()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/AbstractHerder.html#isRunning()"/>
         /// </summary>
-        public Java.Util.Collection<string> Connectors
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsRunning()
         {
-            get { return IExecute<Java.Util.Collection<string>>("connectors"); }
+            return IExecute<bool>("isRunning");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/AbstractHerder.html#isRunning()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/AbstractHerder.html#kafkaClusterId()"/>
         /// </summary>
-        public bool IsRunning
+
+        /// <returns><see cref="string"/></returns>
+        public string KafkaClusterId()
         {
-            get { return IExecute<bool>("isRunning"); }
+            return IExecute<string>("kafkaClusterId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/AbstractHerder.html#kafkaClusterId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/AbstractHerder.html#connectors()"/>
         /// </summary>
-        public string KafkaClusterId
+
+        /// <returns><see cref="Java.Util.Collection"/></returns>
+        public Java.Util.Collection<string> Connectors()
         {
-            get { return IExecute<string>("kafkaClusterId"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/AbstractHerder.html#plugins()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Connect.Runtime.Isolation.Plugins Plugins
-        {
-            get { return IExecute<Org.Apache.Kafka.Connect.Runtime.Isolation.Plugins>("plugins"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/AbstractHerder.html#statusBackingStore()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Connect.Storage.StatusBackingStore StatusBackingStore
-        {
-            get { return IExecute<Org.Apache.Kafka.Connect.Storage.StatusBackingStore>("statusBackingStore"); }
+            return IExecute<Java.Util.Collection<string>>("connectors");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/AbstractHerder.html#connectorPluginConfig(java.lang.String)"/>
@@ -146,6 +138,15 @@ namespace Org.Apache.Kafka.Connect.Runtime
         public Java.Util.Optional<Org.Apache.Kafka.Connect.Runtime.RestartPlan> BuildRestartPlan(Org.Apache.Kafka.Connect.Runtime.RestartRequest arg0)
         {
             return IExecute<Java.Util.Optional<Org.Apache.Kafka.Connect.Runtime.RestartPlan>>("buildRestartPlan", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/AbstractHerder.html#plugins()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.Isolation.Plugins"/></returns>
+        public Org.Apache.Kafka.Connect.Runtime.Isolation.Plugins Plugins()
+        {
+            return IExecute<Org.Apache.Kafka.Connect.Runtime.Isolation.Plugins>("plugins");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/AbstractHerder.html#connectorActiveTopics(java.lang.String)"/>
@@ -191,6 +192,15 @@ namespace Org.Apache.Kafka.Connect.Runtime
         public Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorType ConnectorType(Java.Util.Map<string, string> arg0)
         {
             return IExecute<Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorType>("connectorType", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/AbstractHerder.html#statusBackingStore()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Storage.StatusBackingStore"/></returns>
+        public Org.Apache.Kafka.Connect.Storage.StatusBackingStore StatusBackingStore()
+        {
+            return IExecute<Org.Apache.Kafka.Connect.Storage.StatusBackingStore>("statusBackingStore");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/AbstractHerder.html#connectorConfig(java.lang.String,org.apache.kafka.connect.util.Callback)"/>

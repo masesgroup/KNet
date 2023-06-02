@@ -65,32 +65,40 @@ namespace Org.Apache.Kafka.Common
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicIdPartition.html#partition()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicIdPartition.html#partition()"/>
         /// </summary>
-        public int Partition
+
+        /// <returns><see cref="int"/></returns>
+        public int Partition()
         {
-            get { return IExecute<int>("partition"); }
+            return IExecute<int>("partition");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicIdPartition.html#topic()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicIdPartition.html#topic()"/>
         /// </summary>
-        public string Topic
+
+        /// <returns><see cref="string"/></returns>
+        public string Topic()
         {
-            get { return IExecute<string>("topic"); }
+            return IExecute<string>("topic");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicIdPartition.html#topicId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicIdPartition.html#topicPartition()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Uuid TopicId
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.TopicPartition"/></returns>
+        public Org.Apache.Kafka.Common.TopicPartition TopicPartition()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Uuid>("topicId"); }
+            return IExecute<Org.Apache.Kafka.Common.TopicPartition>("topicPartition");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicIdPartition.html#topicPartition()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicIdPartition.html#topicId()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.TopicPartition TopicPartition
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Uuid"/></returns>
+        public Org.Apache.Kafka.Common.Uuid TopicId()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.TopicPartition>("topicPartition"); }
+            return IExecute<Org.Apache.Kafka.Common.Uuid>("topicId");
         }
 
         #endregion

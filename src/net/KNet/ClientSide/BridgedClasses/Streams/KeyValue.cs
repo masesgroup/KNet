@@ -18,25 +18,8 @@
 
 namespace Org.Apache.Kafka.Streams
 {
-    public class KeyValue<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KeyValue<K, V>>
+    public partial class KeyValue<K, V>
     {
-        public override string ClassName => "org.apache.kafka.streams.KeyValue";
 
-        public static KeyValue<K, V> Pair(K key, V value)
-        {
-            return SExecute<KeyValue<K, V>>("pair", key, value);
-        }
-
-        [System.Obsolete("This is not public in Apache Kafka API")]
-        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
-        public KeyValue() { }
-
-        public KeyValue(K key, V value)
-            : base(key, value)
-        { }
-
-        public K Key => Instance.GetField<K>("key");
-
-        public V Value => Instance.GetField<V>("value");
     }
 }

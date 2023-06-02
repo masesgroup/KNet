@@ -54,13 +54,6 @@ namespace Org.Apache.Kafka.Common
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/ElectionType.html#values()"/> 
-        /// </summary>
-        public static Org.Apache.Kafka.Common.ElectionType[] Values
-        {
-            get { return SExecuteArray<Org.Apache.Kafka.Common.ElectionType>(LocalBridgeClazz, "values"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/ElectionType.html#valueOf(byte)"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
@@ -77,6 +70,15 @@ namespace Org.Apache.Kafka.Common
         public static Org.Apache.Kafka.Common.ElectionType ValueOf(string arg0)
         {
             return SExecute<Org.Apache.Kafka.Common.ElectionType>(LocalBridgeClazz, "valueOf", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/ElectionType.html#values()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.ElectionType"/></returns>
+        public static Org.Apache.Kafka.Common.ElectionType[] Values()
+        {
+            return SExecuteArray<Org.Apache.Kafka.Common.ElectionType>(LocalBridgeClazz, "values");
         }
 
         #endregion

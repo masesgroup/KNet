@@ -37,7 +37,7 @@ namespace Org.Apache.Kafka.Connect.Connector.Policy
         /// <param name="arg2"><see cref="Java.Lang.Class"/></param>
         /// <param name="arg3"><see cref="Java.Util.Map"/></param>
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Connect.Connector.Policy.ConnectorClientConfigRequest.ClientType"/></param>
-        public ConnectorClientConfigRequest(string arg0, Org.Apache.Kafka.Connect.Health.ConnectorType arg1, Java.Lang.Class arg2, Java.Util.Map arg3, Org.Apache.Kafka.Connect.Connector.Policy.ConnectorClientConfigRequest.ClientType arg4)
+        public ConnectorClientConfigRequest(string arg0, Org.Apache.Kafka.Connect.Health.ConnectorType arg1, Java.Lang.Class arg2, Java.Util.Map<string, object> arg3, Org.Apache.Kafka.Connect.Connector.Policy.ConnectorClientConfigRequest.ClientType arg4)
             : base(arg0, arg1, arg2, arg3, arg4)
         {
         }
@@ -58,32 +58,32 @@ namespace Org.Apache.Kafka.Connect.Connector.Policy
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/policy/ConnectorClientConfigRequest.html#clientProps()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/policy/ConnectorClientConfigRequest.html#connectorClass()"/>
         /// </summary>
-        public Java.Util.Map<string, object> ClientProps
+
+        /// <typeparam name="ReturnExtendsOrg_Apache_Kafka_Connect_Connector_Connector"><see cref="Org.Apache.Kafka.Connect.Connector.Connector"/></typeparam>
+        /// <returns><see cref="Java.Lang.Class"/></returns>
+        public Java.Lang.Class ConnectorClass<ReturnExtendsOrg_Apache_Kafka_Connect_Connector_Connector>() where ReturnExtendsOrg_Apache_Kafka_Connect_Connector_Connector: Org.Apache.Kafka.Connect.Connector.Connector
         {
-            get { return IExecute<Java.Util.Map<string, object>>("clientProps"); }
+            return IExecute<Java.Lang.Class>("connectorClass");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/policy/ConnectorClientConfigRequest.html#connectorClass()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/policy/ConnectorClientConfigRequest.html#connectorName()"/>
         /// </summary>
-        public Java.Lang.Class ConnectorClass
+
+        /// <returns><see cref="string"/></returns>
+        public string ConnectorName()
         {
-            get { return IExecute<Java.Lang.Class>("connectorClass"); }
+            return IExecute<string>("connectorName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/policy/ConnectorClientConfigRequest.html#connectorName()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/policy/ConnectorClientConfigRequest.html#clientProps()"/>
         /// </summary>
-        public string ConnectorName
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, object> ClientProps()
         {
-            get { return IExecute<string>("connectorName"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/policy/ConnectorClientConfigRequest.html#connectorType()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Connect.Health.ConnectorType ConnectorType
-        {
-            get { return IExecute<Org.Apache.Kafka.Connect.Health.ConnectorType>("connectorType"); }
+            return IExecute<Java.Util.Map<string, object>>("clientProps");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/policy/ConnectorClientConfigRequest.html#clientType()"/>
@@ -93,6 +93,15 @@ namespace Org.Apache.Kafka.Connect.Connector.Policy
         public Org.Apache.Kafka.Connect.Connector.Policy.ConnectorClientConfigRequest.ClientType ClientTypeMethod()
         {
             return IExecute<Org.Apache.Kafka.Connect.Connector.Policy.ConnectorClientConfigRequest.ClientType>("clientType");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/policy/ConnectorClientConfigRequest.html#connectorType()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Health.ConnectorType"/></returns>
+        public Org.Apache.Kafka.Connect.Health.ConnectorType ConnectorType()
+        {
+            return IExecute<Org.Apache.Kafka.Connect.Health.ConnectorType>("connectorType");
         }
 
         #endregion
@@ -127,13 +136,6 @@ namespace Org.Apache.Kafka.Connect.Connector.Policy
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/policy/ConnectorClientConfigRequest.ClientType.html#values()"/> 
-            /// </summary>
-            public static Org.Apache.Kafka.Connect.Connector.Policy.ConnectorClientConfigRequest.ClientType[] Values
-            {
-                get { return SExecuteArray<Org.Apache.Kafka.Connect.Connector.Policy.ConnectorClientConfigRequest.ClientType>(LocalBridgeClazz, "values"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/policy/ConnectorClientConfigRequest.ClientType.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
@@ -141,6 +143,15 @@ namespace Org.Apache.Kafka.Connect.Connector.Policy
             public static Org.Apache.Kafka.Connect.Connector.Policy.ConnectorClientConfigRequest.ClientType ValueOf(string arg0)
             {
                 return SExecute<Org.Apache.Kafka.Connect.Connector.Policy.ConnectorClientConfigRequest.ClientType>(LocalBridgeClazz, "valueOf", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/policy/ConnectorClientConfigRequest.ClientType.html#values()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Connect.Connector.Policy.ConnectorClientConfigRequest.ClientType"/></returns>
+            public static Org.Apache.Kafka.Connect.Connector.Policy.ConnectorClientConfigRequest.ClientType[] Values()
+            {
+                return SExecuteArray<Org.Apache.Kafka.Connect.Connector.Policy.ConnectorClientConfigRequest.ClientType>(LocalBridgeClazz, "values");
             }
 
             #endregion

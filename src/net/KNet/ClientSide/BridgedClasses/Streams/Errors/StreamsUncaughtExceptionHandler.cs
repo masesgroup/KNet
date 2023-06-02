@@ -22,13 +22,6 @@ using System;
 
 namespace Org.Apache.Kafka.Streams.Errors
 {
-    public enum StreamThreadExceptionResponse
-    {
-        REPLACE_THREAD = 0,
-        SHUTDOWN_CLIENT = 1,
-        SHUTDOWN_APPLICATION = 2
-    }
-
     /// <summary>
     /// Listener for Kafka StreamsUncaughtExceptionHandler. Extends <see cref="IJVMBridgeBase"/>
     /// </summary>
@@ -39,17 +32,17 @@ namespace Org.Apache.Kafka.Streams.Errors
         /// </summary>
         /// <param name="exception">The StreamsUncaughtExceptionHandler object</param>
         /// <returns>The <see cref="StreamThreadExceptionResponse"/> handle evaluation</returns>
-        StreamThreadExceptionResponse Handle(JVMBridgeException exception);
+        StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse Handle(JVMBridgeException exception);
     }
 
     /// <summary>
     /// Listener for Kafka StreamsUncaughtExceptionHandler. Extends <see cref="JVMBridgeListener"/>, implements <see cref="IStreamsUncaughtExceptionHandler"/>
     /// </summary>
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
-    public class StreamsUncaughtExceptionHandler : JVMBridgeListener, IStreamsUncaughtExceptionHandler
+    public partial class StreamsUncaughtExceptionHandler : IStreamsUncaughtExceptionHandler
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.streams.errors.StreamsUncaughtExceptionHandlerImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.streams.errors.StreamsUncaughtExceptionHandlerImpl";
 
         readonly Func<JVMBridgeException, StreamThreadExceptionResponse> executionFunction = null;
         /// <summary>
@@ -81,6 +74,6 @@ namespace Org.Apache.Kafka.Streams.Errors
         /// </summary>
         /// <param name="exception">The StreamsUncaughtExceptionHandler object</param>
         /// <returns>The <see cref="StreamThreadExceptionResponse"/> handle evaluation</returns>
-        public virtual StreamThreadExceptionResponse Handle(JVMBridgeException exception) { return StreamThreadExceptionResponse.SHUTDOWN_APPLICATION; }
+        public virtual StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse Handle(JVMBridgeException exception) { return StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse.SHUTDOWN_APPLICATION; }
     }
 }

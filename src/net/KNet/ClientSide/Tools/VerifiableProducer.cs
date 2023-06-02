@@ -21,14 +21,8 @@ namespace Org.Apache.Kafka.Tools
     /// <summary>
     /// Class managing VerifiableProducer
     /// </summary>
-    public class VerifiableProducer : MASES.JCOBridge.C2JBridge.JVMBridgeMain<VerifiableProducer>
+    public partial class VerifiableProducer
     {
-        /// <summary>
-        /// Initialize a new <see cref="VerifiableProducer"/>
-        /// </summary>
-        public VerifiableProducer()
-            : base("org.apache.kafka.tools.VerifiableProducer")
-        {
-        }
+
     }
 }

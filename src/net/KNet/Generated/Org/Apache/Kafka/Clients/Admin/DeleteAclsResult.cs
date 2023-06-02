@@ -46,18 +46,22 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DeleteAclsResult.html#all()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DeleteAclsResult.html#values()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Collection<Org.Apache.Kafka.Common.Acl.AclBinding>> All
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<Org.Apache.Kafka.Common.Acl.AclBindingFilter, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.DeleteAclsResult.FilterResults>> Values()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Collection<Org.Apache.Kafka.Common.Acl.AclBinding>>>("all"); }
+            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.Acl.AclBindingFilter, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.DeleteAclsResult.FilterResults>>>("values");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DeleteAclsResult.html#values()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DeleteAclsResult.html#all()"/>
         /// </summary>
-        public Java.Util.Map<Org.Apache.Kafka.Common.Acl.AclBindingFilter, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.DeleteAclsResult.FilterResults>> Values
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
+        public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Collection<Org.Apache.Kafka.Common.Acl.AclBinding>> All()
         {
-            get { return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.Acl.AclBindingFilter, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.DeleteAclsResult.FilterResults>>>("values"); }
+            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Collection<Org.Apache.Kafka.Common.Acl.AclBinding>>>("all");
         }
 
         #endregion
@@ -84,18 +88,22 @@ namespace Org.Apache.Kafka.Clients.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DeleteAclsResult.FilterResult.html#binding()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DeleteAclsResult.FilterResult.html#binding()"/>
             /// </summary>
-            public Org.Apache.Kafka.Common.Acl.AclBinding Binding
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Acl.AclBinding"/></returns>
+            public Org.Apache.Kafka.Common.Acl.AclBinding Binding()
             {
-                get { return IExecute<Org.Apache.Kafka.Common.Acl.AclBinding>("binding"); }
+                return IExecute<Org.Apache.Kafka.Common.Acl.AclBinding>("binding");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DeleteAclsResult.FilterResult.html#exception()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DeleteAclsResult.FilterResult.html#exception()"/>
             /// </summary>
-            public Org.Apache.Kafka.Common.Errors.ApiException Exception
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Errors.ApiException"/></returns>
+            public Org.Apache.Kafka.Common.Errors.ApiException Exception()
             {
-                get { var obj = IExecute<MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject>("exception"); return MASES.JCOBridge.C2JBridge.JVMBridgeException.New<Org.Apache.Kafka.Common.Errors.ApiException>(obj); }
+                var obj = IExecute<MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject>("exception"); return MASES.JCOBridge.C2JBridge.JVMBridgeException.New<Org.Apache.Kafka.Common.Errors.ApiException>(obj);
             }
 
             #endregion
@@ -129,11 +137,13 @@ namespace Org.Apache.Kafka.Clients.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DeleteAclsResult.FilterResults.html#values()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DeleteAclsResult.FilterResults.html#values()"/>
             /// </summary>
-            public Java.Util.List<Org.Apache.Kafka.Clients.Admin.DeleteAclsResult.FilterResult> Values
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<Org.Apache.Kafka.Clients.Admin.DeleteAclsResult.FilterResult> Values()
             {
-                get { return IExecute<Java.Util.List<Org.Apache.Kafka.Clients.Admin.DeleteAclsResult.FilterResult>>("values"); }
+                return IExecute<Java.Util.List<Org.Apache.Kafka.Clients.Admin.DeleteAclsResult.FilterResult>>("values");
             }
 
             #endregion

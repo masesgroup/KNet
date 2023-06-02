@@ -54,13 +54,6 @@ namespace Org.Apache.Kafka.Connect.Health
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/ConnectorType.html#values()"/> 
-        /// </summary>
-        public static Org.Apache.Kafka.Connect.Health.ConnectorType[] Values
-        {
-            get { return SExecuteArray<Org.Apache.Kafka.Connect.Health.ConnectorType>(LocalBridgeClazz, "values"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/ConnectorType.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -68,6 +61,15 @@ namespace Org.Apache.Kafka.Connect.Health
         public static Org.Apache.Kafka.Connect.Health.ConnectorType ValueOf(string arg0)
         {
             return SExecute<Org.Apache.Kafka.Connect.Health.ConnectorType>(LocalBridgeClazz, "valueOf", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/ConnectorType.html#values()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Health.ConnectorType"/></returns>
+        public static Org.Apache.Kafka.Connect.Health.ConnectorType[] Values()
+        {
+            return SExecuteArray<Org.Apache.Kafka.Connect.Health.ConnectorType>(LocalBridgeClazz, "values");
         }
 
         #endregion

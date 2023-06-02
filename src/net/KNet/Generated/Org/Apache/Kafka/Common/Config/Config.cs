@@ -33,7 +33,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/Config.html#%3Cinit%3E(java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
-        public Config(Java.Util.List arg0)
+        public Config(Java.Util.List<Org.Apache.Kafka.Common.Config.ConfigValue> arg0)
             : base(arg0)
         {
         }
@@ -54,11 +54,13 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/Config.html#configValues()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/Config.html#configValues()"/>
         /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Config.ConfigValue> ConfigValues
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Config.ConfigValue> ConfigValues()
         {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Config.ConfigValue>>("configValues"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Config.ConfigValue>>("configValues");
         }
 
         #endregion

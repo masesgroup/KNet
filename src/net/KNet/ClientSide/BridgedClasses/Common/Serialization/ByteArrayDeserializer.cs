@@ -16,18 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
+
 namespace Org.Apache.Kafka.Common.Serialization
 {
-    public class ByteArrayDeserializer : Deserializer<byte[]>
+    public partial class ByteArrayDeserializer
     {
-        public override string ClassName => "org.apache.kafka.common.serialization.ByteArrayDeserializer";
-
-        public override bool AutoInit => false;
-
-        public ByteArrayDeserializer()
-            : base(null, null, false)
-        {
-
-        }
+        public static implicit operator Deserializer<byte[]>(ByteArrayDeserializer t) => t.Cast<Deserializer<byte[]>>();
     }
 }

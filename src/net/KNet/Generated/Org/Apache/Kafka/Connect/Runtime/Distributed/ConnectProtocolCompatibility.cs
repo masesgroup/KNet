@@ -54,13 +54,6 @@ namespace Org.Apache.Kafka.Connect.Runtime.Distributed
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ConnectProtocolCompatibility.html#values()"/> 
-        /// </summary>
-        public static Org.Apache.Kafka.Connect.Runtime.Distributed.ConnectProtocolCompatibility[] Values
-        {
-            get { return SExecuteArray<Org.Apache.Kafka.Connect.Runtime.Distributed.ConnectProtocolCompatibility>(LocalBridgeClazz, "values"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ConnectProtocolCompatibility.html#compatibility(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -96,23 +89,36 @@ namespace Org.Apache.Kafka.Connect.Runtime.Distributed
         {
             return SExecute<Org.Apache.Kafka.Connect.Runtime.Distributed.ConnectProtocolCompatibility>(LocalBridgeClazz, "valueOf", arg0);
         }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ConnectProtocolCompatibility.html#values()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.Distributed.ConnectProtocolCompatibility"/></returns>
+        public static Org.Apache.Kafka.Connect.Runtime.Distributed.ConnectProtocolCompatibility[] Values()
+        {
+            return SExecuteArray<Org.Apache.Kafka.Connect.Runtime.Distributed.ConnectProtocolCompatibility>(LocalBridgeClazz, "values");
+        }
 
         #endregion
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ConnectProtocolCompatibility.html#protocol()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ConnectProtocolCompatibility.html#protocol()"/>
         /// </summary>
-        public string Protocol
+
+        /// <returns><see cref="string"/></returns>
+        public string Protocol()
         {
-            get { return IExecute<string>("protocol"); }
+            return IExecute<string>("protocol");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ConnectProtocolCompatibility.html#protocolVersion()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ConnectProtocolCompatibility.html#protocolVersion()"/>
         /// </summary>
-        public short ProtocolVersion
+
+        /// <returns><see cref="short"/></returns>
+        public short ProtocolVersion()
         {
-            get { return IExecute<short>("protocolVersion"); }
+            return IExecute<short>("protocolVersion");
         }
 
         #endregion

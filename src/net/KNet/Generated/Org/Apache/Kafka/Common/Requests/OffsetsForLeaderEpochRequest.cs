@@ -82,11 +82,13 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/OffsetsForLeaderEpochRequest.html#replicaId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/OffsetsForLeaderEpochRequest.html#replicaId()"/>
         /// </summary>
-        public int ReplicaId
+
+        /// <returns><see cref="int"/></returns>
+        public int ReplicaId()
         {
-            get { return IExecute<int>("replicaId"); }
+            return IExecute<int>("replicaId");
         }
 
         #endregion

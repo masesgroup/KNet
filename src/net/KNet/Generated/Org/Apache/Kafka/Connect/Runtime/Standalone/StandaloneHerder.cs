@@ -56,11 +56,13 @@ namespace Org.Apache.Kafka.Connect.Runtime.Standalone
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/standalone/StandaloneHerder.html#generation()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/standalone/StandaloneHerder.html#generation()"/>
         /// </summary>
-        public int Generation
+
+        /// <returns><see cref="int"/></returns>
+        public int Generation()
         {
-            get { return IExecute<int>("generation"); }
+            return IExecute<int>("generation");
         }
 
         #endregion

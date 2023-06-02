@@ -17,19 +17,12 @@
 */
 
 using Java.Lang;
+using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Serialization
 {
-    public class VoidDeserializer : Deserializer<Void>
+    public partial class VoidDeserializer
     {
-        public override string ClassName => "org.apache.kafka.common.serialization.VoidDeserializer";
-
-        public override bool AutoInit => false;
-
-        public VoidDeserializer()
-            : base(null, null, false)
-        {
-
-        }
+        public static implicit operator Deserializer<Void>(VoidDeserializer t) => t.Cast<Deserializer<Void>>();
     }
 }

@@ -60,32 +60,40 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslAuthenticationContext.html#clientAddress()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslAuthenticationContext.html#listenerName()"/>
         /// </summary>
-        public Java.Net.InetAddress ClientAddress
+
+        /// <returns><see cref="string"/></returns>
+        public string ListenerName()
         {
-            get { return IExecute<Java.Net.InetAddress>("clientAddress"); }
+            return IExecute<string>("listenerName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslAuthenticationContext.html#listenerName()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslAuthenticationContext.html#clientAddress()"/>
         /// </summary>
-        public string ListenerName
+
+        /// <returns><see cref="Java.Net.InetAddress"/></returns>
+        public Java.Net.InetAddress ClientAddress()
         {
-            get { return IExecute<string>("listenerName"); }
+            return IExecute<Java.Net.InetAddress>("clientAddress");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslAuthenticationContext.html#securityProtocol()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslAuthenticationContext.html#session()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol SecurityProtocol
+
+        /// <returns><see cref="Javax.Net.Ssl.SSLSession"/></returns>
+        public Javax.Net.Ssl.SSLSession Session()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol>("securityProtocol"); }
+            return IExecute<Javax.Net.Ssl.SSLSession>("session");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslAuthenticationContext.html#session()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslAuthenticationContext.html#securityProtocol()"/>
         /// </summary>
-        public Javax.Net.Ssl.SSLSession Session
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol"/></returns>
+        public Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol SecurityProtocol()
         {
-            get { return IExecute<Javax.Net.Ssl.SSLSession>("session"); }
+            return IExecute<Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol>("securityProtocol");
         }
 
         #endregion

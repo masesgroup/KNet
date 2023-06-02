@@ -46,41 +46,6 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/Consumer.html#assignment()"/> 
-        /// </summary>
-        public Java.Util.Set Assignment
-        {
-            get { return IExecute<Java.Util.Set>("assignment"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/Consumer.html#groupMetadata()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Clients.Consumer.ConsumerGroupMetadata GroupMetadata
-        {
-            get { return IExecute<Org.Apache.Kafka.Clients.Consumer.ConsumerGroupMetadata>("groupMetadata"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/Consumer.html#metrics()"/> 
-        /// </summary>
-        public Java.Util.Map Metrics
-        {
-            get { return IExecute<Java.Util.Map>("metrics"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/Consumer.html#paused()"/> 
-        /// </summary>
-        public Java.Util.Set Paused
-        {
-            get { return IExecute<Java.Util.Set>("paused"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/Consumer.html#subscription()"/> 
-        /// </summary>
-        public Java.Util.Set Subscription
-        {
-            get { return IExecute<Java.Util.Set>("subscription"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/Consumer.html#partitionsFor(java.lang.String,java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -116,6 +81,15 @@ namespace Org.Apache.Kafka.Clients.Consumer
         public Java.Util.Map ListTopics(Java.Time.Duration arg0)
         {
             return IExecute<Java.Util.Map>("listTopics", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/Consumer.html#metrics()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map Metrics()
+        {
+            return IExecute<Java.Util.Map>("metrics");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/Consumer.html#beginningOffsets(java.util.Collection,java.time.Duration)"/>
@@ -203,6 +177,33 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.OptionalLong>("currentLag", arg0);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/Consumer.html#subscription()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set Subscription()
+        {
+            return IExecute<Java.Util.Set>("subscription");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/Consumer.html#assignment()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set Assignment()
+        {
+            return IExecute<Java.Util.Set>("assignment");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/Consumer.html#paused()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set Paused()
+        {
+            return IExecute<Java.Util.Set>("paused");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/Consumer.html#position(org.apache.kafka.common.TopicPartition,java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
@@ -220,6 +221,15 @@ namespace Org.Apache.Kafka.Clients.Consumer
         public long Position(Org.Apache.Kafka.Common.TopicPartition arg0)
         {
             return IExecute<long>("position", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/Consumer.html#groupMetadata()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerGroupMetadata"/></returns>
+        public Org.Apache.Kafka.Clients.Consumer.ConsumerGroupMetadata GroupMetadata()
+        {
+            return IExecute<Org.Apache.Kafka.Clients.Consumer.ConsumerGroupMetadata>("groupMetadata");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/Consumer.html#poll(java.time.Duration)"/>
@@ -458,41 +468,6 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/Consumer.html#assignment()"/> 
-        /// </summary>
-        public Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> Assignment
-        {
-            get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition>>("assignment"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/Consumer.html#groupMetadata()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Clients.Consumer.ConsumerGroupMetadata GroupMetadata
-        {
-            get { return IExecute<Org.Apache.Kafka.Clients.Consumer.ConsumerGroupMetadata>("groupMetadata"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/Consumer.html#metrics()"/> 
-        /// </summary>
-        public Java.Util.Map Metrics
-        {
-            get { return IExecute<Java.Util.Map>("metrics"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/Consumer.html#paused()"/> 
-        /// </summary>
-        public Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> Paused
-        {
-            get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition>>("paused"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/Consumer.html#subscription()"/> 
-        /// </summary>
-        public Java.Util.Set<string> Subscription
-        {
-            get { return IExecute<Java.Util.Set<string>>("subscription"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/Consumer.html#partitionsFor(java.lang.String,java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -528,6 +503,16 @@ namespace Org.Apache.Kafka.Clients.Consumer
         public Java.Util.Map<string, Java.Util.List<Org.Apache.Kafka.Common.PartitionInfo>> ListTopics(Java.Time.Duration arg0)
         {
             return IExecute<Java.Util.Map<string, Java.Util.List<Org.Apache.Kafka.Common.PartitionInfo>>>("listTopics", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/Consumer.html#metrics()"/>
+        /// </summary>
+
+        /// <typeparam name="ReturnExtendsOrg_Apache_Kafka_Common_Metric"><see cref="Org.Apache.Kafka.Common.Metric"/></typeparam>
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<Org.Apache.Kafka.Common.MetricName, ReturnExtendsOrg_Apache_Kafka_Common_Metric> Metrics<ReturnExtendsOrg_Apache_Kafka_Common_Metric>() where ReturnExtendsOrg_Apache_Kafka_Common_Metric: Org.Apache.Kafka.Common.Metric
+        {
+            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.MetricName, ReturnExtendsOrg_Apache_Kafka_Common_Metric>>("metrics");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/Consumer.html#beginningOffsets(java.util.Collection,java.time.Duration)"/>
@@ -615,6 +600,33 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.OptionalLong>("currentLag", arg0);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/Consumer.html#subscription()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<string> Subscription()
+        {
+            return IExecute<Java.Util.Set<string>>("subscription");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/Consumer.html#assignment()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> Assignment()
+        {
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition>>("assignment");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/Consumer.html#paused()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> Paused()
+        {
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition>>("paused");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/Consumer.html#position(org.apache.kafka.common.TopicPartition,java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
@@ -632,6 +644,15 @@ namespace Org.Apache.Kafka.Clients.Consumer
         public long Position(Org.Apache.Kafka.Common.TopicPartition arg0)
         {
             return IExecute<long>("position", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/Consumer.html#groupMetadata()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerGroupMetadata"/></returns>
+        public Org.Apache.Kafka.Clients.Consumer.ConsumerGroupMetadata GroupMetadata()
+        {
+            return IExecute<Org.Apache.Kafka.Clients.Consumer.ConsumerGroupMetadata>("groupMetadata");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/Consumer.html#poll(java.time.Duration)"/>

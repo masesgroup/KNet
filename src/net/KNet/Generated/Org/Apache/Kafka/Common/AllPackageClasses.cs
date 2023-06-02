@@ -171,7 +171,7 @@ namespace Org.Apache.Kafka.Common
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/ConsumerGroupState.html"/>
     /// </summary>
-    public partial class ConsumerGroupState : Java.Lang.Enum
+    public partial class ConsumerGroupState : Java.Lang.Enum<Org.Apache.Kafka.Common.ConsumerGroupState>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -214,7 +214,7 @@ namespace Org.Apache.Kafka.Common
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/ElectionType.html"/>
     /// </summary>
-    public partial class ElectionType : Java.Lang.Enum
+    public partial class ElectionType : Java.Lang.Enum<Org.Apache.Kafka.Common.ElectionType>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -316,7 +316,7 @@ namespace Org.Apache.Kafka.Common
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/IsolationLevel.html"/>
     /// </summary>
-    public partial class IsolationLevel : Java.Lang.Enum
+    public partial class IsolationLevel : Java.Lang.Enum<Org.Apache.Kafka.Common.IsolationLevel>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

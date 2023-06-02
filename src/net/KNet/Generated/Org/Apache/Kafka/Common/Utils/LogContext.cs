@@ -54,20 +54,13 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/LogContext.html#logPrefix()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/LogContext.html#logPrefix()"/>
         /// </summary>
-        public string LogPrefix
+
+        /// <returns><see cref="string"/></returns>
+        public string LogPrefix()
         {
-            get { return IExecute<string>("logPrefix"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/LogContext.html#logger(java.lang.Class)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Java.Lang.Class"/></param>
-        /// <returns><see cref="Org.Slf4j.Logger"/></returns>
-        public Org.Slf4j.Logger Logger(Java.Lang.Class arg0)
-        {
-            return IExecute<Org.Slf4j.Logger>("logger", arg0);
+            return IExecute<string>("logPrefix");
         }
 
         #endregion

@@ -33,7 +33,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/Config.html#%3Cinit%3E(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
-        public Config(Java.Util.Collection arg0)
+        public Config(Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.ConfigEntry> arg0)
             : base(arg0)
         {
         }
@@ -54,11 +54,13 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/Config.html#entries()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/Config.html#entries()"/>
         /// </summary>
-        public Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.ConfigEntry> Entries
+
+        /// <returns><see cref="Java.Util.Collection"/></returns>
+        public Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.ConfigEntry> Entries()
         {
-            get { return IExecute<Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.ConfigEntry>>("entries"); }
+            return IExecute<Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.ConfigEntry>>("entries");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/Config.html#get(java.lang.String)"/>

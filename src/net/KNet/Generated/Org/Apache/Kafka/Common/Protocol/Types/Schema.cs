@@ -63,18 +63,13 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Schema.html#fields()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Schema.html#numFields()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.Types.BoundField[] Fields
+
+        /// <returns><see cref="int"/></returns>
+        public int NumFields()
         {
-            get { return IExecuteArray<Org.Apache.Kafka.Common.Protocol.Types.BoundField>("fields"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Schema.html#numFields()"/> 
-        /// </summary>
-        public int NumFields
-        {
-            get { return IExecute<int>("numFields"); }
+            return IExecute<int>("numFields");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Schema.html#get(int)"/>
@@ -93,6 +88,15 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
         public Org.Apache.Kafka.Common.Protocol.Types.BoundField Get(string arg0)
         {
             return IExecute<Org.Apache.Kafka.Common.Protocol.Types.BoundField>("get", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Schema.html#fields()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Types.BoundField"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.Types.BoundField[] Fields()
+        {
+            return IExecuteArray<Org.Apache.Kafka.Common.Protocol.Types.BoundField>("fields");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Schema.html#walk(org.apache.kafka.common.protocol.types.Schema.Visitor)"/>

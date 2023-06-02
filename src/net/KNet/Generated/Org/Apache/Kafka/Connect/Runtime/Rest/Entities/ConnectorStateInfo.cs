@@ -36,7 +36,7 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest.Entities
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorStateInfo.ConnectorState"/></param>
         /// <param name="arg2"><see cref="Java.Util.List"/></param>
         /// <param name="arg3"><see cref="Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorType"/></param>
-        public ConnectorStateInfo(string arg0, Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorStateInfo.ConnectorState arg1, Java.Util.List arg2, Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorType arg3)
+        public ConnectorStateInfo(string arg0, Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorStateInfo.ConnectorState arg1, Java.Util.List<Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorStateInfo.TaskState> arg2, Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorType arg3)
             : base(arg0, arg1, arg2, arg3)
         {
         }
@@ -57,32 +57,40 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest.Entities
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConnectorStateInfo.html#connector()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConnectorStateInfo.html#name()"/>
         /// </summary>
-        public Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorStateInfo.ConnectorState Connector
+
+        /// <returns><see cref="string"/></returns>
+        public string Name()
         {
-            get { return IExecute<Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorStateInfo.ConnectorState>("connector"); }
+            return IExecute<string>("name");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConnectorStateInfo.html#name()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConnectorStateInfo.html#tasks()"/>
         /// </summary>
-        public string Name
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorStateInfo.TaskState> Tasks()
         {
-            get { return IExecute<string>("name"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorStateInfo.TaskState>>("tasks");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConnectorStateInfo.html#tasks()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConnectorStateInfo.html#connector()"/>
         /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorStateInfo.TaskState> Tasks
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorStateInfo.ConnectorState"/></returns>
+        public Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorStateInfo.ConnectorState Connector()
         {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorStateInfo.TaskState>>("tasks"); }
+            return IExecute<Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorStateInfo.ConnectorState>("connector");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConnectorStateInfo.html#type()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConnectorStateInfo.html#type()"/>
         /// </summary>
-        public Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorType Type
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorType"/></returns>
+        public Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorType Type()
         {
-            get { return IExecute<Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorType>("type"); }
+            return IExecute<Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorType>("type");
         }
 
         #endregion
@@ -119,25 +127,31 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest.Entities
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConnectorStateInfo.AbstractState.html#state()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConnectorStateInfo.AbstractState.html#state()"/>
             /// </summary>
-            public string State
+
+            /// <returns><see cref="string"/></returns>
+            public string State()
             {
-                get { return IExecute<string>("state"); }
+                return IExecute<string>("state");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConnectorStateInfo.AbstractState.html#trace()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConnectorStateInfo.AbstractState.html#trace()"/>
             /// </summary>
-            public string Trace
+
+            /// <returns><see cref="string"/></returns>
+            public string Trace()
             {
-                get { return IExecute<string>("trace"); }
+                return IExecute<string>("trace");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConnectorStateInfo.AbstractState.html#workerId()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConnectorStateInfo.AbstractState.html#workerId()"/>
             /// </summary>
-            public string WorkerId
+
+            /// <returns><see cref="string"/></returns>
+            public string WorkerId()
             {
-                get { return IExecute<string>("workerId"); }
+                return IExecute<string>("workerId");
             }
 
             #endregion
@@ -227,13 +241,6 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest.Entities
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConnectorStateInfo.TaskState.html#id()"/> 
-            /// </summary>
-            public int Id
-            {
-                get { return IExecute<int>("id"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConnectorStateInfo.TaskState.html#compareTo(java.lang.Object)"/>
             /// </summary>
             /// <param name="arg0"><see cref="object"/></param>
@@ -250,6 +257,15 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest.Entities
             public int CompareTo(Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorStateInfo.TaskState arg0)
             {
                 return IExecute<int>("compareTo", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConnectorStateInfo.TaskState.html#id()"/>
+            /// </summary>
+
+            /// <returns><see cref="int"/></returns>
+            public int Id()
+            {
+                return IExecute<int>("id");
             }
 
             #endregion

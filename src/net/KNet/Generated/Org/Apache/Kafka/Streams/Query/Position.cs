@@ -42,11 +42,13 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/Position.html#emptyPosition()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/Position.html#emptyPosition()"/>
         /// </summary>
-        public static Org.Apache.Kafka.Streams.Query.Position EmptyPosition
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Query.Position"/></returns>
+        public static Org.Apache.Kafka.Streams.Query.Position EmptyPosition()
         {
-            get { return SExecute<Org.Apache.Kafka.Streams.Query.Position>(LocalBridgeClazz, "emptyPosition"); }
+            return SExecute<Org.Apache.Kafka.Streams.Query.Position>(LocalBridgeClazz, "emptyPosition");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/Position.html#fromMap(java.util.Map)"/>
@@ -63,25 +65,20 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/Position.html#copy()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Streams.Query.Position Copy
-        {
-            get { return IExecute<Org.Apache.Kafka.Streams.Query.Position>("copy"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/Position.html#isEmpty()"/> 
-        /// </summary>
-        public bool IsEmpty
-        {
-            get { return IExecute<bool>("isEmpty"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/Position.html#getTopics()"/> 
         /// </summary>
         public Java.Util.Set<string> Topics
         {
             get { return IExecute<Java.Util.Set<string>>("getTopics"); }
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/Position.html#isEmpty()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsEmpty()
+        {
+            return IExecute<bool>("isEmpty");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/Position.html#getPartitionPositions(java.lang.String)"/>
@@ -91,6 +88,15 @@ namespace Org.Apache.Kafka.Streams.Query
         public Java.Util.Map<int?, long?> GetPartitionPositions(string arg0)
         {
             return IExecute<Java.Util.Map<int?, long?>>("getPartitionPositions", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/Position.html#copy()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Query.Position"/></returns>
+        public Org.Apache.Kafka.Streams.Query.Position Copy()
+        {
+            return IExecute<Org.Apache.Kafka.Streams.Query.Position>("copy");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/Position.html#merge(org.apache.kafka.streams.query.Position)"/>

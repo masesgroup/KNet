@@ -18,26 +18,8 @@
 
 namespace Org.Apache.Kafka.Clients.Producer
 {
-    public class RecordMetadata : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RecordMetadata>
+    public partial class RecordMetadata
     {
-        public override string ClassName => "org.apache.kafka.clients.producer.RecordMetadata";
-
-        public bool HasOffset => IExecute<bool>("hasOffset");
-
-        public long Offset => IExecute<long>("offset");
-
-        public bool HasTimestamp => IExecute<bool>("hasTimestamp");
-
-        public long Timestamp => IExecute<long>("timestamp");
-
         public System.DateTime DateTime => System.DateTimeOffset.FromUnixTimeMilliseconds(Timestamp).DateTime;
-
-        public int SerializedKeySize => IExecute<int>("serializedKeySize");
-
-        public int SerializedValueSize => IExecute<int>("serializedValueSize");
-
-        public string Topic => IExecute<string>("topic");
-
-        public int Partition => IExecute<int>("partition");
     }
 }

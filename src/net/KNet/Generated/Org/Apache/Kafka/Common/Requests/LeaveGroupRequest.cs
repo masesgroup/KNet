@@ -56,18 +56,22 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/LeaveGroupRequest.html#members()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/LeaveGroupRequest.html#members()"/>
         /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Message.LeaveGroupRequestData.MemberIdentity> Members
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Message.LeaveGroupRequestData.MemberIdentity> Members()
         {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.LeaveGroupRequestData.MemberIdentity>>("members"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.LeaveGroupRequestData.MemberIdentity>>("members");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/LeaveGroupRequest.html#normalizedData()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/LeaveGroupRequest.html#normalizedData()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Message.LeaveGroupRequestData NormalizedData
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Message.LeaveGroupRequestData"/></returns>
+        public Org.Apache.Kafka.Common.Message.LeaveGroupRequestData NormalizedData()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Message.LeaveGroupRequestData>("normalizedData"); }
+            return IExecute<Org.Apache.Kafka.Common.Message.LeaveGroupRequestData>("normalizedData");
         }
 
         #endregion
@@ -82,7 +86,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
             /// <param name="arg1"><see cref="Java.Util.List"/></param>
-            public Builder(string arg0, Java.Util.List arg1)
+            public Builder(string arg0, Java.Util.List<Org.Apache.Kafka.Common.Message.LeaveGroupRequestData.MemberIdentity> arg1)
                 : base(arg0, arg1)
             {
             }

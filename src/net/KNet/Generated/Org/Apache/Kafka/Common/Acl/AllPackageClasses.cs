@@ -201,7 +201,7 @@ namespace Org.Apache.Kafka.Common.Acl
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AclOperation.html"/>
     /// </summary>
-    public partial class AclOperation : Java.Lang.Enum
+    public partial class AclOperation : Java.Lang.Enum<Org.Apache.Kafka.Common.Acl.AclOperation>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -244,7 +244,7 @@ namespace Org.Apache.Kafka.Common.Acl
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AclPermissionType.html"/>
     /// </summary>
-    public partial class AclPermissionType : Java.Lang.Enum
+    public partial class AclPermissionType : Java.Lang.Enum<Org.Apache.Kafka.Common.Acl.AclPermissionType>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

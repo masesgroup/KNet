@@ -46,11 +46,13 @@ namespace Org.Apache.Kafka.Connect.Source
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceConnectorContext.html#offsetStorageReader()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceConnectorContext.html#offsetStorageReader()"/>
         /// </summary>
-        public Org.Apache.Kafka.Connect.Storage.OffsetStorageReader OffsetStorageReader
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Storage.OffsetStorageReader"/></returns>
+        public Org.Apache.Kafka.Connect.Storage.OffsetStorageReader OffsetStorageReader()
         {
-            get { return IExecute<Org.Apache.Kafka.Connect.Storage.OffsetStorageReader>("offsetStorageReader"); }
+            return IExecute<Org.Apache.Kafka.Connect.Storage.OffsetStorageReader>("offsetStorageReader");
         }
 
         #endregion

@@ -69,7 +69,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.ElectionType"/></param>
             /// <param name="arg1"><see cref="Java.Util.Collection"/></param>
             /// <param name="arg2"><see cref="int"/></param>
-            public Builder(Org.Apache.Kafka.Common.ElectionType arg0, Java.Util.Collection arg1, int arg2)
+            public Builder(Org.Apache.Kafka.Common.ElectionType arg0, Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg1, int arg2)
                 : base(arg0, arg1, arg2)
             {
             }

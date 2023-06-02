@@ -54,11 +54,13 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListOffsetsOptions.html#isolationLevel()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListOffsetsOptions.html#isolationLevel()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.IsolationLevel IsolationLevel
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.IsolationLevel"/></returns>
+        public Org.Apache.Kafka.Common.IsolationLevel IsolationLevel()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.IsolationLevel>("isolationLevel"); }
+            return IExecute<Org.Apache.Kafka.Common.IsolationLevel>("isolationLevel");
         }
 
         #endregion

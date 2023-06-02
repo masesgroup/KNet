@@ -41,7 +41,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <param name="arg6"><see cref="Org.Apache.Kafka.Common.Network.ClientInformation"/></param>
         /// <param name="arg7"><see cref="bool"/></param>
         /// <param name="arg8"><see cref="Java.Util.Optional"/></param>
-        public RequestContext(Org.Apache.Kafka.Common.Requests.RequestHeader arg0, string arg1, Java.Net.InetAddress arg2, Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal arg3, Org.Apache.Kafka.Common.Network.ListenerName arg4, Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol arg5, Org.Apache.Kafka.Common.Network.ClientInformation arg6, bool arg7, Java.Util.Optional arg8)
+        public RequestContext(Org.Apache.Kafka.Common.Requests.RequestHeader arg0, string arg1, Java.Net.InetAddress arg2, Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal arg3, Org.Apache.Kafka.Common.Network.ListenerName arg4, Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol arg5, Org.Apache.Kafka.Common.Network.ClientInformation arg6, bool arg7, Java.Util.Optional<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipalSerde> arg8)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
         {
         }
@@ -64,10 +64,6 @@ namespace Org.Apache.Kafka.Common.Requests
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.Requests.RequestContext"/> to <see cref="Org.Apache.Kafka.Server.Authorizer.AuthorizableRequestContext"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Server.Authorizer.AuthorizableRequestContext(Org.Apache.Kafka.Common.Requests.RequestContext t) => t.Cast<Org.Apache.Kafka.Server.Authorizer.AuthorizableRequestContext>();
 
         #endregion
 
@@ -117,67 +113,58 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RequestContext.html#apiVersion()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RequestContext.html#correlationId()"/>
         /// </summary>
-        public short ApiVersion
+
+        /// <returns><see cref="int"/></returns>
+        public int CorrelationId()
         {
-            get { return IExecute<short>("apiVersion"); }
+            return IExecute<int>("correlationId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RequestContext.html#clientAddress()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RequestContext.html#requestType()"/>
         /// </summary>
-        public Java.Net.InetAddress ClientAddress
+
+        /// <returns><see cref="int"/></returns>
+        public int RequestType()
         {
-            get { return IExecute<Java.Net.InetAddress>("clientAddress"); }
+            return IExecute<int>("requestType");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RequestContext.html#clientId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RequestContext.html#requestVersion()"/>
         /// </summary>
-        public string ClientId
+
+        /// <returns><see cref="int"/></returns>
+        public int RequestVersion()
         {
-            get { return IExecute<string>("clientId"); }
+            return IExecute<int>("requestVersion");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RequestContext.html#correlationId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RequestContext.html#clientId()"/>
         /// </summary>
-        public int CorrelationId
+
+        /// <returns><see cref="string"/></returns>
+        public string ClientId()
         {
-            get { return IExecute<int>("correlationId"); }
+            return IExecute<string>("clientId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RequestContext.html#listenerName()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RequestContext.html#listenerName()"/>
         /// </summary>
-        public string ListenerName
+
+        /// <returns><see cref="string"/></returns>
+        public string ListenerName()
         {
-            get { return IExecute<string>("listenerName"); }
+            return IExecute<string>("listenerName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RequestContext.html#principal()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RequestContext.html#clientAddress()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal Principal
+
+        /// <returns><see cref="Java.Net.InetAddress"/></returns>
+        public Java.Net.InetAddress ClientAddress()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal>("principal"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RequestContext.html#requestType()"/> 
-        /// </summary>
-        public int RequestType
-        {
-            get { return IExecute<int>("requestType"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RequestContext.html#requestVersion()"/> 
-        /// </summary>
-        public int RequestVersion
-        {
-            get { return IExecute<int>("requestVersion"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RequestContext.html#securityProtocol()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol SecurityProtocol
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol>("securityProtocol"); }
+            return IExecute<Java.Net.InetAddress>("clientAddress");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RequestContext.html#buildResponseEnvelopePayload(org.apache.kafka.common.requests.AbstractResponse)"/>
@@ -205,6 +192,33 @@ namespace Org.Apache.Kafka.Common.Requests
         public Org.Apache.Kafka.Common.Requests.RequestAndSize ParseRequest(Java.Nio.ByteBuffer arg0)
         {
             return IExecute<Org.Apache.Kafka.Common.Requests.RequestAndSize>("parseRequest", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RequestContext.html#principal()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal"/></returns>
+        public Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal Principal()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal>("principal");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RequestContext.html#securityProtocol()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol"/></returns>
+        public Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol SecurityProtocol()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol>("securityProtocol");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RequestContext.html#apiVersion()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short ApiVersion()
+        {
+            return IExecute<short>("apiVersion");
         }
 
         #endregion

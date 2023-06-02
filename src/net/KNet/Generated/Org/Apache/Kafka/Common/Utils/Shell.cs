@@ -75,18 +75,22 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Shell.html#exitCode()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Shell.html#exitCode()"/>
         /// </summary>
-        public int ExitCode
+
+        /// <returns><see cref="int"/></returns>
+        public int ExitCode()
         {
-            get { return IExecute<int>("exitCode"); }
+            return IExecute<int>("exitCode");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Shell.html#process()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Shell.html#process()"/>
         /// </summary>
-        public Java.Lang.Process Process
+
+        /// <returns><see cref="Java.Lang.Process"/></returns>
+        public Java.Lang.Process Process()
         {
-            get { return IExecute<Java.Lang.Process>("process"); }
+            return IExecute<Java.Lang.Process>("process");
         }
 
         #endregion
@@ -153,11 +157,13 @@ namespace Org.Apache.Kafka.Common.Utils
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Shell.ShellCommandExecutor.html#output()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Shell.ShellCommandExecutor.html#output()"/>
             /// </summary>
-            public string Output
+
+            /// <returns><see cref="string"/></returns>
+            public string Output()
             {
-                get { return IExecute<string>("output"); }
+                return IExecute<string>("output");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Shell.ShellCommandExecutor.html#execute()"/>

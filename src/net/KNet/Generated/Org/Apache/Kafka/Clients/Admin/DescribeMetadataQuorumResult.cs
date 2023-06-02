@@ -46,11 +46,13 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeMetadataQuorumResult.html#quorumInfo()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeMetadataQuorumResult.html#quorumInfo()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.QuorumInfo> QuorumInfo
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
+        public Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.QuorumInfo> QuorumInfo()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.QuorumInfo>>("quorumInfo"); }
+            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.QuorumInfo>>("quorumInfo");
         }
 
         #endregion

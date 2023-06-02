@@ -46,76 +46,6 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#appConfigs()"/> 
-        /// </summary>
-        public Java.Util.Map<string, object> AppConfigs
-        {
-            get { return IExecute<Java.Util.Map<string, object>>("appConfigs"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#applicationId()"/> 
-        /// </summary>
-        public string ApplicationId
-        {
-            get { return IExecute<string>("applicationId"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#currentStreamTimeMs()"/> 
-        /// </summary>
-        public long CurrentStreamTimeMs
-        {
-            get { return IExecute<long>("currentStreamTimeMs"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#currentSystemTimeMs()"/> 
-        /// </summary>
-        public long CurrentSystemTimeMs
-        {
-            get { return IExecute<long>("currentSystemTimeMs"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#keySerde()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Serialization.Serde KeySerde
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Serialization.Serde>("keySerde"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#metrics()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Streams.StreamsMetrics Metrics
-        {
-            get { return IExecute<Org.Apache.Kafka.Streams.StreamsMetrics>("metrics"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#recordMetadata()"/> 
-        /// </summary>
-        public Java.Util.Optional<Org.Apache.Kafka.Streams.Processor.Api.RecordMetadata> RecordMetadata
-        {
-            get { return IExecute<Java.Util.Optional<Org.Apache.Kafka.Streams.Processor.Api.RecordMetadata>>("recordMetadata"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#stateDir()"/> 
-        /// </summary>
-        public Java.Io.File StateDir
-        {
-            get { return IExecute<Java.Io.File>("stateDir"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#taskId()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Streams.Processor.TaskId TaskId
-        {
-            get { return IExecute<Org.Apache.Kafka.Streams.Processor.TaskId>("taskId"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#valueSerde()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Serialization.Serde ValueSerde
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Serialization.Serde>("valueSerde"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#getStateStore(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -124,6 +54,33 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         public S GetStateStore<S>(string arg0) where S: Org.Apache.Kafka.Streams.Processor.StateStore
         {
             return IExecute<S>("getStateStore", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#stateDir()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Io.File"/></returns>
+        public Java.Io.File StateDir()
+        {
+            return IExecute<Java.Io.File>("stateDir");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#applicationId()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string ApplicationId()
+        {
+            return IExecute<string>("applicationId");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#appConfigs()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, object> AppConfigs()
+        {
+            return IExecute<Java.Util.Map<string, object>>("appConfigs");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#appConfigsWithPrefix(java.lang.String)"/>
@@ -135,6 +92,53 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
             return IExecute<Java.Util.Map<string, object>>("appConfigsWithPrefix", arg0);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#recordMetadata()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Optional"/></returns>
+        public Java.Util.Optional<Org.Apache.Kafka.Streams.Processor.Api.RecordMetadata> RecordMetadata()
+        {
+            return IExecute<Java.Util.Optional<Org.Apache.Kafka.Streams.Processor.Api.RecordMetadata>>("recordMetadata");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#currentStreamTimeMs()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long CurrentStreamTimeMs()
+        {
+            return IExecute<long>("currentStreamTimeMs");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#currentSystemTimeMs()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long CurrentSystemTimeMs()
+        {
+            return IExecute<long>("currentSystemTimeMs");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#keySerde()"/>
+        /// </summary>
+
+        /// <typeparam name="ReturnExtendsobject"></typeparam>
+        /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
+        public Org.Apache.Kafka.Common.Serialization.Serde<ReturnExtendsobject> KeySerde<ReturnExtendsobject>()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Serialization.Serde<ReturnExtendsobject>>("keySerde");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#valueSerde()"/>
+        /// </summary>
+
+        /// <typeparam name="ReturnExtendsobject"></typeparam>
+        /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
+        public Org.Apache.Kafka.Common.Serialization.Serde<ReturnExtendsobject> ValueSerde<ReturnExtendsobject>()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Serialization.Serde<ReturnExtendsobject>>("valueSerde");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#schedule(java.time.Duration,org.apache.kafka.streams.processor.PunctuationType,org.apache.kafka.streams.processor.Punctuator)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
@@ -144,6 +148,24 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         public Org.Apache.Kafka.Streams.Processor.Cancellable Schedule(Java.Time.Duration arg0, Org.Apache.Kafka.Streams.Processor.PunctuationType arg1, Org.Apache.Kafka.Streams.Processor.Punctuator arg2)
         {
             return IExecute<Org.Apache.Kafka.Streams.Processor.Cancellable>("schedule", arg0, arg1, arg2);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#taskId()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.TaskId"/></returns>
+        public Org.Apache.Kafka.Streams.Processor.TaskId TaskId()
+        {
+            return IExecute<Org.Apache.Kafka.Streams.Processor.TaskId>("taskId");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#metrics()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.StreamsMetrics"/></returns>
+        public Org.Apache.Kafka.Streams.StreamsMetrics Metrics()
+        {
+            return IExecute<Org.Apache.Kafka.Streams.StreamsMetrics>("metrics");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#commit()"/>

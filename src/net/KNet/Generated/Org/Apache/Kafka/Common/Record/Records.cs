@@ -78,27 +78,6 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html#batches()"/> 
-        /// </summary>
-        public Java.Lang.Iterable Batches
-        {
-            get { return IExecute<Java.Lang.Iterable>("batches"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html#batchIterator()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Utils.AbstractIterator BatchIterator
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Utils.AbstractIterator>("batchIterator"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html#records()"/> 
-        /// </summary>
-        public Java.Lang.Iterable<Org.Apache.Kafka.Common.Record.Record> RecordsMethod
-        {
-            get { return IExecute<Java.Lang.Iterable<Org.Apache.Kafka.Common.Record.Record>>("records"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html#hasMatchingMagic(byte)"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
@@ -106,6 +85,25 @@ namespace Org.Apache.Kafka.Common.Record
         public bool HasMatchingMagic(byte arg0)
         {
             return IExecute<bool>("hasMatchingMagic", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html#batches()"/>
+        /// </summary>
+
+        /// <typeparam name="ReturnExtendsOrg_Apache_Kafka_Common_Record_RecordBatch"><see cref="Org.Apache.Kafka.Common.Record.RecordBatch"/></typeparam>
+        /// <returns><see cref="Java.Lang.Iterable"/></returns>
+        public Java.Lang.Iterable<ReturnExtendsOrg_Apache_Kafka_Common_Record_RecordBatch> Batches<ReturnExtendsOrg_Apache_Kafka_Common_Record_RecordBatch>() where ReturnExtendsOrg_Apache_Kafka_Common_Record_RecordBatch: Org.Apache.Kafka.Common.Record.RecordBatch
+        {
+            return IExecute<Java.Lang.Iterable<ReturnExtendsOrg_Apache_Kafka_Common_Record_RecordBatch>>("batches");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html#records()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Lang.Iterable"/></returns>
+        public Java.Lang.Iterable<Org.Apache.Kafka.Common.Record.Record> RecordsMethod()
+        {
+            return IExecute<Java.Lang.Iterable<Org.Apache.Kafka.Common.Record.Record>>("records");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html#downConvert(byte,long,org.apache.kafka.common.utils.Time)"/>
@@ -118,6 +116,16 @@ namespace Org.Apache.Kafka.Common.Record
         public Org.Apache.Kafka.Common.Record.ConvertedRecords<ReturnExtendsOrg_Apache_Kafka_Common_Record_Records> DownConvert<ReturnExtendsOrg_Apache_Kafka_Common_Record_Records>(byte arg0, long arg1, Org.Apache.Kafka.Common.Utils.Time arg2) where ReturnExtendsOrg_Apache_Kafka_Common_Record_Records: Org.Apache.Kafka.Common.Record.Records
         {
             return IExecute<Org.Apache.Kafka.Common.Record.ConvertedRecords<ReturnExtendsOrg_Apache_Kafka_Common_Record_Records>>("downConvert", arg0, arg1, arg2);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html#batchIterator()"/>
+        /// </summary>
+
+        /// <typeparam name="ReturnExtendsOrg_Apache_Kafka_Common_Record_RecordBatch"><see cref="Org.Apache.Kafka.Common.Record.RecordBatch"/></typeparam>
+        /// <returns><see cref="Org.Apache.Kafka.Common.Utils.AbstractIterator"/></returns>
+        public Org.Apache.Kafka.Common.Utils.AbstractIterator<ReturnExtendsOrg_Apache_Kafka_Common_Record_RecordBatch> BatchIterator<ReturnExtendsOrg_Apache_Kafka_Common_Record_RecordBatch>() where ReturnExtendsOrg_Apache_Kafka_Common_Record_RecordBatch: Org.Apache.Kafka.Common.Record.RecordBatch
+        {
+            return IExecute<Org.Apache.Kafka.Common.Utils.AbstractIterator<ReturnExtendsOrg_Apache_Kafka_Common_Record_RecordBatch>>("batchIterator");
         }
 
         #endregion

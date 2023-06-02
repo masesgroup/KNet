@@ -19,26 +19,10 @@
 using Org.Apache.Kafka.Common.Serialization;
 using Java.Util;
 
-namespace Org.Apache.Kafka.Streams.KStream
+namespace Org.Apache.Kafka.Streams.Kstream
 {
-    public class SessionWindowedDeserializer<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SessionWindowedDeserializer<T>>
+    public partial class SessionWindowedDeserializer<T>
     {
-        public override bool IsCloseable => true;
-
-        public override string ClassName => "org.apache.kafka.streams.kstream.SessionWindowedDeserializer";
-
-        public SessionWindowedDeserializer() { }
-
-        public SessionWindowedDeserializer(Deserializer<T> inner)
-            : base(inner)
-        {
-        }
-
-        public void Configure(Map<string, object> configs, bool isKey)
-        {
-            IExecute("configure", configs, isKey);
-        }
-
         public Windowed<T> Deserialize(string topic, byte[] data)
         {
             return IExecute<Windowed<T>>("deserialize", topic, data);

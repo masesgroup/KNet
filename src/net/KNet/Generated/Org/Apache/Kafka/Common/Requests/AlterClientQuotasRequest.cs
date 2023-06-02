@@ -65,18 +65,22 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AlterClientQuotasRequest.html#entries()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AlterClientQuotasRequest.html#validateOnly()"/>
         /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Quota.ClientQuotaAlteration> Entries
+
+        /// <returns><see cref="bool"/></returns>
+        public bool ValidateOnly()
         {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Quota.ClientQuotaAlteration>>("entries"); }
+            return IExecute<bool>("validateOnly");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AlterClientQuotasRequest.html#validateOnly()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AlterClientQuotasRequest.html#entries()"/>
         /// </summary>
-        public bool ValidateOnly
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Quota.ClientQuotaAlteration> Entries()
         {
-            get { return IExecute<bool>("validateOnly"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Quota.ClientQuotaAlteration>>("entries");
         }
 
         #endregion
@@ -91,7 +95,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
             /// <param name="arg1"><see cref="bool"/></param>
-            public Builder(Java.Util.Collection arg0, bool arg1)
+            public Builder(Java.Util.Collection<Org.Apache.Kafka.Common.Quota.ClientQuotaAlteration> arg0, bool arg1)
                 : base(arg0, arg1)
             {
             }

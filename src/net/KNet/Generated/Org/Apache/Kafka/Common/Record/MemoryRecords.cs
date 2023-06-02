@@ -487,25 +487,13 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#buffer()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#validBytes()"/>
         /// </summary>
-        public Java.Nio.ByteBuffer Buffer
+
+        /// <returns><see cref="int"/></returns>
+        public int ValidBytes()
         {
-            get { return IExecute<Java.Nio.ByteBuffer>("buffer"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#firstBatchSize()"/> 
-        /// </summary>
-        public int? FirstBatchSize
-        {
-            get { return IExecute<int?>("firstBatchSize"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#validBytes()"/> 
-        /// </summary>
-        public int ValidBytes
-        {
-            get { return IExecute<int>("validBytes"); }
+            return IExecute<int>("validBytes");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#writeFullyTo(java.nio.channels.GatheringByteChannel)"/>
@@ -516,6 +504,24 @@ namespace Org.Apache.Kafka.Common.Record
         public int WriteFullyTo(Java.Nio.Channels.GatheringByteChannel arg0)
         {
             return IExecute<int>("writeFullyTo", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#firstBatchSize()"/>
+        /// </summary>
+
+        /// <returns><see cref="int"/></returns>
+        public int? FirstBatchSize()
+        {
+            return IExecute<int?>("firstBatchSize");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#buffer()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
+        public Java.Nio.ByteBuffer Buffer()
+        {
+            return IExecute<Java.Nio.ByteBuffer>("buffer");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#filterTo(org.apache.kafka.common.TopicPartition,org.apache.kafka.common.record.MemoryRecords.RecordFilter,java.nio.ByteBuffer,int,org.apache.kafka.common.utils.BufferSupplier)"/>
@@ -555,60 +561,76 @@ namespace Org.Apache.Kafka.Common.Record
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.FilterResult.html#bytesRead()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.FilterResult.html#bytesRead()"/>
             /// </summary>
-            public int BytesRead
+
+            /// <returns><see cref="int"/></returns>
+            public int BytesRead()
             {
-                get { return IExecute<int>("bytesRead"); }
+                return IExecute<int>("bytesRead");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.FilterResult.html#bytesRetained()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.FilterResult.html#bytesRetained()"/>
             /// </summary>
-            public int BytesRetained
+
+            /// <returns><see cref="int"/></returns>
+            public int BytesRetained()
             {
-                get { return IExecute<int>("bytesRetained"); }
+                return IExecute<int>("bytesRetained");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.FilterResult.html#maxOffset()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.FilterResult.html#messagesRead()"/>
             /// </summary>
-            public long MaxOffset
+
+            /// <returns><see cref="int"/></returns>
+            public int MessagesRead()
             {
-                get { return IExecute<long>("maxOffset"); }
+                return IExecute<int>("messagesRead");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.FilterResult.html#maxTimestamp()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.FilterResult.html#messagesRetained()"/>
             /// </summary>
-            public long MaxTimestamp
+
+            /// <returns><see cref="int"/></returns>
+            public int MessagesRetained()
             {
-                get { return IExecute<long>("maxTimestamp"); }
+                return IExecute<int>("messagesRetained");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.FilterResult.html#messagesRead()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.FilterResult.html#outputBuffer()"/>
             /// </summary>
-            public int MessagesRead
+
+            /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
+            public Java.Nio.ByteBuffer OutputBuffer()
             {
-                get { return IExecute<int>("messagesRead"); }
+                return IExecute<Java.Nio.ByteBuffer>("outputBuffer");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.FilterResult.html#messagesRetained()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.FilterResult.html#maxOffset()"/>
             /// </summary>
-            public int MessagesRetained
+
+            /// <returns><see cref="long"/></returns>
+            public long MaxOffset()
             {
-                get { return IExecute<int>("messagesRetained"); }
+                return IExecute<long>("maxOffset");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.FilterResult.html#outputBuffer()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.FilterResult.html#maxTimestamp()"/>
             /// </summary>
-            public Java.Nio.ByteBuffer OutputBuffer
+
+            /// <returns><see cref="long"/></returns>
+            public long MaxTimestamp()
             {
-                get { return IExecute<Java.Nio.ByteBuffer>("outputBuffer"); }
+                return IExecute<long>("maxTimestamp");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.FilterResult.html#shallowOffsetOfMaxTimestamp()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.FilterResult.html#shallowOffsetOfMaxTimestamp()"/>
             /// </summary>
-            public long ShallowOffsetOfMaxTimestamp
+
+            /// <returns><see cref="long"/></returns>
+            public long ShallowOffsetOfMaxTimestamp()
             {
-                get { return IExecute<long>("shallowOffsetOfMaxTimestamp"); }
+                return IExecute<long>("shallowOffsetOfMaxTimestamp");
             }
 
             #endregion
@@ -691,13 +713,6 @@ namespace Org.Apache.Kafka.Common.Record
 
                 #region Static methods
                 /// <summary>
-                /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.RecordFilter.BatchRetention.html#values()"/> 
-                /// </summary>
-                public static Org.Apache.Kafka.Common.Record.MemoryRecords.RecordFilter.BatchRetention[] Values
-                {
-                    get { return SExecuteArray<Org.Apache.Kafka.Common.Record.MemoryRecords.RecordFilter.BatchRetention>(LocalBridgeClazz, "values"); }
-                }
-                /// <summary>
                 /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.RecordFilter.BatchRetention.html#valueOf(java.lang.String)"/>
                 /// </summary>
                 /// <param name="arg0"><see cref="string"/></param>
@@ -705,6 +720,15 @@ namespace Org.Apache.Kafka.Common.Record
                 public static Org.Apache.Kafka.Common.Record.MemoryRecords.RecordFilter.BatchRetention ValueOf(string arg0)
                 {
                     return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords.RecordFilter.BatchRetention>(LocalBridgeClazz, "valueOf", arg0);
+                }
+                /// <summary>
+                /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.RecordFilter.BatchRetention.html#values()"/>
+                /// </summary>
+
+                /// <returns><see cref="Org.Apache.Kafka.Common.Record.MemoryRecords.RecordFilter.BatchRetention"/></returns>
+                public static Org.Apache.Kafka.Common.Record.MemoryRecords.RecordFilter.BatchRetention[] Values()
+                {
+                    return SExecuteArray<Org.Apache.Kafka.Common.Record.MemoryRecords.RecordFilter.BatchRetention>(LocalBridgeClazz, "values");
                 }
 
                 #endregion

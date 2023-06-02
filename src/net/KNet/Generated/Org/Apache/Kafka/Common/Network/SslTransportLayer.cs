@@ -63,81 +63,68 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#finishConnect()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#finishConnect()"/>
         /// </summary>
-        public bool FinishConnect
+
+        /// <returns><see cref="bool"/></returns>
+        /// <exception cref="Java.Io.IOException"/>
+        public bool FinishConnect()
         {
-            get { return IExecute<bool>("finishConnect"); }
+            return IExecute<bool>("finishConnect");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#hasBytesBuffered()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#hasBytesBuffered()"/>
         /// </summary>
-        public bool HasBytesBuffered
+
+        /// <returns><see cref="bool"/></returns>
+        public bool HasBytesBuffered()
         {
-            get { return IExecute<bool>("hasBytesBuffered"); }
+            return IExecute<bool>("hasBytesBuffered");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#hasPendingWrites()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#hasPendingWrites()"/>
         /// </summary>
-        public bool HasPendingWrites
+
+        /// <returns><see cref="bool"/></returns>
+        public bool HasPendingWrites()
         {
-            get { return IExecute<bool>("hasPendingWrites"); }
+            return IExecute<bool>("hasPendingWrites");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#isConnected()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#isConnected()"/>
         /// </summary>
-        public bool IsConnected
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsConnected()
         {
-            get { return IExecute<bool>("isConnected"); }
+            return IExecute<bool>("isConnected");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#isMute()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#isMute()"/>
         /// </summary>
-        public bool IsMute
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsMute()
         {
-            get { return IExecute<bool>("isMute"); }
+            return IExecute<bool>("isMute");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#isOpen()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#isOpen()"/>
         /// </summary>
-        public bool IsOpen
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsOpen()
         {
-            get { return IExecute<bool>("isOpen"); }
+            return IExecute<bool>("isOpen");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#peerPrincipal()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#ready()"/>
         /// </summary>
-        public Java.Security.Principal PeerPrincipal
+
+        /// <returns><see cref="bool"/></returns>
+        public bool Ready()
         {
-            get { return IExecute<Java.Security.Principal>("peerPrincipal"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#ready()"/> 
-        /// </summary>
-        public bool Ready
-        {
-            get { return IExecute<bool>("ready"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#selectionKey()"/> 
-        /// </summary>
-        public Java.Nio.Channels.SelectionKey SelectionKey
-        {
-            get { return IExecute<Java.Nio.Channels.SelectionKey>("selectionKey"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#socketChannel()"/> 
-        /// </summary>
-        public Java.Nio.Channels.SocketChannel SocketChannel
-        {
-            get { return IExecute<Java.Nio.Channels.SocketChannel>("socketChannel"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#sslSession()"/> 
-        /// </summary>
-        public Javax.Net.Ssl.SSLSession SslSession
-        {
-            get { return IExecute<Javax.Net.Ssl.SSLSession>("sslSession"); }
+            return IExecute<bool>("ready");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#read(java.nio.ByteBuffer)"/>
@@ -158,6 +145,43 @@ namespace Org.Apache.Kafka.Common.Network
         public int Write(Java.Nio.ByteBuffer arg0)
         {
             return IExecute<int>("write", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#selectionKey()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Nio.Channels.SelectionKey"/></returns>
+        public Java.Nio.Channels.SelectionKey SelectionKey()
+        {
+            return IExecute<Java.Nio.Channels.SelectionKey>("selectionKey");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#socketChannel()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Nio.Channels.SocketChannel"/></returns>
+        public Java.Nio.Channels.SocketChannel SocketChannel()
+        {
+            return IExecute<Java.Nio.Channels.SocketChannel>("socketChannel");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#peerPrincipal()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Security.Principal"/></returns>
+        public Java.Security.Principal PeerPrincipal()
+        {
+            return IExecute<Java.Security.Principal>("peerPrincipal");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#sslSession()"/>
+        /// </summary>
+
+        /// <returns><see cref="Javax.Net.Ssl.SSLSession"/></returns>
+        /// <exception cref="Java.Lang.IllegalStateException"/>
+        public Javax.Net.Ssl.SSLSession SslSession()
+        {
+            return IExecute<Javax.Net.Ssl.SSLSession>("sslSession");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#read(java.nio.ByteBuffer[],int,int)"/>

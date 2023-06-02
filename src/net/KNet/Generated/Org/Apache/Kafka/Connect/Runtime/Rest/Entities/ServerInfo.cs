@@ -54,25 +54,31 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest.Entities
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ServerInfo.html#clusterId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ServerInfo.html#clusterId()"/>
         /// </summary>
-        public string ClusterId
+
+        /// <returns><see cref="string"/></returns>
+        public string ClusterId()
         {
-            get { return IExecute<string>("clusterId"); }
+            return IExecute<string>("clusterId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ServerInfo.html#commit()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ServerInfo.html#commit()"/>
         /// </summary>
-        public string Commit
+
+        /// <returns><see cref="string"/></returns>
+        public string Commit()
         {
-            get { return IExecute<string>("commit"); }
+            return IExecute<string>("commit");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ServerInfo.html#version()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ServerInfo.html#version()"/>
         /// </summary>
-        public string Version
+
+        /// <returns><see cref="string"/></returns>
+        public string Version()
         {
-            get { return IExecute<string>("version"); }
+            return IExecute<string>("version");
         }
 
         #endregion

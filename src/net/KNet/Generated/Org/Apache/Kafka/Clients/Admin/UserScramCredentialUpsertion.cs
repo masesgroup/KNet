@@ -77,25 +77,31 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/UserScramCredentialUpsertion.html#credentialInfo()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/UserScramCredentialUpsertion.html#password()"/>
         /// </summary>
-        public Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo CredentialInfo
+
+        /// <returns><see cref="byte"/></returns>
+        public byte[] Password()
         {
-            get { return IExecute<Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo>("credentialInfo"); }
+            return IExecuteArray<byte>("password");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/UserScramCredentialUpsertion.html#password()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/UserScramCredentialUpsertion.html#salt()"/>
         /// </summary>
-        public byte[] Password
+
+        /// <returns><see cref="byte"/></returns>
+        public byte[] Salt()
         {
-            get { return IExecuteArray<byte>("password"); }
+            return IExecuteArray<byte>("salt");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/UserScramCredentialUpsertion.html#salt()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/UserScramCredentialUpsertion.html#credentialInfo()"/>
         /// </summary>
-        public byte[] Salt
+
+        /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo"/></returns>
+        public Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo CredentialInfo()
         {
-            get { return IExecuteArray<byte>("salt"); }
+            return IExecute<Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo>("credentialInfo");
         }
 
         #endregion

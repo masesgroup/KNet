@@ -47,10 +47,10 @@ namespace Org.Apache.Kafka.Streams.Processor
     /// Listener for Kafka TopicNameExtractor. Extends <see cref="JVMBridgeListener"/>, implements <see cref="ITopicNameExtractor{K, V}"/>
     /// </summary>
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
-    public class TopicNameExtractor<K, V> : JVMBridgeListener, ITopicNameExtractor<K, V>
+    public partial class TopicNameExtractor<K, V> : ITopicNameExtractor<K, V>
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.streams.processor.TopicNameExtractorImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.streams.processor.TopicNameExtractorImpl";
 
         readonly Func<K, V, RecordContext, string> executionFunction = null;
         /// <summary>

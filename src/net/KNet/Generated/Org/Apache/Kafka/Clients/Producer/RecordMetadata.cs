@@ -63,60 +63,76 @@ namespace Org.Apache.Kafka.Clients.Producer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/RecordMetadata.html#hasOffset()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/RecordMetadata.html#hasOffset()"/>
         /// </summary>
-        public bool HasOffset
+
+        /// <returns><see cref="bool"/></returns>
+        public bool HasOffset()
         {
-            get { return IExecute<bool>("hasOffset"); }
+            return IExecute<bool>("hasOffset");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/RecordMetadata.html#hasTimestamp()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/RecordMetadata.html#hasTimestamp()"/>
         /// </summary>
-        public bool HasTimestamp
+
+        /// <returns><see cref="bool"/></returns>
+        public bool HasTimestamp()
         {
-            get { return IExecute<bool>("hasTimestamp"); }
+            return IExecute<bool>("hasTimestamp");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/RecordMetadata.html#offset()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/RecordMetadata.html#partition()"/>
         /// </summary>
-        public long Offset
+
+        /// <returns><see cref="int"/></returns>
+        public int Partition()
         {
-            get { return IExecute<long>("offset"); }
+            return IExecute<int>("partition");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/RecordMetadata.html#partition()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/RecordMetadata.html#serializedKeySize()"/>
         /// </summary>
-        public int Partition
+
+        /// <returns><see cref="int"/></returns>
+        public int SerializedKeySize()
         {
-            get { return IExecute<int>("partition"); }
+            return IExecute<int>("serializedKeySize");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/RecordMetadata.html#serializedKeySize()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/RecordMetadata.html#serializedValueSize()"/>
         /// </summary>
-        public int SerializedKeySize
+
+        /// <returns><see cref="int"/></returns>
+        public int SerializedValueSize()
         {
-            get { return IExecute<int>("serializedKeySize"); }
+            return IExecute<int>("serializedValueSize");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/RecordMetadata.html#serializedValueSize()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/RecordMetadata.html#topic()"/>
         /// </summary>
-        public int SerializedValueSize
+
+        /// <returns><see cref="string"/></returns>
+        public string Topic()
         {
-            get { return IExecute<int>("serializedValueSize"); }
+            return IExecute<string>("topic");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/RecordMetadata.html#timestamp()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/RecordMetadata.html#offset()"/>
         /// </summary>
-        public long Timestamp
+
+        /// <returns><see cref="long"/></returns>
+        public long Offset()
         {
-            get { return IExecute<long>("timestamp"); }
+            return IExecute<long>("offset");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/RecordMetadata.html#topic()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/RecordMetadata.html#timestamp()"/>
         /// </summary>
-        public string Topic
+
+        /// <returns><see cref="long"/></returns>
+        public long Timestamp()
         {
-            get { return IExecute<string>("topic"); }
+            return IExecute<long>("timestamp");
         }
 
         #endregion

@@ -60,46 +60,13 @@ namespace Org.Apache.Kafka.Common.Resource
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePatternFilter.html#findIndefiniteField()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePatternFilter.html#isUnknown()"/>
         /// </summary>
-        public string FindIndefiniteField
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsUnknown()
         {
-            get { return IExecute<string>("findIndefiniteField"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePatternFilter.html#isUnknown()"/> 
-        /// </summary>
-        public bool IsUnknown
-        {
-            get { return IExecute<bool>("isUnknown"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePatternFilter.html#matchesAtMostOne()"/> 
-        /// </summary>
-        public bool MatchesAtMostOne
-        {
-            get { return IExecute<bool>("matchesAtMostOne"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePatternFilter.html#name()"/> 
-        /// </summary>
-        public string Name
-        {
-            get { return IExecute<string>("name"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePatternFilter.html#patternType()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Resource.PatternType PatternType
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Resource.PatternType>("patternType"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePatternFilter.html#resourceType()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Resource.ResourceType ResourceType
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Resource.ResourceType>("resourceType"); }
+            return IExecute<bool>("isUnknown");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePatternFilter.html#matches(org.apache.kafka.common.resource.ResourcePattern)"/>
@@ -109,6 +76,51 @@ namespace Org.Apache.Kafka.Common.Resource
         public bool Matches(Org.Apache.Kafka.Common.Resource.ResourcePattern arg0)
         {
             return IExecute<bool>("matches", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePatternFilter.html#matchesAtMostOne()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool MatchesAtMostOne()
+        {
+            return IExecute<bool>("matchesAtMostOne");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePatternFilter.html#findIndefiniteField()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string FindIndefiniteField()
+        {
+            return IExecute<string>("findIndefiniteField");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePatternFilter.html#name()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string Name()
+        {
+            return IExecute<string>("name");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePatternFilter.html#patternType()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Resource.PatternType"/></returns>
+        public Org.Apache.Kafka.Common.Resource.PatternType PatternType()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Resource.PatternType>("patternType");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePatternFilter.html#resourceType()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Resource.ResourceType"/></returns>
+        public Org.Apache.Kafka.Common.Resource.ResourceType ResourceType()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Resource.ResourceType>("resourceType");
         }
 
         #endregion

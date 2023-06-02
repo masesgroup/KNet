@@ -55,60 +55,76 @@ namespace Org.Apache.Kafka.Connect.Runtime
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/RestartPlan.html#connectorName()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/RestartPlan.html#shouldRestartConnector()"/>
         /// </summary>
-        public string ConnectorName
+
+        /// <returns><see cref="bool"/></returns>
+        public bool ShouldRestartConnector()
         {
-            get { return IExecute<string>("connectorName"); }
+            return IExecute<bool>("shouldRestartConnector");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/RestartPlan.html#restartConnectorStateInfo()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/RestartPlan.html#shouldRestartTasks()"/>
         /// </summary>
-        public Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorStateInfo RestartConnectorStateInfo
+
+        /// <returns><see cref="bool"/></returns>
+        public bool ShouldRestartTasks()
         {
-            get { return IExecute<Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorStateInfo>("restartConnectorStateInfo"); }
+            return IExecute<bool>("shouldRestartTasks");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/RestartPlan.html#restartRequest()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/RestartPlan.html#restartTaskCount()"/>
         /// </summary>
-        public Org.Apache.Kafka.Connect.Runtime.RestartRequest RestartRequest
+
+        /// <returns><see cref="int"/></returns>
+        public int RestartTaskCount()
         {
-            get { return IExecute<Org.Apache.Kafka.Connect.Runtime.RestartRequest>("restartRequest"); }
+            return IExecute<int>("restartTaskCount");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/RestartPlan.html#restartTaskCount()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/RestartPlan.html#totalTaskCount()"/>
         /// </summary>
-        public int RestartTaskCount
+
+        /// <returns><see cref="int"/></returns>
+        public int TotalTaskCount()
         {
-            get { return IExecute<int>("restartTaskCount"); }
+            return IExecute<int>("totalTaskCount");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/RestartPlan.html#shouldRestartConnector()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/RestartPlan.html#connectorName()"/>
         /// </summary>
-        public bool ShouldRestartConnector
+
+        /// <returns><see cref="string"/></returns>
+        public string ConnectorName()
         {
-            get { return IExecute<bool>("shouldRestartConnector"); }
+            return IExecute<string>("connectorName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/RestartPlan.html#shouldRestartTasks()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/RestartPlan.html#taskIdsToRestart()"/>
         /// </summary>
-        public bool ShouldRestartTasks
+
+        /// <returns><see cref="Java.Util.Collection"/></returns>
+        public Java.Util.Collection<Org.Apache.Kafka.Connect.Util.ConnectorTaskId> TaskIdsToRestart()
         {
-            get { return IExecute<bool>("shouldRestartTasks"); }
+            return IExecute<Java.Util.Collection<Org.Apache.Kafka.Connect.Util.ConnectorTaskId>>("taskIdsToRestart");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/RestartPlan.html#taskIdsToRestart()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/RestartPlan.html#restartConnectorStateInfo()"/>
         /// </summary>
-        public Java.Util.Collection<Org.Apache.Kafka.Connect.Util.ConnectorTaskId> TaskIdsToRestart
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorStateInfo"/></returns>
+        public Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorStateInfo RestartConnectorStateInfo()
         {
-            get { return IExecute<Java.Util.Collection<Org.Apache.Kafka.Connect.Util.ConnectorTaskId>>("taskIdsToRestart"); }
+            return IExecute<Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConnectorStateInfo>("restartConnectorStateInfo");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/RestartPlan.html#totalTaskCount()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/RestartPlan.html#restartRequest()"/>
         /// </summary>
-        public int TotalTaskCount
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.RestartRequest"/></returns>
+        public Org.Apache.Kafka.Connect.Runtime.RestartRequest RestartRequest()
         {
-            get { return IExecute<int>("totalTaskCount"); }
+            return IExecute<Org.Apache.Kafka.Connect.Runtime.RestartRequest>("restartRequest");
         }
 
         #endregion

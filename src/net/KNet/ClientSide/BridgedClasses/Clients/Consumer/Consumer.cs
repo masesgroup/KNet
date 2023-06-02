@@ -26,13 +26,13 @@ namespace Org.Apache.Kafka.Clients.Consumer
 {
     public interface IConsumer: IJVMBridgeBase, System.IDisposable
     {
-        Set<TopicPartition> Assignment { get; }
+        Set<TopicPartition> Assignment();
 
-        Set<string> Subscription { get; }
+        Set<string> Subscription();
+        
+        Set<TopicPartition> Paused();
 
-        Set<TopicPartition> Paused { get; }
-
-        Map<MetricName, Metric> Metrics { get; }
+        Map<MetricName, T> Metrics<T>() where T : Metric;
 
         void Subscribe(Collection<string> topics);
 
@@ -72,12 +72,6 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         long Position(TopicPartition partition, Duration timeout);
 
-        [System.Obsolete]
-        OffsetAndMetadata Committed(TopicPartition partition);
-
-        [System.Obsolete]
-        OffsetAndMetadata Committed(TopicPartition partition, Duration timeout);
-
         Map<TopicPartition, OffsetAndMetadata> Committed(Set<TopicPartition> partitions);
 
         Map<TopicPartition, OffsetAndMetadata> Committed(Set<TopicPartition> partitions, Duration timeout);
@@ -94,19 +88,19 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         void Resume(Collection<TopicPartition> partitions);
 
-        Map<TopicPartition, OffsetAndTimestamp> OffsetsForTimes(Map<TopicPartition, long> timestampsToSearch);
+        Map<TopicPartition, OffsetAndTimestamp> OffsetsForTimes(Map<TopicPartition, long?> timestampsToSearch);
 
-        Map<TopicPartition, OffsetAndTimestamp> OffsetsForTimes(Map<TopicPartition, long> timestampsToSearch, Duration timeout);
+        Map<TopicPartition, OffsetAndTimestamp> OffsetsForTimes(Map<TopicPartition, long?> timestampsToSearch, Duration timeout);
 
-        Map<TopicPartition, long> BeginningOffsets(Collection<TopicPartition> partitions);
+        Map<TopicPartition, long?> BeginningOffsets(Collection<TopicPartition> partitions);
 
-        Map<TopicPartition, long> BeginningOffsets(Collection<TopicPartition> partitions, Duration timeout);
+        Map<TopicPartition, long?> BeginningOffsets(Collection<TopicPartition> partitions, Duration timeout);
 
-        Map<TopicPartition, long> EndOffsets(Collection<TopicPartition> partitions);
+        Map<TopicPartition, long?> EndOffsets(Collection<TopicPartition> partitions);
 
-        Map<TopicPartition, long> EndOffsets(Collection<TopicPartition> partitions, Duration timeout);
+        Map<TopicPartition, long?> EndOffsets(Collection<TopicPartition> partitions, Duration timeout);
 
-        Optional<long> CurrentLag(TopicPartition topicPartition);
+        OptionalLong CurrentLag(TopicPartition topicPartition);
 
         ConsumerGroupMetadata GroupMetadata();
 

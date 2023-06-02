@@ -46,18 +46,22 @@ namespace Org.Apache.Kafka.Common.Replica
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/PartitionView.html#leader()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/PartitionView.html#replicas()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Replica.ReplicaView Leader
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Common.Replica.ReplicaView> Replicas()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Replica.ReplicaView>("leader"); }
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.Replica.ReplicaView>>("replicas");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/PartitionView.html#replicas()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/PartitionView.html#leader()"/>
         /// </summary>
-        public Java.Util.Set<Org.Apache.Kafka.Common.Replica.ReplicaView> Replicas
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Replica.ReplicaView"/></returns>
+        public Org.Apache.Kafka.Common.Replica.ReplicaView Leader()
         {
-            get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.Replica.ReplicaView>>("replicas"); }
+            return IExecute<Org.Apache.Kafka.Common.Replica.ReplicaView>("leader");
         }
 
         #endregion
@@ -72,7 +76,7 @@ namespace Org.Apache.Kafka.Common.Replica
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Set"/></param>
             /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Replica.ReplicaView"/></param>
-            public DefaultPartitionView(Java.Util.Set arg0, Org.Apache.Kafka.Common.Replica.ReplicaView arg1)
+            public DefaultPartitionView(Java.Util.Set<Org.Apache.Kafka.Common.Replica.ReplicaView> arg0, Org.Apache.Kafka.Common.Replica.ReplicaView arg1)
                 : base(arg0, arg1)
             {
             }
@@ -97,18 +101,22 @@ namespace Org.Apache.Kafka.Common.Replica
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/PartitionView.DefaultPartitionView.html#leader()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/PartitionView.DefaultPartitionView.html#replicas()"/>
             /// </summary>
-            public Org.Apache.Kafka.Common.Replica.ReplicaView Leader
+
+            /// <returns><see cref="Java.Util.Set"/></returns>
+            public Java.Util.Set<Org.Apache.Kafka.Common.Replica.ReplicaView> Replicas()
             {
-                get { return IExecute<Org.Apache.Kafka.Common.Replica.ReplicaView>("leader"); }
+                return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.Replica.ReplicaView>>("replicas");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/PartitionView.DefaultPartitionView.html#replicas()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/PartitionView.DefaultPartitionView.html#leader()"/>
             /// </summary>
-            public Java.Util.Set<Org.Apache.Kafka.Common.Replica.ReplicaView> Replicas
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Replica.ReplicaView"/></returns>
+            public Org.Apache.Kafka.Common.Replica.ReplicaView Leader()
             {
-                get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.Replica.ReplicaView>>("replicas"); }
+                return IExecute<Org.Apache.Kafka.Common.Replica.ReplicaView>("leader");
             }
 
             #endregion

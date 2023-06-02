@@ -34,7 +34,7 @@ namespace Org.Apache.Kafka.Connect.Runtime
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Runtime.Isolation.Plugins"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
-        public ConnectorConfig(Org.Apache.Kafka.Connect.Runtime.Isolation.Plugins arg0, Java.Util.Map arg1)
+        public ConnectorConfig(Org.Apache.Kafka.Connect.Runtime.Isolation.Plugins arg0, Java.Util.Map<string, string> arg1)
             : base(arg0, arg1)
         {
         }
@@ -44,7 +44,7 @@ namespace Org.Apache.Kafka.Connect.Runtime
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Runtime.Isolation.Plugins"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></param>
         /// <param name="arg2"><see cref="Java.Util.Map"/></param>
-        public ConnectorConfig(Org.Apache.Kafka.Connect.Runtime.Isolation.Plugins arg0, Org.Apache.Kafka.Common.Config.ConfigDef arg1, Java.Util.Map arg2)
+        public ConnectorConfig(Org.Apache.Kafka.Connect.Runtime.Isolation.Plugins arg0, Org.Apache.Kafka.Common.Config.ConfigDef arg1, Java.Util.Map<string, string> arg2)
             : base(arg0, arg1, arg2)
         {
         }
@@ -241,11 +241,13 @@ namespace Org.Apache.Kafka.Connect.Runtime
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectorConfig.html#configDef()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectorConfig.html#configDef()"/>
         /// </summary>
-        public static Org.Apache.Kafka.Common.Config.ConfigDef ConfigDef
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
+        public static Org.Apache.Kafka.Common.Config.ConfigDef ConfigDef()
         {
-            get { return SExecute<Org.Apache.Kafka.Common.Config.ConfigDef>(LocalBridgeClazz, "configDef"); }
+            return SExecute<Org.Apache.Kafka.Common.Config.ConfigDef>(LocalBridgeClazz, "configDef");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectorConfig.html#enrich(org.apache.kafka.connect.runtime.isolation.Plugins,org.apache.kafka.common.config.ConfigDef,java.util.Map,boolean)"/>
@@ -264,46 +266,32 @@ namespace Org.Apache.Kafka.Connect.Runtime
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectorConfig.html#enableErrorLog()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectorConfig.html#transformations()"/>
         /// </summary>
-        public bool EnableErrorLog
+
+        /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Connect.Transforms.Transformation<R>> Transformations<R>() where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
         {
-            get { return IExecute<bool>("enableErrorLog"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Connect.Transforms.Transformation<R>>>("transformations");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectorConfig.html#errorMaxDelayInMillis()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectorConfig.html#enableErrorLog()"/>
         /// </summary>
-        public long ErrorMaxDelayInMillis
+
+        /// <returns><see cref="bool"/></returns>
+        public bool EnableErrorLog()
         {
-            get { return IExecute<long>("errorMaxDelayInMillis"); }
+            return IExecute<bool>("enableErrorLog");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectorConfig.html#errorRetryTimeout()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectorConfig.html#includeRecordDetailsInErrorLog()"/>
         /// </summary>
-        public long ErrorRetryTimeout
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IncludeRecordDetailsInErrorLog()
         {
-            get { return IExecute<long>("errorRetryTimeout"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectorConfig.html#errorToleranceType()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Connect.Runtime.Errors.ToleranceType ErrorToleranceType
-        {
-            get { return IExecute<Org.Apache.Kafka.Connect.Runtime.Errors.ToleranceType>("errorToleranceType"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectorConfig.html#includeRecordDetailsInErrorLog()"/> 
-        /// </summary>
-        public bool IncludeRecordDetailsInErrorLog
-        {
-            get { return IExecute<bool>("includeRecordDetailsInErrorLog"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectorConfig.html#transformations()"/> 
-        /// </summary>
-        public Java.Util.List Transformations
-        {
-            get { return IExecute<Java.Util.List>("transformations"); }
+            return IExecute<bool>("includeRecordDetailsInErrorLog");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectorConfig.html#get(java.lang.String)"/>
@@ -313,6 +301,33 @@ namespace Org.Apache.Kafka.Connect.Runtime
         public object Get(string arg0)
         {
             return IExecute("get", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectorConfig.html#errorMaxDelayInMillis()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long ErrorMaxDelayInMillis()
+        {
+            return IExecute<long>("errorMaxDelayInMillis");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectorConfig.html#errorRetryTimeout()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long ErrorRetryTimeout()
+        {
+            return IExecute<long>("errorRetryTimeout");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectorConfig.html#errorToleranceType()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.Errors.ToleranceType"/></returns>
+        public Org.Apache.Kafka.Connect.Runtime.Errors.ToleranceType ErrorToleranceType()
+        {
+            return IExecute<Org.Apache.Kafka.Connect.Runtime.Errors.ToleranceType>("errorToleranceType");
         }
 
         #endregion

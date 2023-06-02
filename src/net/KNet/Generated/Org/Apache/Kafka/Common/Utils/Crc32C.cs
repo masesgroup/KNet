@@ -42,11 +42,13 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Crc32C.html#create()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Crc32C.html#create()"/>
         /// </summary>
-        public static Java.Util.Zip.Checksum Create
+
+        /// <returns><see cref="Java.Util.Zip.Checksum"/></returns>
+        public static Java.Util.Zip.Checksum Create()
         {
-            get { return SExecute<Java.Util.Zip.Checksum>(LocalBridgeClazz, "create"); }
+            return SExecute<Java.Util.Zip.Checksum>(LocalBridgeClazz, "create");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Crc32C.html#compute(byte[],int,int)"/>

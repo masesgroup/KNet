@@ -36,7 +36,7 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest.Entities
         /// <param name="arg1"><see cref="int"/></param>
         /// <param name="arg2"><see cref="Java.Util.List"/></param>
         /// <param name="arg3"><see cref="Java.Util.List"/></param>
-        public ConfigInfos(string arg0, int arg1, Java.Util.List arg2, Java.Util.List arg3)
+        public ConfigInfos(string arg0, int arg1, Java.Util.List<string> arg2, Java.Util.List<Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConfigInfo> arg3)
             : base(arg0, arg1, arg2, arg3)
         {
         }
@@ -57,32 +57,40 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest.Entities
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigInfos.html#errorCount()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigInfos.html#errorCount()"/>
         /// </summary>
-        public int ErrorCount
+
+        /// <returns><see cref="int"/></returns>
+        public int ErrorCount()
         {
-            get { return IExecute<int>("errorCount"); }
+            return IExecute<int>("errorCount");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigInfos.html#groups()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigInfos.html#name()"/>
         /// </summary>
-        public Java.Util.List<string> Groups
+
+        /// <returns><see cref="string"/></returns>
+        public string Name()
         {
-            get { return IExecute<Java.Util.List<string>>("groups"); }
+            return IExecute<string>("name");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigInfos.html#name()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigInfos.html#groups()"/>
         /// </summary>
-        public string Name
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<string> Groups()
         {
-            get { return IExecute<string>("name"); }
+            return IExecute<Java.Util.List<string>>("groups");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigInfos.html#values()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigInfos.html#values()"/>
         /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConfigInfo> Values
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConfigInfo> Values()
         {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConfigInfo>>("values"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConfigInfo>>("values");
         }
 
         #endregion

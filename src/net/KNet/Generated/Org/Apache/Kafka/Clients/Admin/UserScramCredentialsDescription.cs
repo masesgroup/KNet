@@ -34,7 +34,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Java.Util.List"/></param>
-        public UserScramCredentialsDescription(string arg0, Java.Util.List arg1)
+        public UserScramCredentialsDescription(string arg0, Java.Util.List<Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo> arg1)
             : base(arg0, arg1)
         {
         }
@@ -55,18 +55,22 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/UserScramCredentialsDescription.html#credentialInfos()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/UserScramCredentialsDescription.html#name()"/>
         /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo> CredentialInfos
+
+        /// <returns><see cref="string"/></returns>
+        public string Name()
         {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo>>("credentialInfos"); }
+            return IExecute<string>("name");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/UserScramCredentialsDescription.html#name()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/UserScramCredentialsDescription.html#credentialInfos()"/>
         /// </summary>
-        public string Name
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo> CredentialInfos()
         {
-            get { return IExecute<string>("name"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo>>("credentialInfos");
         }
 
         #endregion

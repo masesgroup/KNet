@@ -50,34 +50,6 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#completedReceives()"/> 
-        /// </summary>
-        public Java.Util.Collection<Org.Apache.Kafka.Common.Network.NetworkReceive> CompletedReceives
-        {
-            get { return IExecute<Java.Util.Collection<Org.Apache.Kafka.Common.Network.NetworkReceive>>("completedReceives"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#completedSends()"/> 
-        /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Network.NetworkSend> CompletedSends
-        {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Network.NetworkSend>>("completedSends"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#connected()"/> 
-        /// </summary>
-        public Java.Util.List<string> Connected
-        {
-            get { return IExecute<Java.Util.List<string>>("connected"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#disconnected()"/> 
-        /// </summary>
-        public Java.Util.Map<string, Org.Apache.Kafka.Common.Network.ChannelState> Disconnected
-        {
-            get { return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Common.Network.ChannelState>>("disconnected"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#isChannelReady(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -85,6 +57,42 @@ namespace Org.Apache.Kafka.Common.Network
         public bool IsChannelReady(string arg0)
         {
             return IExecute<bool>("isChannelReady", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#completedReceives()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Collection"/></returns>
+        public Java.Util.Collection<Org.Apache.Kafka.Common.Network.NetworkReceive> CompletedReceives()
+        {
+            return IExecute<Java.Util.Collection<Org.Apache.Kafka.Common.Network.NetworkReceive>>("completedReceives");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#connected()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<string> Connected()
+        {
+            return IExecute<Java.Util.List<string>>("connected");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#completedSends()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Network.NetworkSend> CompletedSends()
+        {
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Network.NetworkSend>>("completedSends");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#disconnected()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, Org.Apache.Kafka.Common.Network.ChannelState> Disconnected()
+        {
+            return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Common.Network.ChannelState>>("disconnected");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#close()"/>

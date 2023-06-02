@@ -85,11 +85,13 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Bytes.html#get()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Bytes.html#get()"/>
         /// </summary>
-        public byte[] Get
+
+        /// <returns><see cref="byte"/></returns>
+        public byte[] Get()
         {
-            get { return IExecuteArray<byte>("get"); }
+            return IExecuteArray<byte>("get");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Bytes.html#compareTo(java.lang.Object)"/>

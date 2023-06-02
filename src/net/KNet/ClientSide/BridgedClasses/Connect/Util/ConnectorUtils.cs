@@ -21,9 +21,9 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Connect.Util
 {
-    public class ConnectorUtils : JVMBridgeBase<ConnectorUtils>
+    public partial class ConnectorUtils : JVMBridgeBase<ConnectorUtils>
     {
-        public override string ClassName => "org.apache.kafka.connect.util.ConnectorUtils";
+        public override string BridgeClassName => "org.apache.kafka.connect.util.ConnectorUtils";
 
         public static List<List<T>> GroupPartitions<T>(List<T> elements, int numGroups) => SExecute<List<List<T>>>("groupPartitions", elements, numGroups);
     }

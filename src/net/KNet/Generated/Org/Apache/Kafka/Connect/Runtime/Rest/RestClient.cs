@@ -53,36 +53,6 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest
         #endregion
 
         #region Instance methods
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/RestClient.html#httpRequest(java.lang.String,java.lang.String,javax.ws.rs.core.HttpHeaders,java.lang.Object,com.fasterxml.jackson.core.type.TypeReference,javax.crypto.SecretKey,java.lang.String)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <param name="arg2"><see cref="Javax.Ws.Rs.Core.HttpHeaders"/></param>
-        /// <param name="arg3"><see cref="object"/></param>
-        /// <param name="arg4"><see cref="Com.Fasterxml.Jackson.Core.Type.TypeReference"/></param>
-        /// <param name="arg5"><see cref="Javax.Crypto.SecretKey"/></param>
-        /// <param name="arg6"><see cref="string"/></param>
-        /// <typeparam name="T"></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.Rest.RestClient.HttpResponse"/></returns>
-        public Org.Apache.Kafka.Connect.Runtime.Rest.RestClient.HttpResponse<T> HttpRequest<T>(string arg0, string arg1, Javax.Ws.Rs.Core.HttpHeaders arg2, object arg3, Com.Fasterxml.Jackson.Core.Type.TypeReference<T> arg4, Javax.Crypto.SecretKey arg5, string arg6)
-        {
-            return IExecute<Org.Apache.Kafka.Connect.Runtime.Rest.RestClient.HttpResponse<T>>("httpRequest", arg0, arg1, arg2, arg3, arg4, arg5, arg6);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/RestClient.html#httpRequest(java.lang.String,java.lang.String,javax.ws.rs.core.HttpHeaders,java.lang.Object,com.fasterxml.jackson.core.type.TypeReference)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <param name="arg2"><see cref="Javax.Ws.Rs.Core.HttpHeaders"/></param>
-        /// <param name="arg3"><see cref="object"/></param>
-        /// <param name="arg4"><see cref="Com.Fasterxml.Jackson.Core.Type.TypeReference"/></param>
-        /// <typeparam name="T"></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.Rest.RestClient.HttpResponse"/></returns>
-        public Org.Apache.Kafka.Connect.Runtime.Rest.RestClient.HttpResponse<T> HttpRequest<T>(string arg0, string arg1, Javax.Ws.Rs.Core.HttpHeaders arg2, object arg3, Com.Fasterxml.Jackson.Core.Type.TypeReference<T> arg4)
-        {
-            return IExecute<Org.Apache.Kafka.Connect.Runtime.Rest.RestClient.HttpResponse<T>>("httpRequest", arg0, arg1, arg2, arg3, arg4);
-        }
 
         #endregion
 
@@ -118,25 +88,31 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/RestClient.HttpResponse.html#body()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/RestClient.HttpResponse.html#status()"/>
             /// </summary>
-            public object Body
+
+            /// <returns><see cref="int"/></returns>
+            public int Status()
             {
-                get { return IExecute("body"); }
+                return IExecute<int>("status");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/RestClient.HttpResponse.html#headers()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/RestClient.HttpResponse.html#headers()"/>
             /// </summary>
-            public Java.Util.Map Headers
+
+            /// <returns><see cref="Java.Util.Map"/></returns>
+            public Java.Util.Map Headers()
             {
-                get { return IExecute<Java.Util.Map>("headers"); }
+                return IExecute<Java.Util.Map>("headers");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/RestClient.HttpResponse.html#status()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/RestClient.HttpResponse.html#body()"/>
             /// </summary>
-            public int Status
+
+            /// <returns><see cref="object"/></returns>
+            public object Body()
             {
-                get { return IExecute<int>("status"); }
+                return IExecute("body");
             }
 
             #endregion
@@ -184,25 +160,31 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/RestClient.HttpResponse.html#body()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/RestClient.HttpResponse.html#status()"/>
             /// </summary>
-            public T Body
+
+            /// <returns><see cref="int"/></returns>
+            public int Status()
             {
-                get { return IExecute<T>("body"); }
+                return IExecute<int>("status");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/RestClient.HttpResponse.html#headers()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/RestClient.HttpResponse.html#headers()"/>
             /// </summary>
-            public Java.Util.Map<string, string> Headers
+
+            /// <returns><see cref="Java.Util.Map"/></returns>
+            public Java.Util.Map<string, string> Headers()
             {
-                get { return IExecute<Java.Util.Map<string, string>>("headers"); }
+                return IExecute<Java.Util.Map<string, string>>("headers");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/RestClient.HttpResponse.html#status()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/RestClient.HttpResponse.html#body()"/>
             /// </summary>
-            public int Status
+
+            /// <returns><typeparamref name="T"/></returns>
+            public T Body()
             {
-                get { return IExecute<int>("status"); }
+                return IExecute<T>("body");
             }
 
             #endregion

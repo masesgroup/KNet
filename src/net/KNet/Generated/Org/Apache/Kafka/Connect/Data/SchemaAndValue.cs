@@ -59,18 +59,22 @@ namespace Org.Apache.Kafka.Connect.Data
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/SchemaAndValue.html#schema()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/SchemaAndValue.html#value()"/>
         /// </summary>
-        public Org.Apache.Kafka.Connect.Data.Schema Schema
+
+        /// <returns><see cref="object"/></returns>
+        public object Value()
         {
-            get { return IExecute<Org.Apache.Kafka.Connect.Data.Schema>("schema"); }
+            return IExecute("value");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/SchemaAndValue.html#value()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/SchemaAndValue.html#schema()"/>
         /// </summary>
-        public object Value
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></returns>
+        public Org.Apache.Kafka.Connect.Data.Schema Schema()
         {
-            get { return IExecute("value"); }
+            return IExecute<Org.Apache.Kafka.Connect.Data.Schema>("schema");
         }
 
         #endregion

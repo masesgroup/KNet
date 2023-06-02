@@ -97,25 +97,31 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#sourceClusterAlias()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#sourceClusterAlias()"/>
         /// </summary>
-        public string SourceClusterAlias
+
+        /// <returns><see cref="string"/></returns>
+        public string SourceClusterAlias()
         {
-            get { return IExecute<string>("sourceClusterAlias"); }
+            return IExecute<string>("sourceClusterAlias");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#targetClusterAlias()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#targetClusterAlias()"/>
         /// </summary>
-        public string TargetClusterAlias
+
+        /// <returns><see cref="string"/></returns>
+        public string TargetClusterAlias()
         {
-            get { return IExecute<string>("targetClusterAlias"); }
+            return IExecute<string>("targetClusterAlias");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#timestamp()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#timestamp()"/>
         /// </summary>
-        public long Timestamp
+
+        /// <returns><see cref="long"/></returns>
+        public long Timestamp()
         {
-            get { return IExecute<long>("timestamp"); }
+            return IExecute<long>("timestamp");
         }
 
         #endregion

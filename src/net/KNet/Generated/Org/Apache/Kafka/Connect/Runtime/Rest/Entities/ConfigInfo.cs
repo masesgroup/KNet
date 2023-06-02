@@ -55,18 +55,22 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest.Entities
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigInfo.html#configKey()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigInfo.html#configKey()"/>
         /// </summary>
-        public Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConfigKeyInfo ConfigKey
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConfigKeyInfo"/></returns>
+        public Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConfigKeyInfo ConfigKey()
         {
-            get { return IExecute<Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConfigKeyInfo>("configKey"); }
+            return IExecute<Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConfigKeyInfo>("configKey");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigInfo.html#configValue()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigInfo.html#configValue()"/>
         /// </summary>
-        public Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConfigValueInfo ConfigValue
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConfigValueInfo"/></returns>
+        public Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConfigValueInfo ConfigValue()
         {
-            get { return IExecute<Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConfigValueInfo>("configValue"); }
+            return IExecute<Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ConfigValueInfo>("configValue");
         }
 
         #endregion

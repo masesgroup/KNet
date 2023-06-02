@@ -62,25 +62,13 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LazyDownConversionRecords.html#sizeInBytes()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LazyDownConversionRecords.html#sizeInBytes()"/>
         /// </summary>
-        public int SizeInBytes
+
+        /// <returns><see cref="int"/></returns>
+        public int SizeInBytes()
         {
-            get { return IExecute<int>("sizeInBytes"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LazyDownConversionRecords.html#topicPartition()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.TopicPartition TopicPartition
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.TopicPartition>("topicPartition"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LazyDownConversionRecords.html#toSend()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Record.RecordsSend ToSend
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Record.RecordsSend>("toSend"); }
+            return IExecute<int>("sizeInBytes");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LazyDownConversionRecords.html#iterator(long)"/>
@@ -91,6 +79,24 @@ namespace Org.Apache.Kafka.Common.Record
         public Java.Util.Iterator<Org.Apache.Kafka.Common.Record.ConvertedRecords<ReturnExtendsobject>> IteratorMethod<ReturnExtendsobject>(long arg0)
         {
             return IExecute<Java.Util.Iterator<Org.Apache.Kafka.Common.Record.ConvertedRecords<ReturnExtendsobject>>>("iterator", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LazyDownConversionRecords.html#toSend()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Record.RecordsSend"/></returns>
+        public Org.Apache.Kafka.Common.Record.RecordsSend ToSend()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Record.RecordsSend>("toSend");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LazyDownConversionRecords.html#topicPartition()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.TopicPartition"/></returns>
+        public Org.Apache.Kafka.Common.TopicPartition TopicPartition()
+        {
+            return IExecute<Org.Apache.Kafka.Common.TopicPartition>("topicPartition");
         }
 
         #endregion

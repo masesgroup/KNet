@@ -98,25 +98,14 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#channel()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#deleteIfExists()"/>
         /// </summary>
-        public Java.Nio.Channels.FileChannel Channel
+
+        /// <returns><see cref="bool"/></returns>
+        /// <exception cref="Java.Io.IOException"/>
+        public bool DeleteIfExists()
         {
-            get { return IExecute<Java.Nio.Channels.FileChannel>("channel"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#deleteIfExists()"/> 
-        /// </summary>
-        public bool DeleteIfExists
-        {
-            get { return IExecute<bool>("deleteIfExists"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#file()"/> 
-        /// </summary>
-        public Java.Io.File File
-        {
-            get { return IExecute<Java.Io.File>("file"); }
+            return IExecute<bool>("deleteIfExists");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#append(org.apache.kafka.common.record.MemoryRecords)"/>
@@ -139,6 +128,15 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecute<int>("truncateTo", arg0);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#file()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Io.File"/></returns>
+        public Java.Io.File File()
+        {
+            return IExecute<Java.Io.File>("file");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#batchesFrom(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
@@ -146,6 +144,15 @@ namespace Org.Apache.Kafka.Common.Record
         public Java.Lang.Iterable<Org.Apache.Kafka.Common.Record.FileLogInputStream.FileChannelRecordBatch> BatchesFrom(int arg0)
         {
             return IExecute<Java.Lang.Iterable<Org.Apache.Kafka.Common.Record.FileLogInputStream.FileChannelRecordBatch>>("batchesFrom", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#channel()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Nio.Channels.FileChannel"/></returns>
+        public Java.Nio.Channels.FileChannel Channel()
+        {
+            return IExecute<Java.Nio.Channels.FileChannel>("channel");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#slice(int,int)"/>
@@ -328,7 +335,7 @@ namespace Org.Apache.Kafka.Common.Record
             /// <param name="arg0"><see cref="long"/></param>
             /// <param name="arg1"><see cref="long"/></param>
             /// <param name="arg2"><see cref="Java.Util.Optional"/></param>
-            public TimestampAndOffset(long arg0, long arg1, Java.Util.Optional arg2)
+            public TimestampAndOffset(long arg0, long arg1, Java.Util.Optional<int?> arg2)
                 : base(arg0, arg1, arg2)
             {
             }

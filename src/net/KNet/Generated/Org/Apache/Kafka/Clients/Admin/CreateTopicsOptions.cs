@@ -46,18 +46,22 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/CreateTopicsOptions.html#shouldRetryOnQuotaViolation()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/CreateTopicsOptions.html#shouldRetryOnQuotaViolation()"/>
         /// </summary>
-        public bool ShouldRetryOnQuotaViolation
+
+        /// <returns><see cref="bool"/></returns>
+        public bool ShouldRetryOnQuotaViolation()
         {
-            get { return IExecute<bool>("shouldRetryOnQuotaViolation"); }
+            return IExecute<bool>("shouldRetryOnQuotaViolation");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/CreateTopicsOptions.html#shouldValidateOnly()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/CreateTopicsOptions.html#shouldValidateOnly()"/>
         /// </summary>
-        public bool ShouldValidateOnly
+
+        /// <returns><see cref="bool"/></returns>
+        public bool ShouldValidateOnly()
         {
-            get { return IExecute<bool>("shouldValidateOnly"); }
+            return IExecute<bool>("shouldValidateOnly");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/CreateTopicsOptions.html#retryOnQuotaViolation(boolean)"/>

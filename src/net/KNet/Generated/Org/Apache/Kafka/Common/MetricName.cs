@@ -36,7 +36,7 @@ namespace Org.Apache.Kafka.Common
         /// <param name="arg1"><see cref="string"/></param>
         /// <param name="arg2"><see cref="string"/></param>
         /// <param name="arg3"><see cref="Java.Util.Map"/></param>
-        public MetricName(string arg0, string arg1, string arg2, Java.Util.Map arg3)
+        public MetricName(string arg0, string arg1, string arg2, Java.Util.Map<string, string> arg3)
             : base(arg0, arg1, arg2, arg3)
         {
         }
@@ -57,32 +57,40 @@ namespace Org.Apache.Kafka.Common
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/MetricName.html#description()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/MetricName.html#description()"/>
         /// </summary>
-        public string Description
+
+        /// <returns><see cref="string"/></returns>
+        public string Description()
         {
-            get { return IExecute<string>("description"); }
+            return IExecute<string>("description");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/MetricName.html#group()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/MetricName.html#group()"/>
         /// </summary>
-        public string Group
+
+        /// <returns><see cref="string"/></returns>
+        public string Group()
         {
-            get { return IExecute<string>("group"); }
+            return IExecute<string>("group");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/MetricName.html#name()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/MetricName.html#name()"/>
         /// </summary>
-        public string Name
+
+        /// <returns><see cref="string"/></returns>
+        public string Name()
         {
-            get { return IExecute<string>("name"); }
+            return IExecute<string>("name");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/MetricName.html#tags()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/MetricName.html#tags()"/>
         /// </summary>
-        public Java.Util.Map<string, string> Tags
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, string> Tags()
         {
-            get { return IExecute<Java.Util.Map<string, string>>("tags"); }
+            return IExecute<Java.Util.Map<string, string>>("tags");
         }
 
         #endregion

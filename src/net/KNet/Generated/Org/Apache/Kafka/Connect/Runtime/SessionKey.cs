@@ -55,18 +55,22 @@ namespace Org.Apache.Kafka.Connect.Runtime
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/SessionKey.html#creationTimestamp()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/SessionKey.html#key()"/>
         /// </summary>
-        public long CreationTimestamp
+
+        /// <returns><see cref="Javax.Crypto.SecretKey"/></returns>
+        public Javax.Crypto.SecretKey Key()
         {
-            get { return IExecute<long>("creationTimestamp"); }
+            return IExecute<Javax.Crypto.SecretKey>("key");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/SessionKey.html#key()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/SessionKey.html#creationTimestamp()"/>
         /// </summary>
-        public Javax.Crypto.SecretKey Key
+
+        /// <returns><see cref="long"/></returns>
+        public long CreationTimestamp()
         {
-            get { return IExecute<Javax.Crypto.SecretKey>("key"); }
+            return IExecute<long>("creationTimestamp");
         }
 
         #endregion

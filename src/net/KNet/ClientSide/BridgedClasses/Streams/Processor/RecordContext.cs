@@ -21,31 +21,8 @@ using Org.Apache.Kafka.Common.Header;
 
 namespace Org.Apache.Kafka.Streams.Processor
 {
-    public interface IRecordContext : IJVMBridgeBase
+    public partial class RecordContext
     {
-        string Topic { get; }
-
-        int Partition { get; }
-
-        long Offset { get; }
-
-        long Timestamp { get; }
-
-        Headers Headers { get; }
-    }
-
-    public class RecordContext : JVMBridgeBase<RecordContext, IRecordContext>, IRecordContext
-    {
-        public override string ClassName => "org.apache.kafka.streams.processor.RecordContext";
-
-        public string Topic => IExecute<string>("topic");
-
-        public int Partition => IExecute<int>("partition");
-
-        public long Offset => IExecute<long>("offset");
-
-        public long Timestamp => IExecute<long>("timestamp");
-
-        public Headers Headers => IExecute<Headers>("headers");
+        public System.DateTime DateTime => System.DateTimeOffset.FromUnixTimeMilliseconds(Timestamp()).DateTime;
     }
 }

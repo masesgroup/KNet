@@ -55,18 +55,22 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigResource.html#isDefault()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigResource.html#isDefault()"/>
         /// </summary>
-        public bool IsDefault
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsDefault()
         {
-            get { return IExecute<bool>("isDefault"); }
+            return IExecute<bool>("isDefault");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigResource.html#name()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigResource.html#name()"/>
         /// </summary>
-        public string Name
+
+        /// <returns><see cref="string"/></returns>
+        public string Name()
         {
-            get { return IExecute<string>("name"); }
+            return IExecute<string>("name");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigResource.html#type()"/>
@@ -114,13 +118,6 @@ namespace Org.Apache.Kafka.Common.Config
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigResource.Type.html#values()"/> 
-            /// </summary>
-            public static Org.Apache.Kafka.Common.Config.ConfigResource.Type[] Values
-            {
-                get { return SExecuteArray<Org.Apache.Kafka.Common.Config.ConfigResource.Type>(LocalBridgeClazz, "values"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigResource.Type.html#forId(byte)"/>
             /// </summary>
             /// <param name="arg0"><see cref="byte"/></param>
@@ -138,16 +135,27 @@ namespace Org.Apache.Kafka.Common.Config
             {
                 return SExecute<Org.Apache.Kafka.Common.Config.ConfigResource.Type>(LocalBridgeClazz, "valueOf", arg0);
             }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigResource.Type.html#values()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigResource.Type"/></returns>
+            public static Org.Apache.Kafka.Common.Config.ConfigResource.Type[] Values()
+            {
+                return SExecuteArray<Org.Apache.Kafka.Common.Config.ConfigResource.Type>(LocalBridgeClazz, "values");
+            }
 
             #endregion
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigResource.Type.html#id()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigResource.Type.html#id()"/>
             /// </summary>
-            public byte Id
+
+            /// <returns><see cref="byte"/></returns>
+            public byte Id()
             {
-                get { return IExecute<byte>("id"); }
+                return IExecute<byte>("id");
             }
 
             #endregion

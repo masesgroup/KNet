@@ -21,52 +21,12 @@ using Java.Util;
 
 namespace Org.Apache.Kafka.Clients.Admin
 {
-    public class ListOffsetsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ListOffsetsResult>
+    public partial class ListOffsetsResult
     {
-        public override string ClassName => "org.apache.kafka.clients.admin.ListOffsetsResult";
-
-        [System.Obsolete("This is not public in Apache Kafka API")]
-        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
-        public ListOffsetsResult()
+        public partial class ListOffsetsResultInfo
         {
+            public System.DateTime DateTime => System.DateTimeOffset.FromUnixTimeMilliseconds(Timestamp()).DateTime;
 
-        }
-
-        public ListOffsetsResult(Map<TopicPartition, KafkaFuture<ListOffsetsResultInfo>> futures)
-            : base(futures)
-        {
-
-        }
-
-        public KafkaFuture<ListOffsetsResultInfo> PartitionResult(TopicPartition partition)
-        {
-            return IExecute<KafkaFuture<ListOffsetsResultInfo>>("partitionResult", partition); ;
-        }
-
-        public KafkaFuture<Map<TopicPartition, ListOffsetsResultInfo>> All => IExecute<KafkaFuture<Map<TopicPartition, ListOffsetsResultInfo>>>("all");
-
-        public class ListOffsetsResultInfo : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ListOffsetsResultInfo>
-        {
-            public override string ClassName => "org.apache.kafka.clients.admin.ListOffsetsResult$ListOffsetsResultInfo";
-
-            [System.Obsolete("This is not public in Apache Kafka API")]
-            [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
-            public ListOffsetsResultInfo()
-            {
-
-            }
-
-            public ListOffsetsResultInfo(long offset, long timestamp, Optional<int> leaderEpoch)
-                : base(offset, timestamp, leaderEpoch)
-            {
-
-            }
-
-            public long Offset => IExecute<long>("offset");
-
-            public long Timestamp => IExecute<long>("timestamp");
-
-            public Optional<int> LeaderEpoch => IExecute<Optional<int>>("leaderEpoch");
         }
     }
 }

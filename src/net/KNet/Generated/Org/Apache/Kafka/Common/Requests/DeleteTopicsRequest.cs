@@ -56,32 +56,40 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DeleteTopicsRequest.html#numberOfTopics()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DeleteTopicsRequest.html#numberOfTopics()"/>
         /// </summary>
-        public int NumberOfTopics
+
+        /// <returns><see cref="int"/></returns>
+        public int NumberOfTopics()
         {
-            get { return IExecute<int>("numberOfTopics"); }
+            return IExecute<int>("numberOfTopics");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DeleteTopicsRequest.html#topicIds()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DeleteTopicsRequest.html#topicNames()"/>
         /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Uuid> TopicIds
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<string> TopicNames()
         {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Uuid>>("topicIds"); }
+            return IExecute<Java.Util.List<string>>("topicNames");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DeleteTopicsRequest.html#topicNames()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DeleteTopicsRequest.html#topics()"/>
         /// </summary>
-        public Java.Util.List<string> TopicNames
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Message.DeleteTopicsRequestData.DeleteTopicState> Topics()
         {
-            get { return IExecute<Java.Util.List<string>>("topicNames"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.DeleteTopicsRequestData.DeleteTopicState>>("topics");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DeleteTopicsRequest.html#topics()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DeleteTopicsRequest.html#topicIds()"/>
         /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Message.DeleteTopicsRequestData.DeleteTopicState> Topics
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Uuid> TopicIds()
         {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.DeleteTopicsRequestData.DeleteTopicState>>("topics"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Uuid>>("topicIds");
         }
 
         #endregion

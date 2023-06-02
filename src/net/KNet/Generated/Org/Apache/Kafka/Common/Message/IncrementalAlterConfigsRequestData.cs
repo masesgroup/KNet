@@ -79,53 +79,22 @@ namespace Org.Apache.Kafka.Common.Message
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.html#apiKey()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.html#validateOnly()"/>
         /// </summary>
-        public short ApiKey
+
+        /// <returns><see cref="bool"/></returns>
+        public bool ValidateOnly()
         {
-            get { return IExecute<short>("apiKey"); }
+            return IExecute<bool>("validateOnly");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.html#duplicate()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.html#unknownTaggedFields()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.Message Duplicate
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.html#highestSupportedVersion()"/> 
-        /// </summary>
-        public short HighestSupportedVersion
-        {
-            get { return IExecute<short>("highestSupportedVersion"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.html#lowestSupportedVersion()"/> 
-        /// </summary>
-        public short LowestSupportedVersion
-        {
-            get { return IExecute<short>("lowestSupportedVersion"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.html#resources()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Message.IncrementalAlterConfigsRequestData.AlterConfigsResourceCollection Resources
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Message.IncrementalAlterConfigsRequestData.AlterConfigsResourceCollection>("resources"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.html#unknownTaggedFields()"/> 
-        /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields
-        {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.html#validateOnly()"/> 
-        /// </summary>
-        public bool ValidateOnly
-        {
-            get { return IExecute<bool>("validateOnly"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.html#setResources(org.apache.kafka.common.message.IncrementalAlterConfigsRequestData.AlterConfigsResourceCollection)"/>
@@ -144,6 +113,51 @@ namespace Org.Apache.Kafka.Common.Message
         public Org.Apache.Kafka.Common.Message.IncrementalAlterConfigsRequestData SetValidateOnly(bool arg0)
         {
             return IExecute<Org.Apache.Kafka.Common.Message.IncrementalAlterConfigsRequestData>("setValidateOnly", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.html#resources()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Message.IncrementalAlterConfigsRequestData.AlterConfigsResourceCollection"/></returns>
+        public Org.Apache.Kafka.Common.Message.IncrementalAlterConfigsRequestData.AlterConfigsResourceCollection Resources()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Message.IncrementalAlterConfigsRequestData.AlterConfigsResourceCollection>("resources");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.html#duplicate()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.Message Duplicate()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.html#apiKey()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short ApiKey()
+        {
+            return IExecute<short>("apiKey");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.html#highestSupportedVersion()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short HighestSupportedVersion()
+        {
+            return IExecute<short>("highestSupportedVersion");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.html#lowestSupportedVersion()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short LowestSupportedVersion()
+        {
+            return IExecute<short>("lowestSupportedVersion");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>
@@ -232,69 +246,6 @@ namespace Org.Apache.Kafka.Common.Message
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterableConfig.html#configOperation()"/> 
-            /// </summary>
-            public byte ConfigOperation
-            {
-                get { return IExecute<byte>("configOperation"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterableConfig.html#duplicate()"/> 
-            /// </summary>
-            public Org.Apache.Kafka.Common.Protocol.Message Duplicate
-            {
-                get { return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterableConfig.html#highestSupportedVersion()"/> 
-            /// </summary>
-            public short HighestSupportedVersion
-            {
-                get { return IExecute<short>("highestSupportedVersion"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterableConfig.html#lowestSupportedVersion()"/> 
-            /// </summary>
-            public short LowestSupportedVersion
-            {
-                get { return IExecute<short>("lowestSupportedVersion"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterableConfig.html#name()"/> 
-            /// </summary>
-            public string Name
-            {
-                get { return IExecute<string>("name"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterableConfig.html#next()"/> 
-            /// </summary>
-            public int Next
-            {
-                get { return IExecute<int>("next"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterableConfig.html#prev()"/> 
-            /// </summary>
-            public int Prev
-            {
-                get { return IExecute<int>("prev"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterableConfig.html#unknownTaggedFields()"/> 
-            /// </summary>
-            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields
-            {
-                get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterableConfig.html#value()"/> 
-            /// </summary>
-            public string Value
-            {
-                get { return IExecute<string>("value"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterableConfig.html#elementKeysAreEqual(java.lang.Object)"/>
             /// </summary>
             /// <param name="arg0"><see cref="object"/></param>
@@ -302,6 +253,60 @@ namespace Org.Apache.Kafka.Common.Message
             public bool ElementKeysAreEqual(object arg0)
             {
                 return IExecute<bool>("elementKeysAreEqual", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterableConfig.html#configOperation()"/>
+            /// </summary>
+
+            /// <returns><see cref="byte"/></returns>
+            public byte ConfigOperation()
+            {
+                return IExecute<byte>("configOperation");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterableConfig.html#next()"/>
+            /// </summary>
+
+            /// <returns><see cref="int"/></returns>
+            public int Next()
+            {
+                return IExecute<int>("next");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterableConfig.html#prev()"/>
+            /// </summary>
+
+            /// <returns><see cref="int"/></returns>
+            public int Prev()
+            {
+                return IExecute<int>("prev");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterableConfig.html#name()"/>
+            /// </summary>
+
+            /// <returns><see cref="string"/></returns>
+            public string Name()
+            {
+                return IExecute<string>("name");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterableConfig.html#value()"/>
+            /// </summary>
+
+            /// <returns><see cref="string"/></returns>
+            public string Value()
+            {
+                return IExecute<string>("value");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterableConfig.html#unknownTaggedFields()"/>
+            /// </summary>
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields()
+            {
+                return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterableConfig.html#setConfigOperation(byte)"/>
@@ -329,6 +334,33 @@ namespace Org.Apache.Kafka.Common.Message
             public Org.Apache.Kafka.Common.Message.IncrementalAlterConfigsRequestData.AlterableConfig SetValue(string arg0)
             {
                 return IExecute<Org.Apache.Kafka.Common.Message.IncrementalAlterConfigsRequestData.AlterableConfig>("setValue", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterableConfig.html#duplicate()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
+            public Org.Apache.Kafka.Common.Protocol.Message Duplicate()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterableConfig.html#highestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short HighestSupportedVersion()
+            {
+                return IExecute<short>("highestSupportedVersion");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterableConfig.html#lowestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short LowestSupportedVersion()
+            {
+                return IExecute<short>("lowestSupportedVersion");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterableConfig.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>
@@ -402,7 +434,7 @@ namespace Org.Apache.Kafka.Common.Message
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterableConfigCollection.html#%3Cinit%3E(java.util.Iterator)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Iterator"/></param>
-            public AlterableConfigCollection(Java.Util.Iterator arg0)
+            public AlterableConfigCollection(Java.Util.Iterator<Org.Apache.Kafka.Common.Message.IncrementalAlterConfigsRequestData.AlterableConfig> arg0)
                 : base(arg0)
             {
             }
@@ -423,13 +455,6 @@ namespace Org.Apache.Kafka.Common.Message
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterableConfigCollection.html#duplicate()"/> 
-            /// </summary>
-            public Org.Apache.Kafka.Common.Message.IncrementalAlterConfigsRequestData.AlterableConfigCollection Duplicate
-            {
-                get { return IExecute<Org.Apache.Kafka.Common.Message.IncrementalAlterConfigsRequestData.AlterableConfigCollection>("duplicate"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterableConfigCollection.html#findAll(java.lang.String,byte)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
@@ -448,6 +473,15 @@ namespace Org.Apache.Kafka.Common.Message
             public Org.Apache.Kafka.Common.Message.IncrementalAlterConfigsRequestData.AlterableConfig Find(string arg0, byte arg1)
             {
                 return IExecute<Org.Apache.Kafka.Common.Message.IncrementalAlterConfigsRequestData.AlterableConfig>("find", arg0, arg1);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterableConfigCollection.html#duplicate()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Message.IncrementalAlterConfigsRequestData.AlterableConfigCollection"/></returns>
+            public Org.Apache.Kafka.Common.Message.IncrementalAlterConfigsRequestData.AlterableConfigCollection Duplicate()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Message.IncrementalAlterConfigsRequestData.AlterableConfigCollection>("duplicate");
             }
 
             #endregion
@@ -514,69 +548,6 @@ namespace Org.Apache.Kafka.Common.Message
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterConfigsResource.html#configs()"/> 
-            /// </summary>
-            public Org.Apache.Kafka.Common.Message.IncrementalAlterConfigsRequestData.AlterableConfigCollection Configs
-            {
-                get { return IExecute<Org.Apache.Kafka.Common.Message.IncrementalAlterConfigsRequestData.AlterableConfigCollection>("configs"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterConfigsResource.html#duplicate()"/> 
-            /// </summary>
-            public Org.Apache.Kafka.Common.Protocol.Message Duplicate
-            {
-                get { return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterConfigsResource.html#highestSupportedVersion()"/> 
-            /// </summary>
-            public short HighestSupportedVersion
-            {
-                get { return IExecute<short>("highestSupportedVersion"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterConfigsResource.html#lowestSupportedVersion()"/> 
-            /// </summary>
-            public short LowestSupportedVersion
-            {
-                get { return IExecute<short>("lowestSupportedVersion"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterConfigsResource.html#next()"/> 
-            /// </summary>
-            public int Next
-            {
-                get { return IExecute<int>("next"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterConfigsResource.html#prev()"/> 
-            /// </summary>
-            public int Prev
-            {
-                get { return IExecute<int>("prev"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterConfigsResource.html#resourceName()"/> 
-            /// </summary>
-            public string ResourceName
-            {
-                get { return IExecute<string>("resourceName"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterConfigsResource.html#resourceType()"/> 
-            /// </summary>
-            public byte ResourceType
-            {
-                get { return IExecute<byte>("resourceType"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterConfigsResource.html#unknownTaggedFields()"/> 
-            /// </summary>
-            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields
-            {
-                get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterConfigsResource.html#elementKeysAreEqual(java.lang.Object)"/>
             /// </summary>
             /// <param name="arg0"><see cref="object"/></param>
@@ -584,6 +555,60 @@ namespace Org.Apache.Kafka.Common.Message
             public bool ElementKeysAreEqual(object arg0)
             {
                 return IExecute<bool>("elementKeysAreEqual", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterConfigsResource.html#resourceType()"/>
+            /// </summary>
+
+            /// <returns><see cref="byte"/></returns>
+            public byte ResourceType()
+            {
+                return IExecute<byte>("resourceType");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterConfigsResource.html#next()"/>
+            /// </summary>
+
+            /// <returns><see cref="int"/></returns>
+            public int Next()
+            {
+                return IExecute<int>("next");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterConfigsResource.html#prev()"/>
+            /// </summary>
+
+            /// <returns><see cref="int"/></returns>
+            public int Prev()
+            {
+                return IExecute<int>("prev");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterConfigsResource.html#resourceName()"/>
+            /// </summary>
+
+            /// <returns><see cref="string"/></returns>
+            public string ResourceName()
+            {
+                return IExecute<string>("resourceName");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterConfigsResource.html#unknownTaggedFields()"/>
+            /// </summary>
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields()
+            {
+                return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterConfigsResource.html#configs()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Message.IncrementalAlterConfigsRequestData.AlterableConfigCollection"/></returns>
+            public Org.Apache.Kafka.Common.Message.IncrementalAlterConfigsRequestData.AlterableConfigCollection Configs()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Message.IncrementalAlterConfigsRequestData.AlterableConfigCollection>("configs");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterConfigsResource.html#setConfigs(org.apache.kafka.common.message.IncrementalAlterConfigsRequestData.AlterableConfigCollection)"/>
@@ -611,6 +636,33 @@ namespace Org.Apache.Kafka.Common.Message
             public Org.Apache.Kafka.Common.Message.IncrementalAlterConfigsRequestData.AlterConfigsResource SetResourceType(byte arg0)
             {
                 return IExecute<Org.Apache.Kafka.Common.Message.IncrementalAlterConfigsRequestData.AlterConfigsResource>("setResourceType", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterConfigsResource.html#duplicate()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
+            public Org.Apache.Kafka.Common.Protocol.Message Duplicate()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterConfigsResource.html#highestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short HighestSupportedVersion()
+            {
+                return IExecute<short>("highestSupportedVersion");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterConfigsResource.html#lowestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short LowestSupportedVersion()
+            {
+                return IExecute<short>("lowestSupportedVersion");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterConfigsResource.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>
@@ -684,7 +736,7 @@ namespace Org.Apache.Kafka.Common.Message
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterConfigsResourceCollection.html#%3Cinit%3E(java.util.Iterator)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Iterator"/></param>
-            public AlterConfigsResourceCollection(Java.Util.Iterator arg0)
+            public AlterConfigsResourceCollection(Java.Util.Iterator<Org.Apache.Kafka.Common.Message.IncrementalAlterConfigsRequestData.AlterConfigsResource> arg0)
                 : base(arg0)
             {
             }
@@ -705,13 +757,6 @@ namespace Org.Apache.Kafka.Common.Message
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterConfigsResourceCollection.html#duplicate()"/> 
-            /// </summary>
-            public Org.Apache.Kafka.Common.Message.IncrementalAlterConfigsRequestData.AlterConfigsResourceCollection Duplicate
-            {
-                get { return IExecute<Org.Apache.Kafka.Common.Message.IncrementalAlterConfigsRequestData.AlterConfigsResourceCollection>("duplicate"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterConfigsResourceCollection.html#findAll(byte,java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="byte"/></param>
@@ -730,6 +775,15 @@ namespace Org.Apache.Kafka.Common.Message
             public Org.Apache.Kafka.Common.Message.IncrementalAlterConfigsRequestData.AlterConfigsResource Find(byte arg0, string arg1)
             {
                 return IExecute<Org.Apache.Kafka.Common.Message.IncrementalAlterConfigsRequestData.AlterConfigsResource>("find", arg0, arg1);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/IncrementalAlterConfigsRequestData.AlterConfigsResourceCollection.html#duplicate()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Message.IncrementalAlterConfigsRequestData.AlterConfigsResourceCollection"/></returns>
+            public Org.Apache.Kafka.Common.Message.IncrementalAlterConfigsRequestData.AlterConfigsResourceCollection Duplicate()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Message.IncrementalAlterConfigsRequestData.AlterConfigsResourceCollection>("duplicate");
             }
 
             #endregion

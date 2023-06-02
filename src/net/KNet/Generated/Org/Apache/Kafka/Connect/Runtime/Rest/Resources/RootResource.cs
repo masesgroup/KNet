@@ -58,11 +58,13 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest.Resources
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/resources/RootResource.html#serverInfo()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/resources/RootResource.html#serverInfo()"/>
         /// </summary>
-        public Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ServerInfo ServerInfo
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ServerInfo"/></returns>
+        public Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ServerInfo ServerInfo()
         {
-            get { return IExecute<Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ServerInfo>("serverInfo"); }
+            return IExecute<Org.Apache.Kafka.Connect.Runtime.Rest.Entities.ServerInfo>("serverInfo");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/resources/RootResource.html#requestTimeout(long)"/>

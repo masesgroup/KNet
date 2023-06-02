@@ -97,32 +97,40 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ListOffsetsRequest.html#duplicatePartitions()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ListOffsetsRequest.html#replicaId()"/>
         /// </summary>
-        public Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> DuplicatePartitions
+
+        /// <returns><see cref="int"/></returns>
+        public int ReplicaId()
         {
-            get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition>>("duplicatePartitions"); }
+            return IExecute<int>("replicaId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ListOffsetsRequest.html#isolationLevel()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ListOffsetsRequest.html#topics()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.IsolationLevel IsolationLevel
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Message.ListOffsetsRequestData.ListOffsetsTopic> Topics()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.IsolationLevel>("isolationLevel"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.ListOffsetsRequestData.ListOffsetsTopic>>("topics");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ListOffsetsRequest.html#replicaId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ListOffsetsRequest.html#duplicatePartitions()"/>
         /// </summary>
-        public int ReplicaId
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> DuplicatePartitions()
         {
-            get { return IExecute<int>("replicaId"); }
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition>>("duplicatePartitions");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ListOffsetsRequest.html#topics()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ListOffsetsRequest.html#isolationLevel()"/>
         /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Message.ListOffsetsRequestData.ListOffsetsTopic> Topics
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.IsolationLevel"/></returns>
+        public Org.Apache.Kafka.Common.IsolationLevel IsolationLevel()
         {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.ListOffsetsRequestData.ListOffsetsTopic>>("topics"); }
+            return IExecute<Org.Apache.Kafka.Common.IsolationLevel>("isolationLevel");
         }
 
         #endregion

@@ -244,7 +244,7 @@ namespace Org.Apache.Kafka.Connect.Health
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/ConnectorType.html"/>
     /// </summary>
-    public partial class ConnectorType : Java.Lang.Enum
+    public partial class ConnectorType : Java.Lang.Enum<Org.Apache.Kafka.Connect.Health.ConnectorType>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

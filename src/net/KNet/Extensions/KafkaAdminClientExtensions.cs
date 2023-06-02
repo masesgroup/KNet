@@ -133,7 +133,7 @@ namespace MASES.KNet.Extensions
             }
             finally
             { // this piece of code tryies to mitigate the effect of GC object recall
-                if (coll != null&& coll.IsStatic)
+                if (coll != null && coll.IsBridgeStatic)
                 {
                     topic.ToString();
                     coll.ToString();
@@ -156,7 +156,7 @@ namespace MASES.KNet.Extensions
             }
             finally
             { // this piece of code tryies to mitigate the effect of GC object recall
-                if (coll != null && coll.IsStatic)
+                if (coll != null && coll.IsBridgeStatic)
                 {
                     topic.ToString();
                     coll.ToString();
@@ -176,7 +176,7 @@ namespace MASES.KNet.Extensions
             }
             finally
             { // this piece of code tryies to mitigate the effect of GC object recall
-                if (coll != null && coll.IsStatic)
+                if (coll != null && coll.IsBridgeStatic)
                 {
                     topic.ToString();
                     coll.ToString();
@@ -204,7 +204,7 @@ namespace MASES.KNet.Extensions
             }
             finally
             { // this piece of code tryies to mitigate the effect of GC object recall
-                if (coll != null && coll.IsStatic) coll.ToString();
+                if (coll != null && coll.IsBridgeStatic) coll.ToString();
             }
         }
 
@@ -223,7 +223,7 @@ namespace MASES.KNet.Extensions
             }
             finally
             { // this piece of code tryies to mitigate the effect of GC object recall
-                if (coll != null && coll.IsStatic) coll.ToString();
+                if (coll != null && coll.IsBridgeStatic) coll.ToString();
             }
         }
 

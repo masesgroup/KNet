@@ -44,7 +44,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
-        public NewTopic(string arg0, Java.Util.Map arg1)
+        public NewTopic(string arg0, Java.Util.Map<int?, Java.Util.List<int?>> arg1)
             : base(arg0, arg1)
         {
         }
@@ -54,7 +54,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Java.Util.Optional"/></param>
         /// <param name="arg2"><see cref="Java.Util.Optional"/></param>
-        public NewTopic(string arg0, Java.Util.Optional arg1, Java.Util.Optional arg2)
+        public NewTopic(string arg0, Java.Util.Optional<int?> arg1, Java.Util.Optional<short?> arg2)
             : base(arg0, arg1, arg2)
         {
         }
@@ -75,32 +75,31 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/NewTopic.html#name()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/NewTopic.html#numPartitions()"/>
         /// </summary>
-        public string Name
+
+        /// <returns><see cref="int"/></returns>
+        public int NumPartitions()
         {
-            get { return IExecute<string>("name"); }
+            return IExecute<int>("numPartitions");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/NewTopic.html#numPartitions()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/NewTopic.html#name()"/>
         /// </summary>
-        public int NumPartitions
+
+        /// <returns><see cref="string"/></returns>
+        public string Name()
         {
-            get { return IExecute<int>("numPartitions"); }
+            return IExecute<string>("name");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/NewTopic.html#replicasAssignments()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/NewTopic.html#replicasAssignments()"/>
         /// </summary>
-        public Java.Util.Map<int?, Java.Util.List<int?>> ReplicasAssignments
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<int?, Java.Util.List<int?>> ReplicasAssignments()
         {
-            get { return IExecute<Java.Util.Map<int?, Java.Util.List<int?>>>("replicasAssignments"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/NewTopic.html#replicationFactor()"/> 
-        /// </summary>
-        public short ReplicationFactor
-        {
-            get { return IExecute<short>("replicationFactor"); }
+            return IExecute<Java.Util.Map<int?, Java.Util.List<int?>>>("replicasAssignments");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/NewTopic.html#configs()"/>
@@ -119,6 +118,15 @@ namespace Org.Apache.Kafka.Clients.Admin
         public Org.Apache.Kafka.Clients.Admin.NewTopic Configs(Java.Util.Map<string, string> arg0)
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.NewTopic>("configs", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/NewTopic.html#replicationFactor()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short ReplicationFactor()
+        {
+            return IExecute<short>("replicationFactor");
         }
 
         #endregion

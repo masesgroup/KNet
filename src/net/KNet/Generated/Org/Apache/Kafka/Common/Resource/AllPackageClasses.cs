@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Common.Resource
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/PatternType.html"/>
     /// </summary>
-    public partial class PatternType : Java.Lang.Enum
+    public partial class PatternType : Java.Lang.Enum<Org.Apache.Kafka.Common.Resource.PatternType>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -201,7 +201,7 @@ namespace Org.Apache.Kafka.Common.Resource
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourceType.html"/>
     /// </summary>
-    public partial class ResourceType : Java.Lang.Enum
+    public partial class ResourceType : Java.Lang.Enum<Org.Apache.Kafka.Common.Resource.ResourceType>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

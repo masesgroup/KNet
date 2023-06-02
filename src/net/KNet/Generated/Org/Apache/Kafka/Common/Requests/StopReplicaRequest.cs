@@ -56,18 +56,22 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/StopReplicaRequest.html#partitionStates()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/StopReplicaRequest.html#topicStates()"/>
         /// </summary>
-        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Message.StopReplicaRequestData.StopReplicaPartitionState> PartitionStates
+
+        /// <returns><see cref="Java.Lang.Iterable"/></returns>
+        public Java.Lang.Iterable<Org.Apache.Kafka.Common.Message.StopReplicaRequestData.StopReplicaTopicState> TopicStates()
         {
-            get { return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Message.StopReplicaRequestData.StopReplicaPartitionState>>("partitionStates"); }
+            return IExecute<Java.Lang.Iterable<Org.Apache.Kafka.Common.Message.StopReplicaRequestData.StopReplicaTopicState>>("topicStates");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/StopReplicaRequest.html#topicStates()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/StopReplicaRequest.html#partitionStates()"/>
         /// </summary>
-        public Java.Lang.Iterable<Org.Apache.Kafka.Common.Message.StopReplicaRequestData.StopReplicaTopicState> TopicStates
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Message.StopReplicaRequestData.StopReplicaPartitionState> PartitionStates()
         {
-            get { return IExecute<Java.Lang.Iterable<Org.Apache.Kafka.Common.Message.StopReplicaRequestData.StopReplicaTopicState>>("topicStates"); }
+            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Message.StopReplicaRequestData.StopReplicaPartitionState>>("partitionStates");
         }
 
         #endregion
@@ -87,7 +91,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// <param name="arg4"><see cref="bool"/></param>
             /// <param name="arg5"><see cref="Java.Util.List"/></param>
             /// <param name="arg6"><see cref="bool"/></param>
-            public Builder(short arg0, int arg1, int arg2, long arg3, bool arg4, Java.Util.List arg5, bool arg6)
+            public Builder(short arg0, int arg1, int arg2, long arg3, bool arg4, Java.Util.List<Org.Apache.Kafka.Common.Message.StopReplicaRequestData.StopReplicaTopicState> arg5, bool arg6)
                 : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
             {
             }
@@ -100,7 +104,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// <param name="arg3"><see cref="long"/></param>
             /// <param name="arg4"><see cref="bool"/></param>
             /// <param name="arg5"><see cref="Java.Util.List"/></param>
-            public Builder(short arg0, int arg1, int arg2, long arg3, bool arg4, Java.Util.List arg5)
+            public Builder(short arg0, int arg1, int arg2, long arg3, bool arg4, Java.Util.List<Org.Apache.Kafka.Common.Message.StopReplicaRequestData.StopReplicaTopicState> arg5)
                 : base(arg0, arg1, arg2, arg3, arg4, arg5)
             {
             }

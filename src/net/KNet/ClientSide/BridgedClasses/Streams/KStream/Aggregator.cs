@@ -19,7 +19,7 @@
 using MASES.JCOBridge.C2JBridge;
 using System;
 
-namespace Org.Apache.Kafka.Streams.KStream
+namespace Org.Apache.Kafka.Streams.Kstream
 {
     /// <summary>
     /// Listener for Kafka Aggregator. Extends <see cref="IJVMBridgeBase"/>
@@ -46,10 +46,10 @@ namespace Org.Apache.Kafka.Streams.KStream
     /// <typeparam name="V">The data associated to the event</typeparam>
     /// <typeparam name="VA">Aggregated value</typeparam>
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
-    public class Aggregator<K, V, VA> : JVMBridgeListener, IAggregator<K, V, VA>
+    public partial class Aggregator<K, V, VA> : IAggregator<K, V, VA>
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.streams.kstream.AggregatorImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.streams.kstream.AggregatorImpl";
 
         readonly Func<K, V, VA, VA> executionFunction = null;
         /// <summary>

@@ -85,13 +85,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#unbounded()"/> 
-            /// </summary>
-            public static Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig Unbounded
-            {
-                get { return SExecute<Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig>(LocalBridgeClazz, "unbounded"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#maxBytes(long)"/>
             /// </summary>
             /// <param name="arg0"><see cref="long"/></param>
@@ -109,37 +102,27 @@ namespace Org.Apache.Kafka.Streams.Kstream
             {
                 return SExecute<Org.Apache.Kafka.Streams.Kstream.Suppressed.EagerBufferConfig>(LocalBridgeClazz, "maxRecords", arg0);
             }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#unbounded()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig"/></returns>
+            public static Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig Unbounded()
+            {
+                return SExecute<Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig>(LocalBridgeClazz, "unbounded");
+            }
 
             #endregion
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#emitEarlyWhenFull()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#withLoggingDisabled()"/>
             /// </summary>
-            public Org.Apache.Kafka.Streams.Kstream.Suppressed.EagerBufferConfig EmitEarlyWhenFull
+
+            /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.BufferConfig"/></returns>
+            public Org.Apache.Kafka.Streams.Kstream.Suppressed.BufferConfig WithLoggingDisabled()
             {
-                get { return IExecute<Org.Apache.Kafka.Streams.Kstream.Suppressed.EagerBufferConfig>("emitEarlyWhenFull"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#shutDownWhenFull()"/> 
-            /// </summary>
-            public Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig ShutDownWhenFull
-            {
-                get { return IExecute<Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig>("shutDownWhenFull"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#withLoggingDisabled()"/> 
-            /// </summary>
-            public Org.Apache.Kafka.Streams.Kstream.Suppressed.BufferConfig WithLoggingDisabled
-            {
-                get { return IExecute<Org.Apache.Kafka.Streams.Kstream.Suppressed.BufferConfig>("withLoggingDisabled"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#withNoBound()"/> 
-            /// </summary>
-            public Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig WithNoBound
-            {
-                get { return IExecute<Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig>("withNoBound"); }
+                return IExecute<Org.Apache.Kafka.Streams.Kstream.Suppressed.BufferConfig>("withLoggingDisabled");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#withLoggingEnabled(java.util.Map)"/>
@@ -167,6 +150,33 @@ namespace Org.Apache.Kafka.Streams.Kstream
             public Org.Apache.Kafka.Streams.Kstream.Suppressed.BufferConfig WithMaxRecords(long arg0)
             {
                 return IExecute<Org.Apache.Kafka.Streams.Kstream.Suppressed.BufferConfig>("withMaxRecords", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#emitEarlyWhenFull()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.EagerBufferConfig"/></returns>
+            public Org.Apache.Kafka.Streams.Kstream.Suppressed.EagerBufferConfig EmitEarlyWhenFull()
+            {
+                return IExecute<Org.Apache.Kafka.Streams.Kstream.Suppressed.EagerBufferConfig>("emitEarlyWhenFull");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#shutDownWhenFull()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig"/></returns>
+            public Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig ShutDownWhenFull()
+            {
+                return IExecute<Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig>("shutDownWhenFull");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#withNoBound()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig"/></returns>
+            public Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig WithNoBound()
+            {
+                return IExecute<Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig>("withNoBound");
             }
 
             #endregion
@@ -200,13 +210,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#unbounded()"/> 
-            /// </summary>
-            public static Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig Unbounded
-            {
-                get { return SExecute<Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig>(LocalBridgeClazz, "unbounded"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#maxBytes(long)"/>
             /// </summary>
             /// <param name="arg0"><see cref="long"/></param>
@@ -224,37 +227,27 @@ namespace Org.Apache.Kafka.Streams.Kstream
             {
                 return SExecute<Org.Apache.Kafka.Streams.Kstream.Suppressed.EagerBufferConfig>(LocalBridgeClazz, "maxRecords", arg0);
             }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#unbounded()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig"/></returns>
+            public static Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig Unbounded()
+            {
+                return SExecute<Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig>(LocalBridgeClazz, "unbounded");
+            }
 
             #endregion
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#emitEarlyWhenFull()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#withLoggingDisabled()"/>
             /// </summary>
-            public Org.Apache.Kafka.Streams.Kstream.Suppressed.EagerBufferConfig EmitEarlyWhenFull
+
+            /// <returns><typeparamref name="BC"/></returns>
+            public BC WithLoggingDisabled()
             {
-                get { return IExecute<Org.Apache.Kafka.Streams.Kstream.Suppressed.EagerBufferConfig>("emitEarlyWhenFull"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#shutDownWhenFull()"/> 
-            /// </summary>
-            public Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig ShutDownWhenFull
-            {
-                get { return IExecute<Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig>("shutDownWhenFull"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#withLoggingDisabled()"/> 
-            /// </summary>
-            public BC WithLoggingDisabled
-            {
-                get { return IExecute<BC>("withLoggingDisabled"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#withNoBound()"/> 
-            /// </summary>
-            public Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig WithNoBound
-            {
-                get { return IExecute<Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig>("withNoBound"); }
+                return IExecute<BC>("withLoggingDisabled");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#withLoggingEnabled(java.util.Map)"/>
@@ -282,6 +275,33 @@ namespace Org.Apache.Kafka.Streams.Kstream
             public BC WithMaxRecords(long arg0)
             {
                 return IExecute<BC>("withMaxRecords", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#emitEarlyWhenFull()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.EagerBufferConfig"/></returns>
+            public Org.Apache.Kafka.Streams.Kstream.Suppressed.EagerBufferConfig EmitEarlyWhenFull()
+            {
+                return IExecute<Org.Apache.Kafka.Streams.Kstream.Suppressed.EagerBufferConfig>("emitEarlyWhenFull");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#shutDownWhenFull()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig"/></returns>
+            public Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig ShutDownWhenFull()
+            {
+                return IExecute<Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig>("shutDownWhenFull");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#withNoBound()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig"/></returns>
+            public Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig WithNoBound()
+            {
+                return IExecute<Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig>("withNoBound");
             }
 
             #endregion

@@ -75,13 +75,6 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Rate.html#unitName()"/> 
-        /// </summary>
-        public string UnitName
-        {
-            get { return IExecute<string>("unitName"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Rate.html#measure(org.apache.kafka.common.metrics.MetricConfig,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Metrics.MetricConfig"/></param>
@@ -90,6 +83,15 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         public double Measure(Org.Apache.Kafka.Common.Metrics.MetricConfig arg0, long arg1)
         {
             return IExecute<double>("measure", arg0, arg1);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Rate.html#unitName()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string UnitName()
+        {
+            return IExecute<string>("unitName");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Rate.html#windowSize(org.apache.kafka.common.metrics.MetricConfig,long)"/>

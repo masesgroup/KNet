@@ -38,7 +38,7 @@ namespace Org.Apache.Kafka.Common.Network
         /// <param name="arg3"><see cref="int"/></param>
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Common.Memory.MemoryPool"/></param>
         /// <param name="arg5"><see cref="Org.Apache.Kafka.Common.Network.ChannelMetadataRegistry"/></param>
-        public KafkaChannel(string arg0, Org.Apache.Kafka.Common.Network.TransportLayer arg1, Java.Util.Function.Supplier arg2, int arg3, Org.Apache.Kafka.Common.Memory.MemoryPool arg4, Org.Apache.Kafka.Common.Network.ChannelMetadataRegistry arg5)
+        public KafkaChannel(string arg0, Org.Apache.Kafka.Common.Network.TransportLayer arg1, Java.Util.Function.Supplier<Org.Apache.Kafka.Common.Network.Authenticator> arg2, int arg3, Org.Apache.Kafka.Common.Memory.MemoryPool arg4, Org.Apache.Kafka.Common.Network.ChannelMetadataRegistry arg5)
             : base(arg0, arg1, arg2, arg3, arg4, arg5)
         {
         }
@@ -70,165 +70,59 @@ namespace Org.Apache.Kafka.Common.Network
             get { return IExecute<long>("getAndResetNetworkThreadTimeNanos"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#channelMetadataRegistry()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#finishConnect()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Network.ChannelMetadataRegistry ChannelMetadataRegistry
+
+        /// <returns><see cref="bool"/></returns>
+        /// <exception cref="Java.Io.IOException"/>
+        public bool FinishConnect()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Network.ChannelMetadataRegistry>("channelMetadataRegistry"); }
+            return IExecute<bool>("finishConnect");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#currentReceive()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#hasBytesBuffered()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Network.NetworkReceive CurrentReceive
+
+        /// <returns><see cref="bool"/></returns>
+        public bool HasBytesBuffered()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Network.NetworkReceive>("currentReceive"); }
+            return IExecute<bool>("hasBytesBuffered");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#finishConnect()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#hasSend()"/>
         /// </summary>
-        public bool FinishConnect
+
+        /// <returns><see cref="bool"/></returns>
+        public bool HasSend()
         {
-            get { return IExecute<bool>("finishConnect"); }
+            return IExecute<bool>("hasSend");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#hasBytesBuffered()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#isConnected()"/>
         /// </summary>
-        public bool HasBytesBuffered
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsConnected()
         {
-            get { return IExecute<bool>("hasBytesBuffered"); }
+            return IExecute<bool>("isConnected");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#hasSend()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#isInMutableState()"/>
         /// </summary>
-        public bool HasSend
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsInMutableState()
         {
-            get { return IExecute<bool>("hasSend"); }
+            return IExecute<bool>("isInMutableState");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#id()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#isMuted()"/>
         /// </summary>
-        public string Id
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsMuted()
         {
-            get { return IExecute<string>("id"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#isConnected()"/> 
-        /// </summary>
-        public bool IsConnected
-        {
-            get { return IExecute<bool>("isConnected"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#isInMutableState()"/> 
-        /// </summary>
-        public bool IsInMutableState
-        {
-            get { return IExecute<bool>("isInMutableState"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#isMuted()"/> 
-        /// </summary>
-        public bool IsMuted
-        {
-            get { return IExecute<bool>("isMuted"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#maybeCompleteReceive()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Network.NetworkReceive MaybeCompleteReceive
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Network.NetworkReceive>("maybeCompleteReceive"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#maybeCompleteSend()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Network.NetworkSend MaybeCompleteSend
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Network.NetworkSend>("maybeCompleteSend"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#muteState()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteState MuteState
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteState>("muteState"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#pollResponseReceivedDuringReauthentication()"/> 
-        /// </summary>
-        public Java.Util.Optional<Org.Apache.Kafka.Common.Network.NetworkReceive> PollResponseReceivedDuringReauthentication
-        {
-            get { return IExecute<Java.Util.Optional<Org.Apache.Kafka.Common.Network.NetworkReceive>>("pollResponseReceivedDuringReauthentication"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#principal()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal Principal
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal>("principal"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#principalSerde()"/> 
-        /// </summary>
-        public Java.Util.Optional<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipalSerde> PrincipalSerde
-        {
-            get { return IExecute<Java.Util.Optional<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipalSerde>>("principalSerde"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#read()"/> 
-        /// </summary>
-        public long Read
-        {
-            get { return IExecute<long>("read"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#ready()"/> 
-        /// </summary>
-        public bool Ready
-        {
-            get { return IExecute<bool>("ready"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#reauthenticationLatencyMs()"/> 
-        /// </summary>
-        public long? ReauthenticationLatencyMs
-        {
-            get { return IExecute<long?>("reauthenticationLatencyMs"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#selectionKey()"/> 
-        /// </summary>
-        public Java.Nio.Channels.SelectionKey SelectionKey
-        {
-            get { return IExecute<Java.Nio.Channels.SelectionKey>("selectionKey"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#socketAddress()"/> 
-        /// </summary>
-        public Java.Net.InetAddress SocketAddress
-        {
-            get { return IExecute<Java.Net.InetAddress>("socketAddress"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#socketDescription()"/> 
-        /// </summary>
-        public string SocketDescription
-        {
-            get { return IExecute<string>("socketDescription"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#successfulAuthentications()"/> 
-        /// </summary>
-        public int SuccessfulAuthentications
-        {
-            get { return IExecute<int>("successfulAuthentications"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#write()"/> 
-        /// </summary>
-        public long Write
-        {
-            get { return IExecute<long>("write"); }
+            return IExecute<bool>("isMuted");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#maybeBeginClientReauthentication(java.util.function.Supplier)"/>
@@ -254,6 +148,15 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<bool>("maybeBeginServerReauthentication", arg0, arg1);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#ready()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool Ready()
+        {
+            return IExecute<bool>("ready");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#serverAuthenticationSessionExpired(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
@@ -263,6 +166,107 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<bool>("serverAuthenticationSessionExpired", arg0);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#successfulAuthentications()"/>
+        /// </summary>
+
+        /// <returns><see cref="int"/></returns>
+        public int SuccessfulAuthentications()
+        {
+            return IExecute<int>("successfulAuthentications");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#reauthenticationLatencyMs()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long? ReauthenticationLatencyMs()
+        {
+            return IExecute<long?>("reauthenticationLatencyMs");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#id()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string Id()
+        {
+            return IExecute<string>("id");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#socketDescription()"/>
+        /// </summary>
+
+        /// <returns><see cref="string"/></returns>
+        public string SocketDescription()
+        {
+            return IExecute<string>("socketDescription");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#socketAddress()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Net.InetAddress"/></returns>
+        public Java.Net.InetAddress SocketAddress()
+        {
+            return IExecute<Java.Net.InetAddress>("socketAddress");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#selectionKey()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Nio.Channels.SelectionKey"/></returns>
+        public Java.Nio.Channels.SelectionKey SelectionKey()
+        {
+            return IExecute<Java.Nio.Channels.SelectionKey>("selectionKey");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#pollResponseReceivedDuringReauthentication()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Optional"/></returns>
+        public Java.Util.Optional<Org.Apache.Kafka.Common.Network.NetworkReceive> PollResponseReceivedDuringReauthentication()
+        {
+            return IExecute<Java.Util.Optional<Org.Apache.Kafka.Common.Network.NetworkReceive>>("pollResponseReceivedDuringReauthentication");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#principalSerde()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Optional"/></returns>
+        public Java.Util.Optional<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipalSerde> PrincipalSerde()
+        {
+            return IExecute<Java.Util.Optional<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipalSerde>>("principalSerde");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#read()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        /// <exception cref="Java.Io.IOException"/>
+        public long Read()
+        {
+            return IExecute<long>("read");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#write()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        /// <exception cref="Java.Io.IOException"/>
+        public long Write()
+        {
+            return IExecute<long>("write");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#channelMetadataRegistry()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Network.ChannelMetadataRegistry"/></returns>
+        public Org.Apache.Kafka.Common.Network.ChannelMetadataRegistry ChannelMetadataRegistry()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Network.ChannelMetadataRegistry>("channelMetadataRegistry");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#state()"/>
         /// </summary>
 
@@ -270,6 +274,51 @@ namespace Org.Apache.Kafka.Common.Network
         public Org.Apache.Kafka.Common.Network.ChannelState State()
         {
             return IExecute<Org.Apache.Kafka.Common.Network.ChannelState>("state");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#muteState()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteState"/></returns>
+        public Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteState MuteState()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteState>("muteState");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#currentReceive()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Network.NetworkReceive"/></returns>
+        public Org.Apache.Kafka.Common.Network.NetworkReceive CurrentReceive()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Network.NetworkReceive>("currentReceive");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#maybeCompleteReceive()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Network.NetworkReceive"/></returns>
+        public Org.Apache.Kafka.Common.Network.NetworkReceive MaybeCompleteReceive()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Network.NetworkReceive>("maybeCompleteReceive");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#maybeCompleteSend()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Network.NetworkSend"/></returns>
+        public Org.Apache.Kafka.Common.Network.NetworkSend MaybeCompleteSend()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Network.NetworkSend>("maybeCompleteSend");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#principal()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal"/></returns>
+        public Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal Principal()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal>("principal");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#addNetworkThreadTimeNanos(long)"/>
@@ -366,13 +415,6 @@ namespace Org.Apache.Kafka.Common.Network
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteEvent.html#values()"/> 
-            /// </summary>
-            public static Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteEvent[] Values
-            {
-                get { return SExecuteArray<Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteEvent>(LocalBridgeClazz, "values"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteEvent.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
@@ -380,6 +422,15 @@ namespace Org.Apache.Kafka.Common.Network
             public static Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteEvent ValueOf(string arg0)
             {
                 return SExecute<Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteEvent>(LocalBridgeClazz, "valueOf", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteEvent.html#values()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteEvent"/></returns>
+            public static Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteEvent[] Values()
+            {
+                return SExecuteArray<Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteEvent>(LocalBridgeClazz, "values");
             }
 
             #endregion
@@ -433,13 +484,6 @@ namespace Org.Apache.Kafka.Common.Network
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteState.html#values()"/> 
-            /// </summary>
-            public static Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteState[] Values
-            {
-                get { return SExecuteArray<Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteState>(LocalBridgeClazz, "values"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteState.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
@@ -447,6 +491,15 @@ namespace Org.Apache.Kafka.Common.Network
             public static Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteState ValueOf(string arg0)
             {
                 return SExecute<Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteState>(LocalBridgeClazz, "valueOf", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteState.html#values()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteState"/></returns>
+            public static Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteState[] Values()
+            {
+                return SExecuteArray<Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteState>(LocalBridgeClazz, "values");
             }
 
             #endregion

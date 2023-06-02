@@ -34,7 +34,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
-        public ConfigTransformerResult(Java.Util.Map arg0, Java.Util.Map arg1)
+        public ConfigTransformerResult(Java.Util.Map<string, string> arg0, Java.Util.Map<string, long?> arg1)
             : base(arg0, arg1)
         {
         }
@@ -55,18 +55,22 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigTransformerResult.html#data()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigTransformerResult.html#ttls()"/>
         /// </summary>
-        public Java.Util.Map<string, string> Data
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, long?> Ttls()
         {
-            get { return IExecute<Java.Util.Map<string, string>>("data"); }
+            return IExecute<Java.Util.Map<string, long?>>("ttls");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigTransformerResult.html#ttls()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigTransformerResult.html#data()"/>
         /// </summary>
-        public Java.Util.Map<string, long?> Ttls
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, string> Data()
         {
-            get { return IExecute<Java.Util.Map<string, long?>>("ttls"); }
+            return IExecute<Java.Util.Map<string, string>>("data");
         }
 
         #endregion

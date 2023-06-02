@@ -56,25 +56,31 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TopicListing.html#isInternal()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TopicListing.html#isInternal()"/>
         /// </summary>
-        public bool IsInternal
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsInternal()
         {
-            get { return IExecute<bool>("isInternal"); }
+            return IExecute<bool>("isInternal");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TopicListing.html#name()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TopicListing.html#name()"/>
         /// </summary>
-        public string Name
+
+        /// <returns><see cref="string"/></returns>
+        public string Name()
         {
-            get { return IExecute<string>("name"); }
+            return IExecute<string>("name");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TopicListing.html#topicId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TopicListing.html#topicId()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Uuid TopicId
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Uuid"/></returns>
+        public Org.Apache.Kafka.Common.Uuid TopicId()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Uuid>("topicId"); }
+            return IExecute<Org.Apache.Kafka.Common.Uuid>("topicId");
         }
 
         #endregion

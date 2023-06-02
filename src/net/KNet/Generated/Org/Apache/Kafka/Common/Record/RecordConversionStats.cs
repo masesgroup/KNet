@@ -60,25 +60,31 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordConversionStats.html#conversionTimeNanos()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordConversionStats.html#numRecordsConverted()"/>
         /// </summary>
-        public long ConversionTimeNanos
+
+        /// <returns><see cref="int"/></returns>
+        public int NumRecordsConverted()
         {
-            get { return IExecute<long>("conversionTimeNanos"); }
+            return IExecute<int>("numRecordsConverted");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordConversionStats.html#numRecordsConverted()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordConversionStats.html#conversionTimeNanos()"/>
         /// </summary>
-        public int NumRecordsConverted
+
+        /// <returns><see cref="long"/></returns>
+        public long ConversionTimeNanos()
         {
-            get { return IExecute<int>("numRecordsConverted"); }
+            return IExecute<long>("conversionTimeNanos");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordConversionStats.html#temporaryMemoryBytes()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordConversionStats.html#temporaryMemoryBytes()"/>
         /// </summary>
-        public long TemporaryMemoryBytes
+
+        /// <returns><see cref="long"/></returns>
+        public long TemporaryMemoryBytes()
         {
-            get { return IExecute<long>("temporaryMemoryBytes"); }
+            return IExecute<long>("temporaryMemoryBytes");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordConversionStats.html#add(org.apache.kafka.common.record.RecordConversionStats)"/>

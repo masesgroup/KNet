@@ -56,11 +56,13 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/EndTxnRequest.html#result()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/EndTxnRequest.html#result()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Requests.TransactionResult Result
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Requests.TransactionResult"/></returns>
+        public Org.Apache.Kafka.Common.Requests.TransactionResult Result()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Requests.TransactionResult>("result"); }
+            return IExecute<Org.Apache.Kafka.Common.Requests.TransactionResult>("result");
         }
 
         #endregion

@@ -2,14 +2,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>MASES.KNetCLI</id>
-    <version>1.5.3</version>
-    <title>KNetCLI - KNet command line interface</title>
+    <version>1.5.4</version>
+    <title>KNet command line interface - The Apache Kafka .NET suite.</title>
     <authors>MASES s.r.l.</authors>
     <owners>MASES s.r.l.</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectUrl>https://github.com/masesgroup/KNet/</projectUrl>
     <repository type="git" url="https://github.com/masesgroup/KNet/" />
-    <description>KNetCLI - KNet command line interface</description>
+    <description>Command line interface of the Apache Kafka .NET suite. KNet is a comprehensive .NET suite for Apache Kafka providing all features: Producer, Consumer, Admin, Streams, Connect, backends (ZooKeeper and Kafka).</description>
     <releaseNotes>https://github.com/masesgroup/KNet/releases</releaseNotes>
     <copyright>Copyright ©  MASES s.r.l. 2023</copyright>
     <license type="file">LICENSE</license>

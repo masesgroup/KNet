@@ -113,46 +113,58 @@ namespace Org.Apache.Kafka.Clients.Producer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerRecord.html#headers()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerRecord.html#partition()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Header.Headers Headers
+
+        /// <returns><see cref="int"/></returns>
+        public int? Partition()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Header.Headers>("headers"); }
+            return IExecute<int?>("partition");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerRecord.html#key()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerRecord.html#timestamp()"/>
         /// </summary>
-        public object Key
+
+        /// <returns><see cref="long"/></returns>
+        public long? Timestamp()
         {
-            get { return IExecute("key"); }
+            return IExecute<long?>("timestamp");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerRecord.html#partition()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerRecord.html#topic()"/>
         /// </summary>
-        public int? Partition
+
+        /// <returns><see cref="string"/></returns>
+        public string Topic()
         {
-            get { return IExecute<int?>("partition"); }
+            return IExecute<string>("topic");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerRecord.html#timestamp()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerRecord.html#key()"/>
         /// </summary>
-        public long? Timestamp
+
+        /// <returns><see cref="object"/></returns>
+        public object Key()
         {
-            get { return IExecute<long?>("timestamp"); }
+            return IExecute("key");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerRecord.html#topic()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerRecord.html#headers()"/>
         /// </summary>
-        public string Topic
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Header.Headers"/></returns>
+        public Org.Apache.Kafka.Common.Header.Headers Headers()
         {
-            get { return IExecute<string>("topic"); }
+            return IExecute<Org.Apache.Kafka.Common.Header.Headers>("headers");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerRecord.html#value()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerRecord.html#value()"/>
         /// </summary>
-        public object Value
+
+        /// <returns><see cref="object"/></returns>
+        public object Value()
         {
-            get { return IExecute("value"); }
+            return IExecute("value");
         }
 
         #endregion
@@ -257,46 +269,58 @@ namespace Org.Apache.Kafka.Clients.Producer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerRecord.html#headers()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerRecord.html#partition()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Header.Headers Headers
+
+        /// <returns><see cref="int"/></returns>
+        public int? Partition()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Header.Headers>("headers"); }
+            return IExecute<int?>("partition");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerRecord.html#key()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerRecord.html#timestamp()"/>
         /// </summary>
-        public K Key
+
+        /// <returns><see cref="long"/></returns>
+        public long? Timestamp()
         {
-            get { return IExecute<K>("key"); }
+            return IExecute<long?>("timestamp");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerRecord.html#partition()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerRecord.html#topic()"/>
         /// </summary>
-        public int? Partition
+
+        /// <returns><see cref="string"/></returns>
+        public string Topic()
         {
-            get { return IExecute<int?>("partition"); }
+            return IExecute<string>("topic");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerRecord.html#timestamp()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerRecord.html#key()"/>
         /// </summary>
-        public long? Timestamp
+
+        /// <returns><typeparamref name="K"/></returns>
+        public K Key()
         {
-            get { return IExecute<long?>("timestamp"); }
+            return IExecute<K>("key");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerRecord.html#topic()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerRecord.html#headers()"/>
         /// </summary>
-        public string Topic
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Header.Headers"/></returns>
+        public Org.Apache.Kafka.Common.Header.Headers Headers()
         {
-            get { return IExecute<string>("topic"); }
+            return IExecute<Org.Apache.Kafka.Common.Header.Headers>("headers");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerRecord.html#value()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerRecord.html#value()"/>
         /// </summary>
-        public V Value
+
+        /// <returns><typeparamref name="V"/></returns>
+        public V Value()
         {
-            get { return IExecute<V>("value"); }
+            return IExecute<V>("value");
         }
 
         #endregion

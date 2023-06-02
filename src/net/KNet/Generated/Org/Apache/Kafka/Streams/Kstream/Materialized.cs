@@ -105,25 +105,22 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Materialized.html#withCachingDisabled()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Materialized.html#withCachingDisabled()"/>
         /// </summary>
-        public Org.Apache.Kafka.Streams.Kstream.Materialized WithCachingDisabled
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></returns>
+        public Org.Apache.Kafka.Streams.Kstream.Materialized WithCachingDisabled()
         {
-            get { return IExecute<Org.Apache.Kafka.Streams.Kstream.Materialized>("withCachingDisabled"); }
+            return IExecute<Org.Apache.Kafka.Streams.Kstream.Materialized>("withCachingDisabled");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Materialized.html#withCachingEnabled()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Materialized.html#withCachingEnabled()"/>
         /// </summary>
-        public Org.Apache.Kafka.Streams.Kstream.Materialized WithCachingEnabled
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></returns>
+        public Org.Apache.Kafka.Streams.Kstream.Materialized WithCachingEnabled()
         {
-            get { return IExecute<Org.Apache.Kafka.Streams.Kstream.Materialized>("withCachingEnabled"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Materialized.html#withLoggingDisabled()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Streams.Kstream.Materialized WithLoggingDisabled
-        {
-            get { return IExecute<Org.Apache.Kafka.Streams.Kstream.Materialized>("withLoggingDisabled"); }
+            return IExecute<Org.Apache.Kafka.Streams.Kstream.Materialized>("withCachingEnabled");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Materialized.html#withKeySerde(org.apache.kafka.common.serialization.Serde)"/>
@@ -133,6 +130,15 @@ namespace Org.Apache.Kafka.Streams.Kstream
         public Org.Apache.Kafka.Streams.Kstream.Materialized WithKeySerde(Org.Apache.Kafka.Common.Serialization.Serde arg0)
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.Materialized>("withKeySerde", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Materialized.html#withLoggingDisabled()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></returns>
+        public Org.Apache.Kafka.Streams.Kstream.Materialized WithLoggingDisabled()
+        {
+            return IExecute<Org.Apache.Kafka.Streams.Kstream.Materialized>("withLoggingDisabled");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Materialized.html#withLoggingEnabled(java.util.Map)"/>
@@ -201,13 +207,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Materialized.StoreType.html#values()"/> 
-            /// </summary>
-            public static Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType[] Values
-            {
-                get { return SExecuteArray<Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType>(LocalBridgeClazz, "values"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Materialized.StoreType.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
@@ -215,6 +214,15 @@ namespace Org.Apache.Kafka.Streams.Kstream
             public static Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType ValueOf(string arg0)
             {
                 return SExecute<Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType>(LocalBridgeClazz, "valueOf", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Materialized.StoreType.html#values()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType"/></returns>
+            public static Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType[] Values()
+            {
+                return SExecuteArray<Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType>(LocalBridgeClazz, "values");
             }
 
             #endregion
@@ -322,25 +330,22 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Materialized.html#withCachingDisabled()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Materialized.html#withCachingDisabled()"/>
         /// </summary>
-        public Org.Apache.Kafka.Streams.Kstream.Materialized<K, V, S> WithCachingDisabled
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></returns>
+        public Org.Apache.Kafka.Streams.Kstream.Materialized WithCachingDisabled()
         {
-            get { return IExecute<Org.Apache.Kafka.Streams.Kstream.Materialized<K, V, S>>("withCachingDisabled"); }
+            return IExecute<Org.Apache.Kafka.Streams.Kstream.Materialized>("withCachingDisabled");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Materialized.html#withCachingEnabled()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Materialized.html#withCachingEnabled()"/>
         /// </summary>
-        public Org.Apache.Kafka.Streams.Kstream.Materialized<K, V, S> WithCachingEnabled
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></returns>
+        public Org.Apache.Kafka.Streams.Kstream.Materialized WithCachingEnabled()
         {
-            get { return IExecute<Org.Apache.Kafka.Streams.Kstream.Materialized<K, V, S>>("withCachingEnabled"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Materialized.html#withLoggingDisabled()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Streams.Kstream.Materialized<K, V, S> WithLoggingDisabled
-        {
-            get { return IExecute<Org.Apache.Kafka.Streams.Kstream.Materialized<K, V, S>>("withLoggingDisabled"); }
+            return IExecute<Org.Apache.Kafka.Streams.Kstream.Materialized>("withCachingEnabled");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Materialized.html#withKeySerde(org.apache.kafka.common.serialization.Serde)"/>
@@ -350,6 +355,15 @@ namespace Org.Apache.Kafka.Streams.Kstream
         public Org.Apache.Kafka.Streams.Kstream.Materialized WithKeySerde(Org.Apache.Kafka.Common.Serialization.Serde<K> arg0)
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.Materialized>("withKeySerde", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Materialized.html#withLoggingDisabled()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></returns>
+        public Org.Apache.Kafka.Streams.Kstream.Materialized WithLoggingDisabled()
+        {
+            return IExecute<Org.Apache.Kafka.Streams.Kstream.Materialized>("withLoggingDisabled");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Materialized.html#withLoggingEnabled(java.util.Map)"/>

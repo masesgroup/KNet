@@ -33,7 +33,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigTransformer.html#%3Cinit%3E(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public ConfigTransformer(Java.Util.Map arg0)
+        public ConfigTransformer(Java.Util.Map<string, Org.Apache.Kafka.Common.Config.Provider.ConfigProvider> arg0)
             : base(arg0)
         {
         }

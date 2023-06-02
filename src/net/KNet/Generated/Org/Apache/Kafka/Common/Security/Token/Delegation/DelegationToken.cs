@@ -55,25 +55,31 @@ namespace Org.Apache.Kafka.Common.Security.Token.Delegation
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/token/delegation/DelegationToken.html#hmac()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/token/delegation/DelegationToken.html#hmac()"/>
         /// </summary>
-        public byte[] Hmac
+
+        /// <returns><see cref="byte"/></returns>
+        public byte[] Hmac()
         {
-            get { return IExecuteArray<byte>("hmac"); }
+            return IExecuteArray<byte>("hmac");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/token/delegation/DelegationToken.html#hmacAsBase64String()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/token/delegation/DelegationToken.html#hmacAsBase64String()"/>
         /// </summary>
-        public string HmacAsBase64String
+
+        /// <returns><see cref="string"/></returns>
+        public string HmacAsBase64String()
         {
-            get { return IExecute<string>("hmacAsBase64String"); }
+            return IExecute<string>("hmacAsBase64String");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/token/delegation/DelegationToken.html#tokenInfo()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/token/delegation/DelegationToken.html#tokenInfo()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation TokenInfo
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation"/></returns>
+        public Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation TokenInfo()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation>("tokenInfo"); }
+            return IExecute<Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation>("tokenInfo");
         }
 
         #endregion

@@ -62,13 +62,6 @@ namespace Org.Apache.Kafka.Clients
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ConnectionState.html#values()"/> 
-        /// </summary>
-        public static Org.Apache.Kafka.Clients.ConnectionState[] Values
-        {
-            get { return SExecuteArray<Org.Apache.Kafka.Clients.ConnectionState>(LocalBridgeClazz, "values"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ConnectionState.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -77,23 +70,36 @@ namespace Org.Apache.Kafka.Clients
         {
             return SExecute<Org.Apache.Kafka.Clients.ConnectionState>(LocalBridgeClazz, "valueOf", arg0);
         }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ConnectionState.html#values()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Clients.ConnectionState"/></returns>
+        public static Org.Apache.Kafka.Clients.ConnectionState[] Values()
+        {
+            return SExecuteArray<Org.Apache.Kafka.Clients.ConnectionState>(LocalBridgeClazz, "values");
+        }
 
         #endregion
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ConnectionState.html#isConnected()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ConnectionState.html#isConnected()"/>
         /// </summary>
-        public bool IsConnected
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsConnected()
         {
-            get { return IExecute<bool>("isConnected"); }
+            return IExecute<bool>("isConnected");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ConnectionState.html#isDisconnected()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ConnectionState.html#isDisconnected()"/>
         /// </summary>
-        public bool IsDisconnected
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsDisconnected()
         {
-            get { return IExecute<bool>("isDisconnected"); }
+            return IExecute<bool>("isDisconnected");
         }
 
         #endregion

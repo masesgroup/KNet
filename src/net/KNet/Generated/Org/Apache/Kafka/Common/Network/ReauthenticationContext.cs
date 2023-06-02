@@ -56,25 +56,31 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ReauthenticationContext.html#networkReceive()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ReauthenticationContext.html#reauthenticationBeginNanos()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Network.NetworkReceive NetworkReceive
+
+        /// <returns><see cref="long"/></returns>
+        public long ReauthenticationBeginNanos()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Network.NetworkReceive>("networkReceive"); }
+            return IExecute<long>("reauthenticationBeginNanos");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ReauthenticationContext.html#previousAuthenticator()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ReauthenticationContext.html#previousAuthenticator()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Network.Authenticator PreviousAuthenticator
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Network.Authenticator"/></returns>
+        public Org.Apache.Kafka.Common.Network.Authenticator PreviousAuthenticator()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Network.Authenticator>("previousAuthenticator"); }
+            return IExecute<Org.Apache.Kafka.Common.Network.Authenticator>("previousAuthenticator");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ReauthenticationContext.html#reauthenticationBeginNanos()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ReauthenticationContext.html#networkReceive()"/>
         /// </summary>
-        public long ReauthenticationBeginNanos
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Network.NetworkReceive"/></returns>
+        public Org.Apache.Kafka.Common.Network.NetworkReceive NetworkReceive()
         {
-            get { return IExecute<long>("reauthenticationBeginNanos"); }
+            return IExecute<Org.Apache.Kafka.Common.Network.NetworkReceive>("networkReceive");
         }
 
         #endregion

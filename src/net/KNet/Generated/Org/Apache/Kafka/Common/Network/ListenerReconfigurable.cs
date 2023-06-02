@@ -46,11 +46,13 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ListenerReconfigurable.html#listenerName()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ListenerReconfigurable.html#listenerName()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Network.ListenerName ListenerName
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Network.ListenerName"/></returns>
+        public Org.Apache.Kafka.Common.Network.ListenerName ListenerName()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Network.ListenerName>("listenerName"); }
+            return IExecute<Org.Apache.Kafka.Common.Network.ListenerName>("listenerName");
         }
 
         #endregion

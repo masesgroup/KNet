@@ -33,7 +33,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/SharedTopicAdmin.html#%3Cinit%3E(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public SharedTopicAdmin(Java.Util.Map arg0)
+        public SharedTopicAdmin(Java.Util.Map<string, object> arg0)
             : base(arg0)
         {
         }
@@ -62,25 +62,31 @@ namespace Org.Apache.Kafka.Connect.Util
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/SharedTopicAdmin.html#bootstrapServers()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/SharedTopicAdmin.html#get()"/>
         /// </summary>
-        public string BootstrapServers
+
+        /// <returns><see cref="object"/></returns>
+        public object Get()
         {
-            get { return IExecute<string>("bootstrapServers"); }
+            return IExecute("get");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/SharedTopicAdmin.html#get()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/SharedTopicAdmin.html#bootstrapServers()"/>
         /// </summary>
-        public object Get
+
+        /// <returns><see cref="string"/></returns>
+        public string BootstrapServers()
         {
-            get { return IExecute("get"); }
+            return IExecute<string>("bootstrapServers");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/SharedTopicAdmin.html#topicAdmin()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/SharedTopicAdmin.html#topicAdmin()"/>
         /// </summary>
-        public Org.Apache.Kafka.Connect.Util.TopicAdmin TopicAdmin
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Util.TopicAdmin"/></returns>
+        public Org.Apache.Kafka.Connect.Util.TopicAdmin TopicAdmin()
         {
-            get { return IExecute<Org.Apache.Kafka.Connect.Util.TopicAdmin>("topicAdmin"); }
+            return IExecute<Org.Apache.Kafka.Connect.Util.TopicAdmin>("topicAdmin");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/SharedTopicAdmin.html#close()"/>

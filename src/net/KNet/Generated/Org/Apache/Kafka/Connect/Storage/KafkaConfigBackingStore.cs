@@ -37,7 +37,7 @@ namespace Org.Apache.Kafka.Connect.Storage
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Connect.Runtime.WorkerConfigTransformer"/></param>
         /// <param name="arg3"><see cref="Java.Util.Function.Supplier"/></param>
         /// <param name="arg4"><see cref="string"/></param>
-        public KafkaConfigBackingStore(Org.Apache.Kafka.Connect.Storage.Converter arg0, Org.Apache.Kafka.Connect.Runtime.Distributed.DistributedConfig arg1, Org.Apache.Kafka.Connect.Runtime.WorkerConfigTransformer arg2, Java.Util.Function.Supplier arg3, string arg4)
+        public KafkaConfigBackingStore(Org.Apache.Kafka.Connect.Storage.Converter arg0, Org.Apache.Kafka.Connect.Runtime.Distributed.DistributedConfig arg1, Org.Apache.Kafka.Connect.Runtime.WorkerConfigTransformer arg2, Java.Util.Function.Supplier<Org.Apache.Kafka.Connect.Util.TopicAdmin> arg3, string arg4)
             : base(arg0, arg1, arg2, arg3, arg4)
         {
         }
@@ -188,13 +188,6 @@ namespace Org.Apache.Kafka.Connect.Storage
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#snapshot()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Connect.Storage.ClusterConfigState Snapshot
-        {
-            get { return IExecute<Org.Apache.Kafka.Connect.Storage.ClusterConfigState>("snapshot"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#contains(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -202,6 +195,15 @@ namespace Org.Apache.Kafka.Connect.Storage
         public bool Contains(string arg0)
         {
             return IExecute<bool>("contains", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#snapshot()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Storage.ClusterConfigState"/></returns>
+        public Org.Apache.Kafka.Connect.Storage.ClusterConfigState Snapshot()
+        {
+            return IExecute<Org.Apache.Kafka.Connect.Storage.ClusterConfigState>("snapshot");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#claimWritePrivileges()"/>

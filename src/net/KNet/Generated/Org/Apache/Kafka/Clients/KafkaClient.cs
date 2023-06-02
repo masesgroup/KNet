@@ -46,11 +46,13 @@ namespace Org.Apache.Kafka.Clients
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/KafkaClient.html#active()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/KafkaClient.html#active()"/>
         /// </summary>
-        public bool Active
+
+        /// <returns><see cref="bool"/></returns>
+        public bool Active()
         {
-            get { return IExecute<bool>("active"); }
+            return IExecute<bool>("active");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/KafkaClient.html#connectionFailed(org.apache.kafka.common.Node)"/>

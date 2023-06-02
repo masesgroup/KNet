@@ -33,7 +33,7 @@ namespace Org.Apache.Kafka.Streams.Processor
     public class Processor<K, V> : JVMBridgeListener, IProcessor<K, V>
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public sealed override string ClassName => "org.mases.knet.streams.processor.ProcessorImpl";
+         public sealed override string BridgeClassName => "org.mases.knet.streams.processor.ProcessorImpl";
 
         readonly Action<ProcessorContext> executionFunctionInit = null;
         readonly Action<K, V> executionFunctionProcess = null;

@@ -58,18 +58,22 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/UnalignedMemoryRecords.html#buffer()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/UnalignedMemoryRecords.html#sizeInBytes()"/>
         /// </summary>
-        public Java.Nio.ByteBuffer Buffer
+
+        /// <returns><see cref="int"/></returns>
+        public int SizeInBytes()
         {
-            get { return IExecute<Java.Nio.ByteBuffer>("buffer"); }
+            return IExecute<int>("sizeInBytes");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/UnalignedMemoryRecords.html#sizeInBytes()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/UnalignedMemoryRecords.html#buffer()"/>
         /// </summary>
-        public int SizeInBytes
+
+        /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
+        public Java.Nio.ByteBuffer Buffer()
         {
-            get { return IExecute<int>("sizeInBytes"); }
+            return IExecute<Java.Nio.ByteBuffer>("buffer");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/UnalignedMemoryRecords.html#writeTo(org.apache.kafka.common.network.TransferableChannel,long,int)"/>

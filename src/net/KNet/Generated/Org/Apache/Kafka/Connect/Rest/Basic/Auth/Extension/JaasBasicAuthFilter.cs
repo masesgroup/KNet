@@ -41,10 +41,6 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension.JaasBasicAuthFilter"/> to <see cref="Javax.Ws.Rs.Container.ContainerRequestFilter"/>
-        /// </summary>
-        public static implicit operator Javax.Ws.Rs.Container.ContainerRequestFilter(Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension.JaasBasicAuthFilter t) => t.Cast<Javax.Ws.Rs.Container.ContainerRequestFilter>();
 
         #endregion
 
@@ -57,15 +53,6 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
         #endregion
 
         #region Instance methods
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-basic-auth-extension/3.4.0/org/apache/kafka/connect/rest/basic/auth/extension/JaasBasicAuthFilter.html#filter(javax.ws.rs.container.ContainerRequestContext)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Javax.Ws.Rs.Container.ContainerRequestContext"/></param>
-        /// <exception cref="Java.Io.IOException"/>
-        public void Filter(Javax.Ws.Rs.Container.ContainerRequestContext arg0)
-        {
-            IExecute("filter", arg0);
-        }
 
         #endregion
 

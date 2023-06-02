@@ -201,7 +201,7 @@ namespace Org.Apache.Kafka.Common.Record
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/CompressionType.html"/>
     /// </summary>
-    public partial class CompressionType : Java.Lang.Enum
+    public partial class CompressionType : Java.Lang.Enum<Org.Apache.Kafka.Common.Record.CompressionType>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -244,7 +244,7 @@ namespace Org.Apache.Kafka.Common.Record
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordType.html"/>
     /// </summary>
-    public partial class ControlRecordType : Java.Lang.Enum
+    public partial class ControlRecordType : Java.Lang.Enum<Org.Apache.Kafka.Common.Record.ControlRecordType>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -891,7 +891,7 @@ namespace Org.Apache.Kafka.Common.Record
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LazyDownConversionRecordsSend.html"/>
     /// </summary>
-    public partial class LazyDownConversionRecordsSend : Org.Apache.Kafka.Common.Record.RecordsSend
+    public partial class LazyDownConversionRecordsSend : Org.Apache.Kafka.Common.Record.RecordsSend<Org.Apache.Kafka.Common.Record.LazyDownConversionRecords>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1098,7 +1098,7 @@ namespace Org.Apache.Kafka.Common.Record
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.RecordFilter.BatchRetention.html"/>
             /// </summary>
-            public partial class BatchRetention : Java.Lang.Enum
+            public partial class BatchRetention : Java.Lang.Enum<Org.Apache.Kafka.Common.Record.MemoryRecords.RecordFilter.BatchRetention>
             {
                 /// <summary>
                 /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1709,7 +1709,7 @@ namespace Org.Apache.Kafka.Common.Record
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordVersion.html"/>
     /// </summary>
-    public partial class RecordVersion : Java.Lang.Enum
+    public partial class RecordVersion : Java.Lang.Enum<Org.Apache.Kafka.Common.Record.RecordVersion>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1795,7 +1795,7 @@ namespace Org.Apache.Kafka.Common.Record
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/TimestampType.html"/>
     /// </summary>
-    public partial class TimestampType : Java.Lang.Enum
+    public partial class TimestampType : Java.Lang.Enum<Org.Apache.Kafka.Common.Record.TimestampType>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

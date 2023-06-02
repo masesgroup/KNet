@@ -58,13 +58,6 @@ namespace Org.Apache.Kafka.Connect.Storage
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryConfigBackingStore.html#snapshot()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Connect.Storage.ClusterConfigState Snapshot
-        {
-            get { return IExecute<Org.Apache.Kafka.Connect.Storage.ClusterConfigState>("snapshot"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryConfigBackingStore.html#contains(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -72,6 +65,15 @@ namespace Org.Apache.Kafka.Connect.Storage
         public bool Contains(string arg0)
         {
             return IExecute<bool>("contains", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryConfigBackingStore.html#snapshot()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Storage.ClusterConfigState"/></returns>
+        public Org.Apache.Kafka.Connect.Storage.ClusterConfigState Snapshot()
+        {
+            return IExecute<Org.Apache.Kafka.Connect.Storage.ClusterConfigState>("snapshot");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryConfigBackingStore.html#putConnectorConfig(java.lang.String,java.util.Map)"/>

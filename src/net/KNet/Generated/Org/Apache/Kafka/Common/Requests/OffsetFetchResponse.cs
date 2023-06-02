@@ -35,7 +35,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
         /// <param name="arg2"><see cref="Java.Util.Map"/></param>
-        public OffsetFetchResponse(int arg0, Java.Util.Map arg1, Java.Util.Map arg2)
+        public OffsetFetchResponse(int arg0, Java.Util.Map<string, Org.Apache.Kafka.Common.Protocol.Errors> arg1, Java.Util.Map<string, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Requests.OffsetFetchResponse.PartitionData>> arg2)
             : base(arg0, arg1, arg2)
         {
         }
@@ -45,7 +45,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Protocol.Errors"/></param>
         /// <param name="arg2"><see cref="Java.Util.Map"/></param>
-        public OffsetFetchResponse(int arg0, Org.Apache.Kafka.Common.Protocol.Errors arg1, Java.Util.Map arg2)
+        public OffsetFetchResponse(int arg0, Org.Apache.Kafka.Common.Protocol.Errors arg1, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Requests.OffsetFetchResponse.PartitionData> arg2)
             : base(arg0, arg1, arg2)
         {
         }
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Errors"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
-        public OffsetFetchResponse(Org.Apache.Kafka.Common.Protocol.Errors arg0, Java.Util.Map arg1)
+        public OffsetFetchResponse(Org.Apache.Kafka.Common.Protocol.Errors arg0, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Requests.OffsetFetchResponse.PartitionData> arg1)
             : base(arg0, arg1)
         {
         }
@@ -118,20 +118,6 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/OffsetFetchResponse.html#error()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.Errors Error
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.Errors>("error"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/OffsetFetchResponse.html#hasError()"/> 
-        /// </summary>
-        public bool HasError
-        {
-            get { return IExecute<bool>("hasError"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/OffsetFetchResponse.html#groupHasError(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -141,6 +127,15 @@ namespace Org.Apache.Kafka.Common.Requests
             return IExecute<bool>("groupHasError", arg0);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/OffsetFetchResponse.html#hasError()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool HasError()
+        {
+            return IExecute<bool>("hasError");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/OffsetFetchResponse.html#partitionDataMap(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -148,6 +143,15 @@ namespace Org.Apache.Kafka.Common.Requests
         public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Requests.OffsetFetchResponse.PartitionData> PartitionDataMap(string arg0)
         {
             return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.Requests.OffsetFetchResponse.PartitionData>>("partitionDataMap", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/OffsetFetchResponse.html#error()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Errors"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.Errors Error()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Protocol.Errors>("error");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/OffsetFetchResponse.html#groupLevelError(java.lang.String)"/>
@@ -173,7 +177,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// <param name="arg1"><see cref="Java.Util.Optional"/></param>
             /// <param name="arg2"><see cref="string"/></param>
             /// <param name="arg3"><see cref="Org.Apache.Kafka.Common.Protocol.Errors"/></param>
-            public PartitionData(long arg0, Java.Util.Optional arg1, string arg2, Org.Apache.Kafka.Common.Protocol.Errors arg3)
+            public PartitionData(long arg0, Java.Util.Optional<int?> arg1, string arg2, Org.Apache.Kafka.Common.Protocol.Errors arg3)
                 : base(arg0, arg1, arg2, arg3)
             {
             }
@@ -210,11 +214,13 @@ namespace Org.Apache.Kafka.Common.Requests
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/OffsetFetchResponse.PartitionData.html#hasError()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/OffsetFetchResponse.PartitionData.html#hasError()"/>
             /// </summary>
-            public bool HasError
+
+            /// <returns><see cref="bool"/></returns>
+            public bool HasError()
             {
-                get { return IExecute<bool>("hasError"); }
+                return IExecute<bool>("hasError");
             }
 
             #endregion

@@ -46,39 +46,49 @@ namespace Org.Apache.Kafka.Streams
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TaskMetadata.html#committedOffsets()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TaskMetadata.html#committedOffsets()"/>
         /// </summary>
-        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?> CommittedOffsets
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?> CommittedOffsets()
         {
-            get { return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?>>("committedOffsets"); }
+            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?>>("committedOffsets");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TaskMetadata.html#endOffsets()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TaskMetadata.html#endOffsets()"/>
         /// </summary>
-        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?> EndOffsets
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?> EndOffsets()
         {
-            get { return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?>>("endOffsets"); }
+            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?>>("endOffsets");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TaskMetadata.html#taskId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TaskMetadata.html#timeCurrentIdlingStarted()"/>
         /// </summary>
-        public Org.Apache.Kafka.Streams.Processor.TaskId TaskId
+
+        /// <returns><see cref="Java.Util.Optional"/></returns>
+        public Java.Util.Optional<long?> TimeCurrentIdlingStarted()
         {
-            get { return IExecute<Org.Apache.Kafka.Streams.Processor.TaskId>("taskId"); }
+            return IExecute<Java.Util.Optional<long?>>("timeCurrentIdlingStarted");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TaskMetadata.html#timeCurrentIdlingStarted()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TaskMetadata.html#topicPartitions()"/>
         /// </summary>
-        public Java.Util.Optional<long?> TimeCurrentIdlingStarted
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> TopicPartitions()
         {
-            get { return IExecute<Java.Util.Optional<long?>>("timeCurrentIdlingStarted"); }
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition>>("topicPartitions");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TaskMetadata.html#topicPartitions()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TaskMetadata.html#taskId()"/>
         /// </summary>
-        public Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> TopicPartitions
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.TaskId"/></returns>
+        public Org.Apache.Kafka.Streams.Processor.TaskId TaskId()
         {
-            get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition>>("topicPartitions"); }
+            return IExecute<Org.Apache.Kafka.Streams.Processor.TaskId>("taskId");
         }
 
         #endregion

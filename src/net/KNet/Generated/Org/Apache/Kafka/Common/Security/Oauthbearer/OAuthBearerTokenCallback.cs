@@ -50,25 +50,31 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerTokenCallback.html#errorCode()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerTokenCallback.html#errorCode()"/>
         /// </summary>
-        public string ErrorCode
+
+        /// <returns><see cref="string"/></returns>
+        public string ErrorCode()
         {
-            get { return IExecute<string>("errorCode"); }
+            return IExecute<string>("errorCode");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerTokenCallback.html#errorDescription()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerTokenCallback.html#errorDescription()"/>
         /// </summary>
-        public string ErrorDescription
+
+        /// <returns><see cref="string"/></returns>
+        public string ErrorDescription()
         {
-            get { return IExecute<string>("errorDescription"); }
+            return IExecute<string>("errorDescription");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerTokenCallback.html#errorUri()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerTokenCallback.html#errorUri()"/>
         /// </summary>
-        public string ErrorUri
+
+        /// <returns><see cref="string"/></returns>
+        public string ErrorUri()
         {
-            get { return IExecute<string>("errorUri"); }
+            return IExecute<string>("errorUri");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerTokenCallback.html#token()"/>

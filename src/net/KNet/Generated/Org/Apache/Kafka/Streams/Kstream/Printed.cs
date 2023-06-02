@@ -42,13 +42,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Printed.html#toSysOut()"/> 
-        /// </summary>
-        public static Org.Apache.Kafka.Streams.Kstream.Printed ToSysOut
-        {
-            get { return SExecute<Org.Apache.Kafka.Streams.Kstream.Printed>(LocalBridgeClazz, "toSysOut"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Printed.html#toFile(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -56,6 +49,15 @@ namespace Org.Apache.Kafka.Streams.Kstream
         public static Org.Apache.Kafka.Streams.Kstream.Printed ToFile(string arg0)
         {
             return SExecute<Org.Apache.Kafka.Streams.Kstream.Printed>(LocalBridgeClazz, "toFile", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Printed.html#toSysOut()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Printed"/></returns>
+        public static Org.Apache.Kafka.Streams.Kstream.Printed ToSysOut()
+        {
+            return SExecute<Org.Apache.Kafka.Streams.Kstream.Printed>(LocalBridgeClazz, "toSysOut");
         }
 
         #endregion
@@ -111,13 +113,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Printed.html#toSysOut()"/> 
-        /// </summary>
-        public static Org.Apache.Kafka.Streams.Kstream.Printed<K, V> ToSysOut
-        {
-            get { return SExecute<Org.Apache.Kafka.Streams.Kstream.Printed<K, V>>(LocalBridgeClazz, "toSysOut"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Printed.html#toFile(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -125,6 +120,15 @@ namespace Org.Apache.Kafka.Streams.Kstream
         public static Org.Apache.Kafka.Streams.Kstream.Printed<K, V> ToFile(string arg0)
         {
             return SExecute<Org.Apache.Kafka.Streams.Kstream.Printed<K, V>>(LocalBridgeClazz, "toFile", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Printed.html#toSysOut()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Printed"/></returns>
+        public static Org.Apache.Kafka.Streams.Kstream.Printed<K, V> ToSysOut()
+        {
+            return SExecute<Org.Apache.Kafka.Streams.Kstream.Printed<K, V>>(LocalBridgeClazz, "toSysOut");
         }
 
         #endregion

@@ -46,11 +46,13 @@ namespace Org.Apache.Kafka.Common.Protocol
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiMessage.html#apiKey()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiMessage.html#apiKey()"/>
         /// </summary>
-        public short ApiKey
+
+        /// <returns><see cref="short"/></returns>
+        public short ApiKey()
         {
-            get { return IExecute<short>("apiKey"); }
+            return IExecute<short>("apiKey");
         }
 
         #endregion

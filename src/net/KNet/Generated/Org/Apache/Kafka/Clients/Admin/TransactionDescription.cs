@@ -39,7 +39,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg4"><see cref="long"/></param>
         /// <param name="arg5"><see cref="Java.Util.OptionalLong"/></param>
         /// <param name="arg6"><see cref="Java.Util.Set"/></param>
-        public TransactionDescription(int arg0, Org.Apache.Kafka.Clients.Admin.TransactionState arg1, long arg2, int arg3, long arg4, Java.Util.OptionalLong arg5, Java.Util.Set arg6)
+        public TransactionDescription(int arg0, Org.Apache.Kafka.Clients.Admin.TransactionState arg1, long arg2, int arg3, long arg4, Java.Util.OptionalLong arg5, Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> arg6)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
         {
         }
@@ -60,53 +60,67 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TransactionDescription.html#coordinatorId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TransactionDescription.html#coordinatorId()"/>
         /// </summary>
-        public int CoordinatorId
+
+        /// <returns><see cref="int"/></returns>
+        public int CoordinatorId()
         {
-            get { return IExecute<int>("coordinatorId"); }
+            return IExecute<int>("coordinatorId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TransactionDescription.html#producerEpoch()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TransactionDescription.html#producerEpoch()"/>
         /// </summary>
-        public int ProducerEpoch
+
+        /// <returns><see cref="int"/></returns>
+        public int ProducerEpoch()
         {
-            get { return IExecute<int>("producerEpoch"); }
+            return IExecute<int>("producerEpoch");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TransactionDescription.html#producerId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TransactionDescription.html#transactionStartTimeMs()"/>
         /// </summary>
-        public long ProducerId
+
+        /// <returns><see cref="Java.Util.OptionalLong"/></returns>
+        public Java.Util.OptionalLong TransactionStartTimeMs()
         {
-            get { return IExecute<long>("producerId"); }
+            return IExecute<Java.Util.OptionalLong>("transactionStartTimeMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TransactionDescription.html#state()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TransactionDescription.html#topicPartitions()"/>
         /// </summary>
-        public Org.Apache.Kafka.Clients.Admin.TransactionState State
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> TopicPartitions()
         {
-            get { return IExecute<Org.Apache.Kafka.Clients.Admin.TransactionState>("state"); }
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition>>("topicPartitions");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TransactionDescription.html#topicPartitions()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TransactionDescription.html#producerId()"/>
         /// </summary>
-        public Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> TopicPartitions
+
+        /// <returns><see cref="long"/></returns>
+        public long ProducerId()
         {
-            get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition>>("topicPartitions"); }
+            return IExecute<long>("producerId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TransactionDescription.html#transactionStartTimeMs()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TransactionDescription.html#transactionTimeoutMs()"/>
         /// </summary>
-        public Java.Util.OptionalLong TransactionStartTimeMs
+
+        /// <returns><see cref="long"/></returns>
+        public long TransactionTimeoutMs()
         {
-            get { return IExecute<Java.Util.OptionalLong>("transactionStartTimeMs"); }
+            return IExecute<long>("transactionTimeoutMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TransactionDescription.html#transactionTimeoutMs()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TransactionDescription.html#state()"/>
         /// </summary>
-        public long TransactionTimeoutMs
+
+        /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.TransactionState"/></returns>
+        public Org.Apache.Kafka.Clients.Admin.TransactionState State()
         {
-            get { return IExecute<long>("transactionTimeoutMs"); }
+            return IExecute<Org.Apache.Kafka.Clients.Admin.TransactionState>("state");
         }
 
         #endregion

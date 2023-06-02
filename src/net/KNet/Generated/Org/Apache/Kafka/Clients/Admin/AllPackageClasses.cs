@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/AbortTransactionOptions.html"/>
     /// </summary>
-    public partial class AbortTransactionOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class AbortTransactionOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.AbortTransactionOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -331,15 +331,42 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/AdminClientConfig.html"/>
     /// </summary>
-    public partial class AdminClientConfig : MASES.JCOBridge.C2JBridge.JVMBridgeMain<AdminClientConfig>
+    public partial class AdminClientConfig : Org.Apache.Kafka.Common.Config.AbstractConfig, IJNetBridgeMain
     {
         /// <summary>
-        /// Initialize a new <see cref="AdminClientConfig"/>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public AdminClientConfig()
-            : base("org.apache.kafka.clients.admin.AdminClientConfig")
-        {
-        }
+        public AdminClientConfig() { }
+        /// <summary>
+        /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
+        /// </summary>
+        public AdminClientConfig(params object[] args) : base(args) { }
+
+        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AdminClientConfig");
+
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.apache.kafka.clients.admin.AdminClientConfig";
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
+        /// </summary>
+        public override bool IsBridgeAbstract => false;
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm"/>
+        /// </summary>
+        public override bool IsBridgeCloseable => false;
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm"/>
+        /// </summary>
+        public override bool IsBridgeInterface => false;
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm"/>
+        /// </summary>
+        public override bool IsBridgeStatic => false;
+
+        // TODO: complete the class
+
     }
     #endregion
 
@@ -347,7 +374,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/AlterClientQuotasOptions.html"/>
     /// </summary>
-    public partial class AlterClientQuotasOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class AlterClientQuotasOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.AlterClientQuotasOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -472,7 +499,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/AlterConfigOp.OpType.html"/>
         /// </summary>
-        public partial class OpType : Java.Lang.Enum
+        public partial class OpType : Java.Lang.Enum<Org.Apache.Kafka.Clients.Admin.AlterConfigOp.OpType>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -519,7 +546,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/AlterConfigsOptions.html"/>
     /// </summary>
-    public partial class AlterConfigsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class AlterConfigsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.AlterConfigsOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -605,7 +632,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/AlterConsumerGroupOffsetsOptions.html"/>
     /// </summary>
-    public partial class AlterConsumerGroupOffsetsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class AlterConsumerGroupOffsetsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.AlterConsumerGroupOffsetsOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -691,7 +718,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/AlterPartitionReassignmentsOptions.html"/>
     /// </summary>
-    public partial class AlterPartitionReassignmentsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class AlterPartitionReassignmentsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.AlterPartitionReassignmentsOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -777,7 +804,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/AlterReplicaLogDirsOptions.html"/>
     /// </summary>
-    public partial class AlterReplicaLogDirsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class AlterReplicaLogDirsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.AlterReplicaLogDirsOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -863,7 +890,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/AlterUserScramCredentialsOptions.html"/>
     /// </summary>
-    public partial class AlterUserScramCredentialsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class AlterUserScramCredentialsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.AlterUserScramCredentialsOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1031,7 +1058,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConfigEntry.ConfigSource.html"/>
         /// </summary>
-        public partial class ConfigSource : Java.Lang.Enum
+        public partial class ConfigSource : Java.Lang.Enum<Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1117,7 +1144,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConfigEntry.ConfigType.html"/>
         /// </summary>
-        public partial class ConfigType : Java.Lang.Enum
+        public partial class ConfigType : Java.Lang.Enum<Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigType>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1250,7 +1277,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/CreateAclsOptions.html"/>
     /// </summary>
-    public partial class CreateAclsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class CreateAclsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.CreateAclsOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1336,7 +1363,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/CreateDelegationTokenOptions.html"/>
     /// </summary>
-    public partial class CreateDelegationTokenOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class CreateDelegationTokenOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.CreateDelegationTokenOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1422,7 +1449,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/CreatePartitionsOptions.html"/>
     /// </summary>
-    public partial class CreatePartitionsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class CreatePartitionsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.CreatePartitionsOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1508,7 +1535,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/CreateTopicsOptions.html"/>
     /// </summary>
-    public partial class CreateTopicsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class CreateTopicsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.CreateTopicsOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1637,7 +1664,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DeleteAclsOptions.html"/>
     /// </summary>
-    public partial class DeleteAclsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class DeleteAclsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DeleteAclsOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1809,7 +1836,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DeleteConsumerGroupOffsetsOptions.html"/>
     /// </summary>
-    public partial class DeleteConsumerGroupOffsetsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class DeleteConsumerGroupOffsetsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupOffsetsOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1895,7 +1922,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DeleteConsumerGroupsOptions.html"/>
     /// </summary>
-    public partial class DeleteConsumerGroupsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class DeleteConsumerGroupsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupsOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -2024,7 +2051,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DeleteRecordsOptions.html"/>
     /// </summary>
-    public partial class DeleteRecordsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class DeleteRecordsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DeleteRecordsOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -2110,7 +2137,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DeleteTopicsOptions.html"/>
     /// </summary>
-    public partial class DeleteTopicsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class DeleteTopicsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DeleteTopicsOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -2196,7 +2223,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeAclsOptions.html"/>
     /// </summary>
-    public partial class DescribeAclsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class DescribeAclsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DescribeAclsOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -2282,7 +2309,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeClientQuotasOptions.html"/>
     /// </summary>
-    public partial class DescribeClientQuotasOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class DescribeClientQuotasOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DescribeClientQuotasOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -2368,7 +2395,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeClusterOptions.html"/>
     /// </summary>
-    public partial class DescribeClusterOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class DescribeClusterOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DescribeClusterOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -2454,7 +2481,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeConfigsOptions.html"/>
     /// </summary>
-    public partial class DescribeConfigsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class DescribeConfigsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DescribeConfigsOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -2540,7 +2567,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeConsumerGroupsOptions.html"/>
     /// </summary>
-    public partial class DescribeConsumerGroupsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class DescribeConsumerGroupsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DescribeConsumerGroupsOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -2626,7 +2653,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeDelegationTokenOptions.html"/>
     /// </summary>
-    public partial class DescribeDelegationTokenOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class DescribeDelegationTokenOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DescribeDelegationTokenOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -2712,7 +2739,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeFeaturesOptions.html"/>
     /// </summary>
-    public partial class DescribeFeaturesOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class DescribeFeaturesOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DescribeFeaturesOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -2798,7 +2825,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeLogDirsOptions.html"/>
     /// </summary>
-    public partial class DescribeLogDirsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class DescribeLogDirsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DescribeLogDirsOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -2884,7 +2911,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeMetadataQuorumOptions.html"/>
     /// </summary>
-    public partial class DescribeMetadataQuorumOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class DescribeMetadataQuorumOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DescribeMetadataQuorumOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -2970,7 +2997,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeProducersOptions.html"/>
     /// </summary>
-    public partial class DescribeProducersOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class DescribeProducersOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DescribeProducersOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -3099,7 +3126,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeReplicaLogDirsOptions.html"/>
     /// </summary>
-    public partial class DescribeReplicaLogDirsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class DescribeReplicaLogDirsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DescribeReplicaLogDirsOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -3228,7 +3255,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeTopicsOptions.html"/>
     /// </summary>
-    public partial class DescribeTopicsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class DescribeTopicsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DescribeTopicsOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -3314,7 +3341,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeTransactionsOptions.html"/>
     /// </summary>
-    public partial class DescribeTransactionsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class DescribeTransactionsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DescribeTransactionsOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -3400,7 +3427,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeUserScramCredentialsOptions.html"/>
     /// </summary>
-    public partial class DescribeUserScramCredentialsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class DescribeUserScramCredentialsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DescribeUserScramCredentialsOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -3486,7 +3513,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ElectLeadersOptions.html"/>
     /// </summary>
-    public partial class ElectLeadersOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class ElectLeadersOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.ElectLeadersOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -3572,7 +3599,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ExpireDelegationTokenOptions.html"/>
     /// </summary>
-    public partial class ExpireDelegationTokenOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class ExpireDelegationTokenOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.ExpireDelegationTokenOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -3740,7 +3767,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/FeatureUpdate.UpgradeType.html"/>
         /// </summary>
-        public partial class UpgradeType : Java.Lang.Enum
+        public partial class UpgradeType : Java.Lang.Enum<Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -3787,7 +3814,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/FenceProducersOptions.html"/>
     /// </summary>
-    public partial class FenceProducersOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class FenceProducersOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.FenceProducersOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -4002,7 +4029,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListConsumerGroupOffsetsOptions.html"/>
     /// </summary>
-    public partial class ListConsumerGroupOffsetsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class ListConsumerGroupOffsetsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -4131,7 +4158,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListConsumerGroupsOptions.html"/>
     /// </summary>
-    public partial class ListConsumerGroupsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class ListConsumerGroupsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -4217,7 +4244,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListOffsetsOptions.html"/>
     /// </summary>
-    public partial class ListOffsetsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class ListOffsetsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.ListOffsetsOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -4346,7 +4373,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListPartitionReassignmentsOptions.html"/>
     /// </summary>
-    public partial class ListPartitionReassignmentsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class ListPartitionReassignmentsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.ListPartitionReassignmentsOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -4432,7 +4459,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListTopicsOptions.html"/>
     /// </summary>
-    public partial class ListTopicsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class ListTopicsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.ListTopicsOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -4518,7 +4545,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListTransactionsOptions.html"/>
     /// </summary>
-    public partial class ListTransactionsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class ListTransactionsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.ListTransactionsOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -5335,7 +5362,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/RemoveMembersFromConsumerGroupOptions.html"/>
     /// </summary>
-    public partial class RemoveMembersFromConsumerGroupOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class RemoveMembersFromConsumerGroupOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.RemoveMembersFromConsumerGroupOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -5421,7 +5448,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/RenewDelegationTokenOptions.html"/>
     /// </summary>
-    public partial class RenewDelegationTokenOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class RenewDelegationTokenOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.RenewDelegationTokenOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -5593,7 +5620,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ScramMechanism.html"/>
     /// </summary>
-    public partial class ScramMechanism : Java.Lang.Enum
+    public partial class ScramMechanism : Java.Lang.Enum<Org.Apache.Kafka.Clients.Admin.ScramMechanism>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -5851,7 +5878,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TransactionState.html"/>
     /// </summary>
-    public partial class TransactionState : Java.Lang.Enum
+    public partial class TransactionState : Java.Lang.Enum<Org.Apache.Kafka.Clients.Admin.TransactionState>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -5894,7 +5921,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/UnregisterBrokerOptions.html"/>
     /// </summary>
-    public partial class UnregisterBrokerOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class UnregisterBrokerOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.UpdateFeaturesOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -5980,7 +6007,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/UpdateFeaturesOptions.html"/>
     /// </summary>
-    public partial class UpdateFeaturesOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions
+    public partial class UpdateFeaturesOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.UpdateFeaturesOptions>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

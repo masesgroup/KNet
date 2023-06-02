@@ -46,11 +46,13 @@ namespace Org.Apache.Kafka.Clients
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ApiVersions.html#maxUsableProduceMagic()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ApiVersions.html#maxUsableProduceMagic()"/>
         /// </summary>
-        public byte MaxUsableProduceMagic
+
+        /// <returns><see cref="byte"/></returns>
+        public byte MaxUsableProduceMagic()
         {
-            get { return IExecute<byte>("maxUsableProduceMagic"); }
+            return IExecute<byte>("maxUsableProduceMagic");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ApiVersions.html#get(java.lang.String)"/>

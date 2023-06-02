@@ -21,14 +21,8 @@ namespace Kafka.Admin
     /// <summary>
     /// Class managing TopicCommand
     /// </summary>
-    public class TopicCommand : MASES.JCOBridge.C2JBridge.JVMBridgeMain<TopicCommand>
+    public partial class TopicCommand
     {
-        /// <summary>
-        /// Initialize a new <see cref="TopicCommand"/>
-        /// </summary>
-        public TopicCommand()
-            : base("kafka.admin.TopicCommand")
-        {
-        }
+
     }
 }

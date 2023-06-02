@@ -103,95 +103,85 @@ namespace Org.Apache.Kafka.Common.Message
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.html#apiKey()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.html#isKRaftController()"/>
         /// </summary>
-        public short ApiKey
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsKRaftController()
         {
-            get { return IExecute<short>("apiKey"); }
+            return IExecute<bool>("isKRaftController");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.html#brokerEpoch()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.html#type()"/>
         /// </summary>
-        public long BrokerEpoch
+
+        /// <returns><see cref="byte"/></returns>
+        public byte Type()
         {
-            get { return IExecute<long>("brokerEpoch"); }
+            return IExecute<byte>("type");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.html#controllerEpoch()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.html#controllerEpoch()"/>
         /// </summary>
-        public int ControllerEpoch
+
+        /// <returns><see cref="int"/></returns>
+        public int ControllerEpoch()
         {
-            get { return IExecute<int>("controllerEpoch"); }
+            return IExecute<int>("controllerEpoch");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.html#controllerId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.html#controllerId()"/>
         /// </summary>
-        public int ControllerId
+
+        /// <returns><see cref="int"/></returns>
+        public int ControllerId()
         {
-            get { return IExecute<int>("controllerId"); }
+            return IExecute<int>("controllerId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.html#duplicate()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.html#liveLeaders()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Protocol.Message Duplicate
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Message.LeaderAndIsrRequestData.LeaderAndIsrLiveLeader> LiveLeaders()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.LeaderAndIsrRequestData.LeaderAndIsrLiveLeader>>("liveLeaders");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.html#highestSupportedVersion()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.html#ungroupedPartitionStates()"/>
         /// </summary>
-        public short HighestSupportedVersion
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Message.LeaderAndIsrRequestData.LeaderAndIsrPartitionState> UngroupedPartitionStates()
         {
-            get { return IExecute<short>("highestSupportedVersion"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.LeaderAndIsrRequestData.LeaderAndIsrPartitionState>>("ungroupedPartitionStates");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.html#isKRaftController()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.html#topicStates()"/>
         /// </summary>
-        public bool IsKRaftController
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Message.LeaderAndIsrRequestData.LeaderAndIsrTopicState> TopicStates()
         {
-            get { return IExecute<bool>("isKRaftController"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.LeaderAndIsrRequestData.LeaderAndIsrTopicState>>("topicStates");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.html#liveLeaders()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.html#unknownTaggedFields()"/>
         /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Message.LeaderAndIsrRequestData.LeaderAndIsrLiveLeader> LiveLeaders
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields()
         {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.LeaderAndIsrRequestData.LeaderAndIsrLiveLeader>>("liveLeaders"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.html#lowestSupportedVersion()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.html#brokerEpoch()"/>
         /// </summary>
-        public short LowestSupportedVersion
+
+        /// <returns><see cref="long"/></returns>
+        public long BrokerEpoch()
         {
-            get { return IExecute<short>("lowestSupportedVersion"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.html#topicStates()"/> 
-        /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Message.LeaderAndIsrRequestData.LeaderAndIsrTopicState> TopicStates
-        {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.LeaderAndIsrRequestData.LeaderAndIsrTopicState>>("topicStates"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.html#type()"/> 
-        /// </summary>
-        public byte Type
-        {
-            get { return IExecute<byte>("type"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.html#ungroupedPartitionStates()"/> 
-        /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Message.LeaderAndIsrRequestData.LeaderAndIsrPartitionState> UngroupedPartitionStates
-        {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.LeaderAndIsrRequestData.LeaderAndIsrPartitionState>>("ungroupedPartitionStates"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.html#unknownTaggedFields()"/> 
-        /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields
-        {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields"); }
+            return IExecute<long>("brokerEpoch");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.html#setBrokerEpoch(long)"/>
@@ -264,6 +254,42 @@ namespace Org.Apache.Kafka.Common.Message
         public Org.Apache.Kafka.Common.Message.LeaderAndIsrRequestData SetUngroupedPartitionStates(Java.Util.List<Org.Apache.Kafka.Common.Message.LeaderAndIsrRequestData.LeaderAndIsrPartitionState> arg0)
         {
             return IExecute<Org.Apache.Kafka.Common.Message.LeaderAndIsrRequestData>("setUngroupedPartitionStates", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.html#duplicate()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
+        public Org.Apache.Kafka.Common.Protocol.Message Duplicate()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.html#apiKey()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short ApiKey()
+        {
+            return IExecute<short>("apiKey");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.html#highestSupportedVersion()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short HighestSupportedVersion()
+        {
+            return IExecute<short>("highestSupportedVersion");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.html#lowestSupportedVersion()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short LowestSupportedVersion()
+        {
+            return IExecute<short>("lowestSupportedVersion");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>
@@ -376,53 +402,40 @@ namespace Org.Apache.Kafka.Common.Message
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrLiveLeader.html#brokerId()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrLiveLeader.html#brokerId()"/>
             /// </summary>
-            public int BrokerId
+
+            /// <returns><see cref="int"/></returns>
+            public int BrokerId()
             {
-                get { return IExecute<int>("brokerId"); }
+                return IExecute<int>("brokerId");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrLiveLeader.html#duplicate()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrLiveLeader.html#port()"/>
             /// </summary>
-            public Org.Apache.Kafka.Common.Protocol.Message Duplicate
+
+            /// <returns><see cref="int"/></returns>
+            public int Port()
             {
-                get { return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate"); }
+                return IExecute<int>("port");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrLiveLeader.html#highestSupportedVersion()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrLiveLeader.html#hostName()"/>
             /// </summary>
-            public short HighestSupportedVersion
+
+            /// <returns><see cref="string"/></returns>
+            public string HostName()
             {
-                get { return IExecute<short>("highestSupportedVersion"); }
+                return IExecute<string>("hostName");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrLiveLeader.html#hostName()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrLiveLeader.html#unknownTaggedFields()"/>
             /// </summary>
-            public string HostName
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields()
             {
-                get { return IExecute<string>("hostName"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrLiveLeader.html#lowestSupportedVersion()"/> 
-            /// </summary>
-            public short LowestSupportedVersion
-            {
-                get { return IExecute<short>("lowestSupportedVersion"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrLiveLeader.html#port()"/> 
-            /// </summary>
-            public int Port
-            {
-                get { return IExecute<int>("port"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrLiveLeader.html#unknownTaggedFields()"/> 
-            /// </summary>
-            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields
-            {
-                get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields"); }
+                return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrLiveLeader.html#setBrokerId(int)"/>
@@ -450,6 +463,33 @@ namespace Org.Apache.Kafka.Common.Message
             public Org.Apache.Kafka.Common.Message.LeaderAndIsrRequestData.LeaderAndIsrLiveLeader SetPort(int arg0)
             {
                 return IExecute<Org.Apache.Kafka.Common.Message.LeaderAndIsrRequestData.LeaderAndIsrLiveLeader>("setPort", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrLiveLeader.html#duplicate()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
+            public Org.Apache.Kafka.Common.Protocol.Message Duplicate()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrLiveLeader.html#highestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short HighestSupportedVersion()
+            {
+                return IExecute<short>("highestSupportedVersion");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrLiveLeader.html#lowestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short LowestSupportedVersion()
+            {
+                return IExecute<short>("lowestSupportedVersion");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrLiveLeader.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>
@@ -569,116 +609,121 @@ namespace Org.Apache.Kafka.Common.Message
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrPartitionState.html#addingReplicas()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrPartitionState.html#isNew()"/>
             /// </summary>
-            public Java.Util.List<int?> AddingReplicas
+
+            /// <returns><see cref="bool"/></returns>
+            public bool IsNew()
             {
-                get { return IExecute<Java.Util.List<int?>>("addingReplicas"); }
+                return IExecute<bool>("isNew");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrPartitionState.html#controllerEpoch()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrPartitionState.html#leaderRecoveryState()"/>
             /// </summary>
-            public int ControllerEpoch
+
+            /// <returns><see cref="byte"/></returns>
+            public byte LeaderRecoveryState()
             {
-                get { return IExecute<int>("controllerEpoch"); }
+                return IExecute<byte>("leaderRecoveryState");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrPartitionState.html#duplicate()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrPartitionState.html#controllerEpoch()"/>
             /// </summary>
-            public Org.Apache.Kafka.Common.Protocol.Message Duplicate
+
+            /// <returns><see cref="int"/></returns>
+            public int ControllerEpoch()
             {
-                get { return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate"); }
+                return IExecute<int>("controllerEpoch");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrPartitionState.html#highestSupportedVersion()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrPartitionState.html#leader()"/>
             /// </summary>
-            public short HighestSupportedVersion
+
+            /// <returns><see cref="int"/></returns>
+            public int Leader()
             {
-                get { return IExecute<short>("highestSupportedVersion"); }
+                return IExecute<int>("leader");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrPartitionState.html#isNew()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrPartitionState.html#leaderEpoch()"/>
             /// </summary>
-            public bool IsNew
+
+            /// <returns><see cref="int"/></returns>
+            public int LeaderEpoch()
             {
-                get { return IExecute<bool>("isNew"); }
+                return IExecute<int>("leaderEpoch");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrPartitionState.html#isr()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrPartitionState.html#partitionEpoch()"/>
             /// </summary>
-            public Java.Util.List<int?> Isr
+
+            /// <returns><see cref="int"/></returns>
+            public int PartitionEpoch()
             {
-                get { return IExecute<Java.Util.List<int?>>("isr"); }
+                return IExecute<int>("partitionEpoch");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrPartitionState.html#leader()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrPartitionState.html#partitionIndex()"/>
             /// </summary>
-            public int Leader
+
+            /// <returns><see cref="int"/></returns>
+            public int PartitionIndex()
             {
-                get { return IExecute<int>("leader"); }
+                return IExecute<int>("partitionIndex");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrPartitionState.html#leaderEpoch()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrPartitionState.html#topicName()"/>
             /// </summary>
-            public int LeaderEpoch
+
+            /// <returns><see cref="string"/></returns>
+            public string TopicName()
             {
-                get { return IExecute<int>("leaderEpoch"); }
+                return IExecute<string>("topicName");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrPartitionState.html#leaderRecoveryState()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrPartitionState.html#addingReplicas()"/>
             /// </summary>
-            public byte LeaderRecoveryState
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<int?> AddingReplicas()
             {
-                get { return IExecute<byte>("leaderRecoveryState"); }
+                return IExecute<Java.Util.List<int?>>("addingReplicas");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrPartitionState.html#lowestSupportedVersion()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrPartitionState.html#isr()"/>
             /// </summary>
-            public short LowestSupportedVersion
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<int?> Isr()
             {
-                get { return IExecute<short>("lowestSupportedVersion"); }
+                return IExecute<Java.Util.List<int?>>("isr");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrPartitionState.html#partitionEpoch()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrPartitionState.html#removingReplicas()"/>
             /// </summary>
-            public int PartitionEpoch
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<int?> RemovingReplicas()
             {
-                get { return IExecute<int>("partitionEpoch"); }
+                return IExecute<Java.Util.List<int?>>("removingReplicas");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrPartitionState.html#partitionIndex()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrPartitionState.html#replicas()"/>
             /// </summary>
-            public int PartitionIndex
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<int?> Replicas()
             {
-                get { return IExecute<int>("partitionIndex"); }
+                return IExecute<Java.Util.List<int?>>("replicas");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrPartitionState.html#removingReplicas()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrPartitionState.html#unknownTaggedFields()"/>
             /// </summary>
-            public Java.Util.List<int?> RemovingReplicas
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields()
             {
-                get { return IExecute<Java.Util.List<int?>>("removingReplicas"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrPartitionState.html#replicas()"/> 
-            /// </summary>
-            public Java.Util.List<int?> Replicas
-            {
-                get { return IExecute<Java.Util.List<int?>>("replicas"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrPartitionState.html#topicName()"/> 
-            /// </summary>
-            public string TopicName
-            {
-                get { return IExecute<string>("topicName"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrPartitionState.html#unknownTaggedFields()"/> 
-            /// </summary>
-            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields
-            {
-                get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields"); }
+                return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrPartitionState.html#setAddingReplicas(java.util.List)"/>
@@ -787,6 +832,33 @@ namespace Org.Apache.Kafka.Common.Message
             public Org.Apache.Kafka.Common.Message.LeaderAndIsrRequestData.LeaderAndIsrPartitionState SetTopicName(string arg0)
             {
                 return IExecute<Org.Apache.Kafka.Common.Message.LeaderAndIsrRequestData.LeaderAndIsrPartitionState>("setTopicName", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrPartitionState.html#duplicate()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
+            public Org.Apache.Kafka.Common.Protocol.Message Duplicate()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrPartitionState.html#highestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short HighestSupportedVersion()
+            {
+                return IExecute<short>("highestSupportedVersion");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrPartitionState.html#lowestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short LowestSupportedVersion()
+            {
+                return IExecute<short>("lowestSupportedVersion");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrPartitionState.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>
@@ -898,53 +970,31 @@ namespace Org.Apache.Kafka.Common.Message
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrTopicState.html#duplicate()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrTopicState.html#topicName()"/>
             /// </summary>
-            public Org.Apache.Kafka.Common.Protocol.Message Duplicate
+
+            /// <returns><see cref="string"/></returns>
+            public string TopicName()
             {
-                get { return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate"); }
+                return IExecute<string>("topicName");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrTopicState.html#highestSupportedVersion()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrTopicState.html#partitionStates()"/>
             /// </summary>
-            public short HighestSupportedVersion
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<Org.Apache.Kafka.Common.Message.LeaderAndIsrRequestData.LeaderAndIsrPartitionState> PartitionStates()
             {
-                get { return IExecute<short>("highestSupportedVersion"); }
+                return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.LeaderAndIsrRequestData.LeaderAndIsrPartitionState>>("partitionStates");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrTopicState.html#lowestSupportedVersion()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrTopicState.html#unknownTaggedFields()"/>
             /// </summary>
-            public short LowestSupportedVersion
+
+            /// <returns><see cref="Java.Util.List"/></returns>
+            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields()
             {
-                get { return IExecute<short>("lowestSupportedVersion"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrTopicState.html#partitionStates()"/> 
-            /// </summary>
-            public Java.Util.List<Org.Apache.Kafka.Common.Message.LeaderAndIsrRequestData.LeaderAndIsrPartitionState> PartitionStates
-            {
-                get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.LeaderAndIsrRequestData.LeaderAndIsrPartitionState>>("partitionStates"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrTopicState.html#topicId()"/> 
-            /// </summary>
-            public Org.Apache.Kafka.Common.Uuid TopicId
-            {
-                get { return IExecute<Org.Apache.Kafka.Common.Uuid>("topicId"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrTopicState.html#topicName()"/> 
-            /// </summary>
-            public string TopicName
-            {
-                get { return IExecute<string>("topicName"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrTopicState.html#unknownTaggedFields()"/> 
-            /// </summary>
-            public Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField> UnknownTaggedFields
-            {
-                get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields"); }
+                return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrTopicState.html#setPartitionStates(java.util.List)"/>
@@ -972,6 +1022,42 @@ namespace Org.Apache.Kafka.Common.Message
             public Org.Apache.Kafka.Common.Message.LeaderAndIsrRequestData.LeaderAndIsrTopicState SetTopicName(string arg0)
             {
                 return IExecute<Org.Apache.Kafka.Common.Message.LeaderAndIsrRequestData.LeaderAndIsrTopicState>("setTopicName", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrTopicState.html#duplicate()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
+            public Org.Apache.Kafka.Common.Protocol.Message Duplicate()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrTopicState.html#topicId()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Uuid"/></returns>
+            public Org.Apache.Kafka.Common.Uuid TopicId()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Uuid>("topicId");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrTopicState.html#highestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short HighestSupportedVersion()
+            {
+                return IExecute<short>("highestSupportedVersion");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrTopicState.html#lowestSupportedVersion()"/>
+            /// </summary>
+
+            /// <returns><see cref="short"/></returns>
+            public short LowestSupportedVersion()
+            {
+                return IExecute<short>("lowestSupportedVersion");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/message/LeaderAndIsrRequestData.LeaderAndIsrTopicState.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>

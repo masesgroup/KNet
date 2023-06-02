@@ -21,14 +21,8 @@ namespace Kafka.Admin
     /// <summary>
     /// Class managing ReassignPartitionsCommand
     /// </summary>
-    public class ReassignPartitionsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeMain<ReassignPartitionsCommand>
+    public partial class ReassignPartitionsCommand
     {
-        /// <summary>
-        /// Initialize a new <see cref="ReassignPartitionsCommand"/>
-        /// </summary>
-        public ReassignPartitionsCommand()
-            : base("kafka.admin.ReassignPartitionsCommand")
-        {
-        }
+
     }
 }

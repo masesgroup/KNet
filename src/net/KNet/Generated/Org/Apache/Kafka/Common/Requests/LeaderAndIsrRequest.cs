@@ -56,25 +56,31 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/LeaderAndIsrRequest.html#liveLeaders()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/LeaderAndIsrRequest.html#partitionStates()"/>
         /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.Message.LeaderAndIsrRequestData.LeaderAndIsrLiveLeader> LiveLeaders
+
+        /// <returns><see cref="Java.Lang.Iterable"/></returns>
+        public Java.Lang.Iterable<Org.Apache.Kafka.Common.Message.LeaderAndIsrRequestData.LeaderAndIsrPartitionState> PartitionStates()
         {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.LeaderAndIsrRequestData.LeaderAndIsrLiveLeader>>("liveLeaders"); }
+            return IExecute<Java.Lang.Iterable<Org.Apache.Kafka.Common.Message.LeaderAndIsrRequestData.LeaderAndIsrPartitionState>>("partitionStates");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/LeaderAndIsrRequest.html#partitionStates()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/LeaderAndIsrRequest.html#liveLeaders()"/>
         /// </summary>
-        public Java.Lang.Iterable<Org.Apache.Kafka.Common.Message.LeaderAndIsrRequestData.LeaderAndIsrPartitionState> PartitionStates
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.Message.LeaderAndIsrRequestData.LeaderAndIsrLiveLeader> LiveLeaders()
         {
-            get { return IExecute<Java.Lang.Iterable<Org.Apache.Kafka.Common.Message.LeaderAndIsrRequestData.LeaderAndIsrPartitionState>>("partitionStates"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Message.LeaderAndIsrRequestData.LeaderAndIsrLiveLeader>>("liveLeaders");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/LeaderAndIsrRequest.html#topicIds()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/LeaderAndIsrRequest.html#topicIds()"/>
         /// </summary>
-        public Java.Util.Map<string, Org.Apache.Kafka.Common.Uuid> TopicIds
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, Org.Apache.Kafka.Common.Uuid> TopicIds()
         {
-            get { return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Common.Uuid>>("topicIds"); }
+            return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Common.Uuid>>("topicIds");
         }
 
         #endregion
@@ -95,7 +101,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// <param name="arg5"><see cref="Java.Util.Map"/></param>
             /// <param name="arg6"><see cref="Java.Util.Collection"/></param>
             /// <param name="arg7"><see cref="bool"/></param>
-            public Builder(short arg0, int arg1, int arg2, long arg3, Java.Util.List arg4, Java.Util.Map arg5, Java.Util.Collection arg6, bool arg7)
+            public Builder(short arg0, int arg1, int arg2, long arg3, Java.Util.List<Org.Apache.Kafka.Common.Message.LeaderAndIsrRequestData.LeaderAndIsrPartitionState> arg4, Java.Util.Map<string, Org.Apache.Kafka.Common.Uuid> arg5, Java.Util.Collection<Org.Apache.Kafka.Common.Node> arg6, bool arg7)
                 : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
             {
             }
@@ -109,7 +115,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// <param name="arg4"><see cref="Java.Util.List"/></param>
             /// <param name="arg5"><see cref="Java.Util.Map"/></param>
             /// <param name="arg6"><see cref="Java.Util.Collection"/></param>
-            public Builder(short arg0, int arg1, int arg2, long arg3, Java.Util.List arg4, Java.Util.Map arg5, Java.Util.Collection arg6)
+            public Builder(short arg0, int arg1, int arg2, long arg3, Java.Util.List<Org.Apache.Kafka.Common.Message.LeaderAndIsrRequestData.LeaderAndIsrPartitionState> arg4, Java.Util.Map<string, Org.Apache.Kafka.Common.Uuid> arg5, Java.Util.Collection<Org.Apache.Kafka.Common.Node> arg6)
                 : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
             {
             }

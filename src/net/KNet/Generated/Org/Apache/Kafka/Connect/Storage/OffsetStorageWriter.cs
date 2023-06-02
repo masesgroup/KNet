@@ -57,20 +57,6 @@ namespace Org.Apache.Kafka.Connect.Storage
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/OffsetStorageWriter.html#beginFlush()"/> 
-        /// </summary>
-        public bool BeginFlush
-        {
-            get { return IExecute<bool>("beginFlush"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/OffsetStorageWriter.html#willFlush()"/> 
-        /// </summary>
-        public bool WillFlush
-        {
-            get { return IExecute<bool>("willFlush"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/OffsetStorageWriter.html#doFlush(org.apache.kafka.connect.util.Callback)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Util.Callback"/></param>
@@ -78,6 +64,24 @@ namespace Org.Apache.Kafka.Connect.Storage
         public Java.Util.Concurrent.Future<Java.Lang.Void> DoFlush(Org.Apache.Kafka.Connect.Util.Callback<Java.Lang.Void> arg0)
         {
             return IExecute<Java.Util.Concurrent.Future<Java.Lang.Void>>("doFlush", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/OffsetStorageWriter.html#beginFlush()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool BeginFlush()
+        {
+            return IExecute<bool>("beginFlush");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/OffsetStorageWriter.html#willFlush()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool WillFlush()
+        {
+            return IExecute<bool>("willFlush");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/OffsetStorageWriter.html#cancelFlush()"/>

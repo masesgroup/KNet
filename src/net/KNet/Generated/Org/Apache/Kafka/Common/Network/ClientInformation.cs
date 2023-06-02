@@ -63,18 +63,22 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ClientInformation.html#softwareName()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ClientInformation.html#softwareName()"/>
         /// </summary>
-        public string SoftwareName
+
+        /// <returns><see cref="string"/></returns>
+        public string SoftwareName()
         {
-            get { return IExecute<string>("softwareName"); }
+            return IExecute<string>("softwareName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ClientInformation.html#softwareVersion()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ClientInformation.html#softwareVersion()"/>
         /// </summary>
-        public string SoftwareVersion
+
+        /// <returns><see cref="string"/></returns>
+        public string SoftwareVersion()
         {
-            get { return IExecute<string>("softwareVersion"); }
+            return IExecute<string>("softwareVersion");
         }
 
         #endregion

@@ -56,25 +56,31 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TransactionListing.html#producerId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TransactionListing.html#transactionalId()"/>
         /// </summary>
-        public long ProducerId
+
+        /// <returns><see cref="string"/></returns>
+        public string TransactionalId()
         {
-            get { return IExecute<long>("producerId"); }
+            return IExecute<string>("transactionalId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TransactionListing.html#state()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TransactionListing.html#producerId()"/>
         /// </summary>
-        public Org.Apache.Kafka.Clients.Admin.TransactionState State
+
+        /// <returns><see cref="long"/></returns>
+        public long ProducerId()
         {
-            get { return IExecute<Org.Apache.Kafka.Clients.Admin.TransactionState>("state"); }
+            return IExecute<long>("producerId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TransactionListing.html#transactionalId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TransactionListing.html#state()"/>
         /// </summary>
-        public string TransactionalId
+
+        /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.TransactionState"/></returns>
+        public Org.Apache.Kafka.Clients.Admin.TransactionState State()
         {
-            get { return IExecute<string>("transactionalId"); }
+            return IExecute<Org.Apache.Kafka.Clients.Admin.TransactionState>("state");
         }
 
         #endregion

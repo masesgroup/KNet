@@ -92,13 +92,6 @@ namespace Org.Apache.Kafka.Common.Metrics
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/JmxReporter.html#reconfigurableConfigs()"/> 
-        /// </summary>
-        public Java.Util.Set<string> ReconfigurableConfigs
-        {
-            get { return IExecute<Java.Util.Set<string>>("reconfigurableConfigs"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/JmxReporter.html#containsMbean(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -106,6 +99,15 @@ namespace Org.Apache.Kafka.Common.Metrics
         public bool ContainsMbean(string arg0)
         {
             return IExecute<bool>("containsMbean", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/JmxReporter.html#reconfigurableConfigs()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<string> ReconfigurableConfigs()
+        {
+            return IExecute<Java.Util.Set<string>>("reconfigurableConfigs");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/JmxReporter.html#close()"/>

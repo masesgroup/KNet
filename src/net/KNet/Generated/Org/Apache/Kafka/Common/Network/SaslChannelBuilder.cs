@@ -29,26 +29,6 @@ namespace Org.Apache.Kafka.Common.Network
     public partial class SaslChannelBuilder
     {
         #region Constructors
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SaslChannelBuilder.html#%3Cinit%3E(org.apache.kafka.common.network.Mode,java.util.Map,org.apache.kafka.common.security.auth.SecurityProtocol,org.apache.kafka.common.network.ListenerName,boolean,java.lang.String,boolean,org.apache.kafka.common.security.authenticator.CredentialCache,org.apache.kafka.common.security.token.delegation.internals.DelegationTokenCache,java.lang.String,org.apache.kafka.common.utils.Time,org.apache.kafka.common.utils.LogContext,java.util.function.Supplier)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Network.Mode"/></param>
-        /// <param name="arg1"><see cref="Java.Util.Map"/></param>
-        /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol"/></param>
-        /// <param name="arg3"><see cref="Org.Apache.Kafka.Common.Network.ListenerName"/></param>
-        /// <param name="arg4"><see cref="bool"/></param>
-        /// <param name="arg5"><see cref="string"/></param>
-        /// <param name="arg6"><see cref="bool"/></param>
-        /// <param name="arg7"><see cref="Org.Apache.Kafka.Common.Security.Authenticator.CredentialCache"/></param>
-        /// <param name="arg8"><see cref="Org.Apache.Kafka.Common.Security.Token.Delegation.Internals.DelegationTokenCache"/></param>
-        /// <param name="arg9"><see cref="string"/></param>
-        /// <param name="arg10"><see cref="Org.Apache.Kafka.Common.Utils.Time"/></param>
-        /// <param name="arg11"><see cref="Org.Apache.Kafka.Common.Utils.LogContext"/></param>
-        /// <param name="arg12"><see cref="Java.Util.Function.Supplier"/></param>
-        public SaslChannelBuilder(Org.Apache.Kafka.Common.Network.Mode arg0, Java.Util.Map arg1, Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol arg2, Org.Apache.Kafka.Common.Network.ListenerName arg3, bool arg4, string arg5, bool arg6, Org.Apache.Kafka.Common.Security.Authenticator.CredentialCache arg7, Org.Apache.Kafka.Common.Security.Token.Delegation.Internals.DelegationTokenCache arg8, string arg9, Org.Apache.Kafka.Common.Utils.Time arg10, Org.Apache.Kafka.Common.Utils.LogContext arg11, Java.Util.Function.Supplier arg12)
-            : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12)
-        {
-        }
 
         #endregion
 
@@ -74,18 +54,13 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SaslChannelBuilder.html#listenerName()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SaslChannelBuilder.html#reconfigurableConfigs()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Network.ListenerName ListenerName
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<string> ReconfigurableConfigs()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Network.ListenerName>("listenerName"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SaslChannelBuilder.html#reconfigurableConfigs()"/> 
-        /// </summary>
-        public Java.Util.Set<string> ReconfigurableConfigs
-        {
-            get { return IExecute<Java.Util.Set<string>>("reconfigurableConfigs"); }
+            return IExecute<Java.Util.Set<string>>("reconfigurableConfigs");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SaslChannelBuilder.html#buildChannel(java.lang.String,java.nio.channels.SelectionKey,int,org.apache.kafka.common.memory.MemoryPool,org.apache.kafka.common.network.ChannelMetadataRegistry)"/>
@@ -100,6 +75,15 @@ namespace Org.Apache.Kafka.Common.Network
         public Org.Apache.Kafka.Common.Network.KafkaChannel BuildChannel(string arg0, Java.Nio.Channels.SelectionKey arg1, int arg2, Org.Apache.Kafka.Common.Memory.MemoryPool arg3, Org.Apache.Kafka.Common.Network.ChannelMetadataRegistry arg4)
         {
             return IExecute<Org.Apache.Kafka.Common.Network.KafkaChannel>("buildChannel", arg0, arg1, arg2, arg3, arg4);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SaslChannelBuilder.html#listenerName()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Network.ListenerName"/></returns>
+        public Org.Apache.Kafka.Common.Network.ListenerName ListenerName()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Network.ListenerName>("listenerName");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SaslChannelBuilder.html#close()"/>

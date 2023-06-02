@@ -414,7 +414,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AddOffsetsToTxnRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.AddOffsetsToTxnRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -543,7 +543,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AddPartitionsToTxnRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.AddPartitionsToTxnRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -672,7 +672,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AllocateProducerIdsRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.AllocateProducerIdsRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -801,7 +801,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AlterClientQuotasRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.AlterClientQuotasRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -930,7 +930,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AlterConfigsRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.AlterConfigsRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1145,7 +1145,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AlterPartitionReassignmentsRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.AlterPartitionReassignmentsRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1274,7 +1274,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AlterPartitionRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.AlterPartitionRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1403,7 +1403,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AlterReplicaLogDirsRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.AlterReplicaLogDirsRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1532,7 +1532,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AlterUserScramCredentialsRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.AlterUserScramCredentialsRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1704,7 +1704,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ApiVersionsRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.ApiVersionsRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1833,7 +1833,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/BeginQuorumEpochRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.BeginQuorumEpochRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1962,7 +1962,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/BrokerHeartbeatRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.BrokerHeartbeatRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -2091,7 +2091,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/BrokerRegistrationRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.BrokerRegistrationRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -2220,7 +2220,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ControlledShutdownRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.ControlledShutdownRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -2365,7 +2365,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/CreateAclsRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.CreateAclsRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -2494,7 +2494,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/CreateDelegationTokenRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.CreateDelegationTokenRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -2623,7 +2623,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/CreatePartitionsRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.CreatePartitionsRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -2752,7 +2752,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/CreateTopicsRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.CreateTopicsRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -2881,7 +2881,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DeleteAclsRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.DeleteAclsRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -3010,7 +3010,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DeleteGroupsRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.DeleteGroupsRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -3139,7 +3139,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DeleteRecordsRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.DeleteRecordsRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -3268,7 +3268,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DeleteTopicsRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.DeleteTopicsRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -3397,7 +3397,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeAclsRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.DescribeAclsRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -3526,7 +3526,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeClientQuotasRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.DescribeClientQuotasRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -3655,7 +3655,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeClusterRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.DescribeClusterRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -3784,7 +3784,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.DescribeConfigsRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -3956,7 +3956,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigSource.html"/>
         /// </summary>
-        public partial class ConfigSource : Java.Lang.Enum
+        public partial class ConfigSource : Java.Lang.Enum<Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigSource>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -4042,7 +4042,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeConfigsResponse.ConfigType.html"/>
         /// </summary>
-        public partial class ConfigType : Java.Lang.Enum
+        public partial class ConfigType : Java.Lang.Enum<Org.Apache.Kafka.Common.Requests.DescribeConfigsResponse.ConfigType>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -4128,7 +4128,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeDelegationTokenRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.DescribeDelegationTokenRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -4257,7 +4257,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeGroupsRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.DescribeGroupsRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -4386,7 +4386,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeLogDirsRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.DescribeLogDirsRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -4515,7 +4515,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeProducersRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.DescribeProducersRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -4644,7 +4644,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeQuorumRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.DescribeQuorumRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -4773,7 +4773,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeTransactionsRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.DescribeTransactionsRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -4902,7 +4902,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/DescribeUserScramCredentialsRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.DescribeUserScramCredentialsRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -5031,7 +5031,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ElectLeadersRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.ElectLeadersRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -5160,7 +5160,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/EndQuorumEpochRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.EndQuorumEpochRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -5289,7 +5289,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/EndTxnRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.EndTxnRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -5418,7 +5418,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/EnvelopeRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.EnvelopeRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -5547,7 +5547,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ExpireDelegationTokenRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.ExpireDelegationTokenRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -5719,7 +5719,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.FetchRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -5891,7 +5891,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FetchSnapshotRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.FetchSnapshotRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -6020,7 +6020,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FindCoordinatorRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.FindCoordinatorRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -6063,7 +6063,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/FindCoordinatorRequest.CoordinatorType.html"/>
         /// </summary>
-        public partial class CoordinatorType : Java.Lang.Enum
+        public partial class CoordinatorType : Java.Lang.Enum<Org.Apache.Kafka.Common.Requests.FindCoordinatorRequest.CoordinatorType>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -6208,7 +6208,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/HeartbeatRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.HeartbeatRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -6337,7 +6337,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/IncrementalAlterConfigsRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.IncrementalAlterConfigsRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -6466,7 +6466,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/InitProducerIdRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.InitProducerIdRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -6595,7 +6595,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/JoinGroupRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.JoinGroupRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -6724,7 +6724,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/LeaderAndIsrRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractControlRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractControlRequest.Builder<Org.Apache.Kafka.Common.Requests.LeaderAndIsrRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -6853,7 +6853,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/LeaveGroupRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.LeaveGroupRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -6982,7 +6982,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ListGroupsRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.ListGroupsRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -7111,7 +7111,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ListOffsetsRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.ListOffsetsRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -7240,7 +7240,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ListPartitionReassignmentsRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.ListPartitionReassignmentsRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -7369,7 +7369,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ListTransactionsRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.ListTransactionsRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -7498,7 +7498,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.MetadataRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -7713,7 +7713,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/OffsetCommitRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.OffsetCommitRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -7842,7 +7842,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/OffsetDeleteRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.OffsetDeleteRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -7971,7 +7971,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/OffsetFetchRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.OffsetFetchRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -8159,7 +8159,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/OffsetsForLeaderEpochRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.OffsetsForLeaderEpochRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -8288,7 +8288,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/ProduceRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.ProduceRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -8503,7 +8503,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/RenewDelegationTokenRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.RenewDelegationTokenRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -8847,7 +8847,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/SaslAuthenticateRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.SaslAuthenticateRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -8976,7 +8976,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/SaslHandshakeRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.SaslHandshakeRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -9105,7 +9105,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/StopReplicaRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractControlRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractControlRequest.Builder<Org.Apache.Kafka.Common.Requests.StopReplicaRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -9234,7 +9234,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/SyncGroupRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.SyncGroupRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -9324,7 +9324,7 @@ namespace Org.Apache.Kafka.Common.Requests
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/TransactionResult.html"/>
     /// </summary>
-    public partial class TransactionResult : Java.Lang.Enum
+    public partial class TransactionResult : Java.Lang.Enum<Org.Apache.Kafka.Common.Requests.TransactionResult>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -9406,7 +9406,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/TxnOffsetCommitRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.TxnOffsetCommitRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -9578,7 +9578,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/UnregisterBrokerRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.UnregisterBrokerRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -9707,7 +9707,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/UpdateFeaturesRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.UpdateFeaturesRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -9879,7 +9879,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/UpdateMetadataRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractControlRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractControlRequest.Builder<Org.Apache.Kafka.Common.Requests.UpdateMetadataRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -10008,7 +10008,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/VoteRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.VoteRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -10137,7 +10137,7 @@ namespace Org.Apache.Kafka.Common.Requests
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/WriteTxnMarkersRequest.Builder.html"/>
         /// </summary>
-        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder
+        public partial class Builder : Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder<Org.Apache.Kafka.Common.Requests.WriteTxnMarkersRequest>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

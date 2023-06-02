@@ -167,7 +167,7 @@ namespace Org.Apache.Kafka.Connect.Runtime.Distributed
             /// <param name="arg3"><see cref="long"/></param>
             /// <param name="arg4"><see cref="Java.Util.Collection"/></param>
             /// <param name="arg5"><see cref="Java.Util.Collection"/></param>
-            public Assignment(short arg0, string arg1, string arg2, long arg3, Java.Util.Collection arg4, Java.Util.Collection arg5)
+            public Assignment(short arg0, string arg1, string arg2, long arg3, Java.Util.Collection<string> arg4, Java.Util.Collection<Org.Apache.Kafka.Connect.Util.ConnectorTaskId> arg5)
                 : base(arg0, arg1, arg2, arg3, arg4, arg5)
             {
             }
@@ -196,53 +196,67 @@ namespace Org.Apache.Kafka.Connect.Runtime.Distributed
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ConnectProtocol.Assignment.html#connectors()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ConnectProtocol.Assignment.html#failed()"/>
             /// </summary>
-            public Java.Util.Collection<string> Connectors
+
+            /// <returns><see cref="bool"/></returns>
+            public bool Failed()
             {
-                get { return IExecute<Java.Util.Collection<string>>("connectors"); }
+                return IExecute<bool>("failed");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ConnectProtocol.Assignment.html#error()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ConnectProtocol.Assignment.html#leader()"/>
             /// </summary>
-            public short Error
+
+            /// <returns><see cref="string"/></returns>
+            public string Leader()
             {
-                get { return IExecute<short>("error"); }
+                return IExecute<string>("leader");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ConnectProtocol.Assignment.html#failed()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ConnectProtocol.Assignment.html#leaderUrl()"/>
             /// </summary>
-            public bool Failed
+
+            /// <returns><see cref="string"/></returns>
+            public string LeaderUrl()
             {
-                get { return IExecute<bool>("failed"); }
+                return IExecute<string>("leaderUrl");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ConnectProtocol.Assignment.html#leader()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ConnectProtocol.Assignment.html#connectors()"/>
             /// </summary>
-            public string Leader
+
+            /// <returns><see cref="Java.Util.Collection"/></returns>
+            public Java.Util.Collection<string> Connectors()
             {
-                get { return IExecute<string>("leader"); }
+                return IExecute<Java.Util.Collection<string>>("connectors");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ConnectProtocol.Assignment.html#leaderUrl()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ConnectProtocol.Assignment.html#tasks()"/>
             /// </summary>
-            public string LeaderUrl
+
+            /// <returns><see cref="Java.Util.Collection"/></returns>
+            public Java.Util.Collection<Org.Apache.Kafka.Connect.Util.ConnectorTaskId> Tasks()
             {
-                get { return IExecute<string>("leaderUrl"); }
+                return IExecute<Java.Util.Collection<Org.Apache.Kafka.Connect.Util.ConnectorTaskId>>("tasks");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ConnectProtocol.Assignment.html#offset()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ConnectProtocol.Assignment.html#offset()"/>
             /// </summary>
-            public long Offset
+
+            /// <returns><see cref="long"/></returns>
+            public long Offset()
             {
-                get { return IExecute<long>("offset"); }
+                return IExecute<long>("offset");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ConnectProtocol.Assignment.html#tasks()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ConnectProtocol.Assignment.html#error()"/>
             /// </summary>
-            public Java.Util.Collection<Org.Apache.Kafka.Connect.Util.ConnectorTaskId> Tasks
+
+            /// <returns><see cref="short"/></returns>
+            public short Error()
             {
-                get { return IExecute<Java.Util.Collection<Org.Apache.Kafka.Connect.Util.ConnectorTaskId>>("tasks"); }
+                return IExecute<short>("error");
             }
 
             #endregion
@@ -285,18 +299,22 @@ namespace Org.Apache.Kafka.Connect.Runtime.Distributed
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ConnectProtocol.WorkerState.html#offset()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ConnectProtocol.WorkerState.html#url()"/>
             /// </summary>
-            public long Offset
+
+            /// <returns><see cref="string"/></returns>
+            public string Url()
             {
-                get { return IExecute<long>("offset"); }
+                return IExecute<string>("url");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ConnectProtocol.WorkerState.html#url()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/distributed/ConnectProtocol.WorkerState.html#offset()"/>
             /// </summary>
-            public string Url
+
+            /// <returns><see cref="long"/></returns>
+            public long Offset()
             {
-                get { return IExecute<string>("url"); }
+                return IExecute<long>("offset");
             }
 
             #endregion

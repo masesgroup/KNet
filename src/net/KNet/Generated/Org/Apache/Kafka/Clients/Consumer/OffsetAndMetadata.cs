@@ -44,7 +44,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="Java.Util.Optional"/></param>
         /// <param name="arg2"><see cref="string"/></param>
-        public OffsetAndMetadata(long arg0, Java.Util.Optional arg1, string arg2)
+        public OffsetAndMetadata(long arg0, Java.Util.Optional<int?> arg1, string arg2)
             : base(arg0, arg1, arg2)
         {
         }
@@ -77,25 +77,31 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetAndMetadata.html#leaderEpoch()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetAndMetadata.html#metadata()"/>
         /// </summary>
-        public Java.Util.Optional<int?> LeaderEpoch
+
+        /// <returns><see cref="string"/></returns>
+        public string Metadata()
         {
-            get { return IExecute<Java.Util.Optional<int?>>("leaderEpoch"); }
+            return IExecute<string>("metadata");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetAndMetadata.html#metadata()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetAndMetadata.html#leaderEpoch()"/>
         /// </summary>
-        public string Metadata
+
+        /// <returns><see cref="Java.Util.Optional"/></returns>
+        public Java.Util.Optional<int?> LeaderEpoch()
         {
-            get { return IExecute<string>("metadata"); }
+            return IExecute<Java.Util.Optional<int?>>("leaderEpoch");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetAndMetadata.html#offset()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetAndMetadata.html#offset()"/>
         /// </summary>
-        public long Offset
+
+        /// <returns><see cref="long"/></returns>
+        public long Offset()
         {
-            get { return IExecute<long>("offset"); }
+            return IExecute<long>("offset");
         }
 
         #endregion

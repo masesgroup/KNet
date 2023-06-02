@@ -46,25 +46,31 @@ namespace Org.Apache.Kafka.Connect.Header
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/header/Header.html#key()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/header/Header.html#value()"/>
         /// </summary>
-        public string Key
+
+        /// <returns><see cref="object"/></returns>
+        public object Value()
         {
-            get { return IExecute<string>("key"); }
+            return IExecute("value");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/header/Header.html#schema()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/header/Header.html#key()"/>
         /// </summary>
-        public Org.Apache.Kafka.Connect.Data.Schema Schema
+
+        /// <returns><see cref="string"/></returns>
+        public string Key()
         {
-            get { return IExecute<Org.Apache.Kafka.Connect.Data.Schema>("schema"); }
+            return IExecute<string>("key");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/header/Header.html#value()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/header/Header.html#schema()"/>
         /// </summary>
-        public object Value
+
+        /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></returns>
+        public Org.Apache.Kafka.Connect.Data.Schema Schema()
         {
-            get { return IExecute("value"); }
+            return IExecute<Org.Apache.Kafka.Connect.Data.Schema>("schema");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/header/Header.html#rename(java.lang.String)"/>

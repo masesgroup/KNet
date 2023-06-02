@@ -55,32 +55,40 @@ namespace Org.Apache.Kafka.Common.Acl
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AclBinding.html#entry()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AclBinding.html#isUnknown()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Acl.AccessControlEntry Entry
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsUnknown()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Acl.AccessControlEntry>("entry"); }
+            return IExecute<bool>("isUnknown");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AclBinding.html#isUnknown()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AclBinding.html#entry()"/>
         /// </summary>
-        public bool IsUnknown
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Acl.AccessControlEntry"/></returns>
+        public Org.Apache.Kafka.Common.Acl.AccessControlEntry Entry()
         {
-            get { return IExecute<bool>("isUnknown"); }
+            return IExecute<Org.Apache.Kafka.Common.Acl.AccessControlEntry>("entry");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AclBinding.html#pattern()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AclBinding.html#toFilter()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Resource.ResourcePattern Pattern
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Acl.AclBindingFilter"/></returns>
+        public Org.Apache.Kafka.Common.Acl.AclBindingFilter ToFilter()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Resource.ResourcePattern>("pattern"); }
+            return IExecute<Org.Apache.Kafka.Common.Acl.AclBindingFilter>("toFilter");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AclBinding.html#toFilter()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/acl/AclBinding.html#pattern()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Acl.AclBindingFilter ToFilter
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Resource.ResourcePattern"/></returns>
+        public Org.Apache.Kafka.Common.Resource.ResourcePattern Pattern()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Acl.AclBindingFilter>("toFilter"); }
+            return IExecute<Org.Apache.Kafka.Common.Resource.ResourcePattern>("pattern");
         }
 
         #endregion

@@ -43,7 +43,7 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest.Entities
         /// <param name="arg8"><see cref="string"/></param>
         /// <param name="arg9"><see cref="string"/></param>
         /// <param name="arg10"><see cref="Java.Util.List"/></param>
-        public ConfigKeyInfo(string arg0, string arg1, bool arg2, string arg3, string arg4, string arg5, string arg6, int arg7, string arg8, string arg9, Java.Util.List arg10)
+        public ConfigKeyInfo(string arg0, string arg1, bool arg2, string arg3, string arg4, string arg5, string arg6, int arg7, string arg8, string arg9, Java.Util.List<string> arg10)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10)
         {
         }
@@ -64,81 +64,103 @@ namespace Org.Apache.Kafka.Connect.Runtime.Rest.Entities
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigKeyInfo.html#defaultValue()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigKeyInfo.html#required()"/>
         /// </summary>
-        public string DefaultValue
+
+        /// <returns><see cref="bool"/></returns>
+        public bool Required()
         {
-            get { return IExecute<string>("defaultValue"); }
+            return IExecute<bool>("required");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigKeyInfo.html#dependents()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigKeyInfo.html#orderInGroup()"/>
         /// </summary>
-        public Java.Util.List<string> Dependents
+
+        /// <returns><see cref="int"/></returns>
+        public int OrderInGroup()
         {
-            get { return IExecute<Java.Util.List<string>>("dependents"); }
+            return IExecute<int>("orderInGroup");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigKeyInfo.html#displayName()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigKeyInfo.html#defaultValue()"/>
         /// </summary>
-        public string DisplayName
+
+        /// <returns><see cref="string"/></returns>
+        public string DefaultValue()
         {
-            get { return IExecute<string>("displayName"); }
+            return IExecute<string>("defaultValue");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigKeyInfo.html#documentation()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigKeyInfo.html#displayName()"/>
         /// </summary>
-        public string Documentation
+
+        /// <returns><see cref="string"/></returns>
+        public string DisplayName()
         {
-            get { return IExecute<string>("documentation"); }
+            return IExecute<string>("displayName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigKeyInfo.html#group()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigKeyInfo.html#documentation()"/>
         /// </summary>
-        public string Group
+
+        /// <returns><see cref="string"/></returns>
+        public string Documentation()
         {
-            get { return IExecute<string>("group"); }
+            return IExecute<string>("documentation");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigKeyInfo.html#importance()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigKeyInfo.html#group()"/>
         /// </summary>
-        public string Importance
+
+        /// <returns><see cref="string"/></returns>
+        public string Group()
         {
-            get { return IExecute<string>("importance"); }
+            return IExecute<string>("group");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigKeyInfo.html#name()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigKeyInfo.html#importance()"/>
         /// </summary>
-        public string Name
+
+        /// <returns><see cref="string"/></returns>
+        public string Importance()
         {
-            get { return IExecute<string>("name"); }
+            return IExecute<string>("importance");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigKeyInfo.html#orderInGroup()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigKeyInfo.html#name()"/>
         /// </summary>
-        public int OrderInGroup
+
+        /// <returns><see cref="string"/></returns>
+        public string Name()
         {
-            get { return IExecute<int>("orderInGroup"); }
+            return IExecute<string>("name");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigKeyInfo.html#required()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigKeyInfo.html#type()"/>
         /// </summary>
-        public bool Required
+
+        /// <returns><see cref="string"/></returns>
+        public string Type()
         {
-            get { return IExecute<bool>("required"); }
+            return IExecute<string>("type");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigKeyInfo.html#type()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigKeyInfo.html#width()"/>
         /// </summary>
-        public string Type
+
+        /// <returns><see cref="string"/></returns>
+        public string Width()
         {
-            get { return IExecute<string>("type"); }
+            return IExecute<string>("width");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigKeyInfo.html#width()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/rest/entities/ConfigKeyInfo.html#dependents()"/>
         /// </summary>
-        public string Width
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<string> Dependents()
         {
-            get { return IExecute<string>("width"); }
+            return IExecute<Java.Util.List<string>>("dependents");
         }
 
         #endregion

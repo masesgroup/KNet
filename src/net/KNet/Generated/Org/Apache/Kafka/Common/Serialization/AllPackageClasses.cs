@@ -287,39 +287,9 @@ namespace Org.Apache.Kafka.Common.Serialization
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Deserializer.html"/>
     /// </summary>
-    public partial class Deserializer : Java.Io.Closeable
+    public partial class Deserializer : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
-        /// <summary>
-        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
-        /// </summary>
-        public Deserializer() { }
-        /// <summary>
-        /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
-        /// </summary>
-        public Deserializer(params object[] args) : base(args) { }
-
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Deserializer");
-
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
-        /// </summary>
-        public override string BridgeClassName => "org.apache.kafka.common.serialization.Deserializer";
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
-        /// </summary>
-        public override bool IsBridgeAbstract => true;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm"/>
-        /// </summary>
-        public override bool IsBridgeCloseable => false;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm"/>
-        /// </summary>
-        public override bool IsBridgeInterface => true;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm"/>
-        /// </summary>
-        public override bool IsBridgeStatic => false;
+    #warning Remember to build the body class for event listener
 
         // TODO: complete the class
 
@@ -331,39 +301,9 @@ namespace Org.Apache.Kafka.Common.Serialization
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Deserializer.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public partial class Deserializer<T> : Java.Io.Closeable
+    public partial class Deserializer<T> : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
-        /// <summary>
-        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
-        /// </summary>
-        public Deserializer() { }
-        /// <summary>
-        /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
-        /// </summary>
-        public Deserializer(params object[] args) : base(args) { }
-
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Deserializer");
-
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
-        /// </summary>
-        public override string BridgeClassName => "org.apache.kafka.common.serialization.Deserializer";
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
-        /// </summary>
-        public override bool IsBridgeAbstract => true;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm"/>
-        /// </summary>
-        public override bool IsBridgeCloseable => false;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm"/>
-        /// </summary>
-        public override bool IsBridgeInterface => true;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm"/>
-        /// </summary>
-        public override bool IsBridgeStatic => false;
+    #warning Remember to build the body class for event listener
 
         // TODO: complete the class
     
@@ -1018,7 +958,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.ByteArraySerde.html"/>
         /// </summary>
-        public partial class ByteArraySerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde
+        public partial class ByteArraySerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<byte[]>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1061,7 +1001,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.ByteBufferSerde.html"/>
         /// </summary>
-        public partial class ByteBufferSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde
+        public partial class ByteBufferSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<Java.Nio.ByteBuffer>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1104,7 +1044,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.BytesSerde.html"/>
         /// </summary>
-        public partial class BytesSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde
+        public partial class BytesSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<Org.Apache.Kafka.Common.Utils.Bytes>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1147,7 +1087,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.DoubleSerde.html"/>
         /// </summary>
-        public partial class DoubleSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde
+        public partial class DoubleSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<double?>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1190,7 +1130,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.FloatSerde.html"/>
         /// </summary>
-        public partial class FloatSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde
+        public partial class FloatSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<float?>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1233,7 +1173,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.IntegerSerde.html"/>
         /// </summary>
-        public partial class IntegerSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde
+        public partial class IntegerSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<int?>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1363,7 +1303,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.LongSerde.html"/>
         /// </summary>
-        public partial class LongSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde
+        public partial class LongSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<long?>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1406,7 +1346,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.ShortSerde.html"/>
         /// </summary>
-        public partial class ShortSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde
+        public partial class ShortSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<short?>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1449,7 +1389,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.StringSerde.html"/>
         /// </summary>
-        public partial class StringSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde
+        public partial class StringSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<string>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1492,7 +1432,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.UUIDSerde.html"/>
         /// </summary>
-        public partial class UUIDSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde
+        public partial class UUIDSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<Java.Util.UUID>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1535,7 +1475,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.VoidSerde.html"/>
         /// </summary>
-        public partial class VoidSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde
+        public partial class VoidSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<Java.Lang.Void>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1669,39 +1609,9 @@ namespace Org.Apache.Kafka.Common.Serialization
     /// <summary>
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serializer.html"/>
     /// </summary>
-    public partial class Serializer : Java.Io.Closeable
+    public partial class Serializer : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
-        /// <summary>
-        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
-        /// </summary>
-        public Serializer() { }
-        /// <summary>
-        /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
-        /// </summary>
-        public Serializer(params object[] args) : base(args) { }
-
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serializer");
-
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
-        /// </summary>
-        public override string BridgeClassName => "org.apache.kafka.common.serialization.Serializer";
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
-        /// </summary>
-        public override bool IsBridgeAbstract => true;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm"/>
-        /// </summary>
-        public override bool IsBridgeCloseable => false;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm"/>
-        /// </summary>
-        public override bool IsBridgeInterface => true;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm"/>
-        /// </summary>
-        public override bool IsBridgeStatic => false;
+    #warning Remember to build the body class for event listener
 
         // TODO: complete the class
 
@@ -1713,39 +1623,9 @@ namespace Org.Apache.Kafka.Common.Serialization
     /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serializer.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public partial class Serializer<T> : Java.Io.Closeable
+    public partial class Serializer<T> : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
-        /// <summary>
-        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
-        /// </summary>
-        public Serializer() { }
-        /// <summary>
-        /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
-        /// </summary>
-        public Serializer(params object[] args) : base(args) { }
-
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serializer");
-
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
-        /// </summary>
-        public override string BridgeClassName => "org.apache.kafka.common.serialization.Serializer";
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
-        /// </summary>
-        public override bool IsBridgeAbstract => true;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm"/>
-        /// </summary>
-        public override bool IsBridgeCloseable => false;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm"/>
-        /// </summary>
-        public override bool IsBridgeInterface => true;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm"/>
-        /// </summary>
-        public override bool IsBridgeStatic => false;
+    #warning Remember to build the body class for event listener
 
         // TODO: complete the class
     
@@ -2031,49 +1911,6 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
         /// </summary>
         public override string BridgeClassName => "org.apache.kafka.common.serialization.VoidDeserializer";
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
-        /// </summary>
-        public override bool IsBridgeAbstract => false;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm"/>
-        /// </summary>
-        public override bool IsBridgeCloseable => false;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm"/>
-        /// </summary>
-        public override bool IsBridgeInterface => false;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm"/>
-        /// </summary>
-        public override bool IsBridgeStatic => false;
-
-        // TODO: complete the class
-
-    }
-    #endregion
-
-    #region VoidSerializer
-    /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/VoidSerializer.html"/>
-    /// </summary>
-    public partial class VoidSerializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<VoidSerializer>
-    {
-        /// <summary>
-        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
-        /// </summary>
-        public VoidSerializer() { }
-        /// <summary>
-        /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
-        /// </summary>
-        public VoidSerializer(params object[] args) : base(args) { }
-
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.VoidSerializer");
-
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
-        /// </summary>
-        public override string BridgeClassName => "org.apache.kafka.common.serialization.VoidSerializer";
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
         /// </summary>

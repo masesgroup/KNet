@@ -48,7 +48,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg2"><see cref="string"/></param>
         /// <param name="arg3"><see cref="string"/></param>
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Clients.Admin.MemberAssignment"/></param>
-        public MemberDescription(string arg0, Java.Util.Optional arg1, string arg2, string arg3, Org.Apache.Kafka.Clients.Admin.MemberAssignment arg4)
+        public MemberDescription(string arg0, Java.Util.Optional<string> arg1, string arg2, string arg3, Org.Apache.Kafka.Clients.Admin.MemberAssignment arg4)
             : base(arg0, arg1, arg2, arg3, arg4)
         {
         }
@@ -69,39 +69,49 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/MemberDescription.html#assignment()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/MemberDescription.html#clientId()"/>
         /// </summary>
-        public Org.Apache.Kafka.Clients.Admin.MemberAssignment Assignment
+
+        /// <returns><see cref="string"/></returns>
+        public string ClientId()
         {
-            get { return IExecute<Org.Apache.Kafka.Clients.Admin.MemberAssignment>("assignment"); }
+            return IExecute<string>("clientId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/MemberDescription.html#clientId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/MemberDescription.html#consumerId()"/>
         /// </summary>
-        public string ClientId
+
+        /// <returns><see cref="string"/></returns>
+        public string ConsumerId()
         {
-            get { return IExecute<string>("clientId"); }
+            return IExecute<string>("consumerId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/MemberDescription.html#consumerId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/MemberDescription.html#host()"/>
         /// </summary>
-        public string ConsumerId
+
+        /// <returns><see cref="string"/></returns>
+        public string Host()
         {
-            get { return IExecute<string>("consumerId"); }
+            return IExecute<string>("host");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/MemberDescription.html#groupInstanceId()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/MemberDescription.html#groupInstanceId()"/>
         /// </summary>
-        public Java.Util.Optional<string> GroupInstanceId
+
+        /// <returns><see cref="Java.Util.Optional"/></returns>
+        public Java.Util.Optional<string> GroupInstanceId()
         {
-            get { return IExecute<Java.Util.Optional<string>>("groupInstanceId"); }
+            return IExecute<Java.Util.Optional<string>>("groupInstanceId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/MemberDescription.html#host()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/MemberDescription.html#assignment()"/>
         /// </summary>
-        public string Host
+
+        /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.MemberAssignment"/></returns>
+        public Org.Apache.Kafka.Clients.Admin.MemberAssignment Assignment()
         {
-            get { return IExecute<string>("host"); }
+            return IExecute<Org.Apache.Kafka.Clients.Admin.MemberAssignment>("assignment");
         }
 
         #endregion

@@ -65,11 +65,13 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AddPartitionsToTxnRequest.html#partitions()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/AddPartitionsToTxnRequest.html#partitions()"/>
         /// </summary>
-        public Java.Util.List<Org.Apache.Kafka.Common.TopicPartition> Partitions
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Common.TopicPartition> Partitions()
         {
-            get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.TopicPartition>>("partitions"); }
+            return IExecute<Java.Util.List<Org.Apache.Kafka.Common.TopicPartition>>("partitions");
         }
 
         #endregion
@@ -86,7 +88,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// <param name="arg1"><see cref="long"/></param>
             /// <param name="arg2"><see cref="short"/></param>
             /// <param name="arg3"><see cref="Java.Util.List"/></param>
-            public Builder(string arg0, long arg1, short arg2, Java.Util.List arg3)
+            public Builder(string arg0, long arg1, short arg2, Java.Util.List<Org.Apache.Kafka.Common.TopicPartition> arg3)
                 : base(arg0, arg1, arg2, arg3)
             {
             }

@@ -97,18 +97,22 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.html#exception()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.html#remoteAddress()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Errors.AuthenticationException Exception
+
+        /// <returns><see cref="string"/></returns>
+        public string RemoteAddress()
         {
-            get { var obj = IExecute<MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject>("exception"); return MASES.JCOBridge.C2JBridge.JVMBridgeException.New<Org.Apache.Kafka.Common.Errors.AuthenticationException>(obj); }
+            return IExecute<string>("remoteAddress");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.html#remoteAddress()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.html#exception()"/>
         /// </summary>
-        public string RemoteAddress
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Errors.AuthenticationException"/></returns>
+        public Org.Apache.Kafka.Common.Errors.AuthenticationException Exception()
         {
-            get { return IExecute<string>("remoteAddress"); }
+            var obj = IExecute<MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject>("exception"); return MASES.JCOBridge.C2JBridge.JVMBridgeException.New<Org.Apache.Kafka.Common.Errors.AuthenticationException>(obj);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.html#state()"/>
@@ -168,13 +172,6 @@ namespace Org.Apache.Kafka.Common.Network
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.State.html#values()"/> 
-            /// </summary>
-            public static Org.Apache.Kafka.Common.Network.ChannelState.State[] Values
-            {
-                get { return SExecuteArray<Org.Apache.Kafka.Common.Network.ChannelState.State>(LocalBridgeClazz, "values"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.State.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
@@ -182,6 +179,15 @@ namespace Org.Apache.Kafka.Common.Network
             public static Org.Apache.Kafka.Common.Network.ChannelState.State ValueOf(string arg0)
             {
                 return SExecute<Org.Apache.Kafka.Common.Network.ChannelState.State>(LocalBridgeClazz, "valueOf", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.State.html#values()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Network.ChannelState.State"/></returns>
+            public static Org.Apache.Kafka.Common.Network.ChannelState.State[] Values()
+            {
+                return SExecuteArray<Org.Apache.Kafka.Common.Network.ChannelState.State>(LocalBridgeClazz, "values");
             }
 
             #endregion

@@ -107,20 +107,6 @@ namespace Org.Apache.Kafka.Streams.Query
             get { return IExecute<Org.Apache.Kafka.Streams.Query.FailureReason>("getFailureReason"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/QueryResult.html#isFailure()"/> 
-        /// </summary>
-        public bool IsFailure
-        {
-            get { return IExecute<bool>("isFailure"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/QueryResult.html#isSuccess()"/> 
-        /// </summary>
-        public bool IsSuccess
-        {
-            get { return IExecute<bool>("isSuccess"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/QueryResult.html#getPosition()"/> <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/QueryResult.html#setPosition(org.apache.kafka.streams.query.Position)"/>
         /// </summary>
         public Org.Apache.Kafka.Streams.Query.Position Position
@@ -133,6 +119,24 @@ namespace Org.Apache.Kafka.Streams.Query
         public object Result
         {
             get { return IExecute("getResult"); }
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/QueryResult.html#isFailure()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsFailure()
+        {
+            return IExecute<bool>("isFailure");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/QueryResult.html#isSuccess()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsSuccess()
+        {
+            return IExecute<bool>("isSuccess");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/QueryResult.html#addExecutionInfo(java.lang.String)"/>
@@ -239,20 +243,6 @@ namespace Org.Apache.Kafka.Streams.Query
             get { return IExecute<Org.Apache.Kafka.Streams.Query.FailureReason>("getFailureReason"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/QueryResult.html#isFailure()"/> 
-        /// </summary>
-        public bool IsFailure
-        {
-            get { return IExecute<bool>("isFailure"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/QueryResult.html#isSuccess()"/> 
-        /// </summary>
-        public bool IsSuccess
-        {
-            get { return IExecute<bool>("isSuccess"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/QueryResult.html#getPosition()"/> <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/QueryResult.html#setPosition(org.apache.kafka.streams.query.Position)"/>
         /// </summary>
         public Org.Apache.Kafka.Streams.Query.Position Position
@@ -265,6 +255,24 @@ namespace Org.Apache.Kafka.Streams.Query
         public R Result
         {
             get { return IExecute<R>("getResult"); }
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/QueryResult.html#isFailure()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsFailure()
+        {
+            return IExecute<bool>("isFailure");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/QueryResult.html#isSuccess()"/>
+        /// </summary>
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsSuccess()
+        {
+            return IExecute<bool>("isSuccess");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/QueryResult.html#addExecutionInfo(java.lang.String)"/>

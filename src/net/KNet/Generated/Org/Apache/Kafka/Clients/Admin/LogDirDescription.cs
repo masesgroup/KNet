@@ -36,7 +36,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
         /// <param name="arg2"><see cref="long"/></param>
         /// <param name="arg3"><see cref="long"/></param>
-        public LogDirDescription(Org.Apache.Kafka.Common.Errors.ApiException arg0, Java.Util.Map arg1, long arg2, long arg3)
+        public LogDirDescription(Org.Apache.Kafka.Common.Errors.ApiException arg0, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Admin.ReplicaInfo> arg1, long arg2, long arg3)
             : base(arg0, arg1, arg2, arg3)
         {
         }
@@ -45,7 +45,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Errors.ApiException"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
-        public LogDirDescription(Org.Apache.Kafka.Common.Errors.ApiException arg0, Java.Util.Map arg1)
+        public LogDirDescription(Org.Apache.Kafka.Common.Errors.ApiException arg0, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Admin.ReplicaInfo> arg1)
             : base(arg0, arg1)
         {
         }
@@ -66,32 +66,40 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/LogDirDescription.html#error()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/LogDirDescription.html#replicaInfos()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Errors.ApiException Error
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Admin.ReplicaInfo> ReplicaInfos()
         {
-            get { var obj = IExecute<MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject>("error"); return MASES.JCOBridge.C2JBridge.JVMBridgeException.New<Org.Apache.Kafka.Common.Errors.ApiException>(obj); }
+            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Admin.ReplicaInfo>>("replicaInfos");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/LogDirDescription.html#replicaInfos()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/LogDirDescription.html#totalBytes()"/>
         /// </summary>
-        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Admin.ReplicaInfo> ReplicaInfos
+
+        /// <returns><see cref="Java.Util.OptionalLong"/></returns>
+        public Java.Util.OptionalLong TotalBytes()
         {
-            get { return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Admin.ReplicaInfo>>("replicaInfos"); }
+            return IExecute<Java.Util.OptionalLong>("totalBytes");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/LogDirDescription.html#totalBytes()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/LogDirDescription.html#usableBytes()"/>
         /// </summary>
-        public Java.Util.OptionalLong TotalBytes
+
+        /// <returns><see cref="Java.Util.OptionalLong"/></returns>
+        public Java.Util.OptionalLong UsableBytes()
         {
-            get { return IExecute<Java.Util.OptionalLong>("totalBytes"); }
+            return IExecute<Java.Util.OptionalLong>("usableBytes");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/LogDirDescription.html#usableBytes()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/LogDirDescription.html#error()"/>
         /// </summary>
-        public Java.Util.OptionalLong UsableBytes
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Errors.ApiException"/></returns>
+        public Org.Apache.Kafka.Common.Errors.ApiException Error()
         {
-            get { return IExecute<Java.Util.OptionalLong>("usableBytes"); }
+            var obj = IExecute<MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject>("error"); return MASES.JCOBridge.C2JBridge.JVMBridgeException.New<Org.Apache.Kafka.Common.Errors.ApiException>(obj);
         }
 
         #endregion

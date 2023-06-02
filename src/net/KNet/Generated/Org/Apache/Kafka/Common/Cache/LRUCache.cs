@@ -58,13 +58,6 @@ namespace Org.Apache.Kafka.Common.Cache
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/LRUCache.html#size()"/> 
-        /// </summary>
-        public long Size
-        {
-            get { return IExecute<long>("size"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/LRUCache.html#remove(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
@@ -72,6 +65,15 @@ namespace Org.Apache.Kafka.Common.Cache
         public bool Remove(object arg0)
         {
             return IExecute<bool>("remove", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/LRUCache.html#size()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long Size()
+        {
+            return IExecute<long>("size");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/LRUCache.html#get(java.lang.Object)"/>
@@ -139,13 +141,6 @@ namespace Org.Apache.Kafka.Common.Cache
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/LRUCache.html#size()"/> 
-        /// </summary>
-        public long Size
-        {
-            get { return IExecute<long>("size"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/LRUCache.html#remove(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
@@ -153,6 +148,15 @@ namespace Org.Apache.Kafka.Common.Cache
         public bool Remove(K arg0)
         {
             return IExecute<bool>("remove", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/LRUCache.html#size()"/>
+        /// </summary>
+
+        /// <returns><see cref="long"/></returns>
+        public long Size()
+        {
+            return IExecute<long>("size");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/LRUCache.html#get(java.lang.Object)"/>

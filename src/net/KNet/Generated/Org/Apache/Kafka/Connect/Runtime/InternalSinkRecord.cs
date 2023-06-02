@@ -34,7 +34,7 @@ namespace Org.Apache.Kafka.Connect.Runtime
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Connect.Sink.SinkRecord"/></param>
-        public InternalSinkRecord(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord arg0, Org.Apache.Kafka.Connect.Sink.SinkRecord arg1)
+        public InternalSinkRecord(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]> arg0, Org.Apache.Kafka.Connect.Sink.SinkRecord arg1)
             : base(arg0, arg1)
         {
         }
@@ -55,11 +55,13 @@ namespace Org.Apache.Kafka.Connect.Runtime
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/InternalSinkRecord.html#originalRecord()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/InternalSinkRecord.html#originalRecord()"/>
         /// </summary>
-        public Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]> OriginalRecord
+
+        /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord"/></returns>
+        public Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]> OriginalRecord()
         {
-            get { return IExecute<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]>>("originalRecord"); }
+            return IExecute<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]>>("originalRecord");
         }
 
         #endregion

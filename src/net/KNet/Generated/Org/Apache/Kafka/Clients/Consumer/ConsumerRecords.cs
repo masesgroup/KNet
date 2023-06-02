@@ -54,43 +54,35 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#empty()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#empty()"/>
         /// </summary>
-        public static Org.Apache.Kafka.Clients.Consumer.ConsumerRecords Empty
+
+        /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords"/></returns>
+        public static Org.Apache.Kafka.Clients.Consumer.ConsumerRecords Empty()
         {
-            get { return SExecute<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords>(LocalBridgeClazz, "empty"); }
+            return SExecute<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords>(LocalBridgeClazz, "empty");
         }
 
         #endregion
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#count()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#isEmpty()"/>
         /// </summary>
-        public int Count
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsEmpty()
         {
-            get { return IExecute<int>("count"); }
+            return IExecute<bool>("isEmpty");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#isEmpty()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#count()"/>
         /// </summary>
-        public bool IsEmpty
+
+        /// <returns><see cref="int"/></returns>
+        public int Count()
         {
-            get { return IExecute<bool>("isEmpty"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#iterator()"/> 
-        /// </summary>
-        public Java.Util.Iterator Iterator
-        {
-            get { return IExecute<Java.Util.Iterator>("iterator"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#partitions()"/> 
-        /// </summary>
-        public Java.Util.Set Partitions
-        {
-            get { return IExecute<Java.Util.Set>("partitions"); }
+            return IExecute<int>("count");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#records(java.lang.String)"/>
@@ -102,6 +94,15 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Lang.Iterable>("records", arg0);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#iterator()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Iterator"/></returns>
+        public Java.Util.Iterator Iterator()
+        {
+            return IExecute<Java.Util.Iterator>("iterator");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#records(org.apache.kafka.common.TopicPartition)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
@@ -109,6 +110,15 @@ namespace Org.Apache.Kafka.Clients.Consumer
         public Java.Util.List Records(Org.Apache.Kafka.Common.TopicPartition arg0)
         {
             return IExecute<Java.Util.List>("records", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#partitions()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set Partitions()
+        {
+            return IExecute<Java.Util.Set>("partitions");
         }
 
         #endregion
@@ -154,43 +164,35 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#empty()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#empty()"/>
         /// </summary>
-        public static Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<K, V> Empty
+
+        /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords"/></returns>
+        public static Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<K, V> Empty()
         {
-            get { return SExecute<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<K, V>>(LocalBridgeClazz, "empty"); }
+            return SExecute<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<K, V>>(LocalBridgeClazz, "empty");
         }
 
         #endregion
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#count()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#isEmpty()"/>
         /// </summary>
-        public int Count
+
+        /// <returns><see cref="bool"/></returns>
+        public bool IsEmpty()
         {
-            get { return IExecute<int>("count"); }
+            return IExecute<bool>("isEmpty");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#isEmpty()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#count()"/>
         /// </summary>
-        public bool IsEmpty
+
+        /// <returns><see cref="int"/></returns>
+        public int Count()
         {
-            get { return IExecute<bool>("isEmpty"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#iterator()"/> 
-        /// </summary>
-        public Java.Util.Iterator<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<K, V>> Iterator
-        {
-            get { return IExecute<Java.Util.Iterator<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<K, V>>>("iterator"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#partitions()"/> 
-        /// </summary>
-        public Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> Partitions
-        {
-            get { return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition>>("partitions"); }
+            return IExecute<int>("count");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#records(java.lang.String)"/>
@@ -202,6 +204,15 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Lang.Iterable<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<K, V>>>("records", arg0);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#iterator()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Iterator"/></returns>
+        public Java.Util.Iterator<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<K, V>> Iterator()
+        {
+            return IExecute<Java.Util.Iterator<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<K, V>>>("iterator");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#records(org.apache.kafka.common.TopicPartition)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
@@ -209,6 +220,15 @@ namespace Org.Apache.Kafka.Clients.Consumer
         public Java.Util.List<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<K, V>> Records(Org.Apache.Kafka.Common.TopicPartition arg0)
         {
             return IExecute<Java.Util.List<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<K, V>>>("records", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#partitions()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> Partitions()
+        {
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition>>("partitions");
         }
 
         #endregion

@@ -55,13 +55,6 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/FeatureUpdate.html#maxVersionLevel()"/> 
-        /// </summary>
-        public short MaxVersionLevel
-        {
-            get { return IExecute<short>("maxVersionLevel"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/FeatureUpdate.html#upgradeType()"/>
         /// </summary>
 
@@ -69,6 +62,15 @@ namespace Org.Apache.Kafka.Clients.Admin
         public Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType UpgradeTypeMethod()
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType>("upgradeType");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/FeatureUpdate.html#maxVersionLevel()"/>
+        /// </summary>
+
+        /// <returns><see cref="short"/></returns>
+        public short MaxVersionLevel()
+        {
+            return IExecute<short>("maxVersionLevel");
         }
 
         #endregion
@@ -107,13 +109,6 @@ namespace Org.Apache.Kafka.Clients.Admin
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/FeatureUpdate.UpgradeType.html#values()"/> 
-            /// </summary>
-            public static Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType[] Values
-            {
-                get { return SExecuteArray<Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType>(LocalBridgeClazz, "values"); }
-            }
-            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/FeatureUpdate.UpgradeType.html#fromCode(int)"/>
             /// </summary>
             /// <param name="arg0"><see cref="int"/></param>
@@ -131,16 +126,27 @@ namespace Org.Apache.Kafka.Clients.Admin
             {
                 return SExecute<Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType>(LocalBridgeClazz, "valueOf", arg0);
             }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/FeatureUpdate.UpgradeType.html#values()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType"/></returns>
+            public static Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType[] Values()
+            {
+                return SExecuteArray<Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType>(LocalBridgeClazz, "values");
+            }
 
             #endregion
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/FeatureUpdate.UpgradeType.html#code()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/FeatureUpdate.UpgradeType.html#code()"/>
             /// </summary>
-            public byte Code
+
+            /// <returns><see cref="byte"/></returns>
+            public byte Code()
             {
-                get { return IExecute<byte>("code"); }
+                return IExecute<byte>("code");
             }
 
             #endregion

@@ -33,7 +33,7 @@ namespace Org.Apache.Kafka.Connect.Runtime
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectMetricsRegistry.html#%3Cinit%3E(java.util.Set)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Set"/></param>
-        public ConnectMetricsRegistry(Java.Util.Set arg0)
+        public ConnectMetricsRegistry(Java.Util.Set<string> arg0)
             : base(arg0)
         {
         }
@@ -405,67 +405,85 @@ namespace Org.Apache.Kafka.Connect.Runtime
             get { return IExecute<Java.Util.List<Org.Apache.Kafka.Common.MetricNameTemplate>>("getAllTemplates"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectMetricsRegistry.html#connectorGroupName()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectMetricsRegistry.html#connectorGroupName()"/>
         /// </summary>
-        public string ConnectorGroupName
+
+        /// <returns><see cref="string"/></returns>
+        public string ConnectorGroupName()
         {
-            get { return IExecute<string>("connectorGroupName"); }
+            return IExecute<string>("connectorGroupName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectMetricsRegistry.html#connectorTagName()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectMetricsRegistry.html#connectorTagName()"/>
         /// </summary>
-        public string ConnectorTagName
+
+        /// <returns><see cref="string"/></returns>
+        public string ConnectorTagName()
         {
-            get { return IExecute<string>("connectorTagName"); }
+            return IExecute<string>("connectorTagName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectMetricsRegistry.html#sinkTaskGroupName()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectMetricsRegistry.html#sinkTaskGroupName()"/>
         /// </summary>
-        public string SinkTaskGroupName
+
+        /// <returns><see cref="string"/></returns>
+        public string SinkTaskGroupName()
         {
-            get { return IExecute<string>("sinkTaskGroupName"); }
+            return IExecute<string>("sinkTaskGroupName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectMetricsRegistry.html#sourceTaskGroupName()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectMetricsRegistry.html#sourceTaskGroupName()"/>
         /// </summary>
-        public string SourceTaskGroupName
+
+        /// <returns><see cref="string"/></returns>
+        public string SourceTaskGroupName()
         {
-            get { return IExecute<string>("sourceTaskGroupName"); }
+            return IExecute<string>("sourceTaskGroupName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectMetricsRegistry.html#taskErrorHandlingGroupName()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectMetricsRegistry.html#taskErrorHandlingGroupName()"/>
         /// </summary>
-        public string TaskErrorHandlingGroupName
+
+        /// <returns><see cref="string"/></returns>
+        public string TaskErrorHandlingGroupName()
         {
-            get { return IExecute<string>("taskErrorHandlingGroupName"); }
+            return IExecute<string>("taskErrorHandlingGroupName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectMetricsRegistry.html#taskGroupName()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectMetricsRegistry.html#taskGroupName()"/>
         /// </summary>
-        public string TaskGroupName
+
+        /// <returns><see cref="string"/></returns>
+        public string TaskGroupName()
         {
-            get { return IExecute<string>("taskGroupName"); }
+            return IExecute<string>("taskGroupName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectMetricsRegistry.html#taskTagName()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectMetricsRegistry.html#taskTagName()"/>
         /// </summary>
-        public string TaskTagName
+
+        /// <returns><see cref="string"/></returns>
+        public string TaskTagName()
         {
-            get { return IExecute<string>("taskTagName"); }
+            return IExecute<string>("taskTagName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectMetricsRegistry.html#workerGroupName()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectMetricsRegistry.html#workerGroupName()"/>
         /// </summary>
-        public string WorkerGroupName
+
+        /// <returns><see cref="string"/></returns>
+        public string WorkerGroupName()
         {
-            get { return IExecute<string>("workerGroupName"); }
+            return IExecute<string>("workerGroupName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectMetricsRegistry.html#workerRebalanceGroupName()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/runtime/ConnectMetricsRegistry.html#workerRebalanceGroupName()"/>
         /// </summary>
-        public string WorkerRebalanceGroupName
+
+        /// <returns><see cref="string"/></returns>
+        public string WorkerRebalanceGroupName()
         {
-            get { return IExecute<string>("workerRebalanceGroupName"); }
+            return IExecute<string>("workerRebalanceGroupName");
         }
 
         #endregion

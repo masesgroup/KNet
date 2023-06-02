@@ -117,67 +117,40 @@ namespace Org.Apache.Kafka.Common.Requests
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.html#brokers()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.html#hasReliableLeaderEpochs()"/>
         /// </summary>
-        public Java.Util.Collection<Org.Apache.Kafka.Common.Node> Brokers
+
+        /// <returns><see cref="bool"/></returns>
+        public bool HasReliableLeaderEpochs()
         {
-            get { return IExecute<Java.Util.Collection<Org.Apache.Kafka.Common.Node>>("brokers"); }
+            return IExecute<bool>("hasReliableLeaderEpochs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.html#brokersById()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.html#clusterAuthorizedOperations()"/>
         /// </summary>
-        public Java.Util.Map<int?, Org.Apache.Kafka.Common.Node> BrokersById
+
+        /// <returns><see cref="int"/></returns>
+        public int ClusterAuthorizedOperations()
         {
-            get { return IExecute<Java.Util.Map<int?, Org.Apache.Kafka.Common.Node>>("brokersById"); }
+            return IExecute<int>("clusterAuthorizedOperations");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.html#buildCluster()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.html#clusterId()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Cluster BuildCluster
+
+        /// <returns><see cref="string"/></returns>
+        public string ClusterId()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.Cluster>("buildCluster"); }
+            return IExecute<string>("clusterId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.html#clusterAuthorizedOperations()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.html#brokers()"/>
         /// </summary>
-        public int ClusterAuthorizedOperations
+
+        /// <returns><see cref="Java.Util.Collection"/></returns>
+        public Java.Util.Collection<Org.Apache.Kafka.Common.Node> Brokers()
         {
-            get { return IExecute<int>("clusterAuthorizedOperations"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.html#clusterId()"/> 
-        /// </summary>
-        public string ClusterId
-        {
-            get { return IExecute<string>("clusterId"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.html#controller()"/> 
-        /// </summary>
-        public Org.Apache.Kafka.Common.Node Controller
-        {
-            get { return IExecute<Org.Apache.Kafka.Common.Node>("controller"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.html#errors()"/> 
-        /// </summary>
-        public Java.Util.Map<string, Org.Apache.Kafka.Common.Protocol.Errors> Errors
-        {
-            get { return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Common.Protocol.Errors>>("errors"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.html#errorsByTopicId()"/> 
-        /// </summary>
-        public Java.Util.Map<Org.Apache.Kafka.Common.Uuid, Org.Apache.Kafka.Common.Protocol.Errors> ErrorsByTopicId
-        {
-            get { return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.Uuid, Org.Apache.Kafka.Common.Protocol.Errors>>("errorsByTopicId"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.html#hasReliableLeaderEpochs()"/> 
-        /// </summary>
-        public bool HasReliableLeaderEpochs
-        {
-            get { return IExecute<bool>("hasReliableLeaderEpochs"); }
+            return IExecute<Java.Util.Collection<Org.Apache.Kafka.Common.Node>>("brokers");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.html#topicMetadata()"/>
@@ -187,6 +160,33 @@ namespace Org.Apache.Kafka.Common.Requests
         public Java.Util.Collection<Org.Apache.Kafka.Common.Requests.MetadataResponse.TopicMetadata> TopicMetadataMethod()
         {
             return IExecute<Java.Util.Collection<Org.Apache.Kafka.Common.Requests.MetadataResponse.TopicMetadata>>("topicMetadata");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.html#brokersById()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<int?, Org.Apache.Kafka.Common.Node> BrokersById()
+        {
+            return IExecute<Java.Util.Map<int?, Org.Apache.Kafka.Common.Node>>("brokersById");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.html#errors()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<string, Org.Apache.Kafka.Common.Protocol.Errors> Errors()
+        {
+            return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Common.Protocol.Errors>>("errors");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.html#errorsByTopicId()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        public Java.Util.Map<Org.Apache.Kafka.Common.Uuid, Org.Apache.Kafka.Common.Protocol.Errors> ErrorsByTopicId()
+        {
+            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.Uuid, Org.Apache.Kafka.Common.Protocol.Errors>>("errorsByTopicId");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.html#topicAuthorizedOperations(java.lang.String)"/>
@@ -206,6 +206,24 @@ namespace Org.Apache.Kafka.Common.Requests
         {
             return IExecute<Java.Util.Set<string>>("topicsByError", arg0);
         }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.html#buildCluster()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Cluster"/></returns>
+        public Org.Apache.Kafka.Common.Cluster BuildCluster()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Cluster>("buildCluster");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.html#controller()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Node"/></returns>
+        public Org.Apache.Kafka.Common.Node Controller()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Node>("controller");
+        }
 
         #endregion
 
@@ -224,7 +242,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// <param name="arg4"><see cref="Java.Util.List"/></param>
             /// <param name="arg5"><see cref="Java.Util.List"/></param>
             /// <param name="arg6"><see cref="Java.Util.List"/></param>
-            public PartitionMetadata(Org.Apache.Kafka.Common.Protocol.Errors arg0, Org.Apache.Kafka.Common.TopicPartition arg1, Java.Util.Optional arg2, Java.Util.Optional arg3, Java.Util.List arg4, Java.Util.List arg5, Java.Util.List arg6)
+            public PartitionMetadata(Org.Apache.Kafka.Common.Protocol.Errors arg0, Org.Apache.Kafka.Common.TopicPartition arg1, Java.Util.Optional<int?> arg2, Java.Util.Optional<int?> arg3, Java.Util.List<int?> arg4, Java.Util.List<int?> arg5, Java.Util.List<int?> arg6)
                 : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
             {
             }
@@ -273,25 +291,31 @@ namespace Org.Apache.Kafka.Common.Requests
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.PartitionMetadata.html#partition()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.PartitionMetadata.html#partition()"/>
             /// </summary>
-            public int Partition
+
+            /// <returns><see cref="int"/></returns>
+            public int Partition()
             {
-                get { return IExecute<int>("partition"); }
+                return IExecute<int>("partition");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.PartitionMetadata.html#topic()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.PartitionMetadata.html#topic()"/>
             /// </summary>
-            public string Topic
+
+            /// <returns><see cref="string"/></returns>
+            public string Topic()
             {
-                get { return IExecute<string>("topic"); }
+                return IExecute<string>("topic");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.PartitionMetadata.html#withoutLeaderEpoch()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.PartitionMetadata.html#withoutLeaderEpoch()"/>
             /// </summary>
-            public Org.Apache.Kafka.Common.Requests.MetadataResponse.PartitionMetadata WithoutLeaderEpoch
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Requests.MetadataResponse.PartitionMetadata"/></returns>
+            public Org.Apache.Kafka.Common.Requests.MetadataResponse.PartitionMetadata WithoutLeaderEpoch()
             {
-                get { return IExecute<Org.Apache.Kafka.Common.Requests.MetadataResponse.PartitionMetadata>("withoutLeaderEpoch"); }
+                return IExecute<Org.Apache.Kafka.Common.Requests.MetadataResponse.PartitionMetadata>("withoutLeaderEpoch");
             }
 
             #endregion
@@ -315,7 +339,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// <param name="arg1"><see cref="string"/></param>
             /// <param name="arg2"><see cref="bool"/></param>
             /// <param name="arg3"><see cref="Java.Util.List"/></param>
-            public TopicMetadata(Org.Apache.Kafka.Common.Protocol.Errors arg0, string arg1, bool arg2, Java.Util.List arg3)
+            public TopicMetadata(Org.Apache.Kafka.Common.Protocol.Errors arg0, string arg1, bool arg2, Java.Util.List<Org.Apache.Kafka.Common.Requests.MetadataResponse.PartitionMetadata> arg3)
                 : base(arg0, arg1, arg2, arg3)
             {
             }
@@ -328,7 +352,7 @@ namespace Org.Apache.Kafka.Common.Requests
             /// <param name="arg3"><see cref="bool"/></param>
             /// <param name="arg4"><see cref="Java.Util.List"/></param>
             /// <param name="arg5"><see cref="int"/></param>
-            public TopicMetadata(Org.Apache.Kafka.Common.Protocol.Errors arg0, string arg1, Org.Apache.Kafka.Common.Uuid arg2, bool arg3, Java.Util.List arg4, int arg5)
+            public TopicMetadata(Org.Apache.Kafka.Common.Protocol.Errors arg0, string arg1, Org.Apache.Kafka.Common.Uuid arg2, bool arg3, Java.Util.List<Org.Apache.Kafka.Common.Requests.MetadataResponse.PartitionMetadata> arg4, int arg5)
                 : base(arg0, arg1, arg2, arg3, arg4, arg5)
             {
             }
@@ -349,32 +373,13 @@ namespace Org.Apache.Kafka.Common.Requests
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.TopicMetadata.html#error()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.TopicMetadata.html#isInternal()"/>
             /// </summary>
-            public Org.Apache.Kafka.Common.Protocol.Errors Error
+
+            /// <returns><see cref="bool"/></returns>
+            public bool IsInternal()
             {
-                get { return IExecute<Org.Apache.Kafka.Common.Protocol.Errors>("error"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.TopicMetadata.html#isInternal()"/> 
-            /// </summary>
-            public bool IsInternal
-            {
-                get { return IExecute<bool>("isInternal"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.TopicMetadata.html#topic()"/> 
-            /// </summary>
-            public string Topic
-            {
-                get { return IExecute<string>("topic"); }
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.TopicMetadata.html#topicId()"/> 
-            /// </summary>
-            public Org.Apache.Kafka.Common.Uuid TopicId
-            {
-                get { return IExecute<Org.Apache.Kafka.Common.Uuid>("topicId"); }
+                return IExecute<bool>("isInternal");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.TopicMetadata.html#authorizedOperations()"/>
@@ -386,6 +391,15 @@ namespace Org.Apache.Kafka.Common.Requests
                 return IExecute<int>("authorizedOperations");
             }
             /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.TopicMetadata.html#topic()"/>
+            /// </summary>
+
+            /// <returns><see cref="string"/></returns>
+            public string Topic()
+            {
+                return IExecute<string>("topic");
+            }
+            /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.TopicMetadata.html#partitionMetadata()"/>
             /// </summary>
 
@@ -393,6 +407,24 @@ namespace Org.Apache.Kafka.Common.Requests
             public Java.Util.List<Org.Apache.Kafka.Common.Requests.MetadataResponse.PartitionMetadata> PartitionMetadataMethod()
             {
                 return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Requests.MetadataResponse.PartitionMetadata>>("partitionMetadata");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.TopicMetadata.html#error()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Errors"/></returns>
+            public Org.Apache.Kafka.Common.Protocol.Errors Error()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Protocol.Errors>("error");
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.TopicMetadata.html#topicId()"/>
+            /// </summary>
+
+            /// <returns><see cref="Org.Apache.Kafka.Common.Uuid"/></returns>
+            public Org.Apache.Kafka.Common.Uuid TopicId()
+            {
+                return IExecute<Org.Apache.Kafka.Common.Uuid>("topicId");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/requests/MetadataResponse.TopicMetadata.html#authorizedOperations(int)"/>

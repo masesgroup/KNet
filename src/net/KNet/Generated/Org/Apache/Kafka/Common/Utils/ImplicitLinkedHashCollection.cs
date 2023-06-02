@@ -66,20 +66,6 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ImplicitLinkedHashCollection.html#valuesList()"/> 
-        /// </summary>
-        public Java.Util.List ValuesList
-        {
-            get { return IExecute<Java.Util.List>("valuesList"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ImplicitLinkedHashCollection.html#valuesSet()"/> 
-        /// </summary>
-        public Java.Util.Set ValuesSet
-        {
-            get { return IExecute<Java.Util.Set>("valuesSet"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ImplicitLinkedHashCollection.html#add(org.apache.kafka.common.utils.ImplicitLinkedHashCollection.Element)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashCollection.Element"/></param>
@@ -122,6 +108,24 @@ namespace Org.Apache.Kafka.Common.Utils
             IExecute("mustAdd", arg0);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ImplicitLinkedHashCollection.html#valuesList()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List ValuesList()
+        {
+            return IExecute<Java.Util.List>("valuesList");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ImplicitLinkedHashCollection.html#valuesSet()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set ValuesSet()
+        {
+            return IExecute<Java.Util.Set>("valuesSet");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ImplicitLinkedHashCollection.html#sort(java.util.Comparator)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Comparator"/></param>
@@ -154,18 +158,22 @@ namespace Org.Apache.Kafka.Common.Utils
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ImplicitLinkedHashCollection.Element.html#next()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ImplicitLinkedHashCollection.Element.html#next()"/>
             /// </summary>
-            public int Next
+
+            /// <returns><see cref="int"/></returns>
+            public int Next()
             {
-                get { return IExecute<int>("next"); }
+                return IExecute<int>("next");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ImplicitLinkedHashCollection.Element.html#prev()"/> 
+            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ImplicitLinkedHashCollection.Element.html#prev()"/>
             /// </summary>
-            public int Prev
+
+            /// <returns><see cref="int"/></returns>
+            public int Prev()
             {
-                get { return IExecute<int>("prev"); }
+                return IExecute<int>("prev");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ImplicitLinkedHashCollection.Element.html#setNext(int)"/>
@@ -255,20 +263,6 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ImplicitLinkedHashCollection.html#valuesList()"/> 
-        /// </summary>
-        public Java.Util.List<E> ValuesList
-        {
-            get { return IExecute<Java.Util.List<E>>("valuesList"); }
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ImplicitLinkedHashCollection.html#valuesSet()"/> 
-        /// </summary>
-        public Java.Util.Set<E> ValuesSet
-        {
-            get { return IExecute<Java.Util.Set<E>>("valuesSet"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ImplicitLinkedHashCollection.html#add(org.apache.kafka.common.utils.ImplicitLinkedHashCollection.Element)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="E"/></param>
@@ -309,6 +303,24 @@ namespace Org.Apache.Kafka.Common.Utils
         public void MustAdd(E arg0)
         {
             IExecute("mustAdd", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ImplicitLinkedHashCollection.html#valuesList()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<E> ValuesList()
+        {
+            return IExecute<Java.Util.List<E>>("valuesList");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ImplicitLinkedHashCollection.html#valuesSet()"/>
+        /// </summary>
+
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<E> ValuesSet()
+        {
+            return IExecute<Java.Util.Set<E>>("valuesSet");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ImplicitLinkedHashCollection.html#sort(java.util.Comparator)"/>

@@ -30,24 +30,17 @@ namespace Org.Apache.Kafka.Clients.Producer
 
         void BeginTransaction();
 
-        [System.Obsolete()]
-        void SendOffsetsToTransaction(Map<TopicPartition, OffsetAndMetadata> offsets, string consumerGroupId);
-
         void SendOffsetsToTransaction(Map<TopicPartition, OffsetAndMetadata> offsets, ConsumerGroupMetadata groupMetadata);
 
         void CommitTransaction();
 
         void AbortTransaction();
 
-        Future<RecordMetadata> Send(ProducerRecord record);
-
-        Future<RecordMetadata> Send(ProducerRecord record, Callback callback);
-
         void Flush();
 
         List<PartitionInfo> PartitionsFor(string topic);
 
-        Map<MetricName, Metric> Metrics { get; }
+        Map<MetricName, T> Metrics<T>() where T : Metric;
     }
 
     public interface IProducer<K, V> : IProducer

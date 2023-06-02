@@ -55,18 +55,22 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Percentile.html#name()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Percentile.html#percentile()"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.MetricName Name
+
+        /// <returns><see cref="double"/></returns>
+        public double PercentileMethod()
         {
-            get { return IExecute<Org.Apache.Kafka.Common.MetricName>("name"); }
+            return IExecute<double>("percentile");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Percentile.html#percentile()"/> 
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Percentile.html#name()"/>
         /// </summary>
-        public double PercentileMethod
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.MetricName"/></returns>
+        public Org.Apache.Kafka.Common.MetricName Name()
         {
-            get { return IExecute<double>("percentile"); }
+            return IExecute<Org.Apache.Kafka.Common.MetricName>("name");
         }
 
         #endregion

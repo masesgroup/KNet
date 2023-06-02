@@ -74,13 +74,6 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/CompressionType.html#values()"/> 
-        /// </summary>
-        public static Org.Apache.Kafka.Common.Record.CompressionType[] Values
-        {
-            get { return SExecuteArray<Org.Apache.Kafka.Common.Record.CompressionType>(LocalBridgeClazz, "values"); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/CompressionType.html#forId(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
@@ -106,6 +99,15 @@ namespace Org.Apache.Kafka.Common.Record
         public static Org.Apache.Kafka.Common.Record.CompressionType ValueOf(string arg0)
         {
             return SExecute<Org.Apache.Kafka.Common.Record.CompressionType>(LocalBridgeClazz, "valueOf", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/CompressionType.html#values()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Record.CompressionType"/></returns>
+        public static Org.Apache.Kafka.Common.Record.CompressionType[] Values()
+        {
+            return SExecuteArray<Org.Apache.Kafka.Common.Record.CompressionType>(LocalBridgeClazz, "values");
         }
 
         #endregion
