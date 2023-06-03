@@ -21,6 +21,7 @@ using Org.Apache.Kafka.Clients.Producer;
 using Org.Apache.Kafka.Common.Serialization;
 using MASES.KNet.Serialization;
 using System;
+using MASES.KNet.Producer;
 
 namespace MASES.KNet.Extensions
 {

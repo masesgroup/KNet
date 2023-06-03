@@ -24,7 +24,7 @@ namespace MASES.KNet.Producer
 {
     public class ProducerConfigBuilder : CommonClientConfigsBuilder<ProducerConfigBuilder>
     {
-        public enum Acks
+        public enum AcksType
         {
             All,
             MinusOne,
@@ -32,7 +32,7 @@ namespace MASES.KNet.Producer
             One
         }
 
-        public enum CompressionType
+        public enum CompressionTypes
         {
             none,
             gzip,
@@ -78,33 +78,33 @@ namespace MASES.KNet.Producer
         }
 
         // "all", "-1", "0", "1"
-        public ProducerConfig.Acks Acks
+        public ProducerConfigBuilder.AcksType Acks
         {
             get
             {
                 var strName = GetProperty<string>(ProducerConfig.ACKS_CONFIG);
-                if (strName == "all") return ProducerConfig.Acks.All;
-                else if (strName == "-1") return ProducerConfig.Acks.MinusOne;
-                else if (strName == "0") return ProducerConfig.Acks.None;
-                else if (strName == "1") return ProducerConfig.Acks.One;
+                if (strName == "all") return ProducerConfigBuilder.AcksType.All;
+                else if (strName == "-1") return ProducerConfigBuilder.AcksType.MinusOne;
+                else if (strName == "0") return ProducerConfigBuilder.AcksType.None;
+                else if (strName == "1") return ProducerConfigBuilder.AcksType.One;
 
-                return ProducerConfig.Acks.None;
+                return ProducerConfigBuilder.AcksType.None;
             }
             set
             {
                 string str = value switch
                 {
-                    ProducerConfig.Acks.All => "all",
-                    ProducerConfig.Acks.MinusOne => "-1",
-                    ProducerConfig.Acks.None => "0",
-                    ProducerConfig.Acks.One => "1",
+                    ProducerConfigBuilder.AcksType.All => "all",
+                    ProducerConfigBuilder.AcksType.MinusOne => "-1",
+                    ProducerConfigBuilder.AcksType.None => "0",
+                    ProducerConfigBuilder.AcksType.One => "1",
                     _ => "all",
                 };
                 SetProperty(ProducerConfig.ACKS_CONFIG, str);
             }
         }
 
-        public ProducerConfigBuilder WithAcks(ProducerConfig.Acks acks)
+        public ProducerConfigBuilder WithAcks(ProducerConfigBuilder.AcksType acks)
         {
             var clone = Clone();
             clone.Acks = acks;
@@ -156,24 +156,24 @@ namespace MASES.KNet.Producer
             return clone;
         }
 
-        public ProducerConfig.CompressionType CompressionType
+        public ProducerConfigBuilder.CompressionTypes CompressionType
         {
             get
             {
                 var strName = GetProperty<string>(ProducerConfig.COMPRESSION_TYPE_CONFIG);
-                if (System.Enum.TryParse<ProducerConfig.CompressionType>(strName, out var rest))
+                if (System.Enum.TryParse<ProducerConfigBuilder.CompressionTypes>(strName, out var rest))
                 {
                     return rest;
                 }
-                return ProducerConfig.CompressionType.none;
+                return ProducerConfigBuilder.CompressionTypes.none;
             }
             set
             {
-                SetProperty(ProducerConfig.COMPRESSION_TYPE_CONFIG, System.Enum.GetName(typeof(ProducerConfig.CompressionType), value).ToLowerInvariant());
+                SetProperty(ProducerConfig.COMPRESSION_TYPE_CONFIG, System.Enum.GetName(typeof(ProducerConfigBuilder.CompressionTypes), value).ToLowerInvariant());
             }
         }
 
-        public ProducerConfigBuilder WithCompressionType(ProducerConfig.CompressionType compressionType)
+        public ProducerConfigBuilder WithCompressionType(ProducerConfigBuilder.CompressionTypes compressionType)
         {
             var clone = Clone();
             clone.CompressionType = compressionType;

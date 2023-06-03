@@ -26,7 +26,7 @@ namespace MASES.KNet.Consumer
 {
     public class ConsumerConfigBuilder : CommonClientConfigsBuilder<ConsumerConfigBuilder>
     {
-        public enum AutoOffsetReset
+        public enum AutoOffsetResetTypes
         {
             None,
             EARLIEST,
@@ -70,18 +70,18 @@ namespace MASES.KNet.Consumer
         }
 
         // "latest", "earliest", "none"
-        public ConsumerConfig.AutoOffsetReset AutoOffsetReset
+        public ConsumerConfigBuilder.AutoOffsetResetTypes AutoOffsetReset
         {
             get
             {
                 var strName = GetProperty<string>(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG);
-                if (System.Enum.GetName(typeof(ConsumerConfig.AutoOffsetReset), ConsumerConfig.AutoOffsetReset.None).ToLowerInvariant() == strName)
-                    return ConsumerConfig.AutoOffsetReset.None;
-                else if (System.Enum.GetName(typeof(ConsumerConfig.AutoOffsetReset), ConsumerConfig.AutoOffsetReset.EARLIEST).ToLowerInvariant() == strName)
-                    return ConsumerConfig.AutoOffsetReset.EARLIEST;
-                else if (System.Enum.GetName(typeof(ConsumerConfig.AutoOffsetReset), ConsumerConfig.AutoOffsetReset.LATEST).ToLowerInvariant() == strName)
-                    return ConsumerConfig.AutoOffsetReset.LATEST;
-                else return ConsumerConfig.AutoOffsetReset.LATEST;
+                if (System.Enum.GetName(typeof(ConsumerConfigBuilder.AutoOffsetResetTypes), ConsumerConfigBuilder.AutoOffsetResetTypes.None).ToLowerInvariant() == strName)
+                    return ConsumerConfigBuilder.AutoOffsetResetTypes.None;
+                else if (System.Enum.GetName(typeof(ConsumerConfigBuilder.AutoOffsetResetTypes), ConsumerConfigBuilder.AutoOffsetResetTypes.EARLIEST).ToLowerInvariant() == strName)
+                    return ConsumerConfig.ConsumerConfigBuilder.EARLIEST;
+                else if (System.Enum.GetName(typeof(ConsumerConfigBuilder.AutoOffsetResetTypes), ConsumerConfigBuilder.AutoOffsetResetTypes.LATEST).ToLowerInvariant() == strName)
+                    return ConsumerConfigBuilder.AutoOffsetResetTypes.LATEST;
+                else return ConsumerConfigBuilder.AutoOffsetResetTypes.LATEST;
             }
             set
             {
@@ -89,7 +89,7 @@ namespace MASES.KNet.Consumer
             }
         }
 
-        public ConsumerConfigBuilder WithAutoOffsetReset(ConsumerConfig.AutoOffsetReset autoOffsetReset)
+        public ConsumerConfigBuilder WithAutoOffsetReset(ConsumerConfigBuilder.AutoOffsetResetTypes autoOffsetReset)
         {
             var clone = Clone();
             clone.AutoOffsetReset = autoOffsetReset;

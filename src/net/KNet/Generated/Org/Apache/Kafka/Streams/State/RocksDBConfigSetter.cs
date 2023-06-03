@@ -45,25 +45,6 @@ namespace Org.Apache.Kafka.Streams.State
         #endregion
 
         #region Instance methods
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/RocksDBConfigSetter.html#close(java.lang.String,org.rocksdb.Options)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="Org.Rocksdb.Options"/></param>
-        public void Close(string arg0, Org.Rocksdb.Options arg1)
-        {
-            IExecute("close", arg0, arg1);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/RocksDBConfigSetter.html#setConfig(java.lang.String,org.rocksdb.Options,java.util.Map)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="Org.Rocksdb.Options"/></param>
-        /// <param name="arg2"><see cref="Java.Util.Map"/></param>
-        public void SetConfig(string arg0, Org.Rocksdb.Options arg1, Java.Util.Map<string, object> arg2)
-        {
-            IExecute("setConfig", arg0, arg1, arg2);
-        }
 
         #endregion
 
