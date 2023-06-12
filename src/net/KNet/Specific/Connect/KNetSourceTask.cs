@@ -18,7 +18,8 @@
 
 using Java.Lang;
 using Java.Util;
-using MASES.JNet.Extensions;
+using MASES.JNet.Specific.Extensions;
+using MASES.JNet.Specific.Extensions;
 using Org.Apache.Kafka.Connect.Data;
 using Org.Apache.Kafka.Connect.Header;
 using Org.Apache.Kafka.Connect.Source;
@@ -72,7 +73,7 @@ namespace MASES.KNet.Connect
         /// Implement the method to execute the Poll action
         /// </summary>
         /// <returns>The list of <see cref="SourceRecord"/> to return to Apache Kafka Connect framework</returns>
-        public abstract IList<SourceRecord> Poll();
+        public abstract System.Collections.Generic.IList<SourceRecord> Poll();
         /// <summary>
         /// Creates a new <see cref="SourceRecord{TKey, TValue}"/>
         /// </summary>

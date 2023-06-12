@@ -374,7 +374,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslClientAuthenticator.html"/>
     /// </summary>
-    public partial class SaslClientAuthenticator : Org.Apache.Kafka.Common.Network.Authenticator
+    public partial class SaslClientAuthenticator : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SaslClientAuthenticator>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -546,7 +546,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslServerAuthenticator.html"/>
     /// </summary>
-    public partial class SaslServerAuthenticator : Org.Apache.Kafka.Common.Network.Authenticator
+    public partial class SaslServerAuthenticator : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SaslServerAuthenticator>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

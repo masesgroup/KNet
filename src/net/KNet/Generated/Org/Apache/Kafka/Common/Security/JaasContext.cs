@@ -72,17 +72,6 @@ namespace Org.Apache.Kafka.Common.Security
         {
             return SExecute<Org.Apache.Kafka.Common.Security.JaasContext>(LocalBridgeClazz, "loadClientContext", arg0);
         }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/JaasContext.html#loadServerContext(org.apache.kafka.common.network.ListenerName,java.lang.String,java.util.Map)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Network.ListenerName"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <param name="arg2"><see cref="Java.Util.Map"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Common.Security.JaasContext"/></returns>
-        public static Org.Apache.Kafka.Common.Security.JaasContext LoadServerContext(Org.Apache.Kafka.Common.Network.ListenerName arg0, string arg1, Java.Util.Map<string, object> arg2)
-        {
-            return SExecute<Org.Apache.Kafka.Common.Security.JaasContext>(LocalBridgeClazz, "loadServerContext", arg0, arg1, arg2);
-        }
 
         #endregion
 

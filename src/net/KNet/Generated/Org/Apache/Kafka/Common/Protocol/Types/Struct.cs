@@ -784,15 +784,6 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Struct>("setIfExists", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getRecords(java.lang.String)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Common.Record.BaseRecords"/></returns>
-        public Org.Apache.Kafka.Common.Record.BaseRecords GetRecords(string arg0)
-        {
-            return IExecute<Org.Apache.Kafka.Common.Record.BaseRecords>("getRecords", arg0);
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#get(org.apache.kafka.common.protocol.types.Field.UUID)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.UUID"/></param>

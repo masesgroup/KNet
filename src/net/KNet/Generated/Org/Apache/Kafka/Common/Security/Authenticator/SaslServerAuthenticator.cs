@@ -126,15 +126,6 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
         {
             IExecute("handleAuthenticationFailure");
         }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslServerAuthenticator.html#reauthenticate(org.apache.kafka.common.network.ReauthenticationContext)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Network.ReauthenticationContext"/></param>
-        /// <exception cref="Java.Io.IOException"/>
-        public void Reauthenticate(Org.Apache.Kafka.Common.Network.ReauthenticationContext arg0)
-        {
-            IExecute("reauthenticate", arg0);
-        }
 
         #endregion
 

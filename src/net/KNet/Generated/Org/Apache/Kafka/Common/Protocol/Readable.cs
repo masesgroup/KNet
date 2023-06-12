@@ -201,15 +201,6 @@ namespace Org.Apache.Kafka.Common.Protocol
             return IExecute<long>("readUnsignedInt");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Readable.html#readRecords(int)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="int"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Common.Record.MemoryRecords"/></returns>
-        public Org.Apache.Kafka.Common.Record.MemoryRecords ReadRecords(int arg0)
-        {
-            return IExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>("readRecords", arg0);
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Readable.html#readUuid()"/>
         /// </summary>
 

@@ -523,7 +523,7 @@ namespace Org.Apache.Kafka.Streams
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsConfig.html"/>
     /// </summary>
-    public partial class StreamsConfig : Org.Apache.Kafka.Common.Config.AbstractConfig, IJNetBridgeMain
+    public partial class StreamsConfig : Org.Apache.Kafka.Common.Config.AbstractConfig, MASES.JNet.Specific.IJNetBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

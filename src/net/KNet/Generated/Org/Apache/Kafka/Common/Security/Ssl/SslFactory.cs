@@ -29,24 +29,6 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
     public partial class SslFactory : Org.Apache.Kafka.Common.IReconfigurable, Java.Io.ICloseable
     {
         #region Constructors
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/ssl/SslFactory.html#%3Cinit%3E(org.apache.kafka.common.network.Mode,java.lang.String,boolean)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Network.Mode"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <param name="arg2"><see cref="bool"/></param>
-        public SslFactory(Org.Apache.Kafka.Common.Network.Mode arg0, string arg1, bool arg2)
-            : base(arg0, arg1, arg2)
-        {
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/ssl/SslFactory.html#%3Cinit%3E(org.apache.kafka.common.network.Mode)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Network.Mode"/></param>
-        public SslFactory(Org.Apache.Kafka.Common.Network.Mode arg0)
-            : base(arg0)
-        {
-        }
 
         #endregion
 

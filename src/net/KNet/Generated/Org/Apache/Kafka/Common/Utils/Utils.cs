@@ -803,19 +803,6 @@ namespace Org.Apache.Kafka.Common.Utils
             if (arg1.Length == 0) return SExecute<long>(LocalBridgeClazz, "min", arg0); else return SExecute<long>(LocalBridgeClazz, "min", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Utils.html#tryWriteTo(org.apache.kafka.common.network.TransferableChannel,int,int,java.nio.ByteBuffer)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Network.TransferableChannel"/></param>
-        /// <param name="arg1"><see cref="int"/></param>
-        /// <param name="arg2"><see cref="int"/></param>
-        /// <param name="arg3"><see cref="Java.Nio.ByteBuffer"/></param>
-        /// <returns><see cref="long"/></returns>
-        /// <exception cref="Java.Io.IOException"/>
-        public static long TryWriteTo(Org.Apache.Kafka.Common.Network.TransferableChannel arg0, int arg1, int arg2, Java.Nio.ByteBuffer arg3)
-        {
-            return SExecute<long>(LocalBridgeClazz, "tryWriteTo", arg0, arg1, arg2, arg3);
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Utils.html#min(short,short)"/>
         /// </summary>
         /// <param name="arg0"><see cref="short"/></param>

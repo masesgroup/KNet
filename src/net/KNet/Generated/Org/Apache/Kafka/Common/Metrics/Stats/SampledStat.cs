@@ -54,17 +54,6 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/SampledStat.html#combine(java.util.List,org.apache.kafka.common.metrics.MetricConfig,long)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Java.Util.List"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Metrics.MetricConfig"/></param>
-        /// <param name="arg2"><see cref="long"/></param>
-        /// <returns><see cref="double"/></returns>
-        public double Combine(Java.Util.List<Org.Apache.Kafka.Common.Metrics.Stats.SampledStat.Sample> arg0, Org.Apache.Kafka.Common.Metrics.MetricConfig arg1, long arg2)
-        {
-            return IExecute<double>("combine", arg0, arg1, arg2);
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/SampledStat.html#measure(org.apache.kafka.common.metrics.MetricConfig,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Metrics.MetricConfig"/></param>

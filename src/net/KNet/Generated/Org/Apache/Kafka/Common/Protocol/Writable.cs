@@ -144,14 +144,6 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("writeVarlong", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Writable.html#writeRecords(org.apache.kafka.common.record.BaseRecords)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Record.BaseRecords"/></param>
-        public void WriteRecords(Org.Apache.Kafka.Common.Record.BaseRecords arg0)
-        {
-            IExecute("writeRecords", arg0);
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Writable.html#writeUnsignedInt(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>

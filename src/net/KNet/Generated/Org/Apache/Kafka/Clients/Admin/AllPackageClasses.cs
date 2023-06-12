@@ -331,7 +331,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/AdminClientConfig.html"/>
     /// </summary>
-    public partial class AdminClientConfig : Org.Apache.Kafka.Common.Config.AbstractConfig, IJNetBridgeMain
+    public partial class AdminClientConfig : Org.Apache.Kafka.Common.Config.AbstractConfig, MASES.JNet.Specific.IJNetBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

@@ -29,24 +29,6 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
     public partial class SaslClientAuthenticator
     {
         #region Constructors
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslClientAuthenticator.html#%3Cinit%3E(java.util.Map,org.apache.kafka.common.security.auth.AuthenticateCallbackHandler,java.lang.String,javax.security.auth.Subject,java.lang.String,java.lang.String,java.lang.String,boolean,org.apache.kafka.common.network.TransportLayer,org.apache.kafka.common.utils.Time,org.apache.kafka.common.utils.LogContext)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Security.Auth.AuthenticateCallbackHandler"/></param>
-        /// <param name="arg2"><see cref="string"/></param>
-        /// <param name="arg3"><see cref="Javax.Security.Auth.Subject"/></param>
-        /// <param name="arg4"><see cref="string"/></param>
-        /// <param name="arg5"><see cref="string"/></param>
-        /// <param name="arg6"><see cref="string"/></param>
-        /// <param name="arg7"><see cref="bool"/></param>
-        /// <param name="arg8"><see cref="Org.Apache.Kafka.Common.Network.TransportLayer"/></param>
-        /// <param name="arg9"><see cref="Org.Apache.Kafka.Common.Utils.Time"/></param>
-        /// <param name="arg10"><see cref="Org.Apache.Kafka.Common.Utils.LogContext"/></param>
-        public SaslClientAuthenticator(Java.Util.Map<string, object> arg0, Org.Apache.Kafka.Common.Security.Auth.AuthenticateCallbackHandler arg1, string arg2, Javax.Security.Auth.Subject arg3, string arg4, string arg5, string arg6, bool arg7, Org.Apache.Kafka.Common.Network.TransportLayer arg8, Org.Apache.Kafka.Common.Utils.Time arg9, Org.Apache.Kafka.Common.Utils.LogContext arg10)
-            : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10)
-        {
-        }
 
         #endregion
 
@@ -117,15 +99,6 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
             return IExecute<long?>("reauthenticationLatencyMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslClientAuthenticator.html#pollResponseReceivedDuringReauthentication()"/>
-        /// </summary>
-
-        /// <returns><see cref="Java.Util.Optional"/></returns>
-        public Java.Util.Optional<Org.Apache.Kafka.Common.Network.NetworkReceive> PollResponseReceivedDuringReauthentication()
-        {
-            return IExecute<Java.Util.Optional<Org.Apache.Kafka.Common.Network.NetworkReceive>>("pollResponseReceivedDuringReauthentication");
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslClientAuthenticator.html#principalSerde()"/>
         /// </summary>
 
@@ -160,15 +133,6 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
         public void Close()
         {
             IExecute("close");
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslClientAuthenticator.html#reauthenticate(org.apache.kafka.common.network.ReauthenticationContext)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Network.ReauthenticationContext"/></param>
-        /// <exception cref="Java.Io.IOException"/>
-        public void Reauthenticate(Org.Apache.Kafka.Common.Network.ReauthenticationContext arg0)
-        {
-            IExecute("reauthenticate", arg0);
         }
 
         #endregion

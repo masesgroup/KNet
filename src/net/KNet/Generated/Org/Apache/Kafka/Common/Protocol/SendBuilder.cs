@@ -46,15 +46,6 @@ namespace Org.Apache.Kafka.Common.Protocol
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/SendBuilder.html#build()"/>
-        /// </summary>
-
-        /// <returns><see cref="Org.Apache.Kafka.Common.Network.Send"/></returns>
-        public Org.Apache.Kafka.Common.Network.Send Build()
-        {
-            return IExecute<Org.Apache.Kafka.Common.Network.Send>("build");
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/SendBuilder.html#writeByte(byte)"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
@@ -101,14 +92,6 @@ namespace Org.Apache.Kafka.Common.Protocol
         public void WriteLong(long arg0)
         {
             IExecute("writeLong", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/SendBuilder.html#writeRecords(org.apache.kafka.common.record.BaseRecords)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Record.BaseRecords"/></param>
-        public void WriteRecords(Org.Apache.Kafka.Common.Record.BaseRecords arg0)
-        {
-            IExecute("writeRecords", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/SendBuilder.html#writeShort(short)"/>

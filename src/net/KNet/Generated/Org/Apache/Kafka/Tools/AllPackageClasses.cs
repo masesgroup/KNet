@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Tools
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/ClientCompatibilityTest.html"/>
     /// </summary>
-    public partial class ClientCompatibilityTest : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ClientCompatibilityTest>, IJNetBridgeMain
+    public partial class ClientCompatibilityTest : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ClientCompatibilityTest>, MASES.JNet.Specific.IJNetBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Tools
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/MetadataQuorumCommand.html"/>
     /// </summary>
-    public partial class MetadataQuorumCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MetadataQuorumCommand>, IJNetBridgeMain
+    public partial class MetadataQuorumCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MetadataQuorumCommand>, MASES.JNet.Specific.IJNetBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -158,7 +158,7 @@ namespace Org.Apache.Kafka.Tools
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/OAuthCompatibilityTool.html"/>
     /// </summary>
-    public partial class OAuthCompatibilityTool : MASES.JCOBridge.C2JBridge.JVMBridgeBase<OAuthCompatibilityTool>, IJNetBridgeMain
+    public partial class OAuthCompatibilityTool : MASES.JCOBridge.C2JBridge.JVMBridgeBase<OAuthCompatibilityTool>, MASES.JNet.Specific.IJNetBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -201,7 +201,7 @@ namespace Org.Apache.Kafka.Tools
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/ProducerPerformance.html"/>
     /// </summary>
-    public partial class ProducerPerformance : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ProducerPerformance>, IJNetBridgeMain
+    public partial class ProducerPerformance : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ProducerPerformance>, MASES.JNet.Specific.IJNetBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -346,7 +346,7 @@ namespace Org.Apache.Kafka.Tools
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/TransactionalMessageCopier.html"/>
     /// </summary>
-    public partial class TransactionalMessageCopier : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TransactionalMessageCopier>, IJNetBridgeMain
+    public partial class TransactionalMessageCopier : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TransactionalMessageCopier>, MASES.JNet.Specific.IJNetBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -389,7 +389,7 @@ namespace Org.Apache.Kafka.Tools
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/TransactionsCommand.html"/>
     /// </summary>
-    public partial class TransactionsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TransactionsCommand>, IJNetBridgeMain
+    public partial class TransactionsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TransactionsCommand>, MASES.JNet.Specific.IJNetBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -432,7 +432,7 @@ namespace Org.Apache.Kafka.Tools
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableConsumer.html"/>
     /// </summary>
-    public partial class VerifiableConsumer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<VerifiableConsumer>, IJNetBridgeMain
+    public partial class VerifiableConsumer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<VerifiableConsumer>, MASES.JNet.Specific.IJNetBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -475,7 +475,7 @@ namespace Org.Apache.Kafka.Tools
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableLog4jAppender.html"/>
     /// </summary>
-    public partial class VerifiableLog4jAppender : MASES.JCOBridge.C2JBridge.JVMBridgeBase<VerifiableLog4jAppender>, IJNetBridgeMain
+    public partial class VerifiableLog4jAppender : MASES.JCOBridge.C2JBridge.JVMBridgeBase<VerifiableLog4jAppender>, MASES.JNet.Specific.IJNetBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -518,7 +518,7 @@ namespace Org.Apache.Kafka.Tools
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableProducer.html"/>
     /// </summary>
-    public partial class VerifiableProducer : Java.Lang.AutoCloseable, IJNetBridgeMain
+    public partial class VerifiableProducer : Java.Lang.AutoCloseable, MASES.JNet.Specific.IJNetBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

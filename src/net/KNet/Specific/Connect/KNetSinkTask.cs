@@ -17,7 +17,7 @@
 */
 
 using Java.Util;
-using MASES.JNet.Extensions;
+using MASES.JNet.Specific.Extensions;
 using Org.Apache.Kafka.Connect.Sink;
 using System.Collections.Generic;
 

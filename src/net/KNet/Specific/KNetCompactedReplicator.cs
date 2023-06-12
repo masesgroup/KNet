@@ -483,7 +483,7 @@ namespace MASES.KNet
         /// </summary>
         /// <returns><see cref="ICollection{TKey}"/> containing the keys of this <see cref="KNetCompactedReplicator{TKey, TValue}"/></returns>
         /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Read"/> flag</exception>
-        public ICollection<TKey> Keys
+        public System.Collections.Generic.ICollection<TKey> Keys
         {
             get { return ValidateAndGetLocalDictionary().Keys; }
         }
@@ -493,7 +493,7 @@ namespace MASES.KNet
         /// </summary>
         /// <returns><see cref="ICollection{TValue}"/> containing the values of this <see cref="KNetCompactedReplicator{TKey, TValue}"/></returns>
         /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Read"/> flag</exception>
-        public ICollection<TValue> Values
+        public System.Collections.Generic.ICollection<TValue> Values
         {
             get { return ValidateAndGetLocalDictionary().Values; }
         }

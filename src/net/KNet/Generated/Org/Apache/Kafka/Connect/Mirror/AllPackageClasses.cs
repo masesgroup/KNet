@@ -244,7 +244,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorCheckpointConfig.html"/>
     /// </summary>
-    public partial class MirrorCheckpointConfig : Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig, IJNetBridgeMain
+    public partial class MirrorCheckpointConfig : Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig, MASES.JNet.Specific.IJNetBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -459,7 +459,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorHeartbeatConfig.html"/>
     /// </summary>
-    public partial class MirrorHeartbeatConfig : Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig, IJNetBridgeMain
+    public partial class MirrorHeartbeatConfig : Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig, MASES.JNet.Specific.IJNetBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -588,7 +588,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorMaker.html"/>
     /// </summary>
-    public partial class MirrorMaker : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MirrorMaker>, IJNetBridgeMain
+    public partial class MirrorMaker : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MirrorMaker>, MASES.JNet.Specific.IJNetBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -674,7 +674,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorSourceConfig.html"/>
     /// </summary>
-    public partial class MirrorSourceConfig : Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig, IJNetBridgeMain
+    public partial class MirrorSourceConfig : Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig, MASES.JNet.Specific.IJNetBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

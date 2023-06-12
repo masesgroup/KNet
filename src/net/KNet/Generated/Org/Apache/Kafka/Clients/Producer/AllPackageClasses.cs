@@ -370,7 +370,7 @@ namespace Org.Apache.Kafka.Clients.Producer
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerConfig.html"/>
     /// </summary>
-    public partial class ProducerConfig : Org.Apache.Kafka.Common.Config.AbstractConfig, IJNetBridgeMain
+    public partial class ProducerConfig : Org.Apache.Kafka.Common.Config.AbstractConfig, MASES.JNet.Specific.IJNetBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

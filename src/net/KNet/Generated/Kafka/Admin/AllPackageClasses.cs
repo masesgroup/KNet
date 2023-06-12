@@ -29,7 +29,7 @@ namespace Kafka.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/AclCommand.html"/>
     /// </summary>
-    public partial class AclCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AclCommand>, IJNetBridgeMain
+    public partial class AclCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AclCommand>, MASES.JNet.Specific.IJNetBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -303,7 +303,7 @@ namespace Kafka.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/BrokerApiVersionsCommand.html"/>
     /// </summary>
-    public partial class BrokerApiVersionsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BrokerApiVersionsCommand>, IJNetBridgeMain
+    public partial class BrokerApiVersionsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BrokerApiVersionsCommand>, MASES.JNet.Specific.IJNetBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -432,7 +432,7 @@ namespace Kafka.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConfigCommand.html"/>
     /// </summary>
-    public partial class ConfigCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConfigCommand>, IJNetBridgeMain
+    public partial class ConfigCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConfigCommand>, MASES.JNet.Specific.IJNetBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -604,7 +604,7 @@ namespace Kafka.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.html"/>
     /// </summary>
-    public partial class ConsumerGroupCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConsumerGroupCommand>, IJNetBridgeMain
+    public partial class ConsumerGroupCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConsumerGroupCommand>, MASES.JNet.Specific.IJNetBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1077,7 +1077,7 @@ namespace Kafka.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/DelegationTokenCommand.html"/>
     /// </summary>
-    public partial class DelegationTokenCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DelegationTokenCommand>, IJNetBridgeMain
+    public partial class DelegationTokenCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DelegationTokenCommand>, MASES.JNet.Specific.IJNetBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1163,7 +1163,7 @@ namespace Kafka.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/DeleteRecordsCommand.html"/>
     /// </summary>
-    public partial class DeleteRecordsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DeleteRecordsCommand>, IJNetBridgeMain
+    public partial class DeleteRecordsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DeleteRecordsCommand>, MASES.JNet.Specific.IJNetBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1245,54 +1245,11 @@ namespace Kafka.Admin
     }
     #endregion
 
-    #region ElectionTypeConverter
-    /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ElectionTypeConverter.html"/>
-    /// </summary>
-    public partial class ElectionTypeConverter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ElectionTypeConverter>
-    {
-        /// <summary>
-        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
-        /// </summary>
-        public ElectionTypeConverter() { }
-        /// <summary>
-        /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
-        /// </summary>
-        public ElectionTypeConverter(params object[] args) : base(args) { }
-
-        private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ElectionTypeConverter");
-
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
-        /// </summary>
-        public override string BridgeClassName => "kafka.admin.ElectionTypeConverter";
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
-        /// </summary>
-        public override bool IsBridgeAbstract => false;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm"/>
-        /// </summary>
-        public override bool IsBridgeCloseable => false;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm"/>
-        /// </summary>
-        public override bool IsBridgeInterface => false;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm"/>
-        /// </summary>
-        public override bool IsBridgeStatic => false;
-
-        // TODO: complete the class
-
-    }
-    #endregion
-
     #region FeatureCommand
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/FeatureCommand.html"/>
     /// </summary>
-    public partial class FeatureCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FeatureCommand>, IJNetBridgeMain
+    public partial class FeatureCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FeatureCommand>, MASES.JNet.Specific.IJNetBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1335,7 +1292,7 @@ namespace Kafka.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/LeaderElectionCommand.html"/>
     /// </summary>
-    public partial class LeaderElectionCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LeaderElectionCommand>, IJNetBridgeMain
+    public partial class LeaderElectionCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LeaderElectionCommand>, MASES.JNet.Specific.IJNetBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1421,7 +1378,7 @@ namespace Kafka.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/LogDirsCommand.html"/>
     /// </summary>
-    public partial class LogDirsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LogDirsCommand>, IJNetBridgeMain
+    public partial class LogDirsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LogDirsCommand>, MASES.JNet.Specific.IJNetBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1550,7 +1507,7 @@ namespace Kafka.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.html"/>
     /// </summary>
-    public partial class ReassignPartitionsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ReassignPartitionsCommand>, IJNetBridgeMain
+    public partial class ReassignPartitionsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ReassignPartitionsCommand>, MASES.JNet.Specific.IJNetBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -2039,7 +1996,7 @@ namespace Kafka.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.html"/>
     /// </summary>
-    public partial class TopicCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicCommand>, IJNetBridgeMain
+    public partial class TopicCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicCommand>, MASES.JNet.Specific.IJNetBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -2340,7 +2297,7 @@ namespace Kafka.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ZkSecurityMigrator.html"/>
     /// </summary>
-    public partial class ZkSecurityMigrator : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ZkSecurityMigrator>, IJNetBridgeMain
+    public partial class ZkSecurityMigrator : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ZkSecurityMigrator>, MASES.JNet.Specific.IJNetBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Common.Protocol
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html"/>
     /// </summary>
-    public partial class ApiKeys : Java.Lang.Enum<Org.Apache.Kafka.Common.Protocol.ApiKeys>, IJNetBridgeMain
+    public partial class ApiKeys : Java.Lang.Enum<Org.Apache.Kafka.Common.Protocol.ApiKeys>, MASES.JNet.Specific.IJNetBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -201,7 +201,7 @@ namespace Org.Apache.Kafka.Common.Protocol
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html"/>
     /// </summary>
-    public partial class Errors : Java.Lang.Enum<Org.Apache.Kafka.Common.Protocol.Errors>, IJNetBridgeMain
+    public partial class Errors : Java.Lang.Enum<Org.Apache.Kafka.Common.Protocol.Errors>, MASES.JNet.Specific.IJNetBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -416,7 +416,7 @@ namespace Org.Apache.Kafka.Common.Protocol
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Protocol.html"/>
     /// </summary>
-    public partial class Protocol : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Protocol>, IJNetBridgeMain
+    public partial class Protocol : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Protocol>, MASES.JNet.Specific.IJNetBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

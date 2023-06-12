@@ -20,7 +20,7 @@ using Java.Lang;
 using Java.Util;
 using MASES.JCOBridge.C2JBridge;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
-using MASES.JNet.Extensions;
+using MASES.JNet.Specific.Extensions;
 using Org.Apache.Kafka.Common.Config;
 using Org.Apache.Kafka.Connect.Connector;
 using System;

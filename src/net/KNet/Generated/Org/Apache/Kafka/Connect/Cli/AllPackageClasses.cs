@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Connect.Cli
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/cli/ConnectDistributed.html"/>
     /// </summary>
-    public partial class ConnectDistributed : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConnectDistributed>, IJNetBridgeMain
+    public partial class ConnectDistributed : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConnectDistributed>, MASES.JNet.Specific.IJNetBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -72,7 +72,7 @@ namespace Org.Apache.Kafka.Connect.Cli
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/cli/ConnectStandalone.html"/>
     /// </summary>
-    public partial class ConnectStandalone : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConnectStandalone>, IJNetBridgeMain
+    public partial class ConnectStandalone : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConnectStandalone>, MASES.JNet.Specific.IJNetBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

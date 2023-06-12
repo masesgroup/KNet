@@ -29,15 +29,6 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
     public partial class DefaultKafkaPrincipalBuilder : Org.Apache.Kafka.Common.Security.Auth.IKafkaPrincipalBuilder, Org.Apache.Kafka.Common.Security.Auth.IKafkaPrincipalSerde
     {
         #region Constructors
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/DefaultKafkaPrincipalBuilder.html#%3Cinit%3E(org.apache.kafka.common.security.kerberos.KerberosShortNamer,org.apache.kafka.common.security.ssl.SslPrincipalMapper)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Security.Kerberos.KerberosShortNamer"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Security.Ssl.SslPrincipalMapper"/></param>
-        public DefaultKafkaPrincipalBuilder(Org.Apache.Kafka.Common.Security.Kerberos.KerberosShortNamer arg0, Org.Apache.Kafka.Common.Security.Ssl.SslPrincipalMapper arg1)
-            : base(arg0, arg1)
-        {
-        }
 
         #endregion
 

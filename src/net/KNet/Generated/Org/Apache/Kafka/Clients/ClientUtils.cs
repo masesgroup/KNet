@@ -61,17 +61,6 @@ namespace Org.Apache.Kafka.Clients
         {
             return SExecute<Java.Util.List<Java.Net.InetSocketAddress>>(LocalBridgeClazz, "parseAndValidateAddresses", arg0, arg1);
         }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientUtils.html#createChannelBuilder(org.apache.kafka.common.config.AbstractConfig,org.apache.kafka.common.utils.Time,org.apache.kafka.common.utils.LogContext)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Config.AbstractConfig"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Utils.Time"/></param>
-        /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Utils.LogContext"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Common.Network.ChannelBuilder"/></returns>
-        public static Org.Apache.Kafka.Common.Network.ChannelBuilder CreateChannelBuilder(Org.Apache.Kafka.Common.Config.AbstractConfig arg0, Org.Apache.Kafka.Common.Utils.Time arg1, Org.Apache.Kafka.Common.Utils.LogContext arg2)
-        {
-            return SExecute<Org.Apache.Kafka.Common.Network.ChannelBuilder>(LocalBridgeClazz, "createChannelBuilder", arg0, arg1, arg2);
-        }
 
         #endregion
 
