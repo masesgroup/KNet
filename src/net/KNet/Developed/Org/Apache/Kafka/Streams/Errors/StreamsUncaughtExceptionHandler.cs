@@ -69,11 +69,5 @@ namespace Org.Apache.Kafka.Streams.Errors
             var retVal = OnHandle(JVMBridgeException.New(data.EventData.EventData as IJavaObject));
             data.SetReturnValue(retVal.ToString());
         }
-        /// <summary>
-        /// Executes the StreamsUncaughtExceptionHandler action in the CLR
-        /// </summary>
-        /// <param name="exception">The StreamsUncaughtExceptionHandler object</param>
-        /// <returns>The <see cref="StreamThreadExceptionResponse"/> handle evaluation</returns>
-        public virtual StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse Handle(JVMBridgeException exception) { return StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse.SHUTDOWN_APPLICATION; }
     }
 }

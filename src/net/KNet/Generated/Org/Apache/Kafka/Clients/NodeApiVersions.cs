@@ -75,24 +75,6 @@ namespace Org.Apache.Kafka.Clients
             return IExecute<string>("toString", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NodeApiVersions.html#supportedFeatures()"/>
-        /// </summary>
-
-        /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<string, Org.Apache.Kafka.Common.Feature.SupportedVersionRange> SupportedFeatures()
-        {
-            return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Common.Feature.SupportedVersionRange>>("supportedFeatures");
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NodeApiVersions.html#allSupportedApiVersions()"/>
-        /// </summary>
-
-        /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<Org.Apache.Kafka.Common.Protocol.ApiKeys, Org.Apache.Kafka.Common.Message.ApiVersionsResponseData.ApiVersion> AllSupportedApiVersions()
-        {
-            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.Protocol.ApiKeys, Org.Apache.Kafka.Common.Message.ApiVersionsResponseData.ApiVersion>>("allSupportedApiVersions");
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NodeApiVersions.html#latestUsableVersion(org.apache.kafka.common.protocol.ApiKeys,short,short)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.ApiKeys"/></param>
