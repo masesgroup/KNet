@@ -38,19 +38,19 @@ namespace Org.Apache.Kafka.Common.Security.Kerberos
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosError.html#CLIENT_NOT_YET_VALID"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosError.html#CLIENT_NOT_YET_VALID"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Security.Kerberos.KerberosError CLIENT_NOT_YET_VALID { get { return SGetField<Org.Apache.Kafka.Common.Security.Kerberos.KerberosError>(LocalBridgeClazz, "CLIENT_NOT_YET_VALID"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosError.html#REPLAY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosError.html#REPLAY"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Security.Kerberos.KerberosError REPLAY { get { return SGetField<Org.Apache.Kafka.Common.Security.Kerberos.KerberosError>(LocalBridgeClazz, "REPLAY"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosError.html#SERVER_NOT_FOUND"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosError.html#SERVER_NOT_FOUND"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Security.Kerberos.KerberosError SERVER_NOT_FOUND { get { return SGetField<Org.Apache.Kafka.Common.Security.Kerberos.KerberosError>(LocalBridgeClazz, "SERVER_NOT_FOUND"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosError.html#TICKET_NOT_YET_VALID"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosError.html#TICKET_NOT_YET_VALID"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Security.Kerberos.KerberosError TICKET_NOT_YET_VALID { get { return SGetField<Org.Apache.Kafka.Common.Security.Kerberos.KerberosError>(LocalBridgeClazz, "TICKET_NOT_YET_VALID"); } }
 
@@ -58,25 +58,25 @@ namespace Org.Apache.Kafka.Common.Security.Kerberos
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosError.html#isRetriableClientGssException(java.lang.Exception)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosError.html#isRetriableClientGssException(java.lang.Exception)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Exception"/></param>
         /// <returns><see cref="bool"/></returns>
-        public static bool IsRetriableClientGssException(Java.Lang.Exception arg0)
+        public static bool IsRetriableClientGssException(MASES.JCOBridge.C2JBridge.JVMBridgeException arg0)
         {
             return SExecute<bool>(LocalBridgeClazz, "isRetriableClientGssException", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosError.html#fromException(java.lang.Exception)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosError.html#fromException(java.lang.Exception)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Exception"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Kerberos.KerberosError"/></returns>
-        public static Org.Apache.Kafka.Common.Security.Kerberos.KerberosError FromException(Java.Lang.Exception arg0)
+        public static Org.Apache.Kafka.Common.Security.Kerberos.KerberosError FromException(MASES.JCOBridge.C2JBridge.JVMBridgeException arg0)
         {
             return SExecute<Org.Apache.Kafka.Common.Security.Kerberos.KerberosError>(LocalBridgeClazz, "fromException", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosError.html#valueOf(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosError.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Kerberos.KerberosError"/></returns>
@@ -85,7 +85,7 @@ namespace Org.Apache.Kafka.Common.Security.Kerberos
             return SExecute<Org.Apache.Kafka.Common.Security.Kerberos.KerberosError>(LocalBridgeClazz, "valueOf", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosError.html#values()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosError.html#values()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Kerberos.KerberosError"/></returns>
@@ -98,7 +98,7 @@ namespace Org.Apache.Kafka.Common.Security.Kerberos
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosError.html#retriable()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosError.html#retriable()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>

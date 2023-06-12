@@ -27,9 +27,9 @@ namespace Org.Apache.Kafka.Connect.Mirror.Formatters
 {
     #region CheckpointFormatter
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/formatters/CheckpointFormatter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/formatters/CheckpointFormatter.html"/>
     /// </summary>
-    public partial class CheckpointFormatter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CheckpointFormatter>
+    public partial class CheckpointFormatter : Org.Apache.Kafka.Common.MessageFormatter
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -70,9 +70,9 @@ namespace Org.Apache.Kafka.Connect.Mirror.Formatters
 
     #region HeartbeatFormatter
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/formatters/HeartbeatFormatter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/formatters/HeartbeatFormatter.html"/>
     /// </summary>
-    public partial class HeartbeatFormatter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<HeartbeatFormatter>
+    public partial class HeartbeatFormatter : Org.Apache.Kafka.Common.MessageFormatter
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -113,9 +113,9 @@ namespace Org.Apache.Kafka.Connect.Mirror.Formatters
 
     #region OffsetSyncFormatter
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/formatters/OffsetSyncFormatter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/formatters/OffsetSyncFormatter.html"/>
     /// </summary>
-    public partial class OffsetSyncFormatter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<OffsetSyncFormatter>
+    public partial class OffsetSyncFormatter : Org.Apache.Kafka.Common.MessageFormatter
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -153,6 +153,7 @@ namespace Org.Apache.Kafka.Connect.Mirror.Formatters
 
     }
     #endregion
+
 
 
 }

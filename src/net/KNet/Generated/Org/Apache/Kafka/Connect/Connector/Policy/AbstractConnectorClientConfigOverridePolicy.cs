@@ -33,10 +33,6 @@ namespace Org.Apache.Kafka.Connect.Connector.Policy
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Connect.Connector.Policy.AbstractConnectorClientConfigOverridePolicy"/> to <see cref="Org.Apache.Kafka.Connect.Connector.Policy.ConnectorClientConfigOverridePolicy"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Connect.Connector.Policy.ConnectorClientConfigOverridePolicy(Org.Apache.Kafka.Connect.Connector.Policy.AbstractConnectorClientConfigOverridePolicy t) => t.Cast<Org.Apache.Kafka.Connect.Connector.Policy.ConnectorClientConfigOverridePolicy>();
 
         #endregion
 
@@ -50,7 +46,7 @@ namespace Org.Apache.Kafka.Connect.Connector.Policy
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/connector/policy/AbstractConnectorClientConfigOverridePolicy.html#validate(org.apache.kafka.connect.connector.policy.ConnectorClientConfigRequest)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/connector/policy/AbstractConnectorClientConfigOverridePolicy.html#validate(org.apache.kafka.connect.connector.policy.ConnectorClientConfigRequest)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Connector.Policy.ConnectorClientConfigRequest"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -59,7 +55,7 @@ namespace Org.Apache.Kafka.Connect.Connector.Policy
             return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Config.ConfigValue>>("validate", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/connector/policy/AbstractConnectorClientConfigOverridePolicy.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/connector/policy/AbstractConnectorClientConfigOverridePolicy.html#close()"/>
         /// </summary>
         public void Close()
         {

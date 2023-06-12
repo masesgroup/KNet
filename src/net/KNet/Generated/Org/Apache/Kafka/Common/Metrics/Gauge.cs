@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Gauge.html#value(org.apache.kafka.common.metrics.MetricConfig,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Gauge.html#value(org.apache.kafka.common.metrics.MetricConfig,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Metrics.MetricConfig"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -66,8 +66,26 @@ namespace Org.Apache.Kafka.Common.Metrics
     }
     #endregion
 
+    #region IGauge<T>
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Gauge.html"/>
+    /// </summary>
+    public partial interface IGauge<T> : Org.Apache.Kafka.Common.Metrics.IMetricValueProvider<T>
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region Gauge<T>
-    public partial class Gauge<T>
+    public partial class Gauge<T> : Org.Apache.Kafka.Common.Metrics.IGauge<T>
     {
         #region Constructors
 
@@ -91,7 +109,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Gauge.html#value(org.apache.kafka.common.metrics.MetricConfig,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Gauge.html#value(org.apache.kafka.common.metrics.MetricConfig,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Metrics.MetricConfig"/></param>
         /// <param name="arg1"><see cref="long"/></param>

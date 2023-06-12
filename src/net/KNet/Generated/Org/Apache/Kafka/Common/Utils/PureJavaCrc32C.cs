@@ -33,10 +33,6 @@ namespace Org.Apache.Kafka.Common.Utils
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.Utils.PureJavaCrc32C"/> to <see cref="Java.Util.Zip.Checksum"/>
-        /// </summary>
-        public static implicit operator Java.Util.Zip.Checksum(Org.Apache.Kafka.Common.Utils.PureJavaCrc32C t) => t.Cast<Java.Util.Zip.Checksum>();
 
         #endregion
 
@@ -50,14 +46,14 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/PureJavaCrc32C.html#getValue()"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/PureJavaCrc32C.html#getValue()"/> 
         /// </summary>
         public long Value
         {
             get { return IExecute<long>("getValue"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/PureJavaCrc32C.html#update(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/PureJavaCrc32C.html#update(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public void Update(int arg0)
@@ -65,14 +61,14 @@ namespace Org.Apache.Kafka.Common.Utils
             IExecute("update", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/PureJavaCrc32C.html#reset()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/PureJavaCrc32C.html#reset()"/>
         /// </summary>
         public void Reset()
         {
             IExecute("reset");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/PureJavaCrc32C.html#update(byte[],int,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/PureJavaCrc32C.html#update(byte[],int,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <param name="arg1"><see cref="int"/></param>

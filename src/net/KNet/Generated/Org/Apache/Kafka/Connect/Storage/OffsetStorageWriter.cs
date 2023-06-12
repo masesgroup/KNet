@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Connect.Storage
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/OffsetStorageWriter.html#%3Cinit%3E(org.apache.kafka.connect.storage.OffsetBackingStore,java.lang.String,org.apache.kafka.connect.storage.Converter,org.apache.kafka.connect.storage.Converter)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/OffsetStorageWriter.html#%3Cinit%3E(org.apache.kafka.connect.storage.OffsetBackingStore,java.lang.String,org.apache.kafka.connect.storage.Converter,org.apache.kafka.connect.storage.Converter)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Storage.OffsetBackingStore"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Connect.Storage
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/OffsetStorageWriter.html#doFlush(org.apache.kafka.connect.util.Callback)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/OffsetStorageWriter.html#doFlush(org.apache.kafka.connect.util.Callback)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Util.Callback"/></param>
         /// <returns><see cref="Java.Util.Concurrent.Future"/></returns>
@@ -66,7 +66,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return IExecute<Java.Util.Concurrent.Future<Java.Lang.Void>>("doFlush", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/OffsetStorageWriter.html#beginFlush()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/OffsetStorageWriter.html#beginFlush()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return IExecute<bool>("beginFlush");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/OffsetStorageWriter.html#willFlush()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/OffsetStorageWriter.html#willFlush()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -84,20 +84,18 @@ namespace Org.Apache.Kafka.Connect.Storage
             return IExecute<bool>("willFlush");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/OffsetStorageWriter.html#cancelFlush()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/OffsetStorageWriter.html#cancelFlush()"/>
         /// </summary>
         public void CancelFlush()
         {
             IExecute("cancelFlush");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/OffsetStorageWriter.html#offset(java.util.Map,java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/OffsetStorageWriter.html#offset(java.util.Map,java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
-        /// <typeparam name="Arg0Extendsobject"></typeparam>
-        /// <typeparam name="Arg1Extendsobject"></typeparam>
-        public void Offset<Arg0Extendsobject, Arg1Extendsobject>(Java.Util.Map<string, Arg0Extendsobject> arg0, Java.Util.Map<string, Arg1Extendsobject> arg1)
+        public void Offset(Java.Util.Map<string, object> arg0, Java.Util.Map<string, object> arg1)
         {
             IExecute("offset", arg0, arg1);
         }

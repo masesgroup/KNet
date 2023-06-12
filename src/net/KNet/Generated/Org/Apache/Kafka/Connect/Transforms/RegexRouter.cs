@@ -33,20 +33,16 @@ namespace Org.Apache.Kafka.Connect.Transforms
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Connect.Transforms.RegexRouter"/> to <see cref="Org.Apache.Kafka.Connect.Transforms.Transformation"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Connect.Transforms.Transformation(Org.Apache.Kafka.Connect.Transforms.RegexRouter t) => t.Cast<Org.Apache.Kafka.Connect.Transforms.Transformation>();
 
         #endregion
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/RegexRouter.html#OVERVIEW_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/RegexRouter.html#OVERVIEW_DOC"/>
         /// </summary>
         public static string OVERVIEW_DOC { get { return SGetField<string>(LocalBridgeClazz, "OVERVIEW_DOC"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/RegexRouter.html#CONFIG_DEF"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/RegexRouter.html#CONFIG_DEF"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Config.ConfigDef CONFIG_DEF { get { return SGetField<Org.Apache.Kafka.Common.Config.ConfigDef>(LocalBridgeClazz, "CONFIG_DEF"); } }
 
@@ -58,7 +54,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/RegexRouter.html#config()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/RegexRouter.html#config()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
@@ -67,7 +63,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("config");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/RegexRouter.html#apply(org.apache.kafka.connect.connector.ConnectRecord)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/RegexRouter.html#apply(org.apache.kafka.connect.connector.ConnectRecord)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord"/></returns>
@@ -76,14 +72,14 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecute<Org.Apache.Kafka.Connect.Connector.ConnectRecord>("apply", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/RegexRouter.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/RegexRouter.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecute("close");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/RegexRouter.html#configure(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/RegexRouter.html#configure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Configure(Java.Util.Map arg0)
@@ -110,10 +106,6 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Class/Interface conversion operators
         /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Connect.Transforms.RegexRouter{R}"/> to <see cref="Org.Apache.Kafka.Connect.Transforms.Transformation{R}"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Connect.Transforms.Transformation<R>(Org.Apache.Kafka.Connect.Transforms.RegexRouter<R> t) => t.Cast<Org.Apache.Kafka.Connect.Transforms.Transformation<R>>();
-        /// <summary>
         /// Converter from <see cref="Org.Apache.Kafka.Connect.Transforms.RegexRouter{R}"/> to <see cref="Org.Apache.Kafka.Connect.Transforms.RegexRouter"/>
         /// </summary>
         public static implicit operator Org.Apache.Kafka.Connect.Transforms.RegexRouter(Org.Apache.Kafka.Connect.Transforms.RegexRouter<R> t) => t.Cast<Org.Apache.Kafka.Connect.Transforms.RegexRouter>();
@@ -122,11 +114,11 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/RegexRouter.html#OVERVIEW_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/RegexRouter.html#OVERVIEW_DOC"/>
         /// </summary>
         public static string OVERVIEW_DOC { get { return SGetField<string>(LocalBridgeClazz, "OVERVIEW_DOC"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/RegexRouter.html#CONFIG_DEF"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/RegexRouter.html#CONFIG_DEF"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Config.ConfigDef CONFIG_DEF { get { return SGetField<Org.Apache.Kafka.Common.Config.ConfigDef>(LocalBridgeClazz, "CONFIG_DEF"); } }
 
@@ -138,7 +130,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/RegexRouter.html#config()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/RegexRouter.html#config()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
@@ -147,7 +139,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("config");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/RegexRouter.html#apply(org.apache.kafka.connect.connector.ConnectRecord)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/RegexRouter.html#apply(org.apache.kafka.connect.connector.ConnectRecord)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="R"/></param>
         /// <returns><typeparamref name="R"/></returns>
@@ -156,18 +148,17 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecute<R>("apply", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/RegexRouter.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/RegexRouter.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecute("close");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/RegexRouter.html#configure(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/RegexRouter.html#configure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        /// <typeparam name="Arg0Extendsobject"></typeparam>
-        public void Configure<Arg0Extendsobject>(Java.Util.Map<string, Arg0Extendsobject> arg0)
+        public void Configure(Java.Util.Map<string, object> arg0)
         {
             IExecute("configure", arg0);
         }

@@ -30,10 +30,10 @@ namespace Org.Apache.Kafka.Connect.Json
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverterConfig.html#%3Cinit%3E(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverterConfig.html#%3Cinit%3E(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public JsonConverterConfig(Java.Util.Map arg0)
+        public JsonConverterConfig(Java.Util.Map<string, object> arg0)
             : base(arg0)
         {
         }
@@ -46,27 +46,27 @@ namespace Org.Apache.Kafka.Connect.Json
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverterConfig.html#SCHEMAS_ENABLE_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverterConfig.html#SCHEMAS_ENABLE_DEFAULT"/>
         /// </summary>
         public static bool SCHEMAS_ENABLE_DEFAULT { get { return SGetField<bool>(LocalBridgeClazz, "SCHEMAS_ENABLE_DEFAULT"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverterConfig.html#SCHEMAS_CACHE_SIZE_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverterConfig.html#SCHEMAS_CACHE_SIZE_DEFAULT"/>
         /// </summary>
         public static int SCHEMAS_CACHE_SIZE_DEFAULT { get { return SGetField<int>(LocalBridgeClazz, "SCHEMAS_CACHE_SIZE_DEFAULT"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverterConfig.html#DECIMAL_FORMAT_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverterConfig.html#DECIMAL_FORMAT_CONFIG"/>
         /// </summary>
         public static string DECIMAL_FORMAT_CONFIG { get { return SGetField<string>(LocalBridgeClazz, "DECIMAL_FORMAT_CONFIG"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverterConfig.html#DECIMAL_FORMAT_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverterConfig.html#DECIMAL_FORMAT_DEFAULT"/>
         /// </summary>
         public static string DECIMAL_FORMAT_DEFAULT { get { return SGetField<string>(LocalBridgeClazz, "DECIMAL_FORMAT_DEFAULT"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverterConfig.html#SCHEMAS_CACHE_SIZE_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverterConfig.html#SCHEMAS_CACHE_SIZE_CONFIG"/>
         /// </summary>
         public static string SCHEMAS_CACHE_SIZE_CONFIG { get { return SGetField<string>(LocalBridgeClazz, "SCHEMAS_CACHE_SIZE_CONFIG"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverterConfig.html#SCHEMAS_ENABLE_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverterConfig.html#SCHEMAS_ENABLE_CONFIG"/>
         /// </summary>
         public static string SCHEMAS_ENABLE_CONFIG { get { return SGetField<string>(LocalBridgeClazz, "SCHEMAS_ENABLE_CONFIG"); } }
 
@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Connect.Json
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverterConfig.html#configDef()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverterConfig.html#configDef()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Connect.Json
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverterConfig.html#schemasEnabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverterConfig.html#schemasEnabled()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -96,7 +96,7 @@ namespace Org.Apache.Kafka.Connect.Json
             return IExecute<bool>("schemasEnabled");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverterConfig.html#schemaCacheSize()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverterConfig.html#schemaCacheSize()"/>
         /// </summary>
 
         /// <returns><see cref="int"/></returns>
@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Connect.Json
             return IExecute<int>("schemaCacheSize");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverterConfig.html#decimalFormat()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverterConfig.html#decimalFormat()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Connect.Json.DecimalFormat"/></returns>

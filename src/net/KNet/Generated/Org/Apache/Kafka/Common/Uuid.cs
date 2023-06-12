@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Uuid.html#%3Cinit%3E(long,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Uuid.html#%3Cinit%3E(long,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -42,20 +42,16 @@ namespace Org.Apache.Kafka.Common
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.Uuid"/> to <see cref="Java.Lang.Comparable"/>
-        /// </summary>
-        public static implicit operator Java.Lang.Comparable(Org.Apache.Kafka.Common.Uuid t) => t.Cast<Java.Lang.Comparable>();
 
         #endregion
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Uuid.html#METADATA_TOPIC_ID"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Uuid.html#METADATA_TOPIC_ID"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Uuid METADATA_TOPIC_ID { get { return SGetField<Org.Apache.Kafka.Common.Uuid>(LocalBridgeClazz, "METADATA_TOPIC_ID"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Uuid.html#ZERO_UUID"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Uuid.html#ZERO_UUID"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Uuid ZERO_UUID { get { return SGetField<Org.Apache.Kafka.Common.Uuid>(LocalBridgeClazz, "ZERO_UUID"); } }
 
@@ -63,7 +59,7 @@ namespace Org.Apache.Kafka.Common
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Uuid.html#fromString(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Uuid.html#fromString(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Uuid"/></returns>
@@ -72,7 +68,7 @@ namespace Org.Apache.Kafka.Common
             return SExecute<Org.Apache.Kafka.Common.Uuid>(LocalBridgeClazz, "fromString", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Uuid.html#randomUuid()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Uuid.html#randomUuid()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Uuid"/></returns>
@@ -85,21 +81,21 @@ namespace Org.Apache.Kafka.Common
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Uuid.html#getLeastSignificantBits()"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Uuid.html#getLeastSignificantBits()"/> 
         /// </summary>
         public long LeastSignificantBits
         {
             get { return IExecute<long>("getLeastSignificantBits"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Uuid.html#getMostSignificantBits()"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Uuid.html#getMostSignificantBits()"/> 
         /// </summary>
         public long MostSignificantBits
         {
             get { return IExecute<long>("getMostSignificantBits"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Uuid.html#compareTo(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Uuid.html#compareTo(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="int"/></returns>
@@ -108,7 +104,7 @@ namespace Org.Apache.Kafka.Common
             return IExecute<int>("compareTo", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Uuid.html#compareTo(org.apache.kafka.common.Uuid)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Uuid.html#compareTo(org.apache.kafka.common.Uuid)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Uuid"/></param>
         /// <returns><see cref="int"/></returns>

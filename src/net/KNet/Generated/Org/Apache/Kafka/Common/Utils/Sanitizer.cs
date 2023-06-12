@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Sanitizer.html#desanitize(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Sanitizer.html#desanitize(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="string"/></returns>
@@ -51,7 +51,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecute<string>(LocalBridgeClazz, "desanitize", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Sanitizer.html#jmxSanitize(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Sanitizer.html#jmxSanitize(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="string"/></returns>
@@ -60,7 +60,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecute<string>(LocalBridgeClazz, "jmxSanitize", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Sanitizer.html#sanitize(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Sanitizer.html#sanitize(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="string"/></returns>

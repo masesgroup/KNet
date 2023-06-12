@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileLogInputStream.html#nextBatch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileLogInputStream.html#nextBatch()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.RecordBatch"/></returns>
@@ -80,7 +80,7 @@ namespace Org.Apache.Kafka.Common.Record
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileLogInputStream.FileChannelRecordBatch.html#position()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileLogInputStream.FileChannelRecordBatch.html#position()"/>
             /// </summary>
 
             /// <returns><see cref="int"/></returns>

@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Security.Kerberos
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosShortNamer.html#%3Cinit%3E(java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosShortNamer.html#%3Cinit%3E(java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         public KerberosShortNamer(Java.Util.List<Org.Apache.Kafka.Common.Security.Kerberos.KerberosRule> arg0)
@@ -50,7 +50,7 @@ namespace Org.Apache.Kafka.Common.Security.Kerberos
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosShortNamer.html#fromUnparsedRules(java.lang.String,java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosShortNamer.html#fromUnparsedRules(java.lang.String,java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Java.Util.List"/></param>
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Security.Kerberos
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosShortNamer.html#shortName(org.apache.kafka.common.security.kerberos.KerberosName)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosShortNamer.html#shortName(org.apache.kafka.common.security.kerberos.KerberosName)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Security.Kerberos.KerberosName"/></param>
         /// <returns><see cref="string"/></returns>

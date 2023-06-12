@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelBuilders.html#clientChannelBuilder(org.apache.kafka.common.security.auth.SecurityProtocol,org.apache.kafka.common.security.JaasContext.Type,org.apache.kafka.common.config.AbstractConfig,org.apache.kafka.common.network.ListenerName,java.lang.String,org.apache.kafka.common.utils.Time,boolean,org.apache.kafka.common.utils.LogContext)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelBuilders.html#clientChannelBuilder(org.apache.kafka.common.security.auth.SecurityProtocol,org.apache.kafka.common.security.JaasContext.Type,org.apache.kafka.common.config.AbstractConfig,org.apache.kafka.common.network.ListenerName,java.lang.String,org.apache.kafka.common.utils.Time,boolean,org.apache.kafka.common.utils.LogContext)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Security.JaasContext.Type"/></param>
@@ -58,14 +58,13 @@ namespace Org.Apache.Kafka.Common.Network
             return SExecute<Org.Apache.Kafka.Common.Network.ChannelBuilder>(LocalBridgeClazz, "clientChannelBuilder", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelBuilders.html#createPrincipalBuilder(java.util.Map,org.apache.kafka.common.security.kerberos.KerberosShortNamer,org.apache.kafka.common.security.ssl.SslPrincipalMapper)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelBuilders.html#createPrincipalBuilder(java.util.Map,org.apache.kafka.common.security.kerberos.KerberosShortNamer,org.apache.kafka.common.security.ssl.SslPrincipalMapper)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Security.Kerberos.KerberosShortNamer"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Security.Ssl.SslPrincipalMapper"/></param>
-        /// <typeparam name="Arg0Extendsobject"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipalBuilder"/></returns>
-        public static Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipalBuilder CreatePrincipalBuilder<Arg0Extendsobject>(Java.Util.Map<string, Arg0Extendsobject> arg0, Org.Apache.Kafka.Common.Security.Kerberos.KerberosShortNamer arg1, Org.Apache.Kafka.Common.Security.Ssl.SslPrincipalMapper arg2)
+        public static Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipalBuilder CreatePrincipalBuilder(Java.Util.Map<string, object> arg0, Org.Apache.Kafka.Common.Security.Kerberos.KerberosShortNamer arg1, Org.Apache.Kafka.Common.Security.Ssl.SslPrincipalMapper arg2)
         {
             return SExecute<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipalBuilder>(LocalBridgeClazz, "createPrincipalBuilder", arg0, arg1, arg2);
         }

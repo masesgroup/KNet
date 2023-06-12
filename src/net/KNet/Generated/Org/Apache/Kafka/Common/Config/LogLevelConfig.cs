@@ -38,31 +38,31 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/LogLevelConfig.html#DEBUG_LOG_LEVEL"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/LogLevelConfig.html#DEBUG_LOG_LEVEL"/>
         /// </summary>
         public static string DEBUG_LOG_LEVEL { get { return SGetField<string>(LocalBridgeClazz, "DEBUG_LOG_LEVEL"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/LogLevelConfig.html#ERROR_LOG_LEVEL"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/LogLevelConfig.html#ERROR_LOG_LEVEL"/>
         /// </summary>
         public static string ERROR_LOG_LEVEL { get { return SGetField<string>(LocalBridgeClazz, "ERROR_LOG_LEVEL"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/LogLevelConfig.html#FATAL_LOG_LEVEL"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/LogLevelConfig.html#FATAL_LOG_LEVEL"/>
         /// </summary>
         public static string FATAL_LOG_LEVEL { get { return SGetField<string>(LocalBridgeClazz, "FATAL_LOG_LEVEL"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/LogLevelConfig.html#INFO_LOG_LEVEL"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/LogLevelConfig.html#INFO_LOG_LEVEL"/>
         /// </summary>
         public static string INFO_LOG_LEVEL { get { return SGetField<string>(LocalBridgeClazz, "INFO_LOG_LEVEL"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/LogLevelConfig.html#TRACE_LOG_LEVEL"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/LogLevelConfig.html#TRACE_LOG_LEVEL"/>
         /// </summary>
         public static string TRACE_LOG_LEVEL { get { return SGetField<string>(LocalBridgeClazz, "TRACE_LOG_LEVEL"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/LogLevelConfig.html#WARN_LOG_LEVEL"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/LogLevelConfig.html#WARN_LOG_LEVEL"/>
         /// </summary>
         public static string WARN_LOG_LEVEL { get { return SGetField<string>(LocalBridgeClazz, "WARN_LOG_LEVEL"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/LogLevelConfig.html#VALID_LOG_LEVELS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/LogLevelConfig.html#VALID_LOG_LEVELS"/>
         /// </summary>
         public static Java.Util.Set VALID_LOG_LEVELS { get { return SGetField<Java.Util.Set>(LocalBridgeClazz, "VALID_LOG_LEVELS"); } }
 

@@ -38,7 +38,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/StickyAssignor.html#STICKY_ASSIGNOR_NAME"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/StickyAssignor.html#STICKY_ASSIGNOR_NAME"/>
         /// </summary>
         public static string STICKY_ASSIGNOR_NAME { get { return SGetField<string>(LocalBridgeClazz, "STICKY_ASSIGNOR_NAME"); } }
 

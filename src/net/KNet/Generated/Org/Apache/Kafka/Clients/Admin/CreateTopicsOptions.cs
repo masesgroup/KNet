@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/CreateTopicsOptions.html#shouldRetryOnQuotaViolation()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/CreateTopicsOptions.html#shouldRetryOnQuotaViolation()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<bool>("shouldRetryOnQuotaViolation");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/CreateTopicsOptions.html#shouldValidateOnly()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/CreateTopicsOptions.html#shouldValidateOnly()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<bool>("shouldValidateOnly");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/CreateTopicsOptions.html#retryOnQuotaViolation(boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/CreateTopicsOptions.html#retryOnQuotaViolation(boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.CreateTopicsOptions"/></returns>
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.CreateTopicsOptions>("retryOnQuotaViolation", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/CreateTopicsOptions.html#validateOnly(boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/CreateTopicsOptions.html#validateOnly(boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.CreateTopicsOptions"/></returns>

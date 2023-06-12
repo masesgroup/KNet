@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Streams.State
 {
+    #region ITimestampedBytesStore
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/TimestampedBytesStore.html"/>
+    /// </summary>
+    public partial interface ITimestampedBytesStore
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region TimestampedBytesStore
-    public partial class TimestampedBytesStore
+    public partial class TimestampedBytesStore : Org.Apache.Kafka.Streams.State.ITimestampedBytesStore
     {
         #region Constructors
 
@@ -42,7 +60,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/TimestampedBytesStore.html#convertToTimestampedFormat(byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/TimestampedBytesStore.html#convertToTimestampedFormat(byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <returns><see cref="byte"/></returns>

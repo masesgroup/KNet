@@ -33,10 +33,6 @@ namespace Org.Apache.Kafka.Common.Replica
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.Replica.RackAwareReplicaSelector"/> to <see cref="Org.Apache.Kafka.Common.Replica.ReplicaSelector"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Common.Replica.ReplicaSelector(Org.Apache.Kafka.Common.Replica.RackAwareReplicaSelector t) => t.Cast<Org.Apache.Kafka.Common.Replica.ReplicaSelector>();
 
         #endregion
 
@@ -50,7 +46,7 @@ namespace Org.Apache.Kafka.Common.Replica
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/RackAwareReplicaSelector.html#select(org.apache.kafka.common.TopicPartition,org.apache.kafka.common.replica.ClientMetadata,org.apache.kafka.common.replica.PartitionView)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/RackAwareReplicaSelector.html#select(org.apache.kafka.common.TopicPartition,org.apache.kafka.common.replica.ClientMetadata,org.apache.kafka.common.replica.PartitionView)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Replica.ClientMetadata"/></param>

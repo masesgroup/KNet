@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Common.Protocol
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Protocol.html#toHtml()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Protocol.html#toHtml()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -51,7 +51,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return SExecute<string>(LocalBridgeClazz, "toHtml");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Protocol.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Protocol.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         public static void Main(string[] arg0)

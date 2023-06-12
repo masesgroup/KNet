@@ -42,7 +42,7 @@ namespace Kafka.Admin
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.html#isDebugEnabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.html#isDebugEnabled()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -51,7 +51,7 @@ namespace Kafka.Admin
             return SExecute<bool>(LocalBridgeClazz, "isDebugEnabled");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.html#isTraceEnabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.html#isTraceEnabled()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -60,7 +60,7 @@ namespace Kafka.Admin
             return SExecute<bool>(LocalBridgeClazz, "isTraceEnabled");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.html#MISSING_COLUMN_VALUE()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.html#MISSING_COLUMN_VALUE()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -69,7 +69,7 @@ namespace Kafka.Admin
             return SExecute<string>(LocalBridgeClazz, "MISSING_COLUMN_VALUE");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="args"><see cref="string"/></param>
         public static void Main(string[] args)
@@ -77,7 +77,7 @@ namespace Kafka.Admin
             SExecute(LocalBridgeClazz, "main", new object[] { args });
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.html#run(kafka.admin.ConsumerGroupCommand.ConsumerGroupCommandOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.html#run(kafka.admin.ConsumerGroupCommand.ConsumerGroupCommandOptions)"/>
         /// </summary>
         /// <param name="opts"><see cref="Kafka.Admin.ConsumerGroupCommand.ConsumerGroupCommandOptions"/></param>
         public static void Run(Kafka.Admin.ConsumerGroupCommand.ConsumerGroupCommandOptions opts)
@@ -97,7 +97,7 @@ namespace Kafka.Admin
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#%3Cinit%3E(java.lang.String[])"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#%3Cinit%3E(java.lang.String[])"/>
             /// </summary>
             /// <param name="args"><see cref="string"/></param>
             public ConsumerGroupCommandOptions(string[] args)
@@ -121,7 +121,7 @@ namespace Kafka.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#AllGroupsDoc()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#AllGroupsDoc()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -130,7 +130,7 @@ namespace Kafka.Admin
                 return IExecute<string>("AllGroupsDoc");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#AllTopicsDoc()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#AllTopicsDoc()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -139,7 +139,7 @@ namespace Kafka.Admin
                 return IExecute<string>("AllTopicsDoc");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#BootstrapServerDoc()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#BootstrapServerDoc()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -148,7 +148,7 @@ namespace Kafka.Admin
                 return IExecute<string>("BootstrapServerDoc");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#CommandConfigDoc()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#CommandConfigDoc()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -157,7 +157,7 @@ namespace Kafka.Admin
                 return IExecute<string>("CommandConfigDoc");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#DeleteDoc()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#DeleteDoc()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -166,7 +166,7 @@ namespace Kafka.Admin
                 return IExecute<string>("DeleteDoc");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#DeleteOffsetsDoc()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#DeleteOffsetsDoc()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -175,7 +175,7 @@ namespace Kafka.Admin
                 return IExecute<string>("DeleteOffsetsDoc");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#DescribeDoc()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#DescribeDoc()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -184,7 +184,7 @@ namespace Kafka.Admin
                 return IExecute<string>("DescribeDoc");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#DryRunDoc()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#DryRunDoc()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -193,7 +193,7 @@ namespace Kafka.Admin
                 return IExecute<string>("DryRunDoc");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#ExecuteDoc()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#ExecuteDoc()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -202,7 +202,7 @@ namespace Kafka.Admin
                 return IExecute<string>("ExecuteDoc");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#ExportDoc()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#ExportDoc()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -211,7 +211,7 @@ namespace Kafka.Admin
                 return IExecute<string>("ExportDoc");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#GroupDoc()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#GroupDoc()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -220,7 +220,7 @@ namespace Kafka.Admin
                 return IExecute<string>("GroupDoc");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#ListDoc()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#ListDoc()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -229,7 +229,7 @@ namespace Kafka.Admin
                 return IExecute<string>("ListDoc");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#MembersDoc()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#MembersDoc()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -238,7 +238,7 @@ namespace Kafka.Admin
                 return IExecute<string>("MembersDoc");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#nl()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#nl()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -247,7 +247,7 @@ namespace Kafka.Admin
                 return IExecute<string>("nl");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#OffsetsDoc()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#OffsetsDoc()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -256,7 +256,7 @@ namespace Kafka.Admin
                 return IExecute<string>("OffsetsDoc");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#ResetByDurationDoc()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#ResetByDurationDoc()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -265,7 +265,7 @@ namespace Kafka.Admin
                 return IExecute<string>("ResetByDurationDoc");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#ResetFromFileDoc()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#ResetFromFileDoc()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -274,7 +274,7 @@ namespace Kafka.Admin
                 return IExecute<string>("ResetFromFileDoc");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#ResetOffsetsDoc()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#ResetOffsetsDoc()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -283,7 +283,7 @@ namespace Kafka.Admin
                 return IExecute<string>("ResetOffsetsDoc");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#ResetShiftByDoc()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#ResetShiftByDoc()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -292,7 +292,7 @@ namespace Kafka.Admin
                 return IExecute<string>("ResetShiftByDoc");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#ResetToCurrentDoc()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#ResetToCurrentDoc()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -301,7 +301,7 @@ namespace Kafka.Admin
                 return IExecute<string>("ResetToCurrentDoc");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#ResetToDatetimeDoc()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#ResetToDatetimeDoc()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -310,7 +310,7 @@ namespace Kafka.Admin
                 return IExecute<string>("ResetToDatetimeDoc");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#ResetToEarliestDoc()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#ResetToEarliestDoc()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -319,7 +319,7 @@ namespace Kafka.Admin
                 return IExecute<string>("ResetToEarliestDoc");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#ResetToLatestDoc()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#ResetToLatestDoc()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -328,7 +328,7 @@ namespace Kafka.Admin
                 return IExecute<string>("ResetToLatestDoc");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#ResetToOffsetDoc()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#ResetToOffsetDoc()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -337,7 +337,7 @@ namespace Kafka.Admin
                 return IExecute<string>("ResetToOffsetDoc");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#StateDoc()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#StateDoc()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -346,7 +346,7 @@ namespace Kafka.Admin
                 return IExecute<string>("StateDoc");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#TimeoutMsDoc()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#TimeoutMsDoc()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -355,7 +355,7 @@ namespace Kafka.Admin
                 return IExecute<string>("TimeoutMsDoc");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#TopicDoc()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#TopicDoc()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -364,7 +364,7 @@ namespace Kafka.Admin
                 return IExecute<string>("TopicDoc");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#VerboseDoc()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#VerboseDoc()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -373,7 +373,7 @@ namespace Kafka.Admin
                 return IExecute<string>("VerboseDoc");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#checkArgs()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html#checkArgs()"/>
             /// </summary>
             public void CheckArgs()
             {
@@ -411,7 +411,7 @@ namespace Kafka.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupService.html#opts()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupService.html#opts()"/>
             /// </summary>
 
             /// <returns><see cref="Kafka.Admin.ConsumerGroupCommand.ConsumerGroupCommandOptions"/></returns>
@@ -420,7 +420,7 @@ namespace Kafka.Admin
                 return IExecute<Kafka.Admin.ConsumerGroupCommand.ConsumerGroupCommandOptions>("opts");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupService.html#collectGroupState(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupService.html#collectGroupState(java.lang.String)"/>
             /// </summary>
             /// <param name="groupId"><see cref="string"/></param>
             /// <returns><see cref="Kafka.Admin.ConsumerGroupCommand.GroupState"/></returns>
@@ -429,28 +429,28 @@ namespace Kafka.Admin
                 return IExecute<Kafka.Admin.ConsumerGroupCommand.GroupState>("collectGroupState", groupId);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupService.html#close()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupService.html#close()"/>
             /// </summary>
             public void Close()
             {
                 IExecute("close");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupService.html#deleteOffsets()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupService.html#deleteOffsets()"/>
             /// </summary>
             public void DeleteOffsets()
             {
                 IExecute("deleteOffsets");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupService.html#describeGroups()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupService.html#describeGroups()"/>
             /// </summary>
             public void DescribeGroups()
             {
                 IExecute("describeGroups");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupService.html#listGroups()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupService.html#listGroups()"/>
             /// </summary>
             public void ListGroups()
             {
@@ -499,11 +499,11 @@ namespace Kafka.Admin
         #endregion
 
         #region CsvRecordNoGroup
-        public partial class CsvRecordNoGroup
+        public partial class CsvRecordNoGroup : Java.Io.ISerializable
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordNoGroup.html#%3Cinit%3E(java.lang.String,int,long)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordNoGroup.html#%3Cinit%3E(java.lang.String,int,long)"/>
             /// </summary>
             /// <param name="topic"><see cref="string"/></param>
             /// <param name="partition"><see cref="int"/></param>
@@ -533,7 +533,7 @@ namespace Kafka.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordNoGroup.html#canEqual(java.lang.Object)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordNoGroup.html#canEqual(java.lang.Object)"/>
             /// </summary>
             /// <param name="x$1"><see cref="object"/></param>
             /// <returns><see cref="bool"/></returns>
@@ -542,7 +542,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("canEqual", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordNoGroup.html#partition()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordNoGroup.html#partition()"/>
             /// </summary>
 
             /// <returns><see cref="int"/></returns>
@@ -551,7 +551,7 @@ namespace Kafka.Admin
                 return IExecute<int>("partition");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordNoGroup.html#productArity()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordNoGroup.html#productArity()"/>
             /// </summary>
 
             /// <returns><see cref="int"/></returns>
@@ -560,7 +560,7 @@ namespace Kafka.Admin
                 return IExecute<int>("productArity");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordNoGroup.html#productElement(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordNoGroup.html#productElement(int)"/>
             /// </summary>
             /// <param name="x$1"><see cref="int"/></param>
             /// <returns><see cref="object"/></returns>
@@ -569,7 +569,7 @@ namespace Kafka.Admin
                 return IExecute("productElement", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordNoGroup.html#productElementName(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordNoGroup.html#productElementName(int)"/>
             /// </summary>
             /// <param name="x$1"><see cref="int"/></param>
             /// <returns><see cref="string"/></returns>
@@ -578,7 +578,7 @@ namespace Kafka.Admin
                 return IExecute<string>("productElementName", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordNoGroup.html#productPrefix()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordNoGroup.html#productPrefix()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -587,7 +587,7 @@ namespace Kafka.Admin
                 return IExecute<string>("productPrefix");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordNoGroup.html#topic()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordNoGroup.html#topic()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -596,7 +596,7 @@ namespace Kafka.Admin
                 return IExecute<string>("topic");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordNoGroup.html#copy(java.lang.String,int,long)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordNoGroup.html#copy(java.lang.String,int,long)"/>
             /// </summary>
             /// <param name="topic"><see cref="string"/></param>
             /// <param name="partition"><see cref="int"/></param>
@@ -607,7 +607,7 @@ namespace Kafka.Admin
                 return IExecute<Kafka.Admin.ConsumerGroupCommand.CsvRecordNoGroup>("copy", topic, partition, offset);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordNoGroup.html#offset()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordNoGroup.html#offset()"/>
             /// </summary>
 
             /// <returns><see cref="long"/></returns>
@@ -627,11 +627,11 @@ namespace Kafka.Admin
         #endregion
 
         #region CsvRecordWithGroup
-        public partial class CsvRecordWithGroup
+        public partial class CsvRecordWithGroup : Java.Io.ISerializable
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordWithGroup.html#%3Cinit%3E(java.lang.String,java.lang.String,int,long)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordWithGroup.html#%3Cinit%3E(java.lang.String,java.lang.String,int,long)"/>
             /// </summary>
             /// <param name="group"><see cref="string"/></param>
             /// <param name="topic"><see cref="string"/></param>
@@ -662,7 +662,7 @@ namespace Kafka.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordWithGroup.html#canEqual(java.lang.Object)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordWithGroup.html#canEqual(java.lang.Object)"/>
             /// </summary>
             /// <param name="x$1"><see cref="object"/></param>
             /// <returns><see cref="bool"/></returns>
@@ -671,7 +671,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("canEqual", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordWithGroup.html#partition()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordWithGroup.html#partition()"/>
             /// </summary>
 
             /// <returns><see cref="int"/></returns>
@@ -680,7 +680,7 @@ namespace Kafka.Admin
                 return IExecute<int>("partition");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordWithGroup.html#productArity()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordWithGroup.html#productArity()"/>
             /// </summary>
 
             /// <returns><see cref="int"/></returns>
@@ -689,7 +689,7 @@ namespace Kafka.Admin
                 return IExecute<int>("productArity");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordWithGroup.html#productElement(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordWithGroup.html#productElement(int)"/>
             /// </summary>
             /// <param name="x$1"><see cref="int"/></param>
             /// <returns><see cref="object"/></returns>
@@ -698,7 +698,7 @@ namespace Kafka.Admin
                 return IExecute("productElement", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordWithGroup.html#group()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordWithGroup.html#group()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -707,7 +707,7 @@ namespace Kafka.Admin
                 return IExecute<string>("group");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordWithGroup.html#productElementName(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordWithGroup.html#productElementName(int)"/>
             /// </summary>
             /// <param name="x$1"><see cref="int"/></param>
             /// <returns><see cref="string"/></returns>
@@ -716,7 +716,7 @@ namespace Kafka.Admin
                 return IExecute<string>("productElementName", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordWithGroup.html#productPrefix()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordWithGroup.html#productPrefix()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -725,7 +725,7 @@ namespace Kafka.Admin
                 return IExecute<string>("productPrefix");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordWithGroup.html#topic()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordWithGroup.html#topic()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -734,7 +734,7 @@ namespace Kafka.Admin
                 return IExecute<string>("topic");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordWithGroup.html#copy(java.lang.String,java.lang.String,int,long)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordWithGroup.html#copy(java.lang.String,java.lang.String,int,long)"/>
             /// </summary>
             /// <param name="group"><see cref="string"/></param>
             /// <param name="topic"><see cref="string"/></param>
@@ -746,7 +746,7 @@ namespace Kafka.Admin
                 return IExecute<Kafka.Admin.ConsumerGroupCommand.CsvRecordWithGroup>("copy", group, topic, partition, offset);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordWithGroup.html#offset()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordWithGroup.html#offset()"/>
             /// </summary>
 
             /// <returns><see cref="long"/></returns>
@@ -766,7 +766,7 @@ namespace Kafka.Admin
         #endregion
 
         #region CsvUtils
-        public partial class CsvUtils
+        public partial class CsvUtils : Java.Io.ISerializable
         {
             #region Constructors
 
@@ -790,7 +790,7 @@ namespace Kafka.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvUtils.html#canEqual(java.lang.Object)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvUtils.html#canEqual(java.lang.Object)"/>
             /// </summary>
             /// <param name="x$1"><see cref="object"/></param>
             /// <returns><see cref="bool"/></returns>
@@ -799,7 +799,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("canEqual", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvUtils.html#productArity()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvUtils.html#productArity()"/>
             /// </summary>
 
             /// <returns><see cref="int"/></returns>
@@ -808,7 +808,7 @@ namespace Kafka.Admin
                 return IExecute<int>("productArity");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvUtils.html#productElement(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvUtils.html#productElement(int)"/>
             /// </summary>
             /// <param name="x$1"><see cref="int"/></param>
             /// <returns><see cref="object"/></returns>
@@ -817,7 +817,7 @@ namespace Kafka.Admin
                 return IExecute("productElement", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvUtils.html#productElementName(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvUtils.html#productElementName(int)"/>
             /// </summary>
             /// <param name="x$1"><see cref="int"/></param>
             /// <returns><see cref="string"/></returns>
@@ -826,7 +826,7 @@ namespace Kafka.Admin
                 return IExecute<string>("productElementName", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvUtils.html#productPrefix()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvUtils.html#productPrefix()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -835,7 +835,7 @@ namespace Kafka.Admin
                 return IExecute<string>("productPrefix");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvUtils.html#copy()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvUtils.html#copy()"/>
             /// </summary>
 
             /// <returns><see cref="Kafka.Admin.ConsumerGroupCommand.CsvUtils"/></returns>
@@ -855,11 +855,11 @@ namespace Kafka.Admin
         #endregion
 
         #region GroupState
-        public partial class GroupState
+        public partial class GroupState : Java.Io.ISerializable
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.GroupState.html#%3Cinit%3E(java.lang.String,org.apache.kafka.common.Node,java.lang.String,java.lang.String,int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.GroupState.html#%3Cinit%3E(java.lang.String,org.apache.kafka.common.Node,java.lang.String,java.lang.String,int)"/>
             /// </summary>
             /// <param name="group"><see cref="string"/></param>
             /// <param name="coordinator"><see cref="Org.Apache.Kafka.Common.Node"/></param>
@@ -891,7 +891,7 @@ namespace Kafka.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.GroupState.html#canEqual(java.lang.Object)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.GroupState.html#canEqual(java.lang.Object)"/>
             /// </summary>
             /// <param name="x$1"><see cref="object"/></param>
             /// <returns><see cref="bool"/></returns>
@@ -900,7 +900,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("canEqual", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.GroupState.html#numMembers()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.GroupState.html#numMembers()"/>
             /// </summary>
 
             /// <returns><see cref="int"/></returns>
@@ -909,7 +909,7 @@ namespace Kafka.Admin
                 return IExecute<int>("numMembers");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.GroupState.html#productArity()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.GroupState.html#productArity()"/>
             /// </summary>
 
             /// <returns><see cref="int"/></returns>
@@ -918,7 +918,7 @@ namespace Kafka.Admin
                 return IExecute<int>("productArity");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.GroupState.html#productElement(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.GroupState.html#productElement(int)"/>
             /// </summary>
             /// <param name="x$1"><see cref="int"/></param>
             /// <returns><see cref="object"/></returns>
@@ -927,7 +927,7 @@ namespace Kafka.Admin
                 return IExecute("productElement", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.GroupState.html#assignmentStrategy()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.GroupState.html#assignmentStrategy()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -936,7 +936,7 @@ namespace Kafka.Admin
                 return IExecute<string>("assignmentStrategy");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.GroupState.html#group()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.GroupState.html#group()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -945,7 +945,7 @@ namespace Kafka.Admin
                 return IExecute<string>("group");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.GroupState.html#productElementName(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.GroupState.html#productElementName(int)"/>
             /// </summary>
             /// <param name="x$1"><see cref="int"/></param>
             /// <returns><see cref="string"/></returns>
@@ -954,7 +954,7 @@ namespace Kafka.Admin
                 return IExecute<string>("productElementName", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.GroupState.html#productPrefix()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.GroupState.html#productPrefix()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -963,7 +963,7 @@ namespace Kafka.Admin
                 return IExecute<string>("productPrefix");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.GroupState.html#state()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.GroupState.html#state()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -972,7 +972,7 @@ namespace Kafka.Admin
                 return IExecute<string>("state");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.GroupState.html#copy(java.lang.String,org.apache.kafka.common.Node,java.lang.String,java.lang.String,int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.GroupState.html#copy(java.lang.String,org.apache.kafka.common.Node,java.lang.String,java.lang.String,int)"/>
             /// </summary>
             /// <param name="group"><see cref="string"/></param>
             /// <param name="coordinator"><see cref="Org.Apache.Kafka.Common.Node"/></param>
@@ -985,7 +985,7 @@ namespace Kafka.Admin
                 return IExecute<Kafka.Admin.ConsumerGroupCommand.GroupState>("copy", group, coordinator, assignmentStrategy, state, numMembers);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.GroupState.html#coordinator()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.GroupState.html#coordinator()"/>
             /// </summary>
 
             /// <returns><see cref="Org.Apache.Kafka.Common.Node"/></returns>
@@ -1036,7 +1036,7 @@ namespace Kafka.Admin
         #endregion
 
         #region MemberAssignmentState
-        public partial class MemberAssignmentState
+        public partial class MemberAssignmentState : Java.Io.ISerializable
         {
             #region Constructors
 
@@ -1060,7 +1060,7 @@ namespace Kafka.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.MemberAssignmentState.html#canEqual(java.lang.Object)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.MemberAssignmentState.html#canEqual(java.lang.Object)"/>
             /// </summary>
             /// <param name="x$1"><see cref="object"/></param>
             /// <returns><see cref="bool"/></returns>
@@ -1069,7 +1069,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("canEqual", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.MemberAssignmentState.html#numPartitions()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.MemberAssignmentState.html#numPartitions()"/>
             /// </summary>
 
             /// <returns><see cref="int"/></returns>
@@ -1078,7 +1078,7 @@ namespace Kafka.Admin
                 return IExecute<int>("numPartitions");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.MemberAssignmentState.html#productArity()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.MemberAssignmentState.html#productArity()"/>
             /// </summary>
 
             /// <returns><see cref="int"/></returns>
@@ -1087,7 +1087,7 @@ namespace Kafka.Admin
                 return IExecute<int>("productArity");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.MemberAssignmentState.html#productElement(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.MemberAssignmentState.html#productElement(int)"/>
             /// </summary>
             /// <param name="x$1"><see cref="int"/></param>
             /// <returns><see cref="object"/></returns>
@@ -1096,7 +1096,7 @@ namespace Kafka.Admin
                 return IExecute("productElement", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.MemberAssignmentState.html#clientId()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.MemberAssignmentState.html#clientId()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -1105,7 +1105,7 @@ namespace Kafka.Admin
                 return IExecute<string>("clientId");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.MemberAssignmentState.html#consumerId()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.MemberAssignmentState.html#consumerId()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -1114,7 +1114,7 @@ namespace Kafka.Admin
                 return IExecute<string>("consumerId");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.MemberAssignmentState.html#group()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.MemberAssignmentState.html#group()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -1123,7 +1123,7 @@ namespace Kafka.Admin
                 return IExecute<string>("group");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.MemberAssignmentState.html#groupInstanceId()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.MemberAssignmentState.html#groupInstanceId()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -1132,7 +1132,7 @@ namespace Kafka.Admin
                 return IExecute<string>("groupInstanceId");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.MemberAssignmentState.html#host()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.MemberAssignmentState.html#host()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -1141,7 +1141,7 @@ namespace Kafka.Admin
                 return IExecute<string>("host");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.MemberAssignmentState.html#productElementName(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.MemberAssignmentState.html#productElementName(int)"/>
             /// </summary>
             /// <param name="x$1"><see cref="int"/></param>
             /// <returns><see cref="string"/></returns>
@@ -1150,7 +1150,7 @@ namespace Kafka.Admin
                 return IExecute<string>("productElementName", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.MemberAssignmentState.html#productPrefix()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.MemberAssignmentState.html#productPrefix()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -1170,7 +1170,7 @@ namespace Kafka.Admin
         #endregion
 
         #region PartitionAssignmentState
-        public partial class PartitionAssignmentState
+        public partial class PartitionAssignmentState : Java.Io.ISerializable
         {
             #region Constructors
 
@@ -1194,7 +1194,7 @@ namespace Kafka.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.PartitionAssignmentState.html#canEqual(java.lang.Object)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.PartitionAssignmentState.html#canEqual(java.lang.Object)"/>
             /// </summary>
             /// <param name="x$1"><see cref="object"/></param>
             /// <returns><see cref="bool"/></returns>
@@ -1203,7 +1203,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("canEqual", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.PartitionAssignmentState.html#productArity()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.PartitionAssignmentState.html#productArity()"/>
             /// </summary>
 
             /// <returns><see cref="int"/></returns>
@@ -1212,7 +1212,7 @@ namespace Kafka.Admin
                 return IExecute<int>("productArity");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.PartitionAssignmentState.html#productElement(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.PartitionAssignmentState.html#productElement(int)"/>
             /// </summary>
             /// <param name="x$1"><see cref="int"/></param>
             /// <returns><see cref="object"/></returns>
@@ -1221,7 +1221,7 @@ namespace Kafka.Admin
                 return IExecute("productElement", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.PartitionAssignmentState.html#group()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.PartitionAssignmentState.html#group()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -1230,7 +1230,7 @@ namespace Kafka.Admin
                 return IExecute<string>("group");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.PartitionAssignmentState.html#productElementName(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.PartitionAssignmentState.html#productElementName(int)"/>
             /// </summary>
             /// <param name="x$1"><see cref="int"/></param>
             /// <returns><see cref="string"/></returns>
@@ -1239,7 +1239,7 @@ namespace Kafka.Admin
                 return IExecute<string>("productElementName", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.PartitionAssignmentState.html#productPrefix()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.PartitionAssignmentState.html#productPrefix()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>

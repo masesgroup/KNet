@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Metrics
 {
+    #region IStat
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Stat.html"/>
+    /// </summary>
+    public partial interface IStat
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region Stat
-    public partial class Stat
+    public partial class Stat : Org.Apache.Kafka.Common.Metrics.IStat
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Stat.html#record(org.apache.kafka.common.metrics.MetricConfig,double,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Stat.html#record(org.apache.kafka.common.metrics.MetricConfig,double,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Metrics.MetricConfig"/></param>
         /// <param name="arg1"><see cref="double"/></param>

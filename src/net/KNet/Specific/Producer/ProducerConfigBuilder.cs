@@ -24,7 +24,7 @@ namespace MASES.KNet.Producer
 {
     public class ProducerConfigBuilder : CommonClientConfigsBuilder<ProducerConfigBuilder>
     {
-        public enum AcksType
+        public enum AcksTypes
         {
             All,
             MinusOne,
@@ -78,33 +78,33 @@ namespace MASES.KNet.Producer
         }
 
         // "all", "-1", "0", "1"
-        public ProducerConfigBuilder.AcksType Acks
+        public ProducerConfigBuilder.AcksTypes Acks
         {
             get
             {
                 var strName = GetProperty<string>(ProducerConfig.ACKS_CONFIG);
-                if (strName == "all") return ProducerConfigBuilder.AcksType.All;
-                else if (strName == "-1") return ProducerConfigBuilder.AcksType.MinusOne;
-                else if (strName == "0") return ProducerConfigBuilder.AcksType.None;
-                else if (strName == "1") return ProducerConfigBuilder.AcksType.One;
+                if (strName == "all") return ProducerConfigBuilder.AcksTypes.All;
+                else if (strName == "-1") return ProducerConfigBuilder.AcksTypes.MinusOne;
+                else if (strName == "0") return ProducerConfigBuilder.AcksTypes.None;
+                else if (strName == "1") return ProducerConfigBuilder.AcksTypes.One;
 
-                return ProducerConfigBuilder.AcksType.None;
+                return ProducerConfigBuilder.AcksTypes.None;
             }
             set
             {
                 string str = value switch
                 {
-                    ProducerConfigBuilder.AcksType.All => "all",
-                    ProducerConfigBuilder.AcksType.MinusOne => "-1",
-                    ProducerConfigBuilder.AcksType.None => "0",
-                    ProducerConfigBuilder.AcksType.One => "1",
+                    ProducerConfigBuilder.AcksTypes.All => "all",
+                    ProducerConfigBuilder.AcksTypes.MinusOne => "-1",
+                    ProducerConfigBuilder.AcksTypes.None => "0",
+                    ProducerConfigBuilder.AcksTypes.One => "1",
                     _ => "all",
                 };
                 SetProperty(ProducerConfig.ACKS_CONFIG, str);
             }
         }
 
-        public ProducerConfigBuilder WithAcks(ProducerConfigBuilder.AcksType acks)
+        public ProducerConfigBuilder WithAcks(ProducerConfigBuilder.AcksTypes acks)
         {
             var clone = Clone();
             clone.Acks = acks;

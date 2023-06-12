@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.html#%3Cinit%3E(java.lang.String,org.apache.kafka.common.protocol.types.Type,java.lang.String,boolean,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.html#%3Cinit%3E(java.lang.String,org.apache.kafka.common.protocol.types.Type,java.lang.String,boolean,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Type"/></param>
@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.html#%3Cinit%3E(java.lang.String,org.apache.kafka.common.protocol.types.Type,java.lang.String,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.html#%3Cinit%3E(java.lang.String,org.apache.kafka.common.protocol.types.Type,java.lang.String,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Type"/></param>
@@ -53,7 +53,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.html#%3Cinit%3E(java.lang.String,org.apache.kafka.common.protocol.types.Type,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.html#%3Cinit%3E(java.lang.String,org.apache.kafka.common.protocol.types.Type,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Type"/></param>
@@ -63,7 +63,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.html#%3Cinit%3E(java.lang.String,org.apache.kafka.common.protocol.types.Type)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.html#%3Cinit%3E(java.lang.String,org.apache.kafka.common.protocol.types.Type)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Type"/></param>
@@ -80,23 +80,23 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.html#hasDefaultValue"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.html#hasDefaultValue"/>
         /// </summary>
         public bool hasDefaultValue { get { return IGetField<bool>("hasDefaultValue"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.html#defaultValue"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.html#defaultValue"/>
         /// </summary>
         public object defaultValue { get { return IGetField("defaultValue"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.html#docString"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.html#docString"/>
         /// </summary>
         public string docString { get { return IGetField<string>("docString"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.html#name"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.html#name"/>
         /// </summary>
         public string name { get { return IGetField<string>("name"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.html#type"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.html#type"/>
         /// </summary>
         public Org.Apache.Kafka.Common.Protocol.Types.Type type { get { return IGetField<Org.Apache.Kafka.Common.Protocol.Types.Type>("type"); } }
 
@@ -116,7 +116,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Array.html#%3Cinit%3E(java.lang.String,org.apache.kafka.common.protocol.types.Type,java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Array.html#%3Cinit%3E(java.lang.String,org.apache.kafka.common.protocol.types.Type,java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
             /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Type"/></param>
@@ -157,7 +157,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Bool.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Bool.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
             /// <param name="arg1"><see cref="string"/></param>
@@ -197,7 +197,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.CompactArray.html#%3Cinit%3E(java.lang.String,org.apache.kafka.common.protocol.types.Type,java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.CompactArray.html#%3Cinit%3E(java.lang.String,org.apache.kafka.common.protocol.types.Type,java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
             /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Type"/></param>
@@ -238,7 +238,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.CompactNullableStr.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.CompactNullableStr.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
             /// <param name="arg1"><see cref="string"/></param>
@@ -278,7 +278,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.CompactStr.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.CompactStr.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
             /// <param name="arg1"><see cref="string"/></param>
@@ -318,7 +318,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.ComplexArray.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.ComplexArray.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
             /// <param name="arg1"><see cref="string"/></param>
@@ -335,11 +335,11 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.ComplexArray.html#docString"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.ComplexArray.html#docString"/>
             /// </summary>
             public string docString { get { return IGetField<string>("docString"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.ComplexArray.html#name"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.ComplexArray.html#name"/>
             /// </summary>
             public string name { get { return IGetField<string>("name"); } }
 
@@ -351,7 +351,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.ComplexArray.html#nullableWithFields(org.apache.kafka.common.protocol.types.Field[])"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.ComplexArray.html#nullableWithFields(org.apache.kafka.common.protocol.types.Field[])"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field"/></returns>
@@ -360,7 +360,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
                 if (arg0.Length == 0) return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Field>("nullableWithFields"); else return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Field>("nullableWithFields", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.ComplexArray.html#withFields(java.lang.String,org.apache.kafka.common.protocol.types.Field[])"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.ComplexArray.html#withFields(java.lang.String,org.apache.kafka.common.protocol.types.Field[])"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
             /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field"/></param>
@@ -370,7 +370,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
                 if (arg1.Length == 0) return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Field>("withFields", arg0); else return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Field>("withFields", arg0, arg1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.ComplexArray.html#withFields(org.apache.kafka.common.protocol.types.Field[])"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.ComplexArray.html#withFields(org.apache.kafka.common.protocol.types.Field[])"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field"/></returns>
@@ -394,7 +394,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Float64.html#%3Cinit%3E(java.lang.String,java.lang.String,double)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Float64.html#%3Cinit%3E(java.lang.String,java.lang.String,double)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
             /// <param name="arg1"><see cref="string"/></param>
@@ -404,7 +404,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             {
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Float64.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Float64.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
             /// <param name="arg1"><see cref="string"/></param>
@@ -444,7 +444,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Int16.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Int16.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
             /// <param name="arg1"><see cref="string"/></param>
@@ -484,7 +484,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Int32.html#%3Cinit%3E(java.lang.String,java.lang.String,int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Int32.html#%3Cinit%3E(java.lang.String,java.lang.String,int)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
             /// <param name="arg1"><see cref="string"/></param>
@@ -494,7 +494,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             {
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Int32.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Int32.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
             /// <param name="arg1"><see cref="string"/></param>
@@ -534,7 +534,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Int64.html#%3Cinit%3E(java.lang.String,java.lang.String,long)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Int64.html#%3Cinit%3E(java.lang.String,java.lang.String,long)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
             /// <param name="arg1"><see cref="string"/></param>
@@ -544,7 +544,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             {
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Int64.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Int64.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
             /// <param name="arg1"><see cref="string"/></param>
@@ -584,7 +584,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Int8.html#%3Cinit%3E(java.lang.String,java.lang.String,byte)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Int8.html#%3Cinit%3E(java.lang.String,java.lang.String,byte)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
             /// <param name="arg1"><see cref="string"/></param>
@@ -594,7 +594,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             {
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Int8.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Int8.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
             /// <param name="arg1"><see cref="string"/></param>
@@ -634,7 +634,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.NullableStr.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.NullableStr.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
             /// <param name="arg1"><see cref="string"/></param>
@@ -674,7 +674,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Str.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Str.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
             /// <param name="arg1"><see cref="string"/></param>
@@ -714,7 +714,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.TaggedFieldsSection.html#%3Cinit%3E(org.apache.kafka.common.protocol.types.Type)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.TaggedFieldsSection.html#%3Cinit%3E(org.apache.kafka.common.protocol.types.Type)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Type"/></param>
             public TaggedFieldsSection(Org.Apache.Kafka.Common.Protocol.Types.Type arg0)
@@ -734,7 +734,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.TaggedFieldsSection.html#of(java.lang.Object[])"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.TaggedFieldsSection.html#of(java.lang.Object[])"/>
             /// </summary>
             /// <param name="arg0"><see cref="object"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.TaggedFieldsSection"/></returns>
@@ -762,7 +762,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Uint16.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Uint16.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
             /// <param name="arg1"><see cref="string"/></param>
@@ -802,7 +802,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Uint32.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Uint32.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
             /// <param name="arg1"><see cref="string"/></param>
@@ -842,7 +842,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.UUID.html#%3Cinit%3E(java.lang.String,java.lang.String,org.apache.kafka.common.protocol.types.Field.UUID)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.UUID.html#%3Cinit%3E(java.lang.String,java.lang.String,org.apache.kafka.common.protocol.types.Field.UUID)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
             /// <param name="arg1"><see cref="string"/></param>
@@ -852,7 +852,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             {
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.UUID.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.UUID.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
             /// <param name="arg1"><see cref="string"/></param>

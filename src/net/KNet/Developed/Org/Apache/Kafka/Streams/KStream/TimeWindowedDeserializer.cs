@@ -23,7 +23,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 {
     public partial class TimeWindowedDeserializer<T>
     {
-        public Windowed<T> Deserialize(string topic, byte[] data)
+        public Windowed<T> Deserialize2(string topic, byte[] data)
         {
             return IExecute<Windowed<T>>("deserialize", topic, data);
         }

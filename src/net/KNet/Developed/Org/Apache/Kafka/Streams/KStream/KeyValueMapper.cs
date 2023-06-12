@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// <typeparam name="K">The data associated to the event</typeparam>
     /// <typeparam name="V">The data associated to the event</typeparam>
     /// <typeparam name="VR">The result value</typeparam>
-    public interface IKeyValueMapper<K, V, VR> : IJVMBridgeBase
+    public partial interface IKeyValueMapper<K, V, VR> : IJVMBridgeBase
     {
         /// <summary>
         /// Executes the KeyValueMapper action in the CLR
@@ -75,12 +75,5 @@ namespace Org.Apache.Kafka.Streams.Kstream
             var retVal = OnApply(data.EventData.TypedEventData, data.EventData.To<V>(0));
             data.SetReturnValue(retVal);
         }
-        /// <summary>
-        /// Executes the KeyValueMapper action in the CLR
-        /// </summary>
-        /// <param name="o1">The KeyValueMapper object</param>
-        /// <param name="o2">The KeyValueMapper object</param>
-        /// <returns>The <typeparamref name="VR"/> apply evaluation</returns>
-        public virtual VR Apply(K o1, V o2) { return default(VR); }
     }
 }

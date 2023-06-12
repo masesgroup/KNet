@@ -25,7 +25,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// Listener for Kafka Initializer. Extends <see cref="IJVMBridgeBase"/>
     /// </summary>
     /// <typeparam name="VA">The Initialized data associated to the event</typeparam>
-    public interface IInitializer<VA> : IJVMBridgeBase
+    public partial interface IInitializer<VA> : IJVMBridgeBase
     {
         /// <summary>
         /// Executes the Initializer action in the CLR
@@ -69,35 +69,5 @@ namespace Org.Apache.Kafka.Streams.Kstream
             var retVal = OnApply();
             data.SetReturnValue(retVal);
         }
-        /// <summary>
-        /// Executes the Initializer action in the CLR
-        /// </summary>
-        /// <returns>The <typeparamref name="VA"/> apply evaluation</returns>
-        public virtual VA Apply() { return default(VA); }
     }
-/*
-    /// <summary>
-    /// Listener for Kafka Initializer. Extends <see cref="InitializerImpl{VA}"/>
-    /// </summary>
-    /// <typeparam name="VA">The aggregated data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
-    /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
-    public class JVMBridgeInitializer<VA> : InitializerImpl<VA>
-        where VA : JVMBridgeBase, new()
-    {
-        /// <summary>
-        /// Initialize a new instance of <see cref="JVMBridgeInitializer{VA}"/>
-        /// </summary>
-        /// <param name="func">The <see cref="Func{VA}"/> to be executed</param>
-        public JVMBridgeInitializer(Func<VA> func = null) : base(func, false)
-        {
-            AddEventHandler("apply", new EventHandler<CLRListenerEventArgs<CLREventData>>(EventHandler));
-        }
-
-        void EventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
-        {
-            var retVal = OnApply();
-            data.CLRReturnValue = retVal?;
-        }
-    }
-*/
 }

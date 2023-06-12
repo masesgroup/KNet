@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeTopicsOptions.html#includeAuthorizedOperations()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeTopicsOptions.html#includeAuthorizedOperations()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<bool>("includeAuthorizedOperations");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeTopicsOptions.html#includeAuthorizedOperations(boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/DescribeTopicsOptions.html#includeAuthorizedOperations(boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DescribeTopicsOptions"/></returns>

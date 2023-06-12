@@ -38,7 +38,7 @@ namespace Org.Apache.Kafka.Connect.Storage
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/ConverterConfig.html#TYPE_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/ConverterConfig.html#TYPE_CONFIG"/>
         /// </summary>
         public static string TYPE_CONFIG { get { return SGetField<string>(LocalBridgeClazz, "TYPE_CONFIG"); } }
 
@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Connect.Storage
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/ConverterConfig.html#newConfigDef()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/ConverterConfig.html#newConfigDef()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
@@ -59,7 +59,7 @@ namespace Org.Apache.Kafka.Connect.Storage
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/ConverterConfig.html#type()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/ConverterConfig.html#type()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Connect.Storage.ConverterType"/></returns>

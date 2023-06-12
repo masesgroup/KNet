@@ -56,8 +56,26 @@ namespace Org.Apache.Kafka.Streams.State
     }
     #endregion
 
+    #region ITimestampedWindowStore<K, V>
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/TimestampedWindowStore.html"/>
+    /// </summary>
+    public partial interface ITimestampedWindowStore<K, V> : Org.Apache.Kafka.Streams.State.IWindowStore<K, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<V>>
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region TimestampedWindowStore<K, V>
-    public partial class TimestampedWindowStore<K, V>
+    public partial class TimestampedWindowStore<K, V> : Org.Apache.Kafka.Streams.State.ITimestampedWindowStore<K, V>
     {
         #region Constructors
 

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Memory
 {
     #region GarbageCollectedMemoryPool
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/GarbageCollectedMemoryPool.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/GarbageCollectedMemoryPool.html"/>
     /// </summary>
     public partial class GarbageCollectedMemoryPool : Org.Apache.Kafka.Common.Memory.SimpleMemoryPool
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Common.Memory
 
     #region MemoryPool
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/MemoryPool.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/MemoryPool.html"/>
     /// </summary>
     public partial class MemoryPool : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MemoryPool>
     {
@@ -113,9 +113,9 @@ namespace Org.Apache.Kafka.Common.Memory
 
     #region SimpleMemoryPool
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/SimpleMemoryPool.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/SimpleMemoryPool.html"/>
     /// </summary>
-    public partial class SimpleMemoryPool : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SimpleMemoryPool>
+    public partial class SimpleMemoryPool : Org.Apache.Kafka.Common.Memory.MemoryPool
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -153,6 +153,7 @@ namespace Org.Apache.Kafka.Common.Memory
 
     }
     #endregion
+
 
 
 }

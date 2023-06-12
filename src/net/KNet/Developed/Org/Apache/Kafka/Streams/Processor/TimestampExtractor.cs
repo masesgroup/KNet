@@ -25,7 +25,7 @@ namespace Org.Apache.Kafka.Streams.Processor
     /// <summary>
     /// Listener for Kafka TimestampExtractor. Extends <see cref="IJVMBridgeBase"/>
     /// </summary>
-    public interface ITimestampExtractor : IJVMBridgeBase
+    public partial interface ITimestampExtractor : IJVMBridgeBase
     {
         /// <summary>
         /// Executes the TimestampExtractor action in the CLR
@@ -70,12 +70,5 @@ namespace Org.Apache.Kafka.Streams.Processor
             var retVal = OnExtract(data.EventData.TypedEventData, data.EventData.To<long>(0));
             data.SetReturnValue(retVal);
         }
-        /// <summary>
-        /// Executes the TimestampExtractor action in the CLR
-        /// </summary>
-        /// <param name="record">a data record</param>
-        /// <param name="partitionTime">the highest extracted valid timestamp of the current record's partition˙ (could be -1 if unknown)</param>
-        /// <returns>the timestamp of the record</returns>
-        public virtual long Extract(ConsumerRecord<object, object> record, long partitionTime) { return 0; }
     }
 }

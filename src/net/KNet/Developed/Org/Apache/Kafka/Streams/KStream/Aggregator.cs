@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// <typeparam name="K">The data associated to the event</typeparam>
     /// <typeparam name="V">The data associated to the event</typeparam>
     /// <typeparam name="VA">Aggregated value</typeparam>
-    public interface IAggregator<K, V, VA> : IJVMBridgeBase
+    public partial interface IAggregator<K, V, VA> : IJVMBridgeBase
     {
         /// <summary>
         /// Executes the Aggregator action in the CLR
@@ -76,42 +76,5 @@ namespace Org.Apache.Kafka.Streams.Kstream
             var retVal = OnApply(data.EventData.TypedEventData, data.EventData.To<V>(0), data.EventData.To<VA>(1));
             data.SetReturnValue(retVal);
         }
-        /// <summary>
-        /// Executes the Aggregator action in the CLR
-        /// </summary>
-        /// <param name="o1">The Aggregator object</param>
-        /// <param name="o2">The Aggregator object</param>
-        /// <param name="aggregate">The current aggregate value</param>
-        /// <returns>The <typeparamref name="VA"/> apply evaluation</returns>
-        public virtual VA Apply(K o1, V o2, VA aggregate) { return default(VA); }
     }
-    /*
-    /// <summary>
-    /// Listener for Kafka Aggregator. Extends <see cref="AggregatorImpl{K, V, VA}"/>
-    /// </summary>
-    /// <typeparam name="K">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
-    /// <typeparam name="V">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
-    /// <typeparam name="VA">The aggregated data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
-    /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
-    public class JVMBridgeAggregator<K, V, VA> : AggregatorImpl<K, V, VA>
-        where K : JVMBridgeBase, new()
-        where V : JVMBridgeBase, new()
-        where VA : JVMBridgeBase, new()
-    {
-        /// <summary>
-        /// Initialize a new instance of <see cref="JVMBridgeAggregator{K, V, VA}"/>
-        /// </summary>
-        /// <param name="func">The <see cref="Func{K, V, VA, VA}"/> to be executed</param>
-        public JVMBridgeAggregator(Func<K, V, VA, VA> func = null) : base(func, false)
-        {
-            AddEventHandler("apply", new EventHandler<CLRListenerEventArgs<JVMBridgeEventData<K>>>(EventHandler));
-        }
-
-        void EventHandler(object sender, CLRListenerEventArgs<JVMBridgeEventData<K>> data)
-        {
-            var retVal = OnApply(data.EventData.TypedEventData, data.EventData.To<V>(0), data.EventData.To<VA>(1));
-            data.CLRReturnValue = retVal?;
-        }
-    }
-    */
 }

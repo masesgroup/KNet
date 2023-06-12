@@ -34,10 +34,6 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Class/Interface conversion operators
         /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Streams.State.KeyValueIterator"/> to <see cref="Java.Util.Iterator"/>
-        /// </summary>
-        public static implicit operator Java.Util.Iterator(Org.Apache.Kafka.Streams.State.KeyValueIterator t) => t.Cast<Java.Util.Iterator>();
-        /// <summary>
         /// Converter from <see cref="Org.Apache.Kafka.Streams.State.KeyValueIterator"/> to <see cref="Java.Io.Closeable"/>
         /// </summary>
         public static implicit operator Java.Io.Closeable(Org.Apache.Kafka.Streams.State.KeyValueIterator t) => t.Cast<Java.Io.Closeable>();
@@ -54,7 +50,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/KeyValueIterator.html#peekNextKey()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/KeyValueIterator.html#peekNextKey()"/>
         /// </summary>
 
         /// <returns><see cref="object"/></returns>
@@ -63,7 +59,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute("peekNextKey");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/KeyValueIterator.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/KeyValueIterator.html#close()"/>
         /// </summary>
         public void Close()
         {
@@ -80,18 +76,32 @@ namespace Org.Apache.Kafka.Streams.State
     }
     #endregion
 
+    #region IKeyValueIterator<K, V>
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/KeyValueIterator.html"/>
+    /// </summary>
+    public partial interface IKeyValueIterator<K, V>
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region KeyValueIterator<K, V>
-    public partial class KeyValueIterator<K, V>
+    public partial class KeyValueIterator<K, V> : Org.Apache.Kafka.Streams.State.IKeyValueIterator<K, V>, Java.Util.IIterator<Org.Apache.Kafka.Streams.KeyValue<K, V>>, Java.Io.ICloseable
     {
         #region Constructors
 
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Streams.State.KeyValueIterator{K, V}"/> to <see cref="Java.Util.Iterator"/>
-        /// </summary>
-        public static implicit operator Java.Util.Iterator(Org.Apache.Kafka.Streams.State.KeyValueIterator<K, V> t) => t.Cast<Java.Util.Iterator>();
         /// <summary>
         /// Converter from <see cref="Org.Apache.Kafka.Streams.State.KeyValueIterator{K, V}"/> to <see cref="Java.Io.Closeable"/>
         /// </summary>
@@ -113,7 +123,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/KeyValueIterator.html#peekNextKey()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/KeyValueIterator.html#peekNextKey()"/>
         /// </summary>
 
         /// <returns><typeparamref name="K"/></returns>
@@ -122,7 +132,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<K>("peekNextKey");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/KeyValueIterator.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/KeyValueIterator.html#close()"/>
         /// </summary>
         public void Close()
         {

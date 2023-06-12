@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Clients
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientUtils.html#parseAndValidateAddresses(java.util.List,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientUtils.html#parseAndValidateAddresses(java.util.List,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -52,7 +52,7 @@ namespace Org.Apache.Kafka.Clients
             return SExecute<Java.Util.List<Java.Net.InetSocketAddress>>(LocalBridgeClazz, "parseAndValidateAddresses", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientUtils.html#parseAndValidateAddresses(java.util.List,org.apache.kafka.clients.ClientDnsLookup)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientUtils.html#parseAndValidateAddresses(java.util.List,org.apache.kafka.clients.ClientDnsLookup)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.ClientDnsLookup"/></param>
@@ -62,7 +62,7 @@ namespace Org.Apache.Kafka.Clients
             return SExecute<Java.Util.List<Java.Net.InetSocketAddress>>(LocalBridgeClazz, "parseAndValidateAddresses", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientUtils.html#createChannelBuilder(org.apache.kafka.common.config.AbstractConfig,org.apache.kafka.common.utils.Time,org.apache.kafka.common.utils.LogContext)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientUtils.html#createChannelBuilder(org.apache.kafka.common.config.AbstractConfig,org.apache.kafka.common.utils.Time,org.apache.kafka.common.utils.LogContext)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Config.AbstractConfig"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Utils.Time"/></param>

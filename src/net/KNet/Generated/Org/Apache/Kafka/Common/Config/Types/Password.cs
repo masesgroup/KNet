@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Config.Types
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/types/Password.html#%3Cinit%3E(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/types/Password.html#%3Cinit%3E(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         public Password(string arg0)
@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Common.Config.Types
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/types/Password.html#HIDDEN"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/types/Password.html#HIDDEN"/>
         /// </summary>
         public static string HIDDEN { get { return SGetField<string>(LocalBridgeClazz, "HIDDEN"); } }
 
@@ -58,7 +58,7 @@ namespace Org.Apache.Kafka.Common.Config.Types
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/types/Password.html#value()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/types/Password.html#value()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>

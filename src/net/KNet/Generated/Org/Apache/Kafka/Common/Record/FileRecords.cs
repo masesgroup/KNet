@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#open(java.io.File,boolean,boolean,int,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#open(java.io.File,boolean,boolean,int,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Io.File"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -60,7 +60,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecute<Org.Apache.Kafka.Common.Record.FileRecords>(LocalBridgeClazz, "open", arg0, arg1, arg2, arg3, arg4);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#open(java.io.File,boolean,int,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#open(java.io.File,boolean,int,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Io.File"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecute<Org.Apache.Kafka.Common.Record.FileRecords>(LocalBridgeClazz, "open", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#open(java.io.File,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#open(java.io.File,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Io.File"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -84,7 +84,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecute<Org.Apache.Kafka.Common.Record.FileRecords>(LocalBridgeClazz, "open", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#open(java.io.File)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#open(java.io.File)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Io.File"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.FileRecords"/></returns>
@@ -98,7 +98,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#deleteIfExists()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#deleteIfExists()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecute<bool>("deleteIfExists");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#append(org.apache.kafka.common.record.MemoryRecords)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#append(org.apache.kafka.common.record.MemoryRecords)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Record.MemoryRecords"/></param>
         /// <returns><see cref="int"/></returns>
@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecute<int>("append", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#truncateTo(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#truncateTo(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="int"/></returns>
@@ -128,7 +128,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecute<int>("truncateTo", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#file()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#file()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Io.File"/></returns>
@@ -137,7 +137,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecute<Java.Io.File>("file");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#batchesFrom(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#batchesFrom(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Java.Lang.Iterable"/></returns>
@@ -146,7 +146,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecute<Java.Lang.Iterable<Org.Apache.Kafka.Common.Record.FileLogInputStream.FileChannelRecordBatch>>("batchesFrom", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#channel()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#channel()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Nio.Channels.FileChannel"/></returns>
@@ -155,7 +155,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecute<Java.Nio.Channels.FileChannel>("channel");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#slice(int,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#slice(int,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -166,7 +166,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecute<Org.Apache.Kafka.Common.Record.FileRecords>("slice", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#searchForOffsetWithSize(long,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#searchForOffsetWithSize(long,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -176,7 +176,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecute<Org.Apache.Kafka.Common.Record.FileRecords.LogOffsetPosition>("searchForOffsetWithSize", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#largestTimestampAfter(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#largestTimestampAfter(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.FileRecords.TimestampAndOffset"/></returns>
@@ -185,7 +185,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecute<Org.Apache.Kafka.Common.Record.FileRecords.TimestampAndOffset>("largestTimestampAfter", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#searchForTimestamp(long,int,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#searchForTimestamp(long,int,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -196,7 +196,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecute<Org.Apache.Kafka.Common.Record.FileRecords.TimestampAndOffset>("searchForTimestamp", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#sliceUnaligned(int,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#sliceUnaligned(int,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -206,7 +206,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecute<Org.Apache.Kafka.Common.Record.UnalignedFileRecords>("sliceUnaligned", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#close()"/>
         /// </summary>
 
         /// <exception cref="Java.Io.IOException"/>
@@ -215,7 +215,7 @@ namespace Org.Apache.Kafka.Common.Record
             IExecute("close");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#closeHandlers()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#closeHandlers()"/>
         /// </summary>
 
         /// <exception cref="Java.Io.IOException"/>
@@ -224,7 +224,7 @@ namespace Org.Apache.Kafka.Common.Record
             IExecute("closeHandlers");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#flush()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#flush()"/>
         /// </summary>
 
         /// <exception cref="Java.Io.IOException"/>
@@ -233,7 +233,7 @@ namespace Org.Apache.Kafka.Common.Record
             IExecute("flush");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#readInto(java.nio.ByteBuffer,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#readInto(java.nio.ByteBuffer,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -243,7 +243,7 @@ namespace Org.Apache.Kafka.Common.Record
             IExecute("readInto", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#renameTo(java.io.File)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#renameTo(java.io.File)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Io.File"/></param>
         /// <exception cref="Java.Io.IOException"/>
@@ -252,7 +252,7 @@ namespace Org.Apache.Kafka.Common.Record
             IExecute("renameTo", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#trim()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#trim()"/>
         /// </summary>
 
         /// <exception cref="Java.Io.IOException"/>
@@ -261,7 +261,7 @@ namespace Org.Apache.Kafka.Common.Record
             IExecute("trim");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#updateParentDir(java.io.File)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html#updateParentDir(java.io.File)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Io.File"/></param>
         public void UpdateParentDir(Java.Io.File arg0)
@@ -277,7 +277,7 @@ namespace Org.Apache.Kafka.Common.Record
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.LogOffsetPosition.html#%3Cinit%3E(long,int,int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.LogOffsetPosition.html#%3Cinit%3E(long,int,int)"/>
             /// </summary>
             /// <param name="arg0"><see cref="long"/></param>
             /// <param name="arg1"><see cref="int"/></param>
@@ -295,15 +295,15 @@ namespace Org.Apache.Kafka.Common.Record
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.LogOffsetPosition.html#position"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.LogOffsetPosition.html#position"/>
             /// </summary>
             public int position { get { return IGetField<int>("position"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.LogOffsetPosition.html#size"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.LogOffsetPosition.html#size"/>
             /// </summary>
             public int size { get { return IGetField<int>("size"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.LogOffsetPosition.html#offset"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.LogOffsetPosition.html#offset"/>
             /// </summary>
             public long offset { get { return IGetField<long>("offset"); } }
 
@@ -330,7 +330,7 @@ namespace Org.Apache.Kafka.Common.Record
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.TimestampAndOffset.html#%3Cinit%3E(long,long,java.util.Optional)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.TimestampAndOffset.html#%3Cinit%3E(long,long,java.util.Optional)"/>
             /// </summary>
             /// <param name="arg0"><see cref="long"/></param>
             /// <param name="arg1"><see cref="long"/></param>
@@ -348,15 +348,15 @@ namespace Org.Apache.Kafka.Common.Record
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.TimestampAndOffset.html#leaderEpoch"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.TimestampAndOffset.html#leaderEpoch"/>
             /// </summary>
             public Java.Util.Optional leaderEpoch { get { return IGetField<Java.Util.Optional>("leaderEpoch"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.TimestampAndOffset.html#offset"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.TimestampAndOffset.html#offset"/>
             /// </summary>
             public long offset { get { return IGetField<long>("offset"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.TimestampAndOffset.html#timestamp"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.TimestampAndOffset.html#timestamp"/>
             /// </summary>
             public long timestamp { get { return IGetField<long>("timestamp"); } }
 

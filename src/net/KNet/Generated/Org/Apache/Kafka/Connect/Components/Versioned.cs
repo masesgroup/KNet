@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Connect.Components
 {
+    #region IVersioned
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/components/Versioned.html"/>
+    /// </summary>
+    public partial interface IVersioned
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region Versioned
-    public partial class Versioned
+    public partial class Versioned : Org.Apache.Kafka.Connect.Components.IVersioned
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Connect.Components
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/components/Versioned.html#version()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/components/Versioned.html#version()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>

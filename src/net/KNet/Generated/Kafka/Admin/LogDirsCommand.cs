@@ -42,7 +42,7 @@ namespace Kafka.Admin
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/LogDirsCommand.html#describe(java.lang.String[],java.io.PrintStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/LogDirsCommand.html#describe(java.lang.String[],java.io.PrintStream)"/>
         /// </summary>
         /// <param name="args"><see cref="string"/></param>
         /// <param name="out"><see cref="Java.Io.PrintStream"/></param>
@@ -51,7 +51,7 @@ namespace Kafka.Admin
             SExecute(LocalBridgeClazz, "describe", args, _out);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/LogDirsCommand.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/LogDirsCommand.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="args"><see cref="string"/></param>
         public static void Main(string[] args)
@@ -71,7 +71,7 @@ namespace Kafka.Admin
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/LogDirsCommand.LogDirsCommandOptions.html#%3Cinit%3E(java.lang.String[])"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/LogDirsCommand.LogDirsCommandOptions.html#%3Cinit%3E(java.lang.String[])"/>
             /// </summary>
             /// <param name="args"><see cref="string"/></param>
             public LogDirsCommandOptions(string[] args)

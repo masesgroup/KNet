@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindows.html#ofInactivityGapAndGrace(java.time.Duration,java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindows.html#ofInactivityGapAndGrace(java.time.Duration,java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
@@ -52,7 +52,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecute<Org.Apache.Kafka.Streams.Kstream.SessionWindows>(LocalBridgeClazz, "ofInactivityGapAndGrace", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindows.html#ofInactivityGapWithNoGrace(java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindows.html#ofInactivityGapWithNoGrace(java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.SessionWindows"/></returns>
@@ -65,7 +65,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindows.html#gracePeriodMs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindows.html#gracePeriodMs()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecute<long>("gracePeriodMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindows.html#inactivityGap()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindows.html#inactivityGap()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>

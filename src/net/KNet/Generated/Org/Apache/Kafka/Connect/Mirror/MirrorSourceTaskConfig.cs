@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorSourceTaskConfig.html#%3Cinit%3E(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorSourceTaskConfig.html#%3Cinit%3E(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public MirrorSourceTaskConfig(Java.Util.Map<string, string> arg0)

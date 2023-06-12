@@ -42,7 +42,7 @@ namespace Kafka.Admin
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/FeatureCommand.html#mainNoExit(java.lang.String[],java.io.PrintStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/FeatureCommand.html#mainNoExit(java.lang.String[],java.io.PrintStream)"/>
         /// </summary>
         /// <param name="args"><see cref="string"/></param>
         /// <param name="out"><see cref="Java.Io.PrintStream"/></param>
@@ -52,7 +52,7 @@ namespace Kafka.Admin
             return SExecute<int>(LocalBridgeClazz, "mainNoExit", args, _out);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/FeatureCommand.html#levelToString(java.lang.String,short)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/FeatureCommand.html#levelToString(java.lang.String,short)"/>
         /// </summary>
         /// <param name="feature"><see cref="string"/></param>
         /// <param name="level"><see cref="short"/></param>
@@ -62,7 +62,7 @@ namespace Kafka.Admin
             return SExecute<string>(LocalBridgeClazz, "levelToString", feature, level);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/FeatureCommand.html#handleDescribe(java.io.PrintStream,org.apache.kafka.clients.admin.Admin)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/FeatureCommand.html#handleDescribe(java.io.PrintStream,org.apache.kafka.clients.admin.Admin)"/>
         /// </summary>
         /// <param name="out"><see cref="Java.Io.PrintStream"/></param>
         /// <param name="admin"><see cref="Org.Apache.Kafka.Clients.Admin.Admin"/></param>
@@ -71,7 +71,7 @@ namespace Kafka.Admin
             SExecute(LocalBridgeClazz, "handleDescribe", _out, admin);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/FeatureCommand.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/FeatureCommand.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="args"><see cref="string"/></param>
         public static void Main(string[] args)
@@ -79,7 +79,7 @@ namespace Kafka.Admin
             SExecute(LocalBridgeClazz, "main", new object[] { args });
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/FeatureCommand.html#update(java.lang.String,java.io.PrintStream,org.apache.kafka.clients.admin.Admin,java.util.HashMap,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/FeatureCommand.html#update(java.lang.String,java.io.PrintStream,org.apache.kafka.clients.admin.Admin,java.util.HashMap,boolean)"/>
         /// </summary>
         /// <param name="op"><see cref="string"/></param>
         /// <param name="out"><see cref="Java.Io.PrintStream"/></param>

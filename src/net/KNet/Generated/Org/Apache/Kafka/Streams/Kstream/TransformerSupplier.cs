@@ -54,7 +54,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TransformerSupplier.html#get()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TransformerSupplier.html#get()"/>
         /// </summary>
 
         /// <returns><see cref="object"/></returns>
@@ -73,8 +73,26 @@ namespace Org.Apache.Kafka.Streams.Kstream
     }
     #endregion
 
+    #region ITransformerSupplier<K, V, R>
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TransformerSupplier.html"/>
+    /// </summary>
+    public partial interface ITransformerSupplier<K, V, R>
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region TransformerSupplier<K, V, R>
-    public partial class TransformerSupplier<K, V, R>
+    public partial class TransformerSupplier<K, V, R> : Org.Apache.Kafka.Streams.Kstream.ITransformerSupplier<K, V, R>, Org.Apache.Kafka.Streams.Processor.IConnectedStoreProvider, Java.Util.Function.ISupplier<Org.Apache.Kafka.Streams.Kstream.Transformer<K, V, R>>
     {
         #region Constructors
 
@@ -106,7 +124,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TransformerSupplier.html#get()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TransformerSupplier.html#get()"/>
         /// </summary>
 
         /// <returns><see cref="object"/></returns>

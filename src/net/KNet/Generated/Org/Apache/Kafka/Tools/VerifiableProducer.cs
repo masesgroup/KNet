@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Tools
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableProducer.html#%3Cinit%3E(org.apache.kafka.clients.producer.KafkaProducer,java.lang.String,int,int,java.lang.Integer,java.lang.Long,java.lang.Integer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableProducer.html#%3Cinit%3E(org.apache.kafka.clients.producer.KafkaProducer,java.lang.String,int,int,java.lang.Integer,java.lang.Long,java.lang.Integer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Producer.KafkaProducer"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -47,10 +47,6 @@ namespace Org.Apache.Kafka.Tools
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Tools.VerifiableProducer"/> to <see cref="Java.Lang.AutoCloseable"/>
-        /// </summary>
-        public static implicit operator Java.Lang.AutoCloseable(Org.Apache.Kafka.Tools.VerifiableProducer t) => t.Cast<Java.Lang.AutoCloseable>();
 
         #endregion
 
@@ -60,7 +56,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableProducer.html#loadProps(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableProducer.html#loadProps(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Java.Util.Properties"/></returns>
@@ -70,7 +66,7 @@ namespace Org.Apache.Kafka.Tools
             return SExecute<Java.Util.Properties>(LocalBridgeClazz, "loadProps", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableProducer.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableProducer.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         public static void Main(string[] arg0)
@@ -82,14 +78,14 @@ namespace Org.Apache.Kafka.Tools
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableProducer.html#getKey()"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableProducer.html#getKey()"/> 
         /// </summary>
         public string Key
         {
             get { return IExecute<string>("getKey"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableProducer.html#getValue(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableProducer.html#getValue(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="string"/></returns>
@@ -98,14 +94,14 @@ namespace Org.Apache.Kafka.Tools
             return IExecute<string>("getValue", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableProducer.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableProducer.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecute("close");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableProducer.html#run(org.apache.kafka.tools.ThroughputThrottler)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableProducer.html#run(org.apache.kafka.tools.ThroughputThrottler)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Tools.ThroughputThrottler"/></param>
         public void Run(Org.Apache.Kafka.Tools.ThroughputThrottler arg0)
@@ -113,7 +109,7 @@ namespace Org.Apache.Kafka.Tools
             IExecute("run", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableProducer.html#send(java.lang.String,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableProducer.html#send(java.lang.String,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="string"/></param>

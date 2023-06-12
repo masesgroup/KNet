@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Connect.Source
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceRecord.html#%3Cinit%3E(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long,java.lang.Iterable)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceRecord.html#%3Cinit%3E(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long,java.lang.Iterable)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
@@ -42,12 +42,12 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <param name="arg7"><see cref="object"/></param>
         /// <param name="arg8"><see cref="long"/></param>
         /// <param name="arg9"><see cref="Java.Lang.Iterable"/></param>
-        public SourceRecord(Java.Util.Map arg0, Java.Util.Map arg1, string arg2, int? arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Org.Apache.Kafka.Connect.Data.Schema arg6, object arg7, long? arg8, Java.Lang.Iterable<Org.Apache.Kafka.Connect.Header.Header> arg9)
+        public SourceRecord(Java.Util.Map<string, object> arg0, Java.Util.Map<string, object> arg1, string arg2, int? arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Org.Apache.Kafka.Connect.Data.Schema arg6, object arg7, long? arg8, Java.Lang.Iterable<Org.Apache.Kafka.Connect.Header.Header> arg9)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceRecord.html#%3Cinit%3E(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceRecord.html#%3Cinit%3E(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
@@ -58,12 +58,12 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <param name="arg6"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg7"><see cref="object"/></param>
         /// <param name="arg8"><see cref="long"/></param>
-        public SourceRecord(Java.Util.Map arg0, Java.Util.Map arg1, string arg2, int? arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Org.Apache.Kafka.Connect.Data.Schema arg6, object arg7, long? arg8)
+        public SourceRecord(Java.Util.Map<string, object> arg0, Java.Util.Map<string, object> arg1, string arg2, int? arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Org.Apache.Kafka.Connect.Data.Schema arg6, object arg7, long? arg8)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceRecord.html#%3Cinit%3E(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceRecord.html#%3Cinit%3E(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
@@ -73,12 +73,12 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <param name="arg5"><see cref="object"/></param>
         /// <param name="arg6"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg7"><see cref="object"/></param>
-        public SourceRecord(Java.Util.Map arg0, Java.Util.Map arg1, string arg2, int? arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Org.Apache.Kafka.Connect.Data.Schema arg6, object arg7)
+        public SourceRecord(Java.Util.Map<string, object> arg0, Java.Util.Map<string, object> arg1, string arg2, int? arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Org.Apache.Kafka.Connect.Data.Schema arg6, object arg7)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceRecord.html#%3Cinit%3E(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceRecord.html#%3Cinit%3E(java.util.Map,java.util.Map,java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
@@ -86,12 +86,12 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <param name="arg3"><see cref="int"/></param>
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg5"><see cref="object"/></param>
-        public SourceRecord(Java.Util.Map arg0, Java.Util.Map arg1, string arg2, int? arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5)
+        public SourceRecord(Java.Util.Map<string, object> arg0, Java.Util.Map<string, object> arg1, string arg2, int? arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5)
             : base(arg0, arg1, arg2, arg3, arg4, arg5)
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceRecord.html#%3Cinit%3E(java.util.Map,java.util.Map,java.lang.String,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceRecord.html#%3Cinit%3E(java.util.Map,java.util.Map,java.lang.String,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
@@ -100,19 +100,19 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <param name="arg4"><see cref="object"/></param>
         /// <param name="arg5"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg6"><see cref="object"/></param>
-        public SourceRecord(Java.Util.Map arg0, Java.Util.Map arg1, string arg2, Org.Apache.Kafka.Connect.Data.Schema arg3, object arg4, Org.Apache.Kafka.Connect.Data.Schema arg5, object arg6)
+        public SourceRecord(Java.Util.Map<string, object> arg0, Java.Util.Map<string, object> arg1, string arg2, Org.Apache.Kafka.Connect.Data.Schema arg3, object arg4, Org.Apache.Kafka.Connect.Data.Schema arg5, object arg6)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceRecord.html#%3Cinit%3E(java.util.Map,java.util.Map,java.lang.String,org.apache.kafka.connect.data.Schema,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceRecord.html#%3Cinit%3E(java.util.Map,java.util.Map,java.lang.String,org.apache.kafka.connect.data.Schema,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
         /// <param name="arg2"><see cref="string"/></param>
         /// <param name="arg3"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg4"><see cref="object"/></param>
-        public SourceRecord(Java.Util.Map arg0, Java.Util.Map arg1, string arg2, Org.Apache.Kafka.Connect.Data.Schema arg3, object arg4)
+        public SourceRecord(Java.Util.Map<string, object> arg0, Java.Util.Map<string, object> arg1, string arg2, Org.Apache.Kafka.Connect.Data.Schema arg3, object arg4)
             : base(arg0, arg1, arg2, arg3, arg4)
         {
         }
@@ -133,24 +133,22 @@ namespace Org.Apache.Kafka.Connect.Source
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceRecord.html#sourceOffset()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceRecord.html#sourceOffset()"/>
         /// </summary>
 
-        /// <typeparam name="ReturnExtendsobject"></typeparam>
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<string, ReturnExtendsobject> SourceOffset<ReturnExtendsobject>()
+        public Java.Util.Map<string, object> SourceOffset()
         {
-            return IExecute<Java.Util.Map<string, ReturnExtendsobject>>("sourceOffset");
+            return IExecute<Java.Util.Map<string, object>>("sourceOffset");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceRecord.html#sourcePartition()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceRecord.html#sourcePartition()"/>
         /// </summary>
 
-        /// <typeparam name="ReturnExtendsobject"></typeparam>
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<string, ReturnExtendsobject> SourcePartition<ReturnExtendsobject>()
+        public Java.Util.Map<string, object> SourcePartition()
         {
-            return IExecute<Java.Util.Map<string, ReturnExtendsobject>>("sourcePartition");
+            return IExecute<Java.Util.Map<string, object>>("sourcePartition");
         }
 
         #endregion

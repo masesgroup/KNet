@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#%3Cinit%3E(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#%3Cinit%3E(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public ForwardingAdmin(Java.Util.Map<string, object> arg0)
@@ -41,10 +41,6 @@ namespace Org.Apache.Kafka.Clients.Admin
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Clients.Admin.ForwardingAdmin"/> to <see cref="Org.Apache.Kafka.Clients.Admin.Admin"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Clients.Admin.Admin(Org.Apache.Kafka.Clients.Admin.ForwardingAdmin t) => t.Cast<Org.Apache.Kafka.Clients.Admin.Admin>();
 
         #endregion
 
@@ -58,7 +54,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#metrics()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#metrics()"/>
         /// </summary>
 
         /// <typeparam name="ReturnExtendsOrg_Apache_Kafka_Common_Metric"><see cref="Org.Apache.Kafka.Common.Metric"/></typeparam>
@@ -68,7 +64,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.MetricName, ReturnExtendsOrg_Apache_Kafka_Common_Metric>>("metrics");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#abortTransaction(org.apache.kafka.clients.admin.AbortTransactionSpec,org.apache.kafka.clients.admin.AbortTransactionOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#abortTransaction(org.apache.kafka.clients.admin.AbortTransactionSpec,org.apache.kafka.clients.admin.AbortTransactionOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.AbortTransactionSpec"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.AbortTransactionOptions"/></param>
@@ -78,7 +74,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.AbortTransactionResult>("abortTransaction", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#alterClientQuotas(java.util.Collection,org.apache.kafka.clients.admin.AlterClientQuotasOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#alterClientQuotas(java.util.Collection,org.apache.kafka.clients.admin.AlterClientQuotasOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.AlterClientQuotasOptions"/></param>
@@ -88,7 +84,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.AlterClientQuotasResult>("alterClientQuotas", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#incrementalAlterConfigs(java.util.Map,org.apache.kafka.clients.admin.AlterConfigsOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#incrementalAlterConfigs(java.util.Map,org.apache.kafka.clients.admin.AlterConfigsOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.AlterConfigsOptions"/></param>
@@ -98,7 +94,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.AlterConfigsResult>("incrementalAlterConfigs", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#alterConsumerGroupOffsets(java.lang.String,java.util.Map,org.apache.kafka.clients.admin.AlterConsumerGroupOffsetsOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#alterConsumerGroupOffsets(java.lang.String,java.util.Map,org.apache.kafka.clients.admin.AlterConsumerGroupOffsetsOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
@@ -109,7 +105,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.AlterConsumerGroupOffsetsResult>("alterConsumerGroupOffsets", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#alterPartitionReassignments(java.util.Map,org.apache.kafka.clients.admin.AlterPartitionReassignmentsOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#alterPartitionReassignments(java.util.Map,org.apache.kafka.clients.admin.AlterPartitionReassignmentsOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.AlterPartitionReassignmentsOptions"/></param>
@@ -119,7 +115,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.AlterPartitionReassignmentsResult>("alterPartitionReassignments", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#alterReplicaLogDirs(java.util.Map,org.apache.kafka.clients.admin.AlterReplicaLogDirsOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#alterReplicaLogDirs(java.util.Map,org.apache.kafka.clients.admin.AlterReplicaLogDirsOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.AlterReplicaLogDirsOptions"/></param>
@@ -129,7 +125,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.AlterReplicaLogDirsResult>("alterReplicaLogDirs", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#alterUserScramCredentials(java.util.List,org.apache.kafka.clients.admin.AlterUserScramCredentialsOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#alterUserScramCredentials(java.util.List,org.apache.kafka.clients.admin.AlterUserScramCredentialsOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.AlterUserScramCredentialsOptions"/></param>
@@ -139,7 +135,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.AlterUserScramCredentialsResult>("alterUserScramCredentials", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#createAcls(java.util.Collection,org.apache.kafka.clients.admin.CreateAclsOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#createAcls(java.util.Collection,org.apache.kafka.clients.admin.CreateAclsOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.CreateAclsOptions"/></param>
@@ -149,7 +145,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.CreateAclsResult>("createAcls", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#createDelegationToken(org.apache.kafka.clients.admin.CreateDelegationTokenOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#createDelegationToken(org.apache.kafka.clients.admin.CreateDelegationTokenOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.CreateDelegationTokenOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.CreateDelegationTokenResult"/></returns>
@@ -158,7 +154,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.CreateDelegationTokenResult>("createDelegationToken", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#createPartitions(java.util.Map,org.apache.kafka.clients.admin.CreatePartitionsOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#createPartitions(java.util.Map,org.apache.kafka.clients.admin.CreatePartitionsOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.CreatePartitionsOptions"/></param>
@@ -168,7 +164,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.CreatePartitionsResult>("createPartitions", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#createTopics(java.util.Collection,org.apache.kafka.clients.admin.CreateTopicsOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#createTopics(java.util.Collection,org.apache.kafka.clients.admin.CreateTopicsOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.CreateTopicsOptions"/></param>
@@ -178,7 +174,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.CreateTopicsResult>("createTopics", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#deleteAcls(java.util.Collection,org.apache.kafka.clients.admin.DeleteAclsOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#deleteAcls(java.util.Collection,org.apache.kafka.clients.admin.DeleteAclsOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DeleteAclsOptions"/></param>
@@ -188,7 +184,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.DeleteAclsResult>("deleteAcls", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#deleteConsumerGroupOffsets(java.lang.String,java.util.Set,org.apache.kafka.clients.admin.DeleteConsumerGroupOffsetsOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#deleteConsumerGroupOffsets(java.lang.String,java.util.Set,org.apache.kafka.clients.admin.DeleteConsumerGroupOffsetsOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Java.Util.Set"/></param>
@@ -199,7 +195,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupOffsetsResult>("deleteConsumerGroupOffsets", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#deleteConsumerGroups(java.util.Collection,org.apache.kafka.clients.admin.DeleteConsumerGroupsOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#deleteConsumerGroups(java.util.Collection,org.apache.kafka.clients.admin.DeleteConsumerGroupsOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupsOptions"/></param>
@@ -209,7 +205,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupsResult>("deleteConsumerGroups", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#deleteRecords(java.util.Map,org.apache.kafka.clients.admin.DeleteRecordsOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#deleteRecords(java.util.Map,org.apache.kafka.clients.admin.DeleteRecordsOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DeleteRecordsOptions"/></param>
@@ -219,7 +215,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.DeleteRecordsResult>("deleteRecords", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#deleteTopics(org.apache.kafka.common.TopicCollection,org.apache.kafka.clients.admin.DeleteTopicsOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#deleteTopics(org.apache.kafka.common.TopicCollection,org.apache.kafka.clients.admin.DeleteTopicsOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicCollection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DeleteTopicsOptions"/></param>
@@ -229,7 +225,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.DeleteTopicsResult>("deleteTopics", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeAcls(org.apache.kafka.common.acl.AclBindingFilter,org.apache.kafka.clients.admin.DescribeAclsOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeAcls(org.apache.kafka.common.acl.AclBindingFilter,org.apache.kafka.clients.admin.DescribeAclsOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Acl.AclBindingFilter"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DescribeAclsOptions"/></param>
@@ -239,7 +235,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.DescribeAclsResult>("describeAcls", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeClientQuotas(org.apache.kafka.common.quota.ClientQuotaFilter,org.apache.kafka.clients.admin.DescribeClientQuotasOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeClientQuotas(org.apache.kafka.common.quota.ClientQuotaFilter,org.apache.kafka.clients.admin.DescribeClientQuotasOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Quota.ClientQuotaFilter"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DescribeClientQuotasOptions"/></param>
@@ -249,7 +245,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.DescribeClientQuotasResult>("describeClientQuotas", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeCluster(org.apache.kafka.clients.admin.DescribeClusterOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeCluster(org.apache.kafka.clients.admin.DescribeClusterOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.DescribeClusterOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DescribeClusterResult"/></returns>
@@ -258,7 +254,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.DescribeClusterResult>("describeCluster", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeConfigs(java.util.Collection,org.apache.kafka.clients.admin.DescribeConfigsOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeConfigs(java.util.Collection,org.apache.kafka.clients.admin.DescribeConfigsOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DescribeConfigsOptions"/></param>
@@ -268,7 +264,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.DescribeConfigsResult>("describeConfigs", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeConsumerGroups(java.util.Collection,org.apache.kafka.clients.admin.DescribeConsumerGroupsOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeConsumerGroups(java.util.Collection,org.apache.kafka.clients.admin.DescribeConsumerGroupsOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DescribeConsumerGroupsOptions"/></param>
@@ -278,7 +274,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.DescribeConsumerGroupsResult>("describeConsumerGroups", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeDelegationToken(org.apache.kafka.clients.admin.DescribeDelegationTokenOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeDelegationToken(org.apache.kafka.clients.admin.DescribeDelegationTokenOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.DescribeDelegationTokenOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DescribeDelegationTokenResult"/></returns>
@@ -287,7 +283,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.DescribeDelegationTokenResult>("describeDelegationToken", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeFeatures(org.apache.kafka.clients.admin.DescribeFeaturesOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeFeatures(org.apache.kafka.clients.admin.DescribeFeaturesOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.DescribeFeaturesOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DescribeFeaturesResult"/></returns>
@@ -296,7 +292,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.DescribeFeaturesResult>("describeFeatures", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeLogDirs(java.util.Collection,org.apache.kafka.clients.admin.DescribeLogDirsOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeLogDirs(java.util.Collection,org.apache.kafka.clients.admin.DescribeLogDirsOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DescribeLogDirsOptions"/></param>
@@ -306,7 +302,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.DescribeLogDirsResult>("describeLogDirs", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeMetadataQuorum(org.apache.kafka.clients.admin.DescribeMetadataQuorumOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeMetadataQuorum(org.apache.kafka.clients.admin.DescribeMetadataQuorumOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.DescribeMetadataQuorumOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DescribeMetadataQuorumResult"/></returns>
@@ -315,7 +311,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.DescribeMetadataQuorumResult>("describeMetadataQuorum", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeProducers(java.util.Collection,org.apache.kafka.clients.admin.DescribeProducersOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeProducers(java.util.Collection,org.apache.kafka.clients.admin.DescribeProducersOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DescribeProducersOptions"/></param>
@@ -325,7 +321,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.DescribeProducersResult>("describeProducers", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeReplicaLogDirs(java.util.Collection,org.apache.kafka.clients.admin.DescribeReplicaLogDirsOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeReplicaLogDirs(java.util.Collection,org.apache.kafka.clients.admin.DescribeReplicaLogDirsOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DescribeReplicaLogDirsOptions"/></param>
@@ -335,7 +331,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.DescribeReplicaLogDirsResult>("describeReplicaLogDirs", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeTopics(org.apache.kafka.common.TopicCollection,org.apache.kafka.clients.admin.DescribeTopicsOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeTopics(org.apache.kafka.common.TopicCollection,org.apache.kafka.clients.admin.DescribeTopicsOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicCollection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DescribeTopicsOptions"/></param>
@@ -345,7 +341,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.DescribeTopicsResult>("describeTopics", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeTransactions(java.util.Collection,org.apache.kafka.clients.admin.DescribeTransactionsOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeTransactions(java.util.Collection,org.apache.kafka.clients.admin.DescribeTransactionsOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DescribeTransactionsOptions"/></param>
@@ -355,7 +351,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.DescribeTransactionsResult>("describeTransactions", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeUserScramCredentials(java.util.List,org.apache.kafka.clients.admin.DescribeUserScramCredentialsOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#describeUserScramCredentials(java.util.List,org.apache.kafka.clients.admin.DescribeUserScramCredentialsOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DescribeUserScramCredentialsOptions"/></param>
@@ -365,7 +361,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.DescribeUserScramCredentialsResult>("describeUserScramCredentials", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#electLeaders(org.apache.kafka.common.ElectionType,java.util.Set,org.apache.kafka.clients.admin.ElectLeadersOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#electLeaders(org.apache.kafka.common.ElectionType,java.util.Set,org.apache.kafka.clients.admin.ElectLeadersOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.ElectionType"/></param>
         /// <param name="arg1"><see cref="Java.Util.Set"/></param>
@@ -376,7 +372,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.ElectLeadersResult>("electLeaders", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#expireDelegationToken(byte[],org.apache.kafka.clients.admin.ExpireDelegationTokenOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#expireDelegationToken(byte[],org.apache.kafka.clients.admin.ExpireDelegationTokenOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.ExpireDelegationTokenOptions"/></param>
@@ -386,7 +382,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.ExpireDelegationTokenResult>("expireDelegationToken", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#fenceProducers(java.util.Collection,org.apache.kafka.clients.admin.FenceProducersOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#fenceProducers(java.util.Collection,org.apache.kafka.clients.admin.FenceProducersOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.FenceProducersOptions"/></param>
@@ -396,7 +392,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.FenceProducersResult>("fenceProducers", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#listConsumerGroupOffsets(java.util.Map,org.apache.kafka.clients.admin.ListConsumerGroupOffsetsOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#listConsumerGroupOffsets(java.util.Map,org.apache.kafka.clients.admin.ListConsumerGroupOffsetsOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsOptions"/></param>
@@ -406,7 +402,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsResult>("listConsumerGroupOffsets", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#listConsumerGroups(org.apache.kafka.clients.admin.ListConsumerGroupsOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#listConsumerGroups(org.apache.kafka.clients.admin.ListConsumerGroupsOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsResult"/></returns>
@@ -415,7 +411,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsResult>("listConsumerGroups", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#listOffsets(java.util.Map,org.apache.kafka.clients.admin.ListOffsetsOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#listOffsets(java.util.Map,org.apache.kafka.clients.admin.ListOffsetsOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.ListOffsetsOptions"/></param>
@@ -425,7 +421,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.ListOffsetsResult>("listOffsets", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#listPartitionReassignments(java.util.Optional,org.apache.kafka.clients.admin.ListPartitionReassignmentsOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#listPartitionReassignments(java.util.Optional,org.apache.kafka.clients.admin.ListPartitionReassignmentsOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Optional"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.ListPartitionReassignmentsOptions"/></param>
@@ -435,7 +431,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.ListPartitionReassignmentsResult>("listPartitionReassignments", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#listTopics(org.apache.kafka.clients.admin.ListTopicsOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#listTopics(org.apache.kafka.clients.admin.ListTopicsOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.ListTopicsOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListTopicsResult"/></returns>
@@ -444,7 +440,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.ListTopicsResult>("listTopics", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#listTransactions(org.apache.kafka.clients.admin.ListTransactionsOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#listTransactions(org.apache.kafka.clients.admin.ListTransactionsOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.ListTransactionsOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListTransactionsResult"/></returns>
@@ -453,7 +449,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.ListTransactionsResult>("listTransactions", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#removeMembersFromConsumerGroup(java.lang.String,org.apache.kafka.clients.admin.RemoveMembersFromConsumerGroupOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#removeMembersFromConsumerGroup(java.lang.String,org.apache.kafka.clients.admin.RemoveMembersFromConsumerGroupOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.RemoveMembersFromConsumerGroupOptions"/></param>
@@ -463,7 +459,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.RemoveMembersFromConsumerGroupResult>("removeMembersFromConsumerGroup", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#renewDelegationToken(byte[],org.apache.kafka.clients.admin.RenewDelegationTokenOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#renewDelegationToken(byte[],org.apache.kafka.clients.admin.RenewDelegationTokenOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.RenewDelegationTokenOptions"/></param>
@@ -473,7 +469,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.RenewDelegationTokenResult>("renewDelegationToken", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#unregisterBroker(int,org.apache.kafka.clients.admin.UnregisterBrokerOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#unregisterBroker(int,org.apache.kafka.clients.admin.UnregisterBrokerOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.UnregisterBrokerOptions"/></param>
@@ -483,7 +479,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.UnregisterBrokerResult>("unregisterBroker", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#updateFeatures(java.util.Map,org.apache.kafka.clients.admin.UpdateFeaturesOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#updateFeatures(java.util.Map,org.apache.kafka.clients.admin.UpdateFeaturesOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.UpdateFeaturesOptions"/></param>
@@ -493,7 +489,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Org.Apache.Kafka.Clients.Admin.UpdateFeaturesResult>("updateFeatures", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#close(java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#close(java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         public void Close(Java.Time.Duration arg0)

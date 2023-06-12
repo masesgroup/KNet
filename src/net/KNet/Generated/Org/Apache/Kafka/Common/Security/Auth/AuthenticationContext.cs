@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Security.Auth
 {
+    #region IAuthenticationContext
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/AuthenticationContext.html"/>
+    /// </summary>
+    public partial interface IAuthenticationContext
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region AuthenticationContext
-    public partial class AuthenticationContext
+    public partial class AuthenticationContext : Org.Apache.Kafka.Common.Security.Auth.IAuthenticationContext
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/AuthenticationContext.html#listenerName()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/AuthenticationContext.html#listenerName()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -55,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
             return IExecute<string>("listenerName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/AuthenticationContext.html#clientAddress()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/AuthenticationContext.html#clientAddress()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Net.InetAddress"/></returns>
@@ -64,7 +82,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
             return IExecute<Java.Net.InetAddress>("clientAddress");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/AuthenticationContext.html#securityProtocol()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/AuthenticationContext.html#securityProtocol()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol"/></returns>

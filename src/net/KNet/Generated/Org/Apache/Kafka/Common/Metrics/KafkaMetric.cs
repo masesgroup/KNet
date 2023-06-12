@@ -30,14 +30,14 @@ namespace Org.Apache.Kafka.Common.Metrics
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/KafkaMetric.html#%3Cinit%3E(java.lang.Object,org.apache.kafka.common.MetricName,org.apache.kafka.common.metrics.MetricValueProvider,org.apache.kafka.common.metrics.MetricConfig,org.apache.kafka.common.utils.Time)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/KafkaMetric.html#%3Cinit%3E(java.lang.Object,org.apache.kafka.common.MetricName,org.apache.kafka.common.metrics.MetricValueProvider,org.apache.kafka.common.metrics.MetricConfig,org.apache.kafka.common.utils.Time)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.MetricName"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Metrics.MetricValueProvider"/></param>
         /// <param name="arg3"><see cref="Org.Apache.Kafka.Common.Metrics.MetricConfig"/></param>
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Common.Utils.Time"/></param>
-        public KafkaMetric(object arg0, Org.Apache.Kafka.Common.MetricName arg1, Org.Apache.Kafka.Common.Metrics.MetricValueProvider arg2, Org.Apache.Kafka.Common.Metrics.MetricConfig arg3, Org.Apache.Kafka.Common.Utils.Time arg4)
+        public KafkaMetric(object arg0, Org.Apache.Kafka.Common.MetricName arg1, Org.Apache.Kafka.Common.Metrics.MetricValueProvider<object> arg2, Org.Apache.Kafka.Common.Metrics.MetricConfig arg3, Org.Apache.Kafka.Common.Utils.Time arg4)
             : base(arg0, arg1, arg2, arg3, arg4)
         {
         }
@@ -45,10 +45,6 @@ namespace Org.Apache.Kafka.Common.Metrics
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.Metrics.KafkaMetric"/> to <see cref="Org.Apache.Kafka.Common.Metric"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Common.Metric(Org.Apache.Kafka.Common.Metrics.KafkaMetric t) => t.Cast<Org.Apache.Kafka.Common.Metric>();
 
         #endregion
 
@@ -62,7 +58,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/KafkaMetric.html#metricValue()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/KafkaMetric.html#metricValue()"/>
         /// </summary>
 
         /// <returns><see cref="object"/></returns>
@@ -71,7 +67,7 @@ namespace Org.Apache.Kafka.Common.Metrics
             return IExecute("metricValue");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/KafkaMetric.html#metricName()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/KafkaMetric.html#metricName()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.MetricName"/></returns>
@@ -80,7 +76,7 @@ namespace Org.Apache.Kafka.Common.Metrics
             return IExecute<Org.Apache.Kafka.Common.MetricName>("metricName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/KafkaMetric.html#measurable()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/KafkaMetric.html#measurable()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Metrics.Measurable"/></returns>
@@ -89,7 +85,7 @@ namespace Org.Apache.Kafka.Common.Metrics
             return IExecute<Org.Apache.Kafka.Common.Metrics.Measurable>("measurable");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/KafkaMetric.html#config()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/KafkaMetric.html#config()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Metrics.MetricConfig"/></returns>
@@ -98,7 +94,7 @@ namespace Org.Apache.Kafka.Common.Metrics
             return IExecute<Org.Apache.Kafka.Common.Metrics.MetricConfig>("config");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/KafkaMetric.html#config(org.apache.kafka.common.metrics.MetricConfig)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/KafkaMetric.html#config(org.apache.kafka.common.metrics.MetricConfig)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Metrics.MetricConfig"/></param>
         public void Config(Org.Apache.Kafka.Common.Metrics.MetricConfig arg0)

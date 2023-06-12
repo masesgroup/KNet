@@ -27,9 +27,9 @@ namespace Org.Apache.Kafka.Connect.Transforms.Util
 {
     #region NonEmptyListValidator
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/util/NonEmptyListValidator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/util/NonEmptyListValidator.html"/>
     /// </summary>
-    public partial class NonEmptyListValidator : MASES.JCOBridge.C2JBridge.JVMBridgeBase<NonEmptyListValidator>
+    public partial class NonEmptyListValidator : Org.Apache.Kafka.Common.Config.ConfigDef.Validator
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -70,9 +70,9 @@ namespace Org.Apache.Kafka.Connect.Transforms.Util
 
     #region RegexValidator
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/util/RegexValidator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/util/RegexValidator.html"/>
     /// </summary>
-    public partial class RegexValidator : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RegexValidator>
+    public partial class RegexValidator : Org.Apache.Kafka.Common.Config.ConfigDef.Validator
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Util
 
     #region Requirements
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/util/Requirements.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/util/Requirements.html"/>
     /// </summary>
     public partial class Requirements : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Requirements>
     {
@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Util
 
     #region SchemaUtil
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/util/SchemaUtil.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/util/SchemaUtil.html"/>
     /// </summary>
     public partial class SchemaUtil : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SchemaUtil>
     {
@@ -199,7 +199,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Util
 
     #region SimpleConfig
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/util/SimpleConfig.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/util/SimpleConfig.html"/>
     /// </summary>
     public partial class SimpleConfig : Org.Apache.Kafka.Common.Config.AbstractConfig
     {
@@ -239,6 +239,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Util
 
     }
     #endregion
+
 
 
 }

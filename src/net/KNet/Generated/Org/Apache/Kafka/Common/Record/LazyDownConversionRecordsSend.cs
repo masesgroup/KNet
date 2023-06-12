@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Record
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LazyDownConversionRecordsSend.html#%3Cinit%3E(org.apache.kafka.common.record.LazyDownConversionRecords)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LazyDownConversionRecordsSend.html#%3Cinit%3E(org.apache.kafka.common.record.LazyDownConversionRecords)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Record.LazyDownConversionRecords"/></param>
         public LazyDownConversionRecordsSend(Org.Apache.Kafka.Common.Record.LazyDownConversionRecords arg0)
@@ -54,7 +54,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LazyDownConversionRecordsSend.html#writeTo(org.apache.kafka.common.network.TransferableChannel,long,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LazyDownConversionRecordsSend.html#writeTo(org.apache.kafka.common.network.TransferableChannel,long,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Network.TransferableChannel"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -66,7 +66,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecute<long>("writeTo", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LazyDownConversionRecordsSend.html#recordConversionStats()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LazyDownConversionRecordsSend.html#recordConversionStats()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.RecordConversionStats"/></returns>
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecute<Org.Apache.Kafka.Common.Record.RecordConversionStats>("recordConversionStats");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LazyDownConversionRecordsSend.html#topicPartition()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LazyDownConversionRecordsSend.html#topicPartition()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.TopicPartition"/></returns>

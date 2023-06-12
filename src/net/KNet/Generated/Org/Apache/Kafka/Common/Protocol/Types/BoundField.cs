@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/BoundField.html#%3Cinit%3E(org.apache.kafka.common.protocol.types.Field,org.apache.kafka.common.protocol.types.Schema,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/BoundField.html#%3Cinit%3E(org.apache.kafka.common.protocol.types.Field,org.apache.kafka.common.protocol.types.Schema,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Schema"/></param>
@@ -48,7 +48,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/BoundField.html#def"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/BoundField.html#def"/>
         /// </summary>
         public Org.Apache.Kafka.Common.Protocol.Types.Field def { get { return IGetField<Org.Apache.Kafka.Common.Protocol.Types.Field>("def"); } }
 

@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Memory
 {
+    #region IMemoryPool
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/MemoryPool.html"/>
+    /// </summary>
+    public partial interface IMemoryPool
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region MemoryPool
-    public partial class MemoryPool
+    public partial class MemoryPool : Org.Apache.Kafka.Common.Memory.IMemoryPool
     {
         #region Constructors
 
@@ -38,7 +56,7 @@ namespace Org.Apache.Kafka.Common.Memory
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/MemoryPool.html#NONE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/MemoryPool.html#NONE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Memory.MemoryPool NONE { get { return SGetField<Org.Apache.Kafka.Common.Memory.MemoryPool>(LocalBridgeClazz, "NONE"); } }
 
@@ -50,7 +68,7 @@ namespace Org.Apache.Kafka.Common.Memory
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/MemoryPool.html#isOutOfMemory()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/MemoryPool.html#isOutOfMemory()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -59,7 +77,7 @@ namespace Org.Apache.Kafka.Common.Memory
             return IExecute<bool>("isOutOfMemory");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/MemoryPool.html#tryAllocate(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/MemoryPool.html#tryAllocate(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
@@ -68,7 +86,7 @@ namespace Org.Apache.Kafka.Common.Memory
             return IExecute<Java.Nio.ByteBuffer>("tryAllocate", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/MemoryPool.html#availableMemory()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/MemoryPool.html#availableMemory()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -77,7 +95,7 @@ namespace Org.Apache.Kafka.Common.Memory
             return IExecute<long>("availableMemory");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/MemoryPool.html#size()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/MemoryPool.html#size()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -86,7 +104,7 @@ namespace Org.Apache.Kafka.Common.Memory
             return IExecute<long>("size");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/MemoryPool.html#release(java.nio.ByteBuffer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/MemoryPool.html#release(java.nio.ByteBuffer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         public void Release(Java.Nio.ByteBuffer arg0)

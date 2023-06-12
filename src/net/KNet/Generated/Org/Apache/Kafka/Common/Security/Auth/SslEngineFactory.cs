@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Security.Auth
 {
+    #region ISslEngineFactory
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslEngineFactory.html"/>
+    /// </summary>
+    public partial interface ISslEngineFactory
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region SslEngineFactory
-    public partial class SslEngineFactory
+    public partial class SslEngineFactory : Org.Apache.Kafka.Common.Security.Auth.ISslEngineFactory, Org.Apache.Kafka.Common.IConfigurable, Java.Io.ICloseable
     {
         #region Constructors
 
@@ -54,7 +72,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslEngineFactory.html#shouldBeRebuilt(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslEngineFactory.html#shouldBeRebuilt(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -63,7 +81,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
             return IExecute<bool>("shouldBeRebuilt", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslEngineFactory.html#keystore()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslEngineFactory.html#keystore()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Security.KeyStore"/></returns>
@@ -72,7 +90,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
             return IExecute<Java.Security.KeyStore>("keystore");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslEngineFactory.html#truststore()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslEngineFactory.html#truststore()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Security.KeyStore"/></returns>
@@ -81,7 +99,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
             return IExecute<Java.Security.KeyStore>("truststore");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslEngineFactory.html#reconfigurableConfigs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslEngineFactory.html#reconfigurableConfigs()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Set"/></returns>
@@ -90,7 +108,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
             return IExecute<Java.Util.Set<string>>("reconfigurableConfigs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslEngineFactory.html#createClientSslEngine(java.lang.String,int,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslEngineFactory.html#createClientSslEngine(java.lang.String,int,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -101,7 +119,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
             return IExecute<Javax.Net.Ssl.SSLEngine>("createClientSslEngine", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslEngineFactory.html#createServerSslEngine(java.lang.String,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslEngineFactory.html#createServerSslEngine(java.lang.String,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="int"/></param>

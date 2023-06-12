@@ -38,11 +38,11 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/SecurityConfig.html#SECURITY_PROVIDERS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/SecurityConfig.html#SECURITY_PROVIDERS_CONFIG"/>
         /// </summary>
         public static string SECURITY_PROVIDERS_CONFIG { get { return SGetField<string>(LocalBridgeClazz, "SECURITY_PROVIDERS_CONFIG"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/SecurityConfig.html#SECURITY_PROVIDERS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/SecurityConfig.html#SECURITY_PROVIDERS_DOC"/>
         /// </summary>
         public static string SECURITY_PROVIDERS_DOC { get { return SGetField<string>(LocalBridgeClazz, "SECURITY_PROVIDERS_DOC"); } }
 

@@ -33,10 +33,6 @@ namespace Org.Apache.Kafka.Common.Network
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.Network.SslTransportLayer"/> to <see cref="Org.Apache.Kafka.Common.Network.TransportLayer"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Common.Network.TransportLayer(Org.Apache.Kafka.Common.Network.SslTransportLayer t) => t.Cast<Org.Apache.Kafka.Common.Network.TransportLayer>();
 
         #endregion
 
@@ -46,7 +42,7 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#create(java.lang.String,java.nio.channels.SelectionKey,javax.net.ssl.SSLEngine,org.apache.kafka.common.network.ChannelMetadataRegistry)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#create(java.lang.String,java.nio.channels.SelectionKey,javax.net.ssl.SSLEngine,org.apache.kafka.common.network.ChannelMetadataRegistry)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Java.Nio.Channels.SelectionKey"/></param>
@@ -63,7 +59,7 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#finishConnect()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#finishConnect()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -73,7 +69,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<bool>("finishConnect");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#hasBytesBuffered()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#hasBytesBuffered()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -82,7 +78,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<bool>("hasBytesBuffered");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#hasPendingWrites()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#hasPendingWrites()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -91,7 +87,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<bool>("hasPendingWrites");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#isConnected()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#isConnected()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -100,7 +96,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<bool>("isConnected");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#isMute()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#isMute()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -109,7 +105,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<bool>("isMute");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#isOpen()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#isOpen()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -118,7 +114,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<bool>("isOpen");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#ready()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#ready()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -127,7 +123,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<bool>("ready");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#read(java.nio.ByteBuffer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#read(java.nio.ByteBuffer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <returns><see cref="int"/></returns>
@@ -137,7 +133,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<int>("read", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#write(java.nio.ByteBuffer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#write(java.nio.ByteBuffer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <returns><see cref="int"/></returns>
@@ -147,7 +143,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<int>("write", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#selectionKey()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#selectionKey()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Nio.Channels.SelectionKey"/></returns>
@@ -156,7 +152,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<Java.Nio.Channels.SelectionKey>("selectionKey");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#socketChannel()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#socketChannel()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Nio.Channels.SocketChannel"/></returns>
@@ -165,7 +161,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<Java.Nio.Channels.SocketChannel>("socketChannel");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#peerPrincipal()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#peerPrincipal()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Security.Principal"/></returns>
@@ -174,7 +170,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<Java.Security.Principal>("peerPrincipal");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#sslSession()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#sslSession()"/>
         /// </summary>
 
         /// <returns><see cref="Javax.Net.Ssl.SSLSession"/></returns>
@@ -184,7 +180,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<Javax.Net.Ssl.SSLSession>("sslSession");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#read(java.nio.ByteBuffer[],int,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#read(java.nio.ByteBuffer[],int,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -196,7 +192,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<long>("read", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#read(java.nio.ByteBuffer[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#read(java.nio.ByteBuffer[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <returns><see cref="long"/></returns>
@@ -206,7 +202,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<long>("read", new object[] { arg0 });
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#transferFrom(java.nio.channels.FileChannel,long,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#transferFrom(java.nio.channels.FileChannel,long,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.Channels.FileChannel"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -218,7 +214,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<long>("transferFrom", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#write(java.nio.ByteBuffer[],int,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#write(java.nio.ByteBuffer[],int,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -230,7 +226,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<long>("write", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#write(java.nio.ByteBuffer[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#write(java.nio.ByteBuffer[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <returns><see cref="long"/></returns>
@@ -240,7 +236,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<long>("write", new object[] { arg0 });
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#addInterestOps(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#addInterestOps(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public void AddInterestOps(int arg0)
@@ -248,7 +244,7 @@ namespace Org.Apache.Kafka.Common.Network
             IExecute("addInterestOps", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#close()"/>
         /// </summary>
 
         /// <exception cref="Java.Io.IOException"/>
@@ -257,14 +253,14 @@ namespace Org.Apache.Kafka.Common.Network
             IExecute("close");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#disconnect()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#disconnect()"/>
         /// </summary>
         public void Disconnect()
         {
             IExecute("disconnect");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#handshake()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#handshake()"/>
         /// </summary>
 
         /// <exception cref="Java.Io.IOException"/>
@@ -273,7 +269,7 @@ namespace Org.Apache.Kafka.Common.Network
             IExecute("handshake");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#removeInterestOps(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html#removeInterestOps(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public void RemoveInterestOps(int arg0)

@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Clients
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ManualMetadataUpdater.html#%3Cinit%3E(java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ManualMetadataUpdater.html#%3Cinit%3E(java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         public ManualMetadataUpdater(Java.Util.List<Org.Apache.Kafka.Common.Node> arg0)
@@ -41,10 +41,6 @@ namespace Org.Apache.Kafka.Clients
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Clients.ManualMetadataUpdater"/> to <see cref="Org.Apache.Kafka.Clients.MetadataUpdater"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Clients.MetadataUpdater(Org.Apache.Kafka.Clients.ManualMetadataUpdater t) => t.Cast<Org.Apache.Kafka.Clients.MetadataUpdater>();
 
         #endregion
 
@@ -58,7 +54,7 @@ namespace Org.Apache.Kafka.Clients
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ManualMetadataUpdater.html#isUpdateDue(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ManualMetadataUpdater.html#isUpdateDue(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -67,7 +63,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecute<bool>("isUpdateDue", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ManualMetadataUpdater.html#fetchNodes()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ManualMetadataUpdater.html#fetchNodes()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -76,7 +72,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Node>>("fetchNodes");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ManualMetadataUpdater.html#maybeUpdate(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ManualMetadataUpdater.html#maybeUpdate(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="long"/></returns>
@@ -85,14 +81,14 @@ namespace Org.Apache.Kafka.Clients
             return IExecute<long>("maybeUpdate", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ManualMetadataUpdater.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ManualMetadataUpdater.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecute("close");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ManualMetadataUpdater.html#handleFailedRequest(long,java.util.Optional)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ManualMetadataUpdater.html#handleFailedRequest(long,java.util.Optional)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="Java.Util.Optional"/></param>
@@ -101,7 +97,7 @@ namespace Org.Apache.Kafka.Clients
             IExecute("handleFailedRequest", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ManualMetadataUpdater.html#handleServerDisconnect(long,java.lang.String,java.util.Optional)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ManualMetadataUpdater.html#handleServerDisconnect(long,java.lang.String,java.util.Optional)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -111,17 +107,7 @@ namespace Org.Apache.Kafka.Clients
             IExecute("handleServerDisconnect", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ManualMetadataUpdater.html#handleSuccessfulResponse(org.apache.kafka.common.requests.RequestHeader,long,org.apache.kafka.common.requests.MetadataResponse)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Requests.RequestHeader"/></param>
-        /// <param name="arg1"><see cref="long"/></param>
-        /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Requests.MetadataResponse"/></param>
-        public void HandleSuccessfulResponse(Org.Apache.Kafka.Common.Requests.RequestHeader arg0, long arg1, Org.Apache.Kafka.Common.Requests.MetadataResponse arg2)
-        {
-            IExecute("handleSuccessfulResponse", arg0, arg1, arg2);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ManualMetadataUpdater.html#setNodes(java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ManualMetadataUpdater.html#setNodes(java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         public void SetNodes(Java.Util.List<Org.Apache.Kafka.Common.Node> arg0)

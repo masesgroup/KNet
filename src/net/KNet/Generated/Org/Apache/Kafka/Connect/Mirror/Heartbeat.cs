@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#%3Cinit%3E(java.lang.String,java.lang.String,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#%3Cinit%3E(java.lang.String,java.lang.String,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -48,35 +48,35 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#SOURCE_CLUSTER_ALIAS_KEY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#SOURCE_CLUSTER_ALIAS_KEY"/>
         /// </summary>
         public static string SOURCE_CLUSTER_ALIAS_KEY { get { return SGetField<string>(LocalBridgeClazz, "SOURCE_CLUSTER_ALIAS_KEY"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#TARGET_CLUSTER_ALIAS_KEY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#TARGET_CLUSTER_ALIAS_KEY"/>
         /// </summary>
         public static string TARGET_CLUSTER_ALIAS_KEY { get { return SGetField<string>(LocalBridgeClazz, "TARGET_CLUSTER_ALIAS_KEY"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#TIMESTAMP_KEY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#TIMESTAMP_KEY"/>
         /// </summary>
         public static string TIMESTAMP_KEY { get { return SGetField<string>(LocalBridgeClazz, "TIMESTAMP_KEY"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#VERSION_KEY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#VERSION_KEY"/>
         /// </summary>
         public static string VERSION_KEY { get { return SGetField<string>(LocalBridgeClazz, "VERSION_KEY"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#HEADER_SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#HEADER_SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Types.Schema HEADER_SCHEMA { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Types.Schema>(LocalBridgeClazz, "HEADER_SCHEMA"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#KEY_SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#KEY_SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Types.Schema KEY_SCHEMA { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Types.Schema>(LocalBridgeClazz, "KEY_SCHEMA"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#VALUE_SCHEMA_V0"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#VALUE_SCHEMA_V0"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Types.Schema VALUE_SCHEMA_V0 { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Types.Schema>(LocalBridgeClazz, "VALUE_SCHEMA_V0"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#VERSION"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#VERSION"/>
         /// </summary>
         public static short VERSION { get { return SGetField<short>(LocalBridgeClazz, "VERSION"); } }
 
@@ -84,7 +84,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#deserializeRecord(org.apache.kafka.clients.consumer.ConsumerRecord)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#deserializeRecord(org.apache.kafka.clients.consumer.ConsumerRecord)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Mirror.Heartbeat"/></returns>
@@ -97,7 +97,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#sourceClusterAlias()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#sourceClusterAlias()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -106,7 +106,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecute<string>("sourceClusterAlias");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#targetClusterAlias()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#targetClusterAlias()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecute<string>("targetClusterAlias");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#timestamp()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#timestamp()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>

@@ -26,7 +26,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
     /// <summary>
     /// Listener for Kafka ConsumerRebalanceListener. Extends <see cref="IJVMBridgeBase"/>
     /// </summary>
-    public interface IConsumerRebalanceListener : IJVMBridgeBase
+    public partial interface IConsumerRebalanceListener : IJVMBridgeBase
     {
         /// <summary>
         /// Executes the Callback action in the CLR
@@ -87,15 +87,5 @@ namespace Org.Apache.Kafka.Clients.Consumer
         {
             OnOnPartitionsAssigned(data.EventData.TypedEventData);
         }
-        /// <summary>
-        /// Executes the Callback action in the CLR
-        /// </summary>
-        /// <param name="partitions">The <see cref="Collection{TopicPartition}"/> object</param>
-        public virtual void OnPartitionsRevoked(Collection<TopicPartition> partitions) { }
-        /// <summary>
-        /// Executes the Callback action in the CLR
-        /// </summary>
-        /// <param name="partitions">The <see cref="Collection{TopicPartition}"/> object</param>
-        public virtual void OnPartitionsAssigned(Collection<TopicPartition> partitions) { }
     }
 }

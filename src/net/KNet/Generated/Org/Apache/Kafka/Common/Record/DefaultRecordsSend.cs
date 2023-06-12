@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Record
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/DefaultRecordsSend.html#%3Cinit%3E(org.apache.kafka.common.record.TransferableRecords,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/DefaultRecordsSend.html#%3Cinit%3E(org.apache.kafka.common.record.TransferableRecords,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Record.TransferableRecords"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -39,7 +39,7 @@ namespace Org.Apache.Kafka.Common.Record
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/DefaultRecordsSend.html#%3Cinit%3E(org.apache.kafka.common.record.TransferableRecords)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/DefaultRecordsSend.html#%3Cinit%3E(org.apache.kafka.common.record.TransferableRecords)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Record.TransferableRecords"/></param>
         public DefaultRecordsSend(Org.Apache.Kafka.Common.Record.TransferableRecords arg0)
@@ -78,7 +78,7 @@ namespace Org.Apache.Kafka.Common.Record
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/DefaultRecordsSend.html#%3Cinit%3E(org.apache.kafka.common.record.TransferableRecords,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/DefaultRecordsSend.html#%3Cinit%3E(org.apache.kafka.common.record.TransferableRecords,int)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="T"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Common.Record
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/DefaultRecordsSend.html#%3Cinit%3E(org.apache.kafka.common.record.TransferableRecords)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/DefaultRecordsSend.html#%3Cinit%3E(org.apache.kafka.common.record.TransferableRecords)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="T"/></param>
         public DefaultRecordsSend(T arg0)

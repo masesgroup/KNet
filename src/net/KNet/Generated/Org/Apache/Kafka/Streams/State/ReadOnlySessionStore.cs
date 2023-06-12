@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetch(java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetch(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -56,7 +56,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator>("fetch", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetch(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetch(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.KeyValueIterator"/></returns>
@@ -65,7 +65,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator>("fetch", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetchSession(java.lang.Object,java.time.Instant,java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetchSession(java.lang.Object,java.time.Instant,java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="Java.Time.Instant"/></param>
@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute("fetchSession", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetchSession(java.lang.Object,long,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetchSession(java.lang.Object,long,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute("fetchSession", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFetch(java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFetch(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -97,7 +97,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator>("backwardFetch", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFetch(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFetch(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.KeyValueIterator"/></returns>
@@ -106,7 +106,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator>("backwardFetch", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions(java.lang.Object,java.time.Instant,java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions(java.lang.Object,java.time.Instant,java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="Java.Time.Instant"/></param>
@@ -117,7 +117,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator>("backwardFindSessions", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions(java.lang.Object,java.lang.Object,java.time.Instant,java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions(java.lang.Object,java.lang.Object,java.time.Instant,java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -129,7 +129,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator>("backwardFindSessions", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions(java.lang.Object,java.lang.Object,long,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions(java.lang.Object,java.lang.Object,long,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -141,7 +141,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator>("backwardFindSessions", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions(java.lang.Object,long,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions(java.lang.Object,long,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -152,7 +152,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator>("backwardFindSessions", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions(java.lang.Object,java.time.Instant,java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions(java.lang.Object,java.time.Instant,java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="Java.Time.Instant"/></param>
@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator>("findSessions", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions(java.lang.Object,java.lang.Object,java.time.Instant,java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions(java.lang.Object,java.lang.Object,java.time.Instant,java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -175,7 +175,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator>("findSessions", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions(java.lang.Object,java.lang.Object,long,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions(java.lang.Object,java.lang.Object,long,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -187,7 +187,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator>("findSessions", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions(java.lang.Object,long,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions(java.lang.Object,long,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -208,8 +208,26 @@ namespace Org.Apache.Kafka.Streams.State
     }
     #endregion
 
+    #region IReadOnlySessionStore<K, AGG>
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html"/>
+    /// </summary>
+    public partial interface IReadOnlySessionStore<K, AGG>
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region ReadOnlySessionStore<K, AGG>
-    public partial class ReadOnlySessionStore<K, AGG>
+    public partial class ReadOnlySessionStore<K, AGG> : Org.Apache.Kafka.Streams.State.IReadOnlySessionStore<K, AGG>
     {
         #region Constructors
 
@@ -233,7 +251,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetch(java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetch(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><typeparamref name="K"/></param>
@@ -243,7 +261,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, AGG>>("fetch", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetch(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetch(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.KeyValueIterator"/></returns>
@@ -252,7 +270,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, AGG>>("fetch", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetchSession(java.lang.Object,java.time.Instant,java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetchSession(java.lang.Object,java.time.Instant,java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><see cref="Java.Time.Instant"/></param>
@@ -263,7 +281,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<AGG>("fetchSession", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetchSession(java.lang.Object,long,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetchSession(java.lang.Object,long,long)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -274,7 +292,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<AGG>("fetchSession", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFetch(java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFetch(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><typeparamref name="K"/></param>
@@ -284,7 +302,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, AGG>>("backwardFetch", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFetch(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFetch(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.KeyValueIterator"/></returns>
@@ -293,7 +311,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, AGG>>("backwardFetch", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions(java.lang.Object,java.time.Instant,java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions(java.lang.Object,java.time.Instant,java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><see cref="Java.Time.Instant"/></param>
@@ -304,7 +322,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, AGG>>("backwardFindSessions", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions(java.lang.Object,java.lang.Object,java.time.Instant,java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions(java.lang.Object,java.lang.Object,java.time.Instant,java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><typeparamref name="K"/></param>
@@ -316,7 +334,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, AGG>>("backwardFindSessions", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions(java.lang.Object,java.lang.Object,long,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions(java.lang.Object,java.lang.Object,long,long)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><typeparamref name="K"/></param>
@@ -328,7 +346,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, AGG>>("backwardFindSessions", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions(java.lang.Object,long,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions(java.lang.Object,long,long)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -339,7 +357,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, AGG>>("backwardFindSessions", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions(java.lang.Object,java.time.Instant,java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions(java.lang.Object,java.time.Instant,java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><see cref="Java.Time.Instant"/></param>
@@ -350,7 +368,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, AGG>>("findSessions", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions(java.lang.Object,java.lang.Object,java.time.Instant,java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions(java.lang.Object,java.lang.Object,java.time.Instant,java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><typeparamref name="K"/></param>
@@ -362,7 +380,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, AGG>>("findSessions", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions(java.lang.Object,java.lang.Object,long,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions(java.lang.Object,java.lang.Object,long,long)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><typeparamref name="K"/></param>
@@ -374,7 +392,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, AGG>>("findSessions", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions(java.lang.Object,long,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions(java.lang.Object,long,long)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><see cref="long"/></param>

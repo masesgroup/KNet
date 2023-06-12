@@ -27,9 +27,9 @@ namespace Org.Apache.Kafka.Common.Security.Plain
 {
     #region PlainAuthenticateCallback
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/PlainAuthenticateCallback.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/PlainAuthenticateCallback.html"/>
     /// </summary>
-    public partial class PlainAuthenticateCallback : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PlainAuthenticateCallback>
+    public partial class PlainAuthenticateCallback : Javax.Security.Auth.Callback.Callback
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -70,9 +70,9 @@ namespace Org.Apache.Kafka.Common.Security.Plain
 
     #region PlainLoginModule
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/PlainLoginModule.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/PlainLoginModule.html"/>
     /// </summary>
-    public partial class PlainLoginModule : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PlainLoginModule>
+    public partial class PlainLoginModule : Javax.Security.Auth.Spi.LoginModule
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -110,6 +110,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain
 
     }
     #endregion
+
 
 
 }

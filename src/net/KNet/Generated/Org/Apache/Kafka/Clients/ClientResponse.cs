@@ -29,22 +29,6 @@ namespace Org.Apache.Kafka.Clients
     public partial class ClientResponse
     {
         #region Constructors
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientResponse.html#%3Cinit%3E(org.apache.kafka.common.requests.RequestHeader,org.apache.kafka.clients.RequestCompletionHandler,java.lang.String,long,long,boolean,org.apache.kafka.common.errors.UnsupportedVersionException,org.apache.kafka.common.errors.AuthenticationException,org.apache.kafka.common.requests.AbstractResponse)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Requests.RequestHeader"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.RequestCompletionHandler"/></param>
-        /// <param name="arg2"><see cref="string"/></param>
-        /// <param name="arg3"><see cref="long"/></param>
-        /// <param name="arg4"><see cref="long"/></param>
-        /// <param name="arg5"><see cref="bool"/></param>
-        /// <param name="arg6"><see cref="Org.Apache.Kafka.Common.Errors.UnsupportedVersionException"/></param>
-        /// <param name="arg7"><see cref="Org.Apache.Kafka.Common.Errors.AuthenticationException"/></param>
-        /// <param name="arg8"><see cref="Org.Apache.Kafka.Common.Requests.AbstractResponse"/></param>
-        public ClientResponse(Org.Apache.Kafka.Common.Requests.RequestHeader arg0, Org.Apache.Kafka.Clients.RequestCompletionHandler arg1, string arg2, long arg3, long arg4, bool arg5, Org.Apache.Kafka.Common.Errors.UnsupportedVersionException arg6, Org.Apache.Kafka.Common.Errors.AuthenticationException arg7, Org.Apache.Kafka.Common.Requests.AbstractResponse arg8)
-            : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
-        {
-        }
 
         #endregion
 
@@ -62,7 +46,7 @@ namespace Org.Apache.Kafka.Clients
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientResponse.html#hasResponse()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientResponse.html#hasResponse()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -71,7 +55,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecute<bool>("hasResponse");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientResponse.html#wasDisconnected()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientResponse.html#wasDisconnected()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -80,7 +64,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecute<bool>("wasDisconnected");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientResponse.html#destination()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientResponse.html#destination()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -89,7 +73,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecute<string>("destination");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientResponse.html#receivedTimeMs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientResponse.html#receivedTimeMs()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -98,7 +82,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecute<long>("receivedTimeMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientResponse.html#requestLatencyMs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientResponse.html#requestLatencyMs()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -107,7 +91,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecute<long>("requestLatencyMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientResponse.html#authenticationException()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientResponse.html#authenticationException()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Errors.AuthenticationException"/></returns>
@@ -116,7 +100,7 @@ namespace Org.Apache.Kafka.Clients
             var obj = IExecute<MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject>("authenticationException"); return MASES.JCOBridge.C2JBridge.JVMBridgeException.New<Org.Apache.Kafka.Common.Errors.AuthenticationException>(obj);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientResponse.html#versionMismatch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientResponse.html#versionMismatch()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Errors.UnsupportedVersionException"/></returns>
@@ -125,25 +109,7 @@ namespace Org.Apache.Kafka.Clients
             var obj = IExecute<MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject>("versionMismatch"); return MASES.JCOBridge.C2JBridge.JVMBridgeException.New<Org.Apache.Kafka.Common.Errors.UnsupportedVersionException>(obj);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientResponse.html#responseBody()"/>
-        /// </summary>
-
-        /// <returns><see cref="Org.Apache.Kafka.Common.Requests.AbstractResponse"/></returns>
-        public Org.Apache.Kafka.Common.Requests.AbstractResponse ResponseBody()
-        {
-            return IExecute<Org.Apache.Kafka.Common.Requests.AbstractResponse>("responseBody");
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientResponse.html#requestHeader()"/>
-        /// </summary>
-
-        /// <returns><see cref="Org.Apache.Kafka.Common.Requests.RequestHeader"/></returns>
-        public Org.Apache.Kafka.Common.Requests.RequestHeader RequestHeader()
-        {
-            return IExecute<Org.Apache.Kafka.Common.Requests.RequestHeader>("requestHeader");
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientResponse.html#onComplete()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientResponse.html#onComplete()"/>
         /// </summary>
         public void OnComplete()
         {

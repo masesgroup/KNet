@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Common.Compress
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/compress/SnappyFactory.html#wrapForInput(java.nio.ByteBuffer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/compress/SnappyFactory.html#wrapForInput(java.nio.ByteBuffer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <returns><see cref="Java.Io.InputStream"/></returns>
@@ -51,7 +51,7 @@ namespace Org.Apache.Kafka.Common.Compress
             return SExecute<Java.Io.InputStream>(LocalBridgeClazz, "wrapForInput", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/compress/SnappyFactory.html#wrapForOutput(org.apache.kafka.common.utils.ByteBufferOutputStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/compress/SnappyFactory.html#wrapForOutput(org.apache.kafka.common.utils.ByteBufferOutputStream)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Utils.ByteBufferOutputStream"/></param>
         /// <returns><see cref="Java.Io.OutputStream"/></returns>

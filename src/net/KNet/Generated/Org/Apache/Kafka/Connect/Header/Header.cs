@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Connect.Header
 {
+    #region IHeader
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/header/Header.html"/>
+    /// </summary>
+    public partial interface IHeader
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region Header
-    public partial class Header
+    public partial class Header : Org.Apache.Kafka.Connect.Header.IHeader
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Connect.Header
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/header/Header.html#value()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/header/Header.html#value()"/>
         /// </summary>
 
         /// <returns><see cref="object"/></returns>
@@ -55,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Header
             return IExecute("value");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/header/Header.html#key()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/header/Header.html#key()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -64,7 +82,7 @@ namespace Org.Apache.Kafka.Connect.Header
             return IExecute<string>("key");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/header/Header.html#schema()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/header/Header.html#schema()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></returns>
@@ -73,7 +91,7 @@ namespace Org.Apache.Kafka.Connect.Header
             return IExecute<Org.Apache.Kafka.Connect.Data.Schema>("schema");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/header/Header.html#rename(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/header/Header.html#rename(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Header"/></returns>
@@ -82,7 +100,7 @@ namespace Org.Apache.Kafka.Connect.Header
             return IExecute<Org.Apache.Kafka.Connect.Header.Header>("rename", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/header/Header.html#with(org.apache.kafka.connect.data.Schema,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/header/Header.html#with(org.apache.kafka.connect.data.Schema,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="object"/></param>

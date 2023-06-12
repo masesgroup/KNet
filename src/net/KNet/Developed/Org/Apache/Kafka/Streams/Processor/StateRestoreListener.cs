@@ -25,7 +25,7 @@ namespace Org.Apache.Kafka.Streams.Processor
     /// <summary>
     /// Listener for Kafka StateRestoreListener. Extends <see cref="IJVMBridgeBase"/>
     /// </summary>
-    public interface IStateRestoreListener : IJVMBridgeBase
+    public partial interface IStateRestoreListener : IJVMBridgeBase
     {
         void OnRestoreStart(TopicPartition topicPartition,
                                string storeName,
@@ -109,21 +109,6 @@ namespace Org.Apache.Kafka.Streams.Processor
         void EventHandler_onRestoreEnd(object sender, CLRListenerEventArgs<CLREventData<TopicPartition>> data)
         {
             OnOnRestoreEnd(data.EventData.TypedEventData, data.EventData.To<string>(0), data.EventData.To<long>(1));
-        }
-
-        public virtual void OnRestoreStart(TopicPartition topicPartition, string storeName, long startingOffset, long endingOffset)
-        {
-
-        }
-
-        public virtual void OnBatchRestored(TopicPartition topicPartition, string storeName, long batchEndOffset, long numRestored)
-        {
-
-        }
-
-        public virtual void OnRestoreEnd(TopicPartition topicPartition, string storeName, long totalRestored)
-        {
-
         }
     }
 }

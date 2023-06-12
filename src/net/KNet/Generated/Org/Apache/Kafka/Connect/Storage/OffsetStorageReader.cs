@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Connect.Storage
 {
+    #region IOffsetStorageReader
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/OffsetStorageReader.html"/>
+    /// </summary>
+    public partial interface IOffsetStorageReader
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region OffsetStorageReader
-    public partial class OffsetStorageReader
+    public partial class OffsetStorageReader : Org.Apache.Kafka.Connect.Storage.IOffsetStorageReader
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Connect.Storage
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/OffsetStorageReader.html#offset(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/OffsetStorageReader.html#offset(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <typeparam name="T"></typeparam>
@@ -56,7 +74,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return IExecute<Java.Util.Map<string, object>>("offset", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/OffsetStorageReader.html#offsets(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/OffsetStorageReader.html#offsets(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <typeparam name="T"></typeparam>

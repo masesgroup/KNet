@@ -50,7 +50,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/DoubleSerializer.html#serialize(java.lang.String,java.lang.Double)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/DoubleSerializer.html#serialize(java.lang.String,java.lang.Double)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="double"/></param>
@@ -60,7 +60,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             return IExecuteArray<byte>("serialize", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/DoubleSerializer.html#serialize(java.lang.String,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/DoubleSerializer.html#serialize(java.lang.String,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="object"/></param>

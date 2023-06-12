@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Serialization
     /// Listener for Kafka Serializer. Extends <see cref="IJVMBridgeBase"/>
     /// </summary>
     /// <typeparam name="E">The data associated to the event</typeparam>
-    public interface ISerializer : IJVMBridgeBase
+    public partial interface ISerializer : IJVMBridgeBase
     {
     }
 
@@ -35,7 +35,7 @@ namespace Org.Apache.Kafka.Common.Serialization
     /// Listener for Kafka Serializer. Extends <see cref="Serializer"/>
     /// </summary>
     /// <typeparam name="T">The data associated to the event</typeparam>
-    public interface ISerializer<T> : ISerializer
+    public partial interface ISerializer<T> : ISerializer
     {
         /// <summary>
         /// Executes the Serializer action in the CLR
@@ -108,13 +108,6 @@ namespace Org.Apache.Kafka.Common.Serialization
             eventData.SetReturnValue(retVal);
         }
 
-        /// <summary>
-        /// Executes the Serializer action in the CLR
-        /// </summary>
-        /// <param name="topic">topic associated with the data</param>
-        /// <param name="data"><typeparamref name="T"/> data</param>
-        /// <returns>serialized bytes</returns>
-        public virtual byte[] Serialize(string topic, T data) { return null; }
         /// <summary>
         /// Executes the Serializer action in the CLR
         /// </summary>

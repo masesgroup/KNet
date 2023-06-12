@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Security.Auth
 {
+    #region ISecurityProviderCreator
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SecurityProviderCreator.html"/>
+    /// </summary>
+    public partial interface ISecurityProviderCreator : Org.Apache.Kafka.Common.IConfigurable
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region SecurityProviderCreator
-    public partial class SecurityProviderCreator
+    public partial class SecurityProviderCreator : Org.Apache.Kafka.Common.Security.Auth.ISecurityProviderCreator
     {
         #region Constructors
 
@@ -46,18 +64,17 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SecurityProviderCreator.html#getProvider()"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SecurityProviderCreator.html#getProvider()"/> 
         /// </summary>
         public Java.Security.Provider Provider
         {
             get { return IExecute<Java.Security.Provider>("getProvider"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SecurityProviderCreator.html#configure(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SecurityProviderCreator.html#configure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        /// <typeparam name="Arg0Extendsobject"></typeparam>
-        public void Configure<Arg0Extendsobject>(Java.Util.Map<string, Arg0Extendsobject> arg0)
+        public void Configure(Java.Util.Map<string, object> arg0)
         {
             IExecute("configure", arg0);
         }

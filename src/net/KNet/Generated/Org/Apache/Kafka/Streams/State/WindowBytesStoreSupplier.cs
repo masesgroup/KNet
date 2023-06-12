@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Streams.State
 {
+    #region IWindowBytesStoreSupplier
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/WindowBytesStoreSupplier.html"/>
+    /// </summary>
+    public partial interface IWindowBytesStoreSupplier : Org.Apache.Kafka.Streams.State.IStoreSupplier<Org.Apache.Kafka.Streams.State.WindowStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region WindowBytesStoreSupplier
-    public partial class WindowBytesStoreSupplier
+    public partial class WindowBytesStoreSupplier : Org.Apache.Kafka.Streams.State.IWindowBytesStoreSupplier
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/WindowBytesStoreSupplier.html#retainDuplicates()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/WindowBytesStoreSupplier.html#retainDuplicates()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -55,7 +73,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<bool>("retainDuplicates");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/WindowBytesStoreSupplier.html#retentionPeriod()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/WindowBytesStoreSupplier.html#retentionPeriod()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -64,7 +82,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<long>("retentionPeriod");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/WindowBytesStoreSupplier.html#segmentIntervalMs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/WindowBytesStoreSupplier.html#segmentIntervalMs()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -73,7 +91,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<long>("segmentIntervalMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/WindowBytesStoreSupplier.html#windowSize()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/WindowBytesStoreSupplier.html#windowSize()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>

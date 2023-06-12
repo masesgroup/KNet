@@ -26,7 +26,7 @@ namespace Org.Apache.Kafka.Common.Metrics
     /// <summary>
     /// Listener for Kafka MetricsReporter. Extends <see cref="IJVMBridgeBase"/>
     /// </summary>
-    public interface IMetricsReporter : IJVMBridgeBase
+    public partial interface IMetricsReporter : IJVMBridgeBase
     {
         void Init(List<KafkaMetric> metrics);
 
@@ -117,47 +117,7 @@ namespace Org.Apache.Kafka.Common.Metrics
             ContextChange(data.EventData.TypedEventData);
         }
 
-        public virtual void Init(List<KafkaMetric> metrics)
-        {
-
-        }
-
-        public virtual void MetricChange(KafkaMetric metric)
-        {
-
-        }
-
-        public virtual void MetricRemoval(KafkaMetric metric)
-        {
-
-        }
-
-        public virtual void Close()
-        {
-
-        }
-
-        public virtual Set<string> ReconfigurableConfigs()
-        {
-            return Wraps<Set<string>>(Collections.DynBridgeClazz.emptySet() as IJavaObject);
-        }
-
         public virtual void Configure(Map<string, object> configs)
-        {
-
-        }
-
-        public virtual void Reconfigure(Map<string, object> configs)
-        {
-
-        }
-
-        public virtual void ValidateReconfiguration(Map<string, object> configs)
-        {
-
-        }
-
-        public virtual void ContextChange(MetricsContext metricsContext)
         {
 
         }

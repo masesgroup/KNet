@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Connect.Util
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConnectUtils.html#combineCollections(java.util.Collection,java.util.function.Function,java.util.stream.Collector)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConnectUtils.html#combineCollections(java.util.Collection,java.util.function.Function,java.util.stream.Collector)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
@@ -50,14 +50,13 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <typeparam name="C"></typeparam>
         /// <typeparam name="I"></typeparam>
         /// <typeparam name="T"></typeparam>
-        /// <typeparam name="Arg2Extendsobject"></typeparam>
         /// <returns><typeparamref name="C"/></returns>
-        public static C CombineCollections<C, I, T, Arg2Extendsobject>(Java.Util.Collection<I> arg0, Java.Util.Function.Function<I, Java.Util.Collection<T>> arg1, Java.Util.Stream.Collector<T, Arg2Extendsobject, C> arg2)
+        public static C CombineCollections<C, I, T>(Java.Util.Collection<I> arg0, Java.Util.Function.Function<I, Java.Util.Collection<T>> arg1, Java.Util.Stream.Collector<T, object, C> arg2)
         {
             return SExecute<C>(LocalBridgeClazz, "combineCollections", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConnectUtils.html#combineCollections(java.util.Collection,java.util.function.Function)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConnectUtils.html#combineCollections(java.util.Collection,java.util.function.Function)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
@@ -69,7 +68,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return SExecute<Java.Util.List<T>>(LocalBridgeClazz, "combineCollections", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConnectUtils.html#combineCollections(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConnectUtils.html#combineCollections(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <typeparam name="I"></typeparam>
@@ -79,7 +78,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return SExecute<Java.Util.List<I>>(LocalBridgeClazz, "combineCollections", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConnectUtils.html#transformValues(java.util.Map,java.util.function.Function)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConnectUtils.html#transformValues(java.util.Map,java.util.function.Function)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
@@ -92,7 +91,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return SExecute<Java.Util.Map<K, O>>(LocalBridgeClazz, "transformValues", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConnectUtils.html#isSinkConnector(org.apache.kafka.connect.connector.Connector)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConnectUtils.html#isSinkConnector(org.apache.kafka.connect.connector.Connector)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Connector.Connector"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -101,7 +100,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return SExecute<bool>(LocalBridgeClazz, "isSinkConnector", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConnectUtils.html#isSourceConnector(org.apache.kafka.connect.connector.Connector)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConnectUtils.html#isSourceConnector(org.apache.kafka.connect.connector.Connector)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Connector.Connector"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -110,7 +109,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return SExecute<bool>(LocalBridgeClazz, "isSourceConnector", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConnectUtils.html#checkAndConvertTimestamp(java.lang.Long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConnectUtils.html#checkAndConvertTimestamp(java.lang.Long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="long"/></returns>
@@ -119,44 +118,24 @@ namespace Org.Apache.Kafka.Connect.Util
             return SExecute<long?>(LocalBridgeClazz, "checkAndConvertTimestamp", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConnectUtils.html#clientIdBase(org.apache.kafka.connect.runtime.WorkerConfig)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Runtime.WorkerConfig"/></param>
-        /// <returns><see cref="string"/></returns>
-        public static string ClientIdBase(Org.Apache.Kafka.Connect.Runtime.WorkerConfig arg0)
-        {
-            return SExecute<string>(LocalBridgeClazz, "clientIdBase", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConnectUtils.html#maybeWrap(java.lang.Throwable,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConnectUtils.html#maybeWrap(java.lang.Throwable,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Throwable"/></param>
         /// <param name="arg1"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Errors.ConnectException"/></returns>
-        public static Org.Apache.Kafka.Connect.Errors.ConnectException MaybeWrap(Java.Lang.Throwable arg0, string arg1)
+        public static Org.Apache.Kafka.Connect.Errors.ConnectException MaybeWrap(MASES.JCOBridge.C2JBridge.JVMBridgeException arg0, string arg1)
         {
             var obj = SExecute<MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject>(LocalBridgeClazz, "maybeWrap", arg0, arg1); return MASES.JCOBridge.C2JBridge.JVMBridgeException.New<Org.Apache.Kafka.Connect.Errors.ConnectException>(obj);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConnectUtils.html#addMetricsContextProperties(java.util.Map,org.apache.kafka.connect.runtime.WorkerConfig,java.lang.String)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Connect.Runtime.WorkerConfig"/></param>
-        /// <param name="arg2"><see cref="string"/></param>
-        public static void AddMetricsContextProperties(Java.Util.Map<string, object> arg0, Org.Apache.Kafka.Connect.Runtime.WorkerConfig arg1, string arg2)
-        {
-            SExecute(LocalBridgeClazz, "addMetricsContextProperties", arg0, arg1, arg2);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConnectUtils.html#ensureProperty(java.util.Map,java.lang.String,java.lang.String,java.lang.String,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConnectUtils.html#ensureProperty(java.util.Map,java.lang.String,java.lang.String,java.lang.String,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="string"/></param>
         /// <param name="arg2"><see cref="string"/></param>
         /// <param name="arg3"><see cref="string"/></param>
         /// <param name="arg4"><see cref="bool"/></param>
-        /// <typeparam name="Arg0objectSuperstring"></typeparam>
-        public static void EnsureProperty<Arg0objectSuperstring>(Java.Util.Map<string, Arg0objectSuperstring> arg0, string arg1, string arg2, string arg3, bool arg4)
+        public static void EnsureProperty(Java.Util.Map<string, string> arg0, string arg1, string arg2, string arg3, bool arg4)
         {
             SExecute(LocalBridgeClazz, "ensureProperty", arg0, arg1, arg2, arg3, arg4);
         }

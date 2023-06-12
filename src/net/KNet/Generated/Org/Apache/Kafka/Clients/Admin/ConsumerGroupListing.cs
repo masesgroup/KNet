@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConsumerGroupListing.html#%3Cinit%3E(java.lang.String,boolean,java.util.Optional)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConsumerGroupListing.html#%3Cinit%3E(java.lang.String,boolean,java.util.Optional)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConsumerGroupListing.html#%3Cinit%3E(java.lang.String,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConsumerGroupListing.html#%3Cinit%3E(java.lang.String,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -65,7 +65,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConsumerGroupListing.html#isSimpleConsumerGroup()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConsumerGroupListing.html#isSimpleConsumerGroup()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<bool>("isSimpleConsumerGroup");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConsumerGroupListing.html#groupId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConsumerGroupListing.html#groupId()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<string>("groupId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConsumerGroupListing.html#state()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ConsumerGroupListing.html#state()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Optional"/></returns>

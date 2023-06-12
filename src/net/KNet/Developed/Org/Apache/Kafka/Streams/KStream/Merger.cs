@@ -26,7 +26,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// </summary>
     /// <typeparam name="K">The data associated to the event</typeparam>
     /// <typeparam name="V">The data associated to the event</typeparam>
-    public interface IMerger<K, V> : IJVMBridgeBase
+    public partial interface IMerger<K, V> : IJVMBridgeBase
     {
         /// <summary>
         /// Executes the Merger action in the CLR
@@ -73,13 +73,5 @@ namespace Org.Apache.Kafka.Streams.Kstream
             var retVal = OnApply(data.EventData.TypedEventData, data.EventData.To<V>(0), data.EventData.To<V>(1));
             data.SetReturnValue(retVal);
         }
-        /// <summary>
-        /// Executes the Merger action in the CLR
-        /// </summary>
-        /// <param name="aggKey">The Merger object</param>
-        /// <param name="aggOne">The Merger object</param>
-        /// <param name="aggTwo">The current aggregate value</param>
-        /// <returns>The <typeparamref name="V"/> apply evaluation</returns>
-        public virtual V Apply(K aggKey, V aggOne, V aggTwo) { return default(V); }
     }
 }

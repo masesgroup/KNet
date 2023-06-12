@@ -56,8 +56,26 @@ namespace Org.Apache.Kafka.Common.Metrics
     }
     #endregion
 
+    #region IMetricValueProvider<T>
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricValueProvider.html"/>
+    /// </summary>
+    public partial interface IMetricValueProvider<T>
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region MetricValueProvider<T>
-    public partial class MetricValueProvider<T>
+    public partial class MetricValueProvider<T> : Org.Apache.Kafka.Common.Metrics.IMetricValueProvider<T>
     {
         #region Constructors
 

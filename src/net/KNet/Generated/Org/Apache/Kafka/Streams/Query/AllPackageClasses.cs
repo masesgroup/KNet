@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Query
 {
     #region FailureReason
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/FailureReason.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/FailureReason.html"/>
     /// </summary>
     public partial class FailureReason : Java.Lang.Enum<Org.Apache.Kafka.Streams.Query.FailureReason>
     {
@@ -70,9 +70,9 @@ namespace Org.Apache.Kafka.Streams.Query
 
     #region KeyQuery
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/KeyQuery.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/KeyQuery.html"/>
     /// </summary>
-    public partial class KeyQuery : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KeyQuery>
+    public partial class KeyQuery : Org.Apache.Kafka.Streams.Query.Query
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -113,11 +113,11 @@ namespace Org.Apache.Kafka.Streams.Query
 
     #region KeyQuery<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/KeyQuery.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/KeyQuery.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
-    public partial class KeyQuery<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KeyQuery<K, V>>
+    public partial class KeyQuery<K, V> : Org.Apache.Kafka.Streams.Query.Query<V>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -158,7 +158,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
     #region Position
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/Position.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/Position.html"/>
     /// </summary>
     public partial class Position : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Position>
     {
@@ -201,7 +201,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
     #region PositionBound
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/PositionBound.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/PositionBound.html"/>
     /// </summary>
     public partial class PositionBound : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PositionBound>
     {
@@ -244,7 +244,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
     #region Query
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/Query.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/Query.html"/>
     /// </summary>
     public partial class Query : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Query>
     {
@@ -287,7 +287,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
     #region Query<R>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/Query.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/Query.html"/>
     /// </summary>
     /// <typeparam name="R"></typeparam>
     public partial class Query<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Query<R>>
@@ -331,7 +331,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
     #region QueryConfig
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/QueryConfig.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/QueryConfig.html"/>
     /// </summary>
     public partial class QueryConfig : MASES.JCOBridge.C2JBridge.JVMBridgeBase<QueryConfig>
     {
@@ -374,7 +374,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
     #region QueryResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/QueryResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/QueryResult.html"/>
     /// </summary>
     public partial class QueryResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<QueryResult>
     {
@@ -417,7 +417,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
     #region QueryResult<R>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/QueryResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/QueryResult.html"/>
     /// </summary>
     /// <typeparam name="R"></typeparam>
     public partial class QueryResult<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<QueryResult<R>>
@@ -461,9 +461,9 @@ namespace Org.Apache.Kafka.Streams.Query
 
     #region RangeQuery
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/RangeQuery.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/RangeQuery.html"/>
     /// </summary>
-    public partial class RangeQuery : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RangeQuery>
+    public partial class RangeQuery : Org.Apache.Kafka.Streams.Query.Query
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -504,11 +504,11 @@ namespace Org.Apache.Kafka.Streams.Query
 
     #region RangeQuery<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/RangeQuery.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/RangeQuery.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
-    public partial class RangeQuery<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RangeQuery<K, V>>
+    public partial class RangeQuery<K, V> : Org.Apache.Kafka.Streams.Query.Query<Org.Apache.Kafka.Streams.State.KeyValueIterator<K, V>>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -549,7 +549,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
     #region StateQueryRequest
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/StateQueryRequest.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/StateQueryRequest.html"/>
     /// </summary>
     public partial class StateQueryRequest : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StateQueryRequest>
     {
@@ -588,7 +588,7 @@ namespace Org.Apache.Kafka.Streams.Query
         // TODO: complete the class
         #region InStore
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/StateQueryRequest.InStore.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/StateQueryRequest.InStore.html"/>
         /// </summary>
         public partial class InStore : MASES.JCOBridge.C2JBridge.JVMBridgeBase<InStore>
         {
@@ -635,7 +635,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
     #region StateQueryRequest<R>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/StateQueryRequest.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/StateQueryRequest.html"/>
     /// </summary>
     /// <typeparam name="R"></typeparam>
     public partial class StateQueryRequest<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StateQueryRequest<R>>
@@ -679,7 +679,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
     #region StateQueryResult
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/StateQueryResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/StateQueryResult.html"/>
     /// </summary>
     public partial class StateQueryResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StateQueryResult>
     {
@@ -722,7 +722,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
     #region StateQueryResult<R>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/StateQueryResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/StateQueryResult.html"/>
     /// </summary>
     /// <typeparam name="R"></typeparam>
     public partial class StateQueryResult<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StateQueryResult<R>>
@@ -766,9 +766,9 @@ namespace Org.Apache.Kafka.Streams.Query
 
     #region WindowKeyQuery
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/WindowKeyQuery.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/WindowKeyQuery.html"/>
     /// </summary>
-    public partial class WindowKeyQuery : MASES.JCOBridge.C2JBridge.JVMBridgeBase<WindowKeyQuery>
+    public partial class WindowKeyQuery : Org.Apache.Kafka.Streams.Query.Query
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -809,11 +809,11 @@ namespace Org.Apache.Kafka.Streams.Query
 
     #region WindowKeyQuery<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/WindowKeyQuery.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/WindowKeyQuery.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
-    public partial class WindowKeyQuery<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<WindowKeyQuery<K, V>>
+    public partial class WindowKeyQuery<K, V> : Org.Apache.Kafka.Streams.Query.Query<Org.Apache.Kafka.Streams.State.WindowStoreIterator<V>>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -854,9 +854,9 @@ namespace Org.Apache.Kafka.Streams.Query
 
     #region WindowRangeQuery
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/WindowRangeQuery.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/WindowRangeQuery.html"/>
     /// </summary>
-    public partial class WindowRangeQuery : MASES.JCOBridge.C2JBridge.JVMBridgeBase<WindowRangeQuery>
+    public partial class WindowRangeQuery : Org.Apache.Kafka.Streams.Query.Query
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -897,11 +897,11 @@ namespace Org.Apache.Kafka.Streams.Query
 
     #region WindowRangeQuery<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/WindowRangeQuery.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/WindowRangeQuery.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
-    public partial class WindowRangeQuery<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<WindowRangeQuery<K, V>>
+    public partial class WindowRangeQuery<K, V> : Org.Apache.Kafka.Streams.Query.Query<Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, V>>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -939,6 +939,7 @@ namespace Org.Apache.Kafka.Streams.Query
     
     }
     #endregion
+
 
 
 }

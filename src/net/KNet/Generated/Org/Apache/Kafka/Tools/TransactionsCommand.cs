@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/TransactionsCommand.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/TransactionsCommand.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <exception cref="Java.Lang.Exception"/>

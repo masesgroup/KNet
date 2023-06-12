@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Network
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ReauthenticationContext.html#%3Cinit%3E(org.apache.kafka.common.network.Authenticator,org.apache.kafka.common.network.NetworkReceive,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ReauthenticationContext.html#%3Cinit%3E(org.apache.kafka.common.network.Authenticator,org.apache.kafka.common.network.NetworkReceive,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Network.Authenticator"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Network.NetworkReceive"/></param>
@@ -56,7 +56,7 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ReauthenticationContext.html#reauthenticationBeginNanos()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ReauthenticationContext.html#reauthenticationBeginNanos()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -65,7 +65,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<long>("reauthenticationBeginNanos");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ReauthenticationContext.html#previousAuthenticator()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ReauthenticationContext.html#previousAuthenticator()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Network.Authenticator"/></returns>
@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<Org.Apache.Kafka.Common.Network.Authenticator>("previousAuthenticator");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ReauthenticationContext.html#networkReceive()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ReauthenticationContext.html#networkReceive()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Network.NetworkReceive"/></returns>

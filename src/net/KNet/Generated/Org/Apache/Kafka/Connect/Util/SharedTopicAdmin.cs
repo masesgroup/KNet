@@ -26,11 +26,11 @@ using MASES.JCOBridge.C2JBridge;
 namespace Org.Apache.Kafka.Connect.Util
 {
     #region SharedTopicAdmin
-    public partial class SharedTopicAdmin
+    public partial class SharedTopicAdmin : Java.Lang.IAutoCloseable, Java.Util.Function.ISupplier<Org.Apache.Kafka.Connect.Util.TopicAdmin>
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/SharedTopicAdmin.html#%3Cinit%3E(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/SharedTopicAdmin.html#%3Cinit%3E(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public SharedTopicAdmin(Java.Util.Map<string, object> arg0)
@@ -62,7 +62,7 @@ namespace Org.Apache.Kafka.Connect.Util
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/SharedTopicAdmin.html#get()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/SharedTopicAdmin.html#get()"/>
         /// </summary>
 
         /// <returns><see cref="object"/></returns>
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecute("get");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/SharedTopicAdmin.html#bootstrapServers()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/SharedTopicAdmin.html#bootstrapServers()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -80,7 +80,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecute<string>("bootstrapServers");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/SharedTopicAdmin.html#topicAdmin()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/SharedTopicAdmin.html#topicAdmin()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Connect.Util.TopicAdmin"/></returns>
@@ -89,14 +89,14 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecute<Org.Apache.Kafka.Connect.Util.TopicAdmin>("topicAdmin");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/SharedTopicAdmin.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/SharedTopicAdmin.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecute("close");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/SharedTopicAdmin.html#close(java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/SharedTopicAdmin.html#close(java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         public void Close(Java.Time.Duration arg0)

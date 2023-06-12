@@ -21,17 +21,17 @@ using Org.Apache.Kafka.Clients.Producer;
 
 namespace Org.Apache.Kafka.Common.Config
 {
-    public partial class TopicConfig
+    public class TopicConfigBuilder : GenericConfigBuilder<TopicConfigBuilder>
     {
         [System.Flags]
-        public enum CleanupPolicy
+        public enum CleanupPolicyTypes
         {
             None = 0,
             Compact = 0x1,
             Delete = 0x2
         }
 
-        public enum CompressionType
+        public enum CompressionTypes
         {
             uncompressed,
             gzip,
@@ -41,16 +41,12 @@ namespace Org.Apache.Kafka.Common.Config
             producer
         }
 
-        public enum MessageTimestampType
+        public enum MessageTimestampTypes
         {
             CreateTime,
             LogAppendTime,
         }
 
-    }
-
-    public class TopicConfigBuilder : GenericConfigBuilder<TopicConfigBuilder>
-    {
         public int SegmentBytes { get { return GetProperty<int>(TopicConfig.SEGMENT_BYTES_CONFIG); } set { SetProperty(TopicConfig.SEGMENT_BYTES_CONFIG, value); } }
 
         public TopicConfigBuilder WithSegmentBytes(int segmentBytes)
@@ -213,19 +209,19 @@ namespace Org.Apache.Kafka.Common.Config
             return clone;
         }
 
-        public TopicConfig.CleanupPolicy CleanupPolicy
+        public CleanupPolicyTypes CleanupPolicy
         {
             get
             {
                 var policyStr = GetProperty<string>(TopicConfig.CLEANUP_POLICY_CONFIG);
-                TopicConfig.CleanupPolicy policy = TopicConfig.CleanupPolicy.None;
-                if (policyStr.Contains(TopicConfig.CLEANUP_POLICY_COMPACT)) policy |= TopicConfig.CleanupPolicy.Compact;
-                if (policyStr.Contains(TopicConfig.CLEANUP_POLICY_DELETE)) policy |= TopicConfig.CleanupPolicy.Delete;
+                CleanupPolicyTypes policy = CleanupPolicyTypes.None;
+                if (policyStr.Contains(TopicConfig.CLEANUP_POLICY_COMPACT)) policy |= CleanupPolicyTypes.Compact;
+                if (policyStr.Contains(TopicConfig.CLEANUP_POLICY_DELETE)) policy |= CleanupPolicyTypes.Delete;
                 return policy;
             }
             set
             {
-                if (value == TopicConfig.CleanupPolicy.None) return;
+                if (value == CleanupPolicyTypes.None) return;
                 var str = value.ToString();
                 str = str.ToLowerInvariant();
                 str = str.Replace(", ", ",");
@@ -233,7 +229,7 @@ namespace Org.Apache.Kafka.Common.Config
             }
         }
 
-        public TopicConfigBuilder WithCleanupPolicy(TopicConfig.CleanupPolicy cleanupPolicy)
+        public TopicConfigBuilder WithCleanupPolicy(CleanupPolicyTypes cleanupPolicy)
         {
             var clone = Clone();
             clone.CleanupPolicy = cleanupPolicy;
@@ -258,24 +254,24 @@ namespace Org.Apache.Kafka.Common.Config
             return clone;
         }
 
-        public TopicConfig.CompressionType CompressionType
+        public CompressionTypes CompressionType
         {
             get
             {
                 var strName = GetProperty<string>(TopicConfig.COMPRESSION_TYPE_CONFIG);
-                if (System.Enum.TryParse<TopicConfig.CompressionType>(strName, out var rest))
+                if (System.Enum.TryParse<CompressionTypes>(strName, out var rest))
                 {
                     return rest;
                 }
-                return TopicConfig.CompressionType.producer;
+                return CompressionTypes.producer;
             }
             set
             {
-                SetProperty(TopicConfig.COMPRESSION_TYPE_CONFIG, System.Enum.GetName(typeof(TopicConfig.CompressionType), value).ToLowerInvariant());
+                SetProperty(TopicConfig.COMPRESSION_TYPE_CONFIG, System.Enum.GetName(typeof(CompressionTypes), value).ToLowerInvariant());
             }
         }
 
-        public TopicConfigBuilder WithCompressionType(TopicConfig.CompressionType compressionType)
+        public TopicConfigBuilder WithCompressionType(CompressionTypes compressionType)
         {
             var clone = Clone();
             clone.CompressionType = compressionType;
@@ -291,24 +287,24 @@ namespace Org.Apache.Kafka.Common.Config
             return clone;
         }
 
-        public TopicConfig.MessageTimestampType MessageTimestampType
+        public MessageTimestampTypes MessageTimestampType
         {
             get
             {
                 var strName = GetProperty<string>(TopicConfig.MESSAGE_TIMESTAMP_TYPE_CONFIG);
-                if (System.Enum.TryParse<TopicConfig.MessageTimestampType>(strName, out var rest))
+                if (System.Enum.TryParse<MessageTimestampTypes>(strName, out var rest))
                 {
                     return rest;
                 }
-                return TopicConfig.MessageTimestampType.CreateTime;
+                return MessageTimestampTypes.CreateTime;
             }
             set
             {
-                SetProperty(TopicConfig.MESSAGE_TIMESTAMP_TYPE_CONFIG, System.Enum.GetName(typeof(TopicConfig.MessageTimestampType), value));
+                SetProperty(TopicConfig.MESSAGE_TIMESTAMP_TYPE_CONFIG, System.Enum.GetName(typeof(MessageTimestampTypes), value));
             }
         }
 
-        public TopicConfigBuilder WithCompressionType(TopicConfig.MessageTimestampType messageTimestampType)
+        public TopicConfigBuilder WithCompressionType(MessageTimestampTypes messageTimestampType)
         {
             var clone = Clone();
             clone.MessageTimestampType = messageTimestampType;

@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Replica
 {
+    #region IReplicaSelector
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ReplicaSelector.html"/>
+    /// </summary>
+    public partial interface IReplicaSelector
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region ReplicaSelector
-    public partial class ReplicaSelector
+    public partial class ReplicaSelector : Org.Apache.Kafka.Common.Replica.IReplicaSelector, Org.Apache.Kafka.Common.IConfigurable, Java.Io.ICloseable
     {
         #region Constructors
 
@@ -54,7 +72,7 @@ namespace Org.Apache.Kafka.Common.Replica
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ReplicaSelector.html#select(org.apache.kafka.common.TopicPartition,org.apache.kafka.common.replica.ClientMetadata,org.apache.kafka.common.replica.PartitionView)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ReplicaSelector.html#select(org.apache.kafka.common.TopicPartition,org.apache.kafka.common.replica.ClientMetadata,org.apache.kafka.common.replica.PartitionView)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Replica.ClientMetadata"/></param>
@@ -65,7 +83,7 @@ namespace Org.Apache.Kafka.Common.Replica
             return IExecute<Java.Util.Optional<Org.Apache.Kafka.Common.Replica.ReplicaView>>("select", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ReplicaSelector.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ReplicaSelector.html#close()"/>
         /// </summary>
 
         /// <exception cref="Java.Io.IOException"/>
@@ -74,11 +92,10 @@ namespace Org.Apache.Kafka.Common.Replica
             IExecute("close");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ReplicaSelector.html#configure(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/ReplicaSelector.html#configure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        /// <typeparam name="Arg0Extendsobject"></typeparam>
-        public void Configure<Arg0Extendsobject>(Java.Util.Map<string, Arg0Extendsobject> arg0)
+        public void Configure(Java.Util.Map<string, object> arg0)
         {
             IExecute("configure", arg0);
         }

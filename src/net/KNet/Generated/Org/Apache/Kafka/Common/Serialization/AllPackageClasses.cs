@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 {
     #region ByteArrayDeserializer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ByteArrayDeserializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ByteArrayDeserializer.html"/>
     /// </summary>
     public partial class ByteArrayDeserializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ByteArrayDeserializer>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region ByteArraySerializer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ByteArraySerializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ByteArraySerializer.html"/>
     /// </summary>
     public partial class ByteArraySerializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ByteArraySerializer>
     {
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region ByteBufferDeserializer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ByteBufferDeserializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ByteBufferDeserializer.html"/>
     /// </summary>
     public partial class ByteBufferDeserializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ByteBufferDeserializer>
     {
@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region ByteBufferSerializer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ByteBufferSerializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ByteBufferSerializer.html"/>
     /// </summary>
     public partial class ByteBufferSerializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ByteBufferSerializer>
     {
@@ -199,7 +199,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region BytesDeserializer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/BytesDeserializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/BytesDeserializer.html"/>
     /// </summary>
     public partial class BytesDeserializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BytesDeserializer>
     {
@@ -242,7 +242,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region BytesSerializer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/BytesSerializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/BytesSerializer.html"/>
     /// </summary>
     public partial class BytesSerializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BytesSerializer>
     {
@@ -285,10 +285,15 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region Deserializer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Deserializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Deserializer.html"/>
     /// </summary>
     public partial class Deserializer : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public Deserializer() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -298,11 +303,16 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region Deserializer<T>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Deserializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Deserializer.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class Deserializer<T> : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public Deserializer() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -312,7 +322,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region DoubleDeserializer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/DoubleDeserializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/DoubleDeserializer.html"/>
     /// </summary>
     public partial class DoubleDeserializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DoubleDeserializer>
     {
@@ -355,7 +365,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region DoubleSerializer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/DoubleSerializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/DoubleSerializer.html"/>
     /// </summary>
     public partial class DoubleSerializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DoubleSerializer>
     {
@@ -398,7 +408,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region FloatDeserializer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/FloatDeserializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/FloatDeserializer.html"/>
     /// </summary>
     public partial class FloatDeserializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FloatDeserializer>
     {
@@ -441,7 +451,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region FloatSerializer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/FloatSerializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/FloatSerializer.html"/>
     /// </summary>
     public partial class FloatSerializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FloatSerializer>
     {
@@ -484,7 +494,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region IntegerDeserializer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/IntegerDeserializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/IntegerDeserializer.html"/>
     /// </summary>
     public partial class IntegerDeserializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<IntegerDeserializer>
     {
@@ -527,7 +537,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region IntegerSerializer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/IntegerSerializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/IntegerSerializer.html"/>
     /// </summary>
     public partial class IntegerSerializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<IntegerSerializer>
     {
@@ -570,7 +580,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region ListDeserializer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ListDeserializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ListDeserializer.html"/>
     /// </summary>
     public partial class ListDeserializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ListDeserializer>
     {
@@ -613,7 +623,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region ListDeserializer<Inner>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ListDeserializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ListDeserializer.html"/>
     /// </summary>
     /// <typeparam name="Inner"></typeparam>
     public partial class ListDeserializer<Inner> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ListDeserializer<Inner>>
@@ -657,7 +667,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region ListSerializer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ListSerializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ListSerializer.html"/>
     /// </summary>
     public partial class ListSerializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ListSerializer>
     {
@@ -700,7 +710,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region ListSerializer<Inner>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ListSerializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ListSerializer.html"/>
     /// </summary>
     /// <typeparam name="Inner"></typeparam>
     public partial class ListSerializer<Inner> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ListSerializer<Inner>>
@@ -744,7 +754,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region LongDeserializer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/LongDeserializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/LongDeserializer.html"/>
     /// </summary>
     public partial class LongDeserializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LongDeserializer>
     {
@@ -787,7 +797,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region LongSerializer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/LongSerializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/LongSerializer.html"/>
     /// </summary>
     public partial class LongSerializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LongSerializer>
     {
@@ -830,7 +840,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region Serde
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serde.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serde.html"/>
     /// </summary>
     public partial class Serde : Java.Io.Closeable
     {
@@ -873,7 +883,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region Serde<T>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serde.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serde.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class Serde<T> : Java.Io.Closeable
@@ -917,7 +927,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region Serdes
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.html"/>
     /// </summary>
     public partial class Serdes : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Serdes>
     {
@@ -956,7 +966,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         // TODO: complete the class
         #region ByteArraySerde
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.ByteArraySerde.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.ByteArraySerde.html"/>
         /// </summary>
         public partial class ByteArraySerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<byte[]>
         {
@@ -999,7 +1009,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
         #region ByteBufferSerde
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.ByteBufferSerde.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.ByteBufferSerde.html"/>
         /// </summary>
         public partial class ByteBufferSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<Java.Nio.ByteBuffer>
         {
@@ -1042,7 +1052,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
         #region BytesSerde
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.BytesSerde.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.BytesSerde.html"/>
         /// </summary>
         public partial class BytesSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<Org.Apache.Kafka.Common.Utils.Bytes>
         {
@@ -1085,7 +1095,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
         #region DoubleSerde
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.DoubleSerde.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.DoubleSerde.html"/>
         /// </summary>
         public partial class DoubleSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<double?>
         {
@@ -1128,7 +1138,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
         #region FloatSerde
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.FloatSerde.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.FloatSerde.html"/>
         /// </summary>
         public partial class FloatSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<float?>
         {
@@ -1171,7 +1181,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
         #region IntegerSerde
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.IntegerSerde.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.IntegerSerde.html"/>
         /// </summary>
         public partial class IntegerSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<int?>
         {
@@ -1214,7 +1224,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
         #region ListSerde
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.ListSerde.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.ListSerde.html"/>
         /// </summary>
         public partial class ListSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde
         {
@@ -1257,7 +1267,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
         #region ListSerde<Inner>
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.ListSerde.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.ListSerde.html"/>
         /// </summary>
         /// <typeparam name="Inner"></typeparam>
         public partial class ListSerde<Inner> : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<Java.Util.List<Inner>>
@@ -1301,7 +1311,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
         #region LongSerde
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.LongSerde.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.LongSerde.html"/>
         /// </summary>
         public partial class LongSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<long?>
         {
@@ -1344,7 +1354,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
         #region ShortSerde
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.ShortSerde.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.ShortSerde.html"/>
         /// </summary>
         public partial class ShortSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<short?>
         {
@@ -1387,7 +1397,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
         #region StringSerde
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.StringSerde.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.StringSerde.html"/>
         /// </summary>
         public partial class StringSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<string>
         {
@@ -1430,7 +1440,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
         #region UUIDSerde
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.UUIDSerde.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.UUIDSerde.html"/>
         /// </summary>
         public partial class UUIDSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<Java.Util.UUID>
         {
@@ -1473,7 +1483,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
         #region VoidSerde
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.VoidSerde.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.VoidSerde.html"/>
         /// </summary>
         public partial class VoidSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<Java.Lang.Void>
         {
@@ -1516,9 +1526,9 @@ namespace Org.Apache.Kafka.Common.Serialization
 
         #region WrapperSerde
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html"/>
         /// </summary>
-        public partial class WrapperSerde : MASES.JCOBridge.C2JBridge.JVMBridgeBase<WrapperSerde>
+        public partial class WrapperSerde : Org.Apache.Kafka.Common.Serialization.Serde
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1559,10 +1569,10 @@ namespace Org.Apache.Kafka.Common.Serialization
 
         #region WrapperSerde<T>
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html"/>
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        public partial class WrapperSerde<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<WrapperSerde<T>>
+        public partial class WrapperSerde<T> : Org.Apache.Kafka.Common.Serialization.Serde<T>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1607,10 +1617,15 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region Serializer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serializer.html"/>
     /// </summary>
     public partial class Serializer : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public Serializer() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -1620,11 +1635,16 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region Serializer<T>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serializer.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class Serializer<T> : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public Serializer() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -1634,7 +1654,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region ShortDeserializer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ShortDeserializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ShortDeserializer.html"/>
     /// </summary>
     public partial class ShortDeserializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ShortDeserializer>
     {
@@ -1677,7 +1697,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region ShortSerializer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ShortSerializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ShortSerializer.html"/>
     /// </summary>
     public partial class ShortSerializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ShortSerializer>
     {
@@ -1720,7 +1740,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region StringDeserializer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/StringDeserializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/StringDeserializer.html"/>
     /// </summary>
     public partial class StringDeserializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StringDeserializer>
     {
@@ -1763,7 +1783,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region StringSerializer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/StringSerializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/StringSerializer.html"/>
     /// </summary>
     public partial class StringSerializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StringSerializer>
     {
@@ -1806,7 +1826,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region UUIDDeserializer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/UUIDDeserializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/UUIDDeserializer.html"/>
     /// </summary>
     public partial class UUIDDeserializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<UUIDDeserializer>
     {
@@ -1849,7 +1869,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region UUIDSerializer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/UUIDSerializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/UUIDSerializer.html"/>
     /// </summary>
     public partial class UUIDSerializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<UUIDSerializer>
     {
@@ -1892,7 +1912,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region VoidDeserializer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/VoidDeserializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/VoidDeserializer.html"/>
     /// </summary>
     public partial class VoidDeserializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<VoidDeserializer>
     {
@@ -1932,6 +1952,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     }
     #endregion
+
 
 
 }

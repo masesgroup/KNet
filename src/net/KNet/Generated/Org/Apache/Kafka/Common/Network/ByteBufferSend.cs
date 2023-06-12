@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Network
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ByteBufferSend.html#%3Cinit%3E(java.nio.ByteBuffer[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ByteBufferSend.html#%3Cinit%3E(java.nio.ByteBuffer[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         public ByteBufferSend(params Java.Nio.ByteBuffer[] arg0)
@@ -38,7 +38,7 @@ namespace Org.Apache.Kafka.Common.Network
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ByteBufferSend.html#%3Cinit%3E(java.nio.ByteBuffer[],long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ByteBufferSend.html#%3Cinit%3E(java.nio.ByteBuffer[],long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -50,10 +50,6 @@ namespace Org.Apache.Kafka.Common.Network
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.Network.ByteBufferSend"/> to <see cref="Org.Apache.Kafka.Common.Network.Send"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Common.Network.Send(Org.Apache.Kafka.Common.Network.ByteBufferSend t) => t.Cast<Org.Apache.Kafka.Common.Network.Send>();
 
         #endregion
 
@@ -63,7 +59,7 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ByteBufferSend.html#sizePrefixed(java.nio.ByteBuffer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ByteBufferSend.html#sizePrefixed(java.nio.ByteBuffer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Network.ByteBufferSend"/></returns>
@@ -76,7 +72,7 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ByteBufferSend.html#completed()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ByteBufferSend.html#completed()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -85,7 +81,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<bool>("completed");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ByteBufferSend.html#remaining()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ByteBufferSend.html#remaining()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -94,7 +90,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<long>("remaining");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ByteBufferSend.html#size()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ByteBufferSend.html#size()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -103,7 +99,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<long>("size");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ByteBufferSend.html#writeTo(org.apache.kafka.common.network.TransferableChannel)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ByteBufferSend.html#writeTo(org.apache.kafka.common.network.TransferableChannel)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Network.TransferableChannel"/></param>
         /// <returns><see cref="long"/></returns>

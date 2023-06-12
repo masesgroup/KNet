@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Connect.Source
 {
+    #region ISourceTaskContext
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTaskContext.html"/>
+    /// </summary>
+    public partial interface ISourceTaskContext
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region SourceTaskContext
-    public partial class SourceTaskContext
+    public partial class SourceTaskContext : Org.Apache.Kafka.Connect.Source.ISourceTaskContext
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Connect.Source
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTaskContext.html#configs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTaskContext.html#configs()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -55,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Source
             return IExecute<Java.Util.Map<string, string>>("configs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTaskContext.html#offsetStorageReader()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTaskContext.html#offsetStorageReader()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Connect.Storage.OffsetStorageReader"/></returns>
@@ -64,7 +82,7 @@ namespace Org.Apache.Kafka.Connect.Source
             return IExecute<Org.Apache.Kafka.Connect.Storage.OffsetStorageReader>("offsetStorageReader");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTaskContext.html#transactionContext()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTaskContext.html#transactionContext()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Connect.Source.TransactionContext"/></returns>

@@ -33,32 +33,28 @@ namespace Org.Apache.Kafka.Connect.Mirror
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Connect.Mirror.DefaultTopicFilter"/> to <see cref="Org.Apache.Kafka.Connect.Mirror.TopicFilter"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Connect.Mirror.TopicFilter(Org.Apache.Kafka.Connect.Mirror.DefaultTopicFilter t) => t.Cast<Org.Apache.Kafka.Connect.Mirror.TopicFilter>();
 
         #endregion
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/DefaultTopicFilter.html#TOPICS_EXCLUDE_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/DefaultTopicFilter.html#TOPICS_EXCLUDE_CONFIG"/>
         /// </summary>
         public static string TOPICS_EXCLUDE_CONFIG { get { return SGetField<string>(LocalBridgeClazz, "TOPICS_EXCLUDE_CONFIG"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/DefaultTopicFilter.html#TOPICS_EXCLUDE_CONFIG_ALIAS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/DefaultTopicFilter.html#TOPICS_EXCLUDE_CONFIG_ALIAS"/>
         /// </summary>
         public static string TOPICS_EXCLUDE_CONFIG_ALIAS { get { return SGetField<string>(LocalBridgeClazz, "TOPICS_EXCLUDE_CONFIG_ALIAS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/DefaultTopicFilter.html#TOPICS_EXCLUDE_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/DefaultTopicFilter.html#TOPICS_EXCLUDE_DEFAULT"/>
         /// </summary>
         public static string TOPICS_EXCLUDE_DEFAULT { get { return SGetField<string>(LocalBridgeClazz, "TOPICS_EXCLUDE_DEFAULT"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/DefaultTopicFilter.html#TOPICS_INCLUDE_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/DefaultTopicFilter.html#TOPICS_INCLUDE_CONFIG"/>
         /// </summary>
         public static string TOPICS_INCLUDE_CONFIG { get { return SGetField<string>(LocalBridgeClazz, "TOPICS_INCLUDE_CONFIG"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/DefaultTopicFilter.html#TOPICS_INCLUDE_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/DefaultTopicFilter.html#TOPICS_INCLUDE_DEFAULT"/>
         /// </summary>
         public static string TOPICS_INCLUDE_DEFAULT { get { return SGetField<string>(LocalBridgeClazz, "TOPICS_INCLUDE_DEFAULT"); } }
 
@@ -70,7 +66,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/DefaultTopicFilter.html#shouldReplicateTopic(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/DefaultTopicFilter.html#shouldReplicateTopic(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -79,18 +75,17 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecute<bool>("shouldReplicateTopic", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/DefaultTopicFilter.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/DefaultTopicFilter.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecute("close");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/DefaultTopicFilter.html#configure(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/DefaultTopicFilter.html#configure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        /// <typeparam name="Arg0Extendsobject"></typeparam>
-        public void Configure<Arg0Extendsobject>(Java.Util.Map<string, Arg0Extendsobject> arg0)
+        public void Configure(Java.Util.Map<string, object> arg0)
         {
             IExecute("configure", arg0);
         }

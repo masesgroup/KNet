@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Protocol
 {
+    #region IWritable
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Writable.html"/>
+    /// </summary>
+    public partial interface IWritable
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region Writable
-    public partial class Writable
+    public partial class Writable : Org.Apache.Kafka.Common.Protocol.IWritable
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Protocol
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Writable.html#writeByte(byte)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Writable.html#writeByte(byte)"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         public void WriteByte(byte arg0)
@@ -54,7 +72,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("writeByte", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Writable.html#writeByteArray(byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Writable.html#writeByteArray(byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         public void WriteByteArray(byte[] arg0)
@@ -62,7 +80,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("writeByteArray", new object[] { arg0 });
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Writable.html#writeByteBuffer(java.nio.ByteBuffer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Writable.html#writeByteBuffer(java.nio.ByteBuffer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         public void WriteByteBuffer(Java.Nio.ByteBuffer arg0)
@@ -70,7 +88,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("writeByteBuffer", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Writable.html#writeDouble(double)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Writable.html#writeDouble(double)"/>
         /// </summary>
         /// <param name="arg0"><see cref="double"/></param>
         public void WriteDouble(double arg0)
@@ -78,7 +96,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("writeDouble", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Writable.html#writeInt(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Writable.html#writeInt(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public void WriteInt(int arg0)
@@ -86,7 +104,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("writeInt", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Writable.html#writeLong(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Writable.html#writeLong(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         public void WriteLong(long arg0)
@@ -94,7 +112,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("writeLong", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Writable.html#writeShort(short)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Writable.html#writeShort(short)"/>
         /// </summary>
         /// <param name="arg0"><see cref="short"/></param>
         public void WriteShort(short arg0)
@@ -102,7 +120,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("writeShort", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Writable.html#writeUnsignedVarint(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Writable.html#writeUnsignedVarint(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public void WriteUnsignedVarint(int arg0)
@@ -110,7 +128,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("writeUnsignedVarint", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Writable.html#writeVarint(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Writable.html#writeVarint(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public void WriteVarint(int arg0)
@@ -118,7 +136,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("writeVarint", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Writable.html#writeVarlong(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Writable.html#writeVarlong(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         public void WriteVarlong(long arg0)
@@ -126,7 +144,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("writeVarlong", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Writable.html#writeRecords(org.apache.kafka.common.record.BaseRecords)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Writable.html#writeRecords(org.apache.kafka.common.record.BaseRecords)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Record.BaseRecords"/></param>
         public void WriteRecords(Org.Apache.Kafka.Common.Record.BaseRecords arg0)
@@ -134,7 +152,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("writeRecords", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Writable.html#writeUnsignedInt(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Writable.html#writeUnsignedInt(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         public void WriteUnsignedInt(long arg0)
@@ -142,7 +160,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("writeUnsignedInt", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Writable.html#writeUnsignedShort(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Writable.html#writeUnsignedShort(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public void WriteUnsignedShort(int arg0)
@@ -150,7 +168,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("writeUnsignedShort", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Writable.html#writeUuid(org.apache.kafka.common.Uuid)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Writable.html#writeUuid(org.apache.kafka.common.Uuid)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Uuid"/></param>
         public void WriteUuid(Org.Apache.Kafka.Common.Uuid arg0)

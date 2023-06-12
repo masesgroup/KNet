@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/FeatureMetadata.html#finalizedFeatures()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/FeatureMetadata.html#finalizedFeatures()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Clients.Admin.FinalizedVersionRange>>("finalizedFeatures");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/FeatureMetadata.html#supportedFeatures()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/FeatureMetadata.html#supportedFeatures()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Clients.Admin.SupportedVersionRange>>("supportedFeatures");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/FeatureMetadata.html#finalizedFeaturesEpoch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/FeatureMetadata.html#finalizedFeaturesEpoch()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Optional"/></returns>

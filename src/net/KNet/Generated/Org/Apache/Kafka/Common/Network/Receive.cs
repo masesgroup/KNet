@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Network
 {
+    #region IReceive
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Receive.html"/>
+    /// </summary>
+    public partial interface IReceive : Java.Io.ICloseable
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region Receive
-    public partial class Receive
+    public partial class Receive : Org.Apache.Kafka.Common.Network.IReceive
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Receive.html#complete()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Receive.html#complete()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -55,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<bool>("complete");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Receive.html#memoryAllocated()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Receive.html#memoryAllocated()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -64,7 +82,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<bool>("memoryAllocated");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Receive.html#requiredMemoryAmountKnown()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Receive.html#requiredMemoryAmountKnown()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -73,7 +91,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<bool>("requiredMemoryAmountKnown");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Receive.html#source()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Receive.html#source()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -82,7 +100,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<string>("source");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Receive.html#readFrom(java.nio.channels.ScatteringByteChannel)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Receive.html#readFrom(java.nio.channels.ScatteringByteChannel)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.Channels.ScatteringByteChannel"/></param>
         /// <returns><see cref="long"/></returns>

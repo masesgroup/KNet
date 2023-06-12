@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serde.html#deserializer()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serde.html#deserializer()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></returns>
@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             return IExecute<Org.Apache.Kafka.Common.Serialization.Deserializer>("deserializer");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serde.html#serializer()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serde.html#serializer()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serializer"/></returns>
@@ -64,14 +64,14 @@ namespace Org.Apache.Kafka.Common.Serialization
             return IExecute<Org.Apache.Kafka.Common.Serialization.Serializer>("serializer");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serde.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serde.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecute("close");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serde.html#configure(java.util.Map,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serde.html#configure(java.util.Map,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -90,8 +90,26 @@ namespace Org.Apache.Kafka.Common.Serialization
     }
     #endregion
 
+    #region ISerde<T>
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serde.html"/>
+    /// </summary>
+    public partial interface ISerde<T> : Java.Io.ICloseable
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region Serde<T>
-    public partial class Serde<T>
+    public partial class Serde<T> : Org.Apache.Kafka.Common.Serialization.ISerde<T>
     {
         #region Constructors
 
@@ -115,7 +133,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serde.html#deserializer()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serde.html#deserializer()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></returns>
@@ -124,7 +142,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             return IExecute<Org.Apache.Kafka.Common.Serialization.Deserializer<T>>("deserializer");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serde.html#serializer()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serde.html#serializer()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serializer"/></returns>
@@ -133,19 +151,18 @@ namespace Org.Apache.Kafka.Common.Serialization
             return IExecute<Org.Apache.Kafka.Common.Serialization.Serializer<T>>("serializer");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serde.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serde.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecute("close");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serde.html#configure(java.util.Map,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serde.html#configure(java.util.Map,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
-        /// <typeparam name="Arg0Extendsobject"></typeparam>
-        public void Configure<Arg0Extendsobject>(Java.Util.Map<string, Arg0Extendsobject> arg0, bool arg1)
+        public void Configure(Java.Util.Map<string, object> arg0, bool arg1)
         {
             IExecute("configure", arg0, arg1);
         }

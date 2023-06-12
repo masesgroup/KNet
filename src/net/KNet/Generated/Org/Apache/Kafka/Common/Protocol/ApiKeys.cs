@@ -38,303 +38,299 @@ namespace Org.Apache.Kafka.Common.Protocol
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#clusterAction"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#clusterAction"/>
         /// </summary>
         public bool clusterAction { get { return IGetField<bool>("clusterAction"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#forwardable"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#forwardable"/>
         /// </summary>
         public bool forwardable { get { return IGetField<bool>("forwardable"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#requiresDelayedAllocation"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#requiresDelayedAllocation"/>
         /// </summary>
         public bool requiresDelayedAllocation { get { return IGetField<bool>("requiresDelayedAllocation"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#minRequiredInterBrokerMagic"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#minRequiredInterBrokerMagic"/>
         /// </summary>
         public byte minRequiredInterBrokerMagic { get { return IGetField<byte>("minRequiredInterBrokerMagic"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#name"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#name"/>
         /// </summary>
         public string name { get { return IGetField<string>("name"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#messageType"/>
-        /// </summary>
-        public Org.Apache.Kafka.Common.Message.ApiMessageType messageType { get { return IGetField<Org.Apache.Kafka.Common.Message.ApiMessageType>("messageType"); } }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#id"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#id"/>
         /// </summary>
         public short id { get { return IGetField<short>("id"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#ADD_OFFSETS_TO_TXN"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#ADD_OFFSETS_TO_TXN"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys ADD_OFFSETS_TO_TXN { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "ADD_OFFSETS_TO_TXN"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#ADD_PARTITIONS_TO_TXN"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#ADD_PARTITIONS_TO_TXN"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys ADD_PARTITIONS_TO_TXN { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "ADD_PARTITIONS_TO_TXN"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#ALLOCATE_PRODUCER_IDS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#ALLOCATE_PRODUCER_IDS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys ALLOCATE_PRODUCER_IDS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "ALLOCATE_PRODUCER_IDS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#ALTER_CLIENT_QUOTAS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#ALTER_CLIENT_QUOTAS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys ALTER_CLIENT_QUOTAS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "ALTER_CLIENT_QUOTAS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#ALTER_CONFIGS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#ALTER_CONFIGS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys ALTER_CONFIGS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "ALTER_CONFIGS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#ALTER_PARTITION"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#ALTER_PARTITION"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys ALTER_PARTITION { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "ALTER_PARTITION"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#ALTER_PARTITION_REASSIGNMENTS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#ALTER_PARTITION_REASSIGNMENTS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys ALTER_PARTITION_REASSIGNMENTS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "ALTER_PARTITION_REASSIGNMENTS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#ALTER_REPLICA_LOG_DIRS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#ALTER_REPLICA_LOG_DIRS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys ALTER_REPLICA_LOG_DIRS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "ALTER_REPLICA_LOG_DIRS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#ALTER_USER_SCRAM_CREDENTIALS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#ALTER_USER_SCRAM_CREDENTIALS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys ALTER_USER_SCRAM_CREDENTIALS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "ALTER_USER_SCRAM_CREDENTIALS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#API_VERSIONS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#API_VERSIONS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys API_VERSIONS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "API_VERSIONS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#BEGIN_QUORUM_EPOCH"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#BEGIN_QUORUM_EPOCH"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys BEGIN_QUORUM_EPOCH { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "BEGIN_QUORUM_EPOCH"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#BROKER_HEARTBEAT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#BROKER_HEARTBEAT"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys BROKER_HEARTBEAT { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "BROKER_HEARTBEAT"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#BROKER_REGISTRATION"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#BROKER_REGISTRATION"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys BROKER_REGISTRATION { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "BROKER_REGISTRATION"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#CONTROLLED_SHUTDOWN"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#CONTROLLED_SHUTDOWN"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys CONTROLLED_SHUTDOWN { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "CONTROLLED_SHUTDOWN"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#CREATE_ACLS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#CREATE_ACLS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys CREATE_ACLS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "CREATE_ACLS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#CREATE_DELEGATION_TOKEN"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#CREATE_DELEGATION_TOKEN"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys CREATE_DELEGATION_TOKEN { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "CREATE_DELEGATION_TOKEN"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#CREATE_PARTITIONS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#CREATE_PARTITIONS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys CREATE_PARTITIONS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "CREATE_PARTITIONS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#CREATE_TOPICS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#CREATE_TOPICS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys CREATE_TOPICS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "CREATE_TOPICS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#DELETE_ACLS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#DELETE_ACLS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys DELETE_ACLS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "DELETE_ACLS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#DELETE_GROUPS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#DELETE_GROUPS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys DELETE_GROUPS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "DELETE_GROUPS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#DELETE_RECORDS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#DELETE_RECORDS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys DELETE_RECORDS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "DELETE_RECORDS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#DELETE_TOPICS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#DELETE_TOPICS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys DELETE_TOPICS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "DELETE_TOPICS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#DESCRIBE_ACLS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#DESCRIBE_ACLS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys DESCRIBE_ACLS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "DESCRIBE_ACLS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#DESCRIBE_CLIENT_QUOTAS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#DESCRIBE_CLIENT_QUOTAS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys DESCRIBE_CLIENT_QUOTAS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "DESCRIBE_CLIENT_QUOTAS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#DESCRIBE_CLUSTER"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#DESCRIBE_CLUSTER"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys DESCRIBE_CLUSTER { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "DESCRIBE_CLUSTER"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#DESCRIBE_CONFIGS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#DESCRIBE_CONFIGS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys DESCRIBE_CONFIGS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "DESCRIBE_CONFIGS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#DESCRIBE_DELEGATION_TOKEN"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#DESCRIBE_DELEGATION_TOKEN"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys DESCRIBE_DELEGATION_TOKEN { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "DESCRIBE_DELEGATION_TOKEN"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#DESCRIBE_GROUPS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#DESCRIBE_GROUPS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys DESCRIBE_GROUPS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "DESCRIBE_GROUPS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#DESCRIBE_LOG_DIRS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#DESCRIBE_LOG_DIRS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys DESCRIBE_LOG_DIRS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "DESCRIBE_LOG_DIRS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#DESCRIBE_PRODUCERS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#DESCRIBE_PRODUCERS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys DESCRIBE_PRODUCERS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "DESCRIBE_PRODUCERS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#DESCRIBE_QUORUM"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#DESCRIBE_QUORUM"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys DESCRIBE_QUORUM { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "DESCRIBE_QUORUM"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#DESCRIBE_TRANSACTIONS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#DESCRIBE_TRANSACTIONS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys DESCRIBE_TRANSACTIONS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "DESCRIBE_TRANSACTIONS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#DESCRIBE_USER_SCRAM_CREDENTIALS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#DESCRIBE_USER_SCRAM_CREDENTIALS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys DESCRIBE_USER_SCRAM_CREDENTIALS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "DESCRIBE_USER_SCRAM_CREDENTIALS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#ELECT_LEADERS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#ELECT_LEADERS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys ELECT_LEADERS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "ELECT_LEADERS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#END_QUORUM_EPOCH"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#END_QUORUM_EPOCH"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys END_QUORUM_EPOCH { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "END_QUORUM_EPOCH"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#END_TXN"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#END_TXN"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys END_TXN { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "END_TXN"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#ENVELOPE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#ENVELOPE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys ENVELOPE { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "ENVELOPE"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#EXPIRE_DELEGATION_TOKEN"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#EXPIRE_DELEGATION_TOKEN"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys EXPIRE_DELEGATION_TOKEN { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "EXPIRE_DELEGATION_TOKEN"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#FETCH"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#FETCH"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys FETCH { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "FETCH"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#FETCH_SNAPSHOT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#FETCH_SNAPSHOT"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys FETCH_SNAPSHOT { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "FETCH_SNAPSHOT"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#FIND_COORDINATOR"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#FIND_COORDINATOR"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys FIND_COORDINATOR { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "FIND_COORDINATOR"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#HEARTBEAT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#HEARTBEAT"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys HEARTBEAT { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "HEARTBEAT"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#INCREMENTAL_ALTER_CONFIGS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#INCREMENTAL_ALTER_CONFIGS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys INCREMENTAL_ALTER_CONFIGS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "INCREMENTAL_ALTER_CONFIGS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#INIT_PRODUCER_ID"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#INIT_PRODUCER_ID"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys INIT_PRODUCER_ID { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "INIT_PRODUCER_ID"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#JOIN_GROUP"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#JOIN_GROUP"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys JOIN_GROUP { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "JOIN_GROUP"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#LEADER_AND_ISR"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#LEADER_AND_ISR"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys LEADER_AND_ISR { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "LEADER_AND_ISR"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#LEAVE_GROUP"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#LEAVE_GROUP"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys LEAVE_GROUP { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "LEAVE_GROUP"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#LIST_GROUPS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#LIST_GROUPS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys LIST_GROUPS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "LIST_GROUPS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#LIST_OFFSETS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#LIST_OFFSETS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys LIST_OFFSETS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "LIST_OFFSETS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#LIST_PARTITION_REASSIGNMENTS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#LIST_PARTITION_REASSIGNMENTS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys LIST_PARTITION_REASSIGNMENTS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "LIST_PARTITION_REASSIGNMENTS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#LIST_TRANSACTIONS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#LIST_TRANSACTIONS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys LIST_TRANSACTIONS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "LIST_TRANSACTIONS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#METADATA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#METADATA"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys METADATA { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "METADATA"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#OFFSET_COMMIT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#OFFSET_COMMIT"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys OFFSET_COMMIT { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "OFFSET_COMMIT"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#OFFSET_DELETE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#OFFSET_DELETE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys OFFSET_DELETE { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "OFFSET_DELETE"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#OFFSET_FETCH"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#OFFSET_FETCH"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys OFFSET_FETCH { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "OFFSET_FETCH"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#OFFSET_FOR_LEADER_EPOCH"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#OFFSET_FOR_LEADER_EPOCH"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys OFFSET_FOR_LEADER_EPOCH { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "OFFSET_FOR_LEADER_EPOCH"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#PRODUCE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#PRODUCE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys PRODUCE { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "PRODUCE"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#RENEW_DELEGATION_TOKEN"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#RENEW_DELEGATION_TOKEN"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys RENEW_DELEGATION_TOKEN { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "RENEW_DELEGATION_TOKEN"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#SASL_AUTHENTICATE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#SASL_AUTHENTICATE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys SASL_AUTHENTICATE { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "SASL_AUTHENTICATE"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#SASL_HANDSHAKE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#SASL_HANDSHAKE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys SASL_HANDSHAKE { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "SASL_HANDSHAKE"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#STOP_REPLICA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#STOP_REPLICA"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys STOP_REPLICA { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "STOP_REPLICA"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#SYNC_GROUP"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#SYNC_GROUP"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys SYNC_GROUP { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "SYNC_GROUP"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#TXN_OFFSET_COMMIT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#TXN_OFFSET_COMMIT"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys TXN_OFFSET_COMMIT { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "TXN_OFFSET_COMMIT"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#UNREGISTER_BROKER"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#UNREGISTER_BROKER"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys UNREGISTER_BROKER { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "UNREGISTER_BROKER"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#UPDATE_FEATURES"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#UPDATE_FEATURES"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys UPDATE_FEATURES { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "UPDATE_FEATURES"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#UPDATE_METADATA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#UPDATE_METADATA"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys UPDATE_METADATA { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "UPDATE_METADATA"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#VOTE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#VOTE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys VOTE { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "VOTE"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#WRITE_TXN_MARKERS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#WRITE_TXN_MARKERS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.ApiKeys WRITE_TXN_MARKERS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "WRITE_TXN_MARKERS"); } }
 
@@ -342,7 +338,7 @@ namespace Org.Apache.Kafka.Common.Protocol
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#hasId(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#hasId(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -351,43 +347,34 @@ namespace Org.Apache.Kafka.Common.Protocol
             return SExecute<bool>(LocalBridgeClazz, "hasId", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#apisForListener(org.apache.kafka.common.message.ApiMessageType.ListenerType)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.ApiMessageType.ListenerType"/></param>
-        /// <returns><see cref="Java.Util.EnumSet"/></returns>
-        public static Java.Util.EnumSet ApisForListener(Org.Apache.Kafka.Common.Message.ApiMessageType.ListenerType arg0)
-        {
-            return SExecute<Java.Util.EnumSet>(LocalBridgeClazz, "apisForListener", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#clientApis()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#clientApis()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.EnumSet"/></returns>
-        public static Java.Util.EnumSet ClientApis()
+        public static Java.Util.EnumSet<Org.Apache.Kafka.Common.Protocol.ApiKeys> ClientApis()
         {
-            return SExecute<Java.Util.EnumSet>(LocalBridgeClazz, "clientApis");
+            return SExecute<Java.Util.EnumSet<Org.Apache.Kafka.Common.Protocol.ApiKeys>>(LocalBridgeClazz, "clientApis");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#controllerApis()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#controllerApis()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.EnumSet"/></returns>
-        public static Java.Util.EnumSet ControllerApis()
+        public static Java.Util.EnumSet<Org.Apache.Kafka.Common.Protocol.ApiKeys> ControllerApis()
         {
-            return SExecute<Java.Util.EnumSet>(LocalBridgeClazz, "controllerApis");
+            return SExecute<Java.Util.EnumSet<Org.Apache.Kafka.Common.Protocol.ApiKeys>>(LocalBridgeClazz, "controllerApis");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#zkBrokerApis()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#zkBrokerApis()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.EnumSet"/></returns>
-        public static Java.Util.EnumSet ZkBrokerApis()
+        public static Java.Util.EnumSet<Org.Apache.Kafka.Common.Protocol.ApiKeys> ZkBrokerApis()
         {
-            return SExecute<Java.Util.EnumSet>(LocalBridgeClazz, "zkBrokerApis");
+            return SExecute<Java.Util.EnumSet<Org.Apache.Kafka.Common.Protocol.ApiKeys>>(LocalBridgeClazz, "zkBrokerApis");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#forId(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#forId(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.ApiKeys"/></returns>
@@ -396,7 +383,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return SExecute<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "forId", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#valueOf(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.ApiKeys"/></returns>
@@ -405,7 +392,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return SExecute<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "valueOf", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#values()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#values()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.ApiKeys"/></returns>
@@ -414,7 +401,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return SExecuteArray<Org.Apache.Kafka.Common.Protocol.ApiKeys>(LocalBridgeClazz, "values");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         public static void Main(string[] arg0)
@@ -426,16 +413,7 @@ namespace Org.Apache.Kafka.Common.Protocol
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#inScope(org.apache.kafka.common.message.ApiMessageType.ListenerType)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Message.ApiMessageType.ListenerType"/></param>
-        /// <returns><see cref="bool"/></returns>
-        public bool InScope(Org.Apache.Kafka.Common.Message.ApiMessageType.ListenerType arg0)
-        {
-            return IExecute<bool>("inScope", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#isVersionSupported(short)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#isVersionSupported(short)"/>
         /// </summary>
         /// <param name="arg0"><see cref="short"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -444,7 +422,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return IExecute<bool>("isVersionSupported", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#allVersions()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#allVersions()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -453,7 +431,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return IExecute<Java.Util.List<short?>>("allVersions");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#latestVersion()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#latestVersion()"/>
         /// </summary>
 
         /// <returns><see cref="short"/></returns>
@@ -462,7 +440,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return IExecute<short>("latestVersion");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#oldestVersion()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#oldestVersion()"/>
         /// </summary>
 
         /// <returns><see cref="short"/></returns>
@@ -471,7 +449,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return IExecute<short>("oldestVersion");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#requestHeaderVersion(short)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#requestHeaderVersion(short)"/>
         /// </summary>
         /// <param name="arg0"><see cref="short"/></param>
         /// <returns><see cref="short"/></returns>
@@ -480,7 +458,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return IExecute<short>("requestHeaderVersion", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#responseHeaderVersion(short)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html#responseHeaderVersion(short)"/>
         /// </summary>
         /// <param name="arg0"><see cref="short"/></param>
         /// <returns><see cref="short"/></returns>

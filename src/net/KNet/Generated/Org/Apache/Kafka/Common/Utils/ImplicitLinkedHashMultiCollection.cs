@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Utils
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ImplicitLinkedHashMultiCollection.html#%3Cinit%3E(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ImplicitLinkedHashMultiCollection.html#%3Cinit%3E(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public ImplicitLinkedHashMultiCollection(int arg0)
@@ -38,7 +38,7 @@ namespace Org.Apache.Kafka.Common.Utils
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ImplicitLinkedHashMultiCollection.html#%3Cinit%3E(java.util.Iterator)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ImplicitLinkedHashMultiCollection.html#%3Cinit%3E(java.util.Iterator)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Iterator"/></param>
         public ImplicitLinkedHashMultiCollection(Java.Util.Iterator arg0)
@@ -62,7 +62,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ImplicitLinkedHashMultiCollection.html#findAll(org.apache.kafka.common.utils.ImplicitLinkedHashCollection.Element)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ImplicitLinkedHashMultiCollection.html#findAll(org.apache.kafka.common.utils.ImplicitLinkedHashCollection.Element)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Utils.ImplicitLinkedHashCollection.Element"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -86,7 +86,7 @@ namespace Org.Apache.Kafka.Common.Utils
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ImplicitLinkedHashMultiCollection.html#%3Cinit%3E(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ImplicitLinkedHashMultiCollection.html#%3Cinit%3E(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public ImplicitLinkedHashMultiCollection(int arg0)
@@ -94,7 +94,7 @@ namespace Org.Apache.Kafka.Common.Utils
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ImplicitLinkedHashMultiCollection.html#%3Cinit%3E(java.util.Iterator)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ImplicitLinkedHashMultiCollection.html#%3Cinit%3E(java.util.Iterator)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Iterator"/></param>
         public ImplicitLinkedHashMultiCollection(Java.Util.Iterator<E> arg0)
@@ -122,7 +122,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ImplicitLinkedHashMultiCollection.html#findAll(org.apache.kafka.common.utils.ImplicitLinkedHashCollection.Element)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/ImplicitLinkedHashMultiCollection.html#findAll(org.apache.kafka.common.utils.ImplicitLinkedHashCollection.Element)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="E"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>

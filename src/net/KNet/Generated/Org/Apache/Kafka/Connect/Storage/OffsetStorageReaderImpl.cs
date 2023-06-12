@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Connect.Storage
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/OffsetStorageReaderImpl.html#%3Cinit%3E(org.apache.kafka.connect.storage.OffsetBackingStore,java.lang.String,org.apache.kafka.connect.storage.Converter,org.apache.kafka.connect.storage.Converter)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/OffsetStorageReaderImpl.html#%3Cinit%3E(org.apache.kafka.connect.storage.OffsetBackingStore,java.lang.String,org.apache.kafka.connect.storage.Converter,org.apache.kafka.connect.storage.Converter)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Storage.OffsetBackingStore"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -44,10 +44,6 @@ namespace Org.Apache.Kafka.Connect.Storage
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Connect.Storage.OffsetStorageReaderImpl"/> to <see cref="Org.Apache.Kafka.Connect.Storage.CloseableOffsetStorageReader"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Connect.Storage.CloseableOffsetStorageReader(Org.Apache.Kafka.Connect.Storage.OffsetStorageReaderImpl t) => t.Cast<Org.Apache.Kafka.Connect.Storage.CloseableOffsetStorageReader>();
 
         #endregion
 
@@ -61,7 +57,7 @@ namespace Org.Apache.Kafka.Connect.Storage
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/OffsetStorageReaderImpl.html#offset(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/OffsetStorageReaderImpl.html#offset(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <typeparam name="T"></typeparam>
@@ -71,7 +67,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return IExecute<Java.Util.Map<string, object>>("offset", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/OffsetStorageReaderImpl.html#offsets(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/OffsetStorageReaderImpl.html#offsets(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <typeparam name="T"></typeparam>
@@ -81,7 +77,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return IExecute<Java.Util.Map<Java.Util.Map<string, T>, Java.Util.Map<string, object>>>("offsets", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/OffsetStorageReaderImpl.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/OffsetStorageReaderImpl.html#close()"/>
         /// </summary>
         public void Close()
         {

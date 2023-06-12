@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Record
 {
+    #region ITransferableRecords
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/TransferableRecords.html"/>
+    /// </summary>
+    public partial interface ITransferableRecords : Org.Apache.Kafka.Common.Record.IBaseRecords
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region TransferableRecords
-    public partial class TransferableRecords
+    public partial class TransferableRecords : Org.Apache.Kafka.Common.Record.ITransferableRecords
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/TransferableRecords.html#writeTo(org.apache.kafka.common.network.TransferableChannel,long,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/TransferableRecords.html#writeTo(org.apache.kafka.common.network.TransferableChannel,long,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Network.TransferableChannel"/></param>
         /// <param name="arg1"><see cref="long"/></param>

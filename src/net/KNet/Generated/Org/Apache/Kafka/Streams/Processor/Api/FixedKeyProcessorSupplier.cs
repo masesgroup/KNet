@@ -54,7 +54,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier.html#get()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier.html#get()"/>
         /// </summary>
 
         /// <returns><see cref="object"/></returns>
@@ -73,8 +73,26 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
     }
     #endregion
 
+    #region IFixedKeyProcessorSupplier<KIn, VIn, VOut>
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier.html"/>
+    /// </summary>
+    public partial interface IFixedKeyProcessorSupplier<KIn, VIn, VOut>
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region FixedKeyProcessorSupplier<KIn, VIn, VOut>
-    public partial class FixedKeyProcessorSupplier<KIn, VIn, VOut>
+    public partial class FixedKeyProcessorSupplier<KIn, VIn, VOut> : Org.Apache.Kafka.Streams.Processor.Api.IFixedKeyProcessorSupplier<KIn, VIn, VOut>, Org.Apache.Kafka.Streams.Processor.IConnectedStoreProvider, Java.Util.Function.ISupplier<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessor<KIn, VIn, VOut>>
     {
         #region Constructors
 
@@ -106,7 +124,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier.html#get()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier.html#get()"/>
         /// </summary>
 
         /// <returns><see cref="object"/></returns>

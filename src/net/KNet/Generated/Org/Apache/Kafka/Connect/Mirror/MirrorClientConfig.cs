@@ -38,43 +38,43 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#FORWARDING_ADMIN_CLASS_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#FORWARDING_ADMIN_CLASS_DEFAULT"/>
         /// </summary>
         public static Java.Lang.Class FORWARDING_ADMIN_CLASS_DEFAULT { get { return SGetField<Java.Lang.Class>(LocalBridgeClazz, "FORWARDING_ADMIN_CLASS_DEFAULT"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#REPLICATION_POLICY_CLASS_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#REPLICATION_POLICY_CLASS_DEFAULT"/>
         /// </summary>
         public static Java.Lang.Class REPLICATION_POLICY_CLASS_DEFAULT { get { return SGetField<Java.Lang.Class>(LocalBridgeClazz, "REPLICATION_POLICY_CLASS_DEFAULT"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#ADMIN_CLIENT_PREFIX"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#ADMIN_CLIENT_PREFIX"/>
         /// </summary>
         public static string ADMIN_CLIENT_PREFIX { get { return SGetField<string>(LocalBridgeClazz, "ADMIN_CLIENT_PREFIX"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#CONSUMER_CLIENT_PREFIX"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#CONSUMER_CLIENT_PREFIX"/>
         /// </summary>
         public static string CONSUMER_CLIENT_PREFIX { get { return SGetField<string>(LocalBridgeClazz, "CONSUMER_CLIENT_PREFIX"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#FORWARDING_ADMIN_CLASS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#FORWARDING_ADMIN_CLASS"/>
         /// </summary>
         public static string FORWARDING_ADMIN_CLASS { get { return SGetField<string>(LocalBridgeClazz, "FORWARDING_ADMIN_CLASS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#FORWARDING_ADMIN_CLASS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#FORWARDING_ADMIN_CLASS_DOC"/>
         /// </summary>
         public static string FORWARDING_ADMIN_CLASS_DOC { get { return SGetField<string>(LocalBridgeClazz, "FORWARDING_ADMIN_CLASS_DOC"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#PRODUCER_CLIENT_PREFIX"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#PRODUCER_CLIENT_PREFIX"/>
         /// </summary>
         public static string PRODUCER_CLIENT_PREFIX { get { return SGetField<string>(LocalBridgeClazz, "PRODUCER_CLIENT_PREFIX"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#REPLICATION_POLICY_CLASS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#REPLICATION_POLICY_CLASS"/>
         /// </summary>
         public static string REPLICATION_POLICY_CLASS { get { return SGetField<string>(LocalBridgeClazz, "REPLICATION_POLICY_CLASS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#REPLICATION_POLICY_SEPARATOR"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#REPLICATION_POLICY_SEPARATOR"/>
         /// </summary>
         public static string REPLICATION_POLICY_SEPARATOR { get { return SGetField<string>(LocalBridgeClazz, "REPLICATION_POLICY_SEPARATOR"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#REPLICATION_POLICY_SEPARATOR_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#REPLICATION_POLICY_SEPARATOR_DEFAULT"/>
         /// </summary>
         public static string REPLICATION_POLICY_SEPARATOR_DEFAULT { get { return SGetField<string>(LocalBridgeClazz, "REPLICATION_POLICY_SEPARATOR_DEFAULT"); } }
 
@@ -86,7 +86,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#adminConfig()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#adminConfig()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecute<Java.Util.Map<string, object>>("adminConfig");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#consumerConfig()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#consumerConfig()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -104,7 +104,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecute<Java.Util.Map<string, object>>("consumerConfig");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#producerConfig()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#producerConfig()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecute<Java.Util.Map<string, object>>("producerConfig");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#replicationPolicy()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClientConfig.html#replicationPolicy()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Connect.Mirror.ReplicationPolicy"/></returns>

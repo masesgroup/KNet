@@ -42,7 +42,7 @@ namespace Kafka.Admin
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ElectionTypeConverter.html#valueType()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ElectionTypeConverter.html#valueType()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Lang.Class"/></returns>
@@ -51,7 +51,7 @@ namespace Kafka.Admin
             return SExecute<Java.Lang.Class>(LocalBridgeClazz, "valueType");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ElectionTypeConverter.html#convert(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ElectionTypeConverter.html#convert(java.lang.String)"/>
         /// </summary>
         /// <param name="x$1"><see cref="string"/></param>
         /// <returns><see cref="Java.Lang.Enum"/></returns>
@@ -60,7 +60,7 @@ namespace Kafka.Admin
             return SExecute<Java.Lang.Enum>(LocalBridgeClazz, "convert", x_1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ElectionTypeConverter.html#convert(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ElectionTypeConverter.html#convert(java.lang.String)"/>
         /// </summary>
         /// <param name="x$1"><see cref="string"/></param>
         /// <returns><see cref="object"/></returns>
@@ -69,7 +69,7 @@ namespace Kafka.Admin
             return SExecute(LocalBridgeClazz, "convert", x_1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ElectionTypeConverter.html#valuePattern()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ElectionTypeConverter.html#valuePattern()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -78,7 +78,7 @@ namespace Kafka.Admin
             return SExecute<string>(LocalBridgeClazz, "valuePattern");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ElectionTypeConverter.html#setDelimiters(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ElectionTypeConverter.html#setDelimiters(java.lang.String)"/>
         /// </summary>
         /// <param name="x$1"><see cref="string"/></param>
         public static void SetDelimiters(string x_1)

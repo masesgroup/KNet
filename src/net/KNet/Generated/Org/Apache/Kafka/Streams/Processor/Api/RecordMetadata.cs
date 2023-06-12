@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Streams.Processor.Api
 {
+    #region IRecordMetadata
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/RecordMetadata.html"/>
+    /// </summary>
+    public partial interface IRecordMetadata
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region RecordMetadata
-    public partial class RecordMetadata
+    public partial class RecordMetadata : Org.Apache.Kafka.Streams.Processor.Api.IRecordMetadata
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/RecordMetadata.html#partition()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/RecordMetadata.html#partition()"/>
         /// </summary>
 
         /// <returns><see cref="int"/></returns>
@@ -55,7 +73,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
             return IExecute<int>("partition");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/RecordMetadata.html#topic()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/RecordMetadata.html#topic()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -64,7 +82,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
             return IExecute<string>("topic");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/RecordMetadata.html#offset()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/RecordMetadata.html#offset()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>

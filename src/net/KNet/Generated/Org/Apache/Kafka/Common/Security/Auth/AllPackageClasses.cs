@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 {
     #region AuthenticateCallbackHandler
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/AuthenticateCallbackHandler.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/AuthenticateCallbackHandler.html"/>
     /// </summary>
     public partial class AuthenticateCallbackHandler : Javax.Security.Auth.Callback.CallbackHandler
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
     #region AuthenticationContext
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/AuthenticationContext.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/AuthenticationContext.html"/>
     /// </summary>
     public partial class AuthenticationContext : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AuthenticationContext>
     {
@@ -113,9 +113,9 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
     #region KafkaPrincipal
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/KafkaPrincipal.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/KafkaPrincipal.html"/>
     /// </summary>
-    public partial class KafkaPrincipal : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KafkaPrincipal>
+    public partial class KafkaPrincipal : Java.Security.Principal
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
     #region KafkaPrincipalBuilder
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/KafkaPrincipalBuilder.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/KafkaPrincipalBuilder.html"/>
     /// </summary>
     public partial class KafkaPrincipalBuilder : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KafkaPrincipalBuilder>
     {
@@ -199,7 +199,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
     #region KafkaPrincipalSerde
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/KafkaPrincipalSerde.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/KafkaPrincipalSerde.html"/>
     /// </summary>
     public partial class KafkaPrincipalSerde : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KafkaPrincipalSerde>
     {
@@ -242,7 +242,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
     #region Login
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/Login.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/Login.html"/>
     /// </summary>
     public partial class Login : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Login>
     {
@@ -285,9 +285,9 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
     #region PlaintextAuthenticationContext
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/PlaintextAuthenticationContext.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/PlaintextAuthenticationContext.html"/>
     /// </summary>
-    public partial class PlaintextAuthenticationContext : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PlaintextAuthenticationContext>
+    public partial class PlaintextAuthenticationContext : Org.Apache.Kafka.Common.Security.Auth.AuthenticationContext
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -328,9 +328,9 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
     #region SaslAuthenticationContext
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SaslAuthenticationContext.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SaslAuthenticationContext.html"/>
     /// </summary>
-    public partial class SaslAuthenticationContext : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SaslAuthenticationContext>
+    public partial class SaslAuthenticationContext : Org.Apache.Kafka.Common.Security.Auth.AuthenticationContext
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -371,7 +371,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
     #region SaslExtensions
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SaslExtensions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SaslExtensions.html"/>
     /// </summary>
     public partial class SaslExtensions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SaslExtensions>
     {
@@ -414,9 +414,9 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
     #region SaslExtensionsCallback
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SaslExtensionsCallback.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SaslExtensionsCallback.html"/>
     /// </summary>
-    public partial class SaslExtensionsCallback : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SaslExtensionsCallback>
+    public partial class SaslExtensionsCallback : Javax.Security.Auth.Callback.Callback
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -457,7 +457,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
     #region SecurityProtocol
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SecurityProtocol.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SecurityProtocol.html"/>
     /// </summary>
     public partial class SecurityProtocol : Java.Lang.Enum<Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol>
     {
@@ -500,7 +500,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
     #region SecurityProviderCreator
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SecurityProviderCreator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SecurityProviderCreator.html"/>
     /// </summary>
     public partial class SecurityProviderCreator : Org.Apache.Kafka.Common.Configurable
     {
@@ -543,9 +543,9 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
     #region SslAuthenticationContext
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslAuthenticationContext.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslAuthenticationContext.html"/>
     /// </summary>
-    public partial class SslAuthenticationContext : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SslAuthenticationContext>
+    public partial class SslAuthenticationContext : Org.Apache.Kafka.Common.Security.Auth.AuthenticationContext
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -586,7 +586,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
     #region SslEngineFactory
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslEngineFactory.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslEngineFactory.html"/>
     /// </summary>
     public partial class SslEngineFactory : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SslEngineFactory>
     {
@@ -626,6 +626,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
     }
     #endregion
+
 
 
 }

@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Network
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/CipherInformation.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/CipherInformation.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/CipherInformation.html#cipher()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/CipherInformation.html#cipher()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<string>("cipher");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/CipherInformation.html#protocol()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/CipherInformation.html#protocol()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>

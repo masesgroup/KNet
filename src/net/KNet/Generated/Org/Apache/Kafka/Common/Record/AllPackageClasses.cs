@@ -27,9 +27,9 @@ namespace Org.Apache.Kafka.Common.Record
 {
     #region AbstractLegacyRecordBatch
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractLegacyRecordBatch.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractLegacyRecordBatch.html"/>
     /// </summary>
-    public partial class AbstractLegacyRecordBatch : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AbstractLegacyRecordBatch>
+    public partial class AbstractLegacyRecordBatch : Org.Apache.Kafka.Common.Record.Record
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -70,9 +70,9 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region AbstractRecords
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractRecords.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractRecords.html"/>
     /// </summary>
-    public partial class AbstractRecords : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AbstractRecords>
+    public partial class AbstractRecords : Org.Apache.Kafka.Common.Record.Records
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region BaseRecords
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/BaseRecords.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/BaseRecords.html"/>
     /// </summary>
     public partial class BaseRecords : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BaseRecords>
     {
@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region CompressionRatioEstimator
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/CompressionRatioEstimator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/CompressionRatioEstimator.html"/>
     /// </summary>
     public partial class CompressionRatioEstimator : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CompressionRatioEstimator>
     {
@@ -199,7 +199,7 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region CompressionType
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/CompressionType.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/CompressionType.html"/>
     /// </summary>
     public partial class CompressionType : Java.Lang.Enum<Org.Apache.Kafka.Common.Record.CompressionType>
     {
@@ -242,7 +242,7 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region ControlRecordType
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordType.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordType.html"/>
     /// </summary>
     public partial class ControlRecordType : Java.Lang.Enum<Org.Apache.Kafka.Common.Record.ControlRecordType>
     {
@@ -285,7 +285,7 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region ControlRecordUtils
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordUtils.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordUtils.html"/>
     /// </summary>
     public partial class ControlRecordUtils : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ControlRecordUtils>
     {
@@ -328,7 +328,7 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region ConvertedRecords
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ConvertedRecords.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ConvertedRecords.html"/>
     /// </summary>
     public partial class ConvertedRecords : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConvertedRecords>
     {
@@ -371,10 +371,10 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region ConvertedRecords<T>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ConvertedRecords.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ConvertedRecords.html"/>
     /// </summary>
-    /// <typeparam name="T"><see cref="Org.Apache.Kafka.Common.Record.Records"/></typeparam>
-    public partial class ConvertedRecords<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConvertedRecords<T>> where T: Org.Apache.Kafka.Common.Record.Records
+    /// <typeparam name="T"><see cref="Org.Apache.Kafka.Common.Record.IRecords"/></typeparam>
+    public partial class ConvertedRecords<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConvertedRecords<T>> where T: Org.Apache.Kafka.Common.Record.IRecords, new()
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -415,9 +415,9 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region DefaultRecord
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/DefaultRecord.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/DefaultRecord.html"/>
     /// </summary>
-    public partial class DefaultRecord : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DefaultRecord>
+    public partial class DefaultRecord : Org.Apache.Kafka.Common.Record.Record
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -458,9 +458,9 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region DefaultRecordBatch
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/DefaultRecordBatch.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/DefaultRecordBatch.html"/>
     /// </summary>
-    public partial class DefaultRecordBatch : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DefaultRecordBatch>
+    public partial class DefaultRecordBatch : Org.Apache.Kafka.Common.Record.MutableRecordBatch
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -501,7 +501,7 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region DefaultRecordsSend
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/DefaultRecordsSend.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/DefaultRecordsSend.html"/>
     /// </summary>
     public partial class DefaultRecordsSend : Org.Apache.Kafka.Common.Record.RecordsSend
     {
@@ -544,10 +544,10 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region DefaultRecordsSend<T>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/DefaultRecordsSend.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/DefaultRecordsSend.html"/>
     /// </summary>
-    /// <typeparam name="T"><see cref="Org.Apache.Kafka.Common.Record.TransferableRecords"/></typeparam>
-    public partial class DefaultRecordsSend<T> : Org.Apache.Kafka.Common.Record.RecordsSend<T> where T: Org.Apache.Kafka.Common.Record.TransferableRecords
+    /// <typeparam name="T"><see cref="Org.Apache.Kafka.Common.Record.ITransferableRecords"/></typeparam>
+    public partial class DefaultRecordsSend<T> : Org.Apache.Kafka.Common.Record.RecordsSend<T> where T: Org.Apache.Kafka.Common.Record.ITransferableRecords, new()
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -588,7 +588,7 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region EndTransactionMarker
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/EndTransactionMarker.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/EndTransactionMarker.html"/>
     /// </summary>
     public partial class EndTransactionMarker : MASES.JCOBridge.C2JBridge.JVMBridgeBase<EndTransactionMarker>
     {
@@ -631,7 +631,7 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region FileLogInputStream
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileLogInputStream.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileLogInputStream.html"/>
     /// </summary>
     public partial class FileLogInputStream : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FileLogInputStream>
     {
@@ -670,7 +670,7 @@ namespace Org.Apache.Kafka.Common.Record
         // TODO: complete the class
         #region FileChannelRecordBatch
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileLogInputStream.FileChannelRecordBatch.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileLogInputStream.FileChannelRecordBatch.html"/>
         /// </summary>
         public partial class FileChannelRecordBatch : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FileChannelRecordBatch>
         {
@@ -717,7 +717,7 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region FileRecords
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.html"/>
     /// </summary>
     public partial class FileRecords : Org.Apache.Kafka.Common.Record.AbstractRecords
     {
@@ -756,7 +756,7 @@ namespace Org.Apache.Kafka.Common.Record
         // TODO: complete the class
         #region LogOffsetPosition
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.LogOffsetPosition.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.LogOffsetPosition.html"/>
         /// </summary>
         public partial class LogOffsetPosition : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LogOffsetPosition>
         {
@@ -799,7 +799,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region TimestampAndOffset
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.TimestampAndOffset.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/FileRecords.TimestampAndOffset.html"/>
         /// </summary>
         public partial class TimestampAndOffset : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TimestampAndOffset>
         {
@@ -846,9 +846,9 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region LazyDownConversionRecords
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LazyDownConversionRecords.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LazyDownConversionRecords.html"/>
     /// </summary>
-    public partial class LazyDownConversionRecords : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LazyDownConversionRecords>
+    public partial class LazyDownConversionRecords : Org.Apache.Kafka.Common.Record.BaseRecords
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -889,7 +889,7 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region LazyDownConversionRecordsSend
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LazyDownConversionRecordsSend.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LazyDownConversionRecordsSend.html"/>
     /// </summary>
     public partial class LazyDownConversionRecordsSend : Org.Apache.Kafka.Common.Record.RecordsSend<Org.Apache.Kafka.Common.Record.LazyDownConversionRecords>
     {
@@ -932,7 +932,7 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region LegacyRecord
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LegacyRecord.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LegacyRecord.html"/>
     /// </summary>
     public partial class LegacyRecord : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LegacyRecord>
     {
@@ -975,7 +975,7 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region MemoryRecords
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html"/>
     /// </summary>
     public partial class MemoryRecords : Org.Apache.Kafka.Common.Record.AbstractRecords
     {
@@ -1014,7 +1014,7 @@ namespace Org.Apache.Kafka.Common.Record
         // TODO: complete the class
         #region FilterResult
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.FilterResult.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.FilterResult.html"/>
         /// </summary>
         public partial class FilterResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FilterResult>
         {
@@ -1057,7 +1057,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region RecordFilter
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.RecordFilter.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.RecordFilter.html"/>
         /// </summary>
         public partial class RecordFilter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RecordFilter>
         {
@@ -1096,7 +1096,7 @@ namespace Org.Apache.Kafka.Common.Record
             // TODO: complete the class
             #region BatchRetention
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.RecordFilter.BatchRetention.html"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.RecordFilter.BatchRetention.html"/>
             /// </summary>
             public partial class BatchRetention : Java.Lang.Enum<Org.Apache.Kafka.Common.Record.MemoryRecords.RecordFilter.BatchRetention>
             {
@@ -1139,7 +1139,7 @@ namespace Org.Apache.Kafka.Common.Record
 
             #region BatchRetentionResult
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.RecordFilter.BatchRetentionResult.html"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.RecordFilter.BatchRetentionResult.html"/>
             /// </summary>
             public partial class BatchRetentionResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BatchRetentionResult>
             {
@@ -1190,9 +1190,9 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region MemoryRecordsBuilder
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.html"/>
     /// </summary>
-    public partial class MemoryRecordsBuilder : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MemoryRecordsBuilder>
+    public partial class MemoryRecordsBuilder : Java.Lang.AutoCloseable
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1229,7 +1229,7 @@ namespace Org.Apache.Kafka.Common.Record
         // TODO: complete the class
         #region RecordsInfo
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.RecordsInfo.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecordsBuilder.RecordsInfo.html"/>
         /// </summary>
         public partial class RecordsInfo : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RecordsInfo>
         {
@@ -1276,9 +1276,9 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region MultiRecordsSend
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MultiRecordsSend.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MultiRecordsSend.html"/>
     /// </summary>
-    public partial class MultiRecordsSend : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MultiRecordsSend>
+    public partial class MultiRecordsSend : Org.Apache.Kafka.Common.Network.Send
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1319,7 +1319,7 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region MutableRecordBatch
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MutableRecordBatch.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MutableRecordBatch.html"/>
     /// </summary>
     public partial class MutableRecordBatch : Org.Apache.Kafka.Common.Record.RecordBatch
     {
@@ -1362,7 +1362,7 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region PartialDefaultRecord
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/PartialDefaultRecord.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/PartialDefaultRecord.html"/>
     /// </summary>
     public partial class PartialDefaultRecord : Org.Apache.Kafka.Common.Record.DefaultRecord
     {
@@ -1405,7 +1405,7 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region Record
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Record.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Record.html"/>
     /// </summary>
     public partial class Record : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Record>
     {
@@ -1448,9 +1448,9 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region RecordBatch
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordBatch.html"/>
     /// </summary>
-    public partial class RecordBatch : Java.Lang.Iterable
+    public partial class RecordBatch : Java.Lang.Iterable<Org.Apache.Kafka.Common.Record.Record>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1491,7 +1491,7 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region RecordConversionStats
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordConversionStats.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordConversionStats.html"/>
     /// </summary>
     public partial class RecordConversionStats : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RecordConversionStats>
     {
@@ -1534,7 +1534,7 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region Records
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html"/>
     /// </summary>
     public partial class Records : Org.Apache.Kafka.Common.Record.TransferableRecords
     {
@@ -1577,9 +1577,9 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region RecordsSend
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordsSend.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordsSend.html"/>
     /// </summary>
-    public partial class RecordsSend : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RecordsSend>
+    public partial class RecordsSend : Org.Apache.Kafka.Common.Network.Send
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1620,10 +1620,10 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region RecordsSend<T>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordsSend.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordsSend.html"/>
     /// </summary>
-    /// <typeparam name="T"><see cref="Org.Apache.Kafka.Common.Record.BaseRecords"/></typeparam>
-    public partial class RecordsSend<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RecordsSend<T>> where T: Org.Apache.Kafka.Common.Record.BaseRecords
+    /// <typeparam name="T"><see cref="Org.Apache.Kafka.Common.Record.IBaseRecords"/></typeparam>
+    public partial class RecordsSend<T> : Org.Apache.Kafka.Common.Network.Send where T: Org.Apache.Kafka.Common.Record.IBaseRecords, new()
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1664,7 +1664,7 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region RecordsUtil
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordsUtil.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordsUtil.html"/>
     /// </summary>
     public partial class RecordsUtil : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RecordsUtil>
     {
@@ -1707,7 +1707,7 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region RecordVersion
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordVersion.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/RecordVersion.html"/>
     /// </summary>
     public partial class RecordVersion : Java.Lang.Enum<Org.Apache.Kafka.Common.Record.RecordVersion>
     {
@@ -1750,7 +1750,7 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region SimpleRecord
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/SimpleRecord.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/SimpleRecord.html"/>
     /// </summary>
     public partial class SimpleRecord : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SimpleRecord>
     {
@@ -1793,7 +1793,7 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region TimestampType
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/TimestampType.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/TimestampType.html"/>
     /// </summary>
     public partial class TimestampType : Java.Lang.Enum<Org.Apache.Kafka.Common.Record.TimestampType>
     {
@@ -1836,7 +1836,7 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region TransferableRecords
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/TransferableRecords.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/TransferableRecords.html"/>
     /// </summary>
     public partial class TransferableRecords : Org.Apache.Kafka.Common.Record.BaseRecords
     {
@@ -1879,9 +1879,9 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region UnalignedFileRecords
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/UnalignedFileRecords.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/UnalignedFileRecords.html"/>
     /// </summary>
-    public partial class UnalignedFileRecords : MASES.JCOBridge.C2JBridge.JVMBridgeBase<UnalignedFileRecords>
+    public partial class UnalignedFileRecords : Org.Apache.Kafka.Common.Record.UnalignedRecords
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1922,9 +1922,9 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region UnalignedMemoryRecords
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/UnalignedMemoryRecords.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/UnalignedMemoryRecords.html"/>
     /// </summary>
-    public partial class UnalignedMemoryRecords : MASES.JCOBridge.C2JBridge.JVMBridgeBase<UnalignedMemoryRecords>
+    public partial class UnalignedMemoryRecords : Org.Apache.Kafka.Common.Record.UnalignedRecords
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1965,7 +1965,7 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region UnalignedRecords
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/UnalignedRecords.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/UnalignedRecords.html"/>
     /// </summary>
     public partial class UnalignedRecords : Org.Apache.Kafka.Common.Record.TransferableRecords
     {
@@ -2005,6 +2005,7 @@ namespace Org.Apache.Kafka.Common.Record
 
     }
     #endregion
+
 
 
 }

@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Protocol
 {
+    #region IMessage
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Message.html"/>
+    /// </summary>
+    public partial interface IMessage
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region Message
-    public partial class Message
+    public partial class Message : Org.Apache.Kafka.Common.Protocol.IMessage
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Protocol
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Message.html#unknownTaggedFields()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Message.html#unknownTaggedFields()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -55,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Protocol.Types.RawTaggedField>>("unknownTaggedFields");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Message.html#duplicate()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Message.html#duplicate()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></returns>
@@ -64,7 +82,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return IExecute<Org.Apache.Kafka.Common.Protocol.Message>("duplicate");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Message.html#highestSupportedVersion()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Message.html#highestSupportedVersion()"/>
         /// </summary>
 
         /// <returns><see cref="short"/></returns>
@@ -73,7 +91,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return IExecute<short>("highestSupportedVersion");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Message.html#lowestSupportedVersion()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Message.html#lowestSupportedVersion()"/>
         /// </summary>
 
         /// <returns><see cref="short"/></returns>
@@ -82,7 +100,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return IExecute<short>("lowestSupportedVersion");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Message.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Message.html#addSize(org.apache.kafka.common.protocol.MessageSizeAccumulator,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.MessageSizeAccumulator"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Protocol.ObjectSerializationCache"/></param>
@@ -92,7 +110,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("addSize", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Message.html#read(org.apache.kafka.common.protocol.Readable,short)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Message.html#read(org.apache.kafka.common.protocol.Readable,short)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Readable"/></param>
         /// <param name="arg1"><see cref="short"/></param>
@@ -101,7 +119,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("read", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Message.html#write(org.apache.kafka.common.protocol.Writable,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Message.html#write(org.apache.kafka.common.protocol.Writable,org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Writable"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Protocol.ObjectSerializationCache"/></param>
@@ -111,7 +129,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("write", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Message.html#size(org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Message.html#size(org.apache.kafka.common.protocol.ObjectSerializationCache,short)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.ObjectSerializationCache"/></param>
         /// <param name="arg1"><see cref="short"/></param>

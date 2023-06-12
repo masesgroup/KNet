@@ -38,87 +38,87 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#BOOLEAN"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#BOOLEAN"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType BOOLEAN { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType>(LocalBridgeClazz, "BOOLEAN"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#BYTES"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#BYTES"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType BYTES { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType>(LocalBridgeClazz, "BYTES"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#COMPACT_BYTES"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#COMPACT_BYTES"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType COMPACT_BYTES { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType>(LocalBridgeClazz, "COMPACT_BYTES"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#COMPACT_NULLABLE_BYTES"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#COMPACT_NULLABLE_BYTES"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType COMPACT_NULLABLE_BYTES { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType>(LocalBridgeClazz, "COMPACT_NULLABLE_BYTES"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#COMPACT_NULLABLE_STRING"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#COMPACT_NULLABLE_STRING"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType COMPACT_NULLABLE_STRING { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType>(LocalBridgeClazz, "COMPACT_NULLABLE_STRING"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#COMPACT_RECORDS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#COMPACT_RECORDS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType COMPACT_RECORDS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType>(LocalBridgeClazz, "COMPACT_RECORDS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#COMPACT_STRING"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#COMPACT_STRING"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType COMPACT_STRING { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType>(LocalBridgeClazz, "COMPACT_STRING"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#FLOAT64"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#FLOAT64"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType FLOAT64 { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType>(LocalBridgeClazz, "FLOAT64"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#INT16"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#INT16"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType INT16 { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType>(LocalBridgeClazz, "INT16"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#INT32"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#INT32"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType INT32 { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType>(LocalBridgeClazz, "INT32"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#INT64"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#INT64"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType INT64 { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType>(LocalBridgeClazz, "INT64"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#INT8"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#INT8"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType INT8 { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType>(LocalBridgeClazz, "INT8"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#NULLABLE_BYTES"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#NULLABLE_BYTES"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType NULLABLE_BYTES { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType>(LocalBridgeClazz, "NULLABLE_BYTES"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#NULLABLE_STRING"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#NULLABLE_STRING"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType NULLABLE_STRING { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType>(LocalBridgeClazz, "NULLABLE_STRING"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#RECORDS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#RECORDS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType RECORDS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType>(LocalBridgeClazz, "RECORDS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#STRING"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#STRING"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType STRING { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType>(LocalBridgeClazz, "STRING"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#UINT16"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#UINT16"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType UINT16 { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType>(LocalBridgeClazz, "UINT16"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#UNSIGNED_INT32"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#UNSIGNED_INT32"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType UNSIGNED_INT32 { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType>(LocalBridgeClazz, "UNSIGNED_INT32"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#UUID"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#UUID"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType UUID { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType>(LocalBridgeClazz, "UUID"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#VARINT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#VARINT"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType VARINT { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType>(LocalBridgeClazz, "VARINT"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#VARLONG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#VARLONG"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType VARLONG { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType>(LocalBridgeClazz, "VARLONG"); } }
 
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         public static void Main(string[] arg0)
@@ -138,7 +138,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#sizeOf(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#sizeOf(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="int"/></returns>
@@ -147,7 +147,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<int>("sizeOf", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#read(java.nio.ByteBuffer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#read(java.nio.ByteBuffer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <returns><see cref="object"/></returns>
@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute("read", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#validate(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#validate(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="object"/></returns>
@@ -165,7 +165,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute("validate", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#write(java.nio.ByteBuffer,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#write(java.nio.ByteBuffer,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -174,7 +174,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             IExecute("write", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#isNullable()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#isNullable()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -183,7 +183,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<bool>("isNullable");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#isArray()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#isArray()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -192,7 +192,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<bool>("isArray");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#arrayElementType()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html#arrayElementType()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Optional"/></returns>
@@ -225,7 +225,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.DocumentedType.html#documentation()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.DocumentedType.html#documentation()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -234,7 +234,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
                 return IExecute<string>("documentation");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.DocumentedType.html#typeName()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.DocumentedType.html#typeName()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>

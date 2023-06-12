@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Streams.Processor
 {
+    #region IPunctuator
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/Punctuator.html"/>
+    /// </summary>
+    public partial interface IPunctuator
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region Punctuator
-    public partial class Punctuator
+    public partial class Punctuator : Org.Apache.Kafka.Streams.Processor.IPunctuator
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/Punctuator.html#punctuate(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/Punctuator.html#punctuate(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         public void Punctuate(long arg0)

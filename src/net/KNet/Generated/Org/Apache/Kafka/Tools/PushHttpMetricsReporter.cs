@@ -50,23 +50,22 @@ namespace Org.Apache.Kafka.Tools
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/PushHttpMetricsReporter.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/PushHttpMetricsReporter.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecute("close");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/PushHttpMetricsReporter.html#configure(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/PushHttpMetricsReporter.html#configure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        /// <typeparam name="Arg0Extendsobject"></typeparam>
-        public void Configure<Arg0Extendsobject>(Java.Util.Map<string, Arg0Extendsobject> arg0)
+        public void Configure(Java.Util.Map<string, object> arg0)
         {
             IExecute("configure", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/PushHttpMetricsReporter.html#init(java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/PushHttpMetricsReporter.html#init(java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         public void Init(Java.Util.List<Org.Apache.Kafka.Common.Metrics.KafkaMetric> arg0)
@@ -74,7 +73,7 @@ namespace Org.Apache.Kafka.Tools
             IExecute("init", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/PushHttpMetricsReporter.html#metricChange(org.apache.kafka.common.metrics.KafkaMetric)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/PushHttpMetricsReporter.html#metricChange(org.apache.kafka.common.metrics.KafkaMetric)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Metrics.KafkaMetric"/></param>
         public void MetricChange(Org.Apache.Kafka.Common.Metrics.KafkaMetric arg0)
@@ -82,7 +81,7 @@ namespace Org.Apache.Kafka.Tools
             IExecute("metricChange", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/PushHttpMetricsReporter.html#metricRemoval(org.apache.kafka.common.metrics.KafkaMetric)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/PushHttpMetricsReporter.html#metricRemoval(org.apache.kafka.common.metrics.KafkaMetric)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Metrics.KafkaMetric"/></param>
         public void MetricRemoval(Org.Apache.Kafka.Common.Metrics.KafkaMetric arg0)

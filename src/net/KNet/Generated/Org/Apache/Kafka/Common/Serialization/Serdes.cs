@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.html#ListSerde(java.lang.Class,org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.html#ListSerde(java.lang.Class,org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Class"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
@@ -53,7 +53,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             return SExecute<Org.Apache.Kafka.Common.Serialization.Serde<Java.Util.List<Inner>>>(LocalBridgeClazz, "ListSerde", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.html#serdeFrom(java.lang.Class)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.html#serdeFrom(java.lang.Class)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Class"/></param>
         /// <typeparam name="T"></typeparam>
@@ -63,7 +63,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             return SExecute<Org.Apache.Kafka.Common.Serialization.Serde<T>>(LocalBridgeClazz, "serdeFrom", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.html#serdeFrom(org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Deserializer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.html#serdeFrom(org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Deserializer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serializer"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             return SExecute<Org.Apache.Kafka.Common.Serialization.Serde<T>>(LocalBridgeClazz, "serdeFrom", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.html#ByteArray()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.html#ByteArray()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             return SExecute<Org.Apache.Kafka.Common.Serialization.Serde<byte[]>>(LocalBridgeClazz, "ByteArray");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.html#Double()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.html#Double()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
@@ -92,7 +92,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             return SExecute<Org.Apache.Kafka.Common.Serialization.Serde<double?>>(LocalBridgeClazz, "Double");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.html#Float()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.html#Float()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
@@ -101,7 +101,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             return SExecute<Org.Apache.Kafka.Common.Serialization.Serde<float?>>(LocalBridgeClazz, "Float");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.html#Integer()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.html#Integer()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             return SExecute<Org.Apache.Kafka.Common.Serialization.Serde<int?>>(LocalBridgeClazz, "Integer");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.html#Long()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.html#Long()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
@@ -119,7 +119,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             return SExecute<Org.Apache.Kafka.Common.Serialization.Serde<long?>>(LocalBridgeClazz, "Long");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.html#Short()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.html#Short()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
@@ -128,7 +128,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             return SExecute<Org.Apache.Kafka.Common.Serialization.Serde<short?>>(LocalBridgeClazz, "Short");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.html#String()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.html#String()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
@@ -137,7 +137,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             return SExecute<Org.Apache.Kafka.Common.Serialization.Serde<string>>(LocalBridgeClazz, "String");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.html#Void()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.html#Void()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
@@ -146,7 +146,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             return SExecute<Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.Void>>(LocalBridgeClazz, "Void");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.html#ByteBuffer()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.html#ByteBuffer()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
@@ -155,7 +155,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             return SExecute<Org.Apache.Kafka.Common.Serialization.Serde<Java.Nio.ByteBuffer>>(LocalBridgeClazz, "ByteBuffer");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.html#UUID()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.html#UUID()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
@@ -164,7 +164,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             return SExecute<Org.Apache.Kafka.Common.Serialization.Serde<Java.Util.UUID>>(LocalBridgeClazz, "UUID");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.html#Bytes()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.html#Bytes()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
@@ -371,7 +371,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.ListSerde.html#%3Cinit%3E(java.lang.Class,org.apache.kafka.common.serialization.Serde)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.ListSerde.html#%3Cinit%3E(java.lang.Class,org.apache.kafka.common.serialization.Serde)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.Class"/></param>
             /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
@@ -411,7 +411,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.ListSerde.html#%3Cinit%3E(java.lang.Class,org.apache.kafka.common.serialization.Serde)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.ListSerde.html#%3Cinit%3E(java.lang.Class,org.apache.kafka.common.serialization.Serde)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.Class"/></param>
             /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
@@ -610,7 +610,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html#%3Cinit%3E(org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Deserializer)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html#%3Cinit%3E(org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Deserializer)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serializer"/></param>
             /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
@@ -622,10 +622,6 @@ namespace Org.Apache.Kafka.Common.Serialization
             #endregion
 
             #region Class/Interface conversion operators
-            /// <summary>
-            /// Converter from <see cref="Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde"/> to <see cref="Org.Apache.Kafka.Common.Serialization.Serde"/>
-            /// </summary>
-            public static implicit operator Org.Apache.Kafka.Common.Serialization.Serde(Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde t) => t.Cast<Org.Apache.Kafka.Common.Serialization.Serde>();
 
             #endregion
 
@@ -639,7 +635,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html#deserializer()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html#deserializer()"/>
             /// </summary>
 
             /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></returns>
@@ -648,7 +644,7 @@ namespace Org.Apache.Kafka.Common.Serialization
                 return IExecute<Org.Apache.Kafka.Common.Serialization.Deserializer>("deserializer");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html#serializer()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html#serializer()"/>
             /// </summary>
 
             /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serializer"/></returns>
@@ -657,14 +653,14 @@ namespace Org.Apache.Kafka.Common.Serialization
                 return IExecute<Org.Apache.Kafka.Common.Serialization.Serializer>("serializer");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html#close()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html#close()"/>
             /// </summary>
             public void Close()
             {
                 IExecute("close");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html#configure(java.util.Map,boolean)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html#configure(java.util.Map,boolean)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Map"/></param>
             /// <param name="arg1"><see cref="bool"/></param>
@@ -688,7 +684,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html#%3Cinit%3E(org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Deserializer)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html#%3Cinit%3E(org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Deserializer)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serializer"/></param>
             /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
@@ -700,10 +696,6 @@ namespace Org.Apache.Kafka.Common.Serialization
             #endregion
 
             #region Class/Interface conversion operators
-            /// <summary>
-            /// Converter from <see cref="Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde{T}"/> to <see cref="Org.Apache.Kafka.Common.Serialization.Serde{T}"/>
-            /// </summary>
-            public static implicit operator Org.Apache.Kafka.Common.Serialization.Serde<T>(Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<T> t) => t.Cast<Org.Apache.Kafka.Common.Serialization.Serde<T>>();
             /// <summary>
             /// Converter from <see cref="Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde{T}"/> to <see cref="Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde"/>
             /// </summary>
@@ -721,7 +713,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html#deserializer()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html#deserializer()"/>
             /// </summary>
 
             /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></returns>
@@ -730,7 +722,7 @@ namespace Org.Apache.Kafka.Common.Serialization
                 return IExecute<Org.Apache.Kafka.Common.Serialization.Deserializer<T>>("deserializer");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html#serializer()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html#serializer()"/>
             /// </summary>
 
             /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serializer"/></returns>
@@ -739,19 +731,18 @@ namespace Org.Apache.Kafka.Common.Serialization
                 return IExecute<Org.Apache.Kafka.Common.Serialization.Serializer<T>>("serializer");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html#close()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html#close()"/>
             /// </summary>
             public void Close()
             {
                 IExecute("close");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html#configure(java.util.Map,boolean)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serdes.WrapperSerde.html#configure(java.util.Map,boolean)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Map"/></param>
             /// <param name="arg1"><see cref="bool"/></param>
-            /// <typeparam name="Arg0Extendsobject"></typeparam>
-            public void Configure<Arg0Extendsobject>(Java.Util.Map<string, Arg0Extendsobject> arg0, bool arg1)
+            public void Configure(Java.Util.Map<string, object> arg0, bool arg1)
             {
                 IExecute("configure", arg0, arg1);
             }

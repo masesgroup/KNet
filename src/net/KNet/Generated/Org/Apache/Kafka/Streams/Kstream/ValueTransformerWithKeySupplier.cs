@@ -54,7 +54,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerWithKeySupplier.html#get()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerWithKeySupplier.html#get()"/>
         /// </summary>
 
         /// <returns><see cref="object"/></returns>
@@ -73,8 +73,26 @@ namespace Org.Apache.Kafka.Streams.Kstream
     }
     #endregion
 
+    #region IValueTransformerWithKeySupplier<K, V, VR>
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerWithKeySupplier.html"/>
+    /// </summary>
+    public partial interface IValueTransformerWithKeySupplier<K, V, VR>
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region ValueTransformerWithKeySupplier<K, V, VR>
-    public partial class ValueTransformerWithKeySupplier<K, V, VR>
+    public partial class ValueTransformerWithKeySupplier<K, V, VR> : Org.Apache.Kafka.Streams.Kstream.IValueTransformerWithKeySupplier<K, V, VR>, Org.Apache.Kafka.Streams.Processor.IConnectedStoreProvider, Java.Util.Function.ISupplier<Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKey<K, V, VR>>
     {
         #region Constructors
 
@@ -106,7 +124,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerWithKeySupplier.html#get()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerWithKeySupplier.html#get()"/>
         /// </summary>
 
         /// <returns><see cref="object"/></returns>

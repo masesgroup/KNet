@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Connect.Storage
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/OffsetUtils.html#validateFormat(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/OffsetUtils.html#validateFormat(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <typeparam name="K"></typeparam>
@@ -52,7 +52,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             SExecute(LocalBridgeClazz, "validateFormat", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/OffsetUtils.html#validateFormat(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/OffsetUtils.html#validateFormat(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         public static void ValidateFormat(object arg0)

@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/ClientCompatibilityTest.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/ClientCompatibilityTest.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <exception cref="Java.Lang.Exception"/>
@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/ClientCompatibilityTest.html#testConsume(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/ClientCompatibilityTest.html#testConsume(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <exception cref="Java.Lang.Throwable"/>
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Tools
             IExecute("testConsume", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/ClientCompatibilityTest.html#testProduce()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/ClientCompatibilityTest.html#testProduce()"/>
         /// </summary>
 
         /// <exception cref="Java.Lang.Exception"/>
@@ -77,7 +77,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Nested classes
         #region ClientCompatibilityTestDeserializer
-        public partial class ClientCompatibilityTestDeserializer
+        public partial class ClientCompatibilityTestDeserializer : Org.Apache.Kafka.Common.Serialization.IDeserializer<byte[]>, Org.Apache.Kafka.Common.IClusterResourceListener
         {
             #region Constructors
 
@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Tools
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/ClientCompatibilityTest.ClientCompatibilityTestDeserializer.html#deserialize(java.lang.String,byte[])"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/ClientCompatibilityTest.ClientCompatibilityTestDeserializer.html#deserialize(java.lang.String,byte[])"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
             /// <param name="arg1"><see cref="byte"/></param>
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecute("deserialize", arg0, arg1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/ClientCompatibilityTest.ClientCompatibilityTestDeserializer.html#onUpdate(org.apache.kafka.common.ClusterResource)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/ClientCompatibilityTest.ClientCompatibilityTestDeserializer.html#onUpdate(org.apache.kafka.common.ClusterResource)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.ClusterResource"/></param>
             public void OnUpdate(Org.Apache.Kafka.Common.ClusterResource arg0)

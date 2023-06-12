@@ -38,11 +38,11 @@ namespace Org.Apache.Kafka.Connect.Source
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/ConnectorTransactionBoundaries.html#SUPPORTED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/ConnectorTransactionBoundaries.html#SUPPORTED"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Source.ConnectorTransactionBoundaries SUPPORTED { get { return SGetField<Org.Apache.Kafka.Connect.Source.ConnectorTransactionBoundaries>(LocalBridgeClazz, "SUPPORTED"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/ConnectorTransactionBoundaries.html#UNSUPPORTED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/ConnectorTransactionBoundaries.html#UNSUPPORTED"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Source.ConnectorTransactionBoundaries UNSUPPORTED { get { return SGetField<Org.Apache.Kafka.Connect.Source.ConnectorTransactionBoundaries>(LocalBridgeClazz, "UNSUPPORTED"); } }
 
@@ -50,7 +50,7 @@ namespace Org.Apache.Kafka.Connect.Source
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/ConnectorTransactionBoundaries.html#valueOf(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/ConnectorTransactionBoundaries.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Source.ConnectorTransactionBoundaries"/></returns>
@@ -59,7 +59,7 @@ namespace Org.Apache.Kafka.Connect.Source
             return SExecute<Org.Apache.Kafka.Connect.Source.ConnectorTransactionBoundaries>(LocalBridgeClazz, "valueOf", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/ConnectorTransactionBoundaries.html#values()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/ConnectorTransactionBoundaries.html#values()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Connect.Source.ConnectorTransactionBoundaries"/></returns>

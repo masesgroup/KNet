@@ -56,8 +56,26 @@ namespace Org.Apache.Kafka.Streams.State
     }
     #endregion
 
+    #region ITimestampedKeyValueStore<K, V>
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/TimestampedKeyValueStore.html"/>
+    /// </summary>
+    public partial interface ITimestampedKeyValueStore<K, V> : Org.Apache.Kafka.Streams.State.IKeyValueStore<K, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<V>>
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region TimestampedKeyValueStore<K, V>
-    public partial class TimestampedKeyValueStore<K, V>
+    public partial class TimestampedKeyValueStore<K, V> : Org.Apache.Kafka.Streams.State.ITimestampedKeyValueStore<K, V>
     {
         #region Constructors
 

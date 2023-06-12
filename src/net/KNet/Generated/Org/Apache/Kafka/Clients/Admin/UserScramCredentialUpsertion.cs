@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/UserScramCredentialUpsertion.html#%3Cinit%3E(java.lang.String,org.apache.kafka.clients.admin.ScramCredentialInfo,byte[],byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/UserScramCredentialUpsertion.html#%3Cinit%3E(java.lang.String,org.apache.kafka.clients.admin.ScramCredentialInfo,byte[],byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo"/></param>
@@ -41,7 +41,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/UserScramCredentialUpsertion.html#%3Cinit%3E(java.lang.String,org.apache.kafka.clients.admin.ScramCredentialInfo,byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/UserScramCredentialUpsertion.html#%3Cinit%3E(java.lang.String,org.apache.kafka.clients.admin.ScramCredentialInfo,byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo"/></param>
@@ -51,7 +51,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/UserScramCredentialUpsertion.html#%3Cinit%3E(java.lang.String,org.apache.kafka.clients.admin.ScramCredentialInfo,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/UserScramCredentialUpsertion.html#%3Cinit%3E(java.lang.String,org.apache.kafka.clients.admin.ScramCredentialInfo,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo"/></param>
@@ -77,7 +77,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/UserScramCredentialUpsertion.html#password()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/UserScramCredentialUpsertion.html#password()"/>
         /// </summary>
 
         /// <returns><see cref="byte"/></returns>
@@ -86,7 +86,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteArray<byte>("password");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/UserScramCredentialUpsertion.html#salt()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/UserScramCredentialUpsertion.html#salt()"/>
         /// </summary>
 
         /// <returns><see cref="byte"/></returns>
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteArray<byte>("salt");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/UserScramCredentialUpsertion.html#credentialInfo()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/UserScramCredentialUpsertion.html#credentialInfo()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo"/></returns>

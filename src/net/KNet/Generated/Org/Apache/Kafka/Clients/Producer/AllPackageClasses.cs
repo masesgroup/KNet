@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 {
     #region BufferExhaustedException
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/BufferExhaustedException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/BufferExhaustedException.html"/>
     /// </summary>
     public partial class BufferExhaustedException : Org.Apache.Kafka.Common.Errors.TimeoutException
     {
@@ -43,10 +43,15 @@ namespace Org.Apache.Kafka.Clients.Producer
 
     #region Callback
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/Callback.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/Callback.html"/>
     /// </summary>
     public partial class Callback : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public Callback() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -56,9 +61,9 @@ namespace Org.Apache.Kafka.Clients.Producer
 
     #region KafkaProducer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/KafkaProducer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/KafkaProducer.html"/>
     /// </summary>
-    public partial class KafkaProducer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KafkaProducer>
+    public partial class KafkaProducer : Org.Apache.Kafka.Clients.Producer.Producer
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -99,11 +104,11 @@ namespace Org.Apache.Kafka.Clients.Producer
 
     #region KafkaProducer<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/KafkaProducer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/KafkaProducer.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
-    public partial class KafkaProducer<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KafkaProducer<K, V>>
+    public partial class KafkaProducer<K, V> : Org.Apache.Kafka.Clients.Producer.Producer<K, V>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -144,9 +149,9 @@ namespace Org.Apache.Kafka.Clients.Producer
 
     #region MockProducer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html"/>
     /// </summary>
-    public partial class MockProducer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MockProducer>
+    public partial class MockProducer : Org.Apache.Kafka.Clients.Producer.Producer
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -187,11 +192,11 @@ namespace Org.Apache.Kafka.Clients.Producer
 
     #region MockProducer<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
-    public partial class MockProducer<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MockProducer<K, V>>
+    public partial class MockProducer<K, V> : Org.Apache.Kafka.Clients.Producer.Producer<K, V>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -232,7 +237,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 
     #region Partitioner
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/Partitioner.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/Partitioner.html"/>
     /// </summary>
     public partial class Partitioner : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Partitioner>
     {
@@ -275,7 +280,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 
     #region Producer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/Producer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/Producer.html"/>
     /// </summary>
     public partial class Producer : Java.Io.Closeable
     {
@@ -318,7 +323,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 
     #region Producer<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/Producer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/Producer.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -363,7 +368,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 
     #region ProducerConfig
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerConfig.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerConfig.html"/>
     /// </summary>
     public partial class ProducerConfig : Org.Apache.Kafka.Common.Config.AbstractConfig, IJNetBridgeMain
     {
@@ -406,7 +411,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 
     #region ProducerInterceptor
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerInterceptor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerInterceptor.html"/>
     /// </summary>
     public partial class ProducerInterceptor : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ProducerInterceptor>
     {
@@ -449,7 +454,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 
     #region ProducerInterceptor<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerInterceptor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerInterceptor.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -494,7 +499,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 
     #region ProducerRecord
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerRecord.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerRecord.html"/>
     /// </summary>
     public partial class ProducerRecord : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ProducerRecord>
     {
@@ -537,7 +542,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 
     #region ProducerRecord<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerRecord.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerRecord.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -582,7 +587,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 
     #region RecordMetadata
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/RecordMetadata.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/RecordMetadata.html"/>
     /// </summary>
     public partial class RecordMetadata : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RecordMetadata>
     {
@@ -625,9 +630,9 @@ namespace Org.Apache.Kafka.Clients.Producer
 
     #region RoundRobinPartitioner
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/RoundRobinPartitioner.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/RoundRobinPartitioner.html"/>
     /// </summary>
-    public partial class RoundRobinPartitioner : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RoundRobinPartitioner>
+    public partial class RoundRobinPartitioner : Org.Apache.Kafka.Clients.Producer.Partitioner
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -665,6 +670,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 
     }
     #endregion
+
 
 
 }

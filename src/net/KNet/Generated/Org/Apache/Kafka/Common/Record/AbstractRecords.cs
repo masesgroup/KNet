@@ -33,10 +33,6 @@ namespace Org.Apache.Kafka.Common.Record
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.Record.AbstractRecords"/> to <see cref="Org.Apache.Kafka.Common.Record.Records"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Common.Record.Records(Org.Apache.Kafka.Common.Record.AbstractRecords t) => t.Cast<Org.Apache.Kafka.Common.Record.Records>();
 
         #endregion
 
@@ -46,7 +42,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractRecords.html#estimateSizeInBytes(byte,long,org.apache.kafka.common.record.CompressionType,java.lang.Iterable)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractRecords.html#estimateSizeInBytes(byte,long,org.apache.kafka.common.record.CompressionType,java.lang.Iterable)"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -58,7 +54,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecute<int>(LocalBridgeClazz, "estimateSizeInBytes", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractRecords.html#estimateSizeInBytes(byte,org.apache.kafka.common.record.CompressionType,java.lang.Iterable)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractRecords.html#estimateSizeInBytes(byte,org.apache.kafka.common.record.CompressionType,java.lang.Iterable)"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Record.CompressionType"/></param>
@@ -69,7 +65,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecute<int>(LocalBridgeClazz, "estimateSizeInBytes", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractRecords.html#estimateSizeInBytesUpperBound(byte,org.apache.kafka.common.record.CompressionType,byte[],byte[],org.apache.kafka.common.header.Header[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractRecords.html#estimateSizeInBytesUpperBound(byte,org.apache.kafka.common.record.CompressionType,byte[],byte[],org.apache.kafka.common.header.Header[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Record.CompressionType"/></param>
@@ -82,7 +78,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecute<int>(LocalBridgeClazz, "estimateSizeInBytesUpperBound", arg0, arg1, arg2, arg3, arg4);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractRecords.html#estimateSizeInBytesUpperBound(byte,org.apache.kafka.common.record.CompressionType,java.nio.ByteBuffer,java.nio.ByteBuffer,org.apache.kafka.common.header.Header[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractRecords.html#estimateSizeInBytesUpperBound(byte,org.apache.kafka.common.record.CompressionType,java.nio.ByteBuffer,java.nio.ByteBuffer,org.apache.kafka.common.header.Header[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Record.CompressionType"/></param>
@@ -95,7 +91,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecute<int>(LocalBridgeClazz, "estimateSizeInBytesUpperBound", arg0, arg1, arg2, arg3, arg4);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractRecords.html#recordBatchHeaderSizeInBytes(byte,org.apache.kafka.common.record.CompressionType)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractRecords.html#recordBatchHeaderSizeInBytes(byte,org.apache.kafka.common.record.CompressionType)"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Record.CompressionType"/></param>
@@ -109,7 +105,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractRecords.html#hasMatchingMagic(byte)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractRecords.html#hasMatchingMagic(byte)"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -118,7 +114,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecute<bool>("hasMatchingMagic", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractRecords.html#records()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractRecords.html#records()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Lang.Iterable"/></returns>
@@ -127,7 +123,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecute<Java.Lang.Iterable<Org.Apache.Kafka.Common.Record.Record>>("records");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractRecords.html#firstBatch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractRecords.html#firstBatch()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.RecordBatch"/></returns>
@@ -136,7 +132,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecute<Org.Apache.Kafka.Common.Record.RecordBatch>("firstBatch");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractRecords.html#toSend()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/AbstractRecords.html#toSend()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.RecordsSend"/></returns>

@@ -26,7 +26,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// </summary>
     /// <typeparam name="K">The data associated to the event</typeparam>
     /// <typeparam name="V">The data associated to the event</typeparam>
-    public interface IForeachAction<K, V> : IJVMBridgeBase
+    public partial interface IForeachAction<K, V> : IJVMBridgeBase
     {
         /// <summary>
         /// Executes the ForeachAction action in the CLR
@@ -73,38 +73,5 @@ namespace Org.Apache.Kafka.Streams.Kstream
         {
             OnApply(data.EventData.TypedEventData, data.EventData.To<V>(0));
         }
-        /// <summary>
-        /// Executes the ForeachAction action in the CLR
-        /// </summary>
-        /// <param name="o1">The ForeachAction object</param>
-        /// <param name="o2">The ForeachAction object</param>
-        /// <returns>The <typeparamref name="VR"/> apply evaluation</returns>
-        public virtual void Apply(K o1, V o2) { }
     }
-    /*
-    /// <summary>
-    /// Listener for Kafka ForeachAction. Extends <see cref="ForeachActionImpl{K, V}"/>
-    /// </summary>
-    /// <typeparam name="K">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
-    /// <typeparam name="V">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
-    /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
-    public class JVMBridgeForeachAction<K, V> : ForeachActionImpl<K, V>
-        where K : IJVMBridgeBase, new()
-        where V : IJVMBridgeBase, new()
-    {
-        /// <summary>
-        /// Initialize a new instance of <see cref="JVMBridgeForeachAction{K, V}"/>
-        /// </summary>
-        /// <param name="func">The <see cref="Action{K, V}"/> to be executed</param>
-        public JVMBridgeForeachAction(Action<K, V> func = null) : base(func, false)
-        {
-            AddEventHandler("apply", new EventHandler<CLRListenerEventArgs<JVMBridgeEventData<K>>>(EventHandler));
-        }
-
-        void EventHandler(object sender, CLRListenerEventArgs<JVMBridgeEventData<K>> data)
-        {
-            OnApply(data.EventData.TypedEventData, data.EventData.To<V>(0));
-        }
-    }
-    */
 }

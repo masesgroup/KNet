@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Util
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/util/NonEmptyListValidator.html#ensureValid(java.lang.String,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/util/NonEmptyListValidator.html#ensureValid(java.lang.String,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="object"/></param>

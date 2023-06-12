@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Common.Feature
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/Features.html#emptySupportedFeatures()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/Features.html#emptySupportedFeatures()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Feature.Features"/></returns>
@@ -51,7 +51,7 @@ namespace Org.Apache.Kafka.Common.Feature
             return SExecute<Org.Apache.Kafka.Common.Feature.Features>(LocalBridgeClazz, "emptySupportedFeatures");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/Features.html#fromSupportedFeaturesMap(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/Features.html#fromSupportedFeaturesMap(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Feature.Features"/></returns>
@@ -60,7 +60,7 @@ namespace Org.Apache.Kafka.Common.Feature
             return SExecute<Org.Apache.Kafka.Common.Feature.Features>(LocalBridgeClazz, "fromSupportedFeaturesMap", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/Features.html#supportedFeatures(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/Features.html#supportedFeatures(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Feature.Features"/></returns>
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Feature
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/Features.html#empty()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/Features.html#empty()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -82,7 +82,7 @@ namespace Org.Apache.Kafka.Common.Feature
             return IExecute<bool>("empty");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/Features.html#toMap()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/Features.html#toMap()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Common.Feature
             return IExecute<Java.Util.Map>("toMap");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/Features.html#features()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/Features.html#features()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -131,38 +131,38 @@ namespace Org.Apache.Kafka.Common.Feature
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/Features.html#emptySupportedFeatures()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/Features.html#emptySupportedFeatures()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Feature.Features"/></returns>
-        public static Org.Apache.Kafka.Common.Feature.Features EmptySupportedFeatures()
+        public static Org.Apache.Kafka.Common.Feature.Features<Org.Apache.Kafka.Common.Feature.SupportedVersionRange> EmptySupportedFeatures()
         {
-            return SExecute<Org.Apache.Kafka.Common.Feature.Features>(LocalBridgeClazz, "emptySupportedFeatures");
+            return SExecute<Org.Apache.Kafka.Common.Feature.Features<Org.Apache.Kafka.Common.Feature.SupportedVersionRange>>(LocalBridgeClazz, "emptySupportedFeatures");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/Features.html#fromSupportedFeaturesMap(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/Features.html#fromSupportedFeaturesMap(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Feature.Features"/></returns>
-        public static Org.Apache.Kafka.Common.Feature.Features FromSupportedFeaturesMap(Java.Util.Map<string, Java.Util.Map<string, short?>> arg0)
+        public static Org.Apache.Kafka.Common.Feature.Features<Org.Apache.Kafka.Common.Feature.SupportedVersionRange> FromSupportedFeaturesMap(Java.Util.Map<string, Java.Util.Map<string, short?>> arg0)
         {
-            return SExecute<Org.Apache.Kafka.Common.Feature.Features>(LocalBridgeClazz, "fromSupportedFeaturesMap", arg0);
+            return SExecute<Org.Apache.Kafka.Common.Feature.Features<Org.Apache.Kafka.Common.Feature.SupportedVersionRange>>(LocalBridgeClazz, "fromSupportedFeaturesMap", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/Features.html#supportedFeatures(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/Features.html#supportedFeatures(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Feature.Features"/></returns>
-        public static Org.Apache.Kafka.Common.Feature.Features SupportedFeatures(Java.Util.Map<string, Org.Apache.Kafka.Common.Feature.SupportedVersionRange> arg0)
+        public static Org.Apache.Kafka.Common.Feature.Features<Org.Apache.Kafka.Common.Feature.SupportedVersionRange> SupportedFeatures(Java.Util.Map<string, Org.Apache.Kafka.Common.Feature.SupportedVersionRange> arg0)
         {
-            return SExecute<Org.Apache.Kafka.Common.Feature.Features>(LocalBridgeClazz, "supportedFeatures", arg0);
+            return SExecute<Org.Apache.Kafka.Common.Feature.Features<Org.Apache.Kafka.Common.Feature.SupportedVersionRange>>(LocalBridgeClazz, "supportedFeatures", arg0);
         }
 
         #endregion
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/Features.html#empty()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/Features.html#empty()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -171,7 +171,7 @@ namespace Org.Apache.Kafka.Common.Feature
             return IExecute<bool>("empty");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/Features.html#toMap()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/Features.html#toMap()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -180,7 +180,7 @@ namespace Org.Apache.Kafka.Common.Feature
             return IExecute<Java.Util.Map<string, Java.Util.Map<string, short?>>>("toMap");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/Features.html#features()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/Features.html#features()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>

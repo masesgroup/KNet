@@ -38,11 +38,11 @@ namespace Org.Apache.Kafka.Common.Protocol
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageUtil.html#UNSIGNED_SHORT_MAX"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageUtil.html#UNSIGNED_SHORT_MAX"/>
         /// </summary>
         public static int UNSIGNED_SHORT_MAX { get { return SGetField<int>(LocalBridgeClazz, "UNSIGNED_SHORT_MAX"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageUtil.html#UNSIGNED_INT_MAX"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageUtil.html#UNSIGNED_INT_MAX"/>
         /// </summary>
         public static long UNSIGNED_INT_MAX { get { return SGetField<long>(LocalBridgeClazz, "UNSIGNED_INT_MAX"); } }
 
@@ -50,7 +50,7 @@ namespace Org.Apache.Kafka.Common.Protocol
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageUtil.html#compareRawTaggedFields(java.util.List,java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageUtil.html#compareRawTaggedFields(java.util.List,java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <param name="arg1"><see cref="Java.Util.List"/></param>
@@ -60,7 +60,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return SExecute<bool>(LocalBridgeClazz, "compareRawTaggedFields", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageUtil.html#byteBufferToArray(java.nio.ByteBuffer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageUtil.html#byteBufferToArray(java.nio.ByteBuffer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <returns><see cref="byte"/></returns>
@@ -69,7 +69,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return SExecuteArray<byte>(LocalBridgeClazz, "byteBufferToArray", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageUtil.html#duplicate(byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageUtil.html#duplicate(byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <returns><see cref="byte"/></returns>
@@ -78,7 +78,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return SExecuteArray<byte>(LocalBridgeClazz, "duplicate", new object[] { arg0 });
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageUtil.html#toVersionPrefixedBytes(short,org.apache.kafka.common.protocol.Message)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageUtil.html#toVersionPrefixedBytes(short,org.apache.kafka.common.protocol.Message)"/>
         /// </summary>
         /// <param name="arg0"><see cref="short"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></param>
@@ -88,17 +88,16 @@ namespace Org.Apache.Kafka.Common.Protocol
             return SExecuteArray<byte>(LocalBridgeClazz, "toVersionPrefixedBytes", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageUtil.html#deepToString(java.util.Iterator)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageUtil.html#deepToString(java.util.Iterator)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Iterator"/></param>
-        /// <typeparam name="Arg0Extendsobject"></typeparam>
         /// <returns><see cref="string"/></returns>
-        public static string DeepToString<Arg0Extendsobject>(Java.Util.Iterator<Arg0Extendsobject> arg0)
+        public static string DeepToString(Java.Util.Iterator<object> arg0)
         {
             return SExecute<string>(LocalBridgeClazz, "deepToString", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageUtil.html#toByteBuffer(org.apache.kafka.common.protocol.Message,short)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageUtil.html#toByteBuffer(org.apache.kafka.common.protocol.Message,short)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></param>
         /// <param name="arg1"><see cref="short"/></param>
@@ -108,7 +107,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return SExecute<Java.Nio.ByteBuffer>(LocalBridgeClazz, "toByteBuffer", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageUtil.html#toVersionPrefixedByteBuffer(short,org.apache.kafka.common.protocol.Message)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageUtil.html#toVersionPrefixedByteBuffer(short,org.apache.kafka.common.protocol.Message)"/>
         /// </summary>
         /// <param name="arg0"><see cref="short"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Protocol.Message"/></param>

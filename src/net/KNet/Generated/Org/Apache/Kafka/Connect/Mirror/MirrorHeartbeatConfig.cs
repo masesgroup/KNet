@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorHeartbeatConfig.html#%3Cinit%3E(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorHeartbeatConfig.html#%3Cinit%3E(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public MirrorHeartbeatConfig(Java.Util.Map<string, string> arg0)
@@ -46,31 +46,31 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorHeartbeatConfig.html#EMIT_HEARTBEATS_ENABLED_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorHeartbeatConfig.html#EMIT_HEARTBEATS_ENABLED_DEFAULT"/>
         /// </summary>
         public static bool EMIT_HEARTBEATS_ENABLED_DEFAULT { get { return SGetField<bool>(LocalBridgeClazz, "EMIT_HEARTBEATS_ENABLED_DEFAULT"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorHeartbeatConfig.html#EMIT_HEARTBEATS_ENABLED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorHeartbeatConfig.html#EMIT_HEARTBEATS_ENABLED"/>
         /// </summary>
         public static string EMIT_HEARTBEATS_ENABLED { get { return SGetField<string>(LocalBridgeClazz, "EMIT_HEARTBEATS_ENABLED"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorHeartbeatConfig.html#EMIT_HEARTBEATS_INTERVAL_SECONDS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorHeartbeatConfig.html#EMIT_HEARTBEATS_INTERVAL_SECONDS"/>
         /// </summary>
         public static string EMIT_HEARTBEATS_INTERVAL_SECONDS { get { return SGetField<string>(LocalBridgeClazz, "EMIT_HEARTBEATS_INTERVAL_SECONDS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorHeartbeatConfig.html#HEARTBEATS_TOPIC_REPLICATION_FACTOR"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorHeartbeatConfig.html#HEARTBEATS_TOPIC_REPLICATION_FACTOR"/>
         /// </summary>
         public static string HEARTBEATS_TOPIC_REPLICATION_FACTOR { get { return SGetField<string>(LocalBridgeClazz, "HEARTBEATS_TOPIC_REPLICATION_FACTOR"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorHeartbeatConfig.html#HEARTBEATS_TOPIC_REPLICATION_FACTOR_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorHeartbeatConfig.html#HEARTBEATS_TOPIC_REPLICATION_FACTOR_DOC"/>
         /// </summary>
         public static string HEARTBEATS_TOPIC_REPLICATION_FACTOR_DOC { get { return SGetField<string>(LocalBridgeClazz, "HEARTBEATS_TOPIC_REPLICATION_FACTOR_DOC"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorHeartbeatConfig.html#EMIT_HEARTBEATS_INTERVAL_SECONDS_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorHeartbeatConfig.html#EMIT_HEARTBEATS_INTERVAL_SECONDS_DEFAULT"/>
         /// </summary>
         public static long EMIT_HEARTBEATS_INTERVAL_SECONDS_DEFAULT { get { return SGetField<long>(LocalBridgeClazz, "EMIT_HEARTBEATS_INTERVAL_SECONDS_DEFAULT"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorHeartbeatConfig.html#HEARTBEATS_TOPIC_REPLICATION_FACTOR_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorHeartbeatConfig.html#HEARTBEATS_TOPIC_REPLICATION_FACTOR_DEFAULT"/>
         /// </summary>
         public static short HEARTBEATS_TOPIC_REPLICATION_FACTOR_DEFAULT { get { return SGetField<short>(LocalBridgeClazz, "HEARTBEATS_TOPIC_REPLICATION_FACTOR_DEFAULT"); } }
 
@@ -78,7 +78,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorHeartbeatConfig.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorHeartbeatConfig.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         public static void Main(string[] arg0)

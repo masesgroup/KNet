@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Config
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigData.html#%3Cinit%3E(java.util.Map,java.lang.Long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigData.html#%3Cinit%3E(java.util.Map,java.lang.Long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -39,7 +39,7 @@ namespace Org.Apache.Kafka.Common.Config
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigData.html#%3Cinit%3E(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigData.html#%3Cinit%3E(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public ConfigData(Java.Util.Map<string, string> arg0)
@@ -63,7 +63,7 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigData.html#ttl()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigData.html#ttl()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -72,7 +72,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecute<long?>("ttl");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigData.html#data()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigData.html#data()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>

@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Network
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.html#%3Cinit%3E(org.apache.kafka.common.network.ChannelState.State,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.html#%3Cinit%3E(org.apache.kafka.common.network.ChannelState.State,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Network.ChannelState.State"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -39,7 +39,7 @@ namespace Org.Apache.Kafka.Common.Network
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.html#%3Cinit%3E(org.apache.kafka.common.network.ChannelState.State,org.apache.kafka.common.errors.AuthenticationException,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.html#%3Cinit%3E(org.apache.kafka.common.network.ChannelState.State,org.apache.kafka.common.errors.AuthenticationException,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Network.ChannelState.State"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Errors.AuthenticationException"/></param>
@@ -49,7 +49,7 @@ namespace Org.Apache.Kafka.Common.Network
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.html#%3Cinit%3E(org.apache.kafka.common.network.ChannelState.State)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.html#%3Cinit%3E(org.apache.kafka.common.network.ChannelState.State)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Network.ChannelState.State"/></param>
         public ChannelState(Org.Apache.Kafka.Common.Network.ChannelState.State arg0)
@@ -65,27 +65,27 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.html#AUTHENTICATE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.html#AUTHENTICATE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Network.ChannelState AUTHENTICATE { get { return SGetField<Org.Apache.Kafka.Common.Network.ChannelState>(LocalBridgeClazz, "AUTHENTICATE"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.html#EXPIRED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.html#EXPIRED"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Network.ChannelState EXPIRED { get { return SGetField<Org.Apache.Kafka.Common.Network.ChannelState>(LocalBridgeClazz, "EXPIRED"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.html#FAILED_SEND"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.html#FAILED_SEND"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Network.ChannelState FAILED_SEND { get { return SGetField<Org.Apache.Kafka.Common.Network.ChannelState>(LocalBridgeClazz, "FAILED_SEND"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.html#LOCAL_CLOSE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.html#LOCAL_CLOSE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Network.ChannelState LOCAL_CLOSE { get { return SGetField<Org.Apache.Kafka.Common.Network.ChannelState>(LocalBridgeClazz, "LOCAL_CLOSE"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.html#NOT_CONNECTED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.html#NOT_CONNECTED"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Network.ChannelState NOT_CONNECTED { get { return SGetField<Org.Apache.Kafka.Common.Network.ChannelState>(LocalBridgeClazz, "NOT_CONNECTED"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.html#READY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.html#READY"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Network.ChannelState READY { get { return SGetField<Org.Apache.Kafka.Common.Network.ChannelState>(LocalBridgeClazz, "READY"); } }
 
@@ -97,7 +97,7 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.html#remoteAddress()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.html#remoteAddress()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -106,7 +106,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<string>("remoteAddress");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.html#exception()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.html#exception()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Errors.AuthenticationException"/></returns>
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Common.Network
             var obj = IExecute<MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject>("exception"); return MASES.JCOBridge.C2JBridge.JVMBridgeException.New<Org.Apache.Kafka.Common.Errors.AuthenticationException>(obj);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.html#state()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.html#state()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Network.ChannelState.State"/></returns>
@@ -140,31 +140,31 @@ namespace Org.Apache.Kafka.Common.Network
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.State.html#AUTHENTICATE"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.State.html#AUTHENTICATE"/>
             /// </summary>
             public static Org.Apache.Kafka.Common.Network.ChannelState.State AUTHENTICATE { get { return SGetField<Org.Apache.Kafka.Common.Network.ChannelState.State>(LocalBridgeClazz, "AUTHENTICATE"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.State.html#AUTHENTICATION_FAILED"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.State.html#AUTHENTICATION_FAILED"/>
             /// </summary>
             public static Org.Apache.Kafka.Common.Network.ChannelState.State AUTHENTICATION_FAILED { get { return SGetField<Org.Apache.Kafka.Common.Network.ChannelState.State>(LocalBridgeClazz, "AUTHENTICATION_FAILED"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.State.html#EXPIRED"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.State.html#EXPIRED"/>
             /// </summary>
             public static Org.Apache.Kafka.Common.Network.ChannelState.State EXPIRED { get { return SGetField<Org.Apache.Kafka.Common.Network.ChannelState.State>(LocalBridgeClazz, "EXPIRED"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.State.html#FAILED_SEND"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.State.html#FAILED_SEND"/>
             /// </summary>
             public static Org.Apache.Kafka.Common.Network.ChannelState.State FAILED_SEND { get { return SGetField<Org.Apache.Kafka.Common.Network.ChannelState.State>(LocalBridgeClazz, "FAILED_SEND"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.State.html#LOCAL_CLOSE"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.State.html#LOCAL_CLOSE"/>
             /// </summary>
             public static Org.Apache.Kafka.Common.Network.ChannelState.State LOCAL_CLOSE { get { return SGetField<Org.Apache.Kafka.Common.Network.ChannelState.State>(LocalBridgeClazz, "LOCAL_CLOSE"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.State.html#NOT_CONNECTED"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.State.html#NOT_CONNECTED"/>
             /// </summary>
             public static Org.Apache.Kafka.Common.Network.ChannelState.State NOT_CONNECTED { get { return SGetField<Org.Apache.Kafka.Common.Network.ChannelState.State>(LocalBridgeClazz, "NOT_CONNECTED"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.State.html#READY"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.State.html#READY"/>
             /// </summary>
             public static Org.Apache.Kafka.Common.Network.ChannelState.State READY { get { return SGetField<Org.Apache.Kafka.Common.Network.ChannelState.State>(LocalBridgeClazz, "READY"); } }
 
@@ -172,7 +172,7 @@ namespace Org.Apache.Kafka.Common.Network
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.State.html#valueOf(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.State.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Common.Network.ChannelState.State"/></returns>
@@ -181,7 +181,7 @@ namespace Org.Apache.Kafka.Common.Network
                 return SExecute<Org.Apache.Kafka.Common.Network.ChannelState.State>(LocalBridgeClazz, "valueOf", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.State.html#values()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.State.html#values()"/>
             /// </summary>
 
             /// <returns><see cref="Org.Apache.Kafka.Common.Network.ChannelState.State"/></returns>

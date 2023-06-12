@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Record
 {
+    #region IBaseRecords
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/BaseRecords.html"/>
+    /// </summary>
+    public partial interface IBaseRecords
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region BaseRecords
-    public partial class BaseRecords
+    public partial class BaseRecords : Org.Apache.Kafka.Common.Record.IBaseRecords
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/BaseRecords.html#sizeInBytes()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/BaseRecords.html#sizeInBytes()"/>
         /// </summary>
 
         /// <returns><see cref="int"/></returns>
@@ -55,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecute<int>("sizeInBytes");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/BaseRecords.html#toSend()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/BaseRecords.html#toSend()"/>
         /// </summary>
 
         /// <typeparam name="ReturnExtendsOrg_Apache_Kafka_Common_Record_BaseRecords"><see cref="Org.Apache.Kafka.Common.Record.BaseRecords"/></typeparam>

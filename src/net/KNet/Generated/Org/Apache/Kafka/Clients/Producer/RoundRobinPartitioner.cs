@@ -33,10 +33,6 @@ namespace Org.Apache.Kafka.Clients.Producer
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Clients.Producer.RoundRobinPartitioner"/> to <see cref="Org.Apache.Kafka.Clients.Producer.Partitioner"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Clients.Producer.Partitioner(Org.Apache.Kafka.Clients.Producer.RoundRobinPartitioner t) => t.Cast<Org.Apache.Kafka.Clients.Producer.Partitioner>();
 
         #endregion
 
@@ -50,7 +46,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/RoundRobinPartitioner.html#partition(java.lang.String,java.lang.Object,byte[],java.lang.Object,byte[],org.apache.kafka.common.Cluster)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/RoundRobinPartitioner.html#partition(java.lang.String,java.lang.Object,byte[],java.lang.Object,byte[],org.apache.kafka.common.Cluster)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -64,18 +60,17 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<int>("partition", arg0, arg1, arg2, arg3, arg4, arg5);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/RoundRobinPartitioner.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/RoundRobinPartitioner.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecute("close");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/RoundRobinPartitioner.html#configure(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/RoundRobinPartitioner.html#configure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        /// <typeparam name="Arg0Extendsobject"></typeparam>
-        public void Configure<Arg0Extendsobject>(Java.Util.Map<string, Arg0Extendsobject> arg0)
+        public void Configure(Java.Util.Map<string, object> arg0)
         {
             IExecute("configure", arg0);
         }

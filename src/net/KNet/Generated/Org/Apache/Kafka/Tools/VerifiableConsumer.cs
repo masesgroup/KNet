@@ -26,11 +26,11 @@ using MASES.JCOBridge.C2JBridge;
 namespace Org.Apache.Kafka.Tools
 {
     #region VerifiableConsumer
-    public partial class VerifiableConsumer
+    public partial class VerifiableConsumer : Java.Io.ICloseable, Org.Apache.Kafka.Clients.Consumer.IOffsetCommitCallback, Org.Apache.Kafka.Clients.Consumer.IConsumerRebalanceListener
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableConsumer.html#%3Cinit%3E(org.apache.kafka.clients.consumer.KafkaConsumer,java.io.PrintStream,java.lang.String,int,boolean,boolean,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableConsumer.html#%3Cinit%3E(org.apache.kafka.clients.consumer.KafkaConsumer,java.io.PrintStream,java.lang.String,int,boolean,boolean,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer"/></param>
         /// <param name="arg1"><see cref="Java.Io.PrintStream"/></param>
@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableConsumer.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableConsumer.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         public static void Main(string[] arg0)
@@ -80,14 +80,14 @@ namespace Org.Apache.Kafka.Tools
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableConsumer.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableConsumer.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecute("close");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableConsumer.html#commitSync(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableConsumer.html#commitSync(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void CommitSync(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata> arg0)
@@ -95,16 +95,16 @@ namespace Org.Apache.Kafka.Tools
             IExecute("commitSync", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableConsumer.html#onComplete(java.util.Map,java.lang.Exception)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableConsumer.html#onComplete(java.util.Map,java.lang.Exception)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Exception"/></param>
-        public void OnComplete(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata> arg0, Java.Lang.Exception arg1)
+        public void OnComplete(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata> arg0, MASES.JCOBridge.C2JBridge.JVMBridgeException arg1)
         {
             IExecute("onComplete", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableConsumer.html#onPartitionsAssigned(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableConsumer.html#onPartitionsAssigned(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public void OnPartitionsAssigned(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0)
@@ -112,7 +112,7 @@ namespace Org.Apache.Kafka.Tools
             IExecute("onPartitionsAssigned", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableConsumer.html#onPartitionsRevoked(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableConsumer.html#onPartitionsRevoked(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public void OnPartitionsRevoked(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0)
@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Tools
             IExecute("onPartitionsRevoked", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableConsumer.html#run()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableConsumer.html#run()"/>
         /// </summary>
         public void Run()
         {
@@ -130,149 +130,7 @@ namespace Org.Apache.Kafka.Tools
         #endregion
 
         #region Nested classes
-        #region RecordData
-        public partial class RecordData
-        {
-            #region Constructors
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableConsumer.RecordData.html#%3Cinit%3E(org.apache.kafka.clients.consumer.ConsumerRecord)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord"/></param>
-            public RecordData(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<string, string> arg0)
-                : base(arg0)
-            {
-            }
 
-            #endregion
-
-            #region Class/Interface conversion operators
-
-            #endregion
-
-            #region Fields
-
-            #endregion
-
-            #region Static methods
-
-            #endregion
-
-            #region Instance methods
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableConsumer.RecordData.html#partition()"/>
-            /// </summary>
-
-            /// <returns><see cref="int"/></returns>
-            public int Partition()
-            {
-                return IExecute<int>("partition");
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableConsumer.RecordData.html#key()"/>
-            /// </summary>
-
-            /// <returns><see cref="string"/></returns>
-            public string Key()
-            {
-                return IExecute<string>("key");
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableConsumer.RecordData.html#topic()"/>
-            /// </summary>
-
-            /// <returns><see cref="string"/></returns>
-            public string Topic()
-            {
-                return IExecute<string>("topic");
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableConsumer.RecordData.html#value()"/>
-            /// </summary>
-
-            /// <returns><see cref="string"/></returns>
-            public string Value()
-            {
-                return IExecute<string>("value");
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableConsumer.RecordData.html#offset()"/>
-            /// </summary>
-
-            /// <returns><see cref="long"/></returns>
-            public long Offset()
-            {
-                return IExecute<long>("offset");
-            }
-
-            #endregion
-
-            #region Nested classes
-
-            #endregion
-
-            // TODO: complete the class
-        }
-        #endregion
-
-        #region RecordsConsumed
-        public partial class RecordsConsumed
-        {
-            #region Constructors
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableConsumer.RecordsConsumed.html#%3Cinit%3E(long,java.util.List)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="long"/></param>
-            /// <param name="arg1"><see cref="Java.Util.List"/></param>
-            public RecordsConsumed(long arg0, Java.Util.List<Org.Apache.Kafka.Tools.VerifiableConsumer.RecordSetSummary> arg1)
-                : base(arg0, arg1)
-            {
-            }
-
-            #endregion
-
-            #region Class/Interface conversion operators
-
-            #endregion
-
-            #region Fields
-
-            #endregion
-
-            #region Static methods
-
-            #endregion
-
-            #region Instance methods
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableConsumer.RecordsConsumed.html#partitions()"/>
-            /// </summary>
-
-            /// <returns><see cref="Java.Util.List"/></returns>
-            public Java.Util.List<Org.Apache.Kafka.Tools.VerifiableConsumer.RecordSetSummary> Partitions()
-            {
-                return IExecute<Java.Util.List<Org.Apache.Kafka.Tools.VerifiableConsumer.RecordSetSummary>>("partitions");
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableConsumer.RecordsConsumed.html#count()"/>
-            /// </summary>
-
-            /// <returns><see cref="long"/></returns>
-            public long Count()
-            {
-                return IExecute<long>("count");
-            }
-
-            #endregion
-
-            #region Nested classes
-
-            #endregion
-
-            // TODO: complete the class
-        }
-        #endregion
-
-    
         #endregion
 
         // TODO: complete the class

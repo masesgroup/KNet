@@ -30,7 +30,7 @@ namespace Kafka.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/LeaderElectionCommandOptions.html#%3Cinit%3E(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/LeaderElectionCommandOptions.html#%3Cinit%3E(java.lang.String[])"/>
         /// </summary>
         /// <param name="args"><see cref="string"/></param>
         public LeaderElectionCommandOptions(string[] args)

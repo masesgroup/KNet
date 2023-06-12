@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Streams.State
 {
+    #region ISessionBytesStoreSupplier
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/SessionBytesStoreSupplier.html"/>
+    /// </summary>
+    public partial interface ISessionBytesStoreSupplier : Org.Apache.Kafka.Streams.State.IStoreSupplier<Org.Apache.Kafka.Streams.State.SessionStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region SessionBytesStoreSupplier
-    public partial class SessionBytesStoreSupplier
+    public partial class SessionBytesStoreSupplier : Org.Apache.Kafka.Streams.State.ISessionBytesStoreSupplier
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/SessionBytesStoreSupplier.html#retentionPeriod()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/SessionBytesStoreSupplier.html#retentionPeriod()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -55,7 +73,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<long>("retentionPeriod");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/SessionBytesStoreSupplier.html#segmentIntervalMs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/SessionBytesStoreSupplier.html#segmentIntervalMs()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>

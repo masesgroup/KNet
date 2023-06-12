@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TransactionListing.html#%3Cinit%3E(java.lang.String,long,org.apache.kafka.clients.admin.TransactionState)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TransactionListing.html#%3Cinit%3E(java.lang.String,long,org.apache.kafka.clients.admin.TransactionState)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -56,7 +56,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TransactionListing.html#transactionalId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TransactionListing.html#transactionalId()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -65,7 +65,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<string>("transactionalId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TransactionListing.html#producerId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TransactionListing.html#producerId()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<long>("producerId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TransactionListing.html#state()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TransactionListing.html#state()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.TransactionState"/></returns>

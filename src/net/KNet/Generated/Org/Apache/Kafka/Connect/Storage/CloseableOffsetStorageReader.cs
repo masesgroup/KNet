@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Connect.Storage
 {
+    #region ICloseableOffsetStorageReader
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/CloseableOffsetStorageReader.html"/>
+    /// </summary>
+    public partial interface ICloseableOffsetStorageReader
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region CloseableOffsetStorageReader
-    public partial class CloseableOffsetStorageReader
+    public partial class CloseableOffsetStorageReader : Org.Apache.Kafka.Connect.Storage.ICloseableOffsetStorageReader, Java.Io.ICloseable, Org.Apache.Kafka.Connect.Storage.IOffsetStorageReader
     {
         #region Constructors
 
@@ -54,7 +72,7 @@ namespace Org.Apache.Kafka.Connect.Storage
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/CloseableOffsetStorageReader.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/CloseableOffsetStorageReader.html#close()"/>
         /// </summary>
         public void Close()
         {

@@ -54,7 +54,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessorSupplier.html#get()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessorSupplier.html#get()"/>
         /// </summary>
 
         /// <returns><see cref="object"/></returns>
@@ -73,8 +73,26 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
     }
     #endregion
 
+    #region IProcessorSupplier<KIn, VIn, KOut, VOut>
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessorSupplier.html"/>
+    /// </summary>
+    public partial interface IProcessorSupplier<KIn, VIn, KOut, VOut>
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region ProcessorSupplier<KIn, VIn, KOut, VOut>
-    public partial class ProcessorSupplier<KIn, VIn, KOut, VOut>
+    public partial class ProcessorSupplier<KIn, VIn, KOut, VOut> : Org.Apache.Kafka.Streams.Processor.Api.IProcessorSupplier<KIn, VIn, KOut, VOut>, Org.Apache.Kafka.Streams.Processor.IConnectedStoreProvider, Java.Util.Function.ISupplier<Org.Apache.Kafka.Streams.Processor.Api.Processor<KIn, VIn, KOut, VOut>>
     {
         #region Constructors
 
@@ -106,7 +124,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessorSupplier.html#get()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessorSupplier.html#get()"/>
         /// </summary>
 
         /// <returns><see cref="object"/></returns>

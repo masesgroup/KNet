@@ -38,75 +38,21 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordUtils.html#LEADER_CHANGE_CURRENT_VERSION"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordUtils.html#LEADER_CHANGE_CURRENT_VERSION"/>
         /// </summary>
         public static short LEADER_CHANGE_CURRENT_VERSION { get { return SGetField<short>(LocalBridgeClazz, "LEADER_CHANGE_CURRENT_VERSION"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordUtils.html#SNAPSHOT_FOOTER_CURRENT_VERSION"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordUtils.html#SNAPSHOT_FOOTER_CURRENT_VERSION"/>
         /// </summary>
         public static short SNAPSHOT_FOOTER_CURRENT_VERSION { get { return SGetField<short>(LocalBridgeClazz, "SNAPSHOT_FOOTER_CURRENT_VERSION"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordUtils.html#SNAPSHOT_HEADER_CURRENT_VERSION"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordUtils.html#SNAPSHOT_HEADER_CURRENT_VERSION"/>
         /// </summary>
         public static short SNAPSHOT_HEADER_CURRENT_VERSION { get { return SGetField<short>(LocalBridgeClazz, "SNAPSHOT_HEADER_CURRENT_VERSION"); } }
 
         #endregion
 
         #region Static methods
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordUtils.html#deserializeLeaderChangeMessage(java.nio.ByteBuffer)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Common.Message.LeaderChangeMessage"/></returns>
-        public static Org.Apache.Kafka.Common.Message.LeaderChangeMessage DeserializeLeaderChangeMessage(Java.Nio.ByteBuffer arg0)
-        {
-            return SExecute<Org.Apache.Kafka.Common.Message.LeaderChangeMessage>(LocalBridgeClazz, "deserializeLeaderChangeMessage", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordUtils.html#deserializeLeaderChangeMessage(org.apache.kafka.common.record.Record)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Record.Record"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Common.Message.LeaderChangeMessage"/></returns>
-        public static Org.Apache.Kafka.Common.Message.LeaderChangeMessage DeserializeLeaderChangeMessage(Org.Apache.Kafka.Common.Record.Record arg0)
-        {
-            return SExecute<Org.Apache.Kafka.Common.Message.LeaderChangeMessage>(LocalBridgeClazz, "deserializeLeaderChangeMessage", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordUtils.html#deserializedSnapshotFooterRecord(java.nio.ByteBuffer)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Common.Message.SnapshotFooterRecord"/></returns>
-        public static Org.Apache.Kafka.Common.Message.SnapshotFooterRecord DeserializedSnapshotFooterRecord(Java.Nio.ByteBuffer arg0)
-        {
-            return SExecute<Org.Apache.Kafka.Common.Message.SnapshotFooterRecord>(LocalBridgeClazz, "deserializedSnapshotFooterRecord", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordUtils.html#deserializedSnapshotFooterRecord(org.apache.kafka.common.record.Record)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Record.Record"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Common.Message.SnapshotFooterRecord"/></returns>
-        public static Org.Apache.Kafka.Common.Message.SnapshotFooterRecord DeserializedSnapshotFooterRecord(Org.Apache.Kafka.Common.Record.Record arg0)
-        {
-            return SExecute<Org.Apache.Kafka.Common.Message.SnapshotFooterRecord>(LocalBridgeClazz, "deserializedSnapshotFooterRecord", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordUtils.html#deserializedSnapshotHeaderRecord(java.nio.ByteBuffer)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Common.Message.SnapshotHeaderRecord"/></returns>
-        public static Org.Apache.Kafka.Common.Message.SnapshotHeaderRecord DeserializedSnapshotHeaderRecord(Java.Nio.ByteBuffer arg0)
-        {
-            return SExecute<Org.Apache.Kafka.Common.Message.SnapshotHeaderRecord>(LocalBridgeClazz, "deserializedSnapshotHeaderRecord", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordUtils.html#deserializedSnapshotHeaderRecord(org.apache.kafka.common.record.Record)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Record.Record"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Common.Message.SnapshotHeaderRecord"/></returns>
-        public static Org.Apache.Kafka.Common.Message.SnapshotHeaderRecord DeserializedSnapshotHeaderRecord(Org.Apache.Kafka.Common.Record.Record arg0)
-        {
-            return SExecute<Org.Apache.Kafka.Common.Message.SnapshotHeaderRecord>(LocalBridgeClazz, "deserializedSnapshotHeaderRecord", arg0);
-        }
 
         #endregion
 

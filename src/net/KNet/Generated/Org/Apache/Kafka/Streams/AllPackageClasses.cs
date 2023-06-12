@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams
 {
     #region KafkaClientSupplier
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KafkaClientSupplier.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KafkaClientSupplier.html"/>
     /// </summary>
     public partial class KafkaClientSupplier : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KafkaClientSupplier>
     {
@@ -70,9 +70,9 @@ namespace Org.Apache.Kafka.Streams
 
     #region KafkaStreams
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KafkaStreams.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KafkaStreams.html"/>
     /// </summary>
-    public partial class KafkaStreams : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KafkaStreams>
+    public partial class KafkaStreams : Java.Lang.AutoCloseable
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -109,7 +109,7 @@ namespace Org.Apache.Kafka.Streams
         // TODO: complete the class
         #region CloseOptions
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KafkaStreams.CloseOptions.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KafkaStreams.CloseOptions.html"/>
         /// </summary>
         public partial class CloseOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CloseOptions>
         {
@@ -152,7 +152,7 @@ namespace Org.Apache.Kafka.Streams
 
         #region State
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KafkaStreams.State.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KafkaStreams.State.html"/>
         /// </summary>
         public partial class State : Java.Lang.Enum<Org.Apache.Kafka.Streams.KafkaStreams.State>
         {
@@ -195,10 +195,15 @@ namespace Org.Apache.Kafka.Streams
 
         #region StateListener
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KafkaStreams.StateListener.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KafkaStreams.StateListener.html"/>
         /// </summary>
         public partial class StateListener : MASES.JCOBridge.C2JBridge.JVMBridgeListener
         {
+            /// <summary>
+            /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+            /// </summary>
+            public StateListener() { }
+
         #warning Remember to build the body class for event listener
 
             // TODO: complete the class
@@ -212,7 +217,7 @@ namespace Org.Apache.Kafka.Streams
 
     #region KeyQueryMetadata
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KeyQueryMetadata.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KeyQueryMetadata.html"/>
     /// </summary>
     public partial class KeyQueryMetadata : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KeyQueryMetadata>
     {
@@ -255,7 +260,7 @@ namespace Org.Apache.Kafka.Streams
 
     #region KeyValue
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KeyValue.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KeyValue.html"/>
     /// </summary>
     public partial class KeyValue : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KeyValue>
     {
@@ -298,7 +303,7 @@ namespace Org.Apache.Kafka.Streams
 
     #region KeyValue<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KeyValue.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KeyValue.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -343,7 +348,7 @@ namespace Org.Apache.Kafka.Streams
 
     #region LagInfo
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/LagInfo.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/LagInfo.html"/>
     /// </summary>
     public partial class LagInfo : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LagInfo>
     {
@@ -386,7 +391,7 @@ namespace Org.Apache.Kafka.Streams
 
     #region StoreQueryParameters
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StoreQueryParameters.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StoreQueryParameters.html"/>
     /// </summary>
     public partial class StoreQueryParameters : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StoreQueryParameters>
     {
@@ -429,7 +434,7 @@ namespace Org.Apache.Kafka.Streams
 
     #region StoreQueryParameters<T>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StoreQueryParameters.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StoreQueryParameters.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class StoreQueryParameters<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StoreQueryParameters<T>>
@@ -473,7 +478,7 @@ namespace Org.Apache.Kafka.Streams
 
     #region StreamsBuilder
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsBuilder.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsBuilder.html"/>
     /// </summary>
     public partial class StreamsBuilder : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StreamsBuilder>
     {
@@ -516,7 +521,7 @@ namespace Org.Apache.Kafka.Streams
 
     #region StreamsConfig
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsConfig.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsConfig.html"/>
     /// </summary>
     public partial class StreamsConfig : Org.Apache.Kafka.Common.Config.AbstractConfig, IJNetBridgeMain
     {
@@ -555,7 +560,7 @@ namespace Org.Apache.Kafka.Streams
         // TODO: complete the class
         #region InternalConfig
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsConfig.InternalConfig.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsConfig.InternalConfig.html"/>
         /// </summary>
         public partial class InternalConfig : MASES.JCOBridge.C2JBridge.JVMBridgeBase<InternalConfig>
         {
@@ -602,7 +607,7 @@ namespace Org.Apache.Kafka.Streams
 
     #region StreamsMetadata
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsMetadata.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsMetadata.html"/>
     /// </summary>
     public partial class StreamsMetadata : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StreamsMetadata>
     {
@@ -645,7 +650,7 @@ namespace Org.Apache.Kafka.Streams
 
     #region StreamsMetrics
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsMetrics.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsMetrics.html"/>
     /// </summary>
     public partial class StreamsMetrics : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StreamsMetrics>
     {
@@ -688,7 +693,7 @@ namespace Org.Apache.Kafka.Streams
 
     #region TaskMetadata
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TaskMetadata.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TaskMetadata.html"/>
     /// </summary>
     public partial class TaskMetadata : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TaskMetadata>
     {
@@ -731,7 +736,7 @@ namespace Org.Apache.Kafka.Streams
 
     #region ThreadMetadata
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html"/>
     /// </summary>
     public partial class ThreadMetadata : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ThreadMetadata>
     {
@@ -774,7 +779,7 @@ namespace Org.Apache.Kafka.Streams
 
     #region Topology
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html"/>
     /// </summary>
     public partial class Topology : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Topology>
     {
@@ -813,7 +818,7 @@ namespace Org.Apache.Kafka.Streams
         // TODO: complete the class
         #region AutoOffsetReset
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.AutoOffsetReset.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.AutoOffsetReset.html"/>
         /// </summary>
         public partial class AutoOffsetReset : Java.Lang.Enum<Org.Apache.Kafka.Streams.Topology.AutoOffsetReset>
         {
@@ -860,7 +865,7 @@ namespace Org.Apache.Kafka.Streams
 
     #region TopologyConfig
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyConfig.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyConfig.html"/>
     /// </summary>
     public partial class TopologyConfig : Org.Apache.Kafka.Common.Config.AbstractConfig
     {
@@ -899,7 +904,7 @@ namespace Org.Apache.Kafka.Streams
         // TODO: complete the class
         #region TaskConfig
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyConfig.TaskConfig.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyConfig.TaskConfig.html"/>
         /// </summary>
         public partial class TaskConfig : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TaskConfig>
         {
@@ -946,7 +951,7 @@ namespace Org.Apache.Kafka.Streams
 
     #region TopologyDescription
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.html"/>
     /// </summary>
     public partial class TopologyDescription : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopologyDescription>
     {
@@ -985,7 +990,7 @@ namespace Org.Apache.Kafka.Streams
         // TODO: complete the class
         #region GlobalStore
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.GlobalStore.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.GlobalStore.html"/>
         /// </summary>
         public partial class GlobalStore : MASES.JCOBridge.C2JBridge.JVMBridgeBase<GlobalStore>
         {
@@ -1028,7 +1033,7 @@ namespace Org.Apache.Kafka.Streams
 
         #region Node
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.Node.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.Node.html"/>
         /// </summary>
         public partial class Node : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Node>
         {
@@ -1071,7 +1076,7 @@ namespace Org.Apache.Kafka.Streams
 
         #region Processor
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.Processor.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.Processor.html"/>
         /// </summary>
         public partial class Processor : Org.Apache.Kafka.Streams.TopologyDescription.Node
         {
@@ -1114,7 +1119,7 @@ namespace Org.Apache.Kafka.Streams
 
         #region Sink
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.Sink.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.Sink.html"/>
         /// </summary>
         public partial class Sink : Org.Apache.Kafka.Streams.TopologyDescription.Node
         {
@@ -1157,7 +1162,7 @@ namespace Org.Apache.Kafka.Streams
 
         #region Source
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.Source.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.Source.html"/>
         /// </summary>
         public partial class Source : Org.Apache.Kafka.Streams.TopologyDescription.Node
         {
@@ -1200,7 +1205,7 @@ namespace Org.Apache.Kafka.Streams
 
         #region Subtopology
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.Subtopology.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TopologyDescription.Subtopology.html"/>
         /// </summary>
         public partial class Subtopology : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Subtopology>
         {
@@ -1244,6 +1249,7 @@ namespace Org.Apache.Kafka.Streams
     
     }
     #endregion
+
 
 
 }

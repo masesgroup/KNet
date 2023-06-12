@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Header
 {
+    #region IHeader
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/header/Header.html"/>
+    /// </summary>
+    public partial interface IHeader
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region Header
-    public partial class Header
+    public partial class Header : Org.Apache.Kafka.Common.Header.IHeader
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Header
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/header/Header.html#value()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/header/Header.html#value()"/>
         /// </summary>
 
         /// <returns><see cref="byte"/></returns>
@@ -55,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Header
             return IExecuteArray<byte>("value");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/header/Header.html#key()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/header/Header.html#key()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>

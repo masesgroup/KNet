@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/PrimitiveRef.html#ofInt(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/PrimitiveRef.html#ofInt(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Utils.PrimitiveRef.IntRef"/></returns>
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/PrimitiveRef.IntRef.html#value"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/PrimitiveRef.IntRef.html#value"/>
             /// </summary>
             public int value { get { return IGetField<int>("value"); } set { ISetField("value", value); } }
 

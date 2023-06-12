@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/PositionBound.html#at(org.apache.kafka.streams.query.Position)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/PositionBound.html#at(org.apache.kafka.streams.query.Position)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Query.Position"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.PositionBound"/></returns>
@@ -51,7 +51,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return SExecute<Org.Apache.Kafka.Streams.Query.PositionBound>(LocalBridgeClazz, "at", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/PositionBound.html#unbounded()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/PositionBound.html#unbounded()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.PositionBound"/></returns>
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/PositionBound.html#isUnbounded()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/PositionBound.html#isUnbounded()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecute<bool>("isUnbounded");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/PositionBound.html#position()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/PositionBound.html#position()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.Position"/></returns>

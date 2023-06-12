@@ -20,21 +20,34 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Streams.Kstream
 {
-    /// <see href="https://kafka.apache.org/30/javadoc/org/apache/kafka/streams/kstream/NamedOperation.html">
-    public interface INamedOperation<T> : IJVMBridgeBase
-        where T: INamedOperation<T>
+    /// <see href="https://kafka.apache.org/34/javadoc/org/apache/kafka/streams/kstream/NamedOperation.html">
+    public interface INamedOperation<T> : IJVMBridgeBase where T: INamedOperation<T>
     {
-        T WithName(string name);
     }
 
-    public class NamedOperation<T> : JVMBridgeBase<NamedOperation<T>, INamedOperation<T>>, INamedOperation<T>
-        where T : NamedOperation<T>
+    public class NamedOperation : JVMBridgeBase<NamedOperation>
     {
         public override string BridgeClassName => "org.apache.kafka.streams.kstream.NamedOperation";
 
-        public T WithName(string name)
-        {
-            return IExecute<T>("withName", name);
-        }
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public NamedOperation() { }
+        /// <summary>
+        /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
+        /// </summary>
+        public NamedOperation(params object[] args) : base(args) { }
+    }
+
+    public class NamedOperation<T> : NamedOperation, INamedOperation<T> where T : NamedOperation<T>
+    {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public NamedOperation() { }
+        /// <summary>
+        /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
+        /// </summary>
+        public NamedOperation(params object[] args) : base(args) { }
     }
 }

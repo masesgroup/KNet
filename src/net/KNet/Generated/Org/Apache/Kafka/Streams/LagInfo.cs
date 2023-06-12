@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Streams
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/LagInfo.html#currentOffsetPosition()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/LagInfo.html#currentOffsetPosition()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecute<long>("currentOffsetPosition");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/LagInfo.html#endOffsetPosition()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/LagInfo.html#endOffsetPosition()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecute<long>("endOffsetPosition");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/LagInfo.html#offsetLag()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/LagInfo.html#offsetLag()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>

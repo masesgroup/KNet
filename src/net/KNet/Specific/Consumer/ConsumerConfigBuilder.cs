@@ -70,26 +70,26 @@ namespace MASES.KNet.Consumer
         }
 
         // "latest", "earliest", "none"
-        public ConsumerConfigBuilder.AutoOffsetResetTypes AutoOffsetReset
+        public AutoOffsetResetTypes AutoOffsetReset
         {
             get
             {
                 var strName = GetProperty<string>(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG);
-                if (System.Enum.GetName(typeof(ConsumerConfigBuilder.AutoOffsetResetTypes), ConsumerConfigBuilder.AutoOffsetResetTypes.None).ToLowerInvariant() == strName)
-                    return ConsumerConfigBuilder.AutoOffsetResetTypes.None;
-                else if (System.Enum.GetName(typeof(ConsumerConfigBuilder.AutoOffsetResetTypes), ConsumerConfigBuilder.AutoOffsetResetTypes.EARLIEST).ToLowerInvariant() == strName)
-                    return ConsumerConfig.ConsumerConfigBuilder.EARLIEST;
-                else if (System.Enum.GetName(typeof(ConsumerConfigBuilder.AutoOffsetResetTypes), ConsumerConfigBuilder.AutoOffsetResetTypes.LATEST).ToLowerInvariant() == strName)
-                    return ConsumerConfigBuilder.AutoOffsetResetTypes.LATEST;
-                else return ConsumerConfigBuilder.AutoOffsetResetTypes.LATEST;
+                if (System.Enum.GetName(typeof(AutoOffsetResetTypes), AutoOffsetResetTypes.None).ToLowerInvariant() == strName)
+                    return AutoOffsetResetTypes.None;
+                else if (System.Enum.GetName(typeof(AutoOffsetResetTypes), AutoOffsetResetTypes.EARLIEST).ToLowerInvariant() == strName)
+                    return AutoOffsetResetTypes.EARLIEST;
+                else if (System.Enum.GetName(typeof(AutoOffsetResetTypes), AutoOffsetResetTypes.LATEST).ToLowerInvariant() == strName)
+                    return AutoOffsetResetTypes.LATEST;
+                else return AutoOffsetResetTypes.LATEST;
             }
             set
             {
-                SetProperty(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, System.Enum.GetName(typeof(ConsumerConfig.AutoOffsetReset), value).ToLowerInvariant());
+                SetProperty(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, System.Enum.GetName(typeof(AutoOffsetResetTypes), value).ToLowerInvariant());
             }
         }
 
-        public ConsumerConfigBuilder WithAutoOffsetReset(ConsumerConfigBuilder.AutoOffsetResetTypes autoOffsetReset)
+        public ConsumerConfigBuilder WithAutoOffsetReset(AutoOffsetResetTypes autoOffsetReset)
         {
             var clone = Clone();
             clone.AutoOffsetReset = autoOffsetReset;

@@ -18,6 +18,7 @@
 
 using Java.Util;
 using MASES.JCOBridge.C2JBridge;
+using MASES.KNet.Admin;
 using MASES.KNet.Consumer;
 using MASES.KNet.Extensions;
 using MASES.KNet.Producer;
@@ -352,7 +353,7 @@ namespace MASES.KNet
                                                             .WithMinCleanableDirtyRatio(0.01)
                                                             .WithSegmentMs(100);
 
-                TopicConfig.CleanupPolicy = Org.Apache.Kafka.Common.Config.TopicConfig.CleanupPolicy.Compact | Org.Apache.Kafka.Common.Config.TopicConfig.CleanupPolicy.Delete;
+                TopicConfig.CleanupPolicy = TopicConfigBuilder.CleanupPolicyTypes.Compact | TopicConfigBuilder.CleanupPolicyTypes.Delete;
                 topic = topic.Configs(TopicConfig);
                 try
                 {
@@ -366,7 +367,7 @@ namespace MASES.KNet
             if (AccessRights.HasFlag(AccessRightsType.Read))
             {
                 _consumerConfig ??= ConsumerConfigBuilder.Create().WithEnableAutoCommit(true)
-                                                                  .WithAutoOffsetReset(Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.AutoOffsetReset.EARLIEST)
+                                                                  .WithAutoOffsetReset(ConsumerConfigBuilder.AutoOffsetResetTypes.EARLIEST)
                                                                   .WithAllowAutoCreateTopics(false);
 
                 ConsumerConfig.BootstrapServers = BootstrapServers;
@@ -392,7 +393,7 @@ namespace MASES.KNet
 
             if (AccessRights.HasFlag(AccessRightsType.Write))
             {
-                _producerConfig ??= ProducerConfigBuilder.Create().WithAcks(Org.Apache.Kafka.Clients.Producer.ProducerConfig.Acks.All)
+                _producerConfig ??= ProducerConfigBuilder.Create().WithAcks(ProducerConfigBuilder.AcksTypes.All)
                                                                   .WithRetries(0)
                                                                   .WithLingerMs(1);
 

@@ -38,27 +38,27 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordType.html#ABORT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordType.html#ABORT"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Record.ControlRecordType ABORT { get { return SGetField<Org.Apache.Kafka.Common.Record.ControlRecordType>(LocalBridgeClazz, "ABORT"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordType.html#COMMIT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordType.html#COMMIT"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Record.ControlRecordType COMMIT { get { return SGetField<Org.Apache.Kafka.Common.Record.ControlRecordType>(LocalBridgeClazz, "COMMIT"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordType.html#LEADER_CHANGE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordType.html#LEADER_CHANGE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Record.ControlRecordType LEADER_CHANGE { get { return SGetField<Org.Apache.Kafka.Common.Record.ControlRecordType>(LocalBridgeClazz, "LEADER_CHANGE"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordType.html#SNAPSHOT_FOOTER"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordType.html#SNAPSHOT_FOOTER"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Record.ControlRecordType SNAPSHOT_FOOTER { get { return SGetField<Org.Apache.Kafka.Common.Record.ControlRecordType>(LocalBridgeClazz, "SNAPSHOT_FOOTER"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordType.html#SNAPSHOT_HEADER"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordType.html#SNAPSHOT_HEADER"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Record.ControlRecordType SNAPSHOT_HEADER { get { return SGetField<Org.Apache.Kafka.Common.Record.ControlRecordType>(LocalBridgeClazz, "SNAPSHOT_HEADER"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordType.html#UNKNOWN"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordType.html#UNKNOWN"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Record.ControlRecordType UNKNOWN { get { return SGetField<Org.Apache.Kafka.Common.Record.ControlRecordType>(LocalBridgeClazz, "UNKNOWN"); } }
 
@@ -66,7 +66,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordType.html#fromTypeId(short)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordType.html#fromTypeId(short)"/>
         /// </summary>
         /// <param name="arg0"><see cref="short"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.ControlRecordType"/></returns>
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecute<Org.Apache.Kafka.Common.Record.ControlRecordType>(LocalBridgeClazz, "fromTypeId", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordType.html#parse(java.nio.ByteBuffer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordType.html#parse(java.nio.ByteBuffer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.ControlRecordType"/></returns>
@@ -84,7 +84,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecute<Org.Apache.Kafka.Common.Record.ControlRecordType>(LocalBridgeClazz, "parse", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordType.html#valueOf(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordType.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.ControlRecordType"/></returns>
@@ -93,7 +93,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecute<Org.Apache.Kafka.Common.Record.ControlRecordType>(LocalBridgeClazz, "valueOf", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordType.html#values()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordType.html#values()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.ControlRecordType"/></returns>
@@ -102,7 +102,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecuteArray<Org.Apache.Kafka.Common.Record.ControlRecordType>(LocalBridgeClazz, "values");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordType.html#parseTypeId(java.nio.ByteBuffer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordType.html#parseTypeId(java.nio.ByteBuffer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <returns><see cref="short"/></returns>
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordType.html#recordKey()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ControlRecordType.html#recordKey()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Types.Struct"/></returns>

@@ -25,7 +25,7 @@ namespace Org.Apache.Kafka.Clients.Producer
     /// <summary>
     /// Listener for Kafka Callback. Extends <see cref="IJVMBridgeBase"/>
     /// </summary>
-    public interface ICallback : IJVMBridgeBase
+    public partial interface ICallback : IJVMBridgeBase
     {
         /// <summary>
         /// Executes the Callback action in the CLR
@@ -70,11 +70,5 @@ namespace Org.Apache.Kafka.Clients.Producer
             var exception = data.EventData.ExtraData.Get(0) as IJavaObject;
             OnOnCompletion(data.EventData.TypedEventData, JVMBridgeException.New(exception));
         }
-        /// <summary>
-        /// Executes the Callback action in the CLR
-        /// </summary>
-        /// <param name="metadata">The <see cref="RecordMetadata"/> object</param>
-        /// <param name="exception">The <see cref="JVMBridgeException"/> object</param>
-        public virtual void OnCompletion(RecordMetadata metadata, JVMBridgeException exception) { }
     }
 }

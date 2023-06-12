@@ -33,16 +33,12 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.Security.Oauthbearer.OAuthBearerLoginModule"/> to <see cref="Javax.Security.Auth.Spi.LoginModule"/>
-        /// </summary>
-        public static implicit operator Javax.Security.Auth.Spi.LoginModule(Org.Apache.Kafka.Common.Security.Oauthbearer.OAuthBearerLoginModule t) => t.Cast<Javax.Security.Auth.Spi.LoginModule>();
 
         #endregion
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginModule.html#OAUTHBEARER_MECHANISM"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginModule.html#OAUTHBEARER_MECHANISM"/>
         /// </summary>
         public static string OAUTHBEARER_MECHANISM { get { return SGetField<string>(LocalBridgeClazz, "OAUTHBEARER_MECHANISM"); } }
 
@@ -54,7 +50,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginModule.html#abort()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginModule.html#abort()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -63,7 +59,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
             return IExecute<bool>("abort");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginModule.html#commit()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginModule.html#commit()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -72,7 +68,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
             return IExecute<bool>("commit");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginModule.html#login()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginModule.html#login()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -82,7 +78,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
             return IExecute<bool>("login");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginModule.html#logout()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginModule.html#logout()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -91,15 +87,13 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
             return IExecute<bool>("logout");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginModule.html#initialize(javax.security.auth.Subject,javax.security.auth.callback.CallbackHandler,java.util.Map,java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginModule.html#initialize(javax.security.auth.Subject,javax.security.auth.callback.CallbackHandler,java.util.Map,java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Javax.Security.Auth.Subject"/></param>
         /// <param name="arg1"><see cref="Javax.Security.Auth.Callback.CallbackHandler"/></param>
         /// <param name="arg2"><see cref="Java.Util.Map"/></param>
         /// <param name="arg3"><see cref="Java.Util.Map"/></param>
-        /// <typeparam name="Arg2Extendsobject"></typeparam>
-        /// <typeparam name="Arg3Extendsobject"></typeparam>
-        public void Initialize<Arg2Extendsobject, Arg3Extendsobject>(Javax.Security.Auth.Subject arg0, Javax.Security.Auth.Callback.CallbackHandler arg1, Java.Util.Map<string, Arg2Extendsobject> arg2, Java.Util.Map<string, Arg3Extendsobject> arg3)
+        public void Initialize(Javax.Security.Auth.Subject arg0, Javax.Security.Auth.Callback.CallbackHandler arg1, Java.Util.Map<string, object> arg2, Java.Util.Map<string, object> arg3)
         {
             IExecute("initialize", arg0, arg1, arg2, arg3);
         }

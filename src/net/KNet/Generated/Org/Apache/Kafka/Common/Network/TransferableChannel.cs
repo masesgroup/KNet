@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Network
 {
+    #region ITransferableChannel
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransferableChannel.html"/>
+    /// </summary>
+    public partial interface ITransferableChannel : Java.Nio.Channels.IGatheringByteChannel
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region TransferableChannel
-    public partial class TransferableChannel
+    public partial class TransferableChannel : Org.Apache.Kafka.Common.Network.ITransferableChannel
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransferableChannel.html#hasPendingWrites()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransferableChannel.html#hasPendingWrites()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -55,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<bool>("hasPendingWrites");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransferableChannel.html#transferFrom(java.nio.channels.FileChannel,long,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransferableChannel.html#transferFrom(java.nio.channels.FileChannel,long,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.Channels.FileChannel"/></param>
         /// <param name="arg1"><see cref="long"/></param>

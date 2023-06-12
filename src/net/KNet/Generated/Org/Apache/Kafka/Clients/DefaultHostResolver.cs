@@ -33,10 +33,6 @@ namespace Org.Apache.Kafka.Clients
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Clients.DefaultHostResolver"/> to <see cref="Org.Apache.Kafka.Clients.HostResolver"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Clients.HostResolver(Org.Apache.Kafka.Clients.DefaultHostResolver t) => t.Cast<Org.Apache.Kafka.Clients.HostResolver>();
 
         #endregion
 
@@ -50,7 +46,7 @@ namespace Org.Apache.Kafka.Clients
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/DefaultHostResolver.html#resolve(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/DefaultHostResolver.html#resolve(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Java.Net.InetAddress"/></returns>

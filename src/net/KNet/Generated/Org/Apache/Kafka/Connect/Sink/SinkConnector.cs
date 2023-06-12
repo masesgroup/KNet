@@ -38,7 +38,7 @@ namespace Org.Apache.Kafka.Connect.Sink
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/sink/SinkConnector.html#TOPICS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/sink/SinkConnector.html#TOPICS_CONFIG"/>
         /// </summary>
         public static string TOPICS_CONFIG { get { return SGetField<string>(LocalBridgeClazz, "TOPICS_CONFIG"); } }
 

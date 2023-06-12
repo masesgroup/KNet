@@ -38,11 +38,11 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Mode.html#CLIENT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Mode.html#CLIENT"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Network.Mode CLIENT { get { return SGetField<Org.Apache.Kafka.Common.Network.Mode>(LocalBridgeClazz, "CLIENT"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Mode.html#SERVER"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Mode.html#SERVER"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Network.Mode SERVER { get { return SGetField<Org.Apache.Kafka.Common.Network.Mode>(LocalBridgeClazz, "SERVER"); } }
 
@@ -50,7 +50,7 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Mode.html#valueOf(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Mode.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Network.Mode"/></returns>
@@ -59,7 +59,7 @@ namespace Org.Apache.Kafka.Common.Network
             return SExecute<Org.Apache.Kafka.Common.Network.Mode>(LocalBridgeClazz, "valueOf", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Mode.html#values()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Mode.html#values()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Network.Mode"/></returns>

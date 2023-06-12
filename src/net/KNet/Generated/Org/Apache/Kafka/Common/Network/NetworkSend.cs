@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Network
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkSend.html#%3Cinit%3E(java.lang.String,org.apache.kafka.common.network.Send)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkSend.html#%3Cinit%3E(java.lang.String,org.apache.kafka.common.network.Send)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Network.Send"/></param>
@@ -42,10 +42,6 @@ namespace Org.Apache.Kafka.Common.Network
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.Network.NetworkSend"/> to <see cref="Org.Apache.Kafka.Common.Network.Send"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Common.Network.Send(Org.Apache.Kafka.Common.Network.NetworkSend t) => t.Cast<Org.Apache.Kafka.Common.Network.Send>();
 
         #endregion
 
@@ -59,7 +55,7 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkSend.html#completed()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkSend.html#completed()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -68,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<bool>("completed");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkSend.html#destinationId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkSend.html#destinationId()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -77,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<string>("destinationId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkSend.html#size()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkSend.html#size()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -86,7 +82,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<long>("size");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkSend.html#writeTo(org.apache.kafka.common.network.TransferableChannel)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkSend.html#writeTo(org.apache.kafka.common.network.TransferableChannel)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Network.TransferableChannel"/></param>
         /// <returns><see cref="long"/></returns>

@@ -42,7 +42,7 @@ namespace Kafka.Admin
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/LeaderElectionCommand.html#isDebugEnabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/LeaderElectionCommand.html#isDebugEnabled()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -51,7 +51,7 @@ namespace Kafka.Admin
             return SExecute<bool>(LocalBridgeClazz, "isDebugEnabled");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/LeaderElectionCommand.html#isTraceEnabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/LeaderElectionCommand.html#isTraceEnabled()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -60,7 +60,7 @@ namespace Kafka.Admin
             return SExecute<bool>(LocalBridgeClazz, "isTraceEnabled");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/LeaderElectionCommand.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/LeaderElectionCommand.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="args"><see cref="string"/></param>
         public static void Main(string[] args)

@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Network
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#%3Cinit%3E(java.lang.String,org.apache.kafka.common.network.TransportLayer,java.util.function.Supplier,int,org.apache.kafka.common.memory.MemoryPool,org.apache.kafka.common.network.ChannelMetadataRegistry)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#%3Cinit%3E(java.lang.String,org.apache.kafka.common.network.TransportLayer,java.util.function.Supplier,int,org.apache.kafka.common.memory.MemoryPool,org.apache.kafka.common.network.ChannelMetadataRegistry)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Network.TransportLayer"/></param>
@@ -46,10 +46,6 @@ namespace Org.Apache.Kafka.Common.Network
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.Network.KafkaChannel"/> to <see cref="Java.Lang.AutoCloseable"/>
-        /// </summary>
-        public static implicit operator Java.Lang.AutoCloseable(Org.Apache.Kafka.Common.Network.KafkaChannel t) => t.Cast<Java.Lang.AutoCloseable>();
 
         #endregion
 
@@ -63,14 +59,14 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#getAndResetNetworkThreadTimeNanos()"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#getAndResetNetworkThreadTimeNanos()"/> 
         /// </summary>
         public long AndResetNetworkThreadTimeNanos
         {
             get { return IExecute<long>("getAndResetNetworkThreadTimeNanos"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#finishConnect()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#finishConnect()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -80,7 +76,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<bool>("finishConnect");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#hasBytesBuffered()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#hasBytesBuffered()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -89,7 +85,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<bool>("hasBytesBuffered");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#hasSend()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#hasSend()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -98,7 +94,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<bool>("hasSend");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#isConnected()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#isConnected()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -107,7 +103,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<bool>("isConnected");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#isInMutableState()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#isInMutableState()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -116,7 +112,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<bool>("isInMutableState");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#isMuted()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#isMuted()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -125,7 +121,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<bool>("isMuted");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#maybeBeginClientReauthentication(java.util.function.Supplier)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#maybeBeginClientReauthentication(java.util.function.Supplier)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Function.Supplier"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -136,7 +132,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<bool>("maybeBeginClientReauthentication", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#maybeBeginServerReauthentication(org.apache.kafka.common.network.NetworkReceive,java.util.function.Supplier)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#maybeBeginServerReauthentication(org.apache.kafka.common.network.NetworkReceive,java.util.function.Supplier)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Network.NetworkReceive"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Supplier"/></param>
@@ -148,7 +144,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<bool>("maybeBeginServerReauthentication", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#ready()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#ready()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -157,7 +153,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<bool>("ready");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#serverAuthenticationSessionExpired(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#serverAuthenticationSessionExpired(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -166,7 +162,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<bool>("serverAuthenticationSessionExpired", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#successfulAuthentications()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#successfulAuthentications()"/>
         /// </summary>
 
         /// <returns><see cref="int"/></returns>
@@ -175,7 +171,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<int>("successfulAuthentications");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#reauthenticationLatencyMs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#reauthenticationLatencyMs()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -184,7 +180,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<long?>("reauthenticationLatencyMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#id()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#id()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -193,7 +189,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<string>("id");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#socketDescription()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#socketDescription()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -202,7 +198,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<string>("socketDescription");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#socketAddress()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#socketAddress()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Net.InetAddress"/></returns>
@@ -211,7 +207,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<Java.Net.InetAddress>("socketAddress");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#selectionKey()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#selectionKey()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Nio.Channels.SelectionKey"/></returns>
@@ -220,7 +216,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<Java.Nio.Channels.SelectionKey>("selectionKey");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#pollResponseReceivedDuringReauthentication()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#pollResponseReceivedDuringReauthentication()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Optional"/></returns>
@@ -229,7 +225,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<Java.Util.Optional<Org.Apache.Kafka.Common.Network.NetworkReceive>>("pollResponseReceivedDuringReauthentication");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#principalSerde()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#principalSerde()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Optional"/></returns>
@@ -238,7 +234,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<Java.Util.Optional<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipalSerde>>("principalSerde");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#read()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#read()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -248,7 +244,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<long>("read");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#write()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#write()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -258,7 +254,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<long>("write");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#channelMetadataRegistry()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#channelMetadataRegistry()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Network.ChannelMetadataRegistry"/></returns>
@@ -267,7 +263,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<Org.Apache.Kafka.Common.Network.ChannelMetadataRegistry>("channelMetadataRegistry");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#state()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#state()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Network.ChannelState"/></returns>
@@ -276,7 +272,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<Org.Apache.Kafka.Common.Network.ChannelState>("state");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#muteState()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#muteState()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteState"/></returns>
@@ -285,7 +281,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteState>("muteState");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#currentReceive()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#currentReceive()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Network.NetworkReceive"/></returns>
@@ -294,7 +290,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<Org.Apache.Kafka.Common.Network.NetworkReceive>("currentReceive");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#maybeCompleteReceive()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#maybeCompleteReceive()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Network.NetworkReceive"/></returns>
@@ -303,7 +299,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<Org.Apache.Kafka.Common.Network.NetworkReceive>("maybeCompleteReceive");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#maybeCompleteSend()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#maybeCompleteSend()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Network.NetworkSend"/></returns>
@@ -312,7 +308,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<Org.Apache.Kafka.Common.Network.NetworkSend>("maybeCompleteSend");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#principal()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#principal()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal"/></returns>
@@ -321,7 +317,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal>("principal");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#addNetworkThreadTimeNanos(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#addNetworkThreadTimeNanos(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         public void AddNetworkThreadTimeNanos(long arg0)
@@ -329,7 +325,7 @@ namespace Org.Apache.Kafka.Common.Network
             IExecute("addNetworkThreadTimeNanos", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#close()"/>
         /// </summary>
 
         /// <exception cref="Java.Io.IOException"/>
@@ -338,14 +334,14 @@ namespace Org.Apache.Kafka.Common.Network
             IExecute("close");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#disconnect()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#disconnect()"/>
         /// </summary>
         public void Disconnect()
         {
             IExecute("disconnect");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#handleChannelMuteEvent(org.apache.kafka.common.network.KafkaChannel.ChannelMuteEvent)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#handleChannelMuteEvent(org.apache.kafka.common.network.KafkaChannel.ChannelMuteEvent)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteEvent"/></param>
         public void HandleChannelMuteEvent(Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteEvent arg0)
@@ -353,7 +349,7 @@ namespace Org.Apache.Kafka.Common.Network
             IExecute("handleChannelMuteEvent", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#prepare()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#prepare()"/>
         /// </summary>
 
         /// <exception cref="Org.Apache.Kafka.Common.Errors.AuthenticationException"/>
@@ -363,7 +359,7 @@ namespace Org.Apache.Kafka.Common.Network
             IExecute("prepare");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#setSend(org.apache.kafka.common.network.NetworkSend)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#setSend(org.apache.kafka.common.network.NetworkSend)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Network.NetworkSend"/></param>
         public void SetSend(Org.Apache.Kafka.Common.Network.NetworkSend arg0)
@@ -371,7 +367,7 @@ namespace Org.Apache.Kafka.Common.Network
             IExecute("setSend", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#state(org.apache.kafka.common.network.ChannelState)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html#state(org.apache.kafka.common.network.ChannelState)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Network.ChannelState"/></param>
         public void State(Org.Apache.Kafka.Common.Network.ChannelState arg0)
@@ -395,19 +391,19 @@ namespace Org.Apache.Kafka.Common.Network
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteEvent.html#REQUEST_RECEIVED"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteEvent.html#REQUEST_RECEIVED"/>
             /// </summary>
             public static Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteEvent REQUEST_RECEIVED { get { return SGetField<Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteEvent>(LocalBridgeClazz, "REQUEST_RECEIVED"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteEvent.html#RESPONSE_SENT"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteEvent.html#RESPONSE_SENT"/>
             /// </summary>
             public static Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteEvent RESPONSE_SENT { get { return SGetField<Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteEvent>(LocalBridgeClazz, "RESPONSE_SENT"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteEvent.html#THROTTLE_ENDED"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteEvent.html#THROTTLE_ENDED"/>
             /// </summary>
             public static Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteEvent THROTTLE_ENDED { get { return SGetField<Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteEvent>(LocalBridgeClazz, "THROTTLE_ENDED"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteEvent.html#THROTTLE_STARTED"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteEvent.html#THROTTLE_STARTED"/>
             /// </summary>
             public static Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteEvent THROTTLE_STARTED { get { return SGetField<Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteEvent>(LocalBridgeClazz, "THROTTLE_STARTED"); } }
 
@@ -415,7 +411,7 @@ namespace Org.Apache.Kafka.Common.Network
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteEvent.html#valueOf(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteEvent.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteEvent"/></returns>
@@ -424,7 +420,7 @@ namespace Org.Apache.Kafka.Common.Network
                 return SExecute<Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteEvent>(LocalBridgeClazz, "valueOf", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteEvent.html#values()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteEvent.html#values()"/>
             /// </summary>
 
             /// <returns><see cref="Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteEvent"/></returns>
@@ -460,23 +456,23 @@ namespace Org.Apache.Kafka.Common.Network
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteState.html#MUTED"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteState.html#MUTED"/>
             /// </summary>
             public static Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteState MUTED { get { return SGetField<Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteState>(LocalBridgeClazz, "MUTED"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteState.html#MUTED_AND_RESPONSE_PENDING"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteState.html#MUTED_AND_RESPONSE_PENDING"/>
             /// </summary>
             public static Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteState MUTED_AND_RESPONSE_PENDING { get { return SGetField<Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteState>(LocalBridgeClazz, "MUTED_AND_RESPONSE_PENDING"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteState.html#MUTED_AND_THROTTLED"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteState.html#MUTED_AND_THROTTLED"/>
             /// </summary>
             public static Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteState MUTED_AND_THROTTLED { get { return SGetField<Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteState>(LocalBridgeClazz, "MUTED_AND_THROTTLED"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteState.html#MUTED_AND_THROTTLED_AND_RESPONSE_PENDING"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteState.html#MUTED_AND_THROTTLED_AND_RESPONSE_PENDING"/>
             /// </summary>
             public static Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteState MUTED_AND_THROTTLED_AND_RESPONSE_PENDING { get { return SGetField<Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteState>(LocalBridgeClazz, "MUTED_AND_THROTTLED_AND_RESPONSE_PENDING"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteState.html#NOT_MUTED"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteState.html#NOT_MUTED"/>
             /// </summary>
             public static Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteState NOT_MUTED { get { return SGetField<Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteState>(LocalBridgeClazz, "NOT_MUTED"); } }
 
@@ -484,7 +480,7 @@ namespace Org.Apache.Kafka.Common.Network
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteState.html#valueOf(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteState.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteState"/></returns>
@@ -493,7 +489,7 @@ namespace Org.Apache.Kafka.Common.Network
                 return SExecute<Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteState>(LocalBridgeClazz, "valueOf", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteState.html#values()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteState.html#values()"/>
             /// </summary>
 
             /// <returns><see cref="Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteState"/></returns>

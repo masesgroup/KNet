@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Metrics
 {
+    #region ICompoundStat
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/CompoundStat.html"/>
+    /// </summary>
+    public partial interface ICompoundStat : Org.Apache.Kafka.Common.Metrics.IStat
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region CompoundStat
-    public partial class CompoundStat
+    public partial class CompoundStat : Org.Apache.Kafka.Common.Metrics.ICompoundStat
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/CompoundStat.html#stats()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/CompoundStat.html#stats()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -63,7 +81,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/CompoundStat.NamedMeasurable.html#%3Cinit%3E(org.apache.kafka.common.MetricName,org.apache.kafka.common.metrics.Measurable)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/CompoundStat.NamedMeasurable.html#%3Cinit%3E(org.apache.kafka.common.MetricName,org.apache.kafka.common.metrics.Measurable)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.MetricName"/></param>
             /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Metrics.Measurable"/></param>
@@ -88,7 +106,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/CompoundStat.NamedMeasurable.html#name()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/CompoundStat.NamedMeasurable.html#name()"/>
             /// </summary>
 
             /// <returns><see cref="Org.Apache.Kafka.Common.MetricName"/></returns>
@@ -97,7 +115,7 @@ namespace Org.Apache.Kafka.Common.Metrics
                 return IExecute<Org.Apache.Kafka.Common.MetricName>("name");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/CompoundStat.NamedMeasurable.html#stat()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/CompoundStat.NamedMeasurable.html#stat()"/>
             /// </summary>
 
             /// <returns><see cref="Org.Apache.Kafka.Common.Metrics.Measurable"/></returns>

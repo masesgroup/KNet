@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#%3Cinit%3E(java.lang.String,org.apache.kafka.common.TopicPartition,long,long,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#%3Cinit%3E(java.lang.String,org.apache.kafka.common.TopicPartition,long,long,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
@@ -50,47 +50,47 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#CONSUMER_GROUP_ID_KEY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#CONSUMER_GROUP_ID_KEY"/>
         /// </summary>
         public static string CONSUMER_GROUP_ID_KEY { get { return SGetField<string>(LocalBridgeClazz, "CONSUMER_GROUP_ID_KEY"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#DOWNSTREAM_OFFSET_KEY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#DOWNSTREAM_OFFSET_KEY"/>
         /// </summary>
         public static string DOWNSTREAM_OFFSET_KEY { get { return SGetField<string>(LocalBridgeClazz, "DOWNSTREAM_OFFSET_KEY"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#METADATA_KEY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#METADATA_KEY"/>
         /// </summary>
         public static string METADATA_KEY { get { return SGetField<string>(LocalBridgeClazz, "METADATA_KEY"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#PARTITION_KEY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#PARTITION_KEY"/>
         /// </summary>
         public static string PARTITION_KEY { get { return SGetField<string>(LocalBridgeClazz, "PARTITION_KEY"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#TOPIC_KEY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#TOPIC_KEY"/>
         /// </summary>
         public static string TOPIC_KEY { get { return SGetField<string>(LocalBridgeClazz, "TOPIC_KEY"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#UPSTREAM_OFFSET_KEY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#UPSTREAM_OFFSET_KEY"/>
         /// </summary>
         public static string UPSTREAM_OFFSET_KEY { get { return SGetField<string>(LocalBridgeClazz, "UPSTREAM_OFFSET_KEY"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#VERSION_KEY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#VERSION_KEY"/>
         /// </summary>
         public static string VERSION_KEY { get { return SGetField<string>(LocalBridgeClazz, "VERSION_KEY"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#HEADER_SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#HEADER_SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Types.Schema HEADER_SCHEMA { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Types.Schema>(LocalBridgeClazz, "HEADER_SCHEMA"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#KEY_SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#KEY_SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Types.Schema KEY_SCHEMA { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Types.Schema>(LocalBridgeClazz, "KEY_SCHEMA"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#VALUE_SCHEMA_V0"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#VALUE_SCHEMA_V0"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Types.Schema VALUE_SCHEMA_V0 { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Types.Schema>(LocalBridgeClazz, "VALUE_SCHEMA_V0"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#VERSION"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#VERSION"/>
         /// </summary>
         public static short VERSION { get { return SGetField<short>(LocalBridgeClazz, "VERSION"); } }
 
@@ -98,7 +98,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#deserializeRecord(org.apache.kafka.clients.consumer.ConsumerRecord)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#deserializeRecord(org.apache.kafka.clients.consumer.ConsumerRecord)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Mirror.Checkpoint"/></returns>
@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#consumerGroupId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#consumerGroupId()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecute<string>("consumerGroupId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#metadata()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#metadata()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -129,7 +129,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecute<string>("metadata");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#downstreamOffset()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#downstreamOffset()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -138,7 +138,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecute<long>("downstreamOffset");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#upstreamOffset()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#upstreamOffset()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -147,7 +147,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecute<long>("upstreamOffset");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#offsetAndMetadata()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#offsetAndMetadata()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata"/></returns>
@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecute<Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>("offsetAndMetadata");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#topicPartition()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Checkpoint.html#topicPartition()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.TopicPartition"/></returns>

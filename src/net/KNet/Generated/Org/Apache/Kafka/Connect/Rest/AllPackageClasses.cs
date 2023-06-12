@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Rest
 {
     #region ConnectRestExtension
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/rest/ConnectRestExtension.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/rest/ConnectRestExtension.html"/>
     /// </summary>
     public partial class ConnectRestExtension : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConnectRestExtension>
     {
@@ -67,6 +67,7 @@ namespace Org.Apache.Kafka.Connect.Rest
 
     }
     #endregion
+
 
 
 }

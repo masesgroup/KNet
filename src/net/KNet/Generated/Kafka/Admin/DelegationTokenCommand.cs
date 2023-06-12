@@ -42,7 +42,7 @@ namespace Kafka.Admin
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/DelegationTokenCommand.html#isDebugEnabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/DelegationTokenCommand.html#isDebugEnabled()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -51,7 +51,7 @@ namespace Kafka.Admin
             return SExecute<bool>(LocalBridgeClazz, "isDebugEnabled");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/DelegationTokenCommand.html#isTraceEnabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/DelegationTokenCommand.html#isTraceEnabled()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -60,7 +60,7 @@ namespace Kafka.Admin
             return SExecute<bool>(LocalBridgeClazz, "isTraceEnabled");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/DelegationTokenCommand.html#expireToken(org.apache.kafka.clients.admin.Admin,kafka.admin.DelegationTokenCommand.DelegationTokenCommandOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/DelegationTokenCommand.html#expireToken(org.apache.kafka.clients.admin.Admin,kafka.admin.DelegationTokenCommand.DelegationTokenCommandOptions)"/>
         /// </summary>
         /// <param name="adminClient"><see cref="Org.Apache.Kafka.Clients.Admin.Admin"/></param>
         /// <param name="opts"><see cref="Kafka.Admin.DelegationTokenCommand.DelegationTokenCommandOptions"/></param>
@@ -70,7 +70,7 @@ namespace Kafka.Admin
             return SExecute<long>(LocalBridgeClazz, "expireToken", adminClient, opts);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/DelegationTokenCommand.html#renewToken(org.apache.kafka.clients.admin.Admin,kafka.admin.DelegationTokenCommand.DelegationTokenCommandOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/DelegationTokenCommand.html#renewToken(org.apache.kafka.clients.admin.Admin,kafka.admin.DelegationTokenCommand.DelegationTokenCommandOptions)"/>
         /// </summary>
         /// <param name="adminClient"><see cref="Org.Apache.Kafka.Clients.Admin.Admin"/></param>
         /// <param name="opts"><see cref="Kafka.Admin.DelegationTokenCommand.DelegationTokenCommandOptions"/></param>
@@ -80,7 +80,7 @@ namespace Kafka.Admin
             return SExecute<long>(LocalBridgeClazz, "renewToken", adminClient, opts);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/DelegationTokenCommand.html#createToken(org.apache.kafka.clients.admin.Admin,kafka.admin.DelegationTokenCommand.DelegationTokenCommandOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/DelegationTokenCommand.html#createToken(org.apache.kafka.clients.admin.Admin,kafka.admin.DelegationTokenCommand.DelegationTokenCommandOptions)"/>
         /// </summary>
         /// <param name="adminClient"><see cref="Org.Apache.Kafka.Clients.Admin.Admin"/></param>
         /// <param name="opts"><see cref="Kafka.Admin.DelegationTokenCommand.DelegationTokenCommandOptions"/></param>
@@ -90,7 +90,7 @@ namespace Kafka.Admin
             return SExecute<Org.Apache.Kafka.Common.Security.Token.Delegation.DelegationToken>(LocalBridgeClazz, "createToken", adminClient, opts);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/DelegationTokenCommand.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/DelegationTokenCommand.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="args"><see cref="string"/></param>
         public static void Main(string[] args)
@@ -110,7 +110,7 @@ namespace Kafka.Admin
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/DelegationTokenCommand.DelegationTokenCommandOptions.html#%3Cinit%3E(java.lang.String[])"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/DelegationTokenCommand.DelegationTokenCommandOptions.html#%3Cinit%3E(java.lang.String[])"/>
             /// </summary>
             /// <param name="args"><see cref="string"/></param>
             public DelegationTokenCommandOptions(string[] args)
@@ -134,7 +134,7 @@ namespace Kafka.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/DelegationTokenCommand.DelegationTokenCommandOptions.html#BootstrapServerDoc()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/DelegationTokenCommand.DelegationTokenCommandOptions.html#BootstrapServerDoc()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -143,7 +143,7 @@ namespace Kafka.Admin
                 return IExecute<string>("BootstrapServerDoc");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/DelegationTokenCommand.DelegationTokenCommandOptions.html#CommandConfigDoc()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/DelegationTokenCommand.DelegationTokenCommandOptions.html#CommandConfigDoc()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -152,7 +152,7 @@ namespace Kafka.Admin
                 return IExecute<string>("CommandConfigDoc");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/DelegationTokenCommand.DelegationTokenCommandOptions.html#checkArgs()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/DelegationTokenCommand.DelegationTokenCommandOptions.html#checkArgs()"/>
             /// </summary>
             public void CheckArgs()
             {

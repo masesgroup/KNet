@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Streams.Processor
 {
+    #region IConnectedStoreProvider
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/ConnectedStoreProvider.html"/>
+    /// </summary>
+    public partial interface IConnectedStoreProvider
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region ConnectedStoreProvider
-    public partial class ConnectedStoreProvider
+    public partial class ConnectedStoreProvider : Org.Apache.Kafka.Streams.Processor.IConnectedStoreProvider
     {
         #region Constructors
 
@@ -46,14 +64,13 @@ namespace Org.Apache.Kafka.Streams.Processor
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/ConnectedStoreProvider.html#stores()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/ConnectedStoreProvider.html#stores()"/>
         /// </summary>
 
-        /// <typeparam name="ReturnExtendsobject"></typeparam>
         /// <returns><see cref="Java.Util.Set"/></returns>
-        public Java.Util.Set<Org.Apache.Kafka.Streams.State.StoreBuilder<ReturnExtendsobject>> Stores<ReturnExtendsobject>()
+        public Java.Util.Set<Org.Apache.Kafka.Streams.State.StoreBuilder> Stores()
         {
-            return IExecute<Java.Util.Set<Org.Apache.Kafka.Streams.State.StoreBuilder<ReturnExtendsobject>>>("stores");
+            return IExecute<Java.Util.Set<Org.Apache.Kafka.Streams.State.StoreBuilder>>("stores");
         }
 
         #endregion

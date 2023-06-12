@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Cache
 {
     #region Cache
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/Cache.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/Cache.html"/>
     /// </summary>
     public partial class Cache : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Cache>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Common.Cache
 
     #region Cache<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/Cache.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/Cache.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -115,9 +115,9 @@ namespace Org.Apache.Kafka.Common.Cache
 
     #region LRUCache
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/LRUCache.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/LRUCache.html"/>
     /// </summary>
-    public partial class LRUCache : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LRUCache>
+    public partial class LRUCache : Org.Apache.Kafka.Common.Cache.Cache
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -158,11 +158,11 @@ namespace Org.Apache.Kafka.Common.Cache
 
     #region LRUCache<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/LRUCache.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/LRUCache.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
-    public partial class LRUCache<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LRUCache<K, V>>
+    public partial class LRUCache<K, V> : Org.Apache.Kafka.Common.Cache.Cache<K, V>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -203,9 +203,9 @@ namespace Org.Apache.Kafka.Common.Cache
 
     #region SynchronizedCache
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/SynchronizedCache.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/SynchronizedCache.html"/>
     /// </summary>
-    public partial class SynchronizedCache : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SynchronizedCache>
+    public partial class SynchronizedCache : Org.Apache.Kafka.Common.Cache.Cache
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -246,11 +246,11 @@ namespace Org.Apache.Kafka.Common.Cache
 
     #region SynchronizedCache<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/SynchronizedCache.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/SynchronizedCache.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
-    public partial class SynchronizedCache<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SynchronizedCache<K, V>>
+    public partial class SynchronizedCache<K, V> : Org.Apache.Kafka.Common.Cache.Cache<K, V>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -288,6 +288,7 @@ namespace Org.Apache.Kafka.Common.Cache
     
     }
     #endregion
+
 
 
 }

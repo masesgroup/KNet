@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 {
     #region ArrayOf
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/ArrayOf.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/ArrayOf.html"/>
     /// </summary>
     public partial class ArrayOf : Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
     #region BoundField
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/BoundField.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/BoundField.html"/>
     /// </summary>
     public partial class BoundField : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BoundField>
     {
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
     #region CompactArrayOf
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/CompactArrayOf.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/CompactArrayOf.html"/>
     /// </summary>
     public partial class CompactArrayOf : Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType
     {
@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
     #region Field
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.html"/>
     /// </summary>
     public partial class Field : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Field>
     {
@@ -195,7 +195,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
         // TODO: complete the class
         #region Array
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Array.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Array.html"/>
         /// </summary>
         public partial class Array : Org.Apache.Kafka.Common.Protocol.Types.Field
         {
@@ -238,7 +238,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
         #region Bool
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Bool.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Bool.html"/>
         /// </summary>
         public partial class Bool : Org.Apache.Kafka.Common.Protocol.Types.Field
         {
@@ -281,7 +281,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
         #region CompactArray
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.CompactArray.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.CompactArray.html"/>
         /// </summary>
         public partial class CompactArray : Org.Apache.Kafka.Common.Protocol.Types.Field
         {
@@ -324,7 +324,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
         #region CompactNullableStr
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.CompactNullableStr.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.CompactNullableStr.html"/>
         /// </summary>
         public partial class CompactNullableStr : Org.Apache.Kafka.Common.Protocol.Types.Field
         {
@@ -367,7 +367,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
         #region CompactStr
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.CompactStr.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.CompactStr.html"/>
         /// </summary>
         public partial class CompactStr : Org.Apache.Kafka.Common.Protocol.Types.Field
         {
@@ -410,7 +410,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
         #region ComplexArray
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.ComplexArray.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.ComplexArray.html"/>
         /// </summary>
         public partial class ComplexArray : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ComplexArray>
         {
@@ -453,7 +453,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
         #region Float64
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Float64.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Float64.html"/>
         /// </summary>
         public partial class Float64 : Org.Apache.Kafka.Common.Protocol.Types.Field
         {
@@ -496,7 +496,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
         #region Int16
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Int16.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Int16.html"/>
         /// </summary>
         public partial class Int16 : Org.Apache.Kafka.Common.Protocol.Types.Field
         {
@@ -539,7 +539,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
         #region Int32
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Int32.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Int32.html"/>
         /// </summary>
         public partial class Int32 : Org.Apache.Kafka.Common.Protocol.Types.Field
         {
@@ -582,7 +582,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
         #region Int64
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Int64.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Int64.html"/>
         /// </summary>
         public partial class Int64 : Org.Apache.Kafka.Common.Protocol.Types.Field
         {
@@ -625,7 +625,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
         #region Int8
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Int8.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Int8.html"/>
         /// </summary>
         public partial class Int8 : Org.Apache.Kafka.Common.Protocol.Types.Field
         {
@@ -668,7 +668,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
         #region NullableStr
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.NullableStr.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.NullableStr.html"/>
         /// </summary>
         public partial class NullableStr : Org.Apache.Kafka.Common.Protocol.Types.Field
         {
@@ -711,7 +711,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
         #region Str
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Str.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Str.html"/>
         /// </summary>
         public partial class Str : Org.Apache.Kafka.Common.Protocol.Types.Field
         {
@@ -754,7 +754,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
         #region TaggedFieldsSection
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.TaggedFieldsSection.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.TaggedFieldsSection.html"/>
         /// </summary>
         public partial class TaggedFieldsSection : Org.Apache.Kafka.Common.Protocol.Types.Field
         {
@@ -797,7 +797,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
         #region Uint16
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Uint16.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Uint16.html"/>
         /// </summary>
         public partial class Uint16 : Org.Apache.Kafka.Common.Protocol.Types.Field
         {
@@ -840,7 +840,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
         #region Uint32
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Uint32.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.Uint32.html"/>
         /// </summary>
         public partial class Uint32 : Org.Apache.Kafka.Common.Protocol.Types.Field
         {
@@ -883,7 +883,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
         #region UUID
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.UUID.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Field.UUID.html"/>
         /// </summary>
         public partial class UUID : Org.Apache.Kafka.Common.Protocol.Types.Field
         {
@@ -930,7 +930,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
     #region RawTaggedField
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/RawTaggedField.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/RawTaggedField.html"/>
     /// </summary>
     public partial class RawTaggedField : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RawTaggedField>
     {
@@ -973,7 +973,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
     #region RawTaggedFieldWriter
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/RawTaggedFieldWriter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/RawTaggedFieldWriter.html"/>
     /// </summary>
     public partial class RawTaggedFieldWriter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RawTaggedFieldWriter>
     {
@@ -1016,7 +1016,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
     #region Schema
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Schema.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Schema.html"/>
     /// </summary>
     public partial class Schema : Org.Apache.Kafka.Common.Protocol.Types.Type
     {
@@ -1055,7 +1055,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
         // TODO: complete the class
         #region Visitor
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Schema.Visitor.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Schema.Visitor.html"/>
         /// </summary>
         public partial class Visitor : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Visitor>
         {
@@ -1102,7 +1102,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
     #region SchemaException
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/SchemaException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/SchemaException.html"/>
     /// </summary>
     public partial class SchemaException : Org.Apache.Kafka.Common.KafkaException
     {
@@ -1118,7 +1118,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
     #region Struct
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html"/>
     /// </summary>
     public partial class Struct : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Struct>
     {
@@ -1161,7 +1161,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
     #region TaggedFields
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/TaggedFields.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/TaggedFields.html"/>
     /// </summary>
     public partial class TaggedFields : Org.Apache.Kafka.Common.Protocol.Types.Type.DocumentedType
     {
@@ -1204,7 +1204,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
     #region Type
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.html"/>
     /// </summary>
     public partial class Type : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Type>, IJNetBridgeMain
     {
@@ -1243,7 +1243,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
         // TODO: complete the class
         #region DocumentedType
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.DocumentedType.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Type.DocumentedType.html"/>
         /// </summary>
         public partial class DocumentedType : Org.Apache.Kafka.Common.Protocol.Types.Type
         {
@@ -1287,6 +1287,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
     
     }
     #endregion
+
 
 
 }

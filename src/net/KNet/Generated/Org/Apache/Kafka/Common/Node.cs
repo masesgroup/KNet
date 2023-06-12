@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#%3Cinit%3E(int,java.lang.String,int,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#%3Cinit%3E(int,java.lang.String,int,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -41,7 +41,7 @@ namespace Org.Apache.Kafka.Common
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#%3Cinit%3E(int,java.lang.String,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#%3Cinit%3E(int,java.lang.String,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -63,7 +63,7 @@ namespace Org.Apache.Kafka.Common
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#noNode()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#noNode()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Node"/></returns>
@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Common
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#hasRack()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#hasRack()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -85,7 +85,7 @@ namespace Org.Apache.Kafka.Common
             return IExecute<bool>("hasRack");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#isEmpty()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#isEmpty()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -94,7 +94,7 @@ namespace Org.Apache.Kafka.Common
             return IExecute<bool>("isEmpty");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#id()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#id()"/>
         /// </summary>
 
         /// <returns><see cref="int"/></returns>
@@ -103,7 +103,7 @@ namespace Org.Apache.Kafka.Common
             return IExecute<int>("id");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#port()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#port()"/>
         /// </summary>
 
         /// <returns><see cref="int"/></returns>
@@ -112,7 +112,7 @@ namespace Org.Apache.Kafka.Common
             return IExecute<int>("port");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#host()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#host()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -121,7 +121,7 @@ namespace Org.Apache.Kafka.Common
             return IExecute<string>("host");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#idString()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#idString()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -130,7 +130,7 @@ namespace Org.Apache.Kafka.Common
             return IExecute<string>("idString");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#rack()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html#rack()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>

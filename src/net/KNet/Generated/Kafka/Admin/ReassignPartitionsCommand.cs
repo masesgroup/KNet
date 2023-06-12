@@ -42,7 +42,7 @@ namespace Kafka.Admin
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.html#compareTopicPartitionReplicas(org.apache.kafka.common.TopicPartitionReplica,org.apache.kafka.common.TopicPartitionReplica)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.html#compareTopicPartitionReplicas(org.apache.kafka.common.TopicPartitionReplica,org.apache.kafka.common.TopicPartitionReplica)"/>
         /// </summary>
         /// <param name="a"><see cref="Org.Apache.Kafka.Common.TopicPartitionReplica"/></param>
         /// <param name="b"><see cref="Org.Apache.Kafka.Common.TopicPartitionReplica"/></param>
@@ -52,7 +52,7 @@ namespace Kafka.Admin
             return SExecute<bool>(LocalBridgeClazz, "compareTopicPartitionReplicas", a, b);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.html#compareTopicPartitions(org.apache.kafka.common.TopicPartition,org.apache.kafka.common.TopicPartition)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.html#compareTopicPartitions(org.apache.kafka.common.TopicPartition,org.apache.kafka.common.TopicPartition)"/>
         /// </summary>
         /// <param name="a"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <param name="b"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
@@ -62,7 +62,7 @@ namespace Kafka.Admin
             return SExecute<bool>(LocalBridgeClazz, "compareTopicPartitions", a, b);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.html#isDebugEnabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.html#isDebugEnabled()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -71,7 +71,7 @@ namespace Kafka.Admin
             return SExecute<bool>(LocalBridgeClazz, "isDebugEnabled");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.html#isTraceEnabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.html#isTraceEnabled()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -80,7 +80,7 @@ namespace Kafka.Admin
             return SExecute<bool>(LocalBridgeClazz, "isTraceEnabled");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.html#curReassignmentsToString(org.apache.kafka.clients.admin.Admin)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.html#curReassignmentsToString(org.apache.kafka.clients.admin.Admin)"/>
         /// </summary>
         /// <param name="adminClient"><see cref="Org.Apache.Kafka.Clients.Admin.Admin"/></param>
         /// <returns><see cref="string"/></returns>
@@ -89,7 +89,7 @@ namespace Kafka.Admin
             return SExecute<string>(LocalBridgeClazz, "curReassignmentsToString", adminClient);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.html#helpText()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.html#helpText()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -98,7 +98,7 @@ namespace Kafka.Admin
             return SExecute<string>(LocalBridgeClazz, "helpText");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.html#validateAndParseArgs(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.html#validateAndParseArgs(java.lang.String[])"/>
         /// </summary>
         /// <param name="args"><see cref="string"/></param>
         /// <returns><see cref="Kafka.Admin.ReassignPartitionsCommand.ReassignPartitionsCommandOptions"/></returns>
@@ -107,7 +107,7 @@ namespace Kafka.Admin
             return SExecute<Kafka.Admin.ReassignPartitionsCommand.ReassignPartitionsCommandOptions>(LocalBridgeClazz, "validateAndParseArgs", new object[] { args });
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.html#verifyAssignment(org.apache.kafka.clients.admin.Admin,java.lang.String,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.html#verifyAssignment(org.apache.kafka.clients.admin.Admin,java.lang.String,boolean)"/>
         /// </summary>
         /// <param name="adminClient"><see cref="Org.Apache.Kafka.Clients.Admin.Admin"/></param>
         /// <param name="jsonString"><see cref="string"/></param>
@@ -118,7 +118,7 @@ namespace Kafka.Admin
             return SExecute<Kafka.Admin.ReassignPartitionsCommand.VerifyAssignmentResult>(LocalBridgeClazz, "verifyAssignment", adminClient, jsonString, preserveThrottles);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.html#executeAssignment(org.apache.kafka.clients.admin.Admin,boolean,java.lang.String,long,long,long,org.apache.kafka.common.utils.Time)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.html#executeAssignment(org.apache.kafka.clients.admin.Admin,boolean,java.lang.String,long,long,long,org.apache.kafka.common.utils.Time)"/>
         /// </summary>
         /// <param name="adminClient"><see cref="Org.Apache.Kafka.Clients.Admin.Admin"/></param>
         /// <param name="additional"><see cref="bool"/></param>
@@ -132,7 +132,7 @@ namespace Kafka.Admin
             SExecute(LocalBridgeClazz, "executeAssignment", adminClient, additional, reassignmentJson, interBrokerThrottle, logDirThrottle, timeoutMs, time);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.html#listReassignments(org.apache.kafka.clients.admin.Admin)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.html#listReassignments(org.apache.kafka.clients.admin.Admin)"/>
         /// </summary>
         /// <param name="adminClient"><see cref="Org.Apache.Kafka.Clients.Admin.Admin"/></param>
         public static void ListReassignments(Org.Apache.Kafka.Clients.Admin.Admin adminClient)
@@ -140,7 +140,7 @@ namespace Kafka.Admin
             SExecute(LocalBridgeClazz, "listReassignments", adminClient);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="args"><see cref="string"/></param>
         public static void Main(string[] args)
@@ -156,11 +156,11 @@ namespace Kafka.Admin
 
         #region Nested classes
         #region ActiveMoveState
-        public partial class ActiveMoveState
+        public partial class ActiveMoveState : Java.Io.ISerializable
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.ActiveMoveState.html#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.ActiveMoveState.html#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String)"/>
             /// </summary>
             /// <param name="currentLogDir"><see cref="string"/></param>
             /// <param name="targetLogDir"><see cref="string"/></param>
@@ -190,7 +190,7 @@ namespace Kafka.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.ActiveMoveState.html#canEqual(java.lang.Object)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.ActiveMoveState.html#canEqual(java.lang.Object)"/>
             /// </summary>
             /// <param name="x$1"><see cref="object"/></param>
             /// <returns><see cref="bool"/></returns>
@@ -199,7 +199,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("canEqual", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.ActiveMoveState.html#done()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.ActiveMoveState.html#done()"/>
             /// </summary>
 
             /// <returns><see cref="bool"/></returns>
@@ -208,7 +208,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("done");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.ActiveMoveState.html#productArity()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.ActiveMoveState.html#productArity()"/>
             /// </summary>
 
             /// <returns><see cref="int"/></returns>
@@ -217,7 +217,7 @@ namespace Kafka.Admin
                 return IExecute<int>("productArity");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.ActiveMoveState.html#productElement(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.ActiveMoveState.html#productElement(int)"/>
             /// </summary>
             /// <param name="x$1"><see cref="int"/></param>
             /// <returns><see cref="object"/></returns>
@@ -226,7 +226,7 @@ namespace Kafka.Admin
                 return IExecute("productElement", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.ActiveMoveState.html#currentLogDir()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.ActiveMoveState.html#currentLogDir()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -235,7 +235,7 @@ namespace Kafka.Admin
                 return IExecute<string>("currentLogDir");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.ActiveMoveState.html#futureLogDir()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.ActiveMoveState.html#futureLogDir()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -244,7 +244,7 @@ namespace Kafka.Admin
                 return IExecute<string>("futureLogDir");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.ActiveMoveState.html#productElementName(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.ActiveMoveState.html#productElementName(int)"/>
             /// </summary>
             /// <param name="x$1"><see cref="int"/></param>
             /// <returns><see cref="string"/></returns>
@@ -253,7 +253,7 @@ namespace Kafka.Admin
                 return IExecute<string>("productElementName", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.ActiveMoveState.html#productPrefix()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.ActiveMoveState.html#productPrefix()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -262,7 +262,7 @@ namespace Kafka.Admin
                 return IExecute<string>("productPrefix");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.ActiveMoveState.html#targetLogDir()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.ActiveMoveState.html#targetLogDir()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -271,7 +271,7 @@ namespace Kafka.Admin
                 return IExecute<string>("targetLogDir");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.ActiveMoveState.html#copy(java.lang.String,java.lang.String,java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.ActiveMoveState.html#copy(java.lang.String,java.lang.String,java.lang.String)"/>
             /// </summary>
             /// <param name="currentLogDir"><see cref="string"/></param>
             /// <param name="targetLogDir"><see cref="string"/></param>
@@ -293,11 +293,11 @@ namespace Kafka.Admin
         #endregion
 
         #region CancelledMoveState
-        public partial class CancelledMoveState
+        public partial class CancelledMoveState : Java.Io.ISerializable
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CancelledMoveState.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CancelledMoveState.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
             /// </summary>
             /// <param name="currentLogDir"><see cref="string"/></param>
             /// <param name="targetLogDir"><see cref="string"/></param>
@@ -326,7 +326,7 @@ namespace Kafka.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CancelledMoveState.html#canEqual(java.lang.Object)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CancelledMoveState.html#canEqual(java.lang.Object)"/>
             /// </summary>
             /// <param name="x$1"><see cref="object"/></param>
             /// <returns><see cref="bool"/></returns>
@@ -335,7 +335,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("canEqual", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CancelledMoveState.html#done()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CancelledMoveState.html#done()"/>
             /// </summary>
 
             /// <returns><see cref="bool"/></returns>
@@ -344,7 +344,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("done");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CancelledMoveState.html#productArity()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CancelledMoveState.html#productArity()"/>
             /// </summary>
 
             /// <returns><see cref="int"/></returns>
@@ -353,7 +353,7 @@ namespace Kafka.Admin
                 return IExecute<int>("productArity");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CancelledMoveState.html#productElement(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CancelledMoveState.html#productElement(int)"/>
             /// </summary>
             /// <param name="x$1"><see cref="int"/></param>
             /// <returns><see cref="object"/></returns>
@@ -362,7 +362,7 @@ namespace Kafka.Admin
                 return IExecute("productElement", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CancelledMoveState.html#currentLogDir()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CancelledMoveState.html#currentLogDir()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -371,7 +371,7 @@ namespace Kafka.Admin
                 return IExecute<string>("currentLogDir");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CancelledMoveState.html#productElementName(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CancelledMoveState.html#productElementName(int)"/>
             /// </summary>
             /// <param name="x$1"><see cref="int"/></param>
             /// <returns><see cref="string"/></returns>
@@ -380,7 +380,7 @@ namespace Kafka.Admin
                 return IExecute<string>("productElementName", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CancelledMoveState.html#productPrefix()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CancelledMoveState.html#productPrefix()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -389,7 +389,7 @@ namespace Kafka.Admin
                 return IExecute<string>("productPrefix");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CancelledMoveState.html#targetLogDir()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CancelledMoveState.html#targetLogDir()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -398,7 +398,7 @@ namespace Kafka.Admin
                 return IExecute<string>("targetLogDir");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CancelledMoveState.html#copy(java.lang.String,java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CancelledMoveState.html#copy(java.lang.String,java.lang.String)"/>
             /// </summary>
             /// <param name="currentLogDir"><see cref="string"/></param>
             /// <param name="targetLogDir"><see cref="string"/></param>
@@ -419,11 +419,11 @@ namespace Kafka.Admin
         #endregion
 
         #region CompletedMoveState
-        public partial class CompletedMoveState
+        public partial class CompletedMoveState : Java.Io.ISerializable
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CompletedMoveState.html#%3Cinit%3E(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CompletedMoveState.html#%3Cinit%3E(java.lang.String)"/>
             /// </summary>
             /// <param name="targetLogDir"><see cref="string"/></param>
             public CompletedMoveState(string targetLogDir)
@@ -451,7 +451,7 @@ namespace Kafka.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CompletedMoveState.html#canEqual(java.lang.Object)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CompletedMoveState.html#canEqual(java.lang.Object)"/>
             /// </summary>
             /// <param name="x$1"><see cref="object"/></param>
             /// <returns><see cref="bool"/></returns>
@@ -460,7 +460,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("canEqual", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CompletedMoveState.html#done()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CompletedMoveState.html#done()"/>
             /// </summary>
 
             /// <returns><see cref="bool"/></returns>
@@ -469,7 +469,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("done");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CompletedMoveState.html#productArity()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CompletedMoveState.html#productArity()"/>
             /// </summary>
 
             /// <returns><see cref="int"/></returns>
@@ -478,7 +478,7 @@ namespace Kafka.Admin
                 return IExecute<int>("productArity");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CompletedMoveState.html#productElement(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CompletedMoveState.html#productElement(int)"/>
             /// </summary>
             /// <param name="x$1"><see cref="int"/></param>
             /// <returns><see cref="object"/></returns>
@@ -487,7 +487,7 @@ namespace Kafka.Admin
                 return IExecute("productElement", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CompletedMoveState.html#productElementName(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CompletedMoveState.html#productElementName(int)"/>
             /// </summary>
             /// <param name="x$1"><see cref="int"/></param>
             /// <returns><see cref="string"/></returns>
@@ -496,7 +496,7 @@ namespace Kafka.Admin
                 return IExecute<string>("productElementName", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CompletedMoveState.html#productPrefix()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CompletedMoveState.html#productPrefix()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -505,7 +505,7 @@ namespace Kafka.Admin
                 return IExecute<string>("productPrefix");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CompletedMoveState.html#targetLogDir()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CompletedMoveState.html#targetLogDir()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -514,7 +514,7 @@ namespace Kafka.Admin
                 return IExecute<string>("targetLogDir");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CompletedMoveState.html#copy(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CompletedMoveState.html#copy(java.lang.String)"/>
             /// </summary>
             /// <param name="targetLogDir"><see cref="string"/></param>
             /// <returns><see cref="Kafka.Admin.ReassignPartitionsCommand.CompletedMoveState"/></returns>
@@ -554,7 +554,7 @@ namespace Kafka.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.LogDirMoveState.html#done()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.LogDirMoveState.html#done()"/>
             /// </summary>
 
             /// <returns><see cref="bool"/></returns>
@@ -574,11 +574,11 @@ namespace Kafka.Admin
         #endregion
 
         #region MissingLogDirMoveState
-        public partial class MissingLogDirMoveState
+        public partial class MissingLogDirMoveState : Java.Io.ISerializable
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingLogDirMoveState.html#%3Cinit%3E(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingLogDirMoveState.html#%3Cinit%3E(java.lang.String)"/>
             /// </summary>
             /// <param name="targetLogDir"><see cref="string"/></param>
             public MissingLogDirMoveState(string targetLogDir)
@@ -606,7 +606,7 @@ namespace Kafka.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingLogDirMoveState.html#canEqual(java.lang.Object)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingLogDirMoveState.html#canEqual(java.lang.Object)"/>
             /// </summary>
             /// <param name="x$1"><see cref="object"/></param>
             /// <returns><see cref="bool"/></returns>
@@ -615,7 +615,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("canEqual", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingLogDirMoveState.html#done()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingLogDirMoveState.html#done()"/>
             /// </summary>
 
             /// <returns><see cref="bool"/></returns>
@@ -624,7 +624,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("done");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingLogDirMoveState.html#productArity()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingLogDirMoveState.html#productArity()"/>
             /// </summary>
 
             /// <returns><see cref="int"/></returns>
@@ -633,7 +633,7 @@ namespace Kafka.Admin
                 return IExecute<int>("productArity");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingLogDirMoveState.html#productElement(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingLogDirMoveState.html#productElement(int)"/>
             /// </summary>
             /// <param name="x$1"><see cref="int"/></param>
             /// <returns><see cref="object"/></returns>
@@ -642,7 +642,7 @@ namespace Kafka.Admin
                 return IExecute("productElement", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingLogDirMoveState.html#productElementName(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingLogDirMoveState.html#productElementName(int)"/>
             /// </summary>
             /// <param name="x$1"><see cref="int"/></param>
             /// <returns><see cref="string"/></returns>
@@ -651,7 +651,7 @@ namespace Kafka.Admin
                 return IExecute<string>("productElementName", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingLogDirMoveState.html#productPrefix()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingLogDirMoveState.html#productPrefix()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -660,7 +660,7 @@ namespace Kafka.Admin
                 return IExecute<string>("productPrefix");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingLogDirMoveState.html#targetLogDir()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingLogDirMoveState.html#targetLogDir()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -669,7 +669,7 @@ namespace Kafka.Admin
                 return IExecute<string>("targetLogDir");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingLogDirMoveState.html#copy(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingLogDirMoveState.html#copy(java.lang.String)"/>
             /// </summary>
             /// <param name="targetLogDir"><see cref="string"/></param>
             /// <returns><see cref="Kafka.Admin.ReassignPartitionsCommand.MissingLogDirMoveState"/></returns>
@@ -689,11 +689,11 @@ namespace Kafka.Admin
         #endregion
 
         #region MissingReplicaMoveState
-        public partial class MissingReplicaMoveState
+        public partial class MissingReplicaMoveState : Java.Io.ISerializable
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingReplicaMoveState.html#%3Cinit%3E(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingReplicaMoveState.html#%3Cinit%3E(java.lang.String)"/>
             /// </summary>
             /// <param name="targetLogDir"><see cref="string"/></param>
             public MissingReplicaMoveState(string targetLogDir)
@@ -721,7 +721,7 @@ namespace Kafka.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingReplicaMoveState.html#canEqual(java.lang.Object)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingReplicaMoveState.html#canEqual(java.lang.Object)"/>
             /// </summary>
             /// <param name="x$1"><see cref="object"/></param>
             /// <returns><see cref="bool"/></returns>
@@ -730,7 +730,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("canEqual", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingReplicaMoveState.html#done()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingReplicaMoveState.html#done()"/>
             /// </summary>
 
             /// <returns><see cref="bool"/></returns>
@@ -739,7 +739,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("done");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingReplicaMoveState.html#productArity()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingReplicaMoveState.html#productArity()"/>
             /// </summary>
 
             /// <returns><see cref="int"/></returns>
@@ -748,7 +748,7 @@ namespace Kafka.Admin
                 return IExecute<int>("productArity");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingReplicaMoveState.html#productElement(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingReplicaMoveState.html#productElement(int)"/>
             /// </summary>
             /// <param name="x$1"><see cref="int"/></param>
             /// <returns><see cref="object"/></returns>
@@ -757,7 +757,7 @@ namespace Kafka.Admin
                 return IExecute("productElement", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingReplicaMoveState.html#productElementName(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingReplicaMoveState.html#productElementName(int)"/>
             /// </summary>
             /// <param name="x$1"><see cref="int"/></param>
             /// <returns><see cref="string"/></returns>
@@ -766,7 +766,7 @@ namespace Kafka.Admin
                 return IExecute<string>("productElementName", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingReplicaMoveState.html#productPrefix()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingReplicaMoveState.html#productPrefix()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -775,7 +775,7 @@ namespace Kafka.Admin
                 return IExecute<string>("productPrefix");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingReplicaMoveState.html#targetLogDir()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingReplicaMoveState.html#targetLogDir()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -784,7 +784,7 @@ namespace Kafka.Admin
                 return IExecute<string>("targetLogDir");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingReplicaMoveState.html#copy(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingReplicaMoveState.html#copy(java.lang.String)"/>
             /// </summary>
             /// <param name="targetLogDir"><see cref="string"/></param>
             /// <returns><see cref="Kafka.Admin.ReassignPartitionsCommand.MissingReplicaMoveState"/></returns>
@@ -804,7 +804,7 @@ namespace Kafka.Admin
         #endregion
 
         #region PartitionMove
-        public partial class PartitionMove
+        public partial class PartitionMove : Java.Io.ISerializable
         {
             #region Constructors
 
@@ -828,7 +828,7 @@ namespace Kafka.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.PartitionMove.html#canEqual(java.lang.Object)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.PartitionMove.html#canEqual(java.lang.Object)"/>
             /// </summary>
             /// <param name="x$1"><see cref="object"/></param>
             /// <returns><see cref="bool"/></returns>
@@ -837,7 +837,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("canEqual", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.PartitionMove.html#productArity()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.PartitionMove.html#productArity()"/>
             /// </summary>
 
             /// <returns><see cref="int"/></returns>
@@ -846,7 +846,7 @@ namespace Kafka.Admin
                 return IExecute<int>("productArity");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.PartitionMove.html#productElement(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.PartitionMove.html#productElement(int)"/>
             /// </summary>
             /// <param name="x$1"><see cref="int"/></param>
             /// <returns><see cref="object"/></returns>
@@ -855,7 +855,7 @@ namespace Kafka.Admin
                 return IExecute("productElement", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.PartitionMove.html#productElementName(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.PartitionMove.html#productElementName(int)"/>
             /// </summary>
             /// <param name="x$1"><see cref="int"/></param>
             /// <returns><see cref="string"/></returns>
@@ -864,7 +864,7 @@ namespace Kafka.Admin
                 return IExecute<string>("productElementName", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.PartitionMove.html#productPrefix()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.PartitionMove.html#productPrefix()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -884,7 +884,7 @@ namespace Kafka.Admin
         #endregion
 
         #region PartitionReassignmentState
-        public partial class PartitionReassignmentState
+        public partial class PartitionReassignmentState : Java.Io.ISerializable
         {
             #region Constructors
 
@@ -908,7 +908,7 @@ namespace Kafka.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.PartitionReassignmentState.html#canEqual(java.lang.Object)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.PartitionReassignmentState.html#canEqual(java.lang.Object)"/>
             /// </summary>
             /// <param name="x$1"><see cref="object"/></param>
             /// <returns><see cref="bool"/></returns>
@@ -917,7 +917,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("canEqual", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.PartitionReassignmentState.html#done()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.PartitionReassignmentState.html#done()"/>
             /// </summary>
 
             /// <returns><see cref="bool"/></returns>
@@ -926,7 +926,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("done");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.PartitionReassignmentState.html#productArity()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.PartitionReassignmentState.html#productArity()"/>
             /// </summary>
 
             /// <returns><see cref="int"/></returns>
@@ -935,7 +935,7 @@ namespace Kafka.Admin
                 return IExecute<int>("productArity");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.PartitionReassignmentState.html#productElement(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.PartitionReassignmentState.html#productElement(int)"/>
             /// </summary>
             /// <param name="x$1"><see cref="int"/></param>
             /// <returns><see cref="object"/></returns>
@@ -944,7 +944,7 @@ namespace Kafka.Admin
                 return IExecute("productElement", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.PartitionReassignmentState.html#productElementName(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.PartitionReassignmentState.html#productElementName(int)"/>
             /// </summary>
             /// <param name="x$1"><see cref="int"/></param>
             /// <returns><see cref="string"/></returns>
@@ -953,7 +953,7 @@ namespace Kafka.Admin
                 return IExecute<string>("productElementName", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.PartitionReassignmentState.html#productPrefix()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.PartitionReassignmentState.html#productPrefix()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -977,7 +977,7 @@ namespace Kafka.Admin
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.ReassignPartitionsCommandOptions.html#%3Cinit%3E(java.lang.String[])"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.ReassignPartitionsCommandOptions.html#%3Cinit%3E(java.lang.String[])"/>
             /// </summary>
             /// <param name="args"><see cref="string"/></param>
             public ReassignPartitionsCommandOptions(string[] args)
@@ -1043,7 +1043,7 @@ namespace Kafka.Admin
         #endregion
 
         #region VerifyAssignmentResult
-        public partial class VerifyAssignmentResult
+        public partial class VerifyAssignmentResult : Java.Io.ISerializable
         {
             #region Constructors
 
@@ -1067,7 +1067,7 @@ namespace Kafka.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.VerifyAssignmentResult.html#canEqual(java.lang.Object)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.VerifyAssignmentResult.html#canEqual(java.lang.Object)"/>
             /// </summary>
             /// <param name="x$1"><see cref="object"/></param>
             /// <returns><see cref="bool"/></returns>
@@ -1076,7 +1076,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("canEqual", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.VerifyAssignmentResult.html#movesOngoing()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.VerifyAssignmentResult.html#movesOngoing()"/>
             /// </summary>
 
             /// <returns><see cref="bool"/></returns>
@@ -1085,7 +1085,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("movesOngoing");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.VerifyAssignmentResult.html#partsOngoing()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.VerifyAssignmentResult.html#partsOngoing()"/>
             /// </summary>
 
             /// <returns><see cref="bool"/></returns>
@@ -1094,7 +1094,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("partsOngoing");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.VerifyAssignmentResult.html#productArity()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.VerifyAssignmentResult.html#productArity()"/>
             /// </summary>
 
             /// <returns><see cref="int"/></returns>
@@ -1103,7 +1103,7 @@ namespace Kafka.Admin
                 return IExecute<int>("productArity");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.VerifyAssignmentResult.html#productElement(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.VerifyAssignmentResult.html#productElement(int)"/>
             /// </summary>
             /// <param name="x$1"><see cref="int"/></param>
             /// <returns><see cref="object"/></returns>
@@ -1112,7 +1112,7 @@ namespace Kafka.Admin
                 return IExecute("productElement", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.VerifyAssignmentResult.html#productElementName(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.VerifyAssignmentResult.html#productElementName(int)"/>
             /// </summary>
             /// <param name="x$1"><see cref="int"/></param>
             /// <returns><see cref="string"/></returns>
@@ -1121,7 +1121,7 @@ namespace Kafka.Admin
                 return IExecute<string>("productElementName", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.VerifyAssignmentResult.html#productPrefix()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.VerifyAssignmentResult.html#productPrefix()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>

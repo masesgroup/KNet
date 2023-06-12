@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream.html#aggregate(org.apache.kafka.streams.kstream.Initializer,org.apache.kafka.streams.kstream.Merger,org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream.html#aggregate(org.apache.kafka.streams.kstream.Initializer,org.apache.kafka.streams.kstream.Merger,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Initializer"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Merger"/></param>
@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("aggregate", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream.html#aggregate(org.apache.kafka.streams.kstream.Initializer,org.apache.kafka.streams.kstream.Merger,org.apache.kafka.streams.kstream.Named,org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream.html#aggregate(org.apache.kafka.streams.kstream.Initializer,org.apache.kafka.streams.kstream.Merger,org.apache.kafka.streams.kstream.Named,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Initializer"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Merger"/></param>
@@ -69,7 +69,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("aggregate", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream.html#aggregate(org.apache.kafka.streams.kstream.Initializer,org.apache.kafka.streams.kstream.Merger,org.apache.kafka.streams.kstream.Named)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream.html#aggregate(org.apache.kafka.streams.kstream.Initializer,org.apache.kafka.streams.kstream.Merger,org.apache.kafka.streams.kstream.Named)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Initializer"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Merger"/></param>
@@ -80,7 +80,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("aggregate", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream.html#aggregate(org.apache.kafka.streams.kstream.Initializer,org.apache.kafka.streams.kstream.Merger)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream.html#aggregate(org.apache.kafka.streams.kstream.Initializer,org.apache.kafka.streams.kstream.Merger)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Initializer"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Merger"/></param>
@@ -100,8 +100,26 @@ namespace Org.Apache.Kafka.Streams.Kstream
     }
     #endregion
 
+    #region ISessionWindowedCogroupedKStream<K, V>
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream.html"/>
+    /// </summary>
+    public partial interface ISessionWindowedCogroupedKStream<K, V>
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region SessionWindowedCogroupedKStream<K, V>
-    public partial class SessionWindowedCogroupedKStream<K, V>
+    public partial class SessionWindowedCogroupedKStream<K, V> : Org.Apache.Kafka.Streams.Kstream.ISessionWindowedCogroupedKStream<K, V>
     {
         #region Constructors
 
@@ -125,19 +143,19 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream.html#aggregate(org.apache.kafka.streams.kstream.Initializer,org.apache.kafka.streams.kstream.Merger,org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream.html#aggregate(org.apache.kafka.streams.kstream.Initializer,org.apache.kafka.streams.kstream.Merger,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Initializer"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Merger"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
         /// <typeparam name="Arg1objectSuperK"><typeparamref name="K"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KTable<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, V> Aggregate<Arg1objectSuperK>(Org.Apache.Kafka.Streams.Kstream.Initializer<V> arg0, Org.Apache.Kafka.Streams.Kstream.Merger<Arg1objectSuperK, V> arg1, Org.Apache.Kafka.Streams.Kstream.Materialized arg2) where Arg1objectSuperK: K
+        public Org.Apache.Kafka.Streams.Kstream.KTable<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, V> Aggregate<Arg1objectSuperK>(Org.Apache.Kafka.Streams.Kstream.Initializer<V> arg0, Org.Apache.Kafka.Streams.Kstream.Merger<Arg1objectSuperK, V> arg1, Org.Apache.Kafka.Streams.Kstream.Materialized<K, V, Org.Apache.Kafka.Streams.State.SessionStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> arg2) where Arg1objectSuperK: K
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, V>>("aggregate", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream.html#aggregate(org.apache.kafka.streams.kstream.Initializer,org.apache.kafka.streams.kstream.Merger,org.apache.kafka.streams.kstream.Named,org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream.html#aggregate(org.apache.kafka.streams.kstream.Initializer,org.apache.kafka.streams.kstream.Merger,org.apache.kafka.streams.kstream.Named,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Initializer"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Merger"/></param>
@@ -145,12 +163,12 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <param name="arg3"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
         /// <typeparam name="Arg1objectSuperK"><typeparamref name="K"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KTable<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, V> Aggregate<Arg1objectSuperK>(Org.Apache.Kafka.Streams.Kstream.Initializer<V> arg0, Org.Apache.Kafka.Streams.Kstream.Merger<Arg1objectSuperK, V> arg1, Org.Apache.Kafka.Streams.Kstream.Named arg2, Org.Apache.Kafka.Streams.Kstream.Materialized arg3) where Arg1objectSuperK: K
+        public Org.Apache.Kafka.Streams.Kstream.KTable<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, V> Aggregate<Arg1objectSuperK>(Org.Apache.Kafka.Streams.Kstream.Initializer<V> arg0, Org.Apache.Kafka.Streams.Kstream.Merger<Arg1objectSuperK, V> arg1, Org.Apache.Kafka.Streams.Kstream.Named arg2, Org.Apache.Kafka.Streams.Kstream.Materialized<K, V, Org.Apache.Kafka.Streams.State.SessionStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> arg3) where Arg1objectSuperK: K
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, V>>("aggregate", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream.html#aggregate(org.apache.kafka.streams.kstream.Initializer,org.apache.kafka.streams.kstream.Merger,org.apache.kafka.streams.kstream.Named)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream.html#aggregate(org.apache.kafka.streams.kstream.Initializer,org.apache.kafka.streams.kstream.Merger,org.apache.kafka.streams.kstream.Named)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Initializer"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Merger"/></param>
@@ -162,7 +180,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, V>>("aggregate", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream.html#aggregate(org.apache.kafka.streams.kstream.Initializer,org.apache.kafka.streams.kstream.Merger)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream.html#aggregate(org.apache.kafka.streams.kstream.Initializer,org.apache.kafka.streams.kstream.Merger)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Initializer"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Merger"/></param>

@@ -25,7 +25,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// Listener for Kafka Reducer. Extends <see cref="IJVMBridgeBase"/>
     /// </summary>
     /// <typeparam name="V">The data associated to the event</typeparam>
-    public interface IReducer<V> : IJVMBridgeBase
+    public partial interface IReducer<V> : IJVMBridgeBase
     {
         /// <summary>
         /// Executes the Reducer action in the CLR
@@ -71,37 +71,5 @@ namespace Org.Apache.Kafka.Streams.Kstream
             var retVal = OnApply(data.EventData.TypedEventData, data.EventData.To<V>(0));
             data.SetReturnValue(retVal);
         }
-        /// <summary>
-        /// Executes the Reducer action in the CLR
-        /// </summary>
-        /// <param name="o1">The Reducer object</param>
-        /// <param name="o2">The Reducer object</param>
-        /// <returns>The <typeparamref name="VR"/> apply evaluation</returns>
-        public virtual V Apply(V o1, V o2) { return default(V); }
     }
-    /*
-    /// <summary>
-    /// Listener for Kafka Reducer. Extends <see cref="ReducerImpl{V}"/>
-    /// </summary>
-    /// <typeparam name="V">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
-    /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
-    public class JVMBridgeReducer<V> : ReducerImpl<V>
-        where V : IJVMBridgeBase, new()
-    {
-        /// <summary>
-        /// Initialize a new instance of <see cref="JVMBridgeReducer{V}"/>
-        /// </summary>
-        /// <param name="func">The <see cref="Func{V, V, V}"/> to be executed</param>
-        public JVMBridgeReducer(Func<V, V, V> func = null) : base(func, false)
-        {
-            AddEventHandler("apply", new EventHandler<CLRListenerEventArgs<JVMBridgeEventData<V>>>(EventHandler));
-        }
-
-        void EventHandler(object sender, CLRListenerEventArgs<JVMBridgeEventData<V>> data)
-        {
-            var retVal = OnApply(data.EventData.TypedEventData, data.EventData.To<V>(0));
-            data.CLRReturnValue = retVal?;
-        }
-    }
-    */
 }

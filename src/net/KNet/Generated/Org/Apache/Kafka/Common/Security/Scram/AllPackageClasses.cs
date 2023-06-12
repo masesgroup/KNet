@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
 {
     #region ScramCredential
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramCredential.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramCredential.html"/>
     /// </summary>
     public partial class ScramCredential : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ScramCredential>
     {
@@ -70,9 +70,9 @@ namespace Org.Apache.Kafka.Common.Security.Scram
 
     #region ScramCredentialCallback
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramCredentialCallback.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramCredentialCallback.html"/>
     /// </summary>
-    public partial class ScramCredentialCallback : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ScramCredentialCallback>
+    public partial class ScramCredentialCallback : Javax.Security.Auth.Callback.Callback
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -113,9 +113,9 @@ namespace Org.Apache.Kafka.Common.Security.Scram
 
     #region ScramExtensionsCallback
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramExtensionsCallback.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramExtensionsCallback.html"/>
     /// </summary>
-    public partial class ScramExtensionsCallback : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ScramExtensionsCallback>
+    public partial class ScramExtensionsCallback : Javax.Security.Auth.Callback.Callback
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -156,9 +156,9 @@ namespace Org.Apache.Kafka.Common.Security.Scram
 
     #region ScramLoginModule
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramLoginModule.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramLoginModule.html"/>
     /// </summary>
-    public partial class ScramLoginModule : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ScramLoginModule>
+    public partial class ScramLoginModule : Javax.Security.Auth.Spi.LoginModule
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -196,6 +196,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
 
     }
     #endregion
+
 
 
 }

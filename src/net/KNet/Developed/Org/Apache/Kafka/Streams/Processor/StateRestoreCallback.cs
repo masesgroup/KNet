@@ -24,7 +24,7 @@ namespace Org.Apache.Kafka.Streams.Processor
     /// <summary>
     /// Listener for Kafka StateRestoreCallback. Extends <see cref="IJVMBridgeBase"/>
     /// </summary>
-    public interface IStateRestoreCallback : IJVMBridgeBase
+    public partial interface IStateRestoreCallback : IJVMBridgeBase
     {
         /// <summary>
         /// Executes the StateRestoreCallback action in the CLR
@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Streams.Processor
     public partial class StateRestoreCallback : IStateRestoreCallback
     {
         /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-         public sealed override string BridgeClassName => "org.mases.knet.streams.processor.StateRestoreCallbackImpl";
+         public override string BridgeClassName => "org.mases.knet.streams.processor.StateRestoreCallbackImpl";
 
         readonly Action<byte[], byte[]> executionFunction = null;
         /// <summary>
@@ -68,12 +68,5 @@ namespace Org.Apache.Kafka.Streams.Processor
         {
             OnRestore(data.EventData.TypedEventData, data.EventData.To<byte[]>(0));
         }
-        /// <summary>
-        /// Executes the StateRestoreCallback action in the CLR
-        /// </summary>
-        /// <param name="key">The StateRestoreCallback key</param>
-        /// <param name="value">The StateRestoreCallback value</param>
-        /// <returns>The <typeparamref name="VR"/> apply evaluation</returns>
-        public virtual void Restore(byte[] key, byte[] value) { }
     }
 }

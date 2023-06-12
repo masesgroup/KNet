@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessorContext.html#forward(org.apache.kafka.streams.processor.api.Record,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessorContext.html#forward(org.apache.kafka.streams.processor.api.Record,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.Record"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
             IExecute("forward", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessorContext.html#forward(org.apache.kafka.streams.processor.api.Record)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessorContext.html#forward(org.apache.kafka.streams.processor.api.Record)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.Record"/></param>
         public void Forward(Org.Apache.Kafka.Streams.Processor.Api.Record arg0)
@@ -73,8 +73,26 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
     }
     #endregion
 
+    #region IProcessorContext<KForward, VForward>
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessorContext.html"/>
+    /// </summary>
+    public partial interface IProcessorContext<KForward, VForward> : Org.Apache.Kafka.Streams.Processor.Api.IProcessingContext
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region ProcessorContext<KForward, VForward>
-    public partial class ProcessorContext<KForward, VForward>
+    public partial class ProcessorContext<KForward, VForward> : Org.Apache.Kafka.Streams.Processor.Api.IProcessorContext<KForward, VForward>
     {
         #region Constructors
 
@@ -98,7 +116,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessorContext.html#forward(org.apache.kafka.streams.processor.api.Record,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessorContext.html#forward(org.apache.kafka.streams.processor.api.Record,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.Record"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -109,7 +127,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
             IExecute("forward", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessorContext.html#forward(org.apache.kafka.streams.processor.api.Record)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessorContext.html#forward(org.apache.kafka.streams.processor.api.Record)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.Record"/></param>
         /// <typeparam name="K"><typeparamref name="KForward"/></typeparam>

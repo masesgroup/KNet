@@ -27,9 +27,9 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
 {
     #region PlainSaslServer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html"/>
     /// </summary>
-    public partial class PlainSaslServer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PlainSaslServer>
+    public partial class PlainSaslServer : Javax.Security.Sasl.SaslServer
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -66,9 +66,9 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
         // TODO: complete the class
         #region PlainSaslServerFactory
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.PlainSaslServerFactory.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.PlainSaslServerFactory.html"/>
         /// </summary>
-        public partial class PlainSaslServerFactory : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PlainSaslServerFactory>
+        public partial class PlainSaslServerFactory : Javax.Security.Sasl.SaslServerFactory
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
 
     #region PlainSaslServerProvider
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainSaslServerProvider.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainSaslServerProvider.html"/>
     /// </summary>
     public partial class PlainSaslServerProvider : Java.Security.Provider
     {
@@ -156,9 +156,9 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
 
     #region PlainServerCallbackHandler
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainServerCallbackHandler.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainServerCallbackHandler.html"/>
     /// </summary>
-    public partial class PlainServerCallbackHandler : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PlainServerCallbackHandler>
+    public partial class PlainServerCallbackHandler : Org.Apache.Kafka.Common.Security.Auth.AuthenticateCallbackHandler
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -196,6 +196,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
 
     }
     #endregion
+
 
 
 }

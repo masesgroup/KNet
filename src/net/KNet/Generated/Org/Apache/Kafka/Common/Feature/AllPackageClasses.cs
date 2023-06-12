@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Feature
 {
     #region Features
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/Features.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/Features.html"/>
     /// </summary>
     public partial class Features : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Features>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Common.Feature
 
     #region Features<VersionRangeType>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/Features.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/Features.html"/>
     /// </summary>
     /// <typeparam name="VersionRangeType"><see cref="Org.Apache.Kafka.Common.Feature.BaseVersionRange"/></typeparam>
     public partial class Features<VersionRangeType> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Features<VersionRangeType>> where VersionRangeType: Org.Apache.Kafka.Common.Feature.BaseVersionRange
@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Common.Feature
 
     #region SupportedVersionRange
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/SupportedVersionRange.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/SupportedVersionRange.html"/>
     /// </summary>
     public partial class SupportedVersionRange : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SupportedVersionRange>
     {
@@ -154,6 +154,7 @@ namespace Org.Apache.Kafka.Common.Feature
 
     }
     #endregion
+
 
 
 }

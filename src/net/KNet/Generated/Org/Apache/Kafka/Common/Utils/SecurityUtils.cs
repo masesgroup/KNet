@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SecurityUtils.html#denyAll(org.apache.kafka.common.resource.ResourcePattern)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SecurityUtils.html#denyAll(org.apache.kafka.common.resource.ResourcePattern)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Resource.ResourcePattern"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -51,7 +51,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecute<bool>(LocalBridgeClazz, "denyAll", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SecurityUtils.html#operationName(org.apache.kafka.common.acl.AclOperation)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SecurityUtils.html#operationName(org.apache.kafka.common.acl.AclOperation)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Acl.AclOperation"/></param>
         /// <returns><see cref="string"/></returns>
@@ -60,7 +60,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecute<string>(LocalBridgeClazz, "operationName", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SecurityUtils.html#permissionTypeName(org.apache.kafka.common.acl.AclPermissionType)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SecurityUtils.html#permissionTypeName(org.apache.kafka.common.acl.AclPermissionType)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Acl.AclPermissionType"/></param>
         /// <returns><see cref="string"/></returns>
@@ -69,7 +69,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecute<string>(LocalBridgeClazz, "permissionTypeName", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SecurityUtils.html#resourceTypeName(org.apache.kafka.common.resource.ResourceType)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SecurityUtils.html#resourceTypeName(org.apache.kafka.common.resource.ResourceType)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Resource.ResourceType"/></param>
         /// <returns><see cref="string"/></returns>
@@ -78,7 +78,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecute<string>(LocalBridgeClazz, "resourceTypeName", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SecurityUtils.html#operation(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SecurityUtils.html#operation(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Acl.AclOperation"/></returns>
@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecute<Org.Apache.Kafka.Common.Acl.AclOperation>(LocalBridgeClazz, "operation", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SecurityUtils.html#permissionType(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SecurityUtils.html#permissionType(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Acl.AclPermissionType"/></returns>
@@ -96,7 +96,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecute<Org.Apache.Kafka.Common.Acl.AclPermissionType>(LocalBridgeClazz, "permissionType", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SecurityUtils.html#resourceType(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SecurityUtils.html#resourceType(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Resource.ResourceType"/></returns>
@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecute<Org.Apache.Kafka.Common.Resource.ResourceType>(LocalBridgeClazz, "resourceType", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SecurityUtils.html#parseKafkaPrincipal(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SecurityUtils.html#parseKafkaPrincipal(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal"/></returns>
@@ -114,16 +114,15 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecute<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal>(LocalBridgeClazz, "parseKafkaPrincipal", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SecurityUtils.html#addConfiguredSecurityProviders(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SecurityUtils.html#addConfiguredSecurityProviders(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        /// <typeparam name="Arg0Extendsobject"></typeparam>
-        public static void AddConfiguredSecurityProviders<Arg0Extendsobject>(Java.Util.Map<string, Arg0Extendsobject> arg0)
+        public static void AddConfiguredSecurityProviders(Java.Util.Map<string, object> arg0)
         {
             SExecute(LocalBridgeClazz, "addConfiguredSecurityProviders", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SecurityUtils.html#authorizeByResourceTypeCheckArgs(org.apache.kafka.common.acl.AclOperation,org.apache.kafka.common.resource.ResourceType)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SecurityUtils.html#authorizeByResourceTypeCheckArgs(org.apache.kafka.common.acl.AclOperation,org.apache.kafka.common.resource.ResourceType)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Acl.AclOperation"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Resource.ResourceType"/></param>

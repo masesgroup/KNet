@@ -29,100 +29,84 @@ namespace Org.Apache.Kafka.Connect.Storage
     public partial class KafkaConfigBackingStore
     {
         #region Constructors
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#%3Cinit%3E(org.apache.kafka.connect.storage.Converter,org.apache.kafka.connect.runtime.distributed.DistributedConfig,org.apache.kafka.connect.runtime.WorkerConfigTransformer,java.util.function.Supplier,java.lang.String)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Storage.Converter"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Connect.Runtime.Distributed.DistributedConfig"/></param>
-        /// <param name="arg2"><see cref="Org.Apache.Kafka.Connect.Runtime.WorkerConfigTransformer"/></param>
-        /// <param name="arg3"><see cref="Java.Util.Function.Supplier"/></param>
-        /// <param name="arg4"><see cref="string"/></param>
-        public KafkaConfigBackingStore(Org.Apache.Kafka.Connect.Storage.Converter arg0, Org.Apache.Kafka.Connect.Runtime.Distributed.DistributedConfig arg1, Org.Apache.Kafka.Connect.Runtime.WorkerConfigTransformer arg2, Java.Util.Function.Supplier<Org.Apache.Kafka.Connect.Util.TopicAdmin> arg3, string arg4)
-            : base(arg0, arg1, arg2, arg3, arg4)
-        {
-        }
 
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Connect.Storage.KafkaConfigBackingStore"/> to <see cref="Org.Apache.Kafka.Connect.Storage.ConfigBackingStore"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Connect.Storage.ConfigBackingStore(Org.Apache.Kafka.Connect.Storage.KafkaConfigBackingStore t) => t.Cast<Org.Apache.Kafka.Connect.Storage.ConfigBackingStore>();
 
         #endregion
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#INCLUDE_TASKS_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#INCLUDE_TASKS_DEFAULT"/>
         /// </summary>
         public static bool INCLUDE_TASKS_DEFAULT { get { return SGetField<bool>(LocalBridgeClazz, "INCLUDE_TASKS_DEFAULT"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#ONLY_FAILED_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#ONLY_FAILED_DEFAULT"/>
         /// </summary>
         public static bool ONLY_FAILED_DEFAULT { get { return SGetField<bool>(LocalBridgeClazz, "ONLY_FAILED_DEFAULT"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#COMMIT_TASKS_PREFIX"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#COMMIT_TASKS_PREFIX"/>
         /// </summary>
         public static string COMMIT_TASKS_PREFIX { get { return SGetField<string>(LocalBridgeClazz, "COMMIT_TASKS_PREFIX"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#CONNECTOR_PREFIX"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#CONNECTOR_PREFIX"/>
         /// </summary>
         public static string CONNECTOR_PREFIX { get { return SGetField<string>(LocalBridgeClazz, "CONNECTOR_PREFIX"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#INCLUDE_TASKS_FIELD_NAME"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#INCLUDE_TASKS_FIELD_NAME"/>
         /// </summary>
         public static string INCLUDE_TASKS_FIELD_NAME { get { return SGetField<string>(LocalBridgeClazz, "INCLUDE_TASKS_FIELD_NAME"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#ONLY_FAILED_FIELD_NAME"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#ONLY_FAILED_FIELD_NAME"/>
         /// </summary>
         public static string ONLY_FAILED_FIELD_NAME { get { return SGetField<string>(LocalBridgeClazz, "ONLY_FAILED_FIELD_NAME"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#RESTART_PREFIX"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#RESTART_PREFIX"/>
         /// </summary>
         public static string RESTART_PREFIX { get { return SGetField<string>(LocalBridgeClazz, "RESTART_PREFIX"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#SESSION_KEY_KEY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#SESSION_KEY_KEY"/>
         /// </summary>
         public static string SESSION_KEY_KEY { get { return SGetField<string>(LocalBridgeClazz, "SESSION_KEY_KEY"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#TARGET_STATE_PREFIX"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#TARGET_STATE_PREFIX"/>
         /// </summary>
         public static string TARGET_STATE_PREFIX { get { return SGetField<string>(LocalBridgeClazz, "TARGET_STATE_PREFIX"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#TASK_COUNT_RECORD_PREFIX"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#TASK_COUNT_RECORD_PREFIX"/>
         /// </summary>
         public static string TASK_COUNT_RECORD_PREFIX { get { return SGetField<string>(LocalBridgeClazz, "TASK_COUNT_RECORD_PREFIX"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#TASK_PREFIX"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#TASK_PREFIX"/>
         /// </summary>
         public static string TASK_PREFIX { get { return SGetField<string>(LocalBridgeClazz, "TASK_PREFIX"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#CONNECTOR_CONFIGURATION_V0"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#CONNECTOR_CONFIGURATION_V0"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema CONNECTOR_CONFIGURATION_V0 { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "CONNECTOR_CONFIGURATION_V0"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#CONNECTOR_TASKS_COMMIT_V0"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#CONNECTOR_TASKS_COMMIT_V0"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema CONNECTOR_TASKS_COMMIT_V0 { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "CONNECTOR_TASKS_COMMIT_V0"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#RESTART_REQUEST_V0"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#RESTART_REQUEST_V0"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema RESTART_REQUEST_V0 { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "RESTART_REQUEST_V0"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#SESSION_KEY_V0"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#SESSION_KEY_V0"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema SESSION_KEY_V0 { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "SESSION_KEY_V0"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#TARGET_STATE_V0"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#TARGET_STATE_V0"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema TARGET_STATE_V0 { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "TARGET_STATE_V0"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#TASK_CONFIGURATION_V0"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#TASK_CONFIGURATION_V0"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema TASK_CONFIGURATION_V0 { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "TASK_CONFIGURATION_V0"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#TASK_COUNT_RECORD_V0"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#TASK_COUNT_RECORD_V0"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema TASK_COUNT_RECORD_V0 { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "TASK_COUNT_RECORD_V0"); } }
 
@@ -130,7 +114,7 @@ namespace Org.Apache.Kafka.Connect.Storage
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#COMMIT_TASKS_KEY(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#COMMIT_TASKS_KEY(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="string"/></returns>
@@ -139,7 +123,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return SExecute<string>(LocalBridgeClazz, "COMMIT_TASKS_KEY", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#CONNECTOR_KEY(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#CONNECTOR_KEY(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="string"/></returns>
@@ -148,7 +132,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return SExecute<string>(LocalBridgeClazz, "CONNECTOR_KEY", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#RESTART_KEY(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#RESTART_KEY(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="string"/></returns>
@@ -157,7 +141,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return SExecute<string>(LocalBridgeClazz, "RESTART_KEY", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#TARGET_STATE_KEY(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#TARGET_STATE_KEY(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="string"/></returns>
@@ -166,7 +150,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return SExecute<string>(LocalBridgeClazz, "TARGET_STATE_KEY", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#TASK_COUNT_RECORD_KEY(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#TASK_COUNT_RECORD_KEY(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="string"/></returns>
@@ -175,7 +159,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return SExecute<string>(LocalBridgeClazz, "TASK_COUNT_RECORD_KEY", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#TASK_KEY(org.apache.kafka.connect.util.ConnectorTaskId)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#TASK_KEY(org.apache.kafka.connect.util.ConnectorTaskId)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Util.ConnectorTaskId"/></param>
         /// <returns><see cref="string"/></returns>
@@ -188,7 +172,7 @@ namespace Org.Apache.Kafka.Connect.Storage
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#contains(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#contains(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -197,7 +181,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return IExecute<bool>("contains", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#snapshot()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#snapshot()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Connect.Storage.ClusterConfigState"/></returns>
@@ -206,14 +190,14 @@ namespace Org.Apache.Kafka.Connect.Storage
             return IExecute<Org.Apache.Kafka.Connect.Storage.ClusterConfigState>("snapshot");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#claimWritePrivileges()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#claimWritePrivileges()"/>
         /// </summary>
         public void ClaimWritePrivileges()
         {
             IExecute("claimWritePrivileges");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#putConnectorConfig(java.lang.String,java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#putConnectorConfig(java.lang.String,java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
@@ -222,32 +206,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             IExecute("putConnectorConfig", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#putRestartRequest(org.apache.kafka.connect.runtime.RestartRequest)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Runtime.RestartRequest"/></param>
-        public void PutRestartRequest(Org.Apache.Kafka.Connect.Runtime.RestartRequest arg0)
-        {
-            IExecute("putRestartRequest", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#putSessionKey(org.apache.kafka.connect.runtime.SessionKey)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Runtime.SessionKey"/></param>
-        public void PutSessionKey(Org.Apache.Kafka.Connect.Runtime.SessionKey arg0)
-        {
-            IExecute("putSessionKey", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#putTargetState(java.lang.String,org.apache.kafka.connect.runtime.TargetState)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Connect.Runtime.TargetState"/></param>
-        public void PutTargetState(string arg0, Org.Apache.Kafka.Connect.Runtime.TargetState arg1)
-        {
-            IExecute("putTargetState", arg0, arg1);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#putTaskConfigs(java.lang.String,java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#putTaskConfigs(java.lang.String,java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Java.Util.List"/></param>
@@ -256,7 +215,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             IExecute("putTaskConfigs", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#putTaskCountRecord(java.lang.String,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#putTaskCountRecord(java.lang.String,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -265,7 +224,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             IExecute("putTaskCountRecord", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#refresh(long,java.util.concurrent.TimeUnit)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#refresh(long,java.util.concurrent.TimeUnit)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="Java.Util.Concurrent.TimeUnit"/></param>
@@ -275,7 +234,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             IExecute("refresh", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#removeConnectorConfig(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#removeConnectorConfig(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         public void RemoveConnectorConfig(string arg0)
@@ -283,7 +242,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             IExecute("removeConnectorConfig", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#removeTaskConfigs(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#removeTaskConfigs(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         public void RemoveTaskConfigs(string arg0)
@@ -291,7 +250,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             IExecute("removeTaskConfigs", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#setUpdateListener(org.apache.kafka.connect.storage.ConfigBackingStore.UpdateListener)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#setUpdateListener(org.apache.kafka.connect.storage.ConfigBackingStore.UpdateListener)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Storage.ConfigBackingStore.UpdateListener"/></param>
         public void SetUpdateListener(Org.Apache.Kafka.Connect.Storage.ConfigBackingStore.UpdateListener arg0)
@@ -299,14 +258,14 @@ namespace Org.Apache.Kafka.Connect.Storage
             IExecute("setUpdateListener", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#start()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#start()"/>
         /// </summary>
         public void Start()
         {
             IExecute("start");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#stop()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/KafkaConfigBackingStore.html#stop()"/>
         /// </summary>
         public void Stop()
         {

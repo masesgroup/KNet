@@ -33,16 +33,12 @@ namespace Org.Apache.Kafka.Connect.Source
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Connect.Source.SourceTask"/> to <see cref="Org.Apache.Kafka.Connect.Connector.Task"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Connect.Connector.Task(Org.Apache.Kafka.Connect.Source.SourceTask t) => t.Cast<Org.Apache.Kafka.Connect.Connector.Task>();
 
         #endregion
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTask.html#TRANSACTION_BOUNDARY_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTask.html#TRANSACTION_BOUNDARY_CONFIG"/>
         /// </summary>
         public static string TRANSACTION_BOUNDARY_CONFIG { get { return SGetField<string>(LocalBridgeClazz, "TRANSACTION_BOUNDARY_CONFIG"); } }
 
@@ -54,7 +50,7 @@ namespace Org.Apache.Kafka.Connect.Source
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTask.html#poll()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTask.html#poll()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -64,7 +60,7 @@ namespace Org.Apache.Kafka.Connect.Source
             return IExecute<Java.Util.List<Org.Apache.Kafka.Connect.Source.SourceRecord>>("poll");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTask.html#start(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTask.html#start(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Start(Java.Util.Map<string, string> arg0)
@@ -72,14 +68,14 @@ namespace Org.Apache.Kafka.Connect.Source
             IExecute("start", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTask.html#stop()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTask.html#stop()"/>
         /// </summary>
         public void Stop()
         {
             IExecute("stop");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTask.html#commit()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTask.html#commit()"/>
         /// </summary>
 
         /// <exception cref="Java.Lang.InterruptedException"/>
@@ -88,7 +84,7 @@ namespace Org.Apache.Kafka.Connect.Source
             IExecute("commit");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTask.html#commitRecord(org.apache.kafka.connect.source.SourceRecord,org.apache.kafka.clients.producer.RecordMetadata)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTask.html#commitRecord(org.apache.kafka.connect.source.SourceRecord,org.apache.kafka.clients.producer.RecordMetadata)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Source.SourceRecord"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Producer.RecordMetadata"/></param>
@@ -98,7 +94,7 @@ namespace Org.Apache.Kafka.Connect.Source
             IExecute("commitRecord", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTask.html#initialize(org.apache.kafka.connect.source.SourceTaskContext)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTask.html#initialize(org.apache.kafka.connect.source.SourceTaskContext)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Source.SourceTaskContext"/></param>
         public void Initialize(Org.Apache.Kafka.Connect.Source.SourceTaskContext arg0)
@@ -122,19 +118,19 @@ namespace Org.Apache.Kafka.Connect.Source
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTask.TransactionBoundary.html#CONNECTOR"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTask.TransactionBoundary.html#CONNECTOR"/>
             /// </summary>
             public static Org.Apache.Kafka.Connect.Source.SourceTask.TransactionBoundary CONNECTOR { get { return SGetField<Org.Apache.Kafka.Connect.Source.SourceTask.TransactionBoundary>(LocalBridgeClazz, "CONNECTOR"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTask.TransactionBoundary.html#DEFAULT"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTask.TransactionBoundary.html#DEFAULT"/>
             /// </summary>
             public static Org.Apache.Kafka.Connect.Source.SourceTask.TransactionBoundary DEFAULT { get { return SGetField<Org.Apache.Kafka.Connect.Source.SourceTask.TransactionBoundary>(LocalBridgeClazz, "DEFAULT"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTask.TransactionBoundary.html#INTERVAL"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTask.TransactionBoundary.html#INTERVAL"/>
             /// </summary>
             public static Org.Apache.Kafka.Connect.Source.SourceTask.TransactionBoundary INTERVAL { get { return SGetField<Org.Apache.Kafka.Connect.Source.SourceTask.TransactionBoundary>(LocalBridgeClazz, "INTERVAL"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTask.TransactionBoundary.html#POLL"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTask.TransactionBoundary.html#POLL"/>
             /// </summary>
             public static Org.Apache.Kafka.Connect.Source.SourceTask.TransactionBoundary POLL { get { return SGetField<Org.Apache.Kafka.Connect.Source.SourceTask.TransactionBoundary>(LocalBridgeClazz, "POLL"); } }
 
@@ -142,7 +138,7 @@ namespace Org.Apache.Kafka.Connect.Source
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTask.TransactionBoundary.html#fromProperty(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTask.TransactionBoundary.html#fromProperty(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Connect.Source.SourceTask.TransactionBoundary"/></returns>
@@ -151,7 +147,7 @@ namespace Org.Apache.Kafka.Connect.Source
                 return SExecute<Org.Apache.Kafka.Connect.Source.SourceTask.TransactionBoundary>(LocalBridgeClazz, "fromProperty", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTask.TransactionBoundary.html#valueOf(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTask.TransactionBoundary.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Connect.Source.SourceTask.TransactionBoundary"/></returns>
@@ -160,7 +156,7 @@ namespace Org.Apache.Kafka.Connect.Source
                 return SExecute<Org.Apache.Kafka.Connect.Source.SourceTask.TransactionBoundary>(LocalBridgeClazz, "valueOf", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTask.TransactionBoundary.html#values()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTask.TransactionBoundary.html#values()"/>
             /// </summary>
 
             /// <returns><see cref="Org.Apache.Kafka.Connect.Source.SourceTask.TransactionBoundary"/></returns>

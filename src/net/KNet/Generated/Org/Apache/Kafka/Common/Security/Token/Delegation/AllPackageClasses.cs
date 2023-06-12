@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Security.Token.Delegation
 {
     #region DelegationToken
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/token/delegation/DelegationToken.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/token/delegation/DelegationToken.html"/>
     /// </summary>
     public partial class DelegationToken : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DelegationToken>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Common.Security.Token.Delegation
 
     #region TokenInformation
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/token/delegation/TokenInformation.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/token/delegation/TokenInformation.html"/>
     /// </summary>
     public partial class TokenInformation : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TokenInformation>
     {
@@ -110,6 +110,7 @@ namespace Org.Apache.Kafka.Common.Security.Token.Delegation
 
     }
     #endregion
+
 
 
 }

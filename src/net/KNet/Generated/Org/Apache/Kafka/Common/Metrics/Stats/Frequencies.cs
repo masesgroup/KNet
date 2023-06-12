@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Frequencies.html#%3Cinit%3E(int,double,double,org.apache.kafka.common.metrics.stats.Frequency[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Frequencies.html#%3Cinit%3E(int,double,double,org.apache.kafka.common.metrics.stats.Frequency[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="double"/></param>
@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Frequencies.html#forBooleanValues(org.apache.kafka.common.MetricName,org.apache.kafka.common.MetricName)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Frequencies.html#forBooleanValues(org.apache.kafka.common.MetricName,org.apache.kafka.common.MetricName)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.MetricName"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.MetricName"/></param>
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Frequencies.html#frequency(org.apache.kafka.common.metrics.MetricConfig,long,double)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Frequencies.html#frequency(org.apache.kafka.common.metrics.MetricConfig,long,double)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Metrics.MetricConfig"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -82,7 +82,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
             return IExecute<double>("frequency", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Frequencies.html#stats()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/Frequencies.html#stats()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.List"/></returns>

@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/QueryableStoreType.html#accepts(org.apache.kafka.streams.processor.StateStore)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/QueryableStoreType.html#accepts(org.apache.kafka.streams.processor.StateStore)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.StateStore"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -65,8 +65,26 @@ namespace Org.Apache.Kafka.Streams.State
     }
     #endregion
 
+    #region IQueryableStoreType<T>
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/QueryableStoreType.html"/>
+    /// </summary>
+    public partial interface IQueryableStoreType<T>
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region QueryableStoreType<T>
-    public partial class QueryableStoreType<T>
+    public partial class QueryableStoreType<T> : Org.Apache.Kafka.Streams.State.IQueryableStoreType<T>
     {
         #region Constructors
 
@@ -90,7 +108,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/QueryableStoreType.html#accepts(org.apache.kafka.streams.processor.StateStore)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/QueryableStoreType.html#accepts(org.apache.kafka.streams.processor.StateStore)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.StateStore"/></param>
         /// <returns><see cref="bool"/></returns>

@@ -26,7 +26,7 @@ namespace Org.Apache.Kafka.Common.Serialization
     /// <summary>
     /// Listener for Kafka Deserializer. Extends <see cref="IJVMBridgeBase"/>
     /// </summary>
-    public interface IDeserializer : IJVMBridgeBase
+    public partial interface IDeserializer : IJVMBridgeBase
     {
     }
 
@@ -34,7 +34,7 @@ namespace Org.Apache.Kafka.Common.Serialization
     /// Listener for Kafka Deserializer. Extends <see cref="Deserializer"/>
     /// </summary>
     /// <typeparam name="T">The data associated to the event</typeparam>
-    public interface IDeserializer<T> : IDeserializer
+    public partial interface IDeserializer<T> : IDeserializer
     {
         /// <summary>
         /// Executes the Deserializer action in the CLR
@@ -111,13 +111,6 @@ namespace Org.Apache.Kafka.Common.Serialization
             data.SetReturnValue(retVal);
         }
 
-        /// <summary>
-        /// Executes the Deserializer action in the CLR
-        /// </summary>
-        /// <param name="topic">topic associated with the data</param>
-        /// <param name="data">serialized bytes; may be null; implementations are recommended to handle null by returning a value or null rather than throwing an exception</param>
-        /// <returns>The deserialized <typeparamref name="T"/></returns>
-        public virtual T Deserialize(string topic, byte[] data) { return default; }
         /// <summary>
         /// Executes the Deserializer action in the CLR
         /// </summary>

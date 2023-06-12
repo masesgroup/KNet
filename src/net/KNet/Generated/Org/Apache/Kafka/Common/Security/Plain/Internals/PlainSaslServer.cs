@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#%3Cinit%3E(javax.security.auth.callback.CallbackHandler)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#%3Cinit%3E(javax.security.auth.callback.CallbackHandler)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Javax.Security.Auth.Callback.CallbackHandler"/></param>
         public PlainSaslServer(Javax.Security.Auth.Callback.CallbackHandler arg0)
@@ -41,16 +41,12 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServer"/> to <see cref="Javax.Security.Sasl.SaslServer"/>
-        /// </summary>
-        public static implicit operator Javax.Security.Sasl.SaslServer(Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServer t) => t.Cast<Javax.Security.Sasl.SaslServer>();
 
         #endregion
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#PLAIN_MECHANISM"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#PLAIN_MECHANISM"/>
         /// </summary>
         public static string PLAIN_MECHANISM { get { return SGetField<string>(LocalBridgeClazz, "PLAIN_MECHANISM"); } }
 
@@ -62,21 +58,21 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#getAuthorizationID()"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#getAuthorizationID()"/> 
         /// </summary>
         public string AuthorizationID
         {
             get { return IExecute<string>("getAuthorizationID"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#getMechanismName()"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#getMechanismName()"/> 
         /// </summary>
         public string MechanismName
         {
             get { return IExecute<string>("getMechanismName"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#isComplete()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#isComplete()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -85,7 +81,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
             return IExecute<bool>("isComplete");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#evaluateResponse(byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#evaluateResponse(byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <returns><see cref="byte"/></returns>
@@ -95,7 +91,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
             return IExecuteArray<byte>("evaluateResponse", new object[] { arg0 });
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#unwrap(byte[],int,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#unwrap(byte[],int,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -106,7 +102,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
             return IExecuteArray<byte>("unwrap", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#wrap(byte[],int,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#wrap(byte[],int,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -117,7 +113,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
             return IExecuteArray<byte>("wrap", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#getNegotiatedProperty(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#getNegotiatedProperty(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="object"/></returns>
@@ -126,7 +122,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
             return IExecute("getNegotiatedProperty", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#dispose()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#dispose()"/>
         /// </summary>
         public new void Dispose()
         {
@@ -144,10 +140,6 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
             #endregion
 
             #region Class/Interface conversion operators
-            /// <summary>
-            /// Converter from <see cref="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServer.PlainSaslServerFactory"/> to <see cref="Javax.Security.Sasl.SaslServerFactory"/>
-            /// </summary>
-            public static implicit operator Javax.Security.Sasl.SaslServerFactory(Org.Apache.Kafka.Common.Security.Plain.Internals.PlainSaslServer.PlainSaslServerFactory t) => t.Cast<Javax.Security.Sasl.SaslServerFactory>();
 
             #endregion
 
@@ -161,27 +153,25 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.PlainSaslServerFactory.html#getMechanismNames(java.util.Map)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.PlainSaslServerFactory.html#getMechanismNames(java.util.Map)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-            /// <typeparam name="Arg0Extendsobject"></typeparam>
             /// <returns><see cref="string"/></returns>
-            public string[] GetMechanismNames<Arg0Extendsobject>(Java.Util.Map<string, Arg0Extendsobject> arg0)
+            public string[] GetMechanismNames(Java.Util.Map<string, object> arg0)
             {
                 return IExecuteArray<string>("getMechanismNames", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.PlainSaslServerFactory.html#createSaslServer(java.lang.String,java.lang.String,java.lang.String,java.util.Map,javax.security.auth.callback.CallbackHandler)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.PlainSaslServerFactory.html#createSaslServer(java.lang.String,java.lang.String,java.lang.String,java.util.Map,javax.security.auth.callback.CallbackHandler)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
             /// <param name="arg1"><see cref="string"/></param>
             /// <param name="arg2"><see cref="string"/></param>
             /// <param name="arg3"><see cref="Java.Util.Map"/></param>
             /// <param name="arg4"><see cref="Javax.Security.Auth.Callback.CallbackHandler"/></param>
-            /// <typeparam name="Arg3Extendsobject"></typeparam>
             /// <returns><see cref="Javax.Security.Sasl.SaslServer"/></returns>
             /// <exception cref="Javax.Security.Sasl.SaslException"/>
-            public Javax.Security.Sasl.SaslServer CreateSaslServer<Arg3Extendsobject>(string arg0, string arg1, string arg2, Java.Util.Map<string, Arg3Extendsobject> arg3, Javax.Security.Auth.Callback.CallbackHandler arg4)
+            public Javax.Security.Sasl.SaslServer CreateSaslServer(string arg0, string arg1, string arg2, Java.Util.Map<string, object> arg3, Javax.Security.Auth.Callback.CallbackHandler arg4)
             {
                 return IExecute<Javax.Security.Sasl.SaslServer>("createSaslServer", arg0, arg1, arg2, arg3, arg4);
             }

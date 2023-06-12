@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/RawTaggedField.html#%3Cinit%3E(int,byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/RawTaggedField.html#%3Cinit%3E(int,byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/RawTaggedField.html#data()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/RawTaggedField.html#data()"/>
         /// </summary>
 
         /// <returns><see cref="byte"/></returns>
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecuteArray<byte>("data");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/RawTaggedField.html#size()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/RawTaggedField.html#size()"/>
         /// </summary>
 
         /// <returns><see cref="int"/></returns>
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<int>("size");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/RawTaggedField.html#tag()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/RawTaggedField.html#tag()"/>
         /// </summary>
 
         /// <returns><see cref="int"/></returns>

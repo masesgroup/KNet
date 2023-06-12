@@ -33,10 +33,6 @@ namespace Org.Apache.Kafka.Common
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.KafkaFuture"/> to <see cref="Java.Util.Concurrent.Future"/>
-        /// </summary>
-        public static implicit operator Java.Util.Concurrent.Future(Org.Apache.Kafka.Common.KafkaFuture t) => t.Cast<Java.Util.Concurrent.Future>();
 
         #endregion
 
@@ -46,7 +42,7 @@ namespace Org.Apache.Kafka.Common
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#completedFuture(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#completedFuture(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
@@ -55,7 +51,7 @@ namespace Org.Apache.Kafka.Common
             return SExecute<Org.Apache.Kafka.Common.KafkaFuture>(LocalBridgeClazz, "completedFuture", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#allOf(org.apache.kafka.common.KafkaFuture[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#allOf(org.apache.kafka.common.KafkaFuture[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
@@ -68,7 +64,7 @@ namespace Org.Apache.Kafka.Common
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#thenApply(org.apache.kafka.common.KafkaFuture.BaseFunction)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#thenApply(org.apache.kafka.common.KafkaFuture.BaseFunction)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.KafkaFuture.BaseFunction"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
@@ -77,7 +73,7 @@ namespace Org.Apache.Kafka.Common
             return IExecute<Org.Apache.Kafka.Common.KafkaFuture>("thenApply", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#cancel(boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#cancel(boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -86,7 +82,7 @@ namespace Org.Apache.Kafka.Common
             return IExecute<bool>("cancel", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#isCancelled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#isCancelled()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -95,7 +91,7 @@ namespace Org.Apache.Kafka.Common
             return IExecute<bool>("isCancelled");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#isCompletedExceptionally()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#isCompletedExceptionally()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -104,7 +100,7 @@ namespace Org.Apache.Kafka.Common
             return IExecute<bool>("isCompletedExceptionally");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#isDone()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#isDone()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -113,7 +109,7 @@ namespace Org.Apache.Kafka.Common
             return IExecute<bool>("isDone");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#toCompletionStage()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#toCompletionStage()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Concurrent.CompletionStage"/></returns>
@@ -122,7 +118,7 @@ namespace Org.Apache.Kafka.Common
             return IExecute<Java.Util.Concurrent.CompletionStage>("toCompletionStage");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#whenComplete(org.apache.kafka.common.KafkaFuture.BiConsumer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#whenComplete(org.apache.kafka.common.KafkaFuture.BiConsumer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.KafkaFuture.BiConsumer"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
@@ -131,7 +127,7 @@ namespace Org.Apache.Kafka.Common
             return IExecute<Org.Apache.Kafka.Common.KafkaFuture>("whenComplete", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#get()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#get()"/>
         /// </summary>
 
         /// <returns><see cref="object"/></returns>
@@ -142,7 +138,7 @@ namespace Org.Apache.Kafka.Common
             return IExecute("get");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#get(long,java.util.concurrent.TimeUnit)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#get(long,java.util.concurrent.TimeUnit)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="Java.Util.Concurrent.TimeUnit"/></param>
@@ -155,7 +151,7 @@ namespace Org.Apache.Kafka.Common
             return IExecute("get", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#getNow(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#getNow(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="object"/></returns>
@@ -190,7 +186,7 @@ namespace Org.Apache.Kafka.Common
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.BaseFunction.html#apply(java.lang.Object)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.BaseFunction.html#apply(java.lang.Object)"/>
             /// </summary>
             /// <param name="arg0"><see cref="object"/></param>
             /// <returns><see cref="object"/></returns>
@@ -234,7 +230,7 @@ namespace Org.Apache.Kafka.Common
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.BaseFunction.html#apply(java.lang.Object)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.BaseFunction.html#apply(java.lang.Object)"/>
             /// </summary>
             /// <param name="arg0"><typeparamref name="A"/></param>
             /// <returns><typeparamref name="B"/></returns>
@@ -274,7 +270,7 @@ namespace Org.Apache.Kafka.Common
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.BiConsumer.html#accept(java.lang.Object,java.lang.Object)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.BiConsumer.html#accept(java.lang.Object,java.lang.Object)"/>
             /// </summary>
             /// <param name="arg0"><see cref="object"/></param>
             /// <param name="arg1"><see cref="object"/></param>
@@ -318,7 +314,7 @@ namespace Org.Apache.Kafka.Common
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.BiConsumer.html#accept(java.lang.Object,java.lang.Object)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.BiConsumer.html#accept(java.lang.Object,java.lang.Object)"/>
             /// </summary>
             /// <param name="arg0"><typeparamref name="A"/></param>
             /// <param name="arg1"><typeparamref name="B"/></param>
@@ -353,10 +349,6 @@ namespace Org.Apache.Kafka.Common
 
         #region Class/Interface conversion operators
         /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.KafkaFuture{T}"/> to <see cref="Java.Util.Concurrent.Future"/>
-        /// </summary>
-        public static implicit operator Java.Util.Concurrent.Future(Org.Apache.Kafka.Common.KafkaFuture<T> t) => t.Cast<Java.Util.Concurrent.Future>();
-        /// <summary>
         /// Converter from <see cref="Org.Apache.Kafka.Common.KafkaFuture{T}"/> to <see cref="Org.Apache.Kafka.Common.KafkaFuture"/>
         /// </summary>
         public static implicit operator Org.Apache.Kafka.Common.KafkaFuture(Org.Apache.Kafka.Common.KafkaFuture<T> t) => t.Cast<Org.Apache.Kafka.Common.KafkaFuture>();
@@ -369,7 +361,7 @@ namespace Org.Apache.Kafka.Common
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#completedFuture(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#completedFuture(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="U"/></param>
         /// <typeparam name="U"></typeparam>
@@ -379,12 +371,11 @@ namespace Org.Apache.Kafka.Common
             return SExecute<Org.Apache.Kafka.Common.KafkaFuture<U>>(LocalBridgeClazz, "completedFuture", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#allOf(org.apache.kafka.common.KafkaFuture[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#allOf(org.apache.kafka.common.KafkaFuture[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></param>
-        /// <typeparam name="Arg0Extendsobject"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
-        public static Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void> AllOf<Arg0Extendsobject>(params Org.Apache.Kafka.Common.KafkaFuture<Arg0Extendsobject>[] arg0)
+        public static Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void> AllOf(params Org.Apache.Kafka.Common.KafkaFuture<object>[] arg0)
         {
             if (arg0.Length == 0) return SExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>>(LocalBridgeClazz, "allOf"); else return SExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>>(LocalBridgeClazz, "allOf", arg0);
         }
@@ -393,7 +384,7 @@ namespace Org.Apache.Kafka.Common
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#thenApply(org.apache.kafka.common.KafkaFuture.BaseFunction)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#thenApply(org.apache.kafka.common.KafkaFuture.BaseFunction)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.KafkaFuture.BaseFunction"/></param>
         /// <typeparam name="R"></typeparam>
@@ -403,7 +394,7 @@ namespace Org.Apache.Kafka.Common
             return IExecute<Org.Apache.Kafka.Common.KafkaFuture<R>>("thenApply", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#cancel(boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#cancel(boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -412,7 +403,7 @@ namespace Org.Apache.Kafka.Common
             return IExecute<bool>("cancel", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#isCancelled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#isCancelled()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -421,7 +412,7 @@ namespace Org.Apache.Kafka.Common
             return IExecute<bool>("isCancelled");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#isCompletedExceptionally()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#isCompletedExceptionally()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -430,7 +421,7 @@ namespace Org.Apache.Kafka.Common
             return IExecute<bool>("isCompletedExceptionally");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#isDone()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#isDone()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -439,7 +430,7 @@ namespace Org.Apache.Kafka.Common
             return IExecute<bool>("isDone");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#toCompletionStage()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#toCompletionStage()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Concurrent.CompletionStage"/></returns>
@@ -448,7 +439,7 @@ namespace Org.Apache.Kafka.Common
             return IExecute<Java.Util.Concurrent.CompletionStage<T>>("toCompletionStage");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#whenComplete(org.apache.kafka.common.KafkaFuture.BiConsumer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#whenComplete(org.apache.kafka.common.KafkaFuture.BiConsumer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.KafkaFuture.BiConsumer"/></param>
         /// <typeparam name="Arg0objectSuperT"><typeparamref name="T"/></typeparam>
@@ -459,7 +450,7 @@ namespace Org.Apache.Kafka.Common
             return IExecute<Org.Apache.Kafka.Common.KafkaFuture<T>>("whenComplete", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#get()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#get()"/>
         /// </summary>
 
         /// <returns><typeparamref name="T"/></returns>
@@ -470,7 +461,7 @@ namespace Org.Apache.Kafka.Common
             return IExecute<T>("get");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#get(long,java.util.concurrent.TimeUnit)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#get(long,java.util.concurrent.TimeUnit)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="Java.Util.Concurrent.TimeUnit"/></param>
@@ -483,7 +474,7 @@ namespace Org.Apache.Kafka.Common
             return IExecute<T>("get", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#getNow(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html#getNow(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="T"/></param>
         /// <returns><typeparamref name="T"/></returns>

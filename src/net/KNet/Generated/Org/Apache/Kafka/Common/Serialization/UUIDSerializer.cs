@@ -50,7 +50,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/UUIDSerializer.html#serialize(java.lang.String,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/UUIDSerializer.html#serialize(java.lang.String,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -60,7 +60,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             return IExecuteArray<byte>("serialize", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/UUIDSerializer.html#serialize(java.lang.String,java.util.UUID)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/UUIDSerializer.html#serialize(java.lang.String,java.util.UUID)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Java.Util.UUID"/></param>
@@ -70,12 +70,11 @@ namespace Org.Apache.Kafka.Common.Serialization
             return IExecuteArray<byte>("serialize", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/UUIDSerializer.html#configure(java.util.Map,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/UUIDSerializer.html#configure(java.util.Map,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
-        /// <typeparam name="Arg0Extendsobject"></typeparam>
-        public void Configure<Arg0Extendsobject>(Java.Util.Map<string, Arg0Extendsobject> arg0, bool arg1)
+        public void Configure(Java.Util.Map<string, object> arg0, bool arg1)
         {
             IExecute("configure", arg0, arg1);
         }

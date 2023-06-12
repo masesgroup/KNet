@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Crc32C.html#create()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Crc32C.html#create()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Zip.Checksum"/></returns>
@@ -51,7 +51,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecute<Java.Util.Zip.Checksum>(LocalBridgeClazz, "create");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Crc32C.html#compute(byte[],int,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Crc32C.html#compute(byte[],int,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -62,7 +62,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecute<long>(LocalBridgeClazz, "compute", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Crc32C.html#compute(java.nio.ByteBuffer,int,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Crc32C.html#compute(java.nio.ByteBuffer,int,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <param name="arg1"><see cref="int"/></param>

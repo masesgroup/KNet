@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/SampledStat.html#%3Cinit%3E(double)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/SampledStat.html#%3Cinit%3E(double)"/>
         /// </summary>
         /// <param name="arg0"><see cref="double"/></param>
         public SampledStat(double arg0)
@@ -41,10 +41,6 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.Metrics.Stats.SampledStat"/> to <see cref="Org.Apache.Kafka.Common.Metrics.MeasurableStat"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Common.Metrics.MeasurableStat(Org.Apache.Kafka.Common.Metrics.Stats.SampledStat t) => t.Cast<Org.Apache.Kafka.Common.Metrics.MeasurableStat>();
 
         #endregion
 
@@ -58,7 +54,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/SampledStat.html#combine(java.util.List,org.apache.kafka.common.metrics.MetricConfig,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/SampledStat.html#combine(java.util.List,org.apache.kafka.common.metrics.MetricConfig,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Metrics.MetricConfig"/></param>
@@ -69,7 +65,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
             return IExecute<double>("combine", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/SampledStat.html#measure(org.apache.kafka.common.metrics.MetricConfig,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/SampledStat.html#measure(org.apache.kafka.common.metrics.MetricConfig,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Metrics.MetricConfig"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -79,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
             return IExecute<double>("measure", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/SampledStat.html#record(org.apache.kafka.common.metrics.MetricConfig,double,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/stats/SampledStat.html#record(org.apache.kafka.common.metrics.MetricConfig,double,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Metrics.MetricConfig"/></param>
         /// <param name="arg1"><see cref="double"/></param>

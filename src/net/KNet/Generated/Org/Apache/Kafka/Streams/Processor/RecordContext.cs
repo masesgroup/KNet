@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Streams.Processor
 {
+    #region IRecordContext
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/RecordContext.html"/>
+    /// </summary>
+    public partial interface IRecordContext
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region RecordContext
-    public partial class RecordContext
+    public partial class RecordContext : Org.Apache.Kafka.Streams.Processor.IRecordContext
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/RecordContext.html#partition()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/RecordContext.html#partition()"/>
         /// </summary>
 
         /// <returns><see cref="int"/></returns>
@@ -55,7 +73,7 @@ namespace Org.Apache.Kafka.Streams.Processor
             return IExecute<int>("partition");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/RecordContext.html#topic()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/RecordContext.html#topic()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -64,7 +82,7 @@ namespace Org.Apache.Kafka.Streams.Processor
             return IExecute<string>("topic");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/RecordContext.html#offset()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/RecordContext.html#offset()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -73,7 +91,7 @@ namespace Org.Apache.Kafka.Streams.Processor
             return IExecute<long>("offset");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/RecordContext.html#timestamp()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/RecordContext.html#timestamp()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -82,7 +100,7 @@ namespace Org.Apache.Kafka.Streams.Processor
             return IExecute<long>("timestamp");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/RecordContext.html#headers()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/RecordContext.html#headers()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Header.Headers"/></returns>

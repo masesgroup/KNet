@@ -27,9 +27,9 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 {
     #region OAuthBearerExtensionsValidatorCallback
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerExtensionsValidatorCallback.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerExtensionsValidatorCallback.html"/>
     /// </summary>
-    public partial class OAuthBearerExtensionsValidatorCallback : MASES.JCOBridge.C2JBridge.JVMBridgeBase<OAuthBearerExtensionsValidatorCallback>
+    public partial class OAuthBearerExtensionsValidatorCallback : Javax.Security.Auth.Callback.Callback
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -70,9 +70,9 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 
     #region OAuthBearerLoginCallbackHandler
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html"/>
     /// </summary>
-    public partial class OAuthBearerLoginCallbackHandler : MASES.JCOBridge.C2JBridge.JVMBridgeBase<OAuthBearerLoginCallbackHandler>
+    public partial class OAuthBearerLoginCallbackHandler : Org.Apache.Kafka.Common.Security.Auth.AuthenticateCallbackHandler
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -113,9 +113,9 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 
     #region OAuthBearerLoginModule
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginModule.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginModule.html"/>
     /// </summary>
-    public partial class OAuthBearerLoginModule : MASES.JCOBridge.C2JBridge.JVMBridgeBase<OAuthBearerLoginModule>
+    public partial class OAuthBearerLoginModule : Javax.Security.Auth.Spi.LoginModule
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 
     #region OAuthBearerToken
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html"/>
     /// </summary>
     public partial class OAuthBearerToken : MASES.JCOBridge.C2JBridge.JVMBridgeBase<OAuthBearerToken>
     {
@@ -199,9 +199,9 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 
     #region OAuthBearerTokenCallback
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerTokenCallback.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerTokenCallback.html"/>
     /// </summary>
-    public partial class OAuthBearerTokenCallback : MASES.JCOBridge.C2JBridge.JVMBridgeBase<OAuthBearerTokenCallback>
+    public partial class OAuthBearerTokenCallback : Javax.Security.Auth.Callback.Callback
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -242,9 +242,9 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 
     #region OAuthBearerValidatorCallback
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallback.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallback.html"/>
     /// </summary>
-    public partial class OAuthBearerValidatorCallback : MASES.JCOBridge.C2JBridge.JVMBridgeBase<OAuthBearerValidatorCallback>
+    public partial class OAuthBearerValidatorCallback : Javax.Security.Auth.Callback.Callback
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -285,9 +285,9 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 
     #region OAuthBearerValidatorCallbackHandler
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallbackHandler.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallbackHandler.html"/>
     /// </summary>
-    public partial class OAuthBearerValidatorCallbackHandler : MASES.JCOBridge.C2JBridge.JVMBridgeBase<OAuthBearerValidatorCallbackHandler>
+    public partial class OAuthBearerValidatorCallbackHandler : Org.Apache.Kafka.Common.Security.Auth.AuthenticateCallbackHandler
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -325,6 +325,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 
     }
     #endregion
+
 
 
 }

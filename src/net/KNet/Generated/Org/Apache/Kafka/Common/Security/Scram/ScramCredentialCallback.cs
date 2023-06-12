@@ -33,10 +33,6 @@ namespace Org.Apache.Kafka.Common.Security.Scram
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.Security.Scram.ScramCredentialCallback"/> to <see cref="Javax.Security.Auth.Callback.Callback"/>
-        /// </summary>
-        public static implicit operator Javax.Security.Auth.Callback.Callback(Org.Apache.Kafka.Common.Security.Scram.ScramCredentialCallback t) => t.Cast<Javax.Security.Auth.Callback.Callback>();
 
         #endregion
 
@@ -50,7 +46,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramCredentialCallback.html#scramCredential()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramCredentialCallback.html#scramCredential()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Scram.ScramCredential"/></returns>
@@ -59,7 +55,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
             return IExecute<Org.Apache.Kafka.Common.Security.Scram.ScramCredential>("scramCredential");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramCredentialCallback.html#scramCredential(org.apache.kafka.common.security.scram.ScramCredential)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramCredentialCallback.html#scramCredential(org.apache.kafka.common.security.scram.ScramCredential)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Security.Scram.ScramCredential"/></param>
         public void ScramCredential(Org.Apache.Kafka.Common.Security.Scram.ScramCredential arg0)

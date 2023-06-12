@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Protocol
 {
+    #region IApiMessage
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiMessage.html"/>
+    /// </summary>
+    public partial interface IApiMessage : Org.Apache.Kafka.Common.Protocol.IMessage
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region ApiMessage
-    public partial class ApiMessage
+    public partial class ApiMessage : Org.Apache.Kafka.Common.Protocol.IApiMessage
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Protocol
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiMessage.html#apiKey()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiMessage.html#apiKey()"/>
         /// </summary>
 
         /// <returns><see cref="short"/></returns>

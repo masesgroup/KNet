@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Utils
 {
+    #region IScheduler
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Scheduler.html"/>
+    /// </summary>
+    public partial interface IScheduler
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region Scheduler
-    public partial class Scheduler
+    public partial class Scheduler : Org.Apache.Kafka.Common.Utils.IScheduler
     {
         #region Constructors
 
@@ -38,7 +56,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Scheduler.html#SYSTEM"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Scheduler.html#SYSTEM"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Utils.Scheduler SYSTEM { get { return SGetField<Org.Apache.Kafka.Common.Utils.Scheduler>(LocalBridgeClazz, "SYSTEM"); } }
 
@@ -50,7 +68,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Scheduler.html#schedule(java.util.concurrent.ScheduledExecutorService,java.util.concurrent.Callable,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Scheduler.html#schedule(java.util.concurrent.ScheduledExecutorService,java.util.concurrent.Callable,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Concurrent.ScheduledExecutorService"/></param>
         /// <param name="arg1"><see cref="Java.Util.Concurrent.Callable"/></param>
@@ -62,7 +80,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecute<Java.Util.Concurrent.Future<T>>("schedule", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Scheduler.html#time()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Scheduler.html#time()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Utils.Time"/></returns>

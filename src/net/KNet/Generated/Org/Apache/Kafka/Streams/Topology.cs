@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Streams
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#%3Cinit%3E(org.apache.kafka.streams.TopologyConfig)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#%3Cinit%3E(org.apache.kafka.streams.TopologyConfig)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.TopologyConfig"/></param>
         public Topology(Org.Apache.Kafka.Streams.TopologyConfig arg0)
@@ -54,7 +54,7 @@ namespace Org.Apache.Kafka.Streams
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,java.lang.String,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer,java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,java.lang.String,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer,java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -69,7 +69,7 @@ namespace Org.Apache.Kafka.Streams
             if (arg4.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Topology>("addSink", arg0, arg1, arg2, arg3); else return IExecute<Org.Apache.Kafka.Streams.Topology>("addSink", arg0, arg1, arg2, arg3, arg4);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,java.lang.String,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.streams.processor.StreamPartitioner,java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,java.lang.String,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.streams.processor.StreamPartitioner,java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Streams
             if (arg5.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Topology>("addSink", arg0, arg1, arg2, arg3, arg4); else return IExecute<Org.Apache.Kafka.Streams.Topology>("addSink", arg0, arg1, arg2, arg3, arg4, arg5);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,java.lang.String,org.apache.kafka.streams.processor.StreamPartitioner,java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,java.lang.String,org.apache.kafka.streams.processor.StreamPartitioner,java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -103,7 +103,7 @@ namespace Org.Apache.Kafka.Streams
             if (arg3.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Topology>("addSink", arg0, arg1, arg2); else return IExecute<Org.Apache.Kafka.Streams.Topology>("addSink", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,org.apache.kafka.streams.processor.TopicNameExtractor,java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,org.apache.kafka.streams.processor.TopicNameExtractor,java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Processor.TopicNameExtractor"/></param>
@@ -116,7 +116,7 @@ namespace Org.Apache.Kafka.Streams
             if (arg2.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Topology>("addSink", arg0, arg1); else return IExecute<Org.Apache.Kafka.Streams.Topology>("addSink", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,org.apache.kafka.streams.processor.TopicNameExtractor,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer,java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,org.apache.kafka.streams.processor.TopicNameExtractor,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer,java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Processor.TopicNameExtractor"/></param>
@@ -131,7 +131,7 @@ namespace Org.Apache.Kafka.Streams
             if (arg4.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Topology>("addSink", arg0, arg1, arg2, arg3); else return IExecute<Org.Apache.Kafka.Streams.Topology>("addSink", arg0, arg1, arg2, arg3, arg4);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,org.apache.kafka.streams.processor.TopicNameExtractor,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.streams.processor.StreamPartitioner,java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,org.apache.kafka.streams.processor.TopicNameExtractor,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.streams.processor.StreamPartitioner,java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Processor.TopicNameExtractor"/></param>
@@ -149,7 +149,7 @@ namespace Org.Apache.Kafka.Streams
             if (arg5.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Topology>("addSink", arg0, arg1, arg2, arg3, arg4); else return IExecute<Org.Apache.Kafka.Streams.Topology>("addSink", arg0, arg1, arg2, arg3, arg4, arg5);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,org.apache.kafka.streams.processor.TopicNameExtractor,org.apache.kafka.streams.processor.StreamPartitioner,java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,org.apache.kafka.streams.processor.TopicNameExtractor,org.apache.kafka.streams.processor.StreamPartitioner,java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Processor.TopicNameExtractor"/></param>
@@ -165,7 +165,7 @@ namespace Org.Apache.Kafka.Streams
             if (arg3.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Topology>("addSink", arg0, arg1, arg2); else return IExecute<Org.Apache.Kafka.Streams.Topology>("addSink", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addProcessor(java.lang.String,org.apache.kafka.streams.processor.api.ProcessorSupplier,java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addProcessor(java.lang.String,org.apache.kafka.streams.processor.api.ProcessorSupplier,java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier"/></param>
@@ -180,7 +180,7 @@ namespace Org.Apache.Kafka.Streams
             if (arg2.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Topology>("addProcessor", arg0, arg1); else return IExecute<Org.Apache.Kafka.Streams.Topology>("addProcessor", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addGlobalStore(org.apache.kafka.streams.state.StoreBuilder,java.lang.String,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.lang.String,java.lang.String,org.apache.kafka.streams.processor.api.ProcessorSupplier)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addGlobalStore(org.apache.kafka.streams.state.StoreBuilder,java.lang.String,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.lang.String,java.lang.String,org.apache.kafka.streams.processor.api.ProcessorSupplier)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.StoreBuilder"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -197,7 +197,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecute<Org.Apache.Kafka.Streams.Topology>("addGlobalStore", arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addGlobalStore(org.apache.kafka.streams.state.StoreBuilder,java.lang.String,org.apache.kafka.streams.processor.TimestampExtractor,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.lang.String,java.lang.String,org.apache.kafka.streams.processor.api.ProcessorSupplier)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addGlobalStore(org.apache.kafka.streams.state.StoreBuilder,java.lang.String,org.apache.kafka.streams.processor.TimestampExtractor,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.lang.String,java.lang.String,org.apache.kafka.streams.processor.api.ProcessorSupplier)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.StoreBuilder"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -215,7 +215,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecute<Org.Apache.Kafka.Streams.Topology>("addGlobalStore", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,java.lang.String,java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,java.lang.String,java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -226,7 +226,7 @@ namespace Org.Apache.Kafka.Streams
             if (arg2.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Topology>("addSink", arg0, arg1); else return IExecute<Org.Apache.Kafka.Streams.Topology>("addSink", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSource(java.lang.String,java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSource(java.lang.String,java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -236,7 +236,7 @@ namespace Org.Apache.Kafka.Streams
             if (arg1.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0); else return IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSource(java.lang.String,java.util.regex.Pattern)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSource(java.lang.String,java.util.regex.Pattern)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Java.Util.Regex.Pattern"/></param>
@@ -246,35 +246,31 @@ namespace Org.Apache.Kafka.Streams
             return IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSource(java.lang.String,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSource(java.lang.String,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
         /// <param name="arg3"><see cref="string"/></param>
-        /// <typeparam name="Arg1Extendsobject"></typeparam>
-        /// <typeparam name="Arg2Extendsobject"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Topology"/></returns>
-        public Org.Apache.Kafka.Streams.Topology AddSource<Arg1Extendsobject, Arg2Extendsobject>(string arg0, Org.Apache.Kafka.Common.Serialization.Deserializer<Arg1Extendsobject> arg1, Org.Apache.Kafka.Common.Serialization.Deserializer<Arg2Extendsobject> arg2, params string[] arg3)
+        public Org.Apache.Kafka.Streams.Topology AddSource(string arg0, Org.Apache.Kafka.Common.Serialization.Deserializer<object> arg1, Org.Apache.Kafka.Common.Serialization.Deserializer<object> arg2, params string[] arg3)
         {
             if (arg3.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2); else return IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSource(java.lang.String,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.util.regex.Pattern)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSource(java.lang.String,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.util.regex.Pattern)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
         /// <param name="arg3"><see cref="Java.Util.Regex.Pattern"/></param>
-        /// <typeparam name="Arg1Extendsobject"></typeparam>
-        /// <typeparam name="Arg2Extendsobject"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Topology"/></returns>
-        public Org.Apache.Kafka.Streams.Topology AddSource<Arg1Extendsobject, Arg2Extendsobject>(string arg0, Org.Apache.Kafka.Common.Serialization.Deserializer<Arg1Extendsobject> arg1, Org.Apache.Kafka.Common.Serialization.Deserializer<Arg2Extendsobject> arg2, Java.Util.Regex.Pattern arg3)
+        public Org.Apache.Kafka.Streams.Topology AddSource(string arg0, Org.Apache.Kafka.Common.Serialization.Deserializer<object> arg1, Org.Apache.Kafka.Common.Serialization.Deserializer<object> arg2, Java.Util.Regex.Pattern arg3)
         {
             return IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.processor.TimestampExtractor,java.lang.String,java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.processor.TimestampExtractor,java.lang.String,java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.TimestampExtractor"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -285,7 +281,7 @@ namespace Org.Apache.Kafka.Streams
             if (arg2.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1); else return IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.processor.TimestampExtractor,java.lang.String,java.util.regex.Pattern)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.processor.TimestampExtractor,java.lang.String,java.util.regex.Pattern)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.TimestampExtractor"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -296,7 +292,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.Topology.AutoOffsetReset,java.lang.String,java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.Topology.AutoOffsetReset,java.lang.String,java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -307,7 +303,7 @@ namespace Org.Apache.Kafka.Streams
             if (arg2.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1); else return IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.Topology.AutoOffsetReset,java.lang.String,java.util.regex.Pattern)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.Topology.AutoOffsetReset,java.lang.String,java.util.regex.Pattern)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -318,37 +314,33 @@ namespace Org.Apache.Kafka.Streams
             return IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.Topology.AutoOffsetReset,java.lang.String,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.Topology.AutoOffsetReset,java.lang.String,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
         /// <param name="arg1"><see cref="string"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
         /// <param name="arg3"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
         /// <param name="arg4"><see cref="string"/></param>
-        /// <typeparam name="Arg2Extendsobject"></typeparam>
-        /// <typeparam name="Arg3Extendsobject"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Topology"/></returns>
-        public Org.Apache.Kafka.Streams.Topology AddSource<Arg2Extendsobject, Arg3Extendsobject>(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, string arg1, Org.Apache.Kafka.Common.Serialization.Deserializer<Arg2Extendsobject> arg2, Org.Apache.Kafka.Common.Serialization.Deserializer<Arg3Extendsobject> arg3, params string[] arg4)
+        public Org.Apache.Kafka.Streams.Topology AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, string arg1, Org.Apache.Kafka.Common.Serialization.Deserializer<object> arg2, Org.Apache.Kafka.Common.Serialization.Deserializer<object> arg3, params string[] arg4)
         {
             if (arg4.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2, arg3); else return IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2, arg3, arg4);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.Topology.AutoOffsetReset,java.lang.String,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.util.regex.Pattern)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.Topology.AutoOffsetReset,java.lang.String,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.util.regex.Pattern)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
         /// <param name="arg1"><see cref="string"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
         /// <param name="arg3"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
         /// <param name="arg4"><see cref="Java.Util.Regex.Pattern"/></param>
-        /// <typeparam name="Arg2Extendsobject"></typeparam>
-        /// <typeparam name="Arg3Extendsobject"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Topology"/></returns>
-        public Org.Apache.Kafka.Streams.Topology AddSource<Arg2Extendsobject, Arg3Extendsobject>(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, string arg1, Org.Apache.Kafka.Common.Serialization.Deserializer<Arg2Extendsobject> arg2, Org.Apache.Kafka.Common.Serialization.Deserializer<Arg3Extendsobject> arg3, Java.Util.Regex.Pattern arg4)
+        public Org.Apache.Kafka.Streams.Topology AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, string arg1, Org.Apache.Kafka.Common.Serialization.Deserializer<object> arg2, Org.Apache.Kafka.Common.Serialization.Deserializer<object> arg3, Java.Util.Regex.Pattern arg4)
         {
             return IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2, arg3, arg4);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.Topology.AutoOffsetReset,java.lang.String,org.apache.kafka.streams.processor.TimestampExtractor,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.Topology.AutoOffsetReset,java.lang.String,org.apache.kafka.streams.processor.TimestampExtractor,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -356,15 +348,13 @@ namespace Org.Apache.Kafka.Streams
         /// <param name="arg3"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
         /// <param name="arg5"><see cref="string"/></param>
-        /// <typeparam name="Arg3Extendsobject"></typeparam>
-        /// <typeparam name="Arg4Extendsobject"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Topology"/></returns>
-        public Org.Apache.Kafka.Streams.Topology AddSource<Arg3Extendsobject, Arg4Extendsobject>(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, string arg1, Org.Apache.Kafka.Streams.Processor.TimestampExtractor arg2, Org.Apache.Kafka.Common.Serialization.Deserializer<Arg3Extendsobject> arg3, Org.Apache.Kafka.Common.Serialization.Deserializer<Arg4Extendsobject> arg4, params string[] arg5)
+        public Org.Apache.Kafka.Streams.Topology AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, string arg1, Org.Apache.Kafka.Streams.Processor.TimestampExtractor arg2, Org.Apache.Kafka.Common.Serialization.Deserializer<object> arg3, Org.Apache.Kafka.Common.Serialization.Deserializer<object> arg4, params string[] arg5)
         {
             if (arg5.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2, arg3, arg4); else return IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2, arg3, arg4, arg5);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.Topology.AutoOffsetReset,java.lang.String,org.apache.kafka.streams.processor.TimestampExtractor,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.util.regex.Pattern)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.Topology.AutoOffsetReset,java.lang.String,org.apache.kafka.streams.processor.TimestampExtractor,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.util.regex.Pattern)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -372,15 +362,13 @@ namespace Org.Apache.Kafka.Streams
         /// <param name="arg3"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
         /// <param name="arg5"><see cref="Java.Util.Regex.Pattern"/></param>
-        /// <typeparam name="Arg3Extendsobject"></typeparam>
-        /// <typeparam name="Arg4Extendsobject"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Topology"/></returns>
-        public Org.Apache.Kafka.Streams.Topology AddSource<Arg3Extendsobject, Arg4Extendsobject>(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, string arg1, Org.Apache.Kafka.Streams.Processor.TimestampExtractor arg2, Org.Apache.Kafka.Common.Serialization.Deserializer<Arg3Extendsobject> arg3, Org.Apache.Kafka.Common.Serialization.Deserializer<Arg4Extendsobject> arg4, Java.Util.Regex.Pattern arg5)
+        public Org.Apache.Kafka.Streams.Topology AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, string arg1, Org.Apache.Kafka.Streams.Processor.TimestampExtractor arg2, Org.Apache.Kafka.Common.Serialization.Deserializer<object> arg3, Org.Apache.Kafka.Common.Serialization.Deserializer<object> arg4, Java.Util.Regex.Pattern arg5)
         {
             return IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2, arg3, arg4, arg5);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.Topology.AutoOffsetReset,org.apache.kafka.streams.processor.TimestampExtractor,java.lang.String,java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.Topology.AutoOffsetReset,org.apache.kafka.streams.processor.TimestampExtractor,java.lang.String,java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Processor.TimestampExtractor"/></param>
@@ -392,7 +380,7 @@ namespace Org.Apache.Kafka.Streams
             if (arg3.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2); else return IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.Topology.AutoOffsetReset,org.apache.kafka.streams.processor.TimestampExtractor,java.lang.String,java.util.regex.Pattern)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.Topology.AutoOffsetReset,org.apache.kafka.streams.processor.TimestampExtractor,java.lang.String,java.util.regex.Pattern)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Processor.TimestampExtractor"/></param>
@@ -404,7 +392,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addStateStore(org.apache.kafka.streams.state.StoreBuilder,java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addStateStore(org.apache.kafka.streams.state.StoreBuilder,java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.StoreBuilder"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -414,7 +402,7 @@ namespace Org.Apache.Kafka.Streams
             if (arg1.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Topology>("addStateStore", arg0); else return IExecute<Org.Apache.Kafka.Streams.Topology>("addStateStore", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#connectProcessorAndStateStores(java.lang.String,java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#connectProcessorAndStateStores(java.lang.String,java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -424,7 +412,7 @@ namespace Org.Apache.Kafka.Streams
             if (arg1.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Topology>("connectProcessorAndStateStores", arg0); else return IExecute<Org.Apache.Kafka.Streams.Topology>("connectProcessorAndStateStores", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#describe()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#describe()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Streams.TopologyDescription"/></returns>
@@ -449,11 +437,11 @@ namespace Org.Apache.Kafka.Streams
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.AutoOffsetReset.html#EARLIEST"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.AutoOffsetReset.html#EARLIEST"/>
             /// </summary>
             public static Org.Apache.Kafka.Streams.Topology.AutoOffsetReset EARLIEST { get { return SGetField<Org.Apache.Kafka.Streams.Topology.AutoOffsetReset>(LocalBridgeClazz, "EARLIEST"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.AutoOffsetReset.html#LATEST"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.AutoOffsetReset.html#LATEST"/>
             /// </summary>
             public static Org.Apache.Kafka.Streams.Topology.AutoOffsetReset LATEST { get { return SGetField<Org.Apache.Kafka.Streams.Topology.AutoOffsetReset>(LocalBridgeClazz, "LATEST"); } }
 
@@ -461,7 +449,7 @@ namespace Org.Apache.Kafka.Streams
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.AutoOffsetReset.html#valueOf(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.AutoOffsetReset.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></returns>
@@ -470,7 +458,7 @@ namespace Org.Apache.Kafka.Streams
                 return SExecute<Org.Apache.Kafka.Streams.Topology.AutoOffsetReset>(LocalBridgeClazz, "valueOf", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.AutoOffsetReset.html#values()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.AutoOffsetReset.html#values()"/>
             /// </summary>
 
             /// <returns><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></returns>

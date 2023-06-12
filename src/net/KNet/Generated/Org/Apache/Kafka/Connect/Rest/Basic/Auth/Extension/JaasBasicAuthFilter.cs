@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-basic-auth-extension/3.4.0/org/apache/kafka/connect/rest/basic/auth/extension/JaasBasicAuthFilter.html#%3Cinit%3E(javax.security.auth.login.Configuration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.4.0/org/apache/kafka/connect/rest/basic/auth/extension/JaasBasicAuthFilter.html#%3Cinit%3E(javax.security.auth.login.Configuration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Javax.Security.Auth.Login.Configuration"/></param>
         public JaasBasicAuthFilter(Javax.Security.Auth.Login.Configuration arg0)
@@ -65,10 +65,6 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
             #endregion
 
             #region Class/Interface conversion operators
-            /// <summary>
-            /// Converter from <see cref="Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension.JaasBasicAuthFilter.BasicAuthCallBackHandler"/> to <see cref="Javax.Security.Auth.Callback.CallbackHandler"/>
-            /// </summary>
-            public static implicit operator Javax.Security.Auth.Callback.CallbackHandler(Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension.JaasBasicAuthFilter.BasicAuthCallBackHandler t) => t.Cast<Javax.Security.Auth.Callback.CallbackHandler>();
 
             #endregion
 
@@ -82,7 +78,7 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-basic-auth-extension/3.4.0/org/apache/kafka/connect/rest/basic/auth/extension/JaasBasicAuthFilter.BasicAuthCallBackHandler.html#handle(javax.security.auth.callback.Callback[])"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.4.0/org/apache/kafka/connect/rest/basic/auth/extension/JaasBasicAuthFilter.BasicAuthCallBackHandler.html#handle(javax.security.auth.callback.Callback[])"/>
             /// </summary>
             /// <param name="arg0"><see cref="Javax.Security.Auth.Callback.Callback"/></param>
             /// <exception cref="Javax.Security.Auth.Callback.UnsupportedCallbackException"/>

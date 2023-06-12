@@ -42,21 +42,20 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/LoginManager.html#acquireLoginManager(org.apache.kafka.common.security.JaasContext,java.lang.String,java.lang.Class,java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/LoginManager.html#acquireLoginManager(org.apache.kafka.common.security.JaasContext,java.lang.String,java.lang.Class,java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Security.JaasContext"/></param>
         /// <param name="arg1"><see cref="string"/></param>
         /// <param name="arg2"><see cref="Java.Lang.Class"/></param>
         /// <param name="arg3"><see cref="Java.Util.Map"/></param>
-        /// <typeparam name="Arg3Extendsobject"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Authenticator.LoginManager"/></returns>
         /// <exception cref="Javax.Security.Auth.Login.LoginException"/>
-        public static Org.Apache.Kafka.Common.Security.Authenticator.LoginManager AcquireLoginManager<Arg3Extendsobject>(Org.Apache.Kafka.Common.Security.JaasContext arg0, string arg1, Java.Lang.Class arg2, Java.Util.Map<string, Arg3Extendsobject> arg3)
+        public static Org.Apache.Kafka.Common.Security.Authenticator.LoginManager AcquireLoginManager(Org.Apache.Kafka.Common.Security.JaasContext arg0, string arg1, Java.Lang.Class arg2, Java.Util.Map<string, object> arg3)
         {
             return SExecute<Org.Apache.Kafka.Common.Security.Authenticator.LoginManager>(LocalBridgeClazz, "acquireLoginManager", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/LoginManager.html#closeAll()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/LoginManager.html#closeAll()"/>
         /// </summary>
         public static void CloseAll()
         {
@@ -67,7 +66,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/LoginManager.html#serviceName()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/LoginManager.html#serviceName()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -76,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
             return IExecute<string>("serviceName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/LoginManager.html#subject()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/LoginManager.html#subject()"/>
         /// </summary>
 
         /// <returns><see cref="Javax.Security.Auth.Subject"/></returns>
@@ -85,7 +84,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
             return IExecute<Javax.Security.Auth.Subject>("subject");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/LoginManager.html#release()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/LoginManager.html#release()"/>
         /// </summary>
         public void Release()
         {

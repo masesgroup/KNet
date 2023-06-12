@@ -27,7 +27,7 @@ namespace Kafka.Admin
 {
     #region AclCommand
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/AclCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/AclCommand.html"/>
     /// </summary>
     public partial class AclCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AclCommand>, IJNetBridgeMain
     {
@@ -66,7 +66,7 @@ namespace Kafka.Admin
         // TODO: complete the class
         #region AclCommandOptions
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/AclCommand.AclCommandOptions.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/AclCommand.AclCommandOptions.html"/>
         /// </summary>
         public partial class AclCommandOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AclCommandOptions>
         {
@@ -109,7 +109,7 @@ namespace Kafka.Admin
 
         #region AclCommandService
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/AclCommand.AclCommandService.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/AclCommand.AclCommandService.html"/>
         /// </summary>
         public partial class AclCommandService : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AclCommandService>
         {
@@ -152,7 +152,7 @@ namespace Kafka.Admin
 
         #region AdminClientService
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/AclCommand.AdminClientService.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/AclCommand.AdminClientService.html"/>
         /// </summary>
         public partial class AdminClientService : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AdminClientService>
         {
@@ -195,7 +195,7 @@ namespace Kafka.Admin
 
         #region AuthorizerService
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/AclCommand.AuthorizerService.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/AclCommand.AuthorizerService.html"/>
         /// </summary>
         public partial class AuthorizerService : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AuthorizerService>
         {
@@ -242,7 +242,7 @@ namespace Kafka.Admin
 
     #region AdminOperationException
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/AdminOperationException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/AdminOperationException.html"/>
     /// </summary>
     public partial class AdminOperationException : Java.Lang.RuntimeException
     {
@@ -258,7 +258,7 @@ namespace Kafka.Admin
 
     #region AdminUtils
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/AdminUtils.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/AdminUtils.html"/>
     /// </summary>
     public partial class AdminUtils : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AdminUtils>
     {
@@ -301,7 +301,7 @@ namespace Kafka.Admin
 
     #region BrokerApiVersionsCommand
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/BrokerApiVersionsCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/BrokerApiVersionsCommand.html"/>
     /// </summary>
     public partial class BrokerApiVersionsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BrokerApiVersionsCommand>, IJNetBridgeMain
     {
@@ -340,7 +340,7 @@ namespace Kafka.Admin
         // TODO: complete the class
         #region BrokerVersionCommandOptions
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/BrokerApiVersionsCommand.BrokerVersionCommandOptions.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/BrokerApiVersionsCommand.BrokerVersionCommandOptions.html"/>
         /// </summary>
         public partial class BrokerVersionCommandOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BrokerVersionCommandOptions>
         {
@@ -387,7 +387,7 @@ namespace Kafka.Admin
 
     #region BrokerMetadata
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/BrokerMetadata.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/BrokerMetadata.html"/>
     /// </summary>
     public partial class BrokerMetadata : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BrokerMetadata>
     {
@@ -430,7 +430,7 @@ namespace Kafka.Admin
 
     #region ConfigCommand
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConfigCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConfigCommand.html"/>
     /// </summary>
     public partial class ConfigCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConfigCommand>, IJNetBridgeMain
     {
@@ -469,7 +469,7 @@ namespace Kafka.Admin
         // TODO: complete the class
         #region ConfigCommandOptions
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConfigCommand.ConfigCommandOptions.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConfigCommand.ConfigCommandOptions.html"/>
         /// </summary>
         public partial class ConfigCommandOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConfigCommandOptions>
         {
@@ -512,7 +512,7 @@ namespace Kafka.Admin
 
         #region ConfigEntity
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConfigCommand.ConfigEntity.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConfigCommand.ConfigEntity.html"/>
         /// </summary>
         public partial class ConfigEntity : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConfigEntity>
         {
@@ -555,7 +555,7 @@ namespace Kafka.Admin
 
         #region Entity
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConfigCommand.Entity.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConfigCommand.Entity.html"/>
         /// </summary>
         public partial class Entity : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Entity>
         {
@@ -602,7 +602,7 @@ namespace Kafka.Admin
 
     #region ConsumerGroupCommand
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.html"/>
     /// </summary>
     public partial class ConsumerGroupCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConsumerGroupCommand>, IJNetBridgeMain
     {
@@ -641,7 +641,7 @@ namespace Kafka.Admin
         // TODO: complete the class
         #region ConsumerGroupCommandOptions
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupCommandOptions.html"/>
         /// </summary>
         public partial class ConsumerGroupCommandOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConsumerGroupCommandOptions>
         {
@@ -684,7 +684,7 @@ namespace Kafka.Admin
 
         #region ConsumerGroupService
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupService.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.ConsumerGroupService.html"/>
         /// </summary>
         public partial class ConsumerGroupService : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConsumerGroupService>
         {
@@ -727,7 +727,7 @@ namespace Kafka.Admin
 
         #region CsvRecord
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecord.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecord.html"/>
         /// </summary>
         public partial class CsvRecord : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CsvRecord>
         {
@@ -770,7 +770,7 @@ namespace Kafka.Admin
 
         #region CsvRecordNoGroup
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordNoGroup.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordNoGroup.html"/>
         /// </summary>
         public partial class CsvRecordNoGroup : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CsvRecordNoGroup>
         {
@@ -813,7 +813,7 @@ namespace Kafka.Admin
 
         #region CsvRecordWithGroup
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordWithGroup.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvRecordWithGroup.html"/>
         /// </summary>
         public partial class CsvRecordWithGroup : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CsvRecordWithGroup>
         {
@@ -856,7 +856,7 @@ namespace Kafka.Admin
 
         #region CsvUtils
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvUtils.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.CsvUtils.html"/>
         /// </summary>
         public partial class CsvUtils : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CsvUtils>
         {
@@ -899,7 +899,7 @@ namespace Kafka.Admin
 
         #region GroupState
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.GroupState.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.GroupState.html"/>
         /// </summary>
         public partial class GroupState : MASES.JCOBridge.C2JBridge.JVMBridgeBase<GroupState>
         {
@@ -942,7 +942,7 @@ namespace Kafka.Admin
 
         #region LogOffsetResult
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.LogOffsetResult.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.LogOffsetResult.html"/>
         /// </summary>
         public partial class LogOffsetResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LogOffsetResult>
         {
@@ -985,7 +985,7 @@ namespace Kafka.Admin
 
         #region MemberAssignmentState
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.MemberAssignmentState.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.MemberAssignmentState.html"/>
         /// </summary>
         public partial class MemberAssignmentState : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MemberAssignmentState>
         {
@@ -1028,7 +1028,7 @@ namespace Kafka.Admin
 
         #region PartitionAssignmentState
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.PartitionAssignmentState.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.PartitionAssignmentState.html"/>
         /// </summary>
         public partial class PartitionAssignmentState : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PartitionAssignmentState>
         {
@@ -1075,7 +1075,7 @@ namespace Kafka.Admin
 
     #region DelegationTokenCommand
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/DelegationTokenCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/DelegationTokenCommand.html"/>
     /// </summary>
     public partial class DelegationTokenCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DelegationTokenCommand>, IJNetBridgeMain
     {
@@ -1114,7 +1114,7 @@ namespace Kafka.Admin
         // TODO: complete the class
         #region DelegationTokenCommandOptions
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/DelegationTokenCommand.DelegationTokenCommandOptions.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/DelegationTokenCommand.DelegationTokenCommandOptions.html"/>
         /// </summary>
         public partial class DelegationTokenCommandOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DelegationTokenCommandOptions>
         {
@@ -1161,7 +1161,7 @@ namespace Kafka.Admin
 
     #region DeleteRecordsCommand
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/DeleteRecordsCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/DeleteRecordsCommand.html"/>
     /// </summary>
     public partial class DeleteRecordsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DeleteRecordsCommand>, IJNetBridgeMain
     {
@@ -1200,7 +1200,7 @@ namespace Kafka.Admin
         // TODO: complete the class
         #region DeleteRecordsCommandOptions
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/DeleteRecordsCommand.DeleteRecordsCommandOptions.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/DeleteRecordsCommand.DeleteRecordsCommandOptions.html"/>
         /// </summary>
         public partial class DeleteRecordsCommandOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DeleteRecordsCommandOptions>
         {
@@ -1247,7 +1247,7 @@ namespace Kafka.Admin
 
     #region ElectionTypeConverter
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ElectionTypeConverter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ElectionTypeConverter.html"/>
     /// </summary>
     public partial class ElectionTypeConverter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ElectionTypeConverter>
     {
@@ -1290,7 +1290,7 @@ namespace Kafka.Admin
 
     #region FeatureCommand
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/FeatureCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/FeatureCommand.html"/>
     /// </summary>
     public partial class FeatureCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FeatureCommand>, IJNetBridgeMain
     {
@@ -1333,7 +1333,7 @@ namespace Kafka.Admin
 
     #region LeaderElectionCommand
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/LeaderElectionCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/LeaderElectionCommand.html"/>
     /// </summary>
     public partial class LeaderElectionCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LeaderElectionCommand>, IJNetBridgeMain
     {
@@ -1376,7 +1376,7 @@ namespace Kafka.Admin
 
     #region LeaderElectionCommandOptions
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/LeaderElectionCommandOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/LeaderElectionCommandOptions.html"/>
     /// </summary>
     public partial class LeaderElectionCommandOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LeaderElectionCommandOptions>
     {
@@ -1419,7 +1419,7 @@ namespace Kafka.Admin
 
     #region LogDirsCommand
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/LogDirsCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/LogDirsCommand.html"/>
     /// </summary>
     public partial class LogDirsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LogDirsCommand>, IJNetBridgeMain
     {
@@ -1458,7 +1458,7 @@ namespace Kafka.Admin
         // TODO: complete the class
         #region LogDirsCommandOptions
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/LogDirsCommand.LogDirsCommandOptions.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/LogDirsCommand.LogDirsCommandOptions.html"/>
         /// </summary>
         public partial class LogDirsCommandOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LogDirsCommandOptions>
         {
@@ -1505,7 +1505,7 @@ namespace Kafka.Admin
 
     #region RackAwareMode
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/RackAwareMode.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/RackAwareMode.html"/>
     /// </summary>
     public partial class RackAwareMode : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RackAwareMode>
     {
@@ -1548,7 +1548,7 @@ namespace Kafka.Admin
 
     #region ReassignPartitionsCommand
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.html"/>
     /// </summary>
     public partial class ReassignPartitionsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ReassignPartitionsCommand>, IJNetBridgeMain
     {
@@ -1587,7 +1587,7 @@ namespace Kafka.Admin
         // TODO: complete the class
         #region ActiveMoveState
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.ActiveMoveState.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.ActiveMoveState.html"/>
         /// </summary>
         public partial class ActiveMoveState : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ActiveMoveState>
         {
@@ -1630,7 +1630,7 @@ namespace Kafka.Admin
 
         #region CancelledMoveState
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CancelledMoveState.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CancelledMoveState.html"/>
         /// </summary>
         public partial class CancelledMoveState : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CancelledMoveState>
         {
@@ -1673,7 +1673,7 @@ namespace Kafka.Admin
 
         #region CompletedMoveState
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CompletedMoveState.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.CompletedMoveState.html"/>
         /// </summary>
         public partial class CompletedMoveState : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CompletedMoveState>
         {
@@ -1716,7 +1716,7 @@ namespace Kafka.Admin
 
         #region LogDirMoveState
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.LogDirMoveState.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.LogDirMoveState.html"/>
         /// </summary>
         public partial class LogDirMoveState : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LogDirMoveState>
         {
@@ -1759,7 +1759,7 @@ namespace Kafka.Admin
 
         #region MissingLogDirMoveState
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingLogDirMoveState.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingLogDirMoveState.html"/>
         /// </summary>
         public partial class MissingLogDirMoveState : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MissingLogDirMoveState>
         {
@@ -1802,7 +1802,7 @@ namespace Kafka.Admin
 
         #region MissingReplicaMoveState
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingReplicaMoveState.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.MissingReplicaMoveState.html"/>
         /// </summary>
         public partial class MissingReplicaMoveState : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MissingReplicaMoveState>
         {
@@ -1845,7 +1845,7 @@ namespace Kafka.Admin
 
         #region PartitionMove
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.PartitionMove.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.PartitionMove.html"/>
         /// </summary>
         public partial class PartitionMove : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PartitionMove>
         {
@@ -1888,7 +1888,7 @@ namespace Kafka.Admin
 
         #region PartitionReassignmentState
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.PartitionReassignmentState.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.PartitionReassignmentState.html"/>
         /// </summary>
         public partial class PartitionReassignmentState : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PartitionReassignmentState>
         {
@@ -1931,7 +1931,7 @@ namespace Kafka.Admin
 
         #region ReassignPartitionsCommandOptions
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.ReassignPartitionsCommandOptions.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.ReassignPartitionsCommandOptions.html"/>
         /// </summary>
         public partial class ReassignPartitionsCommandOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ReassignPartitionsCommandOptions>
         {
@@ -1974,7 +1974,7 @@ namespace Kafka.Admin
 
         #region TerseReassignmentFailureException
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.TerseReassignmentFailureException.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.TerseReassignmentFailureException.html"/>
         /// </summary>
         public partial class TerseReassignmentFailureException : Org.Apache.Kafka.Common.KafkaException
         {
@@ -1990,7 +1990,7 @@ namespace Kafka.Admin
 
         #region VerifyAssignmentResult
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.VerifyAssignmentResult.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.VerifyAssignmentResult.html"/>
         /// </summary>
         public partial class VerifyAssignmentResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<VerifyAssignmentResult>
         {
@@ -2037,7 +2037,7 @@ namespace Kafka.Admin
 
     #region TopicCommand
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.html"/>
     /// </summary>
     public partial class TopicCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicCommand>, IJNetBridgeMain
     {
@@ -2076,7 +2076,7 @@ namespace Kafka.Admin
         // TODO: complete the class
         #region CommandTopicPartition
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.CommandTopicPartition.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.CommandTopicPartition.html"/>
         /// </summary>
         public partial class CommandTopicPartition : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CommandTopicPartition>
         {
@@ -2119,7 +2119,7 @@ namespace Kafka.Admin
 
         #region DescribeOptions
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.DescribeOptions.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.DescribeOptions.html"/>
         /// </summary>
         public partial class DescribeOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DescribeOptions>
         {
@@ -2162,7 +2162,7 @@ namespace Kafka.Admin
 
         #region PartitionDescription
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.PartitionDescription.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.PartitionDescription.html"/>
         /// </summary>
         public partial class PartitionDescription : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PartitionDescription>
         {
@@ -2205,7 +2205,7 @@ namespace Kafka.Admin
 
         #region TopicCommandOptions
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html"/>
         /// </summary>
         public partial class TopicCommandOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicCommandOptions>
         {
@@ -2248,7 +2248,7 @@ namespace Kafka.Admin
 
         #region TopicDescription
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicDescription.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicDescription.html"/>
         /// </summary>
         public partial class TopicDescription : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicDescription>
         {
@@ -2291,7 +2291,7 @@ namespace Kafka.Admin
 
         #region TopicService
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicService.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicService.html"/>
         /// </summary>
         public partial class TopicService : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicService>
         {
@@ -2338,7 +2338,7 @@ namespace Kafka.Admin
 
     #region ZkSecurityMigrator
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ZkSecurityMigrator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ZkSecurityMigrator.html"/>
     /// </summary>
     public partial class ZkSecurityMigrator : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ZkSecurityMigrator>, IJNetBridgeMain
     {
@@ -2375,52 +2375,10 @@ namespace Kafka.Admin
         public override bool IsBridgeStatic => false;
 
         // TODO: complete the class
-        #region ZkSecurityMigratorOptions
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ZkSecurityMigrator.ZkSecurityMigratorOptions.html"/>
-        /// </summary>
-        public partial class ZkSecurityMigratorOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ZkSecurityMigratorOptions>
-        {
-            /// <summary>
-            /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
-            /// </summary>
-            public ZkSecurityMigratorOptions() { }
-            /// <summary>
-            /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
-            /// </summary>
-            public ZkSecurityMigratorOptions(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ZkSecurityMigrator$ZkSecurityMigratorOptions");
-
-            /// <summary>
-            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
-            /// </summary>
-            public override string BridgeClassName => "kafka.admin.ZkSecurityMigrator$ZkSecurityMigratorOptions";
-            /// <summary>
-            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
-            /// </summary>
-            public override bool IsBridgeAbstract => false;
-            /// <summary>
-            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm"/>
-            /// </summary>
-            public override bool IsBridgeCloseable => false;
-            /// <summary>
-            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm"/>
-            /// </summary>
-            public override bool IsBridgeInterface => false;
-            /// <summary>
-            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm"/>
-            /// </summary>
-            public override bool IsBridgeStatic => true;
-
-            // TODO: complete the class
-
-        }
-        #endregion
-
-    
     }
     #endregion
+
 
 
 }

@@ -38,7 +38,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#EMPTY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#EMPTY"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Record.MemoryRecords EMPTY { get { return SGetField<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "EMPTY"); } }
 
@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#readableRecords(java.nio.ByteBuffer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#readableRecords(java.nio.ByteBuffer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.MemoryRecords"/></returns>
@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "readableRecords", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withEndTransactionMarker(long,long,int,long,short,org.apache.kafka.common.record.EndTransactionMarker)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withEndTransactionMarker(long,long,int,long,short,org.apache.kafka.common.record.EndTransactionMarker)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -69,7 +69,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "withEndTransactionMarker", arg0, arg1, arg2, arg3, arg4, arg5);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withEndTransactionMarker(long,long,short,org.apache.kafka.common.record.EndTransactionMarker)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withEndTransactionMarker(long,long,short,org.apache.kafka.common.record.EndTransactionMarker)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -81,7 +81,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "withEndTransactionMarker", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withEndTransactionMarker(long,short,org.apache.kafka.common.record.EndTransactionMarker)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withEndTransactionMarker(long,short,org.apache.kafka.common.record.EndTransactionMarker)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="short"/></param>
@@ -92,7 +92,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "withEndTransactionMarker", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withIdempotentRecords(byte,long,org.apache.kafka.common.record.CompressionType,long,short,int,int,org.apache.kafka.common.record.SimpleRecord[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withIdempotentRecords(byte,long,org.apache.kafka.common.record.CompressionType,long,short,int,int,org.apache.kafka.common.record.SimpleRecord[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Common.Record
             if (arg7.Length == 0) return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "withIdempotentRecords", arg0, arg1, arg2, arg3, arg4, arg5, arg6); else return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "withIdempotentRecords", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withIdempotentRecords(long,org.apache.kafka.common.record.CompressionType,long,short,int,int,org.apache.kafka.common.record.SimpleRecord[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withIdempotentRecords(long,org.apache.kafka.common.record.CompressionType,long,short,int,int,org.apache.kafka.common.record.SimpleRecord[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Record.CompressionType"/></param>
@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Common.Record
             if (arg6.Length == 0) return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "withIdempotentRecords", arg0, arg1, arg2, arg3, arg4, arg5); else return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "withIdempotentRecords", arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withIdempotentRecords(org.apache.kafka.common.record.CompressionType,long,short,int,org.apache.kafka.common.record.SimpleRecord[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withIdempotentRecords(org.apache.kafka.common.record.CompressionType,long,short,int,org.apache.kafka.common.record.SimpleRecord[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Record.CompressionType"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -136,20 +136,7 @@ namespace Org.Apache.Kafka.Common.Record
             if (arg4.Length == 0) return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "withIdempotentRecords", arg0, arg1, arg2, arg3); else return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "withIdempotentRecords", arg0, arg1, arg2, arg3, arg4);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withLeaderChangeMessage(long,long,int,java.nio.ByteBuffer,org.apache.kafka.common.message.LeaderChangeMessage)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="long"/></param>
-        /// <param name="arg1"><see cref="long"/></param>
-        /// <param name="arg2"><see cref="int"/></param>
-        /// <param name="arg3"><see cref="Java.Nio.ByteBuffer"/></param>
-        /// <param name="arg4"><see cref="Org.Apache.Kafka.Common.Message.LeaderChangeMessage"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Common.Record.MemoryRecords"/></returns>
-        public static Org.Apache.Kafka.Common.Record.MemoryRecords WithLeaderChangeMessage(long arg0, long arg1, int arg2, Java.Nio.ByteBuffer arg3, Org.Apache.Kafka.Common.Message.LeaderChangeMessage arg4)
-        {
-            return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "withLeaderChangeMessage", arg0, arg1, arg2, arg3, arg4);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withRecords(byte,long,org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.SimpleRecord[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withRecords(byte,long,org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.SimpleRecord[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -161,7 +148,7 @@ namespace Org.Apache.Kafka.Common.Record
             if (arg3.Length == 0) return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "withRecords", arg0, arg1, arg2); else return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "withRecords", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withRecords(byte,long,org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.TimestampType,long,short,int,int,boolean,org.apache.kafka.common.record.SimpleRecord[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withRecords(byte,long,org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.TimestampType,long,short,int,int,boolean,org.apache.kafka.common.record.SimpleRecord[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -179,7 +166,7 @@ namespace Org.Apache.Kafka.Common.Record
             if (arg9.Length == 0) return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "withRecords", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8); else return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "withRecords", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withRecords(byte,long,org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.TimestampType,org.apache.kafka.common.record.SimpleRecord[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withRecords(byte,long,org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.TimestampType,org.apache.kafka.common.record.SimpleRecord[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -192,7 +179,7 @@ namespace Org.Apache.Kafka.Common.Record
             if (arg4.Length == 0) return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "withRecords", arg0, arg1, arg2, arg3); else return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "withRecords", arg0, arg1, arg2, arg3, arg4);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withRecords(byte,org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.SimpleRecord[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withRecords(byte,org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.SimpleRecord[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Record.CompressionType"/></param>
@@ -203,7 +190,7 @@ namespace Org.Apache.Kafka.Common.Record
             if (arg2.Length == 0) return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "withRecords", arg0, arg1); else return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "withRecords", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withRecords(long,org.apache.kafka.common.record.CompressionType,java.lang.Integer,org.apache.kafka.common.record.SimpleRecord[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withRecords(long,org.apache.kafka.common.record.CompressionType,java.lang.Integer,org.apache.kafka.common.record.SimpleRecord[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Record.CompressionType"/></param>
@@ -215,7 +202,7 @@ namespace Org.Apache.Kafka.Common.Record
             if (arg3.Length == 0) return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "withRecords", arg0, arg1, arg2); else return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "withRecords", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withRecords(long,org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.SimpleRecord[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withRecords(long,org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.SimpleRecord[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Record.CompressionType"/></param>
@@ -226,7 +213,7 @@ namespace Org.Apache.Kafka.Common.Record
             if (arg2.Length == 0) return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "withRecords", arg0, arg1); else return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "withRecords", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withRecords(org.apache.kafka.common.record.CompressionType,int,org.apache.kafka.common.record.SimpleRecord[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withRecords(org.apache.kafka.common.record.CompressionType,int,org.apache.kafka.common.record.SimpleRecord[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Record.CompressionType"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -237,7 +224,7 @@ namespace Org.Apache.Kafka.Common.Record
             if (arg2.Length == 0) return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "withRecords", arg0, arg1); else return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "withRecords", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withRecords(org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.SimpleRecord[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withRecords(org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.SimpleRecord[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Record.CompressionType"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Record.SimpleRecord"/></param>
@@ -247,33 +234,7 @@ namespace Org.Apache.Kafka.Common.Record
             if (arg1.Length == 0) return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "withRecords", arg0); else return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "withRecords", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withSnapshotFooterRecord(long,long,int,java.nio.ByteBuffer,org.apache.kafka.common.message.SnapshotFooterRecord)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="long"/></param>
-        /// <param name="arg1"><see cref="long"/></param>
-        /// <param name="arg2"><see cref="int"/></param>
-        /// <param name="arg3"><see cref="Java.Nio.ByteBuffer"/></param>
-        /// <param name="arg4"><see cref="Org.Apache.Kafka.Common.Message.SnapshotFooterRecord"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Common.Record.MemoryRecords"/></returns>
-        public static Org.Apache.Kafka.Common.Record.MemoryRecords WithSnapshotFooterRecord(long arg0, long arg1, int arg2, Java.Nio.ByteBuffer arg3, Org.Apache.Kafka.Common.Message.SnapshotFooterRecord arg4)
-        {
-            return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "withSnapshotFooterRecord", arg0, arg1, arg2, arg3, arg4);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withSnapshotHeaderRecord(long,long,int,java.nio.ByteBuffer,org.apache.kafka.common.message.SnapshotHeaderRecord)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="long"/></param>
-        /// <param name="arg1"><see cref="long"/></param>
-        /// <param name="arg2"><see cref="int"/></param>
-        /// <param name="arg3"><see cref="Java.Nio.ByteBuffer"/></param>
-        /// <param name="arg4"><see cref="Org.Apache.Kafka.Common.Message.SnapshotHeaderRecord"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Common.Record.MemoryRecords"/></returns>
-        public static Org.Apache.Kafka.Common.Record.MemoryRecords WithSnapshotHeaderRecord(long arg0, long arg1, int arg2, Java.Nio.ByteBuffer arg3, Org.Apache.Kafka.Common.Message.SnapshotHeaderRecord arg4)
-        {
-            return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "withSnapshotHeaderRecord", arg0, arg1, arg2, arg3, arg4);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withTransactionalRecords(byte,long,org.apache.kafka.common.record.CompressionType,long,short,int,int,org.apache.kafka.common.record.SimpleRecord[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withTransactionalRecords(byte,long,org.apache.kafka.common.record.CompressionType,long,short,int,int,org.apache.kafka.common.record.SimpleRecord[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -289,7 +250,7 @@ namespace Org.Apache.Kafka.Common.Record
             if (arg7.Length == 0) return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "withTransactionalRecords", arg0, arg1, arg2, arg3, arg4, arg5, arg6); else return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "withTransactionalRecords", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withTransactionalRecords(long,org.apache.kafka.common.record.CompressionType,long,short,int,int,org.apache.kafka.common.record.SimpleRecord[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withTransactionalRecords(long,org.apache.kafka.common.record.CompressionType,long,short,int,int,org.apache.kafka.common.record.SimpleRecord[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Record.CompressionType"/></param>
@@ -304,7 +265,7 @@ namespace Org.Apache.Kafka.Common.Record
             if (arg6.Length == 0) return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "withTransactionalRecords", arg0, arg1, arg2, arg3, arg4, arg5); else return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "withTransactionalRecords", arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withTransactionalRecords(org.apache.kafka.common.record.CompressionType,long,short,int,org.apache.kafka.common.record.SimpleRecord[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#withTransactionalRecords(org.apache.kafka.common.record.CompressionType,long,short,int,org.apache.kafka.common.record.SimpleRecord[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Record.CompressionType"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -317,7 +278,7 @@ namespace Org.Apache.Kafka.Common.Record
             if (arg4.Length == 0) return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "withTransactionalRecords", arg0, arg1, arg2, arg3); else return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords>(LocalBridgeClazz, "withTransactionalRecords", arg0, arg1, arg2, arg3, arg4);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#builder(java.nio.ByteBuffer,byte,org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.TimestampType,long,long,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#builder(java.nio.ByteBuffer,byte,org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.TimestampType,long,long,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
@@ -332,7 +293,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecordsBuilder>(LocalBridgeClazz, "builder", arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#builder(java.nio.ByteBuffer,byte,org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.TimestampType,long,long,long,short,int,boolean,boolean,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#builder(java.nio.ByteBuffer,byte,org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.TimestampType,long,long,long,short,int,boolean,boolean,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
@@ -352,7 +313,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecordsBuilder>(LocalBridgeClazz, "builder", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#builder(java.nio.ByteBuffer,byte,org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.TimestampType,long,long,long,short,int,boolean,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#builder(java.nio.ByteBuffer,byte,org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.TimestampType,long,long,long,short,int,boolean,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
@@ -371,7 +332,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecordsBuilder>(LocalBridgeClazz, "builder", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#builder(java.nio.ByteBuffer,byte,org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.TimestampType,long,long,long,short,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#builder(java.nio.ByteBuffer,byte,org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.TimestampType,long,long,long,short,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
@@ -388,7 +349,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecordsBuilder>(LocalBridgeClazz, "builder", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#builder(java.nio.ByteBuffer,byte,org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.TimestampType,long,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#builder(java.nio.ByteBuffer,byte,org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.TimestampType,long,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
@@ -402,7 +363,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecordsBuilder>(LocalBridgeClazz, "builder", arg0, arg1, arg2, arg3, arg4, arg5);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#builder(java.nio.ByteBuffer,byte,org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.TimestampType,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#builder(java.nio.ByteBuffer,byte,org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.TimestampType,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
@@ -415,7 +376,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecordsBuilder>(LocalBridgeClazz, "builder", arg0, arg1, arg2, arg3, arg4);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#builder(java.nio.ByteBuffer,org.apache.kafka.common.record.CompressionType,long,long,short,int,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#builder(java.nio.ByteBuffer,org.apache.kafka.common.record.CompressionType,long,long,short,int,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Record.CompressionType"/></param>
@@ -430,7 +391,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecordsBuilder>(LocalBridgeClazz, "builder", arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#builder(java.nio.ByteBuffer,org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.TimestampType,long,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#builder(java.nio.ByteBuffer,org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.TimestampType,long,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Record.CompressionType"/></param>
@@ -443,7 +404,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecordsBuilder>(LocalBridgeClazz, "builder", arg0, arg1, arg2, arg3, arg4);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#builder(java.nio.ByteBuffer,org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.TimestampType,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#builder(java.nio.ByteBuffer,org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.TimestampType,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Record.CompressionType"/></param>
@@ -455,7 +416,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecordsBuilder>(LocalBridgeClazz, "builder", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#idempotentBuilder(java.nio.ByteBuffer,org.apache.kafka.common.record.CompressionType,long,long,short,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#idempotentBuilder(java.nio.ByteBuffer,org.apache.kafka.common.record.CompressionType,long,long,short,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Record.CompressionType"/></param>
@@ -469,7 +430,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecordsBuilder>(LocalBridgeClazz, "idempotentBuilder", arg0, arg1, arg2, arg3, arg4, arg5);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#writeEndTransactionalMarker(java.nio.ByteBuffer,long,long,int,long,short,org.apache.kafka.common.record.EndTransactionMarker)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#writeEndTransactionalMarker(java.nio.ByteBuffer,long,long,int,long,short,org.apache.kafka.common.record.EndTransactionMarker)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -487,7 +448,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#validBytes()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#validBytes()"/>
         /// </summary>
 
         /// <returns><see cref="int"/></returns>
@@ -496,7 +457,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecute<int>("validBytes");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#writeFullyTo(java.nio.channels.GatheringByteChannel)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#writeFullyTo(java.nio.channels.GatheringByteChannel)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.Channels.GatheringByteChannel"/></param>
         /// <returns><see cref="int"/></returns>
@@ -506,7 +467,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecute<int>("writeFullyTo", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#firstBatchSize()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#firstBatchSize()"/>
         /// </summary>
 
         /// <returns><see cref="int"/></returns>
@@ -515,7 +476,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecute<int?>("firstBatchSize");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#buffer()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#buffer()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
@@ -524,7 +485,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecute<Java.Nio.ByteBuffer>("buffer");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#filterTo(org.apache.kafka.common.TopicPartition,org.apache.kafka.common.record.MemoryRecords.RecordFilter,java.nio.ByteBuffer,int,org.apache.kafka.common.utils.BufferSupplier)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.html#filterTo(org.apache.kafka.common.TopicPartition,org.apache.kafka.common.record.MemoryRecords.RecordFilter,java.nio.ByteBuffer,int,org.apache.kafka.common.utils.BufferSupplier)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Record.MemoryRecords.RecordFilter"/></param>
@@ -561,7 +522,7 @@ namespace Org.Apache.Kafka.Common.Record
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.FilterResult.html#bytesRead()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.FilterResult.html#bytesRead()"/>
             /// </summary>
 
             /// <returns><see cref="int"/></returns>
@@ -570,7 +531,7 @@ namespace Org.Apache.Kafka.Common.Record
                 return IExecute<int>("bytesRead");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.FilterResult.html#bytesRetained()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.FilterResult.html#bytesRetained()"/>
             /// </summary>
 
             /// <returns><see cref="int"/></returns>
@@ -579,7 +540,7 @@ namespace Org.Apache.Kafka.Common.Record
                 return IExecute<int>("bytesRetained");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.FilterResult.html#messagesRead()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.FilterResult.html#messagesRead()"/>
             /// </summary>
 
             /// <returns><see cref="int"/></returns>
@@ -588,7 +549,7 @@ namespace Org.Apache.Kafka.Common.Record
                 return IExecute<int>("messagesRead");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.FilterResult.html#messagesRetained()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.FilterResult.html#messagesRetained()"/>
             /// </summary>
 
             /// <returns><see cref="int"/></returns>
@@ -597,7 +558,7 @@ namespace Org.Apache.Kafka.Common.Record
                 return IExecute<int>("messagesRetained");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.FilterResult.html#outputBuffer()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.FilterResult.html#outputBuffer()"/>
             /// </summary>
 
             /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
@@ -606,7 +567,7 @@ namespace Org.Apache.Kafka.Common.Record
                 return IExecute<Java.Nio.ByteBuffer>("outputBuffer");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.FilterResult.html#maxOffset()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.FilterResult.html#maxOffset()"/>
             /// </summary>
 
             /// <returns><see cref="long"/></returns>
@@ -615,7 +576,7 @@ namespace Org.Apache.Kafka.Common.Record
                 return IExecute<long>("maxOffset");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.FilterResult.html#maxTimestamp()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.FilterResult.html#maxTimestamp()"/>
             /// </summary>
 
             /// <returns><see cref="long"/></returns>
@@ -624,7 +585,7 @@ namespace Org.Apache.Kafka.Common.Record
                 return IExecute<long>("maxTimestamp");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.FilterResult.html#shallowOffsetOfMaxTimestamp()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.FilterResult.html#shallowOffsetOfMaxTimestamp()"/>
             /// </summary>
 
             /// <returns><see cref="long"/></returns>
@@ -648,7 +609,7 @@ namespace Org.Apache.Kafka.Common.Record
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.RecordFilter.html#%3Cinit%3E(long,long)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.RecordFilter.html#%3Cinit%3E(long,long)"/>
             /// </summary>
             /// <param name="arg0"><see cref="long"/></param>
             /// <param name="arg1"><see cref="long"/></param>
@@ -665,11 +626,11 @@ namespace Org.Apache.Kafka.Common.Record
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.RecordFilter.html#currentTime"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.RecordFilter.html#currentTime"/>
             /// </summary>
             public long currentTime { get { return IGetField<long>("currentTime"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.RecordFilter.html#deleteRetentionMs"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.RecordFilter.html#deleteRetentionMs"/>
             /// </summary>
             public long deleteRetentionMs { get { return IGetField<long>("deleteRetentionMs"); } }
 
@@ -697,15 +658,15 @@ namespace Org.Apache.Kafka.Common.Record
 
                 #region Fields
                 /// <summary>
-                /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.RecordFilter.BatchRetention.html#DELETE"/>
+                /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.RecordFilter.BatchRetention.html#DELETE"/>
                 /// </summary>
                 public static Org.Apache.Kafka.Common.Record.MemoryRecords.RecordFilter.BatchRetention DELETE { get { return SGetField<Org.Apache.Kafka.Common.Record.MemoryRecords.RecordFilter.BatchRetention>(LocalBridgeClazz, "DELETE"); } }
                 /// <summary>
-                /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.RecordFilter.BatchRetention.html#DELETE_EMPTY"/>
+                /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.RecordFilter.BatchRetention.html#DELETE_EMPTY"/>
                 /// </summary>
                 public static Org.Apache.Kafka.Common.Record.MemoryRecords.RecordFilter.BatchRetention DELETE_EMPTY { get { return SGetField<Org.Apache.Kafka.Common.Record.MemoryRecords.RecordFilter.BatchRetention>(LocalBridgeClazz, "DELETE_EMPTY"); } }
                 /// <summary>
-                /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.RecordFilter.BatchRetention.html#RETAIN_EMPTY"/>
+                /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.RecordFilter.BatchRetention.html#RETAIN_EMPTY"/>
                 /// </summary>
                 public static Org.Apache.Kafka.Common.Record.MemoryRecords.RecordFilter.BatchRetention RETAIN_EMPTY { get { return SGetField<Org.Apache.Kafka.Common.Record.MemoryRecords.RecordFilter.BatchRetention>(LocalBridgeClazz, "RETAIN_EMPTY"); } }
 
@@ -713,7 +674,7 @@ namespace Org.Apache.Kafka.Common.Record
 
                 #region Static methods
                 /// <summary>
-                /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.RecordFilter.BatchRetention.html#valueOf(java.lang.String)"/>
+                /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.RecordFilter.BatchRetention.html#valueOf(java.lang.String)"/>
                 /// </summary>
                 /// <param name="arg0"><see cref="string"/></param>
                 /// <returns><see cref="Org.Apache.Kafka.Common.Record.MemoryRecords.RecordFilter.BatchRetention"/></returns>
@@ -722,7 +683,7 @@ namespace Org.Apache.Kafka.Common.Record
                     return SExecute<Org.Apache.Kafka.Common.Record.MemoryRecords.RecordFilter.BatchRetention>(LocalBridgeClazz, "valueOf", arg0);
                 }
                 /// <summary>
-                /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.RecordFilter.BatchRetention.html#values()"/>
+                /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.RecordFilter.BatchRetention.html#values()"/>
                 /// </summary>
 
                 /// <returns><see cref="Org.Apache.Kafka.Common.Record.MemoryRecords.RecordFilter.BatchRetention"/></returns>
@@ -750,7 +711,7 @@ namespace Org.Apache.Kafka.Common.Record
             {
                 #region Constructors
                 /// <summary>
-                /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.RecordFilter.BatchRetentionResult.html#%3Cinit%3E(org.apache.kafka.common.record.MemoryRecords.RecordFilter.BatchRetention,boolean)"/>
+                /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.RecordFilter.BatchRetentionResult.html#%3Cinit%3E(org.apache.kafka.common.record.MemoryRecords.RecordFilter.BatchRetention,boolean)"/>
                 /// </summary>
                 /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Record.MemoryRecords.RecordFilter.BatchRetention"/></param>
                 /// <param name="arg1"><see cref="bool"/></param>
@@ -767,11 +728,11 @@ namespace Org.Apache.Kafka.Common.Record
 
                 #region Fields
                 /// <summary>
-                /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.RecordFilter.BatchRetentionResult.html#containsMarkerForEmptyTxn"/>
+                /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.RecordFilter.BatchRetentionResult.html#containsMarkerForEmptyTxn"/>
                 /// </summary>
                 public bool containsMarkerForEmptyTxn { get { return IGetField<bool>("containsMarkerForEmptyTxn"); } }
                 /// <summary>
-                /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.RecordFilter.BatchRetentionResult.html#batchRetention"/>
+                /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/MemoryRecords.RecordFilter.BatchRetentionResult.html#batchRetention"/>
                 /// </summary>
                 public Org.Apache.Kafka.Common.Record.MemoryRecords.RecordFilter.BatchRetention batchRetention { get { return IGetField<Org.Apache.Kafka.Common.Record.MemoryRecords.RecordFilter.BatchRetention>("batchRetention"); } }
 

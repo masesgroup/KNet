@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ReplicaInfo.html#%3Cinit%3E(long,long,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ReplicaInfo.html#%3Cinit%3E(long,long,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -56,7 +56,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ReplicaInfo.html#isFuture()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ReplicaInfo.html#isFuture()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -65,7 +65,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<bool>("isFuture");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ReplicaInfo.html#offsetLag()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ReplicaInfo.html#offsetLag()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<long>("offsetLag");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ReplicaInfo.html#size()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ReplicaInfo.html#size()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>

@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/BranchedKStream.html#defaultBranch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/BranchedKStream.html#defaultBranch()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecute<Java.Util.Map>("defaultBranch");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/BranchedKStream.html#defaultBranch(org.apache.kafka.streams.kstream.Branched)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/BranchedKStream.html#defaultBranch(org.apache.kafka.streams.kstream.Branched)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Branched"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecute<Java.Util.Map>("defaultBranch", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/BranchedKStream.html#noDefaultBranch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/BranchedKStream.html#noDefaultBranch()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecute<Java.Util.Map>("noDefaultBranch");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/BranchedKStream.html#branch(org.apache.kafka.streams.kstream.Predicate,org.apache.kafka.streams.kstream.Branched)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/BranchedKStream.html#branch(org.apache.kafka.streams.kstream.Predicate,org.apache.kafka.streams.kstream.Branched)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Predicate"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Branched"/></param>
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecute<Org.Apache.Kafka.Streams.Kstream.BranchedKStream>("branch", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/BranchedKStream.html#branch(org.apache.kafka.streams.kstream.Predicate)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/BranchedKStream.html#branch(org.apache.kafka.streams.kstream.Predicate)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Predicate"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.BranchedKStream"/></returns>
@@ -102,8 +102,26 @@ namespace Org.Apache.Kafka.Streams.Kstream
     }
     #endregion
 
+    #region IBranchedKStream<K, V>
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/BranchedKStream.html"/>
+    /// </summary>
+    public partial interface IBranchedKStream<K, V>
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region BranchedKStream<K, V>
-    public partial class BranchedKStream<K, V>
+    public partial class BranchedKStream<K, V> : Org.Apache.Kafka.Streams.Kstream.IBranchedKStream<K, V>
     {
         #region Constructors
 
@@ -127,7 +145,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/BranchedKStream.html#defaultBranch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/BranchedKStream.html#defaultBranch()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -136,7 +154,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Streams.Kstream.KStream<K, V>>>("defaultBranch");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/BranchedKStream.html#defaultBranch(org.apache.kafka.streams.kstream.Branched)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/BranchedKStream.html#defaultBranch(org.apache.kafka.streams.kstream.Branched)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Branched"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -145,7 +163,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Streams.Kstream.KStream<K, V>>>("defaultBranch", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/BranchedKStream.html#noDefaultBranch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/BranchedKStream.html#noDefaultBranch()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -154,7 +172,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Streams.Kstream.KStream<K, V>>>("noDefaultBranch");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/BranchedKStream.html#branch(org.apache.kafka.streams.kstream.Predicate,org.apache.kafka.streams.kstream.Branched)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/BranchedKStream.html#branch(org.apache.kafka.streams.kstream.Predicate,org.apache.kafka.streams.kstream.Branched)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Predicate"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Branched"/></param>
@@ -166,7 +184,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecute<Org.Apache.Kafka.Streams.Kstream.BranchedKStream<K, V>>("branch", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/BranchedKStream.html#branch(org.apache.kafka.streams.kstream.Predicate)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/BranchedKStream.html#branch(org.apache.kafka.streams.kstream.Predicate)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Predicate"/></param>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>

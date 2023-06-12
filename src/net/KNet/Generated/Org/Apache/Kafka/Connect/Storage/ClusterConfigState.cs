@@ -29,41 +29,6 @@ namespace Org.Apache.Kafka.Connect.Storage
     public partial class ClusterConfigState
     {
         #region Constructors
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#%3Cinit%3E(long,org.apache.kafka.connect.runtime.SessionKey,java.util.Map,java.util.Map,java.util.Map,java.util.Map,java.util.Map,java.util.Map,java.util.Set,java.util.Set,org.apache.kafka.connect.runtime.WorkerConfigTransformer)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="long"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Connect.Runtime.SessionKey"/></param>
-        /// <param name="arg2"><see cref="Java.Util.Map"/></param>
-        /// <param name="arg3"><see cref="Java.Util.Map"/></param>
-        /// <param name="arg4"><see cref="Java.Util.Map"/></param>
-        /// <param name="arg5"><see cref="Java.Util.Map"/></param>
-        /// <param name="arg6"><see cref="Java.Util.Map"/></param>
-        /// <param name="arg7"><see cref="Java.Util.Map"/></param>
-        /// <param name="arg8"><see cref="Java.Util.Set"/></param>
-        /// <param name="arg9"><see cref="Java.Util.Set"/></param>
-        /// <param name="arg10"><see cref="Org.Apache.Kafka.Connect.Runtime.WorkerConfigTransformer"/></param>
-        public ClusterConfigState(long arg0, Org.Apache.Kafka.Connect.Runtime.SessionKey arg1, Java.Util.Map<string, int?> arg2, Java.Util.Map<string, Java.Util.Map<string, string>> arg3, Java.Util.Map<string, Org.Apache.Kafka.Connect.Runtime.TargetState> arg4, Java.Util.Map<Org.Apache.Kafka.Connect.Util.ConnectorTaskId, Java.Util.Map<string, string>> arg5, Java.Util.Map<string, int?> arg6, Java.Util.Map<string, int?> arg7, Java.Util.Set<string> arg8, Java.Util.Set<string> arg9, Org.Apache.Kafka.Connect.Runtime.WorkerConfigTransformer arg10)
-            : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10)
-        {
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#%3Cinit%3E(long,org.apache.kafka.connect.runtime.SessionKey,java.util.Map,java.util.Map,java.util.Map,java.util.Map,java.util.Map,java.util.Map,java.util.Set,java.util.Set)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="long"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Connect.Runtime.SessionKey"/></param>
-        /// <param name="arg2"><see cref="Java.Util.Map"/></param>
-        /// <param name="arg3"><see cref="Java.Util.Map"/></param>
-        /// <param name="arg4"><see cref="Java.Util.Map"/></param>
-        /// <param name="arg5"><see cref="Java.Util.Map"/></param>
-        /// <param name="arg6"><see cref="Java.Util.Map"/></param>
-        /// <param name="arg7"><see cref="Java.Util.Map"/></param>
-        /// <param name="arg8"><see cref="Java.Util.Set"/></param>
-        /// <param name="arg9"><see cref="Java.Util.Set"/></param>
-        public ClusterConfigState(long arg0, Org.Apache.Kafka.Connect.Runtime.SessionKey arg1, Java.Util.Map<string, int?> arg2, Java.Util.Map<string, Java.Util.Map<string, string>> arg3, Java.Util.Map<string, Org.Apache.Kafka.Connect.Runtime.TargetState> arg4, Java.Util.Map<Org.Apache.Kafka.Connect.Util.ConnectorTaskId, Java.Util.Map<string, string>> arg5, Java.Util.Map<string, int?> arg6, Java.Util.Map<string, int?> arg7, Java.Util.Set<string> arg8, Java.Util.Set<string> arg9)
-            : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)
-        {
-        }
 
         #endregion
 
@@ -73,11 +38,11 @@ namespace Org.Apache.Kafka.Connect.Storage
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#NO_OFFSET"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#NO_OFFSET"/>
         /// </summary>
         public static long NO_OFFSET { get { return SGetField<long>(LocalBridgeClazz, "NO_OFFSET"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#EMPTY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#EMPTY"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Storage.ClusterConfigState EMPTY { get { return SGetField<Org.Apache.Kafka.Connect.Storage.ClusterConfigState>(LocalBridgeClazz, "EMPTY"); } }
 
@@ -89,7 +54,7 @@ namespace Org.Apache.Kafka.Connect.Storage
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#contains(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#contains(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -98,7 +63,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return IExecute<bool>("contains", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#pendingFencing(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#pendingFencing(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -107,7 +72,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return IExecute<bool>("pendingFencing", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#taskCount(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#taskCount(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="int"/></returns>
@@ -116,7 +81,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return IExecute<int>("taskCount", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#taskConfigGeneration(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#taskConfigGeneration(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="int"/></returns>
@@ -125,7 +90,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return IExecute<int?>("taskConfigGeneration", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#taskCountRecord(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#taskCountRecord(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="int"/></returns>
@@ -134,7 +99,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return IExecute<int?>("taskCountRecord", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#allTaskConfigs(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#allTaskConfigs(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -143,7 +108,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return IExecute<Java.Util.List<Java.Util.Map<string, string>>>("allTaskConfigs", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#tasks(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#tasks(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -152,7 +117,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return IExecute<Java.Util.List<Org.Apache.Kafka.Connect.Util.ConnectorTaskId>>("tasks", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#connectorConfig(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#connectorConfig(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -161,7 +126,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return IExecute<Java.Util.Map<string, string>>("connectorConfig", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#rawConnectorConfig(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#rawConnectorConfig(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -170,7 +135,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return IExecute<Java.Util.Map<string, string>>("rawConnectorConfig", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#rawTaskConfig(org.apache.kafka.connect.util.ConnectorTaskId)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#rawTaskConfig(org.apache.kafka.connect.util.ConnectorTaskId)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Util.ConnectorTaskId"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -179,7 +144,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return IExecute<Java.Util.Map<string, string>>("rawTaskConfig", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#taskConfig(org.apache.kafka.connect.util.ConnectorTaskId)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#taskConfig(org.apache.kafka.connect.util.ConnectorTaskId)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Util.ConnectorTaskId"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -188,7 +153,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return IExecute<Java.Util.Map<string, string>>("taskConfig", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#connectors()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#connectors()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Set"/></returns>
@@ -197,7 +162,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return IExecute<Java.Util.Set<string>>("connectors");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#inconsistentConnectors()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#inconsistentConnectors()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Set"/></returns>
@@ -206,31 +171,13 @@ namespace Org.Apache.Kafka.Connect.Storage
             return IExecute<Java.Util.Set<string>>("inconsistentConnectors");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#offset()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#offset()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
         public long Offset()
         {
             return IExecute<long>("offset");
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#sessionKey()"/>
-        /// </summary>
-
-        /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.SessionKey"/></returns>
-        public Org.Apache.Kafka.Connect.Runtime.SessionKey SessionKey()
-        {
-            return IExecute<Org.Apache.Kafka.Connect.Runtime.SessionKey>("sessionKey");
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ClusterConfigState.html#targetState(java.lang.String)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.TargetState"/></returns>
-        public Org.Apache.Kafka.Connect.Runtime.TargetState TargetState(string arg0)
-        {
-            return IExecute<Org.Apache.Kafka.Connect.Runtime.TargetState>("targetState", arg0);
         }
 
         #endregion

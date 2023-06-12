@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#as(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#as(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Produced"/></returns>
@@ -51,7 +51,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecute<Org.Apache.Kafka.Streams.Kstream.Produced>(LocalBridgeClazz, "as", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#keySerde(org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#keySerde(org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Produced"/></returns>
@@ -60,7 +60,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecute<Org.Apache.Kafka.Streams.Kstream.Produced>(LocalBridgeClazz, "keySerde", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#streamPartitioner(org.apache.kafka.streams.processor.StreamPartitioner)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#streamPartitioner(org.apache.kafka.streams.processor.StreamPartitioner)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.StreamPartitioner"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Produced"/></returns>
@@ -69,7 +69,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecute<Org.Apache.Kafka.Streams.Kstream.Produced>(LocalBridgeClazz, "streamPartitioner", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#valueSerde(org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#valueSerde(org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Produced"/></returns>
@@ -78,7 +78,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecute<Org.Apache.Kafka.Streams.Kstream.Produced>(LocalBridgeClazz, "valueSerde", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde,org.apache.kafka.streams.processor.StreamPartitioner)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde,org.apache.kafka.streams.processor.StreamPartitioner)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
@@ -89,7 +89,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecute<Org.Apache.Kafka.Streams.Kstream.Produced>(LocalBridgeClazz, "with", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
@@ -103,7 +103,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#withKeySerde(org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#withKeySerde(org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Produced"/></returns>
@@ -112,7 +112,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecute<Org.Apache.Kafka.Streams.Kstream.Produced>("withKeySerde", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#withStreamPartitioner(org.apache.kafka.streams.processor.StreamPartitioner)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#withStreamPartitioner(org.apache.kafka.streams.processor.StreamPartitioner)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.StreamPartitioner"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Produced"/></returns>
@@ -121,7 +121,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecute<Org.Apache.Kafka.Streams.Kstream.Produced>("withStreamPartitioner", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#withValueSerde(org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#withValueSerde(org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Produced"/></returns>
@@ -161,7 +161,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#as(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#as(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Produced"/></returns>
@@ -170,7 +170,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecute<Org.Apache.Kafka.Streams.Kstream.Produced<K, V>>(LocalBridgeClazz, "as", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#keySerde(org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#keySerde(org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Produced"/></returns>
@@ -179,7 +179,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecute<Org.Apache.Kafka.Streams.Kstream.Produced<K, V>>(LocalBridgeClazz, "keySerde", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#streamPartitioner(org.apache.kafka.streams.processor.StreamPartitioner)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#streamPartitioner(org.apache.kafka.streams.processor.StreamPartitioner)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.StreamPartitioner"/></param>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
@@ -190,7 +190,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecute<Org.Apache.Kafka.Streams.Kstream.Produced<K, V>>(LocalBridgeClazz, "streamPartitioner", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#valueSerde(org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#valueSerde(org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Produced"/></returns>
@@ -199,7 +199,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecute<Org.Apache.Kafka.Streams.Kstream.Produced<K, V>>(LocalBridgeClazz, "valueSerde", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde,org.apache.kafka.streams.processor.StreamPartitioner)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde,org.apache.kafka.streams.processor.StreamPartitioner)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
@@ -212,7 +212,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecute<Org.Apache.Kafka.Streams.Kstream.Produced<K, V>>(LocalBridgeClazz, "with", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
@@ -226,7 +226,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#withKeySerde(org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#withKeySerde(org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Produced"/></returns>
@@ -235,7 +235,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecute<Org.Apache.Kafka.Streams.Kstream.Produced<K, V>>("withKeySerde", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#withStreamPartitioner(org.apache.kafka.streams.processor.StreamPartitioner)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#withStreamPartitioner(org.apache.kafka.streams.processor.StreamPartitioner)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.StreamPartitioner"/></param>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
@@ -246,7 +246,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecute<Org.Apache.Kafka.Streams.Kstream.Produced<K, V>>("withStreamPartitioner", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#withValueSerde(org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html#withValueSerde(org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Produced"/></returns>

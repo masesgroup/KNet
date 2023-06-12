@@ -27,9 +27,9 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
 {
     #region BasicAuthSecurityRestExtension
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-basic-auth-extension/3.4.0/org/apache/kafka/connect/rest/basic/auth/extension/BasicAuthSecurityRestExtension.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.4.0/org/apache/kafka/connect/rest/basic/auth/extension/BasicAuthSecurityRestExtension.html"/>
     /// </summary>
-    public partial class BasicAuthSecurityRestExtension : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BasicAuthSecurityRestExtension>
+    public partial class BasicAuthSecurityRestExtension : Org.Apache.Kafka.Connect.Rest.ConnectRestExtension
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
 
     #region JaasBasicAuthFilter
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-basic-auth-extension/3.4.0/org/apache/kafka/connect/rest/basic/auth/extension/JaasBasicAuthFilter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.4.0/org/apache/kafka/connect/rest/basic/auth/extension/JaasBasicAuthFilter.html"/>
     /// </summary>
     public partial class JaasBasicAuthFilter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<JaasBasicAuthFilter>
     {
@@ -109,9 +109,9 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
         // TODO: complete the class
         #region BasicAuthCallBackHandler
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-basic-auth-extension/3.4.0/org/apache/kafka/connect/rest/basic/auth/extension/JaasBasicAuthFilter.BasicAuthCallBackHandler.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.4.0/org/apache/kafka/connect/rest/basic/auth/extension/JaasBasicAuthFilter.BasicAuthCallBackHandler.html"/>
         /// </summary>
-        public partial class BasicAuthCallBackHandler : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BasicAuthCallBackHandler>
+        public partial class BasicAuthCallBackHandler : Javax.Security.Auth.Callback.CallbackHandler
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -156,9 +156,9 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
 
     #region PropertyFileLoginModule
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-basic-auth-extension/3.4.0/org/apache/kafka/connect/rest/basic/auth/extension/PropertyFileLoginModule.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.4.0/org/apache/kafka/connect/rest/basic/auth/extension/PropertyFileLoginModule.html"/>
     /// </summary>
-    public partial class PropertyFileLoginModule : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PropertyFileLoginModule>
+    public partial class PropertyFileLoginModule : Javax.Security.Auth.Spi.LoginModule
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -196,6 +196,7 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
 
     }
     #endregion
+
 
 
 }

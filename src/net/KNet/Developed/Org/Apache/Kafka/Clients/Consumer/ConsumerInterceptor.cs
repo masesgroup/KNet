@@ -26,7 +26,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
     /// <summary>
     /// Listener for Kafka ConsumerInterceptor. Extends <see cref="IJVMBridgeBase"/>
     /// </summary>
-    public interface IConsumerInterceptor<K, V> : IJVMBridgeBase
+    public partial interface IConsumerInterceptor<K, V> : IJVMBridgeBase
     {
         /// <summary>
         /// Configure this class with the given key-value pairs
@@ -136,22 +136,6 @@ namespace Org.Apache.Kafka.Clients.Consumer
         public virtual void Configure(Map<string, Java.Lang.Object> configs)
         {
 
-        }
-
-        /// <inheritdoc cref="IConsumerInterceptor{K, V}.OnConsume"/>
-        public virtual ConsumerRecords<K, V> OnConsume(ConsumerRecords<K, V> records)
-        {
-            return default;
-        }
-
-        /// <inheritdoc cref="IConsumerInterceptor{K, V}.OnCommit"/>
-        public virtual void OnCommit(Map<TopicPartition, OffsetAndMetadata> offsets)
-        {
-        }
-
-        /// <inheritdoc cref="IConsumerInterceptor{K, V}.Close"/>
-        public virtual void Close()
-        {
         }
     }
 }

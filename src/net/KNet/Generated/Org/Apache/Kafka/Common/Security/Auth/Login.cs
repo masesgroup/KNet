@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Security.Auth
 {
+    #region ILogin
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/Login.html"/>
+    /// </summary>
+    public partial interface ILogin
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region Login
-    public partial class Login
+    public partial class Login : Org.Apache.Kafka.Common.Security.Auth.ILogin
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/Login.html#serviceName()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/Login.html#serviceName()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -55,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
             return IExecute<string>("serviceName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/Login.html#login()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/Login.html#login()"/>
         /// </summary>
 
         /// <returns><see cref="Javax.Security.Auth.Login.LoginContext"/></returns>
@@ -65,7 +83,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
             return IExecute<Javax.Security.Auth.Login.LoginContext>("login");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/Login.html#subject()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/Login.html#subject()"/>
         /// </summary>
 
         /// <returns><see cref="Javax.Security.Auth.Subject"/></returns>
@@ -74,21 +92,20 @@ namespace Org.Apache.Kafka.Common.Security.Auth
             return IExecute<Javax.Security.Auth.Subject>("subject");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/Login.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/Login.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecute("close");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/Login.html#configure(java.util.Map,java.lang.String,javax.security.auth.login.Configuration,org.apache.kafka.common.security.auth.AuthenticateCallbackHandler)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/Login.html#configure(java.util.Map,java.lang.String,javax.security.auth.login.Configuration,org.apache.kafka.common.security.auth.AuthenticateCallbackHandler)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="string"/></param>
         /// <param name="arg2"><see cref="Javax.Security.Auth.Login.Configuration"/></param>
         /// <param name="arg3"><see cref="Org.Apache.Kafka.Common.Security.Auth.AuthenticateCallbackHandler"/></param>
-        /// <typeparam name="Arg0Extendsobject"></typeparam>
-        public void Configure<Arg0Extendsobject>(Java.Util.Map<string, Arg0Extendsobject> arg0, string arg1, Javax.Security.Auth.Login.Configuration arg2, Org.Apache.Kafka.Common.Security.Auth.AuthenticateCallbackHandler arg3)
+        public void Configure(Java.Util.Map<string, object> arg0, string arg1, Javax.Security.Auth.Login.Configuration arg2, Org.Apache.Kafka.Common.Security.Auth.AuthenticateCallbackHandler arg3)
         {
             IExecute("configure", arg0, arg1, arg2, arg3);
         }

@@ -21,7 +21,7 @@ using System;
 
 namespace Org.Apache.Kafka.Streams.Processor.Api
 {
-    public interface IProcessor<KIn, VIn, KOut, VOut> : IJVMBridgeBase
+    public partial interface IProcessor<KIn, VIn, KOut, VOut> : IJVMBridgeBase
     {
         void Init(ProcessorContext<KOut, VOut> context);
 
@@ -77,21 +77,6 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         void EventHandlerClose(object sender, CLRListenerEventArgs<CLREventData> data)
         {
             OnClose();
-        }
-
-        public virtual void Init(ProcessorContext<KOut, VOut> context)
-        {
-
-        }
-
-        public virtual void Process(Record<KIn, VIn> record)
-        {
-
-        }
-
-        public virtual void Close()
-        {
-
         }
     }
 }

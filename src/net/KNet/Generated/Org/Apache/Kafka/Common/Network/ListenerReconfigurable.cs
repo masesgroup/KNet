@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Network
 {
+    #region IListenerReconfigurable
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ListenerReconfigurable.html"/>
+    /// </summary>
+    public partial interface IListenerReconfigurable : Org.Apache.Kafka.Common.IReconfigurable
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region ListenerReconfigurable
-    public partial class ListenerReconfigurable
+    public partial class ListenerReconfigurable : Org.Apache.Kafka.Common.Network.IListenerReconfigurable
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ListenerReconfigurable.html#listenerName()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ListenerReconfigurable.html#listenerName()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Network.ListenerName"/></returns>

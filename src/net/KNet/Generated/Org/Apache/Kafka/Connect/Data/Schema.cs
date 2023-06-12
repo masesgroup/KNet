@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Connect.Data
 {
+    #region ISchema
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html"/>
+    /// </summary>
+    public partial interface ISchema
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region Schema
-    public partial class Schema
+    public partial class Schema : Org.Apache.Kafka.Connect.Data.ISchema
     {
         #region Constructors
 
@@ -38,75 +56,75 @@ namespace Org.Apache.Kafka.Connect.Data
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#BOOLEAN_SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#BOOLEAN_SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema BOOLEAN_SCHEMA { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "BOOLEAN_SCHEMA"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#BYTES_SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#BYTES_SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema BYTES_SCHEMA { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "BYTES_SCHEMA"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#FLOAT32_SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#FLOAT32_SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema FLOAT32_SCHEMA { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "FLOAT32_SCHEMA"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#FLOAT64_SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#FLOAT64_SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema FLOAT64_SCHEMA { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "FLOAT64_SCHEMA"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#INT16_SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#INT16_SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema INT16_SCHEMA { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "INT16_SCHEMA"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#INT32_SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#INT32_SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema INT32_SCHEMA { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "INT32_SCHEMA"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#INT64_SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#INT64_SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema INT64_SCHEMA { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "INT64_SCHEMA"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#INT8_SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#INT8_SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema INT8_SCHEMA { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "INT8_SCHEMA"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#OPTIONAL_BOOLEAN_SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#OPTIONAL_BOOLEAN_SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema OPTIONAL_BOOLEAN_SCHEMA { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "OPTIONAL_BOOLEAN_SCHEMA"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#OPTIONAL_BYTES_SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#OPTIONAL_BYTES_SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema OPTIONAL_BYTES_SCHEMA { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "OPTIONAL_BYTES_SCHEMA"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#OPTIONAL_FLOAT32_SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#OPTIONAL_FLOAT32_SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema OPTIONAL_FLOAT32_SCHEMA { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "OPTIONAL_FLOAT32_SCHEMA"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#OPTIONAL_FLOAT64_SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#OPTIONAL_FLOAT64_SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema OPTIONAL_FLOAT64_SCHEMA { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "OPTIONAL_FLOAT64_SCHEMA"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#OPTIONAL_INT16_SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#OPTIONAL_INT16_SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema OPTIONAL_INT16_SCHEMA { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "OPTIONAL_INT16_SCHEMA"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#OPTIONAL_INT32_SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#OPTIONAL_INT32_SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema OPTIONAL_INT32_SCHEMA { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "OPTIONAL_INT32_SCHEMA"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#OPTIONAL_INT64_SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#OPTIONAL_INT64_SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema OPTIONAL_INT64_SCHEMA { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "OPTIONAL_INT64_SCHEMA"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#OPTIONAL_INT8_SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#OPTIONAL_INT8_SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema OPTIONAL_INT8_SCHEMA { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "OPTIONAL_INT8_SCHEMA"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#OPTIONAL_STRING_SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#OPTIONAL_STRING_SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema OPTIONAL_STRING_SCHEMA { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "OPTIONAL_STRING_SCHEMA"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#STRING_SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#STRING_SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema STRING_SCHEMA { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "STRING_SCHEMA"); } }
 
@@ -118,7 +136,7 @@ namespace Org.Apache.Kafka.Connect.Data
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#isOptional()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#isOptional()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -127,7 +145,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecute<bool>("isOptional");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#version()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#version()"/>
         /// </summary>
 
         /// <returns><see cref="int"/></returns>
@@ -136,7 +154,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecute<int?>("version");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#defaultValue()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#defaultValue()"/>
         /// </summary>
 
         /// <returns><see cref="object"/></returns>
@@ -145,7 +163,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecute("defaultValue");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#doc()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#doc()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -154,7 +172,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecute<string>("doc");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#name()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#name()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -163,7 +181,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecute<string>("name");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#fields()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#fields()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -172,7 +190,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecute<Java.Util.List<Org.Apache.Kafka.Connect.Data.Field>>("fields");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#parameters()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#parameters()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -181,7 +199,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecute<Java.Util.Map<string, string>>("parameters");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#field(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#field(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Field"/></returns>
@@ -190,7 +208,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecute<Org.Apache.Kafka.Connect.Data.Field>("field", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#keySchema()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#keySchema()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></returns>
@@ -199,7 +217,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecute<Org.Apache.Kafka.Connect.Data.Schema>("keySchema");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#schema()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#schema()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></returns>
@@ -208,7 +226,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecute<Org.Apache.Kafka.Connect.Data.Schema>("schema");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#valueSchema()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#valueSchema()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></returns>
@@ -217,7 +235,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecute<Org.Apache.Kafka.Connect.Data.Schema>("valueSchema");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#type()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.html#type()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Schema.Type"/></returns>
@@ -242,51 +260,51 @@ namespace Org.Apache.Kafka.Connect.Data
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.Type.html#ARRAY"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.Type.html#ARRAY"/>
             /// </summary>
             public static Org.Apache.Kafka.Connect.Data.Schema.Type ARRAY { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema.Type>(LocalBridgeClazz, "ARRAY"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.Type.html#BOOLEAN"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.Type.html#BOOLEAN"/>
             /// </summary>
             public static Org.Apache.Kafka.Connect.Data.Schema.Type BOOLEAN { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema.Type>(LocalBridgeClazz, "BOOLEAN"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.Type.html#BYTES"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.Type.html#BYTES"/>
             /// </summary>
             public static Org.Apache.Kafka.Connect.Data.Schema.Type BYTES { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema.Type>(LocalBridgeClazz, "BYTES"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.Type.html#FLOAT32"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.Type.html#FLOAT32"/>
             /// </summary>
             public static Org.Apache.Kafka.Connect.Data.Schema.Type FLOAT32 { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema.Type>(LocalBridgeClazz, "FLOAT32"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.Type.html#FLOAT64"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.Type.html#FLOAT64"/>
             /// </summary>
             public static Org.Apache.Kafka.Connect.Data.Schema.Type FLOAT64 { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema.Type>(LocalBridgeClazz, "FLOAT64"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.Type.html#INT16"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.Type.html#INT16"/>
             /// </summary>
             public static Org.Apache.Kafka.Connect.Data.Schema.Type INT16 { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema.Type>(LocalBridgeClazz, "INT16"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.Type.html#INT32"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.Type.html#INT32"/>
             /// </summary>
             public static Org.Apache.Kafka.Connect.Data.Schema.Type INT32 { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema.Type>(LocalBridgeClazz, "INT32"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.Type.html#INT64"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.Type.html#INT64"/>
             /// </summary>
             public static Org.Apache.Kafka.Connect.Data.Schema.Type INT64 { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema.Type>(LocalBridgeClazz, "INT64"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.Type.html#INT8"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.Type.html#INT8"/>
             /// </summary>
             public static Org.Apache.Kafka.Connect.Data.Schema.Type INT8 { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema.Type>(LocalBridgeClazz, "INT8"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.Type.html#MAP"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.Type.html#MAP"/>
             /// </summary>
             public static Org.Apache.Kafka.Connect.Data.Schema.Type MAP { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema.Type>(LocalBridgeClazz, "MAP"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.Type.html#STRING"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.Type.html#STRING"/>
             /// </summary>
             public static Org.Apache.Kafka.Connect.Data.Schema.Type STRING { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema.Type>(LocalBridgeClazz, "STRING"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.Type.html#STRUCT"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.Type.html#STRUCT"/>
             /// </summary>
             public static Org.Apache.Kafka.Connect.Data.Schema.Type STRUCT { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema.Type>(LocalBridgeClazz, "STRUCT"); } }
 
@@ -294,7 +312,7 @@ namespace Org.Apache.Kafka.Connect.Data
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.Type.html#valueOf(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.Type.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Schema.Type"/></returns>
@@ -303,7 +321,7 @@ namespace Org.Apache.Kafka.Connect.Data
                 return SExecute<Org.Apache.Kafka.Connect.Data.Schema.Type>(LocalBridgeClazz, "valueOf", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.Type.html#values()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.Type.html#values()"/>
             /// </summary>
 
             /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Schema.Type"/></returns>
@@ -316,14 +334,14 @@ namespace Org.Apache.Kafka.Connect.Data
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.Type.html#getName()"/> 
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.Type.html#getName()"/> 
             /// </summary>
             public string Name
             {
                 get { return IExecute<string>("getName"); }
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.Type.html#isPrimitive()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Schema.Type.html#isPrimitive()"/>
             /// </summary>
 
             /// <returns><see cref="bool"/></returns>

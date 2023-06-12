@@ -28,7 +28,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// <typeparam name="V1">The data associated to the event</typeparam>
     /// <typeparam name="V2">The data associated to the event</typeparam>
     /// <typeparam name="VR">Joined value</typeparam>
-    public interface IValueJoinerWithKey<K1, V1, V2, VR> : IJVMBridgeBase
+    public partial interface IValueJoinerWithKey<K1, V1, V2, VR> : IJVMBridgeBase
     {
         /// <summary>
         /// Executes the ValueJoinerWithKey action in the CLR
@@ -78,44 +78,5 @@ namespace Org.Apache.Kafka.Streams.Kstream
             var retVal = OnApply(data.EventData.TypedEventData, data.EventData.To<V1>(0), data.EventData.To<V2>(1));
             data.SetReturnValue(retVal);
         }
-        /// <summary>
-        /// Executes the ValueJoinerWithKey action in the CLR
-        /// </summary>
-        /// <param name="readOnlyKey">The ValueJoinerWithKey object</param>
-        /// <param name="value1">The ValueJoinerWithKey object</param>
-        /// <param name="value2">The current aggregate value</param>
-        /// <returns>The <typeparamref name="VR"/> apply evaluation</returns>
-        public virtual VR Apply(K1 readOnlyKey, V1 value1, V2 value2) { return default(VR); }
     }
-    /*
-    /// <summary>
-    /// Listener for Kafka ValueJoinerWithKey. Extends <see cref="ValueJoinerWithKeyImpl{K1, V1, V2, VR}"/>
-    /// </summary>
-    /// <typeparam name="K1">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
-    /// <typeparam name="V1">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
-    /// <typeparam name="V2">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
-    /// <typeparam name="VR">The aggregated data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
-    /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
-    public class JVMBridgeValueJoinerWithKey<K1, V1, V2, VR> : ValueJoinerWithKeyImpl<K1, V1, V2, VR>
-        where K1 : JVMBridgeBase, new()
-        where V1 : JVMBridgeBase, new()
-        where V2 : JVMBridgeBase, new()
-        where VR : JVMBridgeBase, new()
-    {
-        /// <summary>
-        /// Initialize a new instance of <see cref="JVMBridgeValueJoinerWithKey{K1, V1, V2, VR}"/>
-        /// </summary>
-        /// <param name="func">The <see cref="Func{K1, V1, V2, VR}"/> to be executed</param>
-        public JVMBridgeValueJoinerWithKey(Func<K1, V1, V2, VR> func = null) : base(func, false)
-        {
-            AddEventHandler("apply", new EventHandler<CLRListenerEventArgs<JVMBridgeEventData<K1>>>(EventHandler));
-        }
-
-        void EventHandler(object sender, CLRListenerEventArgs<JVMBridgeEventData<K1>> data)
-        {
-            var retVal = OnApply(data.EventData.TypedEventData, data.EventData.To<V1>(0), data.EventData.To<V2>(1));
-            data.CLRReturnValue = retVal?;
-        }
-    }
-    */
 }

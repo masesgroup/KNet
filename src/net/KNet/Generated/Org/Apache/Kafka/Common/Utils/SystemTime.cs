@@ -33,10 +33,6 @@ namespace Org.Apache.Kafka.Common.Utils
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.Utils.SystemTime"/> to <see cref="Org.Apache.Kafka.Common.Utils.Time"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Common.Utils.Time(Org.Apache.Kafka.Common.Utils.SystemTime t) => t.Cast<Org.Apache.Kafka.Common.Utils.Time>();
 
         #endregion
 
@@ -50,7 +46,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SystemTime.html#milliseconds()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SystemTime.html#milliseconds()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -59,7 +55,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecute<long>("milliseconds");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SystemTime.html#nanoseconds()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SystemTime.html#nanoseconds()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -68,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecute<long>("nanoseconds");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SystemTime.html#sleep(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SystemTime.html#sleep(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         public void Sleep(long arg0)
@@ -76,7 +72,7 @@ namespace Org.Apache.Kafka.Common.Utils
             IExecute("sleep", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SystemTime.html#waitObject(java.lang.Object,java.util.function.Supplier,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SystemTime.html#waitObject(java.lang.Object,java.util.function.Supplier,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Supplier"/></param>

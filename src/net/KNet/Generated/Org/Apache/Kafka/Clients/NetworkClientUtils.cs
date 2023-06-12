@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Clients
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClientUtils.html#awaitReady(org.apache.kafka.clients.KafkaClient,org.apache.kafka.common.Node,org.apache.kafka.common.utils.Time,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClientUtils.html#awaitReady(org.apache.kafka.clients.KafkaClient,org.apache.kafka.common.Node,org.apache.kafka.common.utils.Time,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.KafkaClient"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Node"/></param>
@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Clients
             return SExecute<bool>(LocalBridgeClazz, "awaitReady", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClientUtils.html#isReady(org.apache.kafka.clients.KafkaClient,org.apache.kafka.common.Node,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClientUtils.html#isReady(org.apache.kafka.clients.KafkaClient,org.apache.kafka.common.Node,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.KafkaClient"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Node"/></param>
@@ -66,7 +66,7 @@ namespace Org.Apache.Kafka.Clients
             return SExecute<bool>(LocalBridgeClazz, "isReady", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClientUtils.html#sendAndReceive(org.apache.kafka.clients.KafkaClient,org.apache.kafka.clients.ClientRequest,org.apache.kafka.common.utils.Time)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClientUtils.html#sendAndReceive(org.apache.kafka.clients.KafkaClient,org.apache.kafka.clients.ClientRequest,org.apache.kafka.common.utils.Time)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.KafkaClient"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.ClientRequest"/></param>

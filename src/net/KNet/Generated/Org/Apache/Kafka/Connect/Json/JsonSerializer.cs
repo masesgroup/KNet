@@ -50,7 +50,7 @@ namespace Org.Apache.Kafka.Connect.Json
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonSerializer.html#serialize(java.lang.String,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonSerializer.html#serialize(java.lang.String,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="object"/></param>

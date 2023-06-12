@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Streams.Processor
 {
+    #region IStateStoreContext
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateStoreContext.html"/>
+    /// </summary>
+    public partial interface IStateStoreContext
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region StateStoreContext
-    public partial class StateStoreContext
+    public partial class StateStoreContext : Org.Apache.Kafka.Streams.Processor.IStateStoreContext
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateStoreContext.html#stateDir()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateStoreContext.html#stateDir()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Io.File"/></returns>
@@ -55,7 +73,7 @@ namespace Org.Apache.Kafka.Streams.Processor
             return IExecute<Java.Io.File>("stateDir");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateStoreContext.html#applicationId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateStoreContext.html#applicationId()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -64,7 +82,7 @@ namespace Org.Apache.Kafka.Streams.Processor
             return IExecute<string>("applicationId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateStoreContext.html#appConfigs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateStoreContext.html#appConfigs()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -73,7 +91,7 @@ namespace Org.Apache.Kafka.Streams.Processor
             return IExecute<Java.Util.Map<string, object>>("appConfigs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateStoreContext.html#appConfigsWithPrefix(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateStoreContext.html#appConfigsWithPrefix(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -82,7 +100,7 @@ namespace Org.Apache.Kafka.Streams.Processor
             return IExecute<Java.Util.Map<string, object>>("appConfigsWithPrefix", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateStoreContext.html#recordMetadata()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateStoreContext.html#recordMetadata()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Optional"/></returns>
@@ -91,27 +109,25 @@ namespace Org.Apache.Kafka.Streams.Processor
             return IExecute<Java.Util.Optional<Org.Apache.Kafka.Streams.Processor.Api.RecordMetadata>>("recordMetadata");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateStoreContext.html#keySerde()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateStoreContext.html#keySerde()"/>
         /// </summary>
 
-        /// <typeparam name="ReturnExtendsobject"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
-        public Org.Apache.Kafka.Common.Serialization.Serde<ReturnExtendsobject> KeySerde<ReturnExtendsobject>()
+        public Org.Apache.Kafka.Common.Serialization.Serde<object> KeySerde()
         {
-            return IExecute<Org.Apache.Kafka.Common.Serialization.Serde<ReturnExtendsobject>>("keySerde");
+            return IExecute<Org.Apache.Kafka.Common.Serialization.Serde<object>>("keySerde");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateStoreContext.html#valueSerde()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateStoreContext.html#valueSerde()"/>
         /// </summary>
 
-        /// <typeparam name="ReturnExtendsobject"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
-        public Org.Apache.Kafka.Common.Serialization.Serde<ReturnExtendsobject> ValueSerde<ReturnExtendsobject>()
+        public Org.Apache.Kafka.Common.Serialization.Serde<object> ValueSerde()
         {
-            return IExecute<Org.Apache.Kafka.Common.Serialization.Serde<ReturnExtendsobject>>("valueSerde");
+            return IExecute<Org.Apache.Kafka.Common.Serialization.Serde<object>>("valueSerde");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateStoreContext.html#taskId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateStoreContext.html#taskId()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.TaskId"/></returns>
@@ -120,7 +136,7 @@ namespace Org.Apache.Kafka.Streams.Processor
             return IExecute<Org.Apache.Kafka.Streams.Processor.TaskId>("taskId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateStoreContext.html#metrics()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateStoreContext.html#metrics()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Streams.StreamsMetrics"/></returns>
@@ -129,7 +145,7 @@ namespace Org.Apache.Kafka.Streams.Processor
             return IExecute<Org.Apache.Kafka.Streams.StreamsMetrics>("metrics");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateStoreContext.html#register(org.apache.kafka.streams.processor.StateStore,org.apache.kafka.streams.processor.StateRestoreCallback,org.apache.kafka.streams.processor.CommitCallback)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateStoreContext.html#register(org.apache.kafka.streams.processor.StateStore,org.apache.kafka.streams.processor.StateRestoreCallback,org.apache.kafka.streams.processor.CommitCallback)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.StateStore"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Processor.StateRestoreCallback"/></param>
@@ -139,7 +155,7 @@ namespace Org.Apache.Kafka.Streams.Processor
             IExecute("register", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateStoreContext.html#register(org.apache.kafka.streams.processor.StateStore,org.apache.kafka.streams.processor.StateRestoreCallback)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateStoreContext.html#register(org.apache.kafka.streams.processor.StateStore,org.apache.kafka.streams.processor.StateRestoreCallback)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.StateStore"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Processor.StateRestoreCallback"/></param>

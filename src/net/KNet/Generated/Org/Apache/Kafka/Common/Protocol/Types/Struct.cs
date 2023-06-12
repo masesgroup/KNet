@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#%3Cinit%3E(org.apache.kafka.common.protocol.types.Schema)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#%3Cinit%3E(org.apache.kafka.common.protocol.types.Schema)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Schema"/></param>
         public Struct(Org.Apache.Kafka.Common.Protocol.Types.Schema arg0)
@@ -54,7 +54,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getOrElse(org.apache.kafka.common.protocol.types.Field.Bool,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getOrElse(org.apache.kafka.common.protocol.types.Field.Bool,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.Bool"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<bool>("getOrElse", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#hasField(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#hasField(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<bool>("hasField", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#hasField(org.apache.kafka.common.protocol.types.Field)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#hasField(org.apache.kafka.common.protocol.types.Field)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -82,7 +82,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<bool>("hasField", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#hasField(org.apache.kafka.common.protocol.types.Field.ComplexArray)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#hasField(org.apache.kafka.common.protocol.types.Field.ComplexArray)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.ComplexArray"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<bool>("hasField", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getByte(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getByte(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="byte"/></returns>
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<byte>("getByte", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getByteArray(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getByteArray(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="byte"/></returns>
@@ -109,7 +109,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecuteArray<byte>("getByteArray", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#sizeOf()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#sizeOf()"/>
         /// </summary>
 
         /// <returns><see cref="int"/></returns>
@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<int>("sizeOf");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#get(org.apache.kafka.common.protocol.types.Field.Bool)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#get(org.apache.kafka.common.protocol.types.Field.Bool)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.Bool"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -127,7 +127,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<bool?>("get", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getBoolean(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getBoolean(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -136,7 +136,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<bool?>("getBoolean", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getBoolean(org.apache.kafka.common.protocol.types.BoundField)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getBoolean(org.apache.kafka.common.protocol.types.BoundField)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.BoundField"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -145,7 +145,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<bool?>("getBoolean", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#get(org.apache.kafka.common.protocol.types.Field.Int8)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#get(org.apache.kafka.common.protocol.types.Field.Int8)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.Int8"/></param>
         /// <returns><see cref="byte"/></returns>
@@ -154,7 +154,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<byte?>("get", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getByte(org.apache.kafka.common.protocol.types.BoundField)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getByte(org.apache.kafka.common.protocol.types.BoundField)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.BoundField"/></param>
         /// <returns><see cref="byte"/></returns>
@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<byte?>("getByte", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getOrElse(org.apache.kafka.common.protocol.types.Field.Int8,byte)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getOrElse(org.apache.kafka.common.protocol.types.Field.Int8,byte)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.Int8"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
@@ -173,7 +173,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<byte?>("getOrElse", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#get(org.apache.kafka.common.protocol.types.Field.Float64)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#get(org.apache.kafka.common.protocol.types.Field.Float64)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.Float64"/></param>
         /// <returns><see cref="double"/></returns>
@@ -182,7 +182,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<double?>("get", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getDouble(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getDouble(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="double"/></returns>
@@ -191,7 +191,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<double?>("getDouble", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getDouble(org.apache.kafka.common.protocol.types.BoundField)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getDouble(org.apache.kafka.common.protocol.types.BoundField)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.BoundField"/></param>
         /// <returns><see cref="double"/></returns>
@@ -200,7 +200,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<double?>("getDouble", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getOrElse(org.apache.kafka.common.protocol.types.Field.Float64,double)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getOrElse(org.apache.kafka.common.protocol.types.Field.Float64,double)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.Float64"/></param>
         /// <param name="arg1"><see cref="double"/></param>
@@ -210,7 +210,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<double?>("getOrElse", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#get(org.apache.kafka.common.protocol.types.Field.Int32)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#get(org.apache.kafka.common.protocol.types.Field.Int32)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.Int32"/></param>
         /// <returns><see cref="int"/></returns>
@@ -219,7 +219,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<int?>("get", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#get(org.apache.kafka.common.protocol.types.Field.Uint16)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#get(org.apache.kafka.common.protocol.types.Field.Uint16)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.Uint16"/></param>
         /// <returns><see cref="int"/></returns>
@@ -228,7 +228,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<int?>("get", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getInt(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getInt(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="int"/></returns>
@@ -237,7 +237,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<int?>("getInt", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getInt(org.apache.kafka.common.protocol.types.BoundField)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getInt(org.apache.kafka.common.protocol.types.BoundField)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.BoundField"/></param>
         /// <returns><see cref="int"/></returns>
@@ -246,7 +246,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<int?>("getInt", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getOrElse(org.apache.kafka.common.protocol.types.Field.Int32,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getOrElse(org.apache.kafka.common.protocol.types.Field.Int32,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.Int32"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -256,7 +256,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<int?>("getOrElse", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getUnsignedShort(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getUnsignedShort(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="int"/></returns>
@@ -265,7 +265,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<int?>("getUnsignedShort", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getUnsignedShort(org.apache.kafka.common.protocol.types.BoundField)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getUnsignedShort(org.apache.kafka.common.protocol.types.BoundField)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.BoundField"/></param>
         /// <returns><see cref="int"/></returns>
@@ -274,7 +274,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<int?>("getUnsignedShort", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#get(org.apache.kafka.common.protocol.types.Field.Int64)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#get(org.apache.kafka.common.protocol.types.Field.Int64)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.Int64"/></param>
         /// <returns><see cref="long"/></returns>
@@ -283,7 +283,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<long?>("get", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#get(org.apache.kafka.common.protocol.types.Field.Uint32)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#get(org.apache.kafka.common.protocol.types.Field.Uint32)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.Uint32"/></param>
         /// <returns><see cref="long"/></returns>
@@ -292,7 +292,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<long?>("get", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getLong(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getLong(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="long"/></returns>
@@ -301,7 +301,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<long?>("getLong", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getLong(org.apache.kafka.common.protocol.types.BoundField)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getLong(org.apache.kafka.common.protocol.types.BoundField)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.BoundField"/></param>
         /// <returns><see cref="long"/></returns>
@@ -310,7 +310,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<long?>("getLong", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getOrElse(org.apache.kafka.common.protocol.types.Field.Int64,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getOrElse(org.apache.kafka.common.protocol.types.Field.Int64,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.Int64"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -320,7 +320,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<long?>("getOrElse", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getUnsignedInt(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getUnsignedInt(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="long"/></returns>
@@ -329,7 +329,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<long?>("getUnsignedInt", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getUnsignedInt(org.apache.kafka.common.protocol.types.BoundField)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getUnsignedInt(org.apache.kafka.common.protocol.types.BoundField)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.BoundField"/></param>
         /// <returns><see cref="long"/></returns>
@@ -338,7 +338,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<long?>("getUnsignedInt", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#get(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#get(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="object"/></returns>
@@ -347,7 +347,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute("get", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#get(org.apache.kafka.common.protocol.types.BoundField)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#get(org.apache.kafka.common.protocol.types.BoundField)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.BoundField"/></param>
         /// <returns><see cref="object"/></returns>
@@ -356,7 +356,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute("get", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#get(org.apache.kafka.common.protocol.types.Field.Array)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#get(org.apache.kafka.common.protocol.types.Field.Array)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.Array"/></param>
         /// <returns><see cref="object"/></returns>
@@ -365,7 +365,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecuteArray<object>("get", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#get(org.apache.kafka.common.protocol.types.Field.ComplexArray)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#get(org.apache.kafka.common.protocol.types.Field.ComplexArray)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.ComplexArray"/></param>
         /// <returns><see cref="object"/></returns>
@@ -374,7 +374,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecuteArray<object>("get", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getArray(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getArray(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="object"/></returns>
@@ -383,7 +383,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecuteArray<object>("getArray", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getArray(org.apache.kafka.common.protocol.types.BoundField)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getArray(org.apache.kafka.common.protocol.types.BoundField)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.BoundField"/></param>
         /// <returns><see cref="object"/></returns>
@@ -392,7 +392,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecuteArray<object>("getArray", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getOrEmpty(org.apache.kafka.common.protocol.types.Field.Array)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getOrEmpty(org.apache.kafka.common.protocol.types.Field.Array)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.Array"/></param>
         /// <returns><see cref="object"/></returns>
@@ -401,7 +401,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecuteArray<object>("getOrEmpty", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getOrEmpty(org.apache.kafka.common.protocol.types.Field.ComplexArray)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getOrEmpty(org.apache.kafka.common.protocol.types.Field.ComplexArray)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.ComplexArray"/></param>
         /// <returns><see cref="object"/></returns>
@@ -410,7 +410,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecuteArray<object>("getOrEmpty", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#get(org.apache.kafka.common.protocol.types.Field.Int16)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#get(org.apache.kafka.common.protocol.types.Field.Int16)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.Int16"/></param>
         /// <returns><see cref="short"/></returns>
@@ -419,7 +419,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<short?>("get", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getOrElse(org.apache.kafka.common.protocol.types.Field.Int16,short)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getOrElse(org.apache.kafka.common.protocol.types.Field.Int16,short)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.Int16"/></param>
         /// <param name="arg1"><see cref="short"/></param>
@@ -429,7 +429,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<short?>("getOrElse", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getShort(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getShort(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="short"/></returns>
@@ -438,7 +438,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<short?>("getShort", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getShort(org.apache.kafka.common.protocol.types.BoundField)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getShort(org.apache.kafka.common.protocol.types.BoundField)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.BoundField"/></param>
         /// <returns><see cref="short"/></returns>
@@ -447,7 +447,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<short?>("getShort", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#get(org.apache.kafka.common.protocol.types.Field.NullableStr)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#get(org.apache.kafka.common.protocol.types.Field.NullableStr)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.NullableStr"/></param>
         /// <returns><see cref="string"/></returns>
@@ -456,7 +456,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<string>("get", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#get(org.apache.kafka.common.protocol.types.Field.Str)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#get(org.apache.kafka.common.protocol.types.Field.Str)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.Str"/></param>
         /// <returns><see cref="string"/></returns>
@@ -465,7 +465,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<string>("get", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getOrElse(org.apache.kafka.common.protocol.types.Field.NullableStr,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getOrElse(org.apache.kafka.common.protocol.types.Field.NullableStr,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.NullableStr"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -475,7 +475,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<string>("getOrElse", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getOrElse(org.apache.kafka.common.protocol.types.Field.Str,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getOrElse(org.apache.kafka.common.protocol.types.Field.Str,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.Str"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -485,7 +485,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<string>("getOrElse", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getString(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getString(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="string"/></returns>
@@ -494,7 +494,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<string>("getString", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getString(org.apache.kafka.common.protocol.types.BoundField)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getString(org.apache.kafka.common.protocol.types.BoundField)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.BoundField"/></param>
         /// <returns><see cref="string"/></returns>
@@ -503,7 +503,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<string>("getString", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getBytes(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getBytes(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
@@ -512,7 +512,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Java.Nio.ByteBuffer>("getBytes", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getBytes(org.apache.kafka.common.protocol.types.BoundField)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getBytes(org.apache.kafka.common.protocol.types.BoundField)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.BoundField"/></param>
         /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
@@ -521,7 +521,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Java.Nio.ByteBuffer>("getBytes", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#schema()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#schema()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Types.Schema"/></returns>
@@ -530,7 +530,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Schema>("schema");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getStruct(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getStruct(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Types.Struct"/></returns>
@@ -539,7 +539,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Struct>("getStruct", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getStruct(org.apache.kafka.common.protocol.types.BoundField)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getStruct(org.apache.kafka.common.protocol.types.BoundField)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.BoundField"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Types.Struct"/></returns>
@@ -548,7 +548,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Struct>("getStruct", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#instance(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#instance(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Types.Struct"/></returns>
@@ -557,7 +557,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Struct>("instance", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#instance(org.apache.kafka.common.protocol.types.BoundField)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#instance(org.apache.kafka.common.protocol.types.BoundField)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.BoundField"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Types.Struct"/></returns>
@@ -566,7 +566,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Struct>("instance", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#instance(org.apache.kafka.common.protocol.types.Field)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#instance(org.apache.kafka.common.protocol.types.Field)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Types.Struct"/></returns>
@@ -575,7 +575,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Struct>("instance", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#instance(org.apache.kafka.common.protocol.types.Field.ComplexArray)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#instance(org.apache.kafka.common.protocol.types.Field.ComplexArray)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.ComplexArray"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Types.Struct"/></returns>
@@ -584,7 +584,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Struct>("instance", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#set(java.lang.String,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#set(java.lang.String,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -594,7 +594,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Struct>("set", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#set(org.apache.kafka.common.protocol.types.BoundField,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#set(org.apache.kafka.common.protocol.types.BoundField,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.BoundField"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -604,7 +604,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Struct>("set", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#set(org.apache.kafka.common.protocol.types.Field.Array,java.lang.Object[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#set(org.apache.kafka.common.protocol.types.Field.Array,java.lang.Object[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.Array"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -614,7 +614,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Struct>("set", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#set(org.apache.kafka.common.protocol.types.Field.Bool,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#set(org.apache.kafka.common.protocol.types.Field.Bool,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.Bool"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -624,7 +624,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Struct>("set", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#set(org.apache.kafka.common.protocol.types.Field.ComplexArray,java.lang.Object[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#set(org.apache.kafka.common.protocol.types.Field.ComplexArray,java.lang.Object[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.ComplexArray"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -634,7 +634,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Struct>("set", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#set(org.apache.kafka.common.protocol.types.Field.Float64,double)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#set(org.apache.kafka.common.protocol.types.Field.Float64,double)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.Float64"/></param>
         /// <param name="arg1"><see cref="double"/></param>
@@ -644,7 +644,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Struct>("set", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#set(org.apache.kafka.common.protocol.types.Field.Int16,short)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#set(org.apache.kafka.common.protocol.types.Field.Int16,short)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.Int16"/></param>
         /// <param name="arg1"><see cref="short"/></param>
@@ -654,7 +654,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Struct>("set", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#set(org.apache.kafka.common.protocol.types.Field.Int32,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#set(org.apache.kafka.common.protocol.types.Field.Int32,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.Int32"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -664,7 +664,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Struct>("set", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#set(org.apache.kafka.common.protocol.types.Field.Int64,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#set(org.apache.kafka.common.protocol.types.Field.Int64,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.Int64"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -674,7 +674,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Struct>("set", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#set(org.apache.kafka.common.protocol.types.Field.Int8,byte)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#set(org.apache.kafka.common.protocol.types.Field.Int8,byte)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.Int8"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
@@ -684,7 +684,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Struct>("set", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#set(org.apache.kafka.common.protocol.types.Field.NullableStr,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#set(org.apache.kafka.common.protocol.types.Field.NullableStr,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.NullableStr"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -694,7 +694,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Struct>("set", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#set(org.apache.kafka.common.protocol.types.Field.Str,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#set(org.apache.kafka.common.protocol.types.Field.Str,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.Str"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -704,7 +704,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Struct>("set", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#set(org.apache.kafka.common.protocol.types.Field.Uint16,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#set(org.apache.kafka.common.protocol.types.Field.Uint16,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.Uint16"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -714,7 +714,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Struct>("set", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#set(org.apache.kafka.common.protocol.types.Field.Uint32,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#set(org.apache.kafka.common.protocol.types.Field.Uint32,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.Uint32"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -724,7 +724,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Struct>("set", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#set(org.apache.kafka.common.protocol.types.Field.UUID,org.apache.kafka.common.Uuid)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#set(org.apache.kafka.common.protocol.types.Field.UUID,org.apache.kafka.common.Uuid)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.UUID"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Uuid"/></param>
@@ -734,7 +734,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Struct>("set", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#setByteArray(java.lang.String,byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#setByteArray(java.lang.String,byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
@@ -744,7 +744,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Struct>("setByteArray", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#setIfExists(java.lang.String,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#setIfExists(java.lang.String,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -754,7 +754,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Struct>("setIfExists", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#setIfExists(org.apache.kafka.common.protocol.types.Field,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#setIfExists(org.apache.kafka.common.protocol.types.Field,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -764,7 +764,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Struct>("setIfExists", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#setIfExists(org.apache.kafka.common.protocol.types.Field.Array,java.lang.Object[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#setIfExists(org.apache.kafka.common.protocol.types.Field.Array,java.lang.Object[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.Array"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -774,7 +774,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Struct>("setIfExists", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#setIfExists(org.apache.kafka.common.protocol.types.Field.ComplexArray,java.lang.Object[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#setIfExists(org.apache.kafka.common.protocol.types.Field.ComplexArray,java.lang.Object[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.ComplexArray"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -784,7 +784,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Org.Apache.Kafka.Common.Protocol.Types.Struct>("setIfExists", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getRecords(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getRecords(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.BaseRecords"/></returns>
@@ -793,7 +793,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Org.Apache.Kafka.Common.Record.BaseRecords>("getRecords", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#get(org.apache.kafka.common.protocol.types.Field.UUID)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#get(org.apache.kafka.common.protocol.types.Field.UUID)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.UUID"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Uuid"/></returns>
@@ -802,7 +802,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Org.Apache.Kafka.Common.Uuid>("get", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getOrElse(org.apache.kafka.common.protocol.types.Field.UUID,org.apache.kafka.common.Uuid)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getOrElse(org.apache.kafka.common.protocol.types.Field.UUID,org.apache.kafka.common.Uuid)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field.UUID"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Uuid"/></param>
@@ -812,7 +812,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Org.Apache.Kafka.Common.Uuid>("getOrElse", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getUuid(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getUuid(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Uuid"/></returns>
@@ -821,7 +821,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Org.Apache.Kafka.Common.Uuid>("getUuid", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getUuid(org.apache.kafka.common.protocol.types.BoundField)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#getUuid(org.apache.kafka.common.protocol.types.BoundField)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.BoundField"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Uuid"/></returns>
@@ -830,21 +830,21 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Org.Apache.Kafka.Common.Uuid>("getUuid", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#clear()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#clear()"/>
         /// </summary>
         public void Clear()
         {
             IExecute("clear");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#validate()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#validate()"/>
         /// </summary>
         public void Validate()
         {
             IExecute("validate");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#writeTo(java.nio.ByteBuffer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Struct.html#writeTo(java.nio.ByteBuffer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         public void WriteTo(Java.Nio.ByteBuffer arg0)

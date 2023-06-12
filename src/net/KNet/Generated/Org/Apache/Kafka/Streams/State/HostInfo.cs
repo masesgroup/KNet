@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Streams.State
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/HostInfo.html#%3Cinit%3E(java.lang.String,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/HostInfo.html#%3Cinit%3E(java.lang.String,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -51,7 +51,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/HostInfo.html#buildFromEndpoint(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/HostInfo.html#buildFromEndpoint(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.HostInfo"/></returns>
@@ -60,7 +60,7 @@ namespace Org.Apache.Kafka.Streams.State
             return SExecute<Org.Apache.Kafka.Streams.State.HostInfo>(LocalBridgeClazz, "buildFromEndpoint", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/HostInfo.html#unavailable()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/HostInfo.html#unavailable()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.HostInfo"/></returns>
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/HostInfo.html#port()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/HostInfo.html#port()"/>
         /// </summary>
 
         /// <returns><see cref="int"/></returns>
@@ -82,7 +82,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<int>("port");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/HostInfo.html#host()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/HostInfo.html#host()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>

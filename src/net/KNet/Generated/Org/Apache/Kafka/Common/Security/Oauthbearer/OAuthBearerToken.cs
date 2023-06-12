@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 {
+    #region IOAuthBearerToken
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html"/>
+    /// </summary>
+    public partial interface IOAuthBearerToken
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region OAuthBearerToken
-    public partial class OAuthBearerToken
+    public partial class OAuthBearerToken : Org.Apache.Kafka.Common.Security.Oauthbearer.IOAuthBearerToken
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#startTimeMs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#startTimeMs()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -55,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
             return IExecute<long?>("startTimeMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#principalName()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#principalName()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -64,7 +82,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
             return IExecute<string>("principalName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#value()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#value()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -73,7 +91,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
             return IExecute<string>("value");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#scope()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#scope()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Set"/></returns>
@@ -82,7 +100,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
             return IExecute<Java.Util.Set<string>>("scope");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#lifetimeMs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#lifetimeMs()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>

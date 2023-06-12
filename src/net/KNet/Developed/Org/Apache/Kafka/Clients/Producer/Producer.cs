@@ -43,7 +43,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         Map<MetricName, T> Metrics<T>() where T : Metric;
     }
 
-    public interface IProducer<K, V> : IProducer
+    public partial interface IProducer<K, V> : IProducer
     {
         Future<RecordMetadata> Send(ProducerRecord<K, V> record);
 

@@ -27,10 +27,15 @@ namespace Org.Apache.Kafka.Streams.Kstream
 {
     #region Aggregator
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Aggregator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Aggregator.html"/>
     /// </summary>
     public partial class Aggregator : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public Aggregator() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -40,13 +45,18 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Aggregator<K, V, VA>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Aggregator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Aggregator.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
     /// <typeparam name="VA"></typeparam>
     public partial class Aggregator<K, V, VA> : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public Aggregator() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -56,7 +66,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Branched
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Branched.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Branched.html"/>
     /// </summary>
     public partial class Branched : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Branched>
     {
@@ -99,7 +109,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Branched<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Branched.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Branched.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -144,7 +154,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region BranchedKStream
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/BranchedKStream.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/BranchedKStream.html"/>
     /// </summary>
     public partial class BranchedKStream : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BranchedKStream>
     {
@@ -187,7 +197,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region BranchedKStream<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/BranchedKStream.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/BranchedKStream.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -232,7 +242,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region CogroupedKStream
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/CogroupedKStream.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/CogroupedKStream.html"/>
     /// </summary>
     public partial class CogroupedKStream : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CogroupedKStream>
     {
@@ -275,7 +285,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region CogroupedKStream<K, VOut>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/CogroupedKStream.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/CogroupedKStream.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="VOut"></typeparam>
@@ -320,7 +330,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Consumed
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Consumed.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Consumed.html"/>
     /// </summary>
     public partial class Consumed : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Consumed>
     {
@@ -363,7 +373,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Consumed<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Consumed.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Consumed.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -408,7 +418,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region EmitStrategy
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/EmitStrategy.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/EmitStrategy.html"/>
     /// </summary>
     public partial class EmitStrategy : MASES.JCOBridge.C2JBridge.JVMBridgeBase<EmitStrategy>
     {
@@ -447,7 +457,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         // TODO: complete the class
         #region StrategyType
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/EmitStrategy.StrategyType.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/EmitStrategy.StrategyType.html"/>
         /// </summary>
         public partial class StrategyType : Java.Lang.Enum<Org.Apache.Kafka.Streams.Kstream.EmitStrategy.StrategyType>
         {
@@ -494,10 +504,15 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region ForeachAction
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ForeachAction.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ForeachAction.html"/>
     /// </summary>
     public partial class ForeachAction : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public ForeachAction() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -507,12 +522,17 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region ForeachAction<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ForeachAction.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ForeachAction.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
     public partial class ForeachAction<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public ForeachAction() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -522,7 +542,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region ForeachProcessor
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ForeachProcessor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ForeachProcessor.html"/>
     /// </summary>
     public partial class ForeachProcessor : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ForeachProcessor>
     {
@@ -565,7 +585,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region ForeachProcessor<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ForeachProcessor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ForeachProcessor.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -610,7 +630,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region GlobalKTable
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/GlobalKTable.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/GlobalKTable.html"/>
     /// </summary>
     public partial class GlobalKTable : MASES.JCOBridge.C2JBridge.JVMBridgeBase<GlobalKTable>
     {
@@ -653,7 +673,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region GlobalKTable<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/GlobalKTable.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/GlobalKTable.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -698,7 +718,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Grouped
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Grouped.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Grouped.html"/>
     /// </summary>
     public partial class Grouped : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Grouped>
     {
@@ -741,7 +761,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Grouped<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Grouped.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Grouped.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -786,10 +806,15 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Initializer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Initializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Initializer.html"/>
     /// </summary>
     public partial class Initializer : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public Initializer() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -799,11 +824,16 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Initializer<VA>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Initializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Initializer.html"/>
     /// </summary>
     /// <typeparam name="VA"></typeparam>
     public partial class Initializer<VA> : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public Initializer() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -813,7 +843,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Joined
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Joined.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Joined.html"/>
     /// </summary>
     public partial class Joined : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Joined>
     {
@@ -856,7 +886,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Joined<K, V, VO>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Joined.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Joined.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -902,7 +932,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region JoinWindows
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/JoinWindows.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/JoinWindows.html"/>
     /// </summary>
     public partial class JoinWindows : Org.Apache.Kafka.Streams.Kstream.Windows<Org.Apache.Kafka.Streams.Kstream.Window>
     {
@@ -945,10 +975,15 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region KeyValueMapper
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KeyValueMapper.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KeyValueMapper.html"/>
     /// </summary>
     public partial class KeyValueMapper : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public KeyValueMapper() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -958,13 +993,18 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region KeyValueMapper<K, V, VR>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KeyValueMapper.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KeyValueMapper.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
     /// <typeparam name="VR"></typeparam>
     public partial class KeyValueMapper<K, V, VR> : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public KeyValueMapper() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -974,7 +1014,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region KGroupedStream
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KGroupedStream.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KGroupedStream.html"/>
     /// </summary>
     public partial class KGroupedStream : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KGroupedStream>
     {
@@ -1017,7 +1057,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region KGroupedStream<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KGroupedStream.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KGroupedStream.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -1062,7 +1102,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region KGroupedTable
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KGroupedTable.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KGroupedTable.html"/>
     /// </summary>
     public partial class KGroupedTable : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KGroupedTable>
     {
@@ -1105,7 +1145,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region KGroupedTable<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KGroupedTable.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KGroupedTable.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -1150,7 +1190,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region KStream
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KStream.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KStream.html"/>
     /// </summary>
     public partial class KStream : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KStream>
     {
@@ -1193,7 +1233,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region KStream<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KStream.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KStream.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -1238,7 +1278,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region KTable
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KTable.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KTable.html"/>
     /// </summary>
     public partial class KTable : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KTable>
     {
@@ -1281,7 +1321,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region KTable<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KTable.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KTable.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -1326,7 +1366,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Materialized
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Materialized.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Materialized.html"/>
     /// </summary>
     public partial class Materialized : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Materialized>
     {
@@ -1365,7 +1405,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         // TODO: complete the class
         #region StoreType
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Materialized.StoreType.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Materialized.StoreType.html"/>
         /// </summary>
         public partial class StoreType : Java.Lang.Enum<Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType>
         {
@@ -1412,12 +1452,12 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Materialized<K, V, S>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Materialized.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Materialized.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
-    /// <typeparam name="S"><see cref="Org.Apache.Kafka.Streams.Processor.StateStore"/></typeparam>
-    public partial class Materialized<K, V, S> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Materialized<K, V, S>> where S: Org.Apache.Kafka.Streams.Processor.StateStore
+    /// <typeparam name="S"><see cref="Org.Apache.Kafka.Streams.Processor.IStateStore"/></typeparam>
+    public partial class Materialized<K, V, S> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Materialized<K, V, S>> where S: Org.Apache.Kafka.Streams.Processor.IStateStore, new()
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1458,10 +1498,15 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Merger
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Merger.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Merger.html"/>
     /// </summary>
     public partial class Merger : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public Merger() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -1471,12 +1516,17 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Merger<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Merger.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Merger.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
     public partial class Merger<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public Merger() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -1486,7 +1536,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Named
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Named.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Named.html"/>
     /// </summary>
     public partial class Named : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Named>
     {
@@ -1529,10 +1579,15 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Predicate
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Predicate.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Predicate.html"/>
     /// </summary>
     public partial class Predicate : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public Predicate() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -1542,12 +1597,17 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Predicate<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Predicate.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Predicate.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
     public partial class Predicate<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public Predicate() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -1557,7 +1617,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Printed
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Printed.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Printed.html"/>
     /// </summary>
     public partial class Printed : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Printed>
     {
@@ -1600,7 +1660,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Printed<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Printed.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Printed.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -1645,7 +1705,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Produced
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html"/>
     /// </summary>
     public partial class Produced : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Produced>
     {
@@ -1688,7 +1748,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Produced<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Produced.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -1733,10 +1793,15 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Reducer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Reducer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Reducer.html"/>
     /// </summary>
     public partial class Reducer : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public Reducer() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -1746,11 +1811,16 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Reducer<V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Reducer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Reducer.html"/>
     /// </summary>
     /// <typeparam name="V"></typeparam>
     public partial class Reducer<V> : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public Reducer() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -1760,7 +1830,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Repartitioned
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Repartitioned.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Repartitioned.html"/>
     /// </summary>
     public partial class Repartitioned : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Repartitioned>
     {
@@ -1803,7 +1873,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Repartitioned<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Repartitioned.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Repartitioned.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -1848,7 +1918,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region SessionWindowedCogroupedKStream
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream.html"/>
     /// </summary>
     public partial class SessionWindowedCogroupedKStream : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SessionWindowedCogroupedKStream>
     {
@@ -1891,7 +1961,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region SessionWindowedCogroupedKStream<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -1936,7 +2006,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region SessionWindowedDeserializer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html"/>
     /// </summary>
     public partial class SessionWindowedDeserializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SessionWindowedDeserializer>
     {
@@ -1979,7 +2049,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region SessionWindowedDeserializer<T>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class SessionWindowedDeserializer<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SessionWindowedDeserializer<T>>
@@ -2023,7 +2093,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region SessionWindowedKStream
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindowedKStream.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindowedKStream.html"/>
     /// </summary>
     public partial class SessionWindowedKStream : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SessionWindowedKStream>
     {
@@ -2066,7 +2136,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region SessionWindowedKStream<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindowedKStream.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindowedKStream.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -2111,7 +2181,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region SessionWindowedSerializer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html"/>
     /// </summary>
     public partial class SessionWindowedSerializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SessionWindowedSerializer>
     {
@@ -2154,7 +2224,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region SessionWindowedSerializer<T>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class SessionWindowedSerializer<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SessionWindowedSerializer<T>>
@@ -2198,7 +2268,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region SessionWindows
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindows.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SessionWindows.html"/>
     /// </summary>
     public partial class SessionWindows : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SessionWindows>
     {
@@ -2241,7 +2311,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region SlidingWindows
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SlidingWindows.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/SlidingWindows.html"/>
     /// </summary>
     public partial class SlidingWindows : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SlidingWindows>
     {
@@ -2284,7 +2354,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region StreamJoined
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/StreamJoined.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/StreamJoined.html"/>
     /// </summary>
     public partial class StreamJoined : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StreamJoined>
     {
@@ -2327,7 +2397,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region StreamJoined<K, V1, V2>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/StreamJoined.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/StreamJoined.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V1"></typeparam>
@@ -2373,9 +2443,9 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Suppressed
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.html"/>
     /// </summary>
-    public partial class Suppressed : Org.Apache.Kafka.Streams.Kstream.NamedOperation
+    public partial class Suppressed : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Suppressed>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -2412,7 +2482,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         // TODO: complete the class
         #region BufferConfig
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html"/>
         /// </summary>
         public partial class BufferConfig : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BufferConfig>
         {
@@ -2455,7 +2525,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region BufferConfig<BC>
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html"/>
         /// </summary>
         /// <typeparam name="BC"><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.BufferConfig{BC}"/></typeparam>
         public partial class BufferConfig<BC> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BufferConfig<BC>> where BC: Org.Apache.Kafka.Streams.Kstream.Suppressed.BufferConfig<BC>
@@ -2499,9 +2569,9 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region EagerBufferConfig
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.EagerBufferConfig.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.EagerBufferConfig.html"/>
         /// </summary>
-        public partial class EagerBufferConfig : Org.Apache.Kafka.Streams.Kstream.Suppressed.BufferConfig
+        public partial class EagerBufferConfig : Org.Apache.Kafka.Streams.Kstream.Suppressed.BufferConfig<Org.Apache.Kafka.Streams.Kstream.Suppressed.EagerBufferConfig>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -2542,9 +2612,9 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region StrictBufferConfig
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.StrictBufferConfig.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.StrictBufferConfig.html"/>
         /// </summary>
-        public partial class StrictBufferConfig : Org.Apache.Kafka.Streams.Kstream.Suppressed.BufferConfig
+        public partial class StrictBufferConfig : Org.Apache.Kafka.Streams.Kstream.Suppressed.BufferConfig<Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -2589,10 +2659,10 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Suppressed<K>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Suppressed.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
-    public partial class Suppressed<K> : Org.Apache.Kafka.Streams.Kstream.NamedOperation<Org.Apache.Kafka.Streams.Kstream.Suppressed<K>>
+    public partial class Suppressed<K> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Suppressed<K>>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -2633,7 +2703,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region TableJoined
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TableJoined.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TableJoined.html"/>
     /// </summary>
     public partial class TableJoined : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TableJoined>
     {
@@ -2676,7 +2746,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region TableJoined<K, KO>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TableJoined.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TableJoined.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="KO"></typeparam>
@@ -2721,7 +2791,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region TimeWindowedCogroupedKStream
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TimeWindowedCogroupedKStream.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TimeWindowedCogroupedKStream.html"/>
     /// </summary>
     public partial class TimeWindowedCogroupedKStream : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TimeWindowedCogroupedKStream>
     {
@@ -2764,7 +2834,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region TimeWindowedCogroupedKStream<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TimeWindowedCogroupedKStream.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TimeWindowedCogroupedKStream.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -2809,7 +2879,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region TimeWindowedDeserializer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html"/>
     /// </summary>
     public partial class TimeWindowedDeserializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TimeWindowedDeserializer>
     {
@@ -2852,7 +2922,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region TimeWindowedDeserializer<T>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class TimeWindowedDeserializer<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TimeWindowedDeserializer<T>>
@@ -2896,7 +2966,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region TimeWindowedKStream
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TimeWindowedKStream.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TimeWindowedKStream.html"/>
     /// </summary>
     public partial class TimeWindowedKStream : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TimeWindowedKStream>
     {
@@ -2939,7 +3009,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region TimeWindowedKStream<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TimeWindowedKStream.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TimeWindowedKStream.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -2984,7 +3054,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region TimeWindowedSerializer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TimeWindowedSerializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TimeWindowedSerializer.html"/>
     /// </summary>
     public partial class TimeWindowedSerializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TimeWindowedSerializer>
     {
@@ -3027,7 +3097,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region TimeWindowedSerializer<T>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TimeWindowedSerializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TimeWindowedSerializer.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class TimeWindowedSerializer<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TimeWindowedSerializer<T>>
@@ -3071,7 +3141,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region TimeWindows
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TimeWindows.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TimeWindows.html"/>
     /// </summary>
     public partial class TimeWindows : Org.Apache.Kafka.Streams.Kstream.Windows<Org.Apache.Kafka.Streams.Kstream.Internals.TimeWindow>
     {
@@ -3114,7 +3184,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Transformer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Transformer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Transformer.html"/>
     /// </summary>
     public partial class Transformer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Transformer>
     {
@@ -3157,7 +3227,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Transformer<K, V, R>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Transformer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Transformer.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -3203,7 +3273,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region TransformerSupplier
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TransformerSupplier.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TransformerSupplier.html"/>
     /// </summary>
     public partial class TransformerSupplier : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TransformerSupplier>
     {
@@ -3246,7 +3316,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region TransformerSupplier<K, V, R>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TransformerSupplier.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TransformerSupplier.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -3292,7 +3362,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region UnlimitedWindows
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/UnlimitedWindows.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/UnlimitedWindows.html"/>
     /// </summary>
     public partial class UnlimitedWindows : Org.Apache.Kafka.Streams.Kstream.Windows<Org.Apache.Kafka.Streams.Kstream.Internals.UnlimitedWindow>
     {
@@ -3335,10 +3405,15 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region ValueJoiner
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueJoiner.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueJoiner.html"/>
     /// </summary>
     public partial class ValueJoiner : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public ValueJoiner() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -3348,13 +3423,18 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region ValueJoiner<V1, V2, VR>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueJoiner.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueJoiner.html"/>
     /// </summary>
     /// <typeparam name="V1"></typeparam>
     /// <typeparam name="V2"></typeparam>
     /// <typeparam name="VR"></typeparam>
     public partial class ValueJoiner<V1, V2, VR> : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public ValueJoiner() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -3364,10 +3444,15 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region ValueJoinerWithKey
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html"/>
     /// </summary>
     public partial class ValueJoinerWithKey : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public ValueJoinerWithKey() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -3377,7 +3462,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region ValueJoinerWithKey<K1, V1, V2, VR>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html"/>
     /// </summary>
     /// <typeparam name="K1"></typeparam>
     /// <typeparam name="V1"></typeparam>
@@ -3385,6 +3470,11 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// <typeparam name="VR"></typeparam>
     public partial class ValueJoinerWithKey<K1, V1, V2, VR> : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public ValueJoinerWithKey() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -3394,10 +3484,15 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region ValueMapper
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueMapper.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueMapper.html"/>
     /// </summary>
     public partial class ValueMapper : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public ValueMapper() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -3407,12 +3502,17 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region ValueMapper<V, VR>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueMapper.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueMapper.html"/>
     /// </summary>
     /// <typeparam name="V"></typeparam>
     /// <typeparam name="VR"></typeparam>
     public partial class ValueMapper<V, VR> : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public ValueMapper() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -3422,10 +3522,15 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region ValueMapperWithKey
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueMapperWithKey.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueMapperWithKey.html"/>
     /// </summary>
     public partial class ValueMapperWithKey : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public ValueMapperWithKey() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -3435,13 +3540,18 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region ValueMapperWithKey<K, V, VR>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueMapperWithKey.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueMapperWithKey.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
     /// <typeparam name="VR"></typeparam>
     public partial class ValueMapperWithKey<K, V, VR> : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public ValueMapperWithKey() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -3451,10 +3561,15 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region ValueTransformer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformer.html"/>
     /// </summary>
     public partial class ValueTransformer : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public ValueTransformer() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -3464,12 +3579,17 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region ValueTransformer<V, VR>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformer.html"/>
     /// </summary>
     /// <typeparam name="V"></typeparam>
     /// <typeparam name="VR"></typeparam>
     public partial class ValueTransformer<V, VR> : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public ValueTransformer() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -3479,7 +3599,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region ValueTransformerSupplier
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerSupplier.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerSupplier.html"/>
     /// </summary>
     public partial class ValueTransformerSupplier : Org.Apache.Kafka.Streams.Processor.ConnectedStoreProvider
     {
@@ -3522,7 +3642,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region ValueTransformerSupplier<V, VR>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerSupplier.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerSupplier.html"/>
     /// </summary>
     /// <typeparam name="V"></typeparam>
     /// <typeparam name="VR"></typeparam>
@@ -3567,10 +3687,15 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region ValueTransformerWithKey
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerWithKey.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerWithKey.html"/>
     /// </summary>
     public partial class ValueTransformerWithKey : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public ValueTransformerWithKey() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -3580,13 +3705,18 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region ValueTransformerWithKey<K, V, VR>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerWithKey.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerWithKey.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
     /// <typeparam name="VR"></typeparam>
     public partial class ValueTransformerWithKey<K, V, VR> : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public ValueTransformerWithKey() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -3596,7 +3726,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region ValueTransformerWithKeySupplier
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerWithKeySupplier.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerWithKeySupplier.html"/>
     /// </summary>
     public partial class ValueTransformerWithKeySupplier : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ValueTransformerWithKeySupplier>
     {
@@ -3639,7 +3769,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region ValueTransformerWithKeySupplier<K, V, VR>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerWithKeySupplier.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerWithKeySupplier.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -3685,7 +3815,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Window
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Window.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Window.html"/>
     /// </summary>
     public partial class Window : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Window>
     {
@@ -3728,7 +3858,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Windowed
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Windowed.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Windowed.html"/>
     /// </summary>
     public partial class Windowed : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Windowed>
     {
@@ -3771,7 +3901,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Windowed<K>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Windowed.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Windowed.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     public partial class Windowed<K> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Windowed<K>>
@@ -3815,7 +3945,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region WindowedSerdes
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/WindowedSerdes.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/WindowedSerdes.html"/>
     /// </summary>
     public partial class WindowedSerdes : MASES.JCOBridge.C2JBridge.JVMBridgeBase<WindowedSerdes>
     {
@@ -3854,7 +3984,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         // TODO: complete the class
         #region SessionWindowedSerde
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/WindowedSerdes.SessionWindowedSerde.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/WindowedSerdes.SessionWindowedSerde.html"/>
         /// </summary>
         public partial class SessionWindowedSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde
         {
@@ -3897,7 +4027,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region SessionWindowedSerde<T>
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/WindowedSerdes.SessionWindowedSerde.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/WindowedSerdes.SessionWindowedSerde.html"/>
         /// </summary>
         /// <typeparam name="T"></typeparam>
         public partial class SessionWindowedSerde<T> : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<Org.Apache.Kafka.Streams.Kstream.Windowed<T>>
@@ -3941,7 +4071,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region TimeWindowedSerde
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/WindowedSerdes.TimeWindowedSerde.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/WindowedSerdes.TimeWindowedSerde.html"/>
         /// </summary>
         public partial class TimeWindowedSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde
         {
@@ -3984,7 +4114,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region TimeWindowedSerde<T>
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/WindowedSerdes.TimeWindowedSerde.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/WindowedSerdes.TimeWindowedSerde.html"/>
         /// </summary>
         /// <typeparam name="T"></typeparam>
         public partial class TimeWindowedSerde<T> : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<Org.Apache.Kafka.Streams.Kstream.Windowed<T>>
@@ -4032,7 +4162,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Windows
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Windows.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Windows.html"/>
     /// </summary>
     public partial class Windows : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Windows>
     {
@@ -4075,7 +4205,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Windows<W>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Windows.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Windows.html"/>
     /// </summary>
     /// <typeparam name="W"><see cref="Org.Apache.Kafka.Streams.Kstream.Window"/></typeparam>
     public partial class Windows<W> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Windows<W>> where W: Org.Apache.Kafka.Streams.Kstream.Window
@@ -4116,6 +4246,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
     
     }
     #endregion
+
 
 
 }

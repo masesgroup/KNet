@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListOffsetsOptions.html#%3Cinit%3E(org.apache.kafka.common.IsolationLevel)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListOffsetsOptions.html#%3Cinit%3E(org.apache.kafka.common.IsolationLevel)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.IsolationLevel"/></param>
         public ListOffsetsOptions(Org.Apache.Kafka.Common.IsolationLevel arg0)
@@ -54,7 +54,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListOffsetsOptions.html#isolationLevel()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/ListOffsetsOptions.html#isolationLevel()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.IsolationLevel"/></returns>

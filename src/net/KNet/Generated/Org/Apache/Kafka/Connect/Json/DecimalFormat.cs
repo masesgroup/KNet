@@ -38,11 +38,11 @@ namespace Org.Apache.Kafka.Connect.Json
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/DecimalFormat.html#BASE64"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/DecimalFormat.html#BASE64"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Json.DecimalFormat BASE64 { get { return SGetField<Org.Apache.Kafka.Connect.Json.DecimalFormat>(LocalBridgeClazz, "BASE64"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/DecimalFormat.html#NUMERIC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/DecimalFormat.html#NUMERIC"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Json.DecimalFormat NUMERIC { get { return SGetField<Org.Apache.Kafka.Connect.Json.DecimalFormat>(LocalBridgeClazz, "NUMERIC"); } }
 
@@ -50,7 +50,7 @@ namespace Org.Apache.Kafka.Connect.Json
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/DecimalFormat.html#valueOf(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/DecimalFormat.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Json.DecimalFormat"/></returns>
@@ -59,7 +59,7 @@ namespace Org.Apache.Kafka.Connect.Json
             return SExecute<Org.Apache.Kafka.Connect.Json.DecimalFormat>(LocalBridgeClazz, "valueOf", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/DecimalFormat.html#values()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/DecimalFormat.html#values()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Connect.Json.DecimalFormat"/></returns>

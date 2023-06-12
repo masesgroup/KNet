@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Connect.Storage
 {
+    #region IHeaderConverter
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/HeaderConverter.html"/>
+    /// </summary>
+    public partial interface IHeaderConverter
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region HeaderConverter
-    public partial class HeaderConverter
+    public partial class HeaderConverter : Org.Apache.Kafka.Connect.Storage.IHeaderConverter, Org.Apache.Kafka.Common.IConfigurable, Java.Io.ICloseable
     {
         #region Constructors
 
@@ -54,7 +72,7 @@ namespace Org.Apache.Kafka.Connect.Storage
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/HeaderConverter.html#fromConnectHeader(java.lang.String,java.lang.String,org.apache.kafka.connect.data.Schema,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/HeaderConverter.html#fromConnectHeader(java.lang.String,java.lang.String,org.apache.kafka.connect.data.Schema,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -66,7 +84,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return IExecuteArray<byte>("fromConnectHeader", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/HeaderConverter.html#config()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/HeaderConverter.html#config()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
@@ -75,7 +93,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("config");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/HeaderConverter.html#toConnectHeader(java.lang.String,java.lang.String,byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/HeaderConverter.html#toConnectHeader(java.lang.String,java.lang.String,byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="string"/></param>

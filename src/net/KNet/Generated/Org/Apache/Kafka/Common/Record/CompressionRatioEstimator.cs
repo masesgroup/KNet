@@ -38,11 +38,11 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/CompressionRatioEstimator.html#COMPRESSION_RATIO_DETERIORATE_STEP"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/CompressionRatioEstimator.html#COMPRESSION_RATIO_DETERIORATE_STEP"/>
         /// </summary>
         public static float COMPRESSION_RATIO_DETERIORATE_STEP { get { return SGetField<float>(LocalBridgeClazz, "COMPRESSION_RATIO_DETERIORATE_STEP"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/CompressionRatioEstimator.html#COMPRESSION_RATIO_IMPROVING_STEP"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/CompressionRatioEstimator.html#COMPRESSION_RATIO_IMPROVING_STEP"/>
         /// </summary>
         public static float COMPRESSION_RATIO_IMPROVING_STEP { get { return SGetField<float>(LocalBridgeClazz, "COMPRESSION_RATIO_IMPROVING_STEP"); } }
 
@@ -50,7 +50,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/CompressionRatioEstimator.html#estimation(java.lang.String,org.apache.kafka.common.record.CompressionType)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/CompressionRatioEstimator.html#estimation(java.lang.String,org.apache.kafka.common.record.CompressionType)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Record.CompressionType"/></param>
@@ -60,7 +60,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecute<float>(LocalBridgeClazz, "estimation", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/CompressionRatioEstimator.html#updateEstimation(java.lang.String,org.apache.kafka.common.record.CompressionType,float)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/CompressionRatioEstimator.html#updateEstimation(java.lang.String,org.apache.kafka.common.record.CompressionType,float)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Record.CompressionType"/></param>
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecute<float>(LocalBridgeClazz, "updateEstimation", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/CompressionRatioEstimator.html#removeEstimation(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/CompressionRatioEstimator.html#removeEstimation(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         public static void RemoveEstimation(string arg0)
@@ -79,7 +79,7 @@ namespace Org.Apache.Kafka.Common.Record
             SExecute(LocalBridgeClazz, "removeEstimation", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/CompressionRatioEstimator.html#resetEstimation(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/CompressionRatioEstimator.html#resetEstimation(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         public static void ResetEstimation(string arg0)
@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Common.Record
             SExecute(LocalBridgeClazz, "resetEstimation", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/CompressionRatioEstimator.html#setEstimation(java.lang.String,org.apache.kafka.common.record.CompressionType,float)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/CompressionRatioEstimator.html#setEstimation(java.lang.String,org.apache.kafka.common.record.CompressionType,float)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Record.CompressionType"/></param>

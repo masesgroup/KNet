@@ -33,16 +33,12 @@ namespace Org.Apache.Kafka.Common.Security.Scram
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.Security.Scram.ScramLoginModule"/> to <see cref="Javax.Security.Auth.Spi.LoginModule"/>
-        /// </summary>
-        public static implicit operator Javax.Security.Auth.Spi.LoginModule(Org.Apache.Kafka.Common.Security.Scram.ScramLoginModule t) => t.Cast<Javax.Security.Auth.Spi.LoginModule>();
 
         #endregion
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramLoginModule.html#TOKEN_AUTH_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramLoginModule.html#TOKEN_AUTH_CONFIG"/>
         /// </summary>
         public static string TOKEN_AUTH_CONFIG { get { return SGetField<string>(LocalBridgeClazz, "TOKEN_AUTH_CONFIG"); } }
 
@@ -54,7 +50,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramLoginModule.html#abort()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramLoginModule.html#abort()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -63,7 +59,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
             return IExecute<bool>("abort");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramLoginModule.html#commit()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramLoginModule.html#commit()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -72,7 +68,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
             return IExecute<bool>("commit");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramLoginModule.html#login()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramLoginModule.html#login()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -81,7 +77,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
             return IExecute<bool>("login");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramLoginModule.html#logout()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramLoginModule.html#logout()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -90,15 +86,13 @@ namespace Org.Apache.Kafka.Common.Security.Scram
             return IExecute<bool>("logout");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramLoginModule.html#initialize(javax.security.auth.Subject,javax.security.auth.callback.CallbackHandler,java.util.Map,java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramLoginModule.html#initialize(javax.security.auth.Subject,javax.security.auth.callback.CallbackHandler,java.util.Map,java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Javax.Security.Auth.Subject"/></param>
         /// <param name="arg1"><see cref="Javax.Security.Auth.Callback.CallbackHandler"/></param>
         /// <param name="arg2"><see cref="Java.Util.Map"/></param>
         /// <param name="arg3"><see cref="Java.Util.Map"/></param>
-        /// <typeparam name="Arg2Extendsobject"></typeparam>
-        /// <typeparam name="Arg3Extendsobject"></typeparam>
-        public void Initialize<Arg2Extendsobject, Arg3Extendsobject>(Javax.Security.Auth.Subject arg0, Javax.Security.Auth.Callback.CallbackHandler arg1, Java.Util.Map<string, Arg2Extendsobject> arg2, Java.Util.Map<string, Arg3Extendsobject> arg3)
+        public void Initialize(Javax.Security.Auth.Subject arg0, Javax.Security.Auth.Callback.CallbackHandler arg1, Java.Util.Map<string, object> arg2, Java.Util.Map<string, object> arg3)
         {
             IExecute("initialize", arg0, arg1, arg2, arg3);
         }

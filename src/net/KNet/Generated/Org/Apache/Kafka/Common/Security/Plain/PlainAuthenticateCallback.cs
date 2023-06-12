@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/PlainAuthenticateCallback.html#%3Cinit%3E(char[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/PlainAuthenticateCallback.html#%3Cinit%3E(char[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="char"/></param>
         public PlainAuthenticateCallback(char[] arg0)
@@ -41,10 +41,6 @@ namespace Org.Apache.Kafka.Common.Security.Plain
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.Security.Plain.PlainAuthenticateCallback"/> to <see cref="Javax.Security.Auth.Callback.Callback"/>
-        /// </summary>
-        public static implicit operator Javax.Security.Auth.Callback.Callback(Org.Apache.Kafka.Common.Security.Plain.PlainAuthenticateCallback t) => t.Cast<Javax.Security.Auth.Callback.Callback>();
 
         #endregion
 
@@ -58,7 +54,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/PlainAuthenticateCallback.html#authenticated()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/PlainAuthenticateCallback.html#authenticated()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -67,7 +63,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain
             return IExecute<bool>("authenticated");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/PlainAuthenticateCallback.html#password()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/PlainAuthenticateCallback.html#password()"/>
         /// </summary>
 
         /// <returns><see cref="char"/></returns>
@@ -76,7 +72,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain
             return IExecuteArray<char>("password");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/PlainAuthenticateCallback.html#authenticated(boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/PlainAuthenticateCallback.html#authenticated(boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         public void Authenticated(bool arg0)

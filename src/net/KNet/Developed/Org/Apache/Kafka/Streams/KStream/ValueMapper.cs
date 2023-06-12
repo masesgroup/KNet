@@ -26,7 +26,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// </summary>
     /// <typeparam name="V">The data associated to the event</typeparam>
     /// <typeparam name="VR">The result data associated to the event</typeparam>
-    public interface IValueMapper<V, VR> : IJVMBridgeBase
+    public partial interface IValueMapper<V, VR> : IJVMBridgeBase
     {
         /// <summary>
         /// Executes the ValueMapper action in the CLR
@@ -72,38 +72,5 @@ namespace Org.Apache.Kafka.Streams.Kstream
             var retVal = OnApply(data.EventData.TypedEventData);
             data.SetReturnValue(retVal);
         }
-        /// <summary>
-        /// Executes the ValueMapper action in the CLR
-        /// </summary>
-        /// <param name="o1">The ValueMapper object</param>
-        /// <returns>The apply evaluation</returns>
-        public virtual VR Apply(V o1) { return default(VR); }
     }
-    /*
-    /// <summary>
-    /// Listener for Kafka ValueMapper. Extends <see cref="ValueMapperImpl{V, VR}"/>
-    /// </summary>
-    /// <typeparam name="V">The data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
-    /// <typeparam name="VR">The result data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
-    /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
-    public class JVMBridgeValueMapper<V, VR> : ValueMapperImpl<V, VR>
-        where V : JVMBridgeBase, new()
-        where VR : JVMBridgeBase, new()
-    {
-        /// <summary>
-        /// Initialize a new instance of <see cref="JVMBridgeValueMapper{V, VR}"/>
-        /// </summary>
-        /// <param name="func">The <see cref="Func{V, VR}"/> to be executed</param>
-        public JVMBridgeValueMapper(Func<V, VR> func = null) : base(func, false)
-        {
-            AddEventHandler("apply", new EventHandler<CLRListenerEventArgs<JVMBridgeEventData<V>>>(EventHandler));
-        }
-
-        void EventHandler(object sender, CLRListenerEventArgs<JVMBridgeEventData<V>> data)
-        {
-            var retVal = OnApply(data.EventData.TypedEventData);
-            data.CLRReturnValue = retVal?;
-        }
-    }
-    */
 }

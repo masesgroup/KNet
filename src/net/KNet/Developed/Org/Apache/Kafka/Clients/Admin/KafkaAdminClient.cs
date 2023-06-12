@@ -63,7 +63,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         public ElectLeadersResult ElectLeaders(ElectionType electionType, Set<TopicPartition> partitions)
         {
-            return IExecute<ElectLeadersResult>("electLeaders", (byte)electionType, partitions);
+            return IExecute<ElectLeadersResult>("electLeaders", electionType, partitions);
         }
 
         public void Close()

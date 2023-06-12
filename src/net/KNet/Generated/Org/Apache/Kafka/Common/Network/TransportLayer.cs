@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Network
 {
+    #region ITransportLayer
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html"/>
+    /// </summary>
+    public partial interface ITransportLayer
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region TransportLayer
-    public partial class TransportLayer
+    public partial class TransportLayer : Org.Apache.Kafka.Common.Network.ITransportLayer, Java.Nio.Channels.IScatteringByteChannel, Org.Apache.Kafka.Common.Network.ITransferableChannel
     {
         #region Constructors
 
@@ -54,7 +72,7 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#finishConnect()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#finishConnect()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -64,7 +82,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<bool>("finishConnect");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#hasBytesBuffered()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#hasBytesBuffered()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -73,7 +91,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<bool>("hasBytesBuffered");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#isConnected()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#isConnected()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -82,7 +100,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<bool>("isConnected");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#isMute()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#isMute()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -91,7 +109,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<bool>("isMute");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#ready()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#ready()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -100,7 +118,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<bool>("ready");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#selectionKey()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#selectionKey()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Nio.Channels.SelectionKey"/></returns>
@@ -109,7 +127,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<Java.Nio.Channels.SelectionKey>("selectionKey");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#socketChannel()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#socketChannel()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Nio.Channels.SocketChannel"/></returns>
@@ -118,7 +136,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<Java.Nio.Channels.SocketChannel>("socketChannel");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#peerPrincipal()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#peerPrincipal()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Security.Principal"/></returns>
@@ -128,7 +146,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<Java.Security.Principal>("peerPrincipal");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#addInterestOps(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#addInterestOps(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public void AddInterestOps(int arg0)
@@ -136,14 +154,14 @@ namespace Org.Apache.Kafka.Common.Network
             IExecute("addInterestOps", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#disconnect()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#disconnect()"/>
         /// </summary>
         public void Disconnect()
         {
             IExecute("disconnect");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#handshake()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#handshake()"/>
         /// </summary>
 
         /// <exception cref="Org.Apache.Kafka.Common.Errors.AuthenticationException"/>
@@ -153,7 +171,7 @@ namespace Org.Apache.Kafka.Common.Network
             IExecute("handshake");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#removeInterestOps(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html#removeInterestOps(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public void RemoveInterestOps(int arg0)

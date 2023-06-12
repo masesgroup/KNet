@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients
 {
     #region ApiVersions
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ApiVersions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ApiVersions.html"/>
     /// </summary>
     public partial class ApiVersions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ApiVersions>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Clients
 
     #region ClientDnsLookup
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientDnsLookup.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientDnsLookup.html"/>
     /// </summary>
     public partial class ClientDnsLookup : Java.Lang.Enum<Org.Apache.Kafka.Clients.ClientDnsLookup>
     {
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Clients
 
     #region ClientRequest
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html"/>
     /// </summary>
     public partial class ClientRequest : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ClientRequest>
     {
@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Clients
 
     #region ClientResponse
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientResponse.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientResponse.html"/>
     /// </summary>
     public partial class ClientResponse : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ClientResponse>
     {
@@ -199,7 +199,7 @@ namespace Org.Apache.Kafka.Clients
 
     #region ClientUtils
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientUtils.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientUtils.html"/>
     /// </summary>
     public partial class ClientUtils : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ClientUtils>
     {
@@ -242,7 +242,7 @@ namespace Org.Apache.Kafka.Clients
 
     #region CommonClientConfigs
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/CommonClientConfigs.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/CommonClientConfigs.html"/>
     /// </summary>
     public partial class CommonClientConfigs : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CommonClientConfigs>
     {
@@ -285,7 +285,7 @@ namespace Org.Apache.Kafka.Clients
 
     #region ConnectionState
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ConnectionState.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ConnectionState.html"/>
     /// </summary>
     public partial class ConnectionState : Java.Lang.Enum<Org.Apache.Kafka.Clients.ConnectionState>
     {
@@ -328,9 +328,9 @@ namespace Org.Apache.Kafka.Clients
 
     #region DefaultHostResolver
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/DefaultHostResolver.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/DefaultHostResolver.html"/>
     /// </summary>
-    public partial class DefaultHostResolver : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DefaultHostResolver>
+    public partial class DefaultHostResolver : Org.Apache.Kafka.Clients.HostResolver
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -371,7 +371,7 @@ namespace Org.Apache.Kafka.Clients
 
     #region FetchSessionHandler
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/FetchSessionHandler.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/FetchSessionHandler.html"/>
     /// </summary>
     public partial class FetchSessionHandler : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FetchSessionHandler>
     {
@@ -410,7 +410,7 @@ namespace Org.Apache.Kafka.Clients
         // TODO: complete the class
         #region Builder
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/FetchSessionHandler.Builder.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/FetchSessionHandler.Builder.html"/>
         /// </summary>
         public partial class Builder : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Builder>
         {
@@ -453,7 +453,7 @@ namespace Org.Apache.Kafka.Clients
 
         #region FetchRequestData
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/FetchSessionHandler.FetchRequestData.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/FetchSessionHandler.FetchRequestData.html"/>
         /// </summary>
         public partial class FetchRequestData : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FetchRequestData>
         {
@@ -500,7 +500,7 @@ namespace Org.Apache.Kafka.Clients
 
     #region GroupRebalanceConfig
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/GroupRebalanceConfig.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/GroupRebalanceConfig.html"/>
     /// </summary>
     public partial class GroupRebalanceConfig : MASES.JCOBridge.C2JBridge.JVMBridgeBase<GroupRebalanceConfig>
     {
@@ -539,7 +539,7 @@ namespace Org.Apache.Kafka.Clients
         // TODO: complete the class
         #region ProtocolType
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/GroupRebalanceConfig.ProtocolType.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/GroupRebalanceConfig.ProtocolType.html"/>
         /// </summary>
         public partial class ProtocolType : Java.Lang.Enum<Org.Apache.Kafka.Clients.GroupRebalanceConfig.ProtocolType>
         {
@@ -586,7 +586,7 @@ namespace Org.Apache.Kafka.Clients
 
     #region HostResolver
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/HostResolver.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/HostResolver.html"/>
     /// </summary>
     public partial class HostResolver : MASES.JCOBridge.C2JBridge.JVMBridgeBase<HostResolver>
     {
@@ -629,7 +629,7 @@ namespace Org.Apache.Kafka.Clients
 
     #region KafkaClient
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/KafkaClient.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/KafkaClient.html"/>
     /// </summary>
     public partial class KafkaClient : Java.Io.Closeable
     {
@@ -672,9 +672,9 @@ namespace Org.Apache.Kafka.Clients
 
     #region ManualMetadataUpdater
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ManualMetadataUpdater.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ManualMetadataUpdater.html"/>
     /// </summary>
-    public partial class ManualMetadataUpdater : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ManualMetadataUpdater>
+    public partial class ManualMetadataUpdater : Org.Apache.Kafka.Clients.MetadataUpdater
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -715,9 +715,9 @@ namespace Org.Apache.Kafka.Clients
 
     #region Metadata
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/Metadata.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/Metadata.html"/>
     /// </summary>
-    public partial class Metadata : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Metadata>
+    public partial class Metadata : Java.Io.Closeable
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -754,7 +754,7 @@ namespace Org.Apache.Kafka.Clients
         // TODO: complete the class
         #region LeaderAndEpoch
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/Metadata.LeaderAndEpoch.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/Metadata.LeaderAndEpoch.html"/>
         /// </summary>
         public partial class LeaderAndEpoch : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LeaderAndEpoch>
         {
@@ -797,7 +797,7 @@ namespace Org.Apache.Kafka.Clients
 
         #region MetadataRequestAndVersion
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/Metadata.MetadataRequestAndVersion.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/Metadata.MetadataRequestAndVersion.html"/>
         /// </summary>
         public partial class MetadataRequestAndVersion : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MetadataRequestAndVersion>
         {
@@ -844,7 +844,7 @@ namespace Org.Apache.Kafka.Clients
 
     #region MetadataCache
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/MetadataCache.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/MetadataCache.html"/>
     /// </summary>
     public partial class MetadataCache : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MetadataCache>
     {
@@ -887,7 +887,7 @@ namespace Org.Apache.Kafka.Clients
 
     #region MetadataUpdater
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/MetadataUpdater.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/MetadataUpdater.html"/>
     /// </summary>
     public partial class MetadataUpdater : Java.Io.Closeable
     {
@@ -930,9 +930,9 @@ namespace Org.Apache.Kafka.Clients
 
     #region NetworkClient
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html"/>
     /// </summary>
-    public partial class NetworkClient : MASES.JCOBridge.C2JBridge.JVMBridgeBase<NetworkClient>
+    public partial class NetworkClient : Org.Apache.Kafka.Clients.KafkaClient
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -973,7 +973,7 @@ namespace Org.Apache.Kafka.Clients
 
     #region NetworkClientUtils
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClientUtils.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClientUtils.html"/>
     /// </summary>
     public partial class NetworkClientUtils : MASES.JCOBridge.C2JBridge.JVMBridgeBase<NetworkClientUtils>
     {
@@ -1016,7 +1016,7 @@ namespace Org.Apache.Kafka.Clients
 
     #region NodeApiVersions
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NodeApiVersions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NodeApiVersions.html"/>
     /// </summary>
     public partial class NodeApiVersions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<NodeApiVersions>
     {
@@ -1059,7 +1059,7 @@ namespace Org.Apache.Kafka.Clients
 
     #region RequestCompletionHandler
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/RequestCompletionHandler.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/RequestCompletionHandler.html"/>
     /// </summary>
     public partial class RequestCompletionHandler : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RequestCompletionHandler>
     {
@@ -1102,7 +1102,7 @@ namespace Org.Apache.Kafka.Clients
 
     #region StaleMetadataException
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/StaleMetadataException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/StaleMetadataException.html"/>
     /// </summary>
     public partial class StaleMetadataException : Org.Apache.Kafka.Common.Errors.InvalidMetadataException
     {
@@ -1115,6 +1115,7 @@ namespace Org.Apache.Kafka.Clients
 
     }
     #endregion
+
 
 
 }

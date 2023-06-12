@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Streams
 {
+    #region IStreamsMetrics
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsMetrics.html"/>
+    /// </summary>
+    public partial interface IStreamsMetrics
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region StreamsMetrics
-    public partial class StreamsMetrics
+    public partial class StreamsMetrics : Org.Apache.Kafka.Streams.IStreamsMetrics
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Streams
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsMetrics.html#metrics()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsMetrics.html#metrics()"/>
         /// </summary>
 
         /// <typeparam name="ReturnExtendsOrg_Apache_Kafka_Common_Metric"><see cref="Org.Apache.Kafka.Common.Metric"/></typeparam>
@@ -56,7 +74,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.MetricName, ReturnExtendsOrg_Apache_Kafka_Common_Metric>>("metrics");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsMetrics.html#addLatencyRateTotalSensor(java.lang.String,java.lang.String,java.lang.String,org.apache.kafka.common.metrics.Sensor.RecordingLevel,java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsMetrics.html#addLatencyRateTotalSensor(java.lang.String,java.lang.String,java.lang.String,org.apache.kafka.common.metrics.Sensor.RecordingLevel,java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -69,7 +87,7 @@ namespace Org.Apache.Kafka.Streams
             if (arg4.Length == 0) return IExecute<Org.Apache.Kafka.Common.Metrics.Sensor>("addLatencyRateTotalSensor", arg0, arg1, arg2, arg3); else return IExecute<Org.Apache.Kafka.Common.Metrics.Sensor>("addLatencyRateTotalSensor", arg0, arg1, arg2, arg3, arg4);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsMetrics.html#addRateTotalSensor(java.lang.String,java.lang.String,java.lang.String,org.apache.kafka.common.metrics.Sensor.RecordingLevel,java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsMetrics.html#addRateTotalSensor(java.lang.String,java.lang.String,java.lang.String,org.apache.kafka.common.metrics.Sensor.RecordingLevel,java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -82,7 +100,7 @@ namespace Org.Apache.Kafka.Streams
             if (arg4.Length == 0) return IExecute<Org.Apache.Kafka.Common.Metrics.Sensor>("addRateTotalSensor", arg0, arg1, arg2, arg3); else return IExecute<Org.Apache.Kafka.Common.Metrics.Sensor>("addRateTotalSensor", arg0, arg1, arg2, arg3, arg4);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsMetrics.html#addSensor(java.lang.String,org.apache.kafka.common.metrics.Sensor.RecordingLevel,org.apache.kafka.common.metrics.Sensor[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsMetrics.html#addSensor(java.lang.String,org.apache.kafka.common.metrics.Sensor.RecordingLevel,org.apache.kafka.common.metrics.Sensor[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel"/></param>
@@ -93,7 +111,7 @@ namespace Org.Apache.Kafka.Streams
             if (arg2.Length == 0) return IExecute<Org.Apache.Kafka.Common.Metrics.Sensor>("addSensor", arg0, arg1); else return IExecute<Org.Apache.Kafka.Common.Metrics.Sensor>("addSensor", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsMetrics.html#addSensor(java.lang.String,org.apache.kafka.common.metrics.Sensor.RecordingLevel)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsMetrics.html#addSensor(java.lang.String,org.apache.kafka.common.metrics.Sensor.RecordingLevel)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel"/></param>
@@ -103,7 +121,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecute<Org.Apache.Kafka.Common.Metrics.Sensor>("addSensor", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsMetrics.html#removeSensor(org.apache.kafka.common.metrics.Sensor)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsMetrics.html#removeSensor(org.apache.kafka.common.metrics.Sensor)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Metrics.Sensor"/></param>
         public void RemoveSensor(Org.Apache.Kafka.Common.Metrics.Sensor arg0)

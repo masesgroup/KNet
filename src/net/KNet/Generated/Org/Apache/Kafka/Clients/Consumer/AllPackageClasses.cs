@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 {
     #region CommitFailedException
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/CommitFailedException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/CommitFailedException.html"/>
     /// </summary>
     public partial class CommitFailedException : Org.Apache.Kafka.Common.KafkaException
     {
@@ -43,7 +43,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     #region Consumer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/Consumer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/Consumer.html"/>
     /// </summary>
     public partial class Consumer : Java.Io.Closeable
     {
@@ -86,7 +86,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     #region Consumer<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/Consumer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/Consumer.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -131,7 +131,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     #region ConsumerConfig
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerConfig.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerConfig.html"/>
     /// </summary>
     public partial class ConsumerConfig : Org.Apache.Kafka.Common.Config.AbstractConfig, IJNetBridgeMain
     {
@@ -174,7 +174,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     #region ConsumerGroupMetadata
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerGroupMetadata.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerGroupMetadata.html"/>
     /// </summary>
     public partial class ConsumerGroupMetadata : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConsumerGroupMetadata>
     {
@@ -217,10 +217,15 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     #region ConsumerInterceptor
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerInterceptor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerInterceptor.html"/>
     /// </summary>
     public partial class ConsumerInterceptor : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public ConsumerInterceptor() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -230,12 +235,17 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     #region ConsumerInterceptor<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerInterceptor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerInterceptor.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
     public partial class ConsumerInterceptor<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public ConsumerInterceptor() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -245,16 +255,21 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     #region ConsumerPartitionAssignor
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html"/>
     /// </summary>
     public partial class ConsumerPartitionAssignor : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public ConsumerPartitionAssignor() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
         #region Assignment
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.Assignment.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.Assignment.html"/>
         /// </summary>
         public partial class Assignment : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Assignment>
         {
@@ -297,7 +312,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region GroupAssignment
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.GroupAssignment.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.GroupAssignment.html"/>
         /// </summary>
         public partial class GroupAssignment : MASES.JCOBridge.C2JBridge.JVMBridgeBase<GroupAssignment>
         {
@@ -340,7 +355,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region GroupSubscription
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.GroupSubscription.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.GroupSubscription.html"/>
         /// </summary>
         public partial class GroupSubscription : MASES.JCOBridge.C2JBridge.JVMBridgeBase<GroupSubscription>
         {
@@ -383,7 +398,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region RebalanceProtocol
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.RebalanceProtocol.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.RebalanceProtocol.html"/>
         /// </summary>
         public partial class RebalanceProtocol : Java.Lang.Enum<Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.RebalanceProtocol>
         {
@@ -426,7 +441,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Subscription
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.Subscription.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.Subscription.html"/>
         /// </summary>
         public partial class Subscription : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Subscription>
         {
@@ -473,10 +488,15 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     #region ConsumerRebalanceListener
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html"/>
     /// </summary>
     public partial class ConsumerRebalanceListener : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public ConsumerRebalanceListener() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -486,7 +506,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     #region ConsumerRecord
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecord.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecord.html"/>
     /// </summary>
     public partial class ConsumerRecord : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConsumerRecord>
     {
@@ -529,7 +549,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     #region ConsumerRecord<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecord.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecord.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -574,7 +594,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     #region ConsumerRecords
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecords.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecords.html"/>
     /// </summary>
     public partial class ConsumerRecords : Java.Lang.Iterable
     {
@@ -617,11 +637,11 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     #region ConsumerRecords<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecords.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecords.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
-    public partial class ConsumerRecords<K, V> : Java.Lang.Iterable<K, V>
+    public partial class ConsumerRecords<K, V> : Java.Lang.Iterable<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<K, V>>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -662,7 +682,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     #region CooperativeStickyAssignor
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/CooperativeStickyAssignor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/CooperativeStickyAssignor.html"/>
     /// </summary>
     public partial class CooperativeStickyAssignor : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CooperativeStickyAssignor>
     {
@@ -705,7 +725,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     #region InvalidOffsetException
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/InvalidOffsetException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/InvalidOffsetException.html"/>
     /// </summary>
     public partial class InvalidOffsetException : Org.Apache.Kafka.Common.KafkaException
     {
@@ -721,9 +741,9 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     #region KafkaConsumer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/KafkaConsumer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/KafkaConsumer.html"/>
     /// </summary>
-    public partial class KafkaConsumer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KafkaConsumer>
+    public partial class KafkaConsumer : Org.Apache.Kafka.Clients.Consumer.Consumer
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -764,11 +784,11 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     #region KafkaConsumer<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/KafkaConsumer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/KafkaConsumer.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
-    public partial class KafkaConsumer<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KafkaConsumer<K, V>>
+    public partial class KafkaConsumer<K, V> : Org.Apache.Kafka.Clients.Consumer.Consumer<K, V>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -809,7 +829,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     #region LogTruncationException
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/LogTruncationException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/LogTruncationException.html"/>
     /// </summary>
     public partial class LogTruncationException : Org.Apache.Kafka.Clients.Consumer.OffsetOutOfRangeException
     {
@@ -825,9 +845,9 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     #region MockConsumer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html"/>
     /// </summary>
-    public partial class MockConsumer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MockConsumer>
+    public partial class MockConsumer : Org.Apache.Kafka.Clients.Consumer.Consumer
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -868,11 +888,11 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     #region MockConsumer<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
-    public partial class MockConsumer<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MockConsumer<K, V>>
+    public partial class MockConsumer<K, V> : Org.Apache.Kafka.Clients.Consumer.Consumer<K, V>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -913,7 +933,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     #region NoOffsetForPartitionException
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/NoOffsetForPartitionException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/NoOffsetForPartitionException.html"/>
     /// </summary>
     public partial class NoOffsetForPartitionException : Org.Apache.Kafka.Clients.Consumer.InvalidOffsetException
     {
@@ -929,9 +949,9 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     #region OffsetAndMetadata
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetAndMetadata.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetAndMetadata.html"/>
     /// </summary>
-    public partial class OffsetAndMetadata : MASES.JCOBridge.C2JBridge.JVMBridgeBase<OffsetAndMetadata>
+    public partial class OffsetAndMetadata : Java.Io.Serializable
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -972,7 +992,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     #region OffsetAndTimestamp
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetAndTimestamp.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetAndTimestamp.html"/>
     /// </summary>
     public partial class OffsetAndTimestamp : MASES.JCOBridge.C2JBridge.JVMBridgeBase<OffsetAndTimestamp>
     {
@@ -1015,10 +1035,15 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     #region OffsetCommitCallback
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetCommitCallback.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetCommitCallback.html"/>
     /// </summary>
     public partial class OffsetCommitCallback : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public OffsetCommitCallback() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -1028,7 +1053,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     #region OffsetOutOfRangeException
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetOutOfRangeException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetOutOfRangeException.html"/>
     /// </summary>
     public partial class OffsetOutOfRangeException : Org.Apache.Kafka.Clients.Consumer.InvalidOffsetException
     {
@@ -1044,7 +1069,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     #region OffsetResetStrategy
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetResetStrategy.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetResetStrategy.html"/>
     /// </summary>
     public partial class OffsetResetStrategy : Java.Lang.Enum<Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy>
     {
@@ -1087,7 +1112,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     #region RangeAssignor
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/RangeAssignor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/RangeAssignor.html"/>
     /// </summary>
     public partial class RangeAssignor : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RangeAssignor>
     {
@@ -1130,7 +1155,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     #region RetriableCommitFailedException
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/RetriableCommitFailedException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/RetriableCommitFailedException.html"/>
     /// </summary>
     public partial class RetriableCommitFailedException : Org.Apache.Kafka.Common.Errors.RetriableException
     {
@@ -1146,7 +1171,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     #region RoundRobinAssignor
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/RoundRobinAssignor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/RoundRobinAssignor.html"/>
     /// </summary>
     public partial class RoundRobinAssignor : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RoundRobinAssignor>
     {
@@ -1189,7 +1214,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     #region StickyAssignor
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/StickyAssignor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/StickyAssignor.html"/>
     /// </summary>
     public partial class StickyAssignor : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StickyAssignor>
     {
@@ -1229,6 +1254,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     }
     #endregion
+
 
 
 }

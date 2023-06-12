@@ -54,7 +54,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/WindowStoreIterator.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/WindowStoreIterator.html#close()"/>
         /// </summary>
         public void Close()
         {
@@ -71,8 +71,26 @@ namespace Org.Apache.Kafka.Streams.State
     }
     #endregion
 
+    #region IWindowStoreIterator<V>
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/WindowStoreIterator.html"/>
+    /// </summary>
+    public partial interface IWindowStoreIterator<V>
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region WindowStoreIterator<V>
-    public partial class WindowStoreIterator<V>
+    public partial class WindowStoreIterator<V> : Org.Apache.Kafka.Streams.State.IWindowStoreIterator<V>, Org.Apache.Kafka.Streams.State.IKeyValueIterator<long?, V>, Java.Io.ICloseable
     {
         #region Constructors
 
@@ -104,7 +122,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/WindowStoreIterator.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/WindowStoreIterator.html#close()"/>
         /// </summary>
         public void Close()
         {

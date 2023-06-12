@@ -56,8 +56,26 @@ namespace Org.Apache.Kafka.Streams.Query
     }
     #endregion
 
+    #region IQuery<R>
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/query/Query.html"/>
+    /// </summary>
+    public partial interface IQuery<R>
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region Query<R>
-    public partial class Query<R>
+    public partial class Query<R> : Org.Apache.Kafka.Streams.Query.IQuery<R>
     {
         #region Constructors
 

@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Serialization
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ListDeserializer.html#%3Cinit%3E(java.lang.Class,org.apache.kafka.common.serialization.Deserializer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ListDeserializer.html#%3Cinit%3E(java.lang.Class,org.apache.kafka.common.serialization.Deserializer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Class"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
@@ -59,7 +59,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ListDeserializer.html#deserialize(java.lang.String,byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ListDeserializer.html#deserialize(java.lang.String,byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
@@ -69,7 +69,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             return IExecute("deserialize", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ListDeserializer.html#innerDeserializer()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ListDeserializer.html#innerDeserializer()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></returns>
@@ -78,14 +78,14 @@ namespace Org.Apache.Kafka.Common.Serialization
             return IExecute<Org.Apache.Kafka.Common.Serialization.Deserializer>("innerDeserializer");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ListDeserializer.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ListDeserializer.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecute("close");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ListDeserializer.html#configure(java.util.Map,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ListDeserializer.html#configure(java.util.Map,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -109,7 +109,7 @@ namespace Org.Apache.Kafka.Common.Serialization
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ListDeserializer.html#%3Cinit%3E(java.lang.Class,org.apache.kafka.common.serialization.Deserializer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ListDeserializer.html#%3Cinit%3E(java.lang.Class,org.apache.kafka.common.serialization.Deserializer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Class"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
@@ -142,7 +142,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ListDeserializer.html#deserialize(java.lang.String,byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ListDeserializer.html#deserialize(java.lang.String,byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
@@ -152,7 +152,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             return IExecute("deserialize", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ListDeserializer.html#innerDeserializer()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ListDeserializer.html#innerDeserializer()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></returns>
@@ -161,19 +161,18 @@ namespace Org.Apache.Kafka.Common.Serialization
             return IExecute<Org.Apache.Kafka.Common.Serialization.Deserializer<Inner>>("innerDeserializer");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ListDeserializer.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ListDeserializer.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecute("close");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ListDeserializer.html#configure(java.util.Map,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/ListDeserializer.html#configure(java.util.Map,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
-        /// <typeparam name="Arg0Extendsobject"></typeparam>
-        public void Configure<Arg0Extendsobject>(Java.Util.Map<string, Arg0Extendsobject> arg0, bool arg1)
+        public void Configure(Java.Util.Map<string, object> arg0, bool arg1)
         {
             IExecute("configure", arg0, arg1);
         }

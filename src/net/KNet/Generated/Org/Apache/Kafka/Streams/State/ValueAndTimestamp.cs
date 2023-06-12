@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ValueAndTimestamp.html#make(java.lang.Object,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ValueAndTimestamp.html#make(java.lang.Object,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -52,7 +52,7 @@ namespace Org.Apache.Kafka.Streams.State
             return SExecute<Org.Apache.Kafka.Streams.State.ValueAndTimestamp>(LocalBridgeClazz, "make", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ValueAndTimestamp.html#getValueOrNull(org.apache.kafka.streams.state.ValueAndTimestamp)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ValueAndTimestamp.html#getValueOrNull(org.apache.kafka.streams.state.ValueAndTimestamp)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.ValueAndTimestamp"/></param>
         /// <returns><see cref="object"/></returns>
@@ -65,7 +65,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ValueAndTimestamp.html#timestamp()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ValueAndTimestamp.html#timestamp()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<long>("timestamp");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ValueAndTimestamp.html#value()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ValueAndTimestamp.html#value()"/>
         /// </summary>
 
         /// <returns><see cref="object"/></returns>
@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ValueAndTimestamp.html#make(java.lang.Object,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ValueAndTimestamp.html#make(java.lang.Object,long)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="V"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -124,7 +124,7 @@ namespace Org.Apache.Kafka.Streams.State
             return SExecute<Org.Apache.Kafka.Streams.State.ValueAndTimestamp<V>>(LocalBridgeClazz, "make", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ValueAndTimestamp.html#getValueOrNull(org.apache.kafka.streams.state.ValueAndTimestamp)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ValueAndTimestamp.html#getValueOrNull(org.apache.kafka.streams.state.ValueAndTimestamp)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.ValueAndTimestamp"/></param>
         /// <returns><typeparamref name="V"/></returns>
@@ -137,7 +137,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ValueAndTimestamp.html#timestamp()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ValueAndTimestamp.html#timestamp()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -146,7 +146,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<long>("timestamp");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ValueAndTimestamp.html#value()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ValueAndTimestamp.html#value()"/>
         /// </summary>
 
         /// <returns><typeparamref name="V"/></returns>

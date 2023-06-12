@@ -33,10 +33,6 @@ namespace Org.Apache.Kafka.Streams.Errors
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Streams.Errors.LogAndContinueExceptionHandler"/> to <see cref="Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler(Org.Apache.Kafka.Streams.Errors.LogAndContinueExceptionHandler t) => t.Cast<Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler>();
 
         #endregion
 
@@ -50,22 +46,21 @@ namespace Org.Apache.Kafka.Streams.Errors
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/errors/LogAndContinueExceptionHandler.html#handle(org.apache.kafka.streams.processor.ProcessorContext,org.apache.kafka.clients.consumer.ConsumerRecord,java.lang.Exception)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/errors/LogAndContinueExceptionHandler.html#handle(org.apache.kafka.streams.processor.ProcessorContext,org.apache.kafka.clients.consumer.ConsumerRecord,java.lang.Exception)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.ProcessorContext"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord"/></param>
         /// <param name="arg2"><see cref="Java.Lang.Exception"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse"/></returns>
-        public Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse Handle(Org.Apache.Kafka.Streams.Processor.ProcessorContext arg0, Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]> arg1, Java.Lang.Exception arg2)
+        public Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse Handle(Org.Apache.Kafka.Streams.Processor.ProcessorContext arg0, Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]> arg1, MASES.JCOBridge.C2JBridge.JVMBridgeException arg2)
         {
             return IExecute<Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse>("handle", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/errors/LogAndContinueExceptionHandler.html#configure(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/errors/LogAndContinueExceptionHandler.html#configure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        /// <typeparam name="Arg0Extendsobject"></typeparam>
-        public void Configure<Arg0Extendsobject>(Java.Util.Map<string, Arg0Extendsobject> arg0)
+        public void Configure(Java.Util.Map<string, object> arg0)
         {
             IExecute("configure", arg0);
         }

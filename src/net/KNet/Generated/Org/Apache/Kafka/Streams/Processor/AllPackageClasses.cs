@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 {
     #region BatchingStateRestoreCallback
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/BatchingStateRestoreCallback.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/BatchingStateRestoreCallback.html"/>
     /// </summary>
     public partial class BatchingStateRestoreCallback : Org.Apache.Kafka.Streams.Processor.StateRestoreCallback
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
     #region Cancellable
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/Cancellable.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/Cancellable.html"/>
     /// </summary>
     public partial class Cancellable : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Cancellable>
     {
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
     #region CommitCallback
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/CommitCallback.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/CommitCallback.html"/>
     /// </summary>
     public partial class CommitCallback : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CommitCallback>
     {
@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
     #region ConnectedStoreProvider
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/ConnectedStoreProvider.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/ConnectedStoreProvider.html"/>
     /// </summary>
     public partial class ConnectedStoreProvider : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConnectedStoreProvider>
     {
@@ -199,7 +199,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
     #region FailOnInvalidTimestamp
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/FailOnInvalidTimestamp.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/FailOnInvalidTimestamp.html"/>
     /// </summary>
     public partial class FailOnInvalidTimestamp : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FailOnInvalidTimestamp>
     {
@@ -242,7 +242,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
     #region LogAndSkipOnInvalidTimestamp
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/LogAndSkipOnInvalidTimestamp.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/LogAndSkipOnInvalidTimestamp.html"/>
     /// </summary>
     public partial class LogAndSkipOnInvalidTimestamp : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LogAndSkipOnInvalidTimestamp>
     {
@@ -285,7 +285,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
     #region ProcessorContext
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/ProcessorContext.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/ProcessorContext.html"/>
     /// </summary>
     public partial class ProcessorContext : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ProcessorContext>
     {
@@ -328,7 +328,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
     #region PunctuationType
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/PunctuationType.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/PunctuationType.html"/>
     /// </summary>
     public partial class PunctuationType : Java.Lang.Enum<Org.Apache.Kafka.Streams.Processor.PunctuationType>
     {
@@ -371,7 +371,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
     #region Punctuator
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/Punctuator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/Punctuator.html"/>
     /// </summary>
     public partial class Punctuator : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Punctuator>
     {
@@ -414,7 +414,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
     #region RecordContext
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/RecordContext.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/RecordContext.html"/>
     /// </summary>
     public partial class RecordContext : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RecordContext>
     {
@@ -457,10 +457,15 @@ namespace Org.Apache.Kafka.Streams.Processor
 
     #region StateRestoreCallback
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateRestoreCallback.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateRestoreCallback.html"/>
     /// </summary>
     public partial class StateRestoreCallback : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public StateRestoreCallback() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -470,10 +475,15 @@ namespace Org.Apache.Kafka.Streams.Processor
 
     #region StateRestoreListener
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateRestoreListener.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateRestoreListener.html"/>
     /// </summary>
     public partial class StateRestoreListener : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public StateRestoreListener() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -483,7 +493,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
     #region StateStore
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateStore.html"/>
     /// </summary>
     public partial class StateStore : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StateStore>
     {
@@ -526,7 +536,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
     #region StateStoreContext
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateStoreContext.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateStoreContext.html"/>
     /// </summary>
     public partial class StateStoreContext : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StateStoreContext>
     {
@@ -569,10 +579,15 @@ namespace Org.Apache.Kafka.Streams.Processor
 
     #region StreamPartitioner
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StreamPartitioner.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StreamPartitioner.html"/>
     /// </summary>
     public partial class StreamPartitioner : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public StreamPartitioner() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -582,12 +597,17 @@ namespace Org.Apache.Kafka.Streams.Processor
 
     #region StreamPartitioner<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StreamPartitioner.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StreamPartitioner.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
     public partial class StreamPartitioner<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public StreamPartitioner() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -597,9 +617,9 @@ namespace Org.Apache.Kafka.Streams.Processor
 
     #region TaskId
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TaskId.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TaskId.html"/>
     /// </summary>
-    public partial class TaskId : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TaskId>
+    public partial class TaskId : Java.Lang.Comparable<Org.Apache.Kafka.Streams.Processor.TaskId>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -640,10 +660,15 @@ namespace Org.Apache.Kafka.Streams.Processor
 
     #region TimestampExtractor
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TimestampExtractor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TimestampExtractor.html"/>
     /// </summary>
     public partial class TimestampExtractor : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public TimestampExtractor() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -653,7 +678,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
     #region To
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/To.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/To.html"/>
     /// </summary>
     public partial class To : MASES.JCOBridge.C2JBridge.JVMBridgeBase<To>
     {
@@ -696,10 +721,15 @@ namespace Org.Apache.Kafka.Streams.Processor
 
     #region TopicNameExtractor
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TopicNameExtractor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TopicNameExtractor.html"/>
     /// </summary>
     public partial class TopicNameExtractor : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public TopicNameExtractor() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -709,12 +739,17 @@ namespace Org.Apache.Kafka.Streams.Processor
 
     #region TopicNameExtractor<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TopicNameExtractor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TopicNameExtractor.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
     public partial class TopicNameExtractor<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public TopicNameExtractor() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -724,7 +759,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
     #region UsePartitionTimeOnInvalidTimestamp
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/UsePartitionTimeOnInvalidTimestamp.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/UsePartitionTimeOnInvalidTimestamp.html"/>
     /// </summary>
     public partial class UsePartitionTimeOnInvalidTimestamp : MASES.JCOBridge.C2JBridge.JVMBridgeBase<UsePartitionTimeOnInvalidTimestamp>
     {
@@ -767,7 +802,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
     #region WallclockTimestampExtractor
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/WallclockTimestampExtractor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/WallclockTimestampExtractor.html"/>
     /// </summary>
     public partial class WallclockTimestampExtractor : MASES.JCOBridge.C2JBridge.JVMBridgeBase<WallclockTimestampExtractor>
     {
@@ -807,6 +842,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
     }
     #endregion
+
 
 
 }

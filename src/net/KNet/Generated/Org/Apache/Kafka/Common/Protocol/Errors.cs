@@ -38,443 +38,443 @@ namespace Org.Apache.Kafka.Common.Protocol
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#BROKER_ID_NOT_REGISTERED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#BROKER_ID_NOT_REGISTERED"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors BROKER_ID_NOT_REGISTERED { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "BROKER_ID_NOT_REGISTERED"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#BROKER_NOT_AVAILABLE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#BROKER_NOT_AVAILABLE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors BROKER_NOT_AVAILABLE { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "BROKER_NOT_AVAILABLE"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#CLUSTER_AUTHORIZATION_FAILED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#CLUSTER_AUTHORIZATION_FAILED"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors CLUSTER_AUTHORIZATION_FAILED { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "CLUSTER_AUTHORIZATION_FAILED"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#CONCURRENT_TRANSACTIONS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#CONCURRENT_TRANSACTIONS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors CONCURRENT_TRANSACTIONS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "CONCURRENT_TRANSACTIONS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#COORDINATOR_LOAD_IN_PROGRESS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#COORDINATOR_LOAD_IN_PROGRESS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors COORDINATOR_LOAD_IN_PROGRESS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "COORDINATOR_LOAD_IN_PROGRESS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#COORDINATOR_NOT_AVAILABLE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#COORDINATOR_NOT_AVAILABLE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors COORDINATOR_NOT_AVAILABLE { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "COORDINATOR_NOT_AVAILABLE"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#CORRUPT_MESSAGE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#CORRUPT_MESSAGE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors CORRUPT_MESSAGE { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "CORRUPT_MESSAGE"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#DELEGATION_TOKEN_AUTH_DISABLED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#DELEGATION_TOKEN_AUTH_DISABLED"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors DELEGATION_TOKEN_AUTH_DISABLED { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "DELEGATION_TOKEN_AUTH_DISABLED"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#DELEGATION_TOKEN_AUTHORIZATION_FAILED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#DELEGATION_TOKEN_AUTHORIZATION_FAILED"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors DELEGATION_TOKEN_AUTHORIZATION_FAILED { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "DELEGATION_TOKEN_AUTHORIZATION_FAILED"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#DELEGATION_TOKEN_EXPIRED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#DELEGATION_TOKEN_EXPIRED"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors DELEGATION_TOKEN_EXPIRED { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "DELEGATION_TOKEN_EXPIRED"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#DELEGATION_TOKEN_NOT_FOUND"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#DELEGATION_TOKEN_NOT_FOUND"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors DELEGATION_TOKEN_NOT_FOUND { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "DELEGATION_TOKEN_NOT_FOUND"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#DELEGATION_TOKEN_OWNER_MISMATCH"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#DELEGATION_TOKEN_OWNER_MISMATCH"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors DELEGATION_TOKEN_OWNER_MISMATCH { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "DELEGATION_TOKEN_OWNER_MISMATCH"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#DELEGATION_TOKEN_REQUEST_NOT_ALLOWED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#DELEGATION_TOKEN_REQUEST_NOT_ALLOWED"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors DELEGATION_TOKEN_REQUEST_NOT_ALLOWED { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "DELEGATION_TOKEN_REQUEST_NOT_ALLOWED"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#DUPLICATE_BROKER_REGISTRATION"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#DUPLICATE_BROKER_REGISTRATION"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors DUPLICATE_BROKER_REGISTRATION { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "DUPLICATE_BROKER_REGISTRATION"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#DUPLICATE_RESOURCE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#DUPLICATE_RESOURCE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors DUPLICATE_RESOURCE { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "DUPLICATE_RESOURCE"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#DUPLICATE_SEQUENCE_NUMBER"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#DUPLICATE_SEQUENCE_NUMBER"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors DUPLICATE_SEQUENCE_NUMBER { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "DUPLICATE_SEQUENCE_NUMBER"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#ELECTION_NOT_NEEDED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#ELECTION_NOT_NEEDED"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors ELECTION_NOT_NEEDED { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "ELECTION_NOT_NEEDED"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#ELIGIBLE_LEADERS_NOT_AVAILABLE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#ELIGIBLE_LEADERS_NOT_AVAILABLE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors ELIGIBLE_LEADERS_NOT_AVAILABLE { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "ELIGIBLE_LEADERS_NOT_AVAILABLE"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#FEATURE_UPDATE_FAILED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#FEATURE_UPDATE_FAILED"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors FEATURE_UPDATE_FAILED { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "FEATURE_UPDATE_FAILED"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#FENCED_INSTANCE_ID"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#FENCED_INSTANCE_ID"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors FENCED_INSTANCE_ID { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "FENCED_INSTANCE_ID"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#FENCED_LEADER_EPOCH"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#FENCED_LEADER_EPOCH"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors FENCED_LEADER_EPOCH { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "FENCED_LEADER_EPOCH"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#FETCH_SESSION_ID_NOT_FOUND"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#FETCH_SESSION_ID_NOT_FOUND"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors FETCH_SESSION_ID_NOT_FOUND { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "FETCH_SESSION_ID_NOT_FOUND"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#FETCH_SESSION_TOPIC_ID_ERROR"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#FETCH_SESSION_TOPIC_ID_ERROR"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors FETCH_SESSION_TOPIC_ID_ERROR { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "FETCH_SESSION_TOPIC_ID_ERROR"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#GROUP_AUTHORIZATION_FAILED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#GROUP_AUTHORIZATION_FAILED"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors GROUP_AUTHORIZATION_FAILED { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "GROUP_AUTHORIZATION_FAILED"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#GROUP_ID_NOT_FOUND"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#GROUP_ID_NOT_FOUND"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors GROUP_ID_NOT_FOUND { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "GROUP_ID_NOT_FOUND"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#GROUP_MAX_SIZE_REACHED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#GROUP_MAX_SIZE_REACHED"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors GROUP_MAX_SIZE_REACHED { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "GROUP_MAX_SIZE_REACHED"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#GROUP_SUBSCRIBED_TO_TOPIC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#GROUP_SUBSCRIBED_TO_TOPIC"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors GROUP_SUBSCRIBED_TO_TOPIC { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "GROUP_SUBSCRIBED_TO_TOPIC"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#ILLEGAL_GENERATION"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#ILLEGAL_GENERATION"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors ILLEGAL_GENERATION { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "ILLEGAL_GENERATION"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#ILLEGAL_SASL_STATE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#ILLEGAL_SASL_STATE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors ILLEGAL_SASL_STATE { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "ILLEGAL_SASL_STATE"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INCONSISTENT_CLUSTER_ID"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INCONSISTENT_CLUSTER_ID"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors INCONSISTENT_CLUSTER_ID { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "INCONSISTENT_CLUSTER_ID"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INCONSISTENT_GROUP_PROTOCOL"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INCONSISTENT_GROUP_PROTOCOL"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors INCONSISTENT_GROUP_PROTOCOL { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "INCONSISTENT_GROUP_PROTOCOL"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INCONSISTENT_TOPIC_ID"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INCONSISTENT_TOPIC_ID"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors INCONSISTENT_TOPIC_ID { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "INCONSISTENT_TOPIC_ID"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INCONSISTENT_VOTER_SET"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INCONSISTENT_VOTER_SET"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors INCONSISTENT_VOTER_SET { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "INCONSISTENT_VOTER_SET"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INELIGIBLE_REPLICA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INELIGIBLE_REPLICA"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors INELIGIBLE_REPLICA { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "INELIGIBLE_REPLICA"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_COMMIT_OFFSET_SIZE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_COMMIT_OFFSET_SIZE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors INVALID_COMMIT_OFFSET_SIZE { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "INVALID_COMMIT_OFFSET_SIZE"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_CONFIG"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors INVALID_CONFIG { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "INVALID_CONFIG"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_FETCH_SESSION_EPOCH"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_FETCH_SESSION_EPOCH"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors INVALID_FETCH_SESSION_EPOCH { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "INVALID_FETCH_SESSION_EPOCH"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_FETCH_SIZE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_FETCH_SIZE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors INVALID_FETCH_SIZE { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "INVALID_FETCH_SIZE"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_GROUP_ID"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_GROUP_ID"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors INVALID_GROUP_ID { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "INVALID_GROUP_ID"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_PARTITIONS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_PARTITIONS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors INVALID_PARTITIONS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "INVALID_PARTITIONS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_PRINCIPAL_TYPE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_PRINCIPAL_TYPE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors INVALID_PRINCIPAL_TYPE { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "INVALID_PRINCIPAL_TYPE"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_PRODUCER_EPOCH"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_PRODUCER_EPOCH"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors INVALID_PRODUCER_EPOCH { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "INVALID_PRODUCER_EPOCH"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_PRODUCER_ID_MAPPING"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_PRODUCER_ID_MAPPING"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors INVALID_PRODUCER_ID_MAPPING { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "INVALID_PRODUCER_ID_MAPPING"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_RECORD"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_RECORD"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors INVALID_RECORD { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "INVALID_RECORD"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_REPLICA_ASSIGNMENT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_REPLICA_ASSIGNMENT"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors INVALID_REPLICA_ASSIGNMENT { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "INVALID_REPLICA_ASSIGNMENT"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_REPLICATION_FACTOR"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_REPLICATION_FACTOR"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors INVALID_REPLICATION_FACTOR { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "INVALID_REPLICATION_FACTOR"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_REQUEST"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_REQUEST"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors INVALID_REQUEST { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "INVALID_REQUEST"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_REQUIRED_ACKS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_REQUIRED_ACKS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors INVALID_REQUIRED_ACKS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "INVALID_REQUIRED_ACKS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_SESSION_TIMEOUT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_SESSION_TIMEOUT"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors INVALID_SESSION_TIMEOUT { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "INVALID_SESSION_TIMEOUT"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_TIMESTAMP"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_TIMESTAMP"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors INVALID_TIMESTAMP { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "INVALID_TIMESTAMP"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_TOPIC_EXCEPTION"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_TOPIC_EXCEPTION"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors INVALID_TOPIC_EXCEPTION { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "INVALID_TOPIC_EXCEPTION"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_TRANSACTION_TIMEOUT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_TRANSACTION_TIMEOUT"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors INVALID_TRANSACTION_TIMEOUT { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "INVALID_TRANSACTION_TIMEOUT"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_TXN_STATE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_TXN_STATE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors INVALID_TXN_STATE { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "INVALID_TXN_STATE"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_UPDATE_VERSION"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#INVALID_UPDATE_VERSION"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors INVALID_UPDATE_VERSION { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "INVALID_UPDATE_VERSION"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#KAFKA_STORAGE_ERROR"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#KAFKA_STORAGE_ERROR"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors KAFKA_STORAGE_ERROR { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "KAFKA_STORAGE_ERROR"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#LEADER_NOT_AVAILABLE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#LEADER_NOT_AVAILABLE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors LEADER_NOT_AVAILABLE { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "LEADER_NOT_AVAILABLE"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#LISTENER_NOT_FOUND"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#LISTENER_NOT_FOUND"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors LISTENER_NOT_FOUND { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "LISTENER_NOT_FOUND"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#LOG_DIR_NOT_FOUND"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#LOG_DIR_NOT_FOUND"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors LOG_DIR_NOT_FOUND { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "LOG_DIR_NOT_FOUND"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#MEMBER_ID_REQUIRED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#MEMBER_ID_REQUIRED"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors MEMBER_ID_REQUIRED { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "MEMBER_ID_REQUIRED"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#MESSAGE_TOO_LARGE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#MESSAGE_TOO_LARGE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors MESSAGE_TOO_LARGE { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "MESSAGE_TOO_LARGE"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#NETWORK_EXCEPTION"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#NETWORK_EXCEPTION"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors NETWORK_EXCEPTION { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "NETWORK_EXCEPTION"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#NEW_LEADER_ELECTED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#NEW_LEADER_ELECTED"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors NEW_LEADER_ELECTED { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "NEW_LEADER_ELECTED"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#NO_REASSIGNMENT_IN_PROGRESS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#NO_REASSIGNMENT_IN_PROGRESS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors NO_REASSIGNMENT_IN_PROGRESS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "NO_REASSIGNMENT_IN_PROGRESS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#NON_EMPTY_GROUP"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#NON_EMPTY_GROUP"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors NON_EMPTY_GROUP { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "NON_EMPTY_GROUP"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#NONE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#NONE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors NONE { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "NONE"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#NOT_CONTROLLER"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#NOT_CONTROLLER"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors NOT_CONTROLLER { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "NOT_CONTROLLER"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#NOT_COORDINATOR"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#NOT_COORDINATOR"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors NOT_COORDINATOR { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "NOT_COORDINATOR"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#NOT_ENOUGH_REPLICAS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#NOT_ENOUGH_REPLICAS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors NOT_ENOUGH_REPLICAS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "NOT_ENOUGH_REPLICAS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#NOT_ENOUGH_REPLICAS_AFTER_APPEND"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#NOT_ENOUGH_REPLICAS_AFTER_APPEND"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors NOT_ENOUGH_REPLICAS_AFTER_APPEND { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "NOT_ENOUGH_REPLICAS_AFTER_APPEND"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#NOT_LEADER_OR_FOLLOWER"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#NOT_LEADER_OR_FOLLOWER"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors NOT_LEADER_OR_FOLLOWER { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "NOT_LEADER_OR_FOLLOWER"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#OFFSET_METADATA_TOO_LARGE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#OFFSET_METADATA_TOO_LARGE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors OFFSET_METADATA_TOO_LARGE { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "OFFSET_METADATA_TOO_LARGE"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#OFFSET_NOT_AVAILABLE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#OFFSET_NOT_AVAILABLE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors OFFSET_NOT_AVAILABLE { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "OFFSET_NOT_AVAILABLE"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#OFFSET_OUT_OF_RANGE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#OFFSET_OUT_OF_RANGE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors OFFSET_OUT_OF_RANGE { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "OFFSET_OUT_OF_RANGE"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#OPERATION_NOT_ATTEMPTED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#OPERATION_NOT_ATTEMPTED"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors OPERATION_NOT_ATTEMPTED { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "OPERATION_NOT_ATTEMPTED"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#OUT_OF_ORDER_SEQUENCE_NUMBER"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#OUT_OF_ORDER_SEQUENCE_NUMBER"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors OUT_OF_ORDER_SEQUENCE_NUMBER { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "OUT_OF_ORDER_SEQUENCE_NUMBER"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#POLICY_VIOLATION"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#POLICY_VIOLATION"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors POLICY_VIOLATION { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "POLICY_VIOLATION"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#POSITION_OUT_OF_RANGE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#POSITION_OUT_OF_RANGE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors POSITION_OUT_OF_RANGE { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "POSITION_OUT_OF_RANGE"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#PREFERRED_LEADER_NOT_AVAILABLE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#PREFERRED_LEADER_NOT_AVAILABLE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors PREFERRED_LEADER_NOT_AVAILABLE { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "PREFERRED_LEADER_NOT_AVAILABLE"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#PRINCIPAL_DESERIALIZATION_FAILURE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#PRINCIPAL_DESERIALIZATION_FAILURE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors PRINCIPAL_DESERIALIZATION_FAILURE { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "PRINCIPAL_DESERIALIZATION_FAILURE"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#PRODUCER_FENCED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#PRODUCER_FENCED"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors PRODUCER_FENCED { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "PRODUCER_FENCED"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#REASSIGNMENT_IN_PROGRESS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#REASSIGNMENT_IN_PROGRESS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors REASSIGNMENT_IN_PROGRESS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "REASSIGNMENT_IN_PROGRESS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#REBALANCE_IN_PROGRESS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#REBALANCE_IN_PROGRESS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors REBALANCE_IN_PROGRESS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "REBALANCE_IN_PROGRESS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#RECORD_LIST_TOO_LARGE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#RECORD_LIST_TOO_LARGE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors RECORD_LIST_TOO_LARGE { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "RECORD_LIST_TOO_LARGE"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#REPLICA_NOT_AVAILABLE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#REPLICA_NOT_AVAILABLE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors REPLICA_NOT_AVAILABLE { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "REPLICA_NOT_AVAILABLE"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#REQUEST_TIMED_OUT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#REQUEST_TIMED_OUT"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors REQUEST_TIMED_OUT { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "REQUEST_TIMED_OUT"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#RESOURCE_NOT_FOUND"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#RESOURCE_NOT_FOUND"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors RESOURCE_NOT_FOUND { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "RESOURCE_NOT_FOUND"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#SASL_AUTHENTICATION_FAILED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#SASL_AUTHENTICATION_FAILED"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors SASL_AUTHENTICATION_FAILED { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "SASL_AUTHENTICATION_FAILED"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#SECURITY_DISABLED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#SECURITY_DISABLED"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors SECURITY_DISABLED { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "SECURITY_DISABLED"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#SNAPSHOT_NOT_FOUND"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#SNAPSHOT_NOT_FOUND"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors SNAPSHOT_NOT_FOUND { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "SNAPSHOT_NOT_FOUND"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#STALE_BROKER_EPOCH"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#STALE_BROKER_EPOCH"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors STALE_BROKER_EPOCH { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "STALE_BROKER_EPOCH"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#STALE_CONTROLLER_EPOCH"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#STALE_CONTROLLER_EPOCH"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors STALE_CONTROLLER_EPOCH { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "STALE_CONTROLLER_EPOCH"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#THROTTLING_QUOTA_EXCEEDED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#THROTTLING_QUOTA_EXCEEDED"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors THROTTLING_QUOTA_EXCEEDED { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "THROTTLING_QUOTA_EXCEEDED"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#TOPIC_ALREADY_EXISTS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#TOPIC_ALREADY_EXISTS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors TOPIC_ALREADY_EXISTS { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "TOPIC_ALREADY_EXISTS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#TOPIC_AUTHORIZATION_FAILED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#TOPIC_AUTHORIZATION_FAILED"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors TOPIC_AUTHORIZATION_FAILED { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "TOPIC_AUTHORIZATION_FAILED"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#TOPIC_DELETION_DISABLED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#TOPIC_DELETION_DISABLED"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors TOPIC_DELETION_DISABLED { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "TOPIC_DELETION_DISABLED"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#TRANSACTION_COORDINATOR_FENCED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#TRANSACTION_COORDINATOR_FENCED"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors TRANSACTION_COORDINATOR_FENCED { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "TRANSACTION_COORDINATOR_FENCED"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#TRANSACTIONAL_ID_AUTHORIZATION_FAILED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#TRANSACTIONAL_ID_AUTHORIZATION_FAILED"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors TRANSACTIONAL_ID_AUTHORIZATION_FAILED { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "TRANSACTIONAL_ID_AUTHORIZATION_FAILED"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#TRANSACTIONAL_ID_NOT_FOUND"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#TRANSACTIONAL_ID_NOT_FOUND"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors TRANSACTIONAL_ID_NOT_FOUND { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "TRANSACTIONAL_ID_NOT_FOUND"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#UNACCEPTABLE_CREDENTIAL"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#UNACCEPTABLE_CREDENTIAL"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors UNACCEPTABLE_CREDENTIAL { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "UNACCEPTABLE_CREDENTIAL"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#UNKNOWN_LEADER_EPOCH"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#UNKNOWN_LEADER_EPOCH"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors UNKNOWN_LEADER_EPOCH { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "UNKNOWN_LEADER_EPOCH"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#UNKNOWN_MEMBER_ID"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#UNKNOWN_MEMBER_ID"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors UNKNOWN_MEMBER_ID { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "UNKNOWN_MEMBER_ID"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#UNKNOWN_PRODUCER_ID"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#UNKNOWN_PRODUCER_ID"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors UNKNOWN_PRODUCER_ID { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "UNKNOWN_PRODUCER_ID"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#UNKNOWN_SERVER_ERROR"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#UNKNOWN_SERVER_ERROR"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors UNKNOWN_SERVER_ERROR { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "UNKNOWN_SERVER_ERROR"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#UNKNOWN_TOPIC_ID"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#UNKNOWN_TOPIC_ID"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors UNKNOWN_TOPIC_ID { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "UNKNOWN_TOPIC_ID"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#UNKNOWN_TOPIC_OR_PARTITION"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#UNKNOWN_TOPIC_OR_PARTITION"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors UNKNOWN_TOPIC_OR_PARTITION { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "UNKNOWN_TOPIC_OR_PARTITION"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#UNSTABLE_OFFSET_COMMIT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#UNSTABLE_OFFSET_COMMIT"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors UNSTABLE_OFFSET_COMMIT { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "UNSTABLE_OFFSET_COMMIT"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#UNSUPPORTED_COMPRESSION_TYPE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#UNSUPPORTED_COMPRESSION_TYPE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors UNSUPPORTED_COMPRESSION_TYPE { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "UNSUPPORTED_COMPRESSION_TYPE"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#UNSUPPORTED_FOR_MESSAGE_FORMAT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#UNSUPPORTED_FOR_MESSAGE_FORMAT"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors UNSUPPORTED_FOR_MESSAGE_FORMAT { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "UNSUPPORTED_FOR_MESSAGE_FORMAT"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#UNSUPPORTED_SASL_MECHANISM"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#UNSUPPORTED_SASL_MECHANISM"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors UNSUPPORTED_SASL_MECHANISM { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "UNSUPPORTED_SASL_MECHANISM"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#UNSUPPORTED_VERSION"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#UNSUPPORTED_VERSION"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Protocol.Errors UNSUPPORTED_VERSION { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "UNSUPPORTED_VERSION"); } }
 
@@ -482,16 +482,16 @@ namespace Org.Apache.Kafka.Common.Protocol
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#maybeUnwrapException(java.lang.Throwable)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#maybeUnwrapException(java.lang.Throwable)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Throwable"/></param>
         /// <returns><see cref="Java.Lang.Throwable"/></returns>
-        public static Java.Lang.Throwable MaybeUnwrapException(Java.Lang.Throwable arg0)
+        public static Java.Lang.Throwable MaybeUnwrapException(MASES.JCOBridge.C2JBridge.JVMBridgeException arg0)
         {
             var obj = SExecute<MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject>(LocalBridgeClazz, "maybeUnwrapException", arg0); return MASES.JCOBridge.C2JBridge.JVMBridgeException.New<Java.Lang.Throwable>(obj);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#forCode(short)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#forCode(short)"/>
         /// </summary>
         /// <param name="arg0"><see cref="short"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Errors"/></returns>
@@ -500,16 +500,16 @@ namespace Org.Apache.Kafka.Common.Protocol
             return SExecute<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "forCode", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#forException(java.lang.Throwable)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#forException(java.lang.Throwable)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Throwable"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Errors"/></returns>
-        public static Org.Apache.Kafka.Common.Protocol.Errors ForException(Java.Lang.Throwable arg0)
+        public static Org.Apache.Kafka.Common.Protocol.Errors ForException(MASES.JCOBridge.C2JBridge.JVMBridgeException arg0)
         {
             return SExecute<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "forException", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#valueOf(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Errors"/></returns>
@@ -518,7 +518,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return SExecute<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "valueOf", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#values()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#values()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Errors"/></returns>
@@ -527,7 +527,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return SExecuteArray<Org.Apache.Kafka.Common.Protocol.Errors>(LocalBridgeClazz, "values");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         public static void Main(string[] arg0)
@@ -539,7 +539,7 @@ namespace Org.Apache.Kafka.Common.Protocol
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#exceptionName()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#exceptionName()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -548,7 +548,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return IExecute<string>("exceptionName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#message()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#message()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -557,7 +557,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return IExecute<string>("message");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#exception()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#exception()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Errors.ApiException"/></returns>
@@ -566,7 +566,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             var obj = IExecute<MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject>("exception"); return MASES.JCOBridge.C2JBridge.JVMBridgeException.New<Org.Apache.Kafka.Common.Errors.ApiException>(obj);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#exception(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#exception(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Errors.ApiException"/></returns>
@@ -575,7 +575,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             var obj = IExecute<MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject>("exception", arg0); return MASES.JCOBridge.C2JBridge.JVMBridgeException.New<Org.Apache.Kafka.Common.Errors.ApiException>(obj);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#code()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#code()"/>
         /// </summary>
 
         /// <returns><see cref="short"/></returns>
@@ -584,7 +584,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return IExecute<short>("code");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#maybeThrow()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html#maybeThrow()"/>
         /// </summary>
         public void MaybeThrow()
         {

@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Connect.Rest
 {
+    #region IConnectRestExtension
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/rest/ConnectRestExtension.html"/>
+    /// </summary>
+    public partial interface IConnectRestExtension
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region ConnectRestExtension
-    public partial class ConnectRestExtension
+    public partial class ConnectRestExtension : Org.Apache.Kafka.Connect.Rest.IConnectRestExtension, Org.Apache.Kafka.Common.IConfigurable, Org.Apache.Kafka.Connect.Components.IVersioned, Java.Io.ICloseable
     {
         #region Constructors
 

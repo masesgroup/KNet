@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/ArrayOf.html#%3Cinit%3E(org.apache.kafka.common.protocol.types.Type)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/ArrayOf.html#%3Cinit%3E(org.apache.kafka.common.protocol.types.Type)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Type"/></param>
         public ArrayOf(Org.Apache.Kafka.Common.Protocol.Types.Type arg0)
@@ -50,7 +50,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/ArrayOf.html#nullable(org.apache.kafka.common.protocol.types.Type)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/ArrayOf.html#nullable(org.apache.kafka.common.protocol.types.Type)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Type"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Types.ArrayOf"/></returns>

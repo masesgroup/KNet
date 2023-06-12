@@ -33,10 +33,6 @@ namespace Org.Apache.Kafka.Connect.Mirror.Formatters
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Connect.Mirror.Formatters.HeartbeatFormatter"/> to <see cref="Org.Apache.Kafka.Common.MessageFormatter"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Common.MessageFormatter(Org.Apache.Kafka.Connect.Mirror.Formatters.HeartbeatFormatter t) => t.Cast<Org.Apache.Kafka.Common.MessageFormatter>();
 
         #endregion
 
@@ -50,7 +46,7 @@ namespace Org.Apache.Kafka.Connect.Mirror.Formatters
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/formatters/HeartbeatFormatter.html#writeTo(org.apache.kafka.clients.consumer.ConsumerRecord,java.io.PrintStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/formatters/HeartbeatFormatter.html#writeTo(org.apache.kafka.clients.consumer.ConsumerRecord,java.io.PrintStream)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord"/></param>
         /// <param name="arg1"><see cref="Java.Io.PrintStream"/></param>

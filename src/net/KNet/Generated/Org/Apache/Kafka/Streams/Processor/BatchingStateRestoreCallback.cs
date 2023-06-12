@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Streams.Processor
 {
+    #region IBatchingStateRestoreCallback
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/BatchingStateRestoreCallback.html"/>
+    /// </summary>
+    public partial interface IBatchingStateRestoreCallback : Org.Apache.Kafka.Streams.Processor.IStateRestoreCallback
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region BatchingStateRestoreCallback
-    public partial class BatchingStateRestoreCallback
+    public partial class BatchingStateRestoreCallback : Org.Apache.Kafka.Streams.Processor.IBatchingStateRestoreCallback
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/BatchingStateRestoreCallback.html#restoreAll(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/BatchingStateRestoreCallback.html#restoreAll(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public void RestoreAll(Java.Util.Collection<Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>> arg0)
@@ -54,7 +72,7 @@ namespace Org.Apache.Kafka.Streams.Processor
             IExecute("restoreAll", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/BatchingStateRestoreCallback.html#restore(byte[],byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/BatchingStateRestoreCallback.html#restore(byte[],byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <param name="arg1"><see cref="byte"/></param>

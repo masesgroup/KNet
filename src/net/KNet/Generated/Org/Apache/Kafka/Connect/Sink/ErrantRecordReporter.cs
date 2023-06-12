@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Connect.Sink
 {
+    #region IErrantRecordReporter
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/sink/ErrantRecordReporter.html"/>
+    /// </summary>
+    public partial interface IErrantRecordReporter
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region ErrantRecordReporter
-    public partial class ErrantRecordReporter
+    public partial class ErrantRecordReporter : Org.Apache.Kafka.Connect.Sink.IErrantRecordReporter
     {
         #region Constructors
 
@@ -46,12 +64,12 @@ namespace Org.Apache.Kafka.Connect.Sink
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/sink/ErrantRecordReporter.html#report(org.apache.kafka.connect.sink.SinkRecord,java.lang.Throwable)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/sink/ErrantRecordReporter.html#report(org.apache.kafka.connect.sink.SinkRecord,java.lang.Throwable)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Sink.SinkRecord"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Throwable"/></param>
         /// <returns><see cref="Java.Util.Concurrent.Future"/></returns>
-        public Java.Util.Concurrent.Future<Java.Lang.Void> Report(Org.Apache.Kafka.Connect.Sink.SinkRecord arg0, Java.Lang.Throwable arg1)
+        public Java.Util.Concurrent.Future<Java.Lang.Void> Report(Org.Apache.Kafka.Connect.Sink.SinkRecord arg0, MASES.JCOBridge.C2JBridge.JVMBridgeException arg1)
         {
             return IExecute<Java.Util.Concurrent.Future<Java.Lang.Void>>("report", arg0, arg1);
         }

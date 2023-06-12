@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Metrics
 {
+    #region IMeasurableStat
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MeasurableStat.html"/>
+    /// </summary>
+    public partial interface IMeasurableStat
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region MeasurableStat
-    public partial class MeasurableStat
+    public partial class MeasurableStat : Org.Apache.Kafka.Common.Metrics.IMeasurableStat, Org.Apache.Kafka.Common.Metrics.IStat, Org.Apache.Kafka.Common.Metrics.IMeasurable
     {
         #region Constructors
 

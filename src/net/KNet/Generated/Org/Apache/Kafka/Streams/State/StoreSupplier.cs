@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreSupplier.html#metricsScope()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreSupplier.html#metricsScope()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<string>("metricsScope");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreSupplier.html#name()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreSupplier.html#name()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<string>("name");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreSupplier.html#get()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreSupplier.html#get()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.StateStore"/></returns>
@@ -83,8 +83,26 @@ namespace Org.Apache.Kafka.Streams.State
     }
     #endregion
 
+    #region IStoreSupplier<T>
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreSupplier.html"/>
+    /// </summary>
+    public partial interface IStoreSupplier<T>
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region StoreSupplier<T>
-    public partial class StoreSupplier<T>
+    public partial class StoreSupplier<T> : Org.Apache.Kafka.Streams.State.IStoreSupplier<T>
     {
         #region Constructors
 
@@ -108,7 +126,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreSupplier.html#metricsScope()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreSupplier.html#metricsScope()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -117,7 +135,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<string>("metricsScope");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreSupplier.html#name()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreSupplier.html#name()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -126,7 +144,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<string>("name");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreSupplier.html#get()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/StoreSupplier.html#get()"/>
         /// </summary>
 
         /// <returns><typeparamref name="T"/></returns>

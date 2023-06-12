@@ -46,11 +46,11 @@ namespace Org.Apache.Kafka.Connect.Util
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/Callback.html#onCompletion(java.lang.Throwable,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/Callback.html#onCompletion(java.lang.Throwable,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Throwable"/></param>
         /// <param name="arg1"><see cref="object"/></param>
-        public void OnCompletion(Java.Lang.Throwable arg0, object arg1)
+        public void OnCompletion(MASES.JCOBridge.C2JBridge.JVMBridgeException arg0, object arg1)
         {
             IExecute("onCompletion", arg0, arg1);
         }
@@ -65,8 +65,26 @@ namespace Org.Apache.Kafka.Connect.Util
     }
     #endregion
 
+    #region ICallback<V>
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/Callback.html"/>
+    /// </summary>
+    public partial interface ICallback<V>
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region Callback<V>
-    public partial class Callback<V>
+    public partial class Callback<V> : Org.Apache.Kafka.Connect.Util.ICallback<V>
     {
         #region Constructors
 
@@ -90,11 +108,11 @@ namespace Org.Apache.Kafka.Connect.Util
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/Callback.html#onCompletion(java.lang.Throwable,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/Callback.html#onCompletion(java.lang.Throwable,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Throwable"/></param>
         /// <param name="arg1"><typeparamref name="V"/></param>
-        public void OnCompletion(Java.Lang.Throwable arg0, V arg1)
+        public void OnCompletion(MASES.JCOBridge.C2JBridge.JVMBridgeException arg0, V arg1)
         {
             IExecute("onCompletion", arg0, arg1);
         }

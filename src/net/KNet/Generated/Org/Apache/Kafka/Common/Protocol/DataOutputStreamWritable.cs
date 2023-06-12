@@ -26,11 +26,11 @@ using MASES.JCOBridge.C2JBridge;
 namespace Org.Apache.Kafka.Common.Protocol
 {
     #region DataOutputStreamWritable
-    public partial class DataOutputStreamWritable
+    public partial class DataOutputStreamWritable : Org.Apache.Kafka.Common.Protocol.IWritable, Java.Io.ICloseable
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/DataOutputStreamWritable.html#%3Cinit%3E(java.io.DataOutputStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/DataOutputStreamWritable.html#%3Cinit%3E(java.io.DataOutputStream)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Io.DataOutputStream"/></param>
         public DataOutputStreamWritable(Java.Io.DataOutputStream arg0)
@@ -62,21 +62,21 @@ namespace Org.Apache.Kafka.Common.Protocol
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/DataOutputStreamWritable.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/DataOutputStreamWritable.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecute("close");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/DataOutputStreamWritable.html#flush()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/DataOutputStreamWritable.html#flush()"/>
         /// </summary>
         public void Flush()
         {
             IExecute("flush");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/DataOutputStreamWritable.html#writeByte(byte)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/DataOutputStreamWritable.html#writeByte(byte)"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         public void WriteByte(byte arg0)
@@ -84,7 +84,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("writeByte", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/DataOutputStreamWritable.html#writeByteArray(byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/DataOutputStreamWritable.html#writeByteArray(byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         public void WriteByteArray(byte[] arg0)
@@ -92,7 +92,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("writeByteArray", new object[] { arg0 });
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/DataOutputStreamWritable.html#writeByteBuffer(java.nio.ByteBuffer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/DataOutputStreamWritable.html#writeByteBuffer(java.nio.ByteBuffer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         public void WriteByteBuffer(Java.Nio.ByteBuffer arg0)
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("writeByteBuffer", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/DataOutputStreamWritable.html#writeDouble(double)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/DataOutputStreamWritable.html#writeDouble(double)"/>
         /// </summary>
         /// <param name="arg0"><see cref="double"/></param>
         public void WriteDouble(double arg0)
@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("writeDouble", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/DataOutputStreamWritable.html#writeInt(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/DataOutputStreamWritable.html#writeInt(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public void WriteInt(int arg0)
@@ -116,7 +116,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("writeInt", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/DataOutputStreamWritable.html#writeLong(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/DataOutputStreamWritable.html#writeLong(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         public void WriteLong(long arg0)
@@ -124,7 +124,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("writeLong", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/DataOutputStreamWritable.html#writeShort(short)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/DataOutputStreamWritable.html#writeShort(short)"/>
         /// </summary>
         /// <param name="arg0"><see cref="short"/></param>
         public void WriteShort(short arg0)
@@ -132,7 +132,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("writeShort", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/DataOutputStreamWritable.html#writeUnsignedVarint(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/DataOutputStreamWritable.html#writeUnsignedVarint(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public void WriteUnsignedVarint(int arg0)
@@ -140,7 +140,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("writeUnsignedVarint", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/DataOutputStreamWritable.html#writeVarint(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/DataOutputStreamWritable.html#writeVarint(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public void WriteVarint(int arg0)
@@ -148,7 +148,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("writeVarint", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/DataOutputStreamWritable.html#writeVarlong(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/DataOutputStreamWritable.html#writeVarlong(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         public void WriteVarlong(long arg0)

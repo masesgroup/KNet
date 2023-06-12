@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallback.html#%3Cinit%3E(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallback.html#%3Cinit%3E(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         public OAuthBearerValidatorCallback(string arg0)
@@ -41,10 +41,6 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.Security.Oauthbearer.OAuthBearerValidatorCallback"/> to <see cref="Javax.Security.Auth.Callback.Callback"/>
-        /// </summary>
-        public static implicit operator Javax.Security.Auth.Callback.Callback(Org.Apache.Kafka.Common.Security.Oauthbearer.OAuthBearerValidatorCallback t) => t.Cast<Javax.Security.Auth.Callback.Callback>();
 
         #endregion
 
@@ -58,7 +54,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallback.html#errorOpenIDConfiguration()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallback.html#errorOpenIDConfiguration()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -67,7 +63,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
             return IExecute<string>("errorOpenIDConfiguration");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallback.html#errorScope()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallback.html#errorScope()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -76,7 +72,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
             return IExecute<string>("errorScope");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallback.html#errorStatus()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallback.html#errorStatus()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -85,7 +81,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
             return IExecute<string>("errorStatus");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallback.html#tokenValue()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallback.html#tokenValue()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -94,7 +90,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
             return IExecute<string>("tokenValue");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallback.html#token()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallback.html#token()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Oauthbearer.OAuthBearerToken"/></returns>
@@ -103,7 +99,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
             return IExecute<Org.Apache.Kafka.Common.Security.Oauthbearer.OAuthBearerToken>("token");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallback.html#error(java.lang.String,java.lang.String,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallback.html#error(java.lang.String,java.lang.String,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -113,7 +109,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
             IExecute("error", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallback.html#token(org.apache.kafka.common.security.oauthbearer.OAuthBearerToken)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerValidatorCallback.html#token(org.apache.kafka.common.security.oauthbearer.OAuthBearerToken)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Security.Oauthbearer.OAuthBearerToken"/></param>
         public void Token(Org.Apache.Kafka.Common.Security.Oauthbearer.OAuthBearerToken arg0)

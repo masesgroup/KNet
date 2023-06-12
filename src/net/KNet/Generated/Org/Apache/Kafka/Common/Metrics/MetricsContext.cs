@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Metrics
 {
+    #region IMetricsContext
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricsContext.html"/>
+    /// </summary>
+    public partial interface IMetricsContext
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region MetricsContext
-    public partial class MetricsContext
+    public partial class MetricsContext : Org.Apache.Kafka.Common.Metrics.IMetricsContext
     {
         #region Constructors
 
@@ -38,7 +56,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricsContext.html#NAMESPACE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricsContext.html#NAMESPACE"/>
         /// </summary>
         public static string NAMESPACE { get { return SGetField<string>(LocalBridgeClazz, "NAMESPACE"); } }
 
@@ -50,7 +68,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricsContext.html#contextLabels()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricsContext.html#contextLabels()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>

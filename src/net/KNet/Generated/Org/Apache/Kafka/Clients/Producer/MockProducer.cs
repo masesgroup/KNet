@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Clients.Producer
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#%3Cinit%3E(boolean,org.apache.kafka.clients.producer.Partitioner,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#%3Cinit%3E(boolean,org.apache.kafka.clients.producer.Partitioner,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Producer.Partitioner"/></param>
@@ -41,7 +41,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#%3Cinit%3E(boolean,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#%3Cinit%3E(boolean,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Serializer"/></param>
@@ -51,7 +51,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#%3Cinit%3E(org.apache.kafka.common.Cluster,boolean,org.apache.kafka.clients.producer.Partitioner,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#%3Cinit%3E(org.apache.kafka.common.Cluster,boolean,org.apache.kafka.clients.producer.Partitioner,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Cluster"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -63,7 +63,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#%3Cinit%3E(org.apache.kafka.common.Cluster,boolean,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#%3Cinit%3E(org.apache.kafka.common.Cluster,boolean,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Cluster"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -77,48 +77,44 @@ namespace Org.Apache.Kafka.Clients.Producer
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Clients.Producer.MockProducer"/> to <see cref="Org.Apache.Kafka.Clients.Producer.Producer"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Clients.Producer.Producer(Org.Apache.Kafka.Clients.Producer.MockProducer t) => t.Cast<Org.Apache.Kafka.Clients.Producer.Producer>();
 
         #endregion
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#abortTransactionException"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#abortTransactionException"/>
         /// </summary>
         public Java.Lang.RuntimeException abortTransactionException { get { return IGetField<Java.Lang.RuntimeException>("abortTransactionException"); } set { ISetField("abortTransactionException", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#beginTransactionException"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#beginTransactionException"/>
         /// </summary>
         public Java.Lang.RuntimeException beginTransactionException { get { return IGetField<Java.Lang.RuntimeException>("beginTransactionException"); } set { ISetField("beginTransactionException", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#closeException"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#closeException"/>
         /// </summary>
         public Java.Lang.RuntimeException closeException { get { return IGetField<Java.Lang.RuntimeException>("closeException"); } set { ISetField("closeException", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#commitTransactionException"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#commitTransactionException"/>
         /// </summary>
         public Java.Lang.RuntimeException commitTransactionException { get { return IGetField<Java.Lang.RuntimeException>("commitTransactionException"); } set { ISetField("commitTransactionException", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#flushException"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#flushException"/>
         /// </summary>
         public Java.Lang.RuntimeException flushException { get { return IGetField<Java.Lang.RuntimeException>("flushException"); } set { ISetField("flushException", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#initTransactionException"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#initTransactionException"/>
         /// </summary>
         public Java.Lang.RuntimeException initTransactionException { get { return IGetField<Java.Lang.RuntimeException>("initTransactionException"); } set { ISetField("initTransactionException", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#partitionsForException"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#partitionsForException"/>
         /// </summary>
         public Java.Lang.RuntimeException partitionsForException { get { return IGetField<Java.Lang.RuntimeException>("partitionsForException"); } set { ISetField("partitionsForException", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#sendException"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#sendException"/>
         /// </summary>
         public Java.Lang.RuntimeException sendException { get { return IGetField<Java.Lang.RuntimeException>("sendException"); } set { ISetField("sendException", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#sendOffsetsToTransactionException"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#sendOffsetsToTransactionException"/>
         /// </summary>
         public Java.Lang.RuntimeException sendOffsetsToTransactionException { get { return IGetField<Java.Lang.RuntimeException>("sendOffsetsToTransactionException"); } set { ISetField("sendOffsetsToTransactionException", value); } }
 
@@ -130,7 +126,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#closed()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#closed()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -139,7 +135,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<bool>("closed");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#flushed()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#flushed()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -148,7 +144,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<bool>("flushed");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#sentOffsets()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#sentOffsets()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -157,7 +153,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<bool>("sentOffsets");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#transactionAborted()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#transactionAborted()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -166,7 +162,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<bool>("transactionAborted");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#transactionCommitted()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#transactionCommitted()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -175,7 +171,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<bool>("transactionCommitted");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#transactionInFlight()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#transactionInFlight()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -184,7 +180,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<bool>("transactionInFlight");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#transactionInitialized()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#transactionInitialized()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -193,7 +189,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<bool>("transactionInitialized");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#partitionsFor(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#partitionsFor(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -202,7 +198,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<Java.Util.List>("partitionsFor", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#metrics()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#metrics()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -211,7 +207,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<Java.Util.Map>("metrics");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#commitCount()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#commitCount()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -220,7 +216,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<long>("commitCount");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#completeNext()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#completeNext()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -229,16 +225,16 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<bool>("completeNext");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#errorNext(java.lang.RuntimeException)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#errorNext(java.lang.RuntimeException)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.RuntimeException"/></param>
         /// <returns><see cref="bool"/></returns>
-        public bool ErrorNext(Java.Lang.RuntimeException arg0)
+        public bool ErrorNext(MASES.JCOBridge.C2JBridge.JVMBridgeException arg0)
         {
             return IExecute<bool>("errorNext", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#send(org.apache.kafka.clients.producer.ProducerRecord,org.apache.kafka.clients.producer.Callback)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#send(org.apache.kafka.clients.producer.ProducerRecord,org.apache.kafka.clients.producer.Callback)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Producer.ProducerRecord"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Producer.Callback"/></param>
@@ -248,7 +244,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<Java.Util.Concurrent.Future>("send", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#send(org.apache.kafka.clients.producer.ProducerRecord)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#send(org.apache.kafka.clients.producer.ProducerRecord)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Producer.ProducerRecord"/></param>
         /// <returns><see cref="Java.Util.Concurrent.Future"/></returns>
@@ -257,7 +253,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<Java.Util.Concurrent.Future>("send", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#consumerGroupOffsetsHistory()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#consumerGroupOffsetsHistory()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -266,7 +262,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<Java.Util.List>("consumerGroupOffsetsHistory");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#history()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#history()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -275,7 +271,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<Java.Util.List>("history");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#uncommittedRecords()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#uncommittedRecords()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -284,7 +280,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<Java.Util.List>("uncommittedRecords");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#uncommittedOffsets()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#uncommittedOffsets()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -293,28 +289,28 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<Java.Util.Map>("uncommittedOffsets");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#clear()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#clear()"/>
         /// </summary>
         public void Clear()
         {
             IExecute("clear");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#fenceProducer()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#fenceProducer()"/>
         /// </summary>
         public void FenceProducer()
         {
             IExecute("fenceProducer");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#flush()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#flush()"/>
         /// </summary>
         public void Flush()
         {
             IExecute("flush");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#abortTransaction()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#abortTransaction()"/>
         /// </summary>
 
         /// <exception cref="Org.Apache.Kafka.Common.Errors.ProducerFencedException"/>
@@ -323,7 +319,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             IExecute("abortTransaction");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#beginTransaction()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#beginTransaction()"/>
         /// </summary>
 
         /// <exception cref="Org.Apache.Kafka.Common.Errors.ProducerFencedException"/>
@@ -332,14 +328,14 @@ namespace Org.Apache.Kafka.Clients.Producer
             IExecute("beginTransaction");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecute("close");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#close(java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#close(java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         public void Close(Java.Time.Duration arg0)
@@ -347,7 +343,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             IExecute("close", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#commitTransaction()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#commitTransaction()"/>
         /// </summary>
 
         /// <exception cref="Org.Apache.Kafka.Common.Errors.ProducerFencedException"/>
@@ -356,14 +352,14 @@ namespace Org.Apache.Kafka.Clients.Producer
             IExecute("commitTransaction");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#initTransactions()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#initTransactions()"/>
         /// </summary>
         public void InitTransactions()
         {
             IExecute("initTransactions");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#sendOffsetsToTransaction(java.util.Map,org.apache.kafka.clients.consumer.ConsumerGroupMetadata)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#sendOffsetsToTransaction(java.util.Map,org.apache.kafka.clients.consumer.ConsumerGroupMetadata)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerGroupMetadata"/></param>
@@ -373,7 +369,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             IExecute("sendOffsetsToTransaction", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#setMockMetrics(org.apache.kafka.common.MetricName,org.apache.kafka.common.Metric)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#setMockMetrics(org.apache.kafka.common.MetricName,org.apache.kafka.common.Metric)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.MetricName"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Metric"/></param>
@@ -397,7 +393,7 @@ namespace Org.Apache.Kafka.Clients.Producer
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#%3Cinit%3E(boolean,org.apache.kafka.clients.producer.Partitioner,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#%3Cinit%3E(boolean,org.apache.kafka.clients.producer.Partitioner,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Producer.Partitioner"/></param>
@@ -408,7 +404,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#%3Cinit%3E(boolean,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#%3Cinit%3E(boolean,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Serializer"/></param>
@@ -418,7 +414,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#%3Cinit%3E(org.apache.kafka.common.Cluster,boolean,org.apache.kafka.clients.producer.Partitioner,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#%3Cinit%3E(org.apache.kafka.common.Cluster,boolean,org.apache.kafka.clients.producer.Partitioner,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Cluster"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -430,7 +426,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#%3Cinit%3E(org.apache.kafka.common.Cluster,boolean,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#%3Cinit%3E(org.apache.kafka.common.Cluster,boolean,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Cluster"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -445,10 +441,6 @@ namespace Org.Apache.Kafka.Clients.Producer
 
         #region Class/Interface conversion operators
         /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Clients.Producer.MockProducer{K, V}"/> to <see cref="Org.Apache.Kafka.Clients.Producer.Producer{K, V}"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Clients.Producer.Producer<K, V>(Org.Apache.Kafka.Clients.Producer.MockProducer<K, V> t) => t.Cast<Org.Apache.Kafka.Clients.Producer.Producer<K, V>>();
-        /// <summary>
         /// Converter from <see cref="Org.Apache.Kafka.Clients.Producer.MockProducer{K, V}"/> to <see cref="Org.Apache.Kafka.Clients.Producer.MockProducer"/>
         /// </summary>
         public static implicit operator Org.Apache.Kafka.Clients.Producer.MockProducer(Org.Apache.Kafka.Clients.Producer.MockProducer<K, V> t) => t.Cast<Org.Apache.Kafka.Clients.Producer.MockProducer>();
@@ -457,39 +449,39 @@ namespace Org.Apache.Kafka.Clients.Producer
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#abortTransactionException"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#abortTransactionException"/>
         /// </summary>
         public Java.Lang.RuntimeException abortTransactionException { get { return IGetField<Java.Lang.RuntimeException>("abortTransactionException"); } set { ISetField("abortTransactionException", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#beginTransactionException"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#beginTransactionException"/>
         /// </summary>
         public Java.Lang.RuntimeException beginTransactionException { get { return IGetField<Java.Lang.RuntimeException>("beginTransactionException"); } set { ISetField("beginTransactionException", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#closeException"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#closeException"/>
         /// </summary>
         public Java.Lang.RuntimeException closeException { get { return IGetField<Java.Lang.RuntimeException>("closeException"); } set { ISetField("closeException", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#commitTransactionException"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#commitTransactionException"/>
         /// </summary>
         public Java.Lang.RuntimeException commitTransactionException { get { return IGetField<Java.Lang.RuntimeException>("commitTransactionException"); } set { ISetField("commitTransactionException", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#flushException"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#flushException"/>
         /// </summary>
         public Java.Lang.RuntimeException flushException { get { return IGetField<Java.Lang.RuntimeException>("flushException"); } set { ISetField("flushException", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#initTransactionException"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#initTransactionException"/>
         /// </summary>
         public Java.Lang.RuntimeException initTransactionException { get { return IGetField<Java.Lang.RuntimeException>("initTransactionException"); } set { ISetField("initTransactionException", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#partitionsForException"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#partitionsForException"/>
         /// </summary>
         public Java.Lang.RuntimeException partitionsForException { get { return IGetField<Java.Lang.RuntimeException>("partitionsForException"); } set { ISetField("partitionsForException", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#sendException"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#sendException"/>
         /// </summary>
         public Java.Lang.RuntimeException sendException { get { return IGetField<Java.Lang.RuntimeException>("sendException"); } set { ISetField("sendException", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#sendOffsetsToTransactionException"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#sendOffsetsToTransactionException"/>
         /// </summary>
         public Java.Lang.RuntimeException sendOffsetsToTransactionException { get { return IGetField<Java.Lang.RuntimeException>("sendOffsetsToTransactionException"); } set { ISetField("sendOffsetsToTransactionException", value); } }
 
@@ -501,7 +493,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#closed()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#closed()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -510,7 +502,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<bool>("closed");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#flushed()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#flushed()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -519,7 +511,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<bool>("flushed");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#sentOffsets()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#sentOffsets()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -528,7 +520,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<bool>("sentOffsets");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#transactionAborted()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#transactionAborted()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -537,7 +529,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<bool>("transactionAborted");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#transactionCommitted()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#transactionCommitted()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -546,7 +538,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<bool>("transactionCommitted");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#transactionInFlight()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#transactionInFlight()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -555,7 +547,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<bool>("transactionInFlight");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#transactionInitialized()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#transactionInitialized()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -564,7 +556,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<bool>("transactionInitialized");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#partitionsFor(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#partitionsFor(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -573,7 +565,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<Java.Util.List<Org.Apache.Kafka.Common.PartitionInfo>>("partitionsFor", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#metrics()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#metrics()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -582,7 +574,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.MetricName, Org.Apache.Kafka.Common.Metric>>("metrics");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#commitCount()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#commitCount()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -591,7 +583,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<long>("commitCount");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#completeNext()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#completeNext()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -600,16 +592,16 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<bool>("completeNext");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#errorNext(java.lang.RuntimeException)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#errorNext(java.lang.RuntimeException)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.RuntimeException"/></param>
         /// <returns><see cref="bool"/></returns>
-        public bool ErrorNext(Java.Lang.RuntimeException arg0)
+        public bool ErrorNext(MASES.JCOBridge.C2JBridge.JVMBridgeException arg0)
         {
             return IExecute<bool>("errorNext", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#send(org.apache.kafka.clients.producer.ProducerRecord,org.apache.kafka.clients.producer.Callback)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#send(org.apache.kafka.clients.producer.ProducerRecord,org.apache.kafka.clients.producer.Callback)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Producer.ProducerRecord"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Producer.Callback"/></param>
@@ -619,7 +611,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<Java.Util.Concurrent.Future<Org.Apache.Kafka.Clients.Producer.RecordMetadata>>("send", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#send(org.apache.kafka.clients.producer.ProducerRecord)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#send(org.apache.kafka.clients.producer.ProducerRecord)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Producer.ProducerRecord"/></param>
         /// <returns><see cref="Java.Util.Concurrent.Future"/></returns>
@@ -628,7 +620,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<Java.Util.Concurrent.Future<Org.Apache.Kafka.Clients.Producer.RecordMetadata>>("send", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#consumerGroupOffsetsHistory()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#consumerGroupOffsetsHistory()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -637,7 +629,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<Java.Util.List<Java.Util.Map<string, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>>>>("consumerGroupOffsetsHistory");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#history()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#history()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -646,7 +638,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<Java.Util.List<Org.Apache.Kafka.Clients.Producer.ProducerRecord<K, V>>>("history");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#uncommittedRecords()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#uncommittedRecords()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -655,7 +647,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<Java.Util.List<Org.Apache.Kafka.Clients.Producer.ProducerRecord<K, V>>>("uncommittedRecords");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#uncommittedOffsets()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#uncommittedOffsets()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -664,28 +656,28 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<Java.Util.Map<string, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>>>("uncommittedOffsets");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#clear()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#clear()"/>
         /// </summary>
         public void Clear()
         {
             IExecute("clear");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#fenceProducer()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#fenceProducer()"/>
         /// </summary>
         public void FenceProducer()
         {
             IExecute("fenceProducer");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#flush()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#flush()"/>
         /// </summary>
         public void Flush()
         {
             IExecute("flush");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#abortTransaction()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#abortTransaction()"/>
         /// </summary>
 
         /// <exception cref="Org.Apache.Kafka.Common.Errors.ProducerFencedException"/>
@@ -694,7 +686,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             IExecute("abortTransaction");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#beginTransaction()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#beginTransaction()"/>
         /// </summary>
 
         /// <exception cref="Org.Apache.Kafka.Common.Errors.ProducerFencedException"/>
@@ -703,14 +695,14 @@ namespace Org.Apache.Kafka.Clients.Producer
             IExecute("beginTransaction");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecute("close");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#close(java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#close(java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         public void Close(Java.Time.Duration arg0)
@@ -718,7 +710,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             IExecute("close", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#commitTransaction()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#commitTransaction()"/>
         /// </summary>
 
         /// <exception cref="Org.Apache.Kafka.Common.Errors.ProducerFencedException"/>
@@ -727,14 +719,14 @@ namespace Org.Apache.Kafka.Clients.Producer
             IExecute("commitTransaction");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#initTransactions()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#initTransactions()"/>
         /// </summary>
         public void InitTransactions()
         {
             IExecute("initTransactions");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#sendOffsetsToTransaction(java.util.Map,org.apache.kafka.clients.consumer.ConsumerGroupMetadata)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#sendOffsetsToTransaction(java.util.Map,org.apache.kafka.clients.consumer.ConsumerGroupMetadata)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerGroupMetadata"/></param>
@@ -744,7 +736,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             IExecute("sendOffsetsToTransaction", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#setMockMetrics(org.apache.kafka.common.MetricName,org.apache.kafka.common.Metric)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/MockProducer.html#setMockMetrics(org.apache.kafka.common.MetricName,org.apache.kafka.common.Metric)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.MetricName"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Metric"/></param>

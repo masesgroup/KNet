@@ -33,10 +33,6 @@ namespace Org.Apache.Kafka.Common.Security.Scram
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.Security.Scram.ScramExtensionsCallback"/> to <see cref="Javax.Security.Auth.Callback.Callback"/>
-        /// </summary>
-        public static implicit operator Javax.Security.Auth.Callback.Callback(Org.Apache.Kafka.Common.Security.Scram.ScramExtensionsCallback t) => t.Cast<Javax.Security.Auth.Callback.Callback>();
 
         #endregion
 
@@ -50,7 +46,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramExtensionsCallback.html#extensions()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramExtensionsCallback.html#extensions()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -59,7 +55,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
             return IExecute<Java.Util.Map<string, string>>("extensions");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramExtensionsCallback.html#extensions(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/scram/ScramExtensionsCallback.html#extensions(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Extensions(Java.Util.Map<string, string> arg0)

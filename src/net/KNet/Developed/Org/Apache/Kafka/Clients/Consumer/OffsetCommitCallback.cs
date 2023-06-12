@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
     /// <summary>
     /// Listener for Kafka OffsetCommitCallback. Extends <see cref="IJVMBridgeBase"/>
     /// </summary>
-    public interface IOffsetCommitCallback : IJVMBridgeBase
+    public partial interface IOffsetCommitCallback : IJVMBridgeBase
     {
         /// <summary>
         /// Executes the Callback action in the CLR
@@ -68,11 +68,5 @@ namespace Org.Apache.Kafka.Clients.Consumer
             var exception = data.EventData.ExtraData.Get(0) as IJavaObject;
             OnOnComplete(data.EventData.TypedEventData, JVMBridgeException.New(exception));
         }
-        /// <summary>
-        /// Executes the Callback action in the CLR
-        /// </summary>
-        /// <param name="offsets">The <see cref="Map{TopicPartition, OffsetAndMetadata}"/> object</param>
-        /// <param name="exception">The <see cref="JVMBridgeException"/> object</param>
-        public virtual void OnComplete(Map<TopicPartition, OffsetAndMetadata> offsets, JVMBridgeException exception) { }
     }
 }

@@ -26,11 +26,11 @@ using MASES.JCOBridge.C2JBridge;
 namespace Org.Apache.Kafka.Connect.Util
 {
     #region ConnectorTaskId
-    public partial class ConnectorTaskId
+    public partial class ConnectorTaskId : Java.Io.ISerializable, Java.Lang.IComparable<Org.Apache.Kafka.Connect.Util.ConnectorTaskId>
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConnectorTaskId.html#%3Cinit%3E(java.lang.String,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConnectorTaskId.html#%3Cinit%3E(java.lang.String,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -63,7 +63,7 @@ namespace Org.Apache.Kafka.Connect.Util
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConnectorTaskId.html#compareTo(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConnectorTaskId.html#compareTo(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="int"/></returns>
@@ -72,7 +72,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecute<int>("compareTo", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConnectorTaskId.html#compareTo(org.apache.kafka.connect.util.ConnectorTaskId)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConnectorTaskId.html#compareTo(org.apache.kafka.connect.util.ConnectorTaskId)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Util.ConnectorTaskId"/></param>
         /// <returns><see cref="int"/></returns>
@@ -81,7 +81,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecute<int>("compareTo", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConnectorTaskId.html#task()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConnectorTaskId.html#task()"/>
         /// </summary>
 
         /// <returns><see cref="int"/></returns>
@@ -90,7 +90,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecute<int>("task");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConnectorTaskId.html#connector()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConnectorTaskId.html#connector()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>

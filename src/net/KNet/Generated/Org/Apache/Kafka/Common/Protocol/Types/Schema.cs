@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Schema.html#%3Cinit%3E(boolean,org.apache.kafka.common.protocol.types.Field[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Schema.html#%3Cinit%3E(boolean,org.apache.kafka.common.protocol.types.Field[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field"/></param>
@@ -39,7 +39,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Schema.html#%3Cinit%3E(org.apache.kafka.common.protocol.types.Field[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Schema.html#%3Cinit%3E(org.apache.kafka.common.protocol.types.Field[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Field"/></param>
         public Schema(params Org.Apache.Kafka.Common.Protocol.Types.Field[] arg0)
@@ -63,7 +63,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Schema.html#numFields()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Schema.html#numFields()"/>
         /// </summary>
 
         /// <returns><see cref="int"/></returns>
@@ -72,7 +72,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<int>("numFields");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Schema.html#get(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Schema.html#get(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Types.BoundField"/></returns>
@@ -81,7 +81,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Org.Apache.Kafka.Common.Protocol.Types.BoundField>("get", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Schema.html#get(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Schema.html#get(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Types.BoundField"/></returns>
@@ -90,7 +90,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<Org.Apache.Kafka.Common.Protocol.Types.BoundField>("get", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Schema.html#fields()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Schema.html#fields()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Types.BoundField"/></returns>
@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecuteArray<Org.Apache.Kafka.Common.Protocol.Types.BoundField>("fields");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Schema.html#walk(org.apache.kafka.common.protocol.types.Schema.Visitor)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Schema.html#walk(org.apache.kafka.common.protocol.types.Schema.Visitor)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Schema.Visitor"/></param>
         public void Walk(Org.Apache.Kafka.Common.Protocol.Types.Schema.Visitor arg0)
@@ -131,7 +131,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Schema.Visitor.html#visit(org.apache.kafka.common.protocol.types.Schema)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Schema.Visitor.html#visit(org.apache.kafka.common.protocol.types.Schema)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Schema"/></param>
             public void Visit(Org.Apache.Kafka.Common.Protocol.Types.Schema arg0)
@@ -139,7 +139,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
                 IExecute("visit", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Schema.Visitor.html#visit(org.apache.kafka.common.protocol.types.Type)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/Schema.Visitor.html#visit(org.apache.kafka.common.protocol.types.Type)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Types.Type"/></param>
             public void Visit(Org.Apache.Kafka.Common.Protocol.Types.Type arg0)

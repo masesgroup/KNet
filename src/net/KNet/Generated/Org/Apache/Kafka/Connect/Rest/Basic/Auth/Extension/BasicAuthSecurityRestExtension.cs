@@ -33,10 +33,6 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension.BasicAuthSecurityRestExtension"/> to <see cref="Org.Apache.Kafka.Connect.Rest.ConnectRestExtension"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Connect.Rest.ConnectRestExtension(Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension.BasicAuthSecurityRestExtension t) => t.Cast<Org.Apache.Kafka.Connect.Rest.ConnectRestExtension>();
 
         #endregion
 
@@ -50,7 +46,7 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-basic-auth-extension/3.4.0/org/apache/kafka/connect/rest/basic/auth/extension/BasicAuthSecurityRestExtension.html#version()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.4.0/org/apache/kafka/connect/rest/basic/auth/extension/BasicAuthSecurityRestExtension.html#version()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -59,7 +55,7 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
             return IExecute<string>("version");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-basic-auth-extension/3.4.0/org/apache/kafka/connect/rest/basic/auth/extension/BasicAuthSecurityRestExtension.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.4.0/org/apache/kafka/connect/rest/basic/auth/extension/BasicAuthSecurityRestExtension.html#close()"/>
         /// </summary>
 
         /// <exception cref="Java.Io.IOException"/>
@@ -68,11 +64,10 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
             IExecute("close");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-basic-auth-extension/3.4.0/org/apache/kafka/connect/rest/basic/auth/extension/BasicAuthSecurityRestExtension.html#configure(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.4.0/org/apache/kafka/connect/rest/basic/auth/extension/BasicAuthSecurityRestExtension.html#configure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        /// <typeparam name="Arg0Extendsobject"></typeparam>
-        public void Configure<Arg0Extendsobject>(Java.Util.Map<string, Arg0Extendsobject> arg0)
+        public void Configure(Java.Util.Map<string, object> arg0)
         {
             IExecute("configure", arg0);
         }

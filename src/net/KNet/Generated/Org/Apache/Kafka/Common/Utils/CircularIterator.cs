@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Utils
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/CircularIterator.html#%3Cinit%3E(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/CircularIterator.html#%3Cinit%3E(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public CircularIterator(Java.Util.Collection arg0)
@@ -41,10 +41,6 @@ namespace Org.Apache.Kafka.Common.Utils
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.Utils.CircularIterator"/> to <see cref="Java.Util.Iterator"/>
-        /// </summary>
-        public static implicit operator Java.Util.Iterator(Org.Apache.Kafka.Common.Utils.CircularIterator t) => t.Cast<Java.Util.Iterator>();
 
         #endregion
 
@@ -58,7 +54,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/CircularIterator.html#hasNext()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/CircularIterator.html#hasNext()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -67,7 +63,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecute<bool>("hasNext");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/CircularIterator.html#next()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/CircularIterator.html#next()"/>
         /// </summary>
 
         /// <returns><see cref="object"/></returns>
@@ -76,7 +72,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecute("next");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/CircularIterator.html#peek()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/CircularIterator.html#peek()"/>
         /// </summary>
 
         /// <returns><see cref="object"/></returns>
@@ -85,7 +81,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecute("peek");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/CircularIterator.html#remove()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/CircularIterator.html#remove()"/>
         /// </summary>
         public void Remove()
         {
@@ -107,7 +103,7 @@ namespace Org.Apache.Kafka.Common.Utils
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/CircularIterator.html#%3Cinit%3E(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/CircularIterator.html#%3Cinit%3E(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public CircularIterator(Java.Util.Collection<T> arg0)
@@ -118,10 +114,6 @@ namespace Org.Apache.Kafka.Common.Utils
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.Utils.CircularIterator{T}"/> to <see cref="Java.Util.Iterator"/>
-        /// </summary>
-        public static implicit operator Java.Util.Iterator(Org.Apache.Kafka.Common.Utils.CircularIterator<T> t) => t.Cast<Java.Util.Iterator>();
         /// <summary>
         /// Converter from <see cref="Org.Apache.Kafka.Common.Utils.CircularIterator{T}"/> to <see cref="Org.Apache.Kafka.Common.Utils.CircularIterator"/>
         /// </summary>
@@ -139,7 +131,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/CircularIterator.html#hasNext()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/CircularIterator.html#hasNext()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -148,7 +140,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecute<bool>("hasNext");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/CircularIterator.html#next()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/CircularIterator.html#next()"/>
         /// </summary>
 
         /// <returns><typeparamref name="T"/></returns>
@@ -157,7 +149,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecute<T>("next");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/CircularIterator.html#peek()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/CircularIterator.html#peek()"/>
         /// </summary>
 
         /// <returns><typeparamref name="T"/></returns>
@@ -166,7 +158,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecute<T>("peek");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/CircularIterator.html#remove()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/CircularIterator.html#remove()"/>
         /// </summary>
         public void Remove()
         {

@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Connect.Data
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Field.html#%3Cinit%3E(java.lang.String,int,org.apache.kafka.connect.data.Schema)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Field.html#%3Cinit%3E(java.lang.String,int,org.apache.kafka.connect.data.Schema)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -56,7 +56,7 @@ namespace Org.Apache.Kafka.Connect.Data
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Field.html#index()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Field.html#index()"/>
         /// </summary>
 
         /// <returns><see cref="int"/></returns>
@@ -65,7 +65,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecute<int>("index");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Field.html#name()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Field.html#name()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecute<string>("name");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Field.html#schema()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/data/Field.html#schema()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></returns>

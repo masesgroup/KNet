@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Common.Protocol
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageSizeAccumulator.html#sizeExcludingZeroCopy()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageSizeAccumulator.html#sizeExcludingZeroCopy()"/>
         /// </summary>
 
         /// <returns><see cref="int"/></returns>
@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return IExecute<int>("sizeExcludingZeroCopy");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageSizeAccumulator.html#totalSize()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageSizeAccumulator.html#totalSize()"/>
         /// </summary>
 
         /// <returns><see cref="int"/></returns>
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return IExecute<int>("totalSize");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageSizeAccumulator.html#zeroCopySize()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageSizeAccumulator.html#zeroCopySize()"/>
         /// </summary>
 
         /// <returns><see cref="int"/></returns>
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return IExecute<int>("zeroCopySize");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageSizeAccumulator.html#add(org.apache.kafka.common.protocol.MessageSizeAccumulator)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageSizeAccumulator.html#add(org.apache.kafka.common.protocol.MessageSizeAccumulator)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.MessageSizeAccumulator"/></param>
         public void Add(Org.Apache.Kafka.Common.Protocol.MessageSizeAccumulator arg0)
@@ -81,7 +81,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("add", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageSizeAccumulator.html#addBytes(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageSizeAccumulator.html#addBytes(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public void AddBytes(int arg0)
@@ -89,7 +89,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("addBytes", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageSizeAccumulator.html#addZeroCopyBytes(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageSizeAccumulator.html#addZeroCopyBytes(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public void AddZeroCopyBytes(int arg0)

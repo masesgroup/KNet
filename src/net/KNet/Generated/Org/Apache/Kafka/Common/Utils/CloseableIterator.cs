@@ -34,10 +34,6 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Class/Interface conversion operators
         /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.Utils.CloseableIterator"/> to <see cref="Java.Util.Iterator"/>
-        /// </summary>
-        public static implicit operator Java.Util.Iterator(Org.Apache.Kafka.Common.Utils.CloseableIterator t) => t.Cast<Java.Util.Iterator>();
-        /// <summary>
         /// Converter from <see cref="Org.Apache.Kafka.Common.Utils.CloseableIterator"/> to <see cref="Java.Io.Closeable"/>
         /// </summary>
         public static implicit operator Java.Io.Closeable(Org.Apache.Kafka.Common.Utils.CloseableIterator t) => t.Cast<Java.Io.Closeable>();
@@ -50,7 +46,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/CloseableIterator.html#wrap(java.util.Iterator)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/CloseableIterator.html#wrap(java.util.Iterator)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Iterator"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Utils.CloseableIterator"/></returns>
@@ -63,7 +59,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/CloseableIterator.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/CloseableIterator.html#close()"/>
         /// </summary>
         public void Close()
         {
@@ -80,18 +76,32 @@ namespace Org.Apache.Kafka.Common.Utils
     }
     #endregion
 
+    #region ICloseableIterator<T>
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/CloseableIterator.html"/>
+    /// </summary>
+    public partial interface ICloseableIterator<T>
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region CloseableIterator<T>
-    public partial class CloseableIterator<T>
+    public partial class CloseableIterator<T> : Org.Apache.Kafka.Common.Utils.ICloseableIterator<T>, Java.Util.IIterator<T>, Java.Io.ICloseable
     {
         #region Constructors
 
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.Utils.CloseableIterator{T}"/> to <see cref="Java.Util.Iterator"/>
-        /// </summary>
-        public static implicit operator Java.Util.Iterator(Org.Apache.Kafka.Common.Utils.CloseableIterator<T> t) => t.Cast<Java.Util.Iterator>();
         /// <summary>
         /// Converter from <see cref="Org.Apache.Kafka.Common.Utils.CloseableIterator{T}"/> to <see cref="Java.Io.Closeable"/>
         /// </summary>
@@ -109,7 +119,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/CloseableIterator.html#wrap(java.util.Iterator)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/CloseableIterator.html#wrap(java.util.Iterator)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Iterator"/></param>
         /// <typeparam name="R"></typeparam>
@@ -123,7 +133,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/CloseableIterator.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/CloseableIterator.html#close()"/>
         /// </summary>
         public void Close()
         {

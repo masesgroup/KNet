@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Connect.Cli
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/cli/ConnectDistributed.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/cli/ConnectDistributed.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         public static void Main(string[] arg0)
@@ -53,15 +53,6 @@ namespace Org.Apache.Kafka.Connect.Cli
         #endregion
 
         #region Instance methods
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/cli/ConnectDistributed.html#startConnect(java.util.Map)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.Connect"/></returns>
-        public Org.Apache.Kafka.Connect.Runtime.Connect StartConnect(Java.Util.Map<string, string> arg0)
-        {
-            return IExecute<Org.Apache.Kafka.Connect.Runtime.Connect>("startConnect", arg0);
-        }
 
         #endregion
 

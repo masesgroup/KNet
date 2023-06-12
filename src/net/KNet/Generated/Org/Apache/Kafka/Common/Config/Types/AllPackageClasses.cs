@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Config.Types
 {
     #region Password
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/types/Password.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/types/Password.html"/>
     /// </summary>
     public partial class Password : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Password>
     {
@@ -67,6 +67,7 @@ namespace Org.Apache.Kafka.Common.Config.Types
 
     }
     #endregion
+
 
 
 }

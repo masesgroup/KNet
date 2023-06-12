@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClient.html#%3Cinit%3E(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClient.html#%3Cinit%3E(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public MirrorClient(Java.Util.Map<string, object> arg0)
@@ -38,7 +38,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClient.html#%3Cinit%3E(org.apache.kafka.connect.mirror.MirrorClientConfig)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClient.html#%3Cinit%3E(org.apache.kafka.connect.mirror.MirrorClientConfig)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Mirror.MirrorClientConfig"/></param>
         public MirrorClient(Org.Apache.Kafka.Connect.Mirror.MirrorClientConfig arg0)
@@ -49,10 +49,6 @@ namespace Org.Apache.Kafka.Connect.Mirror
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Connect.Mirror.MirrorClient"/> to <see cref="Java.Lang.AutoCloseable"/>
-        /// </summary>
-        public static implicit operator Java.Lang.AutoCloseable(Org.Apache.Kafka.Connect.Mirror.MirrorClient t) => t.Cast<Java.Lang.AutoCloseable>();
 
         #endregion
 
@@ -66,7 +62,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClient.html#replicationHops(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClient.html#replicationHops(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="int"/></returns>
@@ -76,7 +72,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecute<int>("replicationHops", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClient.html#remoteConsumerOffsets(java.lang.String,java.lang.String,java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClient.html#remoteConsumerOffsets(java.lang.String,java.lang.String,java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -87,7 +83,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>>("remoteConsumerOffsets", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClient.html#checkpointTopics()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClient.html#checkpointTopics()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Set"/></returns>
@@ -97,7 +93,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecute<Java.Util.Set<string>>("checkpointTopics");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClient.html#heartbeatTopics()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClient.html#heartbeatTopics()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Set"/></returns>
@@ -107,7 +103,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecute<Java.Util.Set<string>>("heartbeatTopics");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClient.html#remoteTopics()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClient.html#remoteTopics()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Set"/></returns>
@@ -117,7 +113,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecute<Java.Util.Set<string>>("remoteTopics");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClient.html#remoteTopics(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClient.html#remoteTopics(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Java.Util.Set"/></returns>
@@ -127,7 +123,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecute<Java.Util.Set<string>>("remoteTopics", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClient.html#upstreamClusters()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClient.html#upstreamClusters()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Set"/></returns>
@@ -137,7 +133,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecute<Java.Util.Set<string>>("upstreamClusters");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClient.html#replicationPolicy()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClient.html#replicationPolicy()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Connect.Mirror.ReplicationPolicy"/></returns>
@@ -146,7 +142,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecute<Org.Apache.Kafka.Connect.Mirror.ReplicationPolicy>("replicationPolicy");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClient.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/MirrorClient.html#close()"/>
         /// </summary>
         public void Close()
         {

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 {
     #region CompoundStat
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/CompoundStat.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/CompoundStat.html"/>
     /// </summary>
     public partial class CompoundStat : Org.Apache.Kafka.Common.Metrics.Stat
     {
@@ -66,7 +66,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         // TODO: complete the class
         #region NamedMeasurable
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/CompoundStat.NamedMeasurable.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/CompoundStat.NamedMeasurable.html"/>
         /// </summary>
         public partial class NamedMeasurable : MASES.JCOBridge.C2JBridge.JVMBridgeBase<NamedMeasurable>
         {
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
     #region Gauge
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Gauge.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Gauge.html"/>
     /// </summary>
     public partial class Gauge : Org.Apache.Kafka.Common.Metrics.MetricValueProvider
     {
@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
     #region Gauge<T>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Gauge.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Gauge.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class Gauge<T> : Org.Apache.Kafka.Common.Metrics.MetricValueProvider<T>
@@ -200,7 +200,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
     #region JmxReporter
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/JmxReporter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/JmxReporter.html"/>
     /// </summary>
     public partial class JmxReporter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<JmxReporter>
     {
@@ -243,9 +243,9 @@ namespace Org.Apache.Kafka.Common.Metrics
 
     #region KafkaMetric
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/KafkaMetric.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/KafkaMetric.html"/>
     /// </summary>
-    public partial class KafkaMetric : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KafkaMetric>
+    public partial class KafkaMetric : Org.Apache.Kafka.Common.Metric
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -286,9 +286,9 @@ namespace Org.Apache.Kafka.Common.Metrics
 
     #region KafkaMetricsContext
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/KafkaMetricsContext.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/KafkaMetricsContext.html"/>
     /// </summary>
-    public partial class KafkaMetricsContext : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KafkaMetricsContext>
+    public partial class KafkaMetricsContext : Org.Apache.Kafka.Common.Metrics.MetricsContext
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -329,9 +329,9 @@ namespace Org.Apache.Kafka.Common.Metrics
 
     #region Measurable
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Measurable.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Measurable.html"/>
     /// </summary>
-    public partial class Measurable : Org.Apache.Kafka.Common.Metrics.MetricValueProvider
+    public partial class Measurable : Org.Apache.Kafka.Common.Metrics.MetricValueProvider<double?>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -372,7 +372,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
     #region MeasurableStat
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MeasurableStat.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MeasurableStat.html"/>
     /// </summary>
     public partial class MeasurableStat : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MeasurableStat>
     {
@@ -415,7 +415,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
     #region MetricConfig
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricConfig.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricConfig.html"/>
     /// </summary>
     public partial class MetricConfig : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MetricConfig>
     {
@@ -458,9 +458,9 @@ namespace Org.Apache.Kafka.Common.Metrics
 
     #region Metrics
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Metrics.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Metrics.html"/>
     /// </summary>
-    public partial class Metrics : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Metrics>
+    public partial class Metrics : Java.Io.Closeable
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -501,7 +501,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
     #region MetricsContext
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricsContext.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricsContext.html"/>
     /// </summary>
     public partial class MetricsContext : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MetricsContext>
     {
@@ -544,10 +544,15 @@ namespace Org.Apache.Kafka.Common.Metrics
 
     #region MetricsReporter
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricsReporter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricsReporter.html"/>
     /// </summary>
     public partial class MetricsReporter : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public MetricsReporter() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -557,7 +562,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
     #region MetricValueProvider
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricValueProvider.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricValueProvider.html"/>
     /// </summary>
     public partial class MetricValueProvider : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MetricValueProvider>
     {
@@ -600,7 +605,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
     #region MetricValueProvider<T>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricValueProvider.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricValueProvider.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class MetricValueProvider<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MetricValueProvider<T>>
@@ -644,7 +649,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
     #region Quota
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Quota.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Quota.html"/>
     /// </summary>
     public partial class Quota : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Quota>
     {
@@ -687,7 +692,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
     #region QuotaViolationException
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/QuotaViolationException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/QuotaViolationException.html"/>
     /// </summary>
     public partial class QuotaViolationException : Org.Apache.Kafka.Common.KafkaException
     {
@@ -703,7 +708,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
     #region Sensor
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Sensor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Sensor.html"/>
     /// </summary>
     public partial class Sensor : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Sensor>
     {
@@ -742,7 +747,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         // TODO: complete the class
         #region RecordingLevel
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Sensor.RecordingLevel.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Sensor.RecordingLevel.html"/>
         /// </summary>
         public partial class RecordingLevel : Java.Lang.Enum<Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel>
         {
@@ -789,7 +794,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
     #region Stat
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Stat.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/Stat.html"/>
     /// </summary>
     public partial class Stat : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Stat>
     {
@@ -829,6 +834,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
     }
     #endregion
+
 
 
 }

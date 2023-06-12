@@ -54,7 +54,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#onSend(org.apache.kafka.clients.producer.ProducerRecord)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#onSend(org.apache.kafka.clients.producer.ProducerRecord)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Producer.ProducerRecord"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Producer.ProducerRecord"/></returns>
@@ -63,18 +63,18 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<Org.Apache.Kafka.Clients.Producer.ProducerRecord>("onSend", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecute("close");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#onAcknowledgement(org.apache.kafka.clients.producer.RecordMetadata,java.lang.Exception)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#onAcknowledgement(org.apache.kafka.clients.producer.RecordMetadata,java.lang.Exception)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Producer.RecordMetadata"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Exception"/></param>
-        public void OnAcknowledgement(Org.Apache.Kafka.Clients.Producer.RecordMetadata arg0, Java.Lang.Exception arg1)
+        public void OnAcknowledgement(Org.Apache.Kafka.Clients.Producer.RecordMetadata arg0, MASES.JCOBridge.C2JBridge.JVMBridgeException arg1)
         {
             IExecute("onAcknowledgement", arg0, arg1);
         }
@@ -89,8 +89,26 @@ namespace Org.Apache.Kafka.Clients.Producer
     }
     #endregion
 
+    #region IProducerInterceptor<K, V>
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerInterceptor.html"/>
+    /// </summary>
+    public partial interface IProducerInterceptor<K, V>
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region ProducerInterceptor<K, V>
-    public partial class ProducerInterceptor<K, V>
+    public partial class ProducerInterceptor<K, V> : Org.Apache.Kafka.Clients.Producer.IProducerInterceptor<K, V>, Org.Apache.Kafka.Common.IConfigurable, Java.Lang.IAutoCloseable
     {
         #region Constructors
 
@@ -122,7 +140,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#onSend(org.apache.kafka.clients.producer.ProducerRecord)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#onSend(org.apache.kafka.clients.producer.ProducerRecord)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Producer.ProducerRecord"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Producer.ProducerRecord"/></returns>
@@ -131,18 +149,18 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<Org.Apache.Kafka.Clients.Producer.ProducerRecord<K, V>>("onSend", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecute("close");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#onAcknowledgement(org.apache.kafka.clients.producer.RecordMetadata,java.lang.Exception)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerInterceptor.html#onAcknowledgement(org.apache.kafka.clients.producer.RecordMetadata,java.lang.Exception)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Producer.RecordMetadata"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Exception"/></param>
-        public void OnAcknowledgement(Org.Apache.Kafka.Clients.Producer.RecordMetadata arg0, Java.Lang.Exception arg1)
+        public void OnAcknowledgement(Org.Apache.Kafka.Clients.Producer.RecordMetadata arg0, MASES.JCOBridge.C2JBridge.JVMBridgeException arg1)
         {
             IExecute("onAcknowledgement", arg0, arg1);
         }

@@ -30,10 +30,10 @@ namespace Org.Apache.Kafka.Connect.Storage
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/StringConverterConfig.html#%3Cinit%3E(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/StringConverterConfig.html#%3Cinit%3E(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public StringConverterConfig(Java.Util.Map arg0)
+        public StringConverterConfig(Java.Util.Map<string, object> arg0)
             : base(arg0)
         {
         }
@@ -46,11 +46,11 @@ namespace Org.Apache.Kafka.Connect.Storage
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/StringConverterConfig.html#ENCODING_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/StringConverterConfig.html#ENCODING_CONFIG"/>
         /// </summary>
         public static string ENCODING_CONFIG { get { return SGetField<string>(LocalBridgeClazz, "ENCODING_CONFIG"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/StringConverterConfig.html#ENCODING_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/StringConverterConfig.html#ENCODING_DEFAULT"/>
         /// </summary>
         public static string ENCODING_DEFAULT { get { return SGetField<string>(LocalBridgeClazz, "ENCODING_DEFAULT"); } }
 
@@ -58,7 +58,7 @@ namespace Org.Apache.Kafka.Connect.Storage
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/StringConverterConfig.html#configDef()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/StringConverterConfig.html#configDef()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Connect.Storage
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/StringConverterConfig.html#encoding()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/StringConverterConfig.html#encoding()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>

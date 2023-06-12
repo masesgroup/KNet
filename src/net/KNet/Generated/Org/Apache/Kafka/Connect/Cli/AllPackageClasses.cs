@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Cli
 {
     #region ConnectDistributed
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/cli/ConnectDistributed.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/cli/ConnectDistributed.html"/>
     /// </summary>
     public partial class ConnectDistributed : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConnectDistributed>, IJNetBridgeMain
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Connect.Cli
 
     #region ConnectStandalone
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/cli/ConnectStandalone.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/cli/ConnectStandalone.html"/>
     /// </summary>
     public partial class ConnectStandalone : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConnectStandalone>, IJNetBridgeMain
     {
@@ -110,6 +110,7 @@ namespace Org.Apache.Kafka.Connect.Cli
 
     }
     #endregion
+
 
 
 }

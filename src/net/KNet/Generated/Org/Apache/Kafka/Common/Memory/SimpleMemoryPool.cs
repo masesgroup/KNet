@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Memory
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/SimpleMemoryPool.html#%3Cinit%3E(long,int,boolean,org.apache.kafka.common.metrics.Sensor)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/SimpleMemoryPool.html#%3Cinit%3E(long,int,boolean,org.apache.kafka.common.metrics.Sensor)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -44,10 +44,6 @@ namespace Org.Apache.Kafka.Common.Memory
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.Memory.SimpleMemoryPool"/> to <see cref="Org.Apache.Kafka.Common.Memory.MemoryPool"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Common.Memory.MemoryPool(Org.Apache.Kafka.Common.Memory.SimpleMemoryPool t) => t.Cast<Org.Apache.Kafka.Common.Memory.MemoryPool>();
 
         #endregion
 
@@ -61,7 +57,7 @@ namespace Org.Apache.Kafka.Common.Memory
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/SimpleMemoryPool.html#isOutOfMemory()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/SimpleMemoryPool.html#isOutOfMemory()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -70,7 +66,7 @@ namespace Org.Apache.Kafka.Common.Memory
             return IExecute<bool>("isOutOfMemory");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/SimpleMemoryPool.html#tryAllocate(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/SimpleMemoryPool.html#tryAllocate(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
@@ -79,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Memory
             return IExecute<Java.Nio.ByteBuffer>("tryAllocate", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/SimpleMemoryPool.html#availableMemory()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/SimpleMemoryPool.html#availableMemory()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -88,7 +84,7 @@ namespace Org.Apache.Kafka.Common.Memory
             return IExecute<long>("availableMemory");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/SimpleMemoryPool.html#size()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/SimpleMemoryPool.html#size()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -97,7 +93,7 @@ namespace Org.Apache.Kafka.Common.Memory
             return IExecute<long>("size");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/SimpleMemoryPool.html#release(java.nio.ByteBuffer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/SimpleMemoryPool.html#release(java.nio.ByteBuffer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         public void Release(Java.Nio.ByteBuffer arg0)

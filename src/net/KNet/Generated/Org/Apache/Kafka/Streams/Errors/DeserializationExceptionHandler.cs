@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Streams.Errors
 {
+    #region IDeserializationExceptionHandler
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/errors/DeserializationExceptionHandler.html"/>
+    /// </summary>
+    public partial interface IDeserializationExceptionHandler : Org.Apache.Kafka.Common.IConfigurable
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region DeserializationExceptionHandler
-    public partial class DeserializationExceptionHandler
+    public partial class DeserializationExceptionHandler : Org.Apache.Kafka.Streams.Errors.IDeserializationExceptionHandler
     {
         #region Constructors
 
@@ -46,13 +64,13 @@ namespace Org.Apache.Kafka.Streams.Errors
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/errors/DeserializationExceptionHandler.html#handle(org.apache.kafka.streams.processor.ProcessorContext,org.apache.kafka.clients.consumer.ConsumerRecord,java.lang.Exception)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/errors/DeserializationExceptionHandler.html#handle(org.apache.kafka.streams.processor.ProcessorContext,org.apache.kafka.clients.consumer.ConsumerRecord,java.lang.Exception)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.ProcessorContext"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord"/></param>
         /// <param name="arg2"><see cref="Java.Lang.Exception"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse"/></returns>
-        public Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse Handle(Org.Apache.Kafka.Streams.Processor.ProcessorContext arg0, Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]> arg1, Java.Lang.Exception arg2)
+        public Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse Handle(Org.Apache.Kafka.Streams.Processor.ProcessorContext arg0, Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]> arg1, MASES.JCOBridge.C2JBridge.JVMBridgeException arg2)
         {
             return IExecute<Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse>("handle", arg0, arg1, arg2);
         }
@@ -73,19 +91,19 @@ namespace Org.Apache.Kafka.Streams.Errors
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/errors/DeserializationExceptionHandler.DeserializationHandlerResponse.html#id"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/errors/DeserializationExceptionHandler.DeserializationHandlerResponse.html#id"/>
             /// </summary>
             public int id { get { return IGetField<int>("id"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/errors/DeserializationExceptionHandler.DeserializationHandlerResponse.html#name"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/errors/DeserializationExceptionHandler.DeserializationHandlerResponse.html#name"/>
             /// </summary>
             public string name { get { return IGetField<string>("name"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/errors/DeserializationExceptionHandler.DeserializationHandlerResponse.html#CONTINUE"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/errors/DeserializationExceptionHandler.DeserializationHandlerResponse.html#CONTINUE"/>
             /// </summary>
             public static Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse CONTINUE { get { return SGetField<Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse>(LocalBridgeClazz, "CONTINUE"); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/errors/DeserializationExceptionHandler.DeserializationHandlerResponse.html#FAIL"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/errors/DeserializationExceptionHandler.DeserializationHandlerResponse.html#FAIL"/>
             /// </summary>
             public static Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse FAIL { get { return SGetField<Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse>(LocalBridgeClazz, "FAIL"); } }
 
@@ -93,7 +111,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/errors/DeserializationExceptionHandler.DeserializationHandlerResponse.html#valueOf(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/errors/DeserializationExceptionHandler.DeserializationHandlerResponse.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse"/></returns>
@@ -102,7 +120,7 @@ namespace Org.Apache.Kafka.Streams.Errors
                 return SExecute<Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse>(LocalBridgeClazz, "valueOf", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/errors/DeserializationExceptionHandler.DeserializationHandlerResponse.html#values()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/errors/DeserializationExceptionHandler.DeserializationHandlerResponse.html#values()"/>
             /// </summary>
 
             /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse"/></returns>

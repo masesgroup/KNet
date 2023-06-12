@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Connect.Util
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#%3Cinit%3E(org.apache.kafka.connect.util.Callback)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#%3Cinit%3E(org.apache.kafka.connect.util.Callback)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Util.Callback"/></param>
         public ConvertingFutureCallback(Org.Apache.Kafka.Connect.Util.Callback arg0)
@@ -62,7 +62,7 @@ namespace Org.Apache.Kafka.Connect.Util
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#convert(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#convert(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="object"/></returns>
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecute("convert", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#cancel(boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#cancel(boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -80,7 +80,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecute<bool>("cancel", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#isCancelled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#isCancelled()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -89,7 +89,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecute<bool>("isCancelled");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#isDone()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#isDone()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -98,7 +98,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecute<bool>("isDone");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#get()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#get()"/>
         /// </summary>
 
         /// <returns><see cref="object"/></returns>
@@ -109,7 +109,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecute("get");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#get(long,java.util.concurrent.TimeUnit)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#get(long,java.util.concurrent.TimeUnit)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="Java.Util.Concurrent.TimeUnit"/></param>
@@ -122,11 +122,11 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecute("get", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#onCompletion(java.lang.Throwable,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#onCompletion(java.lang.Throwable,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Throwable"/></param>
         /// <param name="arg1"><see cref="object"/></param>
-        public void OnCompletion(Java.Lang.Throwable arg0, object arg1)
+        public void OnCompletion(MASES.JCOBridge.C2JBridge.JVMBridgeException arg0, object arg1)
         {
             IExecute("onCompletion", arg0, arg1);
         }
@@ -142,11 +142,11 @@ namespace Org.Apache.Kafka.Connect.Util
     #endregion
 
     #region ConvertingFutureCallback<U, T>
-    public partial class ConvertingFutureCallback<U, T>
+    public partial class ConvertingFutureCallback<U, T> : Org.Apache.Kafka.Connect.Util.ICallback<U>, Java.Util.Concurrent.IFuture<T>
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#%3Cinit%3E(org.apache.kafka.connect.util.Callback)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#%3Cinit%3E(org.apache.kafka.connect.util.Callback)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Util.Callback"/></param>
         public ConvertingFutureCallback(Org.Apache.Kafka.Connect.Util.Callback<T> arg0)
@@ -182,7 +182,7 @@ namespace Org.Apache.Kafka.Connect.Util
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#convert(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#convert(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="U"/></param>
         /// <returns><typeparamref name="T"/></returns>
@@ -191,7 +191,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecute<T>("convert", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#cancel(boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#cancel(boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -200,7 +200,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecute<bool>("cancel", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#isCancelled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#isCancelled()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -209,7 +209,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecute<bool>("isCancelled");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#isDone()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#isDone()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -218,7 +218,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecute<bool>("isDone");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#get()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#get()"/>
         /// </summary>
 
         /// <returns><typeparamref name="T"/></returns>
@@ -229,7 +229,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecute<T>("get");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#get(long,java.util.concurrent.TimeUnit)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#get(long,java.util.concurrent.TimeUnit)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="Java.Util.Concurrent.TimeUnit"/></param>
@@ -242,11 +242,11 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecute<T>("get", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#onCompletion(java.lang.Throwable,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/ConvertingFutureCallback.html#onCompletion(java.lang.Throwable,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Throwable"/></param>
         /// <param name="arg1"><typeparamref name="U"/></param>
-        public void OnCompletion(Java.Lang.Throwable arg0, U arg1)
+        public void OnCompletion(MASES.JCOBridge.C2JBridge.JVMBridgeException arg0, U arg1)
         {
             IExecute("onCompletion", arg0, arg1);
         }

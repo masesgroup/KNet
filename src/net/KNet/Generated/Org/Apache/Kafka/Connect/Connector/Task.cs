@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Connect.Connector
 {
+    #region ITask
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/Task.html"/>
+    /// </summary>
+    public partial interface ITask
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region Task
-    public partial class Task
+    public partial class Task : Org.Apache.Kafka.Connect.Connector.ITask
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Connect.Connector
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/Task.html#version()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/Task.html#version()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -55,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Connector
             return IExecute<string>("version");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/Task.html#start(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/Task.html#start(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Start(Java.Util.Map<string, string> arg0)
@@ -63,7 +81,7 @@ namespace Org.Apache.Kafka.Connect.Connector
             IExecute("start", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/Task.html#stop()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/Task.html#stop()"/>
         /// </summary>
         public void Stop()
         {

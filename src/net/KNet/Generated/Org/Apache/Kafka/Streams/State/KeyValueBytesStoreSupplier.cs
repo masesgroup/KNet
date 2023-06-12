@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Streams.State
 {
+    #region IKeyValueBytesStoreSupplier
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/KeyValueBytesStoreSupplier.html"/>
+    /// </summary>
+    public partial interface IKeyValueBytesStoreSupplier : Org.Apache.Kafka.Streams.State.IStoreSupplier<Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region KeyValueBytesStoreSupplier
-    public partial class KeyValueBytesStoreSupplier
+    public partial class KeyValueBytesStoreSupplier : Org.Apache.Kafka.Streams.State.IKeyValueBytesStoreSupplier
     {
         #region Constructors
 

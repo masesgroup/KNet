@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#%3Cinit%3E(org.apache.kafka.clients.consumer.OffsetResetStrategy)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#%3Cinit%3E(org.apache.kafka.clients.consumer.OffsetResetStrategy)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy"/></param>
         public MockConsumer(Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy arg0)
@@ -41,10 +41,6 @@ namespace Org.Apache.Kafka.Clients.Consumer
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Clients.Consumer.MockConsumer"/> to <see cref="Org.Apache.Kafka.Clients.Consumer.Consumer"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Clients.Consumer.Consumer(Org.Apache.Kafka.Clients.Consumer.MockConsumer t) => t.Cast<Org.Apache.Kafka.Clients.Consumer.Consumer>();
 
         #endregion
 
@@ -58,7 +54,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#shouldRebalance()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#shouldRebalance()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -67,7 +63,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<bool>("shouldRebalance");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#lastPollTimeout()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#lastPollTimeout()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Time.Duration"/></returns>
@@ -76,7 +72,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Time.Duration>("lastPollTimeout");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#partitionsFor(java.lang.String,java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#partitionsFor(java.lang.String,java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
@@ -86,7 +82,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.List>("partitionsFor", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#listTopics(java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#listTopics(java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -95,7 +91,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.Map>("listTopics", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#beginningOffsets(java.util.Collection,java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#beginningOffsets(java.util.Collection,java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
@@ -105,7 +101,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.Map>("beginningOffsets", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#endOffsets(java.util.Collection,java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#endOffsets(java.util.Collection,java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
@@ -115,7 +111,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.Map>("endOffsets", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#offsetsForTimes(java.util.Map,java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#offsetsForTimes(java.util.Map,java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
@@ -125,7 +121,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.Map>("offsetsForTimes", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#currentLag(org.apache.kafka.common.TopicPartition)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#currentLag(org.apache.kafka.common.TopicPartition)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <returns><see cref="Java.Util.OptionalLong"/></returns>
@@ -134,7 +130,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.OptionalLong>("currentLag", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#groupMetadata()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#groupMetadata()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerGroupMetadata"/></returns>
@@ -143,7 +139,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Org.Apache.Kafka.Clients.Consumer.ConsumerGroupMetadata>("groupMetadata");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#closed()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#closed()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -152,7 +148,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<bool>("closed");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#partitionsFor(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#partitionsFor(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -161,7 +157,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.List>("partitionsFor", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#listTopics()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#listTopics()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -170,7 +166,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.Map>("listTopics");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#metrics()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#metrics()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -179,7 +175,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.Map>("metrics");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#beginningOffsets(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#beginningOffsets(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -188,7 +184,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.Map>("beginningOffsets", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#endOffsets(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#endOffsets(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -197,7 +193,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.Map>("endOffsets", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#committed(java.util.Set,java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#committed(java.util.Set,java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Set"/></param>
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
@@ -207,7 +203,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.Map>("committed", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#committed(java.util.Set)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#committed(java.util.Set)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Set"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -216,7 +212,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.Map>("committed", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#offsetsForTimes(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#offsetsForTimes(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -225,7 +221,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.Map>("offsetsForTimes", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscription()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscription()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Set"/></returns>
@@ -234,7 +230,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.Set>("subscription");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#assignment()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#assignment()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Set"/></returns>
@@ -243,7 +239,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.Set>("assignment");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#paused()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#paused()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Set"/></returns>
@@ -252,7 +248,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.Set>("paused");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#position(org.apache.kafka.common.TopicPartition,java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#position(org.apache.kafka.common.TopicPartition,java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
@@ -262,7 +258,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<long>("position", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#position(org.apache.kafka.common.TopicPartition)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#position(org.apache.kafka.common.TopicPartition)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <returns><see cref="long"/></returns>
@@ -271,7 +267,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<long>("position", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#poll(java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#poll(java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords"/></returns>
@@ -280,7 +276,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords>("poll", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#addRecord(org.apache.kafka.clients.consumer.ConsumerRecord)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#addRecord(org.apache.kafka.clients.consumer.ConsumerRecord)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord"/></param>
         public void AddRecord(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord arg0)
@@ -288,7 +284,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("addRecord", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#assign(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#assign(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public void Assign(Java.Util.Collection arg0)
@@ -296,7 +292,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("assign", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#close(java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#close(java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         public void Close(Java.Time.Duration arg0)
@@ -304,14 +300,14 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("close", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitAsync()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitAsync()"/>
         /// </summary>
         public void CommitAsync()
         {
             IExecute("commitAsync");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitAsync(java.util.Map,org.apache.kafka.clients.consumer.OffsetCommitCallback)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitAsync(java.util.Map,org.apache.kafka.clients.consumer.OffsetCommitCallback)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Consumer.OffsetCommitCallback"/></param>
@@ -320,7 +316,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("commitAsync", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitAsync(org.apache.kafka.clients.consumer.OffsetCommitCallback)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitAsync(org.apache.kafka.clients.consumer.OffsetCommitCallback)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.OffsetCommitCallback"/></param>
         public void CommitAsync(Org.Apache.Kafka.Clients.Consumer.OffsetCommitCallback arg0)
@@ -328,14 +324,14 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("commitAsync", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitSync()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitSync()"/>
         /// </summary>
         public void CommitSync()
         {
             IExecute("commitSync");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitSync(java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitSync(java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         public void CommitSync(Java.Time.Duration arg0)
@@ -343,7 +339,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("commitSync", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitSync(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitSync(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void CommitSync(Java.Util.Map arg0)
@@ -351,7 +347,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("commitSync", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#pause(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#pause(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public void Pause(Java.Util.Collection arg0)
@@ -359,7 +355,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("pause", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#rebalance(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#rebalance(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public void Rebalance(Java.Util.Collection arg0)
@@ -367,7 +363,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("rebalance", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#resume(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#resume(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public void Resume(Java.Util.Collection arg0)
@@ -375,14 +371,14 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("resume", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#scheduleNopPollTask()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#scheduleNopPollTask()"/>
         /// </summary>
         public void ScheduleNopPollTask()
         {
             IExecute("scheduleNopPollTask");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#schedulePollTask(java.lang.Runnable)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#schedulePollTask(java.lang.Runnable)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Runnable"/></param>
         public void SchedulePollTask(Java.Lang.Runnable arg0)
@@ -390,7 +386,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("schedulePollTask", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#seek(org.apache.kafka.common.TopicPartition,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#seek(org.apache.kafka.common.TopicPartition,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -399,7 +395,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("seek", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#seekToBeginning(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#seekToBeginning(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public void SeekToBeginning(Java.Util.Collection arg0)
@@ -407,7 +403,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("seekToBeginning", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#seekToEnd(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#seekToEnd(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public void SeekToEnd(Java.Util.Collection arg0)
@@ -415,23 +411,23 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("seekToEnd", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#setOffsetsException(org.apache.kafka.common.KafkaException)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#setOffsetsException(org.apache.kafka.common.KafkaException)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.KafkaException"/></param>
-        public void SetOffsetsException(Org.Apache.Kafka.Common.KafkaException arg0)
+        public void SetOffsetsException(MASES.JCOBridge.C2JBridge.JVMBridgeException arg0)
         {
             IExecute("setOffsetsException", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#setPollException(org.apache.kafka.common.KafkaException)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#setPollException(org.apache.kafka.common.KafkaException)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.KafkaException"/></param>
-        public void SetPollException(Org.Apache.Kafka.Common.KafkaException arg0)
+        public void SetPollException(MASES.JCOBridge.C2JBridge.JVMBridgeException arg0)
         {
             IExecute("setPollException", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe(java.util.Collection,org.apache.kafka.clients.consumer.ConsumerRebalanceListener)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe(java.util.Collection,org.apache.kafka.clients.consumer.ConsumerRebalanceListener)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRebalanceListener"/></param>
@@ -440,7 +436,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("subscribe", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public void Subscribe(Java.Util.Collection arg0)
@@ -448,7 +444,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("subscribe", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe(java.util.regex.Pattern,org.apache.kafka.clients.consumer.ConsumerRebalanceListener)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe(java.util.regex.Pattern,org.apache.kafka.clients.consumer.ConsumerRebalanceListener)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Regex.Pattern"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRebalanceListener"/></param>
@@ -457,7 +453,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("subscribe", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe(java.util.regex.Pattern)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe(java.util.regex.Pattern)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Regex.Pattern"/></param>
         public void Subscribe(Java.Util.Regex.Pattern arg0)
@@ -465,14 +461,14 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("subscribe", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#unsubscribe()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#unsubscribe()"/>
         /// </summary>
         public void Unsubscribe()
         {
             IExecute("unsubscribe");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#updateBeginningOffsets(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#updateBeginningOffsets(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void UpdateBeginningOffsets(Java.Util.Map arg0)
@@ -480,7 +476,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("updateBeginningOffsets", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#updateEndOffsets(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#updateEndOffsets(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void UpdateEndOffsets(Java.Util.Map arg0)
@@ -488,7 +484,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("updateEndOffsets", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#updatePartitions(java.lang.String,java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#updatePartitions(java.lang.String,java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Java.Util.List"/></param>
@@ -497,21 +493,21 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("updatePartitions", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#wakeup()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#wakeup()"/>
         /// </summary>
         public void Wakeup()
         {
             IExecute("wakeup");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecute("close");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitSync(java.util.Map,java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitSync(java.util.Map,java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
@@ -520,14 +516,14 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("commitSync", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#enforceRebalance()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#enforceRebalance()"/>
         /// </summary>
         public void EnforceRebalance()
         {
             IExecute("enforceRebalance");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#enforceRebalance(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#enforceRebalance(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         public void EnforceRebalance(string arg0)
@@ -535,14 +531,14 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("enforceRebalance", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#resetShouldRebalance()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#resetShouldRebalance()"/>
         /// </summary>
         public void ResetShouldRebalance()
         {
             IExecute("resetShouldRebalance");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#seek(org.apache.kafka.common.TopicPartition,org.apache.kafka.clients.consumer.OffsetAndMetadata)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#seek(org.apache.kafka.common.TopicPartition,org.apache.kafka.clients.consumer.OffsetAndMetadata)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata"/></param>
@@ -566,7 +562,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#%3Cinit%3E(org.apache.kafka.clients.consumer.OffsetResetStrategy)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#%3Cinit%3E(org.apache.kafka.clients.consumer.OffsetResetStrategy)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy"/></param>
         public MockConsumer(Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy arg0)
@@ -577,10 +573,6 @@ namespace Org.Apache.Kafka.Clients.Consumer
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Clients.Consumer.MockConsumer{K, V}"/> to <see cref="Org.Apache.Kafka.Clients.Consumer.Consumer{K, V}"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Clients.Consumer.Consumer<K, V>(Org.Apache.Kafka.Clients.Consumer.MockConsumer<K, V> t) => t.Cast<Org.Apache.Kafka.Clients.Consumer.Consumer<K, V>>();
         /// <summary>
         /// Converter from <see cref="Org.Apache.Kafka.Clients.Consumer.MockConsumer{K, V}"/> to <see cref="Org.Apache.Kafka.Clients.Consumer.MockConsumer"/>
         /// </summary>
@@ -598,7 +590,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#shouldRebalance()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#shouldRebalance()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -607,7 +599,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<bool>("shouldRebalance");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#lastPollTimeout()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#lastPollTimeout()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Time.Duration"/></returns>
@@ -616,7 +608,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Time.Duration>("lastPollTimeout");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#partitionsFor(java.lang.String,java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#partitionsFor(java.lang.String,java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
@@ -626,7 +618,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.List<Org.Apache.Kafka.Common.PartitionInfo>>("partitionsFor", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#listTopics(java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#listTopics(java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -635,7 +627,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.Map<string, Java.Util.List<Org.Apache.Kafka.Common.PartitionInfo>>>("listTopics", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#beginningOffsets(java.util.Collection,java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#beginningOffsets(java.util.Collection,java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
@@ -645,7 +637,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?>>("beginningOffsets", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#endOffsets(java.util.Collection,java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#endOffsets(java.util.Collection,java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
@@ -655,7 +647,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?>>("endOffsets", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#offsetsForTimes(java.util.Map,java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#offsetsForTimes(java.util.Map,java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
@@ -665,7 +657,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndTimestamp>>("offsetsForTimes", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#currentLag(org.apache.kafka.common.TopicPartition)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#currentLag(org.apache.kafka.common.TopicPartition)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <returns><see cref="Java.Util.OptionalLong"/></returns>
@@ -674,7 +666,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.OptionalLong>("currentLag", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#groupMetadata()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#groupMetadata()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerGroupMetadata"/></returns>
@@ -683,7 +675,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Org.Apache.Kafka.Clients.Consumer.ConsumerGroupMetadata>("groupMetadata");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#closed()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#closed()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -692,7 +684,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<bool>("closed");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#partitionsFor(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#partitionsFor(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -701,7 +693,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.List<Org.Apache.Kafka.Common.PartitionInfo>>("partitionsFor", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#listTopics()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#listTopics()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -710,7 +702,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.Map<string, Java.Util.List<Org.Apache.Kafka.Common.PartitionInfo>>>("listTopics");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#metrics()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#metrics()"/>
         /// </summary>
 
         /// <typeparam name="ReturnExtendsOrg_Apache_Kafka_Common_Metric"><see cref="Org.Apache.Kafka.Common.Metric"/></typeparam>
@@ -720,7 +712,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.MetricName, ReturnExtendsOrg_Apache_Kafka_Common_Metric>>("metrics");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#beginningOffsets(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#beginningOffsets(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -729,7 +721,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?>>("beginningOffsets", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#endOffsets(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#endOffsets(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -738,7 +730,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?>>("endOffsets", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#committed(java.util.Set,java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#committed(java.util.Set,java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Set"/></param>
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
@@ -748,7 +740,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>>("committed", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#committed(java.util.Set)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#committed(java.util.Set)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Set"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -757,7 +749,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>>("committed", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#offsetsForTimes(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#offsetsForTimes(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -766,7 +758,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndTimestamp>>("offsetsForTimes", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscription()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscription()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Set"/></returns>
@@ -775,7 +767,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.Set<string>>("subscription");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#assignment()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#assignment()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Set"/></returns>
@@ -784,7 +776,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition>>("assignment");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#paused()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#paused()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Set"/></returns>
@@ -793,7 +785,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition>>("paused");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#position(org.apache.kafka.common.TopicPartition,java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#position(org.apache.kafka.common.TopicPartition,java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
@@ -803,7 +795,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<long>("position", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#position(org.apache.kafka.common.TopicPartition)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#position(org.apache.kafka.common.TopicPartition)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <returns><see cref="long"/></returns>
@@ -812,7 +804,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<long>("position", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#poll(java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#poll(java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords"/></returns>
@@ -821,7 +813,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<K, V>>("poll", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#addRecord(org.apache.kafka.clients.consumer.ConsumerRecord)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#addRecord(org.apache.kafka.clients.consumer.ConsumerRecord)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord"/></param>
         public void AddRecord(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<K, V> arg0)
@@ -829,7 +821,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("addRecord", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#assign(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#assign(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public void Assign(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0)
@@ -837,7 +829,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("assign", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#close(java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#close(java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         public void Close(Java.Time.Duration arg0)
@@ -845,14 +837,14 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("close", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitAsync()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitAsync()"/>
         /// </summary>
         public void CommitAsync()
         {
             IExecute("commitAsync");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitAsync(java.util.Map,org.apache.kafka.clients.consumer.OffsetCommitCallback)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitAsync(java.util.Map,org.apache.kafka.clients.consumer.OffsetCommitCallback)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Consumer.OffsetCommitCallback"/></param>
@@ -861,7 +853,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("commitAsync", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitAsync(org.apache.kafka.clients.consumer.OffsetCommitCallback)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitAsync(org.apache.kafka.clients.consumer.OffsetCommitCallback)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.OffsetCommitCallback"/></param>
         public void CommitAsync(Org.Apache.Kafka.Clients.Consumer.OffsetCommitCallback arg0)
@@ -869,14 +861,14 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("commitAsync", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitSync()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitSync()"/>
         /// </summary>
         public void CommitSync()
         {
             IExecute("commitSync");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitSync(java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitSync(java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         public void CommitSync(Java.Time.Duration arg0)
@@ -884,7 +876,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("commitSync", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitSync(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitSync(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void CommitSync(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata> arg0)
@@ -892,7 +884,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("commitSync", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#pause(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#pause(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public void Pause(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0)
@@ -900,7 +892,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("pause", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#rebalance(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#rebalance(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public void Rebalance(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0)
@@ -908,7 +900,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("rebalance", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#resume(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#resume(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public void Resume(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0)
@@ -916,14 +908,14 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("resume", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#scheduleNopPollTask()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#scheduleNopPollTask()"/>
         /// </summary>
         public void ScheduleNopPollTask()
         {
             IExecute("scheduleNopPollTask");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#schedulePollTask(java.lang.Runnable)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#schedulePollTask(java.lang.Runnable)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Runnable"/></param>
         public void SchedulePollTask(Java.Lang.Runnable arg0)
@@ -931,7 +923,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("schedulePollTask", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#seek(org.apache.kafka.common.TopicPartition,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#seek(org.apache.kafka.common.TopicPartition,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -940,7 +932,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("seek", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#seekToBeginning(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#seekToBeginning(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public void SeekToBeginning(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0)
@@ -948,7 +940,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("seekToBeginning", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#seekToEnd(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#seekToEnd(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public void SeekToEnd(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0)
@@ -956,23 +948,23 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("seekToEnd", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#setOffsetsException(org.apache.kafka.common.KafkaException)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#setOffsetsException(org.apache.kafka.common.KafkaException)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.KafkaException"/></param>
-        public void SetOffsetsException(Org.Apache.Kafka.Common.KafkaException arg0)
+        public void SetOffsetsException(MASES.JCOBridge.C2JBridge.JVMBridgeException arg0)
         {
             IExecute("setOffsetsException", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#setPollException(org.apache.kafka.common.KafkaException)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#setPollException(org.apache.kafka.common.KafkaException)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.KafkaException"/></param>
-        public void SetPollException(Org.Apache.Kafka.Common.KafkaException arg0)
+        public void SetPollException(MASES.JCOBridge.C2JBridge.JVMBridgeException arg0)
         {
             IExecute("setPollException", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe(java.util.Collection,org.apache.kafka.clients.consumer.ConsumerRebalanceListener)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe(java.util.Collection,org.apache.kafka.clients.consumer.ConsumerRebalanceListener)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRebalanceListener"/></param>
@@ -981,7 +973,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("subscribe", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public void Subscribe(Java.Util.Collection<string> arg0)
@@ -989,7 +981,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("subscribe", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe(java.util.regex.Pattern,org.apache.kafka.clients.consumer.ConsumerRebalanceListener)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe(java.util.regex.Pattern,org.apache.kafka.clients.consumer.ConsumerRebalanceListener)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Regex.Pattern"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRebalanceListener"/></param>
@@ -998,7 +990,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("subscribe", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe(java.util.regex.Pattern)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe(java.util.regex.Pattern)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Regex.Pattern"/></param>
         public void Subscribe(Java.Util.Regex.Pattern arg0)
@@ -1006,14 +998,14 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("subscribe", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#unsubscribe()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#unsubscribe()"/>
         /// </summary>
         public void Unsubscribe()
         {
             IExecute("unsubscribe");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#updateBeginningOffsets(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#updateBeginningOffsets(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void UpdateBeginningOffsets(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?> arg0)
@@ -1021,7 +1013,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("updateBeginningOffsets", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#updateEndOffsets(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#updateEndOffsets(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void UpdateEndOffsets(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?> arg0)
@@ -1029,7 +1021,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("updateEndOffsets", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#updatePartitions(java.lang.String,java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#updatePartitions(java.lang.String,java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Java.Util.List"/></param>
@@ -1038,21 +1030,21 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("updatePartitions", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#wakeup()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#wakeup()"/>
         /// </summary>
         public void Wakeup()
         {
             IExecute("wakeup");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecute("close");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitSync(java.util.Map,java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitSync(java.util.Map,java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
@@ -1061,14 +1053,14 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("commitSync", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#enforceRebalance()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#enforceRebalance()"/>
         /// </summary>
         public void EnforceRebalance()
         {
             IExecute("enforceRebalance");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#enforceRebalance(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#enforceRebalance(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         public void EnforceRebalance(string arg0)
@@ -1076,14 +1068,14 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecute("enforceRebalance", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#resetShouldRebalance()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#resetShouldRebalance()"/>
         /// </summary>
         public void ResetShouldRebalance()
         {
             IExecute("resetShouldRebalance");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#seek(org.apache.kafka.common.TopicPartition,org.apache.kafka.clients.consumer.OffsetAndMetadata)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/MockConsumer.html#seek(org.apache.kafka.common.TopicPartition,org.apache.kafka.clients.consumer.OffsetAndMetadata)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata"/></param>

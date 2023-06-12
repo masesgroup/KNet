@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/UserScramCredentialDeletion.html#%3Cinit%3E(java.lang.String,org.apache.kafka.clients.admin.ScramMechanism)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/UserScramCredentialDeletion.html#%3Cinit%3E(java.lang.String,org.apache.kafka.clients.admin.ScramMechanism)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.ScramMechanism"/></param>
@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/UserScramCredentialDeletion.html#mechanism()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/UserScramCredentialDeletion.html#mechanism()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ScramMechanism"/></returns>

@@ -54,7 +54,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/transforms/Transformation.html#config()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/transforms/Transformation.html#config()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
@@ -63,7 +63,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("config");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/transforms/Transformation.html#apply(org.apache.kafka.connect.connector.ConnectRecord)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/transforms/Transformation.html#apply(org.apache.kafka.connect.connector.ConnectRecord)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord"/></returns>
@@ -72,7 +72,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecute<Org.Apache.Kafka.Connect.Connector.ConnectRecord>("apply", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/transforms/Transformation.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/transforms/Transformation.html#close()"/>
         /// </summary>
         public void Close()
         {
@@ -89,8 +89,26 @@ namespace Org.Apache.Kafka.Connect.Transforms
     }
     #endregion
 
+    #region ITransformation<R>
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/transforms/Transformation.html"/>
+    /// </summary>
+    public partial interface ITransformation<R>
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region Transformation<R>
-    public partial class Transformation<R>
+    public partial class Transformation<R> : Org.Apache.Kafka.Connect.Transforms.ITransformation<R>, Org.Apache.Kafka.Common.IConfigurable, Java.Io.ICloseable
     {
         #region Constructors
 
@@ -122,7 +140,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/transforms/Transformation.html#config()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/transforms/Transformation.html#config()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
@@ -131,7 +149,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("config");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/transforms/Transformation.html#apply(org.apache.kafka.connect.connector.ConnectRecord)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/transforms/Transformation.html#apply(org.apache.kafka.connect.connector.ConnectRecord)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="R"/></param>
         /// <returns><typeparamref name="R"/></returns>
@@ -140,7 +158,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecute<R>("apply", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/transforms/Transformation.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/transforms/Transformation.html#close()"/>
         /// </summary>
         public void Close()
         {

@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Cache
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/LRUCache.html#%3Cinit%3E(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/LRUCache.html#%3Cinit%3E(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public LRUCache(int arg0)
@@ -41,10 +41,6 @@ namespace Org.Apache.Kafka.Common.Cache
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.Cache.LRUCache"/> to <see cref="Org.Apache.Kafka.Common.Cache.Cache"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Common.Cache.Cache(Org.Apache.Kafka.Common.Cache.LRUCache t) => t.Cast<Org.Apache.Kafka.Common.Cache.Cache>();
 
         #endregion
 
@@ -58,7 +54,7 @@ namespace Org.Apache.Kafka.Common.Cache
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/LRUCache.html#remove(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/LRUCache.html#remove(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -67,7 +63,7 @@ namespace Org.Apache.Kafka.Common.Cache
             return IExecute<bool>("remove", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/LRUCache.html#size()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/LRUCache.html#size()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -76,7 +72,7 @@ namespace Org.Apache.Kafka.Common.Cache
             return IExecute<long>("size");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/LRUCache.html#get(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/LRUCache.html#get(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="object"/></returns>
@@ -85,7 +81,7 @@ namespace Org.Apache.Kafka.Common.Cache
             return IExecute("get", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/LRUCache.html#put(java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/LRUCache.html#put(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -109,7 +105,7 @@ namespace Org.Apache.Kafka.Common.Cache
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/LRUCache.html#%3Cinit%3E(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/LRUCache.html#%3Cinit%3E(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public LRUCache(int arg0)
@@ -120,10 +116,6 @@ namespace Org.Apache.Kafka.Common.Cache
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.Cache.LRUCache{K, V}"/> to <see cref="Org.Apache.Kafka.Common.Cache.Cache{K, V}"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Common.Cache.Cache<K, V>(Org.Apache.Kafka.Common.Cache.LRUCache<K, V> t) => t.Cast<Org.Apache.Kafka.Common.Cache.Cache<K, V>>();
         /// <summary>
         /// Converter from <see cref="Org.Apache.Kafka.Common.Cache.LRUCache{K, V}"/> to <see cref="Org.Apache.Kafka.Common.Cache.LRUCache"/>
         /// </summary>
@@ -141,7 +133,7 @@ namespace Org.Apache.Kafka.Common.Cache
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/LRUCache.html#remove(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/LRUCache.html#remove(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -150,7 +142,7 @@ namespace Org.Apache.Kafka.Common.Cache
             return IExecute<bool>("remove", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/LRUCache.html#size()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/LRUCache.html#size()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -159,7 +151,7 @@ namespace Org.Apache.Kafka.Common.Cache
             return IExecute<long>("size");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/LRUCache.html#get(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/LRUCache.html#get(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <returns><typeparamref name="V"/></returns>
@@ -168,7 +160,7 @@ namespace Org.Apache.Kafka.Common.Cache
             return IExecute<V>("get", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/LRUCache.html#put(java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/LRUCache.html#put(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><typeparamref name="V"/></param>

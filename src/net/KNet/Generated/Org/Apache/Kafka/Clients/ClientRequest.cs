@@ -29,21 +29,6 @@ namespace Org.Apache.Kafka.Clients
     public partial class ClientRequest
     {
         #region Constructors
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html#%3Cinit%3E(java.lang.String,org.apache.kafka.common.requests.AbstractRequest.Builder,int,java.lang.String,long,boolean,int,org.apache.kafka.clients.RequestCompletionHandler)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder"/></param>
-        /// <param name="arg2"><see cref="int"/></param>
-        /// <param name="arg3"><see cref="string"/></param>
-        /// <param name="arg4"><see cref="long"/></param>
-        /// <param name="arg5"><see cref="bool"/></param>
-        /// <param name="arg6"><see cref="int"/></param>
-        /// <param name="arg7"><see cref="Org.Apache.Kafka.Clients.RequestCompletionHandler"/></param>
-        public ClientRequest(string arg0, Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder arg1, int arg2, string arg3, long arg4, bool arg5, int arg6, Org.Apache.Kafka.Clients.RequestCompletionHandler arg7)
-            : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
-        {
-        }
 
         #endregion
 
@@ -61,7 +46,7 @@ namespace Org.Apache.Kafka.Clients
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html#expectResponse()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html#expectResponse()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -70,7 +55,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecute<bool>("expectResponse");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html#correlationId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html#correlationId()"/>
         /// </summary>
 
         /// <returns><see cref="int"/></returns>
@@ -79,7 +64,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecute<int>("correlationId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html#requestTimeoutMs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html#requestTimeoutMs()"/>
         /// </summary>
 
         /// <returns><see cref="int"/></returns>
@@ -88,7 +73,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecute<int>("requestTimeoutMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html#destination()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html#destination()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -97,7 +82,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecute<string>("destination");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html#createdTimeMs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html#createdTimeMs()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -106,7 +91,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecute<long>("createdTimeMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html#callback()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html#callback()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Clients.RequestCompletionHandler"/></returns>
@@ -115,31 +100,13 @@ namespace Org.Apache.Kafka.Clients
             return IExecute<Org.Apache.Kafka.Clients.RequestCompletionHandler>("callback");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html#apiKey()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html#apiKey()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.ApiKeys"/></returns>
         public Org.Apache.Kafka.Common.Protocol.ApiKeys ApiKey()
         {
             return IExecute<Org.Apache.Kafka.Common.Protocol.ApiKeys>("apiKey");
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html#requestBuilder()"/>
-        /// </summary>
-
-        /// <returns><see cref="Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder"/></returns>
-        public Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder RequestBuilder()
-        {
-            return IExecute<Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder>("requestBuilder");
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/ClientRequest.html#makeHeader(short)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="short"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Common.Requests.RequestHeader"/></returns>
-        public Org.Apache.Kafka.Common.Requests.RequestHeader MakeHeader(short arg0)
-        {
-            return IExecute<Org.Apache.Kafka.Common.Requests.RequestHeader>("makeHeader", arg0);
         }
 
         #endregion

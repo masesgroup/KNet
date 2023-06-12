@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Compress
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/compress/KafkaLZ4BlockInputStream.html#%3Cinit%3E(java.nio.ByteBuffer,org.apache.kafka.common.utils.BufferSupplier,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/compress/KafkaLZ4BlockInputStream.html#%3Cinit%3E(java.nio.ByteBuffer,org.apache.kafka.common.utils.BufferSupplier,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Utils.BufferSupplier"/></param>
@@ -49,19 +49,19 @@ namespace Org.Apache.Kafka.Common.Compress
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/compress/KafkaLZ4BlockInputStream.html#BLOCK_HASH_MISMATCH"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/compress/KafkaLZ4BlockInputStream.html#BLOCK_HASH_MISMATCH"/>
         /// </summary>
         public static string BLOCK_HASH_MISMATCH { get { return SGetField<string>(LocalBridgeClazz, "BLOCK_HASH_MISMATCH"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/compress/KafkaLZ4BlockInputStream.html#DESCRIPTOR_HASH_MISMATCH"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/compress/KafkaLZ4BlockInputStream.html#DESCRIPTOR_HASH_MISMATCH"/>
         /// </summary>
         public static string DESCRIPTOR_HASH_MISMATCH { get { return SGetField<string>(LocalBridgeClazz, "DESCRIPTOR_HASH_MISMATCH"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/compress/KafkaLZ4BlockInputStream.html#NOT_SUPPORTED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/compress/KafkaLZ4BlockInputStream.html#NOT_SUPPORTED"/>
         /// </summary>
         public static string NOT_SUPPORTED { get { return SGetField<string>(LocalBridgeClazz, "NOT_SUPPORTED"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/compress/KafkaLZ4BlockInputStream.html#PREMATURE_EOS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/compress/KafkaLZ4BlockInputStream.html#PREMATURE_EOS"/>
         /// </summary>
         public static string PREMATURE_EOS { get { return SGetField<string>(LocalBridgeClazz, "PREMATURE_EOS"); } }
 
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Compress
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/compress/KafkaLZ4BlockInputStream.html#ignoreFlagDescriptorChecksum()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/compress/KafkaLZ4BlockInputStream.html#ignoreFlagDescriptorChecksum()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>

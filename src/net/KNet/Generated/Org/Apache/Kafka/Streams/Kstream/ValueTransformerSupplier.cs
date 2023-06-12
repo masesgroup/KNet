@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerSupplier.html#get()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerSupplier.html#get()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.ValueTransformer"/></returns>
@@ -65,8 +65,26 @@ namespace Org.Apache.Kafka.Streams.Kstream
     }
     #endregion
 
+    #region IValueTransformerSupplier<V, VR>
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerSupplier.html"/>
+    /// </summary>
+    public partial interface IValueTransformerSupplier<V, VR> : Org.Apache.Kafka.Streams.Processor.IConnectedStoreProvider
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region ValueTransformerSupplier<V, VR>
-    public partial class ValueTransformerSupplier<V, VR>
+    public partial class ValueTransformerSupplier<V, VR> : Org.Apache.Kafka.Streams.Kstream.IValueTransformerSupplier<V, VR>
     {
         #region Constructors
 
@@ -90,7 +108,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerSupplier.html#get()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerSupplier.html#get()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.ValueTransformer"/></returns>

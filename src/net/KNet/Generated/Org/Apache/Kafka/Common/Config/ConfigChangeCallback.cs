@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Config
 {
+    #region IConfigChangeCallback
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigChangeCallback.html"/>
+    /// </summary>
+    public partial interface IConfigChangeCallback
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region ConfigChangeCallback
-    public partial class ConfigChangeCallback
+    public partial class ConfigChangeCallback : Org.Apache.Kafka.Common.Config.IConfigChangeCallback
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigChangeCallback.html#onChange(java.lang.String,org.apache.kafka.common.config.ConfigData)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigChangeCallback.html#onChange(java.lang.String,org.apache.kafka.common.config.ConfigData)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Config.ConfigData"/></param>

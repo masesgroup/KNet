@@ -27,9 +27,9 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
 {
     #region DefaultSslEngineFactory
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html"/>
     /// </summary>
-    public partial class DefaultSslEngineFactory : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DefaultSslEngineFactory>
+    public partial class DefaultSslEngineFactory : Org.Apache.Kafka.Common.Security.Auth.SslEngineFactory
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
 
     #region SslFactory
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/ssl/SslFactory.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/ssl/SslFactory.html"/>
     /// </summary>
     public partial class SslFactory : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SslFactory>
     {
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
 
     #region SslPrincipalMapper
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/ssl/SslPrincipalMapper.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/ssl/SslPrincipalMapper.html"/>
     /// </summary>
     public partial class SslPrincipalMapper : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SslPrincipalMapper>
     {
@@ -152,7 +152,7 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
         // TODO: complete the class
         #region NoMatchingRule
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/ssl/SslPrincipalMapper.NoMatchingRule.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/ssl/SslPrincipalMapper.NoMatchingRule.html"/>
         /// </summary>
         public partial class NoMatchingRule : Java.Io.IOException
         {
@@ -169,6 +169,7 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
     
     }
     #endregion
+
 
 
 }

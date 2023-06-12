@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 {
     #region ContextualFixedKeyProcessor
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ContextualFixedKeyProcessor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ContextualFixedKeyProcessor.html"/>
     /// </summary>
     public partial class ContextualFixedKeyProcessor : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ContextualFixedKeyProcessor>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     #region ContextualFixedKeyProcessor<KIn, VIn, VOut>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ContextualFixedKeyProcessor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ContextualFixedKeyProcessor.html"/>
     /// </summary>
     /// <typeparam name="KIn"></typeparam>
     /// <typeparam name="VIn"></typeparam>
@@ -116,7 +116,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     #region ContextualProcessor
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ContextualProcessor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ContextualProcessor.html"/>
     /// </summary>
     public partial class ContextualProcessor : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ContextualProcessor>
     {
@@ -159,7 +159,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     #region ContextualProcessor<KIn, VIn, KOut, VOut>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ContextualProcessor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ContextualProcessor.html"/>
     /// </summary>
     /// <typeparam name="KIn"></typeparam>
     /// <typeparam name="VIn"></typeparam>
@@ -206,10 +206,15 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     #region FixedKeyProcessor
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html"/>
     /// </summary>
     public partial class FixedKeyProcessor : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public FixedKeyProcessor() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -219,13 +224,18 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     #region FixedKeyProcessor<KIn, VIn, VOut>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html"/>
     /// </summary>
     /// <typeparam name="KIn"></typeparam>
     /// <typeparam name="VIn"></typeparam>
     /// <typeparam name="VOut"></typeparam>
     public partial class FixedKeyProcessor<KIn, VIn, VOut> : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public FixedKeyProcessor() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -235,7 +245,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     #region FixedKeyProcessorContext
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorContext.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorContext.html"/>
     /// </summary>
     public partial class FixedKeyProcessorContext : Org.Apache.Kafka.Streams.Processor.Api.ProcessingContext
     {
@@ -278,7 +288,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     #region FixedKeyProcessorContext<KForward, VForward>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorContext.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorContext.html"/>
     /// </summary>
     /// <typeparam name="KForward"></typeparam>
     /// <typeparam name="VForward"></typeparam>
@@ -323,7 +333,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     #region FixedKeyProcessorSupplier
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier.html"/>
     /// </summary>
     public partial class FixedKeyProcessorSupplier : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FixedKeyProcessorSupplier>
     {
@@ -366,7 +376,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     #region FixedKeyProcessorSupplier<KIn, VIn, VOut>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier.html"/>
     /// </summary>
     /// <typeparam name="KIn"></typeparam>
     /// <typeparam name="VIn"></typeparam>
@@ -412,7 +422,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     #region FixedKeyRecord
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyRecord.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyRecord.html"/>
     /// </summary>
     public partial class FixedKeyRecord : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FixedKeyRecord>
     {
@@ -455,7 +465,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     #region FixedKeyRecord<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyRecord.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyRecord.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -500,7 +510,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     #region InternalFixedKeyRecordFactory
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/InternalFixedKeyRecordFactory.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/InternalFixedKeyRecordFactory.html"/>
     /// </summary>
     public partial class InternalFixedKeyRecordFactory : MASES.JCOBridge.C2JBridge.JVMBridgeBase<InternalFixedKeyRecordFactory>
     {
@@ -543,7 +553,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     #region ProcessingContext
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessingContext.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessingContext.html"/>
     /// </summary>
     public partial class ProcessingContext : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ProcessingContext>
     {
@@ -586,10 +596,15 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     #region Processor
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/Processor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/Processor.html"/>
     /// </summary>
     public partial class Processor : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public Processor() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -599,7 +614,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     #region Processor<KIn, VIn, KOut, VOut>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/Processor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/Processor.html"/>
     /// </summary>
     /// <typeparam name="KIn"></typeparam>
     /// <typeparam name="VIn"></typeparam>
@@ -607,6 +622,11 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
     /// <typeparam name="VOut"></typeparam>
     public partial class Processor<KIn, VIn, KOut, VOut> : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public Processor() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -616,7 +636,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     #region ProcessorContext
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessorContext.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessorContext.html"/>
     /// </summary>
     public partial class ProcessorContext : Org.Apache.Kafka.Streams.Processor.Api.ProcessingContext
     {
@@ -659,7 +679,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     #region ProcessorContext<KForward, VForward>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessorContext.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessorContext.html"/>
     /// </summary>
     /// <typeparam name="KForward"></typeparam>
     /// <typeparam name="VForward"></typeparam>
@@ -704,7 +724,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     #region ProcessorSupplier
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessorSupplier.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessorSupplier.html"/>
     /// </summary>
     public partial class ProcessorSupplier : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ProcessorSupplier>
     {
@@ -747,7 +767,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     #region ProcessorSupplier<KIn, VIn, KOut, VOut>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessorSupplier.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessorSupplier.html"/>
     /// </summary>
     /// <typeparam name="KIn"></typeparam>
     /// <typeparam name="VIn"></typeparam>
@@ -794,7 +814,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     #region Record
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/Record.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/Record.html"/>
     /// </summary>
     public partial class Record : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Record>
     {
@@ -837,7 +857,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     #region Record<K, V>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/Record.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/Record.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -882,7 +902,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     #region RecordMetadata
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/RecordMetadata.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/RecordMetadata.html"/>
     /// </summary>
     public partial class RecordMetadata : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RecordMetadata>
     {
@@ -922,6 +942,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     }
     #endregion
+
 
 
 }

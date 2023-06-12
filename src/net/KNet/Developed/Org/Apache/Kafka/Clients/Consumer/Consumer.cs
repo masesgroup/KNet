@@ -24,7 +24,7 @@ using Java.Util.Regex;
 
 namespace Org.Apache.Kafka.Clients.Consumer
 {
-    public interface IConsumer: IJVMBridgeBase, System.IDisposable
+    public partial interface IConsumer: IJVMBridgeBase, System.IDisposable
     {
         Set<TopicPartition> Assignment();
 
@@ -111,11 +111,8 @@ namespace Org.Apache.Kafka.Clients.Consumer
         void Wakeup();
     }
 
-    public interface IConsumer<K, V> : IConsumer
+    public partial interface IConsumer<K, V> : IConsumer
     {
-        [System.Obsolete]
-        ConsumerRecords<K, V> Poll(long timeoutMs);
-
         ConsumerRecords<K, V> Poll(Duration timeout);
     }
 }

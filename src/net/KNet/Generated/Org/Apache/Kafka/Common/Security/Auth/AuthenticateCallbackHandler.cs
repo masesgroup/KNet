@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Security.Auth
 {
+    #region IAuthenticateCallbackHandler
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/AuthenticateCallbackHandler.html"/>
+    /// </summary>
+    public partial interface IAuthenticateCallbackHandler : Javax.Security.Auth.Callback.ICallbackHandler
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region AuthenticateCallbackHandler
-    public partial class AuthenticateCallbackHandler
+    public partial class AuthenticateCallbackHandler : Org.Apache.Kafka.Common.Security.Auth.IAuthenticateCallbackHandler
     {
         #region Constructors
 
@@ -46,20 +64,19 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/AuthenticateCallbackHandler.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/AuthenticateCallbackHandler.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecute("close");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/AuthenticateCallbackHandler.html#configure(java.util.Map,java.lang.String,java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/AuthenticateCallbackHandler.html#configure(java.util.Map,java.lang.String,java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="string"/></param>
         /// <param name="arg2"><see cref="Java.Util.List"/></param>
-        /// <typeparam name="Arg0Extendsobject"></typeparam>
-        public void Configure<Arg0Extendsobject>(Java.Util.Map<string, Arg0Extendsobject> arg0, string arg1, Java.Util.List<Javax.Security.Auth.Login.AppConfigurationEntry> arg2)
+        public void Configure(Java.Util.Map<string, object> arg0, string arg1, Java.Util.List<Javax.Security.Auth.Login.AppConfigurationEntry> arg2)
         {
             IExecute("configure", arg0, arg1, arg2);
         }

@@ -38,7 +38,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslInternalConfigs.html#CREDENTIAL_LIFETIME_MS_SASL_NEGOTIATED_PROPERTY_KEY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/authenticator/SaslInternalConfigs.html#CREDENTIAL_LIFETIME_MS_SASL_NEGOTIATED_PROPERTY_KEY"/>
         /// </summary>
         public static string CREDENTIAL_LIFETIME_MS_SASL_NEGOTIATED_PROPERTY_KEY { get { return SGetField<string>(LocalBridgeClazz, "CREDENTIAL_LIFETIME_MS_SASL_NEGOTIATED_PROPERTY_KEY"); } }
 

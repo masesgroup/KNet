@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Utils
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/FlattenedIterator.html#%3Cinit%3E(java.util.Iterator,java.util.function.Function)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/FlattenedIterator.html#%3Cinit%3E(java.util.Iterator,java.util.function.Function)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Iterator"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/FlattenedIterator.html#makeNext()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/FlattenedIterator.html#makeNext()"/>
         /// </summary>
 
         /// <returns><see cref="object"/></returns>
@@ -79,7 +79,7 @@ namespace Org.Apache.Kafka.Common.Utils
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/FlattenedIterator.html#%3Cinit%3E(java.util.Iterator,java.util.function.Function)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/FlattenedIterator.html#%3Cinit%3E(java.util.Iterator,java.util.function.Function)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Iterator"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/FlattenedIterator.html#makeNext()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/FlattenedIterator.html#makeNext()"/>
         /// </summary>
 
         /// <returns><typeparamref name="I"/></returns>

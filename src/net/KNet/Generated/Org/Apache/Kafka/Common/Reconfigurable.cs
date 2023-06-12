@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common
 {
+    #region IReconfigurable
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Reconfigurable.html"/>
+    /// </summary>
+    public partial interface IReconfigurable : Org.Apache.Kafka.Common.IConfigurable
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region Reconfigurable
-    public partial class Reconfigurable
+    public partial class Reconfigurable : Org.Apache.Kafka.Common.IReconfigurable
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Common
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Reconfigurable.html#reconfigurableConfigs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Reconfigurable.html#reconfigurableConfigs()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Set"/></returns>
@@ -55,21 +73,19 @@ namespace Org.Apache.Kafka.Common
             return IExecute<Java.Util.Set<string>>("reconfigurableConfigs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Reconfigurable.html#reconfigure(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Reconfigurable.html#reconfigure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        /// <typeparam name="Arg0Extendsobject"></typeparam>
-        public void Reconfigure<Arg0Extendsobject>(Java.Util.Map<string, Arg0Extendsobject> arg0)
+        public void Reconfigure(Java.Util.Map<string, object> arg0)
         {
             IExecute("reconfigure", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Reconfigurable.html#validateReconfiguration(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Reconfigurable.html#validateReconfiguration(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        /// <typeparam name="Arg0Extendsobject"></typeparam>
         /// <exception cref="Org.Apache.Kafka.Common.Config.ConfigException"/>
-        public void ValidateReconfiguration<Arg0Extendsobject>(Java.Util.Map<string, Arg0Extendsobject> arg0)
+        public void ValidateReconfiguration(Java.Util.Map<string, object> arg0)
         {
             IExecute("validateReconfiguration", arg0);
         }

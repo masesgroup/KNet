@@ -38,7 +38,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/IdentityReplicationPolicy.html#SOURCE_CLUSTER_ALIAS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/IdentityReplicationPolicy.html#SOURCE_CLUSTER_ALIAS_CONFIG"/>
         /// </summary>
         public static string SOURCE_CLUSTER_ALIAS_CONFIG { get { return SGetField<string>(LocalBridgeClazz, "SOURCE_CLUSTER_ALIAS_CONFIG"); } }
 

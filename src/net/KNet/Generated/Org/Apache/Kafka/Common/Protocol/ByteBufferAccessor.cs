@@ -26,11 +26,11 @@ using MASES.JCOBridge.C2JBridge;
 namespace Org.Apache.Kafka.Common.Protocol
 {
     #region ByteBufferAccessor
-    public partial class ByteBufferAccessor
+    public partial class ByteBufferAccessor : Org.Apache.Kafka.Common.Protocol.IReadable, Org.Apache.Kafka.Common.Protocol.IWritable
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#%3Cinit%3E(java.nio.ByteBuffer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#%3Cinit%3E(java.nio.ByteBuffer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         public ByteBufferAccessor(Java.Nio.ByteBuffer arg0)
@@ -62,7 +62,7 @@ namespace Org.Apache.Kafka.Common.Protocol
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readByte()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readByte()"/>
         /// </summary>
 
         /// <returns><see cref="byte"/></returns>
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return IExecute<byte>("readByte");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readArray(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readArray(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="byte"/></returns>
@@ -80,7 +80,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return IExecuteArray<byte>("readArray", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readDouble()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readDouble()"/>
         /// </summary>
 
         /// <returns><see cref="double"/></returns>
@@ -89,7 +89,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return IExecute<double>("readDouble");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readInt()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readInt()"/>
         /// </summary>
 
         /// <returns><see cref="int"/></returns>
@@ -98,7 +98,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return IExecute<int>("readInt");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readUnsignedVarint()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readUnsignedVarint()"/>
         /// </summary>
 
         /// <returns><see cref="int"/></returns>
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return IExecute<int>("readUnsignedVarint");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readVarint()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readVarint()"/>
         /// </summary>
 
         /// <returns><see cref="int"/></returns>
@@ -116,7 +116,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return IExecute<int>("readVarint");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#remaining()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#remaining()"/>
         /// </summary>
 
         /// <returns><see cref="int"/></returns>
@@ -125,7 +125,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return IExecute<int>("remaining");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#buffer()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#buffer()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
@@ -134,7 +134,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return IExecute<Java.Nio.ByteBuffer>("buffer");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readByteBuffer(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readByteBuffer(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
@@ -143,7 +143,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return IExecute<Java.Nio.ByteBuffer>("readByteBuffer", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readLong()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readLong()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -152,7 +152,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return IExecute<long>("readLong");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readVarlong()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readVarlong()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -161,7 +161,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return IExecute<long>("readVarlong");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readShort()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#readShort()"/>
         /// </summary>
 
         /// <returns><see cref="short"/></returns>
@@ -170,14 +170,14 @@ namespace Org.Apache.Kafka.Common.Protocol
             return IExecute<short>("readShort");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#flip()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#flip()"/>
         /// </summary>
         public void Flip()
         {
             IExecute("flip");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#writeByte(byte)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#writeByte(byte)"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         public void WriteByte(byte arg0)
@@ -185,7 +185,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("writeByte", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#writeByteArray(byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#writeByteArray(byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         public void WriteByteArray(byte[] arg0)
@@ -193,7 +193,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("writeByteArray", new object[] { arg0 });
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#writeByteBuffer(java.nio.ByteBuffer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#writeByteBuffer(java.nio.ByteBuffer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         public void WriteByteBuffer(Java.Nio.ByteBuffer arg0)
@@ -201,7 +201,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("writeByteBuffer", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#writeDouble(double)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#writeDouble(double)"/>
         /// </summary>
         /// <param name="arg0"><see cref="double"/></param>
         public void WriteDouble(double arg0)
@@ -209,7 +209,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("writeDouble", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#writeInt(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#writeInt(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public void WriteInt(int arg0)
@@ -217,7 +217,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("writeInt", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#writeLong(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#writeLong(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         public void WriteLong(long arg0)
@@ -225,7 +225,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("writeLong", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#writeShort(short)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#writeShort(short)"/>
         /// </summary>
         /// <param name="arg0"><see cref="short"/></param>
         public void WriteShort(short arg0)
@@ -233,7 +233,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("writeShort", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#writeUnsignedVarint(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#writeUnsignedVarint(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public void WriteUnsignedVarint(int arg0)
@@ -241,7 +241,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("writeUnsignedVarint", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#writeVarint(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#writeVarint(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public void WriteVarint(int arg0)
@@ -249,7 +249,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("writeVarint", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#writeVarlong(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html#writeVarlong(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         public void WriteVarlong(long arg0)

@@ -33,10 +33,6 @@ namespace Org.Apache.Kafka.Common.Utils
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.Utils.SystemScheduler"/> to <see cref="Org.Apache.Kafka.Common.Utils.Scheduler"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Common.Utils.Scheduler(Org.Apache.Kafka.Common.Utils.SystemScheduler t) => t.Cast<Org.Apache.Kafka.Common.Utils.Scheduler>();
 
         #endregion
 
@@ -50,7 +46,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SystemScheduler.html#schedule(java.util.concurrent.ScheduledExecutorService,java.util.concurrent.Callable,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SystemScheduler.html#schedule(java.util.concurrent.ScheduledExecutorService,java.util.concurrent.Callable,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Concurrent.ScheduledExecutorService"/></param>
         /// <param name="arg1"><see cref="Java.Util.Concurrent.Callable"/></param>
@@ -62,7 +58,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecute<Java.Util.Concurrent.Future<T>>("schedule", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SystemScheduler.html#time()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/SystemScheduler.html#time()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Utils.Time"/></returns>

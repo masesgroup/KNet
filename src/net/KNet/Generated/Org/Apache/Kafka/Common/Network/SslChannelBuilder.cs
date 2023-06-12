@@ -26,11 +26,11 @@ using MASES.JCOBridge.C2JBridge;
 namespace Org.Apache.Kafka.Common.Network
 {
     #region SslChannelBuilder
-    public partial class SslChannelBuilder
+    public partial class SslChannelBuilder : Org.Apache.Kafka.Common.Network.IChannelBuilder, Org.Apache.Kafka.Common.Network.IListenerReconfigurable
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslChannelBuilder.html#%3Cinit%3E(org.apache.kafka.common.network.Mode,org.apache.kafka.common.network.ListenerName,boolean,org.apache.kafka.common.utils.LogContext)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslChannelBuilder.html#%3Cinit%3E(org.apache.kafka.common.network.Mode,org.apache.kafka.common.network.ListenerName,boolean,org.apache.kafka.common.utils.LogContext)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Network.Mode"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Network.ListenerName"/></param>
@@ -65,7 +65,7 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslChannelBuilder.html#reconfigurableConfigs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslChannelBuilder.html#reconfigurableConfigs()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Set"/></returns>
@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<Java.Util.Set<string>>("reconfigurableConfigs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslChannelBuilder.html#buildChannel(java.lang.String,java.nio.channels.SelectionKey,int,org.apache.kafka.common.memory.MemoryPool,org.apache.kafka.common.network.ChannelMetadataRegistry)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslChannelBuilder.html#buildChannel(java.lang.String,java.nio.channels.SelectionKey,int,org.apache.kafka.common.memory.MemoryPool,org.apache.kafka.common.network.ChannelMetadataRegistry)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Java.Nio.Channels.SelectionKey"/></param>
@@ -88,7 +88,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<Org.Apache.Kafka.Common.Network.KafkaChannel>("buildChannel", arg0, arg1, arg2, arg3, arg4);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslChannelBuilder.html#listenerName()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslChannelBuilder.html#listenerName()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Network.ListenerName"/></returns>
@@ -97,37 +97,34 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<Org.Apache.Kafka.Common.Network.ListenerName>("listenerName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslChannelBuilder.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslChannelBuilder.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecute("close");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslChannelBuilder.html#configure(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslChannelBuilder.html#configure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        /// <typeparam name="Arg0Extendsobject"></typeparam>
         /// <exception cref="Org.Apache.Kafka.Common.KafkaException"/>
-        public void Configure<Arg0Extendsobject>(Java.Util.Map<string, Arg0Extendsobject> arg0)
+        public void Configure(Java.Util.Map<string, object> arg0)
         {
             IExecute("configure", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslChannelBuilder.html#reconfigure(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslChannelBuilder.html#reconfigure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        /// <typeparam name="Arg0Extendsobject"></typeparam>
-        public void Reconfigure<Arg0Extendsobject>(Java.Util.Map<string, Arg0Extendsobject> arg0)
+        public void Reconfigure(Java.Util.Map<string, object> arg0)
         {
             IExecute("reconfigure", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslChannelBuilder.html#validateReconfiguration(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslChannelBuilder.html#validateReconfiguration(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        /// <typeparam name="Arg0Extendsobject"></typeparam>
-        public void ValidateReconfiguration<Arg0Extendsobject>(Java.Util.Map<string, Arg0Extendsobject> arg0)
+        public void ValidateReconfiguration(Java.Util.Map<string, object> arg0)
         {
             IExecute("validateReconfiguration", arg0);
         }

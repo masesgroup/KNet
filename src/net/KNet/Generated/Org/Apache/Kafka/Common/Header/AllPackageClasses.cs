@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Header
 {
     #region Header
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/header/Header.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/header/Header.html"/>
     /// </summary>
     public partial class Header : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Header>
     {
@@ -70,9 +70,9 @@ namespace Org.Apache.Kafka.Common.Header
 
     #region Headers
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/header/Headers.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/header/Headers.html"/>
     /// </summary>
-    public partial class Headers : Java.Lang.Iterable
+    public partial class Headers : Java.Lang.Iterable<Org.Apache.Kafka.Common.Header.Header>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -110,6 +110,7 @@ namespace Org.Apache.Kafka.Common.Header
 
     }
     #endregion
+
 
 
 }

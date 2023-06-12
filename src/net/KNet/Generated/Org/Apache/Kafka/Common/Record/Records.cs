@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Record
 {
+    #region IRecords
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html"/>
+    /// </summary>
+    public partial interface IRecords : Org.Apache.Kafka.Common.Record.ITransferableRecords
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region Records
-    public partial class Records
+    public partial class Records : Org.Apache.Kafka.Common.Record.IRecords
     {
         #region Constructors
 
@@ -38,35 +56,35 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html#HEADER_SIZE_UP_TO_MAGIC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html#HEADER_SIZE_UP_TO_MAGIC"/>
         /// </summary>
         public static int HEADER_SIZE_UP_TO_MAGIC { get { return SGetField<int>(LocalBridgeClazz, "HEADER_SIZE_UP_TO_MAGIC"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html#LOG_OVERHEAD"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html#LOG_OVERHEAD"/>
         /// </summary>
         public static int LOG_OVERHEAD { get { return SGetField<int>(LocalBridgeClazz, "LOG_OVERHEAD"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html#MAGIC_LENGTH"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html#MAGIC_LENGTH"/>
         /// </summary>
         public static int MAGIC_LENGTH { get { return SGetField<int>(LocalBridgeClazz, "MAGIC_LENGTH"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html#MAGIC_OFFSET"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html#MAGIC_OFFSET"/>
         /// </summary>
         public static int MAGIC_OFFSET { get { return SGetField<int>(LocalBridgeClazz, "MAGIC_OFFSET"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html#OFFSET_LENGTH"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html#OFFSET_LENGTH"/>
         /// </summary>
         public static int OFFSET_LENGTH { get { return SGetField<int>(LocalBridgeClazz, "OFFSET_LENGTH"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html#OFFSET_OFFSET"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html#OFFSET_OFFSET"/>
         /// </summary>
         public static int OFFSET_OFFSET { get { return SGetField<int>(LocalBridgeClazz, "OFFSET_OFFSET"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html#SIZE_LENGTH"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html#SIZE_LENGTH"/>
         /// </summary>
         public static int SIZE_LENGTH { get { return SGetField<int>(LocalBridgeClazz, "SIZE_LENGTH"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html#SIZE_OFFSET"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html#SIZE_OFFSET"/>
         /// </summary>
         public static int SIZE_OFFSET { get { return SGetField<int>(LocalBridgeClazz, "SIZE_OFFSET"); } }
 
@@ -78,7 +96,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html#hasMatchingMagic(byte)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html#hasMatchingMagic(byte)"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -87,7 +105,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecute<bool>("hasMatchingMagic", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html#batches()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html#batches()"/>
         /// </summary>
 
         /// <typeparam name="ReturnExtendsOrg_Apache_Kafka_Common_Record_RecordBatch"><see cref="Org.Apache.Kafka.Common.Record.RecordBatch"/></typeparam>
@@ -97,7 +115,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecute<Java.Lang.Iterable<ReturnExtendsOrg_Apache_Kafka_Common_Record_RecordBatch>>("batches");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html#records()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html#records()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Lang.Iterable"/></returns>
@@ -106,7 +124,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecute<Java.Lang.Iterable<Org.Apache.Kafka.Common.Record.Record>>("records");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html#downConvert(byte,long,org.apache.kafka.common.utils.Time)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html#downConvert(byte,long,org.apache.kafka.common.utils.Time)"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -118,7 +136,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecute<Org.Apache.Kafka.Common.Record.ConvertedRecords<ReturnExtendsOrg_Apache_Kafka_Common_Record_Records>>("downConvert", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html#batchIterator()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/Records.html#batchIterator()"/>
         /// </summary>
 
         /// <typeparam name="ReturnExtendsOrg_Apache_Kafka_Common_Record_RecordBatch"><see cref="Org.Apache.Kafka.Common.Record.RecordBatch"/></typeparam>

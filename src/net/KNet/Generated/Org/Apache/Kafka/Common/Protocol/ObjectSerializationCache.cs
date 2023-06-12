@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Common.Protocol
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ObjectSerializationCache.html#getSerializedValue(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ObjectSerializationCache.html#getSerializedValue(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="byte"/></returns>
@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return IExecuteArray<byte>("getSerializedValue", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ObjectSerializationCache.html#getArraySizeInBytes(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ObjectSerializationCache.html#getArraySizeInBytes(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="int"/></returns>
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             return IExecute<int?>("getArraySizeInBytes", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ObjectSerializationCache.html#cacheSerializedValue(java.lang.Object,byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ObjectSerializationCache.html#cacheSerializedValue(java.lang.Object,byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Protocol
             IExecute("cacheSerializedValue", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ObjectSerializationCache.html#setArraySizeInBytes(java.lang.Object,java.lang.Integer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ObjectSerializationCache.html#setArraySizeInBytes(java.lang.Object,java.lang.Integer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="int"/></param>

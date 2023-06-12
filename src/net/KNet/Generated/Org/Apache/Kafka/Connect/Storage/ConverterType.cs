@@ -38,15 +38,15 @@ namespace Org.Apache.Kafka.Connect.Storage
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/ConverterType.html#HEADER"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/ConverterType.html#HEADER"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Storage.ConverterType HEADER { get { return SGetField<Org.Apache.Kafka.Connect.Storage.ConverterType>(LocalBridgeClazz, "HEADER"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/ConverterType.html#KEY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/ConverterType.html#KEY"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Storage.ConverterType KEY { get { return SGetField<Org.Apache.Kafka.Connect.Storage.ConverterType>(LocalBridgeClazz, "KEY"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/ConverterType.html#VALUE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/ConverterType.html#VALUE"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Storage.ConverterType VALUE { get { return SGetField<Org.Apache.Kafka.Connect.Storage.ConverterType>(LocalBridgeClazz, "VALUE"); } }
 
@@ -54,7 +54,7 @@ namespace Org.Apache.Kafka.Connect.Storage
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/ConverterType.html#valueOf(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/ConverterType.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Storage.ConverterType"/></returns>
@@ -63,7 +63,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return SExecute<Org.Apache.Kafka.Connect.Storage.ConverterType>(LocalBridgeClazz, "valueOf", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/ConverterType.html#withName(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/ConverterType.html#withName(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Storage.ConverterType"/></returns>
@@ -72,7 +72,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return SExecute<Org.Apache.Kafka.Connect.Storage.ConverterType>(LocalBridgeClazz, "withName", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/ConverterType.html#values()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/ConverterType.html#values()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Connect.Storage.ConverterType"/></returns>
@@ -85,7 +85,7 @@ namespace Org.Apache.Kafka.Connect.Storage
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/ConverterType.html#getName()"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/storage/ConverterType.html#getName()"/> 
         /// </summary>
         public string Name
         {

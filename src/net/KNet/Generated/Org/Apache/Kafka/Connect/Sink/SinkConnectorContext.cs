@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Connect.Sink
 {
+    #region ISinkConnectorContext
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/sink/SinkConnectorContext.html"/>
+    /// </summary>
+    public partial interface ISinkConnectorContext : Org.Apache.Kafka.Connect.Connector.IConnectorContext
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region SinkConnectorContext
-    public partial class SinkConnectorContext
+    public partial class SinkConnectorContext : Org.Apache.Kafka.Connect.Sink.ISinkConnectorContext
     {
         #region Constructors
 

@@ -38,15 +38,15 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/OperatingSystem.html#IS_WINDOWS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/OperatingSystem.html#IS_WINDOWS"/>
         /// </summary>
         public static bool IS_WINDOWS { get { return SGetField<bool>(LocalBridgeClazz, "IS_WINDOWS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/OperatingSystem.html#IS_ZOS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/OperatingSystem.html#IS_ZOS"/>
         /// </summary>
         public static bool IS_ZOS { get { return SGetField<bool>(LocalBridgeClazz, "IS_ZOS"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/OperatingSystem.html#NAME"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/OperatingSystem.html#NAME"/>
         /// </summary>
         public static string NAME { get { return SGetField<string>(LocalBridgeClazz, "NAME"); } }
 

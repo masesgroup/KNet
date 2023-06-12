@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Record
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LazyDownConversionRecords.html#%3Cinit%3E(org.apache.kafka.common.TopicPartition,org.apache.kafka.common.record.Records,byte,long,org.apache.kafka.common.utils.Time)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LazyDownConversionRecords.html#%3Cinit%3E(org.apache.kafka.common.TopicPartition,org.apache.kafka.common.record.Records,byte,long,org.apache.kafka.common.utils.Time)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Record.Records"/></param>
@@ -45,10 +45,6 @@ namespace Org.Apache.Kafka.Common.Record
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.Record.LazyDownConversionRecords"/> to <see cref="Org.Apache.Kafka.Common.Record.BaseRecords"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Common.Record.BaseRecords(Org.Apache.Kafka.Common.Record.LazyDownConversionRecords t) => t.Cast<Org.Apache.Kafka.Common.Record.BaseRecords>();
 
         #endregion
 
@@ -62,7 +58,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LazyDownConversionRecords.html#sizeInBytes()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LazyDownConversionRecords.html#sizeInBytes()"/>
         /// </summary>
 
         /// <returns><see cref="int"/></returns>
@@ -71,17 +67,16 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecute<int>("sizeInBytes");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LazyDownConversionRecords.html#iterator(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LazyDownConversionRecords.html#iterator(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
-        /// <typeparam name="ReturnExtendsobject"></typeparam>
         /// <returns><see cref="Java.Util.Iterator"/></returns>
-        public Java.Util.Iterator<Org.Apache.Kafka.Common.Record.ConvertedRecords<ReturnExtendsobject>> IteratorMethod<ReturnExtendsobject>(long arg0)
+        public Java.Util.Iterator<Org.Apache.Kafka.Common.Record.ConvertedRecords> IteratorMethod(long arg0)
         {
-            return IExecute<Java.Util.Iterator<Org.Apache.Kafka.Common.Record.ConvertedRecords<ReturnExtendsobject>>>("iterator", arg0);
+            return IExecute<Java.Util.Iterator<Org.Apache.Kafka.Common.Record.ConvertedRecords>>("iterator", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LazyDownConversionRecords.html#toSend()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LazyDownConversionRecords.html#toSend()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.RecordsSend"/></returns>
@@ -90,7 +85,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecute<Org.Apache.Kafka.Common.Record.RecordsSend>("toSend");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LazyDownConversionRecords.html#topicPartition()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/LazyDownConversionRecords.html#topicPartition()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.TopicPartition"/></returns>

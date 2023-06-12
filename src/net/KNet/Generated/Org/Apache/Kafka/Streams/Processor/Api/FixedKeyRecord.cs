@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyRecord.html#withValue(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyRecord.html#withValue(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord"/></returns>
@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
             return IExecute<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord>("withValue", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyRecord.html#key()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyRecord.html#key()"/>
         /// </summary>
 
         /// <returns><see cref="object"/></returns>
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
             return IExecute("key");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyRecord.html#timestamp()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyRecord.html#timestamp()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
             return IExecute<long>("timestamp");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyRecord.html#headers()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyRecord.html#headers()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Header.Headers"/></returns>
@@ -82,7 +82,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
             return IExecute<Org.Apache.Kafka.Common.Header.Headers>("headers");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyRecord.html#withHeaders(org.apache.kafka.common.header.Headers)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyRecord.html#withHeaders(org.apache.kafka.common.header.Headers)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Header.Headers"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord"/></returns>
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
             return IExecute<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord>("withHeaders", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyRecord.html#withTimestamp(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyRecord.html#withTimestamp(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord"/></returns>
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
             return IExecute<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord>("withTimestamp", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyRecord.html#value()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyRecord.html#value()"/>
         /// </summary>
 
         /// <returns><see cref="object"/></returns>
@@ -144,7 +144,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyRecord.html#withValue(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyRecord.html#withValue(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="NewV"/></param>
         /// <typeparam name="NewV"></typeparam>
@@ -154,7 +154,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
             return IExecute<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord<K, NewV>>("withValue", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyRecord.html#key()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyRecord.html#key()"/>
         /// </summary>
 
         /// <returns><typeparamref name="K"/></returns>
@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
             return IExecute<K>("key");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyRecord.html#timestamp()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyRecord.html#timestamp()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -172,7 +172,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
             return IExecute<long>("timestamp");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyRecord.html#headers()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyRecord.html#headers()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Header.Headers"/></returns>
@@ -181,7 +181,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
             return IExecute<Org.Apache.Kafka.Common.Header.Headers>("headers");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyRecord.html#withHeaders(org.apache.kafka.common.header.Headers)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyRecord.html#withHeaders(org.apache.kafka.common.header.Headers)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Header.Headers"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord"/></returns>
@@ -190,7 +190,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
             return IExecute<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord<K, V>>("withHeaders", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyRecord.html#withTimestamp(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyRecord.html#withTimestamp(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord"/></returns>
@@ -199,7 +199,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
             return IExecute<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord<K, V>>("withTimestamp", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyRecord.html#value()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyRecord.html#value()"/>
         /// </summary>
 
         /// <returns><typeparamref name="V"/></returns>

@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Network
 {
+    #region IChannelBuilder
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelBuilder.html"/>
+    /// </summary>
+    public partial interface IChannelBuilder
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region ChannelBuilder
-    public partial class ChannelBuilder
+    public partial class ChannelBuilder : Org.Apache.Kafka.Common.Network.IChannelBuilder, Java.Lang.IAutoCloseable, Org.Apache.Kafka.Common.IConfigurable
     {
         #region Constructors
 
@@ -54,7 +72,7 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelBuilder.html#buildChannel(java.lang.String,java.nio.channels.SelectionKey,int,org.apache.kafka.common.memory.MemoryPool,org.apache.kafka.common.network.ChannelMetadataRegistry)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelBuilder.html#buildChannel(java.lang.String,java.nio.channels.SelectionKey,int,org.apache.kafka.common.memory.MemoryPool,org.apache.kafka.common.network.ChannelMetadataRegistry)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Java.Nio.Channels.SelectionKey"/></param>
@@ -68,7 +86,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<Org.Apache.Kafka.Common.Network.KafkaChannel>("buildChannel", arg0, arg1, arg2, arg3, arg4);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelBuilder.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelBuilder.html#close()"/>
         /// </summary>
         public void Close()
         {

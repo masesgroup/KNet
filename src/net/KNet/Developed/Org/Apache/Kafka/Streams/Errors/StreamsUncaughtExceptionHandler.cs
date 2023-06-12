@@ -25,7 +25,7 @@ namespace Org.Apache.Kafka.Streams.Errors
     /// <summary>
     /// Listener for Kafka StreamsUncaughtExceptionHandler. Extends <see cref="IJVMBridgeBase"/>
     /// </summary>
-    public interface IStreamsUncaughtExceptionHandler : IJVMBridgeBase
+    public partial interface IStreamsUncaughtExceptionHandler : IJVMBridgeBase
     {
         /// <summary>
         /// Executes the StreamsUncaughtExceptionHandler action in the CLR

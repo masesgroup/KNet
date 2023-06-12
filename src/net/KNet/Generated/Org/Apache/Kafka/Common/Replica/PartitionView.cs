@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Replica
 {
+    #region IPartitionView
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/PartitionView.html"/>
+    /// </summary>
+    public partial interface IPartitionView
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region PartitionView
-    public partial class PartitionView
+    public partial class PartitionView : Org.Apache.Kafka.Common.Replica.IPartitionView
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Replica
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/PartitionView.html#replicas()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/PartitionView.html#replicas()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Set"/></returns>
@@ -55,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Replica
             return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.Replica.ReplicaView>>("replicas");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/PartitionView.html#leader()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/PartitionView.html#leader()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Replica.ReplicaView"/></returns>
@@ -72,7 +90,7 @@ namespace Org.Apache.Kafka.Common.Replica
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/PartitionView.DefaultPartitionView.html#%3Cinit%3E(java.util.Set,org.apache.kafka.common.replica.ReplicaView)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/PartitionView.DefaultPartitionView.html#%3Cinit%3E(java.util.Set,org.apache.kafka.common.replica.ReplicaView)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Set"/></param>
             /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Replica.ReplicaView"/></param>
@@ -84,10 +102,6 @@ namespace Org.Apache.Kafka.Common.Replica
             #endregion
 
             #region Class/Interface conversion operators
-            /// <summary>
-            /// Converter from <see cref="Org.Apache.Kafka.Common.Replica.PartitionView.DefaultPartitionView"/> to <see cref="Org.Apache.Kafka.Common.Replica.PartitionView"/>
-            /// </summary>
-            public static implicit operator Org.Apache.Kafka.Common.Replica.PartitionView(Org.Apache.Kafka.Common.Replica.PartitionView.DefaultPartitionView t) => t.Cast<Org.Apache.Kafka.Common.Replica.PartitionView>();
 
             #endregion
 
@@ -101,7 +115,7 @@ namespace Org.Apache.Kafka.Common.Replica
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/PartitionView.DefaultPartitionView.html#replicas()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/PartitionView.DefaultPartitionView.html#replicas()"/>
             /// </summary>
 
             /// <returns><see cref="Java.Util.Set"/></returns>
@@ -110,7 +124,7 @@ namespace Org.Apache.Kafka.Common.Replica
                 return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.Replica.ReplicaView>>("replicas");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/PartitionView.DefaultPartitionView.html#leader()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/replica/PartitionView.DefaultPartitionView.html#leader()"/>
             /// </summary>
 
             /// <returns><see cref="Org.Apache.Kafka.Common.Replica.ReplicaView"/></returns>

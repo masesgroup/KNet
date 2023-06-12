@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Resource
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePattern.html#%3Cinit%3E(org.apache.kafka.common.resource.ResourceType,java.lang.String,org.apache.kafka.common.resource.PatternType)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePattern.html#%3Cinit%3E(org.apache.kafka.common.resource.ResourceType,java.lang.String,org.apache.kafka.common.resource.PatternType)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Resource.ResourceType"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -48,7 +48,7 @@ namespace Org.Apache.Kafka.Common.Resource
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePattern.html#WILDCARD_RESOURCE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePattern.html#WILDCARD_RESOURCE"/>
         /// </summary>
         public static string WILDCARD_RESOURCE { get { return SGetField<string>(LocalBridgeClazz, "WILDCARD_RESOURCE"); } }
 
@@ -60,7 +60,7 @@ namespace Org.Apache.Kafka.Common.Resource
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePattern.html#isUnknown()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePattern.html#isUnknown()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -69,7 +69,7 @@ namespace Org.Apache.Kafka.Common.Resource
             return IExecute<bool>("isUnknown");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePattern.html#name()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePattern.html#name()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -78,7 +78,7 @@ namespace Org.Apache.Kafka.Common.Resource
             return IExecute<string>("name");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePattern.html#patternType()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePattern.html#patternType()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Resource.PatternType"/></returns>
@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Common.Resource
             return IExecute<Org.Apache.Kafka.Common.Resource.PatternType>("patternType");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePattern.html#toFilter()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePattern.html#toFilter()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Resource.ResourcePatternFilter"/></returns>
@@ -96,7 +96,7 @@ namespace Org.Apache.Kafka.Common.Resource
             return IExecute<Org.Apache.Kafka.Common.Resource.ResourcePatternFilter>("toFilter");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePattern.html#resourceType()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/resource/ResourcePattern.html#resourceType()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Resource.ResourceType"/></returns>

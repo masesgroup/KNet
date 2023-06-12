@@ -42,7 +42,7 @@ namespace Kafka.Admin
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.html#isDebugEnabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.html#isDebugEnabled()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -51,7 +51,7 @@ namespace Kafka.Admin
             return SExecute<bool>(LocalBridgeClazz, "isDebugEnabled");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.html#isTraceEnabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.html#isTraceEnabled()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -60,7 +60,7 @@ namespace Kafka.Admin
             return SExecute<bool>(LocalBridgeClazz, "isTraceEnabled");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.html#parseTopicConfigsToBeAdded(kafka.admin.TopicCommand.TopicCommandOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.html#parseTopicConfigsToBeAdded(kafka.admin.TopicCommand.TopicCommandOptions)"/>
         /// </summary>
         /// <param name="opts"><see cref="Kafka.Admin.TopicCommand.TopicCommandOptions"/></param>
         /// <returns><see cref="Java.Util.Properties"/></returns>
@@ -69,7 +69,7 @@ namespace Kafka.Admin
             return SExecute<Java.Util.Properties>(LocalBridgeClazz, "parseTopicConfigsToBeAdded", opts);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="args"><see cref="string"/></param>
         public static void Main(string[] args)
@@ -89,7 +89,7 @@ namespace Kafka.Admin
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.CommandTopicPartition.html#%3Cinit%3E(kafka.admin.TopicCommand.TopicCommandOptions)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.CommandTopicPartition.html#%3Cinit%3E(kafka.admin.TopicCommand.TopicCommandOptions)"/>
             /// </summary>
             /// <param name="opts"><see cref="Kafka.Admin.TopicCommand.TopicCommandOptions"/></param>
             public CommandTopicPartition(Kafka.Admin.TopicCommand.TopicCommandOptions opts)
@@ -113,7 +113,7 @@ namespace Kafka.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.CommandTopicPartition.html#hasPartitions()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.CommandTopicPartition.html#hasPartitions()"/>
             /// </summary>
 
             /// <returns><see cref="bool"/></returns>
@@ -122,7 +122,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("hasPartitions");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.CommandTopicPartition.html#hasReplicaAssignment()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.CommandTopicPartition.html#hasReplicaAssignment()"/>
             /// </summary>
 
             /// <returns><see cref="bool"/></returns>
@@ -131,7 +131,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("hasReplicaAssignment");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.CommandTopicPartition.html#ifTopicDoesntExist()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.CommandTopicPartition.html#ifTopicDoesntExist()"/>
             /// </summary>
 
             /// <returns><see cref="bool"/></returns>
@@ -140,7 +140,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("ifTopicDoesntExist");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.CommandTopicPartition.html#name()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.CommandTopicPartition.html#name()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -149,7 +149,7 @@ namespace Kafka.Admin
                 return IExecute<string>("name");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.CommandTopicPartition.html#configsToAdd()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.CommandTopicPartition.html#configsToAdd()"/>
             /// </summary>
 
             /// <returns><see cref="Java.Util.Properties"/></returns>
@@ -158,7 +158,7 @@ namespace Kafka.Admin
                 return IExecute<Java.Util.Properties>("configsToAdd");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.CommandTopicPartition.html#rackAwareMode()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.CommandTopicPartition.html#rackAwareMode()"/>
             /// </summary>
 
             /// <returns><see cref="Kafka.Admin.RackAwareMode"/></returns>
@@ -198,7 +198,7 @@ namespace Kafka.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.DescribeOptions.html#describeConfigs()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.DescribeOptions.html#describeConfigs()"/>
             /// </summary>
 
             /// <returns><see cref="bool"/></returns>
@@ -207,7 +207,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("describeConfigs");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.DescribeOptions.html#describePartitions()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.DescribeOptions.html#describePartitions()"/>
             /// </summary>
 
             /// <returns><see cref="bool"/></returns>
@@ -216,7 +216,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("describePartitions");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.DescribeOptions.html#maybePrintPartitionDescription(kafka.admin.TopicCommand.PartitionDescription)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.DescribeOptions.html#maybePrintPartitionDescription(kafka.admin.TopicCommand.PartitionDescription)"/>
             /// </summary>
             /// <param name="desc"><see cref="Kafka.Admin.TopicCommand.PartitionDescription"/></param>
             public void MaybePrintPartitionDescription(Kafka.Admin.TopicCommand.PartitionDescription desc)
@@ -235,7 +235,7 @@ namespace Kafka.Admin
         #endregion
 
         #region PartitionDescription
-        public partial class PartitionDescription
+        public partial class PartitionDescription : Java.Io.ISerializable
         {
             #region Constructors
 
@@ -259,7 +259,7 @@ namespace Kafka.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.PartitionDescription.html#canEqual(java.lang.Object)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.PartitionDescription.html#canEqual(java.lang.Object)"/>
             /// </summary>
             /// <param name="x$1"><see cref="object"/></param>
             /// <returns><see cref="bool"/></returns>
@@ -268,7 +268,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("canEqual", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.PartitionDescription.html#isAtMinIsrPartitions()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.PartitionDescription.html#isAtMinIsrPartitions()"/>
             /// </summary>
 
             /// <returns><see cref="bool"/></returns>
@@ -277,7 +277,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("isAtMinIsrPartitions");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.PartitionDescription.html#isUnderMinIsr()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.PartitionDescription.html#isUnderMinIsr()"/>
             /// </summary>
 
             /// <returns><see cref="bool"/></returns>
@@ -286,7 +286,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("isUnderMinIsr");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.PartitionDescription.html#isUnderReplicated()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.PartitionDescription.html#isUnderReplicated()"/>
             /// </summary>
 
             /// <returns><see cref="bool"/></returns>
@@ -295,7 +295,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("isUnderReplicated");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.PartitionDescription.html#markedForDeletion()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.PartitionDescription.html#markedForDeletion()"/>
             /// </summary>
 
             /// <returns><see cref="bool"/></returns>
@@ -304,7 +304,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("markedForDeletion");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.PartitionDescription.html#productArity()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.PartitionDescription.html#productArity()"/>
             /// </summary>
 
             /// <returns><see cref="int"/></returns>
@@ -313,7 +313,7 @@ namespace Kafka.Admin
                 return IExecute<int>("productArity");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.PartitionDescription.html#productElement(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.PartitionDescription.html#productElement(int)"/>
             /// </summary>
             /// <param name="x$1"><see cref="int"/></param>
             /// <returns><see cref="object"/></returns>
@@ -322,7 +322,7 @@ namespace Kafka.Admin
                 return IExecute("productElement", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.PartitionDescription.html#productElementName(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.PartitionDescription.html#productElementName(int)"/>
             /// </summary>
             /// <param name="x$1"><see cref="int"/></param>
             /// <returns><see cref="string"/></returns>
@@ -331,7 +331,7 @@ namespace Kafka.Admin
                 return IExecute<string>("productElementName", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.PartitionDescription.html#productPrefix()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.PartitionDescription.html#productPrefix()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -340,7 +340,7 @@ namespace Kafka.Admin
                 return IExecute<string>("productPrefix");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.PartitionDescription.html#topic()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.PartitionDescription.html#topic()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -349,7 +349,7 @@ namespace Kafka.Admin
                 return IExecute<string>("topic");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.PartitionDescription.html#info()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.PartitionDescription.html#info()"/>
             /// </summary>
 
             /// <returns><see cref="Org.Apache.Kafka.Common.TopicPartitionInfo"/></returns>
@@ -358,7 +358,7 @@ namespace Kafka.Admin
                 return IExecute<Org.Apache.Kafka.Common.TopicPartitionInfo>("info");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.PartitionDescription.html#printDescription()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.PartitionDescription.html#printDescription()"/>
             /// </summary>
             public void PrintDescription()
             {
@@ -380,7 +380,7 @@ namespace Kafka.Admin
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html#%3Cinit%3E(java.lang.String[])"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html#%3Cinit%3E(java.lang.String[])"/>
             /// </summary>
             /// <param name="args"><see cref="string"/></param>
             public TopicCommandOptions(string[] args)
@@ -404,7 +404,7 @@ namespace Kafka.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html#excludeInternalTopics()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html#excludeInternalTopics()"/>
             /// </summary>
 
             /// <returns><see cref="bool"/></returns>
@@ -413,7 +413,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("excludeInternalTopics");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html#hasAlterOption()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html#hasAlterOption()"/>
             /// </summary>
 
             /// <returns><see cref="bool"/></returns>
@@ -422,7 +422,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("hasAlterOption");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html#hasCreateOption()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html#hasCreateOption()"/>
             /// </summary>
 
             /// <returns><see cref="bool"/></returns>
@@ -431,7 +431,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("hasCreateOption");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html#hasDeleteOption()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html#hasDeleteOption()"/>
             /// </summary>
 
             /// <returns><see cref="bool"/></returns>
@@ -440,7 +440,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("hasDeleteOption");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html#hasDescribeOption()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html#hasDescribeOption()"/>
             /// </summary>
 
             /// <returns><see cref="bool"/></returns>
@@ -449,7 +449,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("hasDescribeOption");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html#hasListOption()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html#hasListOption()"/>
             /// </summary>
 
             /// <returns><see cref="bool"/></returns>
@@ -458,7 +458,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("hasListOption");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html#ifExists()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html#ifExists()"/>
             /// </summary>
 
             /// <returns><see cref="bool"/></returns>
@@ -467,7 +467,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("ifExists");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html#ifNotExists()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html#ifNotExists()"/>
             /// </summary>
 
             /// <returns><see cref="bool"/></returns>
@@ -476,7 +476,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("ifNotExists");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html#reportAtMinIsrPartitions()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html#reportAtMinIsrPartitions()"/>
             /// </summary>
 
             /// <returns><see cref="bool"/></returns>
@@ -485,7 +485,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("reportAtMinIsrPartitions");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html#reportOverriddenConfigs()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html#reportOverriddenConfigs()"/>
             /// </summary>
 
             /// <returns><see cref="bool"/></returns>
@@ -494,7 +494,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("reportOverriddenConfigs");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html#reportUnavailablePartitions()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html#reportUnavailablePartitions()"/>
             /// </summary>
 
             /// <returns><see cref="bool"/></returns>
@@ -503,7 +503,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("reportUnavailablePartitions");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html#reportUnderMinIsrPartitions()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html#reportUnderMinIsrPartitions()"/>
             /// </summary>
 
             /// <returns><see cref="bool"/></returns>
@@ -512,7 +512,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("reportUnderMinIsrPartitions");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html#reportUnderReplicatedPartitions()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html#reportUnderReplicatedPartitions()"/>
             /// </summary>
 
             /// <returns><see cref="bool"/></returns>
@@ -521,7 +521,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("reportUnderReplicatedPartitions");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html#commandConfig()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html#commandConfig()"/>
             /// </summary>
 
             /// <returns><see cref="Java.Util.Properties"/></returns>
@@ -530,7 +530,7 @@ namespace Kafka.Admin
                 return IExecute<Java.Util.Properties>("commandConfig");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html#rackAwareMode()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html#rackAwareMode()"/>
             /// </summary>
 
             /// <returns><see cref="Kafka.Admin.RackAwareMode"/></returns>
@@ -539,7 +539,7 @@ namespace Kafka.Admin
                 return IExecute<Kafka.Admin.RackAwareMode>("rackAwareMode");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html#checkArgs()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicCommandOptions.html#checkArgs()"/>
             /// </summary>
             public void CheckArgs()
             {
@@ -557,11 +557,11 @@ namespace Kafka.Admin
         #endregion
 
         #region TopicDescription
-        public partial class TopicDescription
+        public partial class TopicDescription : Java.Io.ISerializable
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicDescription.html#%3Cinit%3E(java.lang.String,org.apache.kafka.common.Uuid,int,int,org.apache.kafka.clients.admin.Config,boolean)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicDescription.html#%3Cinit%3E(java.lang.String,org.apache.kafka.common.Uuid,int,int,org.apache.kafka.clients.admin.Config,boolean)"/>
             /// </summary>
             /// <param name="topic"><see cref="string"/></param>
             /// <param name="topicId"><see cref="Org.Apache.Kafka.Common.Uuid"/></param>
@@ -594,7 +594,7 @@ namespace Kafka.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicDescription.html#canEqual(java.lang.Object)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicDescription.html#canEqual(java.lang.Object)"/>
             /// </summary>
             /// <param name="x$1"><see cref="object"/></param>
             /// <returns><see cref="bool"/></returns>
@@ -603,7 +603,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("canEqual", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicDescription.html#markedForDeletion()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicDescription.html#markedForDeletion()"/>
             /// </summary>
 
             /// <returns><see cref="bool"/></returns>
@@ -612,7 +612,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("markedForDeletion");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicDescription.html#numPartitions()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicDescription.html#numPartitions()"/>
             /// </summary>
 
             /// <returns><see cref="int"/></returns>
@@ -621,7 +621,7 @@ namespace Kafka.Admin
                 return IExecute<int>("numPartitions");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicDescription.html#productArity()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicDescription.html#productArity()"/>
             /// </summary>
 
             /// <returns><see cref="int"/></returns>
@@ -630,7 +630,7 @@ namespace Kafka.Admin
                 return IExecute<int>("productArity");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicDescription.html#replicationFactor()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicDescription.html#replicationFactor()"/>
             /// </summary>
 
             /// <returns><see cref="int"/></returns>
@@ -639,7 +639,7 @@ namespace Kafka.Admin
                 return IExecute<int>("replicationFactor");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicDescription.html#productElement(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicDescription.html#productElement(int)"/>
             /// </summary>
             /// <param name="x$1"><see cref="int"/></param>
             /// <returns><see cref="object"/></returns>
@@ -648,7 +648,7 @@ namespace Kafka.Admin
                 return IExecute("productElement", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicDescription.html#productElementName(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicDescription.html#productElementName(int)"/>
             /// </summary>
             /// <param name="x$1"><see cref="int"/></param>
             /// <returns><see cref="string"/></returns>
@@ -657,7 +657,7 @@ namespace Kafka.Admin
                 return IExecute<string>("productElementName", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicDescription.html#productPrefix()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicDescription.html#productPrefix()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -666,7 +666,7 @@ namespace Kafka.Admin
                 return IExecute<string>("productPrefix");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicDescription.html#topic()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicDescription.html#topic()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -675,7 +675,7 @@ namespace Kafka.Admin
                 return IExecute<string>("topic");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicDescription.html#copy(java.lang.String,org.apache.kafka.common.Uuid,int,int,org.apache.kafka.clients.admin.Config,boolean)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicDescription.html#copy(java.lang.String,org.apache.kafka.common.Uuid,int,int,org.apache.kafka.clients.admin.Config,boolean)"/>
             /// </summary>
             /// <param name="topic"><see cref="string"/></param>
             /// <param name="topicId"><see cref="Org.Apache.Kafka.Common.Uuid"/></param>
@@ -689,7 +689,7 @@ namespace Kafka.Admin
                 return IExecute<Kafka.Admin.TopicCommand.TopicDescription>("copy", topic, topicId, numPartitions, replicationFactor, config, markedForDeletion);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicDescription.html#config()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicDescription.html#config()"/>
             /// </summary>
 
             /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.Config"/></returns>
@@ -698,7 +698,7 @@ namespace Kafka.Admin
                 return IExecute<Org.Apache.Kafka.Clients.Admin.Config>("config");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicDescription.html#topicId()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicDescription.html#topicId()"/>
             /// </summary>
 
             /// <returns><see cref="Org.Apache.Kafka.Common.Uuid"/></returns>
@@ -707,7 +707,7 @@ namespace Kafka.Admin
                 return IExecute<Org.Apache.Kafka.Common.Uuid>("topicId");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicDescription.html#printDescription()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicDescription.html#printDescription()"/>
             /// </summary>
             public void PrintDescription()
             {
@@ -725,11 +725,11 @@ namespace Kafka.Admin
         #endregion
 
         #region TopicService
-        public partial class TopicService
+        public partial class TopicService : Java.Lang.IAutoCloseable, Java.Io.ISerializable
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicService.html#%3Cinit%3E(org.apache.kafka.clients.admin.Admin)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicService.html#%3Cinit%3E(org.apache.kafka.clients.admin.Admin)"/>
             /// </summary>
             /// <param name="adminClient"><see cref="Org.Apache.Kafka.Clients.Admin.Admin"/></param>
             public TopicService(Org.Apache.Kafka.Clients.Admin.Admin adminClient)
@@ -761,7 +761,7 @@ namespace Kafka.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicService.html#canEqual(java.lang.Object)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicService.html#canEqual(java.lang.Object)"/>
             /// </summary>
             /// <param name="x$1"><see cref="object"/></param>
             /// <returns><see cref="bool"/></returns>
@@ -770,7 +770,7 @@ namespace Kafka.Admin
                 return IExecute<bool>("canEqual", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicService.html#productArity()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicService.html#productArity()"/>
             /// </summary>
 
             /// <returns><see cref="int"/></returns>
@@ -779,7 +779,7 @@ namespace Kafka.Admin
                 return IExecute<int>("productArity");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicService.html#productElement(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicService.html#productElement(int)"/>
             /// </summary>
             /// <param name="x$1"><see cref="int"/></param>
             /// <returns><see cref="object"/></returns>
@@ -788,7 +788,7 @@ namespace Kafka.Admin
                 return IExecute("productElement", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicService.html#productElementName(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicService.html#productElementName(int)"/>
             /// </summary>
             /// <param name="x$1"><see cref="int"/></param>
             /// <returns><see cref="string"/></returns>
@@ -797,7 +797,7 @@ namespace Kafka.Admin
                 return IExecute<string>("productElementName", x_1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicService.html#productPrefix()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicService.html#productPrefix()"/>
             /// </summary>
 
             /// <returns><see cref="string"/></returns>
@@ -806,7 +806,7 @@ namespace Kafka.Admin
                 return IExecute<string>("productPrefix");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicService.html#copy(org.apache.kafka.clients.admin.Admin)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicService.html#copy(org.apache.kafka.clients.admin.Admin)"/>
             /// </summary>
             /// <param name="adminClient"><see cref="Org.Apache.Kafka.Clients.Admin.Admin"/></param>
             /// <returns><see cref="Kafka.Admin.TopicCommand.TopicService"/></returns>
@@ -815,7 +815,7 @@ namespace Kafka.Admin
                 return IExecute<Kafka.Admin.TopicCommand.TopicService>("copy", adminClient);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicService.html#adminClient()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicService.html#adminClient()"/>
             /// </summary>
 
             /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.Admin"/></returns>
@@ -824,7 +824,7 @@ namespace Kafka.Admin
                 return IExecute<Org.Apache.Kafka.Clients.Admin.Admin>("adminClient");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicService.html#alterTopic(kafka.admin.TopicCommand.TopicCommandOptions)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicService.html#alterTopic(kafka.admin.TopicCommand.TopicCommandOptions)"/>
             /// </summary>
             /// <param name="opts"><see cref="Kafka.Admin.TopicCommand.TopicCommandOptions"/></param>
             public void AlterTopic(Kafka.Admin.TopicCommand.TopicCommandOptions opts)
@@ -832,14 +832,14 @@ namespace Kafka.Admin
                 IExecute("alterTopic", opts);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicService.html#close()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicService.html#close()"/>
             /// </summary>
             public void Close()
             {
                 IExecute("close");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicService.html#createTopic(kafka.admin.TopicCommand.CommandTopicPartition)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicService.html#createTopic(kafka.admin.TopicCommand.CommandTopicPartition)"/>
             /// </summary>
             /// <param name="topic"><see cref="Kafka.Admin.TopicCommand.CommandTopicPartition"/></param>
             public void CreateTopic(Kafka.Admin.TopicCommand.CommandTopicPartition topic)
@@ -847,7 +847,7 @@ namespace Kafka.Admin
                 IExecute("createTopic", topic);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicService.html#createTopic(kafka.admin.TopicCommand.TopicCommandOptions)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicService.html#createTopic(kafka.admin.TopicCommand.TopicCommandOptions)"/>
             /// </summary>
             /// <param name="opts"><see cref="Kafka.Admin.TopicCommand.TopicCommandOptions"/></param>
             public void CreateTopic(Kafka.Admin.TopicCommand.TopicCommandOptions opts)
@@ -855,7 +855,7 @@ namespace Kafka.Admin
                 IExecute("createTopic", opts);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicService.html#deleteTopic(kafka.admin.TopicCommand.TopicCommandOptions)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicService.html#deleteTopic(kafka.admin.TopicCommand.TopicCommandOptions)"/>
             /// </summary>
             /// <param name="opts"><see cref="Kafka.Admin.TopicCommand.TopicCommandOptions"/></param>
             public void DeleteTopic(Kafka.Admin.TopicCommand.TopicCommandOptions opts)
@@ -863,7 +863,7 @@ namespace Kafka.Admin
                 IExecute("deleteTopic", opts);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicService.html#describeTopic(kafka.admin.TopicCommand.TopicCommandOptions)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicService.html#describeTopic(kafka.admin.TopicCommand.TopicCommandOptions)"/>
             /// </summary>
             /// <param name="opts"><see cref="Kafka.Admin.TopicCommand.TopicCommandOptions"/></param>
             public void DescribeTopic(Kafka.Admin.TopicCommand.TopicCommandOptions opts)
@@ -871,7 +871,7 @@ namespace Kafka.Admin
                 IExecute("describeTopic", opts);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicService.html#listTopics(kafka.admin.TopicCommand.TopicCommandOptions)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.TopicService.html#listTopics(kafka.admin.TopicCommand.TopicCommandOptions)"/>
             /// </summary>
             /// <param name="opts"><see cref="Kafka.Admin.TopicCommand.TopicCommandOptions"/></param>
             public void ListTopics(Kafka.Admin.TopicCommand.TopicCommandOptions opts)

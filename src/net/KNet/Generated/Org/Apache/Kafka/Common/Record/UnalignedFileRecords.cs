@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Record
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/UnalignedFileRecords.html#%3Cinit%3E(java.nio.channels.FileChannel,long,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/UnalignedFileRecords.html#%3Cinit%3E(java.nio.channels.FileChannel,long,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.Channels.FileChannel"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -43,10 +43,6 @@ namespace Org.Apache.Kafka.Common.Record
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.Record.UnalignedFileRecords"/> to <see cref="Org.Apache.Kafka.Common.Record.UnalignedRecords"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Common.Record.UnalignedRecords(Org.Apache.Kafka.Common.Record.UnalignedFileRecords t) => t.Cast<Org.Apache.Kafka.Common.Record.UnalignedRecords>();
 
         #endregion
 
@@ -60,7 +56,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/UnalignedFileRecords.html#sizeInBytes()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/UnalignedFileRecords.html#sizeInBytes()"/>
         /// </summary>
 
         /// <returns><see cref="int"/></returns>
@@ -69,7 +65,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecute<int>("sizeInBytes");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/UnalignedFileRecords.html#writeTo(org.apache.kafka.common.network.TransferableChannel,long,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/UnalignedFileRecords.html#writeTo(org.apache.kafka.common.network.TransferableChannel,long,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Network.TransferableChannel"/></param>
         /// <param name="arg1"><see cref="long"/></param>

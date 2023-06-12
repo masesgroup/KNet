@@ -33,10 +33,6 @@ namespace Org.Apache.Kafka.Connect.Connector
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Connect.Connector.Connector"/> to <see cref="Org.Apache.Kafka.Connect.Components.Versioned"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Connect.Components.Versioned(Org.Apache.Kafka.Connect.Connector.Connector t) => t.Cast<Org.Apache.Kafka.Connect.Components.Versioned>();
 
         #endregion
 
@@ -50,7 +46,7 @@ namespace Org.Apache.Kafka.Connect.Connector
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/Connector.html#taskClass()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/Connector.html#taskClass()"/>
         /// </summary>
 
         /// <typeparam name="ReturnExtendsOrg_Apache_Kafka_Connect_Connector_Task"><see cref="Org.Apache.Kafka.Connect.Connector.Task"/></typeparam>
@@ -60,7 +56,7 @@ namespace Org.Apache.Kafka.Connect.Connector
             return IExecute<Java.Lang.Class>("taskClass");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/Connector.html#taskConfigs(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/Connector.html#taskConfigs(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -69,7 +65,7 @@ namespace Org.Apache.Kafka.Connect.Connector
             return IExecute<Java.Util.List<Java.Util.Map<string, string>>>("taskConfigs", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/Connector.html#config()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/Connector.html#config()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
@@ -78,7 +74,7 @@ namespace Org.Apache.Kafka.Connect.Connector
             return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("config");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/Connector.html#start(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/Connector.html#start(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Start(Java.Util.Map<string, string> arg0)
@@ -86,14 +82,14 @@ namespace Org.Apache.Kafka.Connect.Connector
             IExecute("start", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/Connector.html#stop()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/Connector.html#stop()"/>
         /// </summary>
         public void Stop()
         {
             IExecute("stop");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/Connector.html#validate(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/Connector.html#validate(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.Config"/></returns>
@@ -102,7 +98,7 @@ namespace Org.Apache.Kafka.Connect.Connector
             return IExecute<Org.Apache.Kafka.Common.Config.Config>("validate", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/Connector.html#initialize(org.apache.kafka.connect.connector.ConnectorContext,java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/Connector.html#initialize(org.apache.kafka.connect.connector.ConnectorContext,java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectorContext"/></param>
         /// <param name="arg1"><see cref="Java.Util.List"/></param>
@@ -111,7 +107,7 @@ namespace Org.Apache.Kafka.Connect.Connector
             IExecute("initialize", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/Connector.html#initialize(org.apache.kafka.connect.connector.ConnectorContext)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/Connector.html#initialize(org.apache.kafka.connect.connector.ConnectorContext)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectorContext"/></param>
         public void Initialize(Org.Apache.Kafka.Connect.Connector.ConnectorContext arg0)
@@ -119,7 +115,7 @@ namespace Org.Apache.Kafka.Connect.Connector
             IExecute("initialize", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/Connector.html#reconfigure(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/Connector.html#reconfigure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Reconfigure(Java.Util.Map<string, string> arg0)

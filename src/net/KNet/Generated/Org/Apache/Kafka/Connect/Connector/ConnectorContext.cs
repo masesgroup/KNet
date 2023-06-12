@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Connect.Connector
 {
+    #region IConnectorContext
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/ConnectorContext.html"/>
+    /// </summary>
+    public partial interface IConnectorContext
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region ConnectorContext
-    public partial class ConnectorContext
+    public partial class ConnectorContext : Org.Apache.Kafka.Connect.Connector.IConnectorContext
     {
         #region Constructors
 
@@ -46,15 +64,15 @@ namespace Org.Apache.Kafka.Connect.Connector
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/ConnectorContext.html#raiseError(java.lang.Exception)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/ConnectorContext.html#raiseError(java.lang.Exception)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Exception"/></param>
-        public void RaiseError(Java.Lang.Exception arg0)
+        public void RaiseError(MASES.JCOBridge.C2JBridge.JVMBridgeException arg0)
         {
             IExecute("raiseError", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/ConnectorContext.html#requestTaskReconfiguration()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/ConnectorContext.html#requestTaskReconfiguration()"/>
         /// </summary>
         public void RequestTaskReconfiguration()
         {

@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Network
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ListenerName.html#%3Cinit%3E(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ListenerName.html#%3Cinit%3E(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         public ListenerName(string arg0)
@@ -50,7 +50,7 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ListenerName.html#saslMechanismPrefix(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ListenerName.html#saslMechanismPrefix(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="string"/></returns>
@@ -59,7 +59,7 @@ namespace Org.Apache.Kafka.Common.Network
             return SExecute<string>(LocalBridgeClazz, "saslMechanismPrefix", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ListenerName.html#forSecurityProtocol(org.apache.kafka.common.security.auth.SecurityProtocol)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ListenerName.html#forSecurityProtocol(org.apache.kafka.common.security.auth.SecurityProtocol)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Network.ListenerName"/></returns>
@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Common.Network
             return SExecute<Org.Apache.Kafka.Common.Network.ListenerName>(LocalBridgeClazz, "forSecurityProtocol", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ListenerName.html#normalised(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ListenerName.html#normalised(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Network.ListenerName"/></returns>
@@ -81,7 +81,7 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ListenerName.html#configPrefix()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ListenerName.html#configPrefix()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -90,7 +90,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<string>("configPrefix");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ListenerName.html#saslMechanismConfigPrefix(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ListenerName.html#saslMechanismConfigPrefix(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="string"/></returns>
@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<string>("saslMechanismConfigPrefix", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ListenerName.html#value()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ListenerName.html#value()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>

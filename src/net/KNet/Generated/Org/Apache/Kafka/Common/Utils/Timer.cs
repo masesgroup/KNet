@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#isExpired()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#isExpired()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecute<bool>("isExpired");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#notExpired()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#notExpired()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecute<bool>("notExpired");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#currentTimeMs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#currentTimeMs()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecute<long>("currentTimeMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#elapsedMs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#elapsedMs()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -82,7 +82,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecute<long>("elapsedMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#remainingMs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#remainingMs()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecute<long>("remainingMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#timeoutMs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#timeoutMs()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecute<long>("timeoutMs");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#reset(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#reset(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         public void Reset(long arg0)
@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Common.Utils
             IExecute("reset", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#resetDeadline(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#resetDeadline(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         public void ResetDeadline(long arg0)
@@ -116,7 +116,7 @@ namespace Org.Apache.Kafka.Common.Utils
             IExecute("resetDeadline", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#sleep(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#sleep(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         public void Sleep(long arg0)
@@ -124,14 +124,14 @@ namespace Org.Apache.Kafka.Common.Utils
             IExecute("sleep", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#update()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#update()"/>
         /// </summary>
         public void Update()
         {
             IExecute("update");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#update(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#update(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         public void Update(long arg0)
@@ -139,7 +139,7 @@ namespace Org.Apache.Kafka.Common.Utils
             IExecute("update", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#updateAndReset(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Timer.html#updateAndReset(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         public void UpdateAndReset(long arg0)

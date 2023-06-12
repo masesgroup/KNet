@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Streams
 {
+    #region IThreadMetadata
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html"/>
+    /// </summary>
+    public partial interface IThreadMetadata
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region ThreadMetadata
-    public partial class ThreadMetadata
+    public partial class ThreadMetadata : Org.Apache.Kafka.Streams.IThreadMetadata
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Streams
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html#adminClientId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html#adminClientId()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -55,7 +73,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecute<string>("adminClientId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html#consumerClientId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html#consumerClientId()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -64,7 +82,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecute<string>("consumerClientId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html#restoreConsumerClientId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html#restoreConsumerClientId()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -73,7 +91,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecute<string>("restoreConsumerClientId");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html#threadName()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html#threadName()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -82,7 +100,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecute<string>("threadName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html#threadState()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html#threadState()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -91,7 +109,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecute<string>("threadState");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html#producerClientIds()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html#producerClientIds()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Set"/></returns>
@@ -100,7 +118,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecute<Java.Util.Set<string>>("producerClientIds");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html#activeTasks()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html#activeTasks()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Set"/></returns>
@@ -109,7 +127,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecute<Java.Util.Set<Org.Apache.Kafka.Streams.TaskMetadata>>("activeTasks");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html#standbyTasks()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html#standbyTasks()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Set"/></returns>

@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Clients
 {
+    #region IRequestCompletionHandler
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/RequestCompletionHandler.html"/>
+    /// </summary>
+    public partial interface IRequestCompletionHandler
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region RequestCompletionHandler
-    public partial class RequestCompletionHandler
+    public partial class RequestCompletionHandler : Org.Apache.Kafka.Clients.IRequestCompletionHandler
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Clients
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/RequestCompletionHandler.html#onComplete(org.apache.kafka.clients.ClientResponse)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/RequestCompletionHandler.html#onComplete(org.apache.kafka.clients.ClientResponse)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.ClientResponse"/></param>
         public void OnComplete(Org.Apache.Kafka.Clients.ClientResponse arg0)

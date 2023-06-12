@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TopicListing.html#%3Cinit%3E(java.lang.String,org.apache.kafka.common.Uuid,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TopicListing.html#%3Cinit%3E(java.lang.String,org.apache.kafka.common.Uuid,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Uuid"/></param>
@@ -56,7 +56,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TopicListing.html#isInternal()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TopicListing.html#isInternal()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -65,7 +65,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<bool>("isInternal");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TopicListing.html#name()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TopicListing.html#name()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecute<string>("name");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TopicListing.html#topicId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/TopicListing.html#topicId()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Uuid"/></returns>

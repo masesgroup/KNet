@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Config.Provider
 {
+    #region IConfigProvider
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/provider/ConfigProvider.html"/>
+    /// </summary>
+    public partial interface IConfigProvider
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region ConfigProvider
-    public partial class ConfigProvider
+    public partial class ConfigProvider : Org.Apache.Kafka.Common.Config.Provider.IConfigProvider, Org.Apache.Kafka.Common.IConfigurable, Java.Io.ICloseable
     {
         #region Constructors
 
@@ -54,7 +72,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/provider/ConfigProvider.html#get(java.lang.String,java.util.Set)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/provider/ConfigProvider.html#get(java.lang.String,java.util.Set)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Java.Util.Set"/></param>
@@ -64,7 +82,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
             return IExecute<Org.Apache.Kafka.Common.Config.ConfigData>("get", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/provider/ConfigProvider.html#get(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/provider/ConfigProvider.html#get(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigData"/></returns>
@@ -73,7 +91,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
             return IExecute<Org.Apache.Kafka.Common.Config.ConfigData>("get", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/provider/ConfigProvider.html#subscribe(java.lang.String,java.util.Set,org.apache.kafka.common.config.ConfigChangeCallback)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/provider/ConfigProvider.html#subscribe(java.lang.String,java.util.Set,org.apache.kafka.common.config.ConfigChangeCallback)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Java.Util.Set"/></param>
@@ -83,7 +101,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
             IExecute("subscribe", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/provider/ConfigProvider.html#unsubscribe(java.lang.String,java.util.Set,org.apache.kafka.common.config.ConfigChangeCallback)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/provider/ConfigProvider.html#unsubscribe(java.lang.String,java.util.Set,org.apache.kafka.common.config.ConfigChangeCallback)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Java.Util.Set"/></param>
@@ -93,7 +111,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
             IExecute("unsubscribe", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/provider/ConfigProvider.html#unsubscribeAll()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/provider/ConfigProvider.html#unsubscribeAll()"/>
         /// </summary>
         public void UnsubscribeAll()
         {

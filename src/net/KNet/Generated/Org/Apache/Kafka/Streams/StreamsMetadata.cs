@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Streams
 {
+    #region IStreamsMetadata
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsMetadata.html"/>
+    /// </summary>
+    public partial interface IStreamsMetadata
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region StreamsMetadata
-    public partial class StreamsMetadata
+    public partial class StreamsMetadata : Org.Apache.Kafka.Streams.IStreamsMetadata
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Streams
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsMetadata.html#port()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsMetadata.html#port()"/>
         /// </summary>
 
         /// <returns><see cref="int"/></returns>
@@ -55,7 +73,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecute<int>("port");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsMetadata.html#host()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsMetadata.html#host()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -64,7 +82,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecute<string>("host");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsMetadata.html#standbyStateStoreNames()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsMetadata.html#standbyStateStoreNames()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Set"/></returns>
@@ -73,7 +91,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecute<Java.Util.Set<string>>("standbyStateStoreNames");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsMetadata.html#stateStoreNames()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsMetadata.html#stateStoreNames()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Set"/></returns>
@@ -82,7 +100,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecute<Java.Util.Set<string>>("stateStoreNames");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsMetadata.html#standbyTopicPartitions()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsMetadata.html#standbyTopicPartitions()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Set"/></returns>
@@ -91,7 +109,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition>>("standbyTopicPartitions");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsMetadata.html#topicPartitions()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsMetadata.html#topicPartitions()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Set"/></returns>
@@ -100,7 +118,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition>>("topicPartitions");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsMetadata.html#hostInfo()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsMetadata.html#hostInfo()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.HostInfo"/></returns>

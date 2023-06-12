@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// <typeparam name="K">The key data associated to the event</typeparam>
     /// <typeparam name="V">The value data associated to the event</typeparam>
     /// <typeparam name="VR">The result data associated to the event</typeparam>
-    public interface IValueMapperWithKey<K, V, VR> : IJVMBridgeBase
+    public partial interface IValueMapperWithKey<K, V, VR> : IJVMBridgeBase
     {
         /// <summary>
         /// Executes the ValueMapperWithKey action in the CLR
@@ -76,41 +76,5 @@ namespace Org.Apache.Kafka.Streams.Kstream
             var retVal = OnApply(data.EventData.TypedEventData, data.EventData.To<V>(0));
             data.SetReturnValue(retVal);
         }
-        /// <summary>
-        /// Executes the ValueMapperWithKey action in the CLR
-        /// </summary>
-        /// <param name="readOnlyKey">The ValueMapperWithKey readOnlyKey</param>
-        /// <param name="value">The ValueMapperWithKey value</param>
-        /// <returns>The apply evaluation</returns>
-        public virtual VR Apply(K readOnlyKey, V value) { return default(VR); }
     }
-    /*
-    /// <summary>
-    /// Listener for Kafka ValueMapperWithKey. Extends <see cref="ValueMapperWithKeyImpl{K, V, VR}"/>
-    /// </summary>
-    /// <typeparam name="K">The key data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
-    /// <typeparam name="V">The value data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
-    /// <typeparam name="VR">The result data associated to the event as an <see cref="JVMBridgeBase"/> object</typeparam>
-    /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
-    public class JVMBridgeValueMapperWithKey<K, V, VR> : ValueMapperWithKeyImpl<K, V, VR>
-        where K : JVMBridgeBase, new()
-        where V : JVMBridgeBase, new()
-        where VR : JVMBridgeBase, new()
-    {
-        /// <summary>
-        /// Initialize a new instance of <see cref="JVMBridgeValueMapperWithKey{K, V, VR}"/>
-        /// </summary>
-        /// <param name="func">The <see cref="Func{K, V, VR}"/> to be executed</param>
-        public JVMBridgeValueMapperWithKey(Func<K, V, VR> func = null) : base(func, false)
-        {
-            AddEventHandler("apply", new EventHandler<CLRListenerEventArgs<JVMBridgeEventData<K>>>(EventHandler));
-        }
-
-        void EventHandler(object sender, CLRListenerEventArgs<JVMBridgeEventData<K>> data)
-        {
-            var retVal = OnApply(data.EventData.TypedEventData, data.EventData.To<V>(0));
-            data.CLRReturnValue = retVal?;
-        }
-    }
-    */
 }

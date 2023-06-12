@@ -29,22 +29,10 @@ namespace Org.Apache.Kafka.Connect.Storage
     public partial class MemoryConfigBackingStore
     {
         #region Constructors
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryConfigBackingStore.html#%3Cinit%3E(org.apache.kafka.connect.runtime.WorkerConfigTransformer)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Runtime.WorkerConfigTransformer"/></param>
-        public MemoryConfigBackingStore(Org.Apache.Kafka.Connect.Runtime.WorkerConfigTransformer arg0)
-            : base(arg0)
-        {
-        }
 
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Connect.Storage.MemoryConfigBackingStore"/> to <see cref="Org.Apache.Kafka.Connect.Storage.ConfigBackingStore"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Connect.Storage.ConfigBackingStore(Org.Apache.Kafka.Connect.Storage.MemoryConfigBackingStore t) => t.Cast<Org.Apache.Kafka.Connect.Storage.ConfigBackingStore>();
 
         #endregion
 
@@ -58,7 +46,7 @@ namespace Org.Apache.Kafka.Connect.Storage
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryConfigBackingStore.html#contains(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryConfigBackingStore.html#contains(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -67,7 +55,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return IExecute<bool>("contains", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryConfigBackingStore.html#snapshot()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryConfigBackingStore.html#snapshot()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Connect.Storage.ClusterConfigState"/></returns>
@@ -76,7 +64,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return IExecute<Org.Apache.Kafka.Connect.Storage.ClusterConfigState>("snapshot");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryConfigBackingStore.html#putConnectorConfig(java.lang.String,java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryConfigBackingStore.html#putConnectorConfig(java.lang.String,java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
@@ -85,16 +73,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             IExecute("putConnectorConfig", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryConfigBackingStore.html#putTargetState(java.lang.String,org.apache.kafka.connect.runtime.TargetState)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Connect.Runtime.TargetState"/></param>
-        public void PutTargetState(string arg0, Org.Apache.Kafka.Connect.Runtime.TargetState arg1)
-        {
-            IExecute("putTargetState", arg0, arg1);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryConfigBackingStore.html#putTaskConfigs(java.lang.String,java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryConfigBackingStore.html#putTaskConfigs(java.lang.String,java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Java.Util.List"/></param>
@@ -103,7 +82,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             IExecute("putTaskConfigs", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryConfigBackingStore.html#removeConnectorConfig(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryConfigBackingStore.html#removeConnectorConfig(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         public void RemoveConnectorConfig(string arg0)
@@ -111,7 +90,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             IExecute("removeConnectorConfig", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryConfigBackingStore.html#removeTaskConfigs(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryConfigBackingStore.html#removeTaskConfigs(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         public void RemoveTaskConfigs(string arg0)
@@ -119,7 +98,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             IExecute("removeTaskConfigs", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryConfigBackingStore.html#setUpdateListener(org.apache.kafka.connect.storage.ConfigBackingStore.UpdateListener)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryConfigBackingStore.html#setUpdateListener(org.apache.kafka.connect.storage.ConfigBackingStore.UpdateListener)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Storage.ConfigBackingStore.UpdateListener"/></param>
         public void SetUpdateListener(Org.Apache.Kafka.Connect.Storage.ConfigBackingStore.UpdateListener arg0)
@@ -127,37 +106,21 @@ namespace Org.Apache.Kafka.Connect.Storage
             IExecute("setUpdateListener", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryConfigBackingStore.html#start()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryConfigBackingStore.html#start()"/>
         /// </summary>
         public void Start()
         {
             IExecute("start");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryConfigBackingStore.html#stop()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryConfigBackingStore.html#stop()"/>
         /// </summary>
         public void Stop()
         {
             IExecute("stop");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryConfigBackingStore.html#putRestartRequest(org.apache.kafka.connect.runtime.RestartRequest)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Runtime.RestartRequest"/></param>
-        public void PutRestartRequest(Org.Apache.Kafka.Connect.Runtime.RestartRequest arg0)
-        {
-            IExecute("putRestartRequest", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryConfigBackingStore.html#putSessionKey(org.apache.kafka.connect.runtime.SessionKey)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Runtime.SessionKey"/></param>
-        public void PutSessionKey(Org.Apache.Kafka.Connect.Runtime.SessionKey arg0)
-        {
-            IExecute("putSessionKey", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryConfigBackingStore.html#putTaskCountRecord(java.lang.String,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryConfigBackingStore.html#putTaskCountRecord(java.lang.String,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -166,7 +129,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             IExecute("putTaskCountRecord", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryConfigBackingStore.html#refresh(long,java.util.concurrent.TimeUnit)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryConfigBackingStore.html#refresh(long,java.util.concurrent.TimeUnit)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="Java.Util.Concurrent.TimeUnit"/></param>

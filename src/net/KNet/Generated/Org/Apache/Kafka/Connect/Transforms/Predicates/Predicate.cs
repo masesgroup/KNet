@@ -54,7 +54,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/transforms/predicates/Predicate.html#test(org.apache.kafka.connect.connector.ConnectRecord)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/transforms/predicates/Predicate.html#test(org.apache.kafka.connect.connector.ConnectRecord)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -63,7 +63,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
             return IExecute<bool>("test", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/transforms/predicates/Predicate.html#config()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/transforms/predicates/Predicate.html#config()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
@@ -72,7 +72,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
             return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("config");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/transforms/predicates/Predicate.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/transforms/predicates/Predicate.html#close()"/>
         /// </summary>
         public void Close()
         {
@@ -89,8 +89,26 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
     }
     #endregion
 
+    #region IPredicate<R>
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/transforms/predicates/Predicate.html"/>
+    /// </summary>
+    public partial interface IPredicate<R>
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region Predicate<R>
-    public partial class Predicate<R>
+    public partial class Predicate<R> : Org.Apache.Kafka.Connect.Transforms.Predicates.IPredicate<R>, Org.Apache.Kafka.Common.IConfigurable, Java.Lang.IAutoCloseable
     {
         #region Constructors
 
@@ -122,7 +140,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/transforms/predicates/Predicate.html#test(org.apache.kafka.connect.connector.ConnectRecord)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/transforms/predicates/Predicate.html#test(org.apache.kafka.connect.connector.ConnectRecord)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="R"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -131,7 +149,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
             return IExecute<bool>("test", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/transforms/predicates/Predicate.html#config()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/transforms/predicates/Predicate.html#config()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
@@ -140,7 +158,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
             return IExecute<Org.Apache.Kafka.Common.Config.ConfigDef>("config");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/transforms/predicates/Predicate.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/transforms/predicates/Predicate.html#close()"/>
         /// </summary>
         public void Close()
         {

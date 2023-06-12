@@ -33,36 +33,32 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.Security.Oauthbearer.OAuthBearerLoginCallbackHandler"/> to <see cref="Org.Apache.Kafka.Common.Security.Auth.AuthenticateCallbackHandler"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Common.Security.Auth.AuthenticateCallbackHandler(Org.Apache.Kafka.Common.Security.Oauthbearer.OAuthBearerLoginCallbackHandler t) => t.Cast<Org.Apache.Kafka.Common.Security.Auth.AuthenticateCallbackHandler>();
 
         #endregion
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#CLIENT_ID_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#CLIENT_ID_CONFIG"/>
         /// </summary>
         public static string CLIENT_ID_CONFIG { get { return SGetField<string>(LocalBridgeClazz, "CLIENT_ID_CONFIG"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#CLIENT_ID_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#CLIENT_ID_DOC"/>
         /// </summary>
         public static string CLIENT_ID_DOC { get { return SGetField<string>(LocalBridgeClazz, "CLIENT_ID_DOC"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#CLIENT_SECRET_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#CLIENT_SECRET_CONFIG"/>
         /// </summary>
         public static string CLIENT_SECRET_CONFIG { get { return SGetField<string>(LocalBridgeClazz, "CLIENT_SECRET_CONFIG"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#CLIENT_SECRET_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#CLIENT_SECRET_DOC"/>
         /// </summary>
         public static string CLIENT_SECRET_DOC { get { return SGetField<string>(LocalBridgeClazz, "CLIENT_SECRET_DOC"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#SCOPE_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#SCOPE_CONFIG"/>
         /// </summary>
         public static string SCOPE_CONFIG { get { return SGetField<string>(LocalBridgeClazz, "SCOPE_CONFIG"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#SCOPE_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#SCOPE_DOC"/>
         /// </summary>
         public static string SCOPE_DOC { get { return SGetField<string>(LocalBridgeClazz, "SCOPE_DOC"); } }
 
@@ -74,25 +70,24 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecute("close");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#configure(java.util.Map,java.lang.String,java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#configure(java.util.Map,java.lang.String,java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="string"/></param>
         /// <param name="arg2"><see cref="Java.Util.List"/></param>
-        /// <typeparam name="Arg0Extendsobject"></typeparam>
-        public void Configure<Arg0Extendsobject>(Java.Util.Map<string, Arg0Extendsobject> arg0, string arg1, Java.Util.List<Javax.Security.Auth.Login.AppConfigurationEntry> arg2)
+        public void Configure(Java.Util.Map<string, object> arg0, string arg1, Java.Util.List<Javax.Security.Auth.Login.AppConfigurationEntry> arg2)
         {
             IExecute("configure", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#handle(javax.security.auth.callback.Callback[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#handle(javax.security.auth.callback.Callback[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Javax.Security.Auth.Callback.Callback"/></param>
         /// <exception cref="Java.Io.IOException"/>

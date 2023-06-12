@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Connect.Sink
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/sink/SinkRecord.html#%3Cinit%3E(java.lang.String,int,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,long,java.lang.Long,org.apache.kafka.common.record.TimestampType,java.lang.Iterable)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/sink/SinkRecord.html#%3Cinit%3E(java.lang.String,int,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,long,java.lang.Long,org.apache.kafka.common.record.TimestampType,java.lang.Iterable)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -47,7 +47,7 @@ namespace Org.Apache.Kafka.Connect.Sink
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/sink/SinkRecord.html#%3Cinit%3E(java.lang.String,int,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,long,java.lang.Long,org.apache.kafka.common.record.TimestampType)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/sink/SinkRecord.html#%3Cinit%3E(java.lang.String,int,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,long,java.lang.Long,org.apache.kafka.common.record.TimestampType)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -63,7 +63,7 @@ namespace Org.Apache.Kafka.Connect.Sink
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/sink/SinkRecord.html#%3Cinit%3E(java.lang.String,int,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/sink/SinkRecord.html#%3Cinit%3E(java.lang.String,int,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -93,7 +93,7 @@ namespace Org.Apache.Kafka.Connect.Sink
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/sink/SinkRecord.html#kafkaOffset()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/sink/SinkRecord.html#kafkaOffset()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -102,7 +102,7 @@ namespace Org.Apache.Kafka.Connect.Sink
             return IExecute<long>("kafkaOffset");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/sink/SinkRecord.html#timestampType()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/sink/SinkRecord.html#timestampType()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.TimestampType"/></returns>

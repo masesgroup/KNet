@@ -33,10 +33,6 @@ namespace Org.Apache.Kafka.Connect.Storage
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Connect.Storage.ConnectorOffsetBackingStore"/> to <see cref="Org.Apache.Kafka.Connect.Storage.OffsetBackingStore"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Connect.Storage.OffsetBackingStore(Org.Apache.Kafka.Connect.Storage.ConnectorOffsetBackingStore t) => t.Cast<Org.Apache.Kafka.Connect.Storage.OffsetBackingStore>();
 
         #endregion
 
@@ -46,7 +42,7 @@ namespace Org.Apache.Kafka.Connect.Storage
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ConnectorOffsetBackingStore.html#withConnectorAndWorkerStores(java.util.function.Supplier,org.apache.kafka.connect.storage.OffsetBackingStore,org.apache.kafka.connect.storage.KafkaOffsetBackingStore,java.lang.String,org.apache.kafka.connect.util.TopicAdmin)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ConnectorOffsetBackingStore.html#withConnectorAndWorkerStores(java.util.function.Supplier,org.apache.kafka.connect.storage.OffsetBackingStore,org.apache.kafka.connect.storage.KafkaOffsetBackingStore,java.lang.String,org.apache.kafka.connect.util.TopicAdmin)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Function.Supplier"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Connect.Storage.OffsetBackingStore"/></param>
@@ -59,7 +55,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return SExecute<Org.Apache.Kafka.Connect.Storage.ConnectorOffsetBackingStore>(LocalBridgeClazz, "withConnectorAndWorkerStores", arg0, arg1, arg2, arg3, arg4);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ConnectorOffsetBackingStore.html#withOnlyConnectorStore(java.util.function.Supplier,org.apache.kafka.connect.storage.KafkaOffsetBackingStore,java.lang.String,org.apache.kafka.connect.util.TopicAdmin)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ConnectorOffsetBackingStore.html#withOnlyConnectorStore(java.util.function.Supplier,org.apache.kafka.connect.storage.KafkaOffsetBackingStore,java.lang.String,org.apache.kafka.connect.util.TopicAdmin)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Function.Supplier"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Connect.Storage.KafkaOffsetBackingStore"/></param>
@@ -71,7 +67,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return SExecute<Org.Apache.Kafka.Connect.Storage.ConnectorOffsetBackingStore>(LocalBridgeClazz, "withOnlyConnectorStore", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ConnectorOffsetBackingStore.html#withOnlyWorkerStore(java.util.function.Supplier,org.apache.kafka.connect.storage.OffsetBackingStore,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ConnectorOffsetBackingStore.html#withOnlyWorkerStore(java.util.function.Supplier,org.apache.kafka.connect.storage.OffsetBackingStore,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Function.Supplier"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Connect.Storage.OffsetBackingStore"/></param>
@@ -86,7 +82,7 @@ namespace Org.Apache.Kafka.Connect.Storage
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ConnectorOffsetBackingStore.html#hasConnectorSpecificStore()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ConnectorOffsetBackingStore.html#hasConnectorSpecificStore()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -95,7 +91,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return IExecute<bool>("hasConnectorSpecificStore");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ConnectorOffsetBackingStore.html#hasWorkerGlobalStore()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ConnectorOffsetBackingStore.html#hasWorkerGlobalStore()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -104,7 +100,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return IExecute<bool>("hasWorkerGlobalStore");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ConnectorOffsetBackingStore.html#primaryOffsetsTopic()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ConnectorOffsetBackingStore.html#primaryOffsetsTopic()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -113,7 +109,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return IExecute<string>("primaryOffsetsTopic");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ConnectorOffsetBackingStore.html#set(java.util.Map,org.apache.kafka.connect.util.Callback)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ConnectorOffsetBackingStore.html#set(java.util.Map,org.apache.kafka.connect.util.Callback)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Connect.Util.Callback"/></param>
@@ -123,7 +119,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return IExecute<Java.Util.Concurrent.Future<Java.Lang.Void>>("set", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ConnectorOffsetBackingStore.html#get(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ConnectorOffsetBackingStore.html#get(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Java.Util.Concurrent.Future"/></returns>
@@ -132,22 +128,14 @@ namespace Org.Apache.Kafka.Connect.Storage
             return IExecute<Java.Util.Concurrent.Future<Java.Util.Map<Java.Nio.ByteBuffer, Java.Nio.ByteBuffer>>>("get", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ConnectorOffsetBackingStore.html#configure(org.apache.kafka.connect.runtime.WorkerConfig)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Runtime.WorkerConfig"/></param>
-        public void Configure(Org.Apache.Kafka.Connect.Runtime.WorkerConfig arg0)
-        {
-            IExecute("configure", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ConnectorOffsetBackingStore.html#start()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ConnectorOffsetBackingStore.html#start()"/>
         /// </summary>
         public void Start()
         {
             IExecute("start");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ConnectorOffsetBackingStore.html#stop()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/ConnectorOffsetBackingStore.html#stop()"/>
         /// </summary>
         public void Stop()
         {

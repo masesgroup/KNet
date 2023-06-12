@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Streams
 {
+    #region ITaskMetadata
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TaskMetadata.html"/>
+    /// </summary>
+    public partial interface ITaskMetadata
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region TaskMetadata
-    public partial class TaskMetadata
+    public partial class TaskMetadata : Org.Apache.Kafka.Streams.ITaskMetadata
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Streams
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TaskMetadata.html#committedOffsets()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TaskMetadata.html#committedOffsets()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -55,7 +73,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?>>("committedOffsets");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TaskMetadata.html#endOffsets()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TaskMetadata.html#endOffsets()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -64,7 +82,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?>>("endOffsets");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TaskMetadata.html#timeCurrentIdlingStarted()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TaskMetadata.html#timeCurrentIdlingStarted()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Optional"/></returns>
@@ -73,7 +91,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecute<Java.Util.Optional<long?>>("timeCurrentIdlingStarted");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TaskMetadata.html#topicPartitions()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TaskMetadata.html#topicPartitions()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Set"/></returns>
@@ -82,7 +100,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecute<Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition>>("topicPartitions");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TaskMetadata.html#taskId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/TaskMetadata.html#taskId()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.TaskId"/></returns>

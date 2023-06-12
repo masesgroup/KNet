@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Config
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigValue.html#%3Cinit%3E(java.lang.String,java.lang.Object,java.util.List,java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigValue.html#%3Cinit%3E(java.lang.String,java.lang.Object,java.util.List,java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -41,7 +41,7 @@ namespace Org.Apache.Kafka.Common.Config
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigValue.html#%3Cinit%3E(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigValue.html#%3Cinit%3E(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         public ConfigValue(string arg0)
@@ -65,7 +65,7 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigValue.html#visible()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigValue.html#visible()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecute<bool>("visible");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigValue.html#value()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigValue.html#value()"/>
         /// </summary>
 
         /// <returns><see cref="object"/></returns>
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecute("value");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigValue.html#name()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigValue.html#name()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -92,7 +92,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecute<string>("name");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigValue.html#recommendedValues()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigValue.html#recommendedValues()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -101,7 +101,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecute<Java.Util.List<object>>("recommendedValues");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigValue.html#errorMessages()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigValue.html#errorMessages()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecute<Java.Util.List<string>>("errorMessages");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigValue.html#addErrorMessage(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigValue.html#addErrorMessage(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         public void AddErrorMessage(string arg0)
@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Common.Config
             IExecute("addErrorMessage", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigValue.html#recommendedValues(java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigValue.html#recommendedValues(java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         public void RecommendedValues(Java.Util.List<object> arg0)
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Common.Config
             IExecute("recommendedValues", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigValue.html#value(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigValue.html#value(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         public void Value(object arg0)
@@ -134,7 +134,7 @@ namespace Org.Apache.Kafka.Common.Config
             IExecute("value", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigValue.html#visible(boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigValue.html#visible(boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         public void Visible(bool arg0)

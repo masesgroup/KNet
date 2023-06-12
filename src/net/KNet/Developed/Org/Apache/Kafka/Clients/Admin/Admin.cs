@@ -27,9 +27,9 @@ using Java.Util;
 
 namespace Org.Apache.Kafka.Clients.Admin
 {
-    public interface IAdmin : IJVMBridgeBase, System.IDisposable
+    public partial interface IAdmin : IJVMBridgeBase, System.IDisposable
     {
-        Map<MetricName, Metric> Metrics { get; }
+        Map<MetricName, T> Metrics<T>() where T : Metric;
 
         void Close();
 
@@ -83,9 +83,9 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         AlterReplicaLogDirsResult AlterReplicaLogDirs(Map<TopicPartitionReplica, string> replicaAssignment, AlterReplicaLogDirsOptions options);
 
-        DescribeLogDirsResult DescribeLogDirs(Collection<int> brokers);
+        DescribeLogDirsResult DescribeLogDirs(Collection<int?> brokers);
 
-        DescribeLogDirsResult DescribeLogDirs(Collection<int> brokers, DescribeLogDirsOptions options);
+        DescribeLogDirsResult DescribeLogDirs(Collection<int?> brokers, DescribeLogDirsOptions options);
 
         DescribeReplicaLogDirsResult DescribeReplicaLogDirs(Collection<TopicPartitionReplica> replicas);
 

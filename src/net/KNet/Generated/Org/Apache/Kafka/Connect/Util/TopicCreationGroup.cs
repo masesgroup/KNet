@@ -41,21 +41,12 @@ namespace Org.Apache.Kafka.Connect.Util
         #endregion
 
         #region Static methods
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/TopicCreationGroup.html#configuredGroups(org.apache.kafka.connect.runtime.SourceConnectorConfig)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Runtime.SourceConnectorConfig"/></param>
-        /// <returns><see cref="Java.Util.Map"/></returns>
-        public static Java.Util.Map<string, Org.Apache.Kafka.Connect.Util.TopicCreationGroup> ConfiguredGroups(Org.Apache.Kafka.Connect.Runtime.SourceConnectorConfig arg0)
-        {
-            return SExecute<Java.Util.Map<string, Org.Apache.Kafka.Connect.Util.TopicCreationGroup>>(LocalBridgeClazz, "configuredGroups", arg0);
-        }
 
         #endregion
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/TopicCreationGroup.html#matches(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/TopicCreationGroup.html#matches(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -64,7 +55,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecute<bool>("matches", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/TopicCreationGroup.html#name()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/TopicCreationGroup.html#name()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -73,7 +64,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecute<string>("name");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/TopicCreationGroup.html#newTopic(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/TopicCreationGroup.html#newTopic(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.NewTopic"/></returns>

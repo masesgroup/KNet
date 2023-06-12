@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Protocol
 {
     #region ApiKeys
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiKeys.html"/>
     /// </summary>
     public partial class ApiKeys : Java.Lang.Enum<Org.Apache.Kafka.Common.Protocol.ApiKeys>, IJNetBridgeMain
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Common.Protocol
 
     #region ApiMessage
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiMessage.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ApiMessage.html"/>
     /// </summary>
     public partial class ApiMessage : Org.Apache.Kafka.Common.Protocol.Message
     {
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Common.Protocol
 
     #region ByteBufferAccessor
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ByteBufferAccessor.html"/>
     /// </summary>
     public partial class ByteBufferAccessor : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ByteBufferAccessor>
     {
@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Common.Protocol
 
     #region DataOutputStreamWritable
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/DataOutputStreamWritable.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/DataOutputStreamWritable.html"/>
     /// </summary>
     public partial class DataOutputStreamWritable : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DataOutputStreamWritable>
     {
@@ -199,7 +199,7 @@ namespace Org.Apache.Kafka.Common.Protocol
 
     #region Errors
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Errors.html"/>
     /// </summary>
     public partial class Errors : Java.Lang.Enum<Org.Apache.Kafka.Common.Protocol.Errors>, IJNetBridgeMain
     {
@@ -242,7 +242,7 @@ namespace Org.Apache.Kafka.Common.Protocol
 
     #region Message
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Message.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Message.html"/>
     /// </summary>
     public partial class Message : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Message>
     {
@@ -285,7 +285,7 @@ namespace Org.Apache.Kafka.Common.Protocol
 
     #region MessageSizeAccumulator
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageSizeAccumulator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageSizeAccumulator.html"/>
     /// </summary>
     public partial class MessageSizeAccumulator : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MessageSizeAccumulator>
     {
@@ -328,7 +328,7 @@ namespace Org.Apache.Kafka.Common.Protocol
 
     #region MessageUtil
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageUtil.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/MessageUtil.html"/>
     /// </summary>
     public partial class MessageUtil : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MessageUtil>
     {
@@ -371,7 +371,7 @@ namespace Org.Apache.Kafka.Common.Protocol
 
     #region ObjectSerializationCache
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ObjectSerializationCache.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/ObjectSerializationCache.html"/>
     /// </summary>
     public partial class ObjectSerializationCache : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ObjectSerializationCache>
     {
@@ -414,7 +414,7 @@ namespace Org.Apache.Kafka.Common.Protocol
 
     #region Protocol
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Protocol.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Protocol.html"/>
     /// </summary>
     public partial class Protocol : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Protocol>, IJNetBridgeMain
     {
@@ -457,7 +457,7 @@ namespace Org.Apache.Kafka.Common.Protocol
 
     #region Readable
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Readable.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Readable.html"/>
     /// </summary>
     public partial class Readable : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Readable>
     {
@@ -500,9 +500,9 @@ namespace Org.Apache.Kafka.Common.Protocol
 
     #region SendBuilder
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/SendBuilder.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/SendBuilder.html"/>
     /// </summary>
-    public partial class SendBuilder : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SendBuilder>
+    public partial class SendBuilder : Org.Apache.Kafka.Common.Protocol.Writable
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -543,7 +543,7 @@ namespace Org.Apache.Kafka.Common.Protocol
 
     #region Writable
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Writable.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/Writable.html"/>
     /// </summary>
     public partial class Writable : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Writable>
     {
@@ -583,6 +583,7 @@ namespace Org.Apache.Kafka.Common.Protocol
 
     }
     #endregion
+
 
 
 }

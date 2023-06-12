@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#approximateNumEntries()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#approximateNumEntries()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<long>("approximateNumEntries");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#all()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#all()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.KeyValueIterator"/></returns>
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator>("all");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#range(java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#range(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator>("range", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#get(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#get(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="object"/></returns>
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute("get", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#prefixScan(java.lang.Object,org.apache.kafka.common.serialization.Serializer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#prefixScan(java.lang.Object,org.apache.kafka.common.serialization.Serializer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Serializer"/></param>
@@ -93,7 +93,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator>("prefixScan", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseAll()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseAll()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.KeyValueIterator"/></returns>
@@ -102,7 +102,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator>("reverseAll");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseRange(java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseRange(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -122,8 +122,26 @@ namespace Org.Apache.Kafka.Streams.State
     }
     #endregion
 
+    #region IReadOnlyKeyValueStore<K, V>
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html"/>
+    /// </summary>
+    public partial interface IReadOnlyKeyValueStore<K, V>
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region ReadOnlyKeyValueStore<K, V>
-    public partial class ReadOnlyKeyValueStore<K, V>
+    public partial class ReadOnlyKeyValueStore<K, V> : Org.Apache.Kafka.Streams.State.IReadOnlyKeyValueStore<K, V>
     {
         #region Constructors
 
@@ -147,7 +165,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#approximateNumEntries()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#approximateNumEntries()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>
@@ -156,7 +174,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<long>("approximateNumEntries");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#all()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#all()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.KeyValueIterator"/></returns>
@@ -165,7 +183,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator<K, V>>("all");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#range(java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#range(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><typeparamref name="K"/></param>
@@ -175,7 +193,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator<K, V>>("range", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#get(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#get(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <returns><typeparamref name="V"/></returns>
@@ -184,7 +202,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<V>("get", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#prefixScan(java.lang.Object,org.apache.kafka.common.serialization.Serializer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#prefixScan(java.lang.Object,org.apache.kafka.common.serialization.Serializer)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="P"/></param>
         /// <param name="arg1"><typeparamref name="PS"/></param>
@@ -196,7 +214,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator<K, V>>("prefixScan", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseAll()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseAll()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.KeyValueIterator"/></returns>
@@ -205,7 +223,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecute<Org.Apache.Kafka.Streams.State.KeyValueIterator<K, V>>("reverseAll");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseRange(java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseRange(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><typeparamref name="K"/></param>

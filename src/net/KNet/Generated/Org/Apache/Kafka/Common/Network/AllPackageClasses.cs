@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Network
 {
     #region Authenticator
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Authenticator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Authenticator.html"/>
     /// </summary>
     public partial class Authenticator : Java.Io.Closeable
     {
@@ -70,9 +70,9 @@ namespace Org.Apache.Kafka.Common.Network
 
     #region ByteBufferSend
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ByteBufferSend.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ByteBufferSend.html"/>
     /// </summary>
-    public partial class ByteBufferSend : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ByteBufferSend>
+    public partial class ByteBufferSend : Org.Apache.Kafka.Common.Network.Send
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Common.Network
 
     #region ChannelBuilder
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelBuilder.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelBuilder.html"/>
     /// </summary>
     public partial class ChannelBuilder : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ChannelBuilder>
     {
@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Common.Network
 
     #region ChannelBuilders
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelBuilders.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelBuilders.html"/>
     /// </summary>
     public partial class ChannelBuilders : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ChannelBuilders>
     {
@@ -199,7 +199,7 @@ namespace Org.Apache.Kafka.Common.Network
 
     #region ChannelMetadataRegistry
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelMetadataRegistry.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelMetadataRegistry.html"/>
     /// </summary>
     public partial class ChannelMetadataRegistry : Java.Io.Closeable
     {
@@ -242,7 +242,7 @@ namespace Org.Apache.Kafka.Common.Network
 
     #region ChannelState
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.html"/>
     /// </summary>
     public partial class ChannelState : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ChannelState>
     {
@@ -281,7 +281,7 @@ namespace Org.Apache.Kafka.Common.Network
         // TODO: complete the class
         #region State
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.State.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelState.State.html"/>
         /// </summary>
         public partial class State : Java.Lang.Enum<Org.Apache.Kafka.Common.Network.ChannelState.State>
         {
@@ -328,7 +328,7 @@ namespace Org.Apache.Kafka.Common.Network
 
     #region CipherInformation
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/CipherInformation.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/CipherInformation.html"/>
     /// </summary>
     public partial class CipherInformation : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CipherInformation>
     {
@@ -371,7 +371,7 @@ namespace Org.Apache.Kafka.Common.Network
 
     #region ClientInformation
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ClientInformation.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ClientInformation.html"/>
     /// </summary>
     public partial class ClientInformation : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ClientInformation>
     {
@@ -414,9 +414,9 @@ namespace Org.Apache.Kafka.Common.Network
 
     #region DefaultChannelMetadataRegistry
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/DefaultChannelMetadataRegistry.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/DefaultChannelMetadataRegistry.html"/>
     /// </summary>
-    public partial class DefaultChannelMetadataRegistry : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DefaultChannelMetadataRegistry>
+    public partial class DefaultChannelMetadataRegistry : Org.Apache.Kafka.Common.Network.ChannelMetadataRegistry
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -457,7 +457,7 @@ namespace Org.Apache.Kafka.Common.Network
 
     #region DelayedResponseAuthenticationException
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/DelayedResponseAuthenticationException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/DelayedResponseAuthenticationException.html"/>
     /// </summary>
     public partial class DelayedResponseAuthenticationException : Org.Apache.Kafka.Common.Errors.AuthenticationException
     {
@@ -473,7 +473,7 @@ namespace Org.Apache.Kafka.Common.Network
 
     #region InvalidReceiveException
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/InvalidReceiveException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/InvalidReceiveException.html"/>
     /// </summary>
     public partial class InvalidReceiveException : Org.Apache.Kafka.Common.KafkaException
     {
@@ -489,9 +489,9 @@ namespace Org.Apache.Kafka.Common.Network
 
     #region KafkaChannel
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.html"/>
     /// </summary>
-    public partial class KafkaChannel : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KafkaChannel>
+    public partial class KafkaChannel : Java.Lang.AutoCloseable
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -528,7 +528,7 @@ namespace Org.Apache.Kafka.Common.Network
         // TODO: complete the class
         #region ChannelMuteEvent
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteEvent.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteEvent.html"/>
         /// </summary>
         public partial class ChannelMuteEvent : Java.Lang.Enum<Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteEvent>
         {
@@ -571,7 +571,7 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region ChannelMuteState
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteState.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/KafkaChannel.ChannelMuteState.html"/>
         /// </summary>
         public partial class ChannelMuteState : Java.Lang.Enum<Org.Apache.Kafka.Common.Network.KafkaChannel.ChannelMuteState>
         {
@@ -618,7 +618,7 @@ namespace Org.Apache.Kafka.Common.Network
 
     #region ListenerName
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ListenerName.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ListenerName.html"/>
     /// </summary>
     public partial class ListenerName : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ListenerName>
     {
@@ -661,7 +661,7 @@ namespace Org.Apache.Kafka.Common.Network
 
     #region ListenerReconfigurable
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ListenerReconfigurable.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ListenerReconfigurable.html"/>
     /// </summary>
     public partial class ListenerReconfigurable : Org.Apache.Kafka.Common.Reconfigurable
     {
@@ -704,7 +704,7 @@ namespace Org.Apache.Kafka.Common.Network
 
     #region Mode
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Mode.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Mode.html"/>
     /// </summary>
     public partial class Mode : Java.Lang.Enum<Org.Apache.Kafka.Common.Network.Mode>
     {
@@ -747,9 +747,9 @@ namespace Org.Apache.Kafka.Common.Network
 
     #region NetworkReceive
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html"/>
     /// </summary>
-    public partial class NetworkReceive : MASES.JCOBridge.C2JBridge.JVMBridgeBase<NetworkReceive>
+    public partial class NetworkReceive : Org.Apache.Kafka.Common.Network.Receive
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -790,9 +790,9 @@ namespace Org.Apache.Kafka.Common.Network
 
     #region NetworkSend
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkSend.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkSend.html"/>
     /// </summary>
-    public partial class NetworkSend : MASES.JCOBridge.C2JBridge.JVMBridgeBase<NetworkSend>
+    public partial class NetworkSend : Org.Apache.Kafka.Common.Network.Send
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -833,9 +833,9 @@ namespace Org.Apache.Kafka.Common.Network
 
     #region PlaintextChannelBuilder
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/PlaintextChannelBuilder.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/PlaintextChannelBuilder.html"/>
     /// </summary>
-    public partial class PlaintextChannelBuilder : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PlaintextChannelBuilder>
+    public partial class PlaintextChannelBuilder : Org.Apache.Kafka.Common.Network.ChannelBuilder
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -876,9 +876,9 @@ namespace Org.Apache.Kafka.Common.Network
 
     #region PlaintextTransportLayer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/PlaintextTransportLayer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/PlaintextTransportLayer.html"/>
     /// </summary>
-    public partial class PlaintextTransportLayer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PlaintextTransportLayer>
+    public partial class PlaintextTransportLayer : Org.Apache.Kafka.Common.Network.TransportLayer
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -919,7 +919,7 @@ namespace Org.Apache.Kafka.Common.Network
 
     #region ReauthenticationContext
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ReauthenticationContext.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ReauthenticationContext.html"/>
     /// </summary>
     public partial class ReauthenticationContext : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ReauthenticationContext>
     {
@@ -962,7 +962,7 @@ namespace Org.Apache.Kafka.Common.Network
 
     #region Receive
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Receive.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Receive.html"/>
     /// </summary>
     public partial class Receive : Java.Io.Closeable
     {
@@ -1005,7 +1005,7 @@ namespace Org.Apache.Kafka.Common.Network
 
     #region SaslChannelBuilder
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SaslChannelBuilder.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SaslChannelBuilder.html"/>
     /// </summary>
     public partial class SaslChannelBuilder : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SaslChannelBuilder>
     {
@@ -1048,7 +1048,7 @@ namespace Org.Apache.Kafka.Common.Network
 
     #region Selectable
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html"/>
     /// </summary>
     public partial class Selectable : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Selectable>
     {
@@ -1091,7 +1091,7 @@ namespace Org.Apache.Kafka.Common.Network
 
     #region Selector
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selector.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selector.html"/>
     /// </summary>
     public partial class Selector : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Selector>
     {
@@ -1134,7 +1134,7 @@ namespace Org.Apache.Kafka.Common.Network
 
     #region Send
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Send.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Send.html"/>
     /// </summary>
     public partial class Send : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Send>
     {
@@ -1177,7 +1177,7 @@ namespace Org.Apache.Kafka.Common.Network
 
     #region SslChannelBuilder
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslChannelBuilder.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslChannelBuilder.html"/>
     /// </summary>
     public partial class SslChannelBuilder : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SslChannelBuilder>
     {
@@ -1220,9 +1220,9 @@ namespace Org.Apache.Kafka.Common.Network
 
     #region SslTransportLayer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/SslTransportLayer.html"/>
     /// </summary>
-    public partial class SslTransportLayer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SslTransportLayer>
+    public partial class SslTransportLayer : Org.Apache.Kafka.Common.Network.TransportLayer
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1263,7 +1263,7 @@ namespace Org.Apache.Kafka.Common.Network
 
     #region TransferableChannel
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransferableChannel.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransferableChannel.html"/>
     /// </summary>
     public partial class TransferableChannel : Java.Nio.Channels.GatheringByteChannel
     {
@@ -1306,7 +1306,7 @@ namespace Org.Apache.Kafka.Common.Network
 
     #region TransportLayer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/TransportLayer.html"/>
     /// </summary>
     public partial class TransportLayer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TransportLayer>
     {
@@ -1346,6 +1346,7 @@ namespace Org.Apache.Kafka.Common.Network
 
     }
     #endregion
+
 
 
 }

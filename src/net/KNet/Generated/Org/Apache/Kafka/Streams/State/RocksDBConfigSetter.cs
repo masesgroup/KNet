@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Streams.State
 {
+    #region IRocksDBConfigSetter
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/RocksDBConfigSetter.html"/>
+    /// </summary>
+    public partial interface IRocksDBConfigSetter
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region RocksDBConfigSetter
-    public partial class RocksDBConfigSetter
+    public partial class RocksDBConfigSetter : Org.Apache.Kafka.Streams.State.IRocksDBConfigSetter
     {
         #region Constructors
 

@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/RawTaggedFieldWriter.html#forFields(java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/RawTaggedFieldWriter.html#forFields(java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Protocol.Types.RawTaggedFieldWriter"/></returns>
@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/RawTaggedFieldWriter.html#numFields()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/RawTaggedFieldWriter.html#numFields()"/>
         /// </summary>
 
         /// <returns><see cref="int"/></returns>
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Protocol.Types
             return IExecute<int>("numFields");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/RawTaggedFieldWriter.html#writeRawTags(org.apache.kafka.common.protocol.Writable,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/protocol/types/RawTaggedFieldWriter.html#writeRawTags(org.apache.kafka.common.protocol.Writable,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.Writable"/></param>
         /// <param name="arg1"><see cref="int"/></param>

@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslAuthenticationContext.html#%3Cinit%3E(javax.net.ssl.SSLSession,java.net.InetAddress,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslAuthenticationContext.html#%3Cinit%3E(javax.net.ssl.SSLSession,java.net.InetAddress,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Javax.Net.Ssl.SSLSession"/></param>
         /// <param name="arg1"><see cref="Java.Net.InetAddress"/></param>
@@ -43,10 +43,6 @@ namespace Org.Apache.Kafka.Common.Security.Auth
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.Security.Auth.SslAuthenticationContext"/> to <see cref="Org.Apache.Kafka.Common.Security.Auth.AuthenticationContext"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Common.Security.Auth.AuthenticationContext(Org.Apache.Kafka.Common.Security.Auth.SslAuthenticationContext t) => t.Cast<Org.Apache.Kafka.Common.Security.Auth.AuthenticationContext>();
 
         #endregion
 
@@ -60,7 +56,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslAuthenticationContext.html#listenerName()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslAuthenticationContext.html#listenerName()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -69,7 +65,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
             return IExecute<string>("listenerName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslAuthenticationContext.html#clientAddress()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslAuthenticationContext.html#clientAddress()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Net.InetAddress"/></returns>
@@ -78,7 +74,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
             return IExecute<Java.Net.InetAddress>("clientAddress");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslAuthenticationContext.html#session()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslAuthenticationContext.html#session()"/>
         /// </summary>
 
         /// <returns><see cref="Javax.Net.Ssl.SSLSession"/></returns>
@@ -87,7 +83,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
             return IExecute<Javax.Net.Ssl.SSLSession>("session");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslAuthenticationContext.html#securityProtocol()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/SslAuthenticationContext.html#securityProtocol()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol"/></returns>

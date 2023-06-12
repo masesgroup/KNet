@@ -46,7 +46,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/GlobalKTable.html#queryableStoreName()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/GlobalKTable.html#queryableStoreName()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -65,8 +65,26 @@ namespace Org.Apache.Kafka.Streams.Kstream
     }
     #endregion
 
+    #region IGlobalKTable<K, V>
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/GlobalKTable.html"/>
+    /// </summary>
+    public partial interface IGlobalKTable<K, V>
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region GlobalKTable<K, V>
-    public partial class GlobalKTable<K, V>
+    public partial class GlobalKTable<K, V> : Org.Apache.Kafka.Streams.Kstream.IGlobalKTable<K, V>
     {
         #region Constructors
 
@@ -90,7 +108,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/GlobalKTable.html#queryableStoreName()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/GlobalKTable.html#queryableStoreName()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>

@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Connect.Health
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/ConnectorHealth.html#%3Cinit%3E(java.lang.String,org.apache.kafka.connect.health.ConnectorState,java.util.Map,org.apache.kafka.connect.health.ConnectorType)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/ConnectorHealth.html#%3Cinit%3E(java.lang.String,org.apache.kafka.connect.health.ConnectorState,java.util.Map,org.apache.kafka.connect.health.ConnectorType)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Connect.Health.ConnectorState"/></param>
@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Connect.Health
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/ConnectorHealth.html#name()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/ConnectorHealth.html#name()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -66,7 +66,7 @@ namespace Org.Apache.Kafka.Connect.Health
             return IExecute<string>("name");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/ConnectorHealth.html#tasksState()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/ConnectorHealth.html#tasksState()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Connect.Health
             return IExecute<Java.Util.Map<int?, Org.Apache.Kafka.Connect.Health.TaskState>>("tasksState");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/ConnectorHealth.html#connectorState()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/ConnectorHealth.html#connectorState()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Connect.Health.ConnectorState"/></returns>
@@ -84,7 +84,7 @@ namespace Org.Apache.Kafka.Connect.Health
             return IExecute<Org.Apache.Kafka.Connect.Health.ConnectorState>("connectorState");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/ConnectorHealth.html#type()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/ConnectorHealth.html#type()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Connect.Health.ConnectorType"/></returns>

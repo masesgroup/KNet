@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetAndMetadata.html#%3Cinit%3E(long,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetAndMetadata.html#%3Cinit%3E(long,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -39,7 +39,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetAndMetadata.html#%3Cinit%3E(long,java.util.Optional,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetAndMetadata.html#%3Cinit%3E(long,java.util.Optional,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="Java.Util.Optional"/></param>
@@ -49,7 +49,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetAndMetadata.html#%3Cinit%3E(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetAndMetadata.html#%3Cinit%3E(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         public OffsetAndMetadata(long arg0)
@@ -60,10 +60,6 @@ namespace Org.Apache.Kafka.Clients.Consumer
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata"/> to <see cref="Java.Io.Serializable"/>
-        /// </summary>
-        public static implicit operator Java.Io.Serializable(Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata t) => t.Cast<Java.Io.Serializable>();
 
         #endregion
 
@@ -77,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetAndMetadata.html#metadata()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetAndMetadata.html#metadata()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -86,7 +82,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<string>("metadata");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetAndMetadata.html#leaderEpoch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetAndMetadata.html#leaderEpoch()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Optional"/></returns>
@@ -95,7 +91,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Java.Util.Optional<int?>>("leaderEpoch");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetAndMetadata.html#offset()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetAndMetadata.html#offset()"/>
         /// </summary>
 
         /// <returns><see cref="long"/></returns>

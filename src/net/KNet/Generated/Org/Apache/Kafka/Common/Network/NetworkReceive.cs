@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Network
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#%3Cinit%3E(int,java.lang.String,org.apache.kafka.common.memory.MemoryPool)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#%3Cinit%3E(int,java.lang.String,org.apache.kafka.common.memory.MemoryPool)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Common.Network
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#%3Cinit%3E(int,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#%3Cinit%3E(int,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -49,7 +49,7 @@ namespace Org.Apache.Kafka.Common.Network
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#%3Cinit%3E(java.lang.String,java.nio.ByteBuffer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#%3Cinit%3E(java.lang.String,java.nio.ByteBuffer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Java.Nio.ByteBuffer"/></param>
@@ -58,7 +58,7 @@ namespace Org.Apache.Kafka.Common.Network
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#%3Cinit%3E(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#%3Cinit%3E(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         public NetworkReceive(string arg0)
@@ -69,20 +69,16 @@ namespace Org.Apache.Kafka.Common.Network
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.Network.NetworkReceive"/> to <see cref="Org.Apache.Kafka.Common.Network.Receive"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Common.Network.Receive(Org.Apache.Kafka.Common.Network.NetworkReceive t) => t.Cast<Org.Apache.Kafka.Common.Network.Receive>();
 
         #endregion
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#UNLIMITED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#UNLIMITED"/>
         /// </summary>
         public static int UNLIMITED { get { return SGetField<int>(LocalBridgeClazz, "UNLIMITED"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#UNKNOWN_SOURCE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#UNKNOWN_SOURCE"/>
         /// </summary>
         public static string UNKNOWN_SOURCE { get { return SGetField<string>(LocalBridgeClazz, "UNKNOWN_SOURCE"); } }
 
@@ -94,7 +90,7 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#complete()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#complete()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -103,7 +99,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<bool>("complete");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#memoryAllocated()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#memoryAllocated()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -112,7 +108,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<bool>("memoryAllocated");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#requiredMemoryAmountKnown()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#requiredMemoryAmountKnown()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -121,7 +117,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<bool>("requiredMemoryAmountKnown");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#bytesRead()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#bytesRead()"/>
         /// </summary>
 
         /// <returns><see cref="int"/></returns>
@@ -130,7 +126,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<int>("bytesRead");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#size()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#size()"/>
         /// </summary>
 
         /// <returns><see cref="int"/></returns>
@@ -139,7 +135,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<int>("size");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#source()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#source()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -148,7 +144,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<string>("source");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#payload()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#payload()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
@@ -157,7 +153,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<Java.Nio.ByteBuffer>("payload");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#readFrom(java.nio.channels.ScatteringByteChannel)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#readFrom(java.nio.channels.ScatteringByteChannel)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.Channels.ScatteringByteChannel"/></param>
         /// <returns><see cref="long"/></returns>
@@ -167,7 +163,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<long>("readFrom", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/NetworkReceive.html#close()"/>
         /// </summary>
 
         /// <exception cref="Java.Io.IOException"/>

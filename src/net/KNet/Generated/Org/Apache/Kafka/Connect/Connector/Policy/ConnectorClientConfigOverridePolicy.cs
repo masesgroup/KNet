@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Connect.Connector.Policy
 {
+    #region IConnectorClientConfigOverridePolicy
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/policy/ConnectorClientConfigOverridePolicy.html"/>
+    /// </summary>
+    public partial interface IConnectorClientConfigOverridePolicy
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region ConnectorClientConfigOverridePolicy
-    public partial class ConnectorClientConfigOverridePolicy
+    public partial class ConnectorClientConfigOverridePolicy : Org.Apache.Kafka.Connect.Connector.Policy.IConnectorClientConfigOverridePolicy, Org.Apache.Kafka.Common.IConfigurable, Java.Lang.IAutoCloseable
     {
         #region Constructors
 
@@ -54,7 +72,7 @@ namespace Org.Apache.Kafka.Connect.Connector.Policy
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/policy/ConnectorClientConfigOverridePolicy.html#validate(org.apache.kafka.connect.connector.policy.ConnectorClientConfigRequest)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/policy/ConnectorClientConfigOverridePolicy.html#validate(org.apache.kafka.connect.connector.policy.ConnectorClientConfigRequest)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Connector.Policy.ConnectorClientConfigRequest"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>

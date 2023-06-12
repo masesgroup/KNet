@@ -26,7 +26,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// </summary>
     /// <typeparam name="T">The data associated to the event</typeparam>
     /// <typeparam name="V">The data associated to the event</typeparam>
-    public interface IPredicate<K, V> : IJVMBridgeBase
+    public partial interface IPredicate<K, V> : IJVMBridgeBase
     {
         /// <summary>
         /// Executes the Predicate action in the CLR
@@ -74,12 +74,5 @@ namespace Org.Apache.Kafka.Streams.Kstream
             var retVal = OnTest(data.EventData.TypedEventData, data.EventData.To<V>(0));
             data.SetReturnValue(retVal);
         }
-        /// <summary>
-        /// Executes the Predicate action in the CLR
-        /// </summary>
-        /// <param name="o1">The Predicate object</param>
-        /// <param name="o2">The Predicate object</param>
-        /// <returns>The test evaluation</returns>
-        public virtual bool Test(K o1, V o2) { return false; }
     }
 }

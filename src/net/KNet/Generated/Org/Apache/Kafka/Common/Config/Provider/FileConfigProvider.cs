@@ -33,10 +33,6 @@ namespace Org.Apache.Kafka.Common.Config.Provider
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.Config.Provider.FileConfigProvider"/> to <see cref="Org.Apache.Kafka.Common.Config.Provider.ConfigProvider"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Common.Config.Provider.ConfigProvider(Org.Apache.Kafka.Common.Config.Provider.FileConfigProvider t) => t.Cast<Org.Apache.Kafka.Common.Config.Provider.ConfigProvider>();
 
         #endregion
 
@@ -50,7 +46,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/provider/FileConfigProvider.html#get(java.lang.String,java.util.Set)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/provider/FileConfigProvider.html#get(java.lang.String,java.util.Set)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Java.Util.Set"/></param>
@@ -60,7 +56,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
             return IExecute<Org.Apache.Kafka.Common.Config.ConfigData>("get", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/provider/FileConfigProvider.html#get(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/provider/FileConfigProvider.html#get(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigData"/></returns>
@@ -69,18 +65,17 @@ namespace Org.Apache.Kafka.Common.Config.Provider
             return IExecute<Org.Apache.Kafka.Common.Config.ConfigData>("get", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/provider/FileConfigProvider.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/provider/FileConfigProvider.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecute("close");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/provider/FileConfigProvider.html#configure(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/provider/FileConfigProvider.html#configure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        /// <typeparam name="Arg0Extendsobject"></typeparam>
-        public void Configure<Arg0Extendsobject>(Java.Util.Map<string, Arg0Extendsobject> arg0)
+        public void Configure(Java.Util.Map<string, object> arg0)
         {
             IExecute("configure", arg0);
         }

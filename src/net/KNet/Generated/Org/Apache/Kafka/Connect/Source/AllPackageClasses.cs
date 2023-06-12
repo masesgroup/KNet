@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Source
 {
     #region ConnectorTransactionBoundaries
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/ConnectorTransactionBoundaries.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/ConnectorTransactionBoundaries.html"/>
     /// </summary>
     public partial class ConnectorTransactionBoundaries : Java.Lang.Enum<Org.Apache.Kafka.Connect.Source.ConnectorTransactionBoundaries>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Connect.Source
 
     #region ExactlyOnceSupport
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/ExactlyOnceSupport.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/ExactlyOnceSupport.html"/>
     /// </summary>
     public partial class ExactlyOnceSupport : Java.Lang.Enum<Org.Apache.Kafka.Connect.Source.ExactlyOnceSupport>
     {
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Connect.Source
 
     #region SourceConnector
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceConnector.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceConnector.html"/>
     /// </summary>
     public partial class SourceConnector : Org.Apache.Kafka.Connect.Connector.Connector
     {
@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Connect.Source
 
     #region SourceConnectorContext
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceConnectorContext.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceConnectorContext.html"/>
     /// </summary>
     public partial class SourceConnectorContext : Org.Apache.Kafka.Connect.Connector.ConnectorContext
     {
@@ -199,7 +199,7 @@ namespace Org.Apache.Kafka.Connect.Source
 
     #region SourceRecord
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceRecord.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceRecord.html"/>
     /// </summary>
     public partial class SourceRecord : Org.Apache.Kafka.Connect.Connector.ConnectRecord<Org.Apache.Kafka.Connect.Source.SourceRecord>
     {
@@ -242,9 +242,9 @@ namespace Org.Apache.Kafka.Connect.Source
 
     #region SourceTask
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTask.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTask.html"/>
     /// </summary>
-    public partial class SourceTask : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SourceTask>
+    public partial class SourceTask : Org.Apache.Kafka.Connect.Connector.Task
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -281,7 +281,7 @@ namespace Org.Apache.Kafka.Connect.Source
         // TODO: complete the class
         #region TransactionBoundary
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTask.TransactionBoundary.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTask.TransactionBoundary.html"/>
         /// </summary>
         public partial class TransactionBoundary : Java.Lang.Enum<Org.Apache.Kafka.Connect.Source.SourceTask.TransactionBoundary>
         {
@@ -328,7 +328,7 @@ namespace Org.Apache.Kafka.Connect.Source
 
     #region SourceTaskContext
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTaskContext.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTaskContext.html"/>
     /// </summary>
     public partial class SourceTaskContext : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SourceTaskContext>
     {
@@ -371,7 +371,7 @@ namespace Org.Apache.Kafka.Connect.Source
 
     #region TransactionContext
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/TransactionContext.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/TransactionContext.html"/>
     /// </summary>
     public partial class TransactionContext : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TransactionContext>
     {
@@ -411,6 +411,7 @@ namespace Org.Apache.Kafka.Connect.Source
 
     }
     #endregion
+
 
 
 }

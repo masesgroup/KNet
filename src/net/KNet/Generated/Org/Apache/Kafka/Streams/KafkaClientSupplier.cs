@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Streams
 {
+    #region IKafkaClientSupplier
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KafkaClientSupplier.html"/>
+    /// </summary>
+    public partial interface IKafkaClientSupplier
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region KafkaClientSupplier
-    public partial class KafkaClientSupplier
+    public partial class KafkaClientSupplier : Org.Apache.Kafka.Streams.IKafkaClientSupplier
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Streams
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KafkaClientSupplier.html#getConsumer(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KafkaClientSupplier.html#getConsumer(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.Consumer"/></returns>
@@ -55,7 +73,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecute<Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]>>("getConsumer", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KafkaClientSupplier.html#getGlobalConsumer(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KafkaClientSupplier.html#getGlobalConsumer(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.Consumer"/></returns>
@@ -64,7 +82,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecute<Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]>>("getGlobalConsumer", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KafkaClientSupplier.html#getRestoreConsumer(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KafkaClientSupplier.html#getRestoreConsumer(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.Consumer"/></returns>
@@ -73,7 +91,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecute<Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]>>("getRestoreConsumer", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KafkaClientSupplier.html#getProducer(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KafkaClientSupplier.html#getProducer(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Producer.Producer"/></returns>
@@ -82,7 +100,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecute<Org.Apache.Kafka.Clients.Producer.Producer<byte[], byte[]>>("getProducer", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KafkaClientSupplier.html#getAdmin(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KafkaClientSupplier.html#getAdmin(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.Admin"/></returns>

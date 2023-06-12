@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Kafka.Admin
 {
+    #region IRackAwareMode
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/RackAwareMode.html"/>
+    /// </summary>
+    public partial interface IRackAwareMode
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region RackAwareMode
-    public partial class RackAwareMode
+    public partial class RackAwareMode : Kafka.Admin.IRackAwareMode
     {
         #region Constructors
 

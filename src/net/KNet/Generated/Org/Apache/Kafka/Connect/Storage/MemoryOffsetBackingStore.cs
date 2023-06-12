@@ -33,10 +33,6 @@ namespace Org.Apache.Kafka.Connect.Storage
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Connect.Storage.MemoryOffsetBackingStore"/> to <see cref="Org.Apache.Kafka.Connect.Storage.OffsetBackingStore"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Connect.Storage.OffsetBackingStore(Org.Apache.Kafka.Connect.Storage.MemoryOffsetBackingStore t) => t.Cast<Org.Apache.Kafka.Connect.Storage.OffsetBackingStore>();
 
         #endregion
 
@@ -50,7 +46,7 @@ namespace Org.Apache.Kafka.Connect.Storage
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryOffsetBackingStore.html#set(java.util.Map,org.apache.kafka.connect.util.Callback)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryOffsetBackingStore.html#set(java.util.Map,org.apache.kafka.connect.util.Callback)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Connect.Util.Callback"/></param>
@@ -60,7 +56,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return IExecute<Java.Util.Concurrent.Future<Java.Lang.Void>>("set", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryOffsetBackingStore.html#get(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryOffsetBackingStore.html#get(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Java.Util.Concurrent.Future"/></returns>
@@ -69,22 +65,14 @@ namespace Org.Apache.Kafka.Connect.Storage
             return IExecute<Java.Util.Concurrent.Future<Java.Util.Map<Java.Nio.ByteBuffer, Java.Nio.ByteBuffer>>>("get", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryOffsetBackingStore.html#configure(org.apache.kafka.connect.runtime.WorkerConfig)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Runtime.WorkerConfig"/></param>
-        public void Configure(Org.Apache.Kafka.Connect.Runtime.WorkerConfig arg0)
-        {
-            IExecute("configure", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryOffsetBackingStore.html#start()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryOffsetBackingStore.html#start()"/>
         /// </summary>
         public void Start()
         {
             IExecute("start");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryOffsetBackingStore.html#stop()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/MemoryOffsetBackingStore.html#stop()"/>
         /// </summary>
         public void Stop()
         {

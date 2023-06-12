@@ -27,9 +27,9 @@ namespace Org.Apache.Kafka.Connect.Connector
 {
     #region Connector
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/Connector.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/Connector.html"/>
     /// </summary>
-    public partial class Connector : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Connector>
+    public partial class Connector : Org.Apache.Kafka.Connect.Components.Versioned
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Connect.Connector
 
     #region ConnectorContext
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/ConnectorContext.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/ConnectorContext.html"/>
     /// </summary>
     public partial class ConnectorContext : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConnectorContext>
     {
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Connect.Connector
 
     #region ConnectRecord
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/ConnectRecord.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/ConnectRecord.html"/>
     /// </summary>
     public partial class ConnectRecord : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConnectRecord>
     {
@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Connect.Connector
 
     #region ConnectRecord<R>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/ConnectRecord.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/ConnectRecord.html"/>
     /// </summary>
     /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
     public partial class ConnectRecord<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConnectRecord<R>> where R: Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
@@ -200,7 +200,7 @@ namespace Org.Apache.Kafka.Connect.Connector
 
     #region Task
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/Task.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/connector/Task.html"/>
     /// </summary>
     public partial class Task : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Task>
     {
@@ -240,6 +240,7 @@ namespace Org.Apache.Kafka.Connect.Connector
 
     }
     #endregion
+
 
 
 }

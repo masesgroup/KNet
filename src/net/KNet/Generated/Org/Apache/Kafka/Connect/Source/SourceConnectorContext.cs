@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Connect.Source
 {
+    #region ISourceConnectorContext
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceConnectorContext.html"/>
+    /// </summary>
+    public partial interface ISourceConnectorContext : Org.Apache.Kafka.Connect.Connector.IConnectorContext
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region SourceConnectorContext
-    public partial class SourceConnectorContext
+    public partial class SourceConnectorContext : Org.Apache.Kafka.Connect.Source.ISourceConnectorContext
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Connect.Source
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceConnectorContext.html#offsetStorageReader()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceConnectorContext.html#offsetStorageReader()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Connect.Storage.OffsetStorageReader"/></returns>

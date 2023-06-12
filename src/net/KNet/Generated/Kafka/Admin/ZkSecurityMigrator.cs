@@ -42,7 +42,7 @@ namespace Kafka.Admin
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ZkSecurityMigrator.html#tlsConfigFileOption()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ZkSecurityMigrator.html#tlsConfigFileOption()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -51,7 +51,7 @@ namespace Kafka.Admin
             return SExecute<string>(LocalBridgeClazz, "tlsConfigFileOption");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ZkSecurityMigrator.html#usageMessage()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ZkSecurityMigrator.html#usageMessage()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -60,7 +60,7 @@ namespace Kafka.Admin
             return SExecute<string>(LocalBridgeClazz, "usageMessage");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ZkSecurityMigrator.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ZkSecurityMigrator.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="args"><see cref="string"/></param>
         public static void Main(string[] args)
@@ -68,7 +68,7 @@ namespace Kafka.Admin
             SExecute(LocalBridgeClazz, "main", new object[] { args });
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ZkSecurityMigrator.html#run(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ZkSecurityMigrator.html#run(java.lang.String[])"/>
         /// </summary>
         /// <param name="args"><see cref="string"/></param>
         public static void Run(string[] args)
@@ -80,7 +80,7 @@ namespace Kafka.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ZkSecurityMigrator.html#isDebugEnabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ZkSecurityMigrator.html#isDebugEnabled()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -89,7 +89,7 @@ namespace Kafka.Admin
             return IExecute<bool>("isDebugEnabled");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ZkSecurityMigrator.html#isTraceEnabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ZkSecurityMigrator.html#isTraceEnabled()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -98,7 +98,7 @@ namespace Kafka.Admin
             return IExecute<bool>("isTraceEnabled");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ZkSecurityMigrator.html#loggerName()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ZkSecurityMigrator.html#loggerName()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -107,7 +107,7 @@ namespace Kafka.Admin
             return IExecute<string>("loggerName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ZkSecurityMigrator.html#logIdent()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ZkSecurityMigrator.html#logIdent()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -116,7 +116,7 @@ namespace Kafka.Admin
             return IExecute<string>("logIdent");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ZkSecurityMigrator.html#msgWithLogIdent(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ZkSecurityMigrator.html#msgWithLogIdent(java.lang.String)"/>
         /// </summary>
         /// <param name="msg"><see cref="string"/></param>
         /// <returns><see cref="string"/></returns>
@@ -128,46 +128,7 @@ namespace Kafka.Admin
         #endregion
 
         #region Nested classes
-        #region ZkSecurityMigratorOptions
-        public partial class ZkSecurityMigratorOptions
-        {
-            #region Constructors
-            /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ZkSecurityMigrator.ZkSecurityMigratorOptions.html#%3Cinit%3E(java.lang.String[])"/>
-            /// </summary>
-            /// <param name="args"><see cref="string"/></param>
-            public ZkSecurityMigratorOptions(string[] args)
-                : base(args)
-            {
-            }
 
-            #endregion
-
-            #region Class/Interface conversion operators
-
-            #endregion
-
-            #region Fields
-
-            #endregion
-
-            #region Static methods
-
-            #endregion
-
-            #region Instance methods
-
-            #endregion
-
-            #region Nested classes
-
-            #endregion
-
-            // TODO: complete the class
-        }
-        #endregion
-
-    
         #endregion
 
         // TODO: complete the class

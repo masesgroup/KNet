@@ -33,10 +33,6 @@ namespace Org.Apache.Kafka.Clients.Admin
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Clients.Admin.AdminClient"/> to <see cref="Org.Apache.Kafka.Clients.Admin.Admin"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Clients.Admin.Admin(Org.Apache.Kafka.Clients.Admin.AdminClient t) => t.Cast<Org.Apache.Kafka.Clients.Admin.Admin>();
 
         #endregion
 

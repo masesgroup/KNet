@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Connect.Health
 {
+    #region IConnectClusterState
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/ConnectClusterState.html"/>
+    /// </summary>
+    public partial interface IConnectClusterState
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region ConnectClusterState
-    public partial class ConnectClusterState
+    public partial class ConnectClusterState : Org.Apache.Kafka.Connect.Health.IConnectClusterState
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Connect.Health
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/ConnectClusterState.html#connectors()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/ConnectClusterState.html#connectors()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Collection"/></returns>
@@ -55,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Health
             return IExecute<Java.Util.Collection<string>>("connectors");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/ConnectClusterState.html#connectorHealth(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/ConnectClusterState.html#connectorHealth(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Health.ConnectorHealth"/></returns>
@@ -64,7 +82,7 @@ namespace Org.Apache.Kafka.Connect.Health
             return IExecute<Org.Apache.Kafka.Connect.Health.ConnectorHealth>("connectorHealth", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/ConnectClusterState.html#connectorConfig(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/ConnectClusterState.html#connectorConfig(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -73,7 +91,7 @@ namespace Org.Apache.Kafka.Connect.Health
             return IExecute<Java.Util.Map<string, string>>("connectorConfig", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/ConnectClusterState.html#clusterDetails()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/ConnectClusterState.html#clusterDetails()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Connect.Health.ConnectClusterDetails"/></returns>

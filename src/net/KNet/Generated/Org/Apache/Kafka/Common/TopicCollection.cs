@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Common
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicCollection.html#ofTopicIds(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicCollection.html#ofTopicIds(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.TopicCollection.TopicIdCollection"/></returns>
@@ -51,7 +51,7 @@ namespace Org.Apache.Kafka.Common
             return SExecute<Org.Apache.Kafka.Common.TopicCollection.TopicIdCollection>(LocalBridgeClazz, "ofTopicIds", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicCollection.html#ofTopicNames(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicCollection.html#ofTopicNames(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.TopicCollection.TopicNameCollection"/></returns>
@@ -88,7 +88,7 @@ namespace Org.Apache.Kafka.Common
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicCollection.TopicIdCollection.html#topicIds()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicCollection.TopicIdCollection.html#topicIds()"/>
             /// </summary>
 
             /// <returns><see cref="Java.Util.Collection"/></returns>
@@ -128,7 +128,7 @@ namespace Org.Apache.Kafka.Common
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicCollection.TopicNameCollection.html#topicNames()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicCollection.TopicNameCollection.html#topicNames()"/>
             /// </summary>
 
             /// <returns><see cref="Java.Util.Collection"/></returns>

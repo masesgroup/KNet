@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Record
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ConvertedRecords.html#%3Cinit%3E(org.apache.kafka.common.record.Records,org.apache.kafka.common.record.RecordConversionStats)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ConvertedRecords.html#%3Cinit%3E(org.apache.kafka.common.record.Records,org.apache.kafka.common.record.RecordConversionStats)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Record.Records"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Record.RecordConversionStats"/></param>
@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ConvertedRecords.html#recordConversionStats()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ConvertedRecords.html#recordConversionStats()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.RecordConversionStats"/></returns>
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecute<Org.Apache.Kafka.Common.Record.RecordConversionStats>("recordConversionStats");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ConvertedRecords.html#records()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ConvertedRecords.html#records()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.Records"/></returns>
@@ -88,7 +88,7 @@ namespace Org.Apache.Kafka.Common.Record
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ConvertedRecords.html#%3Cinit%3E(org.apache.kafka.common.record.Records,org.apache.kafka.common.record.RecordConversionStats)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ConvertedRecords.html#%3Cinit%3E(org.apache.kafka.common.record.Records,org.apache.kafka.common.record.RecordConversionStats)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="T"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Record.RecordConversionStats"/></param>
@@ -117,7 +117,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ConvertedRecords.html#recordConversionStats()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ConvertedRecords.html#recordConversionStats()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.RecordConversionStats"/></returns>
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecute<Org.Apache.Kafka.Common.Record.RecordConversionStats>("recordConversionStats");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ConvertedRecords.html#records()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/record/ConvertedRecords.html#records()"/>
         /// </summary>
 
         /// <returns><typeparamref name="T"/></returns>

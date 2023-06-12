@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Network
 {
+    #region ISelectable
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html"/>
+    /// </summary>
+    public partial interface ISelectable
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region Selectable
-    public partial class Selectable
+    public partial class Selectable : Org.Apache.Kafka.Common.Network.ISelectable
     {
         #region Constructors
 
@@ -38,7 +56,7 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#USE_DEFAULT_BUFFER_SIZE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#USE_DEFAULT_BUFFER_SIZE"/>
         /// </summary>
         public static int USE_DEFAULT_BUFFER_SIZE { get { return SGetField<int>(LocalBridgeClazz, "USE_DEFAULT_BUFFER_SIZE"); } }
 
@@ -50,7 +68,7 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#isChannelReady(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#isChannelReady(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -59,7 +77,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<bool>("isChannelReady", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#completedReceives()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#completedReceives()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Collection"/></returns>
@@ -68,7 +86,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<Java.Util.Collection<Org.Apache.Kafka.Common.Network.NetworkReceive>>("completedReceives");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#connected()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#connected()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -77,7 +95,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<Java.Util.List<string>>("connected");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#completedSends()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#completedSends()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -86,7 +104,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<Java.Util.List<Org.Apache.Kafka.Common.Network.NetworkSend>>("completedSends");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#disconnected()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#disconnected()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -95,14 +113,14 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Common.Network.ChannelState>>("disconnected");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecute("close");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#close(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#close(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         public void Close(string arg0)
@@ -110,7 +128,7 @@ namespace Org.Apache.Kafka.Common.Network
             IExecute("close", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#connect(java.lang.String,java.net.InetSocketAddress,int,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#connect(java.lang.String,java.net.InetSocketAddress,int,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Java.Net.InetSocketAddress"/></param>
@@ -122,7 +140,7 @@ namespace Org.Apache.Kafka.Common.Network
             IExecute("connect", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#mute(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#mute(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         public void Mute(string arg0)
@@ -130,14 +148,14 @@ namespace Org.Apache.Kafka.Common.Network
             IExecute("mute", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#muteAll()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#muteAll()"/>
         /// </summary>
         public void MuteAll()
         {
             IExecute("muteAll");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#poll(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#poll(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <exception cref="Java.Io.IOException"/>
@@ -146,7 +164,7 @@ namespace Org.Apache.Kafka.Common.Network
             IExecute("poll", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#send(org.apache.kafka.common.network.NetworkSend)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#send(org.apache.kafka.common.network.NetworkSend)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Network.NetworkSend"/></param>
         public void Send(Org.Apache.Kafka.Common.Network.NetworkSend arg0)
@@ -154,7 +172,7 @@ namespace Org.Apache.Kafka.Common.Network
             IExecute("send", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#unmute(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#unmute(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         public void Unmute(string arg0)
@@ -162,14 +180,14 @@ namespace Org.Apache.Kafka.Common.Network
             IExecute("unmute", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#unmuteAll()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#unmuteAll()"/>
         /// </summary>
         public void UnmuteAll()
         {
             IExecute("unmuteAll");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#wakeup()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/Selectable.html#wakeup()"/>
         /// </summary>
         public void Wakeup()
         {

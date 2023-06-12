@@ -30,11 +30,11 @@ namespace Org.Apache.Kafka.Connect.Transforms.Util
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/util/SimpleConfig.html#%3Cinit%3E(org.apache.kafka.common.config.ConfigDef,java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.4.0/org/apache/kafka/connect/transforms/util/SimpleConfig.html#%3Cinit%3E(org.apache.kafka.common.config.ConfigDef,java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
-        public SimpleConfig(Org.Apache.Kafka.Common.Config.ConfigDef arg0, Java.Util.Map arg1)
+        public SimpleConfig(Org.Apache.Kafka.Common.Config.ConfigDef arg0, Java.Util.Map<object, object> arg1)
             : base(arg0, arg1)
         {
         }

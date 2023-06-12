@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Feature
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/SupportedVersionRange.html#%3Cinit%3E(short,short)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/SupportedVersionRange.html#%3Cinit%3E(short,short)"/>
         /// </summary>
         /// <param name="arg0"><see cref="short"/></param>
         /// <param name="arg1"><see cref="short"/></param>
@@ -39,7 +39,7 @@ namespace Org.Apache.Kafka.Common.Feature
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/SupportedVersionRange.html#%3Cinit%3E(short)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/SupportedVersionRange.html#%3Cinit%3E(short)"/>
         /// </summary>
         /// <param name="arg0"><see cref="short"/></param>
         public SupportedVersionRange(short arg0)
@@ -59,7 +59,7 @@ namespace Org.Apache.Kafka.Common.Feature
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/SupportedVersionRange.html#fromMap(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/SupportedVersionRange.html#fromMap(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Feature.SupportedVersionRange"/></returns>
@@ -72,7 +72,7 @@ namespace Org.Apache.Kafka.Common.Feature
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/SupportedVersionRange.html#isIncompatibleWith(short)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/feature/SupportedVersionRange.html#isIncompatibleWith(short)"/>
         /// </summary>
         /// <param name="arg0"><see cref="short"/></param>
         /// <returns><see cref="bool"/></returns>

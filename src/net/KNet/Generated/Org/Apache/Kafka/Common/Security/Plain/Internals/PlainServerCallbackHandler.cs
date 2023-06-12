@@ -33,10 +33,6 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Common.Security.Plain.Internals.PlainServerCallbackHandler"/> to <see cref="Org.Apache.Kafka.Common.Security.Auth.AuthenticateCallbackHandler"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Common.Security.Auth.AuthenticateCallbackHandler(Org.Apache.Kafka.Common.Security.Plain.Internals.PlainServerCallbackHandler t) => t.Cast<Org.Apache.Kafka.Common.Security.Auth.AuthenticateCallbackHandler>();
 
         #endregion
 
@@ -50,7 +46,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainServerCallbackHandler.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainServerCallbackHandler.html#close()"/>
         /// </summary>
 
         /// <exception cref="Org.Apache.Kafka.Common.KafkaException"/>
@@ -59,18 +55,17 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
             IExecute("close");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainServerCallbackHandler.html#configure(java.util.Map,java.lang.String,java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainServerCallbackHandler.html#configure(java.util.Map,java.lang.String,java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="string"/></param>
         /// <param name="arg2"><see cref="Java.Util.List"/></param>
-        /// <typeparam name="Arg0Extendsobject"></typeparam>
-        public void Configure<Arg0Extendsobject>(Java.Util.Map<string, Arg0Extendsobject> arg0, string arg1, Java.Util.List<Javax.Security.Auth.Login.AppConfigurationEntry> arg2)
+        public void Configure(Java.Util.Map<string, object> arg0, string arg1, Java.Util.List<Javax.Security.Auth.Login.AppConfigurationEntry> arg2)
         {
             IExecute("configure", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainServerCallbackHandler.html#handle(javax.security.auth.callback.Callback[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/plain/internals/PlainServerCallbackHandler.html#handle(javax.security.auth.callback.Callback[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Javax.Security.Auth.Callback.Callback"/></param>
         /// <exception cref="Java.Io.IOException"/>

@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common
 {
+    #region IMetric
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Metric.html"/>
+    /// </summary>
+    public partial interface IMetric
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region Metric
-    public partial class Metric
+    public partial class Metric : Org.Apache.Kafka.Common.IMetric
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Common
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Metric.html#metricValue()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Metric.html#metricValue()"/>
         /// </summary>
 
         /// <returns><see cref="object"/></returns>
@@ -55,7 +73,7 @@ namespace Org.Apache.Kafka.Common
             return IExecute("metricValue");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Metric.html#metricName()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Metric.html#metricName()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.MetricName"/></returns>

@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Security.Kerberos
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosName.html#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosName.html#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -52,7 +52,7 @@ namespace Org.Apache.Kafka.Common.Security.Kerberos
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosName.html#parse(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosName.html#parse(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Kerberos.KerberosName"/></returns>
@@ -65,7 +65,7 @@ namespace Org.Apache.Kafka.Common.Security.Kerberos
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosName.html#hostName()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosName.html#hostName()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Common.Security.Kerberos
             return IExecute<string>("hostName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosName.html#realm()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosName.html#realm()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Common.Security.Kerberos
             return IExecute<string>("realm");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosName.html#serviceName()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosName.html#serviceName()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>

@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Clients.Producer
 {
+    #region IPartitioner
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/Partitioner.html"/>
+    /// </summary>
+    public partial interface IPartitioner
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region Partitioner
-    public partial class Partitioner
+    public partial class Partitioner : Org.Apache.Kafka.Clients.Producer.IPartitioner, Org.Apache.Kafka.Common.IConfigurable, Java.Io.ICloseable
     {
         #region Constructors
 
@@ -54,7 +72,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/Partitioner.html#partition(java.lang.String,java.lang.Object,byte[],java.lang.Object,byte[],org.apache.kafka.common.Cluster)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/Partitioner.html#partition(java.lang.String,java.lang.Object,byte[],java.lang.Object,byte[],org.apache.kafka.common.Cluster)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -68,7 +86,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecute<int>("partition", arg0, arg1, arg2, arg3, arg4, arg5);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/Partitioner.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/Partitioner.html#close()"/>
         /// </summary>
         public void Close()
         {

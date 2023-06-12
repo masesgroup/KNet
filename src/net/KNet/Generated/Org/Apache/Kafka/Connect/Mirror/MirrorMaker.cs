@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorMaker.html#%3Cinit%3E(java.util.Map,java.util.List,org.apache.kafka.common.utils.Time)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorMaker.html#%3Cinit%3E(java.util.Map,java.util.List,org.apache.kafka.common.utils.Time)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Util.List"/></param>
@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorMaker.html#%3Cinit%3E(java.util.Map,java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorMaker.html#%3Cinit%3E(java.util.Map,java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Util.List"/></param>
@@ -49,7 +49,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorMaker.html#%3Cinit%3E(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorMaker.html#%3Cinit%3E(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public MirrorMaker(Java.Util.Map<string, string> arg0)
@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorMaker.html#%3Cinit%3E(org.apache.kafka.connect.mirror.MirrorMakerConfig,java.util.List,org.apache.kafka.common.utils.Time)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorMaker.html#%3Cinit%3E(org.apache.kafka.connect.mirror.MirrorMakerConfig,java.util.List,org.apache.kafka.common.utils.Time)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Mirror.MirrorMakerConfig"/></param>
         /// <param name="arg1"><see cref="Java.Util.List"/></param>
@@ -79,7 +79,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorMaker.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorMaker.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         public static void Main(string[] arg0)
@@ -91,21 +91,21 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorMaker.html#awaitStop()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorMaker.html#awaitStop()"/>
         /// </summary>
         public void AwaitStop()
         {
             IExecute("awaitStop");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorMaker.html#start()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorMaker.html#start()"/>
         /// </summary>
         public void Start()
         {
             IExecute("start");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorMaker.html#stop()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorMaker.html#stop()"/>
         /// </summary>
         public void Stop()
         {

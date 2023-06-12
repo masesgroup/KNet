@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Connect.Health
 {
+    #region IConnectClusterDetails
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/ConnectClusterDetails.html"/>
+    /// </summary>
+    public partial interface IConnectClusterDetails
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region ConnectClusterDetails
-    public partial class ConnectClusterDetails
+    public partial class ConnectClusterDetails : Org.Apache.Kafka.Connect.Health.IConnectClusterDetails
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Connect.Health
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/ConnectClusterDetails.html#kafkaClusterId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/health/ConnectClusterDetails.html#kafkaClusterId()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>

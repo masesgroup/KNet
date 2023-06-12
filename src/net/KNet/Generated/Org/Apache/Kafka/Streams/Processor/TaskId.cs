@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Streams.Processor
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TaskId.html#%3Cinit%3E(int,int,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TaskId.html#%3Cinit%3E(int,int,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TaskId.html#%3Cinit%3E(int,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TaskId.html#%3Cinit%3E(int,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -52,16 +52,12 @@ namespace Org.Apache.Kafka.Streams.Processor
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Streams.Processor.TaskId"/> to <see cref="Java.Lang.Comparable"/>
-        /// </summary>
-        public static implicit operator Java.Lang.Comparable(Org.Apache.Kafka.Streams.Processor.TaskId t) => t.Cast<Java.Lang.Comparable>();
 
         #endregion
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TaskId.html#NAMED_TOPOLOGY_DELIMITER"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TaskId.html#NAMED_TOPOLOGY_DELIMITER"/>
         /// </summary>
         public static string NAMED_TOPOLOGY_DELIMITER { get { return SGetField<string>(LocalBridgeClazz, "NAMED_TOPOLOGY_DELIMITER"); } }
 
@@ -69,7 +65,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TaskId.html#parse(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TaskId.html#parse(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.TaskId"/></returns>
@@ -82,7 +78,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TaskId.html#compareTo(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TaskId.html#compareTo(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="int"/></returns>
@@ -91,7 +87,7 @@ namespace Org.Apache.Kafka.Streams.Processor
             return IExecute<int>("compareTo", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TaskId.html#compareTo(org.apache.kafka.streams.processor.TaskId)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TaskId.html#compareTo(org.apache.kafka.streams.processor.TaskId)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.TaskId"/></param>
         /// <returns><see cref="int"/></returns>
@@ -100,7 +96,7 @@ namespace Org.Apache.Kafka.Streams.Processor
             return IExecute<int>("compareTo", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TaskId.html#partition()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TaskId.html#partition()"/>
         /// </summary>
 
         /// <returns><see cref="int"/></returns>
@@ -109,7 +105,7 @@ namespace Org.Apache.Kafka.Streams.Processor
             return IExecute<int>("partition");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TaskId.html#subtopology()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TaskId.html#subtopology()"/>
         /// </summary>
 
         /// <returns><see cref="int"/></returns>
@@ -118,7 +114,7 @@ namespace Org.Apache.Kafka.Streams.Processor
             return IExecute<int>("subtopology");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TaskId.html#topologyName()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TaskId.html#topologyName()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>

@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Connect.Util
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/TopicCreation.html#empty()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/TopicCreation.html#empty()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Connect.Util.TopicCreation"/></returns>
@@ -50,22 +50,12 @@ namespace Org.Apache.Kafka.Connect.Util
         {
             return SExecute<Org.Apache.Kafka.Connect.Util.TopicCreation>(LocalBridgeClazz, "empty");
         }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/TopicCreation.html#newTopicCreation(org.apache.kafka.connect.runtime.WorkerConfig,java.util.Map)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Runtime.WorkerConfig"/></param>
-        /// <param name="arg1"><see cref="Java.Util.Map"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Connect.Util.TopicCreation"/></returns>
-        public static Org.Apache.Kafka.Connect.Util.TopicCreation NewTopicCreation(Org.Apache.Kafka.Connect.Runtime.WorkerConfig arg0, Java.Util.Map<string, Org.Apache.Kafka.Connect.Util.TopicCreationGroup> arg1)
-        {
-            return SExecute<Org.Apache.Kafka.Connect.Util.TopicCreation>(LocalBridgeClazz, "newTopicCreation", arg0, arg1);
-        }
 
         #endregion
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/TopicCreation.html#isTopicCreationEnabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/TopicCreation.html#isTopicCreationEnabled()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -74,7 +64,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecute<bool>("isTopicCreationEnabled");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/TopicCreation.html#isTopicCreationRequired(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/TopicCreation.html#isTopicCreationRequired(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -83,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecute<bool>("isTopicCreationRequired", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/TopicCreation.html#topicGroups()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/TopicCreation.html#topicGroups()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -92,7 +82,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecute<Java.Util.Map<string, Org.Apache.Kafka.Connect.Util.TopicCreationGroup>>("topicGroups");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/TopicCreation.html#defaultTopicGroup()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/TopicCreation.html#defaultTopicGroup()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Connect.Util.TopicCreationGroup"/></returns>
@@ -101,7 +91,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecute<Org.Apache.Kafka.Connect.Util.TopicCreationGroup>("defaultTopicGroup");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/TopicCreation.html#findFirstGroup(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/TopicCreation.html#findFirstGroup(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Util.TopicCreationGroup"/></returns>
@@ -110,7 +100,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecute<Org.Apache.Kafka.Connect.Util.TopicCreationGroup>("findFirstGroup", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/TopicCreation.html#addTopic(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/TopicCreation.html#addTopic(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         public void AddTopic(string arg0)

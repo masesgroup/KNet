@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Network
 {
+    #region IChannelMetadataRegistry
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelMetadataRegistry.html"/>
+    /// </summary>
+    public partial interface IChannelMetadataRegistry : Java.Io.ICloseable
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region ChannelMetadataRegistry
-    public partial class ChannelMetadataRegistry
+    public partial class ChannelMetadataRegistry : Org.Apache.Kafka.Common.Network.IChannelMetadataRegistry
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelMetadataRegistry.html#cipherInformation()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelMetadataRegistry.html#cipherInformation()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Network.CipherInformation"/></returns>
@@ -55,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<Org.Apache.Kafka.Common.Network.CipherInformation>("cipherInformation");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelMetadataRegistry.html#clientInformation()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelMetadataRegistry.html#clientInformation()"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Network.ClientInformation"/></returns>
@@ -64,14 +82,14 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<Org.Apache.Kafka.Common.Network.ClientInformation>("clientInformation");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelMetadataRegistry.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelMetadataRegistry.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecute("close");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelMetadataRegistry.html#registerCipherInformation(org.apache.kafka.common.network.CipherInformation)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelMetadataRegistry.html#registerCipherInformation(org.apache.kafka.common.network.CipherInformation)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Network.CipherInformation"/></param>
         public void RegisterCipherInformation(Org.Apache.Kafka.Common.Network.CipherInformation arg0)
@@ -79,7 +97,7 @@ namespace Org.Apache.Kafka.Common.Network
             IExecute("registerCipherInformation", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelMetadataRegistry.html#registerClientInformation(org.apache.kafka.common.network.ClientInformation)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ChannelMetadataRegistry.html#registerClientInformation(org.apache.kafka.common.network.ClientInformation)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Network.ClientInformation"/></param>
         public void RegisterClientInformation(Org.Apache.Kafka.Common.Network.ClientInformation arg0)

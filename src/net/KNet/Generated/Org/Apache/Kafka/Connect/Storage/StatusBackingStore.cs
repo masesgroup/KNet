@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Connect.Storage
 {
+    #region IStatusBackingStore
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/StatusBackingStore.html"/>
+    /// </summary>
+    public partial interface IStatusBackingStore
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region StatusBackingStore
-    public partial class StatusBackingStore
+    public partial class StatusBackingStore : Org.Apache.Kafka.Connect.Storage.IStatusBackingStore
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Connect.Storage
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/StatusBackingStore.html#getAll(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/StatusBackingStore.html#getAll(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Java.Util.Collection"/></returns>
@@ -55,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return IExecute<Java.Util.Collection<Org.Apache.Kafka.Connect.Runtime.TaskStatus>>("getAll", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/StatusBackingStore.html#getAllTopics(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/StatusBackingStore.html#getAllTopics(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Java.Util.Collection"/></returns>
@@ -64,7 +82,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return IExecute<Java.Util.Collection<Org.Apache.Kafka.Connect.Runtime.TopicStatus>>("getAllTopics", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/StatusBackingStore.html#connectors()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/StatusBackingStore.html#connectors()"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Set"/></returns>
@@ -73,43 +91,7 @@ namespace Org.Apache.Kafka.Connect.Storage
             return IExecute<Java.Util.Set<string>>("connectors");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/StatusBackingStore.html#get(java.lang.String)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.ConnectorStatus"/></returns>
-        public Org.Apache.Kafka.Connect.Runtime.ConnectorStatus Get(string arg0)
-        {
-            return IExecute<Org.Apache.Kafka.Connect.Runtime.ConnectorStatus>("get", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/StatusBackingStore.html#get(org.apache.kafka.connect.util.ConnectorTaskId)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Util.ConnectorTaskId"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.TaskStatus"/></returns>
-        public Org.Apache.Kafka.Connect.Runtime.TaskStatus Get(Org.Apache.Kafka.Connect.Util.ConnectorTaskId arg0)
-        {
-            return IExecute<Org.Apache.Kafka.Connect.Runtime.TaskStatus>("get", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/StatusBackingStore.html#getTopic(java.lang.String,java.lang.String)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Connect.Runtime.TopicStatus"/></returns>
-        public Org.Apache.Kafka.Connect.Runtime.TopicStatus GetTopic(string arg0, string arg1)
-        {
-            return IExecute<Org.Apache.Kafka.Connect.Runtime.TopicStatus>("getTopic", arg0, arg1);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/StatusBackingStore.html#configure(org.apache.kafka.connect.runtime.WorkerConfig)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Runtime.WorkerConfig"/></param>
-        public void Configure(Org.Apache.Kafka.Connect.Runtime.WorkerConfig arg0)
-        {
-            IExecute("configure", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/StatusBackingStore.html#deleteTopic(java.lang.String,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/StatusBackingStore.html#deleteTopic(java.lang.String,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -118,61 +100,21 @@ namespace Org.Apache.Kafka.Connect.Storage
             IExecute("deleteTopic", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/StatusBackingStore.html#flush()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/StatusBackingStore.html#flush()"/>
         /// </summary>
         public void Flush()
         {
             IExecute("flush");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/StatusBackingStore.html#put(org.apache.kafka.connect.runtime.ConnectorStatus)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Runtime.ConnectorStatus"/></param>
-        public void Put(Org.Apache.Kafka.Connect.Runtime.ConnectorStatus arg0)
-        {
-            IExecute("put", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/StatusBackingStore.html#put(org.apache.kafka.connect.runtime.TaskStatus)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Runtime.TaskStatus"/></param>
-        public void Put(Org.Apache.Kafka.Connect.Runtime.TaskStatus arg0)
-        {
-            IExecute("put", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/StatusBackingStore.html#put(org.apache.kafka.connect.runtime.TopicStatus)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Runtime.TopicStatus"/></param>
-        public void Put(Org.Apache.Kafka.Connect.Runtime.TopicStatus arg0)
-        {
-            IExecute("put", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/StatusBackingStore.html#putSafe(org.apache.kafka.connect.runtime.ConnectorStatus)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Runtime.ConnectorStatus"/></param>
-        public void PutSafe(Org.Apache.Kafka.Connect.Runtime.ConnectorStatus arg0)
-        {
-            IExecute("putSafe", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/StatusBackingStore.html#putSafe(org.apache.kafka.connect.runtime.TaskStatus)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Runtime.TaskStatus"/></param>
-        public void PutSafe(Org.Apache.Kafka.Connect.Runtime.TaskStatus arg0)
-        {
-            IExecute("putSafe", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/StatusBackingStore.html#start()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/StatusBackingStore.html#start()"/>
         /// </summary>
         public void Start()
         {
             IExecute("start");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/StatusBackingStore.html#stop()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/storage/StatusBackingStore.html#stop()"/>
         /// </summary>
         public void Stop()
         {

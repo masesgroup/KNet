@@ -25,8 +25,26 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Security.Auth
 {
+    #region IKafkaPrincipalSerde
+    /// <summary>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/KafkaPrincipalSerde.html"/>
+    /// </summary>
+    public partial interface IKafkaPrincipalSerde
+    {
+        #region Instance methods
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
     #region KafkaPrincipalSerde
-    public partial class KafkaPrincipalSerde
+    public partial class KafkaPrincipalSerde : Org.Apache.Kafka.Common.Security.Auth.IKafkaPrincipalSerde
     {
         #region Constructors
 
@@ -46,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/KafkaPrincipalSerde.html#serialize(org.apache.kafka.common.security.auth.KafkaPrincipal)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/KafkaPrincipalSerde.html#serialize(org.apache.kafka.common.security.auth.KafkaPrincipal)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal"/></param>
         /// <returns><see cref="byte"/></returns>
@@ -56,7 +74,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
             return IExecuteArray<byte>("serialize", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/KafkaPrincipalSerde.html#deserialize(byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/auth/KafkaPrincipalSerde.html#deserialize(byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal"/></returns>

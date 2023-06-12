@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Clients
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#%3Cinit%3E(org.apache.kafka.clients.MetadataUpdater,org.apache.kafka.clients.Metadata,org.apache.kafka.common.network.Selectable,java.lang.String,int,long,long,int,int,int,long,long,org.apache.kafka.common.utils.Time,boolean,org.apache.kafka.clients.ApiVersions,org.apache.kafka.common.metrics.Sensor,org.apache.kafka.common.utils.LogContext,org.apache.kafka.clients.HostResolver)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#%3Cinit%3E(org.apache.kafka.clients.MetadataUpdater,org.apache.kafka.clients.Metadata,org.apache.kafka.common.network.Selectable,java.lang.String,int,long,long,int,int,int,long,long,org.apache.kafka.common.utils.Time,boolean,org.apache.kafka.clients.ApiVersions,org.apache.kafka.common.metrics.Sensor,org.apache.kafka.common.utils.LogContext,org.apache.kafka.clients.HostResolver)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.MetadataUpdater"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Metadata"/></param>
@@ -55,7 +55,7 @@ namespace Org.Apache.Kafka.Clients
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#%3Cinit%3E(org.apache.kafka.common.network.Selectable,org.apache.kafka.clients.Metadata,java.lang.String,int,long,long,int,int,int,long,long,org.apache.kafka.common.utils.Time,boolean,org.apache.kafka.clients.ApiVersions,org.apache.kafka.common.metrics.Sensor,org.apache.kafka.common.utils.LogContext)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#%3Cinit%3E(org.apache.kafka.common.network.Selectable,org.apache.kafka.clients.Metadata,java.lang.String,int,long,long,int,int,int,long,long,org.apache.kafka.common.utils.Time,boolean,org.apache.kafka.clients.ApiVersions,org.apache.kafka.common.metrics.Sensor,org.apache.kafka.common.utils.LogContext)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Network.Selectable"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Metadata"/></param>
@@ -78,7 +78,7 @@ namespace Org.Apache.Kafka.Clients
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#%3Cinit%3E(org.apache.kafka.common.network.Selectable,org.apache.kafka.clients.Metadata,java.lang.String,int,long,long,int,int,int,long,long,org.apache.kafka.common.utils.Time,boolean,org.apache.kafka.clients.ApiVersions,org.apache.kafka.common.utils.LogContext)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#%3Cinit%3E(org.apache.kafka.common.network.Selectable,org.apache.kafka.clients.Metadata,java.lang.String,int,long,long,int,int,int,long,long,org.apache.kafka.common.utils.Time,boolean,org.apache.kafka.clients.ApiVersions,org.apache.kafka.common.utils.LogContext)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Network.Selectable"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Metadata"/></param>
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Clients
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#%3Cinit%3E(org.apache.kafka.common.network.Selectable,org.apache.kafka.clients.MetadataUpdater,java.lang.String,int,long,long,int,int,int,long,long,org.apache.kafka.common.utils.Time,boolean,org.apache.kafka.clients.ApiVersions,org.apache.kafka.common.utils.LogContext)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#%3Cinit%3E(org.apache.kafka.common.network.Selectable,org.apache.kafka.clients.MetadataUpdater,java.lang.String,int,long,long,int,int,int,long,long,org.apache.kafka.common.utils.Time,boolean,org.apache.kafka.clients.ApiVersions,org.apache.kafka.common.utils.LogContext)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Network.Selectable"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.MetadataUpdater"/></param>
@@ -125,10 +125,6 @@ namespace Org.Apache.Kafka.Clients
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Clients.NetworkClient"/> to <see cref="Org.Apache.Kafka.Clients.KafkaClient"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Clients.KafkaClient(Org.Apache.Kafka.Clients.NetworkClient t) => t.Cast<Org.Apache.Kafka.Clients.KafkaClient>();
 
         #endregion
 
@@ -137,22 +133,12 @@ namespace Org.Apache.Kafka.Clients
         #endregion
 
         #region Static methods
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#parseResponse(java.nio.ByteBuffer,org.apache.kafka.common.requests.RequestHeader)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Requests.RequestHeader"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Common.Requests.AbstractResponse"/></returns>
-        public static Org.Apache.Kafka.Common.Requests.AbstractResponse ParseResponse(Java.Nio.ByteBuffer arg0, Org.Apache.Kafka.Common.Requests.RequestHeader arg1)
-        {
-            return SExecute<Org.Apache.Kafka.Common.Requests.AbstractResponse>(LocalBridgeClazz, "parseResponse", arg0, arg1);
-        }
 
         #endregion
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#active()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#active()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -161,7 +147,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecute<bool>("active");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#connectionFailed(org.apache.kafka.common.Node)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#connectionFailed(org.apache.kafka.common.Node)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Node"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -170,7 +156,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecute<bool>("connectionFailed", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#discoverBrokerVersions()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#discoverBrokerVersions()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -179,7 +165,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecute<bool>("discoverBrokerVersions");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#hasInFlightRequests()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#hasInFlightRequests()"/>
         /// </summary>
 
         /// <returns><see cref="bool"/></returns>
@@ -188,7 +174,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecute<bool>("hasInFlightRequests");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#hasInFlightRequests(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#hasInFlightRequests(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -197,7 +183,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecute<bool>("hasInFlightRequests", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#hasReadyNodes(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#hasReadyNodes(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -206,7 +192,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecute<bool>("hasReadyNodes", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#isReady(org.apache.kafka.common.Node,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#isReady(org.apache.kafka.common.Node,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Node"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -216,7 +202,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecute<bool>("isReady", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#ready(org.apache.kafka.common.Node,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#ready(org.apache.kafka.common.Node,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Node"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -226,7 +212,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecute<bool>("ready", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#inFlightRequestCount()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#inFlightRequestCount()"/>
         /// </summary>
 
         /// <returns><see cref="int"/></returns>
@@ -235,7 +221,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecute<int>("inFlightRequestCount");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#inFlightRequestCount(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#inFlightRequestCount(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="int"/></returns>
@@ -244,7 +230,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecute<int>("inFlightRequestCount", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#poll(long,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#poll(long,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -254,7 +240,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecute<Java.Util.List<Org.Apache.Kafka.Clients.ClientResponse>>("poll", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#connectionDelay(org.apache.kafka.common.Node,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#connectionDelay(org.apache.kafka.common.Node,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Node"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -264,7 +250,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecute<long>("connectionDelay", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#pollDelayMs(org.apache.kafka.common.Node,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#pollDelayMs(org.apache.kafka.common.Node,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Node"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -274,7 +260,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecute<long>("pollDelayMs", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#throttleDelayMs(org.apache.kafka.common.Node,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#throttleDelayMs(org.apache.kafka.common.Node,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Node"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -284,33 +270,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecute<long>("throttleDelayMs", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#newClientRequest(java.lang.String,org.apache.kafka.common.requests.AbstractRequest.Builder,long,boolean,int,org.apache.kafka.clients.RequestCompletionHandler)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder"/></param>
-        /// <param name="arg2"><see cref="long"/></param>
-        /// <param name="arg3"><see cref="bool"/></param>
-        /// <param name="arg4"><see cref="int"/></param>
-        /// <param name="arg5"><see cref="Org.Apache.Kafka.Clients.RequestCompletionHandler"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Clients.ClientRequest"/></returns>
-        public Org.Apache.Kafka.Clients.ClientRequest NewClientRequest(string arg0, Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder arg1, long arg2, bool arg3, int arg4, Org.Apache.Kafka.Clients.RequestCompletionHandler arg5)
-        {
-            return IExecute<Org.Apache.Kafka.Clients.ClientRequest>("newClientRequest", arg0, arg1, arg2, arg3, arg4, arg5);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#newClientRequest(java.lang.String,org.apache.kafka.common.requests.AbstractRequest.Builder,long,boolean)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder"/></param>
-        /// <param name="arg2"><see cref="long"/></param>
-        /// <param name="arg3"><see cref="bool"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Clients.ClientRequest"/></returns>
-        public Org.Apache.Kafka.Clients.ClientRequest NewClientRequest(string arg0, Org.Apache.Kafka.Common.Requests.AbstractRequest.Builder arg1, long arg2, bool arg3)
-        {
-            return IExecute<Org.Apache.Kafka.Clients.ClientRequest>("newClientRequest", arg0, arg1, arg2, arg3);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#authenticationException(org.apache.kafka.common.Node)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#authenticationException(org.apache.kafka.common.Node)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Node"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Errors.AuthenticationException"/></returns>
@@ -319,7 +279,7 @@ namespace Org.Apache.Kafka.Clients
             var obj = IExecute<MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject>("authenticationException", arg0); return MASES.JCOBridge.C2JBridge.JVMBridgeException.New<Org.Apache.Kafka.Common.Errors.AuthenticationException>(obj);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#leastLoadedNode(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#leastLoadedNode(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Node"/></returns>
@@ -328,14 +288,14 @@ namespace Org.Apache.Kafka.Clients
             return IExecute<Org.Apache.Kafka.Common.Node>("leastLoadedNode", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecute("close");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#close(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#close(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         public void Close(string arg0)
@@ -343,7 +303,7 @@ namespace Org.Apache.Kafka.Clients
             IExecute("close", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#disconnect(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#disconnect(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         public void Disconnect(string arg0)
@@ -351,14 +311,14 @@ namespace Org.Apache.Kafka.Clients
             IExecute("disconnect", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#initiateClose()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#initiateClose()"/>
         /// </summary>
         public void InitiateClose()
         {
             IExecute("initiateClose");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#send(org.apache.kafka.clients.ClientRequest,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#send(org.apache.kafka.clients.ClientRequest,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.ClientRequest"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -367,7 +327,7 @@ namespace Org.Apache.Kafka.Clients
             IExecute("send", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#wakeup()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClient.html#wakeup()"/>
         /// </summary>
         public void Wakeup()
         {

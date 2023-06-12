@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Network
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ClientInformation.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ClientInformation.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -47,11 +47,11 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ClientInformation.html#UNKNOWN_NAME_OR_VERSION"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ClientInformation.html#UNKNOWN_NAME_OR_VERSION"/>
         /// </summary>
         public static string UNKNOWN_NAME_OR_VERSION { get { return SGetField<string>(LocalBridgeClazz, "UNKNOWN_NAME_OR_VERSION"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ClientInformation.html#EMPTY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ClientInformation.html#EMPTY"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Network.ClientInformation EMPTY { get { return SGetField<Org.Apache.Kafka.Common.Network.ClientInformation>(LocalBridgeClazz, "EMPTY"); } }
 
@@ -63,7 +63,7 @@ namespace Org.Apache.Kafka.Common.Network
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ClientInformation.html#softwareName()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ClientInformation.html#softwareName()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>
@@ -72,7 +72,7 @@ namespace Org.Apache.Kafka.Common.Network
             return IExecute<string>("softwareName");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ClientInformation.html#softwareVersion()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/network/ClientInformation.html#softwareVersion()"/>
         /// </summary>
 
         /// <returns><see cref="string"/></returns>

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common
 {
     #region Cluster
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Cluster.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Cluster.html"/>
     /// </summary>
     public partial class Cluster : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Cluster>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Common
 
     #region ClusterResource
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/ClusterResource.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/ClusterResource.html"/>
     /// </summary>
     public partial class ClusterResource : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ClusterResource>
     {
@@ -113,10 +113,15 @@ namespace Org.Apache.Kafka.Common
 
     #region ClusterResourceListener
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/ClusterResourceListener.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/ClusterResourceListener.html"/>
     /// </summary>
     public partial class ClusterResourceListener : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public ClusterResourceListener() { }
+
     #warning Remember to build the body class for event listener
 
         // TODO: complete the class
@@ -126,7 +131,7 @@ namespace Org.Apache.Kafka.Common
 
     #region Configurable
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Configurable.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Configurable.html"/>
     /// </summary>
     public partial class Configurable : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Configurable>
     {
@@ -169,7 +174,7 @@ namespace Org.Apache.Kafka.Common
 
     #region ConsumerGroupState
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/ConsumerGroupState.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/ConsumerGroupState.html"/>
     /// </summary>
     public partial class ConsumerGroupState : Java.Lang.Enum<Org.Apache.Kafka.Common.ConsumerGroupState>
     {
@@ -212,7 +217,7 @@ namespace Org.Apache.Kafka.Common
 
     #region ElectionType
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/ElectionType.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/ElectionType.html"/>
     /// </summary>
     public partial class ElectionType : Java.Lang.Enum<Org.Apache.Kafka.Common.ElectionType>
     {
@@ -255,7 +260,7 @@ namespace Org.Apache.Kafka.Common
 
     #region Endpoint
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Endpoint.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Endpoint.html"/>
     /// </summary>
     public partial class Endpoint : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Endpoint>
     {
@@ -298,7 +303,7 @@ namespace Org.Apache.Kafka.Common
 
     #region InvalidRecordException
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/InvalidRecordException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/InvalidRecordException.html"/>
     /// </summary>
     public partial class InvalidRecordException : Org.Apache.Kafka.Common.Errors.ApiException
     {
@@ -314,7 +319,7 @@ namespace Org.Apache.Kafka.Common
 
     #region IsolationLevel
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/IsolationLevel.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/IsolationLevel.html"/>
     /// </summary>
     public partial class IsolationLevel : Java.Lang.Enum<Org.Apache.Kafka.Common.IsolationLevel>
     {
@@ -357,7 +362,7 @@ namespace Org.Apache.Kafka.Common
 
     #region KafkaException
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaException.html"/>
     /// </summary>
     public partial class KafkaException : Java.Lang.RuntimeException
     {
@@ -373,9 +378,9 @@ namespace Org.Apache.Kafka.Common
 
     #region KafkaFuture
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html"/>
     /// </summary>
-    public partial class KafkaFuture : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KafkaFuture>
+    public partial class KafkaFuture : Java.Util.Concurrent.Future
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -412,7 +417,7 @@ namespace Org.Apache.Kafka.Common
         // TODO: complete the class
         #region BaseFunction
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.BaseFunction.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.BaseFunction.html"/>
         /// </summary>
         public partial class BaseFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BaseFunction>
         {
@@ -455,7 +460,7 @@ namespace Org.Apache.Kafka.Common
 
         #region BaseFunction<A, B>
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.BaseFunction.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.BaseFunction.html"/>
         /// </summary>
         /// <typeparam name="A"></typeparam>
         /// <typeparam name="B"></typeparam>
@@ -500,7 +505,7 @@ namespace Org.Apache.Kafka.Common
 
         #region BiConsumer
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.BiConsumer.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.BiConsumer.html"/>
         /// </summary>
         public partial class BiConsumer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BiConsumer>
         {
@@ -543,7 +548,7 @@ namespace Org.Apache.Kafka.Common
 
         #region BiConsumer<A, B>
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.BiConsumer.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.BiConsumer.html"/>
         /// </summary>
         /// <typeparam name="A"></typeparam>
         /// <typeparam name="B"></typeparam>
@@ -592,10 +597,10 @@ namespace Org.Apache.Kafka.Common
 
     #region KafkaFuture<T>
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/KafkaFuture.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public partial class KafkaFuture<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KafkaFuture<T>>
+    public partial class KafkaFuture<T> : Java.Util.Concurrent.Future<T>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -636,7 +641,7 @@ namespace Org.Apache.Kafka.Common
 
     #region MessageFormatter
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/MessageFormatter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/MessageFormatter.html"/>
     /// </summary>
     public partial class MessageFormatter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MessageFormatter>
     {
@@ -679,7 +684,7 @@ namespace Org.Apache.Kafka.Common
 
     #region Metric
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Metric.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Metric.html"/>
     /// </summary>
     public partial class Metric : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Metric>
     {
@@ -722,7 +727,7 @@ namespace Org.Apache.Kafka.Common
 
     #region MetricName
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/MetricName.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/MetricName.html"/>
     /// </summary>
     public partial class MetricName : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MetricName>
     {
@@ -765,7 +770,7 @@ namespace Org.Apache.Kafka.Common
 
     #region MetricNameTemplate
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/MetricNameTemplate.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/MetricNameTemplate.html"/>
     /// </summary>
     public partial class MetricNameTemplate : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MetricNameTemplate>
     {
@@ -808,7 +813,7 @@ namespace Org.Apache.Kafka.Common
 
     #region Node
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Node.html"/>
     /// </summary>
     public partial class Node : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Node>
     {
@@ -851,7 +856,7 @@ namespace Org.Apache.Kafka.Common
 
     #region PartitionInfo
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/PartitionInfo.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/PartitionInfo.html"/>
     /// </summary>
     public partial class PartitionInfo : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PartitionInfo>
     {
@@ -894,7 +899,7 @@ namespace Org.Apache.Kafka.Common
 
     #region Reconfigurable
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Reconfigurable.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Reconfigurable.html"/>
     /// </summary>
     public partial class Reconfigurable : Org.Apache.Kafka.Common.Configurable
     {
@@ -937,7 +942,7 @@ namespace Org.Apache.Kafka.Common
 
     #region TopicCollection
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicCollection.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicCollection.html"/>
     /// </summary>
     public partial class TopicCollection : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicCollection>
     {
@@ -976,7 +981,7 @@ namespace Org.Apache.Kafka.Common
         // TODO: complete the class
         #region TopicIdCollection
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicCollection.TopicIdCollection.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicCollection.TopicIdCollection.html"/>
         /// </summary>
         public partial class TopicIdCollection : Org.Apache.Kafka.Common.TopicCollection
         {
@@ -1019,7 +1024,7 @@ namespace Org.Apache.Kafka.Common
 
         #region TopicNameCollection
         /// <summary>
-        /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicCollection.TopicNameCollection.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicCollection.TopicNameCollection.html"/>
         /// </summary>
         public partial class TopicNameCollection : Org.Apache.Kafka.Common.TopicCollection
         {
@@ -1066,7 +1071,7 @@ namespace Org.Apache.Kafka.Common
 
     #region TopicIdPartition
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicIdPartition.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicIdPartition.html"/>
     /// </summary>
     public partial class TopicIdPartition : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicIdPartition>
     {
@@ -1109,9 +1114,9 @@ namespace Org.Apache.Kafka.Common
 
     #region TopicPartition
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicPartition.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicPartition.html"/>
     /// </summary>
-    public partial class TopicPartition : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicPartition>
+    public partial class TopicPartition : Java.Io.Serializable
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1152,7 +1157,7 @@ namespace Org.Apache.Kafka.Common
 
     #region TopicPartitionInfo
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicPartitionInfo.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicPartitionInfo.html"/>
     /// </summary>
     public partial class TopicPartitionInfo : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicPartitionInfo>
     {
@@ -1195,9 +1200,9 @@ namespace Org.Apache.Kafka.Common
 
     #region TopicPartitionReplica
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicPartitionReplica.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/TopicPartitionReplica.html"/>
     /// </summary>
-    public partial class TopicPartitionReplica : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicPartitionReplica>
+    public partial class TopicPartitionReplica : Java.Io.Serializable
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1238,9 +1243,9 @@ namespace Org.Apache.Kafka.Common
 
     #region Uuid
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Uuid.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Uuid.html"/>
     /// </summary>
-    public partial class Uuid : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Uuid>
+    public partial class Uuid : Java.Lang.Comparable<Org.Apache.Kafka.Common.Uuid>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1278,6 +1283,7 @@ namespace Org.Apache.Kafka.Common
 
     }
     #endregion
+
 
 
 }

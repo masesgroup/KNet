@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Security.Kerberos
 {
     #region BadFormatString
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/BadFormatString.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/BadFormatString.html"/>
     /// </summary>
     public partial class BadFormatString : Java.Io.IOException
     {
@@ -43,9 +43,9 @@ namespace Org.Apache.Kafka.Common.Security.Kerberos
 
     #region KerberosClientCallbackHandler
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosClientCallbackHandler.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosClientCallbackHandler.html"/>
     /// </summary>
-    public partial class KerberosClientCallbackHandler : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KerberosClientCallbackHandler>
+    public partial class KerberosClientCallbackHandler : Org.Apache.Kafka.Common.Security.Auth.AuthenticateCallbackHandler
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -86,7 +86,7 @@ namespace Org.Apache.Kafka.Common.Security.Kerberos
 
     #region KerberosError
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosError.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosError.html"/>
     /// </summary>
     public partial class KerberosError : Java.Lang.Enum<Org.Apache.Kafka.Common.Security.Kerberos.KerberosError>
     {
@@ -129,7 +129,7 @@ namespace Org.Apache.Kafka.Common.Security.Kerberos
 
     #region KerberosLogin
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosLogin.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosLogin.html"/>
     /// </summary>
     public partial class KerberosLogin : Org.Apache.Kafka.Common.Security.Authenticator.AbstractLogin
     {
@@ -172,7 +172,7 @@ namespace Org.Apache.Kafka.Common.Security.Kerberos
 
     #region KerberosName
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosName.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosName.html"/>
     /// </summary>
     public partial class KerberosName : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KerberosName>
     {
@@ -215,7 +215,7 @@ namespace Org.Apache.Kafka.Common.Security.Kerberos
 
     #region KerberosShortNamer
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosShortNamer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/KerberosShortNamer.html"/>
     /// </summary>
     public partial class KerberosShortNamer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KerberosShortNamer>
     {
@@ -258,7 +258,7 @@ namespace Org.Apache.Kafka.Common.Security.Kerberos
 
     #region NoMatchingRule
     /// <summary>
-    /// <see href="https://www.javadoc.io/static/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/NoMatchingRule.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/security/kerberos/NoMatchingRule.html"/>
     /// </summary>
     public partial class NoMatchingRule : Java.Io.IOException
     {
@@ -271,6 +271,7 @@ namespace Org.Apache.Kafka.Common.Security.Kerberos
 
     }
     #endregion
+
 
 
 }
