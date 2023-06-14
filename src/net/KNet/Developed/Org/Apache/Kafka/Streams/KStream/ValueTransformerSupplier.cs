@@ -25,51 +25,11 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Streams.Kstream
 {
-    #region ValueTransformerSupplier
-    public partial class ValueTransformerSupplier
-    {
-        #region Constructors
-
-        #endregion
-
-        #region Class/Interface conversion operators
-
-        #endregion
-
-        #region Fields
-
-        #endregion
-
-        #region Static methods
-
-        #endregion
-
-        #region Instance methods
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerSupplier.html#get()"/>
-        /// </summary>
-
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.ValueTransformer"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.ValueTransformer Get()
-        {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.ValueTransformer>("get");
-        }
-
-        #endregion
-
-        #region Nested classes
-
-        #endregion
-
-        // TODO: complete the class
-    }
-    #endregion
-
     #region IValueTransformerSupplier<V, VR>
     /// <summary>
     /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerSupplier.html"/>
     /// </summary>
-    public partial interface IValueTransformerSupplier<V, VR> : Org.Apache.Kafka.Streams.Processor.IConnectedStoreProvider
+    public partial interface IValueTransformerSupplier<V, VR>
     {
         #region Instance methods
 
@@ -84,17 +44,13 @@ namespace Org.Apache.Kafka.Streams.Kstream
     #endregion
 
     #region ValueTransformerSupplier<V, VR>
-    public partial class ValueTransformerSupplier<V, VR> : Org.Apache.Kafka.Streams.Kstream.IValueTransformerSupplier<V, VR>
+    public partial class ValueTransformerSupplier<V, VR> : JVMBridgeListener, Org.Apache.Kafka.Streams.Kstream.IValueTransformerSupplier<V, VR>
     {
         #region Constructors
 
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Streams.Kstream.ValueTransformerSupplier{V, VR}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.ValueTransformerSupplier"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.Kstream.ValueTransformerSupplier(Org.Apache.Kafka.Streams.Kstream.ValueTransformerSupplier<V, VR> t) => t.Cast<Org.Apache.Kafka.Streams.Kstream.ValueTransformerSupplier>();
 
         #endregion
 
@@ -112,9 +68,9 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.ValueTransformer"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.ValueTransformer<V, VR> Get()
+        public virtual Org.Apache.Kafka.Streams.Kstream.ValueTransformer<V, VR> Get()
         {
-            return IExecute<Org.Apache.Kafka.Streams.Kstream.ValueTransformer<V, VR>>("get");
+            return default;
         }
 
         #endregion

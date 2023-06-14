@@ -49,10 +49,6 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Bytes.html#EMPTY"/>
         /// </summary>
         public static byte[] EMPTY { get { return SGetFieldArray<byte>(LocalBridgeClazz, "EMPTY"); } }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Bytes.html#BYTES_LEXICO_COMPARATOR"/>
-        /// </summary>
-        public static Org.Apache.Kafka.Common.Utils.Bytes.ByteArrayComparator BYTES_LEXICO_COMPARATOR { get { return SGetField<Org.Apache.Kafka.Common.Utils.Bytes.ByteArrayComparator>(LocalBridgeClazz, "BYTES_LEXICO_COMPARATOR"); } }
 
         #endregion
 
@@ -111,60 +107,7 @@ namespace Org.Apache.Kafka.Common.Utils
         #endregion
 
         #region Nested classes
-        #region ByteArrayComparator
-        public partial class ByteArrayComparator : Java.Util.IComparator<byte[]>, Java.Io.ISerializable
-        {
-            #region Constructors
 
-            #endregion
-
-            #region Class/Interface conversion operators
-            /// <summary>
-            /// Converter from <see cref="Org.Apache.Kafka.Common.Utils.Bytes.ByteArrayComparator"/> to <see cref="Java.Util.Comparator"/>
-            /// </summary>
-            public static implicit operator Java.Util.Comparator(Org.Apache.Kafka.Common.Utils.Bytes.ByteArrayComparator t) => t.Cast<Java.Util.Comparator>();
-            /// <summary>
-            /// Converter from <see cref="Org.Apache.Kafka.Common.Utils.Bytes.ByteArrayComparator"/> to <see cref="Java.Io.Serializable"/>
-            /// </summary>
-            public static implicit operator Java.Io.Serializable(Org.Apache.Kafka.Common.Utils.Bytes.ByteArrayComparator t) => t.Cast<Java.Io.Serializable>();
-
-            #endregion
-
-            #region Fields
-
-            #endregion
-
-            #region Static methods
-
-            #endregion
-
-            #region Instance methods
-            /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/Bytes.ByteArrayComparator.html#compare(byte[],int,int,byte[],int,int)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="byte"/></param>
-            /// <param name="arg1"><see cref="int"/></param>
-            /// <param name="arg2"><see cref="int"/></param>
-            /// <param name="arg3"><see cref="byte"/></param>
-            /// <param name="arg4"><see cref="int"/></param>
-            /// <param name="arg5"><see cref="int"/></param>
-            /// <returns><see cref="int"/></returns>
-            public int Compare(byte[] arg0, int arg1, int arg2, byte[] arg3, int arg4, int arg5)
-            {
-                return IExecute<int>("compare", arg0, arg1, arg2, arg3, arg4, arg5);
-            }
-
-            #endregion
-
-            #region Nested classes
-
-            #endregion
-
-            // TODO: complete the class
-        }
-        #endregion
-
-    
         #endregion
 
         // TODO: complete the class

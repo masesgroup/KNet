@@ -41,42 +41,6 @@ namespace Org.Apache.Kafka.Clients
         #endregion
 
         #region Static methods
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClientUtils.html#awaitReady(org.apache.kafka.clients.KafkaClient,org.apache.kafka.common.Node,org.apache.kafka.common.utils.Time,long)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.KafkaClient"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Node"/></param>
-        /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Utils.Time"/></param>
-        /// <param name="arg3"><see cref="long"/></param>
-        /// <returns><see cref="bool"/></returns>
-        /// <exception cref="Java.Io.IOException"/>
-        public static bool AwaitReady(Org.Apache.Kafka.Clients.KafkaClient arg0, Org.Apache.Kafka.Common.Node arg1, Org.Apache.Kafka.Common.Utils.Time arg2, long arg3)
-        {
-            return SExecute<bool>(LocalBridgeClazz, "awaitReady", arg0, arg1, arg2, arg3);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClientUtils.html#isReady(org.apache.kafka.clients.KafkaClient,org.apache.kafka.common.Node,long)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.KafkaClient"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Node"/></param>
-        /// <param name="arg2"><see cref="long"/></param>
-        /// <returns><see cref="bool"/></returns>
-        public static bool IsReady(Org.Apache.Kafka.Clients.KafkaClient arg0, Org.Apache.Kafka.Common.Node arg1, long arg2)
-        {
-            return SExecute<bool>(LocalBridgeClazz, "isReady", arg0, arg1, arg2);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NetworkClientUtils.html#sendAndReceive(org.apache.kafka.clients.KafkaClient,org.apache.kafka.clients.ClientRequest,org.apache.kafka.common.utils.Time)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.KafkaClient"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.ClientRequest"/></param>
-        /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Utils.Time"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Clients.ClientResponse"/></returns>
-        /// <exception cref="Java.Io.IOException"/>
-        public static Org.Apache.Kafka.Clients.ClientResponse SendAndReceive(Org.Apache.Kafka.Clients.KafkaClient arg0, Org.Apache.Kafka.Clients.ClientRequest arg1, Org.Apache.Kafka.Common.Utils.Time arg2)
-        {
-            return SExecute<Org.Apache.Kafka.Clients.ClientResponse>(LocalBridgeClazz, "sendAndReceive", arg0, arg1, arg2);
-        }
 
         #endregion
 

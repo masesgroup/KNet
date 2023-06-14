@@ -41,6 +41,24 @@ namespace Org.Apache.Kafka.Clients.Consumer
             : base(arg0, arg1, arg2, arg3, arg4)
         {
         }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#%3Cinit%3E(java.lang.String,int,long,long,org.apache.kafka.common.record.TimestampType,int,int,java.lang.Object,java.lang.Object,org.apache.kafka.common.header.Headers,java.util.Optional)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg1"><see cref="int"/></param>
+        /// <param name="arg2"><see cref="long"/></param>
+        /// <param name="arg3"><see cref="long"/></param>
+        /// <param name="arg4"><see cref="Org.Apache.Kafka.Common.Record.TimestampType"/></param>
+        /// <param name="arg5"><see cref="int"/></param>
+        /// <param name="arg6"><see cref="int"/></param>
+        /// <param name="arg7"><see cref="object"/></param>
+        /// <param name="arg8"><see cref="object"/></param>
+        /// <param name="arg9"><see cref="Org.Apache.Kafka.Common.Header.Headers"/></param>
+        /// <param name="arg10"><see cref="Java.Util.Optional"/></param>
+        public ConsumerRecord(string arg0, int arg1, long arg2, long arg3, Org.Apache.Kafka.Common.Record.TimestampType arg4, int arg5, int arg6, object arg7, object arg8, Org.Apache.Kafka.Common.Header.Headers arg9, Java.Util.Optional arg10)
+            : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10)
+        {
+        }
 
         #endregion
 
@@ -147,6 +165,15 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecute<Org.Apache.Kafka.Common.Header.Headers>("headers");
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#timestampType()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Record.TimestampType"/></returns>
+        public Org.Apache.Kafka.Common.Record.TimestampType TimestampType()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Record.TimestampType>("timestampType");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#value()"/>
         /// </summary>
 
@@ -180,6 +207,24 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <param name="arg4"><typeparamref name="V"/></param>
         public ConsumerRecord(string arg0, int arg1, long arg2, K arg3, V arg4)
             : base(arg0, arg1, arg2, arg3, arg4)
+        {
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#%3Cinit%3E(java.lang.String,int,long,long,org.apache.kafka.common.record.TimestampType,int,int,java.lang.Object,java.lang.Object,org.apache.kafka.common.header.Headers,java.util.Optional)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg1"><see cref="int"/></param>
+        /// <param name="arg2"><see cref="long"/></param>
+        /// <param name="arg3"><see cref="long"/></param>
+        /// <param name="arg4"><see cref="Org.Apache.Kafka.Common.Record.TimestampType"/></param>
+        /// <param name="arg5"><see cref="int"/></param>
+        /// <param name="arg6"><see cref="int"/></param>
+        /// <param name="arg7"><typeparamref name="K"/></param>
+        /// <param name="arg8"><typeparamref name="V"/></param>
+        /// <param name="arg9"><see cref="Org.Apache.Kafka.Common.Header.Headers"/></param>
+        /// <param name="arg10"><see cref="Java.Util.Optional"/></param>
+        public ConsumerRecord(string arg0, int arg1, long arg2, long arg3, Org.Apache.Kafka.Common.Record.TimestampType arg4, int arg5, int arg6, K arg7, V arg8, Org.Apache.Kafka.Common.Header.Headers arg9, Java.Util.Optional<int?> arg10)
+            : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10)
         {
         }
 
@@ -290,6 +335,15 @@ namespace Org.Apache.Kafka.Clients.Consumer
         public Org.Apache.Kafka.Common.Header.Headers Headers()
         {
             return IExecute<Org.Apache.Kafka.Common.Header.Headers>("headers");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#timestampType()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Record.TimestampType"/></returns>
+        public Org.Apache.Kafka.Common.Record.TimestampType TimestampType()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Record.TimestampType>("timestampType");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#value()"/>

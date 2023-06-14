@@ -74,26 +74,6 @@ namespace Org.Apache.Kafka.Clients
         {
             return IExecute<string>("toString", arg0);
         }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NodeApiVersions.html#latestUsableVersion(org.apache.kafka.common.protocol.ApiKeys,short,short)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.ApiKeys"/></param>
-        /// <param name="arg1"><see cref="short"/></param>
-        /// <param name="arg2"><see cref="short"/></param>
-        /// <returns><see cref="short"/></returns>
-        public short LatestUsableVersion(Org.Apache.Kafka.Common.Protocol.ApiKeys arg0, short arg1, short arg2)
-        {
-            return IExecute<short>("latestUsableVersion", arg0, arg1, arg2);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/NodeApiVersions.html#latestUsableVersion(org.apache.kafka.common.protocol.ApiKeys)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Protocol.ApiKeys"/></param>
-        /// <returns><see cref="short"/></returns>
-        public short LatestUsableVersion(Org.Apache.Kafka.Common.Protocol.ApiKeys arg0)
-        {
-            return IExecute<short>("latestUsableVersion", arg0);
-        }
 
         #endregion
 

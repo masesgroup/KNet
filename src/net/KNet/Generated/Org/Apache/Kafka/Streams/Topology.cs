@@ -165,56 +165,6 @@ namespace Org.Apache.Kafka.Streams
             if (arg3.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Topology>("addSink", arg0, arg1, arg2); else return IExecute<Org.Apache.Kafka.Streams.Topology>("addSink", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addProcessor(java.lang.String,org.apache.kafka.streams.processor.api.ProcessorSupplier,java.lang.String[])"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier"/></param>
-        /// <param name="arg2"><see cref="string"/></param>
-        /// <typeparam name="KIn"></typeparam>
-        /// <typeparam name="VIn"></typeparam>
-        /// <typeparam name="KOut"></typeparam>
-        /// <typeparam name="VOut"></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Topology"/></returns>
-        public Org.Apache.Kafka.Streams.Topology AddProcessor<KIn, VIn, KOut, VOut>(string arg0, Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier<KIn, VIn, KOut, VOut> arg1, params string[] arg2)
-        {
-            if (arg2.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Topology>("addProcessor", arg0, arg1); else return IExecute<Org.Apache.Kafka.Streams.Topology>("addProcessor", arg0, arg1, arg2);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addGlobalStore(org.apache.kafka.streams.state.StoreBuilder,java.lang.String,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.lang.String,java.lang.String,org.apache.kafka.streams.processor.api.ProcessorSupplier)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.StoreBuilder"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
-        /// <param name="arg3"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
-        /// <param name="arg4"><see cref="string"/></param>
-        /// <param name="arg5"><see cref="string"/></param>
-        /// <param name="arg6"><see cref="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier"/></param>
-        /// <typeparam name="KIn"></typeparam>
-        /// <typeparam name="VIn"></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Topology"/></returns>
-        public Org.Apache.Kafka.Streams.Topology AddGlobalStore<KIn, VIn>(Org.Apache.Kafka.Streams.State.StoreBuilder arg0, string arg1, Org.Apache.Kafka.Common.Serialization.Deserializer<KIn> arg2, Org.Apache.Kafka.Common.Serialization.Deserializer<VIn> arg3, string arg4, string arg5, Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier<KIn, VIn, Java.Lang.Void, Java.Lang.Void> arg6)
-        {
-            return IExecute<Org.Apache.Kafka.Streams.Topology>("addGlobalStore", arg0, arg1, arg2, arg3, arg4, arg5, arg6);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addGlobalStore(org.apache.kafka.streams.state.StoreBuilder,java.lang.String,org.apache.kafka.streams.processor.TimestampExtractor,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.lang.String,java.lang.String,org.apache.kafka.streams.processor.api.ProcessorSupplier)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.StoreBuilder"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Processor.TimestampExtractor"/></param>
-        /// <param name="arg3"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
-        /// <param name="arg4"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
-        /// <param name="arg5"><see cref="string"/></param>
-        /// <param name="arg6"><see cref="string"/></param>
-        /// <param name="arg7"><see cref="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier"/></param>
-        /// <typeparam name="KIn"></typeparam>
-        /// <typeparam name="VIn"></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Topology"/></returns>
-        public Org.Apache.Kafka.Streams.Topology AddGlobalStore<KIn, VIn>(Org.Apache.Kafka.Streams.State.StoreBuilder arg0, string arg1, Org.Apache.Kafka.Streams.Processor.TimestampExtractor arg2, Org.Apache.Kafka.Common.Serialization.Deserializer<KIn> arg3, Org.Apache.Kafka.Common.Serialization.Deserializer<VIn> arg4, string arg5, string arg6, Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier<KIn, VIn, Java.Lang.Void, Java.Lang.Void> arg7)
-        {
-            return IExecute<Org.Apache.Kafka.Streams.Topology>("addGlobalStore", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,java.lang.String,java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>

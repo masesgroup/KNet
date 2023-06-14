@@ -138,27 +138,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream>("leftJoin", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KStream.html#process(org.apache.kafka.streams.processor.api.ProcessorSupplier,java.lang.String[])"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream Process(Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier arg0, params string[] arg1)
-        {
-            if (arg1.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream>("process", arg0); else return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream>("process", arg0, arg1);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KStream.html#process(org.apache.kafka.streams.processor.api.ProcessorSupplier,org.apache.kafka.streams.kstream.Named,java.lang.String[])"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
-        /// <param name="arg2"><see cref="string"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream Process(Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1, params string[] arg2)
-        {
-            if (arg2.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream>("process", arg0, arg1); else return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream>("process", arg0, arg1, arg2);
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KStream.html#flatMap(org.apache.kafka.streams.kstream.KeyValueMapper,org.apache.kafka.streams.kstream.Named)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.KeyValueMapper"/></param>
@@ -371,27 +350,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
         public Org.Apache.Kafka.Streams.Kstream.KStream OuterJoin(Org.Apache.Kafka.Streams.Kstream.KStream arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey arg1, Org.Apache.Kafka.Streams.Kstream.JoinWindows arg2)
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream>("outerJoin", arg0, arg1, arg2);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KStream.html#processValues(org.apache.kafka.streams.processor.api.FixedKeyProcessorSupplier,java.lang.String[])"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream ProcessValues(Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier arg0, params string[] arg1)
-        {
-            if (arg1.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream>("processValues", arg0); else return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream>("processValues", arg0, arg1);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KStream.html#processValues(org.apache.kafka.streams.processor.api.FixedKeyProcessorSupplier,org.apache.kafka.streams.kstream.Named,java.lang.String[])"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
-        /// <param name="arg2"><see cref="string"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream ProcessValues(Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1, params string[] arg2)
-        {
-            if (arg2.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream>("processValues", arg0, arg1); else return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream>("processValues", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KStream.html#flatMapValues(org.apache.kafka.streams.kstream.ValueMapper,org.apache.kafka.streams.kstream.Named)"/>
@@ -1001,35 +959,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, RV>>("leftJoin", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KStream.html#process(org.apache.kafka.streams.processor.api.ProcessorSupplier,java.lang.String[])"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <typeparam name="KOut"></typeparam>
-        /// <typeparam name="VOut"></typeparam>
-        /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
-        /// <typeparam name="Arg0objectSuperV"></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<KOut, VOut> Process<KOut, VOut, Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier<Arg0objectSuperK, Arg0objectSuperV, KOut, VOut> arg0, params string[] arg1) where Arg0objectSuperK: K
-        {
-            if (arg1.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<KOut, VOut>>("process", arg0); else return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<KOut, VOut>>("process", arg0, arg1);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KStream.html#process(org.apache.kafka.streams.processor.api.ProcessorSupplier,org.apache.kafka.streams.kstream.Named,java.lang.String[])"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
-        /// <param name="arg2"><see cref="string"/></param>
-        /// <typeparam name="KOut"></typeparam>
-        /// <typeparam name="VOut"></typeparam>
-        /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
-        /// <typeparam name="Arg0objectSuperV"></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<KOut, VOut> Process<KOut, VOut, Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier<Arg0objectSuperK, Arg0objectSuperV, KOut, VOut> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1, params string[] arg2) where Arg0objectSuperK: K
-        {
-            if (arg2.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<KOut, VOut>>("process", arg0, arg1); else return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<KOut, VOut>>("process", arg0, arg1, arg2);
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KStream.html#flatMap(org.apache.kafka.streams.kstream.KeyValueMapper,org.apache.kafka.streams.kstream.Named)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.KeyValueMapper"/></param>
@@ -1352,33 +1281,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
         public Org.Apache.Kafka.Streams.Kstream.KStream<K, VR> OuterJoin<VR, VO, Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.KStream<K, VO> arg0, Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey<Arg1objectSuperK, Arg1objectSuperV, Arg1objectSuperVO, Arg1ExtendsVR> arg1, Org.Apache.Kafka.Streams.Kstream.JoinWindows arg2) where Arg1objectSuperK: K where Arg1ExtendsVR: VO
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, VR>>("outerJoin", arg0, arg1, arg2);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KStream.html#processValues(org.apache.kafka.streams.processor.api.FixedKeyProcessorSupplier,java.lang.String[])"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <typeparam name="VOut"></typeparam>
-        /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
-        /// <typeparam name="Arg0objectSuperV"></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VOut> ProcessValues<VOut, Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier<Arg0objectSuperK, Arg0objectSuperV, VOut> arg0, params string[] arg1) where Arg0objectSuperK: K
-        {
-            if (arg1.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, VOut>>("processValues", arg0); else return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, VOut>>("processValues", arg0, arg1);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KStream.html#processValues(org.apache.kafka.streams.processor.api.FixedKeyProcessorSupplier,org.apache.kafka.streams.kstream.Named,java.lang.String[])"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
-        /// <param name="arg2"><see cref="string"/></param>
-        /// <typeparam name="VOut"></typeparam>
-        /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
-        /// <typeparam name="Arg0objectSuperV"></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KStream<K, VOut> ProcessValues<VOut, Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier<Arg0objectSuperK, Arg0objectSuperV, VOut> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1, params string[] arg2) where Arg0objectSuperK: K
-        {
-            if (arg2.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, VOut>>("processValues", arg0, arg1); else return IExecute<Org.Apache.Kafka.Streams.Kstream.KStream<K, VOut>>("processValues", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KStream.html#flatMapValues(org.apache.kafka.streams.kstream.ValueMapper,org.apache.kafka.streams.kstream.Named)"/>

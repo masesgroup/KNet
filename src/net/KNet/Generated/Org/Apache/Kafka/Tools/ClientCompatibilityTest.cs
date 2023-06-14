@@ -76,64 +76,7 @@ namespace Org.Apache.Kafka.Tools
         #endregion
 
         #region Nested classes
-        #region ClientCompatibilityTestDeserializer
-        public partial class ClientCompatibilityTestDeserializer : Org.Apache.Kafka.Common.Serialization.IDeserializer<byte[]>, Org.Apache.Kafka.Common.IClusterResourceListener
-        {
-            #region Constructors
 
-            #endregion
-
-            #region Class/Interface conversion operators
-            /// <summary>
-            /// Converter from <see cref="Org.Apache.Kafka.Tools.ClientCompatibilityTest.ClientCompatibilityTestDeserializer"/> to <see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/>
-            /// </summary>
-            public static implicit operator Org.Apache.Kafka.Common.Serialization.Deserializer(Org.Apache.Kafka.Tools.ClientCompatibilityTest.ClientCompatibilityTestDeserializer t) => t.Cast<Org.Apache.Kafka.Common.Serialization.Deserializer>();
-            /// <summary>
-            /// Converter from <see cref="Org.Apache.Kafka.Tools.ClientCompatibilityTest.ClientCompatibilityTestDeserializer"/> to <see cref="Org.Apache.Kafka.Common.ClusterResourceListener"/>
-            /// </summary>
-            public static implicit operator Org.Apache.Kafka.Common.ClusterResourceListener(Org.Apache.Kafka.Tools.ClientCompatibilityTest.ClientCompatibilityTestDeserializer t) => t.Cast<Org.Apache.Kafka.Common.ClusterResourceListener>();
-
-            #endregion
-
-            #region Fields
-
-            #endregion
-
-            #region Static methods
-
-            #endregion
-
-            #region Instance methods
-            /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/ClientCompatibilityTest.ClientCompatibilityTestDeserializer.html#deserialize(java.lang.String,byte[])"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="string"/></param>
-            /// <param name="arg1"><see cref="byte"/></param>
-            /// <returns><see cref="object"/></returns>
-            public object Deserialize(string arg0, byte[] arg1)
-            {
-                return IExecute("deserialize", arg0, arg1);
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/ClientCompatibilityTest.ClientCompatibilityTestDeserializer.html#onUpdate(org.apache.kafka.common.ClusterResource)"/>
-            /// </summary>
-            /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.ClusterResource"/></param>
-            public void OnUpdate(Org.Apache.Kafka.Common.ClusterResource arg0)
-            {
-                IExecute("onUpdate", arg0);
-            }
-
-            #endregion
-
-            #region Nested classes
-
-            #endregion
-
-            // TODO: complete the class
-        }
-        #endregion
-
-    
         #endregion
 
         // TODO: complete the class

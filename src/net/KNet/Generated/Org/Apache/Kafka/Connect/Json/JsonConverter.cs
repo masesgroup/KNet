@@ -26,7 +26,7 @@ using MASES.JCOBridge.C2JBridge;
 namespace Org.Apache.Kafka.Connect.Json
 {
     #region JsonConverter
-    public partial class JsonConverter : Org.Apache.Kafka.Connect.Storage.IConverter, Org.Apache.Kafka.Connect.Storage.IHeaderConverter
+    public partial class JsonConverter : Org.Apache.Kafka.Connect.Storage.IConverter
     {
         #region Constructors
 
@@ -37,10 +37,6 @@ namespace Org.Apache.Kafka.Connect.Json
         /// Converter from <see cref="Org.Apache.Kafka.Connect.Json.JsonConverter"/> to <see cref="Org.Apache.Kafka.Connect.Storage.Converter"/>
         /// </summary>
         public static implicit operator Org.Apache.Kafka.Connect.Storage.Converter(Org.Apache.Kafka.Connect.Json.JsonConverter t) => t.Cast<Org.Apache.Kafka.Connect.Storage.Converter>();
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Connect.Json.JsonConverter"/> to <see cref="Org.Apache.Kafka.Connect.Storage.HeaderConverter"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Connect.Storage.HeaderConverter(Org.Apache.Kafka.Connect.Json.JsonConverter t) => t.Cast<Org.Apache.Kafka.Connect.Storage.HeaderConverter>();
 
         #endregion
 

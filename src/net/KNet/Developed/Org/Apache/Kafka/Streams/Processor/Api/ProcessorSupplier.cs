@@ -33,14 +33,6 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier"/> to <see cref="Org.Apache.Kafka.Streams.Processor.ConnectedStoreProvider"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.Processor.ConnectedStoreProvider(Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier t) => t.Cast<Org.Apache.Kafka.Streams.Processor.ConnectedStoreProvider>();
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier"/> to <see cref="Java.Util.Function.Supplier"/>
-        /// </summary>
-        public static implicit operator Java.Util.Function.Supplier(Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier t) => t.Cast<Java.Util.Function.Supplier>();
 
         #endregion
 
@@ -58,9 +50,9 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         /// </summary>
 
         /// <returns><see cref="object"/></returns>
-        public object Get()
+        public virtual object Get()
         {
-            return IExecute("get");
+            return default;
         }
 
         #endregion
@@ -92,25 +84,13 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
     #endregion
 
     #region ProcessorSupplier<KIn, VIn, KOut, VOut>
-    public partial class ProcessorSupplier<KIn, VIn, KOut, VOut> : Org.Apache.Kafka.Streams.Processor.Api.IProcessorSupplier<KIn, VIn, KOut, VOut>, Org.Apache.Kafka.Streams.Processor.IConnectedStoreProvider, Java.Util.Function.ISupplier<Org.Apache.Kafka.Streams.Processor.Api.Processor<KIn, VIn, KOut, VOut>>
+    public partial class ProcessorSupplier<KIn, VIn, KOut, VOut> : JVMBridgeListener, Org.Apache.Kafka.Streams.Processor.Api.IProcessorSupplier<KIn, VIn, KOut, VOut>, Org.Apache.Kafka.Streams.Processor.IConnectedStoreProvider, Java.Util.Function.ISupplier<Org.Apache.Kafka.Streams.Processor.Api.Processor<KIn, VIn, KOut, VOut>>
     {
         #region Constructors
 
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier{KIn, VIn, KOut, VOut}"/> to <see cref="Org.Apache.Kafka.Streams.Processor.ConnectedStoreProvider"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.Processor.ConnectedStoreProvider(Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier<KIn, VIn, KOut, VOut> t) => t.Cast<Org.Apache.Kafka.Streams.Processor.ConnectedStoreProvider>();
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier{KIn, VIn, KOut, VOut}"/> to <see cref="Java.Util.Function.Supplier"/>
-        /// </summary>
-        public static implicit operator Java.Util.Function.Supplier(Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier<KIn, VIn, KOut, VOut> t) => t.Cast<Java.Util.Function.Supplier>();
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier{KIn, VIn, KOut, VOut}"/> to <see cref="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier(Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier<KIn, VIn, KOut, VOut> t) => t.Cast<Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier>();
 
         #endregion
 
@@ -128,9 +108,9 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         /// </summary>
 
         /// <returns><see cref="object"/></returns>
-        public object Get()
+        public virtual Org.Apache.Kafka.Streams.Processor.Api.Processor<KIn, VIn, KOut, VOut> Get()
         {
-            return IExecute("get");
+            return default;
         }
 
         #endregion

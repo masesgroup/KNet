@@ -30,6 +30,39 @@ namespace Org.Apache.Kafka.Connect.Sink
     {
         #region Constructors
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/sink/SinkRecord.html#%3Cinit%3E(java.lang.String,int,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,long,java.lang.Long,org.apache.kafka.common.record.TimestampType,java.lang.Iterable)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg1"><see cref="int"/></param>
+        /// <param name="arg2"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
+        /// <param name="arg3"><see cref="object"/></param>
+        /// <param name="arg4"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
+        /// <param name="arg5"><see cref="object"/></param>
+        /// <param name="arg6"><see cref="long"/></param>
+        /// <param name="arg7"><see cref="long"/></param>
+        /// <param name="arg8"><see cref="Org.Apache.Kafka.Common.Record.TimestampType"/></param>
+        /// <param name="arg9"><see cref="Java.Lang.Iterable"/></param>
+        public SinkRecord(string arg0, int arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, long arg6, long? arg7, Org.Apache.Kafka.Common.Record.TimestampType arg8, Java.Lang.Iterable<Org.Apache.Kafka.Connect.Header.Header> arg9)
+            : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)
+        {
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/sink/SinkRecord.html#%3Cinit%3E(java.lang.String,int,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,long,java.lang.Long,org.apache.kafka.common.record.TimestampType)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="string"/></param>
+        /// <param name="arg1"><see cref="int"/></param>
+        /// <param name="arg2"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
+        /// <param name="arg3"><see cref="object"/></param>
+        /// <param name="arg4"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
+        /// <param name="arg5"><see cref="object"/></param>
+        /// <param name="arg6"><see cref="long"/></param>
+        /// <param name="arg7"><see cref="long"/></param>
+        /// <param name="arg8"><see cref="Org.Apache.Kafka.Common.Record.TimestampType"/></param>
+        public SinkRecord(string arg0, int arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, long arg6, long? arg7, Org.Apache.Kafka.Common.Record.TimestampType arg8)
+            : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
+        {
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/sink/SinkRecord.html#%3Cinit%3E(java.lang.String,int,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
@@ -67,6 +100,15 @@ namespace Org.Apache.Kafka.Connect.Sink
         public long KafkaOffset()
         {
             return IExecute<long>("kafkaOffset");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/sink/SinkRecord.html#timestampType()"/>
+        /// </summary>
+
+        /// <returns><see cref="Org.Apache.Kafka.Common.Record.TimestampType"/></returns>
+        public Org.Apache.Kafka.Common.Record.TimestampType TimestampType()
+        {
+            return IExecute<Org.Apache.Kafka.Common.Record.TimestampType>("timestampType");
         }
 
         #endregion

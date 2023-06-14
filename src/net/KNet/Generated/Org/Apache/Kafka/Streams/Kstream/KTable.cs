@@ -392,50 +392,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("mapValues", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KTable.html#transformValues(org.apache.kafka.streams.kstream.ValueTransformerWithKeySupplier,java.lang.String[])"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKeySupplier"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KTable TransformValues(Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKeySupplier arg0, params string[] arg1)
-        {
-            if (arg1.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("transformValues", arg0); else return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("transformValues", arg0, arg1);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KTable.html#transformValues(org.apache.kafka.streams.kstream.ValueTransformerWithKeySupplier,org.apache.kafka.streams.kstream.Materialized,java.lang.String[])"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKeySupplier"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
-        /// <param name="arg2"><see cref="string"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KTable TransformValues(Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKeySupplier arg0, Org.Apache.Kafka.Streams.Kstream.Materialized arg1, params string[] arg2)
-        {
-            if (arg2.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("transformValues", arg0, arg1); else return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("transformValues", arg0, arg1, arg2);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KTable.html#transformValues(org.apache.kafka.streams.kstream.ValueTransformerWithKeySupplier,org.apache.kafka.streams.kstream.Materialized,org.apache.kafka.streams.kstream.Named,java.lang.String[])"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKeySupplier"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
-        /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
-        /// <param name="arg3"><see cref="string"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KTable TransformValues(Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKeySupplier arg0, Org.Apache.Kafka.Streams.Kstream.Materialized arg1, Org.Apache.Kafka.Streams.Kstream.Named arg2, params string[] arg3)
-        {
-            if (arg3.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("transformValues", arg0, arg1, arg2); else return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("transformValues", arg0, arg1, arg2, arg3);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KTable.html#transformValues(org.apache.kafka.streams.kstream.ValueTransformerWithKeySupplier,org.apache.kafka.streams.kstream.Named,java.lang.String[])"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKeySupplier"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
-        /// <param name="arg2"><see cref="string"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KTable TransformValues(Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKeySupplier arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1, params string[] arg2)
-        {
-            if (arg2.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("transformValues", arg0, arg1); else return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable>("transformValues", arg0, arg1, arg2);
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KTable.html#queryableStoreName()"/>
         /// </summary>
 
@@ -1077,66 +1033,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
         public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> MapValues<VR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR> arg0) where Arg0objectSuperK: K
         {
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("mapValues", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KTable.html#transformValues(org.apache.kafka.streams.kstream.ValueTransformerWithKeySupplier,java.lang.String[])"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKeySupplier"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <typeparam name="VR"></typeparam>
-        /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
-        /// <typeparam name="Arg0objectSuperV"></typeparam>
-        /// <typeparam name="Arg0ExtendsVR"></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> TransformValues<VR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKeySupplier<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR> arg0, params string[] arg1) where Arg0objectSuperK: K
-        {
-            if (arg1.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("transformValues", arg0); else return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("transformValues", arg0, arg1);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KTable.html#transformValues(org.apache.kafka.streams.kstream.ValueTransformerWithKeySupplier,org.apache.kafka.streams.kstream.Materialized,java.lang.String[])"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKeySupplier"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
-        /// <param name="arg2"><see cref="string"/></param>
-        /// <typeparam name="VR"></typeparam>
-        /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
-        /// <typeparam name="Arg0objectSuperV"></typeparam>
-        /// <typeparam name="Arg0ExtendsVR"></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> TransformValues<VR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKeySupplier<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR> arg0, Org.Apache.Kafka.Streams.Kstream.Materialized<K, VR, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> arg1, params string[] arg2) where Arg0objectSuperK: K
-        {
-            if (arg2.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("transformValues", arg0, arg1); else return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("transformValues", arg0, arg1, arg2);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KTable.html#transformValues(org.apache.kafka.streams.kstream.ValueTransformerWithKeySupplier,org.apache.kafka.streams.kstream.Materialized,org.apache.kafka.streams.kstream.Named,java.lang.String[])"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKeySupplier"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
-        /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
-        /// <param name="arg3"><see cref="string"/></param>
-        /// <typeparam name="VR"></typeparam>
-        /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
-        /// <typeparam name="Arg0objectSuperV"></typeparam>
-        /// <typeparam name="Arg0ExtendsVR"></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> TransformValues<VR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKeySupplier<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR> arg0, Org.Apache.Kafka.Streams.Kstream.Materialized<K, VR, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> arg1, Org.Apache.Kafka.Streams.Kstream.Named arg2, params string[] arg3) where Arg0objectSuperK: K
-        {
-            if (arg3.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("transformValues", arg0, arg1, arg2); else return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("transformValues", arg0, arg1, arg2, arg3);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KTable.html#transformValues(org.apache.kafka.streams.kstream.ValueTransformerWithKeySupplier,org.apache.kafka.streams.kstream.Named,java.lang.String[])"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKeySupplier"/></param>
-        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
-        /// <param name="arg2"><see cref="string"/></param>
-        /// <typeparam name="VR"></typeparam>
-        /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
-        /// <typeparam name="Arg0objectSuperV"></typeparam>
-        /// <typeparam name="Arg0ExtendsVR"></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
-        public Org.Apache.Kafka.Streams.Kstream.KTable<K, VR> TransformValues<VR, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR>(Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKeySupplier<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVR> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1, params string[] arg2) where Arg0objectSuperK: K
-        {
-            if (arg2.Length == 0) return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("transformValues", arg0, arg1); else return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, VR>>("transformValues", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KTable.html#queryableStoreName()"/>

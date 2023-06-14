@@ -219,20 +219,6 @@ namespace Org.Apache.Kafka.Streams
             return IExecute<Org.Apache.Kafka.Streams.Kstream.KTable<K, V>>("table", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsBuilder.html#addGlobalStore(org.apache.kafka.streams.state.StoreBuilder,java.lang.String,org.apache.kafka.streams.kstream.Consumed,org.apache.kafka.streams.processor.api.ProcessorSupplier)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.StoreBuilder"/></param>
-        /// <param name="arg1"><see cref="string"/></param>
-        /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Kstream.Consumed"/></param>
-        /// <param name="arg3"><see cref="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier"/></param>
-        /// <typeparam name="KIn"></typeparam>
-        /// <typeparam name="VIn"></typeparam>
-        /// <returns><see cref="Org.Apache.Kafka.Streams.StreamsBuilder"/></returns>
-        public Org.Apache.Kafka.Streams.StreamsBuilder AddGlobalStore<KIn, VIn>(Org.Apache.Kafka.Streams.State.StoreBuilder arg0, string arg1, Org.Apache.Kafka.Streams.Kstream.Consumed<KIn, VIn> arg2, Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier<KIn, VIn, Java.Lang.Void, Java.Lang.Void> arg3)
-        {
-            return IExecute<Org.Apache.Kafka.Streams.StreamsBuilder>("addGlobalStore", arg0, arg1, arg2, arg3);
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsBuilder.html#addStateStore(org.apache.kafka.streams.state.StoreBuilder)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.StoreBuilder"/></param>

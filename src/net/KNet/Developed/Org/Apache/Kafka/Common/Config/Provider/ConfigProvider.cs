@@ -21,38 +21,17 @@
 *  using kafka-clients-3.4.0.jar as reference
 */
 
-using MASES.JCOBridge.C2JBridge;
+using Java.Io;
+using Java.Lang;
 
-namespace Org.Apache.Kafka.Common.Protocol.Types
+namespace Org.Apache.Kafka.Common.Config.Provider
 {
-    #region SchemaException
-    public partial class SchemaException
+    #region ConfigProvider
+    public partial class ConfigProvider : ICloseable
     {
-        #region Constructors
+        void ICloseable.Close() => IExecute("close");
 
-        #endregion
-
-        #region Class/Interface conversion operators
-
-        #endregion
-
-        #region Fields
-
-        #endregion
-
-        #region Static methods
-
-        #endregion
-
-        #region Instance methods
-
-        #endregion
-
-        #region Nested classes
-
-        #endregion
-
-        // TODO: complete the class
+        void IAutoCloseable.Close() => IExecute("close");
     }
     #endregion
 }

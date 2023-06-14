@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.4.0/org/apache/kafka/connect/rest/basic/auth/extension/BasicAuthSecurityRestExtension.html"/>
     /// </summary>
-    public partial class BasicAuthSecurityRestExtension : Org.Apache.Kafka.Connect.Rest.ConnectRestExtension
+    public partial class BasicAuthSecurityRestExtension : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BasicAuthSecurityRestExtension>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

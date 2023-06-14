@@ -64,18 +64,6 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// </summary>
         public static string VERSION_KEY { get { return SGetField<string>(LocalBridgeClazz, "VERSION_KEY"); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#HEADER_SCHEMA"/>
-        /// </summary>
-        public static Org.Apache.Kafka.Common.Protocol.Types.Schema HEADER_SCHEMA { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Types.Schema>(LocalBridgeClazz, "HEADER_SCHEMA"); } }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#KEY_SCHEMA"/>
-        /// </summary>
-        public static Org.Apache.Kafka.Common.Protocol.Types.Schema KEY_SCHEMA { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Types.Schema>(LocalBridgeClazz, "KEY_SCHEMA"); } }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#VALUE_SCHEMA_V0"/>
-        /// </summary>
-        public static Org.Apache.Kafka.Common.Protocol.Types.Schema VALUE_SCHEMA_V0 { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Types.Schema>(LocalBridgeClazz, "VALUE_SCHEMA_V0"); } }
-        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/org/apache/kafka/connect/mirror/Heartbeat.html#VERSION"/>
         /// </summary>
         public static short VERSION { get { return SGetField<short>(LocalBridgeClazz, "VERSION"); } }

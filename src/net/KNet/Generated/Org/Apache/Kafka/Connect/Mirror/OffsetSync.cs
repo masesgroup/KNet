@@ -63,14 +63,6 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/OffsetSync.html#UPSTREAM_OFFSET_KEY"/>
         /// </summary>
         public static string UPSTREAM_OFFSET_KEY { get { return SGetField<string>(LocalBridgeClazz, "UPSTREAM_OFFSET_KEY"); } }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/OffsetSync.html#KEY_SCHEMA"/>
-        /// </summary>
-        public static Org.Apache.Kafka.Common.Protocol.Types.Schema KEY_SCHEMA { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Types.Schema>(LocalBridgeClazz, "KEY_SCHEMA"); } }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/OffsetSync.html#VALUE_SCHEMA"/>
-        /// </summary>
-        public static Org.Apache.Kafka.Common.Protocol.Types.Schema VALUE_SCHEMA { get { return SGetField<Org.Apache.Kafka.Common.Protocol.Types.Schema>(LocalBridgeClazz, "VALUE_SCHEMA"); } }
 
         #endregion
 
