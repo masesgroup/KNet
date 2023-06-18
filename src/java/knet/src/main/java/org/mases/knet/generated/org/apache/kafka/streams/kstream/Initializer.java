@@ -27,9 +27,8 @@ public final class Initializer extends org.mases.jcobridge.JCListener implements
         super(key);
     }
 
-    @Override
-    public java.lang.Object apply()
-    {
+    //@Override
+    public java.lang.Object apply() {
         raiseEvent("apply"); Object retVal = getReturnData(); return (java.lang.Object)retVal;
     }
 

@@ -27,34 +27,28 @@ public final class ConsumerPartitionAssignor extends org.mases.jcobridge.JCListe
         super(key);
     }
 
-    @Override
-    public java.lang.String name()
-    {
+    //@Override
+    public java.lang.String name() {
         raiseEvent("name"); Object retVal = getReturnData(); return (java.lang.String)retVal;
     }
-    @Override
-    public org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.GroupAssignment assign(org.apache.kafka.common.Cluster arg0, org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.GroupSubscription arg1)
-    {
+    //@Override
+    public org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.GroupAssignment assign(org.apache.kafka.common.Cluster arg0, org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.GroupSubscription arg1) {
         raiseEvent("assign", arg0, arg1); Object retVal = getReturnData(); return (org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.GroupAssignment)retVal;
     }
-    @Override
-    public java.nio.ByteBuffer subscriptionUserData(java.util.Set arg0)
-    {
+    //@Override
+    public java.nio.ByteBuffer subscriptionUserData(java.util.Set arg0) {
         raiseEvent("subscriptionUserData", arg0); Object retVal = getReturnData(); return (java.nio.ByteBuffer)retVal;
     }
-    @Override
-    public java.util.List supportedProtocols()
-    {
+    //@Override
+    public java.util.List supportedProtocols() {
         raiseEvent("supportedProtocols"); Object retVal = getReturnData(); return (java.util.List)retVal;
     }
-    @Override
-    public short version()
-    {
+    //@Override
+    public short version() {
         raiseEvent("version"); Object retVal = getReturnData(); return (short)retVal;
     }
-    @Override
-    public void onAssignment(org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.Assignment arg0, org.apache.kafka.clients.consumer.ConsumerGroupMetadata arg1)
-    {
+    //@Override
+    public void onAssignment(org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.Assignment arg0, org.apache.kafka.clients.consumer.ConsumerGroupMetadata arg1) {
         raiseEvent("onAssignment", arg0, arg1);
     }
 

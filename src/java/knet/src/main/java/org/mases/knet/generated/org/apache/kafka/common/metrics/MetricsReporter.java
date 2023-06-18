@@ -27,49 +27,40 @@ public final class MetricsReporter extends org.mases.jcobridge.JCListener implem
         super(key);
     }
 
-    @Override
-    public void configure(java.util.Map arg0)
-    {
+    //@Override
+    public void configure(java.util.Map arg0) {
         raiseEvent("configure", arg0);
     }
-    @Override
-    public void close()
-    {
+    //@Override
+    public void close() {
         raiseEvent("close");
     }
-    @Override
-    public void init(java.util.List arg0)
-    {
+    //@Override
+    public void init(java.util.List arg0) {
         raiseEvent("init", arg0);
     }
-    @Override
-    public void metricChange(org.apache.kafka.common.metrics.KafkaMetric arg0)
-    {
+    //@Override
+    public void metricChange(org.apache.kafka.common.metrics.KafkaMetric arg0) {
         raiseEvent("metricChange", arg0);
     }
-    @Override
-    public void metricRemoval(org.apache.kafka.common.metrics.KafkaMetric arg0)
-    {
+    //@Override
+    public void metricRemoval(org.apache.kafka.common.metrics.KafkaMetric arg0) {
         raiseEvent("metricRemoval", arg0);
     }
-    @Override
-    public java.util.Set reconfigurableConfigs()
-    {
+    //@Override
+    public java.util.Set reconfigurableConfigs() {
         raiseEvent("reconfigurableConfigs"); Object retVal = getReturnData(); return (java.util.Set)retVal;
     }
-    @Override
-    public void contextChange(org.apache.kafka.common.metrics.MetricsContext arg0)
-    {
+    //@Override
+    public void contextChange(org.apache.kafka.common.metrics.MetricsContext arg0) {
         raiseEvent("contextChange", arg0);
     }
-    @Override
-    public void reconfigure(java.util.Map arg0)
-    {
+    //@Override
+    public void reconfigure(java.util.Map arg0) {
         raiseEvent("reconfigure", arg0);
     }
-    @Override
-    public void validateReconfiguration(java.util.Map arg0)
-    {
+    //@Override
+    public void validateReconfiguration(java.util.Map arg0) {
         raiseEvent("validateReconfiguration", arg0);
     }
 

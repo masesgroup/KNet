@@ -27,9 +27,8 @@ public final class ConfigChangeCallback extends org.mases.jcobridge.JCListener i
         super(key);
     }
 
-    @Override
-    public void onChange(java.lang.String arg0, org.apache.kafka.common.config.ConfigData arg1)
-    {
+    //@Override
+    public void onChange(java.lang.String arg0, org.apache.kafka.common.config.ConfigData arg1) {
         raiseEvent("onChange", arg0, arg1);
     }
 

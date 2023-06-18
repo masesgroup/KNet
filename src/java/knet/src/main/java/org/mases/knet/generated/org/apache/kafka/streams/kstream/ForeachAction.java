@@ -27,9 +27,8 @@ public final class ForeachAction extends org.mases.jcobridge.JCListener implemen
         super(key);
     }
 
-    @Override
-    public void apply(java.lang.Object arg0, java.lang.Object arg1)
-    {
+    //@Override
+    public void apply(java.lang.Object arg0, java.lang.Object arg1) {
         raiseEvent("apply", arg0, arg1);
     }
 

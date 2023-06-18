@@ -27,19 +27,16 @@ public final class Processor extends org.mases.jcobridge.JCListener implements o
         super(key);
     }
 
-    @Override
-    public void process(org.apache.kafka.streams.processor.api.Record arg0)
-    {
+    //@Override
+    public void process(org.apache.kafka.streams.processor.api.Record arg0) {
         raiseEvent("process", arg0);
     }
-    @Override
-    public void close()
-    {
+    //@Override
+    public void close() {
         raiseEvent("close");
     }
-    @Override
-    public void init(org.apache.kafka.streams.processor.api.ProcessorContext arg0)
-    {
+    //@Override
+    public void init(org.apache.kafka.streams.processor.api.ProcessorContext arg0) {
         raiseEvent("init", arg0);
     }
 

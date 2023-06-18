@@ -27,14 +27,12 @@ public final class BatchingStateRestoreCallback extends org.mases.jcobridge.JCLi
         super(key);
     }
 
-    @Override
-    public void restoreAll(java.util.Collection arg0)
-    {
+    //@Override
+    public void restoreAll(java.util.Collection arg0) {
         raiseEvent("restoreAll", arg0);
     }
-    @Override
-    public void restore(byte[] arg0, byte[] arg1)
-    {
+    //@Override
+    public void restore(byte[] arg0, byte[] arg1) {
         raiseEvent("restore", arg0, arg1);
     }
 

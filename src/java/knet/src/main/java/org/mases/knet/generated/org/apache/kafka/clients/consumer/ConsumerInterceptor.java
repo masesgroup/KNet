@@ -27,24 +27,20 @@ public final class ConsumerInterceptor extends org.mases.jcobridge.JCListener im
         super(key);
     }
 
-    @Override
-    public org.apache.kafka.clients.consumer.ConsumerRecords onConsume(org.apache.kafka.clients.consumer.ConsumerRecords arg0)
-    {
+    //@Override
+    public org.apache.kafka.clients.consumer.ConsumerRecords onConsume(org.apache.kafka.clients.consumer.ConsumerRecords arg0) {
         raiseEvent("onConsume", arg0); Object retVal = getReturnData(); return (org.apache.kafka.clients.consumer.ConsumerRecords)retVal;
     }
-    @Override
-    public void close()
-    {
+    //@Override
+    public void close() {
         raiseEvent("close");
     }
-    @Override
-    public void onCommit(java.util.Map arg0)
-    {
+    //@Override
+    public void onCommit(java.util.Map arg0) {
         raiseEvent("onCommit", arg0);
     }
-    @Override
-    public void configure(java.util.Map arg0)
-    {
+    //@Override
+    public void configure(java.util.Map arg0) {
         raiseEvent("configure", arg0);
     }
 

@@ -27,19 +27,16 @@ public final class FixedKeyProcessor extends org.mases.jcobridge.JCListener impl
         super(key);
     }
 
-    @Override
-    public void process(org.apache.kafka.streams.processor.api.FixedKeyRecord arg0)
-    {
+    //@Override
+    public void process(org.apache.kafka.streams.processor.api.FixedKeyRecord arg0) {
         raiseEvent("process", arg0);
     }
-    @Override
-    public void close()
-    {
+    //@Override
+    public void close() {
         raiseEvent("close");
     }
-    @Override
-    public void init(org.apache.kafka.streams.processor.api.FixedKeyProcessorContext arg0)
-    {
+    //@Override
+    public void init(org.apache.kafka.streams.processor.api.FixedKeyProcessorContext arg0) {
         raiseEvent("init", arg0);
     }
 

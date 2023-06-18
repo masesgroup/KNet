@@ -27,19 +27,16 @@ public final class ValueTransformer extends org.mases.jcobridge.JCListener imple
         super(key);
     }
 
-    @Override
-    public void close()
-    {
+    //@Override
+    public void close() {
         raiseEvent("close");
     }
-    @Override
-    public void init(org.apache.kafka.streams.processor.ProcessorContext arg0)
-    {
+    //@Override
+    public void init(org.apache.kafka.streams.processor.ProcessorContext arg0) {
         raiseEvent("init", arg0);
     }
-    @Override
-    public java.lang.Object transform(java.lang.Object arg0)
-    {
+    //@Override
+    public java.lang.Object transform(java.lang.Object arg0) {
         raiseEvent("transform", arg0); Object retVal = getReturnData(); return (java.lang.Object)retVal;
     }
 

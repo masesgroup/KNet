@@ -27,9 +27,8 @@ public final class OffsetCommitCallback extends org.mases.jcobridge.JCListener i
         super(key);
     }
 
-    @Override
-    public void onComplete(java.util.Map arg0, java.lang.Exception arg1)
-    {
+    //@Override
+    public void onComplete(java.util.Map arg0, java.lang.Exception arg1) {
         raiseEvent("onComplete", arg0, arg1);
     }
 

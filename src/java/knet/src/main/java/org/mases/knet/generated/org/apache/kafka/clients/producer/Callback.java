@@ -27,9 +27,8 @@ public final class Callback extends org.mases.jcobridge.JCListener implements or
         super(key);
     }
 
-    @Override
-    public void onCompletion(org.apache.kafka.clients.producer.RecordMetadata arg0, java.lang.Exception arg1)
-    {
+    //@Override
+    public void onCompletion(org.apache.kafka.clients.producer.RecordMetadata arg0, java.lang.Exception arg1) {
         raiseEvent("onCompletion", arg0, arg1);
     }
 

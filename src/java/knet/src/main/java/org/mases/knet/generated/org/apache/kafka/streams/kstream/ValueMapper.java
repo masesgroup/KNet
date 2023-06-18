@@ -27,9 +27,8 @@ public final class ValueMapper extends org.mases.jcobridge.JCListener implements
         super(key);
     }
 
-    @Override
-    public java.lang.Object apply(java.lang.Object arg0)
-    {
+    //@Override
+    public java.lang.Object apply(java.lang.Object arg0) {
         raiseEvent("apply", arg0); Object retVal = getReturnData(); return (java.lang.Object)retVal;
     }
 

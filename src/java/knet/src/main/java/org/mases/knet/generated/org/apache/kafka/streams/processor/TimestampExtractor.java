@@ -27,9 +27,8 @@ public final class TimestampExtractor extends org.mases.jcobridge.JCListener imp
         super(key);
     }
 
-    @Override
-    public long extract(org.apache.kafka.clients.consumer.ConsumerRecord arg0, long arg1)
-    {
+    //@Override
+    public long extract(org.apache.kafka.clients.consumer.ConsumerRecord arg0, long arg1) {
         raiseEvent("extract", arg0, arg1); Object retVal = getReturnData(); return (long)retVal;
     }
 

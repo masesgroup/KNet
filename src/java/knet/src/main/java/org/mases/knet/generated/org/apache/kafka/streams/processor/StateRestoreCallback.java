@@ -27,9 +27,8 @@ public final class StateRestoreCallback extends org.mases.jcobridge.JCListener i
         super(key);
     }
 
-    @Override
-    public void restore(byte[] arg0, byte[] arg1)
-    {
+    //@Override
+    public void restore(byte[] arg0, byte[] arg1) {
         raiseEvent("restore", arg0, arg1);
     }
 

@@ -27,24 +27,20 @@ public final class Serializer extends org.mases.jcobridge.JCListener implements 
         super(key);
     }
 
-    @Override
-    public byte[] serialize(java.lang.String arg0, java.lang.Object arg1)
-    {
+    //@Override
+    public byte[] serialize(java.lang.String arg0, java.lang.Object arg1) {
         raiseEvent("serialize", arg0, arg1); Object retVal = getReturnData(); return (byte[])retVal;
     }
-    @Override
-    public byte[] serialize(java.lang.String arg0, org.apache.kafka.common.header.Headers arg1, java.lang.Object arg2)
-    {
+    //@Override
+    public byte[] serialize(java.lang.String arg0, org.apache.kafka.common.header.Headers arg1, java.lang.Object arg2) {
         raiseEvent("serialize3", arg0, arg1, arg2); Object retVal = getReturnData(); return (byte[])retVal;
     }
-    @Override
-    public void close()
-    {
+    //@Override
+    public void close() {
         raiseEvent("close");
     }
-    @Override
-    public void configure(java.util.Map arg0, boolean arg1)
-    {
+    //@Override
+    public void configure(java.util.Map arg0, boolean arg1) {
         raiseEvent("configure", arg0, arg1);
     }
 

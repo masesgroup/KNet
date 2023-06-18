@@ -27,9 +27,8 @@ public final class Predicate extends org.mases.jcobridge.JCListener implements o
         super(key);
     }
 
-    @Override
-    public boolean test(java.lang.Object arg0, java.lang.Object arg1)
-    {
+    //@Override
+    public boolean test(java.lang.Object arg0, java.lang.Object arg1) {
         raiseEvent("test", arg0, arg1); Object retVal = getReturnData(); return (boolean)retVal;
     }
 

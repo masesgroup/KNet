@@ -27,9 +27,8 @@ public final class StateListener extends org.mases.jcobridge.JCListener implemen
         super(key);
     }
 
-    @Override
-    public void onChange(org.apache.kafka.streams.KafkaStreams.State arg0, org.apache.kafka.streams.KafkaStreams.State arg1)
-    {
+    //@Override
+    public void onChange(org.apache.kafka.streams.KafkaStreams.State arg0, org.apache.kafka.streams.KafkaStreams.State arg1) {
         raiseEvent("onChange", arg0, arg1);
     }
 

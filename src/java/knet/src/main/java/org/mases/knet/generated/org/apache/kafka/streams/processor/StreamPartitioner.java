@@ -27,14 +27,12 @@ public final class StreamPartitioner extends org.mases.jcobridge.JCListener impl
         super(key);
     }
 
-    @Override
-    public java.lang.Integer partition(java.lang.String arg0, java.lang.Object arg1, java.lang.Object arg2, int arg3)
-    {
+    //@Override
+    public java.lang.Integer partition(java.lang.String arg0, java.lang.Object arg1, java.lang.Object arg2, int arg3) {
         raiseEvent("partition", arg0, arg1, arg2, arg3); Object retVal = getReturnData(); return (java.lang.Integer)retVal;
     }
-    @Override
-    public java.util.Optional partitions(java.lang.String arg0, java.lang.Object arg1, java.lang.Object arg2, int arg3)
-    {
+    //@Override
+    public java.util.Optional partitions(java.lang.String arg0, java.lang.Object arg1, java.lang.Object arg2, int arg3) {
         raiseEvent("partitions", arg0, arg1, arg2, arg3); Object retVal = getReturnData(); return (java.util.Optional)retVal;
     }
 

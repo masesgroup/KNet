@@ -27,19 +27,16 @@ public final class ConsumerRebalanceListener extends org.mases.jcobridge.JCListe
         super(key);
     }
 
-    @Override
-    public void onPartitionsAssigned(java.util.Collection arg0)
-    {
+    //@Override
+    public void onPartitionsAssigned(java.util.Collection arg0) {
         raiseEvent("onPartitionsAssigned", arg0);
     }
-    @Override
-    public void onPartitionsRevoked(java.util.Collection arg0)
-    {
+    //@Override
+    public void onPartitionsRevoked(java.util.Collection arg0) {
         raiseEvent("onPartitionsRevoked", arg0);
     }
-    @Override
-    public void onPartitionsLost(java.util.Collection arg0)
-    {
+    //@Override
+    public void onPartitionsLost(java.util.Collection arg0) {
         raiseEvent("onPartitionsLost", arg0);
     }
 

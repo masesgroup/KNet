@@ -27,24 +27,20 @@ public final class Deserializer extends org.mases.jcobridge.JCListener implement
         super(key);
     }
 
-    @Override
-    public java.lang.Object deserialize(java.lang.String arg0, byte[] arg1)
-    {
+    //@Override
+    public java.lang.Object deserialize(java.lang.String arg0, byte[] arg1) {
         raiseEvent("deserialize", arg0, arg1); Object retVal = getReturnData(); return (java.lang.Object)retVal;
     }
-    @Override
-    public java.lang.Object deserialize(java.lang.String arg0, org.apache.kafka.common.header.Headers arg1, byte[] arg2)
-    {
+    //@Override
+    public java.lang.Object deserialize(java.lang.String arg0, org.apache.kafka.common.header.Headers arg1, byte[] arg2) {
         raiseEvent("deserialize3", arg0, arg1, arg2); Object retVal = getReturnData(); return (java.lang.Object)retVal;
     }
-    @Override
-    public void close()
-    {
+    //@Override
+    public void close() {
         raiseEvent("close");
     }
-    @Override
-    public void configure(java.util.Map arg0, boolean arg1)
-    {
+    //@Override
+    public void configure(java.util.Map arg0, boolean arg1) {
         raiseEvent("configure", arg0, arg1);
     }
 

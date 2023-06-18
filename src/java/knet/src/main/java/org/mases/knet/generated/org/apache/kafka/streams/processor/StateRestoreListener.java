@@ -27,19 +27,16 @@ public final class StateRestoreListener extends org.mases.jcobridge.JCListener i
         super(key);
     }
 
-    @Override
-    public void onBatchRestored(org.apache.kafka.common.TopicPartition arg0, java.lang.String arg1, long arg2, long arg3)
-    {
+    //@Override
+    public void onBatchRestored(org.apache.kafka.common.TopicPartition arg0, java.lang.String arg1, long arg2, long arg3) {
         raiseEvent("onBatchRestored", arg0, arg1, arg2, arg3);
     }
-    @Override
-    public void onRestoreEnd(org.apache.kafka.common.TopicPartition arg0, java.lang.String arg1, long arg2)
-    {
+    //@Override
+    public void onRestoreEnd(org.apache.kafka.common.TopicPartition arg0, java.lang.String arg1, long arg2) {
         raiseEvent("onRestoreEnd", arg0, arg1, arg2);
     }
-    @Override
-    public void onRestoreStart(org.apache.kafka.common.TopicPartition arg0, java.lang.String arg1, long arg2, long arg3)
-    {
+    //@Override
+    public void onRestoreStart(org.apache.kafka.common.TopicPartition arg0, java.lang.String arg1, long arg2, long arg3) {
         raiseEvent("onRestoreStart", arg0, arg1, arg2, arg3);
     }
 

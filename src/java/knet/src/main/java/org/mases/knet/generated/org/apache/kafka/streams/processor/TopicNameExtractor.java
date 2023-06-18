@@ -27,9 +27,8 @@ public final class TopicNameExtractor extends org.mases.jcobridge.JCListener imp
         super(key);
     }
 
-    @Override
-    public java.lang.String extract(java.lang.Object arg0, java.lang.Object arg1, org.apache.kafka.streams.processor.RecordContext arg2)
-    {
+    //@Override
+    public java.lang.String extract(java.lang.Object arg0, java.lang.Object arg1, org.apache.kafka.streams.processor.RecordContext arg2) {
         raiseEvent("extract", arg0, arg1, arg2); Object retVal = getReturnData(); return (java.lang.String)retVal;
     }
 

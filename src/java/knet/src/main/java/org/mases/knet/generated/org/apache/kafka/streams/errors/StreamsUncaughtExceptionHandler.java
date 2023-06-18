@@ -27,9 +27,8 @@ public final class StreamsUncaughtExceptionHandler extends org.mases.jcobridge.J
         super(key);
     }
 
-    @Override
-    public org.apache.kafka.streams.errors.StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse handle(java.lang.Throwable arg0)
-    {
+    //@Override
+    public org.apache.kafka.streams.errors.StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse handle(java.lang.Throwable arg0) {
         raiseEvent("handle", arg0); Object retVal = getReturnData(); return (org.apache.kafka.streams.errors.StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse)retVal;
     }
 

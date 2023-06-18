@@ -27,9 +27,8 @@ public final class Merger extends org.mases.jcobridge.JCListener implements org.
         super(key);
     }
 
-    @Override
-    public java.lang.Object apply(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
-    {
+    //@Override
+    public java.lang.Object apply(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2) {
         raiseEvent("apply", arg0, arg1, arg2); Object retVal = getReturnData(); return (java.lang.Object)retVal;
     }
 
