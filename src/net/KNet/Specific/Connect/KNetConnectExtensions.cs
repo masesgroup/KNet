@@ -68,7 +68,7 @@ namespace MASES.KNet.Connect
         /// <param name="source">The <see cref="IEnumerable{SinkRecord}"/> to convert</param>
         public static IEnumerable<SinkRecord<object, TValue>> CastTo<TValue>(this IEnumerable<SinkRecord> lst)
         {
-            return lst.Select((o) => o.CastTo<object, TValue>());
+            return lst.Select((o) => o.CastTo<SinkRecord<object, TValue>>());
         }
         /// <summary>
         /// Converts an <see cref="IEnumerable{SinkRecord}"/> in <see cref="IEnumerable{SinkRecord{TKey, TValue}}"/>
@@ -76,7 +76,7 @@ namespace MASES.KNet.Connect
         /// <param name="source">The <see cref="IEnumerable{SinkRecord}"/> to convert</param>
         public static IEnumerable<SinkRecord<TKey, TValue>> CastTo<TKey, TValue>(this IEnumerable<SinkRecord> lst)
         {
-            return lst.Select((o) => o.CastTo<TKey, TValue>());
+            return lst.Select((o) => o.CastTo<SinkRecord<TKey, TValue>>());
         }
     }
 }

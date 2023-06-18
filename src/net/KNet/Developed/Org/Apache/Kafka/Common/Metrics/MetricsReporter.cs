@@ -53,68 +53,9 @@ namespace Org.Apache.Kafka.Common.Metrics
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public partial class MetricsReporter : IMetricsReporter
     {
-        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-         public sealed override string BridgeClassName => "org.mases.knet.clients.producer.MetricsReporterImpl";
-        /// <summary>
-        /// Initialize a new instance of <see cref="MetricsReporter"/>
-        /// </summary>
-        public MetricsReporter()
-        {
-            AddEventHandler("init", new EventHandler<CLRListenerEventArgs<CLREventData<List<KafkaMetric>>>>(InitEventHandler));
-            AddEventHandler("metricChange", new EventHandler<CLRListenerEventArgs<CLREventData<KafkaMetric>>>(MetricChangeEventHandler));
-            AddEventHandler("metricRemoval", new EventHandler<CLRListenerEventArgs<CLREventData<KafkaMetric>>>(MetricRemovalEventHandler));
-            AddEventHandler("close", new EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler));
-            AddEventHandler("reconfigurableConfigs", new EventHandler<CLRListenerEventArgs<CLREventData>>(ReconfigurableConfigsEventHandler));
-            AddEventHandler("configure", new EventHandler<CLRListenerEventArgs<CLREventData<Map<string, object>>>>(ConfigureEventHandler));
-            AddEventHandler("reconfigure", new EventHandler<CLRListenerEventArgs<CLREventData<Map<string, object>>>>(ReconfigureEventHandler));
-            AddEventHandler("validateReconfiguration", new EventHandler<CLRListenerEventArgs<CLREventData<Map<string, object>>>>(ValidateReconfigurationEventHandler));
-            AddEventHandler("contextChange", new EventHandler<CLRListenerEventArgs<CLREventData<MetricsContext>>>(ContextChangeEventHandler));
-        }
-
-        void InitEventHandler(object sender, CLRListenerEventArgs<CLREventData<List<KafkaMetric>>> data)
-        {
-            Init(data.EventData.TypedEventData);
-        }
-
-        void MetricChangeEventHandler(object sender, CLRListenerEventArgs<CLREventData<KafkaMetric>> data)
-        {
-            MetricChange(data.EventData.TypedEventData);
-        }
-
-        void MetricRemovalEventHandler(object sender, CLRListenerEventArgs<CLREventData<KafkaMetric>> data)
-        {
-            MetricRemoval(data.EventData.TypedEventData);
-        }
-
-        void CloseEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
-        {
-            Close();
-        }
-
-        void ReconfigurableConfigsEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
-        {
-            var result = ReconfigurableConfigs();
-            data.SetReturnValue(result);
-        }
-
         void ConfigureEventHandler(object sender, CLRListenerEventArgs<CLREventData<Map<string, object>>> data)
         {
             Configure(data.EventData.TypedEventData);
-        }
-
-        void ReconfigureEventHandler(object sender, CLRListenerEventArgs<CLREventData<Map<string, object>>> data)
-        {
-            Reconfigure(data.EventData.TypedEventData);
-        }
-
-        void ValidateReconfigurationEventHandler(object sender, CLRListenerEventArgs<CLREventData<Map<string, object>>> data)
-        {
-            ValidateReconfiguration(data.EventData.TypedEventData);
-        }
-
-        void ContextChangeEventHandler(object sender, CLRListenerEventArgs<CLREventData<MetricsContext>> data)
-        {
-            ContextChange(data.EventData.TypedEventData);
         }
 
         public virtual void Configure(Map<string, object> configs)

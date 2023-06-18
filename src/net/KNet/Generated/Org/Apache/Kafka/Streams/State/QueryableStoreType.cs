@@ -67,7 +67,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region IQueryableStoreType<T>
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/QueryableStoreType.html"/>
+    /// .NET interface for TO BE DEFINED FROM USER
     /// </summary>
     public partial interface IQueryableStoreType<T>
     {

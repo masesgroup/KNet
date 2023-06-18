@@ -210,7 +210,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region IReadOnlySessionStore<K, AGG>
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html"/>
+    /// .NET interface for TO BE DEFINED FROM USER
     /// </summary>
     public partial interface IReadOnlySessionStore<K, AGG>
     {

@@ -34,10 +34,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public Aggregator() { }
+        public Aggregator() { InitializeHandlers(); }
 
-    #warning Remember to build the body class for event listener
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.streams.kstream.Aggregator";
 
+    
         // TODO: complete the class
 
     }
@@ -55,10 +59,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public Aggregator() { }
+        public Aggregator() { InitializeHandlers(); }
 
-    #warning Remember to build the body class for event listener
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.streams.kstream.Aggregator";
 
+    
         // TODO: complete the class
     
     }
@@ -511,10 +519,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public ForeachAction() { }
+        public ForeachAction() { InitializeHandlers(); }
 
-    #warning Remember to build the body class for event listener
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.streams.kstream.ForeachAction";
 
+    
         // TODO: complete the class
 
     }
@@ -531,10 +543,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public ForeachAction() { }
+        public ForeachAction() { InitializeHandlers(); }
 
-    #warning Remember to build the body class for event listener
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.streams.kstream.ForeachAction";
 
+    
         // TODO: complete the class
     
     }
@@ -813,10 +829,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public Initializer() { }
+        public Initializer() { InitializeHandlers(); }
 
-    #warning Remember to build the body class for event listener
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.streams.kstream.Initializer";
 
+    
         // TODO: complete the class
 
     }
@@ -832,10 +852,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public Initializer() { }
+        public Initializer() { InitializeHandlers(); }
 
-    #warning Remember to build the body class for event listener
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.streams.kstream.Initializer";
 
+    
         // TODO: complete the class
     
     }
@@ -982,10 +1006,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public KeyValueMapper() { }
+        public KeyValueMapper() { InitializeHandlers(); }
 
-    #warning Remember to build the body class for event listener
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.streams.kstream.KeyValueMapper";
 
+    
         // TODO: complete the class
 
     }
@@ -1003,10 +1031,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public KeyValueMapper() { }
+        public KeyValueMapper() { InitializeHandlers(); }
 
-    #warning Remember to build the body class for event listener
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.streams.kstream.KeyValueMapper";
 
+    
         // TODO: complete the class
     
     }
@@ -1505,10 +1537,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public Merger() { }
+        public Merger() { InitializeHandlers(); }
 
-    #warning Remember to build the body class for event listener
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.streams.kstream.Merger";
 
+    
         // TODO: complete the class
 
     }
@@ -1525,10 +1561,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public Merger() { }
+        public Merger() { InitializeHandlers(); }
 
-    #warning Remember to build the body class for event listener
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.streams.kstream.Merger";
 
+    
         // TODO: complete the class
     
     }
@@ -1586,10 +1626,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public Predicate() { }
+        public Predicate() { InitializeHandlers(); }
 
-    #warning Remember to build the body class for event listener
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.streams.kstream.Predicate";
 
+    
         // TODO: complete the class
 
     }
@@ -1606,10 +1650,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public Predicate() { }
+        public Predicate() { InitializeHandlers(); }
 
-    #warning Remember to build the body class for event listener
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.streams.kstream.Predicate";
 
+    
         // TODO: complete the class
     
     }
@@ -1800,10 +1848,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public Reducer() { }
+        public Reducer() { InitializeHandlers(); }
 
-    #warning Remember to build the body class for event listener
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.streams.kstream.Reducer";
 
+    
         // TODO: complete the class
 
     }
@@ -1819,10 +1871,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public Reducer() { }
+        public Reducer() { InitializeHandlers(); }
 
-    #warning Remember to build the body class for event listener
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.streams.kstream.Reducer";
 
+    
         // TODO: complete the class
     
     }
@@ -3323,10 +3379,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public ValueJoiner() { }
+        public ValueJoiner() { InitializeHandlers(); }
 
-    #warning Remember to build the body class for event listener
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.streams.kstream.ValueJoiner";
 
+    
         // TODO: complete the class
 
     }
@@ -3344,10 +3404,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public ValueJoiner() { }
+        public ValueJoiner() { InitializeHandlers(); }
 
-    #warning Remember to build the body class for event listener
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.streams.kstream.ValueJoiner";
 
+    
         // TODO: complete the class
     
     }
@@ -3362,10 +3426,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public ValueJoinerWithKey() { }
+        public ValueJoinerWithKey() { InitializeHandlers(); }
 
-    #warning Remember to build the body class for event listener
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.streams.kstream.ValueJoinerWithKey";
 
+    
         // TODO: complete the class
 
     }
@@ -3384,10 +3452,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public ValueJoinerWithKey() { }
+        public ValueJoinerWithKey() { InitializeHandlers(); }
 
-    #warning Remember to build the body class for event listener
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.streams.kstream.ValueJoinerWithKey";
 
+    
         // TODO: complete the class
     
     }
@@ -3402,10 +3474,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public ValueMapper() { }
+        public ValueMapper() { InitializeHandlers(); }
 
-    #warning Remember to build the body class for event listener
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.streams.kstream.ValueMapper";
 
+    
         // TODO: complete the class
 
     }
@@ -3422,10 +3498,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public ValueMapper() { }
+        public ValueMapper() { InitializeHandlers(); }
 
-    #warning Remember to build the body class for event listener
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.streams.kstream.ValueMapper";
 
+    
         // TODO: complete the class
     
     }
@@ -3440,10 +3520,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public ValueMapperWithKey() { }
+        public ValueMapperWithKey() { InitializeHandlers(); }
 
-    #warning Remember to build the body class for event listener
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.streams.kstream.ValueMapperWithKey";
 
+    
         // TODO: complete the class
 
     }
@@ -3461,10 +3545,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public ValueMapperWithKey() { }
+        public ValueMapperWithKey() { InitializeHandlers(); }
 
-    #warning Remember to build the body class for event listener
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.streams.kstream.ValueMapperWithKey";
 
+    
         // TODO: complete the class
     
     }
@@ -3479,10 +3567,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public ValueTransformer() { }
+        public ValueTransformer() { InitializeHandlers(); }
 
-    #warning Remember to build the body class for event listener
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.streams.kstream.ValueTransformer";
 
+    
         // TODO: complete the class
 
     }
@@ -3499,10 +3591,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public ValueTransformer() { }
+        public ValueTransformer() { InitializeHandlers(); }
 
-    #warning Remember to build the body class for event listener
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.streams.kstream.ValueTransformer";
 
+    
         // TODO: complete the class
     
     }
@@ -3517,10 +3613,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public ValueTransformerWithKey() { }
+        public ValueTransformerWithKey() { InitializeHandlers(); }
 
-    #warning Remember to build the body class for event listener
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.streams.kstream.ValueTransformerWithKey";
 
+    
         // TODO: complete the class
 
     }
@@ -3538,10 +3638,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public ValueTransformerWithKey() { }
+        public ValueTransformerWithKey() { InitializeHandlers(); }
 
-    #warning Remember to build the body class for event listener
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.streams.kstream.ValueTransformerWithKey";
 
+    
         // TODO: complete the class
     
     }

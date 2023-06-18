@@ -17,6 +17,7 @@
 */
 
 using Java.Nio;
+using MASES.JCOBridge.C2JBridge.JVMInterop;
 
 namespace Org.Apache.Kafka.Common.Header
 {

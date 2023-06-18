@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 {
     #region IOffsetCommitCallback
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetCommitCallback.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.clients.consumer.OffsetCommitCallback implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetCommitCallback.html"/>
     /// </summary>
     public partial interface IOffsetCommitCallback
     {
@@ -63,6 +63,22 @@ namespace Org.Apache.Kafka.Clients.Consumer
         #endregion
 
         #region Instance methods
+        protected virtual void InitializeHandlers()
+        {
+            AddEventHandler("onComplete", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>>>>(OnCompleteEventHandler)); OnOnComplete = OnComplete;
+
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetCommitCallback.html#onComplete(java.util.Map,java.lang.Exception)"/>
+        /// </summary>
+        public System.Action<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>, MASES.JCOBridge.C2JBridge.JVMBridgeException> OnOnComplete { get; set; }
+
+        void OnCompleteEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>>> data)
+        {
+            if (OnOnComplete != null) OnOnComplete.Invoke(data.EventData.TypedEventData, JVMBridgeException.New(data.EventData.ExtraData.Get(0) as MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject));
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/OffsetCommitCallback.html#onComplete(java.util.Map,java.lang.Exception)"/>
         /// </summary>

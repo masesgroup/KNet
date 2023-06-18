@@ -45,6 +45,28 @@ namespace Org.Apache.Kafka.Clients.Consumer
         #endregion
 
         #region Instance methods
+        protected virtual void InitializeHandlers()
+        {
+            AddEventHandler("onConsume", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords>>>(OnConsumeEventHandler)); OnOnConsume = OnConsume;
+            AddEventHandler("close", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler)); OnClose = Close;
+            AddEventHandler("onCommit", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map>>>(OnCommitEventHandler)); OnOnCommit = OnCommit;
+
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerInterceptor.html#onConsume(org.apache.kafka.clients.consumer.ConsumerRecords)"/>
+        /// </summary>
+        public System.Func<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords, Org.Apache.Kafka.Clients.Consumer.ConsumerRecords> OnOnConsume { get; set; }
+
+        void OnConsumeEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords>> data)
+        {
+            if (OnOnConsume != null)
+            {
+                var executionResult = OnOnConsume.Invoke(data.EventData.TypedEventData);
+                data.SetReturnValue(executionResult);
+            }
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerInterceptor.html#onConsume(org.apache.kafka.clients.consumer.ConsumerRecords)"/>
         /// </summary>
@@ -54,6 +76,17 @@ namespace Org.Apache.Kafka.Clients.Consumer
         {
             return default;
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerInterceptor.html#close()"/>
+        /// </summary>
+        public System.Action OnClose { get; set; }
+
+        void CloseEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
+        {
+            if (OnClose != null) OnClose.Invoke();
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerInterceptor.html#close()"/>
         /// </summary>
@@ -61,6 +94,17 @@ namespace Org.Apache.Kafka.Clients.Consumer
         {
             
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerInterceptor.html#onCommit(java.util.Map)"/>
+        /// </summary>
+        public System.Action<Java.Util.Map> OnOnCommit { get; set; }
+
+        void OnCommitEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map>> data)
+        {
+            if (OnOnCommit != null) OnOnCommit.Invoke(data.EventData.TypedEventData);
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerInterceptor.html#onCommit(java.util.Map)"/>
         /// </summary>
@@ -82,7 +126,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     #region IConsumerInterceptor<K, V>
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerInterceptor.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.clients.consumer.ConsumerInterceptor implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerInterceptor.html"/>
     /// </summary>
     public partial interface IConsumerInterceptor<K, V>
     {
@@ -118,6 +162,28 @@ namespace Org.Apache.Kafka.Clients.Consumer
         #endregion
 
         #region Instance methods
+        protected virtual void InitializeHandlers()
+        {
+            AddEventHandler("onConsume", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<K, V>>>>(OnConsumeEventHandler)); OnOnConsume = OnConsume;
+            AddEventHandler("close", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler)); OnClose = Close;
+            AddEventHandler("onCommit", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>>>>(OnCommitEventHandler)); OnOnCommit = OnCommit;
+
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerInterceptor.html#onConsume(org.apache.kafka.clients.consumer.ConsumerRecords)"/>
+        /// </summary>
+        public System.Func<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<K, V>, Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<K, V>> OnOnConsume { get; set; }
+
+        void OnConsumeEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<K, V>>> data)
+        {
+            if (OnOnConsume != null)
+            {
+                var executionResult = OnOnConsume.Invoke(data.EventData.TypedEventData);
+                data.SetReturnValue(executionResult);
+            }
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerInterceptor.html#onConsume(org.apache.kafka.clients.consumer.ConsumerRecords)"/>
         /// </summary>
@@ -127,6 +193,17 @@ namespace Org.Apache.Kafka.Clients.Consumer
         {
             return default;
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerInterceptor.html#close()"/>
+        /// </summary>
+        public System.Action OnClose { get; set; }
+
+        void CloseEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
+        {
+            if (OnClose != null) OnClose.Invoke();
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerInterceptor.html#close()"/>
         /// </summary>
@@ -134,6 +211,17 @@ namespace Org.Apache.Kafka.Clients.Consumer
         {
             
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerInterceptor.html#onCommit(java.util.Map)"/>
+        /// </summary>
+        public System.Action<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>> OnOnCommit { get; set; }
+
+        void OnCommitEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>>> data)
+        {
+            if (OnOnCommit != null) OnOnCommit.Invoke(data.EventData.TypedEventData);
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerInterceptor.html#onCommit(java.util.Map)"/>
         /// </summary>

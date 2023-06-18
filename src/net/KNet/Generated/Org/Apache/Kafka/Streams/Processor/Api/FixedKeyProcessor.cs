@@ -45,6 +45,24 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         #endregion
 
         #region Instance methods
+        protected virtual void InitializeHandlers()
+        {
+            AddEventHandler("process", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord>>>(ProcessEventHandler)); OnProcess = Process;
+            AddEventHandler("close", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler)); OnClose = Close;
+            AddEventHandler("init", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorContext>>>(InitEventHandler)); OnInit = Init;
+
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#process(org.apache.kafka.streams.processor.api.FixedKeyRecord)"/>
+        /// </summary>
+        public System.Action<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord> OnProcess { get; set; }
+
+        void ProcessEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord>> data)
+        {
+            if (OnProcess != null) OnProcess.Invoke(data.EventData.TypedEventData);
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#process(org.apache.kafka.streams.processor.api.FixedKeyRecord)"/>
         /// </summary>
@@ -53,6 +71,17 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         {
             
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#close()"/>
+        /// </summary>
+        public System.Action OnClose { get; set; }
+
+        void CloseEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
+        {
+            if (OnClose != null) OnClose.Invoke();
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#close()"/>
         /// </summary>
@@ -60,6 +89,17 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         {
             
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#init(org.apache.kafka.streams.processor.api.FixedKeyProcessorContext)"/>
+        /// </summary>
+        public System.Action<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorContext> OnInit { get; set; }
+
+        void InitEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorContext>> data)
+        {
+            if (OnInit != null) OnInit.Invoke(data.EventData.TypedEventData);
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#init(org.apache.kafka.streams.processor.api.FixedKeyProcessorContext)"/>
         /// </summary>
@@ -81,7 +121,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     #region IFixedKeyProcessor<KIn, VIn, VOut>
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.streams.processor.api.FixedKeyProcessor implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html"/>
     /// </summary>
     public partial interface IFixedKeyProcessor<KIn, VIn, VOut>
     {
@@ -117,6 +157,24 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         #endregion
 
         #region Instance methods
+        protected virtual void InitializeHandlers()
+        {
+            AddEventHandler("process", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord<KIn, VIn>>>>(ProcessEventHandler)); OnProcess = Process;
+            AddEventHandler("close", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler)); OnClose = Close;
+            AddEventHandler("init", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorContext<KIn, VOut>>>>(InitEventHandler)); OnInit = Init;
+
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#process(org.apache.kafka.streams.processor.api.FixedKeyRecord)"/>
+        /// </summary>
+        public System.Action<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord<KIn, VIn>> OnProcess { get; set; }
+
+        void ProcessEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord<KIn, VIn>>> data)
+        {
+            if (OnProcess != null) OnProcess.Invoke(data.EventData.TypedEventData);
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#process(org.apache.kafka.streams.processor.api.FixedKeyRecord)"/>
         /// </summary>
@@ -125,6 +183,17 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         {
             
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#close()"/>
+        /// </summary>
+        public System.Action OnClose { get; set; }
+
+        void CloseEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
+        {
+            if (OnClose != null) OnClose.Invoke();
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#close()"/>
         /// </summary>
@@ -132,6 +201,17 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         {
             
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#init(org.apache.kafka.streams.processor.api.FixedKeyProcessorContext)"/>
+        /// </summary>
+        public System.Action<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorContext<KIn, VOut>> OnInit { get; set; }
+
+        void InitEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorContext<KIn, VOut>>> data)
+        {
+            if (OnInit != null) OnInit.Invoke(data.EventData.TypedEventData);
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#init(org.apache.kafka.streams.processor.api.FixedKeyProcessorContext)"/>
         /// </summary>

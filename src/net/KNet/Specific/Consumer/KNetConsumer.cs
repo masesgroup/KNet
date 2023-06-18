@@ -179,7 +179,7 @@ namespace MASES.KNet.Consumer
             return new KNetConsumerRecordsEnumerator<K, V>(_records, _keyDeserializer, _valueDeserializer);
         }
 
-        IAsyncEnumerator<KNetConsumerRecord<K, V>> IAsyncEnumerable<KNetConsumerRecord<K, V>>.GetAsyncEnumerator(CancellationToken cancellationToken = default)
+        IAsyncEnumerator<KNetConsumerRecord<K, V>> IAsyncEnumerable<KNetConsumerRecord<K, V>>.GetAsyncEnumerator(CancellationToken cancellationToken)
         {
             return new KNetConsumerRecordsEnumerator<K, V>(_records, _keyDeserializer, _valueDeserializer, cancellationToken);
         }
@@ -229,7 +229,7 @@ namespace MASES.KNet.Consumer
 
         void SetCallback(Action<KNetConsumerRecord<K, V>> cb);
 
-        new KNetConsumerRecords<K, V> Poll(long timeoutMs);
+        KNetConsumerRecords<K, V> Poll(long timeoutMs);
 
         new KNetConsumerRecords<K, V> Poll(Duration timeout);
 

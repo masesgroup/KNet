@@ -388,7 +388,11 @@ namespace MASES.KNet
 
                 _consumer = new KNetConsumer<TKey, TValue>(ConsumerConfig, KeySerDes, ValueSerDes);
                 _consumer.SetCallback(OnMessage);
-                _consumerListener = new ConsumerRebalanceListener(OnTopicPartitionsRevoked, OnTopicPartitionsAssigned);
+                _consumerListener = new ConsumerRebalanceListener()
+                {
+                    OnOnPartitionsRevoked = OnTopicPartitionsRevoked,
+                    OnOnPartitionsAssigned = OnTopicPartitionsAssigned
+                };
             }
 
             if (AccessRights.HasFlag(AccessRightsType.Write))

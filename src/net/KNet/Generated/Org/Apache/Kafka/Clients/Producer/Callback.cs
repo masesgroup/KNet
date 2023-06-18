@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 {
     #region ICallback
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/Callback.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.clients.producer.Callback implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/Callback.html"/>
     /// </summary>
     public partial interface ICallback
     {
@@ -63,6 +63,22 @@ namespace Org.Apache.Kafka.Clients.Producer
         #endregion
 
         #region Instance methods
+        protected virtual void InitializeHandlers()
+        {
+            AddEventHandler("onCompletion", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Producer.RecordMetadata>>>(OnCompletionEventHandler)); OnOnCompletion = OnCompletion;
+
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/Callback.html#onCompletion(org.apache.kafka.clients.producer.RecordMetadata,java.lang.Exception)"/>
+        /// </summary>
+        public System.Action<Org.Apache.Kafka.Clients.Producer.RecordMetadata, MASES.JCOBridge.C2JBridge.JVMBridgeException> OnOnCompletion { get; set; }
+
+        void OnCompletionEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Producer.RecordMetadata>> data)
+        {
+            if (OnOnCompletion != null) OnOnCompletion.Invoke(data.EventData.TypedEventData, JVMBridgeException.New(data.EventData.ExtraData.Get(0) as MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject));
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/Callback.html#onCompletion(org.apache.kafka.clients.producer.RecordMetadata,java.lang.Exception)"/>
         /// </summary>

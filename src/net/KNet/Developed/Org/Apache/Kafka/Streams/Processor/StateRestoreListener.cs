@@ -49,66 +49,6 @@ namespace Org.Apache.Kafka.Streams.Processor
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public partial class StateRestoreListener : IStateRestoreListener
     {
-        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-         public sealed override string BridgeClassName => "org.mases.knet.streams.processor.StateRestoreListenerImpl";
 
-        readonly Action<TopicPartition, string, long, long> OnRestoreStartFunction = null;
-        readonly Action<TopicPartition, string, long, long> OnBatchRestoredFunction = null;
-        readonly Action<TopicPartition, string, long> OnRestoreEndFunction = null;
-        /// <summary>
-        /// The <see cref="Action{TopicPartition, string, long, long}"/> to be executed
-        /// </summary>
-        public virtual Action<TopicPartition, string, long, long> OnOnRestoreStart { get { return OnRestoreStartFunction; } }
-        /// <summary>
-        /// The <see cref="Action{TopicPartition, string, long, long}"/> to be executed
-        /// </summary>
-        public virtual Action<TopicPartition, string, long, long> OnOnBatchRestored { get { return OnBatchRestoredFunction; } }
-        /// <summary>
-        /// The <see cref="Action{TopicPartition, string, long}"/> to be executed
-        /// </summary>
-        public virtual Action<TopicPartition, string, long> OnOnRestoreEnd { get { return OnRestoreEndFunction; } }
-        /// <summary>
-        /// Initialize a new instance of <see cref="StateRestoreListener"/>
-        /// </summary>
-        /// <param name="onRestoreStartFunction">The <see cref="Action{TopicPartition, string, long, long}"/> to be executed</param>
-        /// <param name="onBatchRestoredFunction">The <see cref="Action{TopicPartition, string, long, long}"/> to be executed</param>
-        /// <param name="onRestoreEndFunction">The <see cref="Action{TopicPartition, string, long}"/> to be executed</param>
-        /// <param name="attachEventHandler">Set to false to disable attach of <see cref="EventHandler"/> and set an own one</param>
-        public StateRestoreListener(Action<TopicPartition, string, long, long> onRestoreStartFunction = null,
-                                        Action<TopicPartition, string, long, long> onBatchRestoredFunction = null,
-                                        Action<TopicPartition, string, long> onRestoreEndFunction = null,
-                                        bool attachEventHandler = true)
-        {
-            if (onRestoreStartFunction != null) OnRestoreStartFunction = onRestoreStartFunction;
-            else OnRestoreStartFunction = OnRestoreStart;
-
-            if (onBatchRestoredFunction != null) OnBatchRestoredFunction = onBatchRestoredFunction;
-            else OnBatchRestoredFunction = OnBatchRestored;
-
-            if (onRestoreEndFunction != null) OnRestoreEndFunction = onRestoreEndFunction;
-            else OnRestoreEndFunction = OnRestoreEnd;
-
-            if (attachEventHandler)
-            {
-                AddEventHandler("onRestoreStart", new EventHandler<CLRListenerEventArgs<CLREventData<TopicPartition>>>(EventHandler_onRestoreStart));
-                AddEventHandler("onBatchRestored", new EventHandler<CLRListenerEventArgs<CLREventData<TopicPartition>>>(EventHandler_onBatchRestored));
-                AddEventHandler("onRestoreEnd", new EventHandler<CLRListenerEventArgs<CLREventData<TopicPartition>>>(EventHandler_onRestoreEnd));
-            }
-        }
-
-        void EventHandler_onRestoreStart(object sender, CLRListenerEventArgs<CLREventData<TopicPartition>> data)
-        {
-            OnOnRestoreStart(data.EventData.TypedEventData, data.EventData.To<string>(0), data.EventData.To<long>(1), data.EventData.To<long>(2));
-        }
-
-        void EventHandler_onBatchRestored(object sender, CLRListenerEventArgs<CLREventData<TopicPartition>> data)
-        {
-            OnOnBatchRestored(data.EventData.TypedEventData, data.EventData.To<string>(0), data.EventData.To<long>(1), data.EventData.To<long>(2));
-        }
-
-        void EventHandler_onRestoreEnd(object sender, CLRListenerEventArgs<CLREventData<TopicPartition>> data)
-        {
-            OnOnRestoreEnd(data.EventData.TypedEventData, data.EventData.To<string>(0), data.EventData.To<long>(1));
-        }
     }
 }

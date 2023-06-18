@@ -45,6 +45,26 @@ namespace Org.Apache.Kafka.Streams.Kstream
         #endregion
 
         #region Instance methods
+        protected virtual void InitializeHandlers()
+        {
+            AddEventHandler("apply", new System.EventHandler<CLRListenerEventArgs<CLREventData<object>>>(ApplyEventHandler)); OnApply = Apply;
+
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html#apply(java.lang.Object,java.lang.Object,java.lang.Object)"/>
+        /// </summary>
+        public System.Func<object, object, object, object> OnApply { get; set; }
+
+        void ApplyEventHandler(object sender, CLRListenerEventArgs<CLREventData<object>> data)
+        {
+            if (OnApply != null)
+            {
+                var executionResult = OnApply.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<object>(0), data.EventData.GetAt<object>(1));
+                data.SetReturnValue(executionResult);
+            }
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html#apply(java.lang.Object,java.lang.Object,java.lang.Object)"/>
         /// </summary>
@@ -69,7 +89,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region IValueJoinerWithKey<K1, V1, V2, VR>
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.streams.kstream.ValueJoinerWithKey implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html"/>
     /// </summary>
     public partial interface IValueJoinerWithKey<K1, V1, V2, VR>
     {
@@ -105,6 +125,26 @@ namespace Org.Apache.Kafka.Streams.Kstream
         #endregion
 
         #region Instance methods
+        protected virtual void InitializeHandlers()
+        {
+            AddEventHandler("apply", new System.EventHandler<CLRListenerEventArgs<CLREventData<K1>>>(ApplyEventHandler)); OnApply = Apply;
+
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html#apply(java.lang.Object,java.lang.Object,java.lang.Object)"/>
+        /// </summary>
+        public System.Func<K1, V1, V2, VR> OnApply { get; set; }
+
+        void ApplyEventHandler(object sender, CLRListenerEventArgs<CLREventData<K1>> data)
+        {
+            if (OnApply != null)
+            {
+                var executionResult = OnApply.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<V1>(0), data.EventData.GetAt<V2>(1));
+                data.SetReturnValue(executionResult);
+            }
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html#apply(java.lang.Object,java.lang.Object,java.lang.Object)"/>
         /// </summary>

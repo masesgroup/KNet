@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
 {
     #region IConfigProvider
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/provider/ConfigProvider.html"/>
+    /// .NET interface for TO BE DEFINED FROM USER
     /// </summary>
     public partial interface IConfigProvider
     {

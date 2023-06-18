@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 {
     #region IConsumerPartitionAssignor
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.clients.consumer.ConsumerPartitionAssignor implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html"/>
     /// </summary>
     public partial interface IConsumerPartitionAssignor
     {
@@ -63,6 +63,31 @@ namespace Org.Apache.Kafka.Clients.Consumer
         #endregion
 
         #region Instance methods
+        protected virtual void InitializeHandlers()
+        {
+            AddEventHandler("name", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(NameEventHandler)); OnName = Name;
+            AddEventHandler("assign", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.Cluster>>>(AssignEventHandler)); OnAssign = Assign;
+            AddEventHandler("subscriptionUserData", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Set<string>>>>(SubscriptionUserDataEventHandler)); OnSubscriptionUserData = SubscriptionUserData;
+            AddEventHandler("supportedProtocols", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(SupportedProtocolsEventHandler)); OnSupportedProtocols = SupportedProtocols;
+            AddEventHandler("version", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(VersionEventHandler)); OnVersion = Version;
+            AddEventHandler("onAssignment", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Assignment>>>(OnAssignmentEventHandler)); OnOnAssignment = OnAssignment;
+
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#name()"/>
+        /// </summary>
+        public System.Func<string> OnName { get; set; }
+
+        void NameEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
+        {
+            if (OnName != null)
+            {
+                var executionResult = OnName.Invoke();
+                data.SetReturnValue(executionResult);
+            }
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#name()"/>
         /// </summary>
@@ -72,6 +97,21 @@ namespace Org.Apache.Kafka.Clients.Consumer
         {
             return default;
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#assign(org.apache.kafka.common.Cluster,org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.GroupSubscription)"/>
+        /// </summary>
+        public System.Func<Org.Apache.Kafka.Common.Cluster, Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.GroupSubscription, Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.GroupAssignment> OnAssign { get; set; }
+
+        void AssignEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.Cluster>> data)
+        {
+            if (OnAssign != null)
+            {
+                var executionResult = OnAssign.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.GroupSubscription>(0));
+                data.SetReturnValue(executionResult);
+            }
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#assign(org.apache.kafka.common.Cluster,org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.GroupSubscription)"/>
         /// </summary>
@@ -82,6 +122,21 @@ namespace Org.Apache.Kafka.Clients.Consumer
         {
             return default;
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#subscriptionUserData(java.util.Set)"/>
+        /// </summary>
+        public System.Func<Java.Util.Set<string>, Java.Nio.ByteBuffer> OnSubscriptionUserData { get; set; }
+
+        void SubscriptionUserDataEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Set<string>>> data)
+        {
+            if (OnSubscriptionUserData != null)
+            {
+                var executionResult = OnSubscriptionUserData.Invoke(data.EventData.TypedEventData);
+                data.SetReturnValue(executionResult);
+            }
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#subscriptionUserData(java.util.Set)"/>
         /// </summary>
@@ -91,6 +146,21 @@ namespace Org.Apache.Kafka.Clients.Consumer
         {
             return default;
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#supportedProtocols()"/>
+        /// </summary>
+        public System.Func<Java.Util.List<Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.RebalanceProtocol>> OnSupportedProtocols { get; set; }
+
+        void SupportedProtocolsEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
+        {
+            if (OnSupportedProtocols != null)
+            {
+                var executionResult = OnSupportedProtocols.Invoke();
+                data.SetReturnValue(executionResult);
+            }
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#supportedProtocols()"/>
         /// </summary>
@@ -100,6 +170,21 @@ namespace Org.Apache.Kafka.Clients.Consumer
         {
             return default;
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#version()"/>
+        /// </summary>
+        public System.Func<short> OnVersion { get; set; }
+
+        void VersionEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
+        {
+            if (OnVersion != null)
+            {
+                var executionResult = OnVersion.Invoke();
+                data.SetReturnValue(executionResult);
+            }
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#version()"/>
         /// </summary>
@@ -109,6 +194,17 @@ namespace Org.Apache.Kafka.Clients.Consumer
         {
             return default;
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#onAssignment(org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.Assignment,org.apache.kafka.clients.consumer.ConsumerGroupMetadata)"/>
+        /// </summary>
+        public System.Action<Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Assignment, Org.Apache.Kafka.Clients.Consumer.ConsumerGroupMetadata> OnOnAssignment { get; set; }
+
+        void OnAssignmentEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Assignment>> data)
+        {
+            if (OnOnAssignment != null) OnOnAssignment.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<Org.Apache.Kafka.Clients.Consumer.ConsumerGroupMetadata>(0));
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html#onAssignment(org.apache.kafka.clients.consumer.ConsumerPartitionAssignor.Assignment,org.apache.kafka.clients.consumer.ConsumerGroupMetadata)"/>
         /// </summary>

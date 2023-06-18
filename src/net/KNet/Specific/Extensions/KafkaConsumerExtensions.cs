@@ -43,7 +43,7 @@ namespace MASES.KNet.Extensions
                 try
                 {
                     var records = consumer.Poll(duration);
-                    if (records.Count == 0) continue;
+                    if (records.Count() == 0) continue;
                     return records;
                 }
                 catch (OperationCanceledException)
@@ -67,7 +67,7 @@ namespace MASES.KNet.Extensions
                 while (true)
                 {
                     var records = consumer.Poll(duration);
-                    if (records.Count == 0) continue;
+                    if (records.Count() == 0) continue;
                     return records;
                 }
             });

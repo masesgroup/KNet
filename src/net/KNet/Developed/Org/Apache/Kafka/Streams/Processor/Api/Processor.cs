@@ -32,51 +32,6 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     public partial class Processor<KIn, VIn, KOut, VOut> : IProcessor<KIn, VIn, KOut, VOut>
     {
-        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-         public sealed override string BridgeClassName => "org.apache.kafka.streams.processor.api.ProcessorImpl";
 
-        readonly Action<ProcessorContext<KOut, VOut>> executionFunctionInit = null;
-        readonly Action<Record<KIn, VIn>> executionFunctionProcess = null;
-        readonly Action executionFunctionClose = null;
-
-        public virtual Action<ProcessorContext<KOut, VOut>> OnInit { get { return executionFunctionInit; } }
-
-        public virtual Action<Record<KIn, VIn>> OnProcess { get { return executionFunctionProcess; } }
-
-        public virtual Action OnClose { get { return executionFunctionClose; } }
-
-        public Processor(Action<ProcessorContext<KOut, VOut>> init = null, Action<Record<KIn, VIn>> process = null, Action close = null, bool attachEventHandler = true)
-        {
-            if (init != null) executionFunctionInit = init;
-            else executionFunctionInit = Init;
-
-            if (process != null) executionFunctionProcess = process;
-            else executionFunctionProcess = Process;
-
-            if (close != null) executionFunctionClose = close;
-            else executionFunctionClose = Close;
-
-            if (attachEventHandler)
-            {
-                AddEventHandler("init", new EventHandler<CLRListenerEventArgs<CLREventData<ProcessorContext<KOut, VOut>>>>(EventHandlerInit));
-                AddEventHandler("process", new EventHandler<CLRListenerEventArgs<CLREventData<Record<KIn, VIn>>>>(EventHandlerProcess));
-                AddEventHandler("close", new EventHandler<CLRListenerEventArgs<CLREventData>>(EventHandlerClose));
-            }
-        }
-
-        void EventHandlerInit(object sender, CLRListenerEventArgs<CLREventData<ProcessorContext<KOut, VOut>>> data)
-        {
-            OnInit(data.EventData.TypedEventData);
-        }
-
-        void EventHandlerProcess(object sender, CLRListenerEventArgs<CLREventData<Record<KIn, VIn>>> data)
-        {
-            OnProcess(data.EventData.TypedEventData);
-        }
-
-        void EventHandlerClose(object sender, CLRListenerEventArgs<CLREventData> data)
-        {
-            OnClose();
-        }
     }
 }

@@ -46,46 +46,6 @@ namespace Org.Apache.Kafka.Clients.Consumer
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public partial class ConsumerRebalanceListener : IConsumerRebalanceListener
     {
-        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-         public sealed override string BridgeClassName => "org.mases.knet.clients.consumer.ConsumerRebalanceListenerImpl";
 
-        readonly Action<Collection<TopicPartition>> revokedFunction = null;
-        readonly Action<Collection<TopicPartition>> assignedFunction = null;
-        /// <summary>
-        /// The <see cref="Action{Collection{TopicPartition}}"/> to be executed on Revoked partitions
-        /// </summary>
-        public virtual Action<Collection<TopicPartition>> OnOnPartitionsRevoked { get { return revokedFunction; } }
-        /// <summary>
-        /// The <see cref="Action{Collection{TopicPartition}}"/> to be executed on Revoked partitions
-        /// </summary>
-        public virtual Action<Collection<TopicPartition>> OnOnPartitionsAssigned { get { return assignedFunction; } }
-        /// <summary>
-        /// Initialize a new instance of <see cref="ConsumerRebalanceListener"/>
-        /// </summary>
-        /// <param name="revoked">The <see cref="Action{Collection{TopicPartition}}"/> to be executed on revoked partitions</param>
-        /// <param name="assigned">The <see cref="Action{Collection{TopicPartition}}"/> to be executed on assigned partitions</param>
-        /// <param name="attachEventHandler">Set to false to disable attach of <see cref="EventHandler"/> and set an own one</param>
-        public ConsumerRebalanceListener(Action<Collection<TopicPartition>> revoked = null, Action<Collection<TopicPartition>> assigned = null, bool attachEventHandler = true)
-        {
-            if (revoked != null) revokedFunction = revoked;
-            else revokedFunction = OnPartitionsRevoked;
-            if (assigned != null) assignedFunction = assigned;
-            else assignedFunction = OnPartitionsAssigned;
-            if (attachEventHandler)
-            {
-                AddEventHandler("onPartitionsRevoked", new EventHandler<CLRListenerEventArgs<CLREventData<Collection<TopicPartition>>>>(EventHandlerRevoked));
-                AddEventHandler("onPartitionsAssigned", new EventHandler<CLRListenerEventArgs<CLREventData<Collection<TopicPartition>>>>(EventHandlerAssigned));
-            }
-        }
-
-        void EventHandlerRevoked(object sender, CLRListenerEventArgs<CLREventData<Collection<TopicPartition>>> data)
-        {
-            OnOnPartitionsRevoked(data.EventData.TypedEventData);
-        }
-
-        void EventHandlerAssigned(object sender, CLRListenerEventArgs<CLREventData<Collection<TopicPartition>>> data)
-        {
-            OnOnPartitionsAssigned(data.EventData.TypedEventData);
-        }
     }
 }

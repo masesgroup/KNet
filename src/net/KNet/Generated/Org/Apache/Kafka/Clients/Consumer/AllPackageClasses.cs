@@ -224,10 +224,14 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public ConsumerInterceptor() { }
+        public ConsumerInterceptor() { InitializeHandlers(); }
 
-    #warning Remember to build the body class for event listener
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.clients.consumer.ConsumerInterceptor";
 
+    
         // TODO: complete the class
 
     }
@@ -244,10 +248,14 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public ConsumerInterceptor() { }
+        public ConsumerInterceptor() { InitializeHandlers(); }
 
-    #warning Remember to build the body class for event listener
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.clients.consumer.ConsumerInterceptor";
 
+    
         // TODO: complete the class
     
     }
@@ -262,10 +270,14 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public ConsumerPartitionAssignor() { }
+        public ConsumerPartitionAssignor() { InitializeHandlers(); }
 
-    #warning Remember to build the body class for event listener
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.clients.consumer.ConsumerPartitionAssignor";
 
+    
         // TODO: complete the class
         #region Assignment
         /// <summary>
@@ -495,10 +507,14 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public ConsumerRebalanceListener() { }
+        public ConsumerRebalanceListener() { InitializeHandlers(); }
 
-    #warning Remember to build the body class for event listener
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.clients.consumer.ConsumerRebalanceListener";
 
+    
         // TODO: complete the class
 
     }
@@ -1042,10 +1058,14 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public OffsetCommitCallback() { }
+        public OffsetCommitCallback() { InitializeHandlers(); }
 
-    #warning Remember to build the body class for event listener
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.clients.consumer.OffsetCommitCallback";
 
+    
         // TODO: complete the class
 
     }

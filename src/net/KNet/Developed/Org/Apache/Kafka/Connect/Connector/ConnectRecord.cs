@@ -32,7 +32,7 @@ namespace Org.Apache.Kafka.Connect.Connector
         /// <summary>
         /// Timestamp
         /// </summary>
-        public DateTime DateTime => DateTimeOffset.FromUnixTimeMilliseconds(Timestamp).DateTime;
+        public DateTime DateTime => DateTimeOffset.FromUnixTimeMilliseconds((long)Timestamp()).DateTime;
     }
 
     /// <summary>

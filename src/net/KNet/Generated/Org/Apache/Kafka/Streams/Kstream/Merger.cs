@@ -45,6 +45,26 @@ namespace Org.Apache.Kafka.Streams.Kstream
         #endregion
 
         #region Instance methods
+        protected virtual void InitializeHandlers()
+        {
+            AddEventHandler("apply", new System.EventHandler<CLRListenerEventArgs<CLREventData<object>>>(ApplyEventHandler)); OnApply = Apply;
+
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Merger.html#apply(java.lang.Object,java.lang.Object,java.lang.Object)"/>
+        /// </summary>
+        public System.Func<object, object, object, object> OnApply { get; set; }
+
+        void ApplyEventHandler(object sender, CLRListenerEventArgs<CLREventData<object>> data)
+        {
+            if (OnApply != null)
+            {
+                var executionResult = OnApply.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<object>(0), data.EventData.GetAt<object>(1));
+                data.SetReturnValue(executionResult);
+            }
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Merger.html#apply(java.lang.Object,java.lang.Object,java.lang.Object)"/>
         /// </summary>
@@ -69,7 +89,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region IMerger<K, V>
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Merger.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.streams.kstream.Merger implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Merger.html"/>
     /// </summary>
     public partial interface IMerger<K, V>
     {
@@ -105,6 +125,26 @@ namespace Org.Apache.Kafka.Streams.Kstream
         #endregion
 
         #region Instance methods
+        protected virtual void InitializeHandlers()
+        {
+            AddEventHandler("apply", new System.EventHandler<CLRListenerEventArgs<CLREventData<K>>>(ApplyEventHandler)); OnApply = Apply;
+
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Merger.html#apply(java.lang.Object,java.lang.Object,java.lang.Object)"/>
+        /// </summary>
+        public System.Func<K, V, V, V> OnApply { get; set; }
+
+        void ApplyEventHandler(object sender, CLRListenerEventArgs<CLREventData<K>> data)
+        {
+            if (OnApply != null)
+            {
+                var executionResult = OnApply.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<V>(0), data.EventData.GetAt<V>(1));
+                data.SetReturnValue(executionResult);
+            }
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Merger.html#apply(java.lang.Object,java.lang.Object,java.lang.Object)"/>
         /// </summary>

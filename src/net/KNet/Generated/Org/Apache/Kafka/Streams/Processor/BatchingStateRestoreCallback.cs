@@ -27,9 +27,9 @@ namespace Org.Apache.Kafka.Streams.Processor
 {
     #region IBatchingStateRestoreCallback
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/BatchingStateRestoreCallback.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.streams.processor.BatchingStateRestoreCallback implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/BatchingStateRestoreCallback.html"/>
     /// </summary>
-    public partial interface IBatchingStateRestoreCallback : Org.Apache.Kafka.Streams.Processor.IStateRestoreCallback
+    public partial interface IBatchingStateRestoreCallback
     {
         #region Instance methods
 
@@ -63,22 +63,50 @@ namespace Org.Apache.Kafka.Streams.Processor
         #endregion
 
         #region Instance methods
+        protected virtual void InitializeHandlers()
+        {
+            AddEventHandler("restoreAll", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Collection<Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>>>>>(RestoreAllEventHandler)); OnRestoreAll = RestoreAll;
+            AddEventHandler("restore", new System.EventHandler<CLRListenerEventArgs<CLREventData<byte[]>>>(RestoreEventHandler)); OnRestore = Restore;
+
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/BatchingStateRestoreCallback.html#restoreAll(java.util.Collection)"/>
+        /// </summary>
+        public System.Action<Java.Util.Collection<Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>>> OnRestoreAll { get; set; }
+
+        void RestoreAllEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Collection<Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>>>> data)
+        {
+            if (OnRestoreAll != null) OnRestoreAll.Invoke(data.EventData.TypedEventData);
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/BatchingStateRestoreCallback.html#restoreAll(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
-        public void RestoreAll(Java.Util.Collection<Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>> arg0)
+        public virtual void RestoreAll(Java.Util.Collection<Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>> arg0)
         {
-            IExecute("restoreAll", arg0);
+            
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/BatchingStateRestoreCallback.html#restore(byte[],byte[])"/>
+        /// </summary>
+        public System.Action<byte[], byte[]> OnRestore { get; set; }
+
+        void RestoreEventHandler(object sender, CLRListenerEventArgs<CLREventData<byte[]>> data)
+        {
+            if (OnRestore != null) OnRestore.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<byte[]>(0));
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/BatchingStateRestoreCallback.html#restore(byte[],byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
-        public void Restore(byte[] arg0, byte[] arg1)
+        public virtual void Restore(byte[] arg0, byte[] arg1)
         {
-            IExecute("restore", arg0, arg1);
+            
         }
 
         #endregion

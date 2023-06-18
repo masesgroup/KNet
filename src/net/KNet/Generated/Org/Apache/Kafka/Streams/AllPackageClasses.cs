@@ -202,10 +202,14 @@ namespace Org.Apache.Kafka.Streams
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
             /// </summary>
-            public StateListener() { }
+            public StateListener() { InitializeHandlers(); }
 
-        #warning Remember to build the body class for event listener
+            /// <summary>
+            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+            /// </summary>
+            public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.streams.StateListener";
 
+        
             // TODO: complete the class
 
         }

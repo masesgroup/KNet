@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 {
     #region IMetricsReporter
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricsReporter.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.common.metrics.MetricsReporter implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricsReporter.html"/>
     /// </summary>
     public partial interface IMetricsReporter
     {
@@ -63,6 +63,29 @@ namespace Org.Apache.Kafka.Common.Metrics
         #endregion
 
         #region Instance methods
+        protected virtual void InitializeHandlers()
+        {
+            AddEventHandler("close", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler)); OnClose = Close;
+            AddEventHandler("init", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.List<Org.Apache.Kafka.Common.Metrics.KafkaMetric>>>>(InitEventHandler)); OnInit = Init;
+            AddEventHandler("metricChange", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.Metrics.KafkaMetric>>>(MetricChangeEventHandler)); OnMetricChange = MetricChange;
+            AddEventHandler("metricRemoval", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.Metrics.KafkaMetric>>>(MetricRemovalEventHandler)); OnMetricRemoval = MetricRemoval;
+            AddEventHandler("reconfigurableConfigs", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(ReconfigurableConfigsEventHandler)); OnReconfigurableConfigs = ReconfigurableConfigs;
+            AddEventHandler("contextChange", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.Metrics.MetricsContext>>>(ContextChangeEventHandler)); OnContextChange = ContextChange;
+            AddEventHandler("reconfigure", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<string, object>>>>(ReconfigureEventHandler)); OnReconfigure = Reconfigure;
+            AddEventHandler("validateReconfiguration", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<string, object>>>>(ValidateReconfigurationEventHandler)); OnValidateReconfiguration = ValidateReconfiguration;
+
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricsReporter.html#close()"/>
+        /// </summary>
+        public System.Action OnClose { get; set; }
+
+        void CloseEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
+        {
+            if (OnClose != null) OnClose.Invoke();
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricsReporter.html#close()"/>
         /// </summary>
@@ -70,6 +93,17 @@ namespace Org.Apache.Kafka.Common.Metrics
         {
             
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricsReporter.html#init(java.util.List)"/>
+        /// </summary>
+        public System.Action<Java.Util.List<Org.Apache.Kafka.Common.Metrics.KafkaMetric>> OnInit { get; set; }
+
+        void InitEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.List<Org.Apache.Kafka.Common.Metrics.KafkaMetric>>> data)
+        {
+            if (OnInit != null) OnInit.Invoke(data.EventData.TypedEventData);
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricsReporter.html#init(java.util.List)"/>
         /// </summary>
@@ -78,6 +112,17 @@ namespace Org.Apache.Kafka.Common.Metrics
         {
             
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricsReporter.html#metricChange(org.apache.kafka.common.metrics.KafkaMetric)"/>
+        /// </summary>
+        public System.Action<Org.Apache.Kafka.Common.Metrics.KafkaMetric> OnMetricChange { get; set; }
+
+        void MetricChangeEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.Metrics.KafkaMetric>> data)
+        {
+            if (OnMetricChange != null) OnMetricChange.Invoke(data.EventData.TypedEventData);
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricsReporter.html#metricChange(org.apache.kafka.common.metrics.KafkaMetric)"/>
         /// </summary>
@@ -86,6 +131,17 @@ namespace Org.Apache.Kafka.Common.Metrics
         {
             
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricsReporter.html#metricRemoval(org.apache.kafka.common.metrics.KafkaMetric)"/>
+        /// </summary>
+        public System.Action<Org.Apache.Kafka.Common.Metrics.KafkaMetric> OnMetricRemoval { get; set; }
+
+        void MetricRemovalEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.Metrics.KafkaMetric>> data)
+        {
+            if (OnMetricRemoval != null) OnMetricRemoval.Invoke(data.EventData.TypedEventData);
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricsReporter.html#metricRemoval(org.apache.kafka.common.metrics.KafkaMetric)"/>
         /// </summary>
@@ -94,6 +150,21 @@ namespace Org.Apache.Kafka.Common.Metrics
         {
             
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricsReporter.html#reconfigurableConfigs()"/>
+        /// </summary>
+        public System.Func<Java.Util.Set<string>> OnReconfigurableConfigs { get; set; }
+
+        void ReconfigurableConfigsEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
+        {
+            if (OnReconfigurableConfigs != null)
+            {
+                var executionResult = OnReconfigurableConfigs.Invoke();
+                data.SetReturnValue(executionResult);
+            }
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricsReporter.html#reconfigurableConfigs()"/>
         /// </summary>
@@ -103,6 +174,17 @@ namespace Org.Apache.Kafka.Common.Metrics
         {
             return default;
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricsReporter.html#contextChange(org.apache.kafka.common.metrics.MetricsContext)"/>
+        /// </summary>
+        public System.Action<Org.Apache.Kafka.Common.Metrics.MetricsContext> OnContextChange { get; set; }
+
+        void ContextChangeEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.Metrics.MetricsContext>> data)
+        {
+            if (OnContextChange != null) OnContextChange.Invoke(data.EventData.TypedEventData);
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricsReporter.html#contextChange(org.apache.kafka.common.metrics.MetricsContext)"/>
         /// </summary>
@@ -111,6 +193,17 @@ namespace Org.Apache.Kafka.Common.Metrics
         {
             
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricsReporter.html#reconfigure(java.util.Map)"/>
+        /// </summary>
+        public System.Action<Java.Util.Map<string, object>> OnReconfigure { get; set; }
+
+        void ReconfigureEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map<string, object>>> data)
+        {
+            if (OnReconfigure != null) OnReconfigure.Invoke(data.EventData.TypedEventData);
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricsReporter.html#reconfigure(java.util.Map)"/>
         /// </summary>
@@ -119,6 +212,17 @@ namespace Org.Apache.Kafka.Common.Metrics
         {
             
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricsReporter.html#validateReconfiguration(java.util.Map)"/>
+        /// </summary>
+        public System.Action<Java.Util.Map<string, object>> OnValidateReconfiguration { get; set; }
+
+        void ValidateReconfigurationEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map<string, object>>> data)
+        {
+            if (OnValidateReconfiguration != null) OnValidateReconfiguration.Invoke(data.EventData.TypedEventData);
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/metrics/MetricsReporter.html#validateReconfiguration(java.util.Map)"/>
         /// </summary>

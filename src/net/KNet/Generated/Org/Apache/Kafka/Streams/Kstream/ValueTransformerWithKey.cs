@@ -45,6 +45,24 @@ namespace Org.Apache.Kafka.Streams.Kstream
         #endregion
 
         #region Instance methods
+        protected virtual void InitializeHandlers()
+        {
+            AddEventHandler("close", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler)); OnClose = Close;
+            AddEventHandler("init", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.ProcessorContext>>>(InitEventHandler)); OnInit = Init;
+            AddEventHandler("transform", new System.EventHandler<CLRListenerEventArgs<CLREventData<object>>>(TransformEventHandler)); OnTransform = Transform;
+
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerWithKey.html#close()"/>
+        /// </summary>
+        public System.Action OnClose { get; set; }
+
+        void CloseEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
+        {
+            if (OnClose != null) OnClose.Invoke();
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerWithKey.html#close()"/>
         /// </summary>
@@ -52,6 +70,17 @@ namespace Org.Apache.Kafka.Streams.Kstream
         {
             
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerWithKey.html#init(org.apache.kafka.streams.processor.ProcessorContext)"/>
+        /// </summary>
+        public System.Action<Org.Apache.Kafka.Streams.Processor.ProcessorContext> OnInit { get; set; }
+
+        void InitEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.ProcessorContext>> data)
+        {
+            if (OnInit != null) OnInit.Invoke(data.EventData.TypedEventData);
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerWithKey.html#init(org.apache.kafka.streams.processor.ProcessorContext)"/>
         /// </summary>
@@ -60,6 +89,21 @@ namespace Org.Apache.Kafka.Streams.Kstream
         {
             
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerWithKey.html#transform(java.lang.Object,java.lang.Object)"/>
+        /// </summary>
+        public System.Func<object, object, object> OnTransform { get; set; }
+
+        void TransformEventHandler(object sender, CLRListenerEventArgs<CLREventData<object>> data)
+        {
+            if (OnTransform != null)
+            {
+                var executionResult = OnTransform.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<object>(0));
+                data.SetReturnValue(executionResult);
+            }
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerWithKey.html#transform(java.lang.Object,java.lang.Object)"/>
         /// </summary>
@@ -83,7 +127,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region IValueTransformerWithKey<K, V, VR>
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerWithKey.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.streams.kstream.ValueTransformerWithKey implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerWithKey.html"/>
     /// </summary>
     public partial interface IValueTransformerWithKey<K, V, VR>
     {
@@ -119,6 +163,24 @@ namespace Org.Apache.Kafka.Streams.Kstream
         #endregion
 
         #region Instance methods
+        protected virtual void InitializeHandlers()
+        {
+            AddEventHandler("close", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler)); OnClose = Close;
+            AddEventHandler("init", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.ProcessorContext>>>(InitEventHandler)); OnInit = Init;
+            AddEventHandler("transform", new System.EventHandler<CLRListenerEventArgs<CLREventData<K>>>(TransformEventHandler)); OnTransform = Transform;
+
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerWithKey.html#close()"/>
+        /// </summary>
+        public System.Action OnClose { get; set; }
+
+        void CloseEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
+        {
+            if (OnClose != null) OnClose.Invoke();
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerWithKey.html#close()"/>
         /// </summary>
@@ -126,6 +188,17 @@ namespace Org.Apache.Kafka.Streams.Kstream
         {
             
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerWithKey.html#init(org.apache.kafka.streams.processor.ProcessorContext)"/>
+        /// </summary>
+        public System.Action<Org.Apache.Kafka.Streams.Processor.ProcessorContext> OnInit { get; set; }
+
+        void InitEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.ProcessorContext>> data)
+        {
+            if (OnInit != null) OnInit.Invoke(data.EventData.TypedEventData);
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerWithKey.html#init(org.apache.kafka.streams.processor.ProcessorContext)"/>
         /// </summary>
@@ -134,6 +207,21 @@ namespace Org.Apache.Kafka.Streams.Kstream
         {
             
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerWithKey.html#transform(java.lang.Object,java.lang.Object)"/>
+        /// </summary>
+        public System.Func<K, V, VR> OnTransform { get; set; }
+
+        void TransformEventHandler(object sender, CLRListenerEventArgs<CLREventData<K>> data)
+        {
+            if (OnTransform != null)
+            {
+                var executionResult = OnTransform.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<V>(0));
+                data.SetReturnValue(executionResult);
+            }
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerWithKey.html#transform(java.lang.Object,java.lang.Object)"/>
         /// </summary>

@@ -61,7 +61,7 @@ namespace MASES.KNet.Extensions
             {
                 if (action != null)
                 {
-                    cb = new Callback(action);
+                    cb = new Callback() { OnOnCompletion = action };
                 }
                 Produce(producer, record, cb);
             }

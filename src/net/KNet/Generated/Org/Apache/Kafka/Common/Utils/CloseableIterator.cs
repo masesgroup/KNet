@@ -78,7 +78,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region ICloseableIterator<T>
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/utils/CloseableIterator.html"/>
+    /// .NET interface for TO BE DEFINED FROM USER
     /// </summary>
     public partial interface ICloseableIterator<T>
     {

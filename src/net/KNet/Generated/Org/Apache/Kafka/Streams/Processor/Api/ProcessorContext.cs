@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     #region IProcessorContext<KForward, VForward>
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessorContext.html"/>
+    /// .NET interface for TO BE DEFINED FROM USER
     /// </summary>
     public partial interface IProcessorContext<KForward, VForward> : Org.Apache.Kafka.Streams.Processor.Api.IProcessingContext
     {

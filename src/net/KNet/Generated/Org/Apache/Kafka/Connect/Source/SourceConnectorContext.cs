@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Source
 {
     #region ISourceConnectorContext
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceConnectorContext.html"/>
+    /// .NET interface for TO BE DEFINED FROM USER
     /// </summary>
     public partial interface ISourceConnectorContext : Org.Apache.Kafka.Connect.Connector.IConnectorContext
     {
@@ -63,15 +63,6 @@ namespace Org.Apache.Kafka.Connect.Source
         #endregion
 
         #region Instance methods
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceConnectorContext.html#offsetStorageReader()"/>
-        /// </summary>
-
-        /// <returns><see cref="Org.Apache.Kafka.Connect.Storage.OffsetStorageReader"/></returns>
-        public Org.Apache.Kafka.Connect.Storage.OffsetStorageReader OffsetStorageReader()
-        {
-            return IExecute<Org.Apache.Kafka.Connect.Storage.OffsetStorageReader>("offsetStorageReader");
-        }
 
         #endregion
 

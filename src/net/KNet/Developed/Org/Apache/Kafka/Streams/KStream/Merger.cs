@@ -45,33 +45,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public partial class Merger<K, V> : IMerger<K, V>
     {
-        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-         public sealed override string BridgeClassName => "org.mases.knet.streams.kstream.MergerImpl";
 
-        readonly Func<K, V, V, V> executionFunction = null;
-        /// <summary>
-        /// The <see cref="Func{K, V, V, V}"/> to be executed
-        /// </summary>
-        public virtual Func<K, V, V, V> OnApply { get { return executionFunction; } }
-        /// <summary>
-        /// Initialize a new instance of <see cref="Merger{K, V}"/>
-        /// </summary>
-        /// <param name="func">The <see cref="Func{K, V, V, V}"/> to be executed</param>
-        /// <param name="attachEventHandler">Set to false to disable attach of <see cref="EventHandler"/> and set an own one</param>
-        public Merger(Func<K, V, V, V> func = null, bool attachEventHandler = true)
-        {
-            if (func != null) executionFunction = func;
-            else executionFunction = Apply;
-            if (attachEventHandler)
-            {
-                AddEventHandler("apply", new EventHandler<CLRListenerEventArgs<CLREventData<K>>>(EventHandler));
-            }
-        }
-
-        void EventHandler(object sender, CLRListenerEventArgs<CLREventData<K>> data)
-        {
-            var retVal = OnApply(data.EventData.TypedEventData, data.EventData.To<V>(0), data.EventData.To<V>(1));
-            data.SetReturnValue(retVal);
-        }
     }
 }

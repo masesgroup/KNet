@@ -41,32 +41,6 @@ namespace Org.Apache.Kafka.Streams.Processor
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public partial class StateRestoreCallback : IStateRestoreCallback
     {
-        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-         public override string BridgeClassName => "org.mases.knet.streams.processor.StateRestoreCallbackImpl";
 
-        readonly Action<byte[], byte[]> executionFunction = null;
-        /// <summary>
-        /// The <see cref="Action{byte[], byte[]}"/> to be executed
-        /// </summary>
-        public virtual Action<byte[], byte[]> OnRestore { get { return executionFunction; } }
-        /// <summary>
-        /// Initialize a new instance of <see cref="StateRestoreCallback"/>
-        /// </summary>
-        /// <param name="func">The <see cref="Action{byte[], byte[]}"/> to be executed</param>
-        /// <param name="attachEventHandler">Set to false to disable attach of <see cref="EventHandler"/> and set an own one</param>
-        public StateRestoreCallback(Action<byte[], byte[]> func = null, bool attachEventHandler = true)
-        {
-            if (func != null) executionFunction = func;
-            else executionFunction = Restore;
-            if (attachEventHandler)
-            {
-                AddEventHandler("restore", new EventHandler<CLRListenerEventArgs<CLREventData<byte[]>>>(EventHandler));
-            }
-        }
-
-        void EventHandler(object sender, CLRListenerEventArgs<CLREventData<byte[]>> data)
-        {
-            OnRestore(data.EventData.TypedEventData, data.EventData.To<byte[]>(0));
-        }
     }
 }

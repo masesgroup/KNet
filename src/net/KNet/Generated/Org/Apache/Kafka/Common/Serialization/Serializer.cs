@@ -45,6 +45,29 @@ namespace Org.Apache.Kafka.Common.Serialization
         #endregion
 
         #region Instance methods
+        protected virtual void InitializeHandlers()
+        {
+            AddEventHandler("serialize", new System.EventHandler<CLRListenerEventArgs<CLREventData<string>>>(SerializeEventHandler)); OnSerialize = Serialize;
+            AddEventHandler("serialize3", new System.EventHandler<CLRListenerEventArgs<CLREventData<string>>>(Serialize3EventHandler)); OnSerialize = Serialize;
+            AddEventHandler("close", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler)); OnClose = Close;
+            AddEventHandler("configure", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map>>>(ConfigureEventHandler)); OnConfigure = Configure;
+
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serializer.html#serialize(java.lang.String,java.lang.Object)"/>
+        /// </summary>
+        public System.Func<string, object, byte[]> OnSerialize { get; set; }
+
+        void SerializeEventHandler(object sender, CLRListenerEventArgs<CLREventData<string>> data)
+        {
+            if (OnSerialize != null)
+            {
+                var executionResult = OnSerialize.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<object>(0));
+                data.SetReturnValue(executionResult);
+            }
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serializer.html#serialize(java.lang.String,java.lang.Object)"/>
         /// </summary>
@@ -55,6 +78,21 @@ namespace Org.Apache.Kafka.Common.Serialization
         {
             return default;
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serializer.html#serialize(java.lang.String,org.apache.kafka.common.header.Headers,java.lang.Object)"/>
+        /// </summary>
+        public System.Func<string, Org.Apache.Kafka.Common.Header.Headers, object, byte[]> OnSerialize3 { get; set; }
+
+        void Serialize3EventHandler(object sender, CLRListenerEventArgs<CLREventData<string>> data)
+        {
+            if (OnSerialize3 != null)
+            {
+                var executionResult = OnSerialize3.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<Org.Apache.Kafka.Common.Header.Headers>(0), data.EventData.GetAt<object>(1));
+                data.SetReturnValue(executionResult);
+            }
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serializer.html#serialize(java.lang.String,org.apache.kafka.common.header.Headers,java.lang.Object)"/>
         /// </summary>
@@ -66,6 +104,17 @@ namespace Org.Apache.Kafka.Common.Serialization
         {
             return default;
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serializer.html#close()"/>
+        /// </summary>
+        public System.Action OnClose { get; set; }
+
+        void CloseEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
+        {
+            if (OnClose != null) OnClose.Invoke();
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serializer.html#close()"/>
         /// </summary>
@@ -73,6 +122,17 @@ namespace Org.Apache.Kafka.Common.Serialization
         {
             
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serializer.html#configure(java.util.Map,boolean)"/>
+        /// </summary>
+        public System.Action<Java.Util.Map, bool> OnConfigure { get; set; }
+
+        void ConfigureEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map>> data)
+        {
+            if (OnConfigure != null) OnConfigure.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<bool>(0));
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serializer.html#configure(java.util.Map,boolean)"/>
         /// </summary>
@@ -95,7 +155,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region ISerializer<T>
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serializer.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.common.serialization.Serializer implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serializer.html"/>
     /// </summary>
     public partial interface ISerializer<T>
     {
@@ -131,6 +191,29 @@ namespace Org.Apache.Kafka.Common.Serialization
         #endregion
 
         #region Instance methods
+        protected virtual void InitializeHandlers()
+        {
+            AddEventHandler("serialize", new System.EventHandler<CLRListenerEventArgs<CLREventData<string>>>(SerializeEventHandler)); OnSerialize = Serialize;
+            AddEventHandler("serialize3", new System.EventHandler<CLRListenerEventArgs<CLREventData<string>>>(Serialize3EventHandler)); OnSerialize = Serialize;
+            AddEventHandler("close", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler)); OnClose = Close;
+            AddEventHandler("configure", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<string, object>>>>(ConfigureEventHandler)); OnConfigure = Configure;
+
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serializer.html#serialize(java.lang.String,java.lang.Object)"/>
+        /// </summary>
+        public System.Func<string, T, byte[]> OnSerialize { get; set; }
+
+        void SerializeEventHandler(object sender, CLRListenerEventArgs<CLREventData<string>> data)
+        {
+            if (OnSerialize != null)
+            {
+                var executionResult = OnSerialize.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<T>(0));
+                data.SetReturnValue(executionResult);
+            }
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serializer.html#serialize(java.lang.String,java.lang.Object)"/>
         /// </summary>
@@ -141,6 +224,21 @@ namespace Org.Apache.Kafka.Common.Serialization
         {
             return default;
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serializer.html#serialize(java.lang.String,org.apache.kafka.common.header.Headers,java.lang.Object)"/>
+        /// </summary>
+        public System.Func<string, Org.Apache.Kafka.Common.Header.Headers, T, byte[]> OnSerialize3 { get; set; }
+
+        void Serialize3EventHandler(object sender, CLRListenerEventArgs<CLREventData<string>> data)
+        {
+            if (OnSerialize3 != null)
+            {
+                var executionResult = OnSerialize3.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<Org.Apache.Kafka.Common.Header.Headers>(0), data.EventData.GetAt<T>(1));
+                data.SetReturnValue(executionResult);
+            }
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serializer.html#serialize(java.lang.String,org.apache.kafka.common.header.Headers,java.lang.Object)"/>
         /// </summary>
@@ -152,6 +250,17 @@ namespace Org.Apache.Kafka.Common.Serialization
         {
             return default;
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serializer.html#close()"/>
+        /// </summary>
+        public System.Action OnClose { get; set; }
+
+        void CloseEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
+        {
+            if (OnClose != null) OnClose.Invoke();
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serializer.html#close()"/>
         /// </summary>
@@ -159,6 +268,17 @@ namespace Org.Apache.Kafka.Common.Serialization
         {
             
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serializer.html#configure(java.util.Map,boolean)"/>
+        /// </summary>
+        public System.Action<Java.Util.Map<string, object>, bool> OnConfigure { get; set; }
+
+        void ConfigureEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map<string, object>>> data)
+        {
+            if (OnConfigure != null) OnConfigure.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<bool>(0));
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/serialization/Serializer.html#configure(java.util.Map,boolean)"/>
         /// </summary>

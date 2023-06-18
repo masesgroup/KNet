@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 {
     #region IStateRestoreCallback
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateRestoreCallback.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.streams.processor.StateRestoreCallback implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateRestoreCallback.html"/>
     /// </summary>
     public partial interface IStateRestoreCallback
     {
@@ -63,6 +63,22 @@ namespace Org.Apache.Kafka.Streams.Processor
         #endregion
 
         #region Instance methods
+        protected virtual void InitializeHandlers()
+        {
+            AddEventHandler("restore", new System.EventHandler<CLRListenerEventArgs<CLREventData<byte[]>>>(RestoreEventHandler)); OnRestore = Restore;
+
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateRestoreCallback.html#restore(byte[],byte[])"/>
+        /// </summary>
+        public System.Action<byte[], byte[]> OnRestore { get; set; }
+
+        void RestoreEventHandler(object sender, CLRListenerEventArgs<CLREventData<byte[]>> data)
+        {
+            if (OnRestore != null) OnRestore.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<byte[]>(0));
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateRestoreCallback.html#restore(byte[],byte[])"/>
         /// </summary>

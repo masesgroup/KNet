@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams
 {
     #region IThreadMetadata
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/ThreadMetadata.html"/>
+    /// .NET interface for TO BE DEFINED FROM USER
     /// </summary>
     public partial interface IThreadMetadata
     {

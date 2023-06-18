@@ -27,7 +27,7 @@ namespace Kafka.Admin
 {
     #region IRackAwareMode
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/RackAwareMode.html"/>
+    /// .NET interface for TO BE DEFINED FROM USER
     /// </summary>
     public partial interface IRackAwareMode
     {

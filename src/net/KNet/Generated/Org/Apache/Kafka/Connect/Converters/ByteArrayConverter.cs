@@ -26,17 +26,13 @@ using MASES.JCOBridge.C2JBridge;
 namespace Org.Apache.Kafka.Connect.Converters
 {
     #region ByteArrayConverter
-    public partial class ByteArrayConverter : Org.Apache.Kafka.Connect.Storage.IConverter
+    public partial class ByteArrayConverter
     {
         #region Constructors
 
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Connect.Converters.ByteArrayConverter"/> to <see cref="Org.Apache.Kafka.Connect.Storage.Converter"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Connect.Storage.Converter(Org.Apache.Kafka.Connect.Converters.ByteArrayConverter t) => t.Cast<Org.Apache.Kafka.Connect.Storage.Converter>();
 
         #endregion
 

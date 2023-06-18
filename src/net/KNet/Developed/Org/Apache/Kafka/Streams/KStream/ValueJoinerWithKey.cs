@@ -50,33 +50,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public partial class ValueJoinerWithKey<K1, V1, V2, VR> : IValueJoinerWithKey<K1, V1, V2, VR>
     {
-        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-         public sealed override string BridgeClassName => "org.mases.knet.streams.kstream.ValueJoinerWithKeyImpl";
 
-        readonly Func<K1, V1, V2, VR> executionFunction = null;
-        /// <summary>
-        /// The <see cref="Func{K1, V1, V2, VR}"/> to be executed
-        /// </summary>
-        public virtual Func<K1, V1, V2, VR> OnApply { get { return executionFunction; } }
-        /// <summary>
-        /// Initialize a new instance of <see cref="ValueJoinerWithKey{K1, V1, V2, VR}"/>
-        /// </summary>
-        /// <param name="func">The <see cref="Func{K, V, VA}"/> to be executed</param>
-        /// <param name="attachEventHandler">Set to false to disable attach of <see cref="EventHandler"/> and set an own one</param>
-        public ValueJoinerWithKey(Func<K1, V1, V2, VR> func = null, bool attachEventHandler = true)
-        {
-            if (func != null) executionFunction = func;
-            else executionFunction = Apply;
-            if (attachEventHandler)
-            {
-                AddEventHandler("apply", new EventHandler<CLRListenerEventArgs<CLREventData<K1>>>(EventHandler));
-            }
-        }
-
-        void EventHandler(object sender, CLRListenerEventArgs<CLREventData<K1>> data)
-        {
-            var retVal = OnApply(data.EventData.TypedEventData, data.EventData.To<V1>(0), data.EventData.To<V2>(1));
-            data.SetReturnValue(retVal);
-        }
     }
 }

@@ -43,34 +43,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public partial class ValueMapper<V, VR> : IValueMapper<V, VR>
     {
-        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-         public sealed override string BridgeClassName => "org.mases.knet.streams.kstream.ValueMapperImpl";
 
-        readonly Func<V, VR> executionFunction = null;
-        /// <summary>
-        /// The <see cref="Func{V, VR}"/> to be executed
-        /// </summary>
-        public virtual Func<V, VR> OnApply { get { return executionFunction; } }
-        /// <summary>
-        /// Initialize a new instance of <see cref="ValueMapper{V, VR}"/>
-        /// </summary>
-        /// <param name="func">The <see cref="Func{V, VR}"/> to be executed</param>
-        /// <param name="attachEventHandler">Set to false to disable attach of <see cref="EventHandler"/> and set an own one</param>
-        public ValueMapper(Func<V, VR> func = null, bool attachEventHandler = true)
-        {
-            if (func != null) executionFunction = func;
-            else executionFunction = Apply;
-
-            if (attachEventHandler)
-            {
-                AddEventHandler("apply", new EventHandler<CLRListenerEventArgs<CLREventData<V>>>(EventHandler));
-            }
-        }
-
-        void EventHandler(object sender, CLRListenerEventArgs<CLREventData<V>> data)
-        {
-            var retVal = OnApply(data.EventData.TypedEventData);
-            data.SetReturnValue(retVal);
-        }
     }
 }

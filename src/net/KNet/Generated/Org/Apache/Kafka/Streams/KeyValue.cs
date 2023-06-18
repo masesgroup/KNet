@@ -49,11 +49,11 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KeyValue.html#key"/>
         /// </summary>
-        public object key { get { return IGetField("key"); } }
+        public object key { get { return IGetField<object>("key"); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KeyValue.html#value"/>
         /// </summary>
-        public object value { get { return IGetField("value"); } }
+        public object value { get { return IGetField<object>("value"); } }
 
         #endregion
 
@@ -111,11 +111,11 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KeyValue.html#key"/>
         /// </summary>
-        public K key { get { return IGetField("key"); } }
+        public K key { get { return IGetField<K>("key"); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KeyValue.html#value"/>
         /// </summary>
-        public V value { get { return IGetField("value"); } }
+        public V value { get { return IGetField<V>("value"); } }
 
         #endregion
 

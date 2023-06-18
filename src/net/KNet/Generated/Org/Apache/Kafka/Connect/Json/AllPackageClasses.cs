@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Connect.Json
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.4.0/org/apache/kafka/connect/json/JsonConverterConfig.html"/>
     /// </summary>
-    public partial class JsonConverterConfig : Org.Apache.Kafka.Connect.Storage.ConverterConfig
+    public partial class JsonConverterConfig : MASES.JCOBridge.C2JBridge.JVMBridgeBase<JsonConverterConfig>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 {
     #region IStreamsUncaughtExceptionHandler
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.streams.errors.StreamsUncaughtExceptionHandler implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.html"/>
     /// </summary>
     public partial interface IStreamsUncaughtExceptionHandler
     {
@@ -63,6 +63,26 @@ namespace Org.Apache.Kafka.Streams.Errors
         #endregion
 
         #region Instance methods
+        protected virtual void InitializeHandlers()
+        {
+            AddEventHandler("handle", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(HandleEventHandler)); OnHandle = Handle;
+
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.html#handle(java.lang.Throwable)"/>
+        /// </summary>
+        public System.Func<MASES.JCOBridge.C2JBridge.JVMBridgeException, Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse> OnHandle { get; set; }
+
+        void HandleEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
+        {
+            if (OnHandle != null)
+            {
+                var executionResult = OnHandle.Invoke(JVMBridgeException.New(data.EventData.EventData as MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject));
+                data.SetReturnValue(executionResult);
+            }
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.html#handle(java.lang.Throwable)"/>
         /// </summary>

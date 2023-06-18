@@ -32,7 +32,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         {
         }
 
-        public System.DateTime DateTime => System.DateTimeOffset.FromUnixTimeMilliseconds(Timestamp).DateTime;
+        public System.DateTime DateTime => System.DateTimeOffset.FromUnixTimeMilliseconds((long)Timestamp()).DateTime;
     }
 }
 

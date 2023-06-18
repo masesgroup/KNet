@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Config
 {
     #region IConfigChangeCallback
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigChangeCallback.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.common.config.ConfigChangeCallback implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigChangeCallback.html"/>
     /// </summary>
     public partial interface IConfigChangeCallback
     {
@@ -63,6 +63,22 @@ namespace Org.Apache.Kafka.Common.Config
         #endregion
 
         #region Instance methods
+        protected virtual void InitializeHandlers()
+        {
+            AddEventHandler("onChange", new System.EventHandler<CLRListenerEventArgs<CLREventData<string>>>(OnChangeEventHandler)); OnOnChange = OnChange;
+
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigChangeCallback.html#onChange(java.lang.String,org.apache.kafka.common.config.ConfigData)"/>
+        /// </summary>
+        public System.Action<string, Org.Apache.Kafka.Common.Config.ConfigData> OnOnChange { get; set; }
+
+        void OnChangeEventHandler(object sender, CLRListenerEventArgs<CLREventData<string>> data)
+        {
+            if (OnOnChange != null) OnOnChange.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<Org.Apache.Kafka.Common.Config.ConfigData>(0));
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/config/ConfigChangeCallback.html#onChange(java.lang.String,org.apache.kafka.common.config.ConfigData)"/>
         /// </summary>

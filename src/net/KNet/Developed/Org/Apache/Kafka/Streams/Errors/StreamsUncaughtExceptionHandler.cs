@@ -41,33 +41,6 @@ namespace Org.Apache.Kafka.Streams.Errors
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public partial class StreamsUncaughtExceptionHandler : IStreamsUncaughtExceptionHandler
     {
-        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-         public sealed override string BridgeClassName => "org.mases.knet.streams.errors.StreamsUncaughtExceptionHandlerImpl";
 
-        readonly Func<JVMBridgeException, StreamThreadExceptionResponse> executionFunction = null;
-        /// <summary>
-        /// The <see cref="Func{JVMBridgeException, StreamThreadExceptionResponse}"/> to be executed
-        /// </summary>
-        public virtual Func<JVMBridgeException, StreamThreadExceptionResponse> OnHandle { get { return executionFunction; } }
-        /// <summary>
-        /// Initialize a new instance of <see cref="StreamsUncaughtExceptionHandler"/>
-        /// </summary>
-        /// <param name="func">The <see cref="Func{JVMBridgeException, StreamThreadExceptionResponse}"/> to be executed</param>
-        /// <param name="attachEventHandler">Set to false to disable attach of <see cref="EventHandler"/> and set an own one</param>
-        public StreamsUncaughtExceptionHandler(Func<JVMBridgeException, StreamThreadExceptionResponse> func = null, bool attachEventHandler = true)
-        {
-            if (func != null) executionFunction = func;
-            else executionFunction = Handle;
-            if (attachEventHandler)
-            {
-                AddEventHandler("handle", new EventHandler<CLRListenerEventArgs<CLREventData>>(EventHandler));
-            }
-        }
-
-        void EventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
-        {
-            var retVal = OnHandle(JVMBridgeException.New(data.EventData.EventData as IJavaObject));
-            data.SetReturnValue(retVal.ToString());
-        }
     }
 }

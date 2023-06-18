@@ -47,33 +47,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public partial class KeyValueMapper<K, V, VR> : IKeyValueMapper<K, V, VR>
     {
-        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-         public sealed override string BridgeClassName => "org.mases.knet.streams.kstream.KeyValueMapperImpl";
 
-        readonly Func<K, V, VR> executionFunction = null;
-        /// <summary>
-        /// The <see cref="Func{K, V, VR}"/> to be executed
-        /// </summary>
-        public virtual Func<K, V, VR> OnApply { get { return executionFunction; } }
-        /// <summary>
-        /// Initialize a new instance of <see cref="KeyValueMapper{K, V, VR}"/>
-        /// </summary>
-        /// <param name="func">The <see cref="Func{K, V, VR}"/> to be executed</param>
-        /// <param name="attachEventHandler">Set to false to disable attach of <see cref="EventHandler"/> and set an own one</param>
-        public KeyValueMapper(Func<K, V, VR> func = null, bool attachEventHandler = true)
-        {
-            if (func != null) executionFunction = func;
-            else executionFunction = Apply;
-            if (attachEventHandler)
-            {
-                AddEventHandler("apply", new EventHandler<CLRListenerEventArgs<CLREventData<K>>>(EventHandler));
-            }
-        }
-
-        void EventHandler(object sender, CLRListenerEventArgs<CLREventData<K>> data)
-        {
-            var retVal = OnApply(data.EventData.TypedEventData, data.EventData.To<V>(0));
-            data.SetReturnValue(retVal);
-        }
     }
 }

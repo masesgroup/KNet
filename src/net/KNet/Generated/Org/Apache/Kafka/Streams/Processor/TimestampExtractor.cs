@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 {
     #region ITimestampExtractor
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TimestampExtractor.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.streams.processor.TimestampExtractor implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TimestampExtractor.html"/>
     /// </summary>
     public partial interface ITimestampExtractor
     {
@@ -63,6 +63,26 @@ namespace Org.Apache.Kafka.Streams.Processor
         #endregion
 
         #region Instance methods
+        protected virtual void InitializeHandlers()
+        {
+            AddEventHandler("extract", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<object, object>>>>(ExtractEventHandler)); OnExtract = Extract;
+
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TimestampExtractor.html#extract(org.apache.kafka.clients.consumer.ConsumerRecord,long)"/>
+        /// </summary>
+        public System.Func<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<object, object>, long, long> OnExtract { get; set; }
+
+        void ExtractEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<object, object>>> data)
+        {
+            if (OnExtract != null)
+            {
+                var executionResult = OnExtract.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<long>(0));
+                data.SetReturnValue(executionResult);
+            }
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TimestampExtractor.html#extract(org.apache.kafka.clients.consumer.ConsumerRecord,long)"/>
         /// </summary>

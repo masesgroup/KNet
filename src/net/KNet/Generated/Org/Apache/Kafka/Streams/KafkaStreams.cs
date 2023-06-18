@@ -536,6 +536,22 @@ namespace Org.Apache.Kafka.Streams
             #endregion
 
             #region Instance methods
+            protected virtual void InitializeHandlers()
+            {
+                AddEventHandler("onChange", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.KafkaStreams.State>>>(OnChangeEventHandler)); OnOnChange = OnChange;
+
+            }
+
+            /// <summary>
+            /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KafkaStreams.StateListener.html#onChange(org.apache.kafka.streams.KafkaStreams.State,org.apache.kafka.streams.KafkaStreams.State)"/>
+            /// </summary>
+            public System.Action<Org.Apache.Kafka.Streams.KafkaStreams.State, Org.Apache.Kafka.Streams.KafkaStreams.State> OnOnChange { get; set; }
+
+            void OnChangeEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.KafkaStreams.State>> data)
+            {
+                if (OnOnChange != null) OnOnChange.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<Org.Apache.Kafka.Streams.KafkaStreams.State>(0));
+            }
+
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/KafkaStreams.StateListener.html#onChange(org.apache.kafka.streams.KafkaStreams.State,org.apache.kafka.streams.KafkaStreams.State)"/>
             /// </summary>

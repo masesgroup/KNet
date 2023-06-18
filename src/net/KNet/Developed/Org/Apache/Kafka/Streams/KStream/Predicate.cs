@@ -45,34 +45,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public partial class Predicate<K, V> : IPredicate<K, V>
     {
-        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-         public sealed override string BridgeClassName => "org.mases.knet.streams.kstream.PredicateImpl";
 
-        readonly Func<K, V, bool> executionFunction = null;
-        /// <summary>
-        /// The <see cref="Func{K, V, Boolean}"/> to be executed
-        /// </summary>
-        public virtual Func<K, V, bool> OnTest { get { return executionFunction; } }
-        /// <summary>
-        /// Initialize a new instance of <see cref="Predicate{T, V}"/>
-        /// </summary>
-        /// <param name="func">The <see cref="Func{K, V, Boolean}"/> to be executed</param>
-        /// <param name="attachEventHandler">Set to false to disable attach of <see cref="EventHandler"/> and set an own one</param>
-        public Predicate(Func<K, V, bool> func = null, bool attachEventHandler = true)
-        {
-            if (func != null) executionFunction = func;
-            else executionFunction = Test;
-
-            if (attachEventHandler)
-            {
-                AddEventHandler("test", new EventHandler<CLRListenerEventArgs<CLREventData<K>>>(EventHandler));
-            }
-        }
-
-        void EventHandler(object sender, CLRListenerEventArgs<CLREventData<K>> data)
-        {
-            var retVal = OnTest(data.EventData.TypedEventData, data.EventData.To<V>(0));
-            data.SetReturnValue(retVal);
-        }
     }
 }

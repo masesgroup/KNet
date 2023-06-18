@@ -125,7 +125,7 @@ namespace MASES.KNet.Extensions
                 topic = new NewTopic(topicName, numPartitions, replicationFactor);
                 coll = Collections.Singleton(topic);
                 var res = admin.CreateTopics(coll);
-                res.All.Get();
+                res.All().Get();
             }
             catch (ExecutionException ex)
             {
@@ -148,7 +148,7 @@ namespace MASES.KNet.Extensions
             {
                 coll = Collections.Singleton(topic);
                 var res = admin.CreateTopics(coll);
-                res.All.Get();
+                res.All().Get();
             }
             catch (ExecutionException ex)
             {
@@ -196,7 +196,7 @@ namespace MASES.KNet.Extensions
             {
                 coll = Collections.Singleton(topicName);
                 var res = admin.DeleteTopics(coll);
-                res.All.Get();
+                res.All().Get();
             }
             catch (ExecutionException ex)
             {
@@ -337,12 +337,12 @@ namespace MASES.KNet.Extensions
             return await Execute(admin.AlterReplicaLogDirs, replicaAssignment, options);
         }
 
-        public static async Task<DescribeLogDirsResult> DescribeLogDirsAsync(this IAdmin admin, Collection<int> brokers)
+        public static async Task<DescribeLogDirsResult> DescribeLogDirsAsync(this IAdmin admin, Collection<int?> brokers)
         {
             return await Execute(admin.DescribeLogDirs, brokers);
         }
 
-        public static async Task<DescribeLogDirsResult> DescribeLogDirsAsync(this IAdmin admin, Collection<int> brokers, DescribeLogDirsOptions options)
+        public static async Task<DescribeLogDirsResult> DescribeLogDirsAsync(this IAdmin admin, Collection<int?> brokers, DescribeLogDirsOptions options)
         {
             return await Execute(admin.DescribeLogDirs, brokers, options);
         }

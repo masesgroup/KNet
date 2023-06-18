@@ -750,7 +750,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region IKStream<K, V>
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/KStream.html"/>
+    /// .NET interface for TO BE DEFINED FROM USER
     /// </summary>
     public partial interface IKStream<K, V>
     {

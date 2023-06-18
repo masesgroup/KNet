@@ -58,50 +58,6 @@ namespace Org.Apache.Kafka.Streams.Processor
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public partial class StreamPartitioner<K, V> : IStreamPartitioner<K, V>
     {
-        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-         public sealed override string BridgeClassName => "org.mases.knet.streams.kstream.StreamPartitionerImpl";
-
-        readonly Func<string, K, V, int, int> executionFunctionPartition = null;
-        readonly Func<string, K, V, int, Optional<Set<Java.Lang.Integer>>> executionFunctionPartitions = null;
-        /// <summary>
-        /// The <see cref="Func{string, K, V, int, int}"/> to be executed
-        /// </summary>
-        public virtual Func<string, K, V, int, int> OnPartition { get { return executionFunctionPartition; } }
-        /// <summary>
-        /// The <see cref="Func{string, K, V, int, Optional{Set{Java.Lang.Integer}}}"/> to be executed
-        /// </summary>
-        public virtual Func<string, K, V, int, Optional<Set<Java.Lang.Integer>>> OnPartitions { get { return executionFunctionPartitions; } }
-        /// <summary>
-        /// Initialize a new instance of <see cref="StreamPartitioner{K, V}"/>
-        /// </summary>
-        /// <param name="partition">The <see cref="Func{string, K, V, int, int}"/> to be executed</param>
-        /// <param name="partitions">The <see cref="Func{string, K, V, int, Optional{Set{Java.Lang.Integer}}}"/> to be executed</param>
-        /// <param name="attachEventHandler">Set to false to disable attach of <see cref="EventHandler"/> and set an own one</param>
-        public StreamPartitioner(Func<string, K, V, int, int> partition = null, Func<string, K, V, int, Optional<Set<Java.Lang.Integer>>> partitions = null, bool attachEventHandler = true)
-        {
-            if (partition != null) executionFunctionPartition = partition;
-            else executionFunctionPartition = Partition;
-            if (partitions != null) executionFunctionPartitions = partitions;
-            else executionFunctionPartitions = Partitions;
-
-            if (attachEventHandler)
-            {
-                AddEventHandler("partition", new EventHandler<CLRListenerEventArgs<CLREventData<string>>>(EventHandlerPartition));
-                AddEventHandler("partitions", new EventHandler<CLRListenerEventArgs<CLREventData<string>>>(EventHandlerPartitions));
-            }
-        }
-
-        void EventHandlerPartition(object sender, CLRListenerEventArgs<CLREventData<string>> data)
-        {
-            var retVal = OnPartition(data.EventData.TypedEventData, data.EventData.To<K>(0), data.EventData.To<V>(1), data.EventData.To<int>(2));
-            data.SetReturnValue(retVal);
-        }
-
-        void EventHandlerPartitions(object sender, CLRListenerEventArgs<CLREventData<string>> data)
-        {
-            var retVal = OnPartitions(data.EventData.TypedEventData, data.EventData.To<K>(0), data.EventData.To<V>(1), data.EventData.To<int>(2));
-            data.SetReturnValue(retVal);
-        }
         /// <summary>
         /// Executes the StreamPartitioner action in the CLR
         /// </summary>

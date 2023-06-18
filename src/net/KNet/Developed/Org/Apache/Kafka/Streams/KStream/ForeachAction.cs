@@ -46,32 +46,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public partial class ForeachAction<K, V> : IForeachAction<K, V>
     {
-        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-         public sealed override string BridgeClassName => "org.mases.knet.streams.kstream.ForeachActionImpl";
 
-        readonly Action<K, V> executionFunction = null;
-        /// <summary>
-        /// The <see cref="Action{K, V}"/> to be executed
-        /// </summary>
-        public virtual Action<K, V> OnApply { get { return executionFunction; } }
-        /// <summary>
-        /// Initialize a new instance of <see cref="ForeachAction{K, V}"/>
-        /// </summary>
-        /// <param name="func">The <see cref="Action{K, V}"/> to be executed</param>
-        /// <param name="attachEventHandler">Set to false to disable attach of <see cref="EventHandler"/> and set an own one</param>
-        public ForeachAction(Action<K, V> func = null, bool attachEventHandler = true)
-        {
-            if (func != null) executionFunction = func;
-            else executionFunction = Apply;
-            if (attachEventHandler)
-            {
-                AddEventHandler("apply", new EventHandler<CLRListenerEventArgs<CLREventData<K>>>(EventHandler));
-            }
-        }
-
-        void EventHandler(object sender, CLRListenerEventArgs<CLREventData<K>> data)
-        {
-            OnApply(data.EventData.TypedEventData, data.EventData.To<V>(0));
-        }
     }
 }

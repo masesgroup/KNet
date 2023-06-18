@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
     #region ITransformation<R>
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/transforms/Transformation.html"/>
+    /// .NET interface for TO BE DEFINED FROM USER
     /// </summary>
     public partial interface ITransformation<R>
     {

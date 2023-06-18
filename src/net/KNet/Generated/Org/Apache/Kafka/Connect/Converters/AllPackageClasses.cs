@@ -244,7 +244,7 @@ namespace Org.Apache.Kafka.Connect.Converters
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/converters/NumberConverterConfig.html"/>
     /// </summary>
-    public partial class NumberConverterConfig : Org.Apache.Kafka.Connect.Storage.ConverterConfig
+    public partial class NumberConverterConfig : MASES.JCOBridge.C2JBridge.JVMBridgeBase<NumberConverterConfig>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

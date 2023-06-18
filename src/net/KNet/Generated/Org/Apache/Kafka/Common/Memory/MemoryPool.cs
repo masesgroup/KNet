@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Memory
 {
     #region IMemoryPool
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/memory/MemoryPool.html"/>
+    /// .NET interface for TO BE DEFINED FROM USER
     /// </summary>
     public partial interface IMemoryPool
     {

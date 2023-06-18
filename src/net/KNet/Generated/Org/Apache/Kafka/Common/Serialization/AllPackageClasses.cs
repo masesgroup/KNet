@@ -292,10 +292,14 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public Deserializer() { }
+        public Deserializer() { InitializeHandlers(); }
 
-    #warning Remember to build the body class for event listener
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.common.serialization.Deserializer";
 
+    
         // TODO: complete the class
 
     }
@@ -311,10 +315,14 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public Deserializer() { }
+        public Deserializer() { InitializeHandlers(); }
 
-    #warning Remember to build the body class for event listener
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.common.serialization.Deserializer";
 
+    
         // TODO: complete the class
     
     }
@@ -1624,10 +1632,14 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public Serializer() { }
+        public Serializer() { InitializeHandlers(); }
 
-    #warning Remember to build the body class for event listener
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.common.serialization.Serializer";
 
+    
         // TODO: complete the class
 
     }
@@ -1643,10 +1655,14 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public Serializer() { }
+        public Serializer() { InitializeHandlers(); }
 
-    #warning Remember to build the body class for event listener
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.generated.org.apache.kafka.common.serialization.Serializer";
 
+    
         // TODO: complete the class
     
     }

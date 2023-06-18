@@ -326,7 +326,7 @@ namespace MASES.KNet.Producer
             {
                 if (action != null)
                 {
-                    cb = new Callback(action);
+                    cb = new Callback() { OnOnCompletion = action };
                 }
                 Produce(record, cb);
             }

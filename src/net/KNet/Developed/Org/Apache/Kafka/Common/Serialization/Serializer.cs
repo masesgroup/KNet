@@ -51,7 +51,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <param name="headers"><see cref="Headers"/> associated with the record; may be empty.</param>
         /// <param name="data"><typeparamref name="T"/> data</param>
         /// <returns>serialized bytes</returns>
-        byte[] SerializeWithHeaders(string topic, Headers headers, T data);
+        byte[] Serialize(string topic, Headers headers, T data);
     }
     /// <summary>
     /// Listener for Kafka Serializer. Extends <see cref="JVMBridgeListener"/>. Implements <see cref="ISerializer{T}"/>
@@ -60,61 +60,29 @@ namespace Org.Apache.Kafka.Common.Serialization
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public partial class Serializer<T> : ISerializer<T>
     {
-        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public override string BridgeClassName => "org.mases.knet.clients.common.serialization.SerializerImpl";
 
-        readonly Func<string, T, byte[]> serialize = null;
-        readonly Func<string, Headers, T, byte[]> serializeWithHeaders = null;
-        /// <summary>
-        /// The <see cref="Func{String, T, Byte[]}"/> to be executed on serialize
-        /// </summary>
-        public virtual Func<string, T, byte[]> OnSerialize { get { return serialize; } }
-        /// <summary>
-        /// The <see cref="Func{String, Headers, T, Byte[]}"/> to be executed on serialize
-        /// </summary>
-        public virtual Func<string, Headers, T, byte[]> OnSerializeWithHeaders { get { return serializeWithHeaders; } }
-        /// <summary>
-        /// Initialize a new instance of <see cref="Serializer{T}"/>
-        /// </summary>
-        /// <param name="serializeFun">The <see cref="Func{String, T, Byte[]}"/> to be executed on serialize</param>
-        /// <param name="serializeWithHeadersFun">The <see cref="Func{String, Headers, T, Byte[]}"/> to be executed on serialize</param>
-        /// <param name="attachEventHandler">Set to false to disable attach of <see cref="EventHandler"/> and set an own one</param>
-        public Serializer(Func<string, T, byte[]> serializeFun = null, Func<string, Headers, T, byte[]> serializeWithHeadersFun = null, bool attachEventHandler = true)
-        {
-            if (serializeFun != null) serialize = serializeFun;
-            else serialize = Serialize;
-            if (serializeWithHeadersFun != null) serializeWithHeaders = serializeWithHeadersFun;
-            else serializeWithHeaders = SerializeWithHeaders;
+        //void EventHandler(object sender, CLRListenerEventArgs<CLREventData<string>> eventData)
+        //{
+        //    var data = eventData.EventData.ExtraData.Get(0);
+        //    var retVal = OnSerialize(eventData.EventData.TypedEventData, data.Convert<T>());
+        //    eventData.SetReturnValue(retVal);
+        //}
 
-            if (attachEventHandler)
-            {
-                AddEventHandler("serialize", new EventHandler<CLRListenerEventArgs<CLREventData<string>>>(EventHandler));
-                AddEventHandler("serializeWithHeaders", new EventHandler<CLRListenerEventArgs<CLREventData<string>>>(EventHandlerWithHeaders));
-            }
-        }
+        //void EventHandlerWithHeaders(object sender, CLRListenerEventArgs<CLREventData<string>> eventData)
+        //{
+        //    var headers = eventData.EventData.ExtraData.Get(0) as IJavaObject; // it is a Headers
+        //    var data = eventData.EventData.ExtraData.Get(1);
+        //    var retVal = OnSerializeWithHeaders(eventData.EventData.TypedEventData, JVMBridgeBase.Wraps<Headers>(headers), data.Convert<T>());
+        //    eventData.SetReturnValue(retVal);
+        //}
 
-        void EventHandler(object sender, CLRListenerEventArgs<CLREventData<string>> eventData)
-        {
-            var data = eventData.EventData.ExtraData.Get(0);
-            var retVal = OnSerialize(eventData.EventData.TypedEventData, data.Convert<T>());
-            eventData.SetReturnValue(retVal);
-        }
-
-        void EventHandlerWithHeaders(object sender, CLRListenerEventArgs<CLREventData<string>> eventData)
-        {
-            var headers = eventData.EventData.ExtraData.Get(0) as IJavaObject; // it is a Headers
-            var data = eventData.EventData.ExtraData.Get(1);
-            var retVal = OnSerializeWithHeaders(eventData.EventData.TypedEventData, JVMBridgeBase.Wraps<Headers>(headers), data.Convert<T>());
-            eventData.SetReturnValue(retVal);
-        }
-
-        /// <summary>
-        /// Executes the Serializer action in the CLR
-        /// </summary>
-        /// <param name="topic">topic associated with the data</param>
-        /// <param name="headers"><see cref="Headers"/> associated with the record; may be empty.</param>
-        /// <param name="data"><typeparamref name="T"/> data</param>
-        /// <returns>serialized bytes</returns>
-        public virtual byte[] SerializeWithHeaders(string topic, Headers headers, T data) { return null; }
+        ///// <summary>
+        ///// Executes the Serializer action in the CLR
+        ///// </summary>
+        ///// <param name="topic">topic associated with the data</param>
+        ///// <param name="headers"><see cref="Headers"/> associated with the record; may be empty.</param>
+        ///// <param name="data"><typeparamref name="T"/> data</param>
+        ///// <returns>serialized bytes</returns>
+        //public virtual byte[] SerializeWithHeaders(string topic, Headers headers, T data) { return null; }
     }
 }

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Source
 {
     #region ISourceTaskContext
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTaskContext.html"/>
+    /// .NET interface for TO BE DEFINED FROM USER
     /// </summary>
     public partial interface ISourceTaskContext
     {
@@ -71,15 +71,6 @@ namespace Org.Apache.Kafka.Connect.Source
         public Java.Util.Map<string, string> Configs()
         {
             return IExecute<Java.Util.Map<string, string>>("configs");
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTaskContext.html#offsetStorageReader()"/>
-        /// </summary>
-
-        /// <returns><see cref="Org.Apache.Kafka.Connect.Storage.OffsetStorageReader"/></returns>
-        public Org.Apache.Kafka.Connect.Storage.OffsetStorageReader OffsetStorageReader()
-        {
-            return IExecute<Org.Apache.Kafka.Connect.Storage.OffsetStorageReader>("offsetStorageReader");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/org/apache/kafka/connect/source/SourceTaskContext.html#transactionContext()"/>

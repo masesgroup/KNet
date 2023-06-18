@@ -45,6 +45,26 @@ namespace Org.Apache.Kafka.Streams.Processor
         #endregion
 
         #region Instance methods
+        protected virtual void InitializeHandlers()
+        {
+            AddEventHandler("partitions", new System.EventHandler<CLRListenerEventArgs<CLREventData<string>>>(PartitionsEventHandler)); OnPartitions = Partitions;
+
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions(java.lang.String,java.lang.Object,java.lang.Object,int)"/>
+        /// </summary>
+        public System.Func<string, object, object, int, Java.Util.Optional> OnPartitions { get; set; }
+
+        void PartitionsEventHandler(object sender, CLRListenerEventArgs<CLREventData<string>> data)
+        {
+            if (OnPartitions != null)
+            {
+                var executionResult = OnPartitions.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<object>(0), data.EventData.GetAt<object>(1), data.EventData.GetAt<int>(2));
+                data.SetReturnValue(executionResult);
+            }
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions(java.lang.String,java.lang.Object,java.lang.Object,int)"/>
         /// </summary>
@@ -70,7 +90,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
     #region IStreamPartitioner<K, V>
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StreamPartitioner.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.streams.processor.StreamPartitioner implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StreamPartitioner.html"/>
     /// </summary>
     public partial interface IStreamPartitioner<K, V>
     {
@@ -106,6 +126,26 @@ namespace Org.Apache.Kafka.Streams.Processor
         #endregion
 
         #region Instance methods
+        protected virtual void InitializeHandlers()
+        {
+            AddEventHandler("partitions", new System.EventHandler<CLRListenerEventArgs<CLREventData<string>>>(PartitionsEventHandler)); OnPartitions = Partitions;
+
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions(java.lang.String,java.lang.Object,java.lang.Object,int)"/>
+        /// </summary>
+        public System.Func<string, K, V, int, Java.Util.Optional<Java.Util.Set<int?>>> OnPartitions { get; set; }
+
+        void PartitionsEventHandler(object sender, CLRListenerEventArgs<CLREventData<string>> data)
+        {
+            if (OnPartitions != null)
+            {
+                var executionResult = OnPartitions.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<K>(0), data.EventData.GetAt<V>(1), data.EventData.GetAt<int>(2));
+                data.SetReturnValue(executionResult);
+            }
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions(java.lang.String,java.lang.Object,java.lang.Object,int)"/>
         /// </summary>

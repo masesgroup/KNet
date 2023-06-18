@@ -67,7 +67,7 @@ namespace Org.Apache.Kafka.Connect.Util
 
     #region ICallback<V>
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/org/apache/kafka/connect/util/Callback.html"/>
+    /// .NET interface for TO BE DEFINED FROM USER
     /// </summary>
     public partial interface ICallback<V>
     {

@@ -50,7 +50,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <param name="headers"><see cref="Headers"/> associated with the record; may be empty.</param>
         /// <param name="data">serialized bytes; may be null; implementations are recommended to handle null by returning a value or null rather than throwing an exception</param>
         /// <returns>The deserialized <typeparamref name="T"/></returns>
-        T DeserializeWithHeaders(string topic, Headers headers, byte[] data);
+        T Deserialize(string topic, Headers headers, byte[] data);
     }
 
     /// <summary>
@@ -60,64 +60,32 @@ namespace Org.Apache.Kafka.Common.Serialization
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public partial class Deserializer<T> : IDeserializer<T>
     {
-        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-        public override string BridgeClassName => "org.mases.knet.clients.common.serialization.DeserializerImpl";
+        //void EventHandler(object sender, CLRListenerEventArgs<CLREventData<string>> data)
+        //{
+        //    var container = data.EventData.ExtraData.Get(0) as IJavaObject; // it is a byte[]
+        //    var array = container.ToArray() as IJavaArray;
+        //    byte[] bytes = (byte[])array.ToPrimitive();
+        //    var retVal = OnDeserialize(data.EventData.TypedEventData, bytes);
+        //    data.SetReturnValue(retVal);
+        //}
 
-        readonly Func<string, byte[], T> deserialize = null;
-        readonly Func<string, Headers, byte[], T> deserializeWithHeaders = null;
-        /// <summary>
-        /// The <see cref="Func{String, Byte[], T}"/> to be executed on deserialize
-        /// </summary>
-        public virtual Func<string, byte[], T> OnDeserialize { get { return deserialize; } }
-        /// <summary>
-        /// The <see cref="Func{String, Headers, Byte[], T}"/> to be executed on deserialize
-        /// </summary>
-        public virtual Func<string, Headers, byte[], T> OnDeserializeWithHeaders { get { return deserializeWithHeaders; } }
-        /// <summary>
-        /// Initialize a new instance of <see cref="Deserializer{T}"/>
-        /// </summary>
-        /// <param name="deserializeFun">The <see cref="Func{String, Byte[], T}"/> to be executed on deserialize</param>
-        /// <param name="deserializeWithHeadersFun">The <see cref="Func{String, Headers, Byte[], T}"/> to be executed on deserialize</param>
-        /// <param name="attachEventHandler">Set to false to disable attach of <see cref="EventHandler"/> and set an own one</param>
-        public Deserializer(Func<string, byte[], T> deserializeFun = null, Func<string, Headers, byte[], T> deserializeWithHeadersFun = null, bool attachEventHandler = true)
-        {
-            if (deserializeFun != null) deserialize = deserializeFun;
-            else deserialize = Deserialize;
-            if (deserializeWithHeadersFun != null) deserializeWithHeaders = deserializeWithHeadersFun;
-            else deserializeWithHeaders = DeserializeWithHeaders;
-            if (attachEventHandler)
-            {
-                AddEventHandler("deserialize", new EventHandler<CLRListenerEventArgs<CLREventData<string>>>(EventHandler));
-                AddEventHandler("deserializeWithHeaders", new EventHandler<CLRListenerEventArgs<CLREventData<string>>>(EventHandlerWithHeaders));
-            }
-        }
+        //void EventHandlerWithHeaders(object sender, CLRListenerEventArgs<CLREventData<string>> data)
+        //{
+        //    var headers = data.EventData.ExtraData.Get(0) as IJavaObject; // it is a Headers
+        //    var container = data.EventData.ExtraData.Get(1) as IJavaObject; // it is an IJavaObject
+        //    var array = container.ToArray() as IJavaArray; // convert to an IJavaArray
+        //    byte[] bytes = (byte[])array.ToPrimitive(); // extract the array
+        //    var retVal = OnDeserializeWithHeaders(data.EventData.TypedEventData, JVMBridgeBase.Wraps<Headers>(headers), bytes);
+        //    data.SetReturnValue(retVal);
+        //}
 
-        void EventHandler(object sender, CLRListenerEventArgs<CLREventData<string>> data)
-        {
-            var container = data.EventData.ExtraData.Get(0) as IJavaObject; // it is a byte[]
-            var array = container.ToArray() as IJavaArray;
-            byte[] bytes = (byte[])array.ToPrimitive();
-            var retVal = OnDeserialize(data.EventData.TypedEventData, bytes);
-            data.SetReturnValue(retVal);
-        }
-
-        void EventHandlerWithHeaders(object sender, CLRListenerEventArgs<CLREventData<string>> data)
-        {
-            var headers = data.EventData.ExtraData.Get(0) as IJavaObject; // it is a Headers
-            var container = data.EventData.ExtraData.Get(1) as IJavaObject; // it is an IJavaObject
-            var array = container.ToArray() as IJavaArray; // convert to an IJavaArray
-            byte[] bytes = (byte[])array.ToPrimitive(); // extract the array
-            var retVal = OnDeserializeWithHeaders(data.EventData.TypedEventData, JVMBridgeBase.Wraps<Headers>(headers), bytes);
-            data.SetReturnValue(retVal);
-        }
-
-        /// <summary>
-        /// Executes the Deserializer action in the CLR
-        /// </summary>
-        /// <param name="topic">topic associated with the data</param>
-        /// <param name="headers"><see cref="Headers"/> associated with the record; may be empty.</param>
-        /// <param name="data">serialized bytes; may be null; implementations are recommended to handle null by returning a value or null rather than throwing an exception</param>
-        /// <returns>The deserialized <typeparamref name="T"/></returns>
-        public virtual T DeserializeWithHeaders(string topic, Headers headers, byte[] data) { return default; }
+        ///// <summary>
+        ///// Executes the Deserializer action in the CLR
+        ///// </summary>
+        ///// <param name="topic">topic associated with the data</param>
+        ///// <param name="headers"><see cref="Headers"/> associated with the record; may be empty.</param>
+        ///// <param name="data">serialized bytes; may be null; implementations are recommended to handle null by returning a value or null rather than throwing an exception</param>
+        ///// <returns>The deserialized <typeparamref name="T"/></returns>
+        //public virtual T DeserializeWithHeaders(string topic, Headers headers, byte[] data) { return default; }
     }
 }

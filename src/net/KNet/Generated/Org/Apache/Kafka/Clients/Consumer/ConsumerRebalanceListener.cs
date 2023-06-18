@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 {
     #region IConsumerRebalanceListener
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.clients.consumer.ConsumerRebalanceListener implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html"/>
     /// </summary>
     public partial interface IConsumerRebalanceListener
     {
@@ -63,6 +63,24 @@ namespace Org.Apache.Kafka.Clients.Consumer
         #endregion
 
         #region Instance methods
+        protected virtual void InitializeHandlers()
+        {
+            AddEventHandler("onPartitionsAssigned", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition>>>>(OnPartitionsAssignedEventHandler)); OnOnPartitionsAssigned = OnPartitionsAssigned;
+            AddEventHandler("onPartitionsRevoked", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition>>>>(OnPartitionsRevokedEventHandler)); OnOnPartitionsRevoked = OnPartitionsRevoked;
+            AddEventHandler("onPartitionsLost", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition>>>>(OnPartitionsLostEventHandler)); OnOnPartitionsLost = OnPartitionsLost;
+
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsAssigned(java.util.Collection)"/>
+        /// </summary>
+        public System.Action<Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition>> OnOnPartitionsAssigned { get; set; }
+
+        void OnPartitionsAssignedEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition>>> data)
+        {
+            if (OnOnPartitionsAssigned != null) OnOnPartitionsAssigned.Invoke(data.EventData.TypedEventData);
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsAssigned(java.util.Collection)"/>
         /// </summary>
@@ -71,6 +89,17 @@ namespace Org.Apache.Kafka.Clients.Consumer
         {
             
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsRevoked(java.util.Collection)"/>
+        /// </summary>
+        public System.Action<Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition>> OnOnPartitionsRevoked { get; set; }
+
+        void OnPartitionsRevokedEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition>>> data)
+        {
+            if (OnOnPartitionsRevoked != null) OnOnPartitionsRevoked.Invoke(data.EventData.TypedEventData);
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsRevoked(java.util.Collection)"/>
         /// </summary>
@@ -79,6 +108,17 @@ namespace Org.Apache.Kafka.Clients.Consumer
         {
             
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsLost(java.util.Collection)"/>
+        /// </summary>
+        public System.Action<Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition>> OnOnPartitionsLost { get; set; }
+
+        void OnPartitionsLostEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition>>> data)
+        {
+            if (OnOnPartitionsLost != null) OnOnPartitionsLost.Invoke(data.EventData.TypedEventData);
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsLost(java.util.Collection)"/>
         /// </summary>

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common
 {
     #region IClusterResourceListener
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/ClusterResourceListener.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.common.ClusterResourceListener implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/ClusterResourceListener.html"/>
     /// </summary>
     public partial interface IClusterResourceListener
     {
@@ -63,6 +63,22 @@ namespace Org.Apache.Kafka.Common
         #endregion
 
         #region Instance methods
+        protected virtual void InitializeHandlers()
+        {
+            AddEventHandler("onUpdate", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.ClusterResource>>>(OnUpdateEventHandler)); OnOnUpdate = OnUpdate;
+
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/ClusterResourceListener.html#onUpdate(org.apache.kafka.common.ClusterResource)"/>
+        /// </summary>
+        public System.Action<Org.Apache.Kafka.Common.ClusterResource> OnOnUpdate { get; set; }
+
+        void OnUpdateEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.ClusterResource>> data)
+        {
+            if (OnOnUpdate != null) OnOnUpdate.Invoke(data.EventData.TypedEventData);
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/ClusterResourceListener.html#onUpdate(org.apache.kafka.common.ClusterResource)"/>
         /// </summary>

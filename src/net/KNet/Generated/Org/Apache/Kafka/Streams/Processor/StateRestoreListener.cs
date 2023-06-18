@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 {
     #region IStateRestoreListener
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateRestoreListener.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.streams.processor.StateRestoreListener implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateRestoreListener.html"/>
     /// </summary>
     public partial interface IStateRestoreListener
     {
@@ -63,6 +63,24 @@ namespace Org.Apache.Kafka.Streams.Processor
         #endregion
 
         #region Instance methods
+        protected virtual void InitializeHandlers()
+        {
+            AddEventHandler("onBatchRestored", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.TopicPartition>>>(OnBatchRestoredEventHandler)); OnOnBatchRestored = OnBatchRestored;
+            AddEventHandler("onRestoreEnd", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.TopicPartition>>>(OnRestoreEndEventHandler)); OnOnRestoreEnd = OnRestoreEnd;
+            AddEventHandler("onRestoreStart", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.TopicPartition>>>(OnRestoreStartEventHandler)); OnOnRestoreStart = OnRestoreStart;
+
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onBatchRestored(org.apache.kafka.common.TopicPartition,java.lang.String,long,long)"/>
+        /// </summary>
+        public System.Action<Org.Apache.Kafka.Common.TopicPartition, string, long, long> OnOnBatchRestored { get; set; }
+
+        void OnBatchRestoredEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.TopicPartition>> data)
+        {
+            if (OnOnBatchRestored != null) OnOnBatchRestored.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<string>(0), data.EventData.GetAt<long>(1), data.EventData.GetAt<long>(2));
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onBatchRestored(org.apache.kafka.common.TopicPartition,java.lang.String,long,long)"/>
         /// </summary>
@@ -74,6 +92,17 @@ namespace Org.Apache.Kafka.Streams.Processor
         {
             
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreEnd(org.apache.kafka.common.TopicPartition,java.lang.String,long)"/>
+        /// </summary>
+        public System.Action<Org.Apache.Kafka.Common.TopicPartition, string, long> OnOnRestoreEnd { get; set; }
+
+        void OnRestoreEndEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.TopicPartition>> data)
+        {
+            if (OnOnRestoreEnd != null) OnOnRestoreEnd.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<string>(0), data.EventData.GetAt<long>(1));
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreEnd(org.apache.kafka.common.TopicPartition,java.lang.String,long)"/>
         /// </summary>
@@ -84,6 +113,17 @@ namespace Org.Apache.Kafka.Streams.Processor
         {
             
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreStart(org.apache.kafka.common.TopicPartition,java.lang.String,long,long)"/>
+        /// </summary>
+        public System.Action<Org.Apache.Kafka.Common.TopicPartition, string, long, long> OnOnRestoreStart { get; set; }
+
+        void OnRestoreStartEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.TopicPartition>> data)
+        {
+            if (OnOnRestoreStart != null) OnOnRestoreStart.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<string>(0), data.EventData.GetAt<long>(1), data.EventData.GetAt<long>(2));
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreStart(org.apache.kafka.common.TopicPartition,java.lang.String,long,long)"/>
         /// </summary>

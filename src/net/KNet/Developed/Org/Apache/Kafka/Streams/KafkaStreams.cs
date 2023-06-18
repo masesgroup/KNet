@@ -33,20 +33,9 @@ namespace Org.Apache.Kafka.Streams
 {
     public partial class KafkaStreams
     {
-        public enum StateType
-        {
-            CREATED,            // 0
-            REBALANCING,        // 1
-            RUNNING,            // 2
-            PENDING_SHUTDOWN,   // 3
-            NOT_RUNNING,        // 4
-            PENDING_ERROR,      // 5
-            ERROR,              // 6
-        }
-
         public interface IStateListener : IJVMBridgeBase
         {
-            void OnChange(StateType newState, StateType oldState);
+            void OnChange(Org.Apache.Kafka.Streams.KafkaStreams.State newState, Org.Apache.Kafka.Streams.KafkaStreams.State oldState);
         }
 
         /// <summary>
@@ -55,36 +44,7 @@ namespace Org.Apache.Kafka.Streams
         /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
         public partial class StateListener : IStateListener
         {
-            /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-            public sealed override string BridgeClassName => "org.mases.knet.streams.StateListenerImpl";
 
-            readonly Action<StateType, StateType> executionFunction = null;
-            /// <summary>
-            /// The <see cref="Action{StateType, StateType}"/> to be executed
-            /// </summary>
-            public virtual Action<StateType, StateType> OnOnChange { get { return executionFunction; } }
-            /// <summary>
-            /// Initialize a new instance of <see cref="StateListener"/>
-            /// </summary>
-            /// <param name="func">The <see cref="Action{StateType, StateType}"/> to be executed</param>
-            /// <param name="attachEventHandler">Set to false to disable attach of <see cref="EventHandler"/> and set an own one</param>
-            public StateListener(Action<StateType, StateType> func = null, bool attachEventHandler = true)
-            {
-                if (func != null) executionFunction = func;
-                else executionFunction = OnChange;
-
-                if (attachEventHandler)
-                {
-                    AddEventHandler("onChange", new EventHandler<CLRListenerEventArgs<CLREventData<StateType>>>(EventHandler));
-                }
-            }
-
-            void EventHandler(object sender, CLRListenerEventArgs<CLREventData<StateType>> data)
-            {
-                OnOnChange(data.EventData.TypedEventData, data.EventData.To<StateType>(0));
-            }
-
-            public virtual void OnChange(StateType newState, StateType oldState) { }
         }
     }
 }

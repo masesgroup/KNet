@@ -91,7 +91,7 @@ namespace MASES.KNet.Serialization
             {
                 KNetSerialization.SerializationType.ByteArray => KNetSerialization.SerializeByteArray(topic, data as byte[]),
                 KNetSerialization.SerializationType.ByteBuffer => KNetSerialization.SerializeByteBuffer(topic, data as ByteBuffer),
-                KNetSerialization.SerializationType.Bytes => KNetSerialization.SerializeBytes(topic, data as Common.Utils.Bytes),
+                KNetSerialization.SerializationType.Bytes => KNetSerialization.SerializeBytes(topic, data as Org.Apache.Kafka.Common.Utils.Bytes),
                 KNetSerialization.SerializationType.Double => KNetSerialization.SerializeDouble(topic, (double)Convert.ChangeType(data, typeof(double))),
                 KNetSerialization.SerializationType.Float => KNetSerialization.SerializeFloat(topic, (float)Convert.ChangeType(data, typeof(float))),
                 KNetSerialization.SerializationType.Int => KNetSerialization.SerializeInt(topic, (int)Convert.ChangeType(data, typeof(int))),

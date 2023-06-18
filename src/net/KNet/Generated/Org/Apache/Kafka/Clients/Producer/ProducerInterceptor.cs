@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 
     #region IProducerInterceptor<K, V>
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerInterceptor.html"/>
+    /// .NET interface for TO BE DEFINED FROM USER
     /// </summary>
     public partial interface IProducerInterceptor<K, V>
     {

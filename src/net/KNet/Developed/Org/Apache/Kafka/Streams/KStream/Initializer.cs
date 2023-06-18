@@ -41,33 +41,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public partial class Initializer<VA> : IInitializer<VA>
     {
-        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-         public sealed override string BridgeClassName => "org.mases.knet.streams.kstream.InitializerImpl";
 
-        readonly Func<VA> executionFunction = null;
-        /// <summary>
-        /// The <see cref="Func{VA}"/> to be executed
-        /// </summary>
-        public virtual Func<VA> OnApply { get { return executionFunction; } }
-        /// <summary>
-        /// Initialize a new instance of <see cref="Initializer{VA}"/>
-        /// </summary>
-        /// <param name="func">The <see cref="Func{VA}"/> to be executed</param>
-        /// <param name="attachEventHandler">Set to false to disable attach of <see cref="EventHandler"/> and set an own one</param>
-        public Initializer(Func<VA> func = null, bool attachEventHandler = true)
-        {
-            if (func != null) executionFunction = func;
-            else executionFunction = Apply;
-            if (attachEventHandler)
-            {
-                AddEventHandler("apply", new EventHandler<CLRListenerEventArgs<CLREventData>>(EventHandler));
-            }
-        }
-
-        void EventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
-        {
-            var retVal = OnApply();
-            data.SetReturnValue(retVal);
-        }
     }
 }

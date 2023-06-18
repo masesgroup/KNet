@@ -16,15 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-using Java.Lang;
 using Java.Util;
-using MASES.JNet.Specific.Extensions;
 using MASES.JNet.Specific.Extensions;
 using Org.Apache.Kafka.Connect.Data;
 using Org.Apache.Kafka.Connect.Header;
 using Org.Apache.Kafka.Connect.Source;
 using System;
-using System.Collections.Generic;
 
 namespace MASES.KNet.Connect
 {

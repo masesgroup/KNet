@@ -35,7 +35,7 @@ public final class StreamPartitionerImpl extends JCListener implements StreamPar
         Object retVal = getReturnData();
         int ret = (int) retVal;
         if (ret == -1) return null;
-        return new Integer((int) retVal);
+        return (int) retVal;
     }
 
     @Override

@@ -94,7 +94,7 @@ namespace Org.Apache.Kafka.Common.Cache
 
     #region ICache<K, V>
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/cache/Cache.html"/>
+    /// .NET interface for TO BE DEFINED FROM USER
     /// </summary>
     public partial interface ICache<K, V>
     {

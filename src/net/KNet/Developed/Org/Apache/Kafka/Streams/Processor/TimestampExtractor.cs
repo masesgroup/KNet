@@ -42,33 +42,6 @@ namespace Org.Apache.Kafka.Streams.Processor
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public partial class TimestampExtractor : ITimestampExtractor
     {
-        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-         public sealed override string BridgeClassName => "org.mases.knet.streams.processor.TimestampExtractorImpl";
 
-        readonly Func<ConsumerRecord<object, object>, long, long> executionFunction = null;
-        /// <summary>
-        /// The <see cref="Func{ConsumerRecord{object, object}, long, long}"/> to be executed
-        /// </summary>
-        public virtual Func<ConsumerRecord<object, object>, long, long> OnExtract { get { return executionFunction; } }
-        /// <summary>
-        /// Initialize a new instance of <see cref="TimestampExtractor"/>
-        /// </summary>
-        /// <param name="func">The <see cref="Func{ConsumerRecord{object, object}, long, long}"/> to be executed</param>
-        /// <param name="attachEventHandler">Set to false to disable attach of <see cref="EventHandler"/> and set an own one</param>
-        public TimestampExtractor(Func<ConsumerRecord<object, object>, long, long> func = null, bool attachEventHandler = true)
-        {
-            if (func != null) executionFunction = func;
-            else executionFunction = Extract;
-            if (attachEventHandler)
-            {
-                AddEventHandler("extract", new EventHandler<CLRListenerEventArgs<CLREventData<ConsumerRecord<object, object>>>>(EventHandler));
-            }
-        }
-
-        void EventHandler(object sender, CLRListenerEventArgs<CLREventData<ConsumerRecord<object, object>>> data)
-        {
-            var retVal = OnExtract(data.EventData.TypedEventData, data.EventData.To<long>(0));
-            data.SetReturnValue(retVal);
-        }
     }
 }

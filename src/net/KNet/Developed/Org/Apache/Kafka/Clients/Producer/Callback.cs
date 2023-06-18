@@ -41,34 +41,6 @@ namespace Org.Apache.Kafka.Clients.Producer
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public partial class Callback : ICallback
     {
-        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-         public sealed override string BridgeClassName => "org.mases.knet.clients.producer.CallbackImpl";
 
-        readonly Action<RecordMetadata, JVMBridgeException> executionFunction = null;
-        /// <summary>
-        /// The <see cref="Action{RecordMetadata, JVMBridgeException}"/> to be executed
-        /// </summary>
-        public virtual Action<RecordMetadata, JVMBridgeException> OnOnCompletion { get { return executionFunction; } }
-        /// <summary>
-        /// Initialize a new instance of <see cref="Callback"/>
-        /// </summary>
-        /// <param name="action">The <see cref="Action{RecordMetadata, JVMBridgeException}"/> to be executed</param>
-        /// <param name="attachEventHandler">Set to false to disable attach of <see cref="EventHandler"/> and set an own one</param>
-        public Callback(Action<RecordMetadata, JVMBridgeException> action = null, bool attachEventHandler = true)
-        {
-            if (action != null) executionFunction = action;
-            else executionFunction = OnCompletion;
-
-            if (attachEventHandler)
-            {
-                AddEventHandler("onCompletion", new EventHandler<CLRListenerEventArgs<CLREventData<RecordMetadata>>>(EventHandler));
-            }
-        }
-
-        void EventHandler(object sender, CLRListenerEventArgs<CLREventData<RecordMetadata>> data)
-        {
-            var exception = data.EventData.ExtraData.Get(0) as IJavaObject;
-            OnOnCompletion(data.EventData.TypedEventData, JVMBridgeException.New(exception));
-        }
     }
 }

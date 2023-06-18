@@ -43,30 +43,6 @@ namespace Org.Apache.Kafka.Clients.Consumer
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public partial class OffsetCommitCallback : IOffsetCommitCallback
     {
-        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
-         public sealed override string BridgeClassName => "org.mases.knet.clients.consumer.OffsetCommitCallbackImpl";
 
-        readonly Action<Map<TopicPartition, OffsetAndMetadata>, JVMBridgeException> executionFunction = null;
-        /// <summary>
-        /// The <see cref="Action{Map{TopicPartition, OffsetAndMetadata}, JVMBridgeException}"/> to be executed
-        /// </summary>
-        public virtual Action<Map<TopicPartition, OffsetAndMetadata>, JVMBridgeException> OnOnComplete { get { return executionFunction; } }
-        /// <summary>
-        /// Initialize a new instance of <see cref="OffsetCommitCallback"/>
-        /// </summary>
-        /// <param name="action">The <see cref="Action{Map{TopicPartition, OffsetAndMetadata}, JVMBridgeException}"/> to be executed</param>
-        public OffsetCommitCallback(Action<Map<TopicPartition, OffsetAndMetadata>, JVMBridgeException> action = null)
-        {
-            if (action != null) executionFunction = action;
-            else executionFunction = OnComplete;
-
-            AddEventHandler("onComplete", new EventHandler<CLRListenerEventArgs<CLREventData<Map<TopicPartition, OffsetAndMetadata>>>>(EventHandler));
-        }
-
-        void EventHandler(object sender, CLRListenerEventArgs<CLREventData<Map<TopicPartition, OffsetAndMetadata>>> data)
-        {
-            var exception = data.EventData.ExtraData.Get(0) as IJavaObject;
-            OnOnComplete(data.EventData.TypedEventData, JVMBridgeException.New(exception));
-        }
     }
 }

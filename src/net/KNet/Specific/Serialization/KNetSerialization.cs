@@ -52,7 +52,7 @@ namespace MASES.KNet.Serialization
 
         public static bool IsInternalManaged(Type type)
         {
-            if (type == typeof(byte[]) || type == typeof(ByteBuffer) || type == typeof(Common.Utils.Bytes)
+            if (type == typeof(byte[]) || type == typeof(ByteBuffer) || type == typeof(Bytes)
                 || type == typeof(double) || type == typeof(float) || type == typeof(int) || type == typeof(long) || type == typeof(short) || type == typeof(string)
                 || type == typeof(Guid) || type == typeof(void))
             {
@@ -71,7 +71,7 @@ namespace MASES.KNet.Serialization
         {
             if (type == typeof(byte[])) return SerializationType.ByteArray;
             else if (type == typeof(ByteBuffer)) return SerializationType.ByteBuffer;
-            else if (type == typeof(Common.Utils.Bytes)) return SerializationType.Bytes;
+            else if (type == typeof(Bytes)) return SerializationType.Bytes;
             else if (type == typeof(double)) return SerializationType.Double;
             else if (type == typeof(float)) return SerializationType.Float;
             else if (type == typeof(int)) return SerializationType.Int;

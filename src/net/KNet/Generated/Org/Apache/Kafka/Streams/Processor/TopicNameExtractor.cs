@@ -45,6 +45,26 @@ namespace Org.Apache.Kafka.Streams.Processor
         #endregion
 
         #region Instance methods
+        protected virtual void InitializeHandlers()
+        {
+            AddEventHandler("extract", new System.EventHandler<CLRListenerEventArgs<CLREventData<object>>>(ExtractEventHandler)); OnExtract = Extract;
+
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract(java.lang.Object,java.lang.Object,org.apache.kafka.streams.processor.RecordContext)"/>
+        /// </summary>
+        public System.Func<object, object, Org.Apache.Kafka.Streams.Processor.RecordContext, string> OnExtract { get; set; }
+
+        void ExtractEventHandler(object sender, CLRListenerEventArgs<CLREventData<object>> data)
+        {
+            if (OnExtract != null)
+            {
+                var executionResult = OnExtract.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<object>(0), data.EventData.GetAt<Org.Apache.Kafka.Streams.Processor.RecordContext>(1));
+                data.SetReturnValue(executionResult);
+            }
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract(java.lang.Object,java.lang.Object,org.apache.kafka.streams.processor.RecordContext)"/>
         /// </summary>
@@ -69,7 +89,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
     #region ITopicNameExtractor<K, V>
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TopicNameExtractor.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.streams.processor.TopicNameExtractor implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TopicNameExtractor.html"/>
     /// </summary>
     public partial interface ITopicNameExtractor<K, V>
     {
@@ -105,6 +125,26 @@ namespace Org.Apache.Kafka.Streams.Processor
         #endregion
 
         #region Instance methods
+        protected virtual void InitializeHandlers()
+        {
+            AddEventHandler("extract", new System.EventHandler<CLRListenerEventArgs<CLREventData<K>>>(ExtractEventHandler)); OnExtract = Extract;
+
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract(java.lang.Object,java.lang.Object,org.apache.kafka.streams.processor.RecordContext)"/>
+        /// </summary>
+        public System.Func<K, V, Org.Apache.Kafka.Streams.Processor.RecordContext, string> OnExtract { get; set; }
+
+        void ExtractEventHandler(object sender, CLRListenerEventArgs<CLREventData<K>> data)
+        {
+            if (OnExtract != null)
+            {
+                var executionResult = OnExtract.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<V>(0), data.EventData.GetAt<Org.Apache.Kafka.Streams.Processor.RecordContext>(1));
+                data.SetReturnValue(executionResult);
+            }
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract(java.lang.Object,java.lang.Object,org.apache.kafka.streams.processor.RecordContext)"/>
         /// </summary>
