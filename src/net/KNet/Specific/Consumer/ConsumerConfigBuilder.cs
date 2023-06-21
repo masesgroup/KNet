@@ -17,8 +17,6 @@
 */
 
 using Org.Apache.Kafka.Common;
-using Org.Apache.Kafka.Common.Config;
-using Org.Apache.Kafka.Common.Metrics;
 using Java.Util;
 using Org.Apache.Kafka.Clients.Consumer;
 

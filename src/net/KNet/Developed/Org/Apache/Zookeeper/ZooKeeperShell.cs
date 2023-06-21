@@ -16,19 +16,18 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JNet.Specific;
+
 namespace Org.Apache.Zookeeper
 {
     /// <summary>
     /// Class managing ZooKeeper shell
     /// </summary>
-    public class ZooKeeperShell : MASES.JCOBridge.C2JBridge.JVMBridgeMain<ZooKeeperShell>
+    public class ZooKeeperShell : JNetBridgeMain<ZooKeeperShell>
     {
         /// <summary>
-        /// Initialize a new <see cref="ZooKeeperShell"/>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
         /// </summary>
-        public ZooKeeperShell()
-            : base("org.apache.zookeeper.ZooKeeperMainWithTlsSupportForKafka")
-        {
-        }
+        public override string BridgeClassName => "org.apache.zookeeper.ZooKeeperMainWithTlsSupportForKafka";
     }
 }

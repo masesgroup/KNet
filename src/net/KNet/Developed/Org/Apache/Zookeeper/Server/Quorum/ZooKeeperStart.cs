@@ -16,19 +16,18 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JNet.Specific;
+
 namespace Org.Apache.Zookeeper.Server.Quorum
 {
     /// <summary>
     /// Class managing ZooKeeper start
     /// </summary>
-    public class ZooKeeperStart : MASES.JCOBridge.C2JBridge.JVMBridgeMain<ZooKeeperStart>
+    public class ZooKeeperStart :JNetBridgeMain<ZooKeeperStart>
     {
         /// <summary>
-        /// Initialize a new <see cref="ZooKeeperStart"/>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
         /// </summary>
-        public ZooKeeperStart()
-            : base("org.apache.zookeeper.server.quorum.QuorumPeerMain")
-        {
-        }
+        public override string BridgeClassName => "org.apache.zookeeper.server.quorum.QuorumPeerMain";
     }
 }

@@ -16,7 +16,6 @@
 *  Refer to LICENSE for more information.
 */
 
-using Org.Apache.Kafka.Common.Config;
 using Java.Util;
 using Org.Apache.Kafka.Clients.Producer;
 
