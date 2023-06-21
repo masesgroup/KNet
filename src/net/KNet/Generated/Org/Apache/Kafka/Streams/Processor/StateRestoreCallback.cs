@@ -63,6 +63,9 @@ namespace Org.Apache.Kafka.Streams.Processor
         #endregion
 
         #region Instance methods
+        /// <summary>
+        /// Handlers initializer for <see cref="StateRestoreCallback"/>
+        /// </summary>
         protected virtual void InitializeHandlers()
         {
             AddEventHandler("restore", new System.EventHandler<CLRListenerEventArgs<CLREventData<byte[]>>>(RestoreEventHandler)); OnRestore = Restore;

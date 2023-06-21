@@ -63,6 +63,9 @@ namespace Org.Apache.Kafka.Clients.Consumer
         #endregion
 
         #region Instance methods
+        /// <summary>
+        /// Handlers initializer for <see cref="ConsumerRebalanceListener"/>
+        /// </summary>
         protected virtual void InitializeHandlers()
         {
             AddEventHandler("onPartitionsAssigned", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition>>>>(OnPartitionsAssignedEventHandler)); OnOnPartitionsAssigned = OnPartitionsAssigned;

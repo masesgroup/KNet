@@ -63,6 +63,9 @@ namespace Org.Apache.Kafka.Common
         #endregion
 
         #region Instance methods
+        /// <summary>
+        /// Handlers initializer for <see cref="ClusterResourceListener"/>
+        /// </summary>
         protected virtual void InitializeHandlers()
         {
             AddEventHandler("onUpdate", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.ClusterResource>>>(OnUpdateEventHandler)); OnOnUpdate = OnUpdate;

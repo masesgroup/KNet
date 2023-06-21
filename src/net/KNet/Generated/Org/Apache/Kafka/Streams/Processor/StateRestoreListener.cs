@@ -63,6 +63,9 @@ namespace Org.Apache.Kafka.Streams.Processor
         #endregion
 
         #region Instance methods
+        /// <summary>
+        /// Handlers initializer for <see cref="StateRestoreListener"/>
+        /// </summary>
         protected virtual void InitializeHandlers()
         {
             AddEventHandler("onBatchRestored", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.TopicPartition>>>(OnBatchRestoredEventHandler)); OnOnBatchRestored = OnBatchRestored;

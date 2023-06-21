@@ -63,8 +63,12 @@ namespace Org.Apache.Kafka.Common.Metrics
         #endregion
 
         #region Instance methods
+        /// <summary>
+        /// Handlers initializer for <see cref="MetricsReporter"/>
+        /// </summary>
         protected virtual void InitializeHandlers()
         {
+            AddEventHandler("configure", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<string, object>>>>(ConfigureEventHandler)); OnConfigure = Configure;
             AddEventHandler("close", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler)); OnClose = Close;
             AddEventHandler("init", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.List<Org.Apache.Kafka.Common.Metrics.KafkaMetric>>>>(InitEventHandler)); OnInit = Init;
             AddEventHandler("metricChange", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Common.Metrics.KafkaMetric>>>(MetricChangeEventHandler)); OnMetricChange = MetricChange;
@@ -74,6 +78,25 @@ namespace Org.Apache.Kafka.Common.Metrics
             AddEventHandler("reconfigure", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<string, object>>>>(ReconfigureEventHandler)); OnReconfigure = Reconfigure;
             AddEventHandler("validateReconfiguration", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<string, object>>>>(ValidateReconfigurationEventHandler)); OnValidateReconfiguration = ValidateReconfiguration;
 
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Configurable.html#configure(java.util.Map)"/>
+        /// </summary>
+        public System.Action<Java.Util.Map<string, object>> OnConfigure { get; set; }
+
+        void ConfigureEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map<string, object>>> data)
+        {
+            if (OnConfigure != null) OnConfigure.Invoke(data.EventData.TypedEventData);
+        }
+
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Configurable.html#configure(java.util.Map)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Util.Map"/></param>
+        public virtual void Configure(Java.Util.Map<string, object> arg0)
+        {
+            
         }
 
         /// <summary>

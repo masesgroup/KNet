@@ -536,6 +536,9 @@ namespace Org.Apache.Kafka.Streams
             #endregion
 
             #region Instance methods
+            /// <summary>
+            /// Handlers initializer for <see cref="StateListener"/>
+            /// </summary>
             protected virtual void InitializeHandlers()
             {
                 AddEventHandler("onChange", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.KafkaStreams.State>>>(OnChangeEventHandler)); OnOnChange = OnChange;

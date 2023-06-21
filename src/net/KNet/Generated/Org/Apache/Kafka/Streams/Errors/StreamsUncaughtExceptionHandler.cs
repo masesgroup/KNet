@@ -63,6 +63,9 @@ namespace Org.Apache.Kafka.Streams.Errors
         #endregion
 
         #region Instance methods
+        /// <summary>
+        /// Handlers initializer for <see cref="StreamsUncaughtExceptionHandler"/>
+        /// </summary>
         protected virtual void InitializeHandlers()
         {
             AddEventHandler("handle", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(HandleEventHandler)); OnHandle = Handle;

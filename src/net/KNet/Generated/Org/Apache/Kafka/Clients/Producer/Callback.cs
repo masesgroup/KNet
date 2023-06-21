@@ -63,6 +63,9 @@ namespace Org.Apache.Kafka.Clients.Producer
         #endregion
 
         #region Instance methods
+        /// <summary>
+        /// Handlers initializer for <see cref="Callback"/>
+        /// </summary>
         protected virtual void InitializeHandlers()
         {
             AddEventHandler("onCompletion", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Producer.RecordMetadata>>>(OnCompletionEventHandler)); OnOnCompletion = OnCompletion;

@@ -45,11 +45,15 @@ namespace Org.Apache.Kafka.Clients.Consumer
         #endregion
 
         #region Instance methods
+        /// <summary>
+        /// Handlers initializer for <see cref="ConsumerInterceptor"/>
+        /// </summary>
         protected virtual void InitializeHandlers()
         {
             AddEventHandler("onConsume", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords>>>(OnConsumeEventHandler)); OnOnConsume = OnConsume;
             AddEventHandler("close", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler)); OnClose = Close;
             AddEventHandler("onCommit", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map>>>(OnCommitEventHandler)); OnOnCommit = OnCommit;
+            AddEventHandler("configure", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map>>>(ConfigureEventHandler)); OnConfigure = Configure;
 
         }
 
@@ -114,6 +118,25 @@ namespace Org.Apache.Kafka.Clients.Consumer
             
         }
 
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Configurable.html#configure(java.util.Map)"/>
+        /// </summary>
+        public System.Action<Java.Util.Map> OnConfigure { get; set; }
+
+        void ConfigureEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map>> data)
+        {
+            if (OnConfigure != null) OnConfigure.Invoke(data.EventData.TypedEventData);
+        }
+
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Configurable.html#configure(java.util.Map)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Util.Map"/></param>
+        public virtual void Configure(Java.Util.Map arg0)
+        {
+            
+        }
+
         #endregion
 
         #region Nested classes
@@ -162,11 +185,15 @@ namespace Org.Apache.Kafka.Clients.Consumer
         #endregion
 
         #region Instance methods
+        /// <summary>
+        /// Handlers initializer for <see cref="ConsumerInterceptor"/>
+        /// </summary>
         protected virtual void InitializeHandlers()
         {
             AddEventHandler("onConsume", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<K, V>>>>(OnConsumeEventHandler)); OnOnConsume = OnConsume;
             AddEventHandler("close", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler)); OnClose = Close;
             AddEventHandler("onCommit", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>>>>(OnCommitEventHandler)); OnOnCommit = OnCommit;
+            AddEventHandler("configure", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<string, object>>>>(ConfigureEventHandler)); OnConfigure = Configure;
 
         }
 
@@ -227,6 +254,25 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public virtual void OnCommit(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata> arg0)
+        {
+            
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Configurable.html#configure(java.util.Map)"/>
+        /// </summary>
+        public System.Action<Java.Util.Map<string, object>> OnConfigure { get; set; }
+
+        void ConfigureEventHandler(object sender, CLRListenerEventArgs<CLREventData<Java.Util.Map<string, object>>> data)
+        {
+            if (OnConfigure != null) OnConfigure.Invoke(data.EventData.TypedEventData);
+        }
+
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/common/Configurable.html#configure(java.util.Map)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Util.Map"/></param>
+        public virtual void Configure(Java.Util.Map<string, object> arg0)
         {
             
         }

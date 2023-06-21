@@ -63,6 +63,9 @@ namespace Org.Apache.Kafka.Clients.Consumer
         #endregion
 
         #region Instance methods
+        /// <summary>
+        /// Handlers initializer for <see cref="ConsumerPartitionAssignor"/>
+        /// </summary>
         protected virtual void InitializeHandlers()
         {
             AddEventHandler("name", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(NameEventHandler)); OnName = Name;

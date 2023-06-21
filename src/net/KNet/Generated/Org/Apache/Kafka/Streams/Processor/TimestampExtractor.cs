@@ -63,6 +63,9 @@ namespace Org.Apache.Kafka.Streams.Processor
         #endregion
 
         #region Instance methods
+        /// <summary>
+        /// Handlers initializer for <see cref="TimestampExtractor"/>
+        /// </summary>
         protected virtual void InitializeHandlers()
         {
             AddEventHandler("extract", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<object, object>>>>(ExtractEventHandler)); OnExtract = Extract;

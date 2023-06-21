@@ -63,6 +63,9 @@ namespace Org.Apache.Kafka.Clients.Consumer
         #endregion
 
         #region Instance methods
+        /// <summary>
+        /// Handlers initializer for <see cref="OffsetCommitCallback"/>
+        /// </summary>
         protected virtual void InitializeHandlers()
         {
             AddEventHandler("onComplete", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>>>>(OnCompleteEventHandler)); OnOnComplete = OnComplete;

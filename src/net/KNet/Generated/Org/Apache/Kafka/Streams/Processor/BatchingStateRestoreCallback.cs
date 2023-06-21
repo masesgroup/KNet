@@ -63,6 +63,9 @@ namespace Org.Apache.Kafka.Streams.Processor
         #endregion
 
         #region Instance methods
+        /// <summary>
+        /// Handlers initializer for <see cref="BatchingStateRestoreCallback"/>
+        /// </summary>
         protected virtual void InitializeHandlers()
         {
             AddEventHandler("restoreAll", new System.EventHandler<CLRListenerEventArgs<CLREventData<Java.Util.Collection<Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>>>>>(RestoreAllEventHandler)); OnRestoreAll = RestoreAll;

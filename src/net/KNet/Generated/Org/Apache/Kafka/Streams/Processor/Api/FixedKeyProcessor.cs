@@ -45,6 +45,9 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         #endregion
 
         #region Instance methods
+        /// <summary>
+        /// Handlers initializer for <see cref="FixedKeyProcessor"/>
+        /// </summary>
         protected virtual void InitializeHandlers()
         {
             AddEventHandler("process", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord>>>(ProcessEventHandler)); OnProcess = Process;
@@ -157,6 +160,9 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         #endregion
 
         #region Instance methods
+        /// <summary>
+        /// Handlers initializer for <see cref="FixedKeyProcessor"/>
+        /// </summary>
         protected virtual void InitializeHandlers()
         {
             AddEventHandler("process", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord<KIn, VIn>>>>(ProcessEventHandler)); OnProcess = Process;

@@ -63,6 +63,9 @@ namespace Org.Apache.Kafka.Common.Config
         #endregion
 
         #region Instance methods
+        /// <summary>
+        /// Handlers initializer for <see cref="ConfigChangeCallback"/>
+        /// </summary>
         protected virtual void InitializeHandlers()
         {
             AddEventHandler("onChange", new System.EventHandler<CLRListenerEventArgs<CLREventData<string>>>(OnChangeEventHandler)); OnOnChange = OnChange;

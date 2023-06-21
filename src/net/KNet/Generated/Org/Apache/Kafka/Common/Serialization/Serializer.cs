@@ -45,6 +45,9 @@ namespace Org.Apache.Kafka.Common.Serialization
         #endregion
 
         #region Instance methods
+        /// <summary>
+        /// Handlers initializer for <see cref="Serializer"/>
+        /// </summary>
         protected virtual void InitializeHandlers()
         {
             AddEventHandler("serialize", new System.EventHandler<CLRListenerEventArgs<CLREventData<string>>>(SerializeEventHandler)); OnSerialize = Serialize;
@@ -191,6 +194,9 @@ namespace Org.Apache.Kafka.Common.Serialization
         #endregion
 
         #region Instance methods
+        /// <summary>
+        /// Handlers initializer for <see cref="Serializer"/>
+        /// </summary>
         protected virtual void InitializeHandlers()
         {
             AddEventHandler("serialize", new System.EventHandler<CLRListenerEventArgs<CLREventData<string>>>(SerializeEventHandler)); OnSerialize = Serialize;

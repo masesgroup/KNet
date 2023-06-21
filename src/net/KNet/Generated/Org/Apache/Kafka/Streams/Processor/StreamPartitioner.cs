@@ -45,6 +45,9 @@ namespace Org.Apache.Kafka.Streams.Processor
         #endregion
 
         #region Instance methods
+        /// <summary>
+        /// Handlers initializer for <see cref="StreamPartitioner"/>
+        /// </summary>
         protected virtual void InitializeHandlers()
         {
             AddEventHandler("partitions", new System.EventHandler<CLRListenerEventArgs<CLREventData<string>>>(PartitionsEventHandler)); OnPartitions = Partitions;
@@ -126,6 +129,9 @@ namespace Org.Apache.Kafka.Streams.Processor
         #endregion
 
         #region Instance methods
+        /// <summary>
+        /// Handlers initializer for <see cref="StreamPartitioner"/>
+        /// </summary>
         protected virtual void InitializeHandlers()
         {
             AddEventHandler("partitions", new System.EventHandler<CLRListenerEventArgs<CLREventData<string>>>(PartitionsEventHandler)); OnPartitions = Partitions;

@@ -45,6 +45,9 @@ namespace Org.Apache.Kafka.Streams.Kstream
         #endregion
 
         #region Instance methods
+        /// <summary>
+        /// Handlers initializer for <see cref="Initializer"/>
+        /// </summary>
         protected virtual void InitializeHandlers()
         {
             AddEventHandler("apply", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(ApplyEventHandler)); OnApply = Apply;
@@ -123,6 +126,9 @@ namespace Org.Apache.Kafka.Streams.Kstream
         #endregion
 
         #region Instance methods
+        /// <summary>
+        /// Handlers initializer for <see cref="Initializer"/>
+        /// </summary>
         protected virtual void InitializeHandlers()
         {
             AddEventHandler("apply", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(ApplyEventHandler)); OnApply = Apply;

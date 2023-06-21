@@ -45,6 +45,9 @@ namespace Org.Apache.Kafka.Streams.Processor
         #endregion
 
         #region Instance methods
+        /// <summary>
+        /// Handlers initializer for <see cref="TopicNameExtractor"/>
+        /// </summary>
         protected virtual void InitializeHandlers()
         {
             AddEventHandler("extract", new System.EventHandler<CLRListenerEventArgs<CLREventData<object>>>(ExtractEventHandler)); OnExtract = Extract;
@@ -125,6 +128,9 @@ namespace Org.Apache.Kafka.Streams.Processor
         #endregion
 
         #region Instance methods
+        /// <summary>
+        /// Handlers initializer for <see cref="TopicNameExtractor"/>
+        /// </summary>
         protected virtual void InitializeHandlers()
         {
             AddEventHandler("extract", new System.EventHandler<CLRListenerEventArgs<CLREventData<K>>>(ExtractEventHandler)); OnExtract = Extract;

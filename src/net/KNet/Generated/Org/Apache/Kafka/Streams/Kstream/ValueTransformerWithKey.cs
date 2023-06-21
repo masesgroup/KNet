@@ -45,6 +45,9 @@ namespace Org.Apache.Kafka.Streams.Kstream
         #endregion
 
         #region Instance methods
+        /// <summary>
+        /// Handlers initializer for <see cref="ValueTransformerWithKey"/>
+        /// </summary>
         protected virtual void InitializeHandlers()
         {
             AddEventHandler("close", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler)); OnClose = Close;
@@ -163,6 +166,9 @@ namespace Org.Apache.Kafka.Streams.Kstream
         #endregion
 
         #region Instance methods
+        /// <summary>
+        /// Handlers initializer for <see cref="ValueTransformerWithKey"/>
+        /// </summary>
         protected virtual void InitializeHandlers()
         {
             AddEventHandler("close", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler)); OnClose = Close;
