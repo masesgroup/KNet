@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Common.Compress
         /// </summary>
         public KafkaLZ4BlockInputStream(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.compress.KafkaLZ4BlockInputStream");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.compress.KafkaLZ4BlockInputStream");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Common.Compress
         /// </summary>
         public KafkaLZ4BlockOutputStream(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.compress.KafkaLZ4BlockOutputStream");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.compress.KafkaLZ4BlockOutputStream");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -122,7 +122,7 @@ namespace Org.Apache.Kafka.Common.Compress
             /// </summary>
             public BD(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.compress.KafkaLZ4BlockOutputStream$BD");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.compress.KafkaLZ4BlockOutputStream$BD");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -165,7 +165,7 @@ namespace Org.Apache.Kafka.Common.Compress
             /// </summary>
             public FLG(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.compress.KafkaLZ4BlockOutputStream$FLG");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.compress.KafkaLZ4BlockOutputStream$FLG");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -212,7 +212,7 @@ namespace Org.Apache.Kafka.Common.Compress
         /// </summary>
         public SnappyFactory(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.compress.SnappyFactory");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.compress.SnappyFactory");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -255,7 +255,7 @@ namespace Org.Apache.Kafka.Common.Compress
         /// </summary>
         public ZstdFactory(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.compress.ZstdFactory");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.compress.ZstdFactory");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

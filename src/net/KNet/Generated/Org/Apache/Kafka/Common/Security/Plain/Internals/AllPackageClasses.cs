@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
         /// </summary>
         public PlainSaslServer(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.plain.internals.PlainSaslServer");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.plain.internals.PlainSaslServer");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -79,7 +79,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
             /// </summary>
             public PlainSaslServerFactory(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.plain.internals.PlainSaslServer$PlainSaslServerFactory");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.plain.internals.PlainSaslServer$PlainSaslServerFactory");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
         /// </summary>
         public PlainSaslServerProvider(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.plain.internals.PlainSaslServerProvider");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.plain.internals.PlainSaslServerProvider");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -169,7 +169,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
         /// </summary>
         public PlainServerCallbackHandler(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.plain.internals.PlainServerCallbackHandler");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.plain.internals.PlainServerCallbackHandler");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

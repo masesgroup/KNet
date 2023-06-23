@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Connect.Converters
         /// </summary>
         public ByteArrayConverter(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.converters.ByteArrayConverter");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.converters.ByteArrayConverter");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Connect.Converters
         /// </summary>
         public DoubleConverter(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.converters.DoubleConverter");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.converters.DoubleConverter");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Connect.Converters
         /// </summary>
         public FloatConverter(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.converters.FloatConverter");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.converters.FloatConverter");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -169,7 +169,7 @@ namespace Org.Apache.Kafka.Connect.Converters
         /// </summary>
         public IntegerConverter(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.converters.IntegerConverter");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.converters.IntegerConverter");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -212,7 +212,7 @@ namespace Org.Apache.Kafka.Connect.Converters
         /// </summary>
         public LongConverter(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.converters.LongConverter");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.converters.LongConverter");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -255,7 +255,7 @@ namespace Org.Apache.Kafka.Connect.Converters
         /// </summary>
         public NumberConverterConfig(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.converters.NumberConverterConfig");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.converters.NumberConverterConfig");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -298,7 +298,7 @@ namespace Org.Apache.Kafka.Connect.Converters
         /// </summary>
         public ShortConverter(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.converters.ShortConverter");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.converters.ShortConverter");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

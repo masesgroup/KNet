@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Connect.Health
         /// </summary>
         public AbstractState(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.health.AbstractState");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.health.AbstractState");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Connect.Health
         /// </summary>
         public ConnectClusterDetails(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.health.ConnectClusterDetails");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.health.ConnectClusterDetails");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Connect.Health
         /// </summary>
         public ConnectClusterState(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.health.ConnectClusterState");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.health.ConnectClusterState");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -169,7 +169,7 @@ namespace Org.Apache.Kafka.Connect.Health
         /// </summary>
         public ConnectorHealth(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.health.ConnectorHealth");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.health.ConnectorHealth");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -212,7 +212,7 @@ namespace Org.Apache.Kafka.Connect.Health
         /// </summary>
         public ConnectorState(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.health.ConnectorState");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.health.ConnectorState");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -255,7 +255,7 @@ namespace Org.Apache.Kafka.Connect.Health
         /// </summary>
         public ConnectorType(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.health.ConnectorType");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.health.ConnectorType");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -298,7 +298,7 @@ namespace Org.Apache.Kafka.Connect.Health
         /// </summary>
         public TaskState(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.health.TaskState");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.health.TaskState");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

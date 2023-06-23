@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Connect.Mirror.Formatters
         /// </summary>
         public CheckpointFormatter(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.formatters.CheckpointFormatter");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.formatters.CheckpointFormatter");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Connect.Mirror.Formatters
         /// </summary>
         public HeartbeatFormatter(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.formatters.HeartbeatFormatter");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.formatters.HeartbeatFormatter");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Connect.Mirror.Formatters
         /// </summary>
         public OffsetSyncFormatter(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.formatters.OffsetSyncFormatter");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.formatters.OffsetSyncFormatter");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

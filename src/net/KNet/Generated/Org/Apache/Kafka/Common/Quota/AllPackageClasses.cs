@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Common.Quota
         /// </summary>
         public ClientQuotaAlteration(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.quota.ClientQuotaAlteration");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.quota.ClientQuotaAlteration");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -79,7 +79,7 @@ namespace Org.Apache.Kafka.Common.Quota
             /// </summary>
             public Op(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.quota.ClientQuotaAlteration$Op");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.quota.ClientQuotaAlteration$Op");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Common.Quota
         /// </summary>
         public ClientQuotaEntity(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.quota.ClientQuotaEntity");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.quota.ClientQuotaEntity");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -169,7 +169,7 @@ namespace Org.Apache.Kafka.Common.Quota
         /// </summary>
         public ClientQuotaFilter(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.quota.ClientQuotaFilter");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.quota.ClientQuotaFilter");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -212,7 +212,7 @@ namespace Org.Apache.Kafka.Common.Quota
         /// </summary>
         public ClientQuotaFilterComponent(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.quota.ClientQuotaFilterComponent");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.quota.ClientQuotaFilterComponent");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public AbortTransactionOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AbortTransactionOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AbortTransactionOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public AbortTransactionResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AbortTransactionResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AbortTransactionResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public AbortTransactionSpec(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AbortTransactionSpec");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AbortTransactionSpec");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -169,7 +169,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public AbstractOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AbstractOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AbstractOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -213,7 +213,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public AbstractOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AbstractOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AbstractOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -256,7 +256,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public Admin(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.Admin");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.Admin");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -299,7 +299,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public AdminClient(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AdminClient");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AdminClient");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -331,7 +331,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/admin/AdminClientConfig.html"/>
     /// </summary>
-    public partial class AdminClientConfig : Org.Apache.Kafka.Common.Config.AbstractConfig, MASES.JNet.Specific.IJNetBridgeMain
+    public partial class AdminClientConfig : Org.Apache.Kafka.Common.Config.AbstractConfig, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -342,7 +342,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public AdminClientConfig(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AdminClientConfig");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AdminClientConfig");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -385,7 +385,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public AlterClientQuotasOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AlterClientQuotasOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AlterClientQuotasOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -428,7 +428,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public AlterClientQuotasResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AlterClientQuotasResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AlterClientQuotasResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -471,7 +471,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public AlterConfigOp(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AlterConfigOp");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AlterConfigOp");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -510,7 +510,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// </summary>
             public OpType(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AlterConfigOp$OpType");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AlterConfigOp$OpType");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -557,7 +557,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public AlterConfigsOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AlterConfigsOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AlterConfigsOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -600,7 +600,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public AlterConfigsResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AlterConfigsResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AlterConfigsResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -643,7 +643,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public AlterConsumerGroupOffsetsOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AlterConsumerGroupOffsetsOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AlterConsumerGroupOffsetsOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -686,7 +686,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public AlterConsumerGroupOffsetsResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AlterConsumerGroupOffsetsResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AlterConsumerGroupOffsetsResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -729,7 +729,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public AlterPartitionReassignmentsOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AlterPartitionReassignmentsOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AlterPartitionReassignmentsOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -772,7 +772,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public AlterPartitionReassignmentsResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AlterPartitionReassignmentsResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AlterPartitionReassignmentsResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -815,7 +815,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public AlterReplicaLogDirsOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AlterReplicaLogDirsOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AlterReplicaLogDirsOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -858,7 +858,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public AlterReplicaLogDirsResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AlterReplicaLogDirsResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AlterReplicaLogDirsResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -901,7 +901,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public AlterUserScramCredentialsOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AlterUserScramCredentialsOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AlterUserScramCredentialsOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -944,7 +944,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public AlterUserScramCredentialsResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AlterUserScramCredentialsResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.AlterUserScramCredentialsResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -987,7 +987,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public Config(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.Config");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.Config");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1030,7 +1030,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public ConfigEntry(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ConfigEntry");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ConfigEntry");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1069,7 +1069,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// </summary>
             public ConfigSource(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ConfigEntry$ConfigSource");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ConfigEntry$ConfigSource");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1112,7 +1112,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// </summary>
             public ConfigSynonym(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ConfigEntry$ConfigSynonym");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ConfigEntry$ConfigSynonym");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1155,7 +1155,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// </summary>
             public ConfigType(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ConfigEntry$ConfigType");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ConfigEntry$ConfigType");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1202,7 +1202,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public ConsumerGroupDescription(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ConsumerGroupDescription");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ConsumerGroupDescription");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1245,7 +1245,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public ConsumerGroupListing(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ConsumerGroupListing");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ConsumerGroupListing");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1288,7 +1288,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public CreateAclsOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.CreateAclsOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.CreateAclsOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1331,7 +1331,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public CreateAclsResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.CreateAclsResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.CreateAclsResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1374,7 +1374,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public CreateDelegationTokenOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.CreateDelegationTokenOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.CreateDelegationTokenOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1417,7 +1417,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public CreateDelegationTokenResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.CreateDelegationTokenResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.CreateDelegationTokenResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1460,7 +1460,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public CreatePartitionsOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.CreatePartitionsOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.CreatePartitionsOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1503,7 +1503,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public CreatePartitionsResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.CreatePartitionsResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.CreatePartitionsResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1546,7 +1546,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public CreateTopicsOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.CreateTopicsOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.CreateTopicsOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1589,7 +1589,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public CreateTopicsResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.CreateTopicsResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.CreateTopicsResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1628,7 +1628,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// </summary>
             public TopicMetadataAndConfig(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.CreateTopicsResult$TopicMetadataAndConfig");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.CreateTopicsResult$TopicMetadataAndConfig");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1675,7 +1675,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DeleteAclsOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DeleteAclsOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DeleteAclsOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1718,7 +1718,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DeleteAclsResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DeleteAclsResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DeleteAclsResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1757,7 +1757,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// </summary>
             public FilterResult(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DeleteAclsResult$FilterResult");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DeleteAclsResult$FilterResult");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1800,7 +1800,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// </summary>
             public FilterResults(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DeleteAclsResult$FilterResults");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DeleteAclsResult$FilterResults");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1847,7 +1847,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DeleteConsumerGroupOffsetsOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DeleteConsumerGroupOffsetsOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DeleteConsumerGroupOffsetsOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1890,7 +1890,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DeleteConsumerGroupOffsetsResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DeleteConsumerGroupOffsetsResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DeleteConsumerGroupOffsetsResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1933,7 +1933,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DeleteConsumerGroupsOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DeleteConsumerGroupsOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DeleteConsumerGroupsOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1976,7 +1976,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DeleteConsumerGroupsResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DeleteConsumerGroupsResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DeleteConsumerGroupsResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -2019,7 +2019,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DeletedRecords(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DeletedRecords");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DeletedRecords");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -2062,7 +2062,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DeleteRecordsOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DeleteRecordsOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DeleteRecordsOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -2105,7 +2105,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DeleteRecordsResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DeleteRecordsResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DeleteRecordsResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -2148,7 +2148,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DeleteTopicsOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DeleteTopicsOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DeleteTopicsOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -2191,7 +2191,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DeleteTopicsResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DeleteTopicsResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DeleteTopicsResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -2234,7 +2234,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DescribeAclsOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeAclsOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeAclsOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -2277,7 +2277,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DescribeAclsResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeAclsResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeAclsResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -2320,7 +2320,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DescribeClientQuotasOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeClientQuotasOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeClientQuotasOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -2363,7 +2363,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DescribeClientQuotasResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeClientQuotasResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeClientQuotasResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -2406,7 +2406,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DescribeClusterOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeClusterOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeClusterOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -2449,7 +2449,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DescribeClusterResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeClusterResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeClusterResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -2492,7 +2492,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DescribeConfigsOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeConfigsOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeConfigsOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -2535,7 +2535,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DescribeConfigsResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeConfigsResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeConfigsResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -2578,7 +2578,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DescribeConsumerGroupsOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeConsumerGroupsOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeConsumerGroupsOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -2621,7 +2621,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DescribeConsumerGroupsResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeConsumerGroupsResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeConsumerGroupsResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -2664,7 +2664,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DescribeDelegationTokenOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeDelegationTokenOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeDelegationTokenOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -2707,7 +2707,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DescribeDelegationTokenResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeDelegationTokenResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeDelegationTokenResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -2750,7 +2750,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DescribeFeaturesOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeFeaturesOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeFeaturesOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -2793,7 +2793,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DescribeFeaturesResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeFeaturesResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeFeaturesResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -2836,7 +2836,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DescribeLogDirsOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeLogDirsOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeLogDirsOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -2879,7 +2879,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DescribeLogDirsResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeLogDirsResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeLogDirsResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -2922,7 +2922,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DescribeMetadataQuorumOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeMetadataQuorumOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeMetadataQuorumOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -2965,7 +2965,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DescribeMetadataQuorumResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeMetadataQuorumResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeMetadataQuorumResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -3008,7 +3008,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DescribeProducersOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeProducersOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeProducersOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -3051,7 +3051,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DescribeProducersResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeProducersResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeProducersResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -3090,7 +3090,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// </summary>
             public PartitionProducerState(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeProducersResult$PartitionProducerState");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeProducersResult$PartitionProducerState");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -3137,7 +3137,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DescribeReplicaLogDirsOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeReplicaLogDirsOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeReplicaLogDirsOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -3180,7 +3180,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DescribeReplicaLogDirsResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeReplicaLogDirsResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeReplicaLogDirsResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -3219,7 +3219,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// </summary>
             public ReplicaLogDirInfo(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeReplicaLogDirsResult$ReplicaLogDirInfo");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeReplicaLogDirsResult$ReplicaLogDirInfo");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -3266,7 +3266,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DescribeTopicsOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeTopicsOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeTopicsOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -3309,7 +3309,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DescribeTopicsResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeTopicsResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeTopicsResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -3352,7 +3352,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DescribeTransactionsOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeTransactionsOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeTransactionsOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -3395,7 +3395,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DescribeTransactionsResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeTransactionsResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeTransactionsResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -3438,7 +3438,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DescribeUserScramCredentialsOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeUserScramCredentialsOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeUserScramCredentialsOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -3481,7 +3481,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public DescribeUserScramCredentialsResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeUserScramCredentialsResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.DescribeUserScramCredentialsResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -3524,7 +3524,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public ElectLeadersOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ElectLeadersOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ElectLeadersOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -3567,7 +3567,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public ElectLeadersResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ElectLeadersResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ElectLeadersResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -3610,7 +3610,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public ExpireDelegationTokenOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ExpireDelegationTokenOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ExpireDelegationTokenOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -3653,7 +3653,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public ExpireDelegationTokenResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ExpireDelegationTokenResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ExpireDelegationTokenResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -3696,7 +3696,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public FeatureMetadata(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.FeatureMetadata");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.FeatureMetadata");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -3739,7 +3739,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public FeatureUpdate(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.FeatureUpdate");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.FeatureUpdate");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -3778,7 +3778,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// </summary>
             public UpgradeType(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.FeatureUpdate$UpgradeType");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.FeatureUpdate$UpgradeType");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -3825,7 +3825,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public FenceProducersOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.FenceProducersOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.FenceProducersOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -3868,7 +3868,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public FenceProducersResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.FenceProducersResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.FenceProducersResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -3911,7 +3911,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public FinalizedVersionRange(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.FinalizedVersionRange");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.FinalizedVersionRange");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -3954,7 +3954,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public ForwardingAdmin(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ForwardingAdmin");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ForwardingAdmin");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -3997,7 +3997,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public KafkaAdminClient(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.KafkaAdminClient");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.KafkaAdminClient");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -4040,7 +4040,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public ListConsumerGroupOffsetsOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ListConsumerGroupOffsetsOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ListConsumerGroupOffsetsOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -4083,7 +4083,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public ListConsumerGroupOffsetsResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ListConsumerGroupOffsetsResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ListConsumerGroupOffsetsResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -4126,7 +4126,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public ListConsumerGroupOffsetsSpec(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ListConsumerGroupOffsetsSpec");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ListConsumerGroupOffsetsSpec");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -4169,7 +4169,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public ListConsumerGroupsOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ListConsumerGroupsOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ListConsumerGroupsOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -4212,7 +4212,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public ListConsumerGroupsResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ListConsumerGroupsResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ListConsumerGroupsResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -4255,7 +4255,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public ListOffsetsOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ListOffsetsOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ListOffsetsOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -4298,7 +4298,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public ListOffsetsResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ListOffsetsResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ListOffsetsResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -4337,7 +4337,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// </summary>
             public ListOffsetsResultInfo(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ListOffsetsResult$ListOffsetsResultInfo");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ListOffsetsResult$ListOffsetsResultInfo");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -4384,7 +4384,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public ListPartitionReassignmentsOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ListPartitionReassignmentsOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ListPartitionReassignmentsOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -4427,7 +4427,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public ListPartitionReassignmentsResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ListPartitionReassignmentsResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ListPartitionReassignmentsResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -4470,7 +4470,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public ListTopicsOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ListTopicsOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ListTopicsOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -4513,7 +4513,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public ListTopicsResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ListTopicsResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ListTopicsResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -4556,7 +4556,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public ListTransactionsOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ListTransactionsOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ListTransactionsOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -4599,7 +4599,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public ListTransactionsResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ListTransactionsResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ListTransactionsResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -4642,7 +4642,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public LogDirDescription(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.LogDirDescription");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.LogDirDescription");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -4685,7 +4685,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public MemberAssignment(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.MemberAssignment");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.MemberAssignment");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -4728,7 +4728,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public MemberDescription(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.MemberDescription");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.MemberDescription");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -4771,7 +4771,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public MemberToRemove(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.MemberToRemove");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.MemberToRemove");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -4814,7 +4814,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public NewPartitionReassignment(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.NewPartitionReassignment");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.NewPartitionReassignment");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -4857,7 +4857,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public NewPartitions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.NewPartitions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.NewPartitions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -4900,7 +4900,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public NewTopic(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.NewTopic");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.NewTopic");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -4943,7 +4943,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public OffsetSpec(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.OffsetSpec");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.OffsetSpec");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -4982,7 +4982,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// </summary>
             public EarliestSpec(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.OffsetSpec$EarliestSpec");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.OffsetSpec$EarliestSpec");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -5025,7 +5025,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// </summary>
             public LatestSpec(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.OffsetSpec$LatestSpec");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.OffsetSpec$LatestSpec");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -5068,7 +5068,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// </summary>
             public MaxTimestampSpec(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.OffsetSpec$MaxTimestampSpec");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.OffsetSpec$MaxTimestampSpec");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -5111,7 +5111,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// </summary>
             public TimestampSpec(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.OffsetSpec$TimestampSpec");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.OffsetSpec$TimestampSpec");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -5158,7 +5158,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public PartitionReassignment(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.PartitionReassignment");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.PartitionReassignment");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -5201,7 +5201,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public ProducerState(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ProducerState");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ProducerState");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -5244,7 +5244,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public QuorumInfo(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.QuorumInfo");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.QuorumInfo");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -5283,7 +5283,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// </summary>
             public ReplicaState(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.QuorumInfo$ReplicaState");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.QuorumInfo$ReplicaState");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -5330,7 +5330,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public RecordsToDelete(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.RecordsToDelete");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.RecordsToDelete");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -5373,7 +5373,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public RemoveMembersFromConsumerGroupOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.RemoveMembersFromConsumerGroupOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.RemoveMembersFromConsumerGroupOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -5416,7 +5416,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public RemoveMembersFromConsumerGroupResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.RemoveMembersFromConsumerGroupResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.RemoveMembersFromConsumerGroupResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -5459,7 +5459,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public RenewDelegationTokenOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.RenewDelegationTokenOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.RenewDelegationTokenOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -5502,7 +5502,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public RenewDelegationTokenResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.RenewDelegationTokenResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.RenewDelegationTokenResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -5545,7 +5545,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public ReplicaInfo(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ReplicaInfo");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ReplicaInfo");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -5588,7 +5588,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public ScramCredentialInfo(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ScramCredentialInfo");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ScramCredentialInfo");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -5631,7 +5631,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public ScramMechanism(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ScramMechanism");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.ScramMechanism");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -5674,7 +5674,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public SupportedVersionRange(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.SupportedVersionRange");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.SupportedVersionRange");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -5717,7 +5717,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public TopicDescription(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.TopicDescription");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.TopicDescription");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -5760,7 +5760,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public TopicListing(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.TopicListing");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.TopicListing");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -5803,7 +5803,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public TransactionDescription(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.TransactionDescription");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.TransactionDescription");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -5846,7 +5846,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public TransactionListing(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.TransactionListing");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.TransactionListing");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -5889,7 +5889,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public TransactionState(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.TransactionState");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.TransactionState");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -5932,7 +5932,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public UnregisterBrokerOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.UnregisterBrokerOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.UnregisterBrokerOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -5975,7 +5975,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public UnregisterBrokerResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.UnregisterBrokerResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.UnregisterBrokerResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -6018,7 +6018,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public UpdateFeaturesOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.UpdateFeaturesOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.UpdateFeaturesOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -6061,7 +6061,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public UpdateFeaturesResult(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.UpdateFeaturesResult");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.UpdateFeaturesResult");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -6104,7 +6104,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public UserScramCredentialAlteration(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.UserScramCredentialAlteration");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.UserScramCredentialAlteration");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -6147,7 +6147,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public UserScramCredentialDeletion(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.UserScramCredentialDeletion");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.UserScramCredentialDeletion");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -6190,7 +6190,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public UserScramCredentialsDescription(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.UserScramCredentialsDescription");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.UserScramCredentialsDescription");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -6233,7 +6233,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         public UserScramCredentialUpsertion(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.UserScramCredentialUpsertion");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.admin.UserScramCredentialUpsertion");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

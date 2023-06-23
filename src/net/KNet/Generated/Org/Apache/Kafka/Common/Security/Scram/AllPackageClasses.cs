@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
         /// </summary>
         public ScramCredential(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.scram.ScramCredential");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.scram.ScramCredential");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
         /// </summary>
         public ScramCredentialCallback(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.scram.ScramCredentialCallback");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.scram.ScramCredentialCallback");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
         /// </summary>
         public ScramExtensionsCallback(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.scram.ScramExtensionsCallback");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.scram.ScramExtensionsCallback");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -169,7 +169,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
         /// </summary>
         public ScramLoginModule(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.scram.ScramLoginModule");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.scram.ScramLoginModule");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

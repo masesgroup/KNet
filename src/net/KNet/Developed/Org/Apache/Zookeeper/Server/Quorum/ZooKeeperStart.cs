@@ -16,6 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
 using MASES.JNet.Specific;
 
 namespace Org.Apache.Zookeeper.Server.Quorum
@@ -23,7 +24,7 @@ namespace Org.Apache.Zookeeper.Server.Quorum
     /// <summary>
     /// Class managing ZooKeeper start
     /// </summary>
-    public class ZooKeeperStart :JNetBridgeMain<ZooKeeperStart>
+    public class ZooKeeperStart : JVMBridgeMainExtensible<ZooKeeperStart>
     {
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

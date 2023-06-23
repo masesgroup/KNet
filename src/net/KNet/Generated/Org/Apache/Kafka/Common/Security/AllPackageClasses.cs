@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Common.Security
         /// </summary>
         public JaasContext(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.JaasContext");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.JaasContext");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -79,7 +79,7 @@ namespace Org.Apache.Kafka.Common.Security
             /// </summary>
             public Type(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.JaasContext$Type");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.JaasContext$Type");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Common.Security
         /// </summary>
         public JaasUtils(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.JaasUtils");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.JaasUtils");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

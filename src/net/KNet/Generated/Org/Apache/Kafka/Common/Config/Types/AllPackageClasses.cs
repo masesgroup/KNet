@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Common.Config.Types
         /// </summary>
         public Password(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.config.types.Password");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.config.types.Password");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

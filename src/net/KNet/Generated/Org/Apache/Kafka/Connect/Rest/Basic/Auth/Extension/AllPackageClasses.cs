@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
         /// </summary>
         public BasicAuthSecurityRestExtension(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.rest.basic.auth.extension.BasicAuthSecurityRestExtension");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.rest.basic.auth.extension.BasicAuthSecurityRestExtension");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
         /// </summary>
         public JaasBasicAuthFilter(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.rest.basic.auth.extension.JaasBasicAuthFilter");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.rest.basic.auth.extension.JaasBasicAuthFilter");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -122,7 +122,7 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
             /// </summary>
             public BasicAuthCallBackHandler(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.rest.basic.auth.extension.JaasBasicAuthFilter$BasicAuthCallBackHandler");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.rest.basic.auth.extension.JaasBasicAuthFilter$BasicAuthCallBackHandler");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -169,7 +169,7 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
         /// </summary>
         public PropertyFileLoginModule(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.rest.basic.auth.extension.PropertyFileLoginModule");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.rest.basic.auth.extension.PropertyFileLoginModule");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

@@ -16,6 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
 using MASES.JNet.Specific;
 
 namespace Org.Apache.Zookeeper
@@ -23,7 +24,7 @@ namespace Org.Apache.Zookeeper
     /// <summary>
     /// Class managing ZooKeeper shell
     /// </summary>
-    public class ZooKeeperShell : JNetBridgeMain<ZooKeeperShell>
+    public class ZooKeeperShell : JVMBridgeMainExtensible<ZooKeeperShell>
     {
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

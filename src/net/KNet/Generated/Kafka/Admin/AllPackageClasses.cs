@@ -29,7 +29,7 @@ namespace Kafka.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/AclCommand.html"/>
     /// </summary>
-    public partial class AclCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AclCommand>, MASES.JNet.Specific.IJNetBridgeMain
+    public partial class AclCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AclCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -40,7 +40,7 @@ namespace Kafka.Admin
         /// </summary>
         public AclCommand(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.AclCommand");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.AclCommand");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -79,7 +79,7 @@ namespace Kafka.Admin
             /// </summary>
             public AclCommandOptions(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.AclCommand$AclCommandOptions");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.AclCommand$AclCommandOptions");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -122,7 +122,7 @@ namespace Kafka.Admin
             /// </summary>
             public AclCommandService(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.AclCommand$AclCommandService");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.AclCommand$AclCommandService");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -165,7 +165,7 @@ namespace Kafka.Admin
             /// </summary>
             public AdminClientService(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.AclCommand$AdminClientService");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.AclCommand$AdminClientService");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -208,7 +208,7 @@ namespace Kafka.Admin
             /// </summary>
             public AuthorizerService(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.AclCommand$AuthorizerService");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.AclCommand$AuthorizerService");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -271,7 +271,7 @@ namespace Kafka.Admin
         /// </summary>
         public AdminUtils(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.AdminUtils");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.AdminUtils");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -303,7 +303,7 @@ namespace Kafka.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/BrokerApiVersionsCommand.html"/>
     /// </summary>
-    public partial class BrokerApiVersionsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BrokerApiVersionsCommand>, MASES.JNet.Specific.IJNetBridgeMain
+    public partial class BrokerApiVersionsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BrokerApiVersionsCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -314,7 +314,7 @@ namespace Kafka.Admin
         /// </summary>
         public BrokerApiVersionsCommand(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.BrokerApiVersionsCommand");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.BrokerApiVersionsCommand");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -353,7 +353,7 @@ namespace Kafka.Admin
             /// </summary>
             public BrokerVersionCommandOptions(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.BrokerApiVersionsCommand$BrokerVersionCommandOptions");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.BrokerApiVersionsCommand$BrokerVersionCommandOptions");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -400,7 +400,7 @@ namespace Kafka.Admin
         /// </summary>
         public BrokerMetadata(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.BrokerMetadata");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.BrokerMetadata");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -432,7 +432,7 @@ namespace Kafka.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConfigCommand.html"/>
     /// </summary>
-    public partial class ConfigCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConfigCommand>, MASES.JNet.Specific.IJNetBridgeMain
+    public partial class ConfigCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConfigCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -443,7 +443,7 @@ namespace Kafka.Admin
         /// </summary>
         public ConfigCommand(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ConfigCommand");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ConfigCommand");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -482,7 +482,7 @@ namespace Kafka.Admin
             /// </summary>
             public ConfigCommandOptions(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ConfigCommand$ConfigCommandOptions");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ConfigCommand$ConfigCommandOptions");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -525,7 +525,7 @@ namespace Kafka.Admin
             /// </summary>
             public ConfigEntity(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ConfigCommand$ConfigEntity");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ConfigCommand$ConfigEntity");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -568,7 +568,7 @@ namespace Kafka.Admin
             /// </summary>
             public Entity(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ConfigCommand$Entity");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ConfigCommand$Entity");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -604,7 +604,7 @@ namespace Kafka.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ConsumerGroupCommand.html"/>
     /// </summary>
-    public partial class ConsumerGroupCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConsumerGroupCommand>, MASES.JNet.Specific.IJNetBridgeMain
+    public partial class ConsumerGroupCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConsumerGroupCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -615,7 +615,7 @@ namespace Kafka.Admin
         /// </summary>
         public ConsumerGroupCommand(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ConsumerGroupCommand");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ConsumerGroupCommand");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -654,7 +654,7 @@ namespace Kafka.Admin
             /// </summary>
             public ConsumerGroupCommandOptions(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ConsumerGroupCommand$ConsumerGroupCommandOptions");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ConsumerGroupCommand$ConsumerGroupCommandOptions");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -697,7 +697,7 @@ namespace Kafka.Admin
             /// </summary>
             public ConsumerGroupService(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ConsumerGroupCommand$ConsumerGroupService");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ConsumerGroupCommand$ConsumerGroupService");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -740,7 +740,7 @@ namespace Kafka.Admin
             /// </summary>
             public CsvRecord(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ConsumerGroupCommand$CsvRecord");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ConsumerGroupCommand$CsvRecord");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -783,7 +783,7 @@ namespace Kafka.Admin
             /// </summary>
             public CsvRecordNoGroup(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ConsumerGroupCommand$CsvRecordNoGroup");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ConsumerGroupCommand$CsvRecordNoGroup");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -826,7 +826,7 @@ namespace Kafka.Admin
             /// </summary>
             public CsvRecordWithGroup(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ConsumerGroupCommand$CsvRecordWithGroup");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ConsumerGroupCommand$CsvRecordWithGroup");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -869,7 +869,7 @@ namespace Kafka.Admin
             /// </summary>
             public CsvUtils(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ConsumerGroupCommand$CsvUtils");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ConsumerGroupCommand$CsvUtils");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -912,7 +912,7 @@ namespace Kafka.Admin
             /// </summary>
             public GroupState(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ConsumerGroupCommand$GroupState");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ConsumerGroupCommand$GroupState");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -955,7 +955,7 @@ namespace Kafka.Admin
             /// </summary>
             public LogOffsetResult(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ConsumerGroupCommand$LogOffsetResult");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ConsumerGroupCommand$LogOffsetResult");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -998,7 +998,7 @@ namespace Kafka.Admin
             /// </summary>
             public MemberAssignmentState(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ConsumerGroupCommand$MemberAssignmentState");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ConsumerGroupCommand$MemberAssignmentState");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1041,7 +1041,7 @@ namespace Kafka.Admin
             /// </summary>
             public PartitionAssignmentState(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ConsumerGroupCommand$PartitionAssignmentState");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ConsumerGroupCommand$PartitionAssignmentState");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1077,7 +1077,7 @@ namespace Kafka.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/DelegationTokenCommand.html"/>
     /// </summary>
-    public partial class DelegationTokenCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DelegationTokenCommand>, MASES.JNet.Specific.IJNetBridgeMain
+    public partial class DelegationTokenCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DelegationTokenCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1088,7 +1088,7 @@ namespace Kafka.Admin
         /// </summary>
         public DelegationTokenCommand(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.DelegationTokenCommand");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.DelegationTokenCommand");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1127,7 +1127,7 @@ namespace Kafka.Admin
             /// </summary>
             public DelegationTokenCommandOptions(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.DelegationTokenCommand$DelegationTokenCommandOptions");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.DelegationTokenCommand$DelegationTokenCommandOptions");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1163,7 +1163,7 @@ namespace Kafka.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/DeleteRecordsCommand.html"/>
     /// </summary>
-    public partial class DeleteRecordsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DeleteRecordsCommand>, MASES.JNet.Specific.IJNetBridgeMain
+    public partial class DeleteRecordsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DeleteRecordsCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1174,7 +1174,7 @@ namespace Kafka.Admin
         /// </summary>
         public DeleteRecordsCommand(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.DeleteRecordsCommand");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.DeleteRecordsCommand");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1213,7 +1213,7 @@ namespace Kafka.Admin
             /// </summary>
             public DeleteRecordsCommandOptions(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.DeleteRecordsCommand$DeleteRecordsCommandOptions");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.DeleteRecordsCommand$DeleteRecordsCommandOptions");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1249,7 +1249,7 @@ namespace Kafka.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/FeatureCommand.html"/>
     /// </summary>
-    public partial class FeatureCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FeatureCommand>, MASES.JNet.Specific.IJNetBridgeMain
+    public partial class FeatureCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FeatureCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1260,7 +1260,7 @@ namespace Kafka.Admin
         /// </summary>
         public FeatureCommand(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.FeatureCommand");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.FeatureCommand");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1292,7 +1292,7 @@ namespace Kafka.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/LeaderElectionCommand.html"/>
     /// </summary>
-    public partial class LeaderElectionCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LeaderElectionCommand>, MASES.JNet.Specific.IJNetBridgeMain
+    public partial class LeaderElectionCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LeaderElectionCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1303,7 +1303,7 @@ namespace Kafka.Admin
         /// </summary>
         public LeaderElectionCommand(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.LeaderElectionCommand");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.LeaderElectionCommand");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1346,7 +1346,7 @@ namespace Kafka.Admin
         /// </summary>
         public LeaderElectionCommandOptions(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.LeaderElectionCommandOptions");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.LeaderElectionCommandOptions");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1378,7 +1378,7 @@ namespace Kafka.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/LogDirsCommand.html"/>
     /// </summary>
-    public partial class LogDirsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LogDirsCommand>, MASES.JNet.Specific.IJNetBridgeMain
+    public partial class LogDirsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LogDirsCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1389,7 +1389,7 @@ namespace Kafka.Admin
         /// </summary>
         public LogDirsCommand(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.LogDirsCommand");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.LogDirsCommand");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1428,7 +1428,7 @@ namespace Kafka.Admin
             /// </summary>
             public LogDirsCommandOptions(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.LogDirsCommand$LogDirsCommandOptions");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.LogDirsCommand$LogDirsCommandOptions");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1475,7 +1475,7 @@ namespace Kafka.Admin
         /// </summary>
         public RackAwareMode(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.RackAwareMode");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.RackAwareMode");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1507,7 +1507,7 @@ namespace Kafka.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ReassignPartitionsCommand.html"/>
     /// </summary>
-    public partial class ReassignPartitionsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ReassignPartitionsCommand>, MASES.JNet.Specific.IJNetBridgeMain
+    public partial class ReassignPartitionsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ReassignPartitionsCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1518,7 +1518,7 @@ namespace Kafka.Admin
         /// </summary>
         public ReassignPartitionsCommand(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ReassignPartitionsCommand");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ReassignPartitionsCommand");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1557,7 +1557,7 @@ namespace Kafka.Admin
             /// </summary>
             public ActiveMoveState(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ReassignPartitionsCommand$ActiveMoveState");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ReassignPartitionsCommand$ActiveMoveState");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1600,7 +1600,7 @@ namespace Kafka.Admin
             /// </summary>
             public CancelledMoveState(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ReassignPartitionsCommand$CancelledMoveState");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ReassignPartitionsCommand$CancelledMoveState");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1643,7 +1643,7 @@ namespace Kafka.Admin
             /// </summary>
             public CompletedMoveState(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ReassignPartitionsCommand$CompletedMoveState");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ReassignPartitionsCommand$CompletedMoveState");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1686,7 +1686,7 @@ namespace Kafka.Admin
             /// </summary>
             public LogDirMoveState(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ReassignPartitionsCommand$LogDirMoveState");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ReassignPartitionsCommand$LogDirMoveState");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1729,7 +1729,7 @@ namespace Kafka.Admin
             /// </summary>
             public MissingLogDirMoveState(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ReassignPartitionsCommand$MissingLogDirMoveState");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ReassignPartitionsCommand$MissingLogDirMoveState");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1772,7 +1772,7 @@ namespace Kafka.Admin
             /// </summary>
             public MissingReplicaMoveState(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ReassignPartitionsCommand$MissingReplicaMoveState");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ReassignPartitionsCommand$MissingReplicaMoveState");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1815,7 +1815,7 @@ namespace Kafka.Admin
             /// </summary>
             public PartitionMove(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ReassignPartitionsCommand$PartitionMove");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ReassignPartitionsCommand$PartitionMove");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1858,7 +1858,7 @@ namespace Kafka.Admin
             /// </summary>
             public PartitionReassignmentState(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ReassignPartitionsCommand$PartitionReassignmentState");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ReassignPartitionsCommand$PartitionReassignmentState");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1901,7 +1901,7 @@ namespace Kafka.Admin
             /// </summary>
             public ReassignPartitionsCommandOptions(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ReassignPartitionsCommand$ReassignPartitionsCommandOptions");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ReassignPartitionsCommand$ReassignPartitionsCommandOptions");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1960,7 +1960,7 @@ namespace Kafka.Admin
             /// </summary>
             public VerifyAssignmentResult(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ReassignPartitionsCommand$VerifyAssignmentResult");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ReassignPartitionsCommand$VerifyAssignmentResult");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1996,7 +1996,7 @@ namespace Kafka.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/TopicCommand.html"/>
     /// </summary>
-    public partial class TopicCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicCommand>, MASES.JNet.Specific.IJNetBridgeMain
+    public partial class TopicCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -2007,7 +2007,7 @@ namespace Kafka.Admin
         /// </summary>
         public TopicCommand(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.TopicCommand");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.TopicCommand");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -2046,7 +2046,7 @@ namespace Kafka.Admin
             /// </summary>
             public CommandTopicPartition(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.TopicCommand$CommandTopicPartition");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.TopicCommand$CommandTopicPartition");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -2089,7 +2089,7 @@ namespace Kafka.Admin
             /// </summary>
             public DescribeOptions(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.TopicCommand$DescribeOptions");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.TopicCommand$DescribeOptions");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -2132,7 +2132,7 @@ namespace Kafka.Admin
             /// </summary>
             public PartitionDescription(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.TopicCommand$PartitionDescription");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.TopicCommand$PartitionDescription");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -2175,7 +2175,7 @@ namespace Kafka.Admin
             /// </summary>
             public TopicCommandOptions(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.TopicCommand$TopicCommandOptions");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.TopicCommand$TopicCommandOptions");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -2218,7 +2218,7 @@ namespace Kafka.Admin
             /// </summary>
             public TopicDescription(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.TopicCommand$TopicDescription");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.TopicCommand$TopicDescription");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -2261,7 +2261,7 @@ namespace Kafka.Admin
             /// </summary>
             public TopicService(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.TopicCommand$TopicService");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.TopicCommand$TopicService");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -2297,7 +2297,7 @@ namespace Kafka.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/kafka/admin/ZkSecurityMigrator.html"/>
     /// </summary>
-    public partial class ZkSecurityMigrator : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ZkSecurityMigrator>, MASES.JNet.Specific.IJNetBridgeMain
+    public partial class ZkSecurityMigrator : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ZkSecurityMigrator>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -2308,7 +2308,7 @@ namespace Kafka.Admin
         /// </summary>
         public ZkSecurityMigrator(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ZkSecurityMigrator");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("kafka.admin.ZkSecurityMigrator");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

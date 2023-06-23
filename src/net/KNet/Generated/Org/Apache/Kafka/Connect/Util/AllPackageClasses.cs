@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// </summary>
         public ConnectorUtils(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.ConnectorUtils");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.ConnectorUtils");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// </summary>
         public Callback(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.Callback");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.Callback");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -127,7 +127,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// </summary>
         public Callback(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.Callback");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.Callback");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -170,7 +170,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// </summary>
         public ConnectorTaskId(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.ConnectorTaskId");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.ConnectorTaskId");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -213,7 +213,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// </summary>
         public ConnectUtils(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.ConnectUtils");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.ConnectUtils");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -256,7 +256,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// </summary>
         public ConvertingFutureCallback(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.ConvertingFutureCallback");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.ConvertingFutureCallback");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -301,7 +301,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// </summary>
         public ConvertingFutureCallback(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.ConvertingFutureCallback");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.ConvertingFutureCallback");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -344,7 +344,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// </summary>
         public FutureCallback(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.FutureCallback");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.FutureCallback");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -388,7 +388,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// </summary>
         public FutureCallback(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.FutureCallback");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.FutureCallback");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -431,7 +431,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// </summary>
         public KafkaBasedLog(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.KafkaBasedLog");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.KafkaBasedLog");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -476,7 +476,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// </summary>
         public KafkaBasedLog(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.KafkaBasedLog");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.KafkaBasedLog");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -519,7 +519,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// </summary>
         public LoggingContext(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.LoggingContext");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.LoggingContext");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -558,7 +558,7 @@ namespace Org.Apache.Kafka.Connect.Util
             /// </summary>
             public Scope(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.LoggingContext$Scope");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.LoggingContext$Scope");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -605,7 +605,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// </summary>
         public RetryUtil(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.RetryUtil");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.RetryUtil");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -648,7 +648,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// </summary>
         public SafeObjectInputStream(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.SafeObjectInputStream");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.SafeObjectInputStream");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -691,7 +691,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// </summary>
         public SinkUtils(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.SinkUtils");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.SinkUtils");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -734,7 +734,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// </summary>
         public Table(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.Table");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.Table");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -780,7 +780,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// </summary>
         public Table(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.Table");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.Table");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -823,7 +823,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// </summary>
         public TopicAdmin(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.TopicAdmin");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.TopicAdmin");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -862,7 +862,7 @@ namespace Org.Apache.Kafka.Connect.Util
             /// </summary>
             public NewTopicBuilder(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.TopicAdmin$NewTopicBuilder");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.TopicAdmin$NewTopicBuilder");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -905,7 +905,7 @@ namespace Org.Apache.Kafka.Connect.Util
             /// </summary>
             public TopicCreationResponse(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.TopicAdmin$TopicCreationResponse");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.TopicAdmin$TopicCreationResponse");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -952,7 +952,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// </summary>
         public TopicCreation(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.TopicCreation");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.TopicCreation");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -995,7 +995,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// </summary>
         public TopicCreationGroup(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.TopicCreationGroup");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.util.TopicCreationGroup");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

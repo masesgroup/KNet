@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Common.Cache
         /// </summary>
         public Cache(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.cache.Cache");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.cache.Cache");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -85,7 +85,7 @@ namespace Org.Apache.Kafka.Common.Cache
         /// </summary>
         public Cache(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.cache.Cache");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.cache.Cache");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -128,7 +128,7 @@ namespace Org.Apache.Kafka.Common.Cache
         /// </summary>
         public LRUCache(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.cache.LRUCache");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.cache.LRUCache");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -173,7 +173,7 @@ namespace Org.Apache.Kafka.Common.Cache
         /// </summary>
         public LRUCache(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.cache.LRUCache");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.cache.LRUCache");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -216,7 +216,7 @@ namespace Org.Apache.Kafka.Common.Cache
         /// </summary>
         public SynchronizedCache(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.cache.SynchronizedCache");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.cache.SynchronizedCache");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -261,7 +261,7 @@ namespace Org.Apache.Kafka.Common.Cache
         /// </summary>
         public SynchronizedCache(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.cache.SynchronizedCache");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.cache.SynchronizedCache");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

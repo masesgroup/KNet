@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Common.Replica
         /// </summary>
         public ClientMetadata(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.replica.ClientMetadata");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.replica.ClientMetadata");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -79,7 +79,7 @@ namespace Org.Apache.Kafka.Common.Replica
             /// </summary>
             public DefaultClientMetadata(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.replica.ClientMetadata$DefaultClientMetadata");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.replica.ClientMetadata$DefaultClientMetadata");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Common.Replica
         /// </summary>
         public PartitionView(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.replica.PartitionView");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.replica.PartitionView");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -165,7 +165,7 @@ namespace Org.Apache.Kafka.Common.Replica
             /// </summary>
             public DefaultPartitionView(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.replica.PartitionView$DefaultPartitionView");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.replica.PartitionView$DefaultPartitionView");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -212,7 +212,7 @@ namespace Org.Apache.Kafka.Common.Replica
         /// </summary>
         public RackAwareReplicaSelector(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.replica.RackAwareReplicaSelector");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.replica.RackAwareReplicaSelector");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -255,7 +255,7 @@ namespace Org.Apache.Kafka.Common.Replica
         /// </summary>
         public ReplicaSelector(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.replica.ReplicaSelector");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.replica.ReplicaSelector");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -298,7 +298,7 @@ namespace Org.Apache.Kafka.Common.Replica
         /// </summary>
         public ReplicaView(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.replica.ReplicaView");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.replica.ReplicaView");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -337,7 +337,7 @@ namespace Org.Apache.Kafka.Common.Replica
             /// </summary>
             public DefaultReplicaView(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.replica.ReplicaView$DefaultReplicaView");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.replica.ReplicaView$DefaultReplicaView");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

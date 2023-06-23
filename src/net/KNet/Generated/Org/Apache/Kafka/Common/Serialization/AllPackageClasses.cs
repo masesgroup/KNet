@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// </summary>
         public ByteArrayDeserializer(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.ByteArrayDeserializer");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.ByteArrayDeserializer");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// </summary>
         public ByteArraySerializer(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.ByteArraySerializer");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.ByteArraySerializer");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// </summary>
         public ByteBufferDeserializer(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.ByteBufferDeserializer");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.ByteBufferDeserializer");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -169,7 +169,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// </summary>
         public ByteBufferSerializer(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.ByteBufferSerializer");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.ByteBufferSerializer");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -212,7 +212,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// </summary>
         public BytesDeserializer(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.BytesDeserializer");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.BytesDeserializer");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -255,7 +255,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// </summary>
         public BytesSerializer(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.BytesSerializer");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.BytesSerializer");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -343,7 +343,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// </summary>
         public DoubleDeserializer(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.DoubleDeserializer");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.DoubleDeserializer");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -386,7 +386,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// </summary>
         public DoubleSerializer(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.DoubleSerializer");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.DoubleSerializer");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -429,7 +429,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// </summary>
         public FloatDeserializer(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.FloatDeserializer");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.FloatDeserializer");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -472,7 +472,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// </summary>
         public FloatSerializer(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.FloatSerializer");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.FloatSerializer");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -515,7 +515,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// </summary>
         public IntegerDeserializer(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.IntegerDeserializer");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.IntegerDeserializer");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -558,7 +558,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// </summary>
         public IntegerSerializer(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.IntegerSerializer");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.IntegerSerializer");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -601,7 +601,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// </summary>
         public ListDeserializer(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.ListDeserializer");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.ListDeserializer");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -645,7 +645,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// </summary>
         public ListDeserializer(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.ListDeserializer");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.ListDeserializer");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -688,7 +688,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// </summary>
         public ListSerializer(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.ListSerializer");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.ListSerializer");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -732,7 +732,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// </summary>
         public ListSerializer(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.ListSerializer");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.ListSerializer");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -775,7 +775,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// </summary>
         public LongDeserializer(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.LongDeserializer");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.LongDeserializer");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -818,7 +818,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// </summary>
         public LongSerializer(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.LongSerializer");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.LongSerializer");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -861,7 +861,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// </summary>
         public Serde(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serde");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serde");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -905,7 +905,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// </summary>
         public Serde(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serde");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serde");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -948,7 +948,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// </summary>
         public Serdes(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serdes");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serdes");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -987,7 +987,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             /// </summary>
             public ByteArraySerde(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serdes$ByteArraySerde");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serdes$ByteArraySerde");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1030,7 +1030,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             /// </summary>
             public ByteBufferSerde(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serdes$ByteBufferSerde");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serdes$ByteBufferSerde");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1073,7 +1073,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             /// </summary>
             public BytesSerde(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serdes$BytesSerde");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serdes$BytesSerde");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1116,7 +1116,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             /// </summary>
             public DoubleSerde(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serdes$DoubleSerde");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serdes$DoubleSerde");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1159,7 +1159,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             /// </summary>
             public FloatSerde(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serdes$FloatSerde");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serdes$FloatSerde");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1202,7 +1202,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             /// </summary>
             public IntegerSerde(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serdes$IntegerSerde");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serdes$IntegerSerde");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1245,7 +1245,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             /// </summary>
             public ListSerde(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serdes$ListSerde");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serdes$ListSerde");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1289,7 +1289,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             /// </summary>
             public ListSerde(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serdes$ListSerde");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serdes$ListSerde");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1332,7 +1332,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             /// </summary>
             public LongSerde(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serdes$LongSerde");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serdes$LongSerde");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1375,7 +1375,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             /// </summary>
             public ShortSerde(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serdes$ShortSerde");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serdes$ShortSerde");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1418,7 +1418,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             /// </summary>
             public StringSerde(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serdes$StringSerde");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serdes$StringSerde");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1461,7 +1461,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             /// </summary>
             public UUIDSerde(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serdes$UUIDSerde");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serdes$UUIDSerde");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1504,7 +1504,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             /// </summary>
             public VoidSerde(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serdes$VoidSerde");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serdes$VoidSerde");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1547,7 +1547,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             /// </summary>
             public WrapperSerde(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serdes$WrapperSerde");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serdes$WrapperSerde");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1591,7 +1591,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             /// </summary>
             public WrapperSerde(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serdes$WrapperSerde");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.Serdes$WrapperSerde");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1683,7 +1683,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// </summary>
         public ShortDeserializer(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.ShortDeserializer");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.ShortDeserializer");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1726,7 +1726,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// </summary>
         public ShortSerializer(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.ShortSerializer");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.ShortSerializer");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1769,7 +1769,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// </summary>
         public StringDeserializer(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.StringDeserializer");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.StringDeserializer");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1812,7 +1812,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// </summary>
         public StringSerializer(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.StringSerializer");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.StringSerializer");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1855,7 +1855,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// </summary>
         public UUIDDeserializer(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.UUIDDeserializer");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.UUIDDeserializer");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1898,7 +1898,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// </summary>
         public UUIDSerializer(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.UUIDSerializer");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.UUIDSerializer");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1941,7 +1941,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// </summary>
         public VoidDeserializer(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.VoidDeserializer");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.serialization.VoidDeserializer");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

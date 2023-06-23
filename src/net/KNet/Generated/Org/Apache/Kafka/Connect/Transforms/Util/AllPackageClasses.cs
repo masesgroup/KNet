@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Util
         /// </summary>
         public NonEmptyListValidator(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.transforms.util.NonEmptyListValidator");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.transforms.util.NonEmptyListValidator");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Util
         /// </summary>
         public RegexValidator(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.transforms.util.RegexValidator");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.transforms.util.RegexValidator");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Util
         /// </summary>
         public Requirements(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.transforms.util.Requirements");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.transforms.util.Requirements");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -169,7 +169,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Util
         /// </summary>
         public SchemaUtil(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.transforms.util.SchemaUtil");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.transforms.util.SchemaUtil");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -212,7 +212,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Util
         /// </summary>
         public SimpleConfig(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.transforms.util.SimpleConfig");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.transforms.util.SimpleConfig");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

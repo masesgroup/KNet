@@ -56,7 +56,7 @@ namespace Org.Apache.Kafka.Streams.Errors
         /// </summary>
         public DefaultProductionExceptionHandler(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.errors.DefaultProductionExceptionHandler");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.errors.DefaultProductionExceptionHandler");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Streams.Errors
         /// </summary>
         public DeserializationExceptionHandler(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.errors.DeserializationExceptionHandler");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.errors.DeserializationExceptionHandler");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -138,7 +138,7 @@ namespace Org.Apache.Kafka.Streams.Errors
             /// </summary>
             public DeserializationHandlerResponse(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.errors.DeserializationExceptionHandler$DeserializationHandlerResponse");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.errors.DeserializationExceptionHandler$DeserializationHandlerResponse");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -233,7 +233,7 @@ namespace Org.Apache.Kafka.Streams.Errors
         /// </summary>
         public LogAndContinueExceptionHandler(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.errors.LogAndContinueExceptionHandler");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.errors.LogAndContinueExceptionHandler");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -276,7 +276,7 @@ namespace Org.Apache.Kafka.Streams.Errors
         /// </summary>
         public LogAndFailExceptionHandler(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.errors.LogAndFailExceptionHandler");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.errors.LogAndFailExceptionHandler");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -351,7 +351,7 @@ namespace Org.Apache.Kafka.Streams.Errors
         /// </summary>
         public ProductionExceptionHandler(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.errors.ProductionExceptionHandler");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.errors.ProductionExceptionHandler");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -390,7 +390,7 @@ namespace Org.Apache.Kafka.Streams.Errors
             /// </summary>
             public ProductionExceptionHandlerResponse(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.errors.ProductionExceptionHandler$ProductionExceptionHandlerResponse");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.errors.ProductionExceptionHandler$ProductionExceptionHandlerResponse");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -551,7 +551,7 @@ namespace Org.Apache.Kafka.Streams.Errors
             /// </summary>
             public StreamThreadExceptionResponse(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.errors.StreamsUncaughtExceptionHandler$StreamThreadExceptionResponse");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.errors.StreamsUncaughtExceptionHandler$StreamThreadExceptionResponse");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

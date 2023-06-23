@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Common.Memory
         /// </summary>
         public GarbageCollectedMemoryPool(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.memory.GarbageCollectedMemoryPool");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.memory.GarbageCollectedMemoryPool");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Common.Memory
         /// </summary>
         public MemoryPool(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.memory.MemoryPool");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.memory.MemoryPool");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Common.Memory
         /// </summary>
         public SimpleMemoryPool(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.memory.SimpleMemoryPool");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.memory.SimpleMemoryPool");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

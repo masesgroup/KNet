@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
         /// </summary>
         public Predicate(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.transforms.predicates.Predicate");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.transforms.predicates.Predicate");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -84,7 +84,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
         /// </summary>
         public Predicate(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.transforms.predicates.Predicate");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.transforms.predicates.Predicate");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -127,7 +127,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
         /// </summary>
         public HasHeaderKey(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.transforms.predicates.HasHeaderKey");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.transforms.predicates.HasHeaderKey");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -171,7 +171,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
         /// </summary>
         public HasHeaderKey(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.transforms.predicates.HasHeaderKey");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.transforms.predicates.HasHeaderKey");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -214,7 +214,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
         /// </summary>
         public RecordIsTombstone(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.transforms.predicates.RecordIsTombstone");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.transforms.predicates.RecordIsTombstone");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -258,7 +258,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
         /// </summary>
         public RecordIsTombstone(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.transforms.predicates.RecordIsTombstone");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.transforms.predicates.RecordIsTombstone");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -301,7 +301,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
         /// </summary>
         public TopicNameMatches(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.transforms.predicates.TopicNameMatches");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.transforms.predicates.TopicNameMatches");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -345,7 +345,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
         /// </summary>
         public TopicNameMatches(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.transforms.predicates.TopicNameMatches");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.transforms.predicates.TopicNameMatches");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

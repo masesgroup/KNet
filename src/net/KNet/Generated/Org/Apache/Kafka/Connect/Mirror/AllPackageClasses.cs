@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// </summary>
         public ConfigPropertyFilter(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.ConfigPropertyFilter");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.ConfigPropertyFilter");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// </summary>
         public DefaultConfigPropertyFilter(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.DefaultConfigPropertyFilter");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.DefaultConfigPropertyFilter");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// </summary>
         public DefaultGroupFilter(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.DefaultGroupFilter");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.DefaultGroupFilter");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -169,7 +169,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// </summary>
         public DefaultTopicFilter(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.DefaultTopicFilter");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.DefaultTopicFilter");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -212,7 +212,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// </summary>
         public GroupFilter(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.GroupFilter");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.GroupFilter");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -244,7 +244,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorCheckpointConfig.html"/>
     /// </summary>
-    public partial class MirrorCheckpointConfig : Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig, MASES.JNet.Specific.IJNetBridgeMain
+    public partial class MirrorCheckpointConfig : Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -255,7 +255,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// </summary>
         public MirrorCheckpointConfig(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.MirrorCheckpointConfig");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.MirrorCheckpointConfig");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -298,7 +298,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// </summary>
         public MirrorCheckpointConnector(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.MirrorCheckpointConnector");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.MirrorCheckpointConnector");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -341,7 +341,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// </summary>
         public MirrorCheckpointTask(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.MirrorCheckpointTask");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.MirrorCheckpointTask");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -384,7 +384,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// </summary>
         public MirrorCheckpointTaskConfig(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.MirrorCheckpointTaskConfig");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.MirrorCheckpointTaskConfig");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -427,7 +427,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// </summary>
         public MirrorConnectorConfig(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.MirrorConnectorConfig");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.MirrorConnectorConfig");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -459,7 +459,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorHeartbeatConfig.html"/>
     /// </summary>
-    public partial class MirrorHeartbeatConfig : Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig, MASES.JNet.Specific.IJNetBridgeMain
+    public partial class MirrorHeartbeatConfig : Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -470,7 +470,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// </summary>
         public MirrorHeartbeatConfig(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.MirrorHeartbeatConfig");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.MirrorHeartbeatConfig");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -513,7 +513,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// </summary>
         public MirrorHeartbeatConnector(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.MirrorHeartbeatConnector");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.MirrorHeartbeatConnector");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -556,7 +556,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// </summary>
         public MirrorHeartbeatTask(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.MirrorHeartbeatTask");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.MirrorHeartbeatTask");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -588,7 +588,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorMaker.html"/>
     /// </summary>
-    public partial class MirrorMaker : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MirrorMaker>, MASES.JNet.Specific.IJNetBridgeMain
+    public partial class MirrorMaker : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MirrorMaker>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -599,7 +599,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// </summary>
         public MirrorMaker(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.MirrorMaker");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.MirrorMaker");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -642,7 +642,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// </summary>
         public MirrorMakerConfig(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.MirrorMakerConfig");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.MirrorMakerConfig");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -674,7 +674,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/org/apache/kafka/connect/mirror/MirrorSourceConfig.html"/>
     /// </summary>
-    public partial class MirrorSourceConfig : Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig, MASES.JNet.Specific.IJNetBridgeMain
+    public partial class MirrorSourceConfig : Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -685,7 +685,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// </summary>
         public MirrorSourceConfig(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.MirrorSourceConfig");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.MirrorSourceConfig");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -728,7 +728,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// </summary>
         public MirrorSourceConnector(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.MirrorSourceConnector");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.MirrorSourceConnector");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -771,7 +771,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// </summary>
         public MirrorSourceTask(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.MirrorSourceTask");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.MirrorSourceTask");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -814,7 +814,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// </summary>
         public MirrorSourceTaskConfig(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.MirrorSourceTaskConfig");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.MirrorSourceTaskConfig");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -857,7 +857,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// </summary>
         public OffsetSync(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.OffsetSync");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.OffsetSync");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -900,7 +900,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// </summary>
         public TopicFilter(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.TopicFilter");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.TopicFilter");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -943,7 +943,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// </summary>
         public Checkpoint(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.Checkpoint");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.Checkpoint");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -986,7 +986,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// </summary>
         public DefaultReplicationPolicy(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.DefaultReplicationPolicy");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.DefaultReplicationPolicy");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1029,7 +1029,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// </summary>
         public Heartbeat(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.Heartbeat");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.Heartbeat");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1072,7 +1072,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// </summary>
         public IdentityReplicationPolicy(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.IdentityReplicationPolicy");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.IdentityReplicationPolicy");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1115,7 +1115,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// </summary>
         public MirrorClient(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.MirrorClient");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.MirrorClient");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1158,7 +1158,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// </summary>
         public MirrorClientConfig(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.MirrorClientConfig");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.MirrorClientConfig");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1201,7 +1201,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// </summary>
         public RemoteClusterUtils(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.RemoteClusterUtils");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.RemoteClusterUtils");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1244,7 +1244,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// </summary>
         public ReplicationPolicy(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.ReplicationPolicy");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.ReplicationPolicy");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1287,7 +1287,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// </summary>
         public SourceAndTarget(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.SourceAndTarget");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.mirror.SourceAndTarget");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

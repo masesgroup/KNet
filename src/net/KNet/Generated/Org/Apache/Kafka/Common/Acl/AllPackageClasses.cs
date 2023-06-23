@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Common.Acl
         /// </summary>
         public AccessControlEntry(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.acl.AccessControlEntry");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.acl.AccessControlEntry");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Common.Acl
         /// </summary>
         public AccessControlEntryFilter(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.acl.AccessControlEntryFilter");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.acl.AccessControlEntryFilter");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Common.Acl
         /// </summary>
         public AclBinding(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.acl.AclBinding");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.acl.AclBinding");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -169,7 +169,7 @@ namespace Org.Apache.Kafka.Common.Acl
         /// </summary>
         public AclBindingFilter(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.acl.AclBindingFilter");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.acl.AclBindingFilter");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -212,7 +212,7 @@ namespace Org.Apache.Kafka.Common.Acl
         /// </summary>
         public AclOperation(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.acl.AclOperation");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.acl.AclOperation");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -255,7 +255,7 @@ namespace Org.Apache.Kafka.Common.Acl
         /// </summary>
         public AclPermissionType(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.acl.AclPermissionType");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.acl.AclPermissionType");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

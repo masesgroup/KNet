@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain
         /// </summary>
         public PlainAuthenticateCallback(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.plain.PlainAuthenticateCallback");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.plain.PlainAuthenticateCallback");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain
         /// </summary>
         public PlainLoginModule(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.plain.PlainLoginModule");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.plain.PlainLoginModule");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

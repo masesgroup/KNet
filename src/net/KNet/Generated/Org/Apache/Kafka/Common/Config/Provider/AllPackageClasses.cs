@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
         /// </summary>
         public ConfigProvider(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.config.provider.ConfigProvider");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.config.provider.ConfigProvider");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
         /// </summary>
         public DirectoryConfigProvider(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.config.provider.DirectoryConfigProvider");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.config.provider.DirectoryConfigProvider");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
         /// </summary>
         public FileConfigProvider(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.config.provider.FileConfigProvider");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.config.provider.FileConfigProvider");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

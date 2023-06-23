@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Tools
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/ClientCompatibilityTest.html"/>
     /// </summary>
-    public partial class ClientCompatibilityTest : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ClientCompatibilityTest>, MASES.JNet.Specific.IJNetBridgeMain
+    public partial class ClientCompatibilityTest : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ClientCompatibilityTest>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Tools
         /// </summary>
         public ClientCompatibilityTest(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.tools.ClientCompatibilityTest");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.tools.ClientCompatibilityTest");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -72,7 +72,7 @@ namespace Org.Apache.Kafka.Tools
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/MetadataQuorumCommand.html"/>
     /// </summary>
-    public partial class MetadataQuorumCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MetadataQuorumCommand>, MASES.JNet.Specific.IJNetBridgeMain
+    public partial class MetadataQuorumCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MetadataQuorumCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Tools
         /// </summary>
         public MetadataQuorumCommand(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.tools.MetadataQuorumCommand");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.tools.MetadataQuorumCommand");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Tools
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/OAuthCompatibilityTool.html"/>
     /// </summary>
-    public partial class OAuthCompatibilityTool : MASES.JCOBridge.C2JBridge.JVMBridgeBase<OAuthCompatibilityTool>, MASES.JNet.Specific.IJNetBridgeMain
+    public partial class OAuthCompatibilityTool : MASES.JCOBridge.C2JBridge.JVMBridgeBase<OAuthCompatibilityTool>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Tools
         /// </summary>
         public OAuthCompatibilityTool(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.tools.OAuthCompatibilityTool");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.tools.OAuthCompatibilityTool");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -158,7 +158,7 @@ namespace Org.Apache.Kafka.Tools
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/ProducerPerformance.html"/>
     /// </summary>
-    public partial class ProducerPerformance : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ProducerPerformance>, MASES.JNet.Specific.IJNetBridgeMain
+    public partial class ProducerPerformance : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ProducerPerformance>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -169,7 +169,7 @@ namespace Org.Apache.Kafka.Tools
         /// </summary>
         public ProducerPerformance(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.tools.ProducerPerformance");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.tools.ProducerPerformance");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -212,7 +212,7 @@ namespace Org.Apache.Kafka.Tools
         /// </summary>
         public PushHttpMetricsReporter(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.tools.PushHttpMetricsReporter");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.tools.PushHttpMetricsReporter");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -271,7 +271,7 @@ namespace Org.Apache.Kafka.Tools
         /// </summary>
         public ThroughputThrottler(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.tools.ThroughputThrottler");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.tools.ThroughputThrottler");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -303,7 +303,7 @@ namespace Org.Apache.Kafka.Tools
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/TransactionalMessageCopier.html"/>
     /// </summary>
-    public partial class TransactionalMessageCopier : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TransactionalMessageCopier>, MASES.JNet.Specific.IJNetBridgeMain
+    public partial class TransactionalMessageCopier : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TransactionalMessageCopier>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -314,7 +314,7 @@ namespace Org.Apache.Kafka.Tools
         /// </summary>
         public TransactionalMessageCopier(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.tools.TransactionalMessageCopier");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.tools.TransactionalMessageCopier");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -346,7 +346,7 @@ namespace Org.Apache.Kafka.Tools
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/TransactionsCommand.html"/>
     /// </summary>
-    public partial class TransactionsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TransactionsCommand>, MASES.JNet.Specific.IJNetBridgeMain
+    public partial class TransactionsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TransactionsCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -357,7 +357,7 @@ namespace Org.Apache.Kafka.Tools
         /// </summary>
         public TransactionsCommand(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.tools.TransactionsCommand");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.tools.TransactionsCommand");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -389,7 +389,7 @@ namespace Org.Apache.Kafka.Tools
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableConsumer.html"/>
     /// </summary>
-    public partial class VerifiableConsumer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<VerifiableConsumer>, MASES.JNet.Specific.IJNetBridgeMain
+    public partial class VerifiableConsumer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<VerifiableConsumer>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -400,7 +400,7 @@ namespace Org.Apache.Kafka.Tools
         /// </summary>
         public VerifiableConsumer(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.tools.VerifiableConsumer");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.tools.VerifiableConsumer");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -432,7 +432,7 @@ namespace Org.Apache.Kafka.Tools
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableLog4jAppender.html"/>
     /// </summary>
-    public partial class VerifiableLog4jAppender : MASES.JCOBridge.C2JBridge.JVMBridgeBase<VerifiableLog4jAppender>, MASES.JNet.Specific.IJNetBridgeMain
+    public partial class VerifiableLog4jAppender : MASES.JCOBridge.C2JBridge.JVMBridgeBase<VerifiableLog4jAppender>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -443,7 +443,7 @@ namespace Org.Apache.Kafka.Tools
         /// </summary>
         public VerifiableLog4jAppender(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.tools.VerifiableLog4jAppender");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.tools.VerifiableLog4jAppender");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -475,7 +475,7 @@ namespace Org.Apache.Kafka.Tools
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/org/apache/kafka/tools/VerifiableProducer.html"/>
     /// </summary>
-    public partial class VerifiableProducer : Java.Lang.AutoCloseable, MASES.JNet.Specific.IJNetBridgeMain
+    public partial class VerifiableProducer : Java.Lang.AutoCloseable, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -486,7 +486,7 @@ namespace Org.Apache.Kafka.Tools
         /// </summary>
         public VerifiableProducer(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.tools.VerifiableProducer");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.tools.VerifiableProducer");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

@@ -53,14 +53,6 @@ namespace Org.Apache.Kafka.Common.Metrics
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public partial class MetricsReporter : IMetricsReporter
     {
-        void ConfigureEventHandler(object sender, CLRListenerEventArgs<CLREventData<Map<string, object>>> data)
-        {
-            Configure(data.EventData.TypedEventData);
-        }
 
-        public virtual void Configure(Map<string, object> configs)
-        {
-
-        }
     }
 }

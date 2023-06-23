@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Common.Annotation
         /// </summary>
         public InterfaceStability(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.annotation.InterfaceStability");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.annotation.InterfaceStability");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -79,7 +79,7 @@ namespace Org.Apache.Kafka.Common.Annotation
             /// </summary>
             public Evolving(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.annotation.InterfaceStability$Evolving");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.annotation.InterfaceStability$Evolving");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -122,7 +122,7 @@ namespace Org.Apache.Kafka.Common.Annotation
             /// </summary>
             public Stable(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.annotation.InterfaceStability$Stable");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.annotation.InterfaceStability$Stable");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -165,7 +165,7 @@ namespace Org.Apache.Kafka.Common.Annotation
             /// </summary>
             public Unstable(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.annotation.InterfaceStability$Unstable");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.annotation.InterfaceStability$Unstable");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
         /// </summary>
         public AbstractLogin(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.authenticator.AbstractLogin");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.authenticator.AbstractLogin");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -79,7 +79,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
             /// </summary>
             public DefaultLoginCallbackHandler(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.authenticator.AbstractLogin$DefaultLoginCallbackHandler");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.authenticator.AbstractLogin$DefaultLoginCallbackHandler");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
         /// </summary>
         public CredentialCache(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.authenticator.CredentialCache");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.authenticator.CredentialCache");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -165,7 +165,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
             /// </summary>
             public Cache(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.authenticator.CredentialCache$Cache");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.authenticator.CredentialCache$Cache");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -209,7 +209,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
             /// </summary>
             public Cache(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.authenticator.CredentialCache$Cache");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.authenticator.CredentialCache$Cache");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -256,7 +256,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
         /// </summary>
         public DefaultKafkaPrincipalBuilder(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.authenticator.DefaultKafkaPrincipalBuilder");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.authenticator.DefaultKafkaPrincipalBuilder");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -299,7 +299,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
         /// </summary>
         public DefaultLogin(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.authenticator.DefaultLogin");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.authenticator.DefaultLogin");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -342,7 +342,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
         /// </summary>
         public LoginManager(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.authenticator.LoginManager");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.authenticator.LoginManager");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -385,7 +385,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
         /// </summary>
         public SaslClientAuthenticator(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.authenticator.SaslClientAuthenticator");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.authenticator.SaslClientAuthenticator");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -424,7 +424,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
             /// </summary>
             public SaslState(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$SaslState");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.authenticator.SaslClientAuthenticator$SaslState");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -471,7 +471,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
         /// </summary>
         public SaslClientCallbackHandler(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.authenticator.SaslClientCallbackHandler");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.authenticator.SaslClientCallbackHandler");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -514,7 +514,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
         /// </summary>
         public SaslInternalConfigs(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.authenticator.SaslInternalConfigs");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.authenticator.SaslInternalConfigs");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -557,7 +557,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
         /// </summary>
         public SaslServerAuthenticator(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.authenticator.SaslServerAuthenticator");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.authenticator.SaslServerAuthenticator");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -600,7 +600,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
         /// </summary>
         public SaslServerCallbackHandler(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.authenticator.SaslServerCallbackHandler");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.security.authenticator.SaslServerCallbackHandler");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

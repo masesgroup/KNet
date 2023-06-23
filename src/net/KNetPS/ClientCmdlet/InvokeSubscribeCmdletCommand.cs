@@ -57,7 +57,7 @@ namespace MASES.KNetPS.ClientCmdlet
         {
             if (Topic != null)
             {
-                Consumer.Subscribe(Collections.Singleton(Topic));
+                Consumer.Subscribe(Collections.Singleton(Topic).ToCollection());
             }
             else if (PatternRegEx != null)
             {

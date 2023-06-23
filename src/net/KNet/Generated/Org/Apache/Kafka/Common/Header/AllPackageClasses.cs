@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Common.Header
         /// </summary>
         public Header(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.header.Header");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.header.Header");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Common.Header
         /// </summary>
         public Headers(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.header.Headers");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.header.Headers");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

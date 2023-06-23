@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// </summary>
         public CompoundStat(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.CompoundStat");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.CompoundStat");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -79,7 +79,7 @@ namespace Org.Apache.Kafka.Common.Metrics
             /// </summary>
             public NamedMeasurable(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.CompoundStat$NamedMeasurable");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.CompoundStat$NamedMeasurable");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// </summary>
         public Gauge(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.Gauge");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.Gauge");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -170,7 +170,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// </summary>
         public Gauge(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.Gauge");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.Gauge");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -213,7 +213,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// </summary>
         public JmxReporter(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.JmxReporter");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.JmxReporter");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -256,7 +256,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// </summary>
         public KafkaMetric(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.KafkaMetric");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.KafkaMetric");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -299,7 +299,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// </summary>
         public KafkaMetricsContext(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.KafkaMetricsContext");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.KafkaMetricsContext");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -342,7 +342,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// </summary>
         public Measurable(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.Measurable");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.Measurable");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -385,7 +385,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// </summary>
         public MeasurableStat(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.MeasurableStat");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.MeasurableStat");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -428,7 +428,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// </summary>
         public MetricConfig(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.MetricConfig");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.MetricConfig");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -471,7 +471,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// </summary>
         public Metrics(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.Metrics");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.Metrics");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -514,7 +514,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// </summary>
         public MetricsContext(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.MetricsContext");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.MetricsContext");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -579,7 +579,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// </summary>
         public MetricValueProvider(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.MetricValueProvider");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.MetricValueProvider");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -623,7 +623,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// </summary>
         public MetricValueProvider(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.MetricValueProvider");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.MetricValueProvider");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -666,7 +666,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// </summary>
         public Quota(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.Quota");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.Quota");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -725,7 +725,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// </summary>
         public Sensor(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.Sensor");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.Sensor");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -764,7 +764,7 @@ namespace Org.Apache.Kafka.Common.Metrics
             /// </summary>
             public RecordingLevel(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.Sensor$RecordingLevel");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.Sensor$RecordingLevel");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -811,7 +811,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// </summary>
         public Stat(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.Stat");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.metrics.Stat");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

@@ -16,6 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
 using MASES.JNet.Specific;
 
 namespace Kafka
@@ -23,7 +24,7 @@ namespace Kafka
     /// <summary>
     /// Class managing Kafka start
     /// </summary>
-    public class KafkaStart : JNetBridgeMain<KafkaStart>
+    public class KafkaStart : JVMBridgeMainExtensible<KafkaStart>
     {
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

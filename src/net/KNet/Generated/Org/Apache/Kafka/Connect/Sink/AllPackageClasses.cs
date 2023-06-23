@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Connect.Sink
         /// </summary>
         public ErrantRecordReporter(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.sink.ErrantRecordReporter");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.sink.ErrantRecordReporter");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Connect.Sink
         /// </summary>
         public SinkConnector(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.sink.SinkConnector");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.sink.SinkConnector");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Connect.Sink
         /// </summary>
         public SinkConnectorContext(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.sink.SinkConnectorContext");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.sink.SinkConnectorContext");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -169,7 +169,7 @@ namespace Org.Apache.Kafka.Connect.Sink
         /// </summary>
         public SinkRecord(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.sink.SinkRecord");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.sink.SinkRecord");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -212,7 +212,7 @@ namespace Org.Apache.Kafka.Connect.Sink
         /// </summary>
         public SinkTask(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.sink.SinkTask");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.sink.SinkTask");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -255,7 +255,7 @@ namespace Org.Apache.Kafka.Connect.Sink
         /// </summary>
         public SinkTaskContext(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.sink.SinkTaskContext");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.sink.SinkTaskContext");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

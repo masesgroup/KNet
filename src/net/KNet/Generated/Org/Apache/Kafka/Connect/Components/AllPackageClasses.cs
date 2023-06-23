@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Connect.Components
         /// </summary>
         public Versioned(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.components.Versioned");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.components.Versioned");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

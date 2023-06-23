@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Connect.Header
         /// </summary>
         public ConnectHeaders(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.header.ConnectHeaders");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.header.ConnectHeaders");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Connect.Header
         /// </summary>
         public Header(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.header.Header");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.header.Header");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Connect.Header
         /// </summary>
         public Headers(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.header.Headers");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.header.Headers");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -165,7 +165,7 @@ namespace Org.Apache.Kafka.Connect.Header
             /// </summary>
             public HeaderTransform(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.header.Headers$HeaderTransform");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.connect.header.Headers$HeaderTransform");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

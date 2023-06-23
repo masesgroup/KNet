@@ -78,7 +78,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// </summary>
         public KafkaProducer(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.producer.KafkaProducer");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.producer.KafkaProducer");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// </summary>
         public KafkaProducer(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.producer.KafkaProducer");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.producer.KafkaProducer");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -166,7 +166,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// </summary>
         public MockProducer(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.producer.MockProducer");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.producer.MockProducer");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -211,7 +211,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// </summary>
         public MockProducer(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.producer.MockProducer");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.producer.MockProducer");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -254,7 +254,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// </summary>
         public Partitioner(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.producer.Partitioner");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.producer.Partitioner");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -297,7 +297,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// </summary>
         public Producer(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.producer.Producer");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.producer.Producer");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -342,7 +342,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// </summary>
         public Producer(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.producer.Producer");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.producer.Producer");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -374,7 +374,7 @@ namespace Org.Apache.Kafka.Clients.Producer
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/org/apache/kafka/clients/producer/ProducerConfig.html"/>
     /// </summary>
-    public partial class ProducerConfig : Org.Apache.Kafka.Common.Config.AbstractConfig, MASES.JNet.Specific.IJNetBridgeMain
+    public partial class ProducerConfig : Org.Apache.Kafka.Common.Config.AbstractConfig, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -385,7 +385,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// </summary>
         public ProducerConfig(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.producer.ProducerConfig");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.producer.ProducerConfig");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -428,7 +428,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// </summary>
         public ProducerInterceptor(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.producer.ProducerInterceptor");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.producer.ProducerInterceptor");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -473,7 +473,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// </summary>
         public ProducerInterceptor(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.producer.ProducerInterceptor");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.producer.ProducerInterceptor");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -516,7 +516,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// </summary>
         public ProducerRecord(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.producer.ProducerRecord");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.producer.ProducerRecord");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -561,7 +561,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// </summary>
         public ProducerRecord(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.producer.ProducerRecord");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.producer.ProducerRecord");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -604,7 +604,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// </summary>
         public RecordMetadata(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.producer.RecordMetadata");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.producer.RecordMetadata");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -647,7 +647,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// </summary>
         public RoundRobinPartitioner(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.producer.RoundRobinPartitioner");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.clients.producer.RoundRobinPartitioner");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

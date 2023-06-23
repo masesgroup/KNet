@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Streams
         /// </summary>
         public KafkaClientSupplier(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.KafkaClientSupplier");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.KafkaClientSupplier");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Streams
         /// </summary>
         public KafkaStreams(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.KafkaStreams");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.KafkaStreams");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -122,7 +122,7 @@ namespace Org.Apache.Kafka.Streams
             /// </summary>
             public CloseOptions(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.KafkaStreams$CloseOptions");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.KafkaStreams$CloseOptions");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -165,7 +165,7 @@ namespace Org.Apache.Kafka.Streams
             /// </summary>
             public State(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.KafkaStreams$State");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.KafkaStreams$State");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -234,7 +234,7 @@ namespace Org.Apache.Kafka.Streams
         /// </summary>
         public KeyQueryMetadata(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.KeyQueryMetadata");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.KeyQueryMetadata");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -277,7 +277,7 @@ namespace Org.Apache.Kafka.Streams
         /// </summary>
         public KeyValue(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.KeyValue");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.KeyValue");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -322,7 +322,7 @@ namespace Org.Apache.Kafka.Streams
         /// </summary>
         public KeyValue(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.KeyValue");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.KeyValue");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -365,7 +365,7 @@ namespace Org.Apache.Kafka.Streams
         /// </summary>
         public LagInfo(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.LagInfo");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.LagInfo");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -408,7 +408,7 @@ namespace Org.Apache.Kafka.Streams
         /// </summary>
         public StoreQueryParameters(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.StoreQueryParameters");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.StoreQueryParameters");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -452,7 +452,7 @@ namespace Org.Apache.Kafka.Streams
         /// </summary>
         public StoreQueryParameters(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.StoreQueryParameters");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.StoreQueryParameters");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -495,7 +495,7 @@ namespace Org.Apache.Kafka.Streams
         /// </summary>
         public StreamsBuilder(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.StreamsBuilder");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.StreamsBuilder");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -527,7 +527,7 @@ namespace Org.Apache.Kafka.Streams
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/StreamsConfig.html"/>
     /// </summary>
-    public partial class StreamsConfig : Org.Apache.Kafka.Common.Config.AbstractConfig, MASES.JNet.Specific.IJNetBridgeMain
+    public partial class StreamsConfig : Org.Apache.Kafka.Common.Config.AbstractConfig, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -538,7 +538,7 @@ namespace Org.Apache.Kafka.Streams
         /// </summary>
         public StreamsConfig(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.StreamsConfig");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.StreamsConfig");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -577,7 +577,7 @@ namespace Org.Apache.Kafka.Streams
             /// </summary>
             public InternalConfig(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.StreamsConfig$InternalConfig");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.StreamsConfig$InternalConfig");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -624,7 +624,7 @@ namespace Org.Apache.Kafka.Streams
         /// </summary>
         public StreamsMetadata(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.StreamsMetadata");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.StreamsMetadata");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -667,7 +667,7 @@ namespace Org.Apache.Kafka.Streams
         /// </summary>
         public StreamsMetrics(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.StreamsMetrics");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.StreamsMetrics");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -710,7 +710,7 @@ namespace Org.Apache.Kafka.Streams
         /// </summary>
         public TaskMetadata(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.TaskMetadata");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.TaskMetadata");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -753,7 +753,7 @@ namespace Org.Apache.Kafka.Streams
         /// </summary>
         public ThreadMetadata(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.ThreadMetadata");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.ThreadMetadata");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -796,7 +796,7 @@ namespace Org.Apache.Kafka.Streams
         /// </summary>
         public Topology(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.Topology");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.Topology");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -835,7 +835,7 @@ namespace Org.Apache.Kafka.Streams
             /// </summary>
             public AutoOffsetReset(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.Topology$AutoOffsetReset");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.Topology$AutoOffsetReset");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -882,7 +882,7 @@ namespace Org.Apache.Kafka.Streams
         /// </summary>
         public TopologyConfig(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.TopologyConfig");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.TopologyConfig");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -921,7 +921,7 @@ namespace Org.Apache.Kafka.Streams
             /// </summary>
             public TaskConfig(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.TopologyConfig$TaskConfig");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.TopologyConfig$TaskConfig");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -968,7 +968,7 @@ namespace Org.Apache.Kafka.Streams
         /// </summary>
         public TopologyDescription(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.TopologyDescription");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.TopologyDescription");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1007,7 +1007,7 @@ namespace Org.Apache.Kafka.Streams
             /// </summary>
             public GlobalStore(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.TopologyDescription$GlobalStore");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.TopologyDescription$GlobalStore");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1050,7 +1050,7 @@ namespace Org.Apache.Kafka.Streams
             /// </summary>
             public Node(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.TopologyDescription$Node");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.TopologyDescription$Node");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1093,7 +1093,7 @@ namespace Org.Apache.Kafka.Streams
             /// </summary>
             public Processor(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.TopologyDescription$Processor");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.TopologyDescription$Processor");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1136,7 +1136,7 @@ namespace Org.Apache.Kafka.Streams
             /// </summary>
             public Sink(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.TopologyDescription$Sink");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.TopologyDescription$Sink");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1179,7 +1179,7 @@ namespace Org.Apache.Kafka.Streams
             /// </summary>
             public Source(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.TopologyDescription$Source");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.TopologyDescription$Source");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1222,7 +1222,7 @@ namespace Org.Apache.Kafka.Streams
             /// </summary>
             public Subtopology(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.TopologyDescription$Subtopology");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.streams.TopologyDescription$Subtopology");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>

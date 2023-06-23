@@ -40,7 +40,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// </summary>
         public AbstractLegacyRecordBatch(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.AbstractLegacyRecordBatch");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.AbstractLegacyRecordBatch");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// </summary>
         public CompressionType(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.CompressionType");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.CompressionType");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// </summary>
         public ControlRecordType(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.ControlRecordType");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.ControlRecordType");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -169,7 +169,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// </summary>
         public ControlRecordUtils(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.ControlRecordUtils");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.ControlRecordUtils");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -212,7 +212,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// </summary>
         public DefaultRecordBatch(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.DefaultRecordBatch");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.DefaultRecordBatch");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -255,7 +255,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// </summary>
         public FileLogInputStream(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.FileLogInputStream");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.FileLogInputStream");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -294,7 +294,7 @@ namespace Org.Apache.Kafka.Common.Record
             /// </summary>
             public FileChannelRecordBatch(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.FileLogInputStream$FileChannelRecordBatch");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.FileLogInputStream$FileChannelRecordBatch");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -341,7 +341,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// </summary>
         public LazyDownConversionRecords(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.LazyDownConversionRecords");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.LazyDownConversionRecords");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -384,7 +384,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// </summary>
         public LegacyRecord(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.LegacyRecord");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.LegacyRecord");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -427,7 +427,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// </summary>
         public MemoryRecordsBuilder(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.MemoryRecordsBuilder");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.MemoryRecordsBuilder");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -466,7 +466,7 @@ namespace Org.Apache.Kafka.Common.Record
             /// </summary>
             public RecordsInfo(params object[] args) : base(args) { }
 
-            private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.MemoryRecordsBuilder$RecordsInfo");
+            private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.MemoryRecordsBuilder$RecordsInfo");
 
             /// <summary>
             /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -513,7 +513,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// </summary>
         public MultiRecordsSend(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.MultiRecordsSend");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.MultiRecordsSend");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -556,7 +556,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// </summary>
         public MutableRecordBatch(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.MutableRecordBatch");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.MutableRecordBatch");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -599,7 +599,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// </summary>
         public Record(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.Record");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.Record");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -642,7 +642,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// </summary>
         public RecordBatch(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.RecordBatch");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.RecordBatch");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -685,7 +685,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// </summary>
         public RecordConversionStats(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.RecordConversionStats");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.RecordConversionStats");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -728,7 +728,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// </summary>
         public RecordsUtil(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.RecordsUtil");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.RecordsUtil");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -771,7 +771,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// </summary>
         public RecordVersion(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.RecordVersion");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.RecordVersion");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -814,7 +814,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// </summary>
         public SimpleRecord(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.SimpleRecord");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.SimpleRecord");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -857,7 +857,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// </summary>
         public TimestampType(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.TimestampType");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.TimestampType");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -900,7 +900,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// </summary>
         public TransferableRecords(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.TransferableRecords");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.TransferableRecords");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -943,7 +943,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// </summary>
         public UnalignedFileRecords(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.UnalignedFileRecords");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.UnalignedFileRecords");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -986,7 +986,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// </summary>
         public UnalignedMemoryRecords(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.UnalignedMemoryRecords");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.UnalignedMemoryRecords");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
@@ -1029,7 +1029,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// </summary>
         public UnalignedRecords(params object[] args) : base(args) { }
 
-        private static IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.UnalignedRecords");
+        private static readonly IJavaType LocalBridgeClazz = ClazzOf("org.apache.kafka.common.record.UnalignedRecords");
 
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
