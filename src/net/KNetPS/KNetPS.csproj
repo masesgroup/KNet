@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<Import Project="..\Common\Common.props" />
 	<PropertyGroup>
-		<OutputType>Exe</OutputType>
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 		<AssemblyName>MASES.KNetPS</AssemblyName>
 		<RootNamespace>MASES.KNetPS</RootNamespace>
