@@ -42,7 +42,7 @@
         <classpathfile>${basedir}/classpathfile.classpath</classpathfile>
         <kafkaVersion>3.4.0</kafkaVersion>
 		<knetVersion>1.5.4.0</knetVersion>
-        <jcobridgeVersion>2.5.7</jcobridgeVersion>
+        <jcobridgeVersion>2.5.8</jcobridgeVersion>
     </properties>
     <distributionManagement>
         <snapshotRepository>
