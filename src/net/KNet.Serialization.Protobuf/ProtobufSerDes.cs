@@ -17,7 +17,7 @@
 */
 
 using Google.Protobuf;
-using MASES.KNet.Common.Header;
+using Org.Apache.Kafka.Common.Header;
 using System.IO;
 
 namespace MASES.KNet.Serialization.Protobuf

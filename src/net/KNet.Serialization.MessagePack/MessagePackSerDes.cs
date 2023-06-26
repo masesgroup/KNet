@@ -16,7 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common.Header;
+using Org.Apache.Kafka.Common.Header;
 using MessagePack;
 using System.IO;
 
