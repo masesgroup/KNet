@@ -24,6 +24,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using MASES.KNet.Admin;
 
 namespace MASES.KNet.Benchmark
 {

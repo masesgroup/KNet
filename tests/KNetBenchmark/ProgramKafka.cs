@@ -18,6 +18,8 @@
 
 using Java.Util;
 using MASES.JCOBridge.C2JBridge;
+using MASES.KNet.Consumer;
+using MASES.KNet.Producer;
 using Org.Apache.Kafka.Clients.Consumer;
 using Org.Apache.Kafka.Clients.Producer;
 using Org.Apache.Kafka.Common.Serialization;
@@ -41,7 +43,7 @@ namespace MASES.KNet.Benchmark
             {
                 Properties props = ProducerConfigBuilder.Create()
                                                         .WithBootstrapServers(Server)
-                                                        .WithAcks(Acks ? ProducerConfig.Acks.One : ProducerConfig.Acks.None)
+                                                        .WithAcks(Acks ? ProducerConfigBuilder.AcksTypes.One : ProducerConfigBuilder.AcksTypes.None)
                                                         .WithRetries(MessageSendMaxRetries)
                                                         .WithLingerMs(LingerMs)
                                                         .WithBatchSize(BatchSize)
@@ -55,16 +57,22 @@ namespace MASES.KNet.Benchmark
                                                         .ToProperties();
                 if (UseSerdes)
                 {
-                    kafkaKeySerializer = new Serializer<long>(serializeWithHeadersFun: (topic, headers, data) =>
+                    kafkaKeySerializer = new Serializer<long>()
                     {
-                        var key = BitConverter.GetBytes(data);
-                        return key;
-                    });
-                    kafkaValueSerializer = new Serializer<byte[]>(serializeWithHeadersFun: (topic, headers, data) =>
+                        OnSerialize3 = (topic, headers, data) =>
+                        {
+                            var key = BitConverter.GetBytes(data);
+                            return key;
+                        }
+                    };
+                    kafkaValueSerializer = new Serializer<byte[]>()
                     {
-                        // var value = Encoding.Unicode.GetBytes(data);
-                        return data;
-                    });
+                        OnSerialize3 = (topic, headers, data) =>
+                        {
+                            // var value = Encoding.Unicode.GetBytes(data);
+                            return data;
+                        }
+                    };
                 }
 
                 kafkaProducer = UseSerdes ? new KafkaProducer<long, byte[]>(props, kafkaKeySerializer, kafkaValueSerializer) : new KafkaProducer<long, byte[]>(props);
@@ -83,11 +91,14 @@ namespace MASES.KNet.Benchmark
 
                 if (UseCallback && kafkaCallback == null)
                 {
-                    kafkaCallback = new Callback((o1, o2) =>
+                    kafkaCallback = new Callback()
                     {
-                        if (o2 != null) Console.WriteLine(o2.ToString());
-                        else if (ShowLogs) Console.WriteLine($"Produced on topic {o1.Topic} at offset {o1.Offset}");
-                    });
+                        OnOnCompletion = (o1, o2) =>
+                        {
+                            if (o2 != null) Console.WriteLine(o2.ToString());
+                            else if (ShowLogs) Console.WriteLine($"Produced on topic {o1.Topic()} at offset {o1.Offset()}");
+                        }
+                    };
                 }
 
                 Stopwatch swCreateRecord = null;
@@ -208,20 +219,26 @@ namespace MASES.KNet.Benchmark
                                                         .WithFetchMinBytes(FetchMinBytes)
                                                         .WithKeyDeserializerClass("org.apache.kafka.common.serialization.LongDeserializer")
                                                         .WithValueDeserializerClass("org.apache.kafka.common.serialization.ByteArrayDeserializer")
-                                                        .WithAutoOffsetReset(ConsumerConfig.AutoOffsetReset.EARLIEST)
+                                                        .WithAutoOffsetReset(ConsumerConfigBuilder.AutoOffsetResetTypes.EARLIEST)
                                                         .ToProperties();
                 if (UseSerdes)
                 {
-                    kafkaKeyDeserializer = new Deserializer<long>(deserializeFun: (topic, data) =>
+                    kafkaKeyDeserializer = new Deserializer<long>()
                     {
-                        var key = BitConverter.ToInt32(data, 0);
-                        return key;
-                    });
-                    kafkaValueDeserializer = new Deserializer<byte[]>(deserializeFun: (topic, data) =>
+                        OnDeserialize = (topic, data) =>
+                        {
+                            var key = BitConverter.ToInt32(data, 0);
+                            return key;
+                        }
+                    };
+                    kafkaValueDeserializer = new Deserializer<byte[]>()
                     {
-                        // var value = Encoding.Unicode.GetString(data);
-                        return data;
-                    });
+                        OnDeserialize = (topic, data) =>
+                        {
+                            // var value = Encoding.Unicode.GetString(data);
+                            return data;
+                        }
+                    };
                 }
 
                 kafkaConsumer = UseSerdes ? new KafkaConsumer<long, byte[]>(props, kafkaKeyDeserializer, kafkaValueDeserializer) : new KafkaConsumer<long, byte[]>(props);
@@ -234,16 +251,18 @@ namespace MASES.KNet.Benchmark
             try
             {
                 Stopwatch stopWatch = null;
-                ConsumerRebalanceListener rebalanceListener = new(
-                                    revoked: (o) =>
-                                    {
-                                        if (ShowLogs) Console.WriteLine("Revoked: {0}", o.ToString());
-                                    },
-                                    assigned: (o) =>
-                                    {
-                                        if (ShowLogs) Console.WriteLine("Assigned: {0}", o.ToString());
-                                        stopWatch = Stopwatch.StartNew();
-                                    });
+                ConsumerRebalanceListener rebalanceListener = new()
+                {
+                    OnOnPartitionsRevoked = (o) =>
+                    {
+                        if (ShowLogs) Console.WriteLine("Revoked: {0}", o.ToString());
+                    },
+                    OnOnPartitionsAssigned = (o) =>
+                    {
+                        if (ShowLogs) Console.WriteLine("Assigned: {0}", o.ToString());
+                        stopWatch = Stopwatch.StartNew();
+                    }
+                };
 
                 var consumer = KafkaConsumer();
                 try
@@ -256,18 +275,18 @@ namespace MASES.KNet.Benchmark
                         var records = consumer.Poll(duration);
                         if (!CheckOnConsume)
                         {
-                            counter += records.Count;
+                            counter += records.Count();
                         }
                         else
                         {
                             if (UsePrefetch)
                             {
-                                foreach (var item in records.WithPrefetch().WithConvert((o) => { return (o.Value, o.Key); }))
+                                foreach (var item in records.WithPrefetch().WithConvert((o) => { return (o.Value(), o.Key()); }))
                                 {
-                                    if (!item.Value.SequenceEqual(data)
-                                        || (!SinglePacket && item.Key != counter))
+                                    if (!item.Item1.SequenceEqual(data)
+                                        || (!SinglePacket && item.Item2 != counter))
                                     {
-                                        throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {item.Key}");
+                                        throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {item.Item2}");
                                     }
                                     counter++;
                                 }
@@ -276,10 +295,10 @@ namespace MASES.KNet.Benchmark
                             {
                                 foreach (var item in records)
                                 {
-                                    if (!item.Value.SequenceEqual(data)
-                                        || (!SinglePacket && item.Key != counter))
+                                    if (!item.Value().SequenceEqual(data)
+                                        || (!SinglePacket && item.Key() != counter))
                                     {
-                                        throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {item.Key}");
+                                        throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {item.Key()}");
                                     }
                                     counter++;
                                 }
@@ -321,15 +340,18 @@ namespace MASES.KNet.Benchmark
                     ConsumerRebalanceListener rebalanceListener = null;
                     try
                     {
-                        rebalanceListener = new(revoked: (o) =>
-                                                {
-                                                    if (ShowLogs) Console.WriteLine("Revoked: {0}", o.ToString());
-                                                },
-                                                assigned: (o) =>
-                                                {
-                                                    if (ShowLogs) Console.WriteLine("Assigned: {0}", o.ToString());
-                                                    startEvent.Set();
-                                                });
+                        rebalanceListener = new()
+                        {
+                            OnOnPartitionsRevoked = (o) =>
+                            {
+                                if (ShowLogs) Console.WriteLine("Revoked: {0}", o.ToString());
+                            },
+                            OnOnPartitionsAssigned = (o) =>
+                            {
+                                if (ShowLogs) Console.WriteLine("Assigned: {0}", o.ToString());
+                                startEvent.Set();
+                            }
+                        };
 
                         consumer.Subscribe(Collections.Singleton(topicName), rebalanceListener);
                         Java.Time.Duration duration = TimeSpan.FromSeconds(1);
@@ -339,13 +361,13 @@ namespace MASES.KNet.Benchmark
                             var records = consumer.Poll(duration);
                             if (UsePrefetch)
                             {
-                                foreach (var item in records.WithPrefetch().WithConvert((o) => { return (o.Key, o.Value); }))
+                                foreach (var item in records.WithPrefetch().WithConvert((o) => { return (o.Key(), o.Value()); }))
                                 {
-                                    roundTripTime.Add((double)(DateTime.Now.Ticks - item.Key) / (TimeSpan.TicksPerMillisecond / 1000));
+                                    roundTripTime.Add((double)(DateTime.Now.Ticks - item.Item1) / (TimeSpan.TicksPerMillisecond / 1000));
 
-                                    if (CheckOnConsume && !item.Value.SequenceEqual(data))
+                                    if (CheckOnConsume && !item.Item2.SequenceEqual(data))
                                     {
-                                        throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {item.Key}");
+                                        throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {item.Item1}");
                                     }
                                     counter++;
                                 }
@@ -354,11 +376,11 @@ namespace MASES.KNet.Benchmark
                             {
                                 foreach (var item in records)
                                 {
-                                    roundTripTime.Add((double)(DateTime.Now.Ticks - item.Key) / (TimeSpan.TicksPerMillisecond / 1000));
+                                    roundTripTime.Add((double)(DateTime.Now.Ticks - item.Key()) / (TimeSpan.TicksPerMillisecond / 1000));
 
-                                    if (CheckOnConsume && !item.Value.SequenceEqual(data))
+                                    if (CheckOnConsume && !item.Value().SequenceEqual(data))
                                     {
-                                        throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {item.Key}");
+                                        throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {item.Key()}");
                                     }
                                     counter++;
                                 }

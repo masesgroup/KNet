@@ -19,6 +19,7 @@
 using Java.Util;
 using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Admin;
+using MASES.KNet.Common;
 using MASES.KNet.Consumer;
 using MASES.KNet.Extensions;
 using MASES.KNet.Producer;

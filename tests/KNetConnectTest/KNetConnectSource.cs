@@ -63,7 +63,7 @@ namespace MASES.KNetConnectTest
 
         private long lineOffset = 0L;
 
-        public override IList<SourceRecord> Poll()
+        public override System.Collections.Generic.IList<SourceRecord> Poll()
         {
             var lines = File.ReadAllLines(_filename);
             if (useSourceOffset)

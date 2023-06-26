@@ -16,10 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet;
-using Org.Apache.Kafka.Clients.Producer;
+using Org.Apache.Kafka.Common.Config;
 
-namespace Org.Apache.Kafka.Common.Config
+namespace MASES.KNet.Common
 {
     public class TopicConfigBuilder : GenericConfigBuilder<TopicConfigBuilder>
     {

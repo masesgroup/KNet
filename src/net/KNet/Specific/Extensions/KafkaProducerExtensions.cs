@@ -18,9 +18,9 @@
 
 using Java.Util.Concurrent;
 using MASES.JCOBridge.C2JBridge;
+using MASES.KNet.Common;
 using Org.Apache.Kafka.Clients.Admin;
 using Org.Apache.Kafka.Clients.Producer;
-using Org.Apache.Kafka.Common.Config;
 using System;
 using System.Threading.Tasks;
 

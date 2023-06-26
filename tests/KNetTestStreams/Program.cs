@@ -136,28 +136,34 @@ namespace MASES.KNetTest
 
                     KStream<string, string> source = builder.Stream<string, string>(topicToUse);
 
-                    valueMapper = new ValueMapper<string, Java.Lang.Iterable<string>>((value) =>
+                    valueMapper = new ValueMapper<string, Java.Lang.Iterable<string>>()
                     {
-                        Regex regex = new("\\W+");
-
-                        ArrayList<string> arrayList = new();
-
-                        foreach (var item in regex.Split(value))
+                        OnApply = (value) =>
                         {
-                            arrayList.Add(item);
+                            Regex regex = new("\\W+");
+
+                            ArrayList<string> arrayList = new();
+
+                            foreach (var item in regex.Split(value))
+                            {
+                                arrayList.Add(item);
+                            }
+
+                            return arrayList; // value->Arrays.asList(value.toLowerCase(Locale.getDefault()).split("\\W+"))
                         }
+                    };
 
-                        return arrayList; // value->Arrays.asList(value.toLowerCase(Locale.getDefault()).split("\\W+"))
-                    });
-
-                    keyValuemapper = new KeyValueMapper<string, string, string>((key, value) =>
+                    keyValuemapper = new KeyValueMapper<string, string, string>()
                     {
-                        return value;
-                    });
+                        OnApply = (key, value) =>
+                        {
+                            return value;
+                        }
+                    };
 
-                    KTable<string, long> counts = source.FlatMapValues(valueMapper)
-                                                        .GroupBy(keyValuemapper)
-                                                        .Count();
+                    KTable<string, long?> counts = source.FlatMapValues(valueMapper)
+                                                         .GroupBy(keyValuemapper)
+                                                         .Count();
 
                     /***** version using Dynamic engine ******
                     
@@ -168,15 +174,18 @@ namespace MASES.KNetTest
                     ******************************************/
 
                     // need to override value serde to Long type
-                    counts.ToStream().To(OUTPUT_TOPIC, Produced<string, long>.With(Serdes.String(), Serdes.Long()));
+                    counts.ToStream().To(OUTPUT_TOPIC, Produced<string, long?>.With(Serdes.String(), Serdes.Long()));
 
                     using (var streams = new KafkaStreams(builder.Build(), props))
                     {
-                        errorHandler = new StreamsUncaughtExceptionHandler((exception) =>
+                        errorHandler = new StreamsUncaughtExceptionHandler()
                         {
-                            Console.WriteLine(exception.ToString());
-                            return StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse.SHUTDOWN_APPLICATION;
-                        });
+                            OnHandle = (exception) =>
+                            {
+                                Console.WriteLine(exception.ToString());
+                                return StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse.SHUTDOWN_APPLICATION;
+                            }
+                        };
                         streams.SetUncaughtExceptionHandler(errorHandler);
                         streams.Start();
                         while (!resetEvent.WaitOne(1000))

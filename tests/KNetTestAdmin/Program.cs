@@ -22,6 +22,7 @@ using Org.Apache.Kafka.Clients.Admin;
 using Org.Apache.Kafka.Common.Config;
 using MASES.KNet.TestCommon;
 using System;
+using MASES.KNet.Admin;
 
 namespace MASES.KNetTestAdmin
 {
@@ -72,7 +73,7 @@ namespace MASES.KNetTestAdmin
                 CreateTopicsResult result = admin.CreateTopics(coll);
 
                 // Call values() to get the result for a specific topic
-                var future = result.Values.Get(topicName);
+                var future = result.Values().Get(topicName);
 
                 // Call get() to block until the topic creation is complete or has failed
                 // if creation failed the ExecutionException wraps the underlying cause.
@@ -99,7 +100,7 @@ namespace MASES.KNetTestAdmin
                 DeleteTopicsResult result = admin.DeleteTopics(coll);
 
                 // Call All to get the result
-                var future = result.All;
+                var future = result.All();
 
                 // Call get() to block until the topic deletion is complete or has failed
                 // if deletion failed the ExecutionException wraps the underlying cause.

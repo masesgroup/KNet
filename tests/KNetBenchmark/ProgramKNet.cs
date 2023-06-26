@@ -20,6 +20,7 @@ using Java.Util;
 using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Consumer;
 using MASES.KNet.Producer;
+using MASES.KNet.Serialization;
 using Org.Apache.Kafka.Clients.Consumer;
 using Org.Apache.Kafka.Clients.Producer;
 using Org.Apache.Kafka.Common.Serialization;
@@ -43,7 +44,7 @@ namespace MASES.KNet.Benchmark
             {
                 Properties props = ProducerConfigBuilder.Create()
                                                         .WithBootstrapServers(Server)
-                                                        .WithAcks(Acks ? ProducerConfig.Acks.One : ProducerConfig.Acks.None)
+                                                        .WithAcks(Acks ? ProducerConfigBuilder.AcksTypes.One : ProducerConfigBuilder.AcksTypes.None)
                                                         .WithRetries(MessageSendMaxRetries)
                                                         .WithLingerMs(LingerMs)
                                                         .WithBatchSize(BatchSize)
@@ -82,11 +83,14 @@ namespace MASES.KNet.Benchmark
 
                 if (UseCallback && kNetCallback == null)
                 {
-                    kNetCallback = new Callback((o1, o2) =>
+                    kNetCallback = new Callback()
                     {
-                        if (o2 != null) Console.WriteLine(o2.ToString());
-                        else if (ShowLogs) Console.WriteLine($"Produced on topic {o1.Topic} at offset {o1.Offset}");
-                    });
+                        OnOnCompletion = (o1, o2) =>
+                        {
+                            if (o2 != null) Console.WriteLine(o2.ToString());
+                            else if (ShowLogs) Console.WriteLine($"Produced on topic {o1.Topic()} at offset {o1.Offset()}");
+                        }
+                    };
                 }
 
                 Stopwatch swCreateRecord = null;
@@ -178,7 +182,7 @@ namespace MASES.KNet.Benchmark
                                                         .WithFetchMinBytes(FetchMinBytes)
                                                         .WithKeyDeserializerClass("org.apache.kafka.common.serialization.LongDeserializer")
                                                         .WithValueDeserializerClass("org.apache.kafka.common.serialization.ByteArrayDeserializer")
-                                                        .WithAutoOffsetReset(ConsumerConfig.AutoOffsetReset.EARLIEST)
+                                                        .WithAutoOffsetReset(ConsumerConfigBuilder.AutoOffsetResetTypes.EARLIEST)
                                                         .ToProperties();
                 if (UseSerdes)
                 {
@@ -204,16 +208,18 @@ namespace MASES.KNet.Benchmark
             try
             {
                 Stopwatch stopWatch = null;
-                ConsumerRebalanceListener rebalanceListener = new(
-                                    revoked: (o) =>
-                                    {
-                                        if (ShowLogs) Console.WriteLine("Revoked: {0}", o.ToString());
-                                    },
-                                    assigned: (o) =>
-                                    {
-                                        if (ShowLogs) Console.WriteLine("Assigned: {0}", o.ToString());
-                                        stopWatch = Stopwatch.StartNew();
-                                    });
+                ConsumerRebalanceListener rebalanceListener = new()
+                {
+                    OnOnPartitionsRevoked = (o) =>
+                    {
+                        if (ShowLogs) Console.WriteLine("Revoked: {0}", o.ToString());
+                    },
+                    OnOnPartitionsAssigned = (o) =>
+                    {
+                        if (ShowLogs) Console.WriteLine("Assigned: {0}", o.ToString());
+                        stopWatch = Stopwatch.StartNew();
+                    }
+                };
 
                 var consumer = KNetConsumer();
                 try
@@ -263,16 +269,18 @@ namespace MASES.KNet.Benchmark
             try
             {
                 Stopwatch stopWatch = null;
-                ConsumerRebalanceListener rebalanceListener = new(
-                                    revoked: (o) =>
-                                    {
-                                        if (ShowLogs) Console.WriteLine("Revoked: {0}", o.ToString());
-                                    },
-                                    assigned: (o) =>
-                                    {
-                                        if (ShowLogs) Console.WriteLine("Assigned: {0}", o.ToString());
-                                        stopWatch = Stopwatch.StartNew();
-                                    });
+                ConsumerRebalanceListener rebalanceListener = new()
+                {
+                    OnOnPartitionsRevoked = (o) =>
+                    {
+                        if (ShowLogs) Console.WriteLine("Revoked: {0}", o.ToString());
+                    },
+                    OnOnPartitionsAssigned = (o) =>
+                    {
+                        if (ShowLogs) Console.WriteLine("Assigned: {0}", o.ToString());
+                        stopWatch = Stopwatch.StartNew();
+                    }
+                };
 
                 var consumer = KNetConsumer();
                 var producer = KNetProducer();
@@ -289,7 +297,7 @@ namespace MASES.KNet.Benchmark
                             byte[] newVal = new byte[item.Value.Length];
                             Array.Copy(item.Value, newVal, item.Value.Length);
                             stopWatch.Start();
-                            var record = new ProducerRecord<long, byte[]>(topicName + "_COPY", item.Key, newVal);
+                            var record = new KNetProducerRecord<long, byte[]>(topicName + "_COPY", item.Key, newVal);
                             producer.Send(record);
                             counter++;
                         }
@@ -333,15 +341,18 @@ namespace MASES.KNet.Benchmark
                     ConsumerRebalanceListener rebalanceListener = null;
                     try
                     {
-                        rebalanceListener = new(revoked: (o) =>
-                                                {
-                                                    if (ShowLogs) Console.WriteLine("Revoked: {0}", o.ToString());
-                                                },
-                                                assigned: (o) =>
-                                                {
-                                                    if (ShowLogs) Console.WriteLine("Assigned: {0}", o.ToString());
-                                                    startEvent.Set();
-                                                });
+                        rebalanceListener = new()
+                        {
+                            OnOnPartitionsRevoked = (o) =>
+                            {
+                                if (ShowLogs) Console.WriteLine("Revoked: {0}", o.ToString());
+                            },
+                            OnOnPartitionsAssigned = (o) =>
+                            {
+                                if (ShowLogs) Console.WriteLine("Assigned: {0}", o.ToString());
+                                startEvent.Set();
+                            }
+                        };
                         consumer.Subscribe(Collections.Singleton(topicName), rebalanceListener);
                         Java.Time.Duration duration = TimeSpan.FromSeconds(1);
                         int counter = 0;
@@ -399,7 +410,7 @@ namespace MASES.KNet.Benchmark
                             data[i] = (byte)rand.Next(0, byte.MaxValue);
                         }
                     }
-                    var record = new ProducerRecord<long, byte[]>(topicName, 42, data);
+                    var record = new KNetProducerRecord<long, byte[]>(topicName, 42, data);
                     swCreateRecord = new();
                     swSendRecord = new();
                     stopWatch = Stopwatch.StartNew();
@@ -412,7 +423,7 @@ namespace MASES.KNet.Benchmark
                             Array.Copy(data, 0, newData, 0, data.Length);
                             stopWatch.Start();
                             swCreateRecord.Start();
-                            record = new ProducerRecord<long, byte[]>(topicName, DateTime.Now.Ticks, newData);
+                            record = new KNetProducerRecord<long, byte[]>(topicName, DateTime.Now.Ticks, newData);
                             swCreateRecord.Stop();
                         }
                         swSendRecord.Start();
