@@ -46,29 +46,76 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
+        /// Handlers initializer for <see cref="Transformer"/>
+        /// </summary>
+        protected virtual void InitializeHandlers()
+        {
+            AddEventHandler("transform", new System.EventHandler<CLRListenerEventArgs<CLREventData<object>>>(TransformEventHandler)); OnTransform = Transform;
+            AddEventHandler("close", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler)); OnClose = Close;
+            AddEventHandler("init", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.ProcessorContext>>>(InitEventHandler)); OnInit = Init;
+
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Transformer.html#transform(java.lang.Object,java.lang.Object)"/>
+        /// </summary>
+        public System.Func<object, object, object> OnTransform { get; set; }
+
+        void TransformEventHandler(object sender, CLRListenerEventArgs<CLREventData<object>> data)
+        {
+            if (OnTransform != null)
+            {
+                var executionResult = OnTransform.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<object>(0));
+                data.SetReturnValue(executionResult);
+            }
+        }
+
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Transformer.html#transform(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="object"/></param>
         /// <returns><see cref="object"/></returns>
-        public object Transform(object arg0, object arg1)
+        public virtual object Transform(object arg0, object arg1)
         {
-            return IExecute("transform", arg0, arg1);
+            return default;
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Transformer.html#close()"/>
+        /// </summary>
+        public System.Action OnClose { get; set; }
+
+        void CloseEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
+        {
+            if (OnClose != null) OnClose.Invoke();
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Transformer.html#close()"/>
         /// </summary>
-        public void Close()
+        public virtual void Close()
         {
-            IExecute("close");
+            
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Transformer.html#init(org.apache.kafka.streams.processor.ProcessorContext)"/>
+        /// </summary>
+        public System.Action<Org.Apache.Kafka.Streams.Processor.ProcessorContext> OnInit { get; set; }
+
+        void InitEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.ProcessorContext>> data)
+        {
+            if (OnInit != null) OnInit.Invoke(data.EventData.TypedEventData);
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Transformer.html#init(org.apache.kafka.streams.processor.ProcessorContext)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.ProcessorContext"/></param>
-        public void Init(Org.Apache.Kafka.Streams.Processor.ProcessorContext arg0)
+        public virtual void Init(Org.Apache.Kafka.Streams.Processor.ProcessorContext arg0)
         {
-            IExecute("init", arg0);
+            
         }
 
         #endregion
@@ -83,7 +130,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region ITransformer<K, V, R>
     /// <summary>
-    /// .NET interface for TO BE DEFINED FROM USER
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.streams.kstream.Transformer implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Transformer.html"/>
     /// </summary>
     public partial interface ITransformer<K, V, R>
     {
@@ -107,10 +154,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
         #endregion
 
         #region Class/Interface conversion operators
-        /// <summary>
-        /// Converter from <see cref="Org.Apache.Kafka.Streams.Kstream.Transformer{K, V, R}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Transformer"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Transformer(Org.Apache.Kafka.Streams.Kstream.Transformer<K, V, R> t) => t.Cast<Org.Apache.Kafka.Streams.Kstream.Transformer>();
 
         #endregion
 
@@ -124,29 +167,76 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
+        /// Handlers initializer for <see cref="Transformer"/>
+        /// </summary>
+        protected virtual void InitializeHandlers()
+        {
+            AddEventHandler("transform", new System.EventHandler<CLRListenerEventArgs<CLREventData<K>>>(TransformEventHandler)); OnTransform = Transform;
+            AddEventHandler("close", new System.EventHandler<CLRListenerEventArgs<CLREventData>>(CloseEventHandler)); OnClose = Close;
+            AddEventHandler("init", new System.EventHandler<CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.ProcessorContext>>>(InitEventHandler)); OnInit = Init;
+
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Transformer.html#transform(java.lang.Object,java.lang.Object)"/>
+        /// </summary>
+        public System.Func<K, V, R> OnTransform { get; set; }
+
+        void TransformEventHandler(object sender, CLRListenerEventArgs<CLREventData<K>> data)
+        {
+            if (OnTransform != null)
+            {
+                var executionResult = OnTransform.Invoke(data.EventData.TypedEventData, data.EventData.GetAt<V>(0));
+                data.SetReturnValue(executionResult);
+            }
+        }
+
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Transformer.html#transform(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><typeparamref name="V"/></param>
         /// <returns><typeparamref name="R"/></returns>
-        public R Transform(K arg0, V arg1)
+        public virtual R Transform(K arg0, V arg1)
         {
-            return IExecute<R>("transform", arg0, arg1);
+            return default;
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Transformer.html#close()"/>
+        /// </summary>
+        public System.Action OnClose { get; set; }
+
+        void CloseEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
+        {
+            if (OnClose != null) OnClose.Invoke();
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Transformer.html#close()"/>
         /// </summary>
-        public void Close()
+        public virtual void Close()
         {
-            IExecute("close");
+            
         }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Transformer.html#init(org.apache.kafka.streams.processor.ProcessorContext)"/>
+        /// </summary>
+        public System.Action<Org.Apache.Kafka.Streams.Processor.ProcessorContext> OnInit { get; set; }
+
+        void InitEventHandler(object sender, CLRListenerEventArgs<CLREventData<Org.Apache.Kafka.Streams.Processor.ProcessorContext>> data)
+        {
+            if (OnInit != null) OnInit.Invoke(data.EventData.TypedEventData);
+        }
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/Transformer.html#init(org.apache.kafka.streams.processor.ProcessorContext)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.ProcessorContext"/></param>
-        public void Init(Org.Apache.Kafka.Streams.Processor.ProcessorContext arg0)
+        public virtual void Init(Org.Apache.Kafka.Streams.Processor.ProcessorContext arg0)
         {
-            IExecute("init", arg0);
+            
         }
 
         #endregion

@@ -138,6 +138,7 @@
     "org.apache.kafka.streams.kstream.Merger",
     "org.apache.kafka.streams.kstream.Initializer",
     "org.apache.kafka.streams.kstream.KeyValueMapper",
+    "org.apache.kafka.streams.kstream.Transformer",
     "org.apache.kafka.streams.kstream.ValueJoiner",
     "org.apache.kafka.streams.kstream.ValueJoinerWithKey",
     "org.apache.kafka.streams.kstream.ValueMapper",
