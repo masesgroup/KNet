@@ -161,7 +161,7 @@ namespace MASES.KNetTest
                         }
                     };
 
-                    KTable<string, long?> counts = source.FlatMapValues(valueMapper)
+                    KTable<string, long?> counts = source.FlatMapValues<string, string, Java.Lang.Iterable<string>, string>(valueMapper)
                                                          .GroupBy(keyValuemapper)
                                                          .Count();
 
