@@ -52,8 +52,6 @@ namespace MASES.KNet.Benchmark
                                                         .WithSendBuffer(SocketSendBufferBytes)
                                                         .WithReceiveBuffer(SocketReceiveBufferBytes)
                                                         .WithBufferMemory(128 * 1024 * 1024)
-                                                        .WithKeySerializerClass("org.apache.kafka.common.serialization.LongSerializer")
-                                                        .WithValueSerializerClass("org.apache.kafka.common.serialization.ByteArraySerializer")
                                                         .ToProperties();
 
                 knetKeySerializer = new KNetSerDes<long>(serializeWithHeadersFun: (topic, headers, data) =>
@@ -176,8 +174,6 @@ namespace MASES.KNet.Benchmark
                                                         .WithSendBuffer(SocketSendBufferBytes)
                                                         .WithReceiveBuffer(SocketReceiveBufferBytes)
                                                         .WithFetchMinBytes(FetchMinBytes)
-                                                        .WithKeyDeserializerClass("org.apache.kafka.common.serialization.LongDeserializer")
-                                                        .WithValueDeserializerClass("org.apache.kafka.common.serialization.ByteArrayDeserializer")
                                                         .WithAutoOffsetReset(ConsumerConfig.AutoOffsetReset.EARLIEST)
                                                         .ToProperties();
                 if (UseSerdes)
