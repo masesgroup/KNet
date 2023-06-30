@@ -18,18 +18,12 @@
 
 namespace MASES.KNet.Common.Serialization
 {
-    public class FloatSerializer : Serializer<float>
+    public class FloatSerializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FloatSerializer>
     {
         public override string BridgeClassName => "org.apache.kafka.common.serialization.FloatSerializer";
 
-        public override bool AutoInit => false;
+        public byte[] Serialize(string topic, float data) => IExecute<byte[]>("serialize", topic, data);
 
-        public FloatSerializer()
-            : base(null, null, false)
-        {
-
-        }
-
-        public override byte[] Serialize(string topic, float data) => IExecute<byte[]>("serialize", topic, data);
+        public static implicit operator Serializer<float>(FloatSerializer t) => t.CastTo<Serializer<float>>();
     }
 }

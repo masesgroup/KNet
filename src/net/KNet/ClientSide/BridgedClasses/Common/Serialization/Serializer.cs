@@ -73,6 +73,14 @@ namespace MASES.KNet.Common.Serialization
         /// The <see cref="Func{String, Headers, E, Byte[]}"/> to be executed on serialize
         /// </summary>
         public virtual Func<string, Headers, E, byte[]> OnSerializeWithHeaders { get { return serializeWithHeaders; } }
+
+        /// <summary>
+        /// Default constructor
+        /// </summary>
+        public Serializer()
+        {
+        }
+
         /// <summary>
         /// Initialize a new instance of <see cref="Serializer{E}"/>
         /// </summary>

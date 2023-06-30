@@ -20,18 +20,12 @@ using Java.Nio;
 
 namespace MASES.KNet.Common.Serialization
 {
-    public class DoubleSerializer : Serializer<double>
+    public class DoubleSerializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DoubleSerializer>
     {
         public override string BridgeClassName => "org.apache.kafka.common.serialization.DoubleSerializer";
 
-        public override bool AutoInit => false;
+        public byte[] Serialize(string topic, double data) => IExecute<byte[]>("serialize", topic, data);
 
-        public DoubleSerializer()
-            : base(null, null, false)
-        {
-
-        }
-
-        public override byte[] Serialize(string topic, double data) => IExecute<byte[]>("serialize", topic, data);
+        public static implicit operator Serializer<double>(DoubleSerializer t) => t.CastTo<Serializer<double>>();
     }
 }

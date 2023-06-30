@@ -16,22 +16,14 @@
 *  Refer to LICENSE for more information.
 */
 
-using Java.Nio;
-
 namespace MASES.KNet.Common.Serialization
 {
-    public class UUIDSerializer : Serializer<Uuid>
+    public class UUIDSerializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<UUIDSerializer>
     {
         public override string BridgeClassName => "org.apache.kafka.common.serialization.UUIDSerializer";
 
-        public override bool AutoInit => false;
+        public byte[] Serialize(string topic, Uuid data) => IExecute<byte[]>("serialize", topic, data);
 
-        public UUIDSerializer()
-            : base(null, null, false)
-        {
-
-        }
-
-        public override byte[] Serialize(string topic, Uuid data) => IExecute<byte[]>("serialize", topic, data);
+        public static implicit operator Serializer<Uuid>(UUIDSerializer t) => t.CastTo<Serializer<Uuid>>();
     }
 }

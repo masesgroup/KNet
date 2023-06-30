@@ -16,23 +16,16 @@
 *  Refer to LICENSE for more information.
 */
 
-using Java.Nio;
 using Java.Util;
 
 namespace MASES.KNet.Common.Serialization
 {
-    public class ListSerializer<Inner> : Serializer<List<Inner>>
+    public class ListSerializer<Inner> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ListSerializer<Inner>>
     {
         public override string BridgeClassName => "org.apache.kafka.common.serialization.ListSerializer";
 
-        public override bool AutoInit => false;
+        public byte[] Serialize(string topic, List<Inner> data) => IExecute<byte[]>("serialize", topic, data);
 
-        public ListSerializer()
-            : base(null, null, false)
-        {
-
-        }
-
-        public override byte[] Serialize(string topic, List<Inner> data) => IExecute<byte[]>("serialize", topic, data);
+        public static implicit operator Serializer<List<Inner>>(ListSerializer<Inner> t) => t.CastTo<Serializer<List<Inner>>>();
     }
 }

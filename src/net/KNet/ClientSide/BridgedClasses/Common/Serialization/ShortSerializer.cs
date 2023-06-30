@@ -16,22 +16,14 @@
 *  Refer to LICENSE for more information.
 */
 
-using Java.Nio;
-
 namespace MASES.KNet.Common.Serialization
 {
-    public class ShortSerializer : Serializer<short>
+    public class ShortSerializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ShortSerializer>
     {
         public override string BridgeClassName => "org.apache.kafka.common.serialization.ShortSerializer";
 
-        public override bool AutoInit => false;
+        public byte[] Serialize(string topic, short data) => IExecute<byte[]>("serialize", topic, data);
 
-        public ShortSerializer()
-            : base(null, null, false)
-        {
-
-        }
-
-        public override byte[] Serialize(string topic, short data) => IExecute<byte[]>("serialize", topic, data);
+        public static implicit operator Serializer<short>(ShortSerializer t) => t.CastTo<Serializer<short>>();
     }
 }

@@ -20,18 +20,12 @@ using Java.Lang;
 
 namespace MASES.KNet.Common.Serialization
 {
-    public class VoidDeserializer : Deserializer<Void>
+    public class VoidDeserializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<VoidDeserializer>
     {
         public override string BridgeClassName => "org.apache.kafka.common.serialization.VoidDeserializer";
 
-        public override bool AutoInit => false;
+        public Void Deserialize(string topic, byte[] data) => IExecute<Void>("deserialize", topic, data);
 
-        public VoidDeserializer()
-            : base(null, null, false)
-        {
-
-        }
-
-        public override Void Deserialize(string topic, byte[] data) => IExecute<Void>("deserialize", topic, data);
+        public static implicit operator Deserializer<Void>(VoidDeserializer t) => t.CastTo<Deserializer<Void>>();
     }
 }

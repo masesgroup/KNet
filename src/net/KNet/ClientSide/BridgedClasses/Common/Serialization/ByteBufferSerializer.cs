@@ -20,18 +20,12 @@ using Java.Nio;
 
 namespace MASES.KNet.Common.Serialization
 {
-    public class ByteBufferSerializer : Serializer<ByteBuffer>
+    public class ByteBufferSerializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ByteBufferSerializer>
     {
         public override string BridgeClassName => "org.apache.kafka.common.serialization.ByteBufferSerializer";
 
-        public override bool AutoInit => false;
+        public byte[] Serialize(string topic, ByteBuffer data) => IExecute<byte[]>("serialize", topic, data);
 
-        public ByteBufferSerializer()
-            : base(null, null, false)
-        {
-
-        }
-
-        public override byte[] Serialize(string topic, ByteBuffer data) => IExecute<byte[]>("serialize", topic, data);
+        public static implicit operator Serializer<ByteBuffer>(ByteBufferSerializer t) => t.CastTo<Serializer<ByteBuffer>>();
     }
 }

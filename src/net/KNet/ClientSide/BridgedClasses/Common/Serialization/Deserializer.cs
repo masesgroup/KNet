@@ -74,6 +74,13 @@ namespace MASES.KNet.Common.Serialization
         /// </summary>
         public virtual Func<string, Headers, byte[], E> OnDeserializeWithHeaders { get { return deserializeWithHeaders; } }
         /// <summary>
+        /// Default constructor
+        /// </summary>
+        public Deserializer()
+        {
+        }
+
+        /// <summary>
         /// Initialize a new instance of <see cref="Deserializer{E}"/>
         /// </summary>
         /// <param name="deserializeFun">The <see cref="Func{String, Byte[], E}"/> to be executed on deserialize</param>
@@ -91,7 +98,6 @@ namespace MASES.KNet.Common.Serialization
                 AddEventHandler("deserializeWithHeaders", new EventHandler<CLRListenerEventArgs<CLREventData<string>>>(EventHandlerWithHeaders));
             }
         }
-
         void EventHandler(object sender, CLRListenerEventArgs<CLREventData<string>> data)
         {
             var container = data.EventData.ExtraData.Get(0) as IJavaObject; // it is a byte[]
@@ -100,7 +106,6 @@ namespace MASES.KNet.Common.Serialization
             var retVal = OnDeserialize(data.EventData.TypedEventData, bytes);
             data.SetReturnValue(retVal);
         }
-
         void EventHandlerWithHeaders(object sender, CLRListenerEventArgs<CLREventData<string>> data)
         {
             var headers = data.EventData.ExtraData.Get(0) as IJavaObject; // it is a Headers
