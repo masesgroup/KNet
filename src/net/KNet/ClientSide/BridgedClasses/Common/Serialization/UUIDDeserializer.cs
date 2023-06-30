@@ -18,18 +18,12 @@
 
 namespace MASES.KNet.Common.Serialization
 {
-    public class UUIDDeserializer : Deserializer<Uuid>
+    public class UUIDDeserializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<UUIDDeserializer>
     {
         public override string BridgeClassName => "org.apache.kafka.common.serialization.UUIDDeserializer";
 
-        public override bool AutoInit => false;
+        public Uuid Deserialize(string topic, byte[] data) => IExecute<Uuid>("deserialize", topic, data);
 
-        public UUIDDeserializer()
-            : base(null, null, false)
-        {
-
-        }
-
-        public override Uuid Deserialize(string topic, byte[] data) => IExecute<Uuid>("deserialize", topic, data);
+        public static implicit operator Deserializer<Uuid>(UUIDDeserializer t) => t.CastTo<Deserializer<Uuid>>();
     }
 }

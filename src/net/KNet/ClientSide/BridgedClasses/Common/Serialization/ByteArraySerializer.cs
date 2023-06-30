@@ -18,18 +18,11 @@
 
 namespace MASES.KNet.Common.Serialization
 {
-    public class ByteArraySerializer : Serializer<byte[]>
+    public class ByteArraySerializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ByteArraySerializer>
     {
         public override string BridgeClassName => "org.apache.kafka.common.serialization.ByteArraySerializer";
+        public byte[] Serialize(string topic, byte[] data) => IExecute<byte[]>("serialize", topic, data);
 
-        public override bool AutoInit => false;
-
-        public ByteArraySerializer()
-            : base(null, null, false)
-        {
-
-        }
-
-        public override byte[] Serialize(string topic, byte[] data) => IExecute<byte[]>("serialize", topic, data);
+        public static implicit operator Serializer<byte[]>(ByteArraySerializer t) => t.CastTo<Serializer<byte[]>>();
     }
 }

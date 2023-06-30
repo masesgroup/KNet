@@ -20,18 +20,12 @@ using MASES.KNet.Common.Utils;
 
 namespace MASES.KNet.Common.Serialization
 {
-    public class BytesDeserializer : Deserializer<Bytes>
+    public class BytesDeserializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BytesDeserializer>
     {
         public override string BridgeClassName => "org.apache.kafka.common.serialization.BytesDeserializer";
 
-        public override bool AutoInit => false;
+        public Bytes Deserialize(string topic, byte[] data) => IExecute<Bytes>("deserialize", topic, data);
 
-        public BytesDeserializer()
-            : base(null, null, false)
-        {
-
-        }
-
-        public override Bytes Deserialize(string topic, byte[] data) => IExecute<Bytes>("deserialize", topic, data);
+        public static implicit operator Deserializer<Bytes>(BytesDeserializer t) => t.CastTo<Deserializer<Bytes>>();
     }
 }

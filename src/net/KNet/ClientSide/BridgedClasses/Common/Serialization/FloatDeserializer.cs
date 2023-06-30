@@ -18,18 +18,12 @@
 
 namespace MASES.KNet.Common.Serialization
 {
-    public class FloatDeserializer : Deserializer<float>
+    public class FloatDeserializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FloatDeserializer>
     {
         public override string BridgeClassName => "org.apache.kafka.common.serialization.FloatDeserializer";
 
-        public override bool AutoInit => false;
+        public float Deserialize(string topic, byte[] data) => IExecute<float>("deserialize", topic, data);
 
-        public FloatDeserializer()
-            : base(null, null, false)
-        {
-
-        }
-
-        public override float Deserialize(string topic, byte[] data) => IExecute<float>("deserialize", topic, data);
+        public static implicit operator Deserializer<float>(FloatDeserializer t) => t.CastTo<Deserializer<float>>();
     }
 }

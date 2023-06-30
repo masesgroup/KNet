@@ -16,22 +16,14 @@
 *  Refer to LICENSE for more information.
 */
 
-using Java.Nio;
-
 namespace MASES.KNet.Common.Serialization
 {
-    public class StringSerializer : Serializer<string>
+    public class StringSerializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StringSerializer>
     {
         public override string BridgeClassName => "org.apache.kafka.common.serialization.StringSerializer";
 
-        public override bool AutoInit => false;
+        public byte[] Serialize(string topic, string data) => IExecute<byte[]>("serialize", topic, data);
 
-        public StringSerializer()
-            : base(null, null, false)
-        {
-
-        }
-
-        public override byte[] Serialize(string topic, string data) => IExecute<byte[]>("serialize", topic, data);
+        public static implicit operator Serializer<string>(StringSerializer t) => t.CastTo<Serializer<string>>();
     }
 }

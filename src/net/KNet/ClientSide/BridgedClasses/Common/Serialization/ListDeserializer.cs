@@ -20,18 +20,12 @@ using Java.Util;
 
 namespace MASES.KNet.Common.Serialization
 {
-    public class ListDeserializer<Inner> : Deserializer<List<Inner>>
+    public class ListDeserializer<Inner> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ListDeserializer<Inner>>
     {
         public override string BridgeClassName => "org.apache.kafka.common.serialization.ListDeserializer";
 
-        public override bool AutoInit => false;
+        public List<Inner> Deserialize(string topic, byte[] data) => IExecute<List<Inner>>("deserialize", topic, data);
 
-        public ListDeserializer()
-            : base(null, null, false)
-        {
-
-        }
-
-        public override List<Inner> Deserialize(string topic, byte[] data) => IExecute<List<Inner>>("deserialize", topic, data);
+        public static implicit operator Deserializer<List<Inner>>(ListDeserializer<Inner> t) => t.CastTo<Deserializer<List<Inner>>>();
     }
 }

@@ -18,18 +18,12 @@
 
 namespace MASES.KNet.Common.Serialization
 {
-    public class IntegerSerializer : Serializer<int>
+    public class IntegerSerializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<IntegerSerializer>
     {
         public override string BridgeClassName => "org.apache.kafka.common.serialization.IntegerSerializer";
 
-        public override bool AutoInit => false;
+        public byte[] Serialize(string topic, int data) => IExecute<byte[]>("serialize", topic, data);
 
-        public IntegerSerializer()
-            : base(null, null, false)
-        {
-
-        }
-
-        public override byte[] Serialize(string topic, int data) => IExecute<byte[]>("serialize", topic, data);
+        public static implicit operator Serializer<int>(IntegerSerializer t) => t.CastTo<Serializer<int>>();
     }
 }
