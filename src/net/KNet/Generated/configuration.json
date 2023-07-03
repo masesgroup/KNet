@@ -4,62 +4,62 @@
   "DisableInterfaceMethodGeneration": true,
   "CreateInterfaceInheritance": true,
   "JarList": [
-    "kafka_2.13-3.4.0.jar",
-    "kafka-clients-3.4.0.jar",
-    "kafka-streams-3.4.0.jar",
-    "kafka-tools-3.4.0.jar",
-    "connect-api-3.4.0.jar",
-    "connect-basic-auth-extension-3.4.0.jar",
-    "connect-json-3.4.0.jar",
-    "connect-mirror-3.4.0.jar",
-    "connect-mirror-client-3.4.0.jar",
-    "connect-runtime-3.4.0.jar",
-    "connect-transforms-3.4.0.jar"
+    "kafka_2.13-3.5.0.jar",
+    "kafka-clients-3.5.0.jar",
+    "kafka-streams-3.5.0.jar",
+    "kafka-tools-3.5.0.jar",
+    "connect-api-3.5.0.jar",
+    "connect-basic-auth-extension-3.5.0.jar",
+    "connect-json-3.5.0.jar",
+    "connect-mirror-3.5.0.jar",
+    "connect-mirror-client-3.5.0.jar",
+    "connect-runtime-3.5.0.jar",
+    "connect-transforms-3.5.0.jar"
   ],
   "OriginJavadocJARVersionAndUrls": [
     {
-      "Version": 11,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.4.0/"
+      "Version": 8,
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.5.0/"
     },
     {
-      "Version": 11,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.4.0/"
+      "Version": 8,
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/"
     },
     {
-      "Version": 11,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/"
+      "Version": 8,
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/"
     },
     {
-      "Version": 11,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.4.0/"
+      "Version": 8,
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.5.0/"
     },
     {
-      "Version": 11,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.4.0/"
+      "Version": 8,
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/"
     },
     {
-      "Version": 11,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.4.0/"
+      "Version": 8,
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.5.0/"
     },
     {
-      "Version": 11,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.4.0/"
+      "Version": 8,
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.5.0/"
     },
     {
-      "Version": 11,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.4.0/"
+      "Version": 8,
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.5.0/"
     },
     {
-      "Version": 11,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.4.0/"
+      "Version": 8,
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.5.0/"
     },
     {
-      "Version": 11,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.4.0/"
+      "Version": 8,
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.5.0/"
     },
     {
-      "Version": 11,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.4.0/"
+      "Version": 8,
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.5.0/"
     }
   ],
   "NamespacesToAvoid": [
@@ -107,6 +107,7 @@
     "org.apache.kafka.common.security.scram.internals",
     "org.apache.kafka.common.security.token.delegation.internals",
     "org.apache.kafka.connect.connector.policy",
+    "org.apache.kafka.connect.mirror.rest",
     "org.apache.kafka.connect.runtime",
     "org.apache.kafka.connect.storage",
     "org.apache.kafka.connect.tools",
@@ -181,6 +182,7 @@
     "org.apache.kafka.common.record.PartialDefaultRecord",
     "org.apache.kafka.common.record.Records",
     "org.apache.kafka.common.record.RecordsSend",
+    "org.apache.kafka.connect.cli.AbstractConnectCli",
     "org.apache.kafka.connect.rest.ConnectRestExtensionContext",
     "org.apache.kafka.connect.rest.ConnectRestExtension",
     "org.apache.kafka.connect.storage.HeaderConverter",
@@ -194,6 +196,7 @@
     "org.apache.kafka.streams.processor.api.FixedKeyProcessorSupplier",
     "org.apache.kafka.streams.processor.api.ProcessorSupplier",
     "org.apache.kafka.tools.ClientCompatibilityTest$ClientCompatibilityTestDeserializer",
+    "org.apache.kafka.tools.ConsumerPerformance$ConsumerPerfRebListener",
     "org.apache.kafka.tools.VerifiableConsumer$RecordData",
     "org.apache.kafka.tools.VerifiableConsumer$RecordsConsumed",
     "org.apache.zookeeper.ZooKeeperMainWithTlsSupportForKafka",

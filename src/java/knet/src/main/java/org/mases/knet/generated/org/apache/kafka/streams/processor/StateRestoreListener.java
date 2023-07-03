@@ -39,5 +39,9 @@ public final class StateRestoreListener extends org.mases.jcobridge.JCListener i
     public void onRestoreStart(org.apache.kafka.common.TopicPartition arg0, java.lang.String arg1, long arg2, long arg3) {
         raiseEvent("onRestoreStart", arg0, arg1, arg2, arg3);
     }
+    //@Override
+    public void onRestoreSuspended(org.apache.kafka.common.TopicPartition arg0, java.lang.String arg1, long arg2) {
+        raiseEvent("onRestoreSuspended", arg0, arg1, arg2);
+    }
 
 }
