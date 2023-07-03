@@ -29,7 +29,7 @@ namespace MASES.KNet.Connect
         /// Initialize a new <see cref="KNetConnectStandalone"/>
         /// </summary>
         public KNetConnectStandalone()
-            : base("org.mases.knet.connect.ConnectStandalone")
+            : base("org.mases.knet.connect.cli.ConnectStandalone")
         {
             KNetConnectProxy.Register();
         }
