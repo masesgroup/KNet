@@ -35,7 +35,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <param name="arg1"><see cref="Java.Util.List"/></param>
         /// <param name="arg2"><see cref="Java.Util.List"/></param>
-        public PartitionReassignment(Java.Util.List<int?> arg0, Java.Util.List<int?> arg1, Java.Util.List<int?> arg2)
+        public PartitionReassignment(Java.Util.List<Java.Lang.Integer> arg0, Java.Util.List<Java.Lang.Integer> arg1, Java.Util.List<Java.Lang.Integer> arg2)
             : base(arg0, arg1, arg2)
         {
         }
@@ -60,27 +60,27 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
 
         /// <returns><see cref="Java.Util.List"/></returns>
-        public Java.Util.List<int?> AddingReplicas()
+        public Java.Util.List<Java.Lang.Integer> AddingReplicas()
         {
-            return IExecute<Java.Util.List<int?>>("addingReplicas");
+            return IExecute<Java.Util.List<Java.Lang.Integer>>("addingReplicas");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/admin/PartitionReassignment.html#removingReplicas--"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.List"/></returns>
-        public Java.Util.List<int?> RemovingReplicas()
+        public Java.Util.List<Java.Lang.Integer> RemovingReplicas()
         {
-            return IExecute<Java.Util.List<int?>>("removingReplicas");
+            return IExecute<Java.Util.List<Java.Lang.Integer>>("removingReplicas");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/admin/PartitionReassignment.html#replicas--"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.List"/></returns>
-        public Java.Util.List<int?> Replicas()
+        public Java.Util.List<Java.Lang.Integer> Replicas()
         {
-            return IExecute<Java.Util.List<int?>>("replicas");
+            return IExecute<Java.Util.List<Java.Lang.Integer>>("replicas");
         }
 
         #endregion

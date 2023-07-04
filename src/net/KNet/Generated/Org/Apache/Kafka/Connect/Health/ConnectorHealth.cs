@@ -36,7 +36,7 @@ namespace Org.Apache.Kafka.Connect.Health
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Connect.Health.ConnectorState"/></param>
         /// <param name="arg2"><see cref="Java.Util.Map"/></param>
         /// <param name="arg3"><see cref="Org.Apache.Kafka.Connect.Health.ConnectorType"/></param>
-        public ConnectorHealth(string arg0, Org.Apache.Kafka.Connect.Health.ConnectorState arg1, Java.Util.Map<int?, Org.Apache.Kafka.Connect.Health.TaskState> arg2, Org.Apache.Kafka.Connect.Health.ConnectorType arg3)
+        public ConnectorHealth(string arg0, Org.Apache.Kafka.Connect.Health.ConnectorState arg1, Java.Util.Map<Java.Lang.Integer, Org.Apache.Kafka.Connect.Health.TaskState> arg2, Org.Apache.Kafka.Connect.Health.ConnectorType arg3)
             : base(arg0, arg1, arg2, arg3)
         {
         }
@@ -70,9 +70,9 @@ namespace Org.Apache.Kafka.Connect.Health
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<int?, Org.Apache.Kafka.Connect.Health.TaskState> TasksState()
+        public Java.Util.Map<Java.Lang.Integer, Org.Apache.Kafka.Connect.Health.TaskState> TasksState()
         {
-            return IExecute<Java.Util.Map<int?, Org.Apache.Kafka.Connect.Health.TaskState>>("tasksState");
+            return IExecute<Java.Util.Map<Java.Lang.Integer, Org.Apache.Kafka.Connect.Health.TaskState>>("tasksState");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/health/ConnectorHealth.html#connectorState--"/>

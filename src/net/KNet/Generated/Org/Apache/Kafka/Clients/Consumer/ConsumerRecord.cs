@@ -223,7 +223,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <param name="arg8"><typeparamref name="V"/></param>
         /// <param name="arg9"><see cref="Org.Apache.Kafka.Common.Header.Headers"/></param>
         /// <param name="arg10"><see cref="Java.Util.Optional"/></param>
-        public ConsumerRecord(string arg0, int arg1, long arg2, long arg3, Org.Apache.Kafka.Common.Record.TimestampType arg4, int arg5, int arg6, K arg7, V arg8, Org.Apache.Kafka.Common.Header.Headers arg9, Java.Util.Optional<int?> arg10)
+        public ConsumerRecord(string arg0, int arg1, long arg2, long arg3, Org.Apache.Kafka.Common.Record.TimestampType arg4, int arg5, int arg6, K arg7, V arg8, Org.Apache.Kafka.Common.Header.Headers arg9, Java.Util.Optional<Java.Lang.Integer> arg10)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10)
         {
         }
@@ -296,9 +296,9 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// </summary>
 
         /// <returns><see cref="Java.Util.Optional"/></returns>
-        public Java.Util.Optional<int?> LeaderEpoch()
+        public Java.Util.Optional<Java.Lang.Integer> LeaderEpoch()
         {
-            return IExecute<Java.Util.Optional<int?>>("leaderEpoch");
+            return IExecute<Java.Util.Optional<Java.Lang.Integer>>("leaderEpoch");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/consumer/ConsumerRecord.html#key--"/>

@@ -33,8 +33,8 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#org.apache.kafka.streams.kstream.TimeWindowedDeserializer(org.apache.kafka.common.serialization.Deserializer,java.lang.Long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
-        /// <param name="arg1"><see cref="long"/></param>
-        public TimeWindowedDeserializer(Org.Apache.Kafka.Common.Serialization.Deserializer arg0, long? arg1)
+        /// <param name="arg1"><see cref="Java.Lang.Long"/></param>
+        public TimeWindowedDeserializer(Org.Apache.Kafka.Common.Serialization.Deserializer arg0, Java.Lang.Long arg1)
             : base(arg0, arg1)
         {
         }
@@ -61,9 +61,9 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#getWindowSize--"/> 
         /// </summary>
-        public long? WindowSize
+        public Java.Lang.Long WindowSize
         {
-            get { return IExecute<long?>("getWindowSize"); }
+            get { return IExecute<Java.Lang.Long>("getWindowSize"); }
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#deserialize-java.lang.String-byte[]-"/>
@@ -118,8 +118,8 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#org.apache.kafka.streams.kstream.TimeWindowedDeserializer(org.apache.kafka.common.serialization.Deserializer,java.lang.Long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
-        /// <param name="arg1"><see cref="long"/></param>
-        public TimeWindowedDeserializer(Org.Apache.Kafka.Common.Serialization.Deserializer<T> arg0, long? arg1)
+        /// <param name="arg1"><see cref="Java.Lang.Long"/></param>
+        public TimeWindowedDeserializer(Org.Apache.Kafka.Common.Serialization.Deserializer<T> arg0, Java.Lang.Long arg1)
             : base(arg0, arg1)
         {
         }
@@ -150,9 +150,9 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#getWindowSize--"/> 
         /// </summary>
-        public long? WindowSize
+        public Java.Lang.Long WindowSize
         {
-            get { return IExecute<long?>("getWindowSize"); }
+            get { return IExecute<Java.Lang.Long>("getWindowSize"); }
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#deserialize-java.lang.String-byte[]-"/>

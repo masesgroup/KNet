@@ -36,10 +36,10 @@ namespace Org.Apache.Kafka.Tools
         /// <param name="arg1"><see cref="string"/></param>
         /// <param name="arg2"><see cref="int"/></param>
         /// <param name="arg3"><see cref="int"/></param>
-        /// <param name="arg4"><see cref="int"/></param>
-        /// <param name="arg5"><see cref="long"/></param>
-        /// <param name="arg6"><see cref="int"/></param>
-        public VerifiableProducer(Org.Apache.Kafka.Clients.Producer.KafkaProducer<string, string> arg0, string arg1, int arg2, int arg3, int? arg4, long? arg5, int? arg6)
+        /// <param name="arg4"><see cref="Java.Lang.Integer"/></param>
+        /// <param name="arg5"><see cref="Java.Lang.Long"/></param>
+        /// <param name="arg6"><see cref="Java.Lang.Integer"/></param>
+        public VerifiableProducer(Org.Apache.Kafka.Clients.Producer.KafkaProducer<string, string> arg0, string arg1, int arg2, int arg3, Java.Lang.Integer arg4, Java.Lang.Long arg5, Java.Lang.Integer arg6)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
         {
         }

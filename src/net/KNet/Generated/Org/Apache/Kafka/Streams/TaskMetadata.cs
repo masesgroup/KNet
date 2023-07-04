@@ -68,27 +68,27 @@ namespace Org.Apache.Kafka.Streams
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?> CommittedOffsets()
+        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.Long> CommittedOffsets()
         {
-            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?>>("committedOffsets");
+            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.Long>>("committedOffsets");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/TaskMetadata.html#endOffsets--"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?> EndOffsets()
+        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.Long> EndOffsets()
         {
-            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?>>("endOffsets");
+            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.Long>>("endOffsets");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/TaskMetadata.html#timeCurrentIdlingStarted--"/>
         /// </summary>
 
         /// <returns><see cref="Java.Util.Optional"/></returns>
-        public Java.Util.Optional<long?> TimeCurrentIdlingStarted()
+        public Java.Util.Optional<Java.Lang.Long> TimeCurrentIdlingStarted()
         {
-            return IExecute<Java.Util.Optional<long?>>("timeCurrentIdlingStarted");
+            return IExecute<Java.Util.Optional<Java.Lang.Long>>("timeCurrentIdlingStarted");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/TaskMetadata.html#topicPartitions--"/>

@@ -549,9 +549,9 @@ namespace Org.Apache.Kafka.Clients.Consumer
             /// </summary>
 
             /// <returns><see cref="Java.Util.Optional"/></returns>
-            public Java.Util.Optional<int?> GenerationId()
+            public Java.Util.Optional<Java.Lang.Integer> GenerationId()
             {
-                return IExecute<Java.Util.Optional<int?>>("generationId");
+                return IExecute<Java.Util.Optional<Java.Lang.Integer>>("generationId");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.Subscription.html#groupInstanceId--"/>

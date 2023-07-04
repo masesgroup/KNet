@@ -193,10 +193,10 @@ namespace Org.Apache.Kafka.Common.Record
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#countOrNull--"/>
         /// </summary>
 
-        /// <returns><see cref="int"/></returns>
-        public int? CountOrNull()
+        /// <returns><see cref="Java.Lang.Integer"/></returns>
+        public Java.Lang.Integer CountOrNull()
         {
-            return IExecute<int?>("countOrNull");
+            return IExecute<Java.Lang.Integer>("countOrNull");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#deleteHorizonMs--"/>

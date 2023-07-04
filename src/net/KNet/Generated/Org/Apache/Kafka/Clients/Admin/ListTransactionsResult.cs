@@ -59,18 +59,18 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
-        public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<int?, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.TransactionListing>>> AllByBrokerId()
+        public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<Java.Lang.Integer, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.TransactionListing>>> AllByBrokerId()
         {
-            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<int?, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.TransactionListing>>>>("allByBrokerId");
+            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<Java.Lang.Integer, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.TransactionListing>>>>("allByBrokerId");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/admin/ListTransactionsResult.html#byBrokerId--"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
-        public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<int?, Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.TransactionListing>>>> ByBrokerId()
+        public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<Java.Lang.Integer, Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.TransactionListing>>>> ByBrokerId()
         {
-            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<int?, Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.TransactionListing>>>>>("byBrokerId");
+            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<Java.Lang.Integer, Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.TransactionListing>>>>>("byBrokerId");
         }
 
         #endregion

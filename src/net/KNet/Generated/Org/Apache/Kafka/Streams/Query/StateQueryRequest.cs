@@ -242,9 +242,9 @@ namespace Org.Apache.Kafka.Streams.Query
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/query/StateQueryRequest.html#getPartitions--"/> 
         /// </summary>
-        public Java.Util.Set<int?> Partitions
+        public Java.Util.Set<Java.Lang.Integer> Partitions
         {
-            get { return IExecute<Java.Util.Set<int?>>("getPartitions"); }
+            get { return IExecute<Java.Util.Set<Java.Lang.Integer>>("getPartitions"); }
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/query/StateQueryRequest.html#getPositionBound--"/> 
@@ -326,7 +326,7 @@ namespace Org.Apache.Kafka.Streams.Query
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Set"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.StateQueryRequest"/></returns>
-        public Org.Apache.Kafka.Streams.Query.StateQueryRequest<R> WithPartitions(Java.Util.Set<int?> arg0)
+        public Org.Apache.Kafka.Streams.Query.StateQueryRequest<R> WithPartitions(Java.Util.Set<Java.Lang.Integer> arg0)
         {
             return IExecute<Org.Apache.Kafka.Streams.Query.StateQueryRequest<R>>("withPartitions", arg0);
         }

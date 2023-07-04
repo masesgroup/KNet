@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Common.Metrics
     /// <summary>
     /// .NET interface for TO BE DEFINED FROM USER
     /// </summary>
-    public partial interface IMeasurable : Org.Apache.Kafka.Common.Metrics.IMetricValueProvider<double?>
+    public partial interface IMeasurable : Org.Apache.Kafka.Common.Metrics.IMetricValueProvider<Java.Lang.Double>
     {
         #region Instance methods
 

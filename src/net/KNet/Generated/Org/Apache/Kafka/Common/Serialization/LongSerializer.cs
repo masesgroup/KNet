@@ -53,9 +53,9 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/serialization/LongSerializer.html#serialize-java.lang.String-java.lang.Long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="long"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.Long"/></param>
         /// <returns><see cref="byte"/></returns>
-        public byte[] Serialize(string arg0, long? arg1)
+        public byte[] Serialize(string arg0, Java.Lang.Long arg1)
         {
             return IExecuteArray<byte>("serialize", arg0, arg1);
         }

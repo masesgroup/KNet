@@ -33,14 +33,14 @@ namespace Org.Apache.Kafka.Connect.Connector
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/connector/ConnectRecord.html#org.apache.kafka.connect.connector.ConnectRecord(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long,java.lang.Iterable)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="int"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg3"><see cref="object"/></param>
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg5"><see cref="object"/></param>
-        /// <param name="arg6"><see cref="long"/></param>
+        /// <param name="arg6"><see cref="Java.Lang.Long"/></param>
         /// <param name="arg7"><see cref="Java.Lang.Iterable"/></param>
-        public ConnectRecord(string arg0, int? arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, long? arg6, Java.Lang.Iterable arg7)
+        public ConnectRecord(string arg0, Java.Lang.Integer arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Java.Lang.Long arg6, Java.Lang.Iterable arg7)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
         {
         }
@@ -48,13 +48,13 @@ namespace Org.Apache.Kafka.Connect.Connector
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/connector/ConnectRecord.html#org.apache.kafka.connect.connector.ConnectRecord(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="int"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg3"><see cref="object"/></param>
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg5"><see cref="object"/></param>
-        /// <param name="arg6"><see cref="long"/></param>
-        public ConnectRecord(string arg0, int? arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, long? arg6)
+        /// <param name="arg6"><see cref="Java.Lang.Long"/></param>
+        public ConnectRecord(string arg0, Java.Lang.Integer arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Java.Lang.Long arg6)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
         {
         }
@@ -78,15 +78,15 @@ namespace Org.Apache.Kafka.Connect.Connector
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/connector/ConnectRecord.html#newRecord-java.lang.String-java.lang.Integer-org.apache.kafka.connect.data.Schema-java.lang.Object-org.apache.kafka.connect.data.Schema-java.lang.Object-java.lang.Long-java.lang.Iterable-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="int"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg3"><see cref="object"/></param>
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg5"><see cref="object"/></param>
-        /// <param name="arg6"><see cref="long"/></param>
+        /// <param name="arg6"><see cref="Java.Lang.Long"/></param>
         /// <param name="arg7"><see cref="Java.Lang.Iterable"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord"/></returns>
-        public Org.Apache.Kafka.Connect.Connector.ConnectRecord NewRecord(string arg0, int? arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, long? arg6, Java.Lang.Iterable arg7)
+        public Org.Apache.Kafka.Connect.Connector.ConnectRecord NewRecord(string arg0, Java.Lang.Integer arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Java.Lang.Long arg6, Java.Lang.Iterable arg7)
         {
             return IExecute<Org.Apache.Kafka.Connect.Connector.ConnectRecord>("newRecord", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
         }
@@ -94,14 +94,14 @@ namespace Org.Apache.Kafka.Connect.Connector
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/connector/ConnectRecord.html#newRecord-java.lang.String-java.lang.Integer-org.apache.kafka.connect.data.Schema-java.lang.Object-org.apache.kafka.connect.data.Schema-java.lang.Object-java.lang.Long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="int"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg3"><see cref="object"/></param>
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg5"><see cref="object"/></param>
-        /// <param name="arg6"><see cref="long"/></param>
+        /// <param name="arg6"><see cref="Java.Lang.Long"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord"/></returns>
-        public Org.Apache.Kafka.Connect.Connector.ConnectRecord NewRecord(string arg0, int? arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, long? arg6)
+        public Org.Apache.Kafka.Connect.Connector.ConnectRecord NewRecord(string arg0, Java.Lang.Integer arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Java.Lang.Long arg6)
         {
             return IExecute<Org.Apache.Kafka.Connect.Connector.ConnectRecord>("newRecord", arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }
@@ -109,19 +109,19 @@ namespace Org.Apache.Kafka.Connect.Connector
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/connector/ConnectRecord.html#kafkaPartition--"/>
         /// </summary>
 
-        /// <returns><see cref="int"/></returns>
-        public int? KafkaPartition()
+        /// <returns><see cref="Java.Lang.Integer"/></returns>
+        public Java.Lang.Integer KafkaPartition()
         {
-            return IExecute<int?>("kafkaPartition");
+            return IExecute<Java.Lang.Integer>("kafkaPartition");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/connector/ConnectRecord.html#timestamp--"/>
         /// </summary>
 
-        /// <returns><see cref="long"/></returns>
-        public long? Timestamp()
+        /// <returns><see cref="Java.Lang.Long"/></returns>
+        public Java.Lang.Long Timestamp()
         {
-            return IExecute<long?>("timestamp");
+            return IExecute<Java.Lang.Long>("timestamp");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/connector/ConnectRecord.html#key--"/>
@@ -196,14 +196,14 @@ namespace Org.Apache.Kafka.Connect.Connector
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/connector/ConnectRecord.html#org.apache.kafka.connect.connector.ConnectRecord(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long,java.lang.Iterable)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="int"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg3"><see cref="object"/></param>
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg5"><see cref="object"/></param>
-        /// <param name="arg6"><see cref="long"/></param>
+        /// <param name="arg6"><see cref="Java.Lang.Long"/></param>
         /// <param name="arg7"><see cref="Java.Lang.Iterable"/></param>
-        public ConnectRecord(string arg0, int? arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, long? arg6, Java.Lang.Iterable<Org.Apache.Kafka.Connect.Header.Header> arg7)
+        public ConnectRecord(string arg0, Java.Lang.Integer arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Java.Lang.Long arg6, Java.Lang.Iterable<Org.Apache.Kafka.Connect.Header.Header> arg7)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
         {
         }
@@ -211,13 +211,13 @@ namespace Org.Apache.Kafka.Connect.Connector
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/connector/ConnectRecord.html#org.apache.kafka.connect.connector.ConnectRecord(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="int"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg3"><see cref="object"/></param>
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg5"><see cref="object"/></param>
-        /// <param name="arg6"><see cref="long"/></param>
-        public ConnectRecord(string arg0, int? arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, long? arg6)
+        /// <param name="arg6"><see cref="Java.Lang.Long"/></param>
+        public ConnectRecord(string arg0, Java.Lang.Integer arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Java.Lang.Long arg6)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
         {
         }
@@ -245,15 +245,15 @@ namespace Org.Apache.Kafka.Connect.Connector
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/connector/ConnectRecord.html#newRecord-java.lang.String-java.lang.Integer-org.apache.kafka.connect.data.Schema-java.lang.Object-org.apache.kafka.connect.data.Schema-java.lang.Object-java.lang.Long-java.lang.Iterable-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="int"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg3"><see cref="object"/></param>
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg5"><see cref="object"/></param>
-        /// <param name="arg6"><see cref="long"/></param>
+        /// <param name="arg6"><see cref="Java.Lang.Long"/></param>
         /// <param name="arg7"><see cref="Java.Lang.Iterable"/></param>
         /// <returns><typeparamref name="R"/></returns>
-        public R NewRecord(string arg0, int? arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, long? arg6, Java.Lang.Iterable<Org.Apache.Kafka.Connect.Header.Header> arg7)
+        public R NewRecord(string arg0, Java.Lang.Integer arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Java.Lang.Long arg6, Java.Lang.Iterable<Org.Apache.Kafka.Connect.Header.Header> arg7)
         {
             return IExecute<R>("newRecord", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
         }
@@ -261,14 +261,14 @@ namespace Org.Apache.Kafka.Connect.Connector
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/connector/ConnectRecord.html#newRecord-java.lang.String-java.lang.Integer-org.apache.kafka.connect.data.Schema-java.lang.Object-org.apache.kafka.connect.data.Schema-java.lang.Object-java.lang.Long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="int"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg3"><see cref="object"/></param>
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg5"><see cref="object"/></param>
-        /// <param name="arg6"><see cref="long"/></param>
+        /// <param name="arg6"><see cref="Java.Lang.Long"/></param>
         /// <returns><typeparamref name="R"/></returns>
-        public R NewRecord(string arg0, int? arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, long? arg6)
+        public R NewRecord(string arg0, Java.Lang.Integer arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Java.Lang.Long arg6)
         {
             return IExecute<R>("newRecord", arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }
@@ -276,19 +276,19 @@ namespace Org.Apache.Kafka.Connect.Connector
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/connector/ConnectRecord.html#kafkaPartition--"/>
         /// </summary>
 
-        /// <returns><see cref="int"/></returns>
-        public int? KafkaPartition()
+        /// <returns><see cref="Java.Lang.Integer"/></returns>
+        public Java.Lang.Integer KafkaPartition()
         {
-            return IExecute<int?>("kafkaPartition");
+            return IExecute<Java.Lang.Integer>("kafkaPartition");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/connector/ConnectRecord.html#timestamp--"/>
         /// </summary>
 
-        /// <returns><see cref="long"/></returns>
-        public long? Timestamp()
+        /// <returns><see cref="Java.Lang.Long"/></returns>
+        public Java.Lang.Long Timestamp()
         {
-            return IExecute<long?>("timestamp");
+            return IExecute<Java.Lang.Long>("timestamp");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/connector/ConnectRecord.html#key--"/>

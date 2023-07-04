@@ -148,10 +148,10 @@ namespace Org.Apache.Kafka.Connect.Data
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/data/Schema.html#version--"/>
         /// </summary>
 
-        /// <returns><see cref="int"/></returns>
-        public int? Version()
+        /// <returns><see cref="Java.Lang.Integer"/></returns>
+        public Java.Lang.Integer Version()
         {
-            return IExecute<int?>("version");
+            return IExecute<Java.Lang.Integer>("version");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/data/Schema.html#defaultValue--"/>

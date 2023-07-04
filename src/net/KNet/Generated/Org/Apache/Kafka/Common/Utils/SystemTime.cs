@@ -78,7 +78,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <param name="arg1"><see cref="Java.Util.Function.Supplier"/></param>
         /// <param name="arg2"><see cref="long"/></param>
         /// <exception cref="Java.Lang.InterruptedException"/>
-        public void WaitObject(object arg0, Java.Util.Function.Supplier<bool?> arg1, long arg2)
+        public void WaitObject(object arg0, Java.Util.Function.Supplier<Java.Lang.Boolean> arg1, long arg2)
         {
             IExecute("waitObject", arg0, arg1, arg2);
         }

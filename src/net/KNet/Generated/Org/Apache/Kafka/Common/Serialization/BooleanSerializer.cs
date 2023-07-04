@@ -53,9 +53,9 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/serialization/BooleanSerializer.html#serialize-java.lang.String-java.lang.Boolean-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="bool"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.Boolean"/></param>
         /// <returns><see cref="byte"/></returns>
-        public byte[] Serialize(string arg0, bool? arg1)
+        public byte[] Serialize(string arg0, Java.Lang.Boolean arg1)
         {
             return IExecuteArray<byte>("serialize", arg0, arg1);
         }

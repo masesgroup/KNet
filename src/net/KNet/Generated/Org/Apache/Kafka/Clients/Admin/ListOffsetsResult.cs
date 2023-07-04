@@ -85,7 +85,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// <param name="arg0"><see cref="long"/></param>
             /// <param name="arg1"><see cref="long"/></param>
             /// <param name="arg2"><see cref="Java.Util.Optional"/></param>
-            public ListOffsetsResultInfo(long arg0, long arg1, Java.Util.Optional<int?> arg2)
+            public ListOffsetsResultInfo(long arg0, long arg1, Java.Util.Optional<Java.Lang.Integer> arg2)
                 : base(arg0, arg1, arg2)
             {
             }
@@ -110,9 +110,9 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// </summary>
 
             /// <returns><see cref="Java.Util.Optional"/></returns>
-            public Java.Util.Optional<int?> LeaderEpoch()
+            public Java.Util.Optional<Java.Lang.Integer> LeaderEpoch()
             {
-                return IExecute<Java.Util.Optional<int?>>("leaderEpoch");
+                return IExecute<Java.Util.Optional<Java.Lang.Integer>>("leaderEpoch");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/admin/ListOffsetsResult.ListOffsetsResultInfo.html#offset--"/>

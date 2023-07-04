@@ -33,9 +33,9 @@ namespace Org.Apache.Kafka.Common.Record
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/LegacyRecord.html#org.apache.kafka.common.record.LegacyRecord(java.nio.ByteBuffer,java.lang.Long,org.apache.kafka.common.record.TimestampType)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
-        /// <param name="arg1"><see cref="long"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.Long"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Record.TimestampType"/></param>
-        public LegacyRecord(Java.Nio.ByteBuffer arg0, long? arg1, Org.Apache.Kafka.Common.Record.TimestampType arg2)
+        public LegacyRecord(Java.Nio.ByteBuffer arg0, Java.Lang.Long arg1, Org.Apache.Kafka.Common.Record.TimestampType arg2)
             : base(arg0, arg1, arg2)
         {
         }
@@ -347,10 +347,10 @@ namespace Org.Apache.Kafka.Common.Record
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/LegacyRecord.html#wrapperRecordTimestamp--"/>
         /// </summary>
 
-        /// <returns><see cref="long"/></returns>
-        public long? WrapperRecordTimestamp()
+        /// <returns><see cref="Java.Lang.Long"/></returns>
+        public Java.Lang.Long WrapperRecordTimestamp()
         {
-            return IExecute<long?>("wrapperRecordTimestamp");
+            return IExecute<Java.Lang.Long>("wrapperRecordTimestamp");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/LegacyRecord.html#buffer--"/>

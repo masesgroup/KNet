@@ -48,11 +48,11 @@ namespace Org.Apache.Kafka.Clients
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/CommonClientConfigs.html#DEFAULT_SOCKET_CONNECTION_SETUP_TIMEOUT_MAX_MS"/>
         /// </summary>
-        public static long? DEFAULT_SOCKET_CONNECTION_SETUP_TIMEOUT_MAX_MS { get { return SGetField<long?>(LocalBridgeClazz, "DEFAULT_SOCKET_CONNECTION_SETUP_TIMEOUT_MAX_MS"); } }
+        public static Java.Lang.Long DEFAULT_SOCKET_CONNECTION_SETUP_TIMEOUT_MAX_MS { get { return SGetField<Java.Lang.Long>(LocalBridgeClazz, "DEFAULT_SOCKET_CONNECTION_SETUP_TIMEOUT_MAX_MS"); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/CommonClientConfigs.html#DEFAULT_SOCKET_CONNECTION_SETUP_TIMEOUT_MS"/>
         /// </summary>
-        public static long? DEFAULT_SOCKET_CONNECTION_SETUP_TIMEOUT_MS { get { return SGetField<long?>(LocalBridgeClazz, "DEFAULT_SOCKET_CONNECTION_SETUP_TIMEOUT_MS"); } }
+        public static Java.Lang.Long DEFAULT_SOCKET_CONNECTION_SETUP_TIMEOUT_MS { get { return SGetField<Java.Lang.Long>(LocalBridgeClazz, "DEFAULT_SOCKET_CONNECTION_SETUP_TIMEOUT_MS"); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/CommonClientConfigs.html#AUTO_INCLUDE_JMX_REPORTER_DOC"/>
         /// </summary>

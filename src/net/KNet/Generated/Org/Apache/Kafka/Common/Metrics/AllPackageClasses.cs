@@ -331,7 +331,7 @@ namespace Org.Apache.Kafka.Common.Metrics
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/metrics/Measurable.html"/>
     /// </summary>
-    public partial class Measurable : Org.Apache.Kafka.Common.Metrics.MetricValueProvider<double?>
+    public partial class Measurable : Org.Apache.Kafka.Common.Metrics.MetricValueProvider<Java.Lang.Double>
     {
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

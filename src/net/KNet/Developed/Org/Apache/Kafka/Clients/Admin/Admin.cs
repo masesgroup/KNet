@@ -83,9 +83,9 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         AlterReplicaLogDirsResult AlterReplicaLogDirs(Map<TopicPartitionReplica, string> replicaAssignment, AlterReplicaLogDirsOptions options);
 
-        DescribeLogDirsResult DescribeLogDirs(Collection<int?> brokers);
+        DescribeLogDirsResult DescribeLogDirs(Collection<Java.Lang.Integer> brokers);
 
-        DescribeLogDirsResult DescribeLogDirs(Collection<int?> brokers, DescribeLogDirsOptions options);
+        DescribeLogDirsResult DescribeLogDirs(Collection<Java.Lang.Integer> brokers, DescribeLogDirsOptions options);
 
         DescribeReplicaLogDirsResult DescribeReplicaLogDirs(Collection<TopicPartitionReplica> replicas);
 

@@ -33,8 +33,8 @@ namespace Org.Apache.Kafka.Common.Config
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/config/ConfigData.html#org.apache.kafka.common.config.ConfigData(java.util.Map,java.lang.Long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        /// <param name="arg1"><see cref="long"/></param>
-        public ConfigData(Java.Util.Map<string, string> arg0, long? arg1)
+        /// <param name="arg1"><see cref="Java.Lang.Long"/></param>
+        public ConfigData(Java.Util.Map<string, string> arg0, Java.Lang.Long arg1)
             : base(arg0, arg1)
         {
         }
@@ -66,10 +66,10 @@ namespace Org.Apache.Kafka.Common.Config
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/config/ConfigData.html#ttl--"/>
         /// </summary>
 
-        /// <returns><see cref="long"/></returns>
-        public long? Ttl()
+        /// <returns><see cref="Java.Lang.Long"/></returns>
+        public Java.Lang.Long Ttl()
         {
-            return IExecute<long?>("ttl");
+            return IExecute<Java.Lang.Long>("ttl");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/config/ConfigData.html#data--"/>

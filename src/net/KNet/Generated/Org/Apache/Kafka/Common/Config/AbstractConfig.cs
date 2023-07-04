@@ -141,10 +141,10 @@ namespace Org.Apache.Kafka.Common.Config
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/config/AbstractConfig.html#getBoolean-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="bool"/></returns>
-        public bool? GetBoolean(string arg0)
+        /// <returns><see cref="Java.Lang.Boolean"/></returns>
+        public Java.Lang.Boolean GetBoolean(string arg0)
         {
-            return IExecute<bool?>("getBoolean", arg0);
+            return IExecute<Java.Lang.Boolean>("getBoolean", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/config/AbstractConfig.html#getClass-java.lang.String-"/>
@@ -159,37 +159,37 @@ namespace Org.Apache.Kafka.Common.Config
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/config/AbstractConfig.html#getDouble-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="double"/></returns>
-        public double? GetDouble(string arg0)
+        /// <returns><see cref="Java.Lang.Double"/></returns>
+        public Java.Lang.Double GetDouble(string arg0)
         {
-            return IExecute<double?>("getDouble", arg0);
+            return IExecute<Java.Lang.Double>("getDouble", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/config/AbstractConfig.html#getInt-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="int"/></returns>
-        public int? GetInt(string arg0)
+        /// <returns><see cref="Java.Lang.Integer"/></returns>
+        public Java.Lang.Integer GetInt(string arg0)
         {
-            return IExecute<int?>("getInt", arg0);
+            return IExecute<Java.Lang.Integer>("getInt", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/config/AbstractConfig.html#getLong-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="long"/></returns>
-        public long? GetLong(string arg0)
+        /// <returns><see cref="Java.Lang.Long"/></returns>
+        public Java.Lang.Long GetLong(string arg0)
         {
-            return IExecute<long?>("getLong", arg0);
+            return IExecute<Java.Lang.Long>("getLong", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/config/AbstractConfig.html#getShort-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="short"/></returns>
-        public short? GetShort(string arg0)
+        /// <returns><see cref="Java.Lang.Short"/></returns>
+        public Java.Lang.Short GetShort(string arg0)
         {
-            return IExecute<short?>("getShort", arg0);
+            return IExecute<Java.Lang.Short>("getShort", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/config/AbstractConfig.html#documentationOf-java.lang.String-"/>

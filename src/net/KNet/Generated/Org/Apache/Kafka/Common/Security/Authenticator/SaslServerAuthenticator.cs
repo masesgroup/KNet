@@ -67,19 +67,19 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/security/authenticator/SaslServerAuthenticator.html#reauthenticationLatencyMs--"/>
         /// </summary>
 
-        /// <returns><see cref="long"/></returns>
-        public long? ReauthenticationLatencyMs()
+        /// <returns><see cref="Java.Lang.Long"/></returns>
+        public Java.Lang.Long ReauthenticationLatencyMs()
         {
-            return IExecute<long?>("reauthenticationLatencyMs");
+            return IExecute<Java.Lang.Long>("reauthenticationLatencyMs");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/security/authenticator/SaslServerAuthenticator.html#serverSessionExpirationTimeNanos--"/>
         /// </summary>
 
-        /// <returns><see cref="long"/></returns>
-        public long? ServerSessionExpirationTimeNanos()
+        /// <returns><see cref="Java.Lang.Long"/></returns>
+        public Java.Lang.Long ServerSessionExpirationTimeNanos()
         {
-            return IExecute<long?>("serverSessionExpirationTimeNanos");
+            return IExecute<Java.Lang.Long>("serverSessionExpirationTimeNanos");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/security/authenticator/SaslServerAuthenticator.html#principalSerde--"/>

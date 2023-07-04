@@ -297,7 +297,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DescribeLogDirsOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DescribeLogDirsResult"/></returns>
-        public Org.Apache.Kafka.Clients.Admin.DescribeLogDirsResult DescribeLogDirs(Java.Util.Collection<int?> arg0, Org.Apache.Kafka.Clients.Admin.DescribeLogDirsOptions arg1)
+        public Org.Apache.Kafka.Clients.Admin.DescribeLogDirsResult DescribeLogDirs(Java.Util.Collection<Java.Lang.Integer> arg0, Org.Apache.Kafka.Clients.Admin.DescribeLogDirsOptions arg1)
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.DescribeLogDirsResult>("describeLogDirs", arg0, arg1);
         }

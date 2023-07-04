@@ -85,7 +85,7 @@ namespace Org.Apache.Kafka.Connect.Sink
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/sink/SinkTaskContext.html#offset-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        public void Offset(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?> arg0)
+        public void Offset(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.Long> arg0)
         {
             IExecute("offset", arg0);
         }

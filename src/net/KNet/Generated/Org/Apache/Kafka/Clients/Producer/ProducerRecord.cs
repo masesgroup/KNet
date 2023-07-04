@@ -33,12 +33,12 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/producer/ProducerRecord.html#org.apache.kafka.clients.producer.ProducerRecord(java.lang.String,java.lang.Integer,java.lang.Long,java.lang.Object,java.lang.Object,java.lang.Iterable)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="int"/></param>
-        /// <param name="arg2"><see cref="long"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
+        /// <param name="arg2"><see cref="Java.Lang.Long"/></param>
         /// <param name="arg3"><see cref="object"/></param>
         /// <param name="arg4"><see cref="object"/></param>
         /// <param name="arg5"><see cref="Java.Lang.Iterable"/></param>
-        public ProducerRecord(string arg0, int? arg1, long? arg2, object arg3, object arg4, Java.Lang.Iterable arg5)
+        public ProducerRecord(string arg0, Java.Lang.Integer arg1, Java.Lang.Long arg2, object arg3, object arg4, Java.Lang.Iterable arg5)
             : base(arg0, arg1, arg2, arg3, arg4, arg5)
         {
         }
@@ -46,11 +46,11 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/producer/ProducerRecord.html#org.apache.kafka.clients.producer.ProducerRecord(java.lang.String,java.lang.Integer,java.lang.Long,java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="int"/></param>
-        /// <param name="arg2"><see cref="long"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
+        /// <param name="arg2"><see cref="Java.Lang.Long"/></param>
         /// <param name="arg3"><see cref="object"/></param>
         /// <param name="arg4"><see cref="object"/></param>
-        public ProducerRecord(string arg0, int? arg1, long? arg2, object arg3, object arg4)
+        public ProducerRecord(string arg0, Java.Lang.Integer arg1, Java.Lang.Long arg2, object arg3, object arg4)
             : base(arg0, arg1, arg2, arg3, arg4)
         {
         }
@@ -58,11 +58,11 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/producer/ProducerRecord.html#org.apache.kafka.clients.producer.ProducerRecord(java.lang.String,java.lang.Integer,java.lang.Object,java.lang.Object,java.lang.Iterable)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="int"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
         /// <param name="arg2"><see cref="object"/></param>
         /// <param name="arg3"><see cref="object"/></param>
         /// <param name="arg4"><see cref="Java.Lang.Iterable"/></param>
-        public ProducerRecord(string arg0, int? arg1, object arg2, object arg3, Java.Lang.Iterable arg4)
+        public ProducerRecord(string arg0, Java.Lang.Integer arg1, object arg2, object arg3, Java.Lang.Iterable arg4)
             : base(arg0, arg1, arg2, arg3, arg4)
         {
         }
@@ -70,10 +70,10 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/producer/ProducerRecord.html#org.apache.kafka.clients.producer.ProducerRecord(java.lang.String,java.lang.Integer,java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="int"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
         /// <param name="arg2"><see cref="object"/></param>
         /// <param name="arg3"><see cref="object"/></param>
-        public ProducerRecord(string arg0, int? arg1, object arg2, object arg3)
+        public ProducerRecord(string arg0, Java.Lang.Integer arg1, object arg2, object arg3)
             : base(arg0, arg1, arg2, arg3)
         {
         }
@@ -116,19 +116,19 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/producer/ProducerRecord.html#partition--"/>
         /// </summary>
 
-        /// <returns><see cref="int"/></returns>
-        public int? Partition()
+        /// <returns><see cref="Java.Lang.Integer"/></returns>
+        public Java.Lang.Integer Partition()
         {
-            return IExecute<int?>("partition");
+            return IExecute<Java.Lang.Integer>("partition");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/producer/ProducerRecord.html#timestamp--"/>
         /// </summary>
 
-        /// <returns><see cref="long"/></returns>
-        public long? Timestamp()
+        /// <returns><see cref="Java.Lang.Long"/></returns>
+        public Java.Lang.Long Timestamp()
         {
-            return IExecute<long?>("timestamp");
+            return IExecute<Java.Lang.Long>("timestamp");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/producer/ProducerRecord.html#topic--"/>
@@ -185,12 +185,12 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/producer/ProducerRecord.html#org.apache.kafka.clients.producer.ProducerRecord(java.lang.String,java.lang.Integer,java.lang.Long,java.lang.Object,java.lang.Object,java.lang.Iterable)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="int"/></param>
-        /// <param name="arg2"><see cref="long"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
+        /// <param name="arg2"><see cref="Java.Lang.Long"/></param>
         /// <param name="arg3"><typeparamref name="K"/></param>
         /// <param name="arg4"><typeparamref name="V"/></param>
         /// <param name="arg5"><see cref="Java.Lang.Iterable"/></param>
-        public ProducerRecord(string arg0, int? arg1, long? arg2, K arg3, V arg4, Java.Lang.Iterable<Org.Apache.Kafka.Common.Header.Header> arg5)
+        public ProducerRecord(string arg0, Java.Lang.Integer arg1, Java.Lang.Long arg2, K arg3, V arg4, Java.Lang.Iterable<Org.Apache.Kafka.Common.Header.Header> arg5)
             : base(arg0, arg1, arg2, arg3, arg4, arg5)
         {
         }
@@ -198,11 +198,11 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/producer/ProducerRecord.html#org.apache.kafka.clients.producer.ProducerRecord(java.lang.String,java.lang.Integer,java.lang.Long,java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="int"/></param>
-        /// <param name="arg2"><see cref="long"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
+        /// <param name="arg2"><see cref="Java.Lang.Long"/></param>
         /// <param name="arg3"><typeparamref name="K"/></param>
         /// <param name="arg4"><typeparamref name="V"/></param>
-        public ProducerRecord(string arg0, int? arg1, long? arg2, K arg3, V arg4)
+        public ProducerRecord(string arg0, Java.Lang.Integer arg1, Java.Lang.Long arg2, K arg3, V arg4)
             : base(arg0, arg1, arg2, arg3, arg4)
         {
         }
@@ -210,11 +210,11 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/producer/ProducerRecord.html#org.apache.kafka.clients.producer.ProducerRecord(java.lang.String,java.lang.Integer,java.lang.Object,java.lang.Object,java.lang.Iterable)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="int"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
         /// <param name="arg2"><typeparamref name="K"/></param>
         /// <param name="arg3"><typeparamref name="V"/></param>
         /// <param name="arg4"><see cref="Java.Lang.Iterable"/></param>
-        public ProducerRecord(string arg0, int? arg1, K arg2, V arg3, Java.Lang.Iterable<Org.Apache.Kafka.Common.Header.Header> arg4)
+        public ProducerRecord(string arg0, Java.Lang.Integer arg1, K arg2, V arg3, Java.Lang.Iterable<Org.Apache.Kafka.Common.Header.Header> arg4)
             : base(arg0, arg1, arg2, arg3, arg4)
         {
         }
@@ -222,10 +222,10 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/producer/ProducerRecord.html#org.apache.kafka.clients.producer.ProducerRecord(java.lang.String,java.lang.Integer,java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="int"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
         /// <param name="arg2"><typeparamref name="K"/></param>
         /// <param name="arg3"><typeparamref name="V"/></param>
-        public ProducerRecord(string arg0, int? arg1, K arg2, V arg3)
+        public ProducerRecord(string arg0, Java.Lang.Integer arg1, K arg2, V arg3)
             : base(arg0, arg1, arg2, arg3)
         {
         }
@@ -272,19 +272,19 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/producer/ProducerRecord.html#partition--"/>
         /// </summary>
 
-        /// <returns><see cref="int"/></returns>
-        public int? Partition()
+        /// <returns><see cref="Java.Lang.Integer"/></returns>
+        public Java.Lang.Integer Partition()
         {
-            return IExecute<int?>("partition");
+            return IExecute<Java.Lang.Integer>("partition");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/producer/ProducerRecord.html#timestamp--"/>
         /// </summary>
 
-        /// <returns><see cref="long"/></returns>
-        public long? Timestamp()
+        /// <returns><see cref="Java.Lang.Long"/></returns>
+        public Java.Lang.Long Timestamp()
         {
-            return IExecute<long?>("timestamp");
+            return IExecute<Java.Lang.Long>("timestamp");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/producer/ProducerRecord.html#topic--"/>

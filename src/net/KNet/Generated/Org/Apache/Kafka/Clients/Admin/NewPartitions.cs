@@ -47,7 +47,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="Java.Util.List"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.NewPartitions"/></returns>
-        public static Org.Apache.Kafka.Clients.Admin.NewPartitions IncreaseTo(int arg0, Java.Util.List<Java.Util.List<int?>> arg1)
+        public static Org.Apache.Kafka.Clients.Admin.NewPartitions IncreaseTo(int arg0, Java.Util.List<Java.Util.List<Java.Lang.Integer>> arg1)
         {
             return SExecute<Org.Apache.Kafka.Clients.Admin.NewPartitions>(LocalBridgeClazz, "increaseTo", arg0, arg1);
         }
@@ -78,9 +78,9 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
 
         /// <returns><see cref="Java.Util.List"/></returns>
-        public Java.Util.List<Java.Util.List<int?>> Assignments()
+        public Java.Util.List<Java.Util.List<Java.Lang.Integer>> Assignments()
         {
-            return IExecute<Java.Util.List<Java.Util.List<int?>>>("assignments");
+            return IExecute<Java.Util.List<Java.Util.List<Java.Lang.Integer>>>("assignments");
         }
 
         #endregion

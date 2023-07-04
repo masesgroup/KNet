@@ -87,55 +87,55 @@ namespace Org.Apache.Kafka.Connect.Data
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/data/Struct.html#getBoolean-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="bool"/></returns>
-        public bool? GetBoolean(string arg0)
+        /// <returns><see cref="Java.Lang.Boolean"/></returns>
+        public Java.Lang.Boolean GetBoolean(string arg0)
         {
-            return IExecute<bool?>("getBoolean", arg0);
+            return IExecute<Java.Lang.Boolean>("getBoolean", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/data/Struct.html#getInt8-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="byte"/></returns>
-        public byte? GetInt8(string arg0)
+        /// <returns><see cref="Java.Lang.Byte"/></returns>
+        public Java.Lang.Byte GetInt8(string arg0)
         {
-            return IExecute<byte?>("getInt8", arg0);
+            return IExecute<Java.Lang.Byte>("getInt8", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/data/Struct.html#getFloat64-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="double"/></returns>
-        public double? GetFloat64(string arg0)
+        /// <returns><see cref="Java.Lang.Double"/></returns>
+        public Java.Lang.Double GetFloat64(string arg0)
         {
-            return IExecute<double?>("getFloat64", arg0);
+            return IExecute<Java.Lang.Double>("getFloat64", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/data/Struct.html#getFloat32-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="float"/></returns>
-        public float? GetFloat32(string arg0)
+        /// <returns><see cref="Java.Lang.Float"/></returns>
+        public Java.Lang.Float GetFloat32(string arg0)
         {
-            return IExecute<float?>("getFloat32", arg0);
+            return IExecute<Java.Lang.Float>("getFloat32", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/data/Struct.html#getInt32-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="int"/></returns>
-        public int? GetInt32(string arg0)
+        /// <returns><see cref="Java.Lang.Integer"/></returns>
+        public Java.Lang.Integer GetInt32(string arg0)
         {
-            return IExecute<int?>("getInt32", arg0);
+            return IExecute<Java.Lang.Integer>("getInt32", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/data/Struct.html#getInt64-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="long"/></returns>
-        public long? GetInt64(string arg0)
+        /// <returns><see cref="Java.Lang.Long"/></returns>
+        public Java.Lang.Long GetInt64(string arg0)
         {
-            return IExecute<long?>("getInt64", arg0);
+            return IExecute<Java.Lang.Long>("getInt64", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/data/Struct.html#get-java.lang.String-"/>
@@ -168,10 +168,10 @@ namespace Org.Apache.Kafka.Connect.Data
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/data/Struct.html#getInt16-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="short"/></returns>
-        public short? GetInt16(string arg0)
+        /// <returns><see cref="Java.Lang.Short"/></returns>
+        public Java.Lang.Short GetInt16(string arg0)
         {
-            return IExecute<short?>("getInt16", arg0);
+            return IExecute<Java.Lang.Short>("getInt16", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/data/Struct.html#getString-java.lang.String-"/>

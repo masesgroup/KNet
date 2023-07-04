@@ -50,9 +50,9 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
 
         /// <returns><see cref="Java.Util.Set"/></returns>
-        public Java.Util.Set<long?> FilteredProducerIds()
+        public Java.Util.Set<Java.Lang.Long> FilteredProducerIds()
         {
-            return IExecute<Java.Util.Set<long?>>("filteredProducerIds");
+            return IExecute<Java.Util.Set<Java.Lang.Long>>("filteredProducerIds");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/admin/ListTransactionsOptions.html#filteredStates--"/>
@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListTransactionsOptions"/></returns>
-        public Org.Apache.Kafka.Clients.Admin.ListTransactionsOptions FilterProducerIds(Java.Util.Collection<long?> arg0)
+        public Org.Apache.Kafka.Clients.Admin.ListTransactionsOptions FilterProducerIds(Java.Util.Collection<Java.Lang.Long> arg0)
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.ListTransactionsOptions>("filterProducerIds", arg0);
         }

@@ -47,7 +47,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <param name="value">The StreamPartitioner object</param>
         /// <param name="numPartitions">The StreamPartitioner object</param>
         /// <returns>an Optional of Set of integers between 0 and <paramref name="numPartitions"/> -1, Empty optional means using default partitioner</returns>
-        Optional<Set<int?>> Partitions(string topic, K key, V value, int numPartitions);
+        Optional<Set<Java.Lang.Integer>> Partitions(string topic, K key, V value, int numPartitions);
     }
 
     /// <summary>

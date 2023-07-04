@@ -36,13 +36,13 @@ namespace Org.Apache.Kafka.Connect.Data
         /// <param name="arg1"><see cref="bool"/></param>
         /// <param name="arg2"><see cref="object"/></param>
         /// <param name="arg3"><see cref="string"/></param>
-        /// <param name="arg4"><see cref="int"/></param>
+        /// <param name="arg4"><see cref="Java.Lang.Integer"/></param>
         /// <param name="arg5"><see cref="string"/></param>
         /// <param name="arg6"><see cref="Java.Util.Map"/></param>
         /// <param name="arg7"><see cref="Java.Util.List"/></param>
         /// <param name="arg8"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg9"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
-        public ConnectSchema(Org.Apache.Kafka.Connect.Data.Schema.Type arg0, bool arg1, object arg2, string arg3, int? arg4, string arg5, Java.Util.Map<string, string> arg6, Java.Util.List<Org.Apache.Kafka.Connect.Data.Field> arg7, Org.Apache.Kafka.Connect.Data.Schema arg8, Org.Apache.Kafka.Connect.Data.Schema arg9)
+        public ConnectSchema(Org.Apache.Kafka.Connect.Data.Schema.Type arg0, bool arg1, object arg2, string arg3, Java.Lang.Integer arg4, string arg5, Java.Util.Map<string, string> arg6, Java.Util.List<Org.Apache.Kafka.Connect.Data.Field> arg7, Org.Apache.Kafka.Connect.Data.Schema arg8, Org.Apache.Kafka.Connect.Data.Schema arg9)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)
         {
         }
@@ -53,9 +53,9 @@ namespace Org.Apache.Kafka.Connect.Data
         /// <param name="arg1"><see cref="bool"/></param>
         /// <param name="arg2"><see cref="object"/></param>
         /// <param name="arg3"><see cref="string"/></param>
-        /// <param name="arg4"><see cref="int"/></param>
+        /// <param name="arg4"><see cref="Java.Lang.Integer"/></param>
         /// <param name="arg5"><see cref="string"/></param>
-        public ConnectSchema(Org.Apache.Kafka.Connect.Data.Schema.Type arg0, bool arg1, object arg2, string arg3, int? arg4, string arg5)
+        public ConnectSchema(Org.Apache.Kafka.Connect.Data.Schema.Type arg0, bool arg1, object arg2, string arg3, Java.Lang.Integer arg4, string arg5)
             : base(arg0, arg1, arg2, arg3, arg4, arg5)
         {
         }
@@ -124,10 +124,10 @@ namespace Org.Apache.Kafka.Connect.Data
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/data/ConnectSchema.html#version--"/>
         /// </summary>
 
-        /// <returns><see cref="int"/></returns>
-        public int? Version()
+        /// <returns><see cref="Java.Lang.Integer"/></returns>
+        public Java.Lang.Integer Version()
         {
-            return IExecute<int?>("version");
+            return IExecute<Java.Lang.Integer>("version");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/data/ConnectSchema.html#defaultValue--"/>

@@ -75,9 +75,9 @@ namespace Org.Apache.Kafka.Streams.Query
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Query.Position"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Query.PositionBound"/></param>
-        /// <param name="arg2"><see cref="int"/></param>
+        /// <param name="arg2"><see cref="Java.Lang.Integer"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.QueryResult"/></returns>
-        public static Org.Apache.Kafka.Streams.Query.QueryResult NotUpToBound(Org.Apache.Kafka.Streams.Query.Position arg0, Org.Apache.Kafka.Streams.Query.PositionBound arg1, int? arg2)
+        public static Org.Apache.Kafka.Streams.Query.QueryResult NotUpToBound(Org.Apache.Kafka.Streams.Query.Position arg0, Org.Apache.Kafka.Streams.Query.PositionBound arg1, Java.Lang.Integer arg2)
         {
             return SExecute<Org.Apache.Kafka.Streams.Query.QueryResult>(LocalBridgeClazz, "notUpToBound", arg0, arg1, arg2);
         }
@@ -229,9 +229,9 @@ namespace Org.Apache.Kafka.Streams.Query
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Query.Position"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Query.PositionBound"/></param>
-        /// <param name="arg2"><see cref="int"/></param>
+        /// <param name="arg2"><see cref="Java.Lang.Integer"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.QueryResult"/></returns>
-        public static Org.Apache.Kafka.Streams.Query.QueryResult<R> NotUpToBound(Org.Apache.Kafka.Streams.Query.Position arg0, Org.Apache.Kafka.Streams.Query.PositionBound arg1, int? arg2)
+        public static Org.Apache.Kafka.Streams.Query.QueryResult<R> NotUpToBound(Org.Apache.Kafka.Streams.Query.Position arg0, Org.Apache.Kafka.Streams.Query.PositionBound arg1, Java.Lang.Integer arg2)
         {
             return SExecute<Org.Apache.Kafka.Streams.Query.QueryResult<R>>(LocalBridgeClazz, "notUpToBound", arg0, arg1, arg2);
         }

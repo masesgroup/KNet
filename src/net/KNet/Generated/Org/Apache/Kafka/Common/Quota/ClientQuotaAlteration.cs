@@ -84,8 +84,8 @@ namespace Org.Apache.Kafka.Common.Quota
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/quota/ClientQuotaAlteration.Op.html#org.apache.kafka.common.quota.ClientQuotaAlteration$Op(java.lang.String,java.lang.Double)"/>
             /// </summary>
             /// <param name="arg0"><see cref="string"/></param>
-            /// <param name="arg1"><see cref="double"/></param>
-            public Op(string arg0, double? arg1)
+            /// <param name="arg1"><see cref="Java.Lang.Double"/></param>
+            public Op(string arg0, Java.Lang.Double arg1)
                 : base(arg0, arg1)
             {
             }
@@ -109,10 +109,10 @@ namespace Org.Apache.Kafka.Common.Quota
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/quota/ClientQuotaAlteration.Op.html#value--"/>
             /// </summary>
 
-            /// <returns><see cref="double"/></returns>
-            public double? Value()
+            /// <returns><see cref="Java.Lang.Double"/></returns>
+            public Java.Lang.Double Value()
             {
-                return IExecute<double?>("value");
+                return IExecute<Java.Lang.Double>("value");
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/quota/ClientQuotaAlteration.Op.html#key--"/>

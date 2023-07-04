@@ -50,9 +50,9 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
-        public Org.Apache.Kafka.Common.KafkaFuture<long?> ExpiryTimestamp()
+        public Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Long> ExpiryTimestamp()
         {
-            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<long?>>("expiryTimestamp");
+            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Long>>("expiryTimestamp");
         }
 
         #endregion

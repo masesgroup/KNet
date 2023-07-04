@@ -141,7 +141,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-"/>
         /// </summary>
-        public System.Func<string, K, V, int, Java.Util.Optional<Java.Util.Set<int?>>> OnPartitions { get; set; }
+        public System.Func<string, K, V, int, Java.Util.Optional<Java.Util.Set<Java.Lang.Integer>>> OnPartitions { get; set; }
 
         void PartitionsEventHandler(object sender, CLRListenerEventArgs<CLREventData<string>> data)
         {
@@ -160,7 +160,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <param name="arg2"><typeparamref name="V"/></param>
         /// <param name="arg3"><see cref="int"/></param>
         /// <returns><see cref="Java.Util.Optional"/></returns>
-        public virtual Java.Util.Optional<Java.Util.Set<int?>> Partitions(string arg0, K arg1, V arg2, int arg3)
+        public virtual Java.Util.Optional<Java.Util.Set<Java.Lang.Integer>> Partitions(string arg0, K arg1, V arg2, int arg3)
         {
             return default;
         }

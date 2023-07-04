@@ -68,10 +68,10 @@ namespace Org.Apache.Kafka.Streams
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/StoreQueryParameters.html#partition--"/>
         /// </summary>
 
-        /// <returns><see cref="int"/></returns>
-        public int? Partition()
+        /// <returns><see cref="Java.Lang.Integer"/></returns>
+        public Java.Lang.Integer Partition()
         {
-            return IExecute<int?>("partition");
+            return IExecute<Java.Lang.Integer>("partition");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/StoreQueryParameters.html#storeName--"/>
@@ -103,9 +103,9 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/StoreQueryParameters.html#withPartition-java.lang.Integer-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="int"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.Integer"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.StoreQueryParameters"/></returns>
-        public Org.Apache.Kafka.Streams.StoreQueryParameters WithPartition(int? arg0)
+        public Org.Apache.Kafka.Streams.StoreQueryParameters WithPartition(Java.Lang.Integer arg0)
         {
             return IExecute<Org.Apache.Kafka.Streams.StoreQueryParameters>("withPartition", arg0);
         }
@@ -167,10 +167,10 @@ namespace Org.Apache.Kafka.Streams
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/StoreQueryParameters.html#partition--"/>
         /// </summary>
 
-        /// <returns><see cref="int"/></returns>
-        public int? Partition()
+        /// <returns><see cref="Java.Lang.Integer"/></returns>
+        public Java.Lang.Integer Partition()
         {
-            return IExecute<int?>("partition");
+            return IExecute<Java.Lang.Integer>("partition");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/StoreQueryParameters.html#storeName--"/>
@@ -202,9 +202,9 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/StoreQueryParameters.html#withPartition-java.lang.Integer-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="int"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.Integer"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.StoreQueryParameters"/></returns>
-        public Org.Apache.Kafka.Streams.StoreQueryParameters<T> WithPartition(int? arg0)
+        public Org.Apache.Kafka.Streams.StoreQueryParameters<T> WithPartition(Java.Lang.Integer arg0)
         {
             return IExecute<Org.Apache.Kafka.Streams.StoreQueryParameters<T>>("withPartition", arg0);
         }

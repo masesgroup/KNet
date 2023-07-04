@@ -35,14 +35,14 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
         /// <param name="arg2"><see cref="string"/></param>
-        /// <param name="arg3"><see cref="int"/></param>
+        /// <param name="arg3"><see cref="Java.Lang.Integer"/></param>
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg5"><see cref="object"/></param>
         /// <param name="arg6"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg7"><see cref="object"/></param>
-        /// <param name="arg8"><see cref="long"/></param>
+        /// <param name="arg8"><see cref="Java.Lang.Long"/></param>
         /// <param name="arg9"><see cref="Java.Lang.Iterable"/></param>
-        public SourceRecord(Java.Util.Map<string, object> arg0, Java.Util.Map<string, object> arg1, string arg2, int? arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Org.Apache.Kafka.Connect.Data.Schema arg6, object arg7, long? arg8, Java.Lang.Iterable<Org.Apache.Kafka.Connect.Header.Header> arg9)
+        public SourceRecord(Java.Util.Map<string, object> arg0, Java.Util.Map<string, object> arg1, string arg2, Java.Lang.Integer arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Org.Apache.Kafka.Connect.Data.Schema arg6, object arg7, Java.Lang.Long arg8, Java.Lang.Iterable<Org.Apache.Kafka.Connect.Header.Header> arg9)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)
         {
         }
@@ -52,13 +52,13 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
         /// <param name="arg2"><see cref="string"/></param>
-        /// <param name="arg3"><see cref="int"/></param>
+        /// <param name="arg3"><see cref="Java.Lang.Integer"/></param>
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg5"><see cref="object"/></param>
         /// <param name="arg6"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg7"><see cref="object"/></param>
-        /// <param name="arg8"><see cref="long"/></param>
-        public SourceRecord(Java.Util.Map<string, object> arg0, Java.Util.Map<string, object> arg1, string arg2, int? arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Org.Apache.Kafka.Connect.Data.Schema arg6, object arg7, long? arg8)
+        /// <param name="arg8"><see cref="Java.Lang.Long"/></param>
+        public SourceRecord(Java.Util.Map<string, object> arg0, Java.Util.Map<string, object> arg1, string arg2, Java.Lang.Integer arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Org.Apache.Kafka.Connect.Data.Schema arg6, object arg7, Java.Lang.Long arg8)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
         {
         }
@@ -68,12 +68,12 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
         /// <param name="arg2"><see cref="string"/></param>
-        /// <param name="arg3"><see cref="int"/></param>
+        /// <param name="arg3"><see cref="Java.Lang.Integer"/></param>
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg5"><see cref="object"/></param>
         /// <param name="arg6"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg7"><see cref="object"/></param>
-        public SourceRecord(Java.Util.Map<string, object> arg0, Java.Util.Map<string, object> arg1, string arg2, int? arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Org.Apache.Kafka.Connect.Data.Schema arg6, object arg7)
+        public SourceRecord(Java.Util.Map<string, object> arg0, Java.Util.Map<string, object> arg1, string arg2, Java.Lang.Integer arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Org.Apache.Kafka.Connect.Data.Schema arg6, object arg7)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
         {
         }
@@ -83,10 +83,10 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
         /// <param name="arg2"><see cref="string"/></param>
-        /// <param name="arg3"><see cref="int"/></param>
+        /// <param name="arg3"><see cref="Java.Lang.Integer"/></param>
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg5"><see cref="object"/></param>
-        public SourceRecord(Java.Util.Map<string, object> arg0, Java.Util.Map<string, object> arg1, string arg2, int? arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5)
+        public SourceRecord(Java.Util.Map<string, object> arg0, Java.Util.Map<string, object> arg1, string arg2, Java.Lang.Integer arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5)
             : base(arg0, arg1, arg2, arg3, arg4, arg5)
         {
         }

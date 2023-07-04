@@ -46,77 +46,77 @@ namespace Org.Apache.Kafka.Connect.Data
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="object"/></param>
-        /// <returns><see cref="bool"/></returns>
+        /// <returns><see cref="Java.Lang.Boolean"/></returns>
         /// <exception cref="Org.Apache.Kafka.Connect.Errors.DataException"/>
-        public static bool? ConvertToBoolean(Org.Apache.Kafka.Connect.Data.Schema arg0, object arg1)
+        public static Java.Lang.Boolean ConvertToBoolean(Org.Apache.Kafka.Connect.Data.Schema arg0, object arg1)
         {
-            return SExecute<bool?>(LocalBridgeClazz, "convertToBoolean", arg0, arg1);
+            return SExecute<Java.Lang.Boolean>(LocalBridgeClazz, "convertToBoolean", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/data/Values.html#convertToByte-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="object"/></param>
-        /// <returns><see cref="byte"/></returns>
+        /// <returns><see cref="Java.Lang.Byte"/></returns>
         /// <exception cref="Org.Apache.Kafka.Connect.Errors.DataException"/>
-        public static byte? ConvertToByte(Org.Apache.Kafka.Connect.Data.Schema arg0, object arg1)
+        public static Java.Lang.Byte ConvertToByte(Org.Apache.Kafka.Connect.Data.Schema arg0, object arg1)
         {
-            return SExecute<byte?>(LocalBridgeClazz, "convertToByte", arg0, arg1);
+            return SExecute<Java.Lang.Byte>(LocalBridgeClazz, "convertToByte", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/data/Values.html#convertToDouble-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="object"/></param>
-        /// <returns><see cref="double"/></returns>
+        /// <returns><see cref="Java.Lang.Double"/></returns>
         /// <exception cref="Org.Apache.Kafka.Connect.Errors.DataException"/>
-        public static double? ConvertToDouble(Org.Apache.Kafka.Connect.Data.Schema arg0, object arg1)
+        public static Java.Lang.Double ConvertToDouble(Org.Apache.Kafka.Connect.Data.Schema arg0, object arg1)
         {
-            return SExecute<double?>(LocalBridgeClazz, "convertToDouble", arg0, arg1);
+            return SExecute<Java.Lang.Double>(LocalBridgeClazz, "convertToDouble", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/data/Values.html#convertToFloat-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="object"/></param>
-        /// <returns><see cref="float"/></returns>
+        /// <returns><see cref="Java.Lang.Float"/></returns>
         /// <exception cref="Org.Apache.Kafka.Connect.Errors.DataException"/>
-        public static float? ConvertToFloat(Org.Apache.Kafka.Connect.Data.Schema arg0, object arg1)
+        public static Java.Lang.Float ConvertToFloat(Org.Apache.Kafka.Connect.Data.Schema arg0, object arg1)
         {
-            return SExecute<float?>(LocalBridgeClazz, "convertToFloat", arg0, arg1);
+            return SExecute<Java.Lang.Float>(LocalBridgeClazz, "convertToFloat", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/data/Values.html#convertToInteger-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="object"/></param>
-        /// <returns><see cref="int"/></returns>
+        /// <returns><see cref="Java.Lang.Integer"/></returns>
         /// <exception cref="Org.Apache.Kafka.Connect.Errors.DataException"/>
-        public static int? ConvertToInteger(Org.Apache.Kafka.Connect.Data.Schema arg0, object arg1)
+        public static Java.Lang.Integer ConvertToInteger(Org.Apache.Kafka.Connect.Data.Schema arg0, object arg1)
         {
-            return SExecute<int?>(LocalBridgeClazz, "convertToInteger", arg0, arg1);
+            return SExecute<Java.Lang.Integer>(LocalBridgeClazz, "convertToInteger", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/data/Values.html#convertToLong-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="object"/></param>
-        /// <returns><see cref="long"/></returns>
+        /// <returns><see cref="Java.Lang.Long"/></returns>
         /// <exception cref="Org.Apache.Kafka.Connect.Errors.DataException"/>
-        public static long? ConvertToLong(Org.Apache.Kafka.Connect.Data.Schema arg0, object arg1)
+        public static Java.Lang.Long ConvertToLong(Org.Apache.Kafka.Connect.Data.Schema arg0, object arg1)
         {
-            return SExecute<long?>(LocalBridgeClazz, "convertToLong", arg0, arg1);
+            return SExecute<Java.Lang.Long>(LocalBridgeClazz, "convertToLong", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/data/Values.html#convertToShort-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="object"/></param>
-        /// <returns><see cref="short"/></returns>
+        /// <returns><see cref="Java.Lang.Short"/></returns>
         /// <exception cref="Org.Apache.Kafka.Connect.Errors.DataException"/>
-        public static short? ConvertToShort(Org.Apache.Kafka.Connect.Data.Schema arg0, object arg1)
+        public static Java.Lang.Short ConvertToShort(Org.Apache.Kafka.Connect.Data.Schema arg0, object arg1)
         {
-            return SExecute<short?>(LocalBridgeClazz, "convertToShort", arg0, arg1);
+            return SExecute<Java.Lang.Short>(LocalBridgeClazz, "convertToShort", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/data/Values.html#convertToString-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>

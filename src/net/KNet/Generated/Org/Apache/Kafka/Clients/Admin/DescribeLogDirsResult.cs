@@ -50,18 +50,18 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<int?, Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<string, Org.Apache.Kafka.Clients.Admin.LogDirDescription>>> Descriptions()
+        public Java.Util.Map<Java.Lang.Integer, Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<string, Org.Apache.Kafka.Clients.Admin.LogDirDescription>>> Descriptions()
         {
-            return IExecute<Java.Util.Map<int?, Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<string, Org.Apache.Kafka.Clients.Admin.LogDirDescription>>>>("descriptions");
+            return IExecute<Java.Util.Map<Java.Lang.Integer, Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<string, Org.Apache.Kafka.Clients.Admin.LogDirDescription>>>>("descriptions");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/admin/DescribeLogDirsResult.html#allDescriptions--"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
-        public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<int?, Java.Util.Map<string, Org.Apache.Kafka.Clients.Admin.LogDirDescription>>> AllDescriptions()
+        public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<Java.Lang.Integer, Java.Util.Map<string, Org.Apache.Kafka.Clients.Admin.LogDirDescription>>> AllDescriptions()
         {
-            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<int?, Java.Util.Map<string, Org.Apache.Kafka.Clients.Admin.LogDirDescription>>>>("allDescriptions");
+            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<Java.Lang.Integer, Java.Util.Map<string, Org.Apache.Kafka.Clients.Admin.LogDirDescription>>>>("allDescriptions");
         }
 
         #endregion

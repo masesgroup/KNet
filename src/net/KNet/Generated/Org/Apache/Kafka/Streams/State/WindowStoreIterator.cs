@@ -90,7 +90,7 @@ namespace Org.Apache.Kafka.Streams.State
     #endregion
 
     #region WindowStoreIterator<V>
-    public partial class WindowStoreIterator<V> : Org.Apache.Kafka.Streams.State.IWindowStoreIterator<V>, Org.Apache.Kafka.Streams.State.IKeyValueIterator<long?, V>, Java.Io.ICloseable
+    public partial class WindowStoreIterator<V> : Org.Apache.Kafka.Streams.State.IWindowStoreIterator<V>, Org.Apache.Kafka.Streams.State.IKeyValueIterator<Java.Lang.Long, V>, Java.Io.ICloseable
     {
         #region Constructors
 

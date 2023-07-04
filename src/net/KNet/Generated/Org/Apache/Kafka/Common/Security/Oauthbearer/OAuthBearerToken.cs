@@ -67,10 +67,10 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#startTimeMs--"/>
         /// </summary>
 
-        /// <returns><see cref="long"/></returns>
-        public long? StartTimeMs()
+        /// <returns><see cref="Java.Lang.Long"/></returns>
+        public Java.Lang.Long StartTimeMs()
         {
-            return IExecute<long?>("startTimeMs");
+            return IExecute<Java.Lang.Long>("startTimeMs");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#principalName--"/>

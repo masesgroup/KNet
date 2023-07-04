@@ -134,9 +134,9 @@ namespace Org.Apache.Kafka.Streams.Query
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/query/StateQueryResult.html#getPartitionResults--"/> 
         /// </summary>
-        public Java.Util.Map<int?, Org.Apache.Kafka.Streams.Query.QueryResult<R>> PartitionResults
+        public Java.Util.Map<Java.Lang.Integer, Org.Apache.Kafka.Streams.Query.QueryResult<R>> PartitionResults
         {
-            get { return IExecute<Java.Util.Map<int?, Org.Apache.Kafka.Streams.Query.QueryResult<R>>>("getPartitionResults"); }
+            get { return IExecute<Java.Util.Map<Java.Lang.Integer, Org.Apache.Kafka.Streams.Query.QueryResult<R>>>("getPartitionResults"); }
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/query/StateQueryResult.html#getPosition--"/> 

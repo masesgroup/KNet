@@ -87,54 +87,54 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
-        public static Org.Apache.Kafka.Common.Serialization.Serde<bool?> Boolean()
+        public static Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.Boolean> Boolean()
         {
-            return SExecute<Org.Apache.Kafka.Common.Serialization.Serde<bool?>>(LocalBridgeClazz, "Boolean");
+            return SExecute<Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.Boolean>>(LocalBridgeClazz, "Boolean");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/serialization/Serdes.html#Double--"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
-        public static Org.Apache.Kafka.Common.Serialization.Serde<double?> Double()
+        public static Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.Double> Double()
         {
-            return SExecute<Org.Apache.Kafka.Common.Serialization.Serde<double?>>(LocalBridgeClazz, "Double");
+            return SExecute<Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.Double>>(LocalBridgeClazz, "Double");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/serialization/Serdes.html#Float--"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
-        public static Org.Apache.Kafka.Common.Serialization.Serde<float?> Float()
+        public static Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.Float> Float()
         {
-            return SExecute<Org.Apache.Kafka.Common.Serialization.Serde<float?>>(LocalBridgeClazz, "Float");
+            return SExecute<Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.Float>>(LocalBridgeClazz, "Float");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/serialization/Serdes.html#Integer--"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
-        public static Org.Apache.Kafka.Common.Serialization.Serde<int?> Integer()
+        public static Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.Integer> Integer()
         {
-            return SExecute<Org.Apache.Kafka.Common.Serialization.Serde<int?>>(LocalBridgeClazz, "Integer");
+            return SExecute<Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.Integer>>(LocalBridgeClazz, "Integer");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/serialization/Serdes.html#Long--"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
-        public static Org.Apache.Kafka.Common.Serialization.Serde<long?> Long()
+        public static Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.Long> Long()
         {
-            return SExecute<Org.Apache.Kafka.Common.Serialization.Serde<long?>>(LocalBridgeClazz, "Long");
+            return SExecute<Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.Long>>(LocalBridgeClazz, "Long");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/serialization/Serdes.html#Short--"/>
         /// </summary>
 
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
-        public static Org.Apache.Kafka.Common.Serialization.Serde<short?> Short()
+        public static Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.Short> Short()
         {
-            return SExecute<Org.Apache.Kafka.Common.Serialization.Serde<short?>>(LocalBridgeClazz, "Short");
+            return SExecute<Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.Short>>(LocalBridgeClazz, "Short");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/serialization/Serdes.html#String--"/>

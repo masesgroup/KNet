@@ -184,10 +184,10 @@ namespace Org.Apache.Kafka.Connect.Data
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/data/SchemaBuilder.html#version--"/>
         /// </summary>
 
-        /// <returns><see cref="int"/></returns>
-        public int? Version()
+        /// <returns><see cref="Java.Lang.Integer"/></returns>
+        public Java.Lang.Integer Version()
         {
-            return IExecute<int?>("version");
+            return IExecute<Java.Lang.Integer>("version");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/data/SchemaBuilder.html#defaultValue--"/>
@@ -365,9 +365,9 @@ namespace Org.Apache.Kafka.Connect.Data
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/data/SchemaBuilder.html#version-java.lang.Integer-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="int"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.Integer"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.SchemaBuilder"/></returns>
-        public Org.Apache.Kafka.Connect.Data.SchemaBuilder Version(int? arg0)
+        public Org.Apache.Kafka.Connect.Data.SchemaBuilder Version(Java.Lang.Integer arg0)
         {
             return IExecute<Org.Apache.Kafka.Connect.Data.SchemaBuilder>("version", arg0);
         }

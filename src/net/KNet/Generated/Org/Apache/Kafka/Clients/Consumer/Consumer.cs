@@ -538,18 +538,18 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?> BeginningOffsets(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0, Java.Time.Duration arg1)
+        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.Long> BeginningOffsets(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0, Java.Time.Duration arg1)
         {
-            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?>>("beginningOffsets", arg0, arg1);
+            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.Long>>("beginningOffsets", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/consumer/Consumer.html#beginningOffsets-java.util.Collection-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?> BeginningOffsets(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0)
+        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.Long> BeginningOffsets(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0)
         {
-            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?>>("beginningOffsets", arg0);
+            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.Long>>("beginningOffsets", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/consumer/Consumer.html#endOffsets-java.util.Collection-java.time.Duration-"/>
@@ -557,18 +557,18 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?> EndOffsets(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0, Java.Time.Duration arg1)
+        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.Long> EndOffsets(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0, Java.Time.Duration arg1)
         {
-            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?>>("endOffsets", arg0, arg1);
+            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.Long>>("endOffsets", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/consumer/Consumer.html#endOffsets-java.util.Collection-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?> EndOffsets(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0)
+        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.Long> EndOffsets(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0)
         {
-            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?>>("endOffsets", arg0);
+            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.Long>>("endOffsets", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/consumer/Consumer.html#committed-java.util.Set-java.time.Duration-"/>
@@ -595,7 +595,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndTimestamp> OffsetsForTimes(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?> arg0, Java.Time.Duration arg1)
+        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndTimestamp> OffsetsForTimes(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.Long> arg0, Java.Time.Duration arg1)
         {
             return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndTimestamp>>("offsetsForTimes", arg0, arg1);
         }
@@ -604,7 +604,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndTimestamp> OffsetsForTimes(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?> arg0)
+        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndTimestamp> OffsetsForTimes(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.Long> arg0)
         {
             return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndTimestamp>>("offsetsForTimes", arg0);
         }

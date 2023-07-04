@@ -68,9 +68,9 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
 
         /// <returns><see cref="Java.Util.Optional"/></returns>
-        public Java.Util.Optional<long?> FinalizedFeaturesEpoch()
+        public Java.Util.Optional<Java.Lang.Long> FinalizedFeaturesEpoch()
         {
-            return IExecute<Java.Util.Optional<long?>>("finalizedFeaturesEpoch");
+            return IExecute<Java.Util.Optional<Java.Lang.Long>>("finalizedFeaturesEpoch");
         }
 
         #endregion

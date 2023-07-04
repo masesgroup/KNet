@@ -501,7 +501,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Set"/></param>
         /// <returns><see cref="int"/></returns>
-        public static int To32BitField(Java.Util.Set<byte?> arg0)
+        public static int To32BitField(Java.Util.Set<Java.Lang.Byte> arg0)
         {
             return SExecute<int>(LocalBridgeClazz, "to32BitField", arg0);
         }
@@ -527,18 +527,18 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/utils/Utils.html#getPort-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="int"/></returns>
-        public static int? GetPort(string arg0)
+        /// <returns><see cref="Java.Lang.Integer"/></returns>
+        public static Java.Lang.Integer GetPort(string arg0)
         {
-            return SExecute<int?>(LocalBridgeClazz, "getPort", arg0);
+            return SExecute<Java.Lang.Integer>(LocalBridgeClazz, "getPort", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/utils/Utils.html#formatAddress-java.lang.String-java.lang.Integer-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <param name="arg1"><see cref="int"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
         /// <returns><see cref="string"/></returns>
-        public static string FormatAddress(string arg0, int? arg1)
+        public static string FormatAddress(string arg0, Java.Lang.Integer arg1)
         {
             return SExecute<string>(LocalBridgeClazz, "formatAddress", arg0, arg1);
         }
@@ -749,9 +749,9 @@ namespace Org.Apache.Kafka.Common.Utils
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Java.Util.Set"/></returns>
-        public static Java.Util.Set<byte?> From32BitField(int arg0)
+        public static Java.Util.Set<Java.Lang.Byte> From32BitField(int arg0)
         {
-            return SExecute<Java.Util.Set<byte?>>(LocalBridgeClazz, "from32BitField", arg0);
+            return SExecute<Java.Util.Set<Java.Lang.Byte>>(LocalBridgeClazz, "from32BitField", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/utils/Utils.html#getDateTime-java.lang.String-"/>

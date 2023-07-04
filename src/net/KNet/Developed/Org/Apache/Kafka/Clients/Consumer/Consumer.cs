@@ -88,17 +88,17 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         void Resume(Collection<TopicPartition> partitions);
 
-        Map<TopicPartition, OffsetAndTimestamp> OffsetsForTimes(Map<TopicPartition, long?> timestampsToSearch);
+        Map<TopicPartition, OffsetAndTimestamp> OffsetsForTimes(Map<TopicPartition, Java.Lang.Long> timestampsToSearch);
 
-        Map<TopicPartition, OffsetAndTimestamp> OffsetsForTimes(Map<TopicPartition, long?> timestampsToSearch, Duration timeout);
+        Map<TopicPartition, OffsetAndTimestamp> OffsetsForTimes(Map<TopicPartition, Java.Lang.Long> timestampsToSearch, Duration timeout);
 
-        Map<TopicPartition, long?> BeginningOffsets(Collection<TopicPartition> partitions);
+        Map<TopicPartition, Java.Lang.Long> BeginningOffsets(Collection<TopicPartition> partitions);
 
-        Map<TopicPartition, long?> BeginningOffsets(Collection<TopicPartition> partitions, Duration timeout);
+        Map<TopicPartition, Java.Lang.Long> BeginningOffsets(Collection<TopicPartition> partitions, Duration timeout);
 
-        Map<TopicPartition, long?> EndOffsets(Collection<TopicPartition> partitions);
+        Map<TopicPartition, Java.Lang.Long> EndOffsets(Collection<TopicPartition> partitions);
 
-        Map<TopicPartition, long?> EndOffsets(Collection<TopicPartition> partitions, Duration timeout);
+        Map<TopicPartition, Java.Lang.Long> EndOffsets(Collection<TopicPartition> partitions, Duration timeout);
 
         OptionalLong CurrentLag(TopicPartition topicPartition);
 

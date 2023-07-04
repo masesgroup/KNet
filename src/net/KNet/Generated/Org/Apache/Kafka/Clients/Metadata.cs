@@ -50,9 +50,9 @@ namespace Org.Apache.Kafka.Clients
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <returns><see cref="Java.Util.Optional"/></returns>
-        public Java.Util.Optional<int?> LastSeenLeaderEpoch(Org.Apache.Kafka.Common.TopicPartition arg0)
+        public Java.Util.Optional<Java.Lang.Integer> LastSeenLeaderEpoch(Org.Apache.Kafka.Common.TopicPartition arg0)
         {
-            return IExecute<Java.Util.Optional<int?>>("lastSeenLeaderEpoch", arg0);
+            return IExecute<Java.Util.Optional<Java.Lang.Integer>>("lastSeenLeaderEpoch", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/Metadata.html#metadataExpireMs--"/>
@@ -240,7 +240,7 @@ namespace Org.Apache.Kafka.Clients
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Optional"/></param>
             /// <param name="arg1"><see cref="Java.Util.Optional"/></param>
-            public LeaderAndEpoch(Java.Util.Optional<Org.Apache.Kafka.Common.Node> arg0, Java.Util.Optional<int?> arg1)
+            public LeaderAndEpoch(Java.Util.Optional<Org.Apache.Kafka.Common.Node> arg0, Java.Util.Optional<Java.Lang.Integer> arg1)
                 : base(arg0, arg1)
             {
             }

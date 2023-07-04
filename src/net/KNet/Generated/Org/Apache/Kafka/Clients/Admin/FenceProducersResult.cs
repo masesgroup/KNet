@@ -59,18 +59,18 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
-        public Org.Apache.Kafka.Common.KafkaFuture<long?> ProducerId(string arg0)
+        public Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Long> ProducerId(string arg0)
         {
-            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<long?>>("producerId", arg0);
+            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Long>>("producerId", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/admin/FenceProducersResult.html#epochId-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
-        public Org.Apache.Kafka.Common.KafkaFuture<short?> EpochId(string arg0)
+        public Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Short> EpochId(string arg0)
         {
-            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<short?>>("epochId", arg0);
+            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Short>>("epochId", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/admin/FenceProducersResult.html#all--"/>

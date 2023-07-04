@@ -54,9 +54,9 @@ namespace Org.Apache.Kafka.Streams.Query
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/query/Position.html#fromMap-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
-        /// <typeparam name="Arg0ExtendsJava_Util_Map_int__long__"><see cref="Java.Util.Map{int?, long?}"/></typeparam>
+        /// <typeparam name="Arg0ExtendsJava_Util_Map_Java_Lang_Integer_Java_Lang_Long_"><see cref="Java.Util.Map{Java.Lang.Integer, Java.Lang.Long}"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.Position"/></returns>
-        public static Org.Apache.Kafka.Streams.Query.Position FromMap<Arg0ExtendsJava_Util_Map_int__long__>(Java.Util.Map<string, Arg0ExtendsJava_Util_Map_int__long__> arg0) where Arg0ExtendsJava_Util_Map_int__long__: Java.Util.Map<int?, long?>
+        public static Org.Apache.Kafka.Streams.Query.Position FromMap<Arg0ExtendsJava_Util_Map_Java_Lang_Integer_Java_Lang_Long_>(Java.Util.Map<string, Arg0ExtendsJava_Util_Map_Java_Lang_Integer_Java_Lang_Long_> arg0) where Arg0ExtendsJava_Util_Map_Java_Lang_Integer_Java_Lang_Long_: Java.Util.Map<Java.Lang.Integer, Java.Lang.Long>
         {
             return SExecute<Org.Apache.Kafka.Streams.Query.Position>(LocalBridgeClazz, "fromMap", arg0);
         }
@@ -85,9 +85,9 @@ namespace Org.Apache.Kafka.Streams.Query
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<int?, long?> GetPartitionPositions(string arg0)
+        public Java.Util.Map<Java.Lang.Integer, Java.Lang.Long> GetPartitionPositions(string arg0)
         {
-            return IExecute<Java.Util.Map<int?, long?>>("getPartitionPositions", arg0);
+            return IExecute<Java.Util.Map<Java.Lang.Integer, Java.Lang.Long>>("getPartitionPositions", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/query/Position.html#copy--"/>

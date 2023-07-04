@@ -112,9 +112,9 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<long?, W> WindowsFor(long arg0)
+        public Java.Util.Map<Java.Lang.Long, W> WindowsFor(long arg0)
         {
-            return IExecute<Java.Util.Map<long?, W>>("windowsFor", arg0);
+            return IExecute<Java.Util.Map<Java.Lang.Long, W>>("windowsFor", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/kstream/Windows.html#gracePeriodMs--"/>

@@ -106,7 +106,7 @@ namespace Org.Apache.Kafka.Tools
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.Consumer"/></param>
         /// <param name="arg1"><see cref="Java.Util.Set"/></param>
         /// <param name="arg2"><see cref="Java.Util.Map"/></param>
-        public void ResetOffsetsFromResetPlan(Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]> arg0, Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> arg1, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?> arg2)
+        public void ResetOffsetsFromResetPlan(Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]> arg0, Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> arg1, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.Long> arg2)
         {
             IExecute("resetOffsetsFromResetPlan", arg0, arg1, arg2);
         }
@@ -115,8 +115,8 @@ namespace Org.Apache.Kafka.Tools
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.Consumer"/></param>
         /// <param name="arg1"><see cref="Java.Util.Set"/></param>
-        /// <param name="arg2"><see cref="long"/></param>
-        public void ResetOffsetsTo(Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]> arg0, Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> arg1, long? arg2)
+        /// <param name="arg2"><see cref="Java.Lang.Long"/></param>
+        public void ResetOffsetsTo(Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]> arg0, Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> arg1, Java.Lang.Long arg2)
         {
             IExecute("resetOffsetsTo", arg0, arg1, arg2);
         }
@@ -125,8 +125,8 @@ namespace Org.Apache.Kafka.Tools
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.Consumer"/></param>
         /// <param name="arg1"><see cref="Java.Util.Set"/></param>
-        /// <param name="arg2"><see cref="long"/></param>
-        public void ResetToDatetime(Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]> arg0, Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> arg1, long? arg2)
+        /// <param name="arg2"><see cref="Java.Lang.Long"/></param>
+        public void ResetToDatetime(Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]> arg0, Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> arg1, Java.Lang.Long arg2)
         {
             IExecute("resetToDatetime", arg0, arg1, arg2);
         }

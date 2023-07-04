@@ -130,10 +130,10 @@ namespace Org.Apache.Kafka.Common
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/Cluster.html#partitionCountForTopic-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="int"/></returns>
-        public int? PartitionCountForTopic(string arg0)
+        /// <returns><see cref="Java.Lang.Integer"/></returns>
+        public Java.Lang.Integer PartitionCountForTopic(string arg0)
         {
-            return IExecute<int?>("partitionCountForTopic", arg0);
+            return IExecute<Java.Lang.Integer>("partitionCountForTopic", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/Cluster.html#topicName-org.apache.kafka.common.Uuid-"/>

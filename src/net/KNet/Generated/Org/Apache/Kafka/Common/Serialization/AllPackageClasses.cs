@@ -1062,7 +1062,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/serialization/Serdes.BooleanSerde.html"/>
         /// </summary>
-        public partial class BooleanSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<bool?>
+        public partial class BooleanSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<Java.Lang.Boolean>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1234,7 +1234,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/serialization/Serdes.DoubleSerde.html"/>
         /// </summary>
-        public partial class DoubleSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<double?>
+        public partial class DoubleSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<Java.Lang.Double>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1277,7 +1277,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/serialization/Serdes.FloatSerde.html"/>
         /// </summary>
-        public partial class FloatSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<float?>
+        public partial class FloatSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<Java.Lang.Float>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1320,7 +1320,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/serialization/Serdes.IntegerSerde.html"/>
         /// </summary>
-        public partial class IntegerSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<int?>
+        public partial class IntegerSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<Java.Lang.Integer>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1450,7 +1450,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/serialization/Serdes.LongSerde.html"/>
         /// </summary>
-        public partial class LongSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<long?>
+        public partial class LongSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<Java.Lang.Long>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
@@ -1493,7 +1493,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/serialization/Serdes.ShortSerde.html"/>
         /// </summary>
-        public partial class ShortSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<short?>
+        public partial class ShortSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<Java.Lang.Short>
         {
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

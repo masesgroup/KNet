@@ -122,9 +122,9 @@ namespace Org.Apache.Kafka.Common.Utils
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/utils/AppInfoParser.AppInfo.html#getStartTimeMs--"/> 
             /// </summary>
-            public long? StartTimeMs
+            public Java.Lang.Long StartTimeMs
             {
-                get { return IExecute<long?>("getStartTimeMs"); }
+                get { return IExecute<Java.Lang.Long>("getStartTimeMs"); }
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/utils/AppInfoParser.AppInfo.html#getVersion--"/> 
@@ -174,9 +174,9 @@ namespace Org.Apache.Kafka.Common.Utils
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/utils/AppInfoParser.AppInfoMBean.html#getStartTimeMs--"/> 
             /// </summary>
-            public long? StartTimeMs
+            public Java.Lang.Long StartTimeMs
             {
-                get { return IExecute<long?>("getStartTimeMs"); }
+                get { return IExecute<Java.Lang.Long>("getStartTimeMs"); }
             }
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/utils/AppInfoParser.AppInfoMBean.html#getVersion--"/> 

@@ -59,18 +59,18 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
-        public Org.Apache.Kafka.Common.KafkaFuture<int?> NumPartitions(string arg0)
+        public Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Integer> NumPartitions(string arg0)
         {
-            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<int?>>("numPartitions", arg0);
+            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Integer>>("numPartitions", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/admin/CreateTopicsResult.html#replicationFactor-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
-        public Org.Apache.Kafka.Common.KafkaFuture<int?> ReplicationFactor(string arg0)
+        public Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Integer> ReplicationFactor(string arg0)
         {
-            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<int?>>("replicationFactor", arg0);
+            return IExecute<Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Integer>>("replicationFactor", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/admin/CreateTopicsResult.html#all--"/>

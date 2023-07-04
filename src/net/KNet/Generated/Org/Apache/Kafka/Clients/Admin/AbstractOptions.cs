@@ -49,17 +49,17 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/admin/AbstractOptions.html#timeoutMs--"/>
         /// </summary>
 
-        /// <returns><see cref="int"/></returns>
-        public int? TimeoutMs()
+        /// <returns><see cref="Java.Lang.Integer"/></returns>
+        public Java.Lang.Integer TimeoutMs()
         {
-            return IExecute<int?>("timeoutMs");
+            return IExecute<Java.Lang.Integer>("timeoutMs");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/admin/AbstractOptions.html#timeoutMs-java.lang.Integer-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="int"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.Integer"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.AbstractOptions"/></returns>
-        public Org.Apache.Kafka.Clients.Admin.AbstractOptions TimeoutMs(int? arg0)
+        public Org.Apache.Kafka.Clients.Admin.AbstractOptions TimeoutMs(Java.Lang.Integer arg0)
         {
             return IExecute<Org.Apache.Kafka.Clients.Admin.AbstractOptions>("timeoutMs", arg0);
         }
@@ -102,17 +102,17 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/admin/AbstractOptions.html#timeoutMs--"/>
         /// </summary>
 
-        /// <returns><see cref="int"/></returns>
-        public int? TimeoutMs()
+        /// <returns><see cref="Java.Lang.Integer"/></returns>
+        public Java.Lang.Integer TimeoutMs()
         {
-            return IExecute<int?>("timeoutMs");
+            return IExecute<Java.Lang.Integer>("timeoutMs");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/admin/AbstractOptions.html#timeoutMs-java.lang.Integer-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="int"/></param>
+        /// <param name="arg0"><see cref="Java.Lang.Integer"/></param>
         /// <returns><typeparamref name="T"/></returns>
-        public T TimeoutMs(int? arg0)
+        public T TimeoutMs(Java.Lang.Integer arg0)
         {
             return IExecute<T>("timeoutMs", arg0);
         }

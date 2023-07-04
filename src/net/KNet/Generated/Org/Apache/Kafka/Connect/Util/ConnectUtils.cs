@@ -111,11 +111,11 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.5.0/org/apache/kafka/connect/util/ConnectUtils.html#checkAndConvertTimestamp-java.lang.Long-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="long"/></param>
-        /// <returns><see cref="long"/></returns>
-        public static long? CheckAndConvertTimestamp(long? arg0)
+        /// <param name="arg0"><see cref="Java.Lang.Long"/></param>
+        /// <returns><see cref="Java.Lang.Long"/></returns>
+        public static Java.Lang.Long CheckAndConvertTimestamp(Java.Lang.Long arg0)
         {
-            return SExecute<long?>(LocalBridgeClazz, "checkAndConvertTimestamp", arg0);
+            return SExecute<Java.Lang.Long>(LocalBridgeClazz, "checkAndConvertTimestamp", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.5.0/org/apache/kafka/connect/util/ConnectUtils.html#className-java.lang.Object-"/>

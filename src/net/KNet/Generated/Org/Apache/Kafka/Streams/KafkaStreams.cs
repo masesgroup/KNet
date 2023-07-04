@@ -191,9 +191,9 @@ namespace Org.Apache.Kafka.Streams
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<string, Java.Util.Map<int?, Org.Apache.Kafka.Streams.LagInfo>> AllLocalStorePartitionLags()
+        public Java.Util.Map<string, Java.Util.Map<Java.Lang.Integer, Org.Apache.Kafka.Streams.LagInfo>> AllLocalStorePartitionLags()
         {
-            return IExecute<Java.Util.Map<string, Java.Util.Map<int?, Org.Apache.Kafka.Streams.LagInfo>>>("allLocalStorePartitionLags");
+            return IExecute<Java.Util.Map<string, Java.Util.Map<Java.Lang.Integer, Org.Apache.Kafka.Streams.LagInfo>>>("allLocalStorePartitionLags");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#metrics--"/>

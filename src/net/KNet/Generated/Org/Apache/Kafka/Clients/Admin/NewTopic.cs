@@ -44,7 +44,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
-        public NewTopic(string arg0, Java.Util.Map<int?, Java.Util.List<int?>> arg1)
+        public NewTopic(string arg0, Java.Util.Map<Java.Lang.Integer, Java.Util.List<Java.Lang.Integer>> arg1)
             : base(arg0, arg1)
         {
         }
@@ -54,7 +54,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Java.Util.Optional"/></param>
         /// <param name="arg2"><see cref="Java.Util.Optional"/></param>
-        public NewTopic(string arg0, Java.Util.Optional<int?> arg1, Java.Util.Optional<short?> arg2)
+        public NewTopic(string arg0, Java.Util.Optional<Java.Lang.Integer> arg1, Java.Util.Optional<Java.Lang.Short> arg2)
             : base(arg0, arg1, arg2)
         {
         }
@@ -97,9 +97,9 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
 
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<int?, Java.Util.List<int?>> ReplicasAssignments()
+        public Java.Util.Map<Java.Lang.Integer, Java.Util.List<Java.Lang.Integer>> ReplicasAssignments()
         {
-            return IExecute<Java.Util.Map<int?, Java.Util.List<int?>>>("replicasAssignments");
+            return IExecute<Java.Util.Map<Java.Lang.Integer, Java.Util.List<Java.Lang.Integer>>>("replicasAssignments");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/admin/NewTopic.html#configs--"/>

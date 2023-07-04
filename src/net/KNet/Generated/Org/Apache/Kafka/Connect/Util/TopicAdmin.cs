@@ -135,9 +135,9 @@ namespace Org.Apache.Kafka.Connect.Util
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Set"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?> EndOffsets(Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> arg0)
+        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.Long> EndOffsets(Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> arg0)
         {
-            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?>>("endOffsets", arg0);
+            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.Long>>("endOffsets", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.5.0/org/apache/kafka/connect/util/TopicAdmin.html#retryEndOffsets-java.util.Set-java.time.Duration-long-"/>
@@ -146,9 +146,9 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
         /// <param name="arg2"><see cref="long"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?> RetryEndOffsets(Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> arg0, Java.Time.Duration arg1, long arg2)
+        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.Long> RetryEndOffsets(Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> arg0, Java.Time.Duration arg1, long arg2)
         {
-            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, long?>>("retryEndOffsets", arg0, arg1, arg2);
+            return IExecute<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.Long>>("retryEndOffsets", arg0, arg1, arg2);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.5.0/org/apache/kafka/connect/util/TopicAdmin.html#createTopics-org.apache.kafka.clients.admin.NewTopic[]-"/>

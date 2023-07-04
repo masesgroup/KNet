@@ -39,10 +39,10 @@ namespace Org.Apache.Kafka.Connect.Sink
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg5"><see cref="object"/></param>
         /// <param name="arg6"><see cref="long"/></param>
-        /// <param name="arg7"><see cref="long"/></param>
+        /// <param name="arg7"><see cref="Java.Lang.Long"/></param>
         /// <param name="arg8"><see cref="Org.Apache.Kafka.Common.Record.TimestampType"/></param>
         /// <param name="arg9"><see cref="Java.Lang.Iterable"/></param>
-        public SinkRecord(string arg0, int arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, long arg6, long? arg7, Org.Apache.Kafka.Common.Record.TimestampType arg8, Java.Lang.Iterable<Org.Apache.Kafka.Connect.Header.Header> arg9)
+        public SinkRecord(string arg0, int arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, long arg6, Java.Lang.Long arg7, Org.Apache.Kafka.Common.Record.TimestampType arg8, Java.Lang.Iterable<Org.Apache.Kafka.Connect.Header.Header> arg9)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)
         {
         }
@@ -56,9 +56,9 @@ namespace Org.Apache.Kafka.Connect.Sink
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg5"><see cref="object"/></param>
         /// <param name="arg6"><see cref="long"/></param>
-        /// <param name="arg7"><see cref="long"/></param>
+        /// <param name="arg7"><see cref="Java.Lang.Long"/></param>
         /// <param name="arg8"><see cref="Org.Apache.Kafka.Common.Record.TimestampType"/></param>
-        public SinkRecord(string arg0, int arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, long arg6, long? arg7, Org.Apache.Kafka.Common.Record.TimestampType arg8)
+        public SinkRecord(string arg0, int arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, long arg6, Java.Lang.Long arg7, Org.Apache.Kafka.Common.Record.TimestampType arg8)
             : base(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
         {
         }

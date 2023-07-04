@@ -337,12 +337,12 @@ namespace MASES.KNet.Extensions
             return await Execute(admin.AlterReplicaLogDirs, replicaAssignment, options);
         }
 
-        public static async Task<DescribeLogDirsResult> DescribeLogDirsAsync(this IAdmin admin, Collection<int?> brokers)
+        public static async Task<DescribeLogDirsResult> DescribeLogDirsAsync(this IAdmin admin, Collection<Java.Lang.Integer> brokers)
         {
             return await Execute(admin.DescribeLogDirs, brokers);
         }
 
-        public static async Task<DescribeLogDirsResult> DescribeLogDirsAsync(this IAdmin admin, Collection<int?> brokers, DescribeLogDirsOptions options)
+        public static async Task<DescribeLogDirsResult> DescribeLogDirsAsync(this IAdmin admin, Collection<Java.Lang.Integer> brokers, DescribeLogDirsOptions options)
         {
             return await Execute(admin.DescribeLogDirs, brokers, options);
         }
