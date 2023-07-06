@@ -1,0 +1,976 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ManualMetadataUpdater
+   | KNet website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ManualMetadataUpdater
+   | KNet website ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Org.Apache.Kafka.Clients.ManualMetadataUpdater">
+  
+  
+  <h1 id="Org_Apache_Kafka_Clients_ManualMetadataUpdater" data-uid="Org.Apache.Kafka.Clients.ManualMetadataUpdater" class="text-break">Class ManualMetadataUpdater
+  </h1>
+  <div class="markdown level0 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/ManualMetadataUpdater.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/ManualMetadataUpdater.html</a></p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
+    <div class="level2"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span></div>
+    <div class="level3"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span>&lt;<span class="xref">Java.Lang.AutoCloseable</span>&gt;</div>
+    <div class="level4"><span class="xref">Java.Lang.AutoCloseable</span></div>
+    <div class="level5"><span class="xref">Java.Io.Closeable</span></div>
+    <div class="level6"><a class="xref" href="Org.Apache.Kafka.Clients.MetadataUpdater.html">MetadataUpdater</a></div>
+    <div class="level7"><span class="xref">ManualMetadataUpdater</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span></div>
+    <div><a class="xref" href="Org.Apache.Kafka.Clients.IMetadataUpdater.html">IMetadataUpdater</a></div>
+    <div><span class="xref">Java.Io.ICloseable</span></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.lang.iautocloseable">IAutoCloseable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute&lt;TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute&lt;TReturn&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute(System.Type, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute&lt;TReturn&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute&lt;TReturn&gt;(System.Type, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute&lt;TReturn, TConverter&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute&lt;TReturn, TConverter&gt;(System.Type, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecuteArray&lt;T&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecuteArray&lt;T&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SGetField(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SGetField(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SGetField&lt;TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SGetField&lt;TReturn&gt;(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SGetFieldArray&lt;TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SGetFieldArray&lt;TReturn&gt;(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SSetField(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SSetField(System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SSetField&lt;TValue&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, TValue)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SSetField&lt;TValue&gt;(System.String, TValue)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.IsAssignableFrom(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.IsAssignableFrom(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.IsAssignableFrom&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.New(System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.Execute&lt;T&gt;(T[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.DynBridgeClazz</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.BridgeClazz</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.DynBridgeClazz</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.BridgeClazz</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClazzOf&lt;TClass&gt;(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClazzOf(System.String, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClassNameOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClassOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TReturn&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInstanceOf(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInstanceOf(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInstanceOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.CastTo&lt;TNewClass&gt;(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Dispose()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Notify()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.NotifyAll()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wait()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wait(System.Int64)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wait(System.Int64, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TReturn&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TNewClass, TReturn&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TNewClass, TReturn, TConverter&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecuteArray&lt;T&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IGetField(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IGetField&lt;TReturn&gt;(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IGetFieldArray&lt;TReturn&gt;(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ISetField(System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ISetField&lt;TValue&gt;(System.String, TValue)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.DynBridgeInstance</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.BridgeInstance</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsBridgeListener</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember#system-dynamic-dynamicobject-trygetmember(system-dynamic-getmemberbinder-system-object@)">DynamicObject.TryGetMember(GetMemberBinder, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetmember#system-dynamic-dynamicobject-trysetmember(system-dynamic-setmemberbinder-system-object)">DynamicObject.TrySetMember(SetMemberBinder, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeletemember#system-dynamic-dynamicobject-trydeletemember(system-dynamic-deletememberbinder)">DynamicObject.TryDeleteMember(DeleteMemberBinder)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvokemember#system-dynamic-dynamicobject-tryinvokemember(system-dynamic-invokememberbinder-system-object()-system-object@)">DynamicObject.TryInvokeMember(InvokeMemberBinder, Object[], Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryconvert#system-dynamic-dynamicobject-tryconvert(system-dynamic-convertbinder-system-object@)">DynamicObject.TryConvert(ConvertBinder, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trycreateinstance#system-dynamic-dynamicobject-trycreateinstance(system-dynamic-createinstancebinder-system-object()-system-object@)">DynamicObject.TryCreateInstance(CreateInstanceBinder, Object[], Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvoke#system-dynamic-dynamicobject-tryinvoke(system-dynamic-invokebinder-system-object()-system-object@)">DynamicObject.TryInvoke(InvokeBinder, Object[], Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trybinaryoperation#system-dynamic-dynamicobject-trybinaryoperation(system-dynamic-binaryoperationbinder-system-object-system-object@)">DynamicObject.TryBinaryOperation(BinaryOperationBinder, Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryunaryoperation#system-dynamic-dynamicobject-tryunaryoperation(system-dynamic-unaryoperationbinder-system-object@)">DynamicObject.TryUnaryOperation(UnaryOperationBinder, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetindex#system-dynamic-dynamicobject-trygetindex(system-dynamic-getindexbinder-system-object()-system-object@)">DynamicObject.TryGetIndex(GetIndexBinder, Object[], Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetindex#system-dynamic-dynamicobject-trysetindex(system-dynamic-setindexbinder-system-object()-system-object)">DynamicObject.TrySetIndex(SetIndexBinder, Object[], Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeleteindex#system-dynamic-dynamicobject-trydeleteindex(system-dynamic-deleteindexbinder-system-object())">DynamicObject.TryDeleteIndex(DeleteIndexBinder, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames#system-dynamic-dynamicobject-getdynamicmembernames">DynamicObject.GetDynamicMemberNames()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getmetaobject#system-dynamic-dynamicobject-getmetaobject(system-linq-expressions-expression)">DynamicObject.GetMetaObject(Expression)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals#system-object-referenceequals(system-object-system-object)">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype#system-object-gettype">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone#system-object-memberwiseclone">Object.MemberwiseClone()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Org.Apache.Kafka.Clients.html">Org.Apache.Kafka.Clients</a></h6>
+  <h6><strong>Assembly</strong>: MASES.KNet.dll</h6>
+  <h5 id="Org_Apache_Kafka_Clients_ManualMetadataUpdater_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ManualMetadataUpdater : MetadataUpdater, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IMetadataUpdater, ICloseable, IAutoCloseable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Clients_ManualMetadataUpdater__ctor.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Clients.ManualMetadataUpdater.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Clients/AllPackageClasses.cs/#L467">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Clients_ManualMetadataUpdater__ctor_" data-uid="Org.Apache.Kafka.Clients.ManualMetadataUpdater.#ctor*"></a>
+  <h4 id="Org_Apache_Kafka_Clients_ManualMetadataUpdater__ctor" data-uid="Org.Apache.Kafka.Clients.ManualMetadataUpdater.#ctor">ManualMetadataUpdater()</h4>
+  <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ManualMetadataUpdater()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Clients_ManualMetadataUpdater__ctor_Java_Util_List_Org_Apache_Kafka_Common_Node__.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Clients.ManualMetadataUpdater.%23ctor(Java.Util.List%7BOrg.Apache.Kafka.Common.Node%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Clients/ManualMetadataUpdater.cs/#L36">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Clients_ManualMetadataUpdater__ctor_" data-uid="Org.Apache.Kafka.Clients.ManualMetadataUpdater.#ctor*"></a>
+  <h4 id="Org_Apache_Kafka_Clients_ManualMetadataUpdater__ctor_Java_Util_List_Org_Apache_Kafka_Common_Node__" data-uid="Org.Apache.Kafka.Clients.ManualMetadataUpdater.#ctor(Java.Util.List{Org.Apache.Kafka.Common.Node})">ManualMetadataUpdater(List&lt;Node&gt;)</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/ManualMetadataUpdater.html#org.apache.kafka.clients.ManualMetadataUpdater(java.util.List)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/ManualMetadataUpdater.html#org.apache.kafka.clients.ManualMetadataUpdater(java.util.List)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ManualMetadataUpdater(List&lt;Node&gt; arg0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Java.Util.List</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a>&gt;</td>
+        <td><span class="parametername">arg0</span></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.list">List</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Clients_ManualMetadataUpdater__ctor_System_Object___.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Clients.ManualMetadataUpdater.%23ctor(System.Object%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Clients/AllPackageClasses.cs/#L471">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Clients_ManualMetadataUpdater__ctor_" data-uid="Org.Apache.Kafka.Clients.ManualMetadataUpdater.#ctor*"></a>
+  <h4 id="Org_Apache_Kafka_Clients_ManualMetadataUpdater__ctor_System_Object___" data-uid="Org.Apache.Kafka.Clients.ManualMetadataUpdater.#ctor(System.Object[])">ManualMetadataUpdater(Object[])</h4>
+  <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ManualMetadataUpdater(params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Clients_ManualMetadataUpdater_BridgeClassName.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Clients.ManualMetadataUpdater.BridgeClassName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Clients/AllPackageClasses.cs/#L478">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Clients_ManualMetadataUpdater_BridgeClassName_" data-uid="Org.Apache.Kafka.Clients.ManualMetadataUpdater.BridgeClassName*"></a>
+  <h4 id="Org_Apache_Kafka_Clients_ManualMetadataUpdater_BridgeClassName" data-uid="Org.Apache.Kafka.Clients.ManualMetadataUpdater.BridgeClassName">BridgeClassName</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string BridgeClassName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Org.Apache.Kafka.Clients.MetadataUpdater.html#Org_Apache_Kafka_Clients_MetadataUpdater_BridgeClassName">MetadataUpdater.BridgeClassName</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Clients_ManualMetadataUpdater_IsBridgeAbstract.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Clients.ManualMetadataUpdater.IsBridgeAbstract%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Clients/AllPackageClasses.cs/#L482">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Clients_ManualMetadataUpdater_IsBridgeAbstract_" data-uid="Org.Apache.Kafka.Clients.ManualMetadataUpdater.IsBridgeAbstract*"></a>
+  <h4 id="Org_Apache_Kafka_Clients_ManualMetadataUpdater_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Clients.ManualMetadataUpdater.IsBridgeAbstract">IsBridgeAbstract</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeAbstract { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Org.Apache.Kafka.Clients.MetadataUpdater.html#Org_Apache_Kafka_Clients_MetadataUpdater_IsBridgeAbstract">MetadataUpdater.IsBridgeAbstract</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Clients_ManualMetadataUpdater_IsBridgeCloseable.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Clients.ManualMetadataUpdater.IsBridgeCloseable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Clients/AllPackageClasses.cs/#L486">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Clients_ManualMetadataUpdater_IsBridgeCloseable_" data-uid="Org.Apache.Kafka.Clients.ManualMetadataUpdater.IsBridgeCloseable*"></a>
+  <h4 id="Org_Apache_Kafka_Clients_ManualMetadataUpdater_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Clients.ManualMetadataUpdater.IsBridgeCloseable">IsBridgeCloseable</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeCloseable { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Org.Apache.Kafka.Clients.MetadataUpdater.html#Org_Apache_Kafka_Clients_MetadataUpdater_IsBridgeCloseable">MetadataUpdater.IsBridgeCloseable</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Clients_ManualMetadataUpdater_IsBridgeInterface.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Clients.ManualMetadataUpdater.IsBridgeInterface%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Clients/AllPackageClasses.cs/#L490">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Clients_ManualMetadataUpdater_IsBridgeInterface_" data-uid="Org.Apache.Kafka.Clients.ManualMetadataUpdater.IsBridgeInterface*"></a>
+  <h4 id="Org_Apache_Kafka_Clients_ManualMetadataUpdater_IsBridgeInterface" data-uid="Org.Apache.Kafka.Clients.ManualMetadataUpdater.IsBridgeInterface">IsBridgeInterface</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeInterface { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Org.Apache.Kafka.Clients.MetadataUpdater.html#Org_Apache_Kafka_Clients_MetadataUpdater_IsBridgeInterface">MetadataUpdater.IsBridgeInterface</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Clients_ManualMetadataUpdater_IsBridgeStatic.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Clients.ManualMetadataUpdater.IsBridgeStatic%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Clients/AllPackageClasses.cs/#L494">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Clients_ManualMetadataUpdater_IsBridgeStatic_" data-uid="Org.Apache.Kafka.Clients.ManualMetadataUpdater.IsBridgeStatic*"></a>
+  <h4 id="Org_Apache_Kafka_Clients_ManualMetadataUpdater_IsBridgeStatic" data-uid="Org.Apache.Kafka.Clients.ManualMetadataUpdater.IsBridgeStatic">IsBridgeStatic</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeStatic { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Org.Apache.Kafka.Clients.MetadataUpdater.html#Org_Apache_Kafka_Clients_MetadataUpdater_IsBridgeStatic">MetadataUpdater.IsBridgeStatic</a></div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Clients_ManualMetadataUpdater_Close.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Clients.ManualMetadataUpdater.Close%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Clients/ManualMetadataUpdater.cs/#L86">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Clients_ManualMetadataUpdater_Close_" data-uid="Org.Apache.Kafka.Clients.ManualMetadataUpdater.Close*"></a>
+  <h4 id="Org_Apache_Kafka_Clients_ManualMetadataUpdater_Close" data-uid="Org.Apache.Kafka.Clients.ManualMetadataUpdater.Close">Close()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/ManualMetadataUpdater.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/ManualMetadataUpdater.html#close--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Close()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Clients_ManualMetadataUpdater_FetchNodes.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Clients.ManualMetadataUpdater.FetchNodes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Clients/ManualMetadataUpdater.cs/#L70">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Clients_ManualMetadataUpdater_FetchNodes_" data-uid="Org.Apache.Kafka.Clients.ManualMetadataUpdater.FetchNodes*"></a>
+  <h4 id="Org_Apache_Kafka_Clients_ManualMetadataUpdater_FetchNodes" data-uid="Org.Apache.Kafka.Clients.ManualMetadataUpdater.FetchNodes">FetchNodes()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/ManualMetadataUpdater.html#fetchNodes--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/ManualMetadataUpdater.html#fetchNodes--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;Node&gt; FetchNodes()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Java.Util.List</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a>&gt;</td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.list">List</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Clients_ManualMetadataUpdater_HandleFailedRequest_System_Int64_Java_Util_Optional_Org_Apache_Kafka_Common_KafkaException__.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Clients.ManualMetadataUpdater.HandleFailedRequest(System.Int64%2CJava.Util.Optional%7BOrg.Apache.Kafka.Common.KafkaException%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Clients/ManualMetadataUpdater.cs/#L95">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Clients_ManualMetadataUpdater_HandleFailedRequest_" data-uid="Org.Apache.Kafka.Clients.ManualMetadataUpdater.HandleFailedRequest*"></a>
+  <h4 id="Org_Apache_Kafka_Clients_ManualMetadataUpdater_HandleFailedRequest_System_Int64_Java_Util_Optional_Org_Apache_Kafka_Common_KafkaException__" data-uid="Org.Apache.Kafka.Clients.ManualMetadataUpdater.HandleFailedRequest(System.Int64,Java.Util.Optional{Org.Apache.Kafka.Common.KafkaException})">HandleFailedRequest(Int64, Optional&lt;KafkaException&gt;)</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/ManualMetadataUpdater.html#handleFailedRequest-long-java.util.Optional-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/ManualMetadataUpdater.html#handleFailedRequest-long-java.util.Optional-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HandleFailedRequest(long arg0, Optional&lt;KafkaException&gt; arg1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">arg0</span></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Java.Util.Optional</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.KafkaException.html">KafkaException</a>&gt;</td>
+        <td><span class="parametername">arg1</span></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.optional">Optional</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Clients_ManualMetadataUpdater_HandleServerDisconnect_System_Int64_System_String_Java_Util_Optional_Org_Apache_Kafka_Common_Errors_AuthenticationException__.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Clients.ManualMetadataUpdater.HandleServerDisconnect(System.Int64%2CSystem.String%2CJava.Util.Optional%7BOrg.Apache.Kafka.Common.Errors.AuthenticationException%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Clients/ManualMetadataUpdater.cs/#L105">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Clients_ManualMetadataUpdater_HandleServerDisconnect_" data-uid="Org.Apache.Kafka.Clients.ManualMetadataUpdater.HandleServerDisconnect*"></a>
+  <h4 id="Org_Apache_Kafka_Clients_ManualMetadataUpdater_HandleServerDisconnect_System_Int64_System_String_Java_Util_Optional_Org_Apache_Kafka_Common_Errors_AuthenticationException__" data-uid="Org.Apache.Kafka.Clients.ManualMetadataUpdater.HandleServerDisconnect(System.Int64,System.String,Java.Util.Optional{Org.Apache.Kafka.Common.Errors.AuthenticationException})">HandleServerDisconnect(Int64, String, Optional&lt;AuthenticationException&gt;)</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/ManualMetadataUpdater.html#handleServerDisconnect-long-java.lang.String-java.util.Optional-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/ManualMetadataUpdater.html#handleServerDisconnect-long-java.lang.String-java.util.Optional-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HandleServerDisconnect(long arg0, string arg1, Optional&lt;AuthenticationException&gt; arg2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">arg0</span></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">arg1</span></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Java.Util.Optional</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Errors.AuthenticationException.html">AuthenticationException</a>&gt;</td>
+        <td><span class="parametername">arg2</span></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.optional">Optional</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Clients_ManualMetadataUpdater_IsUpdateDue_System_Int64_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Clients.ManualMetadataUpdater.IsUpdateDue(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Clients/ManualMetadataUpdater.cs/#L61">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Clients_ManualMetadataUpdater_IsUpdateDue_" data-uid="Org.Apache.Kafka.Clients.ManualMetadataUpdater.IsUpdateDue*"></a>
+  <h4 id="Org_Apache_Kafka_Clients_ManualMetadataUpdater_IsUpdateDue_System_Int64_" data-uid="Org.Apache.Kafka.Clients.ManualMetadataUpdater.IsUpdateDue(System.Int64)">IsUpdateDue(Int64)</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/ManualMetadataUpdater.html#isUpdateDue-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/ManualMetadataUpdater.html#isUpdateDue-long-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsUpdateDue(long arg0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">arg0</span></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Clients_ManualMetadataUpdater_MaybeUpdate_System_Int64_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Clients.ManualMetadataUpdater.MaybeUpdate(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Clients/ManualMetadataUpdater.cs/#L79">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Clients_ManualMetadataUpdater_MaybeUpdate_" data-uid="Org.Apache.Kafka.Clients.ManualMetadataUpdater.MaybeUpdate*"></a>
+  <h4 id="Org_Apache_Kafka_Clients_ManualMetadataUpdater_MaybeUpdate_System_Int64_" data-uid="Org.Apache.Kafka.Clients.ManualMetadataUpdater.MaybeUpdate(System.Int64)">MaybeUpdate(Int64)</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/ManualMetadataUpdater.html#maybeUpdate-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/ManualMetadataUpdater.html#maybeUpdate-long-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long MaybeUpdate(long arg0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">arg0</span></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Clients_ManualMetadataUpdater_SetNodes_Java_Util_List_Org_Apache_Kafka_Common_Node__.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Clients.ManualMetadataUpdater.SetNodes(Java.Util.List%7BOrg.Apache.Kafka.Common.Node%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Clients/ManualMetadataUpdater.cs/#L113">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Clients_ManualMetadataUpdater_SetNodes_" data-uid="Org.Apache.Kafka.Clients.ManualMetadataUpdater.SetNodes*"></a>
+  <h4 id="Org_Apache_Kafka_Clients_ManualMetadataUpdater_SetNodes_Java_Util_List_Org_Apache_Kafka_Common_Node__" data-uid="Org.Apache.Kafka.Clients.ManualMetadataUpdater.SetNodes(Java.Util.List{Org.Apache.Kafka.Common.Node})">SetNodes(List&lt;Node&gt;)</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/ManualMetadataUpdater.html#setNodes-java.util.List-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/ManualMetadataUpdater.html#setNodes-java.util.List-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetNodes(List&lt;Node&gt; arg0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Java.Util.List</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Node.html">Node</a>&gt;</td>
+        <td><span class="parametername">arg0</span></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.list">List</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">System.Dynamic.IDynamicMetaObjectProvider</a>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span>
+  </div>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span>
+  </div>
+  <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.IMetadataUpdater.html">IMetadataUpdater</a>
+  </div>
+  <div>
+      <span class="xref">Java.Io.ICloseable</span>
+  </div>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/java.lang.iautocloseable">Java.Lang.IAutoCloseable</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Clients_ManualMetadataUpdater.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Clients.ManualMetadataUpdater%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Clients/ManualMetadataUpdater.cs/#L29" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 MASES s.r.l..<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
