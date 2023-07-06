@@ -23,6 +23,9 @@ using System.Threading.Tasks;
 
 namespace MASES.KNet.Extensions
 {
+    /// <summary>
+    /// Extension for <see cref="KafkaConsumer"/>
+    /// </summary>
     public static class KafkaConsumerExtensions
     {
         const int internalMs = 100;

@@ -20,11 +20,15 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Streams.Kstream
 {
-    /// <see href="https://kafka.apache.org/34/javadoc/org/apache/kafka/streams/kstream/NamedOperation.html">
+    /// <summary>
+    /// <see href="https://kafka.apache.org/34/javadoc/org/apache/kafka/streams/kstream/NamedOperation.html"/>
+    /// </summary>
     public interface INamedOperation<T> : IJVMBridgeBase where T: INamedOperation<T>
     {
     }
-    /// <see href="https://kafka.apache.org/34/javadoc/org/apache/kafka/streams/kstream/NamedOperation.html">
+    /// <summary>
+    /// <see href="https://kafka.apache.org/34/javadoc/org/apache/kafka/streams/kstream/NamedOperation.html"/>
+    /// </summary>
     public class NamedOperation : JVMBridgeBase<NamedOperation>
     {
         /// <summary>
@@ -41,7 +45,9 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// </summary>
         public NamedOperation(params object[] args) : base(args) { }
     }
-    /// <see href="https://kafka.apache.org/34/javadoc/org/apache/kafka/streams/kstream/NamedOperation.html">
+    /// <summary>
+    /// <see href="https://kafka.apache.org/34/javadoc/org/apache/kafka/streams/kstream/NamedOperation.html"/>
+    /// </summary>
     public class NamedOperation<T> : NamedOperation, INamedOperation<T> where T : NamedOperation<T>
     {
         /// <summary>

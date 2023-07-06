@@ -20,10 +20,18 @@ using Org.Apache.Kafka.Clients.Admin;
 
 namespace MASES.KNet.Admin
 {
+    /// <summary>
+    /// Common builder for <see cref="AdminClientConfig"/>
+    /// </summary>
     public class AdminClientConfigBuilder : CommonClientConfigsBuilder<AdminClientConfigBuilder>
     {
+        /// <summary>
+        /// Manages <see cref="AdminClientConfig.SECURITY_PROVIDERS_CONFIG"/>
+        /// </summary>
         public string SecurityProviders { get { return GetProperty<string>(AdminClientConfig.SECURITY_PROVIDERS_CONFIG); } set { SetProperty(AdminClientConfig.SECURITY_PROVIDERS_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="AdminClientConfig.SECURITY_PROVIDERS_CONFIG"/>
+        /// </summary>
         public AdminClientConfigBuilder WithSecurityProviders(string securityProviders)
         {
             var clone = Clone();

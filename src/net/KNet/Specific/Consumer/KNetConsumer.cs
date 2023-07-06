@@ -31,39 +31,50 @@ using System.Threading.Tasks;
 
 namespace MASES.KNet.Consumer
 {
+    /// <summary>
+    /// KNet extension of <see cref="ConsumerRecord{K, V}"/>
+    /// </summary>
+    /// <typeparam name="K">The key type</typeparam>
+    /// <typeparam name="V">The value type</typeparam>
     public class KNetConsumerRecord<K, V>
     {
         readonly IKNetDeserializer<K> _keyDeserializer;
         readonly IKNetDeserializer<V> _valueDeserializer;
         readonly ConsumerRecord<byte[], byte[]> _record;
-
+        /// <summary>
+        /// Initialize a new <see cref="KNetConsumerRecord{K, V}"/>
+        /// </summary>
+        /// <param name="record">The <see cref="ConsumerRecord{K, V}"/> to use for initialization</param>
+        /// <param name="keyDeserializer">Key serializer base on <see cref="KNetSerDes{K}"/></param>
+        /// <param name="valueDeserializer">Value serializer base on <see cref="KNetSerDes{K}"/></param>
         public KNetConsumerRecord(ConsumerRecord<byte[], byte[]> record, IKNetDeserializer<K> keyDeserializer, IKNetDeserializer<V> valueDeserializer)
         {
             _record = record;
             _keyDeserializer = keyDeserializer;
             _valueDeserializer = valueDeserializer;
         }
-
+        /// <inheritdoc cref="ConsumerRecord{K, V}.Topic"/>
         public string Topic => _record.Topic();
-
+        /// <inheritdoc cref="ConsumerRecord{K, V}.Partition"/>
         public int Partition => _record.Partition();
-
+        /// <inheritdoc cref="ConsumerRecord{K, V}.Headers"/>
         public Headers Headers => _record.Headers();
-
+        /// <inheritdoc cref="ConsumerRecord{K, V}.Offset"/>
         public long Offset => _record.Offset();
-
+        /// <inheritdoc cref="ConsumerRecord{K, V}.DateTime"/>
         public System.DateTime DateTime => _record.DateTime;
-
+        /// <inheritdoc cref="ConsumerRecord{K, V}.Timestamp"/>
         public long Timestamp => _record.Timestamp();
-
+        /// <inheritdoc cref="ConsumerRecord{K, V}.TimestampType"/>
         public TimestampType TimestampType => _record.TimestampType();
-
+        /// <inheritdoc cref="ConsumerRecord{K, V}.SerializedKeySize"/>
         public int SerializedKeySize => _record.SerializedKeySize();
-
+        /// <inheritdoc cref="ConsumerRecord{K, V}.SerializedValueSize"/>
         public int SerializedValueSize => _record.SerializedValueSize();
 
         bool _localKeyDes = false;
         K _localKey = default;
+        /// <inheritdoc cref="ConsumerRecord{K, V}.Key"/>
         public K Key
         {
             get
@@ -79,6 +90,7 @@ namespace MASES.KNet.Consumer
 
         bool _localValueDes = false;
         V _localValue = default;
+        /// <inheritdoc cref="ConsumerRecord{K, V}.Value"/>
         public V Value
         {
             get
@@ -91,7 +103,7 @@ namespace MASES.KNet.Consumer
                 return _localValue;
             }
         }
-
+        /// <inheritdoc cref="object.ToString"/>
         public override string ToString()
         {
             return $"Topic: {Topic} - Partition {Partition} - Offset {Offset} - Key {Key} - Value {Value}";
@@ -155,13 +167,22 @@ namespace MASES.KNet.Consumer
             _recordEnumerator = _records.GetEnumerator();
         }
     }
-
+    /// <summary>
+    /// KNet extension of <see cref="ConsumerRecords{K, V}"/>
+    /// </summary>
+    /// <typeparam name="K">The key type</typeparam>
+    /// <typeparam name="V">The value type</typeparam>
     public class KNetConsumerRecords<K, V> : IEnumerable<KNetConsumerRecord<K, V>>, IAsyncEnumerable<KNetConsumerRecord<K, V>>
     {
         readonly IKNetDeserializer<K> _keyDeserializer;
         readonly IKNetDeserializer<V> _valueDeserializer;
         readonly ConsumerRecords<byte[], byte[]> _records;
-
+        /// <summary>
+        /// Initialize a new <see cref="KNetConsumerRecord{K, V}"/>
+        /// </summary>
+        /// <param name="records">The <see cref="ConsumerRecords{K, V}"/> to use for initialization</param>
+        /// <param name="keyDeserializer">Key serializer base on <see cref="KNetSerDes{K}"/></param>
+        /// <param name="valueDeserializer">Value serializer base on <see cref="KNetSerDes{K}"/></param>
         public KNetConsumerRecords(ConsumerRecords<byte[], byte[]> records, IKNetDeserializer<K> keyDeserializer, IKNetDeserializer<V> valueDeserializer)
         {
             _records = records;
@@ -194,7 +215,9 @@ namespace MASES.KNet.Consumer
     {
         readonly IKNetDeserializer<K> _keyDeserializer;
         readonly IKNetDeserializer<V> _valueDeserializer;
-        /// <inheritdoc cref="JVMBridgeListener.ClassName"/>
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
         public sealed override string BridgeClassName => "org.mases.knet.clients.consumer.KNetConsumerCallback";
 
         readonly Action<KNetConsumerRecord<K, V>> recordReadyFunction = null;
@@ -218,26 +241,59 @@ namespace MASES.KNet.Consumer
 
         public virtual void RecordReady(KNetConsumerRecord<K, V> message) { }
     }
-
+    /// <summary>
+    /// KNet extension of <see cref="IConsumer{K, V}"/>
+    /// </summary>
+    /// <typeparam name="K">The key type</typeparam>
+    /// <typeparam name="V">The value type</typeparam>
     public interface IKNetConsumer<K, V> : IConsumer<byte[], byte[]>
     {
+        /// <summary>
+        /// <see langword="true"/> if the <see cref="IKNetConsumer{K, V}"/> instance is completing async operation
+        /// </summary>
         bool IsCompleting { get; }
-
+        /// <summary>
+        /// <see langword="true"/> if the <see cref="IKNetConsumer{K, V}"/> instance has an empty setnof items in async operation
+        /// </summary>
         bool IsEmpty { get; }
-
+        /// <summary>
+        /// Number of messages in the <see cref="IKNetConsumer{K, V}"/> instance waiting to be processed in async operation
+        /// </summary>
         int WaitingMessages { get; }
-
+        /// <summary>
+        /// Sets the <see cref="Action{T}"/> to use to receive <see cref="KNetConsumerRecord{K, V}"/>
+        /// </summary>
+        /// <param name="cb">The callback <see cref="Action{T}"/></param>
         void SetCallback(Action<KNetConsumerRecord<K, V>> cb);
-
+        /// <summary>
+        /// KNet extension for <see cref="Org.Apache.Kafka.Clients.Consumer.Consumer.Poll(Duration)"/>
+        /// </summary>
+        /// <param name="timeoutMs">Timeout in milliseconds</param>
+        /// <returns><see cref="KNetConsumerRecords{K, V}"/></returns>
         KNetConsumerRecords<K, V> Poll(long timeoutMs);
-
+        /// <summary>
+        /// KNet extension for <see cref="Org.Apache.Kafka.Clients.Consumer.Consumer.Poll(Duration)"/>
+        /// </summary>
+        /// <param name="timeout">Timeout expressed as <see cref="Duration"/></param>
+        /// <returns><see cref="KNetConsumerRecords{K, V}"/></returns>
         new KNetConsumerRecords<K, V> Poll(Duration timeout);
-
+        /// <summary>
+        /// KNet async extension for <see cref="Org.Apache.Kafka.Clients.Consumer.Consumer.Poll(Duration)"/>
+        /// </summary>
+        /// <param name="timeoutMs">Timeout in milliseconds</param>
         void ConsumeAsync(long timeoutMs);
-
+        /// <summary>
+        /// KNet sync extension for <see cref="Org.Apache.Kafka.Clients.Consumer.Consumer.Poll(Duration)"/>
+        /// </summary>
+        /// <param name="timeoutMs">Timeout in milliseconds</param>
+        /// <param name="callback">The <see cref="Action{T}"/> where receives <see cref="KNetConsumerRecord{K, V}"/></param>
         void Consume(long timeoutMs, Action<KNetConsumerRecord<K, V>> callback);
     }
-
+    /// <summary>
+    /// KNet extension of <see cref="KafkaConsumer{K, V}"/>
+    /// </summary>
+    /// <typeparam name="K">The key type</typeparam>
+    /// <typeparam name="V">The value type</typeparam>
     public class KNetConsumer<K, V> : KafkaConsumer<byte[], byte[]>, IKNetConsumer<K, V>
     {
         readonly bool autoCreateSerDes = false;
@@ -249,9 +305,15 @@ namespace MASES.KNet.Consumer
         readonly KNetConsumerCallback<K, V> consumerCallback = null;
         readonly IKNetDeserializer<K> _keyDeserializer;
         readonly IKNetDeserializer<V> _valueDeserializer;
-
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
+        /// </summary>
         public override string BridgeClassName => "org.mases.knet.clients.consumer.KNetConsumer";
-
+        /// <summary>
+        /// Initialize a new instance of <see cref="KNetConsumer{K, V}"/>
+        /// </summary>
+        /// <param name="props">The properties to use, see <see cref="ConsumerConfig"/> and <see cref="ConsumerConfigBuilder"/></param>
+        /// <param name="useJVMCallback"><see langword="true"/> to active callback based mode</param>
         public KNetConsumer(Properties props, bool useJVMCallback = false)
             : this(props, new KNetSerDes<K>(), new KNetSerDes<V>(), useJVMCallback)
         {
@@ -271,7 +333,13 @@ namespace MASES.KNet.Consumer
                 consumeThread.Start();
             }
         }
-
+        /// <summary>
+        /// Initialize a new instance of <see cref="KNetConsumer{K, V}"/>
+        /// </summary>
+        /// <param name="props">The properties to use, see <see cref="ConsumerConfig"/> and <see cref="ConsumerConfigBuilder"/></param>
+        /// <param name="keyDeserializer">Key serializer base on <see cref="KNetSerDes{K}"/></param>
+        /// <param name="valueDeserializer">Value serializer base on <see cref="KNetSerDes{K}"/></param>
+        /// <param name="useJVMCallback"><see langword="true"/> to active callback based mode</param>
         public KNetConsumer(Properties props, IKNetDeserializer<K> keyDeserializer, IKNetDeserializer<V> valueDeserializer, bool useJVMCallback = false)
             : base(CheckProperties(props), keyDeserializer.KafkaDeserializer, valueDeserializer.KafkaDeserializer)
         {
@@ -309,7 +377,9 @@ namespace MASES.KNet.Consumer
 
             return props;
         }
-
+        /// <summary>
+        /// Finalizer
+        /// </summary>
         ~KNetConsumer()
         {
             if (autoCreateSerDes)
@@ -318,13 +388,13 @@ namespace MASES.KNet.Consumer
                 _valueDeserializer?.Dispose();
             }
         }
-
+        /// <inheritdoc cref="IKNetConsumer{K, V}.Poll(long)"/>
         public new KNetConsumerRecords<K, V> Poll(long timeoutMs)
         {
             var records = IExecute<ConsumerRecords<byte[], byte[]>>("poll", timeoutMs);
             return new KNetConsumerRecords<K, V>(records, _keyDeserializer, _valueDeserializer);
         }
-
+        /// <inheritdoc cref="IKNetConsumer{K, V}.Poll(Duration)"/>
         public new KNetConsumerRecords<K, V> Poll(Duration timeout)
         {
             var records = IExecute<ConsumerRecords<byte[], byte[]>>("poll", timeout);
@@ -337,7 +407,7 @@ namespace MASES.KNet.Consumer
         {
             actionCallback?.Invoke(message);
         }
-
+        /// <inheritdoc cref="IDisposable.Dispose"/>
         public override void Dispose()
         {
             base.Dispose();
@@ -354,7 +424,7 @@ namespace MASES.KNet.Consumer
                 actionCallback = null;
             }
         }
-
+        /// <inheritdoc cref="IKNetConsumer{K, V}.SetCallback(Action{KNetConsumerRecord{K, V}})"/>
         public void SetCallback(Action<KNetConsumerRecord<K, V>> cb)
         {
             actionCallback = cb;
@@ -394,13 +464,13 @@ namespace MASES.KNet.Consumer
             catch { }
             finally { threadExited.Set(); threadRunning = false; }
         }
-
+        /// <inheritdoc cref="IKNetConsumer{K, V}.IsCompleting"/>
         public bool IsCompleting => !consumedRecords.IsEmpty || System.Threading.Interlocked.Read(ref dequeing) != 0;
-
+        /// <inheritdoc cref="IKNetConsumer{K, V}.IsEmpty"/>
         public bool IsEmpty => consumedRecords.IsEmpty;
-
+        /// <inheritdoc cref="IKNetConsumer{K, V}.WaitingMessages"/>
         public int WaitingMessages => consumedRecords.Count;
-
+        /// <inheritdoc cref="IKNetConsumer{K, V}.ConsumeAsync(long)"/>
         public void ConsumeAsync(long timeoutMs)
         {
             Duration duration = TimeSpan.FromMilliseconds(timeoutMs);
@@ -413,7 +483,7 @@ namespace MASES.KNet.Consumer
                 System.Threading.Monitor.Pulse(consumedRecords);
             }
         }
-
+        /// <inheritdoc cref="IKNetConsumer{K, V}.Consume(long, Action{KNetConsumerRecord{K, V}})"/>
         public void Consume(long timeoutMs, Action<KNetConsumerRecord<K, V>> callback)
         {
             Duration duration = TimeSpan.FromMilliseconds(timeoutMs);

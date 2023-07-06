@@ -29,6 +29,9 @@ using System.Threading.Tasks;
 
 namespace MASES.KNet.Extensions
 {
+    /// <summary>
+    /// Extension for <see cref="KafkaAdminClient"/>
+    /// </summary>
     public static class KafkaAdminClientExtensions
     {
         async static Task<TReturn> Execute<TReturn>(Func<TReturn> func)
@@ -110,7 +113,9 @@ namespace MASES.KNet.Extensions
             }
             return task.Result;
         }
-
+        /// <summary>
+        /// <see cref="IAdmin.CreateTopics(Collection{NewTopic})"/>
+        /// </summary>
         public static async Task<CreateTopicsResult> CreateTopicsAsync(this IAdmin admin, Collection<NewTopic> newTopics)
         {
             return await Execute(admin.CreateTopics, newTopics);

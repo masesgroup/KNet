@@ -22,51 +22,84 @@ using Org.Apache.Kafka.Clients.Consumer;
 
 namespace MASES.KNet.Consumer
 {
+    /// <summary>
+    /// Builder for <see cref="ConsumerConfig"/>
+    /// </summary>
     public class ConsumerConfigBuilder : CommonClientConfigsBuilder<ConsumerConfigBuilder>
     {
+        /// <summary>
+        /// Used from <see cref="AutoOffsetReset"/> and <see cref="WithAutoOffsetReset(AutoOffsetResetTypes)"/>
+        /// </summary>
         public enum AutoOffsetResetTypes
         {
+            /// <summary>
+            /// None
+            /// </summary>
             None,
+            /// <summary>
+            /// Earliest
+            /// </summary>
             EARLIEST,
+            /// <summary>
+            /// Latest
+            /// </summary>
             LATEST
         }
-
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.MAX_POLL_RECORDS_CONFIG"/>
+        /// </summary>
         public int MaxPollRecords { get { return GetProperty<int>(ConsumerConfig.MAX_POLL_RECORDS_CONFIG); } set { SetProperty(ConsumerConfig.MAX_POLL_RECORDS_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.MAX_POLL_RECORDS_CONFIG"/>
+        /// </summary>
         public ConsumerConfigBuilder WithMaxPollRecords(int maxPollRecords)
         {
             var clone = Clone();
             clone.MaxPollRecords = maxPollRecords;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG"/>
+        /// </summary>
         public bool EnableAutoCommit { get { return GetProperty<bool>(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG); } set { SetProperty(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG"/>
+        /// </summary>
         public ConsumerConfigBuilder WithEnableAutoCommit(bool enableAutoCommit)
         {
             var clone = Clone();
             clone.EnableAutoCommit = enableAutoCommit;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG"/>
+        /// </summary>
         public int AutoCommitIntervalMs { get { return GetProperty<int>(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG); } set { SetProperty(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG"/>
+        /// </summary>
         public ConsumerConfigBuilder WithAutoCommitIntervalMs(int autoCommitIntervalMs)
         {
             var clone = Clone();
             clone.AutoCommitIntervalMs = autoCommitIntervalMs;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.PARTITION_ASSIGNMENT_STRATEGY_CONFIG"/>
+        /// </summary>
         public string PartitionAssignmentStrategy { get { return GetProperty<string>(ConsumerConfig.PARTITION_ASSIGNMENT_STRATEGY_CONFIG); } set { SetProperty(ConsumerConfig.PARTITION_ASSIGNMENT_STRATEGY_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.PARTITION_ASSIGNMENT_STRATEGY_CONFIG"/>
+        /// </summary>
         public ConsumerConfigBuilder WithPartitionAssignmentStrategy(string partitionAssignmentStrategy)
         {
             var clone = Clone();
             clone.PartitionAssignmentStrategy = partitionAssignmentStrategy;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.AUTO_OFFSET_RESET_CONFIG"/>
+        /// </summary>
         // "latest", "earliest", "none"
         public AutoOffsetResetTypes AutoOffsetReset
         {
@@ -86,80 +119,114 @@ namespace MASES.KNet.Consumer
                 SetProperty(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, System.Enum.GetName(typeof(AutoOffsetResetTypes), value).ToLowerInvariant());
             }
         }
-
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.AUTO_OFFSET_RESET_CONFIG"/>
+        /// </summary>
         public ConsumerConfigBuilder WithAutoOffsetReset(AutoOffsetResetTypes autoOffsetReset)
         {
             var clone = Clone();
             clone.AutoOffsetReset = autoOffsetReset;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.FETCH_MIN_BYTES_CONFIG"/>
+        /// </summary>
         public int FetchMinBytes { get { return GetProperty<int>(ConsumerConfig.FETCH_MIN_BYTES_CONFIG); } set { SetProperty(ConsumerConfig.FETCH_MIN_BYTES_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.FETCH_MIN_BYTES_CONFIG"/>
+        /// </summary>
         public ConsumerConfigBuilder WithFetchMinBytes(int fetchMinBytes)
         {
             var clone = Clone();
             clone.FetchMinBytes = fetchMinBytes;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.FETCH_MAX_BYTES_CONFIG"/>
+        /// </summary>
         public int FetchMaxBytes { get { return GetProperty<int>(ConsumerConfig.FETCH_MAX_BYTES_CONFIG); } set { SetProperty(ConsumerConfig.FETCH_MAX_BYTES_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.FETCH_MAX_BYTES_CONFIG"/>
+        /// </summary>
         public ConsumerConfigBuilder WithFetchMaxBytes(int fetchMaxBytes)
         {
             var clone = Clone();
             clone.FetchMaxBytes = fetchMaxBytes;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.FETCH_MAX_WAIT_MS_CONFIG"/>
+        /// </summary>
         public int FetchMaxWaitMs { get { return GetProperty<int>(ConsumerConfig.FETCH_MAX_WAIT_MS_CONFIG); } set { SetProperty(ConsumerConfig.FETCH_MAX_WAIT_MS_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.FETCH_MAX_WAIT_MS_CONFIG"/>
+        /// </summary>
         public ConsumerConfigBuilder WithFetchMaxWaitMs(int fetchMaxWaitMs)
         {
             var clone = Clone();
             clone.FetchMaxWaitMs = fetchMaxWaitMs;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.MAX_PARTITION_FETCH_BYTES_CONFIG"/>
+        /// </summary>
         public int MaxPartitionFetchBytes { get { return GetProperty<int>(ConsumerConfig.MAX_PARTITION_FETCH_BYTES_CONFIG); } set { SetProperty(ConsumerConfig.MAX_PARTITION_FETCH_BYTES_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.MAX_PARTITION_FETCH_BYTES_CONFIG"/>
+        /// </summary>
         public ConsumerConfigBuilder WithMaxPartitionFetchBytes(int maxPartitionFetchBytes)
         {
             var clone = Clone();
             clone.MaxPartitionFetchBytes = maxPartitionFetchBytes;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.CHECK_CRCS_CONFIG"/>
+        /// </summary>
         public bool CheckCrcs { get { return GetProperty<bool>(ConsumerConfig.CHECK_CRCS_CONFIG); } set { SetProperty(ConsumerConfig.CHECK_CRCS_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.CHECK_CRCS_CONFIG"/>
+        /// </summary>
         public ConsumerConfigBuilder WithCheckCrcs(bool checkCrcs)
         {
             var clone = Clone();
             clone.CheckCrcs = checkCrcs;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG"/>
+        /// </summary>
         public string KeyDeserializerClass { get { return GetProperty<string>(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG); } set { SetProperty(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG"/>
+        /// </summary>
         public ConsumerConfigBuilder WithKeyDeserializerClass(string keyDeserializerClass)
         {
             var clone = Clone();
             clone.KeyDeserializerClass = keyDeserializerClass;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG"/>
+        /// </summary>
         public string ValueDeserializerClass { get { return GetProperty<string>(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG); } set { SetProperty(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG"/>
+        /// </summary>
         public ConsumerConfigBuilder WithValueDeserializerClass(string valueDeserializerClass)
         {
             var clone = Clone();
             clone.ValueDeserializerClass = valueDeserializerClass;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.INTERCEPTOR_CLASSES_CONFIG"/>
+        /// </summary>
         [System.Obsolete("To be checked")]
         public List InterceptorClasses { get { return GetProperty<List>(ConsumerConfig.INTERCEPTOR_CLASSES_CONFIG); } set { SetProperty(ConsumerConfig.INTERCEPTOR_CLASSES_CONFIG, value); } }
-        
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.INTERCEPTOR_CLASSES_CONFIG"/>
+        /// </summary>
         [System.Obsolete("To be checked")]
         public ConsumerConfigBuilder WithInterceptorClasses(List interceptorClasses)
         {
@@ -167,16 +234,22 @@ namespace MASES.KNet.Consumer
             clone.InterceptorClasses = interceptorClasses;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.EXCLUDE_INTERNAL_TOPICS_CONFIG"/>
+        /// </summary>
         public bool ExcludeInternalTopics { get { return GetProperty<bool>(ConsumerConfig.EXCLUDE_INTERNAL_TOPICS_CONFIG); } set { SetProperty(ConsumerConfig.EXCLUDE_INTERNAL_TOPICS_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.EXCLUDE_INTERNAL_TOPICS_CONFIG"/>
+        /// </summary>
         public ConsumerConfigBuilder WithExcludeInternalTopics(bool excludeInternalTopics)
         {
             var clone = Clone();
             clone.ExcludeInternalTopics = excludeInternalTopics;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.ISOLATION_LEVEL_CONFIG"/>
+        /// </summary>
         // IsolationLevel.READ_COMMITTED.toString().toLowerCase(Locale.ROOT), IsolationLevel.READ_UNCOMMITTED.toString().toLowerCase(Locale.ROOT)
         public IsolationLevel IsolationLevel
         {
@@ -194,25 +267,35 @@ namespace MASES.KNet.Consumer
                 SetProperty(ConsumerConfig.ISOLATION_LEVEL_CONFIG, System.Enum.GetName(typeof(IsolationLevel), value).ToLowerInvariant());
             }
         }
-
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.ISOLATION_LEVEL_CONFIG"/>
+        /// </summary>
         public ConsumerConfigBuilder WithIsolationLevel(IsolationLevel isolationLevel)
         {
             var clone = Clone();
             clone.IsolationLevel = isolationLevel;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.ALLOW_AUTO_CREATE_TOPICS_CONFIG"/>
+        /// </summary>
         public bool AllowAutoCreateTopics { get { return GetProperty<bool>(ConsumerConfig.ALLOW_AUTO_CREATE_TOPICS_CONFIG); } set { SetProperty(ConsumerConfig.ALLOW_AUTO_CREATE_TOPICS_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.ALLOW_AUTO_CREATE_TOPICS_CONFIG"/>
+        /// </summary>
         public ConsumerConfigBuilder WithAllowAutoCreateTopics(bool allowAutoCreateTopics)
         {
             var clone = Clone();
             clone.AllowAutoCreateTopics = allowAutoCreateTopics;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.SECURITY_PROVIDERS_CONFIG"/>
+        /// </summary>
         public string SecurityProviders { get { return GetProperty<string>(ConsumerConfig.SECURITY_PROVIDERS_CONFIG); } set { SetProperty(ConsumerConfig.SECURITY_PROVIDERS_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.SECURITY_PROVIDERS_CONFIG"/>
+        /// </summary>
         public ConsumerConfigBuilder WithSecurityProviders(string securityProviders)
         {
             var clone = Clone();

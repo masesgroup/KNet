@@ -25,18 +25,37 @@ using MASES.KNet.Producer;
 
 namespace MASES.KNet.Extensions
 {
+    /// <summary>
+    /// Extensions for <see cref="ProducerConfigBuilder"/>
+    /// </summary>
     public static class ProducerConfigBuilderExtensions
     {
+        /// <summary>
+        /// Test if <typeparamref name="T"/> can use basic serializer
+        /// </summary>
+        /// <typeparam name="T">The type to test</typeparam>
+        /// <param name="builder">The <see cref="ProducerConfigBuilder"/></param>
+        /// <returns><see langword="true"/> if <typeparamref name="T"/> can use basic serializer</returns>
         public static bool CanApplyBasicSerializer<T>(this ProducerConfigBuilder builder)
         {
             return KNetSerialization.IsInternalManaged<T>();
         }
-
+        /// <summary>
+        /// Apply key serializer
+        /// </summary>
+        /// <typeparam name="T">The type to serialize</typeparam>
+        /// <param name="builder">The <see cref="ProducerConfigBuilder"/></param>
+        /// <returns>The updated <see cref="ProducerConfigBuilder"/></returns>
         public static ProducerConfigBuilder WithKeySerializerClass<T>(this ProducerConfigBuilder builder)
         {
             return WithKeySerializerClass(builder, typeof(T));
         }
-
+        /// <summary>
+        /// Apply key serializer
+        /// </summary>
+        /// <param name="builder">The <see cref="ProducerConfigBuilder"/></param>
+        /// <param name="type">The <see cref="Type"/> to serialize</param>
+        /// <returns>The updated <see cref="ProducerConfigBuilder"/></returns>
         public static ProducerConfigBuilder WithKeySerializerClass(this ProducerConfigBuilder builder, System.Type type)
         {
             if (!KNetSerialization.IsInternalManaged(type)) throw new InvalidOperationException($"Cannot manage serialization with type {type}");
@@ -81,12 +100,22 @@ namespace MASES.KNet.Extensions
 
             return builder;
         }
-
+        /// <summary>
+        /// Apply value serializer
+        /// </summary>
+        /// <typeparam name="T">The type to serialize</typeparam>
+        /// <param name="builder">The <see cref="ProducerConfigBuilder"/></param>
+        /// <returns>The updated <see cref="ProducerConfigBuilder"/></returns>
         public static ProducerConfigBuilder WithValueSerializerClass<T>(this ProducerConfigBuilder builder)
         {
             return WithValueSerializerClass(builder, typeof(T));
         }
-
+        /// <summary>
+        /// Apply value serializer
+        /// </summary>
+        /// <param name="builder">The <see cref="ProducerConfigBuilder"/></param>
+        /// <param name="type">The <see cref="Type"/> to serialize</param>
+        /// <returns>The updated <see cref="ProducerConfigBuilder"/></returns>
         public static ProducerConfigBuilder WithValueSerializerClass(this ProducerConfigBuilder builder, System.Type type)
         {
             if (!KNetSerialization.IsInternalManaged(type)) throw new InvalidOperationException($"Cannot manage serialization with type {type}");
