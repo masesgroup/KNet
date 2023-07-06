@@ -23,6 +23,9 @@ namespace Org.Apache.Kafka.Streams.Processor
 {
     public partial class RecordContext
     {
+        /// <summary>
+        /// <see cref="System.DateTime"/> of <see cref="Timestamp"/>
+        /// </summary>
         public System.DateTime DateTime => System.DateTimeOffset.FromUnixTimeMilliseconds(Timestamp()).DateTime;
     }
 }

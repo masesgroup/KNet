@@ -18,18 +18,25 @@
 
 namespace Org.Apache.Kafka.Streams.Kstream.Internals
 {
+    /// <summary>
+    /// Internal
+    /// </summary>
     public class UnlimitedWindow : Window    
     {
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
+        /// </summary>
         public override string BridgeClassName => "org.apache.kafka.streams.kstream.internals.UnlimitedWindow";
-
-        [System.Obsolete("This is not public in Apache Kafka API")]
-        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
         public UnlimitedWindow() { }
-
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
         public UnlimitedWindow(long startMs)
             : base(startMs, long.MaxValue)
         {
         }
-
     }
 }

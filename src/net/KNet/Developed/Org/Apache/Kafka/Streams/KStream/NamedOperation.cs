@@ -24,9 +24,12 @@ namespace Org.Apache.Kafka.Streams.Kstream
     public interface INamedOperation<T> : IJVMBridgeBase where T: INamedOperation<T>
     {
     }
-
+    /// <see href="https://kafka.apache.org/34/javadoc/org/apache/kafka/streams/kstream/NamedOperation.html">
     public class NamedOperation : JVMBridgeBase<NamedOperation>
     {
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
+        /// </summary>
         public override string BridgeClassName => "org.apache.kafka.streams.kstream.NamedOperation";
 
         /// <summary>
@@ -38,7 +41,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// </summary>
         public NamedOperation(params object[] args) : base(args) { }
     }
-
+    /// <see href="https://kafka.apache.org/34/javadoc/org/apache/kafka/streams/kstream/NamedOperation.html">
     public class NamedOperation<T> : NamedOperation, INamedOperation<T> where T : NamedOperation<T>
     {
         /// <summary>

@@ -10,12 +10,15 @@
 		<PackageTags>knet kafka apache-kafka dotnet clr netcore net6 kafka connect streams producer consumer providers streamprovider gateway</PackageTags>
 		<PackageId>MASES.KNet</PackageId>
 		<PackageReadmeFile>usage.md</PackageReadmeFile>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<RunAnalyzersDuringBuild>False</RunAnalyzersDuringBuild>
+		<RunAnalyzersDuringLiveAnalysis>False</RunAnalyzersDuringLiveAnalysis>
 	</PropertyGroup>
 	<ItemGroup>
 		<None Include="mases.knet.targets" Pack="true" PackagePath="build" />
 		<None Include="..\..\..\jars\*.jar" Pack="true" PackagePath="build\jars" />
 		<None Include="..\..\config\**\*" Pack="true" PackagePath="build\config" />
-		<None Include="..\Documentation\articles\usage.md" Pack="true" PackagePath="\" />
+		<None Include="..\..\documentation\articles\usage.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="MASES.JNet" Version="2.0.0">

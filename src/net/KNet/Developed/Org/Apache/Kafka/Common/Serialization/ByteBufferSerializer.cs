@@ -23,6 +23,9 @@ namespace Org.Apache.Kafka.Common.Serialization
 {
     public partial class ByteBufferSerializer
     {
+        /// <summary>
+        /// Conversion operator
+        /// </summary>
         public static implicit operator Serializer<ByteBuffer>(ByteBufferSerializer t) => t.Cast<Serializer<ByteBuffer>>();
     }
 }

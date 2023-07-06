@@ -25,6 +25,9 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         public partial class ListOffsetsResultInfo
         {
+            /// <summary>
+            /// <see cref="System.DateTime"/> of <see cref="Timestamp"/>
+            /// </summary>
             public System.DateTime DateTime => System.DateTimeOffset.FromUnixTimeMilliseconds(Timestamp()).DateTime;
 
         }

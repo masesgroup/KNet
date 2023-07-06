@@ -23,7 +23,7 @@
 	<files>
 		<file src="..\..\..\LICENSE" target="LICENSE" />
 		<file src="..\Common\JCOB128x128.png" target="" />
-		<file src="..\Documentation\articles\usageConnect.md" target="" />
+		<file src="..\..\documentation\articles\usageConnect.md" target="" />
 		<file src="..\..\..\binConnect\net6.0\" target="tools\net6.0\any\" />
 	</files>
 </package>

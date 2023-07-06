@@ -45,6 +45,9 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
     #endregion
 
     #region FixedKeyProcessorSupplier<KIn, VIn, VOut>
+    /// <summary>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier.html"/>
+    /// </summary>
     public partial class FixedKeyProcessorSupplier<KIn, VIn, VOut> : JVMBridgeListener, Org.Apache.Kafka.Streams.Processor.Api.IFixedKeyProcessorSupplier<KIn, VIn, VOut>, Org.Apache.Kafka.Streams.Processor.IConnectedStoreProvider, Java.Util.Function.ISupplier<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessor<KIn, VIn, VOut>>
     {
         #region Private
@@ -66,7 +69,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         #region Instance methods
 
         /// <summary>
-        /// Handlers initializer for <see cref="FixedKeyProcessorSupplier"/>
+        /// Handlers initializer for <see cref="FixedKeyProcessorSupplier{KIn, VIn, VOut}"/>
         /// </summary>
         protected virtual void InitializeHandlers()
         {

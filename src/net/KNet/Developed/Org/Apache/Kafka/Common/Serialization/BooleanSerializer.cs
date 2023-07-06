@@ -16,14 +16,15 @@
 *  Refer to LICENSE for more information.
 */
 
-using Java.Lang;
-using Java.Util;
-using Org.Apache.Kafka.Common;
+using MASES.JCOBridge.C2JBridge;
 
-namespace Org.Apache.Kafka.Clients.Consumer
+namespace Org.Apache.Kafka.Common.Serialization
 {
-    public partial class ConsumerRecords<K, V> 
+    public partial class BooleanSerializer
     {
-
+        /// <summary>
+        /// Conversion operator
+        /// </summary>
+        public static implicit operator Serializer<bool>(BooleanSerializer t) => t.Cast<Serializer<bool>>();
     }
 }

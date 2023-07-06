@@ -22,6 +22,9 @@ namespace Org.Apache.Kafka.Common.Serialization
 {
     public partial class ShortSerializer
     {
+        /// <summary>
+        /// Conversion operator
+        /// </summary>
         public static implicit operator Serializer<short>(ShortSerializer t) => t.Cast<Serializer<short>>();
     }
 }

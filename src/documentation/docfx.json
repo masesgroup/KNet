@@ -5,7 +5,7 @@
         {
           "files": [ "**.csproj" ],
           "exclude": [ "**/bin/**", "**/obj/**" ],
-          "src": "../"
+          "src": "../net/"
         }
       ],
       "dest": "api",
@@ -60,7 +60,7 @@
 
       }
     },
-    "dest": "../../../docs",
+    "dest": "../../docs",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [

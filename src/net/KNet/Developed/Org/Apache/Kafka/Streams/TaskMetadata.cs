@@ -25,6 +25,9 @@ namespace Org.Apache.Kafka.Streams
 {
     public partial class TaskMetadata
     {
+        /// <summary>
+        /// <see cref="System.DateTime"/> of <see cref="TimeCurrentIdlingStarted"/>
+        /// </summary>
         public System.DateTime TimeCurrentIdlingStartedDateTime => System.DateTimeOffset.FromUnixTimeMilliseconds(TimeCurrentIdlingStarted().Get()??0).DateTime;
     }
 }

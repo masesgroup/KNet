@@ -40,6 +40,9 @@ namespace Org.Apache.Kafka.Streams.Kstream
     #endregion
 
     #region TransformerSupplier<K, V, R>
+    /// <summary>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/TransformerSupplier.html"/>
+    /// </summary>
     public partial class TransformerSupplier<K, V, R> : JVMBridgeListener, Org.Apache.Kafka.Streams.Kstream.ITransformerSupplier<K, V, R>, Org.Apache.Kafka.Streams.Processor.IConnectedStoreProvider, Java.Util.Function.ISupplier<Org.Apache.Kafka.Streams.Kstream.Transformer<K, V, R>>
     {
         #region Private
@@ -61,7 +64,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         #region Instance methods
 
         /// <summary>
-        /// Handlers initializer for <see cref="TransformerSupplier"/>
+        /// Handlers initializer for <see cref="TransformerSupplier{K, V, R}"/>
         /// </summary>
         protected virtual void InitializeHandlers()
         {
