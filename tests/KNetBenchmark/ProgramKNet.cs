@@ -17,29 +17,34 @@
 */
 
 using Java.Util;
-using MASES.KNet.Clients.Consumer;
-using MASES.KNet.Clients.Producer;
-using MASES.KNet.Common.Serialization;
+using MASES.JCOBridge.C2JBridge;
+using MASES.KNet.Consumer;
+using MASES.KNet.Producer;
+using MASES.KNet.Serialization;
+using Org.Apache.Kafka.Clients.Consumer;
+using Org.Apache.Kafka.Clients.Producer;
+using Org.Apache.Kafka.Common.Serialization;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Threading;
 
 namespace MASES.KNet.Benchmark
 {
     partial class Program
     {
-        static IProducer<int, byte[]> kafkaProducer = null;
-        static IKNetProducer<int, byte[]> knetProducer = null;
-        static Serializer<int> knetKeySerializer = null;
-        static Serializer<byte[]> knetValueSerializer = null;
+        static IKNetProducer<long, byte[]> knetProducer = null;
+        static KNetSerDes<long> knetKeySerializer = null;
+        static KNetSerDes<byte[]> knetValueSerializer = null;
 
-        static IKNetProducer<int, byte[]> KNetProducer()
+        static IKNetProducer<long, byte[]> KNetProducer()
         {
             if (knetProducer == null || !SharedObjects)
             {
                 Properties props = ProducerConfigBuilder.Create()
                                                         .WithBootstrapServers(Server)
-                                                        .WithAcks(Acks ? ProducerConfig.Acks.One : ProducerConfig.Acks.None)
+                                                        .WithAcks(Acks ? ProducerConfigBuilder.AcksTypes.One : ProducerConfigBuilder.AcksTypes.None)
                                                         .WithRetries(MessageSendMaxRetries)
                                                         .WithLingerMs(LingerMs)
                                                         .WithBatchSize(BatchSize)
@@ -48,63 +53,23 @@ namespace MASES.KNet.Benchmark
                                                         .WithSendBuffer(SocketSendBufferBytes)
                                                         .WithReceiveBuffer(SocketReceiveBufferBytes)
                                                         .WithBufferMemory(128 * 1024 * 1024)
-                                                        .WithKeySerializerClass("org.apache.kafka.common.serialization.IntegerSerializer")
+                                                        .WithKeySerializerClass("org.apache.kafka.common.serialization.LongSerializer")
                                                         .WithValueSerializerClass("org.apache.kafka.common.serialization.ByteArraySerializer")
                                                         .ToProperties();
-                if (UseSerdes)
-                {
-                    knetKeySerializer = new Serializer<int>(serializeWithHeadersFun: (topic, headers, data) =>
-                    {
-                        var key = BitConverter.GetBytes(data);
-                        return key;
-                    });
-                    knetValueSerializer = new Serializer<byte[]>(serializeWithHeadersFun: (topic, headers, data) =>
-                    {
-                        // var value = Encoding.Unicode.GetBytes(data);
-                        return data;
-                    });
-                }
 
-                knetProducer = UseSerdes ? new KNetProducer<int, byte[]>(props, knetKeySerializer, knetValueSerializer) : new KNetProducer<int, byte[]>(props);
+                knetKeySerializer = new KNetSerDes<long>(serializeWithHeadersFun: (topic, headers, data) =>
+                {
+                    var key = BitConverter.GetBytes(data);
+                    return key;
+                });
+                knetValueSerializer = new KNetSerDes<byte[]>(serializeWithHeadersFun: (topic, headers, data) =>
+                {
+                    // var value = Encoding.Unicode.GetBytes(data);
+                    return data;
+                });
+                knetProducer = new KNetProducer<long, byte[]>(props, knetKeySerializer, knetValueSerializer);
             }
             return knetProducer;
-        }
-
-        static IProducer<int, byte[]> KafkaProducer()
-        {
-            if (kafkaProducer == null || !SharedObjects)
-            {
-                Properties props = ProducerConfigBuilder.Create()
-                                                        .WithBootstrapServers(Server)
-                                                        .WithAcks(Acks ? ProducerConfig.Acks.One : ProducerConfig.Acks.None)
-                                                        .WithRetries(MessageSendMaxRetries)
-                                                        .WithLingerMs(LingerMs)
-                                                        .WithBatchSize(BatchSize)
-                                                        .WithMaxInFlightRequestPerConnection(MaxInFlight)
-                                                        .WithEnableIdempotence(false)
-                                                        .WithSendBuffer(SocketSendBufferBytes)
-                                                        .WithReceiveBuffer(SocketReceiveBufferBytes)
-                                                        .WithBufferMemory(128 * 1024 * 1024)
-                                                        .WithKeySerializerClass("org.apache.kafka.common.serialization.IntegerSerializer")
-                                                        .WithValueSerializerClass("org.apache.kafka.common.serialization.ByteArraySerializer")
-                                                        .ToProperties();
-                if (UseSerdes)
-                {
-                    knetKeySerializer = new Serializer<int>(serializeWithHeadersFun: (topic, headers, data) =>
-                    {
-                        var key = BitConverter.GetBytes(data);
-                        return key;
-                    });
-                    knetValueSerializer = new Serializer<byte[]>(serializeWithHeadersFun: (topic, headers, data) =>
-                    {
-                        // var value = Encoding.Unicode.GetBytes(data);
-                        return data;
-                    });
-                }
-
-                kafkaProducer = UseSerdes ? new KafkaProducer<int, byte[]>(props, knetKeySerializer, knetValueSerializer) : new KafkaProducer<int, byte[]>(props);
-            }
-            return kafkaProducer;
         }
 
         static Callback kNetCallback = null;
@@ -113,16 +78,19 @@ namespace MASES.KNet.Benchmark
         {
             try
             {
-                var kafkaproducer = KNetProducer();
-                kafkaproducer.PartitionsFor(topicName); // used to get metadata before do the test
+                var knetproducer = KNetProducer();
+                knetproducer.PartitionsFor(topicName); // used to get metadata before do the test
 
                 if (UseCallback && kNetCallback == null)
                 {
-                    kNetCallback = new Callback((o1, o2) =>
+                    kNetCallback = new Callback()
                     {
-                        if (o2 != null) Console.WriteLine(o2.ToString());
-                        else if (ShowLogs) Console.WriteLine($"Produced on topic {o1.Topic} at offset {o1.Offset}");
-                    });
+                        OnOnCompletion = (o1, o2) =>
+                        {
+                            if (o2 != null) Console.WriteLine(o2.ToString());
+                            else if (ShowLogs) Console.WriteLine($"Produced on topic {o1.Topic()} at offset {o1.Offset()}");
+                        }
+                    };
                 }
 
                 Stopwatch swCreateRecord = null;
@@ -149,7 +117,7 @@ namespace MASES.KNet.Benchmark
                         swSendRecord = new();
                         if (UseCallback)
                         {
-                            kafkaproducer.SetCallback(kNetCallback);
+                            knetproducer.SetCallback(kNetCallback);
                         }
                         stopWatch = Stopwatch.StartNew();
                         for (int i = 0; i < numpacket; i++)
@@ -161,13 +129,13 @@ namespace MASES.KNet.Benchmark
                                 Array.Copy(data, 0, newData, 0, data.Length);
                                 stopWatch.Start();
                                 swSendRecord.Start();
-                                kafkaproducer.Send(topicName, i, newData);
+                                knetproducer.Send(topicName, i, newData);
                                 swSendRecord.Stop();
                             }
                             else
                             {
                                 swSendRecord.Start();
-                                kafkaproducer.Send(topicName, i, data);
+                                knetproducer.Send(topicName, i, data);
                                 swSendRecord.Stop();
                             }
                             if (WithBurst)
@@ -179,11 +147,11 @@ namespace MASES.KNet.Benchmark
                                     stopWatch.Start();
                                 }
                             }
-                            if (ContinuousFlushKNet) kafkaproducer.Flush();
+                            if (ContinuousFlushKNet) knetproducer.Flush();
                         }
                     }
                 }
-                finally { kafkaproducer.Flush(); stopWatch.Stop(); if (!SharedObjects) kafkaproducer.Dispose(); }
+                finally { knetproducer.Flush(); stopWatch.Stop(); if (!SharedObjects) knetproducer.Dispose(); }
                 if (ShowResults && !ProducePreLoad)
                 {
                     Console.WriteLine($"KNET: Create {swCreateRecord.ElapsedMicroSeconds()} ({swCreateRecord.ElapsedMicroSeconds() / numpacket}) Send {swSendRecord.ElapsedMicroSeconds()} ({swSendRecord.ElapsedMicroSeconds() / numpacket}) -> {swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds()} -> BackTime {stopWatch.ElapsedMicroSeconds() - (swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds())}");
@@ -196,164 +164,11 @@ namespace MASES.KNet.Benchmark
             }
         }
 
-        static Stopwatch ProduceKafka(string topicName, int length, int numpacket, byte[] data = null)
-        {
-            try
-            {
-                var kafkaproducer = KafkaProducer();
-                kafkaproducer.PartitionsFor(topicName); // used to get metadata before do the test
+        static KNetSerDes<long> knetKeyDeserializer = null;
+        static KNetSerDes<byte[]> knetValueDeserializer = null;
+        static IKNetConsumer<long, byte[]> knetConsumer = null;
 
-                if (UseCallback && kNetCallback == null)
-                {
-                    kNetCallback = new Callback((o1, o2) =>
-                    {
-                        if (o2 != null) Console.WriteLine(o2.ToString());
-                        else if (ShowLogs) Console.WriteLine($"Produced on topic {o1.Topic} at offset {o1.Offset}");
-                    });
-                }
-
-                Stopwatch swCreateRecord = null;
-                Stopwatch swSendRecord = null;
-                Stopwatch stopWatch = null;
-                try
-                {
-                    if (data == null)
-                    {
-                        var rand = new System.Random();
-                        data = new byte[length];
-                        for (int i = 0; i < length; i++)
-                        {
-                            data[i] = (byte)rand.Next(0, byte.MaxValue);
-                        }
-                    }
-                    var record = new ProducerRecord<int, byte[]>(topicName, 42, data);
-                    if (ProducePreLoad)
-                    {
-                        swCreateRecord = new();
-                        swSendRecord = new();
-                        System.Collections.Generic.List<ProducerRecord<int, byte[]>> messages = new();
-                        for (int i = 0; i < numpacket; i++)
-                        {
-                            var rand = new System.Random();
-                            data = new byte[length];
-                            for (int ii = 0; ii < length; ii++)
-                            {
-                                data[ii] = (byte)rand.Next(0, byte.MaxValue);
-                            }
-                            swCreateRecord.Start();
-                            record = new ProducerRecord<int, byte[]>(topicName, i, data);
-                            swCreateRecord.Stop();
-                            messages.Add(record);
-                        }
-                        stopWatch = Stopwatch.StartNew();
-                        for (int i = 0; i < numpacket; i++)
-                        {
-                            swSendRecord.Start();
-                            var result = UseCallback ? kafkaproducer.Send(messages[i], kNetCallback) : kafkaproducer.Send(messages[i]);
-                            swSendRecord.Stop();
-                            if (WithBurst)
-                            {
-                                if (i % BurstLength == 0)
-                                {
-                                    stopWatch.Stop();
-                                    System.Threading.Thread.Sleep(BurstInterval);
-                                    stopWatch.Start();
-                                }
-                            }
-                            if (ContinuousFlushKNet) kafkaproducer.Flush();
-                        }
-                    }
-                    else
-                    {
-                        swCreateRecord = new();
-                        swSendRecord = new();
-                        stopWatch = Stopwatch.StartNew();
-                        // KafkaProducerHighPressure<int, byte[]> kafkaProducerHighPressure = new(producer);
-                        for (int i = 0; i < numpacket; i++)
-                        {
-                            if (!SinglePacket)
-                            {
-                                stopWatch.Stop();
-                                byte[] newData = new byte[data.Length];
-                                Array.Copy(data, 0, newData, 0, data.Length);
-                                stopWatch.Start();
-                                swCreateRecord.Start();
-                                record = new ProducerRecord<int, byte[]>(topicName, i, newData);
-                                swCreateRecord.Stop();
-                            }
-                            swSendRecord.Start();
-                            if (UseCallback)
-                                kafkaproducer.Send(record, kNetCallback);
-                            else
-                                kafkaproducer.Send(record);
-                            swSendRecord.Stop();
-                            if (WithBurst)
-                            {
-                                if (i % BurstLength == 0)
-                                {
-                                    stopWatch.Stop();
-                                    System.Threading.Thread.Sleep(BurstInterval);
-                                    stopWatch.Start();
-                                }
-                            }
-                            if (ContinuousFlushKNet) kafkaproducer.Flush();
-                        }
-                    }
-                }
-                finally { kafkaproducer.Flush(); stopWatch.Stop(); if (!SharedObjects) kafkaproducer.Dispose(); }
-                if (ShowResults && !ProducePreLoad)
-                {
-                    Console.WriteLine($"KNET: Create {swCreateRecord.ElapsedMicroSeconds()} ({swCreateRecord.ElapsedMicroSeconds() / numpacket}) Send {swSendRecord.ElapsedMicroSeconds()} ({swSendRecord.ElapsedMicroSeconds() / numpacket}) -> {swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds()} -> BackTime {stopWatch.ElapsedMicroSeconds() - (swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds())}");
-                }
-                return stopWatch;
-            }
-            catch (Java.Util.Concurrent.ExecutionException ex)
-            {
-                throw ex.InnerException;
-            }
-        }
-
-        static Deserializer<int> knetKeyDeserializer = null;
-        static Deserializer<byte[]> knetValueDeserializer = null;
-        static IConsumer<int, byte[]> kafkaConsumer = null;
-        static IKNetConsumer<int, byte[]> knetConsumer = null;
-
-        static IConsumer<int, byte[]> KafkaConsumer()
-        {
-            if (kafkaConsumer == null || !SharedObjects)
-            {
-                Properties props = ConsumerConfigBuilder.Create()
-                                                        .WithBootstrapServers(Server)
-                                                        .WithGroupId(Guid.NewGuid().ToString())
-                                                        .WithEnableAutoCommit(!AlwaysCommit)
-                                                        .WithAutoCommitIntervalMs(1000)
-                                                        .WithSendBuffer(SocketSendBufferBytes)
-                                                        .WithReceiveBuffer(SocketReceiveBufferBytes)
-                                                        .WithFetchMinBytes(FetchMinBytes)
-                                                        .WithKeyDeserializerClass("org.apache.kafka.common.serialization.IntegerDeserializer")
-                                                        .WithValueDeserializerClass("org.apache.kafka.common.serialization.ByteArrayDeserializer")
-                                                        .WithAutoOffsetReset(ConsumerConfig.AutoOffsetReset.EARLIEST)
-                                                        .ToProperties();
-                if (UseSerdes)
-                {
-                    knetKeyDeserializer = new Deserializer<int>(deserializeFun: (topic, data) =>
-                    {
-                        var key = BitConverter.ToInt32(data, 0);
-                        return key;
-                    });
-                    knetValueDeserializer = new Deserializer<byte[]>(deserializeFun: (topic, data) =>
-                    {
-                        // var value = Encoding.Unicode.GetString(data);
-                        return data;
-                    });
-                }
-
-                kafkaConsumer = UseSerdes ? new KafkaConsumer<int, byte[]>(props, knetKeyDeserializer, knetValueDeserializer) : new KafkaConsumer<int, byte[]>(props);
-            }
-            return kafkaConsumer;
-        }
-
-        static IKNetConsumer<int, byte[]> KNetConsumer()
+        static IKNetConsumer<long, byte[]> KNetConsumer()
         {
             if (knetConsumer == null || !SharedObjects)
             {
@@ -365,107 +180,46 @@ namespace MASES.KNet.Benchmark
                                                         .WithSendBuffer(SocketSendBufferBytes)
                                                         .WithReceiveBuffer(SocketReceiveBufferBytes)
                                                         .WithFetchMinBytes(FetchMinBytes)
-                                                        .WithKeyDeserializerClass("org.apache.kafka.common.serialization.IntegerDeserializer")
+                                                        .WithKeyDeserializerClass("org.apache.kafka.common.serialization.LongDeserializer")
                                                         .WithValueDeserializerClass("org.apache.kafka.common.serialization.ByteArrayDeserializer")
-                                                        .WithAutoOffsetReset(ConsumerConfig.AutoOffsetReset.EARLIEST)
+                                                        .WithAutoOffsetReset(ConsumerConfigBuilder.AutoOffsetResetTypes.EARLIEST)
                                                         .ToProperties();
                 if (UseSerdes)
                 {
-                    knetKeyDeserializer = new Deserializer<int>(deserializeFun: (topic, data) =>
+                    knetKeyDeserializer = new KNetSerDes<long>(deserializeFun: (topic, data) =>
                     {
                         var key = BitConverter.ToInt32(data, 0);
                         return key;
                     });
-                    knetValueDeserializer = new Deserializer<byte[]>(deserializeFun: (topic, data) =>
+                    knetValueDeserializer = new KNetSerDes<byte[]>(deserializeFun: (topic, data) =>
                     {
                         // var value = Encoding.Unicode.GetString(data);
                         return data;
                     });
                 }
 
-                knetConsumer = UseSerdes ? new KNetConsumer<int, byte[]>(props, knetKeyDeserializer, knetValueDeserializer) : new KNetConsumer<int, byte[]>(props);
+                knetConsumer = UseSerdes ? new KNetConsumer<long, byte[]>(props, knetKeyDeserializer, knetValueDeserializer) : new KNetConsumer<long, byte[]>(props);
             }
             return knetConsumer;
         }
 
-        static Stopwatch ConsumeKafka(string topicName, int length, int numpacket, byte[] data = null)
+        static Stopwatch ConsumeKNet(int testNum, string topicName, int length, int numpacket, byte[] data = null)
         {
             try
             {
                 Stopwatch stopWatch = null;
-                ConsumerRebalanceListener rebalanceListener = new(
-                                    revoked: (o) =>
-                                    {
-                                        if (ShowLogs) Console.WriteLine("Revoked: {0}", o.ToString());
-                                    },
-                                    assigned: (o) =>
-                                    {
-                                        if (ShowLogs) Console.WriteLine("Assigned: {0}", o.ToString());
-                                        stopWatch = Stopwatch.StartNew();
-                                    });
-
-                var consumer = KafkaConsumer();
-                try
+                ConsumerRebalanceListener rebalanceListener = new()
                 {
-                    Java.Time.Duration duration = TimeSpan.FromMinutes(1);
-                    int counter = 0;
-                    consumer.Subscribe(Collections.Singleton(topicName), rebalanceListener);
-                    while (true)
+                    OnOnPartitionsRevoked = (o) =>
                     {
-                        var records = consumer.Poll(duration);
-                        if (!CheckOnConsume)
-                        {
-                            counter += records.Count;
-                        }
-                        else
-                        {
-                            foreach (var item in records)
-                            {
-                                if (!item.Value.SequenceEqual(data)
-                                    || (!SinglePacket && item.Key != counter))
-                                {
-                                    throw new InvalidOperationException($"Incorrect data counter {counter} item.Key {item.Key}");
-                                }
-                                counter++;
-                            }
-                        }
-                        if (AlwaysCommit) consumer.CommitSync();
-                        if (counter >= numpacket)
-                        {
-                            consumer.CommitSync();
-                            stopWatch.Stop();
-                            consumer.Unsubscribe();
-                            return stopWatch;
-                        }
+                        if (ShowLogs) Console.WriteLine("Revoked: {0}", o.ToString());
+                    },
+                    OnOnPartitionsAssigned = (o) =>
+                    {
+                        if (ShowLogs) Console.WriteLine("Assigned: {0}", o.ToString());
+                        stopWatch = Stopwatch.StartNew();
                     }
-                }
-                finally
-                {
-                    if (!SharedObjects) consumer.Dispose();
-                    rebalanceListener?.Dispose();
-                }
-            }
-            catch (Java.Util.Concurrent.ExecutionException ex)
-            {
-                throw ex.InnerException;
-            }
-        }
-
-        static Stopwatch ConsumeKNet(string topicName, int length, int numpacket, byte[] data = null)
-        {
-            try
-            {
-                Stopwatch stopWatch = null;
-                ConsumerRebalanceListener rebalanceListener = new(
-                                    revoked: (o) =>
-                                    {
-                                        if (ShowLogs) Console.WriteLine("Revoked: {0}", o.ToString());
-                                    },
-                                    assigned: (o) =>
-                                    {
-                                        if (ShowLogs) Console.WriteLine("Assigned: {0}", o.ToString());
-                                        stopWatch = Stopwatch.StartNew();
-                                    });
+                };
 
                 var consumer = KNetConsumer();
                 try
@@ -479,7 +233,7 @@ namespace MASES.KNet.Benchmark
                             if (!message.Value.SequenceEqual(data)
                                 || (!SinglePacket && message.Key != counter))
                             {
-                                throw new InvalidOperationException($"Incorrect data counter {counter} item.Key {message.Key}");
+                                throw new InvalidOperationException($"KNetConsumer test {testNum}: Incorrect data counter {counter} item.Key {message.Key}");
                             }
                         }
                         counter++;
@@ -515,19 +269,21 @@ namespace MASES.KNet.Benchmark
             try
             {
                 Stopwatch stopWatch = null;
-                ConsumerRebalanceListener rebalanceListener = new(
-                                    revoked: (o) =>
-                                    {
-                                        if (ShowLogs) Console.WriteLine("Revoked: {0}", o.ToString());
-                                    },
-                                    assigned: (o) =>
-                                    {
-                                        if (ShowLogs) Console.WriteLine("Assigned: {0}", o.ToString());
-                                        stopWatch = Stopwatch.StartNew();
-                                    });
+                ConsumerRebalanceListener rebalanceListener = new()
+                {
+                    OnOnPartitionsRevoked = (o) =>
+                    {
+                        if (ShowLogs) Console.WriteLine("Revoked: {0}", o.ToString());
+                    },
+                    OnOnPartitionsAssigned = (o) =>
+                    {
+                        if (ShowLogs) Console.WriteLine("Assigned: {0}", o.ToString());
+                        stopWatch = Stopwatch.StartNew();
+                    }
+                };
 
-                var consumer = KafkaConsumer();
-                var producer = KafkaProducer();
+                var consumer = KNetConsumer();
+                var producer = KNetProducer();
                 try
                 {
                     int counter = 0;
@@ -541,7 +297,7 @@ namespace MASES.KNet.Benchmark
                             byte[] newVal = new byte[item.Value.Length];
                             Array.Copy(item.Value, newVal, item.Value.Length);
                             stopWatch.Start();
-                            var record = new ProducerRecord<int, byte[]>(topicName + "_COPY", item.Key, newVal);
+                            var record = new KNetProducerRecord<long, byte[]>(topicName + "_COPY", item.Key, newVal);
                             producer.Send(record);
                             counter++;
                         }
@@ -564,6 +320,139 @@ namespace MASES.KNet.Benchmark
                         producer.Dispose();
                     }
                 }
+            }
+            catch (Java.Util.Concurrent.ExecutionException ex)
+            {
+                throw ex.InnerException;
+            }
+        }
+
+        static (Stopwatch, IEnumerable<double>) RoundTripKNet(int testNum, string topicName, int length, int numpacket, byte[] data = null)
+        {
+            try
+            {
+                System.Collections.Generic.List<double> roundTripTime = new System.Collections.Generic.List<double>();
+                ManualResetEvent startEvent = new ManualResetEvent(false);
+                var consumer = KNetConsumer();
+                var producer = KNetProducer();
+
+                System.Threading.Thread thread = new System.Threading.Thread(() =>
+                {
+                    ConsumerRebalanceListener rebalanceListener = null;
+                    try
+                    {
+                        rebalanceListener = new()
+                        {
+                            OnOnPartitionsRevoked = (o) =>
+                            {
+                                if (ShowLogs) Console.WriteLine("Revoked: {0}", o.ToString());
+                            },
+                            OnOnPartitionsAssigned = (o) =>
+                            {
+                                if (ShowLogs) Console.WriteLine("Assigned: {0}", o.ToString());
+                                startEvent.Set();
+                            }
+                        };
+                        consumer.Subscribe(Collections.Singleton(topicName), rebalanceListener);
+                        Java.Time.Duration duration = TimeSpan.FromSeconds(1);
+                        int counter = 0;
+                        while (true)
+                        {
+                            var records = consumer.Poll(duration);
+                            foreach (var item in records)
+                            {
+                                roundTripTime.Add((double)(DateTime.Now.Ticks - item.Key) / (TimeSpan.TicksPerMillisecond / 1000));
+
+                                if (CheckOnConsume && !item.Value.SequenceEqual(data))
+                                {
+                                    throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {item.Key}");
+                                }
+                                counter++;
+                            }
+
+                            if (AlwaysCommit) consumer.CommitSync();
+                            if (counter >= numpacket)
+                            {
+                                consumer.CommitSync();
+                                consumer.Unsubscribe();
+                                break;
+                            }
+                        }
+                    }
+                    finally
+                    {
+                        rebalanceListener?.Dispose();
+                        if (!SharedObjects)
+                        {
+                            consumer.Dispose();
+                        }
+                        startEvent.Set();
+                    }
+                });
+
+                thread.Start();
+                startEvent.WaitOne();
+                startEvent.Reset();
+
+                Stopwatch totalExecution = Stopwatch.StartNew();
+
+                Stopwatch swCreateRecord = null;
+                Stopwatch swSendRecord = null;
+                Stopwatch stopWatch = null;
+                try
+                {
+                    if (data == null)
+                    {
+                        var rand = new System.Random();
+                        data = new byte[length];
+                        for (int i = 0; i < length; i++)
+                        {
+                            data[i] = (byte)rand.Next(0, byte.MaxValue);
+                        }
+                    }
+                    var record = new KNetProducerRecord<long, byte[]>(topicName, 42, data);
+                    swCreateRecord = new();
+                    swSendRecord = new();
+                    stopWatch = Stopwatch.StartNew();
+                    for (int i = 0; i < numpacket; i++)
+                    {
+                        if (!SinglePacket)
+                        {
+                            stopWatch.Stop();
+                            byte[] newData = new byte[data.Length];
+                            Array.Copy(data, 0, newData, 0, data.Length);
+                            stopWatch.Start();
+                            swCreateRecord.Start();
+                            record = new KNetProducerRecord<long, byte[]>(topicName, DateTime.Now.Ticks, newData);
+                            swCreateRecord.Stop();
+                        }
+                        swSendRecord.Start();
+                        if (UseCallback)
+                            producer.Send(record, kNetCallback);
+                        else
+                            producer.Send(record);
+                        swSendRecord.Stop();
+                        if (WithBurst)
+                        {
+                            if (i % BurstLength == 0)
+                            {
+                                stopWatch.Stop();
+                                System.Threading.Thread.Sleep(BurstInterval);
+                                stopWatch.Start();
+                            }
+                        }
+                        if (ContinuousFlushKNet) producer.Flush();
+                    }
+                }
+                finally { producer.Flush(); stopWatch.Stop(); if (!SharedObjects) producer.Dispose(); }
+                startEvent.WaitOne();
+                totalExecution.Stop();
+                if (ShowResults)
+                {
+                    Console.WriteLine($"KNET: Create {swCreateRecord.ElapsedMicroSeconds()} ({swCreateRecord.ElapsedMicroSeconds() / numpacket}) Send {swSendRecord.ElapsedMicroSeconds()} ({swSendRecord.ElapsedMicroSeconds() / numpacket}) -> {swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds()} -> BackTime {stopWatch.ElapsedMicroSeconds() - (swCreateRecord.ElapsedMicroSeconds() + swSendRecord.ElapsedMicroSeconds())}");
+                }
+
+                return (totalExecution, roundTripTime);
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
             {

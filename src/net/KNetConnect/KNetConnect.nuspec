@@ -2,14 +2,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>MASES.KNetConnect</id>
-    <version>1.5.1</version>
-    <title>KNetConnect - KNet Connect command line interface</title>
+    <version>2.0.0</version>
+    <title>KNet Connect SDK command line interface - The Apache Kafka .NET suite.</title>
     <authors>MASES s.r.l.</authors>
     <owners>MASES s.r.l.</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectUrl>https://github.com/masesgroup/KNet/</projectUrl>
     <repository type="git" url="https://github.com/masesgroup/KNet/" />
-    <description>KNetConnect - KNet Connect command line interface</description>
+    <description>Connect SDK command line interface of the Apache Kafka .NET suite. KNet is a comprehensive .NET suite for Apache Kafka providing all features: Producer, Consumer, Admin, Streams, Connect, backends (ZooKeeper and Kafka).</description>
     <releaseNotes>https://github.com/masesgroup/KNet/releases</releaseNotes>
     <copyright>Copyright ©  MASES s.r.l. 2023</copyright>
     <license type="file">LICENSE</license>

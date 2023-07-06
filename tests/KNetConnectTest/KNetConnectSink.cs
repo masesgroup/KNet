@@ -17,7 +17,8 @@
 */
 
 using MASES.KNet.Connect;
-using MASES.KNet.Connect.Sink;
+using Org.Apache.Kafka.Connect;
+using Org.Apache.Kafka.Connect.Sink;
 using System;
 using System.Collections.Generic;
 

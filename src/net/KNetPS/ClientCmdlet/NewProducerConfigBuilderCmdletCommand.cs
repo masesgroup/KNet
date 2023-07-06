@@ -16,14 +16,14 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Clients.Producer;
 using MASES.KNetPS.Cmdlet;
 using System.Management.Automation;
+using MASES.KNet.Producer;
 
 namespace MASES.KNetPS.ClientCmdlet
 {
     [Cmdlet(VerbsCommon.New, "ProducerConfigBuilder")]
-    [OutputType(typeof(KNetProducer<,>))]
+    [OutputType(typeof(ProducerConfigBuilder))]
     public class NewProducerConfigBuilderCmdletCommand : KNetPSCmdlet
     {
         // This method gets called once for each cmdlet in the pipeline when the pipeline starts executing

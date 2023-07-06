@@ -40,9 +40,9 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <classpathfile>${basedir}/classpathfile.classpath</classpathfile>
-        <kafkaVersion>3.4.0</kafkaVersion>
-		<knetVersion>1.5.1.0</knetVersion>
-        <jcobridgeVersion>2.5.3</jcobridgeVersion>
+        <kafkaVersion>3.5.0</kafkaVersion>
+		<knetVersion>2.0.0.0</knetVersion>
+        <jcobridgeVersion>2.5.8</jcobridgeVersion>
     </properties>
     <distributionManagement>
         <snapshotRepository>
@@ -169,7 +169,7 @@
                 <version>2.9.1</version>
                 <configuration>
                     <links>
-                        <link>https://www.jcobridge.com/api-java_${jcobridgeVersion}</link>
+                        <link>https://www.jcobridge.com/api-java</link>
                     </links>
                     <quiet>true</quiet>
                     <source>8</source>

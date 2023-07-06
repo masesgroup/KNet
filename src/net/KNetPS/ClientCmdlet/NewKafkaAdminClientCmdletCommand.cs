@@ -16,9 +16,10 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Clients.Admin;
+using Org.Apache.Kafka.Clients.Admin;
 using MASES.KNetPS.Cmdlet;
 using System.Management.Automation;
+using MASES.KNet.Admin;
 
 namespace MASES.KNetPS.ClientCmdlet
 {

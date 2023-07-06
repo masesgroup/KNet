@@ -36,7 +36,7 @@ A basic producer can be like the following one:
 
 ```C#
 using MASES.KNet;
-using MASES.KNet.Clients.Producer;
+using Org.Apache.Kafka.Clients.Producer;
 using Java.Util;
 using System;
 using System.Threading;
@@ -120,7 +120,7 @@ Surf [JVM callbacks]() to go into detail in the callback management from JVM.
 
 ```C#
 using MASES.KNet;
-using MASES.KNet.Clients.Producer;
+using Org.Apache.Kafka.Clients.Producer;
 using Java.Util;
 using System;
 using System.Threading;
@@ -213,7 +213,7 @@ A basic consumer can be like the following one:
 
 ```C#
 using MASES.KNet;
-using MASES.KNet.Clients.Consumer;
+using Org.Apache.Kafka.Clients.Consumer;
 using Java.Util;
 using System;
 

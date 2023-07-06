@@ -8,6 +8,8 @@
   href: performance.md
 - name: KNet APIs extendibility
   href: API_extensibility.md
+- name: KNet Serializer/Deserializer
+  href: usageSerDes.md
 - name: KNet JVM callbacks
   href: jvm_callbacks.md
 - name: KNet Connect SDK

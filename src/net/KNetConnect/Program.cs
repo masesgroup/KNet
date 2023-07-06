@@ -37,10 +37,7 @@ namespace MASES.KNetCLI
 
                 try
                 {
-                    var core = Activator.CreateInstance(KNetConnectCore.MainClassToRun) as JVMBridgeBase;
-                    if (core == null) throw new ArgumentException("Requested class is not a child of JVMBridgeBase.");
-
-                    core.Execute(KNetConnectCore.FilteredArgs);
+                    KNetConnectCore.Launch(KNetConnectCore.MainClassToRun, KNetConnectCore.FilteredArgs);
                 }
                 catch (TargetInvocationException tie)
                 {

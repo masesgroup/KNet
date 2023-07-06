@@ -41,6 +41,7 @@ namespace MASES.KNet.Benchmark
         public const string UseKNetConsumer = "UseKNetConsumer";
         public const string UseSerdes = "UseSerdes";
         public const string UseCallback = "UseCallback";
+        public const string UsePrefetch = "UsePrefetch";
         public const string SinglePacket = "SinglePacket";
         public const string ProducePreLoad = "ProducePreLoad";
         public const string SimpleCount = "SimpleCount";
@@ -326,6 +327,7 @@ namespace MASES.KNet.Benchmark
         static bool UseKNetConsumer;
         static bool UseSerdes;
         static bool UseCallback;
+        static bool UsePrefetch;
         static bool ProducePreLoad;
         static bool SinglePacket;
         static bool CheckOnConsume;
@@ -372,6 +374,7 @@ namespace MASES.KNet.Benchmark
             UseKNetConsumer = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.UseKNetConsumer);
             UseSerdes = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.UseSerdes);
             UseCallback = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.UseCallback);
+            UsePrefetch = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.UsePrefetch);
             ProducePreLoad = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.ProducePreLoad);
             SinglePacket = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.SinglePacket);
             CheckOnConsume = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.CheckOnConsume);

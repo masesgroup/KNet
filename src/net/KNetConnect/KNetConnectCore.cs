@@ -19,6 +19,7 @@
 using MASES.CLIParser;
 using MASES.KNet;
 using MASES.KNet.Connect;
+using Org.Apache.Kafka.Connect;
 using System;
 using System.Collections.Generic;
 using System.IO;

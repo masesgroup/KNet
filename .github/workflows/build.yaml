@@ -78,7 +78,7 @@ jobs:
           gpg-passphrase: MAVEN_GPG_PASSPHRASE # env variable for GPG private key passphrase
 
       - name: Install local file to be used within Javadoc plugin of generated POM
-        run: mvn install:install-file -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.3 -Dpackaging=jar -Dfile=../../../bin/net6.0/JCOBridge.jar -f ./src/java/knet/pom.xml
+        run: mvn install:install-file -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.8 -Dpackaging=jar -Dfile=../../../bin/net6.0/JCOBridge.jar -f ./src/java/knet/pom.xml
         shell: bash
 
       - name: Create Jars
@@ -150,7 +150,7 @@ jobs:
           gpg-passphrase: MAVEN_GPG_PASSPHRASE # env variable for GPG private key passphrase
 
       - name: Install local file to be used within Javadoc plugin of generated POM
-        run: mvn install:install-file -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.3 -Dpackaging=jar -Dfile=../../../bin/net6.0/JCOBridge.jar -f ./src/java/knet/pom.xml
+        run: mvn install:install-file -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.8 -Dpackaging=jar -Dfile=../../../bin/net6.0/JCOBridge.jar -f ./src/java/knet/pom.xml
         shell: bash
 
       - name: Create Jars
@@ -197,6 +197,7 @@ jobs:
         run: Remove-Item .\docs\* -Recurse -Force -Exclude _config.yml
 
       - name: Build documentation
+        if: ${{ github.repository_owner == 'masesgroup'}} #if outside main repo do not build docs, it will be checked during pullrequest or build on main branch
         run: |
           choco install docfx
           cd src\net\Documentation

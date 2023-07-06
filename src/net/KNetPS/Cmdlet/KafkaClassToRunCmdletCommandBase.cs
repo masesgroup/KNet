@@ -50,10 +50,7 @@ namespace MASES.KNetPS.Cmdlet
 
             try
             {
-                var core = Activator.CreateInstance(KNetPSCore.MainClassToRun) as JVMBridgeBase;
-                if (core == null) throw new ArgumentException("Requested class is not a child of JVMBridgeBase.");
-
-                core.Execute(arguments);
+                JNetPSHelper<KNetPSCore>.Launch(KNetPSCore.MainClassToRun, arguments);
             }
             catch (TargetInvocationException tie)
             {

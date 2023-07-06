@@ -18,8 +18,9 @@
 
 using Java.Util;
 using MASES.KNet.Connect;
-using MASES.KNet.Connect.Data;
-using MASES.KNet.Connect.Source;
+using Org.Apache.Kafka.Connect;
+using Org.Apache.Kafka.Connect.Data;
+using Org.Apache.Kafka.Connect.Source;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -62,7 +63,7 @@ namespace MASES.KNetConnectTest
 
         private long lineOffset = 0L;
 
-        public override IList<SourceRecord> Poll()
+        public override System.Collections.Generic.IList<SourceRecord> Poll()
         {
             var lines = File.ReadAllLines(_filename);
             if (useSourceOffset)

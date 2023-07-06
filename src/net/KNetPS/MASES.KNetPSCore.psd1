@@ -10,7 +10,7 @@
 ModuleToProcess = 'MASES.KNetPS.dll'
 
 # Version number of this module.
-ModuleVersion = '1.5.1'
+ModuleVersion = '2.0.0'
 
 # ID used to uniquely identify this module
 GUID = 'F7C13891-7BC6-4025-ACF5-04509852F87D'
@@ -25,7 +25,7 @@ CompanyName = 'MASES s.r.l.'
 Copyright = 'Copyright ©  MASES s.r.l. 2023'
 
 # Description of the functionality provided by this module
-Description = 'PowerShell command line interface for KNet'
+Description = 'PowerShell command line interface of the Apache Kafka .NET suite. KNet is a comprehensive .NET suite for Apache Kafka providing all features: Producer, Consumer, Admin, Streams, Connect, backends (ZooKeeper and Kafka).'
 
 # Minimum version of the Windows PowerShell engine required by this module
 PowerShellVersion = '7.0.0'

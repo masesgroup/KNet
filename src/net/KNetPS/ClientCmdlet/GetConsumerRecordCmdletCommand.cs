@@ -18,7 +18,7 @@
 
 using MASES.JCOBridge.C2JBridge;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
-using MASES.KNet.Clients.Consumer;
+using Org.Apache.Kafka.Clients.Consumer;
 using MASES.KNetPS.Cmdlet;
 using System;
 using System.Collections;
@@ -83,7 +83,7 @@ namespace MASES.KNetPS.ClientCmdlet
 
                 foreach (IJavaObject item in consumerRecords as IEnumerable)
                 {
-                    var res = JVMBridgeBase.Wraps(consumerRecordType, item);
+                    var res = JVMBridgeBase.Wraps(consumerRecordType, item, JVMBridgeBase.ClassNameOf<ConsumerRecord>());
                     WriteObject(res);
                 }
             }
