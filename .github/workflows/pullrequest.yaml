@@ -163,11 +163,11 @@ jobs:
       - name: Recompile to create nuget packages
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KNet.sln
 
-      - name: Clear documentation folder 
-        run: Remove-Item .\docs\* -Recurse -Force -Exclude _config.yml
-
-      - name: Build documentation
-        run: |
-          choco install docfx
-          cd src\net\Documentation
-          docfx
+      # - name: Clear documentation folder 
+      #   run: Remove-Item .\docs\* -Recurse -Force -Exclude _config.yml
+      # 
+      # - name: Build documentation
+      #   run: |
+      #     choco install docfx
+      #     cd src\net\Documentation
+      #     docfx
