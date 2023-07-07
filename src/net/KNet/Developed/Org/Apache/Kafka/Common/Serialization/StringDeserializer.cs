@@ -22,6 +22,9 @@ namespace Org.Apache.Kafka.Common.Serialization
 {
     public partial class StringDeserializer
     {
+        /// <summary>
+        /// Conversion operator
+        /// </summary>
         public static implicit operator Deserializer<string>(StringDeserializer t) => t.Cast<Deserializer<string>>();
     }
 }

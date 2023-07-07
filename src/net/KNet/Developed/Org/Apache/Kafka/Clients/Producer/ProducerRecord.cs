@@ -22,16 +22,23 @@ namespace Org.Apache.Kafka.Clients.Producer
 {
     public partial class ProducerRecord<K, V>
     {
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/producer/ProducerRecord.html#org.apache.kafka.clients.producer.ProducerRecord(java.lang.String,java.lang.Integer,java.lang.Long,java.lang.Object,java.lang.Object,java.lang.Iterable)"/>
+        /// </summary>
         public ProducerRecord(string topic, int partition, System.DateTime timestamp, K key, V value, Headers headers)
             : this(topic, partition, new System.DateTimeOffset(timestamp).ToUnixTimeMilliseconds(), timestamp, key, value, headers)
         {
         }
-
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/producer/ProducerRecord.html#org.apache.kafka.clients.producer.ProducerRecord(java.lang.String,java.lang.Integer,java.lang.Long,java.lang.Object,java.lang.Object)"/>
+        /// </summary>
         public ProducerRecord(string topic, int partition, System.DateTime timestamp, K key, V value)
             : this(topic, partition, new System.DateTimeOffset(timestamp).ToUnixTimeMilliseconds(), key, value)
         {
         }
-
+        /// <summary>
+        /// <see cref="System.DateTime"/> of <see cref="Timestamp"/>
+        /// </summary>
         public System.DateTime DateTime => System.DateTimeOffset.FromUnixTimeMilliseconds((long)Timestamp()).DateTime;
     }
 }

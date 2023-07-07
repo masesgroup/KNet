@@ -40,6 +40,9 @@ namespace Org.Apache.Kafka.Streams.Kstream
     #endregion
 
     #region ValueTransformerSupplier<V, VR>
+    /// <summary>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/kstream/ValueTransformerSupplier.html"/>
+    /// </summary>
     public partial class ValueTransformerSupplier<V, VR> : JVMBridgeListener, Org.Apache.Kafka.Streams.Kstream.IValueTransformerSupplier<V, VR>
     {
         #region Private
@@ -61,7 +64,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         #region Instance methods
 
         /// <summary>
-        /// Handlers initializer for <see cref="ValueTransformerSupplier"/>
+        /// Handlers initializer for <see cref="ValueTransformerSupplier{V, VR}"/>
         /// </summary>
         protected virtual void InitializeHandlers()
         {

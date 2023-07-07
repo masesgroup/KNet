@@ -58,7 +58,7 @@ namespace MASES.KNet.Connect
             return source;
         }
 
-        public static Type TraverseUntil(Type source, Type t)
+        static Type TraverseUntil(Type source, Type t)
         {
             var baseType = source;
             while (baseType != null && CheckOn(baseType, t) != t)

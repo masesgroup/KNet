@@ -24,8 +24,13 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         public partial class ReplicaState
         {
+            /// <summary>
+            /// <see cref="System.DateTime"/> of <see cref="LastFetchTimestamp"/>
+            /// </summary>
             public System.DateTime LastFetchDateTime => System.DateTimeOffset.FromUnixTimeMilliseconds(LastFetchTimestamp().AsLong).DateTime;
-
+            /// <summary>
+            /// <see cref="System.DateTime"/> of <see cref="LastCaughtUpTimestamp"/>
+            /// </summary>
             public System.DateTime LastCaughtUpDateTime => System.DateTimeOffset.FromUnixTimeMilliseconds(LastCaughtUpTimestamp().AsLong).DateTime;
         }
     }

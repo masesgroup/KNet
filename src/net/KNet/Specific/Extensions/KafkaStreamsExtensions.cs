@@ -18,6 +18,9 @@
 
 namespace MASES.KNet.Extensions
 {
+    /// <summary>
+    /// Extension for <see cref="Org.Apache.Kafka.Streams"/>
+    /// </summary>
     public static class KafkaStreamsExtensions
     {
     }

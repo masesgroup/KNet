@@ -23,10 +23,6 @@ using System;
 
 namespace Org.Apache.Kafka.Connect.Connector
 {
-    /// <summary>
-    /// Base type for <see cref="MASES.KNet.Connect.Sink.SinkRecord"/> and <see cref="MASES.KNet.Connect.Source.SourceRecord"/>
-    /// </summary>
-    /// <typeparam name="R">The class extending <see cref="ConnectRecord{R}"/></typeparam>
     public partial class ConnectRecord<R>
     {
         /// <summary>
@@ -36,21 +32,31 @@ namespace Org.Apache.Kafka.Connect.Connector
     }
 
     /// <summary>
-    /// Base type for <see cref="MASES.KNet.Connect.Sink.SinkRecord{TKey, TValue}"/> and <see cref="MASES.KNet.Connect.Source.SourceRecord{TKey, TValue}"/>
+    /// KNet helper for <see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord"/>
     /// </summary>
     /// <typeparam name="R">The class extending <see cref="ConnectRecord{R, TKey, TValue}"/></typeparam>
     /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
     /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
     public class ConnectRecord<R, TKey, TValue> : JVMBridgeBase<ConnectRecord<R, TKey, TValue>> where R : ConnectRecord<R, TKey, TValue>
     {
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
+        /// </summary>
         public override bool IsBridgeAbstract => true;
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
+        /// </summary>
         public override string BridgeClassName => "org.apache.kafka.connect.connector.ConnectRecord";
 
-        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
         public ConnectRecord()
         {
         }
-
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/connector/ConnectRecord.html#org.apache.kafka.connect.connector.ConnectRecord(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)"/>
+        /// </summary>
         public ConnectRecord(string topic, int kafkaPartition,
                               Schema keySchema, TKey key,
                               Schema valueSchema, TValue value,
@@ -58,7 +64,9 @@ namespace Org.Apache.Kafka.Connect.Connector
             : base(topic, kafkaPartition, keySchema, key, valueSchema, value, new DateTimeOffset(timestamp).ToUnixTimeMilliseconds())
         {
         }
-
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/connector/ConnectRecord.html#org.apache.kafka.connect.connector.ConnectRecord(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long,java.lang.Iterable)"/>
+        /// </summary>
         public ConnectRecord(string topic, int kafkaPartition,
                              Schema keySchema, TKey key,
                              Schema valueSchema, TValue value,
@@ -66,7 +74,9 @@ namespace Org.Apache.Kafka.Connect.Connector
              : base(topic, kafkaPartition, keySchema, key, valueSchema, value, new DateTimeOffset(timestamp).ToUnixTimeMilliseconds(), headers)
         {
         }
-
+        /// <summary>
+        /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
+        /// </summary>
         protected ConnectRecord(params object[] args) : base(args)
         {
         }
@@ -102,9 +112,13 @@ namespace Org.Apache.Kafka.Connect.Connector
         /// The <see cref="Headers"/>
         /// </summary>
         public Headers Headers => IExecute<Headers>("headers");
-
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/connector/ConnectRecord.html#newRecord-java.lang.String-java.lang.Integer-org.apache.kafka.connect.data.Schema-java.lang.Object-org.apache.kafka.connect.data.Schema-java.lang.Object-java.lang.Long-"/>
+        /// </summary>
         public R NewRecord(string topic, int kafkaPartition, Schema keySchema, TKey key, Schema valueSchema, TValue value, DateTime timestamp) => IExecute<R>("newRecord", topic, kafkaPartition, keySchema, key, valueSchema, value, new DateTimeOffset(timestamp).ToUnixTimeMilliseconds());
-
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/connector/ConnectRecord.html#newRecord-java.lang.String-java.lang.Integer-org.apache.kafka.connect.data.Schema-java.lang.Object-org.apache.kafka.connect.data.Schema-java.lang.Object-java.lang.Long-java.lang.Iterable-"/>
+        /// </summary>
         public R NewRecord(string topic, int kafkaPartition, Schema keySchema, TKey key, Schema valueSchema, TValue value, DateTime timestamp, Headers headers) => IExecute<R>("newRecord", topic, kafkaPartition, keySchema, key, valueSchema, value, new DateTimeOffset(timestamp).ToUnixTimeMilliseconds(), headers);
     }
 }

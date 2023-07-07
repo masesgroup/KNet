@@ -17,12 +17,14 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using MASES.JCOBridge.C2JBridge.JVMInterop;
 
-namespace Org.Apache.Kafka.Common
+namespace Org.Apache.Kafka.Common.Serialization
 {
-    public partial class PartitionInfo
+    public partial class BooleanDeserializer
     {
-
+        /// <summary>
+        /// Conversion operator
+        /// </summary>
+        public static implicit operator Deserializer<bool>(BooleanDeserializer t) => t.Cast<Deserializer<bool>>();
     }
 }

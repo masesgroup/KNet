@@ -22,6 +22,9 @@ namespace Org.Apache.Kafka.Clients.Consumer
 {
     public partial class OffsetAndTimestamp 
     {
+        /// <summary>
+        /// <see cref="System.DateTime"/> of <see cref="Timestamp"/>
+        /// </summary>
         public System.DateTime DateTime => System.DateTimeOffset.FromUnixTimeMilliseconds(Timestamp()).DateTime;
     }
 }

@@ -23,6 +23,9 @@ namespace Org.Apache.Kafka.Common.Serialization
 {
     public partial class UUIDDeserializer
     {
+        /// <summary>
+        /// Conversion operator
+        /// </summary>
         public static implicit operator Deserializer<UUID>(UUIDDeserializer t) => t.Cast<Deserializer<UUID>>();
     }
 }

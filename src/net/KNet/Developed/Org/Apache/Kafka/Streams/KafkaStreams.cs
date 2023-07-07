@@ -33,8 +33,14 @@ namespace Org.Apache.Kafka.Streams
 {
     public partial class KafkaStreams
     {
+        /// <summary>
+        /// .NET interface for <see cref="StateListener"/>
+        /// </summary>
         public interface IStateListener : IJVMBridgeBase
         {
+            /// <summary>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.StateListener.html#onChange-org.apache.kafka.streams.KafkaStreams.State-org.apache.kafka.streams.KafkaStreams.State-"/>
+            /// </summary>
             void OnChange(Org.Apache.Kafka.Streams.KafkaStreams.State newState, Org.Apache.Kafka.Streams.KafkaStreams.State oldState);
         }
 

@@ -42,9 +42,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// <summary>
     /// Listener for Kafka Aggregator. Extends <see cref="JVMBridgeListener"/>, implements <see cref="IAggregator{K, V, VA}"/>
     /// </summary>
-    /// <typeparam name="K">The data associated to the event</typeparam>
-    /// <typeparam name="V">The data associated to the event</typeparam>
-    /// <typeparam name="VA">Aggregated value</typeparam>
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public partial class Aggregator<K, V, VA> : IAggregator<K, V, VA>
     {

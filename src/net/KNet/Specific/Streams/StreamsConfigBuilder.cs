@@ -20,56 +20,84 @@ using Org.Apache.Kafka.Streams;
 
 namespace MASES.KNet.Streams
 {
+    /// <summary>
+    /// Builder for <see cref="StreamsConfig"/>
+    /// </summary>
     public class StreamsConfigBuilder : CommonClientConfigsBuilder<StreamsConfigBuilder>
     {
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.APPLICATION_ID_CONFIG"/>
+        /// </summary>
         public string ApplicationId { get { return GetProperty<string>(StreamsConfig.APPLICATION_ID_CONFIG); } set { SetProperty(StreamsConfig.APPLICATION_ID_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.APPLICATION_ID_CONFIG"/>
+        /// </summary>
         public StreamsConfigBuilder WithApplicationId(string applicationId)
         {
             var clone = Clone();
             clone.ApplicationId = applicationId;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.NUM_STANDBY_REPLICAS_CONFIG"/>
+        /// </summary>
         public int NumStandByReplicas { get { return GetProperty<int>(StreamsConfig.NUM_STANDBY_REPLICAS_CONFIG); } set { SetProperty(StreamsConfig.NUM_STANDBY_REPLICAS_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.NUM_STANDBY_REPLICAS_CONFIG"/>
+        /// </summary>
         public StreamsConfigBuilder WithNumStandByReplicas(int numStandByReplicas)
         {
             var clone = Clone();
             clone.NumStandByReplicas = numStandByReplicas;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.STATE_DIR_CONFIG"/>
+        /// </summary>
         public string StateDir { get { return GetProperty<string>(StreamsConfig.STATE_DIR_CONFIG); } set { SetProperty(StreamsConfig.STATE_DIR_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.STATE_DIR_CONFIG"/>
+        /// </summary>
         public StreamsConfigBuilder WithStateDir(string stateDir)
         {
             var clone = Clone();
             clone.StateDir = stateDir;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.ACCEPTABLE_RECOVERY_LAG_CONFIG"/>
+        /// </summary>
         public long AcceptableRecoveryLag { get { return GetProperty<int>(StreamsConfig.ACCEPTABLE_RECOVERY_LAG_CONFIG); } set { SetProperty(StreamsConfig.ACCEPTABLE_RECOVERY_LAG_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.ACCEPTABLE_RECOVERY_LAG_CONFIG"/>
+        /// </summary>
         public StreamsConfigBuilder WithAcceptableRecoveryLag(long acceptableRecoveryLag)
         {
             var clone = Clone();
             clone.AcceptableRecoveryLag = acceptableRecoveryLag;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.STATESTORE_CACHE_MAX_BYTES_CONFIG"/>
+        /// </summary>
         public long StateStoreMaxBytesBuffering { get { return GetProperty<int>(StreamsConfig.STATESTORE_CACHE_MAX_BYTES_CONFIG); } set { SetProperty(StreamsConfig.STATESTORE_CACHE_MAX_BYTES_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.STATESTORE_CACHE_MAX_BYTES_CONFIG"/>
+        /// </summary>
         public StreamsConfigBuilder WithStateStoreMaxBytesBuffering(long stateStoreMaxBytesBuffering)
         {
             var clone = Clone();
             clone.StateStoreMaxBytesBuffering = stateStoreMaxBytesBuffering;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG"/>
+        /// </summary>
         [System.Obsolete("To be checked")]
         public Java.Lang.Class DefaultDeserializationExceptionHandlerClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG"/>
+        /// </summary>
         [System.Obsolete("To be checked")]
         public StreamsConfigBuilder WithDefaultDeserializationExceptionHandlerClass(Java.Lang.Class defaultDeserializationExceptionHandlerClass)
         {
@@ -77,10 +105,14 @@ namespace MASES.KNet.Streams
             clone.DefaultDeserializationExceptionHandlerClass = defaultDeserializationExceptionHandlerClass;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG"/>
+        /// </summary>
         [System.Obsolete("To be checked")]
         public Java.Lang.Class DefaultKeySerdeClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG"/>
+        /// </summary>
         [System.Obsolete("To be checked")]
         public StreamsConfigBuilder WithDefaultKeySerdeClass(Java.Lang.Class defaultKeySerdeClass)
         {
@@ -88,10 +120,14 @@ namespace MASES.KNet.Streams
             clone.DefaultKeySerdeClass = defaultKeySerdeClass;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG"/>
+        /// </summary>
         [System.Obsolete("To be checked")]
         public Java.Lang.Class DefaultProductionExceptionHandlerClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG"/>
+        /// </summary>
         [System.Obsolete("To be checked")]
         public StreamsConfigBuilder WithDefaultProductionExceptionHandlerClass(Java.Lang.Class defaultProductionExceptionHandlerClass)
         {
@@ -99,19 +135,27 @@ namespace MASES.KNet.Streams
             clone.DefaultProductionExceptionHandlerClass = defaultProductionExceptionHandlerClass;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.DEFAULT_DSL_STORE_CONFIG"/>
+        /// </summary>
         public string DefaultDSLStore { get { return GetProperty<string>(StreamsConfig.DEFAULT_DSL_STORE_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_DSL_STORE_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.DEFAULT_DSL_STORE_CONFIG"/>
+        /// </summary>
         public StreamsConfigBuilder WithDefaultDSLStore(string defaultDSLStore)
         {
             var clone = Clone();
             clone.DefaultDSLStore = defaultDSLStore;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIG"/>
+        /// </summary>
         [System.Obsolete("To be checked")]
         public Java.Lang.Class DefaultTimestampExtractorClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIG"/>
+        /// </summary>
         [System.Obsolete("To be checked")]
         public StreamsConfigBuilder WithDefaultTimestampExtractorClass(Java.Lang.Class defaultTimestampExtractorClass)
         {
@@ -119,10 +163,14 @@ namespace MASES.KNet.Streams
             clone.DefaultTimestampExtractorClass = defaultTimestampExtractorClass;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG"/>
+        /// </summary>
         [System.Obsolete("To be checked")]
         public Java.Lang.Class DefaultValueSerdeClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG"/>
+        /// </summary>
         [System.Obsolete("To be checked")]
         public StreamsConfigBuilder WithDefaultValueSerdeClass(Java.Lang.Class defaultValueSerdeClass)
         {
@@ -130,118 +178,170 @@ namespace MASES.KNet.Streams
             clone.DefaultValueSerdeClass = defaultValueSerdeClass;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.MAX_TASK_IDLE_MS_CONFIG"/>
+        /// </summary>
         public long MaxTaskIdleMs { get { return GetProperty<int>(StreamsConfig.MAX_TASK_IDLE_MS_CONFIG); } set { SetProperty(StreamsConfig.MAX_TASK_IDLE_MS_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.MAX_TASK_IDLE_MS_CONFIG"/>
+        /// </summary>
         public StreamsConfigBuilder WithMaxTaskIdleMs(long maxTaskIdleMs)
         {
             var clone = Clone();
             clone.MaxTaskIdleMs = maxTaskIdleMs;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.MAX_WARMUP_REPLICAS_CONFIG"/>
+        /// </summary>
         public int MaxWarmupReplicas { get { return GetProperty<int>(StreamsConfig.MAX_WARMUP_REPLICAS_CONFIG); } set { SetProperty(StreamsConfig.MAX_WARMUP_REPLICAS_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.MAX_WARMUP_REPLICAS_CONFIG"/>
+        /// </summary>
         public StreamsConfigBuilder WithMaxWarmupReplicas(int maxWarmupReplicas)
         {
             var clone = Clone();
             clone.MaxWarmupReplicas = maxWarmupReplicas;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.NUM_STREAM_THREADS_CONFIG"/>
+        /// </summary>
         public int NumStreamThreads { get { return GetProperty<int>(StreamsConfig.NUM_STREAM_THREADS_CONFIG); } set { SetProperty(StreamsConfig.NUM_STREAM_THREADS_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.NUM_STREAM_THREADS_CONFIG"/>
+        /// </summary>
         public StreamsConfigBuilder WithNumStreamThreads(int numStreamThreads)
         {
             var clone = Clone();
             clone.NumStreamThreads = numStreamThreads;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.REPLICATION_FACTOR_CONFIG"/>
+        /// </summary>
         public int ReplicationFactor { get { return GetProperty<int>(StreamsConfig.REPLICATION_FACTOR_CONFIG); } set { SetProperty(StreamsConfig.REPLICATION_FACTOR_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.REPLICATION_FACTOR_CONFIG"/>
+        /// </summary>
         public StreamsConfigBuilder WithReplicationFactor(int replicationFactor)
         {
             var clone = Clone();
             clone.ReplicationFactor = replicationFactor;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.TASK_TIMEOUT_MS_CONFIG"/>
+        /// </summary>
         public long TaskTimeoutMs { get { return GetProperty<long>(StreamsConfig.TASK_TIMEOUT_MS_CONFIG); } set { SetProperty(StreamsConfig.TASK_TIMEOUT_MS_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.TASK_TIMEOUT_MS_CONFIG"/>
+        /// </summary>
         public StreamsConfigBuilder WithTaskTimeoutMs(long taskTimeoutMs)
         {
             var clone = Clone();
             clone.TaskTimeoutMs = taskTimeoutMs;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.TOPOLOGY_OPTIMIZATION_CONFIG"/>
+        /// </summary>
         public bool TopologyOptimization { get { return GetProperty<string>(StreamsConfig.TOPOLOGY_OPTIMIZATION_CONFIG) == StreamsConfig.OPTIMIZE; } set { SetProperty(StreamsConfig.TOPOLOGY_OPTIMIZATION_CONFIG, value ? StreamsConfig.OPTIMIZE : StreamsConfig.NO_OPTIMIZATION); } }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.TOPOLOGY_OPTIMIZATION_CONFIG"/>
+        /// </summary>
         public StreamsConfigBuilder WithTopologyOptimization(bool topologyOptimization)
         {
             var clone = Clone();
             clone.TopologyOptimization = topologyOptimization;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.APPLICATION_SERVER_CONFIG"/>
+        /// </summary>
         public string ApplicationServer { get { return GetProperty<string>(StreamsConfig.APPLICATION_SERVER_CONFIG); } set { SetProperty(StreamsConfig.APPLICATION_SERVER_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.APPLICATION_SERVER_CONFIG"/>
+        /// </summary>
         public StreamsConfigBuilder WithApplicationServer(string applicationServer)
         {
             var clone = Clone();
             clone.ApplicationServer = applicationServer;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.BUFFERED_RECORDS_PER_PARTITION_CONFIG"/>
+        /// </summary>
         public int BufferedRecordsPerPartition { get { return GetProperty<int>(StreamsConfig.BUFFERED_RECORDS_PER_PARTITION_CONFIG); } set { SetProperty(StreamsConfig.BUFFERED_RECORDS_PER_PARTITION_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.BUFFERED_RECORDS_PER_PARTITION_CONFIG"/>
+        /// </summary>
         public StreamsConfigBuilder WithBufferedRecordsPerPartition(int bufferedRecordsPerPartition)
         {
             var clone = Clone();
             clone.BufferedRecordsPerPartition = bufferedRecordsPerPartition;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.BUILT_IN_METRICS_VERSION_CONFIG"/>
+        /// </summary>
         public string BuiltInMetricsVersion { get { return GetProperty<string>(StreamsConfig.BUILT_IN_METRICS_VERSION_CONFIG); } set { SetProperty(StreamsConfig.BUILT_IN_METRICS_VERSION_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.BUILT_IN_METRICS_VERSION_CONFIG"/>
+        /// </summary>
         public StreamsConfigBuilder WithBuiltInMetricsVersion(string builtInMetricsVersion)
         {
             var clone = Clone();
             clone.BuiltInMetricsVersion = builtInMetricsVersion;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.COMMIT_INTERVAL_MS_CONFIG"/>
+        /// </summary>
         public long CommitIntervalMs { get { return GetProperty<long>(StreamsConfig.COMMIT_INTERVAL_MS_CONFIG); } set { SetProperty(StreamsConfig.COMMIT_INTERVAL_MS_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.COMMIT_INTERVAL_MS_CONFIG"/>
+        /// </summary>
         public StreamsConfigBuilder WithCommitIntervalMs(long commitIntervalMs)
         {
             var clone = Clone();
             clone.CommitIntervalMs = commitIntervalMs;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.REPARTITION_PURGE_INTERVAL_MS_CONFIG"/>
+        /// </summary>
         public long RepartitionPurgeIntervalMs { get { return GetProperty<long>(StreamsConfig.REPARTITION_PURGE_INTERVAL_MS_CONFIG); } set { SetProperty(StreamsConfig.REPARTITION_PURGE_INTERVAL_MS_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.REPARTITION_PURGE_INTERVAL_MS_CONFIG"/>
+        /// </summary>
         public StreamsConfigBuilder WithRepartitionPurgeIntervalMs(long repartitionPurgeIntervalMs)
         {
             var clone = Clone();
             clone.RepartitionPurgeIntervalMs = repartitionPurgeIntervalMs;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.PROBING_REBALANCE_INTERVAL_MS_CONFIG"/>
+        /// </summary>
         public long ProbingRebalanceIntervalMs { get { return GetProperty<long>(StreamsConfig.PROBING_REBALANCE_INTERVAL_MS_CONFIG); } set { SetProperty(StreamsConfig.PROBING_REBALANCE_INTERVAL_MS_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.PROBING_REBALANCE_INTERVAL_MS_CONFIG"/>
+        /// </summary>
         public StreamsConfigBuilder WithProbingRebalanceIntervalMs(long probingRebalanceIntervalMs)
         {
             var clone = Clone();
             clone.ProbingRebalanceIntervalMs = probingRebalanceIntervalMs;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.ROCKSDB_CONFIG_SETTER_CLASS_CONFIG"/>
+        /// </summary>
         [System.Obsolete("To be checked")]
         public Java.Lang.Class RocksDbConfigSetterClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.ROCKSDB_CONFIG_SETTER_CLASS_CONFIG); } set { SetProperty(StreamsConfig.ROCKSDB_CONFIG_SETTER_CLASS_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.ROCKSDB_CONFIG_SETTER_CLASS_CONFIG"/>
+        /// </summary>
         [System.Obsolete("To be checked")]
         public StreamsConfigBuilder WithRocksDbConfigSetterClass(Java.Lang.Class rocksDbConfigSetterClass)
         {
@@ -249,45 +349,65 @@ namespace MASES.KNet.Streams
             clone.RocksDbConfigSetterClass = rocksDbConfigSetterClass;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.STATE_CLEANUP_DELAY_MS_CONFIG"/>
+        /// </summary>
         public long StateCleanupDelayMs { get { return GetProperty<long>(StreamsConfig.STATE_CLEANUP_DELAY_MS_CONFIG); } set { SetProperty(StreamsConfig.STATE_CLEANUP_DELAY_MS_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.STATE_CLEANUP_DELAY_MS_CONFIG"/>
+        /// </summary>
         public StreamsConfigBuilder WithStateCleanupDelayMs(long stateCleanupDelayMs)
         {
             var clone = Clone();
             clone.StateCleanupDelayMs = stateCleanupDelayMs;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.UPGRADE_FROM_CONFIG"/>
+        /// </summary>
         public string UpgradeFrom { get { return GetProperty<string>(StreamsConfig.UPGRADE_FROM_CONFIG); } set { SetProperty(StreamsConfig.UPGRADE_FROM_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.UPGRADE_FROM_CONFIG"/>
+        /// </summary>
         public StreamsConfigBuilder WithUpgradeFrom(string upgradeFrom)
         {
             var clone = Clone();
             clone.UpgradeFrom = upgradeFrom;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.WINDOWED_INNER_CLASS_SERDE"/>
+        /// </summary>
         public string WindowedInnerClassSerde { get { return GetProperty<string>(StreamsConfig.WINDOWED_INNER_CLASS_SERDE); } set { SetProperty(StreamsConfig.WINDOWED_INNER_CLASS_SERDE, value); } }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.WINDOWED_INNER_CLASS_SERDE"/>
+        /// </summary>
         public StreamsConfigBuilder WithWindowedInnerClassSerde(string windowedInnerClassSerde)
         {
             var clone = Clone();
             clone.WindowedInnerClassSerde = windowedInnerClassSerde;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.WINDOW_STORE_CHANGE_LOG_ADDITIONAL_RETENTION_MS_CONFIG"/>
+        /// </summary>
         public long WindowStoreChangeLogAdditionalRetentionMs { get { return GetProperty<long>(StreamsConfig.WINDOW_STORE_CHANGE_LOG_ADDITIONAL_RETENTION_MS_CONFIG); } set { SetProperty(StreamsConfig.WINDOW_STORE_CHANGE_LOG_ADDITIONAL_RETENTION_MS_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.WINDOW_STORE_CHANGE_LOG_ADDITIONAL_RETENTION_MS_CONFIG"/>
+        /// </summary>
         public StreamsConfigBuilder WithWindowStoreChangeLogAdditionalRetentionMs(long windowStoreChangeLogAdditionalRetentionMs)
         {
             var clone = Clone();
             clone.WindowStoreChangeLogAdditionalRetentionMs = windowStoreChangeLogAdditionalRetentionMs;
             return clone;
         }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.WINDOW_SIZE_MS_CONFIG"/>
+        /// </summary>
         public long WindowSizeMs { get { return GetProperty<long>(StreamsConfig.WINDOW_SIZE_MS_CONFIG); } set { SetProperty(StreamsConfig.WINDOW_SIZE_MS_CONFIG, value); } }
-
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.WINDOW_SIZE_MS_CONFIG"/>
+        /// </summary>
         public StreamsConfigBuilder WithWindowSizeMs(long windowSizeMs)
         {
             var clone = Clone();

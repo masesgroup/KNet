@@ -40,6 +40,9 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
     #endregion
 
     #region ProcessorSupplier<KIn, VIn, KOut, VOut>
+    /// <summary>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.4.0/org/apache/kafka/streams/processor/api/ProcessorSupplier.html"/>
+    /// </summary>
     public partial class ProcessorSupplier<KIn, VIn, KOut, VOut> : JVMBridgeListener, Org.Apache.Kafka.Streams.Processor.Api.IProcessorSupplier<KIn, VIn, KOut, VOut>, Org.Apache.Kafka.Streams.Processor.IConnectedStoreProvider, Java.Util.Function.ISupplier<Org.Apache.Kafka.Streams.Processor.Api.Processor<KIn, VIn, KOut, VOut>>
     {
         #region Private
@@ -61,7 +64,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         #region Instance methods
 
         /// <summary>
-        /// Handlers initializer for <see cref="ProcessorSupplier"/>
+        /// Handlers initializer for <see cref="ProcessorSupplier{KIn, VIn, KOut, VOut}"/>
         /// </summary>
         protected virtual void InitializeHandlers()
         {

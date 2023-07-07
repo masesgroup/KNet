@@ -46,37 +46,37 @@ namespace MASES.KNet.Connect
             return source.Cast<SourceRecord>();
         }
         /// <summary>
-        /// Converts an <see cref="IEnumerable{SourceRecord{TKey, TValue}}"/> in <see cref="List{SourceRecord}"/>
+        /// Converts an <see cref="IEnumerable{T}"/> of <see cref="SourceRecord{TKey, TValue}"/> in <see cref="List{SourceRecord}"/>
         /// </summary>
-        /// <param name="source">The <see cref="IEnumerable{SourceRecord{TKey, TValue}}"/> to convert</param>
-        public static List<SourceRecord> Convert<TKey, TValue>(this IEnumerable<SourceRecord<TKey, TValue>> lst)
+        /// <param name="source">The <see cref="IEnumerable{T}"/> of <see cref="SourceRecord{TKey, TValue}"/> to convert</param>
+        public static List<SourceRecord> Convert<TKey, TValue>(this IEnumerable<SourceRecord<TKey, TValue>> source)
         {
-            return lst.Select((o) => o.From()).ToList();
+            return source.Select((o) => o.From()).ToList();
         }
 
         /// <summary>
-        /// Converts an <see cref="IEnumerable{SourceRecord{TKeySource, TOffset,TKey, TValue}}"/> in <see cref="List{SourceRecord}"/>
+        /// Converts an <see cref="IEnumerable{T}"/> of <see cref="SourceRecord{TKeySource, TOffset,TKey, TValue}"/> in <see cref="List{SourceRecord}"/>
         /// </summary>
-        /// <param name="source">The <see cref="IEnumerable{SourceRecord{TKeySource, TOffset,TKey, TValue}}"/> to convert</param>
-        public static List<SourceRecord> Convert<TKeySource, TOffset, TKey, TValue>(this IEnumerable<SourceRecord<TKeySource, TOffset, TKey, TValue>> lst)
+        /// <param name="source">The <see cref="IEnumerable{T}"/> of <see cref="SourceRecord{TKeySource, TOffset,TKey, TValue}"/> to convert</param>
+        public static List<SourceRecord> Convert<TKeySource, TOffset, TKey, TValue>(this IEnumerable<SourceRecord<TKeySource, TOffset, TKey, TValue>> source)
         {
-            return lst.Select((o) => o.From()).ToList();
+            return source.Select((o) => o.From()).ToList();
         }
         /// <summary>
-        /// Converts an <see cref="IEnumerable{SinkRecord}"/> in <see cref="IEnumerable{SinkRecord{object, TValue}}"/>
+        /// Converts an <see cref="IEnumerable{SinkRecord}"/> in <see cref="IEnumerable{T}"/> of <see cref="SinkRecord{Object, TValue}"/>
         /// </summary>
         /// <param name="source">The <see cref="IEnumerable{SinkRecord}"/> to convert</param>
-        public static IEnumerable<SinkRecord<object, TValue>> CastTo<TValue>(this IEnumerable<SinkRecord> lst)
+        public static IEnumerable<SinkRecord<object, TValue>> CastTo<TValue>(this IEnumerable<SinkRecord> source)
         {
-            return lst.Select((o) => o.CastTo<SinkRecord<object, TValue>>());
+            return source.Select((o) => o.CastTo<SinkRecord<object, TValue>>());
         }
         /// <summary>
-        /// Converts an <see cref="IEnumerable{SinkRecord}"/> in <see cref="IEnumerable{SinkRecord{TKey, TValue}}"/>
+        /// Converts an <see cref="IEnumerable{SinkRecord}"/> in <see cref="IEnumerable{T}"/> of <see cref="SinkRecord{TKey, TValue}"/>
         /// </summary>
         /// <param name="source">The <see cref="IEnumerable{SinkRecord}"/> to convert</param>
-        public static IEnumerable<SinkRecord<TKey, TValue>> CastTo<TKey, TValue>(this IEnumerable<SinkRecord> lst)
+        public static IEnumerable<SinkRecord<TKey, TValue>> CastTo<TKey, TValue>(this IEnumerable<SinkRecord> source)
         {
-            return lst.Select((o) => o.CastTo<SinkRecord<TKey, TValue>>());
+            return source.Select((o) => o.CastTo<SinkRecord<TKey, TValue>>());
         }
     }
 }

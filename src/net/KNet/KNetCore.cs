@@ -38,7 +38,7 @@ namespace MASES.KNet
     public class KNetCore<T> : JNetCore<T>
         where T : KNetCore<T>
     {
-        /// <inheritdoc cref="JNetCore{T}.CommandLineArguments"/>
+        /// <inheritdoc cref="JNetCoreBase{T}.CommandLineArguments"/>
         public override IEnumerable<IArgumentMetadata> CommandLineArguments
         {
             get
@@ -107,7 +107,7 @@ namespace MASES.KNet
             JCOBridge.C2JBridge.JCOBridge.RegisterExceptions(typeof(KNetCore<>).Assembly);
         }
 
-        /// <inheritdoc cref="JNetCore{T}.ProcessCommandLine" />
+        /// <inheritdoc cref="JNetCoreBase{T}.ProcessCommandLine" />
         protected override string[] ProcessCommandLine()
         {
             var result = base.ProcessCommandLine();
@@ -270,6 +270,7 @@ namespace MASES.KNet
         }
 
 #if DEBUG
+        /// <inheritdoc cref="JNetCoreBase{T}.EnableDebug"/>
         public override bool EnableDebug => true;
 #endif
     }

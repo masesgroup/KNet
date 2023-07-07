@@ -28,22 +28,41 @@ namespace Org.Apache.Kafka.Common.Metrics
     /// </summary>
     public partial interface IMetricsReporter : IJVMBridgeBase
     {
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/metrics/MetricsReporter.html#init-java.util.List-"/>
+        /// </summary>
         void Init(List<KafkaMetric> metrics);
-
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/metrics/MetricsReporter.html#metricChange-org.apache.kafka.common.metrics.KafkaMetric-"/>
+        /// </summary>
         void MetricChange(KafkaMetric metric);
-
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/metrics/MetricsReporter.html#metricRemoval-org.apache.kafka.common.metrics.KafkaMetric-"/>
+        /// </summary>
         void MetricRemoval(KafkaMetric metric);
-
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/metrics/MetricsReporter.html#close--"/>
+        /// </summary>
         void Close();
-
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/metrics/MetricsReporter.html#reconfigurableConfigs--"/>
+        /// </summary>
         Set<string> ReconfigurableConfigs();
-
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/Configurable.html#configure-java.util.Map-"/>
+        /// </summary>
         void Configure(Map<string, object> configs);
-
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/metrics/MetricsReporter.html#reconfigure-java.util.Map-"/>
+        /// </summary>
         void Reconfigure(Map<string, object> configs);
-
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/metrics/MetricsReporter.html#validateReconfiguration-java.util.Map-"/>
+        /// </summary>
         void ValidateReconfiguration(Map<string, object> configs);
-
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/metrics/MetricsReporter.html#contextChange-org.apache.kafka.common.metrics.MetricsContext-"/>
+        /// </summary>
         void ContextChange(MetricsContext metricsContext);
     }
 

@@ -31,7 +31,6 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// </summary>
         /// <param name="key">The StateRestoreCallback key</param>
         /// <param name="value">The StateRestoreCallback value</param>
-        /// <returns>The <typeparamref name="VR"/> apply evaluation</returns>
         void Restore(byte[] key, byte[] value);
     }
 

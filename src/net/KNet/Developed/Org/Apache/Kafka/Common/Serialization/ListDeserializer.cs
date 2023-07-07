@@ -23,6 +23,9 @@ namespace Org.Apache.Kafka.Common.Serialization
 {
     public partial class ListDeserializer<Inner>
     {
+        /// <summary>
+        /// Conversion operator
+        /// </summary>
         public static implicit operator Deserializer<List<Inner>>(ListDeserializer<Inner> t) => t.Cast<Deserializer<List<Inner>>>();
     }
 }

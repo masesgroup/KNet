@@ -16,10 +16,15 @@
 *  Refer to LICENSE for more information.
 */
 
+using static System.Net.WebRequestMethods;
+
 namespace Org.Apache.Kafka.Common.Errors
 {
     public partial class DuplicateResourceException
     {
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/latest/org/apache/kafka/common/errors/DuplicateResourceException.html#resource--"/>
+        /// </summary>
         public string Resource => DynBridgeInstance.resource();
     }
 }

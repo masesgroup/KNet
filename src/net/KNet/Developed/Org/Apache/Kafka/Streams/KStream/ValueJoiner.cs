@@ -41,9 +41,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// <summary>
     /// Listener for Kafka ValueJoiner. Extends <see cref="JVMBridgeListener"/>, implements <see cref="IValueJoiner{V1, V2, VR}"/>
     /// </summary>
-    /// <typeparam name="V1">The data associated to the event</typeparam>
-    /// <typeparam name="V2">The data associated to the event</typeparam>
-    /// <typeparam name="VR">Aggregated value</typeparam>
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public partial class ValueJoiner<V1, V2, VR> : IValueJoiner<V1, V2, VR>
     {

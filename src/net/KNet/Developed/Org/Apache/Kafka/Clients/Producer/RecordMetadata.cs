@@ -20,6 +20,9 @@ namespace Org.Apache.Kafka.Clients.Producer
 {
     public partial class RecordMetadata
     {
+        /// <summary>
+        /// <see cref="System.DateTime"/> of <see cref="Timestamp"/>
+        /// </summary>
         public System.DateTime DateTime => System.DateTimeOffset.FromUnixTimeMilliseconds((long)Timestamp()).DateTime;
     }
 }

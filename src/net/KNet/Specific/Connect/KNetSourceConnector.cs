@@ -43,7 +43,7 @@ namespace MASES.KNet.Connect
             return ExactlyOnceSupport;
         }
         /// <summary>
-        /// Implement the method to return the <see cref="KNet.Connect.Source.ExactlyOnceSupport"/> value
+        /// Implement the method to return the <see cref="ExactlyOnceSupport"/> value
         /// </summary>
         public virtual ExactlyOnceSupport ExactlyOnceSupport => ExactlyOnceSupport.UNSUPPORTED;
 

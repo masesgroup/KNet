@@ -27,17 +27,24 @@ namespace Org.Apache.Kafka.Streams.Processor
     /// </summary>
     public partial interface IStateRestoreListener : IJVMBridgeBase
     {
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreStart-org.apache.kafka.common.TopicPartition-java.lang.String-long-long-"/>
+        /// </summary>
         void OnRestoreStart(TopicPartition topicPartition,
                                string storeName,
                                long startingOffset,
                                long endingOffset);
 
-
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onBatchRestored-org.apache.kafka.common.TopicPartition-java.lang.String-long-long-"/>
+        /// </summary>
         void OnBatchRestored(TopicPartition topicPartition,
                               string storeName,
                               long batchEndOffset,
                               long numRestored);
-
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreEnd-org.apache.kafka.common.TopicPartition-java.lang.String-long-"/>
+        /// </summary>
         void OnRestoreEnd(TopicPartition topicPartition,
                            string storeName,
                            long totalRestored);

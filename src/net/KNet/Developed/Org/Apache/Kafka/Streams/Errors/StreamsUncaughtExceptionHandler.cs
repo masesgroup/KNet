@@ -31,7 +31,7 @@ namespace Org.Apache.Kafka.Streams.Errors
         /// Executes the StreamsUncaughtExceptionHandler action in the CLR
         /// </summary>
         /// <param name="exception">The StreamsUncaughtExceptionHandler object</param>
-        /// <returns>The <see cref="StreamThreadExceptionResponse"/> handle evaluation</returns>
+        /// <returns>The <see cref="StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse"/> handle evaluation</returns>
         StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse Handle(JVMBridgeException exception);
     }
 

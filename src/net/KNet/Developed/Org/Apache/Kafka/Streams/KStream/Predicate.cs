@@ -24,7 +24,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// <summary>
     /// Listener for Kafka Predicate. Extends <see cref="IJVMBridgeBase"/>
     /// </summary>
-    /// <typeparam name="T">The data associated to the event</typeparam>
+    /// <typeparam name="K">The data associated to the event</typeparam>
     /// <typeparam name="V">The data associated to the event</typeparam>
     public partial interface IPredicate<K, V> : IJVMBridgeBase
     {
@@ -40,8 +40,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// <summary>
     /// Listener for Kafka Predicate. Extends <see cref="JVMBridgeListener"/>, implements <see cref="IPredicate{K, V}"/>
     /// </summary>
-    /// <typeparam name="K">The data associated to the event</typeparam>
-    /// <typeparam name="V">The data associated to the event</typeparam>
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public partial class Predicate<K, V> : IPredicate<K, V>
     {

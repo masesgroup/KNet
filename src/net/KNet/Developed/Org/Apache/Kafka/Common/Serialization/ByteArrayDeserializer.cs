@@ -22,6 +22,9 @@ namespace Org.Apache.Kafka.Common.Serialization
 {
     public partial class ByteArrayDeserializer
     {
+        /// <summary>
+        /// Conversion operator
+        /// </summary>
         public static implicit operator Deserializer<byte[]>(ByteArrayDeserializer t) => t.Cast<Deserializer<byte[]>>();
     }
 }

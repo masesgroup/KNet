@@ -19,11 +19,15 @@
 using MASES.JCOBridge.C2JBridge;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
 using Java.Util;
+using static System.Net.WebRequestMethods;
 
 namespace Org.Apache.Kafka.Common.Errors
 {
     public partial class InvalidTopicException
     {
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/latest/org/apache/kafka/common/errors/InvalidTopicException.html#invalidTopics--"/>
+        /// </summary>
         public Set<string> InvalidTopics()
         {
             return JVMBridgeBase.Wraps<Set<string>>(BridgeInstance.Invoke("invalidTopics") as IJavaObject);

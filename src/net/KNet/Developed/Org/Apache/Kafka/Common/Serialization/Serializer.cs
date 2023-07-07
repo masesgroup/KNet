@@ -26,7 +26,6 @@ namespace Org.Apache.Kafka.Common.Serialization
     /// <summary>
     /// Listener for Kafka Serializer. Extends <see cref="IJVMBridgeBase"/>
     /// </summary>
-    /// <typeparam name="E">The data associated to the event</typeparam>
     public partial interface ISerializer : IJVMBridgeBase
     {
     }
@@ -41,7 +40,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// Executes the Serializer action in the CLR
         /// </summary>
         /// <param name="topic">topic associated with the data</param>
-        /// <param name="data"><typeparamref name="E"/> data</param>
+        /// <param name="data"><typeparamref name="T"/> data</param>
         /// <returns>serialized bytes</returns>
         byte[] Serialize(string topic, T data);
         /// <summary>
@@ -56,33 +55,8 @@ namespace Org.Apache.Kafka.Common.Serialization
     /// <summary>
     /// Listener for Kafka Serializer. Extends <see cref="JVMBridgeListener"/>. Implements <see cref="ISerializer{T}"/>
     /// </summary>
-    /// <typeparam name="E">The data associated to the event</typeparam>
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public partial class Serializer<T> : ISerializer<T>
     {
-
-        //void EventHandler(object sender, CLRListenerEventArgs<CLREventData<string>> eventData)
-        //{
-        //    var data = eventData.EventData.ExtraData.Get(0);
-        //    var retVal = OnSerialize(eventData.EventData.TypedEventData, data.Convert<T>());
-        //    eventData.SetReturnValue(retVal);
-        //}
-
-        //void EventHandlerWithHeaders(object sender, CLRListenerEventArgs<CLREventData<string>> eventData)
-        //{
-        //    var headers = eventData.EventData.ExtraData.Get(0) as IJavaObject; // it is a Headers
-        //    var data = eventData.EventData.ExtraData.Get(1);
-        //    var retVal = OnSerializeWithHeaders(eventData.EventData.TypedEventData, JVMBridgeBase.Wraps<Headers>(headers), data.Convert<T>());
-        //    eventData.SetReturnValue(retVal);
-        //}
-
-        ///// <summary>
-        ///// Executes the Serializer action in the CLR
-        ///// </summary>
-        ///// <param name="topic">topic associated with the data</param>
-        ///// <param name="headers"><see cref="Headers"/> associated with the record; may be empty.</param>
-        ///// <param name="data"><typeparamref name="T"/> data</param>
-        ///// <returns>serialized bytes</returns>
-        //public virtual byte[] SerializeWithHeaders(string topic, Headers headers, T data) { return null; }
     }
 }

@@ -39,7 +39,7 @@ namespace MASES.KNet.Connect
         /// </summary>
         public override string ReflectedTaskClassName => "KNetSinkTask";
         /// <summary>
-        /// Public method used from Java to trigger <see cref="Put(Collection{SinkRecord})"/>
+        /// Public method used from Java to trigger <see cref="Put(IEnumerable{SinkRecord})"/>
         /// </summary>
         public void PutInternal()
         {

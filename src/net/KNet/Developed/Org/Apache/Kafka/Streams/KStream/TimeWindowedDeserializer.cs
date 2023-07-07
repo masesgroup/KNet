@@ -23,6 +23,9 @@ namespace Org.Apache.Kafka.Streams.Kstream
 {
     public partial class TimeWindowedDeserializer<T>
     {
+        /// <summary>
+        /// Override of <see cref="Deserialize(string, byte[])"/> to return <see cref="Windowed{K}"/>
+        /// </summary>
         public Windowed<T> Deserialize2(string topic, byte[] data)
         {
             return IExecute<Windowed<T>>("deserialize", topic, data);

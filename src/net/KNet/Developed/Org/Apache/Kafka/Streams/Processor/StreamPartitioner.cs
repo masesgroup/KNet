@@ -53,8 +53,6 @@ namespace Org.Apache.Kafka.Streams.Processor
     /// <summary>
     /// Listener for Kafka StreamPartitioner. Extends <see cref="JVMBridgeListener"/>, implements <see cref="IStreamPartitioner{K, V}"/>
     /// </summary>
-    /// <typeparam name="K">The data associated to the event</typeparam>
-    /// <typeparam name="V">The data associated to the event</typeparam>
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public partial class StreamPartitioner<K, V> : IStreamPartitioner<K, V>
     {

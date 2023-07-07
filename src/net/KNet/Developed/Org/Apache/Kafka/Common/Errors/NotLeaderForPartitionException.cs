@@ -18,9 +18,15 @@
 
 namespace Org.Apache.Kafka.Common.Errors
 {
+    /// <summary>
+    /// Obsolote exception
+    /// </summary>
     [System.Obsolete]
     public class NotLeaderForPartitionException : InvalidMetadataException
     {
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
+        /// </summary>
         public override string BridgeClassName => "org.apache.kafka.common.errors.NotLeaderForPartitionException";
     }
 }

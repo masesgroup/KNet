@@ -22,6 +22,9 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     public partial class ProducerState
     {
+        /// <summary>
+        /// <see cref="System.DateTime"/> of <see cref="LastTimestamp"/>
+        /// </summary>
         public System.DateTime LastDateTime => System.DateTimeOffset.FromUnixTimeMilliseconds(LastTimestamp()).DateTime;
     }
 }

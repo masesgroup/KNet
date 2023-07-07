@@ -33,21 +33,21 @@ namespace MASES.KNet.Connect
         where TTask : KNetSourceTask<TTask>
     {
         /// <summary>
-        /// Generates a <see cref="Map{string, T}"/> to be used in <see cref="SourceRecord"/>
+        /// Generates a <see cref="Map{String, T}"/> to be used in <see cref="SourceRecord"/>
         /// </summary>
         /// <typeparam name="T">The <paramref name="identifier"/> type</typeparam>
         /// <param name="identifier">The identifier to be associated in first, or second, parameter of a <see cref="SourceRecord"/></param>
         /// <param name="value">The value to be inserted and associated to the <paramref name="identifier"/></param>
-        /// <returns>A <see cref="Map{string, K}"/></returns>
+        /// <returns>A <see cref="Map{String, K}"/></returns>
         protected Map<string, T> OffsetForKey<T>(string identifier, T value) => Collections.SingletonMap(identifier, value);
         /// <summary>
         /// Get the offset for the specified partition. If the data isn't already available locally, this gets it from the backing store, which may require some network round trips.
         /// </summary>
-        /// <typeparam name="TKeySource">The type of the key set when was called <see cref="OffsetForKey{K}(string, K)"/> to generated first parameter of <see cref="SourceRecord"/></typeparam>
-        /// <typeparam name="TOffset">The type of the offset set when was called <see cref="OffsetForKey{K}(string, K)"/> to generated second parameter of <see cref="SourceRecord"/></typeparam>
-        /// <param name="keyName">The identifier used when was called <see cref="OffsetForKey{K}(string, K)"/></param>
-        /// <param name="keyValue">The value used when was called <see cref="OffsetForKey{K}(string, K)"/></param>
-        /// <returns>Return the <see cref="Map{string, TOffset}"/> associated to the element identified from <paramref name="keyName"/> and <paramref name="keyValue"/> which is an object uniquely identifying the offset in the partition of data</returns>
+        /// <typeparam name="TKeySource">The type of the key set when was called <see cref="OffsetForKey{K}(String, K)"/> to generated first parameter of <see cref="SourceRecord"/></typeparam>
+        /// <typeparam name="TOffset">The type of the offset set when was called <see cref="OffsetForKey{K}(String, K)"/> to generated second parameter of <see cref="SourceRecord"/></typeparam>
+        /// <param name="keyName">The identifier used when was called <see cref="OffsetForKey{K}(String, K)"/></param>
+        /// <param name="keyValue">The value used when was called <see cref="OffsetForKey{K}(String, K)"/></param>
+        /// <returns>Return the <see cref="Map{String, TOffset}"/> associated to the element identified from <paramref name="keyName"/> and <paramref name="keyValue"/> which is an object uniquely identifying the offset in the partition of data</returns>
         protected Map<string, TOffset> OffsetAt<TKeySource, TOffset>(string keyName, TKeySource keyValue) => ExecuteOnTask<Map<string, TOffset>>("offsetAt", keyName, keyValue);
 
         /// <summary>
@@ -81,10 +81,8 @@ namespace MASES.KNet.Connect
         /// <param name="valueSchema">The schema for the value; may be null</param>
         /// <param name="value">The value; may be null</param>
         /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
-        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
         public SourceRecord<TKey, TValue> CreateRecord<TKey, TValue>(string topic, int? partition, Schema valueSchema, TValue value)
-
         {
             return new SourceRecord<TKey, TValue>(null, null, topic, partition, valueSchema, value);
         }
@@ -97,8 +95,7 @@ namespace MASES.KNet.Connect
         /// <param name="valueSchema">The schema for the value; may be null</param>
         /// <param name="value">The value; may be null</param>
         /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
-        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
         public SourceRecord<TKey, TValue> CreateRecord<TKey, TValue>(string topic, Schema valueSchema, TValue value)
 
         {
@@ -115,8 +112,7 @@ namespace MASES.KNet.Connect
         /// <param name="valueSchema">The schema for the value; may be null</param>
         /// <param name="value">The value; may be null</param>
         /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
-        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
         public SourceRecord<TKey, TValue> CreateRecord<TKey, TValue>(string topic, Schema keySchema, TKey key, Schema valueSchema, TValue value)
 
         {
@@ -134,8 +130,7 @@ namespace MASES.KNet.Connect
         /// <param name="valueSchema">The schema for the value; may be null</param>
         /// <param name="value">The value; may be null</param>
         /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
-        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
         public SourceRecord<TKey, TValue> CreateRecord<TKey, TValue>(string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value)
 
         {
@@ -144,15 +139,13 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// Creates a new <see cref="SourceRecord{TKey, TValue}"/>
         /// </summary>
-        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
         /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
         /// <param name="topic">The name of the topic; may be null</param>
         /// <param name="valueSchema">The schema for the value; may be null</param>
         /// <param name="value">The value; may be null</param>
         /// <param name="timestamp">The timestamp; may be null</param>
         /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
-        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
         public SourceRecord<object, TValue> CreateRecord<TValue>(string topic, Schema valueSchema, TValue value, DateTime timestamp)
 
         {
@@ -161,7 +154,6 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// Creates a new <see cref="SourceRecord{TKey, TValue}"/>
         /// </summary>
-        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
         /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
         /// <param name="topic">The name of the topic; may be null</param>
         /// <param name="partition">The partition number for the Kafka topic; may be null</param>
@@ -169,8 +161,7 @@ namespace MASES.KNet.Connect
         /// <param name="value">The value; may be null</param>
         /// <param name="timestamp">The timestamp; may be null</param>
         /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
-        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
         public SourceRecord<object, TValue> CreateRecord<TValue>(string topic, int? partition,
                                                                      Schema valueSchema, TValue value,
                                                                      DateTime timestamp)
@@ -191,8 +182,7 @@ namespace MASES.KNet.Connect
         /// <param name="value">The value; may be null</param>
         /// <param name="timestamp">The timestamp; may be null</param>
         /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
-        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
         public SourceRecord<TKey, TValue> CreateRecord<TKey, TValue>(string topic, int? partition,
                                                                      Schema keySchema, TKey key,
                                                                      Schema valueSchema, TValue value,
@@ -215,8 +205,7 @@ namespace MASES.KNet.Connect
         /// <param name="timestamp">The timestamp; may be null</param>
         /// <param name="headers">The <see cref="Headers"/>s; may be null or empty</param>
         /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
-        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
         public SourceRecord<TKey, TValue> CreateRecord<TKey, TValue>(string topic, int? partition,
                                                                      Schema keySchema, TKey key,
                                                                      Schema valueSchema, TValue value,
@@ -229,8 +218,10 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/>
         /// </summary>
-        /// <typeparam name="TKeySource">The type within <see cref="Map{string, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
-        /// <typeparam name="TOffset">The type within <see cref="Map{string, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
+        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
         /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
         /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
         /// <param name="topic">The name of the topic; may be null</param>
@@ -249,8 +240,10 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/>
         /// </summary>
-        /// <typeparam name="TKey">The type within <see cref="Map{string, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
-        /// <typeparam name="TOffset">The type within <see cref="Map{string, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
+        /// <typeparam name="TKey">The type within <see cref="Map{String, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
         /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
         /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
         /// <param name="topic">The name of the topic; may be null</param>
@@ -268,8 +261,10 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/>
         /// </summary>
-        /// <typeparam name="TKey">The type within <see cref="Map{string, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
-        /// <typeparam name="TOffset">The type within <see cref="Map{string, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
+        /// <typeparam name="TKey">The type within <see cref="Map{String, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
         /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
         /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
         /// <param name="topic">The name of the topic; may be null</param>
@@ -290,8 +285,10 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/>
         /// </summary>
-        /// <typeparam name="TKey">The type within <see cref="Map{string, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
-        /// <typeparam name="TOffset">The type within <see cref="Map{string, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
+        /// <typeparam name="TKey">The type within <see cref="Map{String, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
         /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
         /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
         /// <param name="topic">The name of the topic; may be null</param>
@@ -312,8 +309,9 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/>
         /// </summary>
-        /// <typeparam name="TKey">The type within <see cref="Map{string, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
-        /// <typeparam name="TOffset">The type within <see cref="Map{string, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
         /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
         /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
         /// <param name="topic">The name of the topic; may be null</param>
@@ -332,8 +330,9 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/>
         /// </summary>
-        /// <typeparam name="TKey">The type within <see cref="Map{string, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
-        /// <typeparam name="TOffset">The type within <see cref="Map{string, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
         /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
         /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
         /// <param name="topic">The name of the topic; may be null</param>
@@ -355,8 +354,10 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/>
         /// </summary>
-        /// <typeparam name="TKey">The type within <see cref="Map{string, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
-        /// <typeparam name="TOffset">The type within <see cref="Map{string, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
+        /// <typeparam name="TKey">The type within <see cref="Map{String, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
         /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
         /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
         /// <param name="topic">The name of the topic; may be null</param>
@@ -381,8 +382,10 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/>
         /// </summary>
-        /// <typeparam name="TKey">The type within <see cref="Map{string, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
-        /// <typeparam name="TOffset">The type within <see cref="Map{string, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
+        /// <typeparam name="TKey">The type within <see cref="Map{String, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
         /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
         /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
         /// <param name="topic">The name of the topic; may be null</param>

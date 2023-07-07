@@ -24,6 +24,9 @@ namespace Org.Apache.Kafka.Connect.Source
 {
     public partial class SourceTask
     {
+        /// <summary>
+        /// Default <see cref="TransactionBoundary"/>
+        /// </summary>
         public static readonly TransactionBoundary DEFAULT = TransactionBoundary.POLL;
 
     }

@@ -25,18 +25,37 @@ using MASES.KNet.Consumer;
 
 namespace MASES.KNet.Extensions
 {
+    /// <summary>
+    /// Extension for <see cref="ConsumerConfigBuilder"/>
+    /// </summary>
     public static class ConsumerConfigBuilderExtensions
     {
+        /// <summary>
+        /// Test if <typeparamref name="T"/> can use basic serializer
+        /// </summary>
+        /// <typeparam name="T">The type to test</typeparam>
+        /// <param name="builder">The <see cref="ConsumerConfigBuilder"/></param>
+        /// <returns><see langword="true"/> if <typeparamref name="T"/> can use basic serializer</returns>
         public static bool CanApplyBasicDeserializer<T>(this ConsumerConfigBuilder builder)
         {
             return KNetSerialization.IsInternalManaged<T>();
         }
-
+        /// <summary>
+        /// Apply key serializer
+        /// </summary>
+        /// <typeparam name="T">The type to serialize</typeparam>
+        /// <param name="builder">The <see cref="ConsumerConfigBuilder"/></param>
+        /// <returns>The updated <see cref="ConsumerConfigBuilder"/></returns>
         public static ConsumerConfigBuilder WithKeyDeserializerClass<T>(this ConsumerConfigBuilder builder)
         {
             return WithKeyDeserializerClass(builder, typeof(T));
         }
-
+        /// <summary>
+        /// Apply key serializer
+        /// </summary>
+        /// <param name="builder">The <see cref="ConsumerConfigBuilder"/></param>
+        /// <param name="type">The <see cref="Type"/> to serialize</param>
+        /// <returns>The updated <see cref="ConsumerConfigBuilder"/></returns>
         public static ConsumerConfigBuilder WithKeyDeserializerClass(this ConsumerConfigBuilder builder, System.Type type)
         {
             if (!KNetSerialization.IsInternalManaged(type)) throw new InvalidOperationException($"Cannot manage serialization with type {type}");
@@ -81,12 +100,22 @@ namespace MASES.KNet.Extensions
 
             return builder;
         }
-
+        /// <summary>
+        /// Apply value serializer
+        /// </summary>
+        /// <typeparam name="T">The type to serialize</typeparam>
+        /// <param name="builder">The <see cref="ConsumerConfigBuilder"/></param>
+        /// <returns>The updated <see cref="ConsumerConfigBuilder"/></returns>
         public static ConsumerConfigBuilder WithValueDeserializerClass<T>(this ConsumerConfigBuilder builder)
         {
             return WithValueDeserializerClass(builder, typeof(T));
         }
-
+        /// <summary>
+        /// Apply value serializer
+        /// </summary>
+        /// <param name="builder">The <see cref="ConsumerConfigBuilder"/></param>
+        /// <param name="type">The <see cref="Type"/> to serialize</param>
+        /// <returns>The updated <see cref="ConsumerConfigBuilder"/></returns>
         public static ConsumerConfigBuilder WithValueDeserializerClass(this ConsumerConfigBuilder builder, System.Type type)
         {
             if (!KNetSerialization.IsInternalManaged(type)) throw new InvalidOperationException($"Cannot manage serialization with type {type}");

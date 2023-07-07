@@ -484,9 +484,9 @@ namespace MASES.KNet
         }
 
         /// <summary>
-        /// Gets an <see cref="ICollection{TKey}"/> containing the keys of this <see cref="KNetCompactedReplicator{TKey, TValue}"/>
+        /// Gets an <see cref="System.Collections.Generic.ICollection{TKey}"/> containing the keys of this <see cref="KNetCompactedReplicator{TKey, TValue}"/>
         /// </summary>
-        /// <returns><see cref="ICollection{TKey}"/> containing the keys of this <see cref="KNetCompactedReplicator{TKey, TValue}"/></returns>
+        /// <returns><see cref="System.Collections.Generic.ICollection{TKey}"/> containing the keys of this <see cref="KNetCompactedReplicator{TKey, TValue}"/></returns>
         /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Read"/> flag</exception>
         public System.Collections.Generic.ICollection<TKey> Keys
         {
@@ -494,9 +494,9 @@ namespace MASES.KNet
         }
 
         /// <summary>
-        /// Gets an <see cref="ICollection{TValue}"/> containing the values of this <see cref="KNetCompactedReplicator{TKey, TValue}"/>
+        /// Gets an <see cref="System.Collections.Generic.ICollection{TValue}"/> containing the values of this <see cref="KNetCompactedReplicator{TKey, TValue}"/>
         /// </summary>
-        /// <returns><see cref="ICollection{TValue}"/> containing the values of this <see cref="KNetCompactedReplicator{TKey, TValue}"/></returns>
+        /// <returns><see cref="System.Collections.Generic.ICollection{TValue}"/> containing the values of this <see cref="KNetCompactedReplicator{TKey, TValue}"/></returns>
         /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Read"/> flag</exception>
         public System.Collections.Generic.ICollection<TValue> Values
         {
@@ -522,7 +522,7 @@ namespace MASES.KNet
         }
 
         /// <summary>
-        /// Adds or updates the <paramref name="item"/> in this and others <see cref="KNetCompactedReplicator{TKey, TValue}"/> in the way defined by the <see cref="UpdateModes"/> provided
+        /// Adds or updates the <paramref name="key"/> in this and others <see cref="KNetCompactedReplicator{TKey, TValue}"/> in the way defined by the <see cref="UpdateModeTypes"/> provided
         /// </summary>
         /// <param name="key">The object to use as the key of the element to add</param>
         /// <param name="value">The object to use as the value of the element to add. null means remove <paramref name="key"/></param>
@@ -534,7 +534,7 @@ namespace MASES.KNet
         }
 
         /// <summary>
-        /// Adds or updates the <paramref name="item"/> in this and others <see cref="KNetCompactedReplicator{TKey, TValue}"/> in the way defined by the <see cref="UpdateModes"/> provided
+        /// Adds or updates the <paramref name="item"/> in this and others <see cref="KNetCompactedReplicator{TKey, TValue}"/> in the way defined by the <see cref="UpdateModeTypes"/> provided
         /// </summary>
         /// <param name="item">The item to add or updates. Value == null means remove key</param>
         /// <exception cref="ArgumentNullException"><paramref name="item"/>.Key is null</exception>
@@ -605,7 +605,7 @@ namespace MASES.KNet
         }
 
         /// <summary>
-        /// Removes the <paramref name="key"/> from this and others <see cref="KNetCompactedReplicator{TKey, TValue}"/> in the way defined by the <see cref="UpdateModes"/> provided
+        /// Removes the <paramref name="key"/> from this and others <see cref="KNetCompactedReplicator{TKey, TValue}"/> in the way defined by the <see cref="UpdateModeTypes"/> provided
         /// </summary>
         /// <param name="key">The key of the element to remove</param>
         /// <returns><see langword="true"/> if the removal request is delivered to the others <see cref="KNetCompactedReplicator{TKey, TValue}"/></returns>
@@ -619,7 +619,7 @@ namespace MASES.KNet
         }
 
         /// <summary>
-        /// Removes the <paramref name="item"/> from this and others <see cref="KNetCompactedReplicator{TKey, TValue}"/> in the way defined by the <see cref="UpdateModes"/> provided
+        /// Removes the <paramref name="item"/> from this and others <see cref="KNetCompactedReplicator{TKey, TValue}"/> in the way defined by the <see cref="UpdateModeTypes"/> provided
         /// </summary>
         /// <param name="item">Item to be removed</param>
         /// <returns><see langword="true"/> if the removal request is delivered to the others <see cref="KNetCompactedReplicator{TKey, TValue}"/></returns>

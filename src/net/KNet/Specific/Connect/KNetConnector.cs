@@ -29,29 +29,38 @@ using System.Collections.Generic;
 
 namespace MASES.KNet.Connect
 {
+    /// <summary>
+    /// .NET interface for <see cref="IConnector"/>
+    /// </summary>
     public interface IVersion
     {
+        /// <summary>
+        /// Returns version string
+        /// </summary>
         string Version();
     }
-
+    /// <summary>
+    /// .NET interface for <see cref="Connector"/>
+    /// </summary>
     public interface IConnector : IVersion
     {
+        /// <inheritdoc cref="Connector.Initialize(ConnectorContext)"/>
         void Initialize(ConnectorContext ctx);
-
+        /// <inheritdoc cref="Connector.Initialize(ConnectorContext, Java.Util.List{Map{string, string}})"/>
         void Initialize(ConnectorContext ctx, Java.Util.List<Map<string, string>> taskConfigs);
-
+        /// <inheritdoc cref="Connector.Start(Map{string, string})"/>
         void Start(Map<string, string> props);
-
+        /// <inheritdoc cref="Connector.Reconfigure(Map{string, string})"/>
         void Reconfigure(Map<string, string> props);
-
+        /// <inheritdoc cref="Connector.TaskClass{ReturnExtendsOrg_Apache_Kafka_Connect_Connector_Task}"/>
         Class TaskClass();
-
+        /// <inheritdoc cref="Connector.TaskConfigs(int)"/>
         Java.Util.List<Map<string, string>> TaskConfigs(int maxTasks);
-
+        /// <inheritdoc cref="Connector.Stop"/>
         void Stop();
-
+        /// <inheritdoc cref="Connector.Validate(Map{string, string})"/>
         Config Validate(Map<string, string> connectorConfigs);
-
+        /// <inheritdoc cref="Connector.Config"/>
         ConfigDef Config();
     }
 
@@ -81,13 +90,13 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// Implement the method to execute the start action
         /// </summary>
-        /// <param name="props">The set of properties returned from Apache Kafka Connect framework: the <see cref="IReadOnlyDictionary{string, string}"/> contains the same info from configuration file.</param>
+        /// <param name="props">The set of properties returned from Apache Kafka Connect framework: the <see cref="IReadOnlyDictionary{TKey, TValue}"/> contains the same info from configuration file.</param>
         void Start(IReadOnlyDictionary<string, string> props);
         /// <summary>
         /// Invoked during allocation of tasks from Apache Kafka Connect
         /// </summary>
         /// <param name="index">The actual index</param>
-        /// <param name="config">The <see cref="IDictionary{string, string}"/> to be filled in with properties for the task: the same will be received from <see cref="KNetTask.Start(IReadOnlyDictionary{string, string})"/></param>
+        /// <param name="config">The <see cref="IDictionary{TKey, TValue}"/> to be filled in with properties for the task: the same will be received from <see cref="KNetTask.Start(IReadOnlyDictionary{string, string})"/></param>
         void TaskConfigs(int index, IDictionary<string, string> config);
     }
     /// <summary>
@@ -149,8 +158,6 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// An helper function to read the data from Java side
         /// </summary>
-        /// <typeparam name="T">The expected return <see cref="Type"/></typeparam>
-        /// <returns>The <typeparamref name="T"/></returns>
         /// <exception cref="InvalidOperationException"> </exception>
         protected void DataToExchange(object data)
         {
@@ -198,9 +205,15 @@ namespace MASES.KNet.Connect
         public abstract string ConnectorName { get; }
         /// <inheritdoc cref="IKNetConnector.TaskClassType"/>
         public abstract Type TaskClassType { get; }
-
+        /// <summary>
+        /// Not implemented
+        /// </summary>
+        /// <exception cref="NotImplementedException">Invoked in Java before any initialization</exception>
         public void Initialize(ConnectorContext ctx) => throw new NotImplementedException("Invoked in Java before any initialization.");
-
+        /// <summary>
+        /// Not implemented
+        /// </summary>
+        /// <exception cref="NotImplementedException">Invoked in Java before any initialization</exception>
         public void Initialize(ConnectorContext ctx, Java.Util.List<Map<string, string>> taskConfigs) => throw new NotImplementedException("Invoked in Java before any initialization.");
         /// <summary>
         /// Public method used from Java to trigger <see cref="Start(Map{string, string})"/>
@@ -211,17 +224,26 @@ namespace MASES.KNet.Connect
             Properties = props.ToDictiony();
             Start(Properties);
         }
-
+        /// <summary>
+        /// Not implemented
+        /// </summary>
+        /// <exception cref="NotImplementedException">Local version with a different signature</exception>
         public void Start(Map<string, string> props) => throw new NotImplementedException("Local version with a different signature");
 
         /// <inheritdoc cref="IKNetConnector.Start(IReadOnlyDictionary{string, string})"/>
         public abstract void Start(IReadOnlyDictionary<string, string> props);
-
+        /// <summary>
+        /// Not implemented
+        /// </summary>
+        /// <exception cref="NotImplementedException"></exception>
         public void Reconfigure(Map<string, string> props) => throw new NotImplementedException("Invoked in Java before any initialization.");
-
+        /// <summary>
+        /// Not implemented
+        /// </summary>
+        /// <exception cref="NotImplementedException">Invoked in Java before any initialization</exception>
         public Class TaskClass() => throw new NotImplementedException("Invoked in Java before any initialization.");
         /// <summary>
-        /// Public method used from Java to trigger <see cref="TaskConfigs(int, Map{string, string})"/>
+        /// Public method used from Java to trigger <see cref="TaskConfigs(int, IDictionary{string, string})"/>
         /// </summary>
         public void TaskConfigsInternal(int index)
         {
@@ -236,7 +258,10 @@ namespace MASES.KNet.Connect
         }
         /// <inheritdoc cref="IKNetConnector.TaskConfigs(int, IDictionary{string, string})"/>
         public abstract void TaskConfigs(int index, IDictionary<string, string> config);
-
+        /// <summary>
+        /// Not implemented
+        /// </summary>
+        /// <exception cref="NotImplementedException">Invoked using the other signature</exception>
         public Java.Util.List<Map<string, string>> TaskConfigs(int maxTasks) => throw new NotImplementedException("Invoked using the other signature.");
         /// <summary>
         /// Public method used from Java to trigger <see cref="Stop"/>
@@ -249,43 +274,52 @@ namespace MASES.KNet.Connect
         /// Implement the method to execute the stop action
         /// </summary>
         public abstract void Stop();
-
+        /// <summary>
+        /// Not implemented
+        /// </summary>
+        /// <exception cref="NotImplementedException">Invoked in Java before any initialization</exception>
         public Config Validate(Map<string, string> connectorConfigs) => throw new NotImplementedException("Invoked in Java before any initialization.");
-
+        /// <summary>
+        /// Not implemented
+        /// </summary>
+        /// <exception cref="NotImplementedException">Invoked in Java before any initialization</exception>
         public ConfigDef Config() => throw new NotImplementedException("Invoked in Java before any initialization.");
-
+        /// <summary>
+        /// Not implemented
+        /// </summary>
+        /// <exception cref="NotImplementedException">Invoked in Java before any initialization</exception>
         public string Version() => throw new NotImplementedException("Invoked in Java before any initialization.");
 
         #region IKNetConnectLogging
-
+        /// <inheritdoc cref="IKNetConnectLogging.IsTraceEnabled"/>
         public bool IsTraceEnabled => ExecuteOnConnector<bool>("isTraceEnabled");
-
+        /// <inheritdoc cref="IKNetConnectLogging.IsDebugEnabled"/>
         public bool IsDebugEnabled => ExecuteOnConnector<bool>("isDebugEnabled");
-
+        /// <inheritdoc cref="IKNetConnectLogging.IsInfoEnabled"/>
         public bool IsInfoEnabled => ExecuteOnConnector<bool>("isInfoEnabled");
-
+        /// <inheritdoc cref="IKNetConnectLogging.IsWarnEnabled"/>
         public bool IsWarnEnabled => ExecuteOnConnector<bool>("isWarnEnabled");
-
+        /// <inheritdoc cref="IKNetConnectLogging.IsErrorEnabled"/>
         public bool IsErrorEnabled => ExecuteOnConnector<bool>("isErrorEnabled");
-
+        /// <inheritdoc cref="IKNetConnectLogging.LogTrace(string)"/>
         public void LogTrace(string var1) => ExecuteOnConnector("trace", var1);
-
+        /// <inheritdoc cref="IKNetConnectLogging.LogTrace(string, JVMBridgeException)"/>
         public void LogTrace(string var1, JVMBridgeException var2) => ExecuteOnConnector("trace", var1, var2.BridgeInstance);
-
+        /// <inheritdoc cref="IKNetConnectLogging.LogDebug(string)"/>
         public void LogDebug(string var1) => ExecuteOnConnector("debug", var1);
-
+        /// <inheritdoc cref="IKNetConnectLogging.LogDebug(string, JVMBridgeException)"/>
         public void LogDebug(string var1, JVMBridgeException var2) => ExecuteOnConnector("debug", var1, var2.BridgeInstance);
-
+        /// <inheritdoc cref="IKNetConnectLogging.LogInfo(string)"/>
         public void LogInfo(string var1) => ExecuteOnConnector("info", var1);
-
+        /// <inheritdoc cref="IKNetConnectLogging.LogInfo(string, JVMBridgeException)"/>
         public void LogInfo(string var1, JVMBridgeException var2) => ExecuteOnConnector("info", var1, var2.BridgeInstance);
-
+        /// <inheritdoc cref="IKNetConnectLogging.LogWarn(string)"/>
         public void LogWarn(string var1) => ExecuteOnConnector("warn", var1);
-
+        /// <inheritdoc cref="IKNetConnectLogging.LogWarn(string, JVMBridgeException)"/>
         public void LogWarn(string var1, JVMBridgeException var2) => ExecuteOnConnector("warn", var1, var2.BridgeInstance);
-
+        /// <inheritdoc cref="IKNetConnectLogging.LogError(string)"/>
         public void LogError(string var1) => ExecuteOnConnector("error", var1);
-
+        /// <inheritdoc cref="IKNetConnectLogging.LogError(string, JVMBridgeException)"/>
         public void LogError(string var1, JVMBridgeException var2) => ExecuteOnConnector("error", var1, var2.BridgeInstance);
         #endregion
     }
