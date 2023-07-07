@@ -63,7 +63,7 @@ jobs:
           submodules: 'true'
 
       - name: Pre compile
-        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src/net/KNet/KNet.csproj
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030" src/net/KNet/KNet.csproj
         
       - name: Set up Apache Maven Central
         uses: actions/setup-java@v3
@@ -132,10 +132,10 @@ jobs:
           submodules: 'true'
 
       - name: Pre compile templates
-        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KNetTemplates.sln
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030" src\net\KNetTemplates.sln
 
       - name: Pre compile
-        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KNet\KNet.csproj
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030" src\net\KNet\KNet.csproj
 
       - name: Set up Apache Maven Central
         uses: actions/setup-java@v3
@@ -161,13 +161,13 @@ jobs:
           MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
 
       - name: Compile command line
-        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KNetCLI\KNetCLI.csproj
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030" src\net\KNetCLI\KNetCLI.csproj
 
       - name: Compile KNet Connect
-        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KNetConnect\KNetConnect.csproj
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030" src\net\KNetConnect\KNetConnect.csproj
 
       - name: Compile KNetPS
-        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KNetPS\KNetPS.csproj
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030" src\net\KNetPS\KNetPS.csproj
 
       - uses: nuget/setup-nuget@v1.1.1
         with:
@@ -177,7 +177,7 @@ jobs:
       - run: nuget pack src\net\KNetConnect\KNetConnect.nuspec -OutputDirectory .\bin
 
       - name: Recompile to create nuget packages
-        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\KNet.sln
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030" src\net\KNet.sln
 
       - name: Prepare PowerShell package
         run: |
