@@ -21,10 +21,10 @@ KNet is a comprehensive .NET suite for [Apache Kafka](https://kafka.apache.org/)
 This project aims to create a set of libraries and tools to direct access, from .NET, all the features available in the [Apache Kafka binary distribution](https://kafka.apache.org/downloads). 
 
 There are many client libraries written to manage communication with Apache Kafka. Conversely, this project use directly the Java packages released from The Apache Foundation giving more than one benefit:
-* all implemented features are availables at no extra implementation costs, see [KNet usage](src/net/Documentation/articles/usage.md);
+* all implemented features are availables at no extra implementation costs, see [KNet usage](src/documentation/articles/usage.md);
 * avoids any third party communication protocol implementation;
 * access all features made available from Apache Kafka: the most important are Apache Kafka Streams and Apache Kafka Connect which does not have any C# implementation;
-* measured high [performance](src/net/Documentation/articles/performance.md) in many operating conditions.
+* measured high [performance](src/documentation/articles/performance.md) in many operating conditions.
 
 The Apache Kafka packages are downloaded from:
 
@@ -51,24 +51,24 @@ This project adheres to the Contributor [Covenant code of conduct](CODE_OF_CONDU
 
 ## Summary
 
-* [Roadmap](src/net/Documentation/articles/roadmap.md)
-* [Actual state](src/net/Documentation/articles/actualstate.md)
-* [Performance](src/net/Documentation/articles/performance.md)
-* [Connect SDK](src/net/Documentation/articles/connectSDK.md)
-* [KNet usage](src/net/Documentation/articles/usage.md)
-* [KNet APIs extensibility](src/net/Documentation/articles/API_extensibility.md)
-* [KNet Serializer/Deserializer](src/net/Documentation/articles/usageSerDes.md)
-* [KNet CLI usage](src/net/Documentation/articles/usageCLI.md)
-* [KNet Connect usage](src/net/Documentation/articles/usageConnect.md)
-* [KNet PowerShell usage](src/net/Documentation/articles/usagePS.md)
-* [KNet Template usage](src/net/Documentation/articles/usageTemplates.md)
-* [How to build from scratch](src/net/Documentation/articles/howtobuild.md)
+* [Roadmap](src/documentation/articles/roadmap.md)
+* [Actual state](src/documentation/articles/actualstate.md)
+* [Performance](src/documentation/articles/performance.md)
+* [Connect SDK](src/documentation/articles/connectSDK.md)
+* [KNet usage](src/documentation/articles/usage.md)
+* [KNet APIs extensibility](src/documentation/articles/API_extensibility.md)
+* [KNet Serializer/Deserializer](src/documentation/articles/usageSerDes.md)
+* [KNet CLI usage](src/documentation/articles/usageCLI.md)
+* [KNet Connect usage](src/documentation/articles/usageConnect.md)
+* [KNet PowerShell usage](src/documentation/articles/usagePS.md)
+* [KNet Template usage](src/documentation/articles/usageTemplates.md)
+* [How to build from scratch](src/documentation/articles/howtobuild.md)
 
 ### News
 
-* V1.4.4+: From version 1.4.4 there is a new project, named KNetPS, which permits to write PowerShell client scripts for an Apache Kafka cluster and many other things, [here full usage](src/net/Documentation/articles/usagePS.md).
-* V1.4.7+: From version 1.4.7 there is a new project, named KNetConnect, to execute Apache Kafka Connect related jobs, [here full usage](src/net/Documentation/articles/usageConnect.md).
-* V1.5.4+: From version 1.5.4 there are new packages dedicated to [KNet Serializer/Deserializer](src/net/Documentation/articles/usageSerDes.md)
+* V1.4.4+: From version 1.4.4 there is a new project, named KNetPS, which permits to write PowerShell client scripts for an Apache Kafka cluster and many other things, [here full usage](src/documentation/articles/usagePS.md).
+* V1.4.7+: From version 1.4.7 there is a new project, named KNetConnect, to execute Apache Kafka Connect related jobs, [here full usage](src/documentation/articles/usageConnect.md).
+* V1.5.4+: From version 1.5.4 there are new packages dedicated to [KNet Serializer/Deserializer](src/documentation/articles/usageSerDes.md)
 * V2.0.0+: From version 2.0.0 the code base is fully reflected from the JARs of the Apache Kafka distribution downloaded from Maven; some developed classes still remains beside the specific KNet implementations
 ---
 
@@ -85,7 +85,7 @@ KNet uses [JNet](https://github.com/masesgroup/JNet), and indeed [JCOBridge](htt
   * No need to learn new APIs: we try to expose the same APIs in C# style;
   * No extra validation cycle on protocol and functionality: bug fix, improvements, new features are immediately available;
   * Documentation is shared;
-* **Dynamic code**: it helps to write a Java/Scala/Kotlin/etc seamless language code directly inside a standard .NET application written in C#/VB.NET: look at this [simple example](https://www.jcobridge.com/net-examples/dotnet-examples/) and [KNet APIs extensibility](src/net/Documentation/articles/API_extensibility.md).
+* **Dynamic code**: it helps to write a Java/Scala/Kotlin/etc seamless language code directly inside a standard .NET application written in C#/VB.NET: look at this [simple example](https://www.jcobridge.com/net-examples/dotnet-examples/) and [KNet APIs extensibility](src/documentation/articles/API_extensibility.md).
 
 ### JCOBridge resources
 
