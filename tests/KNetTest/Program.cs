@@ -71,8 +71,15 @@ namespace MASES.KNetTest
                 serverToUse = args[0];
             }
 
-            KNetSerDes<TestType> serializer = new KNetSerDes<TestType>((topic, type) => { return new byte[0]; });
-            KNetSerDes<TestType> deserializer = new KNetSerDes<TestType>((topic, data) => { return new TestType(0); });
+            KNetSerDes<TestType> serializer = new KNetSerDes<TestType>()
+            {
+                OnSerialize = (topic, type) => { return new byte[0]; }
+            };
+
+            KNetSerDes<TestType> deserializer = new KNetSerDes<TestType>()
+            {
+                OnDeserialize = (topic, data) => { return new TestType(0); }
+            };
 
             CreateTopic();
 

@@ -57,16 +57,22 @@ namespace MASES.KNet.Benchmark
                                                         .WithValueSerializerClass("org.apache.kafka.common.serialization.ByteArraySerializer")
                                                         .ToProperties();
 
-                knetKeySerializer = new KNetSerDes<long>(serializeWithHeadersFun: (topic, headers, data) =>
+                knetKeySerializer = new KNetSerDes<long>()
                 {
-                    var key = BitConverter.GetBytes(data);
-                    return key;
-                });
-                knetValueSerializer = new KNetSerDes<byte[]>(serializeWithHeadersFun: (topic, headers, data) =>
+                    OnSerializeWithHeaders = (topic, headers, data) =>
+                    {
+                        var key = BitConverter.GetBytes(data);
+                        return key;
+                    }
+                };
+                knetValueSerializer = new KNetSerDes<byte[]>()
                 {
-                    // var value = Encoding.Unicode.GetBytes(data);
-                    return data;
-                });
+                    OnSerializeWithHeaders = (topic, headers, data) =>
+                    {
+                        // var value = Encoding.Unicode.GetBytes(data);
+                        return data;
+                    }
+                };
                 knetProducer = new KNetProducer<long, byte[]>(props, knetKeySerializer, knetValueSerializer);
             }
             return knetProducer;
@@ -186,16 +192,22 @@ namespace MASES.KNet.Benchmark
                                                         .ToProperties();
                 if (UseSerdes)
                 {
-                    knetKeyDeserializer = new KNetSerDes<long>(deserializeFun: (topic, data) =>
+                    knetKeyDeserializer = new KNetSerDes<long>()
                     {
-                        var key = BitConverter.ToInt32(data, 0);
-                        return key;
-                    });
-                    knetValueDeserializer = new KNetSerDes<byte[]>(deserializeFun: (topic, data) =>
+                        OnDeserialize = (topic, data) =>
+                        {
+                            var key = BitConverter.ToInt32(data, 0);
+                            return key;
+                        }
+                    };
+                    knetValueDeserializer = new KNetSerDes<byte[]>()
                     {
-                        // var value = Encoding.Unicode.GetString(data);
-                        return data;
-                    });
+                        OnDeserialize = (topic, data) =>
+                        {
+                            // var value = Encoding.Unicode.GetString(data);
+                            return data;
+                        }
+                    };
                 }
 
                 knetConsumer = UseSerdes ? new KNetConsumer<long, byte[]>(props, knetKeyDeserializer, knetValueDeserializer) : new KNetConsumer<long, byte[]>(props);
