@@ -1,9 +1,9 @@
 ﻿using MASES.JCOBridge.C2JBridge;
 using MASES.KNet;
-using MASES.KNet.Clients.Consumer;
-using MASES.KNet.Common.Serialization;
+using Org.Apache.Kafka.Clients.Consumer;
+using Org.Apache.Kafka.Common.Serialization;
 using Java.Util;
-using MASES.KNet.Streams;
+using Org.Apache.Kafka.Streams;
 using System;
 using System.Threading;
 
@@ -37,8 +37,8 @@ namespace MASES.KNetTemplate.KNetStreamPipe
 
             props.Put(StreamsConfig.APPLICATION_ID_CONFIG, "streams-pipe");
             props.Put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
-            props.Put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String.Dyn().getClass());
-            props.Put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String.Dyn().getClass());
+            props.Put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().Dyn().getClass());
+            props.Put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().Dyn().getClass());
 
             // setting offset reset to earliest so that we can re-run the demo code with the same pre-loaded data
             props.Put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
@@ -55,7 +55,7 @@ namespace MASES.KNetTemplate.KNetStreamPipe
                 streams.Start();
                 while (!resetEvent.WaitOne(0))
                 {
-                    var state = streams.State;
+                    var state = streams.StateMethod();
                     Console.WriteLine($"KafkaStreams state: {state}");
                 }
             }

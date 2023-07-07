@@ -1,0 +1,1974 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class KafkaStreams
+   | KNet website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class KafkaStreams
+   | KNet website ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Org.Apache.Kafka.Streams.KafkaStreams">
+  
+  
+  <h1 id="Org_Apache_Kafka_Streams_KafkaStreams" data-uid="Org.Apache.Kafka.Streams.KafkaStreams" class="text-break">Class KafkaStreams
+  </h1>
+  <div class="markdown level0 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html</a></p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
+    <div class="level2"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span></div>
+    <div class="level3"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span>&lt;<span class="xref">Java.Lang.AutoCloseable</span>&gt;</div>
+    <div class="level4"><span class="xref">Java.Lang.AutoCloseable</span></div>
+    <div class="level5"><span class="xref">KafkaStreams</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.lang.iautocloseable">IAutoCloseable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute&lt;TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute&lt;TReturn&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute(System.Type, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute&lt;TReturn&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute&lt;TReturn&gt;(System.Type, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute&lt;TReturn, TConverter&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute&lt;TReturn, TConverter&gt;(System.Type, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecuteArray&lt;T&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecuteArray&lt;T&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SGetField(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SGetField(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SGetField&lt;TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SGetField&lt;TReturn&gt;(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SGetFieldArray&lt;TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SGetFieldArray&lt;TReturn&gt;(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SSetField(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SSetField(System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SSetField&lt;TValue&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, TValue)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SSetField&lt;TValue&gt;(System.String, TValue)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.IsAssignableFrom(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.IsAssignableFrom(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.IsAssignableFrom&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.New(System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.Execute&lt;T&gt;(T[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.DynBridgeClazz</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.BridgeClazz</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.DynBridgeClazz</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.BridgeClazz</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClazzOf&lt;TClass&gt;(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClazzOf(System.String, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClassNameOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClassOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TReturn&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInstanceOf(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInstanceOf(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInstanceOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.CastTo&lt;TNewClass&gt;(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Dispose()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Notify()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.NotifyAll()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wait()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wait(System.Int64)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wait(System.Int64, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TReturn&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TNewClass, TReturn&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TNewClass, TReturn, TConverter&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecuteArray&lt;T&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IGetField(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IGetField&lt;TReturn&gt;(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IGetFieldArray&lt;TReturn&gt;(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ISetField(System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ISetField&lt;TValue&gt;(System.String, TValue)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.DynBridgeInstance</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.BridgeInstance</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsBridgeListener</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember#system-dynamic-dynamicobject-trygetmember(system-dynamic-getmemberbinder-system-object@)">DynamicObject.TryGetMember(GetMemberBinder, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetmember#system-dynamic-dynamicobject-trysetmember(system-dynamic-setmemberbinder-system-object)">DynamicObject.TrySetMember(SetMemberBinder, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeletemember#system-dynamic-dynamicobject-trydeletemember(system-dynamic-deletememberbinder)">DynamicObject.TryDeleteMember(DeleteMemberBinder)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvokemember#system-dynamic-dynamicobject-tryinvokemember(system-dynamic-invokememberbinder-system-object()-system-object@)">DynamicObject.TryInvokeMember(InvokeMemberBinder, Object[], Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryconvert#system-dynamic-dynamicobject-tryconvert(system-dynamic-convertbinder-system-object@)">DynamicObject.TryConvert(ConvertBinder, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trycreateinstance#system-dynamic-dynamicobject-trycreateinstance(system-dynamic-createinstancebinder-system-object()-system-object@)">DynamicObject.TryCreateInstance(CreateInstanceBinder, Object[], Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvoke#system-dynamic-dynamicobject-tryinvoke(system-dynamic-invokebinder-system-object()-system-object@)">DynamicObject.TryInvoke(InvokeBinder, Object[], Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trybinaryoperation#system-dynamic-dynamicobject-trybinaryoperation(system-dynamic-binaryoperationbinder-system-object-system-object@)">DynamicObject.TryBinaryOperation(BinaryOperationBinder, Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryunaryoperation#system-dynamic-dynamicobject-tryunaryoperation(system-dynamic-unaryoperationbinder-system-object@)">DynamicObject.TryUnaryOperation(UnaryOperationBinder, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetindex#system-dynamic-dynamicobject-trygetindex(system-dynamic-getindexbinder-system-object()-system-object@)">DynamicObject.TryGetIndex(GetIndexBinder, Object[], Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetindex#system-dynamic-dynamicobject-trysetindex(system-dynamic-setindexbinder-system-object()-system-object)">DynamicObject.TrySetIndex(SetIndexBinder, Object[], Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeleteindex#system-dynamic-dynamicobject-trydeleteindex(system-dynamic-deleteindexbinder-system-object())">DynamicObject.TryDeleteIndex(DeleteIndexBinder, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames#system-dynamic-dynamicobject-getdynamicmembernames">DynamicObject.GetDynamicMemberNames()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getmetaobject#system-dynamic-dynamicobject-getmetaobject(system-linq-expressions-expression)">DynamicObject.GetMetaObject(Expression)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals#system-object-referenceequals(system-object-system-object)">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype#system-object-gettype">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone#system-object-memberwiseclone">Object.MemberwiseClone()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Org.Apache.Kafka.Streams.html">Org.Apache.Kafka.Streams</a></h6>
+  <h6><strong>Assembly</strong>: MASES.KNet.dll</h6>
+  <h5 id="Org_Apache_Kafka_Streams_KafkaStreams_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class KafkaStreams : AutoCloseable, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IAutoCloseable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams__ctor.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/AllPackageClasses.cs/#L59">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams__ctor_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.#ctor*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams__ctor" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.#ctor">KafkaStreams()</h4>
+  <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KafkaStreams()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams__ctor_Org_Apache_Kafka_Streams_Topology_Java_Util_Properties_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.%23ctor(Org.Apache.Kafka.Streams.Topology%2CJava.Util.Properties)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L68">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams__ctor_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.#ctor*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams__ctor_Org_Apache_Kafka_Streams_Topology_Java_Util_Properties_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.#ctor(Org.Apache.Kafka.Streams.Topology,Java.Util.Properties)">KafkaStreams(Topology, Properties)</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(org.apache.kafka.streams.Topology,java.util.Properties)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(org.apache.kafka.streams.Topology,java.util.Properties)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KafkaStreams(Topology arg0, Properties arg1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Streams.Topology.html">Topology</a></td>
+        <td><span class="parametername">arg0</span></td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.Topology.html">Topology</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.properties">Properties</a></td>
+        <td><span class="parametername">arg1</span></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.properties">Properties</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams__ctor_Org_Apache_Kafka_Streams_Topology_Java_Util_Properties_Org_Apache_Kafka_Common_Utils_Time_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.%23ctor(Org.Apache.Kafka.Streams.Topology%2CJava.Util.Properties%2COrg.Apache.Kafka.Common.Utils.Time)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L38">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams__ctor_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.#ctor*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams__ctor_Org_Apache_Kafka_Streams_Topology_Java_Util_Properties_Org_Apache_Kafka_Common_Utils_Time_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.#ctor(Org.Apache.Kafka.Streams.Topology,Java.Util.Properties,Org.Apache.Kafka.Common.Utils.Time)">KafkaStreams(Topology, Properties, Time)</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(org.apache.kafka.streams.Topology,java.util.Properties,org.apache.kafka.common.utils.Time)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(org.apache.kafka.streams.Topology,java.util.Properties,org.apache.kafka.common.utils.Time)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KafkaStreams(Topology arg0, Properties arg1, Time arg2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Streams.Topology.html">Topology</a></td>
+        <td><span class="parametername">arg0</span></td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.Topology.html">Topology</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.properties">Properties</a></td>
+        <td><span class="parametername">arg1</span></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.properties">Properties</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Common.Utils.Time.html">Time</a></td>
+        <td><span class="parametername">arg2</span></td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Utils.Time.html">Time</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams__ctor_Org_Apache_Kafka_Streams_Topology_Java_Util_Properties_Org_Apache_Kafka_Streams_KafkaClientSupplier_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.%23ctor(Org.Apache.Kafka.Streams.Topology%2CJava.Util.Properties%2COrg.Apache.Kafka.Streams.KafkaClientSupplier)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L59">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams__ctor_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.#ctor*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams__ctor_Org_Apache_Kafka_Streams_Topology_Java_Util_Properties_Org_Apache_Kafka_Streams_KafkaClientSupplier_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.#ctor(Org.Apache.Kafka.Streams.Topology,Java.Util.Properties,Org.Apache.Kafka.Streams.KafkaClientSupplier)">KafkaStreams(Topology, Properties, KafkaClientSupplier)</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(org.apache.kafka.streams.Topology,java.util.Properties,org.apache.kafka.streams.KafkaClientSupplier)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(org.apache.kafka.streams.Topology,java.util.Properties,org.apache.kafka.streams.KafkaClientSupplier)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KafkaStreams(Topology arg0, Properties arg1, KafkaClientSupplier arg2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Streams.Topology.html">Topology</a></td>
+        <td><span class="parametername">arg0</span></td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.Topology.html">Topology</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.properties">Properties</a></td>
+        <td><span class="parametername">arg1</span></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.properties">Properties</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Streams.KafkaClientSupplier.html">KafkaClientSupplier</a></td>
+        <td><span class="parametername">arg2</span></td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.KafkaClientSupplier.html">KafkaClientSupplier</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams__ctor_Org_Apache_Kafka_Streams_Topology_Java_Util_Properties_Org_Apache_Kafka_Streams_KafkaClientSupplier_Org_Apache_Kafka_Common_Utils_Time_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.%23ctor(Org.Apache.Kafka.Streams.Topology%2CJava.Util.Properties%2COrg.Apache.Kafka.Streams.KafkaClientSupplier%2COrg.Apache.Kafka.Common.Utils.Time)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L49">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams__ctor_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.#ctor*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams__ctor_Org_Apache_Kafka_Streams_Topology_Java_Util_Properties_Org_Apache_Kafka_Streams_KafkaClientSupplier_Org_Apache_Kafka_Common_Utils_Time_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.#ctor(Org.Apache.Kafka.Streams.Topology,Java.Util.Properties,Org.Apache.Kafka.Streams.KafkaClientSupplier,Org.Apache.Kafka.Common.Utils.Time)">KafkaStreams(Topology, Properties, KafkaClientSupplier, Time)</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(org.apache.kafka.streams.Topology,java.util.Properties,org.apache.kafka.streams.KafkaClientSupplier,org.apache.kafka.common.utils.Time)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(org.apache.kafka.streams.Topology,java.util.Properties,org.apache.kafka.streams.KafkaClientSupplier,org.apache.kafka.common.utils.Time)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KafkaStreams(Topology arg0, Properties arg1, KafkaClientSupplier arg2, Time arg3)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Streams.Topology.html">Topology</a></td>
+        <td><span class="parametername">arg0</span></td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.Topology.html">Topology</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.properties">Properties</a></td>
+        <td><span class="parametername">arg1</span></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.properties">Properties</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Streams.KafkaClientSupplier.html">KafkaClientSupplier</a></td>
+        <td><span class="parametername">arg2</span></td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.KafkaClientSupplier.html">KafkaClientSupplier</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Common.Utils.Time.html">Time</a></td>
+        <td><span class="parametername">arg3</span></td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Utils.Time.html">Time</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams__ctor_Org_Apache_Kafka_Streams_Topology_Org_Apache_Kafka_Streams_StreamsConfig_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.%23ctor(Org.Apache.Kafka.Streams.Topology%2COrg.Apache.Kafka.Streams.StreamsConfig)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L97">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams__ctor_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.#ctor*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams__ctor_Org_Apache_Kafka_Streams_Topology_Org_Apache_Kafka_Streams_StreamsConfig_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.#ctor(Org.Apache.Kafka.Streams.Topology,Org.Apache.Kafka.Streams.StreamsConfig)">KafkaStreams(Topology, StreamsConfig)</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(org.apache.kafka.streams.Topology,org.apache.kafka.streams.StreamsConfig)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(org.apache.kafka.streams.Topology,org.apache.kafka.streams.StreamsConfig)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KafkaStreams(Topology arg0, StreamsConfig arg1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Streams.Topology.html">Topology</a></td>
+        <td><span class="parametername">arg0</span></td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.Topology.html">Topology</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html">StreamsConfig</a></td>
+        <td><span class="parametername">arg1</span></td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html">StreamsConfig</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams__ctor_Org_Apache_Kafka_Streams_Topology_Org_Apache_Kafka_Streams_StreamsConfig_Org_Apache_Kafka_Common_Utils_Time_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.%23ctor(Org.Apache.Kafka.Streams.Topology%2COrg.Apache.Kafka.Streams.StreamsConfig%2COrg.Apache.Kafka.Common.Utils.Time)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L78">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams__ctor_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.#ctor*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams__ctor_Org_Apache_Kafka_Streams_Topology_Org_Apache_Kafka_Streams_StreamsConfig_Org_Apache_Kafka_Common_Utils_Time_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.#ctor(Org.Apache.Kafka.Streams.Topology,Org.Apache.Kafka.Streams.StreamsConfig,Org.Apache.Kafka.Common.Utils.Time)">KafkaStreams(Topology, StreamsConfig, Time)</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(org.apache.kafka.streams.Topology,org.apache.kafka.streams.StreamsConfig,org.apache.kafka.common.utils.Time)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(org.apache.kafka.streams.Topology,org.apache.kafka.streams.StreamsConfig,org.apache.kafka.common.utils.Time)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KafkaStreams(Topology arg0, StreamsConfig arg1, Time arg2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Streams.Topology.html">Topology</a></td>
+        <td><span class="parametername">arg0</span></td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.Topology.html">Topology</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html">StreamsConfig</a></td>
+        <td><span class="parametername">arg1</span></td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html">StreamsConfig</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Common.Utils.Time.html">Time</a></td>
+        <td><span class="parametername">arg2</span></td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Utils.Time.html">Time</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams__ctor_Org_Apache_Kafka_Streams_Topology_Org_Apache_Kafka_Streams_StreamsConfig_Org_Apache_Kafka_Streams_KafkaClientSupplier_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.%23ctor(Org.Apache.Kafka.Streams.Topology%2COrg.Apache.Kafka.Streams.StreamsConfig%2COrg.Apache.Kafka.Streams.KafkaClientSupplier)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L88">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams__ctor_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.#ctor*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams__ctor_Org_Apache_Kafka_Streams_Topology_Org_Apache_Kafka_Streams_StreamsConfig_Org_Apache_Kafka_Streams_KafkaClientSupplier_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.#ctor(Org.Apache.Kafka.Streams.Topology,Org.Apache.Kafka.Streams.StreamsConfig,Org.Apache.Kafka.Streams.KafkaClientSupplier)">KafkaStreams(Topology, StreamsConfig, KafkaClientSupplier)</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(org.apache.kafka.streams.Topology,org.apache.kafka.streams.StreamsConfig,org.apache.kafka.streams.KafkaClientSupplier)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(org.apache.kafka.streams.Topology,org.apache.kafka.streams.StreamsConfig,org.apache.kafka.streams.KafkaClientSupplier)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KafkaStreams(Topology arg0, StreamsConfig arg1, KafkaClientSupplier arg2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Streams.Topology.html">Topology</a></td>
+        <td><span class="parametername">arg0</span></td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.Topology.html">Topology</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html">StreamsConfig</a></td>
+        <td><span class="parametername">arg1</span></td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.StreamsConfig.html">StreamsConfig</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Streams.KafkaClientSupplier.html">KafkaClientSupplier</a></td>
+        <td><span class="parametername">arg2</span></td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.KafkaClientSupplier.html">KafkaClientSupplier</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams__ctor_System_Object___.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.%23ctor(System.Object%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/AllPackageClasses.cs/#L63">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams__ctor_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.#ctor*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams__ctor_System_Object___" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.#ctor(System.Object[])">KafkaStreams(Object[])</h4>
+  <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KafkaStreams(params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams_BridgeClassName.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.BridgeClassName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/AllPackageClasses.cs/#L70">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams_BridgeClassName_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.BridgeClassName*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams_BridgeClassName" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.BridgeClassName">BridgeClassName</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string BridgeClassName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Java.Lang.AutoCloseable.BridgeClassName</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams_IsBridgeAbstract.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.IsBridgeAbstract%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/AllPackageClasses.cs/#L74">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams_IsBridgeAbstract_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.IsBridgeAbstract*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.IsBridgeAbstract">IsBridgeAbstract</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeAbstract { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Java.Lang.AutoCloseable.IsBridgeAbstract</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams_IsBridgeCloseable.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.IsBridgeCloseable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/AllPackageClasses.cs/#L78">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams_IsBridgeCloseable_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.IsBridgeCloseable*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.IsBridgeCloseable">IsBridgeCloseable</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeCloseable { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Java.Lang.AutoCloseable.IsBridgeCloseable</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams_IsBridgeInterface.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.IsBridgeInterface%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/AllPackageClasses.cs/#L82">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams_IsBridgeInterface_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.IsBridgeInterface*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams_IsBridgeInterface" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.IsBridgeInterface">IsBridgeInterface</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeInterface { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Java.Lang.AutoCloseable.IsBridgeInterface</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams_IsBridgeStatic.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.IsBridgeStatic%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/AllPackageClasses.cs/#L86">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams_IsBridgeStatic_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.IsBridgeStatic*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams_IsBridgeStatic" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.IsBridgeStatic">IsBridgeStatic</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeStatic { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Java.Lang.AutoCloseable.IsBridgeStatic</span></div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams_AddStreamThread.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.AddStreamThread%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L213">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams_AddStreamThread_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.AddStreamThread*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams_AddStreamThread" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.AddStreamThread">AddStreamThread()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#addStreamThread--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#addStreamThread--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Optional&lt;string&gt; AddStreamThread()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Java.Util.Optional</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.optional">Optional</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams_AllLocalStorePartitionLags.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.AllLocalStorePartitionLags%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L194">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams_AllLocalStorePartitionLags_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.AllLocalStorePartitionLags*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams_AllLocalStorePartitionLags" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.AllLocalStorePartitionLags">AllLocalStorePartitionLags()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#allLocalStorePartitionLags--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#allLocalStorePartitionLags--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Map&lt;string, Map&lt;Integer, LagInfo&gt;&gt; AllLocalStorePartitionLags()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Java.Util.Map</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <span class="xref">Java.Util.Map</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/java.lang.integer">Integer</a>, <a class="xref" href="Org.Apache.Kafka.Streams.LagInfo.html">LagInfo</a>&gt;&gt;</td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.map">Map</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams_CleanUp.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.CleanUp%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L286">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams_CleanUp_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.CleanUp*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams_CleanUp" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.CleanUp">CleanUp()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#cleanUp--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#cleanUp--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CleanUp()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams_Close.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.Close%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L293">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams_Close_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.Close*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams_Close" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.Close">Close()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#close--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Close()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams_Close_Java_Time_Duration_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.Close(Java.Time.Duration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L259">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams_Close_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.Close*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams_Close_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.Close(Java.Time.Duration)">Close(Duration)</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#close-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#close-java.time.Duration-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Close(Duration arg0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Java.Time.Duration</span></td>
+        <td><span class="parametername">arg0</span></td>
+        <td><p><span class="xref">Java.Time.Duration</span></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.lang.illegalargumentexception">IllegalArgumentException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams_Close_Org_Apache_Kafka_Streams_KafkaStreams_CloseOptions_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.Close(Org.Apache.Kafka.Streams.KafkaStreams.CloseOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L269">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams_Close_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.Close*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams_Close_Org_Apache_Kafka_Streams_KafkaStreams_CloseOptions_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.Close(Org.Apache.Kafka.Streams.KafkaStreams.CloseOptions)">Close(KafkaStreams.CloseOptions)</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#close-org.apache.kafka.streams.KafkaStreams.CloseOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#close-org.apache.kafka.streams.KafkaStreams.CloseOptions-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Close(KafkaStreams.CloseOptions arg0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Streams.KafkaStreams.CloseOptions.html">KafkaStreams.CloseOptions</a></td>
+        <td><span class="parametername">arg0</span></td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.KafkaStreams.CloseOptions.html">KafkaStreams.CloseOptions</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.lang.illegalargumentexception">IllegalArgumentException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams_IsPaused.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.IsPaused%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L167">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams_IsPaused_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.IsPaused*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams_IsPaused" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.IsPaused">IsPaused()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#isPaused--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#isPaused--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPaused()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams_MetadataForAllStreamsClients.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.MetadataForAllStreamsClients%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L176">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams_MetadataForAllStreamsClients_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.MetadataForAllStreamsClients*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams_MetadataForAllStreamsClients" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.MetadataForAllStreamsClients">MetadataForAllStreamsClients()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#metadataForAllStreamsClients--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#metadataForAllStreamsClients--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Collection&lt;StreamsMetadata&gt; MetadataForAllStreamsClients()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Java.Util.Collection</span>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.StreamsMetadata.html">StreamsMetadata</a>&gt;</td>
+        <td><p><span class="xref">Java.Util.Collection</span></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams_MetadataForLocalThreads.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.MetadataForLocalThreads%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L240">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams_MetadataForLocalThreads_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.MetadataForLocalThreads*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams_MetadataForLocalThreads" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.MetadataForLocalThreads">MetadataForLocalThreads()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#metadataForLocalThreads--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#metadataForLocalThreads--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Set&lt;ThreadMetadata&gt; MetadataForLocalThreads()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Java.Util.Set</span>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.ThreadMetadata.html">ThreadMetadata</a>&gt;</td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.set">Set</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams_Metrics__1.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.Metrics%60%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L204">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams_Metrics_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.Metrics*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams_Metrics__1" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.Metrics``1">Metrics&lt;ReturnExtendsOrg_Apache_Kafka_Common_Metric&gt;()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#metrics--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#metrics--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Map&lt;MetricName, ReturnExtendsOrg_Apache_Kafka_Common_Metric&gt; Metrics&lt;ReturnExtendsOrg_Apache_Kafka_Common_Metric&gt;()
+    where ReturnExtendsOrg_Apache_Kafka_Common_Metric : Metric</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Java.Util.Map</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.MetricName.html">MetricName</a>, ReturnExtendsOrg_Apache_Kafka_Common_Metric&gt;</td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.map">Map</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">ReturnExtendsOrg_Apache_Kafka_Common_Metric</span></td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Metric.html">Metric</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams_Pause.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.Pause%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L300">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams_Pause_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.Pause*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams_Pause" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.Pause">Pause()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#pause--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#pause--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Pause()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams_Query__1_Org_Apache_Kafka_Streams_Query_StateQueryRequest___0__.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.Query%60%601(Org.Apache.Kafka.Streams.Query.StateQueryRequest%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L148">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams_Query_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.Query*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams_Query__1_Org_Apache_Kafka_Streams_Query_StateQueryRequest___0__" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.Query``1(Org.Apache.Kafka.Streams.Query.StateQueryRequest{``0})">Query&lt;R&gt;(StateQueryRequest&lt;R&gt;)</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#query-org.apache.kafka.streams.query.StateQueryRequest-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#query-org.apache.kafka.streams.query.StateQueryRequest-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StateQueryResult&lt;R&gt; Query&lt;R&gt;(StateQueryRequest&lt;R&gt; arg0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Streams.Query.StateQueryRequest-1.html">StateQueryRequest</a>&lt;R&gt;</td>
+        <td><span class="parametername">arg0</span></td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.Query.StateQueryRequest.html">StateQueryRequest</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Streams.Query.StateQueryResult-1.html">StateQueryResult</a>&lt;R&gt;</td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.Query.StateQueryResult.html">StateQueryResult</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">R</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams_QueryMetadataForKey__1_System_String___0_Org_Apache_Kafka_Common_Serialization_Serializer___0__.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.QueryMetadataForKey%60%601(System.String%2C%60%600%2COrg.Apache.Kafka.Common.Serialization.Serializer%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L125">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams_QueryMetadataForKey_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.QueryMetadataForKey*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams_QueryMetadataForKey__1_System_String___0_Org_Apache_Kafka_Common_Serialization_Serializer___0__" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.QueryMetadataForKey``1(System.String,``0,Org.Apache.Kafka.Common.Serialization.Serializer{``0})">QueryMetadataForKey&lt;K&gt;(String, K, Serializer&lt;K&gt;)</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#queryMetadataForKey-java.lang.String-java.lang.Object-org.apache.kafka.common.serialization.Serializer-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#queryMetadataForKey-java.lang.String-java.lang.Object-org.apache.kafka.common.serialization.Serializer-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyQueryMetadata QueryMetadataForKey&lt;K&gt;(string arg0, K arg1, Serializer&lt;K&gt; arg2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">arg0</span></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">K</span></td>
+        <td><span class="parametername">arg1</span></td>
+        <td><p><code data-dev-comment-type="typeparamref" class="typeparamref">K</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serializer-1.html">Serializer</a>&lt;K&gt;</td>
+        <td><span class="parametername">arg2</span></td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serializer.html">Serializer</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Streams.KeyQueryMetadata.html">KeyQueryMetadata</a></td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.KeyQueryMetadata.html">KeyQueryMetadata</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">K</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams_QueryMetadataForKey__2_System_String___0_Org_Apache_Kafka_Streams_Processor_StreamPartitioner___1_System_Object__.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.QueryMetadataForKey%60%602(System.String%2C%60%600%2COrg.Apache.Kafka.Streams.Processor.StreamPartitioner%7B%60%601%2CSystem.Object%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L138">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams_QueryMetadataForKey_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.QueryMetadataForKey*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams_QueryMetadataForKey__2_System_String___0_Org_Apache_Kafka_Streams_Processor_StreamPartitioner___1_System_Object__" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.QueryMetadataForKey``2(System.String,``0,Org.Apache.Kafka.Streams.Processor.StreamPartitioner{``1,System.Object})">QueryMetadataForKey&lt;K, Arg2objectSuperK&gt;(String, K, StreamPartitioner&lt;Arg2objectSuperK, Object&gt;)</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#queryMetadataForKey-java.lang.String-java.lang.Object-org.apache.kafka.streams.processor.StreamPartitioner-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#queryMetadataForKey-java.lang.String-java.lang.Object-org.apache.kafka.streams.processor.StreamPartitioner-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyQueryMetadata QueryMetadataForKey&lt;K, Arg2objectSuperK&gt;(string arg0, K arg1, StreamPartitioner&lt;Arg2objectSuperK, object&gt; arg2)
+    where Arg2objectSuperK : K</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">arg0</span></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">K</span></td>
+        <td><span class="parametername">arg1</span></td>
+        <td><p><code data-dev-comment-type="typeparamref" class="typeparamref">K</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Streams.Processor.StreamPartitioner-2.html">StreamPartitioner</a>&lt;Arg2objectSuperK, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a>&gt;</td>
+        <td><span class="parametername">arg2</span></td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.Processor.StreamPartitioner.html">StreamPartitioner</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Streams.KeyQueryMetadata.html">KeyQueryMetadata</a></td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.KeyQueryMetadata.html">KeyQueryMetadata</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">K</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Arg2objectSuperK</span></td>
+        <td><p><code data-dev-comment-type="typeparamref" class="typeparamref">K</code></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams_RemoveStreamThread.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.RemoveStreamThread%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L222">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams_RemoveStreamThread_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.RemoveStreamThread*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams_RemoveStreamThread" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.RemoveStreamThread">RemoveStreamThread()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#removeStreamThread--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#removeStreamThread--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Optional&lt;string&gt; RemoveStreamThread()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Java.Util.Optional</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.optional">Optional</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams_RemoveStreamThread_Java_Time_Duration_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.RemoveStreamThread(Java.Time.Duration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L231">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams_RemoveStreamThread_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.RemoveStreamThread*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams_RemoveStreamThread_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.RemoveStreamThread(Java.Time.Duration)">RemoveStreamThread(Duration)</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#removeStreamThread-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#removeStreamThread-java.time.Duration-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Optional&lt;string&gt; RemoveStreamThread(Duration arg0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Java.Time.Duration</span></td>
+        <td><span class="parametername">arg0</span></td>
+        <td><p><span class="xref">Java.Time.Duration</span></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Java.Util.Optional</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.optional">Optional</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams_Resume.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.Resume%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L307">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams_Resume_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.Resume*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams_Resume" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.Resume">Resume()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#resume--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#resume--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Resume()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams_SetGlobalStateRestoreListener_Org_Apache_Kafka_Streams_Processor_StateRestoreListener_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.SetGlobalStateRestoreListener(Org.Apache.Kafka.Streams.Processor.StateRestoreListener)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L315">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams_SetGlobalStateRestoreListener_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.SetGlobalStateRestoreListener*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams_SetGlobalStateRestoreListener_Org_Apache_Kafka_Streams_Processor_StateRestoreListener_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.SetGlobalStateRestoreListener(Org.Apache.Kafka.Streams.Processor.StateRestoreListener)">SetGlobalStateRestoreListener(StateRestoreListener)</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#setGlobalStateRestoreListener-org.apache.kafka.streams.processor.StateRestoreListener-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#setGlobalStateRestoreListener-org.apache.kafka.streams.processor.StateRestoreListener-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetGlobalStateRestoreListener(StateRestoreListener arg0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Streams.Processor.StateRestoreListener.html">StateRestoreListener</a></td>
+        <td><span class="parametername">arg0</span></td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.Processor.StateRestoreListener.html">StateRestoreListener</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams_SetStateListener_Org_Apache_Kafka_Streams_KafkaStreams_StateListener_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.SetStateListener(Org.Apache.Kafka.Streams.KafkaStreams.StateListener)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L323">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams_SetStateListener_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.SetStateListener*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams_SetStateListener_Org_Apache_Kafka_Streams_KafkaStreams_StateListener_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.SetStateListener(Org.Apache.Kafka.Streams.KafkaStreams.StateListener)">SetStateListener(KafkaStreams.StateListener)</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#setStateListener-org.apache.kafka.streams.KafkaStreams.StateListener-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#setStateListener-org.apache.kafka.streams.KafkaStreams.StateListener-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetStateListener(KafkaStreams.StateListener arg0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Streams.KafkaStreams.StateListener.html">KafkaStreams.StateListener</a></td>
+        <td><span class="parametername">arg0</span></td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.KafkaStreams.StateListener.html">KafkaStreams.StateListener</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams_SetUncaughtExceptionHandler_Org_Apache_Kafka_Streams_Errors_StreamsUncaughtExceptionHandler_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.SetUncaughtExceptionHandler(Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L331">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams_SetUncaughtExceptionHandler_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.SetUncaughtExceptionHandler*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams_SetUncaughtExceptionHandler_Org_Apache_Kafka_Streams_Errors_StreamsUncaughtExceptionHandler_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.SetUncaughtExceptionHandler(Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler)">SetUncaughtExceptionHandler(StreamsUncaughtExceptionHandler)</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#setUncaughtExceptionHandler-org.apache.kafka.streams.errors.StreamsUncaughtExceptionHandler-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#setUncaughtExceptionHandler-org.apache.kafka.streams.errors.StreamsUncaughtExceptionHandler-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetUncaughtExceptionHandler(StreamsUncaughtExceptionHandler arg0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler.html">StreamsUncaughtExceptionHandler</a></td>
+        <td><span class="parametername">arg0</span></td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler.html">StreamsUncaughtExceptionHandler</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams_Start.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.Start%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L279">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams_Start_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.Start*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams_Start" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.Start">Start()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#start--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#start--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Start()</code></pre>
+  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.lang.illegalstateexception">IllegalStateException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Streams.Errors.StreamsException.html">StreamsException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams_StateMethod.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.StateMethod%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L249">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams_StateMethod_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.StateMethod*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams_StateMethod" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.StateMethod">StateMethod()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#state--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#state--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KafkaStreams.State StateMethod()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Streams.KafkaStreams.State.html">KafkaStreams.State</a></td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.KafkaStreams.State.html">KafkaStreams.State</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams_Store__1_Org_Apache_Kafka_Streams_StoreQueryParameters___0__.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.Store%60%601(Org.Apache.Kafka.Streams.StoreQueryParameters%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L158">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams_Store_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.Store*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams_Store__1_Org_Apache_Kafka_Streams_StoreQueryParameters___0__" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.Store``1(Org.Apache.Kafka.Streams.StoreQueryParameters{``0})">Store&lt;T&gt;(StoreQueryParameters&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#store-org.apache.kafka.streams.StoreQueryParameters-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#store-org.apache.kafka.streams.StoreQueryParameters-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T Store&lt;T&gt;(StoreQueryParameters&lt;T&gt; arg0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Streams.StoreQueryParameters-1.html">StoreQueryParameters</a>&lt;T&gt;</td>
+        <td><span class="parametername">arg0</span></td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Streams.StoreQueryParameters.html">StoreQueryParameters</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p><code data-dev-comment-type="typeparamref" class="typeparamref">T</code></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams_StreamsMetadataForStore_System_String_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams.StreamsMetadataForStore(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L185">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams_StreamsMetadataForStore_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.StreamsMetadataForStore*"></a>
+  <h4 id="Org_Apache_Kafka_Streams_KafkaStreams_StreamsMetadataForStore_System_String_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.StreamsMetadataForStore(System.String)">StreamsMetadataForStore(String)</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#streamsMetadataForStore-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.html#streamsMetadataForStore-java.lang.String-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Collection&lt;StreamsMetadata&gt; StreamsMetadataForStore(string arg0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">arg0</span></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Java.Util.Collection</span>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.StreamsMetadata.html">StreamsMetadata</a>&gt;</td>
+        <td><p><span class="xref">Java.Util.Collection</span></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">System.Dynamic.IDynamicMetaObjectProvider</a>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span>
+  </div>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span>
+  </div>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/java.lang.iautocloseable">Java.Lang.IAutoCloseable</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Streams_KafkaStreams.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.KafkaStreams%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L29" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 MASES s.r.l..<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -10,9 +10,12 @@
 		<PackageTags>knet kafka apache-kafka dotnet clr netcore net6 kafka connect streams producer consumer providers streamprovider gateway</PackageTags>
 		<PackageId>MASES.KNet.Serialization.MessagePack</PackageId>
 		<PackageReadmeFile>usageSerDes.md</PackageReadmeFile>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<RunAnalyzersDuringBuild>False</RunAnalyzersDuringBuild>
+		<RunAnalyzersDuringLiveAnalysis>False</RunAnalyzersDuringLiveAnalysis>
 	</PropertyGroup>
 	<ItemGroup>
-		<None Include="..\Documentation\articles\usageSerDes.md" Pack="true" PackagePath="\" />
+		<None Include="..\..\documentation\articles\usageSerDes.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
 	<ItemGroup Condition="'$(TargetFramework)' == 'net462'">
 		<PackageReference Include="System.Memory" Version="4.5.5" />

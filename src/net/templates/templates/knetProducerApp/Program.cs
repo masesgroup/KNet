@@ -1,10 +1,11 @@
 ﻿using MASES.KNet;
-using MASES.KNet.Clients.Producer;
-using MASES.KNet.Common.Serialization;
+using Org.Apache.Kafka.Clients.Producer;
+using Org.Apache.Kafka.Common.Serialization;
 using Java.Util;
 using System;
 using System.Text;
 using System.Threading;
+using MASES.KNet.Producer;
 
 namespace MASES.KNetTemplate.KNetProducer
 {
@@ -47,7 +48,7 @@ namespace MASES.KNetTemplate.KNetProducer
 
             Properties props = ProducerConfigBuilder.Create()
                                                     .WithBootstrapServers(serverToUse)
-                                                    .WithAcks(ProducerConfig.Acks.All)
+                                                    .WithAcks(ProducerConfigBuilder.AcksTypes.All)
                                                     .WithRetries(0)
                                                     .WithLingerMs(1)
                                                     .WithKeySerializerClass("org.apache.kafka.common.serialization.StringSerializer")
@@ -61,24 +62,33 @@ namespace MASES.KNetTemplate.KNetProducer
             {
                 if (useSerdes)
                 {
-                    keySerializer = new Serializer<string>(serializeFun: (topic, data) =>
+                    keySerializer = new Serializer<string>()
                     {
-                        var key = Encoding.Unicode.GetBytes(data);
-                        return null;
-                    });
-                    valueSerializer = new Serializer<string>(serializeFun: (topic, data) =>
+                        OnSerialize = (topic, data) =>
+                        {
+                            var key = Encoding.Unicode.GetBytes(data);
+                            return null;
+                        }
+                    };
+                    valueSerializer = new Serializer<string>()
                     {
-                        var value = Encoding.Unicode.GetBytes(data);
-                        return value;
-                    });
+                        OnSerialize = (topic, data) =>
+                        {
+                            var value = Encoding.Unicode.GetBytes(data);
+                            return value;
+                        }
+                    };
                 }
                 if (useCallback)
                 {
-                    callback = new Callback((o1, o2) =>
+                    callback = new Callback()
                     {
-                        if (o2 != null) Console.WriteLine(o2.ToString());
-                        else Console.WriteLine($"Produced on topic {o1.Topic} at offset {o1.Offset}");
-                    });
+                        OnOnCompletion = (o1, o2) =>
+                        {
+                            if (o2 != null) Console.WriteLine(o2.ToString());
+                            else Console.WriteLine($"Produced on topic {o1.Topic()} at offset {o1.Offset()}");
+                        }
+                    };
                 }
 
                 Console.CancelKeyPress += Console_CancelKeyPress;

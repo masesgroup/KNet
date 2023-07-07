@@ -19,39 +19,90 @@
 using Java.Lang;
 using Java.Nio;
 using MASES.JCOBridge.C2JBridge;
-using MASES.KNet.Common.Errors;
-using MASES.KNet.Common.Serialization;
+using Org.Apache.Kafka.Common.Errors;
+using Org.Apache.Kafka.Common.Serialization;
+using Org.Apache.Kafka.Common.Utils;
 using System;
 using System.Text;
 
 namespace MASES.KNet.Serialization
 {
+    /// <summary>
+    /// Helper for KNetSerDes
+    /// </summary>
     public static class KNetSerialization
     {
+        /// <summary>
+        /// Serializer types
+        /// </summary>
         public enum SerializationType
         {
+            /// <summary>
+            /// Externally managed
+            /// </summary>
             External,
+            /// <summary>
+            /// Array of <see cref="byte"/>
+            /// </summary>
             ByteArray,
+            /// <summary>
+            /// <see cref="Java.Nio.ByteBuffer"/>
+            /// </summary>
             ByteBuffer,
+            /// <summary>
+            /// <see cref="Org.Apache.Kafka.Common.Utils.Bytes"/>
+            /// </summary>
             Bytes,
+            /// <summary>
+            /// <see cref="double"/>
+            /// </summary>
             Double,
+            /// <summary>
+            /// <see cref="float"/>
+            /// </summary>
             Float,
+            /// <summary>
+            /// <see cref="int"/>
+            /// </summary>
             Int,
+            /// <summary>
+            /// <see cref="long"/>
+            /// </summary>
             Long,
+            /// <summary>
+            /// <see cref="short"/>
+            /// </summary>
             Short,
+            /// <summary>
+            /// <see cref="string"/>
+            /// </summary>
             String,
+            /// <summary>
+            /// <see cref="System.Guid"/>
+            /// </summary>
             Guid,
+            /// <summary>
+            /// <see cref="Java.Lang.Void"/>
+            /// </summary>
             Void
         }
-
+        /// <summary>
+        /// Check if a serializer is available for <typeparamref name="TData"/>
+        /// </summary>
+        /// <typeparam name="TData">The type to check</typeparam>
+        /// <returns><see langword="true"/> if managed</returns>
         public static bool IsInternalManaged<TData>()
         {
             return IsInternalManaged(typeof(TData));
         }
-
+        /// <summary>
+        /// Check if a serializer is available for <paramref name="type"/>
+        /// </summary>
+        /// <param name="type">The <see cref="Type"/> to check</param>
+        /// <returns><see langword="true"/> if managed</returns>
         public static bool IsInternalManaged(Type type)
         {
-            if (type == typeof(byte[]) || type == typeof(ByteBuffer) || type == typeof(Common.Utils.Bytes)
+            if (type == typeof(byte[]) || type == typeof(ByteBuffer) || type == typeof(Bytes)
                 || type == typeof(double) || type == typeof(float) || type == typeof(int) || type == typeof(long) || type == typeof(short) || type == typeof(string)
                 || type == typeof(Guid) || type == typeof(void))
             {
@@ -60,17 +111,25 @@ namespace MASES.KNet.Serialization
 
             return false;
         }
-
+        /// <summary>
+        /// Returns the serializer <see cref="SerializationType"/> for <typeparamref name="TData"/>
+        /// </summary>
+        /// <typeparam name="TData">The type to check</typeparam>
+        /// <returns><see cref="SerializationType"/></returns>
         public static SerializationType InternalSerDesType<TData>()
         {
             return InternalSerDesType(typeof(TData));
         }
-
+        /// <summary>
+        /// Returns the serializer <see cref="SerializationType"/> for <paramref name="type"/>
+        /// </summary>
+        /// <param name="type">The <see cref="Type"/> to check</param>
+        /// <returns><see cref="SerializationType"/></returns>
         public static SerializationType InternalSerDesType(Type type)
         {
             if (type == typeof(byte[])) return SerializationType.ByteArray;
             else if (type == typeof(ByteBuffer)) return SerializationType.ByteBuffer;
-            else if (type == typeof(Common.Utils.Bytes)) return SerializationType.Bytes;
+            else if (type == typeof(Bytes)) return SerializationType.Bytes;
             else if (type == typeof(double)) return SerializationType.Double;
             else if (type == typeof(float)) return SerializationType.Float;
             else if (type == typeof(int)) return SerializationType.Int;
@@ -83,37 +142,54 @@ namespace MASES.KNet.Serialization
             return SerializationType.External;
         }
 
-
+        /// <summary>
+        /// Serialize a <see cref="SerializationType.ByteArray"/>
+        /// </summary>
         public static byte[] SerializeByteArray(string topic, byte[] data)
         {
             return data;
         }
 
         static readonly Serializer<ByteBuffer> _ByteBufferSerializer = new ByteBufferSerializer();
+        /// <summary>
+        /// Serialize a <see cref="SerializationType.ByteBuffer"/>
+        /// </summary>
         public static byte[] SerializeByteBuffer(string topic, ByteBuffer data)
         {
             return _ByteBufferSerializer.Serialize(topic, data);
         }
 
-        static readonly Serializer<Common.Utils.Bytes> _BytesSerializer = new BytesSerializer();
-        public static byte[] SerializeBytes(string topic, Common.Utils.Bytes data)
+        static readonly Serializer<Bytes> _BytesSerializer = new BytesSerializer();
+        /// <summary>
+        /// Serialize a <see cref="SerializationType.Bytes"/>
+        /// </summary>
+        public static byte[] SerializeBytes(string topic, Bytes data)
         {
             return _BytesSerializer.Serialize(topic, data);
         }
 
         static readonly Serializer<double> _DoubleSerializer = new DoubleSerializer();
+        /// <summary>
+        /// Serialize a <see cref="SerializationType.Double"/>
+        /// </summary>
         public static byte[] SerializeDouble(string topic, double data)
         {
             return _DoubleSerializer.Serialize(topic, data);
         }
 
         static readonly Serializer<float> _FloatSerializer = new FloatSerializer();
+        /// <summary>
+        /// Serialize a <see cref="SerializationType.Float"/>
+        /// </summary>
         public static byte[] SerializeFloat(string topic, float data)
         {
             return _FloatSerializer.Serialize(topic, data);
         }
 
         static readonly Serializer<int> _IntSerializer = new IntegerSerializer();
+        /// <summary>
+        /// Serialize a <see cref="SerializationType.Int"/>
+        /// </summary>
         public static byte[] SerializeInt(string topic, int data)
         {
             return _IntSerializer.Serialize(topic, data);
@@ -122,6 +198,9 @@ namespace MASES.KNet.Serialization
         }
 
         static readonly Serializer<long> _LongSerializer = new LongSerializer();
+        /// <summary>
+        /// Serialize a <see cref="SerializationType.Long"/>
+        /// </summary>
         public static byte[] SerializeLong(string topic, long data)
         {
             return _LongSerializer.Serialize(topic, data);
@@ -130,58 +209,84 @@ namespace MASES.KNet.Serialization
         }
 
         static readonly Serializer<short> _ShortSerializer = new ShortSerializer();
+        /// <summary>
+        /// Serialize a <see cref="SerializationType.Short"/>
+        /// </summary>
         public static byte[] SerializeShort(string topic, short data)
         {
             return _ShortSerializer.Serialize(topic, data);
             // the following generates an error in container
             //return new byte[] { (byte)(data >>> 8), ((byte)data) };
         }
-
+        /// <summary>
+        /// Serialize a <see cref="SerializationType.String"/>
+        /// </summary>
         public static byte[] SerializeString(string topic, string data)
         {
             return Encoding.UTF8.GetBytes(data);
         }
-
+        /// <summary>
+        /// Serialize a <see cref="SerializationType.Guid"/>
+        /// </summary>
         public static byte[] SerializeGuid(string topic, Guid data)
         {
             return data.ToByteArray();
         }
-
+        /// <summary>
+        /// Serialize a <see cref="SerializationType.Void"/>
+        /// </summary>
         public static byte[] SerializeVoid(string topic, Java.Lang.Void data)
         {
             return null;
         }
-
+        /// <summary>
+        /// Deserialize a <see cref="SerializationType.ByteArray"/>
+        /// </summary>
         public static byte[] DeserializeByteArray(string topic, byte[] data)
         {
             return data;
         }
 
         static readonly Deserializer<ByteBuffer> _ByteBufferDeserializer = new ByteBufferDeserializer();
+        /// <summary>
+        /// Deserialize a <see cref="SerializationType.ByteBuffer"/>
+        /// </summary>
         public static ByteBuffer DeserializeByteBuffer(string topic, byte[] data)
         {
             return _ByteBufferDeserializer.Deserialize(topic, data);
         }
 
-        static readonly Deserializer<Common.Utils.Bytes> _BytesDeserializer = new BytesDeserializer();
-        public static Common.Utils.Bytes DeserializeBytes(string topic, byte[] data)
+        static readonly Deserializer<Bytes> _BytesDeserializer = new BytesDeserializer();
+        /// <summary>
+        /// Deserialize a <see cref="SerializationType.Bytes"/>
+        /// </summary>
+        public static Bytes DeserializeBytes(string topic, byte[] data)
         {
             return _BytesDeserializer.Deserialize(topic, data);
         }
 
         static readonly Deserializer<double> _DoubleDeserializer = new DoubleDeserializer();
+        /// <summary>
+        /// Deserialize a <see cref="SerializationType.Double"/>
+        /// </summary>
         public static double DeserializeDouble(string topic, byte[] data)
         {
             return _DoubleDeserializer.Deserialize(topic, data);
         }
 
         static readonly Deserializer<float> _FloatDeserializer = new FloatDeserializer();
+        /// <summary>
+        /// Deserialize a <see cref="SerializationType.Float"/>
+        /// </summary>
         public static float DeserializeFloat(string topic, byte[] data)
         {
             return _FloatDeserializer.Deserialize(topic, data);
         }
 
         static readonly Deserializer<int> _IntDeserializer = new IntegerDeserializer();
+        /// <summary>
+        /// Deserialize a <see cref="SerializationType.Int"/>
+        /// </summary>
         public static int DeserializeInt(string topic, byte[] data)
         {
             return _IntDeserializer.Deserialize(topic, data);
@@ -213,6 +318,9 @@ namespace MASES.KNet.Serialization
         }
 
         static readonly Deserializer<long> _LongDeserializer = new LongDeserializer();
+        /// <summary>
+        /// Deserialize a <see cref="SerializationType.Long"/>
+        /// </summary>
         public static long DeserializeLong(string topic, byte[] data)
         {
             return _LongDeserializer.Deserialize(topic, data);
@@ -244,6 +352,9 @@ namespace MASES.KNet.Serialization
         }
 
         static readonly Deserializer<short> _ShortDeserializer = new ShortDeserializer();
+        /// <summary>
+        /// Deserialize a <see cref="SerializationType.Short"/>
+        /// </summary>
         public static short DeserializeShort(string topic, byte[] data)
         {
             return _ShortDeserializer.Deserialize(topic, data);
@@ -273,17 +384,23 @@ namespace MASES.KNet.Serialization
             //    return value;
             //}
         }
-
+        /// <summary>
+        /// Deserialize a <see cref="SerializationType.String"/>
+        /// </summary>
         public static string DeserializeString(string topic, byte[] data)
         {
             return Encoding.UTF8.GetString(data);
         }
-
+        /// <summary>
+        /// Deserialize a <see cref="SerializationType.Guid"/>
+        /// </summary>
         public static Guid DeserializeGuid(string topic, byte[] data)
         {
             return new Guid(data);
         }
-
+        /// <summary>
+        /// Deserialize a <see cref="SerializationType.Void"/>
+        /// </summary>
         public static Java.Lang.Void DeserializeVoid(string topic, byte[] data)
         {
             if (data != null)

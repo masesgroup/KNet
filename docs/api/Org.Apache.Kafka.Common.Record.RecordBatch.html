@@ -1,0 +1,1756 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class RecordBatch
+   | KNet website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class RecordBatch
+   | KNet website ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch">
+  
+  
+  <h1 id="Org_Apache_Kafka_Common_Record_RecordBatch" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch" class="text-break">Class RecordBatch
+  </h1>
+  <div class="markdown level0 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html</a></p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
+    <div class="level2"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span></div>
+    <div class="level3"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span>&lt;<span class="xref">Java.Lang.Iterable</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Record.Record.html">Record</a>&gt;&gt;</div>
+    <div class="level4"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBaseEnumerable</span>&lt;<span class="xref">Java.Lang.Iterable</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Record.Record.html">Record</a>&gt;&gt;</div>
+    <div class="level5"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBaseEnumerable</span>&lt;<span class="xref">Java.Lang.Iterable</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Record.Record.html">Record</a>&gt;, <a class="xref" href="Org.Apache.Kafka.Common.Record.Record.html">Record</a>&gt;</div>
+    <div class="level6"><span class="xref">MASES.JNet.Specific.JNetAsyncEnumerable</span>&lt;<span class="xref">Java.Lang.Iterable</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Record.Record.html">Record</a>&gt;, <a class="xref" href="Org.Apache.Kafka.Common.Record.Record.html">Record</a>&gt;</div>
+    <div class="level7"><span class="xref">Java.Lang.Iterable</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Record.Record.html">Record</a>&gt;</div>
+    <div class="level8"><span class="xref">RecordBatch</span></div>
+      <div class="level9"><a class="xref" href="Org.Apache.Kafka.Common.Record.MutableRecordBatch.html">MutableRecordBatch</a></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IEnumerableExtension</span></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Record.Record.html">Record</a>&gt;</div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Record.Record.html">Record</a>&gt;</div>
+    <div><a class="xref" href="Org.Apache.Kafka.Common.Record.IRecordBatch.html">IRecordBatch</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;.Iterator</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JNet.Specific.JNetAsyncEnumerable&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;, Org.Apache.Kafka.Common.Record.Record&gt;.GetAsyncEnumerator(System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBaseEnumerable&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;, Org.Apache.Kafka.Common.Record.Record&gt;.GetEnumerator()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBaseEnumerable&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.GetEnumerator()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBaseEnumerable&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.MASES.JCOBridge.C2JBridge.IEnumerableExtension.UsePrefetch</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBaseEnumerable&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.MASES.JCOBridge.C2JBridge.IEnumerableExtension.UseThread</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBaseEnumerable&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.MASES.JCOBridge.C2JBridge.IEnumerableExtension.ConverterBridge</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.SExecute(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.SExecute(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.SExecute&lt;TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.SExecute&lt;TReturn&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.SExecute(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.SExecute(System.Type, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.SExecute&lt;TNewClass, TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.SExecute&lt;TNewClass, TReturn&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.SExecute&lt;TReturn&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.SExecute&lt;TReturn&gt;(System.Type, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.SExecute&lt;TReturn, TConverter&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.SExecute&lt;TReturn, TConverter&gt;(System.Type, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.SExecuteArray&lt;T&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.SExecuteArray&lt;T&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.SGetField(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.SGetField(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.SGetField&lt;TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.SGetField&lt;TReturn&gt;(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.SGetFieldArray&lt;TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.SGetFieldArray&lt;TReturn&gt;(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.SSetField(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.SSetField(System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.SSetField&lt;TValue&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, TValue)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.SSetField&lt;TValue&gt;(System.String, TValue)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.IsAssignableFrom(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.IsAssignableFrom(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.IsAssignableFrom&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.New(System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.Execute&lt;T&gt;(T[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.DynBridgeClazz</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.BridgeClazz</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.DynBridgeClazz</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.BridgeClazz</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClazzOf&lt;TClass&gt;(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClazzOf(System.String, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClassNameOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClassOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TReturn&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInstanceOf(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInstanceOf(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInstanceOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.CastTo&lt;TNewClass&gt;(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Dispose()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Notify()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.NotifyAll()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wait()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wait(System.Int64)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wait(System.Int64, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TReturn&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TNewClass, TReturn&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TNewClass, TReturn, TConverter&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecuteArray&lt;T&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IGetField(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IGetField&lt;TReturn&gt;(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IGetFieldArray&lt;TReturn&gt;(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ISetField(System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ISetField&lt;TValue&gt;(System.String, TValue)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.DynBridgeInstance</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.BridgeInstance</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsBridgeListener</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember#system-dynamic-dynamicobject-trygetmember(system-dynamic-getmemberbinder-system-object@)">DynamicObject.TryGetMember(GetMemberBinder, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetmember#system-dynamic-dynamicobject-trysetmember(system-dynamic-setmemberbinder-system-object)">DynamicObject.TrySetMember(SetMemberBinder, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeletemember#system-dynamic-dynamicobject-trydeletemember(system-dynamic-deletememberbinder)">DynamicObject.TryDeleteMember(DeleteMemberBinder)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvokemember#system-dynamic-dynamicobject-tryinvokemember(system-dynamic-invokememberbinder-system-object()-system-object@)">DynamicObject.TryInvokeMember(InvokeMemberBinder, Object[], Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryconvert#system-dynamic-dynamicobject-tryconvert(system-dynamic-convertbinder-system-object@)">DynamicObject.TryConvert(ConvertBinder, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trycreateinstance#system-dynamic-dynamicobject-trycreateinstance(system-dynamic-createinstancebinder-system-object()-system-object@)">DynamicObject.TryCreateInstance(CreateInstanceBinder, Object[], Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvoke#system-dynamic-dynamicobject-tryinvoke(system-dynamic-invokebinder-system-object()-system-object@)">DynamicObject.TryInvoke(InvokeBinder, Object[], Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trybinaryoperation#system-dynamic-dynamicobject-trybinaryoperation(system-dynamic-binaryoperationbinder-system-object-system-object@)">DynamicObject.TryBinaryOperation(BinaryOperationBinder, Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryunaryoperation#system-dynamic-dynamicobject-tryunaryoperation(system-dynamic-unaryoperationbinder-system-object@)">DynamicObject.TryUnaryOperation(UnaryOperationBinder, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetindex#system-dynamic-dynamicobject-trygetindex(system-dynamic-getindexbinder-system-object()-system-object@)">DynamicObject.TryGetIndex(GetIndexBinder, Object[], Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetindex#system-dynamic-dynamicobject-trysetindex(system-dynamic-setindexbinder-system-object()-system-object)">DynamicObject.TrySetIndex(SetIndexBinder, Object[], Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeleteindex#system-dynamic-dynamicobject-trydeleteindex(system-dynamic-deleteindexbinder-system-object())">DynamicObject.TryDeleteIndex(DeleteIndexBinder, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames#system-dynamic-dynamicobject-getdynamicmembernames">DynamicObject.GetDynamicMemberNames()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getmetaobject#system-dynamic-dynamicobject-getmetaobject(system-linq-expressions-expression)">DynamicObject.GetMetaObject(Expression)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals#system-object-referenceequals(system-object-system-object)">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype#system-object-gettype">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone#system-object-memberwiseclone">Object.MemberwiseClone()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Org.Apache.Kafka.Common.Record.html">Org.Apache.Kafka.Common.Record</a></h6>
+  <h6><strong>Assembly</strong>: MASES.KNet.dll</h6>
+  <h5 id="Org_Apache_Kafka_Common_Record_RecordBatch_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class RecordBatch : Iterable&lt;Record&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IEnumerableExtension, IEnumerable&lt;Record&gt;, IEnumerable, IAsyncEnumerable&lt;Record&gt;, IRecordBatch</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch__ctor.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/AllPackageClasses.cs/#L639">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch__ctor_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.#ctor*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch__ctor" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.#ctor">RecordBatch()</h4>
+  <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RecordBatch()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch__ctor_System_Object___.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.%23ctor(System.Object%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/AllPackageClasses.cs/#L643">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch__ctor_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.#ctor*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch__ctor_System_Object___" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.#ctor(System.Object[])">RecordBatch(Object[])</h4>
+  <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RecordBatch(params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_BridgeClassName.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.BridgeClassName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/AllPackageClasses.cs/#L650">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_BridgeClassName_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.BridgeClassName*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_BridgeClassName" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.BridgeClassName">BridgeClassName</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string BridgeClassName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;.BridgeClassName</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_CURRENT_MAGIC_VALUE.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.CURRENT_MAGIC_VALUE%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L61">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_CURRENT_MAGIC_VALUE_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.CURRENT_MAGIC_VALUE*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_CURRENT_MAGIC_VALUE" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.CURRENT_MAGIC_VALUE">CURRENT_MAGIC_VALUE</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#CURRENT_MAGIC_VALUE">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#CURRENT_MAGIC_VALUE</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static byte CURRENT_MAGIC_VALUE { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_IsBridgeAbstract.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.IsBridgeAbstract%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/AllPackageClasses.cs/#L654">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_IsBridgeAbstract_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.IsBridgeAbstract*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.IsBridgeAbstract">IsBridgeAbstract</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeAbstract { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsBridgeAbstract</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_IsBridgeCloseable.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.IsBridgeCloseable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/AllPackageClasses.cs/#L658">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_IsBridgeCloseable_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.IsBridgeCloseable*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.IsBridgeCloseable">IsBridgeCloseable</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeCloseable { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsBridgeCloseable</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_IsBridgeInterface.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.IsBridgeInterface%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/AllPackageClasses.cs/#L662">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_IsBridgeInterface_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.IsBridgeInterface*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_IsBridgeInterface" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.IsBridgeInterface">IsBridgeInterface</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeInterface { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Java.Lang.Iterable&lt;Org.Apache.Kafka.Common.Record.Record&gt;.IsBridgeInterface</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_IsBridgeStatic.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.IsBridgeStatic%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/AllPackageClasses.cs/#L666">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_IsBridgeStatic_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.IsBridgeStatic*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_IsBridgeStatic" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.IsBridgeStatic">IsBridgeStatic</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeStatic { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsBridgeStatic</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_MAGIC_VALUE_V0.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.MAGIC_VALUE_V0%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L65">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_MAGIC_VALUE_V0_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.MAGIC_VALUE_V0*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_MAGIC_VALUE_V0" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.MAGIC_VALUE_V0">MAGIC_VALUE_V0</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#MAGIC_VALUE_V0">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#MAGIC_VALUE_V0</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static byte MAGIC_VALUE_V0 { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_MAGIC_VALUE_V1.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.MAGIC_VALUE_V1%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L69">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_MAGIC_VALUE_V1_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.MAGIC_VALUE_V1*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_MAGIC_VALUE_V1" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.MAGIC_VALUE_V1">MAGIC_VALUE_V1</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#MAGIC_VALUE_V1">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#MAGIC_VALUE_V1</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static byte MAGIC_VALUE_V1 { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_MAGIC_VALUE_V2.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.MAGIC_VALUE_V2%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L73">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_MAGIC_VALUE_V2_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.MAGIC_VALUE_V2*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_MAGIC_VALUE_V2" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.MAGIC_VALUE_V2">MAGIC_VALUE_V2</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#MAGIC_VALUE_V2">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#MAGIC_VALUE_V2</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static byte MAGIC_VALUE_V2 { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_NO_PARTITION_LEADER_EPOCH.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.NO_PARTITION_LEADER_EPOCH%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L77">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_NO_PARTITION_LEADER_EPOCH_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.NO_PARTITION_LEADER_EPOCH*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_NO_PARTITION_LEADER_EPOCH" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.NO_PARTITION_LEADER_EPOCH">NO_PARTITION_LEADER_EPOCH</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#NO_PARTITION_LEADER_EPOCH">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#NO_PARTITION_LEADER_EPOCH</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int NO_PARTITION_LEADER_EPOCH { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_NO_PRODUCER_EPOCH.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.NO_PRODUCER_EPOCH%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L93">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_NO_PRODUCER_EPOCH_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.NO_PRODUCER_EPOCH*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_NO_PRODUCER_EPOCH" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.NO_PRODUCER_EPOCH">NO_PRODUCER_EPOCH</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#NO_PRODUCER_EPOCH">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#NO_PRODUCER_EPOCH</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static short NO_PRODUCER_EPOCH { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">Int16</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_NO_PRODUCER_ID.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.NO_PRODUCER_ID%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L85">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_NO_PRODUCER_ID_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.NO_PRODUCER_ID*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_NO_PRODUCER_ID" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.NO_PRODUCER_ID">NO_PRODUCER_ID</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#NO_PRODUCER_ID">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#NO_PRODUCER_ID</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static long NO_PRODUCER_ID { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_NO_SEQUENCE.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.NO_SEQUENCE%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L81">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_NO_SEQUENCE_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.NO_SEQUENCE*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_NO_SEQUENCE" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.NO_SEQUENCE">NO_SEQUENCE</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#NO_SEQUENCE">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#NO_SEQUENCE</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int NO_SEQUENCE { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_NO_TIMESTAMP.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.NO_TIMESTAMP%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L89">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_NO_TIMESTAMP_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.NO_TIMESTAMP*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_NO_TIMESTAMP" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.NO_TIMESTAMP">NO_TIMESTAMP</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#NO_TIMESTAMP">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#NO_TIMESTAMP</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static long NO_TIMESTAMP { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_BaseOffset.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.BaseOffset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L215">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_BaseOffset_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.BaseOffset*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_BaseOffset" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.BaseOffset">BaseOffset()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#baseOffset--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#baseOffset--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long BaseOffset()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_BaseSequence.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.BaseSequence%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L161">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_BaseSequence_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.BaseSequence*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_BaseSequence" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.BaseSequence">BaseSequence()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#baseSequence--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#baseSequence--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int BaseSequence()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_Checksum.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.Checksum%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L224">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_Checksum_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.Checksum*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_Checksum" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.Checksum">Checksum()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#checksum--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#checksum--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long Checksum()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_CompressionType.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.CompressionType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L269">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_CompressionType_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.CompressionType*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_CompressionType" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.CompressionType">CompressionType()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#compressionType--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#compressionType--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CompressionType CompressionType()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Common.Record.CompressionType.html">CompressionType</a></td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Record.CompressionType.html">CompressionType</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_CountOrNull.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.CountOrNull%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L197">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_CountOrNull_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.CountOrNull*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_CountOrNull" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.CountOrNull">CountOrNull()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#countOrNull--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#countOrNull--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Integer CountOrNull()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.lang.integer">Integer</a></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.lang.integer">Integer</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_DeleteHorizonMs.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.DeleteHorizonMs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L206">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_DeleteHorizonMs_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.DeleteHorizonMs*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_DeleteHorizonMs" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.DeleteHorizonMs">DeleteHorizonMs()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#deleteHorizonMs--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#deleteHorizonMs--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OptionalLong DeleteHorizonMs()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.optionallong">OptionalLong</a></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.util.optionallong">OptionalLong</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_EnsureValid.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.EnsureValid%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L303">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_EnsureValid_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.EnsureValid*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_EnsureValid" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.EnsureValid">EnsureValid()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#ensureValid--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#ensureValid--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EnsureValid()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_HasProducerId.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.HasProducerId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L107">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_HasProducerId_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.HasProducerId*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_HasProducerId" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.HasProducerId">HasProducerId()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#hasProducerId--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#hasProducerId--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasProducerId()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_IsCompressed.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.IsCompressed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L116">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_IsCompressed_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.IsCompressed*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_IsCompressed" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.IsCompressed">IsCompressed()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#isCompressed--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#isCompressed--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsCompressed()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_IsControlBatch.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.IsControlBatch%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L125">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_IsControlBatch_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.IsControlBatch*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_IsControlBatch" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.IsControlBatch">IsControlBatch()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#isControlBatch--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#isControlBatch--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsControlBatch()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_IsTransactional.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.IsTransactional%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L134">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_IsTransactional_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.IsTransactional*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_IsTransactional" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.IsTransactional">IsTransactional()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#isTransactional--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#isTransactional--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsTransactional()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_IsValid.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.IsValid%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L143">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_IsValid_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.IsValid*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_IsValid" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.IsValid">IsValid()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#isValid--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#isValid--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsValid()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_LastOffset.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.LastOffset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L233">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_LastOffset_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.LastOffset*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_LastOffset" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.LastOffset">LastOffset()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#lastOffset--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#lastOffset--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long LastOffset()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_LastSequence.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.LastSequence%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L170">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_LastSequence_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.LastSequence*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_LastSequence" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.LastSequence">LastSequence()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#lastSequence--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#lastSequence--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int LastSequence()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_Magic.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.Magic%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L152">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_Magic_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.Magic*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_Magic" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.Magic">Magic()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#magic--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#magic--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte Magic()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_MaxTimestamp.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.MaxTimestamp%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L242">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_MaxTimestamp_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.MaxTimestamp*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_MaxTimestamp" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.MaxTimestamp">MaxTimestamp()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#maxTimestamp--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#maxTimestamp--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long MaxTimestamp()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_NextOffset.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.NextOffset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L251">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_NextOffset_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.NextOffset*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_NextOffset" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.NextOffset">NextOffset()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#nextOffset--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#nextOffset--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long NextOffset()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_PartitionLeaderEpoch.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.PartitionLeaderEpoch%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L179">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_PartitionLeaderEpoch_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.PartitionLeaderEpoch*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_PartitionLeaderEpoch" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.PartitionLeaderEpoch">PartitionLeaderEpoch()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#partitionLeaderEpoch--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#partitionLeaderEpoch--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int PartitionLeaderEpoch()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_ProducerEpoch.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.ProducerEpoch%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L296">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_ProducerEpoch_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.ProducerEpoch*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_ProducerEpoch" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.ProducerEpoch">ProducerEpoch()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#producerEpoch--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#producerEpoch--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public short ProducerEpoch()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">Int16</a></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">Int16</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_ProducerId.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.ProducerId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L260">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_ProducerId_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.ProducerId*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_ProducerId" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.ProducerId">ProducerId()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#producerId--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#producerId--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long ProducerId()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_SizeInBytes.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.SizeInBytes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L188">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_SizeInBytes_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.SizeInBytes*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_SizeInBytes" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.SizeInBytes">SizeInBytes()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#sizeInBytes--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#sizeInBytes--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int SizeInBytes()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_StreamingIterator_Org_Apache_Kafka_Common_Utils_BufferSupplier_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.StreamingIterator(Org.Apache.Kafka.Common.Utils.BufferSupplier)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L287">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_StreamingIterator_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.StreamingIterator*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_StreamingIterator_Org_Apache_Kafka_Common_Utils_BufferSupplier_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.StreamingIterator(Org.Apache.Kafka.Common.Utils.BufferSupplier)">StreamingIterator(BufferSupplier)</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#streamingIterator-org.apache.kafka.common.utils.BufferSupplier-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#streamingIterator-org.apache.kafka.common.utils.BufferSupplier-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CloseableIterator&lt;Record&gt; StreamingIterator(BufferSupplier arg0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Common.Utils.BufferSupplier.html">BufferSupplier</a></td>
+        <td><span class="parametername">arg0</span></td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Utils.BufferSupplier.html">BufferSupplier</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Common.Utils.CloseableIterator-1.html">CloseableIterator</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Record.Record.html">Record</a>&gt;</td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Utils.CloseableIterator.html">CloseableIterator</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_TimestampType.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.TimestampType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L278">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_TimestampType_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.TimestampType*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_TimestampType" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.TimestampType">TimestampType()</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#timestampType--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#timestampType--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimestampType TimestampType()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Org.Apache.Kafka.Common.Record.TimestampType.html">TimestampType</a></td>
+        <td><p><a class="xref" href="Org.Apache.Kafka.Common.Record.TimestampType.html">TimestampType</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch_WriteTo_Java_Nio_ByteBuffer_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch.WriteTo(Java.Nio.ByteBuffer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L311">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Common_Record_RecordBatch_WriteTo_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.WriteTo*"></a>
+  <h4 id="Org_Apache_Kafka_Common_Record_RecordBatch_WriteTo_Java_Nio_ByteBuffer_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.WriteTo(Java.Nio.ByteBuffer)">WriteTo(ByteBuffer)</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#writeTo-java.nio.ByteBuffer-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/record/RecordBatch.html#writeTo-java.nio.ByteBuffer-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteTo(ByteBuffer arg0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.nio.bytebuffer">ByteBuffer</a></td>
+        <td><span class="parametername">arg0</span></td>
+        <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.nio.bytebuffer">ByteBuffer</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">System.Dynamic.IDynamicMetaObjectProvider</a>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span>
+  </div>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IEnumerableExtension</span>
+  </div>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">System.Collections.Generic.IEnumerable&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">System.Collections.IEnumerable</a>
+  </div>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">System.Collections.Generic.IAsyncEnumerable&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Org.Apache.Kafka.Common.Record.IRecordBatch.html">IRecordBatch</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Common_Record_RecordBatch.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Common.Record.RecordBatch%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L47" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 MASES s.r.l..<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

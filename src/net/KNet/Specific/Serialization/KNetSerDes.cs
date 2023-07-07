@@ -17,53 +17,54 @@
 */
 
 using Java.Nio;
-using MASES.KNet.Common.Header;
-using MASES.KNet.Common.Serialization;
+using Org.Apache.Kafka.Common.Header;
+using Org.Apache.Kafka.Common.Serialization;
 using System;
 
 namespace MASES.KNet.Serialization
 {
+    /// <summary>
+    /// Common serializer/deserializer
+    /// </summary>
+    /// <typeparam name="T">The type to serialize/deserialize</typeparam>
     public class KNetSerDes<T> : IKNetSerializer<T>, IKNetDeserializer<T>
     {
-        readonly bool _IsGenericTypeManaged = KNetSerialization.IsInternalManaged<T>();
+        readonly bool _ManagesAnyType = KNetSerialization.IsInternalManaged<T>();
         readonly KNetSerialization.SerializationType _SerializationType = KNetSerialization.InternalSerDesType<T>();
         Serializer<byte[]> _KafkaSerializer = new ByteArraySerializer();
         Deserializer<byte[]> _KafkaDeserializer = new ByteArrayDeserializer();
-        readonly Func<string, byte[], T> _deserializeFun = null;
-        readonly Func<string, Headers, byte[], T> _deserializeWithHeadersFun = null;
-        readonly Func<string, T, byte[]> _serializeFun = null;
-        readonly Func<string, Headers, T, byte[]> _serializeWithHeadersFun = null;
-
+        /// <summary>
+        /// Initialize a new <see cref="KNetSerDes{T}"/>
+        /// </summary>
+        /// <exception cref="InvalidOperationException">The <typeparamref name="T"/> needs an external serializer</exception>
         public KNetSerDes()
         {
-            if (!IsGenericTypeManaged) throw new InvalidOperationException($"{typeof(T)} needs an external serializer, use a different constructor.");
+            if (!ManagesAnyType) throw new InvalidOperationException($"{typeof(T)} needs an external serializer, use a different constructor.");
         }
-
-        public KNetSerDes(Func<string, T, byte[]> serializeFun)
-        {
-            _serializeFun = serializeFun;
-        }
-
-        public KNetSerDes(Func<string, Headers, T, byte[]> serializeWithHeadersFun)
-        {
-            _serializeWithHeadersFun = serializeWithHeadersFun;
-        }
-
-        public KNetSerDes(Func<string, byte[], T> deserializeFun)
-        {
-            _deserializeFun = deserializeFun;
-        }
-
-        public KNetSerDes(Func<string, Headers, byte[], T> deserializeWithHeadersFun)
-        {
-            _deserializeWithHeadersFun = deserializeWithHeadersFun;
-        }
-
+        /// <summary>
+        /// External serialization function
+        /// </summary>
+        public Func<string, T, byte[]> OnSerialize { get; set; }
+        /// <summary>
+        /// External serialization function using <see cref="Headers"/>
+        /// </summary>
+        public Func<string, Headers, T, byte[]> OnSerializeWithHeaders { get; set; }
+        /// <summary>
+        /// External deserialization function
+        /// </summary>
+        public Func<string, byte[], T> OnDeserialize { get; set; }
+        /// <summary>
+        /// External deserialization function using <see cref="Headers"/>
+        /// </summary>
+        public Func<string, Headers, byte[], T> OnDeserializeWithHeaders { get; set; }
+        /// <summary>
+        /// Finalizer
+        /// </summary>
         ~KNetSerDes()
         {
             Dispose();
         }
-
+        /// <inheritdoc cref="IDisposable.Dispose"/>
         public void Dispose()
         {
             GC.SuppressFinalize(this);
@@ -72,26 +73,28 @@ namespace MASES.KNet.Serialization
             _KafkaDeserializer?.Dispose();
             _KafkaDeserializer = null;
         }
-
-        protected virtual bool IsGenericTypeManaged => _IsGenericTypeManaged;
-
+        /// <summary>
+        /// Override in derived classes to indicate the class is able to manage complex types, default is the result of <see cref="KNetSerialization.IsInternalManaged{T}()"/>
+        /// </summary>
+        protected virtual bool ManagesAnyType => _ManagesAnyType;
+        /// <inheritdoc cref="IKNetSerializer{T}.KafkaSerializer"/>
         public Serializer<byte[]> KafkaSerializer => _KafkaSerializer;
-
+        /// <inheritdoc cref="IKNetDeserializer{T}.KafkaDeserializer"/>
         public Deserializer<byte[]> KafkaDeserializer => _KafkaDeserializer;
-
+        /// <inheritdoc cref="IKNetDeserializer{T}.UseHeaders"/>
         public virtual bool UseHeaders => false;
-
+        /// <inheritdoc cref="IKNetSerializer{T}.Serialize(string, T)"/>
         public virtual byte[] Serialize(string topic, T data)
         {
-            if (_serializeFun != null)
+            if (OnSerialize != null)
             {
-                return _serializeFun.Invoke(topic, data);
+                return OnSerialize.Invoke(topic, data);
             }
             return _SerializationType switch
             {
                 KNetSerialization.SerializationType.ByteArray => KNetSerialization.SerializeByteArray(topic, data as byte[]),
                 KNetSerialization.SerializationType.ByteBuffer => KNetSerialization.SerializeByteBuffer(topic, data as ByteBuffer),
-                KNetSerialization.SerializationType.Bytes => KNetSerialization.SerializeBytes(topic, data as Common.Utils.Bytes),
+                KNetSerialization.SerializationType.Bytes => KNetSerialization.SerializeBytes(topic, data as Org.Apache.Kafka.Common.Utils.Bytes),
                 KNetSerialization.SerializationType.Double => KNetSerialization.SerializeDouble(topic, (double)Convert.ChangeType(data, typeof(double))),
                 KNetSerialization.SerializationType.Float => KNetSerialization.SerializeFloat(topic, (float)Convert.ChangeType(data, typeof(float))),
                 KNetSerialization.SerializationType.Int => KNetSerialization.SerializeInt(topic, (int)Convert.ChangeType(data, typeof(int))),
@@ -103,22 +106,22 @@ namespace MASES.KNet.Serialization
                 _ => default,
             };
         }
-
+        /// <inheritdoc cref="IKNetSerializer{T}.SerializeWithHeaders(string, Headers, T)"/>
         public virtual byte[] SerializeWithHeaders(string topic, Headers headers, T data)
         {
-            if (_serializeWithHeadersFun != null)
+            if (OnSerializeWithHeaders != null)
             {
-                return _serializeWithHeadersFun.Invoke(topic, headers, data);
+                return OnSerializeWithHeaders.Invoke(topic, headers, data);
             }
             return Serialize(topic, data);
         }
 
-
+        /// <inheritdoc cref="IKNetDeserializer{T}.Deserialize(string, byte[])"/>
         public virtual T Deserialize(string topic, byte[] data)
         {
-            if (_deserializeFun != null)
+            if (OnDeserialize != null)
             {
-                return _deserializeFun.Invoke(topic, data);
+                return OnDeserialize.Invoke(topic, data);
             }
             return _SerializationType switch
             {
@@ -135,12 +138,12 @@ namespace MASES.KNet.Serialization
                 _ => default,
             };
         }
-
+        /// <inheritdoc cref="IKNetDeserializer{T}.DeserializeWithHeaders(string, Headers, byte[])"/>
         public virtual T DeserializeWithHeaders(string topic, Headers headers, byte[] data)
         {
-            if (_deserializeWithHeadersFun != null)
+            if (OnDeserializeWithHeaders != null)
             {
-                return _deserializeWithHeadersFun.Invoke(topic, headers, data);
+                return OnDeserializeWithHeaders.Invoke(topic, headers, data);
             }
 
             return Deserialize(topic, data);

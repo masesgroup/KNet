@@ -1,10 +1,11 @@
 ﻿using MASES.KNet;
-using MASES.KNet.Clients.Consumer;
-using MASES.KNet.Common.Serialization;
+using Org.Apache.Kafka.Clients.Consumer;
+using Org.Apache.Kafka.Common.Serialization;
 using Java.Util;
 using System;
 using System.Text;
 using System.Threading;
+using MASES.KNet.Consumer;
 
 namespace MASES.KNetTemplate.KNetConsumer
 {
@@ -61,31 +62,39 @@ namespace MASES.KNetTemplate.KNetConsumer
             {
                 if (useSerdes)
                 {
-                    keyDeserializer = new Deserializer<string>(deserializeFun: (topic, data) =>
+                    keyDeserializer = new Deserializer<string>()
                     {
-                        var key = Encoding.Unicode.GetString(data);
-                        Console.WriteLine("Received key {0} from topic {1}", key, topic);
-                        return key;
-                    });
-                    valueDeserializer = new Deserializer<string>(deserializeFun: (topic, data) =>
+                        OnDeserialize = (topic, data) =>
+                        {
+                            var key = Encoding.Unicode.GetString(data);
+                            Console.WriteLine("Received key {0} from topic {1}", key, topic);
+                            return key;
+                        }
+                    };
+                    valueDeserializer = new Deserializer<string>()
                     {
-                        var value = Encoding.Unicode.GetString(data);
-                        Console.WriteLine("Received value {0} from topic {1}", value, topic);
-                        return value;
-                    });
+                        OnDeserialize = (topic, data) =>
+                        {
+                            var value = Encoding.Unicode.GetString(data);
+                            Console.WriteLine("Received value {0} from topic {1}", value, topic);
+                            return value;
+                        }
+                    };
                 }
 
                 if (useCallback)
                 {
-                    rebalanceListener = new ConsumerRebalanceListener(
-                        revoked: (o) =>
+                    rebalanceListener = new ConsumerRebalanceListener()
+                    {
+                        OnOnPartitionsRevoked = (o) =>
                         {
                             Console.WriteLine("Revoked: {0}", o.ToString());
                         },
-                        assigned: (o) =>
+                        OnOnPartitionsAssigned = (o) =>
                         {
                             Console.WriteLine("Assigned: {0}", o.ToString());
-                        });
+                        }
+                    };
                 }
 
                 Console.CancelKeyPress += Console_CancelKeyPress;
@@ -101,7 +110,7 @@ namespace MASES.KNetTemplate.KNetConsumer
                         var records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);
                         foreach (var item in records)
                         {
-                            Console.WriteLine($"Consuming from Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}");
+                            Console.WriteLine($"Consuming from Offset = {item.Offset()}, Key = {item.Key()}, Value = {item.Value()}");
                         }
                     }
                 }

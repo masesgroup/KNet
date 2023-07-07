@@ -18,14 +18,18 @@
 
 using Java.Util;
 using MASES.JCOBridge.C2JBridge;
-using MASES.KNet.Clients.Admin;
-using MASES.KNet.Clients.Consumer;
-using MASES.KNet.Clients.Producer;
+using MASES.KNet.Admin;
 using MASES.KNet.Common;
-using MASES.KNet.Common.Config;
-using MASES.KNet.Common.Errors;
+using MASES.KNet.Consumer;
 using MASES.KNet.Extensions;
+using MASES.KNet.Producer;
 using MASES.KNet.Serialization;
+using Org.Apache.Kafka.Clients.Admin;
+using Org.Apache.Kafka.Clients.Consumer;
+using Org.Apache.Kafka.Clients.Producer;
+using Org.Apache.Kafka.Common;
+using Org.Apache.Kafka.Common.Config;
+using Org.Apache.Kafka.Common.Errors;
 using System;
 using System.Collections;
 using System.Collections.Concurrent;
@@ -350,7 +354,7 @@ namespace MASES.KNet
                                                             .WithMinCleanableDirtyRatio(0.01)
                                                             .WithSegmentMs(100);
 
-                TopicConfig.CleanupPolicy = MASES.KNet.Common.Config.TopicConfig.CleanupPolicy.Compact | MASES.KNet.Common.Config.TopicConfig.CleanupPolicy.Delete;
+                TopicConfig.CleanupPolicy = TopicConfigBuilder.CleanupPolicyTypes.Compact | TopicConfigBuilder.CleanupPolicyTypes.Delete;
                 topic = topic.Configs(TopicConfig);
                 try
                 {
@@ -364,7 +368,7 @@ namespace MASES.KNet
             if (AccessRights.HasFlag(AccessRightsType.Read))
             {
                 _consumerConfig ??= ConsumerConfigBuilder.Create().WithEnableAutoCommit(true)
-                                                                  .WithAutoOffsetReset(Clients.Consumer.ConsumerConfig.AutoOffsetReset.EARLIEST)
+                                                                  .WithAutoOffsetReset(ConsumerConfigBuilder.AutoOffsetResetTypes.EARLIEST)
                                                                   .WithAllowAutoCreateTopics(false);
 
                 ConsumerConfig.BootstrapServers = BootstrapServers;
@@ -385,12 +389,16 @@ namespace MASES.KNet
 
                 _consumer = new KNetConsumer<TKey, TValue>(ConsumerConfig, KeySerDes, ValueSerDes);
                 _consumer.SetCallback(OnMessage);
-                _consumerListener = new ConsumerRebalanceListener(OnTopicPartitionsRevoked, OnTopicPartitionsAssigned);
+                _consumerListener = new ConsumerRebalanceListener()
+                {
+                    OnOnPartitionsRevoked = OnTopicPartitionsRevoked,
+                    OnOnPartitionsAssigned = OnTopicPartitionsAssigned
+                };
             }
 
             if (AccessRights.HasFlag(AccessRightsType.Write))
             {
-                _producerConfig ??= ProducerConfigBuilder.Create().WithAcks(Clients.Producer.ProducerConfig.Acks.All)
+                _producerConfig ??= ProducerConfigBuilder.Create().WithAcks(ProducerConfigBuilder.AcksTypes.All)
                                                                   .WithRetries(0)
                                                                   .WithLingerMs(1);
 
@@ -476,21 +484,21 @@ namespace MASES.KNet
         }
 
         /// <summary>
-        /// Gets an <see cref="ICollection{TKey}"/> containing the keys of this <see cref="KNetCompactedReplicator{TKey, TValue}"/>
+        /// Gets an <see cref="System.Collections.Generic.ICollection{TKey}"/> containing the keys of this <see cref="KNetCompactedReplicator{TKey, TValue}"/>
         /// </summary>
-        /// <returns><see cref="ICollection{TKey}"/> containing the keys of this <see cref="KNetCompactedReplicator{TKey, TValue}"/></returns>
+        /// <returns><see cref="System.Collections.Generic.ICollection{TKey}"/> containing the keys of this <see cref="KNetCompactedReplicator{TKey, TValue}"/></returns>
         /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Read"/> flag</exception>
-        public ICollection<TKey> Keys
+        public System.Collections.Generic.ICollection<TKey> Keys
         {
             get { return ValidateAndGetLocalDictionary().Keys; }
         }
 
         /// <summary>
-        /// Gets an <see cref="ICollection{TValue}"/> containing the values of this <see cref="KNetCompactedReplicator{TKey, TValue}"/>
+        /// Gets an <see cref="System.Collections.Generic.ICollection{TValue}"/> containing the values of this <see cref="KNetCompactedReplicator{TKey, TValue}"/>
         /// </summary>
-        /// <returns><see cref="ICollection{TValue}"/> containing the values of this <see cref="KNetCompactedReplicator{TKey, TValue}"/></returns>
+        /// <returns><see cref="System.Collections.Generic.ICollection{TValue}"/> containing the values of this <see cref="KNetCompactedReplicator{TKey, TValue}"/></returns>
         /// <exception cref="InvalidOperationException">The provided <see cref="AccessRights"/> do not include the <see cref="AccessRightsType.Read"/> flag</exception>
-        public ICollection<TValue> Values
+        public System.Collections.Generic.ICollection<TValue> Values
         {
             get { return ValidateAndGetLocalDictionary().Values; }
         }
@@ -514,7 +522,7 @@ namespace MASES.KNet
         }
 
         /// <summary>
-        /// Adds or updates the <paramref name="item"/> in this and others <see cref="KNetCompactedReplicator{TKey, TValue}"/> in the way defined by the <see cref="UpdateModes"/> provided
+        /// Adds or updates the <paramref name="key"/> in this and others <see cref="KNetCompactedReplicator{TKey, TValue}"/> in the way defined by the <see cref="UpdateModeTypes"/> provided
         /// </summary>
         /// <param name="key">The object to use as the key of the element to add</param>
         /// <param name="value">The object to use as the value of the element to add. null means remove <paramref name="key"/></param>
@@ -526,7 +534,7 @@ namespace MASES.KNet
         }
 
         /// <summary>
-        /// Adds or updates the <paramref name="item"/> in this and others <see cref="KNetCompactedReplicator{TKey, TValue}"/> in the way defined by the <see cref="UpdateModes"/> provided
+        /// Adds or updates the <paramref name="item"/> in this and others <see cref="KNetCompactedReplicator{TKey, TValue}"/> in the way defined by the <see cref="UpdateModeTypes"/> provided
         /// </summary>
         /// <param name="item">The item to add or updates. Value == null means remove key</param>
         /// <exception cref="ArgumentNullException"><paramref name="item"/>.Key is null</exception>
@@ -597,7 +605,7 @@ namespace MASES.KNet
         }
 
         /// <summary>
-        /// Removes the <paramref name="key"/> from this and others <see cref="KNetCompactedReplicator{TKey, TValue}"/> in the way defined by the <see cref="UpdateModes"/> provided
+        /// Removes the <paramref name="key"/> from this and others <see cref="KNetCompactedReplicator{TKey, TValue}"/> in the way defined by the <see cref="UpdateModeTypes"/> provided
         /// </summary>
         /// <param name="key">The key of the element to remove</param>
         /// <returns><see langword="true"/> if the removal request is delivered to the others <see cref="KNetCompactedReplicator{TKey, TValue}"/></returns>
@@ -611,7 +619,7 @@ namespace MASES.KNet
         }
 
         /// <summary>
-        /// Removes the <paramref name="item"/> from this and others <see cref="KNetCompactedReplicator{TKey, TValue}"/> in the way defined by the <see cref="UpdateModes"/> provided
+        /// Removes the <paramref name="item"/> from this and others <see cref="KNetCompactedReplicator{TKey, TValue}"/> in the way defined by the <see cref="UpdateModeTypes"/> provided
         /// </summary>
         /// <param name="item">Item to be removed</param>
         /// <returns><see langword="true"/> if the removal request is delivered to the others <see cref="KNetCompactedReplicator{TKey, TValue}"/></returns>

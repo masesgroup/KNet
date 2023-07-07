@@ -19,11 +19,11 @@
 using Java.Util;
 using MASES.JCOBridge.C2JBridge;
 using MASES.KNet;
-using MASES.KNet.Clients.Consumer;
-using MASES.KNet.Common.Serialization;
-using MASES.KNet.Streams;
-using MASES.KNet.Streams.Errors;
-using MASES.KNet.Streams.KStream;
+using Org.Apache.Kafka.Clients.Consumer;
+using Org.Apache.Kafka.Common.Serialization;
+using Org.Apache.Kafka.Streams;
+using Org.Apache.Kafka.Streams.Errors;
+using Org.Apache.Kafka.Streams.Kstream;
 using MASES.KNet.TestCommon;
 using System;
 using System.Text.RegularExpressions;
@@ -82,8 +82,8 @@ namespace MASES.KNetTest
 
                 props.Put(StreamsConfig.APPLICATION_ID_CONFIG, "streams-pipe");
                 props.Put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
-                props.Put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String.Dyn().getClass());
-                props.Put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String.Dyn().getClass());
+                props.Put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().Dyn().getClass());
+                props.Put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().Dyn().getClass());
 
                 // setting offset reset to earliest so that we can re-run the demo code with the same pre-loaded data
                 props.Put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
@@ -97,7 +97,7 @@ namespace MASES.KNetTest
                     streams.Start();
                     while (!resetEvent.WaitOne(1000))
                     {
-                        var state = streams.State;
+                        var state = streams.StateMethod();
                         Console.WriteLine($"KafkaStreams state: {state}");
                     }
                 }
@@ -120,9 +120,8 @@ namespace MASES.KNetTest
 
                 props.Put(StreamsConfig.APPLICATION_ID_CONFIG, "WordCountDemo");
                 props.Put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
-                props.Put(StreamsConfig.CACHE_MAX_BYTES_BUFFERING_CONFIG, 0);
-                props.Put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String.Dyn().getClass());
-                props.Put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String.Dyn().getClass());
+                props.Put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().Dyn().getClass());
+                props.Put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().Dyn().getClass());
 
                 // setting offset reset to earliest so that we can re-run the demo code with the same pre-loaded data
                 props.Put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
@@ -137,28 +136,34 @@ namespace MASES.KNetTest
 
                     KStream<string, string> source = builder.Stream<string, string>(topicToUse);
 
-                    valueMapper = new ValueMapper<string, Java.Lang.Iterable<string>>((value) =>
+                    valueMapper = new ValueMapper<string, Java.Lang.Iterable<string>>()
                     {
-                        Regex regex = new("\\W+");
-
-                        ArrayList<string> arrayList = new();
-
-                        foreach (var item in regex.Split(value))
+                        OnApply = (value) =>
                         {
-                            arrayList.Add(item);
+                            Regex regex = new("\\W+");
+
+                            ArrayList<string> arrayList = new();
+
+                            foreach (var item in regex.Split(value))
+                            {
+                                arrayList.Add(item);
+                            }
+
+                            return arrayList; // value->Arrays.asList(value.toLowerCase(Locale.getDefault()).split("\\W+"))
                         }
+                    };
 
-                        return arrayList; // value->Arrays.asList(value.toLowerCase(Locale.getDefault()).split("\\W+"))
-                    });
-
-                    keyValuemapper = new KeyValueMapper<string, string, string>((key, value) =>
+                    keyValuemapper = new KeyValueMapper<string, string, string>()
                     {
-                        return value;
-                    });
+                        OnApply = (key, value) =>
+                        {
+                            return value;
+                        }
+                    };
 
-                    KTable<string, long> counts = source.FlatMapValues(valueMapper)
-                                                        .GroupBy(keyValuemapper)
-                                                        .Count();
+                    KTable<string, long?> counts = source.FlatMapValues<string, string, Java.Lang.Iterable<string>, string>(valueMapper)
+                                                         .GroupBy(keyValuemapper)
+                                                         .Count();
 
                     /***** version using Dynamic engine ******
                     
@@ -169,20 +174,23 @@ namespace MASES.KNetTest
                     ******************************************/
 
                     // need to override value serde to Long type
-                    counts.ToStream().To(OUTPUT_TOPIC, Produced<string, long>.With(Serdes.String, Serdes.Long));
+                    counts.ToStream().To(OUTPUT_TOPIC, Produced<string, long?>.With(Serdes.String(), Serdes.Long()));
 
                     using (var streams = new KafkaStreams(builder.Build(), props))
                     {
-                        errorHandler = new StreamsUncaughtExceptionHandler((exception) =>
+                        errorHandler = new StreamsUncaughtExceptionHandler()
                         {
-                            Console.WriteLine(exception.ToString());
-                            return StreamThreadExceptionResponse.SHUTDOWN_APPLICATION;
-                        });
+                            OnHandle = (exception) =>
+                            {
+                                Console.WriteLine(exception.ToString());
+                                return StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse.SHUTDOWN_APPLICATION;
+                            }
+                        };
                         streams.SetUncaughtExceptionHandler(errorHandler);
                         streams.Start();
                         while (!resetEvent.WaitOne(1000))
                         {
-                            var state = streams.State;
+                            var state = streams.StateMethod();
                             Console.WriteLine($"KafkaStreams state: {state}");
                         }
                     }

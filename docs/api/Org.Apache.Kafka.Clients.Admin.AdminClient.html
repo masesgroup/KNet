@@ -1,0 +1,1242 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class AdminClient
+   | KNet website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class AdminClient
+   | KNet website ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Org.Apache.Kafka.Clients.Admin.AdminClient">
+  
+  
+  <h1 id="Org_Apache_Kafka_Clients_Admin_AdminClient" data-uid="Org.Apache.Kafka.Clients.Admin.AdminClient" class="text-break">Class AdminClient
+  </h1>
+  <div class="markdown level0 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/admin/AdminClient.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/clients/admin/AdminClient.html</a></p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
+    <div class="level2"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span></div>
+    <div class="level3"><span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase</span>&lt;<span class="xref">Java.Lang.AutoCloseable</span>&gt;</div>
+    <div class="level4"><span class="xref">Java.Lang.AutoCloseable</span></div>
+    <div class="level5"><a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html">Admin</a></div>
+    <div class="level6"><span class="xref">AdminClient</span></div>
+      <div class="level7"><a class="xref" href="Org.Apache.Kafka.Clients.Admin.KafkaAdminClient.html">KafkaAdminClient</a></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span></div>
+    <div><a class="xref" href="Org.Apache.Kafka.Clients.Admin.IAdmin.html">IAdmin</a></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span></div>
+    <div><span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/java.lang.iautocloseable">IAutoCloseable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_Create_Java_Util_Map_System_String_System_Object__">Admin.Create(Map&lt;String, Object&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_Create_Java_Util_Properties_">Admin.Create(Properties)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_Metrics__1">Admin.Metrics&lt;ReturnExtendsOrg_Apache_Kafka_Common_Metric&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_AbortTransaction_Org_Apache_Kafka_Clients_Admin_AbortTransactionSpec_Org_Apache_Kafka_Clients_Admin_AbortTransactionOptions_">Admin.AbortTransaction(AbortTransactionSpec, AbortTransactionOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_AlterClientQuotas_Java_Util_Collection_Org_Apache_Kafka_Common_Quota_ClientQuotaAlteration__Org_Apache_Kafka_Clients_Admin_AlterClientQuotasOptions_">Admin.AlterClientQuotas(Collection&lt;ClientQuotaAlteration&gt;, AlterClientQuotasOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_IncrementalAlterConfigs_Java_Util_Map_Org_Apache_Kafka_Common_Config_ConfigResource_Java_Util_Collection_Org_Apache_Kafka_Clients_Admin_AlterConfigOp___Org_Apache_Kafka_Clients_Admin_AlterConfigsOptions_">Admin.IncrementalAlterConfigs(Map&lt;ConfigResource, Collection&lt;AlterConfigOp&gt;&gt;, AlterConfigsOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_AlterConsumerGroupOffsets_System_String_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Clients_Consumer_OffsetAndMetadata__Org_Apache_Kafka_Clients_Admin_AlterConsumerGroupOffsetsOptions_">Admin.AlterConsumerGroupOffsets(String, Map&lt;TopicPartition, OffsetAndMetadata&gt;, AlterConsumerGroupOffsetsOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_AlterPartitionReassignments_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Java_Util_Optional_Org_Apache_Kafka_Clients_Admin_NewPartitionReassignment___Org_Apache_Kafka_Clients_Admin_AlterPartitionReassignmentsOptions_">Admin.AlterPartitionReassignments(Map&lt;TopicPartition, Optional&lt;NewPartitionReassignment&gt;&gt;, AlterPartitionReassignmentsOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_AlterReplicaLogDirs_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartitionReplica_System_String__Org_Apache_Kafka_Clients_Admin_AlterReplicaLogDirsOptions_">Admin.AlterReplicaLogDirs(Map&lt;TopicPartitionReplica, String&gt;, AlterReplicaLogDirsOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_AlterUserScramCredentials_Java_Util_List_Org_Apache_Kafka_Clients_Admin_UserScramCredentialAlteration__Org_Apache_Kafka_Clients_Admin_AlterUserScramCredentialsOptions_">Admin.AlterUserScramCredentials(List&lt;UserScramCredentialAlteration&gt;, AlterUserScramCredentialsOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_CreateAcls_Java_Util_Collection_Org_Apache_Kafka_Common_Acl_AclBinding__Org_Apache_Kafka_Clients_Admin_CreateAclsOptions_">Admin.CreateAcls(Collection&lt;AclBinding&gt;, CreateAclsOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_CreateDelegationToken_Org_Apache_Kafka_Clients_Admin_CreateDelegationTokenOptions_">Admin.CreateDelegationToken(CreateDelegationTokenOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_CreatePartitions_Java_Util_Map_System_String_Org_Apache_Kafka_Clients_Admin_NewPartitions__Org_Apache_Kafka_Clients_Admin_CreatePartitionsOptions_">Admin.CreatePartitions(Map&lt;String, NewPartitions&gt;, CreatePartitionsOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_CreateTopics_Java_Util_Collection_Org_Apache_Kafka_Clients_Admin_NewTopic__Org_Apache_Kafka_Clients_Admin_CreateTopicsOptions_">Admin.CreateTopics(Collection&lt;NewTopic&gt;, CreateTopicsOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DeleteAcls_Java_Util_Collection_Org_Apache_Kafka_Common_Acl_AclBindingFilter__Org_Apache_Kafka_Clients_Admin_DeleteAclsOptions_">Admin.DeleteAcls(Collection&lt;AclBindingFilter&gt;, DeleteAclsOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DeleteConsumerGroupOffsets_System_String_Java_Util_Set_Org_Apache_Kafka_Common_TopicPartition__Org_Apache_Kafka_Clients_Admin_DeleteConsumerGroupOffsetsOptions_">Admin.DeleteConsumerGroupOffsets(String, Set&lt;TopicPartition&gt;, DeleteConsumerGroupOffsetsOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DeleteConsumerGroups_Java_Util_Collection_System_String__Org_Apache_Kafka_Clients_Admin_DeleteConsumerGroupsOptions_">Admin.DeleteConsumerGroups(Collection&lt;String&gt;, DeleteConsumerGroupsOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DeleteRecords_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Clients_Admin_RecordsToDelete__Org_Apache_Kafka_Clients_Admin_DeleteRecordsOptions_">Admin.DeleteRecords(Map&lt;TopicPartition, RecordsToDelete&gt;, DeleteRecordsOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DeleteTopics_Org_Apache_Kafka_Common_TopicCollection_Org_Apache_Kafka_Clients_Admin_DeleteTopicsOptions_">Admin.DeleteTopics(TopicCollection, DeleteTopicsOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DescribeAcls_Org_Apache_Kafka_Common_Acl_AclBindingFilter_Org_Apache_Kafka_Clients_Admin_DescribeAclsOptions_">Admin.DescribeAcls(AclBindingFilter, DescribeAclsOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DescribeClientQuotas_Org_Apache_Kafka_Common_Quota_ClientQuotaFilter_Org_Apache_Kafka_Clients_Admin_DescribeClientQuotasOptions_">Admin.DescribeClientQuotas(ClientQuotaFilter, DescribeClientQuotasOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DescribeCluster_Org_Apache_Kafka_Clients_Admin_DescribeClusterOptions_">Admin.DescribeCluster(DescribeClusterOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DescribeConfigs_Java_Util_Collection_Org_Apache_Kafka_Common_Config_ConfigResource__Org_Apache_Kafka_Clients_Admin_DescribeConfigsOptions_">Admin.DescribeConfigs(Collection&lt;ConfigResource&gt;, DescribeConfigsOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DescribeConsumerGroups_Java_Util_Collection_System_String__Org_Apache_Kafka_Clients_Admin_DescribeConsumerGroupsOptions_">Admin.DescribeConsumerGroups(Collection&lt;String&gt;, DescribeConsumerGroupsOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DescribeDelegationToken_Org_Apache_Kafka_Clients_Admin_DescribeDelegationTokenOptions_">Admin.DescribeDelegationToken(DescribeDelegationTokenOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DescribeFeatures_Org_Apache_Kafka_Clients_Admin_DescribeFeaturesOptions_">Admin.DescribeFeatures(DescribeFeaturesOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DescribeLogDirs_Java_Util_Collection_Java_Lang_Integer__Org_Apache_Kafka_Clients_Admin_DescribeLogDirsOptions_">Admin.DescribeLogDirs(Collection&lt;Integer&gt;, DescribeLogDirsOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DescribeMetadataQuorum_Org_Apache_Kafka_Clients_Admin_DescribeMetadataQuorumOptions_">Admin.DescribeMetadataQuorum(DescribeMetadataQuorumOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DescribeProducers_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__Org_Apache_Kafka_Clients_Admin_DescribeProducersOptions_">Admin.DescribeProducers(Collection&lt;TopicPartition&gt;, DescribeProducersOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DescribeReplicaLogDirs_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartitionReplica__Org_Apache_Kafka_Clients_Admin_DescribeReplicaLogDirsOptions_">Admin.DescribeReplicaLogDirs(Collection&lt;TopicPartitionReplica&gt;, DescribeReplicaLogDirsOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DescribeTopics_Org_Apache_Kafka_Common_TopicCollection_Org_Apache_Kafka_Clients_Admin_DescribeTopicsOptions_">Admin.DescribeTopics(TopicCollection, DescribeTopicsOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DescribeTransactions_Java_Util_Collection_System_String__Org_Apache_Kafka_Clients_Admin_DescribeTransactionsOptions_">Admin.DescribeTransactions(Collection&lt;String&gt;, DescribeTransactionsOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DescribeUserScramCredentials_Java_Util_List_System_String__Org_Apache_Kafka_Clients_Admin_DescribeUserScramCredentialsOptions_">Admin.DescribeUserScramCredentials(List&lt;String&gt;, DescribeUserScramCredentialsOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_ElectLeaders_Org_Apache_Kafka_Common_ElectionType_Java_Util_Set_Org_Apache_Kafka_Common_TopicPartition__Org_Apache_Kafka_Clients_Admin_ElectLeadersOptions_">Admin.ElectLeaders(ElectionType, Set&lt;TopicPartition&gt;, ElectLeadersOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_ExpireDelegationToken_System_Byte___Org_Apache_Kafka_Clients_Admin_ExpireDelegationTokenOptions_">Admin.ExpireDelegationToken(Byte[], ExpireDelegationTokenOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_FenceProducers_Java_Util_Collection_System_String__Org_Apache_Kafka_Clients_Admin_FenceProducersOptions_">Admin.FenceProducers(Collection&lt;String&gt;, FenceProducersOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_ListConsumerGroupOffsets_Java_Util_Map_System_String_Org_Apache_Kafka_Clients_Admin_ListConsumerGroupOffsetsSpec__Org_Apache_Kafka_Clients_Admin_ListConsumerGroupOffsetsOptions_">Admin.ListConsumerGroupOffsets(Map&lt;String, ListConsumerGroupOffsetsSpec&gt;, ListConsumerGroupOffsetsOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_ListConsumerGroups_Org_Apache_Kafka_Clients_Admin_ListConsumerGroupsOptions_">Admin.ListConsumerGroups(ListConsumerGroupsOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_ListOffsets_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Clients_Admin_OffsetSpec__Org_Apache_Kafka_Clients_Admin_ListOffsetsOptions_">Admin.ListOffsets(Map&lt;TopicPartition, OffsetSpec&gt;, ListOffsetsOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_ListPartitionReassignments_Java_Util_Optional_Java_Util_Set_Org_Apache_Kafka_Common_TopicPartition___Org_Apache_Kafka_Clients_Admin_ListPartitionReassignmentsOptions_">Admin.ListPartitionReassignments(Optional&lt;Set&lt;TopicPartition&gt;&gt;, ListPartitionReassignmentsOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_ListTopics_Org_Apache_Kafka_Clients_Admin_ListTopicsOptions_">Admin.ListTopics(ListTopicsOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_ListTransactions_Org_Apache_Kafka_Clients_Admin_ListTransactionsOptions_">Admin.ListTransactions(ListTransactionsOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_RemoveMembersFromConsumerGroup_System_String_Org_Apache_Kafka_Clients_Admin_RemoveMembersFromConsumerGroupOptions_">Admin.RemoveMembersFromConsumerGroup(String, RemoveMembersFromConsumerGroupOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_RenewDelegationToken_System_Byte___Org_Apache_Kafka_Clients_Admin_RenewDelegationTokenOptions_">Admin.RenewDelegationToken(Byte[], RenewDelegationTokenOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_UnregisterBroker_System_Int32_Org_Apache_Kafka_Clients_Admin_UnregisterBrokerOptions_">Admin.UnregisterBroker(Int32, UnregisterBrokerOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_UpdateFeatures_Java_Util_Map_System_String_Org_Apache_Kafka_Clients_Admin_FeatureUpdate__Org_Apache_Kafka_Clients_Admin_UpdateFeaturesOptions_">Admin.UpdateFeatures(Map&lt;String, FeatureUpdate&gt;, UpdateFeaturesOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_Close_Java_Time_Duration_">Admin.Close(Duration)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_AbortTransaction_Org_Apache_Kafka_Clients_Admin_AbortTransactionSpec_">Admin.AbortTransaction(AbortTransactionSpec)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_AlterClientQuotas_Java_Util_Collection_Org_Apache_Kafka_Common_Quota_ClientQuotaAlteration__">Admin.AlterClientQuotas(Collection&lt;ClientQuotaAlteration&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_IncrementalAlterConfigs_Java_Util_Map_Org_Apache_Kafka_Common_Config_ConfigResource_Java_Util_Collection_Org_Apache_Kafka_Clients_Admin_AlterConfigOp___">Admin.IncrementalAlterConfigs(Map&lt;ConfigResource, Collection&lt;AlterConfigOp&gt;&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_AlterConsumerGroupOffsets_System_String_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Clients_Consumer_OffsetAndMetadata__">Admin.AlterConsumerGroupOffsets(String, Map&lt;TopicPartition, OffsetAndMetadata&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_AlterPartitionReassignments_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Java_Util_Optional_Org_Apache_Kafka_Clients_Admin_NewPartitionReassignment___">Admin.AlterPartitionReassignments(Map&lt;TopicPartition, Optional&lt;NewPartitionReassignment&gt;&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_AlterReplicaLogDirs_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartitionReplica_System_String__">Admin.AlterReplicaLogDirs(Map&lt;TopicPartitionReplica, String&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_AlterUserScramCredentials_Java_Util_List_Org_Apache_Kafka_Clients_Admin_UserScramCredentialAlteration__">Admin.AlterUserScramCredentials(List&lt;UserScramCredentialAlteration&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_CreateAcls_Java_Util_Collection_Org_Apache_Kafka_Common_Acl_AclBinding__">Admin.CreateAcls(Collection&lt;AclBinding&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_CreateDelegationToken">Admin.CreateDelegationToken()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_CreatePartitions_Java_Util_Map_System_String_Org_Apache_Kafka_Clients_Admin_NewPartitions__">Admin.CreatePartitions(Map&lt;String, NewPartitions&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_CreateTopics_Java_Util_Collection_Org_Apache_Kafka_Clients_Admin_NewTopic__">Admin.CreateTopics(Collection&lt;NewTopic&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DeleteAcls_Java_Util_Collection_Org_Apache_Kafka_Common_Acl_AclBindingFilter__">Admin.DeleteAcls(Collection&lt;AclBindingFilter&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DeleteConsumerGroupOffsets_System_String_Java_Util_Set_Org_Apache_Kafka_Common_TopicPartition__">Admin.DeleteConsumerGroupOffsets(String, Set&lt;TopicPartition&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DeleteConsumerGroups_Java_Util_Collection_System_String__">Admin.DeleteConsumerGroups(Collection&lt;String&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DeleteRecords_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Clients_Admin_RecordsToDelete__">Admin.DeleteRecords(Map&lt;TopicPartition, RecordsToDelete&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DeleteTopics_Java_Util_Collection_System_String__Org_Apache_Kafka_Clients_Admin_DeleteTopicsOptions_">Admin.DeleteTopics(Collection&lt;String&gt;, DeleteTopicsOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DeleteTopics_Java_Util_Collection_System_String__">Admin.DeleteTopics(Collection&lt;String&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DeleteTopics_Org_Apache_Kafka_Common_TopicCollection_">Admin.DeleteTopics(TopicCollection)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DescribeAcls_Org_Apache_Kafka_Common_Acl_AclBindingFilter_">Admin.DescribeAcls(AclBindingFilter)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DescribeClientQuotas_Org_Apache_Kafka_Common_Quota_ClientQuotaFilter_">Admin.DescribeClientQuotas(ClientQuotaFilter)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DescribeCluster">Admin.DescribeCluster()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DescribeConfigs_Java_Util_Collection_Org_Apache_Kafka_Common_Config_ConfigResource__">Admin.DescribeConfigs(Collection&lt;ConfigResource&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DescribeConsumerGroups_Java_Util_Collection_System_String__">Admin.DescribeConsumerGroups(Collection&lt;String&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DescribeDelegationToken">Admin.DescribeDelegationToken()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DescribeFeatures">Admin.DescribeFeatures()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DescribeLogDirs_Java_Util_Collection_Java_Lang_Integer__">Admin.DescribeLogDirs(Collection&lt;Integer&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DescribeMetadataQuorum">Admin.DescribeMetadataQuorum()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DescribeProducers_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__">Admin.DescribeProducers(Collection&lt;TopicPartition&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DescribeReplicaLogDirs_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartitionReplica__">Admin.DescribeReplicaLogDirs(Collection&lt;TopicPartitionReplica&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DescribeTopics_Java_Util_Collection_System_String__Org_Apache_Kafka_Clients_Admin_DescribeTopicsOptions_">Admin.DescribeTopics(Collection&lt;String&gt;, DescribeTopicsOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DescribeTopics_Java_Util_Collection_System_String__">Admin.DescribeTopics(Collection&lt;String&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DescribeTopics_Org_Apache_Kafka_Common_TopicCollection_">Admin.DescribeTopics(TopicCollection)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DescribeTransactions_Java_Util_Collection_System_String__">Admin.DescribeTransactions(Collection&lt;String&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DescribeUserScramCredentials">Admin.DescribeUserScramCredentials()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_DescribeUserScramCredentials_Java_Util_List_System_String__">Admin.DescribeUserScramCredentials(List&lt;String&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_ElectLeaders_Org_Apache_Kafka_Common_ElectionType_Java_Util_Set_Org_Apache_Kafka_Common_TopicPartition__">Admin.ElectLeaders(ElectionType, Set&lt;TopicPartition&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_ExpireDelegationToken_System_Byte___">Admin.ExpireDelegationToken(Byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_FenceProducers_Java_Util_Collection_System_String__">Admin.FenceProducers(Collection&lt;String&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_ListConsumerGroupOffsets_System_String_Org_Apache_Kafka_Clients_Admin_ListConsumerGroupOffsetsOptions_">Admin.ListConsumerGroupOffsets(String, ListConsumerGroupOffsetsOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_ListConsumerGroupOffsets_System_String_">Admin.ListConsumerGroupOffsets(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_ListConsumerGroupOffsets_Java_Util_Map_System_String_Org_Apache_Kafka_Clients_Admin_ListConsumerGroupOffsetsSpec__">Admin.ListConsumerGroupOffsets(Map&lt;String, ListConsumerGroupOffsetsSpec&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_ListConsumerGroups">Admin.ListConsumerGroups()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_ListOffsets_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Clients_Admin_OffsetSpec__">Admin.ListOffsets(Map&lt;TopicPartition, OffsetSpec&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_ListPartitionReassignments">Admin.ListPartitionReassignments()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_ListPartitionReassignments_Java_Util_Set_Org_Apache_Kafka_Common_TopicPartition__Org_Apache_Kafka_Clients_Admin_ListPartitionReassignmentsOptions_">Admin.ListPartitionReassignments(Set&lt;TopicPartition&gt;, ListPartitionReassignmentsOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_ListPartitionReassignments_Java_Util_Set_Org_Apache_Kafka_Common_TopicPartition__">Admin.ListPartitionReassignments(Set&lt;TopicPartition&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_ListPartitionReassignments_Org_Apache_Kafka_Clients_Admin_ListPartitionReassignmentsOptions_">Admin.ListPartitionReassignments(ListPartitionReassignmentsOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_ListTopics">Admin.ListTopics()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_ListTransactions">Admin.ListTransactions()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_RenewDelegationToken_System_Byte___">Admin.RenewDelegationToken(Byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_UnregisterBroker_System_Int32_">Admin.UnregisterBroker(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_Close">Admin.Close()</a>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute&lt;TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute&lt;TReturn&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute(System.Type, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute&lt;TReturn&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute&lt;TReturn&gt;(System.Type, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute&lt;TReturn, TConverter&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecute&lt;TReturn, TConverter&gt;(System.Type, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecuteArray&lt;T&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SExecuteArray&lt;T&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SGetField(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SGetField(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SGetField&lt;TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SGetField&lt;TReturn&gt;(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SGetFieldArray&lt;TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SGetFieldArray&lt;TReturn&gt;(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SSetField(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SSetField(System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SSetField&lt;TValue&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType, System.String, TValue)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.SSetField&lt;TValue&gt;(System.String, TValue)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.IsAssignableFrom(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.IsAssignableFrom(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.IsAssignableFrom&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.New(System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.Execute&lt;T&gt;(T[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.DynBridgeClazz</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.BridgeClazz</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.DynBridgeClazz</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase&lt;Java.Lang.AutoCloseable&gt;.MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.BridgeClazz</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClazzOf&lt;TClass&gt;(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClazzOf(System.String, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClassNameOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ClassOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TReturn&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(System.Type, MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInstanceOf(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInstanceOf(MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsInstanceOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.CastTo&lt;TNewClass&gt;(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Dispose()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Notify()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.NotifyAll()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wait()</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wait(System.Int64)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.Wait(System.Int64, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TReturn&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TNewClass, TReturn&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecute&lt;TNewClass, TReturn, TConverter&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IExecuteArray&lt;T&gt;(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IGetField(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IGetField&lt;TReturn&gt;(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IGetFieldArray&lt;TReturn&gt;(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ISetField(System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.ISetField&lt;TValue&gt;(System.String, TValue)</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.DynBridgeInstance</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.BridgeInstance</span>
+    </div>
+    <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeBase.IsBridgeListener</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember#system-dynamic-dynamicobject-trygetmember(system-dynamic-getmemberbinder-system-object@)">DynamicObject.TryGetMember(GetMemberBinder, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetmember#system-dynamic-dynamicobject-trysetmember(system-dynamic-setmemberbinder-system-object)">DynamicObject.TrySetMember(SetMemberBinder, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeletemember#system-dynamic-dynamicobject-trydeletemember(system-dynamic-deletememberbinder)">DynamicObject.TryDeleteMember(DeleteMemberBinder)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvokemember#system-dynamic-dynamicobject-tryinvokemember(system-dynamic-invokememberbinder-system-object()-system-object@)">DynamicObject.TryInvokeMember(InvokeMemberBinder, Object[], Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryconvert#system-dynamic-dynamicobject-tryconvert(system-dynamic-convertbinder-system-object@)">DynamicObject.TryConvert(ConvertBinder, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trycreateinstance#system-dynamic-dynamicobject-trycreateinstance(system-dynamic-createinstancebinder-system-object()-system-object@)">DynamicObject.TryCreateInstance(CreateInstanceBinder, Object[], Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvoke#system-dynamic-dynamicobject-tryinvoke(system-dynamic-invokebinder-system-object()-system-object@)">DynamicObject.TryInvoke(InvokeBinder, Object[], Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trybinaryoperation#system-dynamic-dynamicobject-trybinaryoperation(system-dynamic-binaryoperationbinder-system-object-system-object@)">DynamicObject.TryBinaryOperation(BinaryOperationBinder, Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryunaryoperation#system-dynamic-dynamicobject-tryunaryoperation(system-dynamic-unaryoperationbinder-system-object@)">DynamicObject.TryUnaryOperation(UnaryOperationBinder, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetindex#system-dynamic-dynamicobject-trygetindex(system-dynamic-getindexbinder-system-object()-system-object@)">DynamicObject.TryGetIndex(GetIndexBinder, Object[], Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetindex#system-dynamic-dynamicobject-trysetindex(system-dynamic-setindexbinder-system-object()-system-object)">DynamicObject.TrySetIndex(SetIndexBinder, Object[], Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeleteindex#system-dynamic-dynamicobject-trydeleteindex(system-dynamic-deleteindexbinder-system-object())">DynamicObject.TryDeleteIndex(DeleteIndexBinder, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames#system-dynamic-dynamicobject-getdynamicmembernames">DynamicObject.GetDynamicMemberNames()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getmetaobject#system-dynamic-dynamicobject-getmetaobject(system-linq-expressions-expression)">DynamicObject.GetMetaObject(Expression)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals#system-object-referenceequals(system-object-system-object)">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype#system-object-gettype">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone#system-object-memberwiseclone">Object.MemberwiseClone()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Org.Apache.Kafka.Clients.Admin.html">Org.Apache.Kafka.Clients.Admin</a></h6>
+  <h6><strong>Assembly</strong>: MASES.KNet.dll</h6>
+  <h5 id="Org_Apache_Kafka_Clients_Admin_AdminClient_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AdminClient : Admin, IDynamicMetaObjectProvider, IJVMBridgeCore, IJVMBridgeBaseStatic, IAdmin, IJVMBridgeBase, IJVMBridgeDefinition, IDisposable, IAutoCloseable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Clients_Admin_AdminClient__ctor.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Clients.Admin.AdminClient.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L296">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Clients_Admin_AdminClient__ctor_" data-uid="Org.Apache.Kafka.Clients.Admin.AdminClient.#ctor*"></a>
+  <h4 id="Org_Apache_Kafka_Clients_Admin_AdminClient__ctor" data-uid="Org.Apache.Kafka.Clients.Admin.AdminClient.#ctor">AdminClient()</h4>
+  <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AdminClient()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Clients_Admin_AdminClient__ctor_System_Object___.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Clients.Admin.AdminClient.%23ctor(System.Object%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L300">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Clients_Admin_AdminClient__ctor_" data-uid="Org.Apache.Kafka.Clients.Admin.AdminClient.#ctor*"></a>
+  <h4 id="Org_Apache_Kafka_Clients_Admin_AdminClient__ctor_System_Object___" data-uid="Org.Apache.Kafka.Clients.Admin.AdminClient.#ctor(System.Object[])">AdminClient(Object[])</h4>
+  <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AdminClient(params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Clients_Admin_AdminClient_BridgeClassName.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Clients.Admin.AdminClient.BridgeClassName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L307">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Clients_Admin_AdminClient_BridgeClassName_" data-uid="Org.Apache.Kafka.Clients.Admin.AdminClient.BridgeClassName*"></a>
+  <h4 id="Org_Apache_Kafka_Clients_Admin_AdminClient_BridgeClassName" data-uid="Org.Apache.Kafka.Clients.Admin.AdminClient.BridgeClassName">BridgeClassName</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string BridgeClassName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_BridgeClassName">Admin.BridgeClassName</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Clients_Admin_AdminClient_IsBridgeAbstract.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Clients.Admin.AdminClient.IsBridgeAbstract%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L311">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Clients_Admin_AdminClient_IsBridgeAbstract_" data-uid="Org.Apache.Kafka.Clients.Admin.AdminClient.IsBridgeAbstract*"></a>
+  <h4 id="Org_Apache_Kafka_Clients_Admin_AdminClient_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Clients.Admin.AdminClient.IsBridgeAbstract">IsBridgeAbstract</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeAbstract { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_IsBridgeAbstract">Admin.IsBridgeAbstract</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Clients_Admin_AdminClient_IsBridgeCloseable.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Clients.Admin.AdminClient.IsBridgeCloseable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L315">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Clients_Admin_AdminClient_IsBridgeCloseable_" data-uid="Org.Apache.Kafka.Clients.Admin.AdminClient.IsBridgeCloseable*"></a>
+  <h4 id="Org_Apache_Kafka_Clients_Admin_AdminClient_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Clients.Admin.AdminClient.IsBridgeCloseable">IsBridgeCloseable</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeCloseable { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_IsBridgeCloseable">Admin.IsBridgeCloseable</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Clients_Admin_AdminClient_IsBridgeInterface.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Clients.Admin.AdminClient.IsBridgeInterface%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L319">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Clients_Admin_AdminClient_IsBridgeInterface_" data-uid="Org.Apache.Kafka.Clients.Admin.AdminClient.IsBridgeInterface*"></a>
+  <h4 id="Org_Apache_Kafka_Clients_Admin_AdminClient_IsBridgeInterface" data-uid="Org.Apache.Kafka.Clients.Admin.AdminClient.IsBridgeInterface">IsBridgeInterface</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeInterface { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_IsBridgeInterface">Admin.IsBridgeInterface</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Clients_Admin_AdminClient_IsBridgeStatic.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Clients.Admin.AdminClient.IsBridgeStatic%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L323">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Clients_Admin_AdminClient_IsBridgeStatic_" data-uid="Org.Apache.Kafka.Clients.Admin.AdminClient.IsBridgeStatic*"></a>
+  <h4 id="Org_Apache_Kafka_Clients_Admin_AdminClient_IsBridgeStatic" data-uid="Org.Apache.Kafka.Clients.Admin.AdminClient.IsBridgeStatic">IsBridgeStatic</h4>
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeStatic { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Org.Apache.Kafka.Clients.Admin.Admin.html#Org_Apache_Kafka_Clients_Admin_Admin_IsBridgeStatic">Admin.IsBridgeStatic</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">System.Dynamic.IDynamicMetaObjectProvider</a>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeCore</span>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic</span>
+  </div>
+  <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Admin.IAdmin.html">IAdmin</a>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeBase</span>
+  </div>
+  <div>
+      <span class="xref">MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition</span>
+  </div>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
+  </div>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/java.lang.iautocloseable">Java.Lang.IAutoCloseable</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_CreateTopicsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Collection_Org_Apache_Kafka_Clients_Admin_NewTopic__">KafkaAdminClientExtensions.CreateTopicsAsync(IAdmin, Collection&lt;NewTopic&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_CreateTopic_Org_Apache_Kafka_Clients_Admin_IAdmin_System_String_System_Int32_System_Int16_">KafkaAdminClientExtensions.CreateTopic(IAdmin, String, Int32, Int16)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_CreateTopic_Org_Apache_Kafka_Clients_Admin_IAdmin_Org_Apache_Kafka_Clients_Admin_NewTopic_">KafkaAdminClientExtensions.CreateTopic(IAdmin, NewTopic)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_CreateTopicAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_System_String_System_Int32_System_Int16_">KafkaAdminClientExtensions.CreateTopicAsync(IAdmin, String, Int32, Int16)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_CreateTopicsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Collection_Org_Apache_Kafka_Clients_Admin_NewTopic__Org_Apache_Kafka_Clients_Admin_CreateTopicsOptions_">KafkaAdminClientExtensions.CreateTopicsAsync(IAdmin, Collection&lt;NewTopic&gt;, CreateTopicsOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DeleteTopic_Org_Apache_Kafka_Clients_Admin_IAdmin_System_String_">KafkaAdminClientExtensions.DeleteTopic(IAdmin, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DeleteTopicsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Collection_System_String__">KafkaAdminClientExtensions.DeleteTopicsAsync(IAdmin, Collection&lt;String&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DeleteTopicAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_System_String_">KafkaAdminClientExtensions.DeleteTopicAsync(IAdmin, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DeleteTopicsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Collection_System_String__Org_Apache_Kafka_Clients_Admin_DeleteTopicsOptions_">KafkaAdminClientExtensions.DeleteTopicsAsync(IAdmin, Collection&lt;String&gt;, DeleteTopicsOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DeleteTopicsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Org_Apache_Kafka_Common_TopicCollection_">KafkaAdminClientExtensions.DeleteTopicsAsync(IAdmin, TopicCollection)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DeleteTopicsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Org_Apache_Kafka_Common_TopicCollection_Org_Apache_Kafka_Clients_Admin_DeleteTopicsOptions_">KafkaAdminClientExtensions.DeleteTopicsAsync(IAdmin, TopicCollection, DeleteTopicsOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_ListTopicsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_">KafkaAdminClientExtensions.ListTopicsAsync(IAdmin)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_ListTopicsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Org_Apache_Kafka_Clients_Admin_ListTopicsOptions_">KafkaAdminClientExtensions.ListTopicsAsync(IAdmin, ListTopicsOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DescribeTopicsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Collection_System_String__">KafkaAdminClientExtensions.DescribeTopicsAsync(IAdmin, Collection&lt;String&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DescribeTopicAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_System_String_">KafkaAdminClientExtensions.DescribeTopicAsync(IAdmin, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DescribeTopicsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Collection_System_String__Org_Apache_Kafka_Clients_Admin_DescribeTopicsOptions_">KafkaAdminClientExtensions.DescribeTopicsAsync(IAdmin, Collection&lt;String&gt;, DescribeTopicsOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DescribeClusterAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_">KafkaAdminClientExtensions.DescribeClusterAsync(IAdmin)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DescribeClusterAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Org_Apache_Kafka_Clients_Admin_DescribeClusterOptions_">KafkaAdminClientExtensions.DescribeClusterAsync(IAdmin, DescribeClusterOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DescribeAclsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Org_Apache_Kafka_Common_Acl_AclBindingFilter_">KafkaAdminClientExtensions.DescribeAclsAsync(IAdmin, AclBindingFilter)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DescribeAclsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Org_Apache_Kafka_Common_Acl_AclBindingFilter_Org_Apache_Kafka_Clients_Admin_DescribeAclsOptions_">KafkaAdminClientExtensions.DescribeAclsAsync(IAdmin, AclBindingFilter, DescribeAclsOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_CreateAclsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Collection_Org_Apache_Kafka_Common_Acl_AclBinding__">KafkaAdminClientExtensions.CreateAclsAsync(IAdmin, Collection&lt;AclBinding&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_CreateAclsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Collection_Org_Apache_Kafka_Common_Acl_AclBinding__Org_Apache_Kafka_Clients_Admin_CreateAclsOptions_">KafkaAdminClientExtensions.CreateAclsAsync(IAdmin, Collection&lt;AclBinding&gt;, CreateAclsOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DeleteAclsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Collection_Org_Apache_Kafka_Common_Acl_AclBindingFilter__">KafkaAdminClientExtensions.DeleteAclsAsync(IAdmin, Collection&lt;AclBindingFilter&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DeleteAclsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Collection_Org_Apache_Kafka_Common_Acl_AclBindingFilter__Org_Apache_Kafka_Clients_Admin_DeleteAclsOptions_">KafkaAdminClientExtensions.DeleteAclsAsync(IAdmin, Collection&lt;AclBindingFilter&gt;, DeleteAclsOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DescribeConfigsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Collection_Org_Apache_Kafka_Common_Config_ConfigResource__">KafkaAdminClientExtensions.DescribeConfigsAsync(IAdmin, Collection&lt;ConfigResource&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DescribeConfigsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Collection_Org_Apache_Kafka_Common_Config_ConfigResource__Org_Apache_Kafka_Clients_Admin_DescribeConfigsOptions_">KafkaAdminClientExtensions.DescribeConfigsAsync(IAdmin, Collection&lt;ConfigResource&gt;, DescribeConfigsOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_IncrementalAlterConfigsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Map_Org_Apache_Kafka_Common_Config_ConfigResource_Java_Util_Collection_Org_Apache_Kafka_Clients_Admin_AlterConfigOp___">KafkaAdminClientExtensions.IncrementalAlterConfigsAsync(IAdmin, Map&lt;ConfigResource, Collection&lt;AlterConfigOp&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_IncrementalAlterConfigsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Map_Org_Apache_Kafka_Common_Config_ConfigResource_Java_Util_Collection_Org_Apache_Kafka_Clients_Admin_AlterConfigOp___Org_Apache_Kafka_Clients_Admin_AlterConfigsOptions_">KafkaAdminClientExtensions.IncrementalAlterConfigsAsync(IAdmin, Map&lt;ConfigResource, Collection&lt;AlterConfigOp&gt;&gt;, AlterConfigsOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_AlterReplicaLogDirsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartitionReplica_System_String__">KafkaAdminClientExtensions.AlterReplicaLogDirsAsync(IAdmin, Map&lt;TopicPartitionReplica, String&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_AlterReplicaLogDirsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartitionReplica_System_String__Org_Apache_Kafka_Clients_Admin_AlterReplicaLogDirsOptions_">KafkaAdminClientExtensions.AlterReplicaLogDirsAsync(IAdmin, Map&lt;TopicPartitionReplica, String&gt;, AlterReplicaLogDirsOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DescribeLogDirsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Collection_Java_Lang_Integer__">KafkaAdminClientExtensions.DescribeLogDirsAsync(IAdmin, Collection&lt;Integer&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DescribeLogDirsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Collection_Java_Lang_Integer__Org_Apache_Kafka_Clients_Admin_DescribeLogDirsOptions_">KafkaAdminClientExtensions.DescribeLogDirsAsync(IAdmin, Collection&lt;Integer&gt;, DescribeLogDirsOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DescribeReplicaLogDirsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartitionReplica__">KafkaAdminClientExtensions.DescribeReplicaLogDirsAsync(IAdmin, Collection&lt;TopicPartitionReplica&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DescribeReplicaLogDirsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartitionReplica__Org_Apache_Kafka_Clients_Admin_DescribeReplicaLogDirsOptions_">KafkaAdminClientExtensions.DescribeReplicaLogDirsAsync(IAdmin, Collection&lt;TopicPartitionReplica&gt;, DescribeReplicaLogDirsOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_CreatePartitionsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Map_System_String_Org_Apache_Kafka_Clients_Admin_NewPartitions__">KafkaAdminClientExtensions.CreatePartitionsAsync(IAdmin, Map&lt;String, NewPartitions&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_CreatePartitionsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Map_System_String_Org_Apache_Kafka_Clients_Admin_NewPartitions__Org_Apache_Kafka_Clients_Admin_CreatePartitionsOptions_">KafkaAdminClientExtensions.CreatePartitionsAsync(IAdmin, Map&lt;String, NewPartitions&gt;, CreatePartitionsOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DeleteRecordsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Clients_Admin_RecordsToDelete__">KafkaAdminClientExtensions.DeleteRecordsAsync(IAdmin, Map&lt;TopicPartition, RecordsToDelete&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DeleteRecordsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Clients_Admin_RecordsToDelete__Org_Apache_Kafka_Clients_Admin_DeleteRecordsOptions_">KafkaAdminClientExtensions.DeleteRecordsAsync(IAdmin, Map&lt;TopicPartition, RecordsToDelete&gt;, DeleteRecordsOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_CreateDelegationTokenAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_">KafkaAdminClientExtensions.CreateDelegationTokenAsync(IAdmin)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_CreateDelegationTokenAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Org_Apache_Kafka_Clients_Admin_CreateDelegationTokenOptions_">KafkaAdminClientExtensions.CreateDelegationTokenAsync(IAdmin, CreateDelegationTokenOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_RenewDelegationTokenAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_System_Byte___">KafkaAdminClientExtensions.RenewDelegationTokenAsync(IAdmin, Byte[])</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_RenewDelegationTokenAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_System_Byte___Org_Apache_Kafka_Clients_Admin_RenewDelegationTokenOptions_">KafkaAdminClientExtensions.RenewDelegationTokenAsync(IAdmin, Byte[], RenewDelegationTokenOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_ExpireDelegationTokenAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_System_Byte___">KafkaAdminClientExtensions.ExpireDelegationTokenAsync(IAdmin, Byte[])</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_ExpireDelegationTokenAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_System_Byte___Org_Apache_Kafka_Clients_Admin_ExpireDelegationTokenOptions_">KafkaAdminClientExtensions.ExpireDelegationTokenAsync(IAdmin, Byte[], ExpireDelegationTokenOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DescribeDelegationTokenAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_">KafkaAdminClientExtensions.DescribeDelegationTokenAsync(IAdmin)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DescribeDelegationTokenAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Org_Apache_Kafka_Clients_Admin_DescribeDelegationTokenOptions_">KafkaAdminClientExtensions.DescribeDelegationTokenAsync(IAdmin, DescribeDelegationTokenOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DescribeConsumerGroupsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Collection_System_String__Org_Apache_Kafka_Clients_Admin_DescribeConsumerGroupsOptions_">KafkaAdminClientExtensions.DescribeConsumerGroupsAsync(IAdmin, Collection&lt;String&gt;, DescribeConsumerGroupsOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DescribeConsumerGroupsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Collection_System_String__">KafkaAdminClientExtensions.DescribeConsumerGroupsAsync(IAdmin, Collection&lt;String&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_ListConsumerGroupsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Org_Apache_Kafka_Clients_Admin_ListConsumerGroupsOptions_">KafkaAdminClientExtensions.ListConsumerGroupsAsync(IAdmin, ListConsumerGroupsOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_ListConsumerGroupsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_">KafkaAdminClientExtensions.ListConsumerGroupsAsync(IAdmin)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_ListConsumerGroupOffsetsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_System_String_Org_Apache_Kafka_Clients_Admin_ListConsumerGroupOffsetsOptions_">KafkaAdminClientExtensions.ListConsumerGroupOffsetsAsync(IAdmin, String, ListConsumerGroupOffsetsOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_ListConsumerGroupOffsetsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_System_String_">KafkaAdminClientExtensions.ListConsumerGroupOffsetsAsync(IAdmin, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DeleteConsumerGroupsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Collection_System_String__Org_Apache_Kafka_Clients_Admin_DeleteConsumerGroupsOptions_">KafkaAdminClientExtensions.DeleteConsumerGroupsAsync(IAdmin, Collection&lt;String&gt;, DeleteConsumerGroupsOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DeleteConsumerGroupsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Collection_System_String__">KafkaAdminClientExtensions.DeleteConsumerGroupsAsync(IAdmin, Collection&lt;String&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DeleteConsumerGroupOffsetsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_System_String_Java_Util_Set_Org_Apache_Kafka_Common_TopicPartition__Org_Apache_Kafka_Clients_Admin_DeleteConsumerGroupOffsetsOptions_">KafkaAdminClientExtensions.DeleteConsumerGroupOffsetsAsync(IAdmin, String, Set&lt;TopicPartition&gt;, DeleteConsumerGroupOffsetsOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DeleteConsumerGroupOffsetsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_System_String_Java_Util_Set_Org_Apache_Kafka_Common_TopicPartition__">KafkaAdminClientExtensions.DeleteConsumerGroupOffsetsAsync(IAdmin, String, Set&lt;TopicPartition&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_ElectLeadersAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Org_Apache_Kafka_Common_ElectionType_Java_Util_Set_Org_Apache_Kafka_Common_TopicPartition__">KafkaAdminClientExtensions.ElectLeadersAsync(IAdmin, ElectionType, Set&lt;TopicPartition&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_ElectLeadersAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Org_Apache_Kafka_Common_ElectionType_Java_Util_Set_Org_Apache_Kafka_Common_TopicPartition__Org_Apache_Kafka_Clients_Admin_ElectLeadersOptions_">KafkaAdminClientExtensions.ElectLeadersAsync(IAdmin, ElectionType, Set&lt;TopicPartition&gt;, ElectLeadersOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_AlterPartitionReassignmentsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Java_Util_Optional_Org_Apache_Kafka_Clients_Admin_NewPartitionReassignment___">KafkaAdminClientExtensions.AlterPartitionReassignmentsAsync(IAdmin, Map&lt;TopicPartition, Optional&lt;NewPartitionReassignment&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_AlterPartitionReassignmentsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Java_Util_Optional_Org_Apache_Kafka_Clients_Admin_NewPartitionReassignment___Org_Apache_Kafka_Clients_Admin_AlterPartitionReassignmentsOptions_">KafkaAdminClientExtensions.AlterPartitionReassignmentsAsync(IAdmin, Map&lt;TopicPartition, Optional&lt;NewPartitionReassignment&gt;&gt;, AlterPartitionReassignmentsOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_ListPartitionReassignmentsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_">KafkaAdminClientExtensions.ListPartitionReassignmentsAsync(IAdmin)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_ListPartitionReassignmentsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Set_Org_Apache_Kafka_Common_TopicPartition__">KafkaAdminClientExtensions.ListPartitionReassignmentsAsync(IAdmin, Set&lt;TopicPartition&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_ListPartitionReassignmentsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Set_Org_Apache_Kafka_Common_TopicPartition__Org_Apache_Kafka_Clients_Admin_ListPartitionReassignmentsOptions_">KafkaAdminClientExtensions.ListPartitionReassignmentsAsync(IAdmin, Set&lt;TopicPartition&gt;, ListPartitionReassignmentsOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_ListPartitionReassignmentsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Org_Apache_Kafka_Clients_Admin_ListPartitionReassignmentsOptions_">KafkaAdminClientExtensions.ListPartitionReassignmentsAsync(IAdmin, ListPartitionReassignmentsOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_ListPartitionReassignmentsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Optional_Java_Util_Set_Org_Apache_Kafka_Common_TopicPartition___Org_Apache_Kafka_Clients_Admin_ListPartitionReassignmentsOptions_">KafkaAdminClientExtensions.ListPartitionReassignmentsAsync(IAdmin, Optional&lt;Set&lt;TopicPartition&gt;&gt;, ListPartitionReassignmentsOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_RemoveMembersFromConsumerGroupAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_System_String_Org_Apache_Kafka_Clients_Admin_RemoveMembersFromConsumerGroupOptions_">KafkaAdminClientExtensions.RemoveMembersFromConsumerGroupAsync(IAdmin, String, RemoveMembersFromConsumerGroupOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_AlterConsumerGroupOffsetsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_System_String_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Clients_Consumer_OffsetAndMetadata__">KafkaAdminClientExtensions.AlterConsumerGroupOffsetsAsync(IAdmin, String, Map&lt;TopicPartition, OffsetAndMetadata&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_AlterConsumerGroupOffsetsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_System_String_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Clients_Consumer_OffsetAndMetadata__Org_Apache_Kafka_Clients_Admin_AlterConsumerGroupOffsetsOptions_">KafkaAdminClientExtensions.AlterConsumerGroupOffsetsAsync(IAdmin, String, Map&lt;TopicPartition, OffsetAndMetadata&gt;, AlterConsumerGroupOffsetsOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_ListOffsetsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Clients_Admin_OffsetSpec__">KafkaAdminClientExtensions.ListOffsetsAsync(IAdmin, Map&lt;TopicPartition, OffsetSpec&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_ListOffsetsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Clients_Admin_OffsetSpec__Org_Apache_Kafka_Clients_Admin_ListOffsetsOptions_">KafkaAdminClientExtensions.ListOffsetsAsync(IAdmin, Map&lt;TopicPartition, OffsetSpec&gt;, ListOffsetsOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DescribeClientQuotasAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Org_Apache_Kafka_Common_Quota_ClientQuotaFilter_">KafkaAdminClientExtensions.DescribeClientQuotasAsync(IAdmin, ClientQuotaFilter)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DescribeClientQuotasAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Org_Apache_Kafka_Common_Quota_ClientQuotaFilter_Org_Apache_Kafka_Clients_Admin_DescribeClientQuotasOptions_">KafkaAdminClientExtensions.DescribeClientQuotasAsync(IAdmin, ClientQuotaFilter, DescribeClientQuotasOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_AlterClientQuotasAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Collection_Org_Apache_Kafka_Common_Quota_ClientQuotaAlteration__">KafkaAdminClientExtensions.AlterClientQuotasAsync(IAdmin, Collection&lt;ClientQuotaAlteration&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_AlterClientQuotasAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Collection_Org_Apache_Kafka_Common_Quota_ClientQuotaAlteration__Org_Apache_Kafka_Clients_Admin_AlterClientQuotasOptions_">KafkaAdminClientExtensions.AlterClientQuotasAsync(IAdmin, Collection&lt;ClientQuotaAlteration&gt;, AlterClientQuotasOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DescribeUserScramCredentialsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_">KafkaAdminClientExtensions.DescribeUserScramCredentialsAsync(IAdmin)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DescribeUserScramCredentialsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_List_System_String__">KafkaAdminClientExtensions.DescribeUserScramCredentialsAsync(IAdmin, List&lt;String&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DescribeUserScramCredentialsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_List_System_String__Org_Apache_Kafka_Clients_Admin_DescribeUserScramCredentialsOptions_">KafkaAdminClientExtensions.DescribeUserScramCredentialsAsync(IAdmin, List&lt;String&gt;, DescribeUserScramCredentialsOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_AlterUserScramCredentialsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_List_Org_Apache_Kafka_Clients_Admin_UserScramCredentialAlteration__">KafkaAdminClientExtensions.AlterUserScramCredentialsAsync(IAdmin, List&lt;UserScramCredentialAlteration&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_AlterUserScramCredentialsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_List_Org_Apache_Kafka_Clients_Admin_UserScramCredentialAlteration__Org_Apache_Kafka_Clients_Admin_AlterUserScramCredentialsOptions_">KafkaAdminClientExtensions.AlterUserScramCredentialsAsync(IAdmin, List&lt;UserScramCredentialAlteration&gt;, AlterUserScramCredentialsOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DescribeFeaturesAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_">KafkaAdminClientExtensions.DescribeFeaturesAsync(IAdmin)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DescribeFeaturesAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Org_Apache_Kafka_Clients_Admin_DescribeFeaturesOptions_">KafkaAdminClientExtensions.DescribeFeaturesAsync(IAdmin, DescribeFeaturesOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_UpdateFeaturesAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Map_System_String_Org_Apache_Kafka_Clients_Admin_FeatureUpdate__Org_Apache_Kafka_Clients_Admin_UpdateFeaturesOptions_">KafkaAdminClientExtensions.UpdateFeaturesAsync(IAdmin, Map&lt;String, FeatureUpdate&gt;, UpdateFeaturesOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_UnregisterBrokerAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_System_Int32_">KafkaAdminClientExtensions.UnregisterBrokerAsync(IAdmin, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_UnregisterBrokerAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_System_Int32_Org_Apache_Kafka_Clients_Admin_UnregisterBrokerOptions_">KafkaAdminClientExtensions.UnregisterBrokerAsync(IAdmin, Int32, UnregisterBrokerOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DescribeProducersAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__">KafkaAdminClientExtensions.DescribeProducersAsync(IAdmin, Collection&lt;TopicPartition&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DescribeProducersAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__Org_Apache_Kafka_Clients_Admin_DescribeProducersOptions_">KafkaAdminClientExtensions.DescribeProducersAsync(IAdmin, Collection&lt;TopicPartition&gt;, DescribeProducersOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DescribeTransactionsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Collection_System_String__">KafkaAdminClientExtensions.DescribeTransactionsAsync(IAdmin, Collection&lt;String&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_DescribeTransactionsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Java_Util_Collection_System_String__Org_Apache_Kafka_Clients_Admin_DescribeTransactionsOptions_">KafkaAdminClientExtensions.DescribeTransactionsAsync(IAdmin, Collection&lt;String&gt;, DescribeTransactionsOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_AbortTransactionAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Org_Apache_Kafka_Clients_Admin_AbortTransactionSpec_">KafkaAdminClientExtensions.AbortTransactionAsync(IAdmin, AbortTransactionSpec)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_AbortTransactionAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Org_Apache_Kafka_Clients_Admin_AbortTransactionSpec_Org_Apache_Kafka_Clients_Admin_AbortTransactionOptions_">KafkaAdminClientExtensions.AbortTransactionAsync(IAdmin, AbortTransactionSpec, AbortTransactionOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_ListTransactionsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_">KafkaAdminClientExtensions.ListTransactionsAsync(IAdmin)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.KNet.Extensions.KafkaAdminClientExtensions.html#MASES_KNet_Extensions_KafkaAdminClientExtensions_ListTransactionsAsync_Org_Apache_Kafka_Clients_Admin_IAdmin_Org_Apache_Kafka_Clients_Admin_ListTransactionsOptions_">KafkaAdminClientExtensions.ListTransactionsAsync(IAdmin, ListTransactionsOptions)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Clients_Admin_AdminClient.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Clients.Admin.AdminClient%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/AllPackageClasses.cs/#L291" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 MASES s.r.l..<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

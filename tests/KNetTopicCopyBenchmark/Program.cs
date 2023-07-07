@@ -17,7 +17,7 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using MASES.KNet.Common.Errors;
+using Org.Apache.Kafka.Common.Errors;
 using System;
 using System.IO;
 using System.Text;

@@ -16,17 +16,26 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Common.Header;
+using Org.Apache.Kafka.Common.Header;
 using System.Text;
 
 namespace MASES.KNet.Serialization.Json
 {
+    /// <summary>
+    /// Json extension of <see cref="KNetSerDes{T}"/>, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class JsonSerDes<T> : KNetSerDes<T>
     {
-        protected override bool IsGenericTypeManaged => true;
-
+        /// <summary>
+        /// Can manage any type in <typeparamref name="T"/>
+        /// </summary>
+        protected override bool ManagesAnyType => true;
+        /// <summary>
+        /// The extension uses <see cref="Headers"/>
+        /// </summary>
         public override bool UseHeaders => true;
-
+        /// <inheritdoc cref="KNetSerDes{T}.SerializeWithHeaders(string, Headers, T)"/>
         public override byte[] SerializeWithHeaders(string topic, Headers headers, T data)
         {
 #if NET462_OR_GREATER
@@ -37,7 +46,7 @@ namespace MASES.KNet.Serialization.Json
             return Encoding.UTF8.GetBytes(jsonStr);
 #endif
         }
-
+        /// <inheritdoc cref="KNetSerDes{T}.DeserializeWithHeaders(string, Headers, byte[])"/>
         public override T DeserializeWithHeaders(string topic, Headers headers, byte[] data)
         {
 #if NET462_OR_GREATER

@@ -48,7 +48,10 @@ namespace MASES.KNet
             };
             return newT;
         }
-
+        /// <summary>
+        /// Converts <see cref="GenericConfigBuilder{T}"/> into <see cref="Properties"/>
+        /// </summary>
+        /// <param name="clazz"></param>
         public static implicit operator Properties(GenericConfigBuilder<T> clazz) { return clazz.ToProperties(); }
 
         /// <inheritdoc />
@@ -111,9 +114,9 @@ namespace MASES.KNet
         }
 
         /// <summary>
-        /// Returns the <see cref="Map{string, string}"/> from the <typeparamref name="T"/> instance
+        /// Returns the <see cref="Map{String, String}"/> from the <typeparamref name="T"/> instance
         /// </summary>
-        /// <returns><see cref="Map{string, string}"/> containing the properties</returns>
+        /// <returns><see cref="Map{String, String}"/> containing the properties</returns>
         public Map<string, string> ToMap()
         {
             HashMap<string, string> props = new();

@@ -18,7 +18,7 @@
 
 using Java.Util;
 using Java.Util.Regex;
-using MASES.KNet.Clients.Consumer;
+using Org.Apache.Kafka.Clients.Consumer;
 using MASES.KNetPS.Cmdlet;
 using System.Management.Automation;
 
@@ -57,7 +57,7 @@ namespace MASES.KNetPS.ClientCmdlet
         {
             if (Topic != null)
             {
-                Consumer.Subscribe(Collections.Singleton(Topic));
+                Consumer.Subscribe(Collections.Singleton(Topic).ToCollection());
             }
             else if (PatternRegEx != null)
             {

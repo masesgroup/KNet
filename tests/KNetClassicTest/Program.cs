@@ -17,13 +17,17 @@
 */
 
 using Java.Util;
-using MASES.KNet.Clients.Admin;
-using MASES.KNet.Clients.Consumer;
-using MASES.KNet.Clients.Producer;
-using MASES.KNet.Common.Config;
-using MASES.KNet.Common.Serialization;
+using MASES.KNet.Admin;
+using MASES.KNet.Common;
+using MASES.KNet.Consumer;
 using MASES.KNet.Extensions;
+using MASES.KNet.Producer;
 using MASES.KNet.TestCommon;
+using Org.Apache.Kafka.Clients.Admin;
+using Org.Apache.Kafka.Clients.Consumer;
+using Org.Apache.Kafka.Clients.Producer;
+using Org.Apache.Kafka.Common.Config;
+using Org.Apache.Kafka.Common.Serialization;
 using System;
 using System.Text;
 using System.Threading;
@@ -91,7 +95,7 @@ namespace MASES.KNetClassicTest
                 var map = Collections.SingletonMap(TopicConfig.CLEANUP_POLICY_CONFIG, TopicConfig.CLEANUP_POLICY_COMPACT);
                 topic.Configs(map);
                 *********/
-                topic = topic.Configs(TopicConfigBuilder.Create().WithCleanupPolicy(TopicConfig.CleanupPolicy.Compact | TopicConfig.CleanupPolicy.Delete)
+                topic = topic.Configs(TopicConfigBuilder.Create().WithCleanupPolicy(TopicConfigBuilder.CleanupPolicyTypes.Compact | TopicConfigBuilder.CleanupPolicyTypes.Delete)
                                                                  .WithDeleteRetentionMs(100)
                                                                  .WithMinCleanableDirtyRatio(0.01)
                                                                  .WithSegmentMs(100));
@@ -147,7 +151,7 @@ namespace MASES.KNetClassicTest
 
                 Properties props = ProducerConfigBuilder.Create()
                                                         .WithBootstrapServers(serverToUse)
-                                                        .WithAcks(ProducerConfig.Acks.All)
+                                                        .WithAcks(ProducerConfigBuilder.AcksTypes.All)
                                                         .WithRetries(0)
                                                         .WithLingerMs(1)
                                                         .WithKeySerializerClass("org.apache.kafka.common.serialization.StringSerializer")
@@ -158,16 +162,22 @@ namespace MASES.KNetClassicTest
                 Serializer<string> valueSerializer = null;
                 if (useSerdes)
                 {
-                    keySerializer = new Serializer<string>(serializeWithHeadersFun: (topic, headers, data) =>
+                    keySerializer = new Serializer<string>()
                     {
-                        var key = Encoding.Unicode.GetBytes(data);
-                        return key;
-                    });
-                    valueSerializer = new Serializer<string>(serializeWithHeadersFun: (topic, headers, data) =>
+                        OnSerialize3 = (topic, headers, data) =>
+                        {
+                            var key = Encoding.Unicode.GetBytes(data);
+                            return key;
+                        }
+                    };
+                    valueSerializer = new Serializer<string>()
                     {
-                        var value = Encoding.Unicode.GetBytes(data);
-                        return value;
-                    });
+                        OnSerialize3 = (topic, headers, data) =>
+                        {
+                            var value = Encoding.Unicode.GetBytes(data);
+                            return value;
+                        }
+                    };
                 }
                 try
                 {
@@ -177,11 +187,14 @@ namespace MASES.KNetClassicTest
                         Callback callback = null;
                         if (useCallback)
                         {
-                            callback = new Callback((o1, o2) =>
+                            callback = new Callback()
                             {
-                                if (o2 != null) Console.WriteLine(o2.ToString());
-                                else Console.WriteLine($"Produced on topic {o1.Topic} at offset {o1.Offset}");
-                            });
+                                OnOnCompletion = (o1, o2) =>
+                                {
+                                    if (o2 != null) Console.WriteLine(o2.ToString());
+                                    else Console.WriteLine($"Produced on topic {o1.Topic()} at offset {o1.Offset()}");
+                                }
+                            };
                         }
                         try
                         {
@@ -245,30 +258,38 @@ namespace MASES.KNetClassicTest
                 KafkaConsumer<string, string> consumer = null;
                 if (useSerdes)
                 {
-                    keyDeserializer = new Deserializer<string>(deserializeFun: (topic, data) =>
+                    keyDeserializer = new Deserializer<string>()
                     {
-                        var key = Encoding.Unicode.GetString(data);
-                        Console.WriteLine("Received key {0} from topic {1}", key, topic);
-                        return key;
-                    });
-                    valueDeserializer = new Deserializer<string>(deserializeFun: (topic, data) =>
+                        OnDeserialize = (topic, data) =>
+                        {
+                            var key = Encoding.Unicode.GetString(data);
+                            Console.WriteLine("Received key {0} from topic {1}", key, topic);
+                            return key;
+                        }
+                    };
+                    valueDeserializer = new Deserializer<string>()
                     {
-                        var value = Encoding.Unicode.GetString(data);
-                        Console.WriteLine("Received value {0} from topic {1}", value, topic);
-                        return value;
-                    });
+                        OnDeserialize = (topic, data) =>
+                        {
+                            var value = Encoding.Unicode.GetString(data);
+                            Console.WriteLine("Received value {0} from topic {1}", value, topic);
+                            return value;
+                        }
+                    };
                 }
                 if (useCallback)
                 {
-                    rebalanceListener = new ConsumerRebalanceListener(
-                        revoked: (o) =>
+                    rebalanceListener = new ConsumerRebalanceListener()
+                    {
+                        OnOnPartitionsRevoked = (o) =>
                         {
                             Console.WriteLine("Revoked: {0}", o.ToString());
                         },
-                        assigned: (o) =>
+                        OnOnPartitionsAssigned = (o) =>
                         {
                             Console.WriteLine("Assigned: {0}", o.ToString());
-                        });
+                        }
+                    };
                 }
                 try
                 {
@@ -282,7 +303,7 @@ namespace MASES.KNetClassicTest
                             var records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);
                             foreach (var item in records)
                             {
-                                Console.WriteLine($"Consuming from Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}");
+                                Console.WriteLine($"Consuming from Offset = {item.Offset()}, Key = {item.Key()}, Value = {item.Value()}");
                             }
                         }
                     }

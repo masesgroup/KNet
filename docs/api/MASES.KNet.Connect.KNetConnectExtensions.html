@@ -115,19 +115,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnectExtensions_CastTo__1_System_Collections_Generic_IEnumerable_MASES_KNet_Connect_Sink_SinkRecord__.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnectExtensions.CastTo%60%601(System.Collections.Generic.IEnumerable%7BMASES.KNet.Connect.Sink.SinkRecord%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=MASES_KNet_Connect_KNetConnectExtensions_CastTo__1_System_Collections_Generic_IEnumerable_Org_Apache_Kafka_Connect_Sink_SinkRecord__.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnectExtensions.CastTo%60%601(System.Collections.Generic.IEnumerable%7BOrg.Apache.Kafka.Connect.Sink.SinkRecord%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/KNetConnectExtensions.cs/#L69">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Specific/Connect/KNetConnectExtensions.cs/#L69">View Source</a>
   </span>
   <a id="MASES_KNet_Connect_KNetConnectExtensions_CastTo_" data-uid="MASES.KNet.Connect.KNetConnectExtensions.CastTo*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnectExtensions_CastTo__1_System_Collections_Generic_IEnumerable_MASES_KNet_Connect_Sink_SinkRecord__" data-uid="MASES.KNet.Connect.KNetConnectExtensions.CastTo``1(System.Collections.Generic.IEnumerable{MASES.KNet.Connect.Sink.SinkRecord})">CastTo&lt;TValue&gt;(IEnumerable&lt;SinkRecord&gt;)</h4>
-  <div class="markdown level1 summary"><p>Converts an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a> in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a></p>
+  <h4 id="MASES_KNet_Connect_KNetConnectExtensions_CastTo__1_System_Collections_Generic_IEnumerable_Org_Apache_Kafka_Connect_Sink_SinkRecord__" data-uid="MASES.KNet.Connect.KNetConnectExtensions.CastTo``1(System.Collections.Generic.IEnumerable{Org.Apache.Kafka.Connect.Sink.SinkRecord})">CastTo&lt;TValue&gt;(IEnumerable&lt;SinkRecord&gt;)</h4>
+  <div class="markdown level1 summary"><p>Converts an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a> in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a> of <a class="xref" href="Org.Apache.Kafka.Connect.Sink.SinkRecord-2.html">SinkRecord&lt;TKey, TValue&gt;</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;SinkRecord&lt;object, TValue&gt;&gt; CastTo&lt;TValue&gt;(this IEnumerable&lt;SinkRecord&gt; lst)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;SinkRecord&lt;object, TValue&gt;&gt; CastTo&lt;TValue&gt;(this IEnumerable&lt;SinkRecord&gt; source)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -140,9 +140,10 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MASES.KNet.Connect.Sink.SinkRecord.html">SinkRecord</a>&gt;</td>
-        <td><span class="parametername">lst</span></td>
-        <td></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Sink.SinkRecord.html">SinkRecord</a>&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a> to convert</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -156,7 +157,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MASES.KNet.Connect.Sink.SinkRecord-2.html">SinkRecord</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a>, TValue&gt;&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Sink.SinkRecord-2.html">SinkRecord</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a>, TValue&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -178,19 +179,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnectExtensions_CastTo__2_System_Collections_Generic_IEnumerable_MASES_KNet_Connect_Sink_SinkRecord__.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnectExtensions.CastTo%60%602(System.Collections.Generic.IEnumerable%7BMASES.KNet.Connect.Sink.SinkRecord%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=MASES_KNet_Connect_KNetConnectExtensions_CastTo__2_System_Collections_Generic_IEnumerable_Org_Apache_Kafka_Connect_Sink_SinkRecord__.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnectExtensions.CastTo%60%602(System.Collections.Generic.IEnumerable%7BOrg.Apache.Kafka.Connect.Sink.SinkRecord%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/KNetConnectExtensions.cs/#L77">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Specific/Connect/KNetConnectExtensions.cs/#L77">View Source</a>
   </span>
   <a id="MASES_KNet_Connect_KNetConnectExtensions_CastTo_" data-uid="MASES.KNet.Connect.KNetConnectExtensions.CastTo*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnectExtensions_CastTo__2_System_Collections_Generic_IEnumerable_MASES_KNet_Connect_Sink_SinkRecord__" data-uid="MASES.KNet.Connect.KNetConnectExtensions.CastTo``2(System.Collections.Generic.IEnumerable{MASES.KNet.Connect.Sink.SinkRecord})">CastTo&lt;TKey, TValue&gt;(IEnumerable&lt;SinkRecord&gt;)</h4>
-  <div class="markdown level1 summary"><p>Converts an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a> in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a></p>
+  <h4 id="MASES_KNet_Connect_KNetConnectExtensions_CastTo__2_System_Collections_Generic_IEnumerable_Org_Apache_Kafka_Connect_Sink_SinkRecord__" data-uid="MASES.KNet.Connect.KNetConnectExtensions.CastTo``2(System.Collections.Generic.IEnumerable{Org.Apache.Kafka.Connect.Sink.SinkRecord})">CastTo&lt;TKey, TValue&gt;(IEnumerable&lt;SinkRecord&gt;)</h4>
+  <div class="markdown level1 summary"><p>Converts an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a> in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a> of <a class="xref" href="Org.Apache.Kafka.Connect.Sink.SinkRecord-2.html">SinkRecord&lt;TKey, TValue&gt;</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;SinkRecord&lt;TKey, TValue&gt;&gt; CastTo&lt;TKey, TValue&gt;(this IEnumerable&lt;SinkRecord&gt; lst)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;SinkRecord&lt;TKey, TValue&gt;&gt; CastTo&lt;TKey, TValue&gt;(this IEnumerable&lt;SinkRecord&gt; source)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -203,9 +204,10 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MASES.KNet.Connect.Sink.SinkRecord.html">SinkRecord</a>&gt;</td>
-        <td><span class="parametername">lst</span></td>
-        <td></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Sink.SinkRecord.html">SinkRecord</a>&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a> to convert</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -219,7 +221,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MASES.KNet.Connect.Sink.SinkRecord-2.html">SinkRecord</a>&lt;TKey, TValue&gt;&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Sink.SinkRecord-2.html">SinkRecord</a>&lt;TKey, TValue&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -245,19 +247,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnectExtensions_Convert__2_System_Collections_Generic_IEnumerable_MASES_KNet_Connect_Source_SourceRecord___0___1___.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnectExtensions.Convert%60%602(System.Collections.Generic.IEnumerable%7BMASES.KNet.Connect.Source.SourceRecord%7B%60%600%2C%60%601%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=MASES_KNet_Connect_KNetConnectExtensions_Convert__2_System_Collections_Generic_IEnumerable_Org_Apache_Kafka_Connect_Source_SourceRecord___0___1___.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnectExtensions.Convert%60%602(System.Collections.Generic.IEnumerable%7BOrg.Apache.Kafka.Connect.Source.SourceRecord%7B%60%600%2C%60%601%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/KNetConnectExtensions.cs/#L52">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Specific/Connect/KNetConnectExtensions.cs/#L52">View Source</a>
   </span>
   <a id="MASES_KNet_Connect_KNetConnectExtensions_Convert_" data-uid="MASES.KNet.Connect.KNetConnectExtensions.Convert*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnectExtensions_Convert__2_System_Collections_Generic_IEnumerable_MASES_KNet_Connect_Source_SourceRecord___0___1___" data-uid="MASES.KNet.Connect.KNetConnectExtensions.Convert``2(System.Collections.Generic.IEnumerable{MASES.KNet.Connect.Source.SourceRecord{``0,``1}})">Convert&lt;TKey, TValue&gt;(IEnumerable&lt;SourceRecord&lt;TKey, TValue&gt;&gt;)</h4>
-  <div class="markdown level1 summary"><p>Converts an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a> in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List&lt;T&gt;</a></p>
+  <h4 id="MASES_KNet_Connect_KNetConnectExtensions_Convert__2_System_Collections_Generic_IEnumerable_Org_Apache_Kafka_Connect_Source_SourceRecord___0___1___" data-uid="MASES.KNet.Connect.KNetConnectExtensions.Convert``2(System.Collections.Generic.IEnumerable{Org.Apache.Kafka.Connect.Source.SourceRecord{``0,``1}})">Convert&lt;TKey, TValue&gt;(IEnumerable&lt;SourceRecord&lt;TKey, TValue&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Converts an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a> of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List&lt;T&gt;</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static List&lt;SourceRecord&gt; Convert&lt;TKey, TValue&gt;(this IEnumerable&lt;SourceRecord&lt;TKey, TValue&gt;&gt; lst)</code></pre>
+    <pre><code class="lang-csharp hljs">public static List&lt;SourceRecord&gt; Convert&lt;TKey, TValue&gt;(this IEnumerable&lt;SourceRecord&lt;TKey, TValue&gt;&gt; source)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -270,9 +272,10 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MASES.KNet.Connect.Source.SourceRecord-2.html">SourceRecord</a>&lt;TKey, TValue&gt;&gt;</td>
-        <td><span class="parametername">lst</span></td>
-        <td></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord</a>&lt;TKey, TValue&gt;&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a> of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> to convert</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -286,7 +289,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MASES.KNet.Connect.Source.SourceRecord.html">SourceRecord</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -312,19 +315,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnectExtensions_Convert__4_System_Collections_Generic_IEnumerable_MASES_KNet_Connect_Source_SourceRecord___0___1___2___3___.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnectExtensions.Convert%60%604(System.Collections.Generic.IEnumerable%7BMASES.KNet.Connect.Source.SourceRecord%7B%60%600%2C%60%601%2C%60%602%2C%60%603%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=MASES_KNet_Connect_KNetConnectExtensions_Convert__4_System_Collections_Generic_IEnumerable_Org_Apache_Kafka_Connect_Source_SourceRecord___0___1___2___3___.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnectExtensions.Convert%60%604(System.Collections.Generic.IEnumerable%7BOrg.Apache.Kafka.Connect.Source.SourceRecord%7B%60%600%2C%60%601%2C%60%602%2C%60%603%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/KNetConnectExtensions.cs/#L61">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Specific/Connect/KNetConnectExtensions.cs/#L61">View Source</a>
   </span>
   <a id="MASES_KNet_Connect_KNetConnectExtensions_Convert_" data-uid="MASES.KNet.Connect.KNetConnectExtensions.Convert*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnectExtensions_Convert__4_System_Collections_Generic_IEnumerable_MASES_KNet_Connect_Source_SourceRecord___0___1___2___3___" data-uid="MASES.KNet.Connect.KNetConnectExtensions.Convert``4(System.Collections.Generic.IEnumerable{MASES.KNet.Connect.Source.SourceRecord{``0,``1,``2,``3}})">Convert&lt;TKeySource, TOffset, TKey, TValue&gt;(IEnumerable&lt;SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;&gt;)</h4>
-  <div class="markdown level1 summary"><p>Converts an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a> in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List&lt;T&gt;</a></p>
+  <h4 id="MASES_KNet_Connect_KNetConnectExtensions_Convert__4_System_Collections_Generic_IEnumerable_Org_Apache_Kafka_Connect_Source_SourceRecord___0___1___2___3___" data-uid="MASES.KNet.Connect.KNetConnectExtensions.Convert``4(System.Collections.Generic.IEnumerable{Org.Apache.Kafka.Connect.Source.SourceRecord{``0,``1,``2,``3}})">Convert&lt;TKeySource, TOffset, TKey, TValue&gt;(IEnumerable&lt;SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Converts an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a> of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> in <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List&lt;T&gt;</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static List&lt;SourceRecord&gt; Convert&lt;TKeySource, TOffset, TKey, TValue&gt;(this IEnumerable&lt;SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;&gt; lst)</code></pre>
+    <pre><code class="lang-csharp hljs">public static List&lt;SourceRecord&gt; Convert&lt;TKeySource, TOffset, TKey, TValue&gt;(this IEnumerable&lt;SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;&gt; source)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -337,9 +340,10 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MASES.KNet.Connect.Source.SourceRecord-4.html">SourceRecord</a>&lt;TKeySource, TOffset, TKey, TValue&gt;&gt;</td>
-        <td><span class="parametername">lst</span></td>
-        <td></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord</a>&lt;TKeySource, TOffset, TKey, TValue&gt;&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a> of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> to convert</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -353,7 +357,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MASES.KNet.Connect.Source.SourceRecord.html">SourceRecord</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -387,14 +391,14 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnectExtensions_From__2_MASES_KNet_Connect_Source_SourceRecord___0___1__.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnectExtensions.From%60%602(MASES.KNet.Connect.Source.SourceRecord%7B%60%600%2C%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=MASES_KNet_Connect_KNetConnectExtensions_From__2_Org_Apache_Kafka_Connect_Source_SourceRecord___0___1__.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnectExtensions.From%60%602(Org.Apache.Kafka.Connect.Source.SourceRecord%7B%60%600%2C%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/KNetConnectExtensions.cs/#L36">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Specific/Connect/KNetConnectExtensions.cs/#L36">View Source</a>
   </span>
   <a id="MASES_KNet_Connect_KNetConnectExtensions_From_" data-uid="MASES.KNet.Connect.KNetConnectExtensions.From*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnectExtensions_From__2_MASES_KNet_Connect_Source_SourceRecord___0___1__" data-uid="MASES.KNet.Connect.KNetConnectExtensions.From``2(MASES.KNet.Connect.Source.SourceRecord{``0,``1})">From&lt;TKey, TValue&gt;(SourceRecord&lt;TKey, TValue&gt;)</h4>
-  <div class="markdown level1 summary"><p>Converts an <a class="xref" href="MASES.KNet.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> in <a class="xref" href="MASES.KNet.Connect.Source.SourceRecord.html">SourceRecord</a></p>
+  <h4 id="MASES_KNet_Connect_KNetConnectExtensions_From__2_Org_Apache_Kafka_Connect_Source_SourceRecord___0___1__" data-uid="MASES.KNet.Connect.KNetConnectExtensions.From``2(Org.Apache.Kafka.Connect.Source.SourceRecord{``0,``1})">From&lt;TKey, TValue&gt;(SourceRecord&lt;TKey, TValue&gt;)</h4>
+  <div class="markdown level1 summary"><p>Converts an <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> in <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -412,9 +416,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MASES.KNet.Connect.Source.SourceRecord-2.html">SourceRecord</a>&lt;TKey, TValue&gt;</td>
+        <td><a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord</a>&lt;TKey, TValue&gt;</td>
         <td><span class="parametername">source</span></td>
-        <td><p>The <a class="xref" href="MASES.KNet.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> to convert</p>
+        <td><p>The <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> to convert</p>
 </td>
       </tr>
     </tbody>
@@ -429,7 +433,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MASES.KNet.Connect.Source.SourceRecord.html">SourceRecord</a></td>
+        <td><a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -455,14 +459,14 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnectExtensions_From__4_MASES_KNet_Connect_Source_SourceRecord___0___1___2___3__.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnectExtensions.From%60%604(MASES.KNet.Connect.Source.SourceRecord%7B%60%600%2C%60%601%2C%60%602%2C%60%603%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=MASES_KNet_Connect_KNetConnectExtensions_From__4_Org_Apache_Kafka_Connect_Source_SourceRecord___0___1___2___3__.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnectExtensions.From%60%604(Org.Apache.Kafka.Connect.Source.SourceRecord%7B%60%600%2C%60%601%2C%60%602%2C%60%603%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/KNetConnectExtensions.cs/#L44">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Specific/Connect/KNetConnectExtensions.cs/#L44">View Source</a>
   </span>
   <a id="MASES_KNet_Connect_KNetConnectExtensions_From_" data-uid="MASES.KNet.Connect.KNetConnectExtensions.From*"></a>
-  <h4 id="MASES_KNet_Connect_KNetConnectExtensions_From__4_MASES_KNet_Connect_Source_SourceRecord___0___1___2___3__" data-uid="MASES.KNet.Connect.KNetConnectExtensions.From``4(MASES.KNet.Connect.Source.SourceRecord{``0,``1,``2,``3})">From&lt;TKeySource, TOffset, TKey, TValue&gt;(SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;)</h4>
-  <div class="markdown level1 summary"><p>Converts an <a class="xref" href="MASES.KNet.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> in <a class="xref" href="MASES.KNet.Connect.Source.SourceRecord.html">SourceRecord</a></p>
+  <h4 id="MASES_KNet_Connect_KNetConnectExtensions_From__4_Org_Apache_Kafka_Connect_Source_SourceRecord___0___1___2___3__" data-uid="MASES.KNet.Connect.KNetConnectExtensions.From``4(Org.Apache.Kafka.Connect.Source.SourceRecord{``0,``1,``2,``3})">From&lt;TKeySource, TOffset, TKey, TValue&gt;(SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;)</h4>
+  <div class="markdown level1 summary"><p>Converts an <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> in <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -480,9 +484,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MASES.KNet.Connect.Source.SourceRecord-4.html">SourceRecord</a>&lt;TKeySource, TOffset, TKey, TValue&gt;</td>
+        <td><a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord</a>&lt;TKeySource, TOffset, TKey, TValue&gt;</td>
         <td><span class="parametername">source</span></td>
-        <td><p>The <a class="xref" href="MASES.KNet.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> to convert</p>
+        <td><p>The <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> to convert</p>
 </td>
       </tr>
     </tbody>
@@ -497,7 +501,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MASES.KNet.Connect.Source.SourceRecord.html">SourceRecord</a></td>
+        <td><a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -537,10 +541,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_KNetConnectExtensions.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnectExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=MASES_KNet_Connect_KNetConnectExtensions.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.KNetConnectExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/ClientSide/BridgedClasses/Connect/KNetConnectExtensions.cs/#L30" class="contribution-link">View Source</a>
+                    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Specific/Connect/KNetConnectExtensions.cs/#L30" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

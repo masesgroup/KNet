@@ -16,7 +16,7 @@
 		<PackageReadmeFile>usageTemplates.md</PackageReadmeFile>
 	</PropertyGroup>
 	<ItemGroup>
-		<None Include="..\Documentation\articles\usageTemplates.md" Pack="true" PackagePath="\" />
+		<None Include="..\..\documentation\articles\usageTemplates.md" Pack="true" PackagePath="\" />
 		<Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**;templates\**\.vscode\**" />
 		<Compile Remove="**\*" />
 	</ItemGroup>

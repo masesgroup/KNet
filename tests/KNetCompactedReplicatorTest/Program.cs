@@ -18,14 +18,18 @@
 
 using Java.Util;
 using MASES.KNet;
-using MASES.KNet.Clients.Admin;
-using MASES.KNet.Clients.Consumer;
-using MASES.KNet.Clients.Producer;
-using MASES.KNet.Common.Config;
+using MASES.KNet.Admin;
+using MASES.KNet.Common;
+using MASES.KNet.Consumer;
 using MASES.KNet.Extensions;
+using MASES.KNet.Producer;
 using MASES.KNet.Serialization;
 using MASES.KNet.Serialization.Json;
 using MASES.KNet.TestCommon;
+using Org.Apache.Kafka.Clients.Admin;
+using Org.Apache.Kafka.Clients.Consumer;
+using Org.Apache.Kafka.Clients.Producer;
+using Org.Apache.Kafka.Common.Config;
 using System;
 using System.Threading;
 
@@ -109,7 +113,7 @@ namespace MASES.KNetTest
                 var map = Collections.SingletonMap(TopicConfig.CLEANUP_POLICY_CONFIG, TopicConfig.CLEANUP_POLICY_COMPACT);
                 topic.Configs(map);
                 *********/
-                topic = topic.Configs(TopicConfigBuilder.Create().WithCleanupPolicy(TopicConfig.CleanupPolicy.Compact | TopicConfig.CleanupPolicy.Delete)
+                topic = topic.Configs(TopicConfigBuilder.Create().WithCleanupPolicy(TopicConfigBuilder.CleanupPolicyTypes.Compact | TopicConfigBuilder.CleanupPolicyTypes.Delete)
                                                                  .WithDeleteRetentionMs(100)
                                                                  .WithMinCleanableDirtyRatio(0.01)
                                                                  .WithSegmentMs(100));
@@ -163,7 +167,7 @@ namespace MASES.KNetTest
 
                 Properties props = ProducerConfigBuilder.Create()
                                                         .WithBootstrapServers(serverToUse)
-                                                        .WithAcks(ProducerConfig.Acks.All)
+                                                        .WithAcks(ProducerConfigBuilder.AcksTypes.All)
                                                         .WithRetries(0)
                                                         .WithLingerMs(1)
                                                         .ToProperties();
@@ -178,11 +182,14 @@ namespace MASES.KNetTest
                         Callback callback = null;
                         if (useCallback)
                         {
-                            callback = new Callback((o1, o2) =>
+                            callback = new Callback()
                             {
-                                if (o2 != null) Console.WriteLine(o2.ToString());
-                                else Console.WriteLine($"Produced on topic {o1.Topic} at offset {o1.Offset}");
-                            });
+                                OnOnCompletion = (o1, o2) =>
+                                {
+                                    if (o2 != null) Console.WriteLine(o2.ToString());
+                                    else Console.WriteLine($"Produced on topic {o1.Topic()} at offset {o1.Offset()}");
+                                }
+                            };
                         }
                         try
                         {
@@ -240,15 +247,17 @@ namespace MASES.KNetTest
 
                 if (useCallback)
                 {
-                    rebalanceListener = new ConsumerRebalanceListener(
-                        revoked: (o) =>
+                    rebalanceListener = new ConsumerRebalanceListener()
+                    {
+                        OnOnPartitionsRevoked = (o) =>
                         {
                             Console.WriteLine("Revoked: {0}", o.ToString());
                         },
-                        assigned: (o) =>
+                        OnOnPartitionsAssigned = (o) =>
                         {
                             Console.WriteLine("Assigned: {0}", o.ToString());
-                        });
+                        }
+                    };
                 }
                 try
                 {

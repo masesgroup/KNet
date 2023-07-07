@@ -18,7 +18,7 @@
 
 using MASES.JCOBridge.C2JBridge;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
-using MASES.KNet.Clients.Consumer;
+using Org.Apache.Kafka.Clients.Consumer;
 using MASES.KNetPS.Cmdlet;
 using System;
 using System.Collections;

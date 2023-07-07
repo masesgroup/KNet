@@ -16,11 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Clients.Producer;
+using Org.Apache.Kafka.Clients.Producer;
 using MASES.KNet.Extensions;
 using MASES.KNetPS.Cmdlet;
 using System;
 using System.Management.Automation;
+using MASES.KNet.Producer;
 
 namespace MASES.KNetPS.ClientCmdlet
 {
