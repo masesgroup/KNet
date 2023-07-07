@@ -73,7 +73,7 @@
   
   <h1 id="Org_Apache_Kafka_Connect_Connector_ConnectRecord_3" data-uid="Org.Apache.Kafka.Connect.Connector.ConnectRecord`3" class="text-break">Class ConnectRecord&lt;R, TKey, TValue&gt;
   </h1>
-  <div class="markdown level0 summary"><p>Base type for <see cref="!:MASES.KNet.Connect.Sink.SinkRecord&lt;TKey, TValue>"></see> and <see cref="!:MASES.KNet.Connect.Source.SourceRecord&lt;TKey, TValue>"></see></p>
+  <div class="markdown level0 summary"><p>KNet helper for <a class="xref" href="Org.Apache.Kafka.Connect.Connector.ConnectRecord.html">ConnectRecord</a></p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -416,14 +416,31 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Connect_Connector_ConnectRecord_3__ctor.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Connector.ConnectRecord%603.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Connector/ConnectRecord.cs/#L54">View Source</a>
+  </span>
+  <a id="Org_Apache_Kafka_Connect_Connector_ConnectRecord_3__ctor_" data-uid="Org.Apache.Kafka.Connect.Connector.ConnectRecord`3.#ctor*"></a>
+  <h4 id="Org_Apache_Kafka_Connect_Connector_ConnectRecord_3__ctor" data-uid="Org.Apache.Kafka.Connect.Connector.ConnectRecord`3.#ctor">ConnectRecord()</h4>
+  <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConnectRecord()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Connect_Connector_ConnectRecord_3__ctor_System_Object___.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Connector.ConnectRecord%603.%23ctor(System.Object%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Connector/ConnectRecord.cs/#L70">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Connector/ConnectRecord.cs/#L80">View Source</a>
   </span>
   <a id="Org_Apache_Kafka_Connect_Connector_ConnectRecord_3__ctor_" data-uid="Org.Apache.Kafka.Connect.Connector.ConnectRecord`3.#ctor*"></a>
   <h4 id="Org_Apache_Kafka_Connect_Connector_ConnectRecord_3__ctor_System_Object___" data-uid="Org.Apache.Kafka.Connect.Connector.ConnectRecord`3.#ctor(System.Object[])">ConnectRecord(Object[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -451,11 +468,12 @@
     <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Connect_Connector_ConnectRecord_3__ctor_System_String_System_Int32_Org_Apache_Kafka_Connect_Data_Schema__1_Org_Apache_Kafka_Connect_Data_Schema__2_System_DateTime_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Connector.ConnectRecord%603.%23ctor(System.String%2CSystem.Int32%2COrg.Apache.Kafka.Connect.Data.Schema%2C%601%2COrg.Apache.Kafka.Connect.Data.Schema%2C%602%2CSystem.DateTime)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Connector/ConnectRecord.cs/#L54">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Connector/ConnectRecord.cs/#L60">View Source</a>
   </span>
   <a id="Org_Apache_Kafka_Connect_Connector_ConnectRecord_3__ctor_" data-uid="Org.Apache.Kafka.Connect.Connector.ConnectRecord`3.#ctor*"></a>
   <h4 id="Org_Apache_Kafka_Connect_Connector_ConnectRecord_3__ctor_System_String_System_Int32_Org_Apache_Kafka_Connect_Data_Schema__1_Org_Apache_Kafka_Connect_Data_Schema__2_System_DateTime_" data-uid="Org.Apache.Kafka.Connect.Connector.ConnectRecord`3.#ctor(System.String,System.Int32,Org.Apache.Kafka.Connect.Data.Schema,`1,Org.Apache.Kafka.Connect.Data.Schema,`2,System.DateTime)">ConnectRecord(String, Int32, Schema, TKey, Schema, TValue, DateTime)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/connector/ConnectRecord.html#org.apache.kafka.connect.connector.ConnectRecord(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/connector/ConnectRecord.html#org.apache.kafka.connect.connector.ConnectRecord(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)</a></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -513,11 +531,12 @@
     <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Connect_Connector_ConnectRecord_3__ctor_System_String_System_Int32_Org_Apache_Kafka_Connect_Data_Schema__1_Org_Apache_Kafka_Connect_Data_Schema__2_System_DateTime_Org_Apache_Kafka_Connect_Header_Headers_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Connector.ConnectRecord%603.%23ctor(System.String%2CSystem.Int32%2COrg.Apache.Kafka.Connect.Data.Schema%2C%601%2COrg.Apache.Kafka.Connect.Data.Schema%2C%602%2CSystem.DateTime%2COrg.Apache.Kafka.Connect.Header.Headers)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Connector/ConnectRecord.cs/#L62">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Connector/ConnectRecord.cs/#L70">View Source</a>
   </span>
   <a id="Org_Apache_Kafka_Connect_Connector_ConnectRecord_3__ctor_" data-uid="Org.Apache.Kafka.Connect.Connector.ConnectRecord`3.#ctor*"></a>
   <h4 id="Org_Apache_Kafka_Connect_Connector_ConnectRecord_3__ctor_System_String_System_Int32_Org_Apache_Kafka_Connect_Data_Schema__1_Org_Apache_Kafka_Connect_Data_Schema__2_System_DateTime_Org_Apache_Kafka_Connect_Header_Headers_" data-uid="Org.Apache.Kafka.Connect.Connector.ConnectRecord`3.#ctor(System.String,System.Int32,Org.Apache.Kafka.Connect.Data.Schema,`1,Org.Apache.Kafka.Connect.Data.Schema,`2,System.DateTime,Org.Apache.Kafka.Connect.Header.Headers)">ConnectRecord(String, Int32, Schema, TKey, Schema, TValue, DateTime, Headers)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/connector/ConnectRecord.html#org.apache.kafka.connect.connector.ConnectRecord(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long,java.lang.Iterable)">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/connector/ConnectRecord.html#org.apache.kafka.connect.connector.ConnectRecord(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long,java.lang.Iterable)</a></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -582,11 +601,12 @@
     <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_BridgeClassName.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Connector.ConnectRecord%603.BridgeClassName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Connector/ConnectRecord.cs/#L47">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Connector/ConnectRecord.cs/#L49">View Source</a>
   </span>
   <a id="Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_BridgeClassName_" data-uid="Org.Apache.Kafka.Connect.Connector.ConnectRecord`3.BridgeClassName*"></a>
   <h4 id="Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_BridgeClassName" data-uid="Org.Apache.Kafka.Connect.Connector.ConnectRecord`3.BridgeClassName">BridgeClassName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -614,7 +634,7 @@
     <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_Headers.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Connector.ConnectRecord%603.Headers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Connector/ConnectRecord.cs/#L104">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Connector/ConnectRecord.cs/#L114">View Source</a>
   </span>
   <a id="Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_Headers_" data-uid="Org.Apache.Kafka.Connect.Connector.ConnectRecord`3.Headers*"></a>
   <h4 id="Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_Headers" data-uid="Org.Apache.Kafka.Connect.Connector.ConnectRecord`3.Headers">Headers</h4>
@@ -645,11 +665,12 @@
     <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_IsBridgeAbstract.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Connector.ConnectRecord%603.IsBridgeAbstract%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Connector/ConnectRecord.cs/#L46">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Connector/ConnectRecord.cs/#L45">View Source</a>
   </span>
   <a id="Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_IsBridgeAbstract_" data-uid="Org.Apache.Kafka.Connect.Connector.ConnectRecord`3.IsBridgeAbstract*"></a>
   <h4 id="Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Connect.Connector.ConnectRecord`3.IsBridgeAbstract">IsBridgeAbstract</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -677,7 +698,7 @@
     <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_KafkaPartition.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Connector.ConnectRecord%603.KafkaPartition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Connector/ConnectRecord.cs/#L80">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Connector/ConnectRecord.cs/#L90">View Source</a>
   </span>
   <a id="Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_KafkaPartition_" data-uid="Org.Apache.Kafka.Connect.Connector.ConnectRecord`3.KafkaPartition*"></a>
   <h4 id="Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_KafkaPartition" data-uid="Org.Apache.Kafka.Connect.Connector.ConnectRecord`3.KafkaPartition">KafkaPartition</h4>
@@ -708,7 +729,7 @@
     <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_Key.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Connector.ConnectRecord%603.Key%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Connector/ConnectRecord.cs/#L84">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Connector/ConnectRecord.cs/#L94">View Source</a>
   </span>
   <a id="Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_Key_" data-uid="Org.Apache.Kafka.Connect.Connector.ConnectRecord`3.Key*"></a>
   <h4 id="Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_Key" data-uid="Org.Apache.Kafka.Connect.Connector.ConnectRecord`3.Key">Key</h4>
@@ -739,7 +760,7 @@
     <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_KeySchema.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Connector.ConnectRecord%603.KeySchema%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Connector/ConnectRecord.cs/#L88">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Connector/ConnectRecord.cs/#L98">View Source</a>
   </span>
   <a id="Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_KeySchema_" data-uid="Org.Apache.Kafka.Connect.Connector.ConnectRecord`3.KeySchema*"></a>
   <h4 id="Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_KeySchema" data-uid="Org.Apache.Kafka.Connect.Connector.ConnectRecord`3.KeySchema">KeySchema</h4>
@@ -770,7 +791,7 @@
     <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_Timestamp.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Connector.ConnectRecord%603.Timestamp%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Connector/ConnectRecord.cs/#L100">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Connector/ConnectRecord.cs/#L110">View Source</a>
   </span>
   <a id="Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_Timestamp_" data-uid="Org.Apache.Kafka.Connect.Connector.ConnectRecord`3.Timestamp*"></a>
   <h4 id="Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_Timestamp" data-uid="Org.Apache.Kafka.Connect.Connector.ConnectRecord`3.Timestamp">Timestamp</h4>
@@ -801,7 +822,7 @@
     <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_Topic.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Connector.ConnectRecord%603.Topic%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Connector/ConnectRecord.cs/#L76">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Connector/ConnectRecord.cs/#L86">View Source</a>
   </span>
   <a id="Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_Topic_" data-uid="Org.Apache.Kafka.Connect.Connector.ConnectRecord`3.Topic*"></a>
   <h4 id="Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_Topic" data-uid="Org.Apache.Kafka.Connect.Connector.ConnectRecord`3.Topic">Topic</h4>
@@ -832,7 +853,7 @@
     <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_Value.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Connector.ConnectRecord%603.Value%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Connector/ConnectRecord.cs/#L92">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Connector/ConnectRecord.cs/#L102">View Source</a>
   </span>
   <a id="Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_Value_" data-uid="Org.Apache.Kafka.Connect.Connector.ConnectRecord`3.Value*"></a>
   <h4 id="Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_Value" data-uid="Org.Apache.Kafka.Connect.Connector.ConnectRecord`3.Value">Value</h4>
@@ -863,7 +884,7 @@
     <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_ValueSchema.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Connector.ConnectRecord%603.ValueSchema%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Connector/ConnectRecord.cs/#L96">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Connector/ConnectRecord.cs/#L106">View Source</a>
   </span>
   <a id="Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_ValueSchema_" data-uid="Org.Apache.Kafka.Connect.Connector.ConnectRecord`3.ValueSchema*"></a>
   <h4 id="Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_ValueSchema" data-uid="Org.Apache.Kafka.Connect.Connector.ConnectRecord`3.ValueSchema">ValueSchema</h4>
@@ -896,11 +917,12 @@
     <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_NewRecord_System_String_System_Int32_Org_Apache_Kafka_Connect_Data_Schema__1_Org_Apache_Kafka_Connect_Data_Schema__2_System_DateTime_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Connector.ConnectRecord%603.NewRecord(System.String%2CSystem.Int32%2COrg.Apache.Kafka.Connect.Data.Schema%2C%601%2COrg.Apache.Kafka.Connect.Data.Schema%2C%602%2CSystem.DateTime)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Connector/ConnectRecord.cs/#L106">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Connector/ConnectRecord.cs/#L118">View Source</a>
   </span>
   <a id="Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_NewRecord_" data-uid="Org.Apache.Kafka.Connect.Connector.ConnectRecord`3.NewRecord*"></a>
   <h4 id="Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_NewRecord_System_String_System_Int32_Org_Apache_Kafka_Connect_Data_Schema__1_Org_Apache_Kafka_Connect_Data_Schema__2_System_DateTime_" data-uid="Org.Apache.Kafka.Connect.Connector.ConnectRecord`3.NewRecord(System.String,System.Int32,Org.Apache.Kafka.Connect.Data.Schema,`1,Org.Apache.Kafka.Connect.Data.Schema,`2,System.DateTime)">NewRecord(String, Int32, Schema, TKey, Schema, TValue, DateTime)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/connector/ConnectRecord.html#newRecord-java.lang.String-java.lang.Integer-org.apache.kafka.connect.data.Schema-java.lang.Object-org.apache.kafka.connect.data.Schema-java.lang.Object-java.lang.Long-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/connector/ConnectRecord.html#newRecord-java.lang.String-java.lang.Integer-org.apache.kafka.connect.data.Schema-java.lang.Object-org.apache.kafka.connect.data.Schema-java.lang.Object-java.lang.Long-</a></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -973,11 +995,12 @@
     <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_NewRecord_System_String_System_Int32_Org_Apache_Kafka_Connect_Data_Schema__1_Org_Apache_Kafka_Connect_Data_Schema__2_System_DateTime_Org_Apache_Kafka_Connect_Header_Headers_.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Connector.ConnectRecord%603.NewRecord(System.String%2CSystem.Int32%2COrg.Apache.Kafka.Connect.Data.Schema%2C%601%2COrg.Apache.Kafka.Connect.Data.Schema%2C%602%2CSystem.DateTime%2COrg.Apache.Kafka.Connect.Header.Headers)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Connector/ConnectRecord.cs/#L108">View Source</a>
+    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Connector/ConnectRecord.cs/#L122">View Source</a>
   </span>
   <a id="Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_NewRecord_" data-uid="Org.Apache.Kafka.Connect.Connector.ConnectRecord`3.NewRecord*"></a>
   <h4 id="Org_Apache_Kafka_Connect_Connector_ConnectRecord_3_NewRecord_System_String_System_Int32_Org_Apache_Kafka_Connect_Data_Schema__1_Org_Apache_Kafka_Connect_Data_Schema__2_System_DateTime_Org_Apache_Kafka_Connect_Header_Headers_" data-uid="Org.Apache.Kafka.Connect.Connector.ConnectRecord`3.NewRecord(System.String,System.Int32,Org.Apache.Kafka.Connect.Data.Schema,`1,Org.Apache.Kafka.Connect.Data.Schema,`2,System.DateTime,Org.Apache.Kafka.Connect.Header.Headers)">NewRecord(String, Int32, Schema, TKey, Schema, TValue, DateTime, Headers)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/connector/ConnectRecord.html#newRecord-java.lang.String-java.lang.Integer-org.apache.kafka.connect.data.Schema-java.lang.Object-org.apache.kafka.connect.data.Schema-java.lang.Object-java.lang.Long-java.lang.Iterable-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/connector/ConnectRecord.html#newRecord-java.lang.String-java.lang.Integer-org.apache.kafka.connect.data.Schema-java.lang.Object-org.apache.kafka.connect.data.Schema-java.lang.Object-java.lang.Long-java.lang.Iterable-</a></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1080,7 +1103,7 @@
                     <a href="https://github.com/masesgroup/KNet/new/v2/apiSpec/new?filename=Org_Apache_Kafka_Connect_Connector_ConnectRecord_3.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Connect.Connector.ConnectRecord%603%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Connector/ConnectRecord.cs/#L44" class="contribution-link">View Source</a>
+                    <a href="https://github.com/masesgroup/KNet/blob/v2/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Connector/ConnectRecord.cs/#L40" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
