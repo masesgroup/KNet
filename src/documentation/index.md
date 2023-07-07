@@ -63,6 +63,7 @@ This project adheres to the Contributor [Covenant code of conduct](CODE_OF_CONDU
 * V1.4.4+: From version 1.4.4 there is a new project, named KNetPS, which permits to write PowerShell client scripts for an Apache Kafka cluster and many other things, [here full usage](src/net/Documentation/articles/usagePS.md).
 * V1.4.7+: From version 1.4.7 there is a new project, named KNetConnect, to execute Apache Kafka Connect related jobs, [here full usage](src/net/Documentation/articles/usageConnect.md).
 * V1.5.4+: From version 1.5.4 there are new packages dedicated to [KNet Serializer/Deserializer](src/net/Documentation/articles/usageSerDes.md)
+* V2.0.0+: From version 2.0.0 the code base is fully reflected from the JARs of the Apache Kafka distribution downloaded from Maven; some developed classes still remains beside the specific KNet implementations
 
 ---
 
@@ -85,8 +86,6 @@ KNet uses [JNet](https://github.com/masesgroup/JNet), and indeed [JCOBridge](htt
 
 Have a look at the following JCOBridge resources:
 - [Release notes](https://www.jcobridge.com/release-notes/)
-- ~~[Non Profit or University](https://www.jcobridge.com/pricing/)~~
-- ~~[Commercial info: Professional or Enterprise](https://www.jcobridge.com/pricing/)~~
 - [Community Edition](https://www.jcobridge.com/pricing-25/)
 - [Commercial Edition](https://www.jcobridge.com/pricing-25/)
 - Latest release: [![JCOBridge nuget](https://img.shields.io/nuget/v/MASES.JCOBridge)](https://www.nuget.org/packages/MASES.JCOBridge)
