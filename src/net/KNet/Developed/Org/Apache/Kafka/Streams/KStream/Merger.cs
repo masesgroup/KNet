@@ -40,8 +40,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// <summary>
     /// Listener for Kafka Merger. Extends <see cref="JVMBridgeListener"/>
     /// </summary>
-    /// <typeparam name="K">The data associated to the event</typeparam>
-    /// <typeparam name="V">The data associated to the event</typeparam>
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public partial class Merger<K, V> : IMerger<K, V>
     {

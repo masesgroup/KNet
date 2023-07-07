@@ -56,36 +56,9 @@ namespace Org.Apache.Kafka.Common.Serialization
     /// <summary>
     /// Listener for Kafka Deserializer. Extends <see cref="IDeserializer{E}"/>
     /// </summary>
-    /// <typeparam name="E">The data associated to the event</typeparam>
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public partial class Deserializer<T> : IDeserializer<T>
     {
-        //void EventHandler(object sender, CLRListenerEventArgs<CLREventData<string>> data)
-        //{
-        //    var container = data.EventData.ExtraData.Get(0) as IJavaObject; // it is a byte[]
-        //    var array = container.ToArray() as IJavaArray;
-        //    byte[] bytes = (byte[])array.ToPrimitive();
-        //    var retVal = OnDeserialize(data.EventData.TypedEventData, bytes);
-        //    data.SetReturnValue(retVal);
-        //}
 
-        //void EventHandlerWithHeaders(object sender, CLRListenerEventArgs<CLREventData<string>> data)
-        //{
-        //    var headers = data.EventData.ExtraData.Get(0) as IJavaObject; // it is a Headers
-        //    var container = data.EventData.ExtraData.Get(1) as IJavaObject; // it is an IJavaObject
-        //    var array = container.ToArray() as IJavaArray; // convert to an IJavaArray
-        //    byte[] bytes = (byte[])array.ToPrimitive(); // extract the array
-        //    var retVal = OnDeserializeWithHeaders(data.EventData.TypedEventData, JVMBridgeBase.Wraps<Headers>(headers), bytes);
-        //    data.SetReturnValue(retVal);
-        //}
-
-        ///// <summary>
-        ///// Executes the Deserializer action in the CLR
-        ///// </summary>
-        ///// <param name="topic">topic associated with the data</param>
-        ///// <param name="headers"><see cref="Headers"/> associated with the record; may be empty.</param>
-        ///// <param name="data">serialized bytes; may be null; implementations are recommended to handle null by returning a value or null rather than throwing an exception</param>
-        ///// <returns>The deserialized <typeparamref name="T"/></returns>
-        //public virtual T DeserializeWithHeaders(string topic, Headers headers, byte[] data) { return default; }
     }
 }

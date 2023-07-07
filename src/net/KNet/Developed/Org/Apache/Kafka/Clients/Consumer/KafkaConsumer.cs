@@ -25,6 +25,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 {
     public partial class KafkaConsumer<K, V> : IConsumer<K, V>
     {
+        /// <inheritdoc cref="IConsumer{K, V}.Poll(Duration)"/>
         public ConsumerRecords<K, V> Poll(long timeoutMs)
         {
             return IExecute<ConsumerRecords<K, V>>("poll", timeoutMs);

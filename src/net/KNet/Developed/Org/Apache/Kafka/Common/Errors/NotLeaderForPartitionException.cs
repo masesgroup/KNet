@@ -18,6 +18,9 @@
 
 namespace Org.Apache.Kafka.Common.Errors
 {
+    /// <summary>
+    /// Obsolote exception
+    /// </summary>
     [System.Obsolete]
     public class NotLeaderForPartitionException : InvalidMetadataException
     {

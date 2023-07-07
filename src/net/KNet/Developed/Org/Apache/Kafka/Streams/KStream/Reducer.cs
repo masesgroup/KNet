@@ -32,14 +32,13 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// </summary>
         /// <param name="o1">The Reducer object</param>
         /// <param name="o2">The Reducer object</param>
-        /// <returns>The <typeparamref name="VR"/> apply evaluation</returns>
+        /// <returns>The <typeparamref name="V"/> apply evaluation</returns>
         V Apply(V o1, V o2);
     }
 
     /// <summary>
     /// Listener for Kafka Reducer. Extends <see cref="JVMBridgeListener"/>, implements <see cref="IReducer{V}"/>
     /// </summary>
-    /// <typeparam name="V">The data associated to the event</typeparam>
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public partial class Reducer<V> : IReducer<V>
     {

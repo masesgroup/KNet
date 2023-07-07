@@ -29,29 +29,38 @@ using System.Collections.Generic;
 
 namespace MASES.KNet.Connect
 {
+    /// <summary>
+    /// .NET interface for <see cref="IConnector"/>
+    /// </summary>
     public interface IVersion
     {
+        /// <summary>
+        /// Returns version string
+        /// </summary>
         string Version();
     }
-
+    /// <summary>
+    /// .NET interface for <see cref="Connector"/>
+    /// </summary>
     public interface IConnector : IVersion
     {
+        /// <inheritdoc cref="Connector.Initialize(ConnectorContext)"/>
         void Initialize(ConnectorContext ctx);
-
+        /// <inheritdoc cref="Connector.Initialize(ConnectorContext, Java.Util.List{Map{string, string}})"/>
         void Initialize(ConnectorContext ctx, Java.Util.List<Map<string, string>> taskConfigs);
-
+        /// <inheritdoc cref="Connector.Start(Map{string, string})"/>
         void Start(Map<string, string> props);
-
+        /// <inheritdoc cref="Connector.Reconfigure(Map{string, string})"/>
         void Reconfigure(Map<string, string> props);
-
+        /// <inheritdoc cref="Connector.TaskClass{ReturnExtendsOrg_Apache_Kafka_Connect_Connector_Task}"/>
         Class TaskClass();
-
+        /// <inheritdoc cref="Connector.TaskConfigs(int)"/>
         Java.Util.List<Map<string, string>> TaskConfigs(int maxTasks);
-
+        /// <inheritdoc cref="Connector.Stop"/>
         void Stop();
-
+        /// <inheritdoc cref="Connector.Validate(Map{string, string})"/>
         Config Validate(Map<string, string> connectorConfigs);
-
+        /// <inheritdoc cref="Connector.Config"/>
         ConfigDef Config();
     }
 
@@ -149,8 +158,6 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// An helper function to read the data from Java side
         /// </summary>
-        /// <typeparam name="T">The expected return <see cref="Type"/></typeparam>
-        /// <returns>The <typeparamref name="T"/></returns>
         /// <exception cref="InvalidOperationException"> </exception>
         protected void DataToExchange(object data)
         {

@@ -22,14 +22,23 @@ using System;
 
 namespace MASES.KNet.Serialization
 {
+    /// <summary>
+    /// KNet interface for deserializers
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public interface IKNetDeserializer<T> : IDisposable
     {
+        /// <summary>
+        /// The <see cref="Deserializer{T}"/> to use in Apache Kafka
+        /// </summary>
         Deserializer<byte[]> KafkaDeserializer { get; }
-
+        /// <summary>
+        /// <see langword="true"/> if <see cref="Headers"/>are used
+        /// </summary>
         bool UseHeaders { get; }
-
+        /// <inheritdoc cref="IDeserializer{T}.Deserialize(string, byte[])"/>
         T Deserialize(string topic, byte[] data);
-
+        /// <inheritdoc cref="IDeserializer{T}.Deserialize(string, Headers, byte[])"/>
         T DeserializeWithHeaders(string topic, Headers headers, byte[] data);
     }
 }

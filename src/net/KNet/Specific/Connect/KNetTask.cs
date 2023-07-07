@@ -67,7 +67,7 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// Implement the method to execute the start action
         /// </summary>
-        /// <param name="props">The set of properties returned from Apache Kafka Connect framework: the <see cref="IReadOnlyDictionary{TKey, TValue}"/> contains the info from <see cref="IKNetConnector.TaskConfigs(int, Map{string, string})"/>.</param>
+        /// <param name="props">The set of properties returned from Apache Kafka Connect framework: the <see cref="IReadOnlyDictionary{TKey, TValue}"/> contains the info from <see cref="KNetConnector.TaskConfigs(int, IDictionary{string, string})"/>.</param>
         void Start(IReadOnlyDictionary<string, string> props);
     }
     /// <summary>
@@ -121,8 +121,6 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// An helper function to read the data from Java side
         /// </summary>
-        /// <typeparam name="T">The expected return <see cref="Type"/></typeparam>
-        /// <returns>The <typeparamref name="T"/></returns>
         /// <exception cref="InvalidOperationException"> </exception>
         protected void DataToExchange(object data)
         {

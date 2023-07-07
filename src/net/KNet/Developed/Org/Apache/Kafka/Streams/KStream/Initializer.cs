@@ -37,7 +37,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// <summary>
     /// Listener for Kafka Initializer. Extends <see cref="JVMBridgeListener"/>, implements <see cref="IInitializer{VA}"/>
     /// </summary>
-    /// <typeparam name="VA">The Initialized data associated to the event</typeparam>
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public partial class Initializer<VA> : IInitializer<VA>
     {

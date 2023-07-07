@@ -33,7 +33,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// </summary>
         /// <param name="o1">The ForeachAction object</param>
         /// <param name="o2">The ForeachAction object</param>
-        /// <returns>The <typeparamref name="VR"/> apply evaluation</returns>
         void Apply(K o1, V o2);
     }
 
@@ -41,8 +40,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// <summary>
     /// Listener for Kafka ForeachAction. Extends <see cref="JVMBridgeListener"/>, implements <see cref="IForeachAction{K, V}"/>
     /// </summary>
-    /// <typeparam name="K">The data associated to the event</typeparam>
-    /// <typeparam name="V">The data associated to the event</typeparam>
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public partial class ForeachAction<K, V> : IForeachAction<K, V>
     {

@@ -38,8 +38,6 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// <summary>
     /// Listener for Kafka ValueMapper. Extends <see cref="JVMBridgeListener"/>, implements <see cref="IValueMapper{V, VR}"/>
     /// </summary>
-    /// <typeparam name="V">The data associated to the event</typeparam>
-    /// <typeparam name="VR">The result data associated to the event</typeparam>
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public partial class ValueMapper<V, VR> : IValueMapper<V, VR>
     {
