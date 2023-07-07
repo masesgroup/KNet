@@ -28,10 +28,6 @@ namespace MASES.KNet.Serialization.Json
     public class JsonSerDes<T> : KNetSerDes<T>
     {
         /// <summary>
-        /// Can manage any type in <typeparamref name="T"/>
-        /// </summary>
-        protected override bool ManagesAnyType => true;
-        /// <summary>
         /// The extension uses <see cref="Headers"/>
         /// </summary>
         public override bool UseHeaders => true;

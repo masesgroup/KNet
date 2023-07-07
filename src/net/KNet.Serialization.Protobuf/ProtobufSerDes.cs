@@ -31,10 +31,6 @@ namespace MASES.KNet.Serialization.Protobuf
     {
         readonly MessageParser<T> _parser = new MessageParser<T>(() => new T());
         /// <summary>
-        /// Can manage any type in <typeparamref name="T"/>
-        /// </summary>
-        protected override bool ManagesAnyType => true;
-        /// <summary>
         /// The extension uses <see cref="Headers"/>
         /// </summary>
         public override bool UseHeaders => true;

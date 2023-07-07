@@ -161,9 +161,9 @@ namespace MASES.KNetTest
                         }
                     };
 
-                    KTable<string, long?> counts = source.FlatMapValues<string, string, Java.Lang.Iterable<string>, string>(valueMapper)
-                                                         .GroupBy(keyValuemapper)
-                                                         .Count();
+                    KTable<string, Java.Lang.Long> counts = source.FlatMapValues<string, string, Java.Lang.Iterable<string>, string>(valueMapper)
+                                                                  .GroupBy(keyValuemapper)
+                                                                  .Count();
 
                     /***** version using Dynamic engine ******
                     
@@ -174,7 +174,7 @@ namespace MASES.KNetTest
                     ******************************************/
 
                     // need to override value serde to Long type
-                    counts.ToStream().To(OUTPUT_TOPIC, Produced<string, long?>.With(Serdes.String(), Serdes.Long()));
+                    counts.ToStream().To(OUTPUT_TOPIC, Produced<string, Java.Lang.Long>.With(Serdes.String(), Serdes.Long()));
 
                     using (var streams = new KafkaStreams(builder.Build(), props))
                     {
