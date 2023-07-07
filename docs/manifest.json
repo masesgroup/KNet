@@ -1473,7 +1473,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Serialization.Avro.AvroSerDes-1.html",
-          "hash": "4SCVF50nnhTR7af1OayQj8ad0x3JdA8sFUP9HU9EFbY="
+          "hash": "J2hNeZUR0zh9OJ82Kj0dmy4ijsBcMlOoS/b/fzrIXy4="
         }
       },
       "is_incremental": false,
@@ -1521,7 +1521,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Serialization.Json.JsonSerDes-1.html",
-          "hash": "P3CczH/vtMwD1wyXwz2hKyfAtrtIfGqF1Ist2Aubg+8="
+          "hash": "qmlYDleChWeHnyv95GQCVYUES2BHCMsbP0lDeiL7x2M="
         }
       },
       "is_incremental": false,
@@ -1545,7 +1545,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Serialization.KNetSerDes-1.html",
-          "hash": "Qa7aIlTzh6o/1vcZayUekxGRubbHDgx152EcwTS8qlg="
+          "hash": "Yi47r3+D1BS+2NGOG5t5GnTBkxfN8zzwn7gxG4Nb+g8="
         }
       },
       "is_incremental": false,
@@ -1581,7 +1581,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Serialization.MessagePack.MessagePackSerDes-1.html",
-          "hash": "jBIIrPd50Y6ZNdwDJmx2pMHjL3DefR1kEpnQMzOL8xA="
+          "hash": "++Cb+LMZF8T3j1mEK9/4VvwWp/HW7qDwn5U9fWLvJQQ="
         }
       },
       "is_incremental": false,
@@ -1605,7 +1605,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MASES.KNet.Serialization.Protobuf.ProtobufSerDes-1.html",
-          "hash": "TFwC8o4u1Z4xM/Lx9PmivFne5ixA9C/rKxKwNpuJckc="
+          "hash": "HdHRoDnrzDjrOvZgD2emzzJjfRnsVkbCWYJj1WB0eS8="
         }
       },
       "is_incremental": false,
