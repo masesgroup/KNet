@@ -17,20 +17,30 @@
 */
 
 using Org.Apache.Kafka.Common.Header;
+using static System.Net.WebRequestMethods;
 
 namespace MASES.KNet.Serialization.Avro
 {
+    /// <summary>
+    /// Avro extension of <see cref="KNetSerDes{T}"/>, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class AvroSerDes<T> : KNetSerDes<T>
     {
-        protected override bool IsGenericTypeManaged => true;
-
+        /// <summary>
+        /// Can manage any type in <typeparamref name="T"/>
+        /// </summary>
+        protected override bool ManagesAnyType => true;
+        /// <summary>
+        /// The extension uses <see cref="Headers"/>
+        /// </summary>
         public override bool UseHeaders => true;
-
+        /// <inheritdoc cref="KNetSerDes{T}.SerializeWithHeaders(string, Headers, T)"/>
         public override byte[] SerializeWithHeaders(string topic, Headers headers, T data)
         {
             throw new System.NotImplementedException();
         }
-
+        /// <inheritdoc cref="KNetSerDes{T}.DeserializeWithHeaders(string, Headers, byte[])"/>
         public override T DeserializeWithHeaders(string topic, Headers headers, byte[] data)
         {
             throw new System.NotImplementedException();
