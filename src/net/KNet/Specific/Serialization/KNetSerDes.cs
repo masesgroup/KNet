@@ -29,7 +29,7 @@ namespace MASES.KNet.Serialization
     /// <typeparam name="T">The type to serialize/deserialize</typeparam>
     public class KNetSerDes<T> : IKNetSerializer<T>, IKNetDeserializer<T>
     {
-        readonly bool _IsGenericTypeManaged = KNetSerialization.IsInternalManaged<T>();
+        readonly bool _ManagesAnyType = KNetSerialization.IsInternalManaged<T>();
         readonly KNetSerialization.SerializationType _SerializationType = KNetSerialization.InternalSerDesType<T>();
         Serializer<byte[]> _KafkaSerializer = new ByteArraySerializer();
         Deserializer<byte[]> _KafkaDeserializer = new ByteArrayDeserializer();
@@ -39,7 +39,7 @@ namespace MASES.KNet.Serialization
         /// <exception cref="InvalidOperationException">The <typeparamref name="T"/> needs an external serializer</exception>
         public KNetSerDes()
         {
-            if (!IsGenericTypeManaged) throw new InvalidOperationException($"{typeof(T)} needs an external serializer, use a different constructor.");
+            if (!ManagesAnyType) throw new InvalidOperationException($"{typeof(T)} needs an external serializer, use a different constructor.");
         }
         /// <summary>
         /// External serialization function
@@ -76,7 +76,7 @@ namespace MASES.KNet.Serialization
         /// <summary>
         /// Override in derived classes to indicate the class is able to manage complex types, default is the result of <see cref="KNetSerialization.IsInternalManaged{T}()"/>
         /// </summary>
-        protected virtual bool IsGenericTypeManaged => _IsGenericTypeManaged;
+        protected virtual bool ManagesAnyType => _ManagesAnyType;
         /// <inheritdoc cref="IKNetSerializer{T}.KafkaSerializer"/>
         public Serializer<byte[]> KafkaSerializer => _KafkaSerializer;
         /// <inheritdoc cref="IKNetDeserializer{T}.KafkaDeserializer"/>

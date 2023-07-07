@@ -22,17 +22,26 @@ using System.IO;
 
 namespace MASES.KNet.Serialization.MessagePack
 {
+    /// <summary>
+    /// MessagePack extension of <see cref="KNetSerDes{T}"/>, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class MessagePackSerDes<T> : KNetSerDes<T>
     {
-        protected override bool IsGenericTypeManaged => true;
-
+        /// <summary>
+        /// Can manage any type in <typeparamref name="T"/>
+        /// </summary>
+        protected override bool ManagesAnyType => true;
+        /// <summary>
+        /// The extension uses <see cref="Headers"/>
+        /// </summary>
         public override bool UseHeaders => true;
-
+        /// <inheritdoc cref="KNetSerDes{T}.SerializeWithHeaders(string, Headers, T)"/>
         public override byte[] SerializeWithHeaders(string topic, Headers headers, T data)
         {
             return MessagePackSerializer.Serialize(data);
         }
-
+        /// <inheritdoc cref="KNetSerDes{T}.DeserializeWithHeaders(string, Headers, byte[])"/>
         public override T DeserializeWithHeaders(string topic, Headers headers, byte[] data)
         {
             using (MemoryStream stream = new MemoryStream(data))

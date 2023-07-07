@@ -22,15 +22,23 @@ using System.IO;
 
 namespace MASES.KNet.Serialization.Protobuf
 {
+    /// <summary>
+    /// Protobuf extension of <see cref="KNetSerDes{T}"/>, for example <see href="https://masesgroup.github.io/KNet/articles/usageSerDes.html"/>
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class ProtobufSerDes<T> : KNetSerDes<T>
         where T : IMessage<T>, new()
     {
         readonly MessageParser<T> _parser = new MessageParser<T>(() => new T());
-
-        protected override bool IsGenericTypeManaged => true;
-
+        /// <summary>
+        /// Can manage any type in <typeparamref name="T"/>
+        /// </summary>
+        protected override bool ManagesAnyType => true;
+        /// <summary>
+        /// The extension uses <see cref="Headers"/>
+        /// </summary>
         public override bool UseHeaders => true;
-
+        /// <inheritdoc cref="KNetSerDes{T}.SerializeWithHeaders(string, Headers, T)"/>
         public override byte[] SerializeWithHeaders(string topic, Headers headers, T data)
         {
             using (MemoryStream stream = new MemoryStream())
@@ -39,7 +47,7 @@ namespace MASES.KNet.Serialization.Protobuf
                 return stream.ToArray();
             }
         }
-
+        /// <inheritdoc cref="KNetSerDes{T}.DeserializeWithHeaders(string, Headers, byte[])"/>
         public override T DeserializeWithHeaders(string topic, Headers headers, byte[] data)
         {
             return _parser.ParseFrom(data);
