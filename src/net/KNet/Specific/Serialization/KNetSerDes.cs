@@ -29,18 +29,9 @@ namespace MASES.KNet.Serialization
     /// <typeparam name="T">The type to serialize/deserialize</typeparam>
     public class KNetSerDes<T> : IKNetSerializer<T>, IKNetDeserializer<T>
     {
-        readonly bool _ManagesAnyType = KNetSerialization.IsInternalManaged<T>();
         readonly KNetSerialization.SerializationType _SerializationType = KNetSerialization.InternalSerDesType<T>();
         Serializer<byte[]> _KafkaSerializer = new ByteArraySerializer();
         Deserializer<byte[]> _KafkaDeserializer = new ByteArrayDeserializer();
-        /// <summary>
-        /// Initialize a new <see cref="KNetSerDes{T}"/>
-        /// </summary>
-        /// <exception cref="InvalidOperationException">The <typeparamref name="T"/> needs an external serializer</exception>
-        public KNetSerDes()
-        {
-            if (!ManagesAnyType) throw new InvalidOperationException($"{typeof(T)} needs an external serializer, use a different constructor.");
-        }
         /// <summary>
         /// External serialization function
         /// </summary>
@@ -73,10 +64,6 @@ namespace MASES.KNet.Serialization
             _KafkaDeserializer?.Dispose();
             _KafkaDeserializer = null;
         }
-        /// <summary>
-        /// Override in derived classes to indicate the class is able to manage complex types, default is the result of <see cref="KNetSerialization.IsInternalManaged{T}()"/>
-        /// </summary>
-        protected virtual bool ManagesAnyType => _ManagesAnyType;
         /// <inheritdoc cref="IKNetSerializer{T}.KafkaSerializer"/>
         public Serializer<byte[]> KafkaSerializer => _KafkaSerializer;
         /// <inheritdoc cref="IKNetDeserializer{T}.KafkaDeserializer"/>
@@ -103,6 +90,7 @@ namespace MASES.KNet.Serialization
                 KNetSerialization.SerializationType.String => KNetSerialization.SerializeString(topic, data as string),
                 KNetSerialization.SerializationType.Guid => KNetSerialization.SerializeGuid(topic, (Guid)Convert.ChangeType(data, typeof(Guid))),
                 KNetSerialization.SerializationType.Void => KNetSerialization.SerializeVoid(topic, data as Java.Lang.Void),
+                KNetSerialization.SerializationType.External => throw new InvalidOperationException($"{typeof(T)} needs an external serializer: set {nameof(OnSerialize)} or {nameof(OnSerializeWithHeaders)}."),
                 _ => default,
             };
         }
@@ -135,6 +123,7 @@ namespace MASES.KNet.Serialization
                 KNetSerialization.SerializationType.String => (T)(object)KNetSerialization.DeserializeString(topic, data),
                 KNetSerialization.SerializationType.Guid => (T)(object)KNetSerialization.DeserializeGuid(topic, data),
                 KNetSerialization.SerializationType.Void => (T)(object)KNetSerialization.DeserializeVoid(topic, data),
+                KNetSerialization.SerializationType.External => throw new InvalidOperationException($"{typeof(T)} needs an external deserializer: set {nameof(OnDeserialize)} or {nameof(OnDeserializeWithHeaders)}."),
                 _ => default,
             };
         }
