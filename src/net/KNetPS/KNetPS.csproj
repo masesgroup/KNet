@@ -9,8 +9,14 @@
 		<Product>KNetPS</Product>
 		<OutputPath>..\..\..\MASES.KNetPS\</OutputPath>
 		<TargetFrameworks>net462;net6.0</TargetFrameworks>
+		<RunAnalyzersDuringLiveAnalysis>False</RunAnalyzersDuringLiveAnalysis>
+		<RunAnalyzersDuringBuild>False</RunAnalyzersDuringBuild>
 	</PropertyGroup>
 
+	<PropertyGroup Condition="'$(TargetFramework)' == 'net6.0'">
+		<OutputType>Exe</OutputType>
+	</PropertyGroup>
+	
 	<ItemGroup Condition="True">
 		<knetps_jars Include="$(ProjectDir)\..\..\..\jars\*.*" />
 		<knetps_config Include="$(ProjectDir)\..\..\config\*.*" />
