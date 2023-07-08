@@ -26,7 +26,7 @@ namespace MASES.KNetPS
     public class KNetPSCore : KNetCLICore<KNetPSCore>
     {
 #if NET6_0_OR_GREATER
-        public static void Main(string[] args) { }
+        public static void Main(string[] args) { } // used in conjunction with project of executable type to produce artifacts with all needed assemblies
 #endif
     }
 }
